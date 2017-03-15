@@ -32,7 +32,7 @@
 &lt;p&gt;y todo esto en unas tres semanas aproximadamente.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34; target=&#34;_blank&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;dormida-en-los-laureles&#34;&gt;Dormida en los laureles&lt;/h3&gt;
@@ -41,7 +41,7 @@
 
 &lt;p&gt;Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo &lt;em&gt;plantilla&lt;/em&gt; con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en &lt;em&gt;Calc&lt;/em&gt; tienes que introducir los decimales con una coma y &lt;em&gt;Python&lt;/em&gt; los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.&lt;/p&gt;
 
-&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
+&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
 
 &lt;h3 id=&#34;último-día-kernel-panic&#34;&gt;Último día. Kernel panic.&lt;/h3&gt;
 
@@ -67,7 +67,7 @@
 
 &lt;p&gt;Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que &lt;strong&gt;gasté&lt;/strong&gt; metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.&lt;/p&gt;
 
-&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
+&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
 
 &lt;p&gt;Tuve la suerte de haber hecho mi práctica en &lt;em&gt;python&lt;/em&gt;, por lo que añadirle el script que voy a describir a continuación fue pan comido.&lt;/p&gt;
 
@@ -121,9 +121,9 @@
 
 &lt;h2 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h2&gt;
 
-&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34; target=&#34;_blank&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
@@ -437,19 +437,19 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
-&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34; target=&#34;_blank&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;más-sobre-r-y-python&#34;&gt;Más sobre R y Python&lt;/h2&gt;
 
 &lt;p&gt;Puedes consultar los siguientes atrículos sobre R y python:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34; target=&#34;_blank&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34; target=&#34;_blank&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34; target=&#34;_blank&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34; target=&#34;_blank&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34; target=&#34;_blank&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

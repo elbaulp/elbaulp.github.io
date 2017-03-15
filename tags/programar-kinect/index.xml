@@ -29,7 +29,7 @@
     layout=&#34;responsive&#34;
     width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
 
-&lt;p&gt;El código está en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_npi&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;, y la práctica la hemos realizado Cristina H.G y Alejandro Alcalde.
+&lt;p&gt;El código está en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_npi&#34;&gt;github&lt;/a&gt;, y la práctica la hemos realizado Cristina H.G y Alejandro Alcalde.
 {: .notice-info }&lt;/p&gt;
 
 &lt;p&gt;Como se puede ver, inicialmente no se nos hace caso, luego activamos el procesamiento y comenzamos a avanzar y retroceder transpacencias. Cada vez que se ejecuta un comando, se ilumina el brazo que ejecutó la acción.&lt;/p&gt;
@@ -38,7 +38,7 @@
 
 &lt;p&gt;Para esta primera práctica consistente en familiarizarse con &lt;em&gt;Kinect&lt;/em&gt; , nos hemos basado en un ejemplo de &lt;em&gt;Microsoft&lt;/em&gt; [1] en el que se permite controlar una presentación &lt;em&gt;Power Point&lt;/em&gt; mediante gestos. El proyecto original avanza o retrocede las diapositivas elevando el brazo derecho/izquierdo por encima del hombro derecho/izquierdo. Nosotros la hemos modificado para que los gestos sean los especificados más arriba.&lt;/p&gt;
 
-&lt;p&gt;Estando de frente en la &lt;em&gt;kinect&lt;/em&gt;, con los brazos en posición normal, hay que subir la muñeca de forma que sobrepase la cadera, y luego volver a bajarla. El brazo derecho se usa para avanzar una diapositiva, mientras que el izquierdo retrocede. Para ello se hace uso de un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; target=&#34;_blank&#34;&gt;framework&lt;/a&gt;&lt;/em&gt; simple que declara una relación entre una o varias articulaciones, el ejemplo que pusimos al principio implica la relación de dos articulaciones (muñeca y cadera) y la relación arriba y abajo. Los posibles tipos de relaciones entre articulaciones se definen en la siguiente enumeración:&lt;/p&gt;
+&lt;p&gt;Estando de frente en la &lt;em&gt;kinect&lt;/em&gt;, con los brazos en posición normal, hay que subir la muñeca de forma que sobrepase la cadera, y luego volver a bajarla. El brazo derecho se usa para avanzar una diapositiva, mientras que el izquierdo retrocede. Para ello se hace uso de un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34;&gt;framework&lt;/a&gt;&lt;/em&gt; simple que declara una relación entre una o varias articulaciones, el ejemplo que pusimos al principio implica la relación de dos articulaciones (muñeca y cadera) y la relación arriba y abajo. Los posibles tipos de relaciones entre articulaciones se definen en la siguiente enumeración:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-csharp&#34; data-lang=&#34;csharp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;JointRelationship&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -106,7 +106,7 @@
 
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
-&lt;p&gt;[1] - Walt Smith, Simple Gesture Processing using the Kinect for Windows | &lt;a href=&#34;https://code.msdn.microsoft.com/Simple-Gesture-Processing-097c5527&#34; target=&#34;_blank&#34;&gt;code.msdn.microsoft.com&lt;/a&gt;
+&lt;p&gt;[1] - Walt Smith, Simple Gesture Processing using the Kinect for Windows | &lt;a href=&#34;https://code.msdn.microsoft.com/Simple-Gesture-Processing-097c5527&#34;&gt;code.msdn.microsoft.com&lt;/a&gt;
 &lt;/gesturecomponent&gt;&lt;/p&gt;</description>
     </item>
     

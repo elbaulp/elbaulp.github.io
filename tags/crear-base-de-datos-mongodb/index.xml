@@ -14,9 +14,9 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</guid>
-      <description>&lt;p&gt;En un &lt;a href=&#34;https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/&#34; title=&#34;Cómo desarrollar aplicaciones en un servidor Cloud&#34; target=&#34;_blank&#34;&gt;artículo anterior&lt;/a&gt; se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.&lt;/p&gt;
+      <description>&lt;p&gt;En un &lt;a href=&#34;https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/&#34; title=&#34;Cómo desarrollar aplicaciones en un servidor Cloud&#34;&gt;artículo anterior&lt;/a&gt; se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.&lt;/p&gt;
 
-&lt;p&gt;Para conseguir nuestro objetivo necesitaremos &lt;strong&gt;Node.js&lt;/strong&gt;, &lt;strong&gt;Express&lt;/strong&gt; y &lt;strong&gt;mongodb&lt;/strong&gt;. Usaremos el servicio &lt;a href=&#34;http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=appmovil&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; title=&#34;Arsys cloudbuilder&#34; target=&#34;_blank&#34;&gt;cloudbuilder de Arsys&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para conseguir nuestro objetivo necesitaremos &lt;strong&gt;Node.js&lt;/strong&gt;, &lt;strong&gt;Express&lt;/strong&gt; y &lt;strong&gt;mongodb&lt;/strong&gt;. Usaremos el servicio &lt;a href=&#34;http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=appmovil&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; title=&#34;Arsys cloudbuilder&#34;&gt;cloudbuilder de Arsys&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;La razón de usar un servicio cloud es muy sencilla, éstos entornos ofrecen la flexibilidad necesaria para escalar nuestra plataforma en cualquier momento, sin tener que embarcarnos nosotros mismos en instalar y configurar más servidores dedicados, y se paga en función de las horas de uso. A medida que los requisitos de nuestro sistema aumentan, es posible incrementar las capacidades de nuestros servidores únicamente desplazando una barrita que diga cuanta RAM más necesitamos, cuantos cores, cuantos servidores&amp;#8230; Así de sencillo.&lt;/p&gt;
 
@@ -46,7 +46,7 @@
 
 &lt;h1 id=&#34;instalar-node-js&#34;&gt;Instalar Node.js&lt;/h1&gt;
 
-&lt;p&gt;Descargamos el binario de su &lt;a href=&#34;http://nodejs.org/download/&#34; target=&#34;_blank&#34;&gt;página web&lt;/a&gt;, descomprimimos el fichero y listo. En linux estaría bien añadir la carpeta &lt;code&gt;bin&lt;/code&gt; al &lt;code&gt;PATH&lt;/code&gt; para que sea accesible desde cualquier lugar en la terminal.&lt;/p&gt;
+&lt;p&gt;Descargamos el binario de su &lt;a href=&#34;http://nodejs.org/download/&#34;&gt;página web&lt;/a&gt;, descomprimimos el fichero y listo. En linux estaría bien añadir la carpeta &lt;code&gt;bin&lt;/code&gt; al &lt;code&gt;PATH&lt;/code&gt; para que sea accesible desde cualquier lugar en la terminal.&lt;/p&gt;
 
 &lt;h1 id=&#34;descripción-de-la-api&#34;&gt;Descripción de la API&lt;/h1&gt;
 

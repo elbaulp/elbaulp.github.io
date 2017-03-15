@@ -459,7 +459,7 @@ iptables -j DROP -h
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;netstat -tulpn
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34; target=&#34;_blank&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
+&lt;p&gt;Es recomendable instalarse un &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad&#34;&gt;sniffer&lt;/a&gt; como tcpdupm y ngrep para probar la configuración de nuestro firewall.&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 
@@ -483,7 +483,7 @@ iptables -X
 
 &lt;p&gt;IPtables -nL para ver que estan vacias&lt;/p&gt;
 
-&lt;h2 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34; target=&#34;_blank&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34; target=&#34;_blank&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h2&gt;
+&lt;h2 id=&#34;configura-la-máquina-para-que-sólo-se-pueda-acceder-desde-ella-a-las-webs-http-www-google-es-y-http-www-iesgoya-com-y-a-ninguna-otra&#34;&gt;Configura la máquina para que sólo se pueda acceder desde ella a las webs &lt;a href=&#34;http://www.google.es&#34;&gt;http://www.google.es&lt;/a&gt; y &lt;a href=&#34;http://www.iesgoya.com&#34;&gt;http://www.iesgoya.com&lt;/a&gt; y a ninguna otra.&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;iptables -A OUTPUT -d http://www.google.es -j ACCEPT
 iptables -A OUTPUT -d http://www.iesgoya.com -j ACCEPT
 iptables -A OUTPUT -p tcp –dport &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; -j DROP &lt;span class=&#34;c1&#34;&gt;# Mas exigente –&amp;gt; iptables -A OUTPUT -p all -j DROP&lt;/span&gt;
@@ -570,7 +570,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 
 &lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
 
-&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por la frecuencia con las que se realizaban las peticiones debía ser un ataque automatizado, y probaba cadenas de texto aleatorias, lo primero que hice fué bloquear a dicha ip cualquier intento de conexión al servidor mediante &lt;a href=&#34;https://elbauldelprogramador.com/?s=iptables&#34;&gt;iptables&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Además de bloquearlo, añadí una regla a las directivas de iptables para que quedara registrado en el log cada intento de conexión. Las reglas en cuestión son las siguientes:&lt;/p&gt;
 
@@ -593,7 +593,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 
 &lt;p&gt;Donde &lt;strong&gt;xx.xx.xx.xx&lt;/strong&gt; debe ser la ip del atacante. El comando wc con el parámetro -l es el encargado de contar las líneas.&lt;/p&gt;
 
-&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En las referencias puedes encontrar más información sobre iptables. También puedes leer los &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34;&gt;20 ejemplos de iptables para SysAdmins novatos&lt;/a&gt;&lt;/strong&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 

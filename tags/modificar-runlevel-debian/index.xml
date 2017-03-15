@@ -36,7 +36,7 @@
 
 &lt;p&gt;El runlevel 0 es la condición de apagado del sistema. La mayoría de ordenadores actuales se apagarán al llegar a este nivel.&lt;/p&gt;
 
-&lt;p&gt;El 1 es conocido como de monousuario o usuario único. Suele llamarsele modo de rescate (&lt;em&gt;rescue mode ó trouble-shooting&lt;/em&gt;). En este nivel no se ejecuta ningún servicio o demonio. Normalmente es posible iniciar el sistema en modo rescate desde el &lt;a href=&#34;https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/&#34; title=&#34;Grub Customizer 2.0, personaliza tu GRUB2&#34; target=&#34;_blank&#34;&gt;GRUB&lt;/a&gt;, o añadiendo la palabra &lt;strong&gt;single&lt;/strong&gt; al final de la línea de comandos del kernel.&lt;/p&gt;
+&lt;p&gt;El 1 es conocido como de monousuario o usuario único. Suele llamarsele modo de rescate (&lt;em&gt;rescue mode ó trouble-shooting&lt;/em&gt;). En este nivel no se ejecuta ningún servicio o demonio. Normalmente es posible iniciar el sistema en modo rescate desde el &lt;a href=&#34;https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/&#34; title=&#34;Grub Customizer 2.0, personaliza tu GRUB2&#34;&gt;GRUB&lt;/a&gt;, o añadiendo la palabra &lt;strong&gt;single&lt;/strong&gt; al final de la línea de comandos del kernel.&lt;/p&gt;
 
 &lt;p&gt;Del runlevel 2 al 5 son modos multiusuario, y el modo usado por defecto.&lt;/p&gt;
 
@@ -61,7 +61,7 @@ S01motd     S17binfmt-support  S18apache2  S19atd      S19exim4  S20avahi-daemon
 S14rpcbind  S17rsyslog         S19acpid    S19cron     S19rsync  S20bluetooth          S21libvirt-bin      S22bootlogs    S23rc.local
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Cada fichero es un enlace simbólico a su respectivo &lt;a href=&#34;https://elbauldelprogramador.com/&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; residente en &lt;code&gt;/etc/init.d&lt;/code&gt;. Estos scripts controlan la detención o inicio de un servicio.&lt;/p&gt;
+&lt;p&gt;Cada fichero es un enlace simbólico a su respectivo &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;script&lt;/a&gt; residente en &lt;code&gt;/etc/init.d&lt;/code&gt;. Estos scripts controlan la detención o inicio de un servicio.&lt;/p&gt;
 
 &lt;p&gt;El nombre de los enlaces de estos directorios puede ser poco intuitivos al principio, pero veamos su significado, la sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;K &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; S&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; + nn + &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;string&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;

@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</guid>
-      <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34; target=&#34;_blank&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -26,7 +26,7 @@
 
 &lt;p&gt;*El principal propósito de &lt;strong&gt;Regin&lt;/strong&gt; es la recopilación de información y se ha visto implicado en operaciones de colección de datos contra organizaciones gubernamentales, empresas, organizaciones docentes y particulares. La complejidad y nivel de sofisticación de &lt;strong&gt;Regin&lt;/strong&gt; hacen pensar que el desarrollo de ésta amenaza ha llevado meses, e incluso años.*&lt;/p&gt;
 
-&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34; target=&#34;_blank&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.*&lt;/p&gt;
+&lt;p&gt;*&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.*&lt;/p&gt;
 
 &lt;h2 id=&#34;período-activo-y-versiones-de-regin&#34;&gt;Período activo y versiones de Regin&lt;/h2&gt;
 
@@ -83,7 +83,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34; target=&#34;_blank&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
+&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
 
 &lt;p&gt;A continuación se muetra un gráfico que describe el proceso de infección:&lt;/p&gt;
 
@@ -161,7 +161,7 @@ D0204917CA58}&lt;/em&gt;&lt;/li&gt;
 D0204917CA5A}&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
+&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
 
 &lt;p&gt;A partir de esta etapa, todas estan basadas en un framework modular de módulos de código. Éstos módulos ofrecen funciones mediante una interfaz privada y personalizada. Cada fichero en la etapa 3 y superior pude exportar funcionalidad a otras partes de Regin.&lt;/p&gt;
 

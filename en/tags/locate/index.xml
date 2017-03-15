@@ -20,17 +20,17 @@
 &lt;p&gt;locate reads one or more databases prepared by updatedb(8) and writes file names matching at least one of the PATTERNs to standard output, one per line.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;This post arises from a problem I had some days ago. I have a file with some of my &lt;a href=&#34;https://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; target=&#34;_blank&#34; title=&#34;Favorite songs&#34;&gt;Favorite songs&lt;/a&gt;. I update this file on a regular basis and I wanted to generate a playlist from that file. The solution was to write a &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt; which loop through all items in the file and search where the each file is located in the hard drive.&lt;/p&gt;
+&lt;p&gt;This post arises from a problem I had some days ago. I have a file with some of my &lt;a href=&#34;https://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; target=&#34;_blank&#34; title=&#34;Favorite songs&#34;&gt;Favorite songs&lt;/a&gt;. I update this file on a regular basis and I wanted to generate a playlist from that file. The solution was to write a &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; which loop through all items in the file and search where the each file is located in the hard drive.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Some time ago I improved this idea and wrote a &lt;code&gt;Python&lt;/code&gt; script to &lt;a href=&#34;https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;create music playlists with a given length&#34; target=&#34;_blank&#34;&gt;create music playlists with a given length&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Some time ago I improved this idea and wrote a &lt;code&gt;Python&lt;/code&gt; script to &lt;a href=&#34;https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;create music playlists with a given length&#34;&gt;create music playlists with a given length&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&#34;regular-expressions-in-locate&#34;&gt;Regular expressions in Locate&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; accepts complex &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34; target=&#34;_blank&#34;&gt;regexs&lt;/a&gt;, in order to enable them, give &lt;code&gt;locate&lt;/code&gt; &lt;code&gt;-regex&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; accepts complex &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;regexs&lt;/a&gt;, in order to enable them, give &lt;code&gt;locate&lt;/code&gt; &lt;code&gt;-regex&lt;/code&gt; option.&lt;/p&gt;
 
 &lt;p&gt;Basically the problem is as follows: Given a text file with filenames, get the absolute path for each file in the textfile. For example, a file name &lt;em&gt;“Author - Song Name”&lt;/em&gt; will be stored in the file as &lt;em&gt;“Song Name”&lt;/em&gt;.&lt;/p&gt;
 
@@ -43,7 +43,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;$i&lt;/code&gt; stores the song name.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;.*&lt;/code&gt; match zero or more characters after the song name.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; match only files with &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;mp3&lt;/em&gt; or &lt;em&gt;mp4&lt;/em&gt; extensions&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; match only files with &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;em&gt;mp3&lt;/em&gt; or &lt;em&gt;mp4&lt;/em&gt; extensions&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;When building regular expressions, I find useful to use some king of tool like &lt;strong&gt;regex texter&lt;/strong&gt;, that allows to visualize the regular expression:&lt;/p&gt;
@@ -75,7 +75,7 @@
 
 &lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; is set to line break, because &lt;code&gt;for&lt;/code&gt; by default would consider the space as a separator, instead of a new line.&lt;/p&gt;
 
-&lt;p&gt;As an alternative, suggested  by &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34; target=&#34;_blank&#34;&gt;@ingenieríainv&lt;/a&gt; is to use &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;As an alternative, suggested  by &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt; is to use &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat ARCHIVO_CON_LISTA_DE_NOMBRES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;

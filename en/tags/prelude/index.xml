@@ -14,7 +14,7 @@
       <pubDate>Thu, 09 Mar 2017 18:01:44 +0100</pubDate>
       
       <guid>https://elbauldelprogramador.com/en/chuleta-atajos-teclado-emacs/</guid>
-      <description>&lt;p&gt;There is a bunch of post about &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/cheatsheet&#34; title=&#34;cheatsheets&#34; target=&#34;_blank&#34;&gt;cheatsheets&lt;/a&gt;  in this blog:&lt;/p&gt;
+      <description>&lt;p&gt;There is a bunch of post about &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/cheatsheet&#34; title=&#34;cheatsheets&#34;&gt;cheatsheets&lt;/a&gt;  in this blog:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -27,17 +27,17 @@
 
 &lt;p&gt;Today CheatSheet is going to be about &lt;em&gt;Emacs&lt;/em&gt;. But I want this cheatsheet to be different, my idea is that all of you using emacs help this cheatsheet grow with your own tips and favorite commands &amp;amp; packages.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve been using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34; target=&#34;_blank&#34;&gt;emacs&lt;/a&gt; for a few months now and I&amp;rsquo;m pretty happy about it. It is very powerful. Now, lets start with the collaborative Emacs CheatSheet:&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; for a few months now and I&amp;rsquo;m pretty happy about it. It is very powerful. Now, lets start with the collaborative Emacs CheatSheet:&lt;/p&gt;
 
 &lt;h1 id=&#34;useful-packages&#34;&gt;Useful packages&lt;/h1&gt;
 
 &lt;h2 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Official yasnippet site&#34; target=&#34;_blank&#34;&gt;YaSnippet&lt;/a&gt; is a template system for emacs, it is a &lt;em&gt;must have&lt;/em&gt; package for every emacs user. By default &lt;em&gt;YaSnippet&lt;/em&gt; has a set of pre-defined snippets for practically every language, but it is possible to configure our own ones. For example:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Official yasnippet site&#34;&gt;YaSnippet&lt;/a&gt; is a template system for emacs, it is a &lt;em&gt;must have&lt;/em&gt; package for every emacs user. By default &lt;em&gt;YaSnippet&lt;/em&gt; has a set of pre-defined snippets for practically every language, but it is possible to configure our own ones. For example:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Every blog post in this blog has a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/frontmatter/&#34; title=&#34;Frontmatter&#34; target=&#34;_blank&#34;&gt;Frontmatter&lt;/a&gt;, one of its variables holds the last time the post was modified, in order to quickly write the current date, I&amp;rsquo;ve created the following &lt;em&gt;YaSnippet&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;Every blog post in this blog has a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/frontmatter/&#34; title=&#34;Frontmatter&#34;&gt;Frontmatter&lt;/a&gt;, one of its variables holds the last time the post was modified, in order to quickly write the current date, I&amp;rsquo;ve created the following &lt;em&gt;YaSnippet&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
@@ -73,7 +73,7 @@
 
 &lt;p&gt;&lt;strong&gt;Problem&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;p&gt;Search using a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/regex/&#34; title=&#34;regular expression&#34; target=&#34;_blank&#34;&gt;regular expression&lt;/a&gt; or a simple text in multiple files at once, or a entire directory and replace all the matches found.&lt;/p&gt;
+&lt;p&gt;Search using a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/regex/&#34; title=&#34;regular expression&#34;&gt;regular expression&lt;/a&gt; or a simple text in multiple files at once, or a entire directory and replace all the matches found.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;
 
@@ -84,7 +84,7 @@
 &lt;li&gt;Write down the regex, for every file matches it is necessary to confirm the operation, in order to replace the contents in all the files at once, press &lt;code&gt;A&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34; target=&#34;_blank&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;rectangular-selection&#34;&gt;Rectangular selection&lt;/h2&gt;
 
@@ -121,7 +121,7 @@ line 4
 &lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: &lt;em&gt;Insert&lt;/em&gt; string on each line of the rectangle.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34; target=&#34;_blank&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;replace-a-character-with-a-new-line&#34;&gt;Replace a character with a new line&lt;/h2&gt;
 
@@ -149,7 +149,7 @@ line 4
  Fusce vestibulum.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34; target=&#34;_blank&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;delete-trailing-white-spaces-at-the-end-of-a-line&#34;&gt;Delete trailing white spaces at the end of a line&lt;/h2&gt;
 
@@ -176,7 +176,7 @@ line 4
     &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34; target=&#34;_blank&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;execute-an-action-for-all-opened-buffers&#34;&gt;Execute an action for all opened buffers&lt;/h2&gt;
 
@@ -198,7 +198,7 @@ line 4
 &lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; to save all the marked buffers.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34; target=&#34;_blank&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;vertical-align-with-the-given-character&#34;&gt;Vertical align with the given character&lt;/h2&gt;
 
@@ -223,7 +223,7 @@ line 4
 
 &lt;li&gt;&lt;p&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Above inverse, replace all tabs by spaces.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Source: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34; target=&#34;_blank&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Source: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;
@@ -234,7 +234,7 @@ line 4
 &lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; is an enhanced Emacs 24 distribution that should make your experience with Emacs both more pleasant and more powerful.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;It works as well on emacs 25 though, I am using this version in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/gentoo&#34; title=&#34;Gentoo&#34; target=&#34;_blank&#34;&gt;Gentoo&lt;/a&gt; and works well.&lt;/p&gt;
+&lt;p&gt;It works as well on emacs 25 though, I am using this version in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/gentoo&#34; title=&#34;Gentoo&#34;&gt;Gentoo&lt;/a&gt; and works well.&lt;/p&gt;
 
 &lt;p&gt;Prelude installation is very easy, all steps are described in its &lt;a href=&#34;https://github.com/bbatsov/prelude&#34; target=&#34;_blank&#34; title=&#34;repositorio de Github&#34;&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;
 

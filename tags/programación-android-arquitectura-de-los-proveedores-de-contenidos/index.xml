@@ -20,16 +20,16 @@
 
 &lt;ul&gt;
 &lt;li&gt;Sitios webs&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/&#34; target=&#34;_blank&#34;&gt;REST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/buenas-practicas-para-el-diseno-de-una-api-restful-pragmatica/&#34;&gt;REST&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Servicios web&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;Procedimientos Almacenados&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;Procedimientos Almacenados&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Cada CV de un dispositivo se registra a sí mismo de manera similar a como lo hace un sitio web con cadenas de texto (similar a los nombres de domínio, pero para los CV se llama &lt;em&gt;authority&lt;/em&gt;). Esta cadena asenta las bases del conjunto de URIs que este CV puede ofrecer. No es diferente a como un sitio web con un dominio ofrece un conjunto de URls que muestran sus documentos o contenido en general.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;El registro de la authority se hace en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34; target=&#34;_blank&#34;&gt;androidManifest&lt;/a&gt;. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/&#34; target=&#34;_blank&#34;&gt;FavSItes&lt;/a&gt;):&lt;/p&gt;
+&lt;p&gt;El registro de la authority se hace en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;androidManifest&lt;/a&gt;. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/&#34;&gt;FavSItes&lt;/a&gt;):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;provider&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.SitesProvider&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;na&#34;&gt;android:authorities=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;com.elbauldelprogramador.provider.FavSites&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -59,7 +59,7 @@ content://contacts/people/23
 &lt;p&gt;Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;siguiente-tema-proveedores-de-contenidos-leer-datos-mediante-uris-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de_28/&#34; target=&#34;_blank&#34;&gt;Proveedores de Contenidos - Leer datos mediante URIs&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-proveedores-de-contenidos-leer-datos-mediante-uris-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de_28/&#34;&gt;Proveedores de Contenidos - Leer datos mediante URIs&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
   </channel>

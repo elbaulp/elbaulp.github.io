@@ -14,7 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</guid>
-      <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34; target=&#34;_blank&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34; target=&#34;_blank&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
+      <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -54,7 +54,7 @@ Development server is running at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Con la aplicación ejecutándose, nos dirigimos a &lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/a&gt;. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:&lt;/p&gt;
+&lt;p&gt;Con la aplicación ejecutándose, nos dirigimos a &lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/a&gt;. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;get_queryset&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
 -&amp;gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; Poll.objects.filter&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Pdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;

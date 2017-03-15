@@ -37,7 +37,7 @@
 
 &lt;p&gt;Si se tiene una colección de datos relativamente pequeña en forma de pares clave-valor, se puede usar la API de SharedPreferences. Un objeto  de éste tipo apunta a un archivo conteniendo pares de datos. Pueden ser  privados o públicos.&lt;/p&gt;
 
-&lt;p&gt;Ésta API no debe confundirse con la API de Preference, que ayuda a construir  una interfaz gráfica para las preferencias de nuestra aplicación (Por debajo ésta usa &lt;a href=&#34;http://developer.android.com/training/basics/data-storage/shared-preferences.html&#34; target=&#34;_blank&#34;&gt;SharedPreferences&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Ésta API no debe confundirse con la API de Preference, que ayuda a construir  una interfaz gráfica para las preferencias de nuestra aplicación (Por debajo ésta usa &lt;a href=&#34;http://developer.android.com/training/basics/data-storage/shared-preferences.html&#34;&gt;SharedPreferences&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Para mayores cantidades de datos se usarán bases de datos en SQLite. (El código se va explicando en los comentarios).&lt;/p&gt;
 
@@ -266,7 +266,7 @@
 
 &lt;h3 id=&#34;clase-personcontract&#34;&gt;Clase &lt;code&gt;PersonContract&lt;/code&gt;&lt;/h3&gt;
 
-&lt;p&gt;La finalidad de esta clase es servir abstracción a la base de datos. Aquí se definirá el esquema de representación de la base de datos, bien documentado. En la clase externa deberá ir todo campo global a la base de datos Échale un vistazo a un ejemplo real de &lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/&#34; title=&#34;Provider&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;La finalidad de esta clase es servir abstracción a la base de datos. Aquí se definirá el esquema de representación de la base de datos, bien documentado. En la clase externa deberá ir todo campo global a la base de datos Échale un vistazo a un ejemplo real de &lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/provider/&#34; title=&#34;Provider&#34;&gt;Google&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;PersonContract&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PersonContract&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -581,7 +581,7 @@
 
 &lt;p&gt;En este fichero se definen las pantallas que la aplicación va a usar, así como los permisos que necesita (En este caso ninguno).&lt;/p&gt;
 
-&lt;p&gt;El código de este artículo podéis encontrarlo en el repositorio de &lt;a href=&#34;https://github.com/elbaulp/CursoAndroid/tree/master/Ejemplos/MainApp/helloworld&#34; title=&#34;Curso de  Android repositorio&#34; target=&#34;_blank&#34;&gt;Github Curso de Android&lt;/a&gt;
+&lt;p&gt;El código de este artículo podéis encontrarlo en el repositorio de &lt;a href=&#34;https://github.com/elbaulp/CursoAndroid/tree/master/Ejemplos/MainApp/helloworld&#34; title=&#34;Curso de  Android repositorio&#34;&gt;Github Curso de Android&lt;/a&gt;
 {: .notice-info }&lt;/p&gt;</description>
     </item>
     

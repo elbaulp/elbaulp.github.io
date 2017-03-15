@@ -14,13 +14,13 @@
       <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</guid>
-      <description>&lt;p&gt;In a previous post we shown how to create a &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/&#34; title=&#34;Cómo crear un diálogo personalizado en las preferencias Android&#34; target=&#34;_blank&#34;&gt;custom dialog for an Android preference&lt;/a&gt;. This post shows how to change the summary color in an Android preference. The &lt;em&gt;summary&lt;/em&gt; is the text appearing below the preference&amp;rsquo;s title.&lt;/p&gt;
+      <description>&lt;p&gt;In a previous post we shown how to create a &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/&#34; title=&#34;Cómo crear un diálogo personalizado en las preferencias Android&#34;&gt;custom dialog for an Android preference&lt;/a&gt;. This post shows how to change the summary color in an Android preference. The &lt;em&gt;summary&lt;/em&gt; is the text appearing below the preference&amp;rsquo;s title.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;getting-the-default-layout&#34;&gt;Getting the default layout&lt;/h1&gt;
 
-&lt;p&gt;To accomplish this task, first it is necessary to create a custom &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34; target=&#34;_blank&#34;&gt;layout&lt;/a&gt;. Searching in the Android source code I found one in &lt;em&gt;&lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/layout/preference_child.xml&#34; target=&#34;_blank&#34;&gt;frameworks/base/core/res/res/layout/preference_child.xml&lt;/a&gt;&lt;/em&gt;. Lets remove unnecessary code:&lt;/p&gt;
+&lt;p&gt;To accomplish this task, first it is necessary to create a custom &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34;&gt;layout&lt;/a&gt;. Searching in the Android source code I found one in &lt;em&gt;&lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/layout/preference_child.xml&#34; target=&#34;_blank&#34;&gt;frameworks/base/core/res/res/layout/preference_child.xml&lt;/a&gt;&lt;/em&gt;. Lets remove unnecessary code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- Layout for a visually child-like Preference in a PreferenceActivity. --&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
@@ -72,7 +72,7 @@ android:textColor=&amp;quot;@color/red&amp;quot;
 &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;The &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34; title=&#34;Programación Android: Interfaz gráfica – Estilos y Temas&#34; target=&#34;_blank&#34;&gt;color definition&lt;/a&gt; is created in &lt;strong&gt;&lt;em&gt;./res/values/colors.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34; title=&#34;Programación Android: Interfaz gráfica – Estilos y Temas&#34;&gt;color definition&lt;/a&gt; is created in &lt;strong&gt;&lt;em&gt;./res/values/colors.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;color&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#ff0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/color&amp;gt;&lt;/span&gt;

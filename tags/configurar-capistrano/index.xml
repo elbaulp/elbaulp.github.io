@@ -20,13 +20,13 @@
 
 &lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
 
-&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34; target=&#34;_blank&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
+&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
 
 &lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
 
-&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34; target=&#34;_blank&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -36,15 +36,15 @@
 
 &lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
 
-&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34; target=&#34;_blank&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
 
-&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34; target=&#34;_blank&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;a href=&#34;http://bundler.io/&#34; target=&#34;_blank&#34;&gt;Bundler&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34; target=&#34;_blank&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;

@@ -42,7 +42,7 @@
 &lt;li&gt;&lt;em&gt;Segunda&lt;/em&gt;: Tipo de bloqueo (POSIX si el bloqueo se hizo con &lt;code&gt;fcntl&lt;/code&gt; y &lt;code&gt;FLOCK&lt;/code&gt; si se creó con &lt;code&gt;flock&lt;/code&gt;.)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Tercera&lt;/em&gt;: Modo de bloqueo (ADVISORY o MANDATORY)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Cuarta&lt;/em&gt;: Tipo de bloqueo (WRITE o READ), correspondiente a bloqueos compartidos o exclusivos.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Quinta&lt;/em&gt;: PID del &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-los-procesos/&#34; title=&#34;Intro a los procesos&#34; target=&#34;_blank&#34;&gt;proceso&lt;/a&gt; que tiene el bloqueo sobre el fichero.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Quinta&lt;/em&gt;: PID del &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-los-procesos/&#34; title=&#34;Intro a los procesos&#34;&gt;proceso&lt;/a&gt; que tiene el bloqueo sobre el fichero.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Sexta&lt;/em&gt;: Tres números separados por &lt;code&gt;:&lt;/code&gt;, que identifican el fichero bloqueado.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Séptima:&lt;/em&gt; Byte donde comienza el bloqueo en el fichero.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Octava:&lt;/em&gt; Byte donde acaba el bloqueo del fichero.&lt;/li&gt;

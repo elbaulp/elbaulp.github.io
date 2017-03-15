@@ -18,9 +18,9 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/dns-300x240.jpg&#34; alt=&#34;Cómo ocultar la versión de BIND (Y como averiguarla)&#34; width=&#34;300px&#34; height=&#34;240px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Realizando un análisis en &lt;em&gt;&lt;a href=&#34;http://www.dnsinspect.com&#34; target=&#34;_blank&#34;&gt;dnsInspect&lt;/a&gt;&lt;/em&gt; me dí cuenta de que el servidor estaba mostrando la versión de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; target=&#34;_blank&#34;&gt;BIND&lt;/a&gt;, lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.&lt;/p&gt;
+&lt;p&gt;Realizando un análisis en &lt;em&gt;&lt;a href=&#34;http://www.dnsinspect.com&#34; target=&#34;_blank&#34;&gt;dnsInspect&lt;/a&gt;&lt;/em&gt; me dí cuenta de que el servidor estaba mostrando la versión de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34;&gt;BIND&lt;/a&gt;, lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.&lt;/p&gt;
 
-&lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34; target=&#34;_blank&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
+&lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ dig @example.com -c CH -t txt version.bind &lt;span class=&#34;c1&#34;&gt;# Consultamos la versión para el dominio de la web&lt;/span&gt;

@@ -32,7 +32,7 @@
 &lt;p&gt;y todo esto en unas tres semanas aproximadamente.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34; target=&#34;_blank&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h3 id=&#34;dormida-en-los-laureles&#34;&gt;Dormida en los laureles&lt;/h3&gt;
@@ -41,7 +41,7 @@
 
 &lt;p&gt;Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo &lt;em&gt;plantilla&lt;/em&gt; con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en &lt;em&gt;Calc&lt;/em&gt; tienes que introducir los decimales con una coma y &lt;em&gt;Python&lt;/em&gt; los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.&lt;/p&gt;
 
-&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34; target=&#34;_blank&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
+&lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
 
 &lt;h3 id=&#34;último-día-kernel-panic&#34;&gt;Último día. Kernel panic.&lt;/h3&gt;
 
@@ -67,7 +67,7 @@
 
 &lt;p&gt;Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que &lt;strong&gt;gasté&lt;/strong&gt; metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.&lt;/p&gt;
 
-&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34; target=&#34;_blank&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
+&lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
 
 &lt;p&gt;Tuve la suerte de haber hecho mi práctica en &lt;em&gt;python&lt;/em&gt;, por lo que añadirle el script que voy a describir a continuación fue pan comido.&lt;/p&gt;
 
@@ -121,9 +121,9 @@
 
 &lt;h2 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h2&gt;
 
-&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34; target=&#34;_blank&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34; target=&#34;_blank&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
@@ -437,19 +437,19 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 
 &lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
 
-&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34; target=&#34;_blank&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;más-sobre-r-y-python&#34;&gt;Más sobre R y Python&lt;/h2&gt;
 
 &lt;p&gt;Puedes consultar los siguientes atrículos sobre R y python:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34; target=&#34;_blank&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34; target=&#34;_blank&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34; target=&#34;_blank&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34; target=&#34;_blank&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34; target=&#34;_blank&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34; target=&#34;_blank&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;Introducción a las expresiones regulares en python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;Generar listas de reproducción de una determinada duración con Python&#34;&gt;Generar listas de reproducción de una determinada duración con Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/python-lista-de-listas-eficiente/&#34; title=&#34;Crear Una Lista De Listas De Forma Eficiente en Python&#34;&gt;Crear Una Lista De Listas De Forma Eficiente en Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
@@ -465,8 +465,8 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX – Introducción&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX – Introducción&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -549,7 +549,7 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 
 &lt;h2 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h2&gt;
 
-&lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34; target=&#34;_blank&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para personalizar la cabecera y el pie de pagina&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -611,15 +611,15 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;li&gt;Cada vez que quieras compilar, presiona control+b, teniendo elegido el build system de LaTeX que has creado.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar ATOM&#34; target=&#34;_blank&#34;&gt;Atom&lt;/a&gt; hay un paquete para compilar LaTeX pulsando control+alt+b.&lt;/p&gt;
+&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar ATOM&#34;&gt;Atom&lt;/a&gt; hay un paquete para compilar LaTeX pulsando control+alt+b.&lt;/p&gt;
 
-&lt;p&gt;Si trabajáis en Windows, probad a trabajar con un programa llamado &lt;a href=&#34;http://miktex.org/&#34; title=&#34;MikTeX&#34; target=&#34;_blank&#34;&gt;MikTeX&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Si trabajáis en Windows, probad a trabajar con un programa llamado &lt;a href=&#34;http://miktex.org/&#34; title=&#34;MikTeX&#34;&gt;MikTeX&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Y para Mac OS X, si no tengo mal entendido, podéis usar cualquiera de las dos alternativas.&lt;/p&gt;
 
 &lt;p&gt;Y con esto, ya tenemos un portafolios de prácticas bonito, bien presentado y estructurado. Por supuesto, con LaTeX se pueden hacer muchas más cosas, pero no me he querido meter muy a fondo en un curso introductorio.&lt;/p&gt;
 
-&lt;p&gt;Espero que os haya gustado este curso y os haya servido como base para aprender LaTeX, podéis consultar el fichero fuente que he utilizado yo en &lt;a href=&#34;https://github.com/mgmacias95/CursoLaTex/&#34; title=&#34;github&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt; (también os he incluido en el repositorio el fichero .h y la imagen para que lo podáis compilar y trastear con él todo lo que queráis).&lt;/p&gt;
+&lt;p&gt;Espero que os haya gustado este curso y os haya servido como base para aprender LaTeX, podéis consultar el fichero fuente que he utilizado yo en &lt;a href=&#34;https://github.com/mgmacias95/CursoLaTex/&#34; title=&#34;github&#34;&gt;github&lt;/a&gt; (también os he incluido en el repositorio el fichero .h y la imagen para que lo podáis compilar y trastear con él todo lo que queráis).&lt;/p&gt;
 
 &lt;p&gt;Quiero despedirme no sin antes dedicar todo esto a mi profesor, Francisco Miguel García, ya que sin su ayuda seguramente aún seguiría haciendo mis documentos con el Microsoft Word y a mi amigo, Alejandro Alcalde, por dejarme publicarlo en su blog y llegar así a más gente.&lt;/p&gt;
 
@@ -638,9 +638,9 @@ Marta.&lt;/p&gt;</description>
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
@@ -651,7 +651,7 @@ Marta.&lt;/p&gt;</description>
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Código del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34; target=&#34;_blank&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
+&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -751,7 +751,7 @@ Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 Por tanto, tal y como dijimos antes, la eficiencia del bucle es de &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34; target=&#34;_blank&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
+&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
 
 &lt;p&gt;Ahora seguiríamos con nuestro análisis de la eficiencia:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
@@ -810,8 +810,8 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 
 &lt;ul&gt;
 &lt;li&gt;Mini Curso de LaTeX - Introducción&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34; target=&#34;_blank&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
@@ -986,7 +986,7 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
       <description>&lt;p&gt;&lt;figure&gt;
 &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;600px&#34; height=&#34;520px&#34; /&gt;
 &lt;/figure&gt;
-&lt;em&gt;Créditos de la imagen &lt;a href=&#34;https://en.wikipedia.org/wiki/File:Knapsack.svg&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;em&gt;Créditos de la imagen &lt;a href=&#34;https://en.wikipedia.org/wiki/File:Knapsack.svg&#34;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Este artículo se basa en las prácticas que he hecho para una asignatura llamada &lt;em&gt;Algorítmica&lt;/em&gt;. Dichas prácticas consistían en realizar el problema de la Mochila usando las técnicas algorítmicas que veíamos en la asignatura.&lt;/p&gt;
 

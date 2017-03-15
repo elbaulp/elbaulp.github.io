@@ -18,7 +18,7 @@
   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Bloquear-ataques-de-fuerza-bruta-en-Nginx-y-Wordpress-con-Fail2Ban2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;600px&#34; height=&#34;600px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada &lt;strong&gt;&lt;em&gt;Fail2Ban&lt;/em&gt;&lt;/strong&gt;, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar &lt;strong&gt;Fail2Ban&lt;/strong&gt; para bloquear el acceso a nuestra máquina a robots atacando por &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/&#34; title=&#34;Bloquear una IP atacando el servidor mediante iptables&#34; target=&#34;_blank&#34;&gt;fuerza bruta&lt;/a&gt; a &lt;em&gt;WordPress&lt;/em&gt; y al servidor web &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34; target=&#34;_blank&#34;&gt;Nginx&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada &lt;strong&gt;&lt;em&gt;Fail2Ban&lt;/em&gt;&lt;/strong&gt;, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar &lt;strong&gt;Fail2Ban&lt;/strong&gt; para bloquear el acceso a nuestra máquina a robots atacando por &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/&#34; title=&#34;Bloquear una IP atacando el servidor mediante iptables&#34;&gt;fuerza bruta&lt;/a&gt; a &lt;em&gt;WordPress&lt;/em&gt; y al servidor web &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;Nginx&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -206,7 +206,7 @@
         &lt;figcaption&gt;Combatir los comentarios de spam en Wordpress&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34; target=&#34;_blank&#34;&gt;bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.&lt;/p&gt;
+&lt;p&gt;Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -214,7 +214,7 @@
 
 &lt;h1 id=&#34;recopilar-las-direcciones-ips-de-los-spammers&#34;&gt;Recopilar las direcciones IPs de los spammers&lt;/h1&gt;
 
-&lt;p&gt;Esto es algo trivial, WordPress siempre muestra la IP desde la que se realiza el comentario. Sin embargo recopilar la dirección de 200 comentarios puede ser una tarea ardua. Será más sencillo extraer esta información de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con una consulta &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34; title=&#34;Consulta de Datos – Cláusula Select&#34; target=&#34;_blank&#34;&gt;SELECT&lt;/a&gt;. La tabla en la que nos interesa realizar la consulta es &lt;strong&gt;wp_comments&lt;/strong&gt;, y el único campo que deseamos extraer es la dirección IP (Columna &lt;strong&gt;comment_author_IP&lt;/strong&gt; de la tabla anterior). Para evitar que se repitan la direcciones IPs usaremos la opción &lt;strong&gt;DISTINC&lt;/strong&gt;. Seleccionaremos únicamente los comentarios que estén marcados como spam, lo cual corresponde a que el campo &lt;strong&gt;comment_approved&lt;/strong&gt; tenga el valor &amp;#8220;&lt;strong&gt;spam&lt;/strong&gt;&amp;#8220;. La consulta quedará así:&lt;/p&gt;
+&lt;p&gt;Esto es algo trivial, WordPress siempre muestra la IP desde la que se realiza el comentario. Sin embargo recopilar la dirección de 200 comentarios puede ser una tarea ardua. Será más sencillo extraer esta información de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;base de datos&lt;/a&gt; con una consulta &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34; title=&#34;Consulta de Datos – Cláusula Select&#34;&gt;SELECT&lt;/a&gt;. La tabla en la que nos interesa realizar la consulta es &lt;strong&gt;wp_comments&lt;/strong&gt;, y el único campo que deseamos extraer es la dirección IP (Columna &lt;strong&gt;comment_author_IP&lt;/strong&gt; de la tabla anterior). Para evitar que se repitan la direcciones IPs usaremos la opción &lt;strong&gt;DISTINC&lt;/strong&gt;. Seleccionaremos únicamente los comentarios que estén marcados como spam, lo cual corresponde a que el campo &lt;strong&gt;comment_approved&lt;/strong&gt; tenga el valor &amp;#8220;&lt;strong&gt;spam&lt;/strong&gt;&amp;#8220;. La consulta quedará así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt;  &lt;span class=&#34;ss&#34;&gt;`comment_author_IP`&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;  &lt;span class=&#34;ss&#34;&gt;`wp_comments`&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt;  &lt;span class=&#34;ss&#34;&gt;`comment_approved`&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;spam&amp;#39;&lt;/span&gt;
@@ -231,7 +231,7 @@ z.z.z.z
 
 &lt;h1 id=&#34;bloquear-el-spam&#34;&gt;Bloquear el spam&lt;/h1&gt;
 
-&lt;p&gt;Una vez tenemos el archivo con las IPs de los spammers, procedemos bloquearlos mediante &lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;, de tal forma que no lograrán ni acceder al sitio web, ya que Iptables les denegará el acceso. Usaremos el siguiente &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Scripts del blog&#34; target=&#34;_blank&#34;&gt;script&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Una vez tenemos el archivo con las IPs de los spammers, procedemos bloquearlos mediante &lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34;&gt;iptables&lt;/a&gt;, de tal forma que no lograrán ni acceder al sitio web, ya que Iptables les denegará el acceso. Usaremos el siguiente &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Scripts del blog&#34;&gt;script&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;inet_if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;eth0
@@ -306,7 +306,7 @@ LOG        all  --  X.X.X.X        anywhere            LOG level warning prefix 
 
 &lt;h1 id=&#34;generar-las-claves-públicas-y-privadas&#34;&gt;Generar las claves públicas y privadas&lt;/h1&gt;
 
-&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; target=&#34;_blank&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
+&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ openssl genrsa -out clave.pem 4096
 $ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -373,7 +373,7 @@ $ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -o
 
 &lt;h1 id=&#34;script-para-descifrar-varios-archivos-de-una-vez&#34;&gt;Script para descifrar varios archivos de una vez&lt;/h1&gt;
 
-&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34; target=&#34;_blank&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
+&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
@@ -414,7 +414,7 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
-      <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; target=&#34;_blank&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
+      <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
 
 &lt;h1 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h1&gt;
 
@@ -539,8 +539,8 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 
 &lt;ul&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
@@ -569,7 +569,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 
 &lt;h1 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h1&gt;
 
-&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
+&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
 
 &lt;p&gt;La base de datos del sistema DNS tiene tres niveles. Al primer grupo de servidores se les llama “&lt;strong&gt;servidores root&lt;/strong&gt;”. Al segundo, “&lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt;” o dominios de primer nivel. Cuando se necesita conocer la dirección de una web, el segundo componente de &lt;strong&gt;BIND&lt;/strong&gt; (resolver library) realiza una petición, (De aquí en adelante lo llamaremos &lt;em&gt;resolver&lt;/em&gt;).&lt;/p&gt;
 
@@ -690,9 +690,9 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:&lt;/p&gt;
@@ -817,8 +817,8 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
 &lt;/figure&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34; target=&#34;_blank&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -997,7 +997,7 @@ root: direccion@correo.com
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nginx -V
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;De no tenerlo, hay que volver a &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34; target=&#34;_blank&#34;&gt;compilar nginx&lt;/a&gt; con éste módulo activo.&lt;/p&gt;
+&lt;p&gt;De no tenerlo, hay que volver a &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;compilar nginx&lt;/a&gt; con éste módulo activo.&lt;/p&gt;
 
 &lt;h3 id=&#34;habilitar-la-página-de-estado-en-nginx&#34;&gt;Habilitar la página de estado en nginx&lt;/h3&gt;
 
@@ -1100,7 +1100,7 @@ $ sudo chown root:root /etc/init.d/nginx
 
 &lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
 
-&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34; target=&#34;_blank&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
+&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# update-rc.d nginx defaults&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -1200,7 +1200,7 @@ $ sudo service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt
 deb-src http://packages.dotdeb.org stable all
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34; target=&#34;_blank&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
+&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
@@ -1317,9 +1317,9 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/dns-300x240.jpg&#34; alt=&#34;Cómo ocultar la versión de BIND (Y como averiguarla)&#34; width=&#34;300px&#34; height=&#34;240px&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Realizando un análisis en &lt;em&gt;&lt;a href=&#34;http://www.dnsinspect.com&#34; target=&#34;_blank&#34;&gt;dnsInspect&lt;/a&gt;&lt;/em&gt; me dí cuenta de que el servidor estaba mostrando la versión de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; target=&#34;_blank&#34;&gt;BIND&lt;/a&gt;, lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.&lt;/p&gt;
+&lt;p&gt;Realizando un análisis en &lt;em&gt;&lt;a href=&#34;http://www.dnsinspect.com&#34; target=&#34;_blank&#34;&gt;dnsInspect&lt;/a&gt;&lt;/em&gt; me dí cuenta de que el servidor estaba mostrando la versión de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34;&gt;BIND&lt;/a&gt;, lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.&lt;/p&gt;
 
-&lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34; target=&#34;_blank&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
+&lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ dig @example.com -c CH -t txt version.bind &lt;span class=&#34;c1&#34;&gt;# Consultamos la versión para el dominio de la web&lt;/span&gt;
@@ -1368,7 +1368,7 @@ fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34; target=&#34;_blank&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -1471,7 +1471,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 233.34.194.173.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;83265&lt;/span&gt; IN  PTR mad01s09-in-f9.1e100.net.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; target=&#34;_blank&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
@@ -1494,11 +1494,11 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;ul&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hace tiempo se vío en este blog &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34; target=&#34;_blank&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;, en los próximos artículos se intentará explicar de forma más detallada cómo llevar a cabo éste proceso junto con algunas mejoras adicionales en términos de optimización. Es necesario informar al lector que todas las recomendaciones aquí explicadas se basan únicamente en la experiencias del autor.&lt;/p&gt;
+&lt;p&gt;Hace tiempo se vío en este blog &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;, en los próximos artículos se intentará explicar de forma más detallada cómo llevar a cabo éste proceso junto con algunas mejoras adicionales en términos de optimización. Es necesario informar al lector que todas las recomendaciones aquí explicadas se basan únicamente en la experiencias del autor.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -1657,8 +1657,8 @@ service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&
 
 &lt;ul&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1671,9 +1671,9 @@ service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&
       <description>&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.&lt;/p&gt;
@@ -1687,7 +1687,7 @@ service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&
 deb-src http://packages.dotdeb.org stable all
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Es necesario agregar la &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; target=&#34;_blank&#34;&gt;llave GnuPG&lt;/a&gt;, instalamos php5-fpm y lo iniciamos:&lt;/p&gt;
+&lt;p&gt;Es necesario agregar la &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;llave GnuPG&lt;/a&gt;, instalamos php5-fpm y lo iniciamos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
 cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
@@ -1733,9 +1733,9 @@ chown www-data:www-data /usr/local/nginx/html/index.php
 &lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     
@@ -1748,8 +1748,8 @@ chown www-data:www-data /usr/local/nginx/html/index.php
       <description>&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2022,7 +2022,7 @@ apc.localcache &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;
 apc.localcache.size &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;384&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/&#34; title=&#34;Solucionar fallo de segmentación en PHP cuando se usa APC&#34; target=&#34;_blank&#34;&gt;APC&lt;/a&gt; proporciona una mejora considerable en cuanto al rendimiento, ya que no es necesario volver a interpretar el código PHP cada vez que el servidor recibe una petición, el código quedará compilado en cache listo para ser servido. Uno de los parámetros más importantes es &lt;em&gt;apc.shm_size=&lt;/em&gt;, el cual establece el tamaño reservado para la caché.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/&#34; title=&#34;Solucionar fallo de segmentación en PHP cuando se usa APC&#34;&gt;APC&lt;/a&gt; proporciona una mejora considerable en cuanto al rendimiento, ya que no es necesario volver a interpretar el código PHP cada vez que el servidor recibe una petición, el código quedará compilado en cache listo para ser servido. Uno de los parámetros más importantes es &lt;em&gt;apc.shm_size=&lt;/em&gt;, el cual establece el tamaño reservado para la caché.&lt;/p&gt;
 
 &lt;h2 id=&#34;consideraciones-sobre-seguridad&#34;&gt;Consideraciones sobre seguridad&lt;/h2&gt;
 
@@ -2069,8 +2069,8 @@ apc.localcache.size &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=
 &lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34; target=&#34;_blank&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>

@@ -24,7 +24,7 @@
 
 &lt;h3 id=&#34;cambiar-las-dns-del-dominio-para-que-apunte-a-nuestro-hosting-con-wordpress&#34;&gt;Cambiar las DNS del dominio para que apunte a nuestro hosting con wordpress&lt;/h3&gt;
 
-&lt;p&gt;En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son &lt;em&gt;&lt;strong&gt;ns100.ovh.net&lt;/strong&gt;&lt;/em&gt; y &lt;strong&gt;&lt;em&gt;dns100.ovh.net. &lt;/em&gt;&lt;/strong&gt;Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace &lt;a href=&#34;https://www.google.com/nombredetudominio&#34; target=&#34;_blank&#34;&gt;https://www.google.com/nombredetudominio&lt;/a&gt;. Una vez dentro del panel de control nos dirigimos a &lt;em&gt;Domain settings&lt;/em&gt;&lt;em&gt;→Domain Names&lt;/em&gt;&lt;em&gt;→Avanced DNS settings. &lt;/em&gt;Nos logeamos en la consola y editamos la sección &lt;em&gt;DNS Information &lt;/em&gt;para que quede parecido a esto:&lt;/p&gt;
+&lt;p&gt;En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son &lt;em&gt;&lt;strong&gt;ns100.ovh.net&lt;/strong&gt;&lt;/em&gt; y &lt;strong&gt;&lt;em&gt;dns100.ovh.net. &lt;/em&gt;&lt;/strong&gt;Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace &lt;a href=&#34;https://www.google.com/nombredetudominio&#34;&gt;https://www.google.com/nombredetudominio&lt;/a&gt;. Una vez dentro del panel de control nos dirigimos a &lt;em&gt;Domain settings&lt;/em&gt;&lt;em&gt;→Domain Names&lt;/em&gt;&lt;em&gt;→Avanced DNS settings. &lt;/em&gt;Nos logeamos en la consola y editamos la sección &lt;em&gt;DNS Information &lt;/em&gt;para que quede parecido a esto:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;DNS settings blogger to wordpress&#34; src=&#34;https://elbauldelprogramador.com/img/2012/04/Screenshot-04042012-055625-PM1.png&#34; alt=&#34;&#34; width=&#34;613px&#34; height=&#34;98px&#34;&gt;&lt;/amp-img&gt;
@@ -47,7 +47,7 @@
 
 &lt;h3 id=&#34;feedburner&#34;&gt;FeedBurner&lt;/h3&gt;
 
-&lt;p&gt;No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por &lt;em&gt;elbauldelprogramador.org/&lt;/em&gt; feed en mi caso. Hecho esto, instalamos &lt;a href=&#34;http://flagrantdisregard.com/feedburner/&#34; target=&#34;_blank&#34;&gt;FD FeedBurner&lt;/a&gt; y en la configuración del plugin escribimos la dirección de feedburner &lt;em&gt;&lt;a href=&#34;http://feeds.feedburner.com/elBauldelProgramador&#34; target=&#34;_blank&#34;&gt;http://feeds.feedburner.com/elBauldelProgramador&lt;/a&gt;.&lt;/em&gt; A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.&lt;/p&gt;
+&lt;p&gt;No podemos olvidarnos de nuestros suscriptores de RSS y correo. El primer paso es dirigirnos a la configuración de feedburner y en la url del feed sustituir la de blogger por &lt;em&gt;elbauldelprogramador.org/&lt;/em&gt; feed en mi caso. Hecho esto, instalamos &lt;a href=&#34;http://flagrantdisregard.com/feedburner/&#34; target=&#34;_blank&#34;&gt;FD FeedBurner&lt;/a&gt; y en la configuración del plugin escribimos la dirección de feedburner &lt;em&gt;&lt;a href=&#34;http://feeds.feedburner.com/elBauldelProgramador&#34;&gt;http://feeds.feedburner.com/elBauldelProgramador&lt;/a&gt;.&lt;/em&gt; A partir de ahora el RSS de nuestro feed wordpress redireccionará a feedburner y mantendremos a todos nuestros suscriptores.&lt;/p&gt;
 
 &lt;h2 id=&#34;seguridad&#34;&gt;Seguridad&lt;/h2&gt;
 
@@ -55,7 +55,7 @@
 
 &lt;h3 id=&#34;askapache-password-protect&#34;&gt;AskApache Password Protect&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://wordpress.org/extend/plugins/askapache-password-protect/&#34; target=&#34;_blank&#34;&gt;AskApache Password Protect&lt;/a&gt; realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un &lt;em&gt;.htaccess&lt;/em&gt;. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un &lt;em&gt;.htaccess&lt;/em&gt; en la raiz de la instalación de WordPress y otro dentro de &lt;em&gt;wp-admin&lt;/em&gt;. Simplemente buscamos la regla, y la eliminamos.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://wordpress.org/extend/plugins/askapache-password-protect/&#34;&gt;AskApache Password Protect&lt;/a&gt; realiza un escaner para comprobar las capacidades del servidor que proporciona nuestro hosting y proporciona módulos que podemos activar/desactivar para generar un &lt;em&gt;.htaccess&lt;/em&gt;. Si activais un módulo que sea demasiado restrictivo y no podéis acceder al blog, no os preocupéis, como el autor del plugin dice, solo se crean dos archivos, un &lt;em&gt;.htaccess&lt;/em&gt; en la raiz de la instalación de WordPress y otro dentro de &lt;em&gt;wp-admin&lt;/em&gt;. Simplemente buscamos la regla, y la eliminamos.&lt;/p&gt;
 
 &lt;h3 id=&#34;login-lock-down&#34;&gt;Login Lock-Down&lt;/h3&gt;
 
@@ -501,7 +501,7 @@ RewriteRule . /index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span c
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/enlaces-de-la-semana-i-2/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg&#34; target=&#34;_blank&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Chain Links&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;225px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/contruyendo-links-de-afiliados-fuertes1.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Chain Links&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/contruyendo-links-de-afiliados-fuertes1-300x225.jpg&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;225px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A partir de esta semana voy a tomarme en serio esta sección y publicaré semanalmente una recopilación de enlaces que leo y me parecen interesante compartirlos con vosotros.&lt;/p&gt;
 

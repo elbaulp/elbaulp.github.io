@@ -65,7 +65,7 @@ PL/SQL se puede representar como sigue:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cadena_caracteres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h1 id=&#34;siguiente-tema-pl-sql-declaración-de-variables-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34; target=&#34;_blank&#34;&gt;PL/SQL - Declaración de variables&lt;/a&gt;&lt;/h1&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-declaración-de-variables-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;PL/SQL - Declaración de variables&lt;/a&gt;&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -795,7 +795,7 @@ PL/SQL se puede representar como sigue:&lt;/p&gt;
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/conectar-base-de-datos-oracle/</guid>
-      <description>&lt;p&gt;Hace bastante tiempo, publiqué una entrada sobre cómo &lt;a href=&#34;https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008&#34; target=&#34;_blank&#34;&gt;Conectar base de datos sql Server 2008 a aplicación Java remotamente&lt;/a&gt;, aunque tiene mucho tiempo, sigue siendo la entrada más visitada y más comentada del blog. Debido a ello, hace poco un lector contactó conmigo comunicándome que disponía de una implementación del código de conexión, pero en lugar de ser sobre sql server 2008, era para ORACLE. Desde ya darle las gracias a Edwin por colaborar (Al que podéis seguir en &lt;a href=&#34;https://plus.google.com/u/0/b/108003822606696308728/110549682438236698342/posts&#34; target=&#34;_blank&#34;&gt;G+&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/muymuynica&#34; target=&#34;_blank&#34;&gt;twitter&lt;/a&gt;) y a continuación os dejo la implementación junto con la explicación de cómo hacerlo:&lt;/p&gt;
+      <description>&lt;p&gt;Hace bastante tiempo, publiqué una entrada sobre cómo &lt;a href=&#34;https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008&#34;&gt;Conectar base de datos sql Server 2008 a aplicación Java remotamente&lt;/a&gt;, aunque tiene mucho tiempo, sigue siendo la entrada más visitada y más comentada del blog. Debido a ello, hace poco un lector contactó conmigo comunicándome que disponía de una implementación del código de conexión, pero en lugar de ser sobre sql server 2008, era para ORACLE. Desde ya darle las gracias a Edwin por colaborar (Al que podéis seguir en &lt;a href=&#34;https://plus.google.com/u/0/b/108003822606696308728/110549682438236698342/posts&#34; target=&#34;_blank&#34;&gt;G+&lt;/a&gt; y &lt;a href=&#34;https://twitter.com/muymuynica&#34;&gt;twitter&lt;/a&gt;) y a continuación os dejo la implementación junto con la explicación de cómo hacerlo:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -824,7 +824,7 @@ A continuación les detallo puntualmente la implementación de la clase:&lt;/p&g
 &lt;li&gt;Agregar al buildpath la librería ojdbc14.jar. La cual pueden bajar del siguiente enlace:&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html&#34; target=&#34;_blank&#34;&gt;http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html&#34;&gt;http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Clase de conexión:&lt;/li&gt;
@@ -895,7 +895,7 @@ A continuación les detallo puntualmente la implementación de la clase:&lt;/p&g
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Tenéis el código disponible en &lt;a href=&#34;http://pastebin.com/embed_js.php?i=zU4sfhzv&#34; target=&#34;_blank&#34;&gt;PasteBin&lt;/a&gt; también.&lt;/p&gt;</description>
+&lt;p&gt;Tenéis el código disponible en &lt;a href=&#34;http://pastebin.com/embed_js.php?i=zU4sfhzv&#34;&gt;PasteBin&lt;/a&gt; también.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -912,11 +912,11 @@ A continuación les detallo puntualmente la implementación de la clase:&lt;/p&g
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Lo primero que hay que hacer es intalar SQL server 2008 y configurarlo para que se pueda acceder de dos formas (con autentificación windows y con autentificación SQl server), esto se pregunta durante la instalación de SQL server, posteriormente hay que crear un usuario SQL server, &lt;a href=&#34;http://kbase.gfi.com/showarticle.asp?id=KBID002804&#34; target=&#34;_blank&#34;&gt;aqui se explica como hacerlo&lt;/a&gt;. Tambien debemos permitir &lt;a href=&#34;http://www.blogdemegastar.com/2010/09/pasos-para-configurar-sql-server-2008.html&#34; target=&#34;_blank&#34;&gt;conexiones remotas.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lo primero que hay que hacer es intalar SQL server 2008 y configurarlo para que se pueda acceder de dos formas (con autentificación windows y con autentificación SQl server), esto se pregunta durante la instalación de SQL server, posteriormente hay que crear un usuario SQL server, &lt;a href=&#34;http://kbase.gfi.com/showarticle.asp?id=KBID002804&#34;&gt;aqui se explica como hacerlo&lt;/a&gt;. Tambien debemos permitir &lt;a href=&#34;http://www.blogdemegastar.com/2010/09/pasos-para-configurar-sql-server-2008.html&#34;&gt;conexiones remotas.&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Ahora vamos al código, (que he sacado de un ejemplo de la web de &lt;a href=&#34;http://support.microsoft.com/kb/313100&#34; target=&#34;_blank&#34;&gt;microsoft&lt;/a&gt;), al cual solo he añadido una consulta a una tabla de mi base de datos.&lt;/p&gt;
+&lt;p&gt;Ahora vamos al código, (que he sacado de un ejemplo de la web de &lt;a href=&#34;http://support.microsoft.com/kb/313100&#34;&gt;microsoft&lt;/a&gt;), al cual solo he añadido una consulta a una tabla de mi base de datos.&lt;/p&gt;
 
-&lt;p&gt;Ahora vamos a crear un proyecto, yo lo he creado en ecplise, es necesario agregarle las librerías JDBC para que hagan de puente entre la aplicación y la base de datos. En ecplise se añaden en las propiedades del proyecto/JAva Build Path/Libraries, estas librerías podeis descargarlas de &lt;a href=&#34;http://www.akadia.com/download/documents/sqlsrv_jdbc.tar.gz&#34; target=&#34;_blank&#34;&gt;aqui&lt;/a&gt;, si no lo hacéis en ecplise, en este &lt;a href=&#34;http://www.akadia.com/services/sqlsrv_jdbc.html&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt; se ve como configurarlo&lt;/p&gt;
+&lt;p&gt;Ahora vamos a crear un proyecto, yo lo he creado en ecplise, es necesario agregarle las librerías JDBC para que hagan de puente entre la aplicación y la base de datos. En ecplise se añaden en las propiedades del proyecto/JAva Build Path/Libraries, estas librerías podeis descargarlas de &lt;a href=&#34;http://www.akadia.com/download/documents/sqlsrv_jdbc.tar.gz&#34;&gt;aqui&lt;/a&gt;, si no lo hacéis en ecplise, en este &lt;a href=&#34;http://www.akadia.com/services/sqlsrv_jdbc.html&#34;&gt;enlace&lt;/a&gt; se ve como configurarlo&lt;/p&gt;
 
 &lt;p&gt;También puedes ver cómo &lt;a href=&#34;https://elbauldelprogramador.com/conectar-base-de-datos-oracle/&#34;&gt;Conectar una base de datos ORACLE a aplicación Java remotamente&lt;/a&gt;&lt;/p&gt;
 
@@ -1146,7 +1146,7 @@ nombre.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;FULL&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OUTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;JOIN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FACTURAS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCodCli&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCodCli&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-where-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Cláusula WHERE&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-where-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34;&gt;Consulta de Datos - Cláusula WHERE&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1210,7 +1210,7 @@ nombre.&lt;/p&gt;
 &lt;li&gt;STDEV | STDEVP | VAR | VARP. Desviación típica y Varianza.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1250,7 +1250,7 @@ nombre.&lt;/p&gt;
 
 &lt;p&gt;Los valores nulos se consideran como los más pequeños posibles.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-operadores-union-all-intersect-minus-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-operadores-union-all-intersect-minus-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/&#34;&gt;Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1263,7 +1263,7 @@ nombre.&lt;/p&gt;
 
 &lt;h1 id=&#34;consulta-de-datos-cláusula-select&#34;&gt;Consulta de Datos - Cláusula Select&lt;/h1&gt;
 
-&lt;p&gt;La instrucción &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34; target=&#34;_blank&#34;&gt;DML&lt;/a&gt; más utilizada es la de consulta de datos SELECT. Su función
+&lt;p&gt;La instrucción &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;DML&lt;/a&gt; más utilizada es la de consulta de datos SELECT. Su función
 principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia es capaz de realizar las siguientes funciones:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
@@ -1289,9 +1289,9 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;ul&gt;
 &lt;li&gt;Cláusula SELECT&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34; target=&#34;_blank&#34;&gt;Cláusula FROM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34; target=&#34;_blank&#34;&gt;Cláusula WHERE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/&#34; target=&#34;_blank&#34;&gt;Cláusula GROUP BY&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34;&gt;Cláusula FROM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34;&gt;Cláusula WHERE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/&#34;&gt;Cláusula GROUP BY&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Cláusula HAVING&lt;/li&gt;
 &lt;li&gt;Cláusula ORDER BY&lt;/li&gt;
 &lt;/ul&gt;
@@ -1346,7 +1346,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;El renombrado de columnas y/o expresiones puede ser usado en la cláusula ORDER BY; pero sin embargo no se puede usar en las cláusulas WHERE, GROUP BY, o HAVING.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-from-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Cláusula FROM&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-from-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-from/&#34;&gt;Consulta de Datos - Cláusula FROM&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1512,7 +1512,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-subconsultas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-subconsultas/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Subconsultas.&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-subconsultas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-subconsultas/&#34;&gt;Consulta de Datos - Subconsultas.&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1523,7 +1523,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
       <guid>https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/</guid>
       <description>
 
-&lt;p&gt;Ya hemos acabado el tema de &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;consulta de datos&lt;/a&gt; en sql, lo siguiente que veremos ya será &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34; target=&#34;_blank&#34;&gt;PL/SQL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ya hemos acabado el tema de &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;consulta de datos&lt;/a&gt; en sql, lo siguiente que veremos ya será &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34;&gt;PL/SQL&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Dejo un Pdf con un resumen y algunos ejemplos de funciones en ORACLE que podéis descargar clicando en el botón.&lt;/p&gt;
 
@@ -1531,7 +1531,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
   &lt;a href=&#34;https://elbauldelprogramador.com/pdfs/SOLOTABLAS.pdf&#34; target=&#34;_blank&#34;&gt;Descargar Resumen de Tablas SQL&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-introducción-a-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34; target=&#34;_blank&#34;&gt;Introducción a PL/SQL&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;siguiente-tema-introducción-a-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34;&gt;Introducción a PL/SQL&lt;/a&gt;&lt;/h2&gt;
 </description>
     </item>
     
@@ -1573,7 +1573,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;El predicado &lt;code&gt;EXISTS&lt;/code&gt; se utiliza en comparaciones de verdad/falso para determinar si la subconsulta devuelve algún registro.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/&#34; target=&#34;_blank&#34;&gt;Consulta de Datos - Tablas Resumen operadores y Funciones Oracle&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/&#34;&gt;Consulta de Datos - Tablas Resumen operadores y Funciones Oracle&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1733,7 +1733,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;577&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TOEf64pXGdI/AAAAAAAAAE0/eersZkN7Aj4/s800/m.rf2.png&#34; width=&#34;800&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&#34;siguiente-tema-diseño-de-bases-de-datos-ii-restricciones-1&#34;&gt;Siguiente tema:&lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/&#34; target=&#34;_blank&#34;&gt;Diseño de Bases de Datos ( II ) - Restricciones&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-diseño-de-bases-de-datos-ii-restricciones-1&#34;&gt;Siguiente tema:&lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-ii/&#34;&gt;Diseño de Bases de Datos ( II ) - Restricciones&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -1809,7 +1809,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;li&gt;&lt;strong&gt;Disparadores&lt;/strong&gt; &lt;em&gt;(TRIGGERS)&lt;/em&gt;, a veces puede interesar espeficar una acción distinta del rechazo cuando no se cumple una determinada restricción semántica. En este caso, se recurre al uso de disparadores o triggers que nos permiten además de indicar una condición, especificar la acción que queremos que se lleve a cabo si la condición se hace verdadera. Los disparadores pueden interpretarse como reglas del tipo evento-condición-acción (ECA) que pueden interpretarse como reglas que especifican que cuando se produce un evento, si se cumple una condición, entonces se realiza una determinada acción.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;siguiente-tema-introducción-sql-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-sql-sql-introduction/&#34; target=&#34;_blank&#34;&gt;Introducción SQL&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h2 id=&#34;siguiente-tema-introducción-sql-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-sql-sql-introduction/&#34;&gt;Introducción SQL&lt;/a&gt;&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -1837,9 +1837,9 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;p&gt;Con PL/SQL vamos a poder programar las unidades de programa de la base de datos &lt;code&gt;ORACLE&lt;/code&gt;, estas son:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;Procedimientos almacenados&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34; target=&#34;_blank&#34;&gt;Funciones&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-disparadores-o-triggers/&#34; target=&#34;_blank&#34;&gt;Trigger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;Procedimientos almacenados&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;Funciones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/plsql-disparadores-o-triggers/&#34;&gt;Trigger&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Scripts&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1890,7 +1890,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;siguiente-tema-bloques-pl-sql-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34; target=&#34;_blank&#34;&gt;Bloques PL/SQL&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-bloques-pl-sql-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;Bloques PL/SQL&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
   </channel>

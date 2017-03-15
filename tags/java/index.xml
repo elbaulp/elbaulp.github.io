@@ -14,17 +14,17 @@
       <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
       
       <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
-      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
+      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2-descomprime-y-crea-un-directorio-donde-construirlo&#34;&gt;[1]. Descarga OpenCV 3.2, descomprime y crea un directorio donde construirlo&lt;/h1&gt;
 
-&lt;p&gt;Siguiendo los pasos de &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;mi último post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Siguiendo los pasos de &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;mi último post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;2-descarga-y-descomprime-la-parte-no-gratuita&#34;&gt;[2]. Descarga y descomprime la parte no gratuita&lt;/h1&gt;
 
-&lt;p&gt;La parte no gratuita la separaron de la gratuita en OpenCV3+, por lo que necesitas descargarla aparte desde &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34; target=&#34;_blank&#34;&gt;el repo github de opencv&lt;/a&gt;  o clonar el repositorio. Después extrae &lt;strong&gt;opencv_contrib&lt;/strong&gt; y ponla dentro de tu carpeta opencv :&lt;/p&gt;
+&lt;p&gt;La parte no gratuita la separaron de la gratuita en OpenCV3+, por lo que necesitas descargarla aparte desde &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34;&gt;el repo github de opencv&lt;/a&gt;  o clonar el repositorio. Después extrae &lt;strong&gt;opencv_contrib&lt;/strong&gt; y ponla dentro de tu carpeta opencv :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~ $ cp Downloads/opencv-contrib opencv-3.2.0/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -119,7 +119,7 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;h1 id=&#34;prerequisitos&#34;&gt;Prerequisitos&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34; target=&#34;_blank&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
+&lt;li&gt;Java JDK 7+: necesitamos un JDK para construir el Java &lt;em&gt;binding&lt;/em&gt;, así que si no lo tienes instalado puedes hacerlo desde &lt;a href=&#34;http://www.oracle.com/technetwork/java/javase/downloads/index.html&#34; title=&#34;www.oracle.com&#34;&gt;oracle web page&lt;/a&gt;. Puedes comprobar tu versión de JDK ejecutando: &lt;code&gt;java -version&lt;/code&gt;  en un terminal.&lt;/li&gt;
 &lt;li&gt;Apache Ant: teclea &lt;code&gt;ant -version&lt;/code&gt; para comprobar que tienes Apache Ant instalado. Si no lo tienes, instálalo tecleando &lt;code&gt;sudo apt-get install ant&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Python 2.6+: teclea &lt;code&gt;python --version&lt;/code&gt; en la terminal para comprobar si tienes python instalado y en que versión.&lt;/li&gt;
 &lt;/ul&gt;
@@ -128,7 +128,7 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2&#34;&gt;1. Descarga OpenCV 3.2&lt;/h1&gt;
 
-&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
+&lt;p&gt;Ve a &lt;a href=&#34;http://opencv.org/&#34; title=&#34;opencv.org&#34;&gt;opencv documentation&lt;/a&gt; y descarga la última versión estable para Linux/Mac.&lt;/p&gt;
 
 &lt;h1 id=&#34;2-descomprime-donde-quieras-instalar-y-crea-un-directorio-en-el-que-construir&#34;&gt;2. Descomprime donde quieras instalar y crea un directorio en el que construir&lt;/h1&gt;
 
@@ -188,7 +188,7 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;figcaption&gt;añadiendo .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34; target=&#34;_blank&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
+&lt;p&gt;Finalmente, tomamos el ejemplo de detección de caras de &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , lo corregimos (dado que es para la versión 2.4.4 de OpenCV) y lo guardamos en un fichero llamado &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; dentro de la carpeta &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt;.  El código de ejemplo adaptado a la versión 3.2 de OpenCV es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.Mat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.opencv.core.MatOfRect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -355,7 +355,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 &lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java06&#34; target=&#34;_blank&#34;&gt;Descárgala&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34; target=&#34;_blank&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34; target=&#34;_blank&#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

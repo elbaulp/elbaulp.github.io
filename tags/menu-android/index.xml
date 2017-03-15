@@ -83,7 +83,7 @@
 
 &lt;p&gt;Como vemos, al crear el arrayAdapter, tenemos que pasar tres parámetros, el contexto, un layout que se usará para dibujar cada item (en este caso &lt;strong&gt;&lt;em&gt;simple_list_item_1&lt;/em&gt;&lt;/strong&gt;, que ya viene definido por android), más adelante veremos como crear los nuestros propios, y como tercer parámetro la colección de datos.&lt;/p&gt;
 
-&lt;p&gt;Aprovechando que en la anterior &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34; target=&#34;_blank&#34;&gt;entrada hablamos de los eventos&lt;/a&gt;, voy a explicar como fijar un evento onclick para cada elemento de la lista.&lt;/p&gt;
+&lt;p&gt;Aprovechando que en la anterior &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;entrada hablamos de los eventos&lt;/a&gt;, voy a explicar como fijar un evento onclick para cada elemento de la lista.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Evento que se disparará al pulsar en un elemento de la lista&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;lv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnItemClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnItemClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
@@ -167,7 +167,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/-gB_egWAdpUc/TgojWE4FONI/AAAAAAAAAqo/fhfy9j6sQeE/s800/listaVacia.png&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-ii-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Adapters II&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-ii-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34;&gt;Programación Android: Interfaz gráfica - Adapters II&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -176,7 +176,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/</guid>
-      <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;, se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.&lt;/p&gt;
+      <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;, se vio como crear y usar adaptadores simples para nuestras aplicaciones. Ahora vamos a ver como crear los nuestros propios.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -354,7 +354,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Adaptadores en Android&#34; alt=&#34;Adaptadores en Android&#34;  height=&#34;800&#34; width=&#34;420&#34; src=&#34;https://3.bp.blogspot.com/-A6gb57w_xX4/Tg4D4i8sSVI/AAAAAAAAAqw/hvsbzYlBpPQ/s800/adaptadores2.png&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-menús-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Menús&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-menús-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_08/&#34;&gt;Programación Android: Interfaz gráfica - Menús&lt;/a&gt;&lt;/h4&gt;</description>
     </item>
     
     <item>
@@ -363,7 +363,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica/&#34; target=&#34;_blank&#34;&gt;Ya hemos visto&lt;/a&gt; que todos los componentes visuales descienden del objeto View, que proporciona una interfaz para que podemos interactuar con ellos.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica/&#34;&gt;Ya hemos visto&lt;/a&gt; que todos los componentes visuales descienden del objeto View, que proporciona una interfaz para que podemos interactuar con ellos.&lt;/p&gt;
 
 &lt;p&gt;Para que nuestras aplicaciones sean funcionales, necesitamos responder a los eventos que el usuario dispare al interactuar con nuestro programa, en Android, esto se consigue mediante los &lt;strong&gt;&lt;em&gt;Listeners&lt;/em&gt;&lt;/strong&gt;, que serán llamados cada vez que se produzca un evento.&lt;/p&gt;
 
@@ -371,7 +371,7 @@
 
 &lt;p&gt;Por ejemplo, un listener muy común será &lt;strong&gt;&lt;em&gt;setOnClickListener()&lt;/em&gt;&lt;/strong&gt;, que responderá cada vez que se pulse sobre la vista a la que se lo aplicamos, como un botón, o una imágen. Hay muchos tipos de listener, &lt;strong&gt;&lt;em&gt;setOnKeyListener()&lt;/em&gt;&lt;/strong&gt; (Para eventos de teclado), &lt;strong&gt;&lt;em&gt;setOnItemClicklistener()&lt;/em&gt;&lt;/strong&gt; (Para eventos al seleccionar un elemento de una lista) etc etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; target=&#34;_blank&#34;&gt;En los ejemplos mostrados hasta ahora&lt;/a&gt;, solo hemos visto objetos de tipo &lt;strong&gt;TexView&lt;/strong&gt;, vamos a ver unos cuantos más (En cada ejemplo pondré la definición XML del objeto, y su manipulación mediante código):&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34;&gt;En los ejemplos mostrados hasta ahora&lt;/a&gt;, solo hemos visto objetos de tipo &lt;strong&gt;TexView&lt;/strong&gt;, vamos a ver unos cuantos más (En cada ejemplo pondré la definición XML del objeto, y su manipulación mediante código):&lt;/p&gt;
 
 &lt;h3 id=&#34;button&#34;&gt;Button&lt;/h3&gt;
 
@@ -475,7 +475,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-i-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-i-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;/checkbox&gt;&lt;/imageview&gt;&lt;/edittext&gt;&lt;/button&gt;&lt;/p&gt;</description>
     </item>
@@ -502,7 +502,7 @@
 
 &lt;p&gt;Una notificación Toast es un mensaje que se muestra superpuesto en la pantalla. Solo ocupa el espacio necesario para mostrar la alerta, mientras tanto, la actividad que estaba visible puede seguir usándose. Este tipo de notificaciones se muestran durante un periodo de tiempo y desaparecen, no permiten interactuar con ellas. Debido a que un Toast se crea mediante un servicio en segundo plano, puede aparecer aunque la aplicación no esté visible.&lt;/p&gt;
 
-&lt;p&gt;A lo largo de todas las &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34; target=&#34;_blank&#34;&gt;entradas sobre Android&lt;/a&gt;, se ha usado mucho este típo de notificaciones:&lt;/p&gt;
+&lt;p&gt;A lo largo de todas las &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;entradas sobre Android&lt;/a&gt;, se ha usado mucho este típo de notificaciones:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;makeText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;duration&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -650,7 +650,7 @@
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;&lt;/http:&gt;&lt;/p&gt;</description>
     </item>
@@ -761,7 +761,7 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;relativeLayout Android&#34; alt=&#34;relativeLayout Android&#34;  height=&#34;437&#34; width=&#34;326&#34; src=&#34;https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-componentes-gráficos-y-eventos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Componentes gráficos y Eventos&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-componentes-gráficos-y-eventos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;Programación Android: Interfaz gráfica - Componentes gráficos y Eventos&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     
     <item>
@@ -893,11 +893,11 @@
     &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  title=&#34;Context menu Android&#34; alt=&#34;Context menu Android&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s800/contextMenu.png&#34;&gt;&lt;/amp-img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Podéis encontrar más información sobre Menús en la &lt;a href=&#34;http://developer.android.com/guide/topics/ui/menus.html&#34; target=&#34;_blank&#34;&gt;página oficial de Android&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Podéis encontrar más información sobre Menús en la &lt;a href=&#34;http://developer.android.com/guide/topics/ui/menus.html&#34;&gt;página oficial de Android&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Espero que os sirva de ayuda.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-diálogos-y-notificaciones-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Diálogos y notificaciones&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-diálogos-y-notificaciones-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/&#34;&gt;Programación Android: Interfaz gráfica - Diálogos y notificaciones&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     
     <item>
@@ -953,9 +953,9 @@
 
 &lt;h3 id=&#34;context&#34;&gt;Context&lt;/h3&gt;
 
-&lt;p&gt;Si ya has programado algo en Android, o has visto alguno de los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34; target=&#34;_blank&#34;&gt;ejemplos&lt;/a&gt;, probablemente hayas visto que muchos métodos referidos a la vista piden como parámetro un objeto de tipo &lt;strong&gt;&lt;em&gt;context&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Si ya has programado algo en Android, o has visto alguno de los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;ejemplos&lt;/a&gt;, probablemente hayas visto que muchos métodos referidos a la vista piden como parámetro un objeto de tipo &lt;strong&gt;&lt;em&gt;context&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Context es una interfaz para la información global de la aplicación. A través de él podemos acceder a recursos, clases y operaciones, como lanzar &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34; target=&#34;_blank&#34;&gt;actividades&lt;/a&gt;, manejar &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34; target=&#34;_blank&#34;&gt;intents&lt;/a&gt; etc.&lt;/p&gt;
+&lt;p&gt;Context es una interfaz para la información global de la aplicación. A través de él podemos acceder a recursos, clases y operaciones, como lanzar &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;actividades&lt;/a&gt;, manejar &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;intents&lt;/a&gt; etc.&lt;/p&gt;
 
 &lt;p&gt;Podemos acceder al contexto de diferentes formas en función de donde nos encontremos:&lt;/p&gt;
 
@@ -965,7 +965,7 @@
 &lt;li&gt;Usando otros métodos como &lt;strong&gt;&lt;em&gt;getApplicationContext() o getApplication()&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-layouts-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; target=&#34;_blank&#34;&gt;Programación Android: Interfaz gráfica - Layouts&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-layouts-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34;&gt;Programación Android: Interfaz gráfica - Layouts&lt;/a&gt;&lt;/h3&gt;</description>
     </item>
     
   </channel>

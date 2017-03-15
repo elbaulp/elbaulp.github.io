@@ -14,17 +14,17 @@
       <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
       
       <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
-      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
+      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2-descomprime-y-crea-un-directorio-donde-construirlo&#34;&gt;[1]. Descarga OpenCV 3.2, descomprime y crea un directorio donde construirlo&lt;/h1&gt;
 
-&lt;p&gt;Siguiendo los pasos de &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34; target=&#34;_blank&#34;&gt;mi último post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Siguiendo los pasos de &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;mi último post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;2-descarga-y-descomprime-la-parte-no-gratuita&#34;&gt;[2]. Descarga y descomprime la parte no gratuita&lt;/h1&gt;
 
-&lt;p&gt;La parte no gratuita la separaron de la gratuita en OpenCV3+, por lo que necesitas descargarla aparte desde &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34; target=&#34;_blank&#34;&gt;el repo github de opencv&lt;/a&gt;  o clonar el repositorio. Después extrae &lt;strong&gt;opencv_contrib&lt;/strong&gt; y ponla dentro de tu carpeta opencv :&lt;/p&gt;
+&lt;p&gt;La parte no gratuita la separaron de la gratuita en OpenCV3+, por lo que necesitas descargarla aparte desde &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34;&gt;el repo github de opencv&lt;/a&gt;  o clonar el repositorio. Después extrae &lt;strong&gt;opencv_contrib&lt;/strong&gt; y ponla dentro de tu carpeta opencv :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~ $ cp Downloads/opencv-contrib opencv-3.2.0/
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
