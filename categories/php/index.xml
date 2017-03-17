@@ -105,13 +105,13 @@
       <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
 
 &lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt; ?php&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;// Short code&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;function Nombre_de_nuestro_shortcode( $atts, $content = null ) {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   return &amp;#39;Código de nuestro shortcode&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;nombre_de_nuestro_shortcode&amp;#39;, &amp;#39;Nombre_de_nuestro_shortcode&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// Short code&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
@@ -132,15 +132,13 @@
       <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</guid>
       <description>&lt;p&gt;Ya se vió cómo añadir &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/&#34; target=&#34;_blank&#34;&gt;shortcodes simples&lt;/a&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
 
-&lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&amp;nbsp;&lt;strong&gt;functions.php .&amp;nbsp;&lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado *[foo]&amp;nbsp;*que añadirá al artículo el texto&amp;nbsp;&lt;strong&gt;&amp;#8220;Esto es una prueba&amp;#8221;.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&amp;nbsp;&lt;strong&gt;functions.php .&amp;nbsp;&lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado &lt;em&gt;[foo]&lt;/em&gt; que añadirá al artículo el texto&amp;nbsp;&lt;strong&gt;&amp;#8220;Esto es una prueba&amp;#8221;.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;functions-php&#34;&gt;functions.php&lt;/h3&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h1 id=&#34;functions-php&#34;&gt;functions.php&lt;/h1&gt;
 
 &lt;p&gt;Este archivo está en el directorio del tema. Actua como un plugin, y, si existe en el directorio del tema, se carga automáticamente durante la inicialización de WordPress. Los pasos a seguir para crear el shortcode son los siguientes:&lt;/p&gt;
 
-&lt;h4 id=&#34;crea-la-función-en-wordpress&#34;&gt;Crea la función en wordpress&lt;/h4&gt;
+&lt;h2 id=&#34;crea-la-función-en-wordpress&#34;&gt;Crea la función en wordpress&lt;/h2&gt;
 
 &lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
 &lt;!--ad--&gt;&lt;/p&gt;
@@ -153,7 +151,7 @@
 
 &lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 
-&lt;h4 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h4&gt;
+&lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
 
 &lt;p&gt;Edita o crea un artículo y añade el shortcode:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;foo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
@@ -161,7 +159,7 @@
 
 &lt;p&gt;Guárdalo y haz clic en publicar o vista previa.&lt;/p&gt;
 
-&lt;h3 id=&#34;cómo-pasar-parámetros-o-atributos-a-un-shortcode&#34;&gt;Cómo pasar parámetros o atributos a un shortcode&lt;/h3&gt;
+&lt;h1 id=&#34;cómo-pasar-parámetros-o-atributos-a-un-shortcode&#34;&gt;Cómo pasar parámetros o atributos a un shortcode&lt;/h1&gt;
 
 &lt;p&gt;La API del shortcode facilita mucho la tarea para poder añadirle parámetros como estos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;rap&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Nach&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
@@ -194,9 +192,11 @@
 
 &lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
