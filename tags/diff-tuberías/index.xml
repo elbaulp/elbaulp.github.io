@@ -38,9 +38,11 @@
 
 &lt;p&gt;Listo, no es necesario nada más que reemplazar &lt;code&gt;$&lt;/code&gt; por &lt;code&gt;&amp;lt;&lt;/code&gt;, esto realiza una &lt;a href=&#34;http://www.gnu.org/software/bash/manual/bash.html#Process-Substitution&#34; target=&#34;_blank&#34; title=&#34;Manual gnu&#34;&gt;sustitución de procesos&lt;/a&gt; en lugar de sustitución de comandos. El resultado es que ahora &lt;code&gt;diff&lt;/code&gt; tendrá como parámetros descriptores de ficheros (&lt;code&gt;diff /dev/fd/5 /dev/fd/6&lt;/code&gt;) correspondientes a dos &lt;code&gt;pipes&lt;/code&gt; creadas por bash. Cuando &lt;code&gt;diff&lt;/code&gt; abre dichos ficheros, se conecta al lado de lectura de cada &lt;em&gt;pipe&lt;/em&gt; o tubería, mientras que el lado de escritura de cada tubería está conectado al comando &lt;code&gt;readelf&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;Cómo ejecutar diff a la salida de dos comandos | &lt;a href=&#34;http://askubuntu.com/questions/229447/how-do-i-diff-the-output-of-two-commands&#34; title=&#34;How do I diff the output of two commands&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;Cómo ejecutar diff a la salida de dos comandos | &lt;a href=&#34;http://askubuntu.com/questions/229447/how-do-i-diff-the-output-of-two-commands&#34; title=&#34;How do I diff the output of two commands&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
