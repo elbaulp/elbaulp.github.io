@@ -18,7 +18,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;habilitar-el-módulo-httpstubstatusmodule&#34;&gt;Habilitar el módulo HttpStubStatusModule&lt;/h3&gt;
+&lt;h1 id=&#34;habilitar-el-módulo-httpstubstatusmodule&#34;&gt;Habilitar el módulo HttpStubStatusModule&lt;/h1&gt;
 
 &lt;p&gt;Es necesario compilar nginx con éste módulo. Para comprobar si está compilado debe aparecer &lt;code&gt;--with-http_stub_status_module&lt;/code&gt; al ejecutar el comando&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nginx -V
@@ -26,7 +26,7 @@
 
 &lt;p&gt;De no tenerlo, hay que volver a &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;compilar nginx&lt;/a&gt; con éste módulo activo.&lt;/p&gt;
 
-&lt;h3 id=&#34;habilitar-la-página-de-estado-en-nginx&#34;&gt;Habilitar la página de estado en nginx&lt;/h3&gt;
+&lt;h1 id=&#34;habilitar-la-página-de-estado-en-nginx&#34;&gt;Habilitar la página de estado en nginx&lt;/h1&gt;
 
 &lt;p&gt;Hay que editar el fichero &lt;em&gt;nginx.conf&lt;/em&gt;, y añadir en el bloque &lt;strong&gt;&lt;em&gt;server { /*&amp;#8230;*/ }&lt;/em&gt;&lt;/strong&gt; lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;location /nginx_status &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -60,10 +60,12 @@ Reading: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; Writing: &lt;span class=&#
 &lt;li&gt;&lt;em&gt;waiting&lt;/em&gt; &amp;#8212; Conexiones &lt;em&gt;keep-alive&lt;/em&gt;, activas en el momento (Lectura + Escritura)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Enable and see current status page&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt;
-&lt;em&gt;HttpStubStatusModule&lt;/em&gt; »» &lt;a href=&#34;http://wiki.nginx.org/HttpStubStatusModule&#34; target=&#34;_blank&#34;&gt;wiki.nginx.org&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enable and see current status page&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HttpStubStatusModule&lt;/em&gt; »» &lt;a href=&#34;http://wiki.nginx.org/HttpStubStatusModule&#34; target=&#34;_blank&#34;&gt;wiki.nginx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

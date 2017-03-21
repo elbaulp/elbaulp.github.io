@@ -9,14 +9,14 @@
     <atom:link href="https://elbauldelprogramador.com/tags/protocolo-http2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación Web</title>
+      <title>Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación  Web</title>
       <link>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</guid>
       <description>&lt;p&gt;Hacía mucho tiempo que no traducía episodios del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;Security Now!&lt;/a&gt;. Hoy os traigo la traducción del episodio &lt;a href=&#34;http://twit.tv/show/security-now/495&#34;&gt;#495&lt;/a&gt;, donde &lt;em&gt;Steve&lt;/em&gt; describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado &lt;em&gt;Google&lt;/em&gt;. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.&lt;/p&gt;
 
-&lt;h2 id=&#34;qué-hay-mal-en-el-protocolo-actual&#34;&gt;¿Qué hay mal en el protocolo actual?&lt;/h2&gt;
+&lt;h1 id=&#34;qué-hay-mal-en-el-protocolo-actual&#34;&gt;¿Qué hay mal en el protocolo actual?&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Páginas web inmensas&lt;/li&gt;
@@ -27,7 +27,7 @@
 &lt;li&gt;Se realizan múltiples conexiones.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;http2-corrige-todos-éstos-problemas&#34;&gt;HTTP2 corrige todos éstos problemas&lt;/h2&gt;
+&lt;h1 id=&#34;http2-corrige-todos-éstos-problemas&#34;&gt;HTTP2 corrige todos éstos problemas&lt;/h1&gt;
 
 &lt;p&gt;HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en éstos puntos):&lt;/p&gt;
 
@@ -61,7 +61,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;situación-actual&#34;&gt;Situación actual&lt;/h2&gt;
+&lt;h1 id=&#34;situación-actual&#34;&gt;Situación actual&lt;/h1&gt;
 
 &lt;p&gt;Durante los últimos 15 años hemos convivido con HTTP/1, ¿Qué tiene de malo?, hoy en día todo el mundo lo usa. El problema es que en éstos últimos 15 años las webs se han vuelto locas. Han pasado de ser una simple página de texto con algunas fotos a webs con cantidades de recursos pesados, scripts, gráficos, css, librerías etc.&lt;/p&gt;
 
@@ -89,17 +89,17 @@
 
 &lt;p&gt;La razón por la que solo hay una conexión, radica en que no queremos varias conexiones comprobando cómo de rápido pueden transmitir datos. En su lugar, tendremos una conexión yendo a la máxima velocidad posible. Así tendremos una única negociación TLS y una única conexión TCP.&lt;/p&gt;
 
-&lt;h2 id=&#34;speculative-push&#34;&gt;Speculative push&lt;/h2&gt;
+&lt;h1 id=&#34;speculative-push&#34;&gt;Speculative push&lt;/h1&gt;
 
 &lt;p&gt;A partir de ahora, los servidores tendrán algo llamado &lt;em&gt;speculative push&lt;/em&gt;, algo equivalente a la especulación el los procesadores. En las CPUs modernas, el procesador va por delante de la ejecución actual ejecutando sentencias futuras, cuando se llega a una bifurcación, se ejecutan las sentencias de ambas ramas, una vez se ejecuta la condición necesaria para saber qué bifurcación había que coger, se descartan las intrucciones de la rama incorrecta. El &lt;em&gt;speculative push&lt;/em&gt; es algo parecido, el servidor puede enviar algunas cosas que sabe que el navegador necesitará antes de que el éste las solicite.&lt;/p&gt;
 
-&lt;h2 id=&#34;frames&#34;&gt;Frames&lt;/h2&gt;
+&lt;h1 id=&#34;frames&#34;&gt;Frames&lt;/h1&gt;
 
 &lt;p&gt;La única conexión existente se dividirá en en &lt;em&gt;frames&lt;/em&gt;. Son una abstracción de HTTP2. Permiten soportar múltiples flujos simultáneamente. Hay que tener en cuenta que los &lt;em&gt;frames&lt;/em&gt; no son paquetes. TCP, el protocolo que hay debajo, dividirá los &lt;em&gt;frames&lt;/em&gt; en paquetes. Será TCP quién garantice que los paquetes perdidos llegarán al destino, y en el orden correcto. HTTP2 confía en que su comunicación se ve como un único flujo.&lt;/p&gt;
 
 &lt;p&gt;El flujo TCP se divide en &lt;em&gt;frames&lt;/em&gt; de longitud aleatoria. Los &lt;em&gt;frames&lt;/em&gt; están por encima de TCP en la capa de abstracción. Cada &lt;em&gt;frame&lt;/em&gt; tiene una cabecera de 9 bytes&lt;/p&gt;
 
-&lt;h3 id=&#34;frame-header-la-cabecera-de-los-frames&#34;&gt;Frame Header (La cabecera de los Frames)&lt;/h3&gt;
+&lt;h2 id=&#34;frame-header-la-cabecera-de-los-frames&#34;&gt;Frame Header (La cabecera de los Frames)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;+-----------------------------------------------+
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +---------------+---------------+---------------+
@@ -117,7 +117,7 @@
 
 &lt;p&gt;En resumen, los &lt;em&gt;frames&lt;/em&gt; pueden variar en tamaño desde muy pequeños hasta 16K, a no ser que ambas partes negocien un tamañó mayor. Luego un tipo de &lt;em&gt;frame&lt;/em&gt; y sus &lt;em&gt;flags&lt;/em&gt;. El &lt;em&gt;Stream ID&lt;/em&gt; permite un flujo de hasta 4GB, así se reduce la posibilidad de agotar los posibles IDs para una conexión. Los múltiples flujos simultáneos permiten una conversación multiplexada entre los dos puntos. Es decir, que el navegador cree nuevos flujos.&lt;/p&gt;
 
-&lt;h2 id=&#34;conexión-entre-el-cliente-y-el-servidor&#34;&gt;Conexión entre el cliente y el servidor&lt;/h2&gt;
+&lt;h1 id=&#34;conexión-entre-el-cliente-y-el-servidor&#34;&gt;Conexión entre el cliente y el servidor&lt;/h1&gt;
 
 &lt;p&gt;Recordemos que tenemos una única conexión entre el cliente y el servidor, es posible tener otras conexiones HTTP2, una por cada servidor que contribuye al contenido de la página solicitada. Pero la clave está en que se tiene una única conexión por servidor.&lt;/p&gt;
 
@@ -127,17 +127,17 @@
 &lt;p&gt;Por debajo de HTTP2, sigue existiendo HTTP/1.1, simplemente se encapsula en frames.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;stream-priority-prioridad-de-flujo&#34;&gt;Stream Priority (Prioridad de flujo)&lt;/h2&gt;
+&lt;h1 id=&#34;stream-priority-prioridad-de-flujo&#34;&gt;Stream Priority (Prioridad de flujo)&lt;/h1&gt;
 
 &lt;p&gt;Otra cosa que el cliente puede hacer con los flujos es asignarles prioridad. Por ejemplo, la página HTML principal, la cual es necesaria inmediatamente para obtener el resto de URLs necesarias para completar la carga de la web. Es posible asignar una prioridad a dicho recurso para que el servidor lo proporcione de inmediato. De esta forma, se puede establecer dependencias entre recursos.&lt;/p&gt;
 
-&lt;h2 id=&#34;los-beneficios-de-una-única-conexión&#34;&gt;Los beneficios de una única conexión&lt;/h2&gt;
+&lt;h1 id=&#34;los-beneficios-de-una-única-conexión&#34;&gt;Los beneficios de una única conexión&lt;/h1&gt;
 
 &lt;p&gt;Hagamos un breve repaso de lo visto hasta ahora. Tenemos una única conexión optimizada para ser veloz. Una vez establecida se comienza a enviar peticiones, empaquetándolas en &lt;em&gt;frames&lt;/em&gt; y asignándoles un identificador único (&lt;em&gt;Stream ID&lt;/em&gt;). En el lado del servidor, éste mira las dependencias y prioridades, enviándolas en el orden solicitado por el cliente.&lt;/p&gt;
 
 &lt;p&gt;El servidor va acumulando una gran cantidad de cosas a enviar y las lanza por la conexión todo lo rápido que puede, teniendo en cuenta las restricciones que el cliente haya establecido. Se mantiene así la única conexión tan ocupada como sea posible, sin existir pausas entre peticiones de recursos. Ésta es la gran diferencia con el protocolo anterior. Ya que, aunque hubiera 6 o más conexiones, había un periodo de espera entre solicitar y recibir cada uno de los recursos necesarios. El servidor básicamente esperaba a que el cliente se diera cuenta de qué recursos le hacían falta, ésto ya no pasa en HTTP2.&lt;/p&gt;
 
-&lt;h2 id=&#34;header-compression-compresión-de-cabeceras&#34;&gt;Header Compression (Compresión de cabeceras)&lt;/h2&gt;
+&lt;h1 id=&#34;header-compression-compresión-de-cabeceras&#34;&gt;Header Compression (Compresión de cabeceras)&lt;/h1&gt;
 
 &lt;p&gt;Actualmente hay mucha redundancia en las cabeceras HTTP, ya que todas y cada una de ellas se envían en todas las peticiones, aunque sean iguales para cada petición (Ej, el user-agent, cookies, hora etc). Como se mencionó arriba, el protocolo HTTP típico, el textual sigue usandose sin modificar.&lt;/p&gt;
 
@@ -165,15 +165,17 @@
 &lt;p&gt;Todo el mérito de éste protocolo es para Google&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;p&gt;&lt;amp-youtube
     data-videoid=&#34;5EyROG4N3r4&#34;
     layout=&#34;responsive&#34;
     width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Borrador HTTP2&lt;/em&gt; »» &lt;a href=&#34;http://tools.ietf.org/pdf/draft-ietf-httpbis-http2-17.pdf&#34; target=&#34;_blank&#34;&gt;tools.ietf.org&lt;/a&gt;
-&lt;em&gt;Crédito de la imagen&lt;/em&gt; »» &lt;a href=&#34;https://httpwg.github.io/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://httpwg.github.io/&#34;&gt;https://httpwg.github.io/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Borrador HTTP2&lt;/em&gt; »» &lt;a href=&#34;http://tools.ietf.org/pdf/draft-ietf-httpbis-http2-17.pdf&#34; target=&#34;_blank&#34;&gt;tools.ietf.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Crédito de la imagen&lt;/em&gt; »» &lt;a href=&#34;https://httpwg.github.io/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://httpwg.github.io/&#34;&gt;https://httpwg.github.io/&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

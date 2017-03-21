@@ -14,14 +14,30 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/</guid>
-      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudio.png&#34; alt=&#34;AndroidStudio&#34; width=&#34;402px&#34; height=&#34;302px&#34; /&gt;
-Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en &lt;a href=&#34;http://developer.android.com/sdk/installing/studio.html&#34; target=&#34;_blank&#34;&gt;developer.android.com&lt;/a&gt;. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.&lt;/p&gt;
+      <description>&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudio.png&#34;&gt;
+          &lt;amp-img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudio.png&#34;
+            alt=&#34;C\xF3mo instalar el IDE Android Studio en Linux y peque\xF1a gu\xEDa de uso&#34;
+            title=&#34;C\xF3mo instalar el IDE Android Studio en Linux y peque\xF1a gu\xEDa de uso&#34;
+            sizes=&#34;(min-width: 402px) 402px, 100vw&#34;
+            width=&#34;402&#34;
+            height=&#34;302&#34;&gt;
+          &lt;/amp-img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Ayer en el Google I/O 2013 presentaron Android Studio, un IDE basado en IntelliJIDEA. Ya está disponible para descargar en &lt;a href=&#34;http://developer.android.com/sdk/installing/studio.html&#34; target=&#34;_blank&#34;&gt;developer.android.com&lt;/a&gt;. He estado probándolo y me ha gustado bastante. Hoy voy a explicar cómo instalar este IDE en Linux, y un pequeño tutorial de uso.&lt;/p&gt;
 
 &lt;p&gt;Descargamos el IDE (&lt;a href=&#34;http://dl.google.com/android/studio/android-studio-bundle-130.677228-linux.tgz&#34;&gt;Linux&lt;/a&gt;) | (&lt;a href=&#34;http://dl.google.com/android/studio/android-studio-bundle-130.677228-windows.exe&#34;&gt;Windows&lt;/a&gt;). Lo descomprimimos y ejecutamos el el fichero &lt;em&gt;studio.sh&lt;/em&gt;, que se encuentra en la carpeta &lt;em&gt;bin&lt;/em&gt;. En Linux se recomienda instalar el JDK de Oracle. Para instalarlo seguimos los siguientes pasos:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;instalar-el-jdk-de-oracle-en-linux-desde-repositorio&#34;&gt;Instalar el JDK de ORACLE en Linux desde repositorio&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-el-jdk-de-oracle-en-linux-desde-repositorio&#34;&gt;Instalar el JDK de ORACLE en Linux desde repositorio&lt;/h1&gt;
 
 &lt;p&gt;Introducimos en la terminal los siguientes comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;su -
@@ -40,7 +56,7 @@ apt-get install oracle-java7-installer
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE-1024x734.png&#34; alt=&#34;AndroidStudioIDE&#34; width=&#34;1024px&#34; height=&#34;734px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;exportar-proyectos-de-eclipse-e-importarlos-android-studio&#34;&gt;Exportar proyectos de eclipse e importarlos Android Studio&lt;/h3&gt;
+&lt;h1 id=&#34;exportar-proyectos-de-eclipse-e-importarlos-android-studio&#34;&gt;Exportar proyectos de eclipse e importarlos Android Studio&lt;/h1&gt;
 
 &lt;p&gt;Una vez hecho esto, lo más probable es que queramos importar los proyectos que teníamos en eclipse a Android Studio, para ello es necesario actualizar el plugin ADT en eclipse, y luego seguir estos pasos:&lt;/p&gt;
 
@@ -202,13 +218,15 @@ build files&lt;/strong&gt;.&lt;/li&gt;
 &lt;/tr&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h3&gt;
+&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
 
 &lt;p&gt;Aunque Android Studio está todavía en desarrollo, promete mucho y voy a empezar a usarlo como IDE por defecto. ¿Qué opináis vosotros? ¿Lo habéis probado?, compartid vuestra experiencia en los comentarios.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Instalar JDK en Debian&lt;/em&gt; »» &lt;a href=&#34;http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html&#34; target=&#34;_blank&#34;&gt;webupd8&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Instalar JDK en Debian&lt;/em&gt; »» &lt;a href=&#34;http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html&#34; target=&#34;_blank&#34;&gt;webupd8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>

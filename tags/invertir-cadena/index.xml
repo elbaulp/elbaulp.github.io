@@ -14,11 +14,7 @@
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
       <guid>https://elbauldelprogramador.com/como-invertir-una-cadena-en-unix/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;invertir cadenas en bash&#34; src=&#34;https://lh4.googleusercontent.com/-vUNPZhd87O8/TROpDAE42nI/AAAAAAAAAN8/Gfmk5XMAcsg/s128/sh.png&#34; title=&#34;Shell Bash&#34; class=&#34;alignleft&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Existe un comando que realiza esta operación, &lt;code&gt;rev&lt;/code&gt;. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:&lt;/p&gt;
+      <description>&lt;p&gt;Existe un comando que realiza esta operación, &lt;code&gt;rev&lt;/code&gt;. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Copia los archivos especificados a la salida estandar, invirtiendo el orden de los caracteres de cada línea. Si no se especifican ficheros, rev lee de la entrada estandar (el teclado).&lt;/p&gt;
@@ -42,7 +38,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;abeurp anu se aeníl atsE
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;ejemplo-en-perl&#34;&gt;Ejemplo en Perl&lt;/h3&gt;
+&lt;h1 id=&#34;ejemplo-en-perl&#34;&gt;Ejemplo en Perl&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;perl -ne &lt;span class=&#34;s1&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;quot;n&amp;quot;;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;elbauldelprogramador&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -50,7 +46,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;elbauldelprogramador&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; perl -ne &lt;span class=&#34;s1&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;quot;n&amp;quot;;&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;script-bash-para-invertir-cadenas&#34;&gt;Script bash para invertir cadenas&lt;/h3&gt;
+&lt;h1 id=&#34;script-bash-para-invertir-cadenas&#34;&gt;Script bash para invertir cadenas&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
@@ -84,9 +80,11 @@ php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;fuente-original&#34;&gt;Fuente original&lt;/h4&gt;
+&lt;h1 id=&#34;fuente-original&#34;&gt;Fuente original&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;NixCraft&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;NixCraft&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
   </channel>
