@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Spark on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/tags/spark/index.xml</link>
-    <description>Recent content in Spark on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/tags/spark/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How to convert a column to VectorUDT/DenseVector in Spark</title>
-      <link>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</link>
-      <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m starting to use &lt;code&gt;spark&lt;/code&gt; and was reading its documentation for its &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;MlLib linearRegression&#34;&gt;&lt;code&gt;MLlib&lt;/code&gt; library&lt;/a&gt;. At first it seemed simple enough to use, but when reading a &lt;code&gt;csv&lt;/code&gt; file with the training data I kept getting the below error:&lt;/p&gt;
+    <channel>
+        <title>Spark on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/spark/index.xml</link>
+        <description>Recent content in Spark on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/spark/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to convert a column to VectorUDT/DenseVector in Spark</title>
+            <link>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</link>
+            <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;m starting to use &lt;code&gt;spark&lt;/code&gt; and was reading its documentation for its &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;MlLib linearRegression&#34;&gt;&lt;code&gt;MLlib&lt;/code&gt; library&lt;/a&gt;. At first it seemed simple enough to use, but when reading a &lt;code&gt;csv&lt;/code&gt; file with the training data I kept getting the below error:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
@@ -164,7 +168,7 @@
 &lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Training data is from the book &lt;a href=&#34;http://amzn.to/2kKFAgi&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Metodos De Autentificacion on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/metodos-de-autentificacion/index.xml</link>
-    <description>Recent content in Metodos De Autentificacion on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/metodos-de-autentificacion/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>SQRL y la idea de eliminar el uso de usuario y contraseña en internet</title>
-      <link>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;
+    <channel>
+        <title>Metodos De Autentificacion on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/metodos-de-autentificacion/index.xml</link>
+        <description>Recent content in Metodos De Autentificacion on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/metodos-de-autentificacion/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>SQRL y la idea de eliminar el uso de usuario y contraseña en internet</title>
+            <link>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</guid>
+            <description>&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;
 {: .notice}&lt;/p&gt;
 
 &lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sqrl-login-sample.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;400px&#34; height=&#34;199px&#34; /&gt;&lt;/p&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sqrl-login-sample.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;400px&#34; height=&#34;199px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;El sistema &lt;strong&gt;SQRL&lt;/strong&gt; es bastante simple, cuando se desea identificarse en un sitio web mediante &lt;strong&gt;SQRL&lt;/strong&gt;, aparecerá un código, entonces:&lt;/p&gt;
 
@@ -48,7 +52,7 @@
 &lt;li&gt;El sitio de autenticación tiene la URL que contiene el nonce que devolvió la página de login del smartphone del usuario. Tiene también una firma criptográfica de esa URL, y la clave pública específica del sitio del usuario. Usa la clave pública para verificar que la firma es válida para la URL. Esto confirma que el usuario que produjo la firma usó la clave privada que corresponde a la clave pública. Tras de verificar la firma, el sitio de autentificación reconoce al usuario (ahora-autenticado) por la clave pública específica de sitio.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sign-algo.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;580px&#34; height=&#34;194px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/sign-algo.png&#34; alt=&#34;SQRL y la idea de elminar el uso de usuario y contraseña en internet&#34; width=&#34;580px&#34; height=&#34;194px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Resumiendo: &amp;#8220;El login del sitio web presenta un código QR que contiene la URL de su servicio de autenticación, más un nonce. El smartphone del usuario firma la login URL usando una clave privada derivada de su secreto maestro y el nombre de dominio de la URL. El smartphone envía la clave pública que se corresponde para identificar el usuario, y la firma para autenticarlo.&amp;#8221;&lt;/p&gt;
 
@@ -60,16 +64,16 @@
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;(1) SQRL en la página de su creador, Steve&lt;/em&gt; »» &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>SQRL -Secure Quick Reliable Login a Fondo</title>
-      <link>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</link>
-      <pubDate>Thu, 10 Sep 2015 09:08:37 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png&#34; title=&#34;{{ .Title }}&#34; alt=&#34;{{ .Title }}&#34; width=&#34;450px&#34; height=&#34;450px&#34; /&gt;
+        </item>
+        
+        <item>
+            <title>SQRL -Secure Quick Reliable Login a Fondo</title>
+            <link>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</link>
+            <pubDate>Thu, 10 Sep 2015 09:08:37 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</guid>
+            <description>&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/SQRL-Secure-Quick-Reliable-Login-a-Fondo.png&#34; title=&#34;{{ .Title }}&#34; alt=&#34;{{ .Title }}&#34; width=&#34;450px&#34; height=&#34;450px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt; Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En éste artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
@@ -198,7 +202,7 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
     data-videoid=&#34;hsotcaizGjM&#34;
     layout=&#34;responsive&#34;
     width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

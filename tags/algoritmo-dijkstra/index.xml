@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Algoritmo Dijkstra on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/algoritmo-dijkstra/index.xml</link>
-    <description>Recent content in Algoritmo Dijkstra on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/algoritmo-dijkstra/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Algoritmos de caminos cortos.</title>
-      <link>https://elbauldelprogramador.com/algoritmos-de-caminos-cortos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/algoritmos-de-caminos-cortos/</guid>
-      <description>&lt;p&gt;Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador.&lt;/p&gt;
+    <channel>
+        <title>Algoritmo Dijkstra on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/algoritmo-dijkstra/index.xml</link>
+        <description>Recent content in Algoritmo Dijkstra on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/algoritmo-dijkstra/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Algoritmos de caminos cortos.</title>
+            <link>https://elbauldelprogramador.com/algoritmos-de-caminos-cortos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/algoritmos-de-caminos-cortos/</guid>
+            <description>&lt;p&gt;Para hablar de este tipo de algoritmos, tengo que hacer una breve introducción a lo que es un grafo y cómo se representa en un ordenador.&lt;/p&gt;
 
 &lt;p&gt;Un grafo en el ámbito de las ciencias de la computación es una estructura de datos, en concreto un tipo abstracto de datos (TDA), que consiste en un conjunto de nodos (también llamados vértices) y un conjunto de arcos (aristas) que establecen relaciones entre los nodos. El concepto de grafo TDA desciende directamente del concepto matemático de grafo.
 Informalmente se define como G = (V, E), siendo los elementos de V los vértices, y los elementos de E, las aristas (edges en inglés). Formalmente, un grafo, G, se define como un par ordenado, G = (V, E), donde V es un conjunto finito y E es un conjunto que consta de dos elementos de V.&lt;/p&gt;
@@ -23,7 +27,7 @@ Informalmente se define como G = (V, E), siendo los elementos de V los vértices
 Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo, siendo los elementos de la matriz la relación entre los mismos, tomando los valores de 1 si existe la arista y 0 en caso contrario.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg&#34; alt=&#34;&#34; title=&#34;Matriz_de_adyacencia&#34; width=&#34;546px&#34; height=&#34;232px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Matriz_de_adyacencia1.jpg&#34; alt=&#34;&#34; title=&#34;Matriz_de_adyacencia&#34; width=&#34;546px&#34; height=&#34;232px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
@@ -41,7 +45,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;p&gt;El &lt;strong&gt;algoritmo de Dijkstra&lt;/strong&gt; consiste en ir explorando todos los caminos más cortos que parten del vértice origen y que llevan a todos los demás vértices; cuando se obtiene el camino más corto desde el vértice origen, al resto de vértices que componen el grafo, el algoritmo se detiene.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg&#34; alt=&#34;&#34; title=&#34;Caminosmascortos&#34; width=&#34;744px&#34; height=&#34;500px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Caminosmascortos1.jpg&#34; alt=&#34;&#34; title=&#34;Caminosmascortos&#34; width=&#34;744px&#34; height=&#34;500px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;algoritmo-de-dijkstra&#34;&gt;Algoritmo de Dijkstra&lt;/h1&gt;
@@ -164,7 +168,7 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
 &lt;p &gt;
   Así, si tratamos de encontrar la solución mas barata, es razonable intentar primero el nodo con el valor más bajo de g(n) + h(n). Resulta que esta estrategia es más que razonable: con tal de que la función heurística h(n) satisfaga ciertas condiciones, la búsqueda A* es tanto completa como óptima.
 &lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

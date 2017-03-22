@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Intellij on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/tags/intellij/index.xml</link>
-    <description>Recent content in Intellij on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
-      <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
-      <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
-      <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
+    <channel>
+        <title>Intellij on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/intellij/index.xml</link>
+        <description>Recent content in Intellij on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
+            <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
+            <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-download-opencv-3-2-unpack-and-create-build-directory&#34;&gt;[1]. Download OpenCV 3.2, unpack and create build directory&lt;/h1&gt;
 
@@ -44,7 +48,7 @@
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -105,15 +109,15 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
-      <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
-      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</guid>
-      <description>&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
+            <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
+            <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</guid>
+            <description>&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
 
 &lt;p&gt;For compiling OPENCV 3.2 with Java support you must make sure you have the following installed:&lt;/p&gt;
 
@@ -150,7 +154,7 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
@@ -180,12 +184,12 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
  and choose &lt;strong&gt;Dependencies&lt;/strong&gt; tab. Here, we click to add and select the &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and  the library, that is in &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;adding .jar file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;adding .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -247,10 +251,10 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;p&gt;Finally we run &lt;strong&gt;HelloOpenCV&lt;/strong&gt; example and see it works! printing lenna&amp;rsquo;s face detection to &lt;strong&gt;faceDetection.png&lt;/strong&gt; image.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img sizes=&#34;(min-width: 531px) 531px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;531&#34; height=&#34;528&#34;&gt;&lt;/amp-img&gt;
+    &lt;img sizes=&#34;(min-width: 531px) 531px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;531&#34; height=&#34;528&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;example face detection&lt;/figcaption&gt;
 &lt;/figure&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

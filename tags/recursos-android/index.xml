@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Recursos Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/recursos-android/index.xml</link>
-    <description>Recent content in Recursos Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/recursos-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Recursos - Introducción</title>
-      <link>https://elbauldelprogramador.com/programacion-android-recursos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-recursos/</guid>
-      <description>&lt;p&gt;Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio &lt;strong&gt;&lt;em&gt;./res&lt;/em&gt;&lt;/strong&gt;. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.&lt;/p&gt;
+    <channel>
+        <title>Recursos Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/recursos-android/index.xml</link>
+        <description>Recent content in Recursos Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/recursos-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Recursos - Introducción</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos/</guid>
+            <description>&lt;p&gt;Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio &lt;strong&gt;&lt;em&gt;./res&lt;/em&gt;&lt;/strong&gt;. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -25,13 +29,13 @@
 &lt;p&gt;Dos dispositivos distintos, usando recursos por defecto:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s800/resource_devices_diagram1.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s800/resource_devices_diagram1.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Dos dispositivos distintos, usando recursos alternativos:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s800/resource_devices_diagram2.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s800/resource_devices_diagram2.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Por ejemplo, podemos crear iconos más pequeños para que sean mostrados en los terminales con pantallas más pequeñas o diseñar una disposición de pantalla diferente para cuando la aplicación se esté ejecutando en modo apaisado, para conseguir esto, simplemente creamos una carpeta de recursos añadiendo el sufijo que indica la situación en la que debe usarse.&lt;/p&gt;
@@ -43,15 +47,15 @@
 &lt;p&gt;Para saber más acerca de los tipos de sufijos que se pueden usar, visita &lt;a href=&#34;http://developer.android.com/guide/topics/resources/providing-resources.html&#34;&gt;Providing Resources en la página oficial de Android.&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-programación-android-recursos-usando-recursos-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-usando/&#34;&gt;Programación Android: Recursos - Usando recursos&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Recursos - Strings</title>
-      <link>https://elbauldelprogramador.com/programacion-android-recursos-strings/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-recursos-strings/</guid>
-      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Strings</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-strings/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-strings/</guid>
+            <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;Como ya hemos visto, los recursos juegan un papel muy importante en la arquitectura Android. Un recurso en Android es un archivo (como un fichero de música) o un valor (como el título de un Diálogo) que está ligado a una aplicación ejecutable. Estos archivos están ligados a un ejecutable de tal manera que podemos cambiarlos sin necesidad de recompilar la aplicación.&lt;/p&gt;
 
@@ -120,15 +124,15 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-programación-android-recursos-layout-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;Programación Android: Recursos - Layout&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Recursos - Usando recursos</title>
-      <link>https://elbauldelprogramador.com/programacion-android-recursos-usando/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-recursos-usando/</guid>
-      <description>&lt;p&gt;A todos los recursos que colocamos en las subcarpetas de ./res/ se puede acceder a través de la clase R de nuestro proyecto.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Usando recursos</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-usando/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-usando/</guid>
+            <description>&lt;p&gt;A todos los recursos que colocamos en las subcarpetas de ./res/ se puede acceder a través de la clase R de nuestro proyecto.&lt;/p&gt;
 
 &lt;p&gt;Esta clase R la genera el comando aapt en una pasada anterior a la compilación (Eclipse, por defecto, la va generando continuamente conforme cambiamos los recursos). Contiene todos los identificadores de recursos para poder referenciarlos.&lt;/p&gt;
 
@@ -216,7 +220,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;siguiente-tema-programación-android-recursos-strings-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings/&#34;&gt;Programación Android: Recursos - Strings&lt;/a&gt;&lt;/h3&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

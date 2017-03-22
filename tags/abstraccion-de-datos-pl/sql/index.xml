@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Abstraccion De Datos Pl/Sql on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/abstraccion-de-datos-pl/sql/index.xml</link>
-    <description>Recent content in Abstraccion De Datos Pl/Sql on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/abstraccion-de-datos-pl/sql/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Introduccion a base de datos</title>
-      <link>https://elbauldelprogramador.com/introduccion-base-de-datos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-base-de-datos/</guid>
-      <description>&lt;h2 id=&#34;introducción-a-bases-de-datos&#34;&gt;Introducción a bases de datos&lt;/h2&gt;
+    <channel>
+        <title>Abstraccion De Datos Pl/Sql on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/abstraccion-de-datos-pl/sql/index.xml</link>
+        <description>Recent content in Abstraccion De Datos Pl/Sql on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/abstraccion-de-datos-pl/sql/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introduccion a base de datos</title>
+            <link>https://elbauldelprogramador.com/introduccion-base-de-datos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-base-de-datos/</guid>
+            <description>&lt;h2 id=&#34;introducción-a-bases-de-datos&#34;&gt;Introducción a bases de datos&lt;/h2&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Todo lo que voy a escribir a continuación sobre base de datos, lo he sacado de los apuntes de mi profesor de Bases de Datos.&lt;/p&gt;
@@ -82,7 +86,7 @@
 &lt;/ul&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sistema gestor de base de datos - sgbd&#34; title=&#34;sistema gestor de base de datos - sgbd&#34; height=&#34;300&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg&#34; width=&#34;320&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sistema gestor de base de datos - sgbd&#34; title=&#34;sistema gestor de base de datos - sgbd&#34; height=&#34;300&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En el siguiente ejemplo de una base de datos se puede observar que se han obtenido dos subesquemas (esquemas externos) a partir del único esquema conceptual formado por las entidades: VENDEDORES, VENTAS y ARTICULOS. La estructura de cada subesquema obedece a las necesidades concretas del tipo de usuario que lo va a utilizar. Por ejemplo:&lt;/p&gt;
@@ -128,7 +132,7 @@
 &lt;p&gt;Esquema conceptual de toda la base de datos, formado por los siguientes registros conceptuales:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; height=&#34;66&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg&#34; width=&#34;320&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; height=&#34;66&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;esquema-interno&#34;&gt;ESQUEMA INTERNO&lt;/h3&gt;
@@ -290,7 +294,7 @@
 &lt;p&gt;Para describir el funcionamiento de un SGBD supondremos el caso de un programa de aplicación, que lee un registro de una base de datos, para ello realiza una solicitud al &lt;abbr title=&#34;Sistema Gestor de Base de Datos&#34;&gt;SGBD&lt;/abbr&gt;, esencialmente la secuencia, mostrada en el esquema de la figura 1.2, es la siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Funcionamiento de un SGBD&#34; height=&#34;255&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg&#34; width=&#34;320&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Funcionamiento de un SGBD&#34; height=&#34;255&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;ol&gt;
@@ -331,7 +335,7 @@ programador tiene que recorrer la base de datos registro a registro, especifican
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;siguiente-tema-diseño-de-bases-de-datos-i-conceptos-del-modelo-relacional-https-elbauldelprogramador-com-diseno-de-bases-de-datos-i-conceptos&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/&#34;&gt;Diseño de Bases de Datos ( I ) – Conceptos del Modelo Relacional&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

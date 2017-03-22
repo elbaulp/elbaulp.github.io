@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cliente Google Drive Linux on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/cliente-google-drive-linux/index.xml</link>
-    <description>Recent content in Cliente Google Drive Linux on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/cliente-google-drive-linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Sincronizar Google Drive en Linux en 4 pasos</title>
-      <link>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/google-drive-linux3.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;800px&#34; height=&#34;701px&#34;&gt;&lt;/amp-img&gt;
+    <channel>
+        <title>Cliente Google Drive Linux on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/cliente-google-drive-linux/index.xml</link>
+        <description>Recent content in Cliente Google Drive Linux on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/cliente-google-drive-linux/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Sincronizar Google Drive en Linux en 4 pasos</title>
+            <link>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/google-drive-linux3.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;800px&#34; height=&#34;701px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Llevaba tiempo buscando la manera de sincronizar los archivos de &lt;strong&gt;Google Drive en Linux&lt;/strong&gt; con carpetas locales del mismo modo que Dropbox. Pensé en usar el programa &lt;a href=&#34;https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/&#34; title=&#34;Ejecutar un script al modificar un fichero con inotify&#34;&gt;inotify&lt;/a&gt;, pero no sabía muy bien por donde empezar. Hace unos días encontré la respuesta en &lt;a href=&#34;https://openlinuxforums.org&#34; title=&#34;Foro linux&#34; target=&#34;_blank&#34;&gt;openlinuxforums&lt;/a&gt; y al parecer no iba mal encaminado, es una solución bastante sencilla usando inotify y nos permitirá mantener sincronizados los archivos y carpetas de &lt;strong&gt;Google Drive&lt;/strong&gt; en todos los ordenadores que queramos.&lt;/p&gt;
@@ -135,7 +139,7 @@ $ apt-get install grive
 &lt;p&gt;El resultado de estas modificaciones es el siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1366px&#34; height=&#34;768px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Sincronizar-Google-Drive-en-Linux-en-4-pasos.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1366px&#34; height=&#34;768px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -144,16 +148,16 @@ $ apt-get install grive
 &lt;li&gt;&lt;em&gt;Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu &amp;amp; Debian&lt;/em&gt; »» &lt;a href=&#34;https://openlinuxforums.org/index.php?topic=3144.0&#34; target=&#34;_blank&#34;&gt;openlinuxforums.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Créditos de la imagen&lt;/em&gt; »» &lt;a href=&#34;https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR&#34; target=&#34;_blank&#34;&gt;plus.google.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sincronizar Google Drive en Linux en 4 pasos [Actualización]</title>
-      <link>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</guid>
-      <description>&lt;figure&gt;
-  &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/google-drive-linux3.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;800px&#34; height=&#34;701px&#34;&gt;&lt;/amp-img&gt;
+        </item>
+        
+        <item>
+            <title>Sincronizar Google Drive en Linux en 4 pasos [Actualización]</title>
+            <link>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</guid>
+            <description>&lt;figure&gt;
+  &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/google-drive-linux3.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;800px&#34; height=&#34;701px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Hace poco vimos en un artículo cómo &lt;a href=&#34;https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/&#34; title=&#34;Sincronizar Google Drive en Linux en 4 pasos&#34;&gt;Sincronizar Google Drive en Linux en 4 pasos&lt;/a&gt;. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que &lt;em&gt;grive&lt;/em&gt; vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas.&lt;/p&gt;
@@ -242,7 +246,7 @@ $ apt-get install grive
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu &amp;amp; Debian&lt;/em&gt; »» &lt;a href=&#34;https://openlinuxforums.org/index.php?topic=3144.0&#34; target=&#34;_blank&#34;&gt;openlinuxforums.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Howto on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/tags/howto/index.xml</link>
-    <description>Recent content in Howto on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/tags/howto/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
-      <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
-      <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
-      <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
+    <channel>
+        <title>Howto on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/howto/index.xml</link>
+        <description>Recent content in Howto on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
+            <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
+            <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-download-opencv-3-2-unpack-and-create-build-directory&#34;&gt;[1]. Download OpenCV 3.2, unpack and create build directory&lt;/h1&gt;
 
@@ -44,7 +48,7 @@
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -105,15 +109,15 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to change summary color in Android&#39;s preferences</title>
-      <link>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</link>
-      <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</guid>
-      <description>&lt;p&gt;In a previous post we shown how to create a &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/&#34; title=&#34;Cómo crear un diálogo personalizado en las preferencias Android&#34;&gt;custom dialog for an Android preference&lt;/a&gt;. This post shows how to change the summary color in an Android preference. The &lt;em&gt;summary&lt;/em&gt; is the text appearing below the preference&amp;rsquo;s title.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to change summary color in Android&#39;s preferences</title>
+            <link>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</link>
+            <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</guid>
+            <description>&lt;p&gt;In a previous post we shown how to create a &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/&#34; title=&#34;Cómo crear un diálogo personalizado en las preferencias Android&#34;&gt;custom dialog for an Android preference&lt;/a&gt;. This post shows how to change the summary color in an Android preference. The &lt;em&gt;summary&lt;/em&gt; is the text appearing below the preference&amp;rsquo;s title.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -196,17 +200,17 @@ android:textColor=&amp;quot;@color/red&amp;quot;
 &lt;p&gt;As seen in the previous post, &lt;code&gt;mDialogoPersonalizado&lt;/code&gt;&amp;rsquo;s type is &lt;code&gt;Preference&lt;/code&gt;. When a password of length inferior to 8 characters is introduced by the user, the following message is shown:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34;&gt;&lt;amp-img sizes=&#34;(min-width: 419px) 419px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;419px&#34; height=&#34;97px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34;&gt;&lt;img sizes=&#34;(min-width: 419px) 419px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;419px&#34; height=&#34;97px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to search files with locate using regular expressions.</title>
-      <link>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
-      <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
-      <description>&lt;p&gt;In GNU/Linux, &lt;code&gt;locate&lt;/code&gt; command is useful to find files in the file system by querying a database. Here is how to use with regular expressions.&amp;rdquo; Its &lt;code&gt;man&lt;/code&gt; description is:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to search files with locate using regular expressions.</title>
+            <link>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
+            <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
+            <description>&lt;p&gt;In GNU/Linux, &lt;code&gt;locate&lt;/code&gt; command is useful to find files in the file system by querying a database. Here is how to use with regular expressions.&amp;rdquo; Its &lt;code&gt;man&lt;/code&gt; description is:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;locate reads one or more databases prepared by updatedb(8) and writes file names matching at least one of the PATTERNs to standard output, one per line.&lt;/p&gt;
@@ -241,7 +245,7 @@ android:textColor=&amp;quot;@color/red&amp;quot;
 &lt;p&gt;When building regular expressions, I find useful to use some king of tool like &lt;strong&gt;regex texter&lt;/strong&gt;, that allows to visualize the regular expression:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -288,15 +292,15 @@ cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to remove slotted packages in gentoo</title>
-      <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
-      <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
-      <description>
+        </item>
+        
+        <item>
+            <title>How to remove slotted packages in gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
+            <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
+            <description>
 
 &lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
 
@@ -364,15 +368,15 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>How to parse frontmatter with python</title>
-      <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
-      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
-      <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to parse frontmatter with python</title>
+            <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
+            <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
+            <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
 
 &lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
 
@@ -449,15 +453,15 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Python-Frontmatter&amp;rsquo;s Githup repo&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Change Portage Folders to Other Location in Gentoo</title>
-      <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
-      <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
-      <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to Change Portage Folders to Other Location in Gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
+            <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
+            <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -505,7 +509,7 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

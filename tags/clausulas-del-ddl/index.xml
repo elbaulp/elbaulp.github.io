@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Clausulas Del Ddl on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/clausulas-del-ddl/index.xml</link>
-    <description>Recent content in Clausulas Del Ddl on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/clausulas-del-ddl/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Lenguaje Definición de Datos (DDL) - DROP</title>
-      <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/</guid>
-      <description>&lt;p&gt;En el anterior post vimos la orden &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34;&gt;CREATE.&lt;/a&gt;&lt;/p&gt;
+    <channel>
+        <title>Clausulas Del Ddl on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/clausulas-del-ddl/index.xml</link>
+        <description>Recent content in Clausulas Del Ddl on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/clausulas-del-ddl/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Lenguaje Definición de Datos (DDL) - DROP</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/</guid>
+            <description>&lt;p&gt;En el anterior post vimos la orden &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34;&gt;CREATE.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;En este post explicaré el funcionamiento de la orden DROP.&lt;/p&gt;
 
@@ -39,15 +43,15 @@ Si se hace referencia a la clave primaria de esta tabla mediante restricciones F
 Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-alter-table-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/&#34;&gt;Lenguaje Definición de Datos (DDL) - ALTER TABLE&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas</title>
-      <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/</guid>
-      <description>&lt;h2 id=&#34;sinónimos&#34;&gt;Sinónimos&lt;/h2&gt;
+        </item>
+        
+        <item>
+            <title>Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/</guid>
+            <description>&lt;h2 id=&#34;sinónimos&#34;&gt;Sinónimos&lt;/h2&gt;
 
 &lt;p&gt;Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y con ellos podemos darle nombres diferentes a un mismo objeto.&lt;/p&gt;
 
@@ -91,15 +95,15 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-lenguaje-manipulación-de-datos-dml-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;Lenguaje Manipulación de Datos (DML)&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lenguaje Definición de Datos (DDL) - Vistas</title>
-      <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/</guid>
-      <description>&lt;p&gt;Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta SELECT, tienen la misma estructura que una tabla cualquiera, es decir, están organizadas por filas y columnas. Una de las principales ventajas de utilizar vistas procede del hecho de que la vista no almacena los datos, sino que hace referencia a una o varias tablas de origen mediante una consulta SELECT, consulta que se ejecuta cada vez que se hace referencia a la vista. De esta forma, cualquier modificación que se realice sobre los datos de las tablas de origen es inmediatamente visible en la vista, cuando ésta vuelva a ejecutarse. Su sintaxis es:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Lenguaje Definición de Datos (DDL) - Vistas</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/</guid>
+            <description>&lt;p&gt;Las vistas son tablas virtuales ‘que contienen’ el resultado de una consulta SELECT, tienen la misma estructura que una tabla cualquiera, es decir, están organizadas por filas y columnas. Una de las principales ventajas de utilizar vistas procede del hecho de que la vista no almacena los datos, sino que hace referencia a una o varias tablas de origen mediante una consulta SELECT, consulta que se ejecuta cada vez que se hace referencia a la vista. De esta forma, cualquier modificación que se realice sobre los datos de las tablas de origen es inmediatamente visible en la vista, cuando ésta vuelva a ejecutarse. Su sintaxis es:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;OR&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REPLACE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;VIEW&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Nombre_vista&lt;/span&gt;
@@ -137,15 +141,15 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-índices-y-secuencias-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/&#34;&gt;Lenguaje Definición de Datos (DDL) - Índices y secuencias&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lenguaje Definición de Datos (DDL) - Índices y secuencias</title>
-      <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/</guid>
-      <description>&lt;h2 id=&#34;creación-de-un-índice&#34;&gt;Creación de un índice&lt;/h2&gt;
+        </item>
+        
+        <item>
+            <title>Lenguaje Definición de Datos (DDL) - Índices y secuencias</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/</guid>
+            <description>&lt;h2 id=&#34;creación-de-un-índice&#34;&gt;Creación de un índice&lt;/h2&gt;
 
 &lt;p&gt;Los índices sirven para mejorar el rendimiento de las consultas. El optimizador de Oracle los utiliza implícitamente y se actualizan de forma automática al actualizar las filas.&lt;/p&gt;
 
@@ -205,15 +209,15 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-sinónimos-y-pseudocolumnas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/&#34;&gt;Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lenguaje Definición de Datos(DDL) - CREATE</title>
-      <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</guid>
-      <description>&lt;p&gt;En esta entrada vamos a ver la orden CREATE&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Lenguaje Definición de Datos(DDL) - CREATE</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</guid>
+            <description>&lt;p&gt;En esta entrada vamos a ver la orden CREATE&lt;/p&gt;
 
 &lt;p&gt;CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos tablas, vistas etc.&lt;/p&gt;
 
@@ -323,7 +327,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h3&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

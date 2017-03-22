@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>R on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/r/index.xml</link>
-    <description>Recent content in R on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
-      <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
-      <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
-      <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
+    <channel>
+        <title>R on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/r/index.xml</link>
+        <description>Recent content in R on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/r/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
+            <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
+            <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
+            <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
 
 &lt;h2 id=&#34;cómo-empezó-todo&#34;&gt;Cómo empezó todo&amp;hellip;&lt;/h2&gt;
 
@@ -52,12 +56,12 @@
 &lt;p&gt;Estos son los gráficos que finalmente incluí en la que iba a ser la chachi documentación extra profesional a 5 minutos de que la entrega se cerrase.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Primer gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Segundo gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -100,7 +104,7 @@
 &lt;p&gt;Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos medidas, en dos listas separadas: tiempo de ejecución y coste de la solución obtenida. De antemano tenía guardados los distintos casos que tenía que ejecutar y las mejores soluciones conocidas de cada algoritmo, que usé para calcular la desviación de cada solución con la siguiente fórmula:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.&lt;/p&gt;
@@ -126,19 +130,19 @@
 &lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso pequeño&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso grande&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;¿Qué algoritmo funciona mejor en casos pequeños? ¿Y en casos grandes?&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico de convergencia&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -452,15 +456,15 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo modificar Una Variable Desde Dentro De Una Función en R</title>
-      <link>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</link>
-      <pubDate>Fri, 22 Apr 2016 06:40:33 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</guid>
-      <description>&lt;p&gt;Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo modificar Una Variable Desde Dentro De Una Función en R</title>
+            <link>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</link>
+            <pubDate>Fri, 22 Apr 2016 06:40:33 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</guid>
+            <description>&lt;p&gt;Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -521,16 +525,16 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;ul&gt;
 &lt;li&gt;Entornos Avanzados en R | &lt;a href=&#34;http://adv-r.had.co.nz/Environments.html&#34; target=&#34;_blank&#34; title=&#34;Entornos avanzados en R&#34;&gt;adv-r.had.co.nz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Vectorizar El Acceso a Columnas en R</title>
-      <link>https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/</link>
-      <pubDate>Mon, 04 Apr 2016 18:56:12 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Vectorizar El Acceso a Columnas en R</title>
+            <link>https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/</link>
+            <pubDate>Mon, 04 Apr 2016 18:56:12 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
@@ -590,7 +594,7 @@ datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f4&lt;span class=&#34;p
 &lt;h4 id=&#34;fuente&#34;&gt;Fuente&lt;/h4&gt;
 
 &lt;p&gt;Vectorize access to columns in R | &lt;a href=&#34;http://stackoverflow.com/questions/35914984/vectorize-access-to-columns-in-r&#34; title=&#34;Vectorize access to columns in R&#34; target=&#34;_blank&#34;&gt;stackoverlow.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

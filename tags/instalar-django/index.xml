@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Instalar Django on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/instalar-django/index.xml</link>
-    <description>Recent content in Instalar Django on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/instalar-django/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Introducción a Django - Instalación y primer proyecto</title>
-      <link>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
-      <description>&lt;blockquote&gt;
+    <channel>
+        <title>Instalar Django on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/instalar-django/index.xml</link>
+        <description>Recent content in Instalar Django on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/instalar-django/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introducción a Django - Instalación y primer proyecto</title>
+            <link>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/jneight&#34; title=&#34;Perfil en Github de @jneight&#34;&gt;@Jneight&lt;/a&gt; por actualizar este artículo!&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -215,7 +219,7 @@
 &lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado &lt;em&gt;admin.py&lt;/em&gt; en el directorio &lt;em&gt;polls&lt;/em&gt;:&lt;/p&gt;
@@ -228,7 +232,7 @@
 &lt;p&gt;Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h4 id=&#34;escribir-la-primera-vista&#34;&gt;Escribir la primera vista&lt;/h4&gt;
@@ -270,7 +274,7 @@
 
 &lt;p&gt;&lt;em&gt;Documentación Oficial&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/intro/tutorial01/&#34; target=&#34;_blank&#34;&gt;djangoproject.com&lt;/a&gt;
 &lt;em&gt;Imagen de aruseni&lt;/em&gt; »» &lt;a href=&#34;http://aruseni.deviantart.com/art/Django-white-and-green-318200642&#34; target=&#34;_blank&#34;&gt;deviantart&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

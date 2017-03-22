@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Npi on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/npi/index.xml</link>
-    <description>Recent content in Npi on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/npi/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android - Conceptos básicos</title>
-      <link>https://elbauldelprogramador.com/conceptos-basicos/</link>
-      <pubDate>Mon, 14 Dec 2015 07:53:53 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/conceptos-basicos/</guid>
-      <description>&lt;h1 id=&#34;conceptos-básicos-android&#34;&gt;Conceptos básicos Android&lt;/h1&gt;
+    <channel>
+        <title>Npi on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/npi/index.xml</link>
+        <description>Recent content in Npi on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/npi/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android - Conceptos básicos</title>
+            <link>https://elbauldelprogramador.com/conceptos-basicos/</link>
+            <pubDate>Mon, 14 Dec 2015 07:53:53 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/conceptos-basicos/</guid>
+            <description>&lt;h1 id=&#34;conceptos-básicos-android&#34;&gt;Conceptos básicos Android&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;View:&lt;/strong&gt; Representa el componente básico en el que se apoyan
@@ -56,7 +60,7 @@ aplicaciones.&lt;/li&gt;
 debemos respetar.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;carpeta-res&#34;&gt;Carpeta Res&lt;/h3&gt;
@@ -100,7 +104,7 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 &lt;p&gt;La siguiente imagen muestra el ciclo de vida de una &lt;em&gt;Activity&lt;/em&gt;, esto es qué flujo de llamadas siguen las aplicaciones. Como vemos, &lt;code&gt;onCreate&lt;/code&gt; es el primero método en llamarse al lanzar una &lt;em&gt;Activity&lt;/em&gt;, es por ello que en él debemos hacer todas las inicializaciones necesarias. Si lo necesitamos, podemos implementar todos y cada uno de estos métodos. Por ejemplo, en una aplicación de vídeo, interesará detener la reproducción cuando se recibe una llamada, o cuando la pantalla se apaga, toda esa lógica deberá ir en el método &lt;code&gt;onPause&lt;/code&gt; o &lt;code&gt;onStop&lt;/code&gt;, y debería reanudarse implementando la lógica en &lt;code&gt;onRestart&lt;/code&gt; o &lt;code&gt;onResume&lt;/code&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;res-layout-activity-main-xml&#34;&gt;./res/layout/activity_main.xml&lt;/h3&gt;
@@ -129,7 +133,7 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 {: .notice-info }&lt;/p&gt;
 
 &lt;!-- &lt;a href=&#34;https://elbauldelprogramador.com/tutorial-android-hola-mundo-a-fondo/&#34; class=&#34;btn btn-info&#34;&gt;Siguiente artículo: Hola Mundo a fondo&lt;/a&gt; --&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

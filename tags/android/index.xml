@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/android/index.xml</link>
-    <description>Recent content in Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo activar opciones de desarrollador en Android 4.2</title>
-      <link>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
-      <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/tags/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
+    <channel>
+        <title>Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/android/index.xml</link>
+        <description>Recent content in Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo activar opciones de desarrollador en Android 4.2</title>
+            <link>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/activar-opciones-de-desarrollador-en-android-4-2/</guid>
+            <description>&lt;p&gt;Hace poco actualicé mi Samsung Galaxy S II (GT-I9100) a CyanogenMod 10.1 y me dí cuenta que las opciones de desarrollador en &lt;a href=&#34;https://elbauldelprogramador.com/tags/android&#34;&gt;Android&lt;/a&gt; 4.2 no estaban donde siempre, en la configuración del teléfono. Así que buscando un poco encontré la respuesta. A fin de mejorar la experiencia del usuario, Google ha escondido por defecto esta opción.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -27,7 +31,7 @@
 &lt;p&gt;La respuesta concretamente la encontré en el foro de &lt;a href=&#34;https://elbauldelprogramador.com/tags/xda&#34;&gt;XDA&lt;/a&gt;. Como sabía que el problema lo había causado la opción &lt;strong&gt;Simular pantallas secundarias&lt;/strong&gt; bastaba con desactivarla para volver a la normalidad. Resulta que Android posee de un modo de &lt;em&gt;rescate o modo seguro&lt;/em&gt; que se puede iniciar manteniendo pulsadas todas las teclas excepto el botón de encendido en el proceso de arranque:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Screenshot_2013-03-03-13-48-30.png&#34; alt=&#34;Safe Mode in Android o Modo rescate en Android&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Screenshot_2013-03-03-13-48-30.png&#34; alt=&#34;Safe Mode in Android o Modo rescate en Android&#34; width=&#34;480px&#34; height=&#34;800px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Una vez en el modo rescate, desactivé la opción y problema resuelto.&lt;/p&gt;
@@ -39,15 +43,15 @@
 &lt;li&gt;&lt;em&gt;developer options disappear from settings&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/13558969/developer-options-disappear-from-settings&#34; target=&#34;_blank&#34;&gt;stackOverflow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&amp;#091;Q&amp;#93; Help! Messed with &amp;lsquo;Simulate Secondary Display&amp;rsquo; settings!&lt;/em&gt; »» &lt;a href=&#34;http://forum.xda-developers.com/showthread.php?t=2076180&#34; target=&#34;_blank&#34;&gt;forum.xda-developers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar  aplicaciones</title>
-      <link>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</guid>
-      <description>&lt;p&gt;Ya me ha sucedido en varias ocasiones que he intentado conectar mi &lt;strong&gt;Samsung Galaxy S&lt;/strong&gt; al &lt;strong&gt;adb&lt;/strong&gt; del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo conectar tu dispositivo Android en Linux al adb para depurar y desarrollar  aplicaciones</title>
+            <link>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-conectar-tu-dispositivo-android-en/</guid>
+            <description>&lt;p&gt;Ya me ha sucedido en varias ocasiones que he intentado conectar mi &lt;strong&gt;Samsung Galaxy S&lt;/strong&gt; al &lt;strong&gt;adb&lt;/strong&gt; del SDK de Android y he tenido que buscar durante un rato en internet como solucionar el siguiete problema:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ adb devices
 List of devices attached
 ???????????? no permissions
@@ -103,15 +107,15 @@ List of devices attached
 
 &lt;p&gt;Fuente: &lt;a href=&#34;http://dimitar.me/how-to-connect-your-android-phone-to-ubuntu-to-do-developmenttestinginstallations-or-tethering/&#34; target=&#34;_blank&#34;&gt;dimitar.me&lt;/a&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Disponible la primera parte del curso Android en PDF</title>
-      <link>https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/</guid>
-      <description>&lt;p&gt;Como vengo anunciando desde &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/terminada-la-primera-parte-del-manual&#34;&gt;hace unos días&lt;/a&gt;, ya está terminado el pdf con todo el contenido del &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;curso&lt;/a&gt;.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Disponible la primera parte del curso Android en PDF</title>
+            <link>https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/</guid>
+            <description>&lt;p&gt;Como vengo anunciando desde &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/terminada-la-primera-parte-del-manual&#34;&gt;hace unos días&lt;/a&gt;, ya está terminado el pdf con todo el contenido del &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;curso&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;El pdf está compuesto de 83 páginas. Podéis descargar el primer capítulo más abajo. Junto con 5 proyectos de ejemplo que se ven a lo largo del manual.&lt;/p&gt;
 
@@ -132,15 +136,15 @@ List of devices attached
 &lt;p&gt;De todos modos, si valoras el trabajo realizado, se aceptan donaciones mediante nuestro &lt;a href=&#34;https://www.paypal.me/elbaul&#34;&gt;enlace de Paypal&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, quiero daros las gracias a todos los lectore del blog. Un saludo&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos</title>
-      <link>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
-      <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+        </item>
+        
+        <item>
+            <title>Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos</title>
+            <link>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
+            <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
 
 &lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
 
@@ -185,15 +189,15 @@ List of devices attached
 &lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Grid Spacing en Android</title>
-      <link>https://elbauldelprogramador.com/grid-spacing-en-android/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/grid-spacing-en-android/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Éste artículo es una traducción del blog de &lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;, al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer (&lt;a href=&#34;https://elbauldelprogramador.com/pon-dieta-tus-apks/&#34; title=&#34;Pon a Dieta Tus APKs&#34;&gt;Pon a dieta tus APKs&lt;/a&gt;), otra traducción de su blog.&lt;/em&gt;&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Grid Spacing en Android</title>
+            <link>https://elbauldelprogramador.com/grid-spacing-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/grid-spacing-en-android/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una traducción del blog de &lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;, al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer (&lt;a href=&#34;https://elbauldelprogramador.com/pon-dieta-tus-apks/&#34; title=&#34;Pon a Dieta Tus APKs&#34;&gt;Pon a dieta tus APKs&lt;/a&gt;), otra traducción de su blog.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;La mayoría de interfaces de usuario (en móviles o web) se basan en el concepto de &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/&#34; title=&#34;Crear un GridView con Adaptador personalizado en Android&#34;&gt;rejillas&lt;/a&gt; (&lt;strong&gt;Grids&lt;/strong&gt; a partir de ahora). Los &lt;strong&gt;Grids&lt;/strong&gt; consisten básicamente en separar la interfaz de usuario en una serie de cuadrados alineados que pueden ser fusionados para crear bloques. Usando el principio Grid en el desarrollo de la UI (Interfaz de usuario) ayuda a alinear elementos, trae consistencia, genera un código limpio, asegura que el usuario pueda analizar fácilmente el contenido de la interfaz etc. En resumen, los &lt;strong&gt;Grids&lt;/strong&gt; son una herramienta de diseño extremadamante potentes.&lt;/p&gt;
 
@@ -218,13 +222,13 @@ List of devices attached
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;624px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;624px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;La interfaz mostrada en la imagen de arriba depende claramente en la idea de un Grid. Sin embargo, carece de espacio entre elementos que permitan al usuario distinguir claramente la entidades independientes de la interfaz. Corrijamos éste problema añadiendo &lt;code&gt;android:layout_marginTop=&amp;quot;@dimen/spacing_medium&amp;quot;&lt;/code&gt; al &lt;code&gt;LinearLayout&lt;/code&gt; identificado por &lt;code&gt;@id/buttons_container&lt;/code&gt; y &lt;code&gt;android:layout_marginRight=&amp;quot;@dimen/spacing_medium&amp;quot;&lt;/code&gt; a los botones &lt;code&gt;@id/btn_first&lt;/code&gt; y &lt;code&gt;@id/btn_second&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;/span&gt;
 &lt;/figure&gt;
 
@@ -233,7 +237,7 @@ List of devices attached
 &lt;p&gt;La interfaz de arriba tiene un aspecto bastante bueno: Buena apariencia, es legible, etc. Desafortunadamente, las cosas se ponen un poco mal cuando se ocultan dinámicamente algunas &lt;code&gt;Views&lt;/code&gt; en el &lt;em&gt;layout&lt;/em&gt;. De hecho, imaginemos que la función que se activaría con un click en el botón &lt;code&gt;@id/btn_third&lt;/code&gt; requiere de alguna característica no disponible en el dispositivo (&lt;strong&gt;Google Play Services&lt;/strong&gt; por ejemplo). La mejor forma de no desordenar la interfaz es ocultar el tercer botón con &lt;code&gt;View.GONE&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como es de esperar, el botón &lt;code&gt;@id/btn_third&lt;/code&gt; desaparece, pero el borde derecho de &lt;code&gt;@id/btn_second&lt;/code&gt; no está alineado con el borde derecho del icono de la aplicación. La razón principal de éste problema se debe a que la técnica usando el margen funciona bien siempre que se mantenga la asunción hecha al principio: cada &lt;code&gt;View&lt;/code&gt; con un margen derecho/superior tiene una &lt;code&gt;View&lt;/code&gt; vecina a su derecha/arriba. Ocultar algunas &lt;code&gt;Views&lt;/code&gt; en la barra va en contra de esta restricción.&lt;/p&gt;
@@ -263,7 +267,7 @@ List of devices attached
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
@@ -273,15 +277,15 @@ List of devices attached
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Grid Spacing on Android&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/11/17/grid-spacing-on-android/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Interfaz gráfica - Diálogos y notificaciones</title>
-      <link>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/</guid>
-      <description>&lt;p&gt;En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Interfaz gráfica - Diálogos y notificaciones</title>
+            <link>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/</guid>
+            <description>&lt;p&gt;En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.&lt;/p&gt;
 
 &lt;p&gt;Android dispone de tres tipos de notificaciones:&lt;/p&gt;
 
@@ -348,7 +352,7 @@ List of devices attached
 &lt;p&gt;Listo, al ejecutar la aplicación tendremos un Toast como este:&lt;/p&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Toast notification Android &#34; title=&#34;Toast notification Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Toast notification Android &#34; title=&#34;Toast notification Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Para saber más acerca de los mensajes toast puede visitar: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
@@ -387,7 +391,7 @@ List of devices attached
 &lt;p&gt;El resultado es el siguiente:&lt;/p&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;notification bar Android&#34; alt=&#34;notification bar Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;notification bar Android&#34; alt=&#34;notification bar Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Al igual que los Toast, se puede crear un layout personalizado, para más información visite: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
@@ -438,7 +442,7 @@ List of devices attached
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;alertDialog Android&#34; title=&#34;AlertDialog android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;alertDialog Android&#34; title=&#34;AlertDialog android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;También vamos a ver un ProgressDialog, indefinido (Que nunca termina).&lt;/p&gt;
@@ -453,7 +457,7 @@ List of devices attached
 &lt;p&gt;Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &amp;#8220;atrás&amp;#8221; del terminal.&lt;/p&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-    &lt;a href=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Se puede descargar el proyecto de esta entrada aquí:&lt;/p&gt;
@@ -463,24 +467,24 @@ List of devices attached
 &lt;hr /&gt;
 
 &lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h1&gt;</description>
-    </item>
-    
-    <item>
-      <title>Saltarse la autentificación de dos factores de Google</title>
-      <link>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Dou Security&lt;/em&gt;&lt;/strong&gt; encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificación de dos factores de Google&lt;/a&gt; y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Saltarse la autentificación de dos factores de Google</title>
+            <link>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</guid>
+            <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;Dou Security&lt;/em&gt;&lt;/strong&gt; encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificación de dos factores de Google&lt;/a&gt; y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Bypassing-Google-Two-Factor-Authentication.jpg&#34; alt=&#34;Bypassing Google Two Factor Authentication&#34; width=&#34;460px&#34; height=&#34;349px&#34; /&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Bypassing-Google-Two-Factor-Authentication.jpg&#34; alt=&#34;Bypassing Google Two Factor Authentication&#34; width=&#34;460px&#34; height=&#34;349px&#34; /&gt;
 &lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;La vulnerabilidad está en la implementación del mecanismo de auto-login en la ultima versión del navegador Chrome para Android. Dicha vulnerabilidad permitión a Duo Security usar un ASP (Application-Specific-Password) para ganar acceso al panel de recuperación de cuentas de Google y gestionar la configuración de la autentificación de dos factores.&lt;/p&gt;
 
 &lt;p&gt;El auto-login permite a los usuarios que han enlazado sus dispositivos móviles o ChromeBooks a su cuenta de Google acceder automáticamente a todas las páginas que tienen que ver con aplicaciones de Google sin necesidad de insertar los datos de login.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/android_autologin.png&#34; alt=&#34;android_autologin&#34; width=&#34;300px&#34; height=&#34;500px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/android_autologin.png&#34; alt=&#34;android_autologin&#34; width=&#34;300px&#34; height=&#34;500px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Duo Security dijo en &lt;a href=&#34;https://blog.duosecurity.com/2013/02/bypassing-googles-two-factor-authentication/&#34; target=&#34;_blank&#34;&gt;su blog&lt;/a&gt;:&lt;/p&gt;
 
@@ -491,7 +495,7 @@ List of devices attached
 &lt;p&gt;&lt;em&gt;“Luego, se usa un ASP en lugar de tu contraseña real. En términos más concretos, Se crean ASPs para la mayoría de aplicaciones cliente que no usan un login basado en Web: clientes email que usen IMAP y SMTP (Mail de Apple, Thunderbird etc); clientes de chat con comunicaciones mediante XMPP (Adium, pidgin etc) y aplicaciones de calendarios que se sincronizan usando CaIDAV (iCal, etc)”&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/gauth_break_sm1.png&#34; alt=&#34;gauth_break_sm1&#34; width=&#34;640px&#34; height=&#34;393px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/gauth_break_sm1.png&#34; alt=&#34;gauth_break_sm1&#34; width=&#34;640px&#34; height=&#34;393px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Las ASPs son Tokens especializados generados para cada aplicación que el usuario usa en lugar de la combinación contraseña/token. Duo Security descubrió que los ASPs en ralidad no eran específicos para aplicaciones, de hecho, un único código podría usarse para loggearse en casi cualquier aplicación Web de Google debido a la característica del auto-login.&lt;/p&gt;
 
@@ -504,16 +508,16 @@ List of devices attached
 &lt;h4 id=&#34;fuente&#34;&gt;Fuente&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Bypassing Google’s Two-Factor Authentication&lt;/em&gt; »» &lt;a href=&#34;http://thehackernews.com/2013/02/bypassing-google-two-factor.html&#34; target=&#34;_blank&#34;&gt;thehackernews.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Pon a dieta a tus APKs</title>
-      <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
-      <pubDate>Fri, 11 Dec 2015 10:47:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Pon a dieta a tus APKs</title>
+            <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
+            <pubDate>Fri, 11 Dec 2015 10:47:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: Cyril&lt;/span&gt;
 &lt;/figure&gt;
 
@@ -654,7 +658,7 @@ resources.arsc
 
 &lt;p&gt;También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas &lt;code&gt;ic_arrow_expand&lt;/code&gt; y &lt;code&gt;ic_arrow_collapse&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos deshacernos fácilmente de &lt;code&gt;ic_arrow_collapse&lt;/code&gt; creando un &lt;code&gt;RotateDrawable&lt;/code&gt; basándonos en &lt;code&gt;ic_arrow_expand&lt;/code&gt;. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
@@ -667,7 +671,7 @@ resources.arsc
 
 &lt;p&gt;Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el &lt;strong&gt;APK&lt;/strong&gt; resultante pesaba más de &lt;strong&gt;1.5MB&lt;/strong&gt;. Tras investigar en &lt;code&gt;wearable-support.aar&lt;/code&gt;, descubrió que se empaquetan dos animaciones &lt;em&gt;frame-by-frame&lt;/em&gt; en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La animación para el “éxito” se construye con un &lt;code&gt;AnimationDrawable&lt;/code&gt; definido en un XML:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
@@ -720,18 +724,18 @@ resources.arsc
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Aprende a Programar Una App Android Para Proteger Tus PDFs</title>
-      <link>https://elbauldelprogramador.com/aprende-a-programar-una-app-android-para-proteger-tus-pdfs/</link>
-      <pubDate>Tue, 07 Jul 2015 15:38:30 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/aprende-a-programar-una-app-android-para-proteger-tus-pdfs/</guid>
-      <description>&lt;p&gt;Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Aprende a Programar Una App Android Para Proteger Tus PDFs</title>
+            <link>https://elbauldelprogramador.com/aprende-a-programar-una-app-android-para-proteger-tus-pdfs/</link>
+            <pubDate>Tue, 07 Jul 2015 15:38:30 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/aprende-a-programar-una-app-android-para-proteger-tus-pdfs/</guid>
+            <description>&lt;p&gt;Hoy vamos a guiarte en el desarrollo de una aplicación Android que sirve para proteger tus documentos PDF de los ojos no autorizados, por medio de una contraseña.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;450px&#34; height=&#34;300px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Aprende-a-Programar-Una-App-Android-Para-Proteger-Tus-PDFs.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;450px&#34; height=&#34;300px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;¿Por qué puede interesarte? Bien, esto es útil en varios escenarios, por ejemplo cuando quieres subir tus documentos sensibles a la nube, en formato PDF, y necesitas añadir una capa de seguridad encriptando el documento con un password.&lt;/p&gt;
@@ -764,14 +768,14 @@ resources.arsc
 &lt;p&gt;Lo que hace PDF Protector es preguntarte qué partes de tu PDF quieres asegurar.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Protege tus documentos PDF nativos.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Protege tus documentos PDF nativos.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;figcaption&gt;Figura 1. Protegiendo tus documentos PDF nativos&lt;/figure&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como decimos, el user password es para proteger por contraseña la apertura del documento, y el master password para proteger las operaciones que desees. Así que cuando proteges tus PDF con un user password entonces te sale este diálogo al abrirlo.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Documento protegido por user password.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Documento protegido por user password.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;figcaption&gt;Figura 2. Documento protegido por user password&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -883,15 +887,15 @@ resources.arsc
 &lt;p&gt;El método &lt;code&gt;getUserAccessPermissions&lt;/code&gt; de &lt;code&gt;PDFDocument&lt;/code&gt; recibe en la variable &lt;code&gt;perm&lt;/code&gt; los permisos que quieres establecer, y luego se los tienes que pasar a &lt;code&gt;setEncrypt&lt;/code&gt; (método que también pertenece a &lt;code&gt;PDFDocument&lt;/code&gt;) para encriptar el documento con dichos permisos.&lt;/p&gt;
 
 &lt;p&gt;¡Ya hemos terminado! Esperamos que el tutorial de hoy os haya gustado. Consigue tu &lt;strong&gt;&lt;a href=&#34;https://plugpdf.com/download/&#34;&gt;tu licencia PlugPDF gratis&lt;/a&gt;&lt;/strong&gt; ahora y comienza a desarrollar herramientas de seguridad PDF hoy mismo.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Programar Un Completo Lector PDF en Android</title>
-      <link>https://elbauldelprogramador.com/como-programar-un-completo-lector-pdf-en-android/</link>
-      <pubDate>Mon, 06 Jul 2015 19:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-programar-un-completo-lector-pdf-en-android/</guid>
-      <description>&lt;p&gt;¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34; title=&#34;Curso android&#34;&gt;Android&lt;/a&gt; como en iOS.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Programar Un Completo Lector PDF en Android</title>
+            <link>https://elbauldelprogramador.com/como-programar-un-completo-lector-pdf-en-android/</link>
+            <pubDate>Mon, 06 Jul 2015 19:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-programar-un-completo-lector-pdf-en-android/</guid>
+            <description>&lt;p&gt;¿Conoces el SDK PlugPDF? Esta API te permite trabajar con documentos PDF de forma nativa, tanto en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34; title=&#34;Curso android&#34;&gt;Android&lt;/a&gt; como en iOS.&lt;/p&gt;
 
 &lt;p&gt;En este tutorial te vamos a enseñar cómo poner en tus apps Android un completo lector y visor de documentos PDF, totalmente funcional, que incluye una barra de navegación con todo lo siguiente:&lt;/p&gt;
 
@@ -905,37 +909,37 @@ resources.arsc
 
 &lt;p&gt;&lt;!--ad--&gt;
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Lector PDF Android con barra de navegación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Lector PDF Android con barra de navegación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 1. Lector PDF Android que incluye una barra de navegación con varios controles&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Bloquear la rotación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Bloquear la rotación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 2. Bloquear la rotación
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Modo de visualización de la página.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Modo de visualización de la página.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 3. Modo de visualización
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Brillo.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Brillo.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 4. Brillo
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/outline.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/outline.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 5. Outline
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Búsqueda de texto.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Búsqueda de texto.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 6. Búsqueda de texto
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Insertar anotaciones.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Insertar anotaciones.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;960px&#34; height=&#34;560px&#34; /&gt;
 &lt;/figure&gt;
 Figura 7. Insertar anotaciones: subrayar texto, tachado, dibujo a mano alzada, etc.
 
@@ -976,7 +980,7 @@ En aplicaciones Android más complejas que cuentan con varias clases, es recomen
 Ahora vamos a crear un proyecto Android nuevo que llamaremos `SimpleDocumentReader`, y justo a continuación, importaremos PlugPDF como un módulo nuevo. La estructura de la aplicación tiene que quedar como sigue.
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Estructura de la aplicación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;429px&#34; height=&#34;562px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Estructura de la aplicación.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;429px&#34; height=&#34;562px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Figura 8. Estructura de la aplicación&lt;/p&gt;
@@ -1105,15 +1109,15 @@ Ahora vamos a crear un proyecto Android nuevo que llamaremos `SimpleDocumentRead
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;¡Ya lo tenemos! Esperamos que hayas podido correr este lector PDF nativo en tu Android, en pocos minutos. Si te gustó este post estás invitado/a a compartirlo con tus amigos/as. Muchas gracias.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en  Android</title>
-      <link>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</link>
-      <pubDate>Tue, 30 Jun 2015 16:48:42 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</guid>
-      <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34;&gt;Android&lt;/a&gt;, cuando se tiene un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;&lt;code&gt;ListView&lt;/code&gt;&lt;/a&gt;, dentro de un &lt;code&gt;ScrollView&lt;/code&gt;, es posible que el último capture todos los eventos &lt;code&gt;onTouch&lt;/code&gt;, y no sea posible utilizar el &lt;code&gt;ListView&lt;/code&gt;.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en  Android</title>
+            <link>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</link>
+            <pubDate>Tue, 30 Jun 2015 16:48:42 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</guid>
+            <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34;&gt;Android&lt;/a&gt;, cuando se tiene un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;&lt;code&gt;ListView&lt;/code&gt;&lt;/a&gt;, dentro de un &lt;code&gt;ScrollView&lt;/code&gt;, es posible que el último capture todos los eventos &lt;code&gt;onTouch&lt;/code&gt;, y no sea posible utilizar el &lt;code&gt;ListView&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para solucionar el problema, bastaría con deshabilitar la captura del evento &lt;code&gt;onTouch&lt;/code&gt; para el &lt;code&gt;ScrollView&lt;/code&gt;, si lo que estamos pulsando es el &lt;code&gt;ListView&lt;/code&gt;, es decir:&lt;/p&gt;
 
@@ -1150,7 +1154,7 @@ disallowIntercept   True if the child does not want the parent to intercept touc
 &lt;/blockquote&gt;
 
 &lt;p&gt;Es decir, le pasaremos &lt;code&gt;true&lt;/code&gt; cuando la vista hija no quiera que el padre intercepte eventos &lt;code&gt;onTouch&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Configurar Dns on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/configurar-dns/index.xml</link>
-    <description>Recent content in Configurar Dns on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/configurar-dns/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo configurar un servidor DNS - Parte 1 (Introducción)</title>
-      <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</guid>
-      <description>&lt;figure&gt;
+    <channel>
+        <title>Configurar Dns on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/configurar-dns/index.xml</link>
+        <description>Recent content in Configurar Dns on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/configurar-dns/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 1 (Introducción)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</guid>
+            <description>&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -27,7 +31,7 @@
             sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
             width=&#34;450&#34;
             height=&#34;361&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
         &lt;/a&gt;
 &lt;/figure&gt;
 
@@ -72,7 +76,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 &lt;p&gt;Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “&lt;em&gt;No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”&lt;/em&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Esquema servidores DNS&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/dns.png&#34; width=&#34;513px&#34; height=&#34;399px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Esquema servidores DNS&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/dns.png&#34; width=&#34;513px&#34; height=&#34;399px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En la figura de arriba, la parte superior izquierda representa los servidores root. En la jerga DNS, éstos servidores reprensentan el comienzo del camino en el sistema DNS. Suelen representarse con un punto (“.”). En los archivos de configuración, el mapeo entre IP y nombre acabará en un punto. A lo largo de esta series de artículos quedará más claro este concepto.&lt;/p&gt;
@@ -86,7 +90,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 &lt;p&gt;En la figura 2, &lt;em&gt;named&lt;/em&gt; ha recibido una petición. Busca en su fichero de configuración &lt;em&gt;named.conf&lt;/em&gt;, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Figura 2 - Respondiendo a una petición&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/config.png&#34; width=&#34;411px&#34; height=&#34;185px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Figura 2 - Respondiendo a una petición&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/config.png&#34; width=&#34;411px&#34; height=&#34;185px&#34; /&gt;
 &lt;figcaption&gt;Figura 2 - Respondiendo a una petición&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -158,17 +162,17 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)</title>
-      <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</guid>
-      <description>&lt;figure&gt;
+        </item>
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</guid>
+            <description>&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -179,7 +183,7 @@ zone &lt;span class=&#34;s2&#34;&gt;&amp;quot;255.in-addr.arpa&amp;quot;&lt;/spa
             sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
             width=&#34;450&#34;
             height=&#34;361&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
         &lt;/a&gt;
 &lt;/figure&gt;
 
@@ -285,17 +289,17 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)</title>
-      <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</guid>
-      <description>&lt;figure&gt;
+        </item>
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</guid>
+            <description>&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/04/dns.jpg&#34;&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -306,7 +310,7 @@ MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
             sizes=&#34;(min-width: 450px) 450px, 100vw&#34;
             width=&#34;450&#34;
             height=&#34;361&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
         &lt;/a&gt;
 &lt;/figure&gt;
 
@@ -424,7 +428,7 @@ elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;a href=&#34;http://www.howtoforge.com/traditional_dns_howto&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

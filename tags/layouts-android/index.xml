@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Layouts Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/layouts-android/index.xml</link>
-    <description>Recent content in Layouts Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/layouts-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Interfaz gráfica - Layouts</title>
-      <link>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/</guid>
-      <description>&lt;p&gt;Los layout nos permiten posicionar cada objeto gráfico en el lugar que queramos de la pantalla, es decir, nos permite diseñar el aspecto gráfico que va a tener nuestra pantalla. Los layouts son de tipo &lt;strong&gt;&lt;em&gt;ViewGroup&lt;/em&gt;&lt;/strong&gt;, una subclase de &lt;strong&gt;&lt;em&gt;View&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+    <channel>
+        <title>Layouts Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/layouts-android/index.xml</link>
+        <description>Recent content in Layouts Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/layouts-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Interfaz gráfica - Layouts</title>
+            <link>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/</guid>
+            <description>&lt;p&gt;Los layout nos permiten posicionar cada objeto gráfico en el lugar que queramos de la pantalla, es decir, nos permite diseñar el aspecto gráfico que va a tener nuestra pantalla. Los layouts son de tipo &lt;strong&gt;&lt;em&gt;ViewGroup&lt;/em&gt;&lt;/strong&gt;, una subclase de &lt;strong&gt;&lt;em&gt;View&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Existen varios tipos de Layouts para Android, vamos a ver los más comunes:&lt;/p&gt;
 
@@ -44,7 +48,7 @@
 &lt;p&gt;Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;FrameLayout Android&#34; title=&#34;FrameLayout Android&#34;  height=&#34;436&#34; width=&#34;328&#34; src=&#34;https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s800/frameLayout.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;FrameLayout Android&#34; title=&#34;FrameLayout Android&#34;  height=&#34;436&#34; width=&#34;328&#34; src=&#34;https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s800/frameLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;linearlayout&#34;&gt;LinearLayout&lt;/h3&gt;
@@ -74,7 +78,7 @@
 &lt;p&gt;En este caso, he pueso un fondo de color a cada texto (con la propiedad &lt;strong&gt;&lt;em&gt;android:background&lt;/em&gt;&lt;/strong&gt;) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;LinearLayout Android&#34; title=&#34;LinearLayout Android&#34;  height=&#34;435&#34; width=&#34;326&#34; src=&#34;https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s800/LinearLayout.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;LinearLayout Android&#34; title=&#34;LinearLayout Android&#34;  height=&#34;435&#34; width=&#34;326&#34; src=&#34;https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s800/LinearLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;relativelayout&#34;&gt;RelativeLayout&lt;/h3&gt;
@@ -111,11 +115,11 @@
 &lt;p&gt;Como vemos, hemos centrado el texto1 en la pantalla con &lt;strong&gt;&lt;em&gt;android:layout_centerInParent=&amp;#8221;true&amp;#8221;&lt;/em&gt;&lt;/strong&gt; y hemos puesto debajo del texto1 al texto2 con &lt;strong&gt;&lt;em&gt;android:layout_below=&amp;#8221;@id/text1&amp;#8243;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;relativeLayout Android&#34; alt=&#34;relativeLayout Android&#34;  height=&#34;437&#34; width=&#34;326&#34; src=&#34;https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;relativeLayout Android&#34; alt=&#34;relativeLayout Android&#34;  height=&#34;437&#34; width=&#34;326&#34; src=&#34;https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-componentes-gráficos-y-eventos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;Programación Android: Interfaz gráfica - Componentes gráficos y Eventos&lt;/a&gt;&lt;/h3&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

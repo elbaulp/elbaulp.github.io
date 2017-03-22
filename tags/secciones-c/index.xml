@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Secciones C on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/secciones-c/index.xml</link>
-    <description>Recent content in Secciones C on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/secciones-c/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Jugando con las secciones .dtors y .ctors de la tabla de secciones en C</title>
-      <link>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</guid>
-      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34; class=&#34;alignleft&#34; /&gt;
+    <channel>
+        <title>Secciones C on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/secciones-c/index.xml</link>
+        <description>Recent content in Secciones C on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/secciones-c/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Jugando con las secciones .dtors y .ctors de la tabla de secciones en C</title>
+            <link>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</guid>
+            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34; class=&#34;alignleft&#34; /&gt;
 Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Desafío de ingeniería inversa en C – Soluciones&#34;&gt;ingeniería inversa en C&lt;/a&gt;, o &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;explotación de buffers overflows&lt;/a&gt;. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt;, creada por los binarios compilados con el compilador de GNU.&lt;/p&gt;
 
 &lt;p&gt;Estas secciones se crean para los &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-destructor/&#34;&gt;destructores&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-constructor/&#34;&gt;constructores&lt;/a&gt;, respectivamente. Los constructores se llaman justo antes de ejecutar la función &lt;code&gt;main()&lt;/code&gt; y los destructores se llaman justo antes de que &lt;code&gt;main()&lt;/code&gt; finalize con la llamada al sistema &lt;code&gt;exit&lt;/code&gt;.&lt;/p&gt;
@@ -190,7 +194,7 @@ La última dirección (3c840408) corresponde con la dirección de la función &l
 &lt;em&gt;Abusing .CTORS and .DTORS For FUN and PROFIT&lt;/em&gt; »» &lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34; target=&#34;_blank&#34;&gt;exploit-db.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/stdlib.h&gt;&lt;/stdio.h&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

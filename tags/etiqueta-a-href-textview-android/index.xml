@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Etiqueta A Href Textview Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/etiqueta-a-href-textview-android/index.xml</link>
-    <description>Recent content in Etiqueta A Href Textview Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/etiqueta-a-href-textview-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Crear enlaces en un TextView con la etiqueta HTML</title>
-      <link>https://elbauldelprogramador.com/crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/</guid>
-      <description>&lt;p&gt;Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta &lt;em&gt;&amp;lt;a href=””&amp;gt;&amp;lt;/a&amp;gt;&lt;/em&gt;.&lt;/p&gt;
+    <channel>
+        <title>Etiqueta A Href Textview Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/etiqueta-a-href-textview-android/index.xml</link>
+        <description>Recent content in Etiqueta A Href Textview Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/etiqueta-a-href-textview-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear enlaces en un TextView con la etiqueta HTML</title>
+            <link>https://elbauldelprogramador.com/crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-enlaces-en-un-textview-con-la-etiqueta-html-a-href-en-android/</guid>
+            <description>&lt;p&gt;Para una aplicación que estoy haciendo, me hacía falta ser capaz de mostrar un enlace al usuario de forma similar al que se crean en las páginas webs con la etiqueta &lt;em&gt;&amp;lt;a href=””&amp;gt;&amp;lt;/a&amp;gt;&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -43,11 +47,11 @@ author.setMovementMethod(LinkMovementMethod.getInstance());
 &lt;p&gt;Con el código anterior se consigue el comportamiento deseado:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/setMovementMethod-example.png&#34; alt=&#34;enlaces en un textview android&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/setMovementMethod-example.png&#34; alt=&#34;enlaces en un textview android&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Los dos primeros enlaces están creados con el método &lt;code&gt;setMovementMethod()&lt;/code&gt;, los otros dos con &lt;code&gt;android:autoLink=&amp;quot;web&amp;quot;&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

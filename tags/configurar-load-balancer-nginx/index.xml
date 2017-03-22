@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Configurar Load Balancer Nginx on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/configurar-load-balancer-nginx/index.xml</link>
-    <description>Recent content in Configurar Load Balancer Nginx on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/configurar-load-balancer-nginx/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo configurar un balanceador de carga en entornos cloud</title>
-      <link>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
-      <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
+    <channel>
+        <title>Configurar Load Balancer Nginx on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/configurar-load-balancer-nginx/index.xml</link>
+        <description>Recent content in Configurar Load Balancer Nginx on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/configurar-load-balancer-nginx/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo configurar un balanceador de carga en entornos cloud</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
+            <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
 
 &lt;h1 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h1&gt;
 
@@ -91,17 +95,17 @@
 
 &lt;p&gt;Para ello, en el panel de control hacemos click en &lt;em&gt;Red&lt;/em&gt; » Balanceadores. Allí crearemos uno nuevo&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga1.png&#34; alt=&#34;Balanceadoresdecarga1&#34; width=&#34;815px&#34; height=&#34;531px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga1.png&#34; alt=&#34;Balanceadoresdecarga1&#34; width=&#34;815px&#34; height=&#34;531px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Donde se especifica el nombre, puertos y direcciones a usar.&lt;/p&gt;
 
 &lt;p&gt;El siguiente paso es elegir el tipo de Control de estado a realizar, y el método de balanceo (Round robin o least connections)&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga2.png&#34; alt=&#34;Balanceadoresdecarga2&#34; width=&#34;812px&#34; height=&#34;532px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga2.png&#34; alt=&#34;Balanceadoresdecarga2&#34; width=&#34;812px&#34; height=&#34;532px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Por último, se especifica la aplicación que será balanceada entre todos los servidores virtuales disponibles.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga3.png&#34; alt=&#34;Balanceadoresdecarga3&#34; width=&#34;815px&#34; height=&#34;529px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga3.png&#34; alt=&#34;Balanceadoresdecarga3&#34; width=&#34;815px&#34; height=&#34;529px&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h1&gt;
 
@@ -112,7 +116,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Nginx Docs&lt;/em&gt; »» &lt;a href=&#34;http://nginx.org/en/docs/http/load_balancing.html&#34; target=&#34;_blank&#34;&gt;nginx.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

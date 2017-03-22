@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Navegar Anonimamente on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/navegar-anonimamente/index.xml</link>
-    <description>Recent content in Navegar Anonimamente on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/navegar-anonimamente/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks</title>
-      <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</guid>
-      <description>&lt;ul&gt;
+    <channel>
+        <title>Navegar Anonimamente on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/navegar-anonimamente/index.xml</link>
+        <description>Recent content in Navegar Anonimamente on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/navegar-anonimamente/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</guid>
+            <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/li&gt;
@@ -41,7 +45,7 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1515_AchievingAn1&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/081712_1515_AchievingAn1.png&#34; width=&#34;300px&#34; height=&#34;114px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1515_AchievingAn1&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/081712_1515_AchievingAn1.png&#34; width=&#34;300px&#34; height=&#34;114px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;2-torbutton&#34;&gt;2. Torbutton&lt;/h2&gt;
@@ -185,7 +189,7 @@ tsocks
 &lt;p&gt;Podemos ver que pedimos el archivo image.png de la dirección IP 31.172.30.1. Para verificar incluso si la IP es parte de la red Tor, podemos clickear en &amp;#8220;View the Network&amp;#8221; en la GUI Vidalia, la cual nos lista todos los nodos en la red Tor. Entre todos ellos está también el nodo con la IP 31.172.30.1 como se representa en la imagen siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1515_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/081712_1515_AchievingAn2.png&#34; width=&#34;300px&#34; height=&#34;99px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1515_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/081712_1515_AchievingAn2.png&#34; width=&#34;300px&#34; height=&#34;99px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, y está levantado desde hace 48 días, etc. Por lo tanto, hemos validado que el nodo es parte de la red Tor, y por lo tanto tsocks funcionó como era esperado.&lt;/p&gt;
@@ -196,15 +200,15 @@ tsocks
 &lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-3/&#34; target=&#34;_blank&#34;&gt;Achieving Anonymity with Tor Part 3&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;(1) Tor Project&lt;/em&gt; »» &lt;a href=&#34;https://www.torproject.org/torbutton/en/design/&#34; target=&#34;_blank&#34;&gt;Torbutton Design Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Logrando el anonimato con Tor (Parte 4) - Tor para relés</title>
-      <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</guid>
-      <description>&lt;ul&gt;
+        </item>
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 4) - Tor para relés</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</guid>
+            <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
@@ -242,7 +246,7 @@ tsocks
 &lt;p&gt;Podemos muy sencillamente configurar un Tor relay con una interface de usuario gráfica de Vidalia haciendo click en Settings -&amp;gt; Sharing -&amp;gt; &amp;#8220;Relay traffic for the Tor network (exit relay)&amp;#8221;. Se puede ver en la imagen siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn1&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/081712_1525_AchievingAn1.png&#34; width=&#34;300px&#34; height=&#34;298px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn1&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/081712_1525_AchievingAn1.png&#34; width=&#34;300px&#34; height=&#34;298px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podemos ver que hay un par de opciones que podemos configurar:&lt;/p&gt;
@@ -310,7 +314,7 @@ RelayBandwidthBurst 10485760
 &lt;p&gt;Después de haber configurado nuestro nodo relay, deberíamos guardar la configuración y reiniciar Tor. Este proceso debería crear claves privadas para Tor, las cuales son almacenadas en keys/secret_id_key en nuestro DataDirectory. Si mostramos el contenido de DataDirectory, podemos ver que las claves privadas están presentes, como se puede ver en la imagen siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn2.png&#34; width=&#34;616px&#34; height=&#34;119px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn2.png&#34; width=&#34;616px&#34; height=&#34;119px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Los comandos presentados en la imagen fueron ejecutados unos momentos después de que el relay de Tor sea configurado e iniciado. Podemos ver que la fecha actual es unos minutos después de la fecha de creación de las claves privadas, lo que indica que fueron creadas recientemente. Esas dos claves son críticas para la operación de nuestro relay, debido a que son usadas para encriptar/desencriptar el tráfico que pasa por nuestro relay. Si alguien puede meter las manos en esas dos claves privadas, entonces podría desencriptar todo el tráfico que pasa por nuestro relay, lo cual rompería nuestra capacidad de anonimato con Tor.&lt;/p&gt;
@@ -318,7 +322,7 @@ RelayBandwidthBurst 10485760
 &lt;p&gt;Presentemos una de las claves aquí, así podemos tener una imagen mejor de estos dos archivos. El contenido del archivo &lt;code&gt;secret_id_file&lt;/code&gt; se muestra a continuación:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn3&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn3.png&#34; width=&#34;587px&#34; height=&#34;275px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn3&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn3.png&#34; width=&#34;587px&#34; height=&#34;275px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podemos ver que el archivo &lt;code&gt;secret_id_key&lt;/code&gt; contiene solo la clave privada RSA usada para encriptar/desencriptar el tráfico que pasa a través del relay.&lt;/p&gt;
@@ -351,13 +355,13 @@ RelayBandwidthBurst 10485760
 En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay están corriendo bien, lo aumenta nuestra seguridad de que todo está funcionando correctamente.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn4&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn4.png&#34; width=&#34;643px&#34; height=&#34;138px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn4&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn4.png&#34; width=&#34;643px&#34; height=&#34;138px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si todavía no estamos satisfechos y quisiéramos ver nuestro relay en acción, necesitamos esperar una hora para que el relay sea agregado en el directorio, y luego podemos buscarlo en el sitio web Relay Search. Si escribimos &amp;#8220;abracadabra&amp;#8221; en el cuadro de búsqueda y presionamos &amp;#8220;Search&amp;#8221;, nuestro relay debería mostrarse. Podemos ver esto en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn5&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn5.png&#34; width=&#34;602px&#34; height=&#34;520px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn5&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn5.png&#34; width=&#34;602px&#34; height=&#34;520px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Hemos buscado la cadena &amp;#8220;abracadabra&amp;#8221;, la cual es el alias de nuestro relay, por lo tanto está funcionando. La IP externa está enmascarada con xxx.xxx.xxx.xxx para la imagen, pero la dirección está realmente, por lo que es otra confirmación de que el relay no es anónimo y su IP externa es visible. La imagen también nos muestra qué puertos el relay dejará atravesar (80 y 443), el ancho de banda disponible y la versión de Tor que está corriendo, más alguna otra extraña cadena &amp;#8220;CwGinCP3xw5S0orVqecCNxQ7fUw”, de la que no tenemos información sobre qué significa.&lt;/p&gt;
@@ -365,7 +369,7 @@ En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay est�
 &lt;p&gt;La imagen presentada también tiene un hipervínculo “b20yYC0pV6WSYHT0mq+h6i27Ke0″, que apunta a &lt;a href=&#34;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&#34;&gt;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&lt;/a&gt;. Esta dirección revela la información mostrada en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn7&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn7.png&#34; width=&#34;643px&#34; height=&#34;215px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081712_1525_AchievingAn7&#34; src=&#34;https://elbauldelprogramador.com/img/2013/06/081712_1525_AchievingAn7.png&#34; width=&#34;643px&#34; height=&#34;215px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El alias para el relay es abracadabra, el ancho de banda es 59.39 KB, y el IP y el puerto también son visibles. Hay además banderas que identifican el tipo de servicio. Las banderas especifican las siguientes cosas en orden:&lt;/p&gt;
@@ -388,7 +392,7 @@ En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay est�
 &lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-4/&#34; target=&#34;_blank&#34;&gt;Achieving Anonymity with Tor Part 4&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.torproject.org/&#34; target=&#34;_blank&#34;&gt;Tor Project&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

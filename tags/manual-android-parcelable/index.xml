@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Manual Android Parcelable on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/manual-android-parcelable/index.xml</link>
-    <description>Recent content in Manual Android Parcelable on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/manual-android-parcelable/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo crear un adapter personalizado en Android</title>
-      <link>https://elbauldelprogramador.com/adapter-personalizado-en-android/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/adapter-personalizado-en-android/</guid>
-      <description>&lt;p&gt;Hace tiempo que hablé de cómo crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;adapter simple&lt;/a&gt;, y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34;&gt;otro&lt;/a&gt; un poco más personalizado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
+    <channel>
+        <title>Manual Android Parcelable on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/manual-android-parcelable/index.xml</link>
+        <description>Recent content in Manual Android Parcelable on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/manual-android-parcelable/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo crear un adapter personalizado en Android</title>
+            <link>https://elbauldelprogramador.com/adapter-personalizado-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/adapter-personalizado-en-android/</guid>
+            <description>&lt;p&gt;Hace tiempo que hablé de cómo crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;adapter simple&lt;/a&gt;, y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica-2/&#34;&gt;otro&lt;/a&gt; un poco más personalizado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;Android&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;En esta entrada se verá cómo crear un adapter desde cero, con algunas funcionalidades más.&lt;/p&gt;
 
@@ -31,7 +35,7 @@
 &lt;p&gt;Terminada, la aplicación de prueba debe quedar algo así:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;aligncenter  wp-image-964&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;aligncenter  wp-image-964&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Antes de nada, hay que crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;layout&lt;/a&gt; que define cómo ha de verse cada fila del ListView:&lt;/p&gt;
@@ -84,7 +88,7 @@
 &lt;p&gt;Creando así el aspecto deseado para cada línea del ListView:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;customrow&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/customrow1.png&#34; alt=&#34;adapter android&#34; width=&#34;307px&#34; height=&#34;50px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;customrow&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/customrow1.png&#34; alt=&#34;adapter android&#34; width=&#34;307px&#34; height=&#34;50px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El primer paso es crear una clase que representará los datos a almacenar:&lt;/p&gt;
@@ -471,7 +475,7 @@
 &lt;li&gt;&lt;em&gt;Saving state of ArrayList of custom objects&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/3469947/saving-state-of-arraylist-of-custom-objects&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;AndroidBook&lt;/em&gt; »» &lt;a href=&#34;http://www.androidbook.com&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

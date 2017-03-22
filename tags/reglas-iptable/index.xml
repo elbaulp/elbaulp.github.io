@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Reglas Iptable on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/reglas-iptable/index.xml</link>
-    <description>Recent content in Reglas Iptable on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/reglas-iptable/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>20 ejemplos de iptables para SysAdmins novatos</title>
-      <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
-      <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
+    <channel>
+        <title>Reglas Iptable on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/reglas-iptable/index.xml</link>
+        <description>Recent content in Reglas Iptable on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/reglas-iptable/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>20 ejemplos de iptables para SysAdmins novatos</title>
+            <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
+            <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.&lt;/p&gt;
@@ -558,7 +562,7 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 &lt;p&gt;E incluimos al final:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;kern.warning /var/log/iptables.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Actividades on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/actividades/index.xml</link>
-    <description>Recent content in Actividades on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/actividades/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos</title>
-      <link>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
-      <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+    <channel>
+        <title>Actividades on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/actividades/index.xml</link>
+        <description>Recent content in Actividades on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/actividades/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos</title>
+            <link>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
+            <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
 
 &lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
 
@@ -59,7 +63,7 @@
 &lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

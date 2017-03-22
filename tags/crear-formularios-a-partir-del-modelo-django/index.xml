@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Crear Formularios A Partir Del Modelo Django on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/crear-formularios-a-partir-del-modelo-django/index.xml</link>
-    <description>Recent content in Crear Formularios A Partir Del Modelo Django on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/crear-formularios-a-partir-del-modelo-django/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Crear formularios en Django a partir de un Modelo con ModelForm</title>
-      <link>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</guid>
-      <description>&lt;p&gt;Como comenté cuando escribí el artículo sobre &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;Introducción a Django&lt;/a&gt; he tenido que empezar a desarrollar aplicaciones web en este &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; que cada día me gusta más.&lt;/p&gt;
+    <channel>
+        <title>Crear Formularios A Partir Del Modelo Django on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/crear-formularios-a-partir-del-modelo-django/index.xml</link>
+        <description>Recent content in Crear Formularios A Partir Del Modelo Django on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/crear-formularios-a-partir-del-modelo-django/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear formularios en Django a partir de un Modelo con ModelForm</title>
+            <link>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</guid>
+            <description>&lt;p&gt;Como comenté cuando escribí el artículo sobre &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;Introducción a Django&lt;/a&gt; he tenido que empezar a desarrollar aplicaciones web en este &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; que cada día me gusta más.&lt;/p&gt;
 
 &lt;p&gt;Hoy quiero hablar sobre cómo podemos crear formularios de una forma muy sencilla y directa basándonos en los campos de nuestros modelos mediante la clase &lt;em&gt;ModelForm&lt;/em&gt;.&lt;/p&gt;
 
@@ -137,7 +141,7 @@ $ python manage.py runserver
 &lt;p&gt;Si todo ha ido bien, deberíamos ver la siguiente página en &lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34; title=&#34;localhost&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34;&gt;http://127.0.0.1:8000/personas/list&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;crear-un-formulario-a-partir-de-un-modelo-con-modelform&#34;&gt;Crear un formulario a partir de un Modelo con ModelForm&lt;/h2&gt;
@@ -364,7 +368,7 @@ Haga click &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#3
 &lt;p&gt;&lt;em&gt;(1) Documentación ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
 &lt;em&gt;(2) Vistas genéricas&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
 &lt;em&gt;(3) ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutoriales Cursores Sql on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/tutoriales-cursores-sql/index.xml</link>
-    <description>Recent content in Tutoriales Cursores Sql on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/tutoriales-cursores-sql/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>PL/SQL. Cursores</title>
-      <link>https://elbauldelprogramador.com/plsql-cursores/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/plsql-cursores/</guid>
-      <description>&lt;p&gt;Un cursor es el nombre para un área memoria privada que contiene información procedente de la ejecución de una sentencia &lt;code&gt;SELECT&lt;/code&gt;. Cada cursor tiene unos atributos que nos devuelven información útil sobre el estado del cursor en la ejecución de la sentencia SQL. Cuando un cursor está abierto y los datos referenciados por la consulta &lt;code&gt;SELECT&lt;/code&gt; cambian, estos cambios no son recogidos por el cursor.&lt;/p&gt;
+    <channel>
+        <title>Tutoriales Cursores Sql on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/tutoriales-cursores-sql/index.xml</link>
+        <description>Recent content in Tutoriales Cursores Sql on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/tutoriales-cursores-sql/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>PL/SQL. Cursores</title>
+            <link>https://elbauldelprogramador.com/plsql-cursores/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/plsql-cursores/</guid>
+            <description>&lt;p&gt;Un cursor es el nombre para un área memoria privada que contiene información procedente de la ejecución de una sentencia &lt;code&gt;SELECT&lt;/code&gt;. Cada cursor tiene unos atributos que nos devuelven información útil sobre el estado del cursor en la ejecución de la sentencia SQL. Cuando un cursor está abierto y los datos referenciados por la consulta &lt;code&gt;SELECT&lt;/code&gt; cambian, estos cambios no son recogidos por el cursor.&lt;/p&gt;
 
 &lt;p&gt;PL/SQL crea implícitamente un cursor para todas las sentencias SQL de manipulación de datos sobre un conjunto de filas, incluyendo aquellas que solo devuelven una sola fila.&lt;/p&gt;
 
@@ -95,7 +99,7 @@
 &lt;p&gt;Podremos recuperar filas mientras la consulta &lt;code&gt;SELECT&lt;/code&gt; tenga filas pendientes de recuperar. Para saber cuándo no hay más filas podemos consultar los siguientes atributos de un cursor:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;74&#34; width=&#34;584&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;74&#34; width=&#34;584&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;&lt;code&gt;%ROWTYPE&lt;/code&gt;&lt;/a&gt;. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia &lt;code&gt;SELECT&lt;/code&gt;.&lt;/p&gt;
@@ -245,7 +249,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-pl-sql-procedimientos-y-funciones-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;PL/SQL - Procedimientos y Funciones&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

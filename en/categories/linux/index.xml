@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Linux on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/categories/linux/index.xml</link>
-    <description>Recent content in Linux on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How to remove slotted packages in gentoo</title>
-      <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
-      <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
-      <description>
+    <channel>
+        <title>Linux on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/categories/linux/index.xml</link>
+        <description>Recent content in Linux on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to remove slotted packages in gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
+            <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
+            <description>
 
 &lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
 
@@ -82,15 +86,15 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>How to Change Portage Folders to Other Location in Gentoo</title>
-      <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
-      <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
-      <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to Change Portage Folders to Other Location in Gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
+            <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
+            <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -138,15 +142,15 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Can&#39;t Update to Firefox 48 in Gentoo, NSS Version Too Old</title>
-      <link>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
-      <pubDate>Thu, 04 Aug 2016 09:05:17 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
-      <description>&lt;p&gt;Today, when I check for updates in my &lt;em&gt;Gentoo&lt;/em&gt; machine, the new Firefox 48 was released. But when I tried to update I kept getting this error:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Can&#39;t Update to Firefox 48 in Gentoo, NSS Version Too Old</title>
+            <link>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
+            <pubDate>Thu, 04 Aug 2016 09:05:17 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
+            <description>&lt;p&gt;Today, when I check for updates in my &lt;em&gt;Gentoo&lt;/em&gt; machine, the new Firefox 48 was released. But when I tried to update I kept getting this error:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -163,15 +167,15 @@ emerge -u nss
 &lt;p&gt;Once firefox 48 is installed, we can enjoy the &lt;a href=&#34;http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/&#34; title=&#34;Firefox 48 ships, bringing Rust mainstream and multiprocess for some&#34;&gt;new multiprocessing feature&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Thanks to &lt;em&gt;fedeliallalinea&lt;/em&gt; for solving me the problem in the forums!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bash syntax highlighted script</title>
-      <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</guid>
-      <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
@@ -205,15 +209,15 @@ rm temp
 
 &lt;p&gt;I hope that it is useful&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Bash syntax highlighted script [Improved]</title>
-      <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</guid>
-      <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script [Improved]</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</guid>
+            <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -244,7 +248,7 @@ rm temp
 &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

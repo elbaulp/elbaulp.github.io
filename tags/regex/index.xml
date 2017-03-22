@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Regex on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/regex/index.xml</link>
-    <description>Recent content in Regex on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Crear Comandos Personalizados en Emacs</title>
-      <link>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</link>
-      <pubDate>Thu, 25 Aug 2016 15:01:15 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</guid>
-      <description>&lt;p&gt;Hace unos meses que comencé a usar &lt;em&gt;emacs&lt;/em&gt; como editor predeterminado, y la verdad es que una vez me acostumbré a él es bastante cómodo. Sin embargo, editando artículos del blog, me encontraba ejecutando una y otra vez el mismo comando, o comandos similares. Así que busqué la forma de asociarlos a una función para no tener que andar escribiendolos cada dos por trés. Veamos cómo crear estas funciones.&lt;/p&gt;
+    <channel>
+        <title>Regex on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/regex/index.xml</link>
+        <description>Recent content in Regex on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Crear Comandos Personalizados en Emacs</title>
+            <link>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</link>
+            <pubDate>Thu, 25 Aug 2016 15:01:15 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</guid>
+            <description>&lt;p&gt;Hace unos meses que comencé a usar &lt;em&gt;emacs&lt;/em&gt; como editor predeterminado, y la verdad es que una vez me acostumbré a él es bastante cómodo. Sin embargo, editando artículos del blog, me encontraba ejecutando una y otra vez el mismo comando, o comandos similares. Así que busqué la forma de asociarlos a una función para no tener que andar escribiendolos cada dos por trés. Veamos cómo crear estas funciones.&lt;/p&gt;
 
 &lt;h1 id=&#34;la-función-query-replace-regexp&#34;&gt;La función (query-replace-regexp)&lt;/h1&gt;
 
@@ -73,15 +77,15 @@
 &lt;ul&gt;
 &lt;li&gt;How to define an Emacs command to &lt;code&gt;query-replace-regexp&lt;/code&gt; using a specific regexp | &lt;a href=&#34;http://stackoverflow.com/questions/39040092/how-to-define-an-emacs-command-to-query-replace-regexp-using-a-specific-regexp&#34; title=&#34;How to define an Emacs command to `query-replace-regexp` using a specific regexp&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Expresiones Regulares Multilínea</title>
-      <link>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</link>
-      <pubDate>Fri, 10 Jun 2016 13:59:28 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
-      <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Expresiones Regulares Multilínea</title>
+            <link>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</link>
+            <pubDate>Fri, 10 Jun 2016 13:59:28 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
+            <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;---&lt;/span&gt;
 &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param1&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor1&lt;/span&gt;
 &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;param2&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;valor2&lt;/span&gt;
@@ -176,15 +180,15 @@ color: &amp;quot;#F57C00&amp;quot;
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;p&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Buscar archivos con locate mediante expresiones regulares</title>
-      <link>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
-      <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Buscar archivos con locate mediante expresiones regulares</title>
+            <link>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
+            <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
@@ -215,7 +219,7 @@ color: &amp;quot;#F57C00&amp;quot;
 &lt;p&gt;Siempre que necesito crear una expresión regular uso una herramienta llamada &lt;strong&gt;regex tester&lt;/strong&gt; que permite visualizar qué cadenas de texto coincidirían con el patrón:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -260,7 +264,7 @@ cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

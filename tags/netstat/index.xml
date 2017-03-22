@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Netstat on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/netstat/index.xml</link>
-    <description>Recent content in Netstat on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/netstat/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Algunos comandos útiles con iproute2</title>
-      <link>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
-      <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
+    <channel>
+        <title>Netstat on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/netstat/index.xml</link>
+        <description>Recent content in Netstat on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/netstat/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Algunos comandos útiles con iproute2</title>
+            <link>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
+            <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
 
 &lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
 
@@ -236,15 +240,15 @@ ss src 5.39.89.44:25
 &lt;li&gt;&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/files/ss.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Netstat: Analizando la red y detectando problemas</title>
-      <link>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</guid>
-      <description>&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Netstat: Analizando la red y detectando problemas</title>
+            <link>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</guid>
+            <description>&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -411,7 +415,7 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;a href=&#34;http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/&#34; target=&#34;_blank&#34;&gt;pinehead.tv&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Lista posibles estados TCP&lt;/em&gt; »» &lt;a href=&#34;http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm&#34; target=&#34;_blank&#34;&gt;tcpipguide.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

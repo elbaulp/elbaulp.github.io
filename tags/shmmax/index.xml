@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Shmmax on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/shmmax/index.xml</link>
-    <description>Recent content in Shmmax on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/shmmax/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Solucionar fallo de segmentación en PHP cuando se usa APC</title>
-      <link>https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/</guid>
-      <description>&lt;p&gt;Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro &lt;code&gt;apc.shm_size&lt;/code&gt; junto con el parámetro del kernel &lt;code&gt;kernel.shmmax&lt;/code&gt;. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.&lt;/p&gt;
+    <channel>
+        <title>Shmmax on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/shmmax/index.xml</link>
+        <description>Recent content in Shmmax on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/shmmax/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Solucionar fallo de segmentación en PHP cuando se usa APC</title>
+            <link>https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/</guid>
+            <description>&lt;p&gt;Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro &lt;code&gt;apc.shm_size&lt;/code&gt; junto con el parámetro del kernel &lt;code&gt;kernel.shmmax&lt;/code&gt;. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -84,7 +88,7 @@ set apc.shm_size = 64M&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Créditos de la imagen&lt;/em&gt; »» &lt;a href=&#34;http://icons8.com/&#34; target=&#34;_blank&#34;&gt;icons8&lt;/a&gt;
 &lt;em&gt;APC causes PHP fast-cgi to segfault&lt;/em&gt; »» &lt;a href=&#34;https://bugs.php.net/bug.php?id=56894&#34; target=&#34;_blank&#34;&gt;bugs.php.net&lt;/a&gt;
 &lt;em&gt;Documentación Sysctl&lt;/em&gt; »» &lt;a href=&#34;https://www.kernel.org/doc/Documentation/sysctl/kernel.txt&#34; target=&#34;_blank&#34;&gt;kernel.org&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

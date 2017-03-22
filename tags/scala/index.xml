@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Scala on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/scala/index.xml</link>
-    <description>Recent content in Scala on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/scala/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo convertir una columna a VectorUDT/DenseVector en Spark</title>
-      <link>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</link>
-      <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
-      <description>&lt;p&gt;Estoy iniciándome en el mundo de &lt;code&gt;spark&lt;/code&gt;, ojeando su librería &lt;code&gt;MLlib&lt;/code&gt; decidí implementar una simple &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;Regresión lineal&#34;&gt;Regresión lineal&lt;/a&gt;. Aunque el ejemplo de su documentación parece sencillo, cuando intentaba leer mi propio csv con datos obtenía el siguiente error:&lt;/p&gt;
+    <channel>
+        <title>Scala on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/scala/index.xml</link>
+        <description>Recent content in Scala on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/scala/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo convertir una columna a VectorUDT/DenseVector en Spark</title>
+            <link>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</link>
+            <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
+            <description>&lt;p&gt;Estoy iniciándome en el mundo de &lt;code&gt;spark&lt;/code&gt;, ojeando su librería &lt;code&gt;MLlib&lt;/code&gt; decidí implementar una simple &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;Regresión lineal&#34;&gt;Regresión lineal&lt;/a&gt;. Aunque el ejemplo de su documentación parece sencillo, cuando intentaba leer mi propio csv con datos obtenía el siguiente error:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
@@ -164,7 +168,7 @@
 &lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;El dataset es el sacado del libro &lt;a href=&#34;http://amzn.to/2kFpfde&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Git on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/git/index.xml</link>
-    <description>Recent content in Git on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Eliminar Ficheros Demasiado Grandes Para GitHub</title>
-      <link>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</link>
-      <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
-      <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
+    <channel>
+        <title>Git on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/git/index.xml</link>
+        <description>Recent content in Git on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Eliminar Ficheros Demasiado Grandes Para GitHub</title>
+            <link>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</link>
+            <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
+            <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
 
 &lt;h2 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h2&gt;
 
@@ -54,17 +58,17 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Manual De Git Gratuito</title>
-      <link>https://elbauldelprogramador.com/manual-de-git-gratuito/</link>
-      <pubDate>Sat, 06 Aug 2016 16:15:22 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/manual-de-git-gratuito/</guid>
-      <description>&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/git-tutorial-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
-   &lt;/amp-img&gt;
+        </item>
+        
+        <item>
+            <title>Manual De Git Gratuito</title>
+            <link>https://elbauldelprogramador.com/manual-de-git-gratuito/</link>
+            <pubDate>Sat, 06 Aug 2016 16:15:22 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/manual-de-git-gratuito/</guid>
+            <description>&lt;figure&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/git-tutorial-centered.jpg&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;800&#34; height=&#34;420&#34;&gt;
+   &lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
@@ -86,16 +90,16 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;/div&gt;
 
 &lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo mostrar información de un repositorio Git en el prompt de tu terminal</title>
-      <link>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</link>
-      <pubDate>Mon, 23 May 2016 12:40:25 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;823px&#34; height=&#34;518px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Cómo mostrar información de un repositorio Git en el prompt de tu terminal</title>
+            <link>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</link>
+            <pubDate>Mon, 23 May 2016 12:40:25 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Mostrar-Informacion-De-Un-Repositorio-Git-en-El-Prompt-De-Bash.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;823px&#34; height=&#34;518px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; target=&#34;_blank&#34; title=&#34;Repo Oh my Git&#34;&gt;Repo Oh my Git&lt;/a&gt;&lt;/span&gt;
 &lt;/figure&gt;
 
@@ -149,7 +153,7 @@ rbw_load_theme simple
 &lt;p&gt;A partir de ahora, al meternos en una carpeta con un repositorio git dentro, deberíamos ver lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/ohmygitprompt.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/ohmygitprompt.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;527px&#34; height=&#34;39px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/ohmygitprompt.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/ohmygitprompt.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;527px&#34; height=&#34;39px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;volver-a-nuestro-prompt-por-defecto&#34;&gt;Volver a nuestro prompt por defecto&lt;/h3&gt;
@@ -177,16 +181,16 @@ rbw_load_theme simple
 &lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git: Mini Tutorial y chuleta de comandos</title>
-      <link>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</link>
-      <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; alt=&#34;Tutorial git y comandos git&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos git&#34; alt=&#34;Git: Mini Tutorial y chuleta de comandos&#34; width=&#34;910px&#34; height=&#34;380px&#34;&gt;&lt;/amp-img&gt;
+        </item>
+        
+        <item>
+            <title>Git: Mini Tutorial y chuleta de comandos</title>
+            <link>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</link>
+            <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
+            <description>&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; alt=&#34;Tutorial git y comandos git&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos git&#34; alt=&#34;Git: Mini Tutorial y chuleta de comandos&#34; width=&#34;910px&#34; height=&#34;380px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;blockquote&gt;
@@ -623,15 +627,15 @@ cat date_test.txt
 build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
 doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>21 alias útiles para git</title>
-      <link>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</link>
-      <pubDate>Tue, 01 Dec 2015 10:56:26 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</guid>
-      <description>&lt;p&gt;Todo aquel que use &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Tutorial de Git&#34;&gt;git&lt;/a&gt; sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los &lt;em&gt;alias&lt;/em&gt;, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos &lt;em&gt;alias&lt;/em&gt; útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>21 alias útiles para git</title>
+            <link>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</link>
+            <pubDate>Tue, 01 Dec 2015 10:56:26 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</guid>
+            <description>&lt;p&gt;Todo aquel que use &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Tutorial de Git&#34;&gt;git&lt;/a&gt; sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los &lt;em&gt;alias&lt;/em&gt;, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos &lt;em&gt;alias&lt;/em&gt; útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -699,7 +703,7 @@ git submodule update --init --recursive
 &lt;h1 id=&#34;mostrar-commits-de-forma-compacta-y-colores-git-ls&#34;&gt;Mostrar commits de forma compacta y colores, git ls&lt;/h1&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/gitls.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitls.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;666px&#34; height=&#34;504px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitls.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitls.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;666px&#34; height=&#34;504px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
@@ -709,7 +713,7 @@ git submodule update --init --recursive
 &lt;h1 id=&#34;listar-commits-y-ficheros-modificados-git-ll&#34;&gt;Listar commits y ficheros modificados, git ll&lt;/h1&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/gitll.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitll.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;603px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitll.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitll.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;603px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
@@ -719,7 +723,7 @@ git submodule update --init --recursive
 &lt;h1 id=&#34;mostar-commits-de-forma-compacta-y-con-fechas-git-lds&#34;&gt;Mostar commits de forma compacta y con fechas, git lds&lt;/h1&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;766px&#34; height=&#34;502px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;766px&#34; height=&#34;502px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -727,7 +731,7 @@ git submodule update --init --recursive
 &lt;p&gt;Si lo preferimos con fechas relativas, usaremos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;git ld&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/gitld.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitld.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;785px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/gitld.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitld.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;785px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -822,16 +826,16 @@ P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/
 &lt;li&gt;Github Flow Aliases | &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; title=&#34;Github Flow Aliases&#34;&gt;haacked.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/&#34; title=&#34;Must Have Git Aliases: Advanced Examples&#34;&gt;durdn.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
-      <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
-      <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
+        </item>
+        
+        <item>
+            <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
+            <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
+            <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
+            <description>&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/CREAR-UN-ENTORNO-DE-DESARROLLO-PARA-WORDPRESS-CON-GIT-CAPISTRANO-Y-WP-DEPLOY.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;400px&#34; height=&#34;400px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
@@ -1016,16 +1020,16 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;li&gt;&lt;em&gt;Wp-Deploy&lt;/em&gt; »» &lt;a href=&#34;https://github.com/Mixd/wp-deploy&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Capistrano&lt;/em&gt; »» &lt;a href=&#34;http://capistranorb.com/&#34; target=&#34;_blank&#34;&gt;capistranorb.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Como Usar Los Filtros Smudge Y Clean en Git</title>
-      <link>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</link>
-      <pubDate>Thu, 21 May 2015 14:50:42 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+        </item>
+        
+        <item>
+            <title>Como Usar Los Filtros Smudge Y Clean en Git</title>
+            <link>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</link>
+            <pubDate>Thu, 21 May 2015 14:50:42 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</guid>
+            <description>&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En el anterior artículo, hablamos sobre &lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34;&gt;cómo sincronizar dos repositorios en git&lt;/a&gt;, también se vio algo de &lt;em&gt;hooks&lt;/em&gt;.&lt;/p&gt;
@@ -1076,16 +1080,16 @@ $ git config filter.siteurl.clean siteurl.clean
 &lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Sincronización de proyectos en git con hooks (ganchos)</title>
-      <link>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</link>
-      <pubDate>Wed, 15 Apr 2015 14:22:19 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+        </item>
+        
+        <item>
+            <title>Sincronización de proyectos en git con hooks (ganchos)</title>
+            <link>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</link>
+            <pubDate>Wed, 15 Apr 2015 14:22:19 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;repositorio-espejo-mirror-repo&#34;&gt;Repositorio espejo (Mirror repo)&lt;/h2&gt;
@@ -1151,7 +1155,7 @@ git push repo2 master:master
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

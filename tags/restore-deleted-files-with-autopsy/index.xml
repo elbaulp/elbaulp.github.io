@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Restore Deleted Files With Autopsy on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/restore-deleted-files-with-autopsy/index.xml</link>
-    <description>Recent content in Restore Deleted Files With Autopsy on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/restore-deleted-files-with-autopsy/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Recuperar Datos Borrados De Un Disco</title>
-      <link>https://elbauldelprogramador.com/como-recuperar-datos-borrados-de-un-disco/</link>
-      <pubDate>Thu, 21 Jan 2016 22:26:14 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-recuperar-datos-borrados-de-un-disco/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
+    <channel>
+        <title>Restore Deleted Files With Autopsy on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/restore-deleted-files-with-autopsy/index.xml</link>
+        <description>Recent content in Restore Deleted Files With Autopsy on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/restore-deleted-files-with-autopsy/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Recuperar Datos Borrados De Un Disco</title>
+            <link>https://elbauldelprogramador.com/como-recuperar-datos-borrados-de-un-disco/</link>
+            <pubDate>Thu, 21 Jan 2016 22:26:14 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-recuperar-datos-borrados-de-un-disco/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro.&lt;/p&gt;
@@ -65,7 +69,7 @@ amenaza
 &lt;p&gt;La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;433px&#34; height=&#34;676px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;433px&#34; height=&#34;676px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como vemos, aunque se ha borrado el fichero, quedan pruebas de que se realizó una amenaza, y por tanto podrían usarse en contra de alguien en un juicio.&lt;/p&gt;
@@ -73,7 +77,7 @@ amenaza
 &lt;p&gt;En la imagen anterior se muestra el desplazamiento en bytes donde se encontró una coincidencia de la lista de evidencias, para ver el contenido del fichero basta con usar el comando &lt;em&gt;xxd&lt;/em&gt; con el desplazamiento dado por grep, en este caso 40566354:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;recuperar-una-imagen-borrada&#34;&gt;Recuperar una imagen borrada&lt;/h1&gt;
@@ -93,7 +97,7 @@ $ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;
 &lt;p&gt;Tras esto, instalamos &lt;em&gt;autopsy&lt;/em&gt; (Está disponible en los repositorios de linux). La pantalla principal es esta:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;606px&#34; height=&#34;362px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;606px&#34; height=&#34;362px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;buscar-ficheros-borrados&#34;&gt;Buscar ficheros borrados&lt;/h2&gt;
@@ -101,19 +105,19 @@ $ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;
 &lt;p&gt;Pinchamos en el botón de crear un nuevo caso. Nos pedirá rellenar unos datos, y luego indicar la ruta a la imagen del disco. Una vez hecho esto, podemos comenzar a analizarlo. Seleccionada la imagen con la que trabajar, pinchamos en el botón de analizar:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;609px&#34; height=&#34;224px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;609px&#34; height=&#34;224px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Y luego en file Analysis:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1166px&#34; height=&#34;360px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1166px&#34; height=&#34;360px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como vemos, al final de la lista aparece un fichero borrado, que es una imagen. Debemos de fijarnos en la la columna &lt;em&gt;Meta&lt;/em&gt;, en ella aparece un número en el que podemos pinchar, en este caso es el 7. Tras pinchar, aparecerá la siguiente pantalla:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;442px&#34; height=&#34;565px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;442px&#34; height=&#34;565px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Aquí se muestra la información del fichero borrado, los sectores que ocupa etc. Ya que el contenido de la imagen está en los sectores que aparecen en esta página, necesitamos alguna forma de guardarlos, para ellos calcularemos cuantos sectores ocupa la imagen.&lt;/p&gt;
@@ -129,13 +133,13 @@ $ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;
 &lt;p&gt;Ya solo resta pinchar en el enlace al primer sector de la imagen, y poner que queremos a partir de ese sector 1181 más, como se muestra en la imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;925px&#34; height=&#34;386px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;925px&#34; height=&#34;386px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En estos momentos tenemos seleccionado el rango de sectores correcto, le damos a &lt;em&gt;Export Contents&lt;/em&gt; y nos descargaremos un fichero con extensión &lt;em&gt;raw&lt;/em&gt;. Lo renombramos a &lt;em&gt;.jpg&lt;/em&gt;  y lo guardamos. ¡Acabamos de recuperar nuestra imagen borrada!&lt;/p&gt;
 
 &lt;p&gt;Espero que os haya gustado el artículo. No dudeis en comentar!&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

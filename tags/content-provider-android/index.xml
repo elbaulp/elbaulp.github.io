@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Content Provider Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/content-provider-android/index.xml</link>
-    <description>Recent content in Content Provider Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/content-provider-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Implementando un Content Provider (Parte 1)</title>
-      <link>https://elbauldelprogramador.com/programacion-android-implementando-un/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-implementando-un/</guid>
-      <description>&lt;p&gt;Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.&lt;/p&gt;
+    <channel>
+        <title>Content Provider Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/content-provider-android/index.xml</link>
+        <description>Recent content in Content Provider Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/content-provider-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Implementando un Content Provider (Parte 1)</title>
+            <link>https://elbauldelprogramador.com/programacion-android-implementando-un/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-implementando-un/</guid>
+            <description>&lt;p&gt;Esta es la primera entrada de un total de 4 en la que se irán describiendo los pasos a dar para crear nuestro propio proveedor de contenidos.&lt;/p&gt;
 
 &lt;p&gt;Ya hemos visto cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y&#34;&gt;interactuar con un Content provider&lt;/a&gt;, pero no hemos visto aún cómo escribir nuestro propio Content Provider. Para hacerlo, es necesario extender de &lt;em&gt;android.content.ContentProvider&lt;/em&gt; e implementar los siguientes métodos:&lt;/p&gt;
 
@@ -166,15 +170,15 @@
 &lt;p&gt;Además, la clase &lt;em&gt;favSitesTableMEtaData&lt;/em&gt; hereda de la clase &lt;em&gt;BaseColumns&lt;/em&gt;, la cual proporciona el campo estandar &lt;em&gt;_ID&lt;/em&gt;, que representa el identificador de la fila. Con todas estas definiciones de metadatos, estamos listos para continuar con la implementación de nuestro proveedor.&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-2-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08/&#34;&gt;Implementando un Content Provider (Parte 2)&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Implementando un Content Provider (Parte 2)</title>
-      <link>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</guid>
-      <description>&lt;p&gt;En la anterior entrada de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;programación Android&lt;/a&gt;, hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;planteamiento de la base de datos.&lt;/a&gt; En esta entrada vamos a ver cómo extender de la clase ContentProvider.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Implementando un Content Provider (Parte 2)</title>
+            <link>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</guid>
+            <description>&lt;p&gt;En la anterior entrada de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;programación Android&lt;/a&gt;, hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;planteamiento de la base de datos.&lt;/a&gt; En esta entrada vamos a ver cómo extender de la clase ContentProvider.&lt;/p&gt;
 
 &lt;p&gt;Para implementar el content provider de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu&#34;&gt;FavSites&lt;/a&gt; hemos de extender de la clase ContentProvider y sobreescribir &lt;em&gt;onCreate()&lt;/em&gt; para crear la base de datos y después implementar los métodos query, insert, update, delete y getType. En esta segunda parte de cuatro en la que se explica cómo implementar un content provider desde cero, vamos a ver cómo configurar inicialmente en conten provider, en la siguente entrada se verá como implementar los métodos query, insert, update, delete y getType.&lt;/p&gt;
 
@@ -352,15 +356,15 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-3-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_14/&#34;&gt;Implementando un Content Provider (Parte 3)&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Implementando un Content Provider (Parte 3)</title>
-      <link>https://elbauldelprogramador.com/programacion-android-implementando-un_14/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_14/</guid>
-      <description>&lt;p&gt;Ya hemos visto como &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;plantear la base de datos&lt;/a&gt; para un proveedor y cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08&#34;&gt;implementar parte del proveedor de contenidos&lt;/a&gt;, en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Implementando un Content Provider (Parte 3)</title>
+            <link>https://elbauldelprogramador.com/programacion-android-implementando-un_14/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_14/</guid>
+            <description>&lt;p&gt;Ya hemos visto como &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;plantear la base de datos&lt;/a&gt; para un proveedor y cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08&#34;&gt;implementar parte del proveedor de contenidos&lt;/a&gt;, en esta tercera parte vamos a implementar los métodos query, insert, update, delete y getType.&lt;/p&gt;
 
 &lt;p&gt;En el código que vimos en la anterior entrada, se implementa el método &lt;em&gt;getType()&lt;/em&gt;, que devuelve los tipos MIME para una URI dada. Este método, al igual que muchos de los métodos del content provider, está sobrecargado con respecto a la URI entrante. La función de este método consiste en distinguir el tipo de URI. Para saber si es una colección de lugares (en el caso de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu&#34;&gt;FavSites&lt;/a&gt;), o un único lugar.&lt;/p&gt;
 
@@ -485,15 +489,15 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;siguiente-tema-implementando-un-content-provider-parte-4-8&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_29/&#34;&gt;Implementando un Content Provider (Parte 4)&lt;/a&gt;&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Implementando un Content Provider (Parte 4)</title>
-      <link>https://elbauldelprogramador.com/programacion-android-implementando-un_29/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_29/</guid>
-      <description>&lt;p&gt;En esta última parte de una serie de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;4 artículos&lt;/a&gt; en los que se ha ido explicando cómo implementar un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;ContentProvider&lt;/a&gt; desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Implementando un Content Provider (Parte 4)</title>
+            <link>https://elbauldelprogramador.com/programacion-android-implementando-un_29/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_29/</guid>
+            <description>&lt;p&gt;En esta última parte de una serie de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;4 artículos&lt;/a&gt; en los que se ha ido explicando cómo implementar un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;ContentProvider&lt;/a&gt; desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.&lt;/p&gt;
 
 &lt;h4 id=&#34;registrar-el-proveedor&#34;&gt;Registrar el proveedor&lt;/h4&gt;
 
@@ -617,7 +621,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los próximos artículos veremos en profundidad los intents.&lt;/p&gt;
 
 &lt;h4 id=&#34;siguiente-tema-intents-conceptos-básicos-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34;&gt;Intents - Conceptos básicos&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

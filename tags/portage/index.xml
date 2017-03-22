@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Portage on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/portage/index.xml</link>
-    <description>Recent content in Portage on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/portage/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo eliminar un paquete slotted en Gentoo</title>
-      <link>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</link>
-      <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</guid>
-      <description>
+    <channel>
+        <title>Portage on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/portage/index.xml</link>
+        <description>Recent content in Portage on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/portage/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo eliminar un paquete slotted en Gentoo</title>
+            <link>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</link>
+            <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</guid>
+            <description>
 
 &lt;p&gt;Hace poco tuve un problema intentando eliminar un paquete de los llamados &lt;em&gt;slotted&lt;/em&gt; en Gentoo, a continuación muestro cómo lo resolví.&lt;/p&gt;
 
@@ -82,15 +86,15 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Cómo Cambiar El Directorio De Portage a Otro Directorio en Gentoo</title>
-      <link>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</link>
-      <pubDate>Wed, 17 Aug 2016 08:30:50 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</guid>
-      <description>&lt;p&gt;Hace poco tuve problemas con &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;portage&lt;/a&gt; y su directorio de trabajo temporal en &lt;code&gt;/var/tmp/portage&lt;/code&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt; porque me quedé sin las 10GB mínimas que necesita:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Cambiar El Directorio De Portage a Otro Directorio en Gentoo</title>
+            <link>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</link>
+            <pubDate>Wed, 17 Aug 2016 08:30:50 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</guid>
+            <description>&lt;p&gt;Hace poco tuve problemas con &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;portage&lt;/a&gt; y su directorio de trabajo temporal en &lt;code&gt;/var/tmp/portage&lt;/code&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt; porque me quedé sin las 10GB mínimas que necesita:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -136,17 +140,17 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Instalar/actualizar/eliminar Paquetes en Gentoo</title>
-      <link>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</link>
-      <pubDate>Fri, 29 Jul 2016 10:20:01 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</guid>
-      <description>&lt;figure&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Instalar/actualizar/eliminar Paquetes en Gentoo</title>
+            <link>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</link>
+            <pubDate>Fri, 29 Jul 2016 10:20:01 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</guid>
+            <description>&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34;&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -157,7 +161,7 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
             sizes=&#34;(min-width: 526px) 526px, 100vw&#34;
             width=&#34;526&#34;
             height=&#34;256&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
         &lt;/a&gt;
         &lt;figcaption&gt;Imagen tomada con &lt;em&gt;ScreenFetch&lt;/em&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -350,7 +354,7 @@ Filesystem Size  Used Avail Use%                                                
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Eclean&#34; title=&#34;Página de Eclean&#34;&gt;Eclean&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Instalar Atom on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/instalar-atom/index.xml</link>
-    <description>Recent content in Instalar Atom on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/instalar-atom/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Instalar Atom, el editor de GitHub en Linux</title>
-      <link>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</guid>
-      <description>&lt;p&gt;Hace unos días decidí instalar &lt;strong&gt;Atom&lt;/strong&gt;, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:&lt;/p&gt;
+    <channel>
+        <title>Instalar Atom on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/instalar-atom/index.xml</link>
+        <description>Recent content in Instalar Atom on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/instalar-atom/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Instalar Atom, el editor de GitHub en Linux</title>
+            <link>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/</guid>
+            <description>&lt;p&gt;Hace unos días decidí instalar &lt;strong&gt;Atom&lt;/strong&gt;, el nuevo editor que recientemente publicó GitHub, después de descubrir que ya era posible instalarlo en Linux (Inicialmente solo estaba disponible para Mac). Tras probarlo unos días, he quedado tan impresionado que se ha convertido en mi editor de texto e IDE predeterminado. En su web oficial lo describen como:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;At GitHub, we&amp;#8217;re building the text editor we&amp;#8217;ve always wanted. A tool you can customize to do anything, but also use productively on the first day without ever touching a config file. Atom is modern, approachable, and hackable to the core. We can&amp;#8217;t wait to see what you build with it.&lt;/p&gt;
@@ -54,7 +58,7 @@ script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $
 
 &lt;p&gt;Si no se te da bien recordar atajos de teclado, basta con recordar uno solo para obtenerlos todos &lt;code&gt;ctrl-shift-P&lt;/code&gt;, aparecerá algo así:&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/cmd-alt-p-atom.png&#34; alt=&#34;cmd-alt-p atom&#34; width=&#34;548px&#34; height=&#34;390px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/cmd-alt-p-atom.png&#34; alt=&#34;cmd-alt-p atom&#34; width=&#34;548px&#34; height=&#34;390px&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;encontrando-archivos&#34;&gt;Encontrando archivos&lt;/h4&gt;
 
@@ -86,7 +90,7 @@ script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $
 
 &lt;p&gt;Una demostración de su uso:&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-plus-atom.gif&#34; alt=&#34;git-plus-atom&#34; width=&#34;1075px&#34; height=&#34;340px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-plus-atom.gif&#34; alt=&#34;git-plus-atom&#34; width=&#34;1075px&#34; height=&#34;340px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Algunos comandos básicos:&lt;/p&gt;
 
@@ -124,7 +128,7 @@ script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $
 
 &lt;p&gt;Éste paquete viene instalado por defecto, es bastante útil porque muestra el diff de forma gráfica, por ejemplo:&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-diff-atom.png&#34; alt=&#34;git diff atom&#34; width=&#34;800px&#34; height=&#34;224px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/05/git-diff-atom.png&#34; alt=&#34;git diff atom&#34; width=&#34;800px&#34; height=&#34;224px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Donde el símbolo + significa que se ha agregado una línea nueva, y el punto amarillo que se ha modificado una existente.&lt;/p&gt;
 
@@ -137,7 +141,7 @@ script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Readme.MD linux&lt;/em&gt; »» &lt;a href=&#34;https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md&#34; target=&#34;_blank&#34;&gt;github.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python Mp4 To Mp3 on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/python-mp4-to-mp3/index.xml</link>
-    <description>Recent content in Python Mp4 To Mp3 on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/python-mp4-to-mp3/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Generar listas de reproducción de una determinada duración con Python</title>
-      <link>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
-      <description>&lt;p&gt;A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la &lt;a href=&#34;http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro&#34; title=&#34;Técnica pomodoro&#34; target=&#34;_blank&#34;&gt;técnica Pomodoro&lt;/a&gt;, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.&lt;/p&gt;
+    <channel>
+        <title>Python Mp4 To Mp3 on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/python-mp4-to-mp3/index.xml</link>
+        <description>Recent content in Python Mp4 To Mp3 on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/python-mp4-to-mp3/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Generar listas de reproducción de una determinada duración con Python</title>
+            <link>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
+            <description>&lt;p&gt;A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la &lt;a href=&#34;http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro&#34; title=&#34;Técnica pomodoro&#34; target=&#34;_blank&#34;&gt;técnica Pomodoro&lt;/a&gt;, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.&lt;/p&gt;
 
 &lt;p&gt;Para ello he creado un pequeño script en python que genera automáticamente las listas de reproducción dado un directorio con ficheros mp3 o mp4 y una duración en minutos.&lt;/p&gt;
 
@@ -181,7 +185,7 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 &lt;p&gt;Ya que el script lo he hecho en media hora, se puede mejorar bastante. Ahora mismo no busca los ficheros de música recursivamente, en el futuro lo añadiré. &lt;del datetime=&#34;2014-04-05T15:37:18+00:00&#34;&gt;Tiene un fallo, cuando se está generando la lista, si la duración total es menor que la indicada por parámetro, y el fichero de música procesándose en ese momento es muy grande (por ejemplo 40 min), la lista de reproducción no será del tamaño correcto.&lt;/del&gt; (Solucionado)&lt;/p&gt;
 
 &lt;p&gt;Para aquellos que estén interesados, el código está en &lt;a href=&#34;https://github.com/elbaulp/genPlaylistByName&#34; title=&#34;Repositorio&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

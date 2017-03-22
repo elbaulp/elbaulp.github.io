@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Fundamentos Sqlite Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/fundamentos-sqlite-android/index.xml</link>
-    <description>Recent content in Fundamentos Sqlite Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/fundamentos-sqlite-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Implementando un Content Provider (Parte 2)</title>
-      <link>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</guid>
-      <description>&lt;p&gt;En la anterior entrada de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;programación Android&lt;/a&gt;, hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;planteamiento de la base de datos.&lt;/a&gt; En esta entrada vamos a ver cómo extender de la clase ContentProvider.&lt;/p&gt;
+    <channel>
+        <title>Fundamentos Sqlite Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/fundamentos-sqlite-android/index.xml</link>
+        <description>Recent content in Fundamentos Sqlite Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/fundamentos-sqlite-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Implementando un Content Provider (Parte 2)</title>
+            <link>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_08/</guid>
+            <description>&lt;p&gt;En la anterior entrada de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;programación Android&lt;/a&gt;, hablamos de cómo empezar a implementar un proveedor de contenido desde cero, empezando por el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;planteamiento de la base de datos.&lt;/a&gt; En esta entrada vamos a ver cómo extender de la clase ContentProvider.&lt;/p&gt;
 
 &lt;p&gt;Para implementar el content provider de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu&#34;&gt;FavSites&lt;/a&gt; hemos de extender de la clase ContentProvider y sobreescribir &lt;em&gt;onCreate()&lt;/em&gt; para crear la base de datos y después implementar los métodos query, insert, update, delete y getType. En esta segunda parte de cuatro en la que se explica cómo implementar un content provider desde cero, vamos a ver cómo configurar inicialmente en conten provider, en la siguente entrada se verá como implementar los métodos query, insert, update, delete y getType.&lt;/p&gt;
 
@@ -192,7 +196,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-3-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_14/&#34;&gt;Implementando un Content Provider (Parte 3)&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

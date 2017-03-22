@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>So on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/categories/so/index.xml</link>
-    <description>Recent content in So on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/categories/so/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Actualizar BIOS de ASUS desde Linux</title>
-      <link>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</guid>
-      <description>&lt;p&gt;Toda esta historia viene al comprar una memória de 2Gb de Ram a mi pc, para aumentar la capacidad total a 4Gb, no parece que sea algo muy complicado, ya que supuestamente mi placa base soporta hasta 8Gb y uso un Sistema Operatívo de 64-bits (CrunchBang 64-bit Stable + backports).&lt;/p&gt;
+    <channel>
+        <title>So on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/so/index.xml</link>
+        <description>Recent content in So on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/so/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Actualizar BIOS de ASUS desde Linux</title>
+            <link>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/actualizar-bios-de-asus-desde-linux/</guid>
+            <description>&lt;p&gt;Toda esta historia viene al comprar una memória de 2Gb de Ram a mi pc, para aumentar la capacidad total a 4Gb, no parece que sea algo muy complicado, ya que supuestamente mi placa base soporta hasta 8Gb y uso un Sistema Operatívo de 64-bits (CrunchBang 64-bit Stable + backports).&lt;/p&gt;
 
 &lt;p&gt;Bueno, inserto la RAM en la placa base todo contento ya que ahora iba a tener 4Gb (2x1Gb y 1x2Gb) y no se mi iba a quedar colgado el pc mientras escucho música con el Eclipse abierto más el emulador Android y el Chrome&amp;#8230; (Que se come la RAM que da gusto), y resulta que solo reconoce 3Gb&amp;#8230; Tras una tarde de buscar por foros y no encontrar nada me decido a publicar mi problema en los foros de &lt;a href=&#34;http://crunchbanglinux.org/forums/post/192843/#p192843&#34;&gt;cruchbang&lt;/a&gt; y &lt;a href=&#34;http://forums.debian.net/viewtopic.php?f=7&amp;amp;t;=76419&#34;&gt;debian&lt;/a&gt;. Al principio pensaba que era un problema de que no estaba colocando las memórias en los canales correctos para que hiciera el dual channel. Pero ese no era el problema.&lt;/p&gt;
 
@@ -59,15 +63,15 @@ Disk identifier: 0x00025eb4
 &lt;p&gt;Despues de actualizar la BIOS, se restauran las configuraciones por defecto, de modo que es necesario volver a configurar la BIOS con los parámetros que deseemos.&lt;/p&gt;
 
 &lt;p&gt;&lt;a target=&#34;_blank&#34; href=&#34;http://www.blakeanthonyjohnson.com/?p=170&#34;&gt;Fuente original&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Codificación</title>
-      <link>https://elbauldelprogramador.com/codificacion/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/codificacion/</guid>
-      <description>&lt;p&gt;Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Codificación</title>
+            <link>https://elbauldelprogramador.com/codificacion/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/codificacion/</guid>
+            <description>&lt;p&gt;Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -78,7 +82,7 @@ Disk identifier: 0x00025eb4
 &lt;p&gt;Dado un número x, su representación en una dada base b consiste en escribirlo como&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;86&#34; width=&#34;214&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;86&#34; width=&#34;214&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;donde el signo &lt;var&gt;s&lt;/var&gt; es igual a 0 o 1 y los coeficientes a&lt;sub&gt;j&lt;/sub&gt; son enteros positivos menores que &lt;em&gt;b&lt;/em&gt;. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).&lt;/p&gt;
@@ -119,7 +123,7 @@ Disk identifier: 0x00025eb4
 &lt;p&gt;Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en precisión simple:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;842&#34; height=&#34;118&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;842&#34; height=&#34;118&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Entre paréntesis está representada la parte entera de la mantisa (que es igual a 1 siempre por convención.) Debe notarse que el número final se obtiene considerando que:&lt;/p&gt;
@@ -133,7 +137,7 @@ Disk identifier: 0x00025eb4
 &lt;p&gt;Como segundo ejemplo veamos la conversión inversa, del número (3,375)&lt;sub&gt;10&lt;/sub&gt; a sistema binario. El bit de signo es 0. El número puede expresarse como la fracción &lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt; y es mayor que 2 por lo que debemos sacar un exponente positivo; en este caso, factorizamos por 2&lt;sup&gt;1&lt;/sup&gt; y nos queda &lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt; que puede escribirse como&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; width=&#34;280&#34; height=&#34;63&#34;  src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; width=&#34;280&#34; height=&#34;63&#34;  src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;por lo que, después de eliminar la parte entera y agregando el signo y el exponente, el número es:&lt;/p&gt;
@@ -366,15 +370,15 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
 
 &lt;p&gt;&lt;sup&gt;1&lt;/sup&gt; En doble precisión se utilizan 64 bits (8 bytes): 1 para el signo, 11 para el exponente y 52 para la mantisa.
 &lt;sup&gt;2&lt;/sup&gt; En la convención IEEE-754 el exponente varía en el rango [-126, 127] y se reservan los restantes valores para representar números muy pequeños y muy grandes.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Encontrar archivos abiertos en Linux</title>
-      <link>https://elbauldelprogramador.com/encontrar-archivos-abiertos-en-linux/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/encontrar-archivos-abiertos-en-linux/</guid>
-      <description>&lt;p&gt;¿Cómo podemos saber cuantos archivos tenemos abiertos o hasta cuantos podemos permitir que están abiertos en Linux?&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Encontrar archivos abiertos en Linux</title>
+            <link>https://elbauldelprogramador.com/encontrar-archivos-abiertos-en-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/encontrar-archivos-abiertos-en-linux/</guid>
+            <description>&lt;p&gt;¿Cómo podemos saber cuantos archivos tenemos abiertos o hasta cuantos podemos permitir que están abiertos en Linux?&lt;/p&gt;
 
 &lt;p&gt;Por defecto el kernel de Linux establece un límite (para propósitos de seguridad) de hasta cuantos descriptores de archivos abiertos están permitidos en los sitemas linux servidor o escritorio.&lt;/p&gt;
 
@@ -405,16 +409,16 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
 &lt;/ul&gt;
 
 &lt;p&gt;El kernel de Linux asigna los identificadores de archivos de forma dinámica, pero no los libera de nuevo. Si el número de archivos asignados se encuentra cercano al máximo, se debe considerar aumentar el &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/&#34;&gt;número máximo de archivos abiertos permitidos&lt;/a&gt; editando el archivo &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/faq/making-changes-to-proc-filesystem-permanently/&#34;&gt;/etc/sysctl.conf&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Entendiendo los runlevel en Debian</title>
-      <link>https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/</guid>
-      <description>&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sh&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh1.png&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;
+        </item>
+        
+        <item>
+            <title>Entendiendo los runlevel en Debian</title>
+            <link>https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/</guid>
+            <description>&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sh&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh1.png&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Visto de forma simple, los runlevel  determinan qué programas se ejecutan al inicio del sistema.&lt;/p&gt;
@@ -522,15 +526,15 @@ N 2
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;An introduction to run-levels&lt;/em&gt; »» &lt;a href=&#34;http://www.debian-administration.org/articles/212&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Introducción a los Procesos</title>
-      <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
-      <description>&lt;h2 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h2&gt;
+        </item>
+        
+        <item>
+            <title>Introducción a los Procesos</title>
+            <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
+            <description>&lt;h2 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h2&gt;
 
 &lt;p&gt;El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.&lt;/p&gt;
 
@@ -579,7 +583,7 @@ N 2
 &lt;/ul&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;La &lt;strong&gt;transición&lt;/strong&gt; entre cada uno de los tres estados puede hacerse de la siguiente manera:&lt;/p&gt;
@@ -602,15 +606,15 @@ N 2
 &lt;li&gt;Una operación que sufren los procesos usualmente es el &lt;strong&gt;cambio de contexto&lt;/strong&gt;, que consiste en retirar el control de la CPU del proceso actual, y asignarla a otro proceso.&lt;/li&gt;
 &lt;li&gt;Los sistemas operativos deben proporcionar alguna forma de crear y destruir los procesos. Cada proceso tiene un padre y cero o más hijos. Así, existe una jerarquía de procesos que se puede representar en forma de árbol.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Por qué nuestro PC necesita un firewall activado</title>
-      <link>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</guid>
-      <description>&lt;p&gt;Hace poco os hablé de &lt;a href=&#34;https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks&#34;&gt;por qué Linux no era solo para geeks&lt;/a&gt;, sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Por qué nuestro PC necesita un firewall activado</title>
+            <link>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</guid>
+            <description>&lt;p&gt;Hace poco os hablé de &lt;a href=&#34;https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks&#34;&gt;por qué Linux no era solo para geeks&lt;/a&gt;, sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red&lt;/p&gt;
 
 &lt;p&gt;¿Por qué es necesario convencer a todo el mundo que es necesario activar un cortafuegos (Firewall) en los ordenadores que tienen acceso a internet?, ya sean de escritorio o servidores. Se podría pensar que la tarea de un firewall es obvia para cualquier usuario que posea un ordenador. Sin embargo, circulan comentarios acerca de este tema que no lo hacen del todo cierto.&lt;/p&gt;
 
@@ -657,32 +661,32 @@ N 2
 &lt;p&gt;Algunas de las mejores distros linux, como Fedora, tienen un firewall habilitado fuera del nucleo. Así es como debe ser. El kernel linux tiene un firewall incorporado (Vale también par alos BSD), y hay varias interfaces gráficas para manejarlo. Lo menos que podemos esperar de los desarrolladores de las distros es que ser permita activarlo fuera del nucleo.&lt;/p&gt;
 
 &lt;p&gt;Tracucción de : &lt;a target=&#34;_blank&#34; href=&#34;http://www.linuxbsdos.com/2011/11/21/why-your-computer-needs-a-firewall-enabled/&#34;&gt;linuxbsdos.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)</title>
-      <link>https://elbauldelprogramador.com/humor-como-arreglar-una-computadora/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/humor-como-arreglar-una-computadora/</guid>
-      <description>&lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;800&#34; width=&#34;428&#34; src=&#34;https://1.bp.blogspot.com/-nZA60Hrzepo/TdErBWlgr8I/AAAAAAAAAfA/p7DoPhDerdQ/s800/linux.png&#34;&gt;&lt;/amp-img&gt;
+        </item>
+        
+        <item>
+            <title>[Humor]: Como arreglar una computadora (Windows, Linux o Mac OSX)</title>
+            <link>https://elbauldelprogramador.com/humor-como-arreglar-una-computadora/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/humor-como-arreglar-una-computadora/</guid>
+            <description>&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;800&#34; width=&#34;428&#34; src=&#34;https://1.bp.blogspot.com/-nZA60Hrzepo/TdErBWlgr8I/AAAAAAAAAfA/p7DoPhDerdQ/s800/linux.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;589&#34; width=&#34;399&#34; src=&#34;https://3.bp.blogspot.com/-HckHsExHyL8/TdErA2OYrfI/AAAAAAAAAew/W3RLpuvwUUE/s800/windows.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;589&#34; width=&#34;399&#34; src=&#34;https://3.bp.blogspot.com/-HckHsExHyL8/TdErA2OYrfI/AAAAAAAAAew/W3RLpuvwUUE/s800/windows.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;492&#34; width=&#34;439&#34; src=&#34;https://3.bp.blogspot.com/-uALX0h_XbzU/TdErBEx3OpI/AAAAAAAAAe4/TTfcnLUDP7I/s800/apple.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;492&#34; width=&#34;439&#34; src=&#34;https://3.bp.blogspot.com/-uALX0h_XbzU/TdErBEx3OpI/AAAAAAAAAe4/TTfcnLUDP7I/s800/apple.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;fuente&#34;&gt;Fuente&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://theoatmeal.com/blog/fix_computer&#34;&gt;theoatmeal&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

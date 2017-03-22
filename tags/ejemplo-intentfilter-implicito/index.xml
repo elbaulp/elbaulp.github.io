@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ejemplo Intentfilter Implicito on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/ejemplo-intentfilter-implicito/index.xml</link>
-    <description>Recent content in Ejemplo Intentfilter Implicito on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/ejemplo-intentfilter-implicito/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Cómo se resuelven los Intents</title>
-      <link>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</guid>
-      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://elbauldelprogramador.com/img/2013/07/iconoAndroid.png&#34;  id=&#34;logo&#34;  class=&#34;icono&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/p&gt;
+    <channel>
+        <title>Ejemplo Intentfilter Implicito on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/ejemplo-intentfilter-implicito/index.xml</link>
+        <description>Recent content in Ejemplo Intentfilter Implicito on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/ejemplo-intentfilter-implicito/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Cómo se resuelven los Intents</title>
+            <link>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</guid>
+            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://elbauldelprogramador.com/img/2013/07/iconoAndroid.png&#34;  id=&#34;logo&#34;  class=&#34;icono&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
 
@@ -59,15 +63,15 @@
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Intents - Categorías</title>
-      <link>https://elbauldelprogramador.com/programacion-android-intents-categorias/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-intents-categorias/</guid>
-      <description>&lt;div class=&#34;separator&#34; &gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Intents - Categorías</title>
+            <link>https://elbauldelprogramador.com/programacion-android-intents-categorias/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-intents-categorias/</guid>
+            <description>&lt;div class=&#34;separator&#34; &gt;
 
 &lt;/div&gt;
 
@@ -131,15 +135,15 @@
 &lt;hr /&gt;
 
 &lt;h4 id=&#34;siguiente-tema-cómo-se-resuelven-los-intents-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven/&#34;&gt;Cómo se resuelven los Intents&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación Android: Intents - Conceptos básicos</title>
-      <link>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</guid>
-      <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación Android: Intents - Conceptos básicos</title>
+            <link>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</guid>
+            <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
 
 &lt;h3 id=&#34;introducción-a-los-intents&#34;&gt;Introducción a los Intents&lt;/h3&gt;
 
@@ -327,7 +331,7 @@
 &lt;p&gt;Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.&lt;/p&gt;
 
 &lt;h4 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h4&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

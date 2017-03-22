@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Calcular Rutas Gps Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/calcular-rutas-gps-android/index.xml</link>
-    <description>Recent content in Calcular Rutas Gps Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/calcular-rutas-gps-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android</title>
-      <link>https://elbauldelprogramador.com/programar-navegador-gps-android/</link>
-      <pubDate>Tue, 16 Feb 2016 20:05:38 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programar-navegador-gps-android/</guid>
-      <description>&lt;blockquote&gt;
+    <channel>
+        <title>Calcular Rutas Gps Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/calcular-rutas-gps-android/index.xml</link>
+        <description>Recent content in Calcular Rutas Gps Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/calcular-rutas-gps-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear Un Navegador GPS Que Dibuje El Camino Seguido en Android</title>
+            <link>https://elbauldelprogramador.com/programar-navegador-gps-android/</link>
+            <pubDate>Tue, 16 Feb 2016 20:05:38 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programar-navegador-gps-android/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;La siguiente aplicación es parte de una práctica de la asignatura “Nuevos Paradigmas de la Interacción” de la facultad de Ingeniería Informática de Granada (ETSIIT) Otras aplicaciones de la práctica son:&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -34,7 +38,7 @@
 &lt;p&gt;En esta aplicación se lee un destino mediante códigos QR, tras esto, se puede iniciar la navegación con &lt;em&gt;Google Maps&lt;/em&gt; (Usando la librería &lt;a href=&#34;https://github.com/akexorcist/Android-GoogleDirectionLibrary&#34;&gt;Android-GoogleDirectionLibrary&lt;/a&gt;). En la aplicación se muestran dos mapas. En el de abajo aparece el destino al que debemos llegar, además, se va dibujando un camino por el que el usuario va pasando. En el mapa de arriba se ve el mapa desde el punto de vista &lt;em&gt;StreetView&lt;/em&gt;. Veamos la aplicación:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/gpsQr.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/gpsQr.png&#34; title=&#34;GPSQR&#34; alt=&#34;GPSQR&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/gpsQr.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/gpsQr.png&#34; title=&#34;GPSQR&#34; alt=&#34;GPSQR&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;GPSQR&lt;/span&gt;
 &lt;/figure&gt;
 &lt;!--ad--&gt;
@@ -42,7 +46,7 @@
 El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que usa una simplificación de la librería _Zxing_. Cuando se escanea una localización, veremos lo siguiente:
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/gqsqr_read.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/gqsqr_read.png&#34; title=&#34;Codigo QR leido con el destino&#34; alt=&#34;Codigo QR leido con el destino&#34; width=&#34;360px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/gqsqr_read.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/gqsqr_read.png&#34; title=&#34;Codigo QR leido con el destino&#34; alt=&#34;Codigo QR leido con el destino&#34; width=&#34;360px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Codigo QR leido con el destino&lt;/span&gt;
 &lt;/figure&gt;
 
@@ -255,7 +259,7 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
 &lt;li&gt;&lt;a href=&#34;http://www.iconarchive.com/show/windows-8-icons-by-icons8/Ecommerce-Qr-Code-icon.html&#34;&gt;Icono QR&lt;/a&gt;
 &lt;/uses-permission&gt;&lt;/latlng&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

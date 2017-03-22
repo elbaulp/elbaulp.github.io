@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tutorial Express on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/tutorial-express/index.xml</link>
-    <description>Recent content in Tutorial Express on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/tutorial-express/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo configurar entornos de desarrollo para aplicaciones móviles en  un servidor cloud</title>
-      <link>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</guid>
-      <description>&lt;p&gt;En un &lt;a href=&#34;https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/&#34; title=&#34;Cómo desarrollar aplicaciones en un servidor Cloud&#34;&gt;artículo anterior&lt;/a&gt; se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.&lt;/p&gt;
+    <channel>
+        <title>Tutorial Express on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/tutorial-express/index.xml</link>
+        <description>Recent content in Tutorial Express on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/tutorial-express/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo configurar entornos de desarrollo para aplicaciones móviles en  un servidor cloud</title>
+            <link>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</guid>
+            <description>&lt;p&gt;En un &lt;a href=&#34;https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/&#34; title=&#34;Cómo desarrollar aplicaciones en un servidor Cloud&#34;&gt;artículo anterior&lt;/a&gt; se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.&lt;/p&gt;
 
 &lt;p&gt;Para conseguir nuestro objetivo necesitaremos &lt;strong&gt;Node.js&lt;/strong&gt;, &lt;strong&gt;Express&lt;/strong&gt; y &lt;strong&gt;mongodb&lt;/strong&gt;. Usaremos el servicio &lt;a href=&#34;http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=appmovil&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; title=&#34;Arsys cloudbuilder&#34;&gt;cloudbuilder de Arsys&lt;/a&gt;.&lt;/p&gt;
 
@@ -30,19 +34,19 @@
 
 &lt;p&gt;En éste caso, elegiremos un servidor con Debian 6, y una instalación base.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/1.-Creación-de-un-servidor-Cloud.png&#34; alt=&#34;1. Creación de un servidor Cloud&#34; width=&#34;817px&#34; height=&#34;448px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/1.-Creación-de-un-servidor-Cloud.png&#34; alt=&#34;1. Creación de un servidor Cloud&#34; width=&#34;817px&#34; height=&#34;448px&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;configurar-la-capacidad-del-servidor&#34;&gt;Configurar la capacidad del servidor&lt;/h2&gt;
 
 &lt;p&gt;Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png&#34; alt=&#34;2. Configuración capacidad servidor Cloud&#34; width=&#34;817px&#34; height=&#34;575px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png&#34; alt=&#34;2. Configuración capacidad servidor Cloud&#34; width=&#34;817px&#34; height=&#34;575px&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;establecer-la-contraseña-de-usuario&#34;&gt;Establecer la contraseña de usuario&lt;/h2&gt;
 
 &lt;p&gt;Por último, solo resta proporcionar una contraseña al usuario &lt;strong&gt;root&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png&#34; alt=&#34;3. Finalización de la puesta en marcha del servidor cloud&#34; width=&#34;815px&#34; height=&#34;581px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png&#34; alt=&#34;3. Finalización de la puesta en marcha del servidor cloud&#34; width=&#34;815px&#34; height=&#34;581px&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;instalar-node-js&#34;&gt;Instalar Node.js&lt;/h1&gt;
 
@@ -560,7 +564,7 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;scotch.io&lt;/em&gt; »» &lt;a href=&#34;https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4&#34; target=&#34;_blank&#34;&gt;Build a RESTful API Using Node and Express 4&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

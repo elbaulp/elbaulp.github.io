@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Curso Abap on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/curso-abap/index.xml</link>
-    <description>Recent content in Curso Abap on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/curso-abap/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Introducción a ABAP</title>
-      <link>https://elbauldelprogramador.com/introduccion-abap/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-abap/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+    <channel>
+        <title>Curso Abap on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/curso-abap/index.xml</link>
+        <description>Recent content in Curso Abap on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/curso-abap/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introducción a ABAP</title>
+            <link>https://elbauldelprogramador.com/introduccion-abap/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-abap/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;qué-es-abap&#34;&gt;Qué es ABAP&lt;/h2&gt;
 
@@ -23,7 +27,7 @@
 &lt;p&gt;Como lenguaje de programación propietario de SAP, ABAP se ha utilizado y se utiliza como elemento de programación específico para la mayor parte de sus productos. Literalmente las siglas ABAP significan &lt;em&gt;Advanced Business Application Programming&lt;/em&gt; y tiene muchos elementos en común con el lenguaje C. Originalmente fue definido como un lenguaje estructurado de cuarta generación (de ahí el antiguo nombre de ABAP/4), posteriormente ha incorporado elementos propios de lenguajes orientados a objetos.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-Apariencia.png&#34; alt=&#34;SAP-Apariencia&#34; width=&#34;979px&#34; height=&#34;602px&#34; /&gt;&lt;/p&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-Apariencia.png&#34; alt=&#34;SAP-Apariencia&#34; width=&#34;979px&#34; height=&#34;602px&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;características-del-lenguaje-abap&#34;&gt;Características del lenguaje ABAP&lt;/h2&gt;
 
@@ -77,22 +81,22 @@
 
 &lt;p&gt;Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola transacción. Nos permite trabajar a la vez con diferentes herramientas de programación bajo un área común.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-SE80-Object-Navigator.png&#34; alt=&#34;SAP-SE80-Object-Navigator&#34; width=&#34;983px&#34; height=&#34;604px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-SE80-Object-Navigator.png&#34; alt=&#34;SAP-SE80-Object-Navigator&#34; width=&#34;983px&#34; height=&#34;604px&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;se09-stms-sistema-gestor-de-transportes&#34;&gt;SE09/STMS - Sistema gestor de transportes&lt;/h3&gt;
 
 &lt;p&gt;El desarrollo en ABAP se realiza sobre un entorno de desarrollo al cual sólo tienen acceso los programadores y consultores. Éste se encuentra separado del entorno productivo en el cual trabajan los usuarios del ERP. Así pues, todo nuevo desarrollo o ampliación se debe mover al entorno productivo a través de un sistema que comunique todos los entornos. Éste sistema es el gestor de transportes y las transacciones SE09 y STMS son sus transacciones más conocidas.&lt;/p&gt;
 
 &lt;p&gt;Finalmente, hay que decir que el &lt;em&gt;ABAP workbench&lt;/em&gt; es propio de SAP pero últimamente SAP también permite programar ABAP mediante herramientas no propietarias de SAP, sobre todo con &lt;em&gt;Eclipse&lt;/em&gt;. Sin embargo, con estas plataformas se pierde mucha de la funcionalidad propia del &lt;em&gt;ABAP Workbench&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Programación ABAP: Hola Mundo en Reports</title>
-      <link>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Programación ABAP: Hola Mundo en Reports</title>
+            <link>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje.&lt;/p&gt;
 
@@ -111,11 +115,11 @@
 &lt;li&gt;&lt;strong&gt;Aplicación&lt;/strong&gt;: describe, dentro de los módulos disponibles de SAP, en qué categoría se puede introducir. Por ejemplo, puede estar asociado al módulo de compras, al de ventas, etc. Al ser un programa de test no lo asignaremos a ninguna aplicación.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-crear.png&#34; alt=&#34;Crear Hola Mundo ABAP&#34; width=&#34;689px&#34; height=&#34;646px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-crear.png&#34; alt=&#34;Crear Hola Mundo ABAP&#34; width=&#34;689px&#34; height=&#34;646px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Al pulsar el botón &lt;strong&gt;Grabar&lt;/strong&gt; SAP nos devuelve a otra pantalla, donde nos pide que asignemos la capa de transporte. Básicamente, nos está diciendo que este programa podrá ser transportado desde nuestro entorno de desarrollo a un entorno productivo.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-objeto.png&#34; alt=&#34;hola-mundo-objeto&#34; width=&#34;468px&#34; height=&#34;312px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-objeto.png&#34; alt=&#34;hola-mundo-objeto&#34; width=&#34;468px&#34; height=&#34;312px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Sin embargo, como a nosotros esto ahora mismo no nos interesa pulsaremos el botón &lt;strong&gt;Objeto Local&lt;/strong&gt;. Esto significa que no lo vamos a poder transportar a productivo nunca.&lt;/p&gt;
 
@@ -123,7 +127,7 @@
 
 &lt;p&gt;Una vez creado nuestro programa, SAP nos genera automáticamente una serie de líneas de comentario y una línea de report.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;En ABAP todas las sentencias que empiezan por &lt;strong&gt;asterisco&lt;/strong&gt; son comentarios no ejecutables. Y en estas líneas que SAP nos ha creado automáticamente se espera que escribamos una descripción general del propósito del programa.&lt;/p&gt;
 
@@ -157,7 +161,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-abap&#34; data-lang=&#34;abap&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WRITE&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;g_texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;verificación-y-activación&#34;&gt;VERIFICACIÓN Y ACTIVACIÓN&lt;/h3&gt;
 
@@ -172,7 +176,7 @@
 
 &lt;p&gt;A través del menú &lt;strong&gt;Programa / Ejecutar / Proceso directo&lt;/strong&gt; o, simplemente, pulsando &lt;strong&gt;F8&lt;/strong&gt; obtendremos el resultado de nuestro programa en pantalla.&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-salida.png&#34; alt=&#34;hola-mundo-salida&#34; width=&#34;633px&#34; height=&#34;205px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-salida.png&#34; alt=&#34;hola-mundo-salida&#34; width=&#34;633px&#34; height=&#34;205px&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;transacciones&#34;&gt;TRANSACCIONES&lt;/h3&gt;
 
@@ -183,13 +187,13 @@
 &lt;li&gt;Como nombre de transacción escribiremos Z_HOLA. De nuevo, recordar que como clientes sólo podemos utilizar la Z o la Y como letra de inicio de nuestros objetos ABAP.&lt;/li&gt;
 &lt;li&gt;Pulsamos crear, damos una descripción e indicamos que nuestra transacción es transacción de report.&lt;/li&gt;
 &lt;li&gt;Indicamos el nombre de nuestro programa y grabamos como objeto local.
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-transaccion.png&#34; alt=&#34;hola-mundo-transaccion&#34; width=&#34;469px&#34; height=&#34;219px&#34; /&gt;&lt;/li&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-transaccion.png&#34; alt=&#34;hola-mundo-transaccion&#34; width=&#34;469px&#34; height=&#34;219px&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Ya está. Ahora utilizando la transacción Z_HOLA se ejecutará el resultado del programa Z_HOLA_MUNDO.&lt;/p&gt;
 
 &lt;p&gt;&lt;/tipo&gt;&lt;/nombre_variable&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Añadir Imagenes Php on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/a%C3%B1adir-imagenes-php/index.xml</link>
-    <description>Recent content in Añadir Imagenes Php on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/a%C3%B1adir-imagenes-php/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Incluir imágenes en una entrada de WordPress usando PHP</title>
-      <link>https://elbauldelprogramador.com/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/</guid>
-      <description>&lt;blockquote&gt;
+    <channel>
+        <title>Añadir Imagenes Php on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/a%C3%B1adir-imagenes-php/index.xml</link>
+        <description>Recent content in Añadir Imagenes Php on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/a%C3%B1adir-imagenes-php/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Incluir imágenes en una entrada de WordPress usando PHP</title>
+            <link>https://elbauldelprogramador.com/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://reinspirit.com/blog/&#34; target=&#34;_blank&#34;&gt;Pedro Mendez&lt;/a&gt; en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página &amp;#8220;2014 Galery&amp;#8221;, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.&lt;/p&gt;
@@ -46,7 +50,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

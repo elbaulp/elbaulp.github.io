@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Wordpress on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/wordpress/index.xml</link>
-    <description>Recent content in Wordpress on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
-      <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
-      <description>
+    <channel>
+        <title>Wordpress on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/wordpress/index.xml</link>
+        <description>Recent content in Wordpress on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
+            <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
+            <description>
 
 &lt;figure&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -28,7 +32,7 @@
             sizes=&#34;(min-width: 123px) 123px, 100vw&#34;
             width=&#34;123&#34;
             height=&#34;116&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
@@ -49,15 +53,15 @@
 &lt;li&gt;&lt;em&gt;How to Add Default Content in Your WordPress Post Editor&lt;/em&gt; »» &lt;a href=&#34;http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/&#34; target=&#34;_blank&#34;&gt;wpbeginner&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Cómo crear  simples shortcodes en WordPress</title>
-      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
-      <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo crear  simples shortcodes en WordPress</title>
+            <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
+            <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
 
 &lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
@@ -77,15 +81,15 @@
 
 &lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Cómo crear shortcodes en WordPress que soporten parámetros</title>
-      <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</guid>
-      <description>&lt;p&gt;Ya se vió cómo añadir &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/&#34; target=&#34;_blank&#34;&gt;shortcodes simples&lt;/a&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo crear shortcodes en WordPress que soporten parámetros</title>
+            <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</guid>
+            <description>&lt;p&gt;Ya se vió cómo añadir &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/&#34; target=&#34;_blank&#34;&gt;shortcodes simples&lt;/a&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
 
 &lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&amp;nbsp;&lt;strong&gt;functions.php .&amp;nbsp;&lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado &lt;em&gt;[foo]&lt;/em&gt; que añadirá al artículo el texto&amp;nbsp;&lt;strong&gt;&amp;#8220;Esto es una prueba&amp;#8221;.&lt;/strong&gt;&lt;/p&gt;
 
@@ -152,15 +156,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad</title>
-      <link>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</guid>
-      <description>&lt;h3 id=&#34;importar-entradas-y-comentários&#34;&gt;Importar entradas y comentários&lt;/h3&gt;
+        </item>
+        
+        <item>
+            <title>Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad</title>
+            <link>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/</guid>
+            <description>&lt;h3 id=&#34;importar-entradas-y-comentários&#34;&gt;Importar entradas y comentários&lt;/h3&gt;
 
 &lt;p&gt;Una vez tenemos wordpress instalado y funcionando, vamos a importar todos las entradas y los comentarios de nuestro blog de blogger, para ello hacemos clic en &lt;em&gt;Herramientas→Importar→Blogger&lt;/em&gt;&lt;/p&gt;
 
@@ -173,7 +177,7 @@
 &lt;p&gt;En el caso de que dispongáis de un dominio propio como en mi caso, el primer paso es encontrar la dirección de los servidores DNS de nuestro proveedor de hosting, en mi caso con OVH las direcciones son &lt;em&gt;&lt;strong&gt;ns100.ovh.net&lt;/strong&gt;&lt;/em&gt; y &lt;strong&gt;&lt;em&gt;dns100.ovh.net. &lt;/em&gt;&lt;/strong&gt;Al comprar el domínio a través de blogger para acceder al panel de control debemos usar google Apps a través de este enlace &lt;a href=&#34;https://www.google.com/nombredetudominio&#34;&gt;https://www.google.com/nombredetudominio&lt;/a&gt;. Una vez dentro del panel de control nos dirigimos a &lt;em&gt;Domain settings&lt;/em&gt;&lt;em&gt;→Domain Names&lt;/em&gt;&lt;em&gt;→Avanced DNS settings. &lt;/em&gt;Nos logeamos en la consola y editamos la sección &lt;em&gt;DNS Information &lt;/em&gt;para que quede parecido a esto:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;DNS settings blogger to wordpress&#34; src=&#34;https://elbauldelprogramador.com/img/2012/04/Screenshot-04042012-055625-PM1.png&#34; alt=&#34;&#34; width=&#34;613px&#34; height=&#34;98px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;DNS settings blogger to wordpress&#34; src=&#34;https://elbauldelprogramador.com/img/2012/04/Screenshot-04042012-055625-PM1.png&#34; alt=&#34;&#34; width=&#34;613px&#34; height=&#34;98px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Obviamente con los DNS correspondientes a los que os proporcione vuestro servicio de hosting.&lt;/p&gt;
@@ -639,7 +643,7 @@ RewriteRule . /index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span c
 
 &lt;span class=&#34;c1&#34;&gt;# END WordPress&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

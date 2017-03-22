@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Como Hacer Un Trigger on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/como-hacer-un-trigger/index.xml</link>
-    <description>Recent content in Como Hacer Un Trigger on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/como-hacer-un-trigger/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>PL/SQL. Disparadores o Triggers</title>
-      <link>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</guid>
-      <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+    <channel>
+        <title>Como Hacer Un Trigger on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/como-hacer-un-trigger/index.xml</link>
+        <description>Recent content in Como Hacer Un Trigger on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/como-hacer-un-trigger/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>PL/SQL. Disparadores o Triggers</title>
+            <link>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</guid>
+            <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
 
 &lt;p&gt;Los disparadores (o triggers) son &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloques de código PL/SQL&lt;/a&gt; asociados a una tabla y que se ejecutan automáticamente como reacción a una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;operación DML&lt;/a&gt; específica (&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt; o &lt;code&gt;DELETE&lt;/code&gt;) sobre dicha tabla.&lt;/p&gt;
 
@@ -254,7 +258,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;p&gt;Si queremos conocer los valores del registro de la tabla sobre la que se ha disparado el trigger, este último debe estar declarado de forma &lt;code&gt;FOR EACH ROW&lt;/code&gt; y acceder a sus valores mediante las pseudocolumnas :NEW y :OLD.&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

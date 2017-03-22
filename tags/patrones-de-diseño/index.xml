@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Patrones De Diseño on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/patrones-de-dise%C3%B1o/index.xml</link>
-    <description>Recent content in Patrones De Diseño on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/patrones-de-dise%C3%B1o/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo crear un Front Controller en PHP</title>
-      <link>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</guid>
-      <description>&lt;blockquote&gt;
+    <channel>
+        <title>Patrones De Diseño on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/patrones-de-dise%C3%B1o/index.xml</link>
+        <description>Recent content in Patrones De Diseño on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/patrones-de-dise%C3%B1o/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo crear un Front Controller en PHP</title>
+            <link>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
 
 &lt;figure&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -32,7 +36,7 @@
             sizes=&#34;(min-width: 480px) 480px, 100vw&#34;
             width=&#34;480&#34;
             height=&#34;360&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
@@ -80,7 +84,7 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

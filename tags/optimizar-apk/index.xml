@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Optimizar Apk on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/optimizar-apk/index.xml</link>
-    <description>Recent content in Optimizar Apk on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/optimizar-apk/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Pon a dieta a tus APKs</title>
-      <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
-      <pubDate>Fri, 11 Dec 2015 10:47:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
+    <channel>
+        <title>Optimizar Apk on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/optimizar-apk/index.xml</link>
+        <description>Recent content in Optimizar Apk on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/optimizar-apk/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Pon a dieta a tus APKs</title>
+            <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
+            <pubDate>Fri, 11 Dec 2015 10:47:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: Cyril&lt;/span&gt;
 &lt;/figure&gt;
 
@@ -156,7 +160,7 @@ resources.arsc
 
 &lt;p&gt;También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas &lt;code&gt;ic_arrow_expand&lt;/code&gt; y &lt;code&gt;ic_arrow_collapse&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos deshacernos fácilmente de &lt;code&gt;ic_arrow_collapse&lt;/code&gt; creando un &lt;code&gt;RotateDrawable&lt;/code&gt; basándonos en &lt;code&gt;ic_arrow_expand&lt;/code&gt;. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
@@ -169,7 +173,7 @@ resources.arsc
 
 &lt;p&gt;Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el &lt;strong&gt;APK&lt;/strong&gt; resultante pesaba más de &lt;strong&gt;1.5MB&lt;/strong&gt;. Tras investigar en &lt;code&gt;wearable-support.aar&lt;/code&gt;, descubrió que se empaquetan dos animaciones &lt;em&gt;frame-by-frame&lt;/em&gt; en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).&lt;/p&gt;
 
-&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La animación para el “éxito” se construye con un &lt;code&gt;AnimationDrawable&lt;/code&gt; definido en un XML:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
@@ -222,7 +226,7 @@ resources.arsc
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

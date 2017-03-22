@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Strictmode Android on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/strictmode-android/index.xml</link>
-    <description>Recent content in Strictmode Android on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/strictmode-android/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: StrictMode</title>
-      <link>https://elbauldelprogramador.com/programacion-android-strictmode/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-strictmode/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/android&#34;&gt;Android&lt;/a&gt; 2.3 introdujo una funcionalidad de depuración llamada &lt;em&gt;StrictMode&lt;/em&gt;. Según Google, usaron esta característica para hacer cientos de mejoras a sus aplicaciones Android. Lo que hace el &lt;em&gt;StrictMode&lt;/em&gt; es informar de las violaciones de políticas relacionadas con los &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;hilos&lt;/a&gt; y la máquina virtual. Si se detecta dicha violación, obtenemos una alerta que nos lo indica. Junto a la alerta tendremos también una traza de la pila de ejecución (Stack Trace), donde podremos comprobar el lugar en el que se produjo la violación. En ese momento, podemos forzar el cierre de la aplicación o simplemente escribirla en el log y dejar que la aplicación continue su ejecución.&lt;/p&gt;
+    <channel>
+        <title>Strictmode Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/strictmode-android/index.xml</link>
+        <description>Recent content in Strictmode Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/strictmode-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: StrictMode</title>
+            <link>https://elbauldelprogramador.com/programacion-android-strictmode/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-strictmode/</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/android&#34;&gt;Android&lt;/a&gt; 2.3 introdujo una funcionalidad de depuración llamada &lt;em&gt;StrictMode&lt;/em&gt;. Según Google, usaron esta característica para hacer cientos de mejoras a sus aplicaciones Android. Lo que hace el &lt;em&gt;StrictMode&lt;/em&gt; es informar de las violaciones de políticas relacionadas con los &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;hilos&lt;/a&gt; y la máquina virtual. Si se detecta dicha violación, obtenemos una alerta que nos lo indica. Junto a la alerta tendremos también una traza de la pila de ejecución (Stack Trace), donde podremos comprobar el lugar en el que se produjo la violación. En ese momento, podemos forzar el cierre de la aplicación o simplemente escribirla en el log y dejar que la aplicación continue su ejecución.&lt;/p&gt;
 
 &lt;p&gt;Actualmente hay dos tipos de políticas disponibles para usar con &lt;em&gt;StrictMode&lt;/em&gt;. La primera de ellas es referente a los hilos y está destinada principalmente a ejecutarse en el hilo principal, también conocido como el hilo de UI (User Interface).&lt;/p&gt;
 
@@ -112,17 +116,17 @@
 &lt;h3 id=&#34;mediante-el-penaltylog&#34;&gt;Mediante el penaltyLog():&lt;/h3&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png&#34;&gt;&lt;amp-img layout=&#34;responsive&#34; alt=&#34;android development&#34;  height=&#34;774&#34; width=&#34;1189&#34; src=&#34;https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png&#34;&gt;&lt;img layout=&#34;responsive&#34; alt=&#34;android development&#34;  height=&#34;774&#34; width=&#34;1189&#34; src=&#34;https://3.bp.blogspot.com/-IdweIPhRyVQ/TsOuiL-BQQI/AAAAAAAABx8/X2hvK1eoP00/s1600/Screenshot-1.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;mediante-penaltydialog&#34;&gt;Mediante penaltyDialog():&lt;/h3&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png&#34;  &gt;&lt;amp-img layout=&#34;responsive&#34;  alt=&#34;android&#34; height=&#34;337&#34; width=&#34;447&#34; src=&#34;https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png&#34;  &gt;&lt;img layout=&#34;responsive&#34;  alt=&#34;android&#34; height=&#34;337&#34; width=&#34;447&#34; src=&#34;https://1.bp.blogspot.com/-osWDkvmrHug/TsOu3XOySgI/AAAAAAAAByI/2TbyygetI14/s1600/Screenshot.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;siguiente-tema-proveedores-de-contenido-introducción-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de/&#34;&gt;Proveedores de Contenido - Introducción&lt;/a&gt;&lt;/h3&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

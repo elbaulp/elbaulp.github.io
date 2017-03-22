@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Drawable Tricks on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/drawable-tricks/index.xml</link>
-    <description>Recent content in Drawable Tricks on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/drawable-tricks/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Grid Spacing en Android</title>
-      <link>https://elbauldelprogramador.com/grid-spacing-en-android/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/grid-spacing-en-android/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Éste artículo es una traducción del blog de &lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;, al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer (&lt;a href=&#34;https://elbauldelprogramador.com/pon-dieta-tus-apks/&#34; title=&#34;Pon a Dieta Tus APKs&#34;&gt;Pon a dieta tus APKs&lt;/a&gt;), otra traducción de su blog.&lt;/em&gt;&lt;/p&gt;
+    <channel>
+        <title>Drawable Tricks on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/drawable-tricks/index.xml</link>
+        <description>Recent content in Drawable Tricks on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/drawable-tricks/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Grid Spacing en Android</title>
+            <link>https://elbauldelprogramador.com/grid-spacing-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/grid-spacing-en-android/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una traducción del blog de &lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;, al cual le agradezco que me diera permiso para escribirlo. Quizás te interese leer (&lt;a href=&#34;https://elbauldelprogramador.com/pon-dieta-tus-apks/&#34; title=&#34;Pon a Dieta Tus APKs&#34;&gt;Pon a dieta tus APKs&lt;/a&gt;), otra traducción de su blog.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;La mayoría de interfaces de usuario (en móviles o web) se basan en el concepto de &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/&#34; title=&#34;Crear un GridView con Adaptador personalizado en Android&#34;&gt;rejillas&lt;/a&gt; (&lt;strong&gt;Grids&lt;/strong&gt; a partir de ahora). Los &lt;strong&gt;Grids&lt;/strong&gt; consisten básicamente en separar la interfaz de usuario en una serie de cuadrados alineados que pueden ser fusionados para crear bloques. Usando el principio Grid en el desarrollo de la UI (Interfaz de usuario) ayuda a alinear elementos, trae consistencia, genera un código limpio, asegura que el usuario pueda analizar fácilmente el contenido de la interfaz etc. En resumen, los &lt;strong&gt;Grids&lt;/strong&gt; son una herramienta de diseño extremadamante potentes.&lt;/p&gt;
 
@@ -39,13 +43,13 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;624px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;624px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;La interfaz mostrada en la imagen de arriba depende claramente en la idea de un Grid. Sin embargo, carece de espacio entre elementos que permitan al usuario distinguir claramente la entidades independientes de la interfaz. Corrijamos éste problema añadiendo &lt;code&gt;android:layout_marginTop=&amp;quot;@dimen/spacing_medium&amp;quot;&lt;/code&gt; al &lt;code&gt;LinearLayout&lt;/code&gt; identificado por &lt;code&gt;@id/buttons_container&lt;/code&gt; y &lt;code&gt;android:layout_marginRight=&amp;quot;@dimen/spacing_medium&amp;quot;&lt;/code&gt; a los botones &lt;code&gt;@id/btn_first&lt;/code&gt; y &lt;code&gt;@id/btn_second&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;/span&gt;
 &lt;/figure&gt;
 
@@ -54,7 +58,7 @@
 &lt;p&gt;La interfaz de arriba tiene un aspecto bastante bueno: Buena apariencia, es legible, etc. Desafortunadamente, las cosas se ponen un poco mal cuando se ocultan dinámicamente algunas &lt;code&gt;Views&lt;/code&gt; en el &lt;em&gt;layout&lt;/em&gt;. De hecho, imaginemos que la función que se activaría con un click en el botón &lt;code&gt;@id/btn_third&lt;/code&gt; requiere de alguna característica no disponible en el dispositivo (&lt;strong&gt;Google Play Services&lt;/strong&gt; por ejemplo). La mejor forma de no desordenar la interfaz es ocultar el tercer botón con &lt;code&gt;View.GONE&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_2_2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como es de esperar, el botón &lt;code&gt;@id/btn_third&lt;/code&gt; desaparece, pero el borde derecho de &lt;code&gt;@id/btn_second&lt;/code&gt; no está alineado con el borde derecho del icono de la aplicación. La razón principal de éste problema se debe a que la técnica usando el margen funciona bien siempre que se mantenga la asunción hecha al principio: cada &lt;code&gt;View&lt;/code&gt; con un margen derecho/superior tiene una &lt;code&gt;View&lt;/code&gt; vecina a su derecha/arriba. Ocultar algunas &lt;code&gt;Views&lt;/code&gt; en la barra va en contra de esta restricción.&lt;/p&gt;
@@ -84,7 +88,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/12/Grid-Spacing-en-Android-take_3.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1080px&#34; height=&#34;672px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
@@ -94,7 +98,7 @@
 &lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;Grid Spacing on Android&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/11/17/grid-spacing-on-android/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

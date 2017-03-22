@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Privativa on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/privativa/index.xml</link>
-    <description>Recent content in Privativa on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/privativa/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Compilar la parte no gratuita de OpenCV 3.0&#43; desde fuente</title>
-      <link>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</link>
-      <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
-      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
+    <channel>
+        <title>Privativa on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/privativa/index.xml</link>
+        <description>Recent content in Privativa on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/privativa/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Compilar la parte no gratuita de OpenCV 3.0&#43; desde fuente</title>
+            <link>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
+            <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2-descomprime-y-crea-un-directorio-donde-construirlo&#34;&gt;[1]. Descarga OpenCV 3.2, descomprime y crea un directorio donde construirlo&lt;/h1&gt;
 
@@ -43,7 +47,7 @@
 &lt;p&gt;Fíjate cuando estés generando el makefile, que la salida para el campo de Java es así:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -104,7 +108,7 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

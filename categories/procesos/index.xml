@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Procesos on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/categories/procesos/index.xml</link>
-    <description>Recent content in Procesos on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/categories/procesos/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Introducción a los Procesos</title>
-      <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
-      <description>&lt;h2 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h2&gt;
+    <channel>
+        <title>Procesos on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/procesos/index.xml</link>
+        <description>Recent content in Procesos on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/procesos/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introducción a los Procesos</title>
+            <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
+            <description>&lt;h2 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h2&gt;
 
 &lt;p&gt;El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.&lt;/p&gt;
 
@@ -63,7 +67,7 @@
 &lt;/ul&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;La &lt;strong&gt;transición&lt;/strong&gt; entre cada uno de los tres estados puede hacerse de la siguiente manera:&lt;/p&gt;
@@ -86,15 +90,15 @@
 &lt;li&gt;Una operación que sufren los procesos usualmente es el &lt;strong&gt;cambio de contexto&lt;/strong&gt;, que consiste en retirar el control de la CPU del proceso actual, y asignarla a otro proceso.&lt;/li&gt;
 &lt;li&gt;Los sistemas operativos deben proporcionar alguna forma de crear y destruir los procesos. Cada proceso tiene un padre y cero o más hijos. Así, existe una jerarquía de procesos que se puede representar en forma de árbol.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Liberada la versión 1.0 de htop</title>
-      <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
-      <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Liberada la versión 1.0 de htop</title>
+            <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
+            <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
 
 &lt;p&gt;Podéis &lt;strong&gt;consultar las mejoras&lt;/strong&gt; en la &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads&#34;&gt;página oficial del proyecto en SourceForge&lt;/a&gt;, y por supuesto tenéis a vuestra disposición tanto el &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads#sources&#34;&gt;código fuente&lt;/a&gt; como &lt;a href=&#34;http://htop.sourceforge.net/index.php?page=downloads#binaries&#34;&gt;binarios&lt;/a&gt; preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede &lt;a target=&#34;_blank&#34; href=&#34;http://sourceforge.net/donate/index.php?group_id=108839&#34;&gt;invitarle a una cervecita.&lt;/a&gt;&lt;/p&gt;
 
@@ -148,13 +152,13 @@ compelled me to call this version 1.0. We all deserve this little
 &lt;p&gt;Al ejecutarlo veremos algo parecido a lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;linux htop&#34; width=&#34;800&#34; height=&#34;640&#34; src=&#34;https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;linux htop&#34; width=&#34;800&#34; height=&#34;640&#34; src=&#34;https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Vía &lt;a target=&#34;_blank&#34; href=&#34;http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/&#34;&gt;MuyLinux&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Fuente &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=main&#34;&gt;htop.sourceforge.net&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

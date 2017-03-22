@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Recursos No Compilados on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/recursos-no-compilados/index.xml</link>
-    <description>Recent content in Recursos No Compilados on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/recursos-no-compilados/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Programación Android: Recursos compilados y no compilados</title>
-      <link>https://elbauldelprogramador.com/programacion-android-recursos-2/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/programacion-android-recursos-2/</guid>
-      <description>&lt;p&gt;Android soporta principalmente dos tipos de recursos: archivos XML y archivos raw (como imágenes, audio y vídeo). Incluso dentro de los archivos XML, has podido ver que en algunos casos los recursos están definidos como valores dentro del archivo XML (las cadenas de texto, por ejemplo). En otras ocasiones, un archivo XML es un recurso por sí mismo, como los Layout.&lt;/p&gt;
+    <channel>
+        <title>Recursos No Compilados on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/recursos-no-compilados/index.xml</link>
+        <description>Recent content in Recursos No Compilados on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/recursos-no-compilados/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Recursos compilados y no compilados</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-2/</guid>
+            <description>&lt;p&gt;Android soporta principalmente dos tipos de recursos: archivos XML y archivos raw (como imágenes, audio y vídeo). Incluso dentro de los archivos XML, has podido ver que en algunos casos los recursos están definidos como valores dentro del archivo XML (las cadenas de texto, por ejemplo). En otras ocasiones, un archivo XML es un recurso por sí mismo, como los Layout.&lt;/p&gt;
 
 &lt;p&gt;Podemos encontrar dos tipos de archivos XML: uno se compilará a un formato binario y el otro se copiará tal como es al dispositivo. Como ejemplo podemos poner los ficheros XML de recursos&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings&#34;&gt; string &lt;/a&gt;y los ficheros de &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout&#34;&gt;layout&lt;/a&gt;, ambos se compilarán a un formato binario antes de formar parte del paquete de instalación. Estos ficheros XML tienen formatos predefinidos en los que los nodos XML se traducen a IDs.&lt;/p&gt;
 
@@ -40,7 +44,7 @@
 &lt;p&gt;El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los recursos excepto los raw y lo coloca en el fichero .apk (Android package) final. Este fichero es el que contiene el código de las aplicaciones Android y los recursos, similar a los .jar de Java. Estos ficheros son los que usamos para instalar aplicaciones en Android.&lt;/p&gt;
 
 &lt;h2 id=&#34;siguiente-tema-programación-android-recursos-arrays-de-strings-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-arrays-de/&#34;&gt;Programación Android:Recursos - Arrays de strings&lt;/a&gt;&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

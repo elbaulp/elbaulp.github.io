@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Esconder Informacion En Imagen on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/esconder-informacion-en-imagen/index.xml</link>
-    <description>Recent content in Esconder Informacion En Imagen on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/esconder-informacion-en-imagen/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Ocultar/Revelar información dentro de imágenes con C&#43;&#43;</title>
-      <link>https://elbauldelprogramador.com/ocultarrevelar-informacion-dentro-de/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/ocultarrevelar-informacion-dentro-de/</guid>
-      <description>&lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34;&gt;&lt;/amp-img&gt;
+    <channel>
+        <title>Esconder Informacion En Imagen on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/esconder-informacion-en-imagen/index.xml</link>
+        <description>Recent content in Esconder Informacion En Imagen on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/esconder-informacion-en-imagen/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Ocultar/Revelar información dentro de imágenes con C&#43;&#43;</title>
+            <link>https://elbauldelprogramador.com/ocultarrevelar-informacion-dentro-de/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/ocultarrevelar-informacion-dentro-de/</guid>
+            <description>&lt;figure&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El jueves pasado me mandaron hacer una práctica en MP (Metodología de la Programación) que consiste en la inserción y extracción de un mensaje &amp;#8216;oculto&amp;#8217; en una imagen.&lt;/p&gt;
@@ -38,7 +42,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;En la siguiente figura se muestra un ejemplo de imagen 256&amp;#215;256 de niveles de gris. Observe el zoom de una región 10&amp;#215;10 para apreciar con detalle los grises que la componen:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;215&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;215&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;imágenes-ppm-portable-pix-map-file-format&#34;&gt;Imágenes PPM (Portable Pix Map file format)&lt;/h3&gt;
@@ -58,7 +62,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;Ahora que disponemos del bit menos significativo para cambiarlo como deseemos, podemos usar todos los bits menos significativos de la imagen para codificar el mensaje. Por otro lado, el mensaje será una cadena-C, es decir, una secuencia de valores de tipo char que terminan en un cero. En este caso, igualmente, tenemos una secuencia de bytes (8 bits) que queremos insertar en la imagen. Dado que podemos modificar los bits menos significativos de la imagen, podemos “repartir” cada carácter del mensaje en 8 píxeles consecutivos. En la siguiente figura mostramos un esquema que refleja esta idea:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;125&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;125&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Donde los valores de arriba corresponden a los píxeles de la imágen y los de abajo al mensaje.&lt;/p&gt;
@@ -66,13 +70,13 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;Hasta aquí el planteamiento del problema. Para resolverlo va a ser necesario usar operadores a nivel de bits, que en C++ son los siguientes:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;273&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;273&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Siento no poder poner algún trozo de código de ejemplo para que lo veáis, pero debido a que son unas prácticas evaluables, no puedo arriesgarme a que algún compañero copie el código. (Que ya me pasó una vez y me suspendieron). Sin embargo os dejo unas capturas del programa:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como podéis comprobar, Lenna aparentemente no ha cambiado su aspecto :D. En el caso de la imagen a color pasaría exactamente lo mismo.&lt;/p&gt;
@@ -89,7 +93,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;El resultado es:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;175&#34; width=&#34;320&#34; src=&#34;https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;175&#34; width=&#34;320&#34; src=&#34;https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos haciendo la imagen más oscura:&lt;/p&gt;
@@ -97,7 +101,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;320&#34; src=&#34;https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;320&#34; src=&#34;https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Por último, si deplazamos todos los bits la izquierda una posición, es decir, pasa lo siguiente:&lt;/p&gt;
@@ -105,11 +109,11 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-   &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;177&#34; width=&#34;320&#34; src=&#34;https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png&#34;&gt;&lt;/amp-img&gt;
+   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;177&#34; width=&#34;320&#34; src=&#34;https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Eso es todo, Saludos!&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

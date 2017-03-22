@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Informe Estadístico Mensual De Gmail on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/informe-estad%C3%ADstico-mensual-de-gmail/index.xml</link>
-    <description>Recent content in Informe Estadístico Mensual De Gmail on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/informe-estad%C3%ADstico-mensual-de-gmail/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Crea scripts para las aplicaciones de Google con Apps Script</title>
-      <link>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</guid>
-      <description>&lt;p&gt;Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.&lt;/p&gt;
+    <channel>
+        <title>Informe Estadístico Mensual De Gmail on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/informe-estad%C3%ADstico-mensual-de-gmail/index.xml</link>
+        <description>Recent content in Informe Estadístico Mensual De Gmail on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/informe-estad%C3%ADstico-mensual-de-gmail/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crea scripts para las aplicaciones de Google con Apps Script</title>
+            <link>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crea-scripts-para-las-aplicaciones-de-google-con-apps-script/</guid>
+            <description>&lt;p&gt;Hace bastante tiempo que Google lanzó Apps Scripts, pero hasta ahora no lo había probado. Hoy esbozaré en qué consiste esta característica que google pone a nuestra disposición.&lt;/p&gt;
 
 &lt;h3 id=&#34;qué-es-google-apps-script&#34;&gt;Qué es Google Apps Script&lt;/h3&gt;
 
@@ -38,9 +42,9 @@
 &lt;p&gt;Uno de los scripts que estoy usando actualmente recopila información de mi cuenta de gmail, para mandarme un correo al final de més con estadísticas y gráficos sobre quién me manda más correos electónicos, a quién respondo más etc. El informe que elabora este script es así:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/gmailStats.png&#34; alt=&#34;gmailStats&#34; width=&#34;495px&#34; height=&#34;244px&#34;&gt;&lt;/amp-img&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/chart1.png&#34; alt=&#34;chart1&#34; width=&#34;650px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/chart2.png&#34; alt=&#34;chart2&#34; width=&#34;650px&#34; height=&#34;400px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/gmailStats.png&#34; alt=&#34;gmailStats&#34; width=&#34;495px&#34; height=&#34;244px&#34;&gt;&lt;/img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/chart1.png&#34; alt=&#34;chart1&#34; width=&#34;650px&#34; height=&#34;400px&#34;&gt;&lt;/img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/chart2.png&#34; alt=&#34;chart2&#34; width=&#34;650px&#34; height=&#34;400px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Los pasos para configurar y dejar funcionando el script se pueden encontrar en este tutorial de Google » &lt;a href=&#34;https://developers.google.com/apps-script/articles/gmail-stats&#34; target=&#34;_blank&#34;&gt;Tutorial: Creating Gmail Inbox Statistics Report&lt;/a&gt;.&lt;/p&gt;
@@ -270,7 +274,7 @@
       &lt;span class=&#34;nx&#34;&gt;report&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;  &amp;lt;/ul&amp;gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;&amp;lt;/tr&amp;gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;&amp;lt;br /&amp;gt;&amp;lt;amp-img on=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;lightbox1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; role=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;button&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; tabindex=&amp;quot;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; layout=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;responsive&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; src=&amp;quot;&amp;quot; /&amp;gt;&amp;lt; variables.timeOfEmailsReceived.length; i++) { // create&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;lt;br /&amp;gt;&amp;lt;img on=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;tap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;lightbox1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; role=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;button&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; tabindex=&amp;quot;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; layout=&amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;responsive&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; src=&amp;quot;&amp;quot; /&amp;gt;&amp;lt; variables.timeOfEmailsReceived.length; i++) { // create&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;                                                                      // the&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;                                                                      // rows&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;    switch (i) {&lt;/span&gt;
@@ -306,7 +310,7 @@
 &lt;span class=&#34;s2&#34;&gt;      650,&lt;/span&gt;
 &lt;span class=&#34;s2&#34;&gt;      400).build();&lt;/span&gt;
 
-&lt;span class=&#34;s2&#34;&gt;  report += &amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Averageflow&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; /&amp;gt;&amp;quot; + &amp;quot;&amp;lt;amp-img on=&amp;quot;tap:lightbox1&amp;quot; role=&amp;quot;button&amp;quot; tabindex=&amp;quot;0&amp;quot; layout=&amp;quot;responsive&amp;quot; src=&amp;quot;&amp;quot; /&amp;gt;&amp;lt; variables.dayOfEmailsReceived.length; i++) { // create&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;  report += &amp;quot;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cid&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Averageflow&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; /&amp;gt;&amp;quot; + &amp;quot;&amp;lt;img on=&amp;quot;tap:lightbox1&amp;quot; role=&amp;quot;button&amp;quot; tabindex=&amp;quot;0&amp;quot; layout=&amp;quot;responsive&amp;quot; src=&amp;quot;&amp;quot; /&amp;gt;&amp;lt; variables.dayOfEmailsReceived.length; i++) { // create&lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;                                                                    // the rows&lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;    dataTable.addRow([&lt;/span&gt;
 &lt;span class=&#34;s1&#34;&gt;      i + 1, variables.dayOfEmailsReceived[i], variables.dayOfEmailsSent[i]&lt;/span&gt;
@@ -405,7 +409,7 @@
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;Google Apps Script&lt;/em&gt; »» &lt;a href=&#34;http://www.google.com/script/start/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

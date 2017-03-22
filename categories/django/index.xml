@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Django on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/categories/django/index.xml</link>
-    <description>Recent content in Django on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/categories/django/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Crear formularios en Django a partir de un Modelo con ModelForm</title>
-      <link>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</guid>
-      <description>&lt;p&gt;Como comenté cuando escribí el artículo sobre &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;Introducción a Django&lt;/a&gt; he tenido que empezar a desarrollar aplicaciones web en este &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; que cada día me gusta más.&lt;/p&gt;
+    <channel>
+        <title>Django on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/django/index.xml</link>
+        <description>Recent content in Django on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/django/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear formularios en Django a partir de un Modelo con ModelForm</title>
+            <link>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-formularios-en-django-partir-de-un-modelo-con-modelform/</guid>
+            <description>&lt;p&gt;Como comenté cuando escribí el artículo sobre &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;Introducción a Django&lt;/a&gt; he tenido que empezar a desarrollar aplicaciones web en este &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; que cada día me gusta más.&lt;/p&gt;
 
 &lt;p&gt;Hoy quiero hablar sobre cómo podemos crear formularios de una forma muy sencilla y directa basándonos en los campos de nuestros modelos mediante la clase &lt;em&gt;ModelForm&lt;/em&gt;.&lt;/p&gt;
 
@@ -137,7 +141,7 @@ $ python manage.py runserver
 &lt;p&gt;Si todo ha ido bien, deberíamos ver la siguiente página en &lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34; title=&#34;localhost&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34;&gt;http://127.0.0.1:8000/personas/list&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;crear-un-formulario-a-partir-de-un-modelo-con-modelform&#34;&gt;Crear un formulario a partir de un Modelo con ModelForm&lt;/h2&gt;
@@ -364,15 +368,15 @@ Haga click &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#3
 &lt;p&gt;&lt;em&gt;(1) Documentación ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
 &lt;em&gt;(2) Vistas genéricas&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
 &lt;em&gt;(3) ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo depurar una aplicación en Django</title>
-      <link>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</guid>
-      <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo depurar una aplicación en Django</title>
+            <link>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-depurar-una-aplicacion-en-django/</guid>
+            <description>&lt;p&gt;Hace poco vimos una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/&#34; title=&#34;Introducción a Django – Instalación y primer proyecto&#34;&gt;introducción a django&lt;/a&gt;. Pero a medida que las aplicaciones vayan haciéndose más complejas, tendremos la necesidad de saber qué está pasando, qué contienen las variables etc, y para ello será necesario hacer uso del &lt;a href=&#34;https://elbauldelprogramador.com/?s=gdb&amp;amp;submit;=&#34; title=&#34;Depuradores&#34;&gt;depurador&lt;/a&gt;. Hoy veremos cómo depurar una aplicación en Django.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -453,15 +457,15 @@ retval  rv
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;How to debug in django&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/1118183/how-to-debug-in-django-the-good-way&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Introducción a Django - Instalación y primer proyecto</title>
-      <link>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
-      <description>&lt;blockquote&gt;
+        </item>
+        
+        <item>
+            <title>Introducción a Django - Instalación y primer proyecto</title>
+            <link>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/jneight&#34; title=&#34;Perfil en Github de @jneight&#34;&gt;@Jneight&lt;/a&gt; por actualizar este artículo!&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -662,7 +666,7 @@ retval  rv
 &lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado &lt;em&gt;admin.py&lt;/em&gt; en el directorio &lt;em&gt;polls&lt;/em&gt;:&lt;/p&gt;
@@ -675,7 +679,7 @@ retval  rv
 &lt;p&gt;Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h4 id=&#34;escribir-la-primera-vista&#34;&gt;Escribir la primera vista&lt;/h4&gt;
@@ -717,7 +721,7 @@ retval  rv
 
 &lt;p&gt;&lt;em&gt;Documentación Oficial&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/intro/tutorial01/&#34; target=&#34;_blank&#34;&gt;djangoproject.com&lt;/a&gt;
 &lt;em&gt;Imagen de aruseni&lt;/em&gt; »» &lt;a href=&#34;http://aruseni.deviantart.com/art/Django-white-and-green-318200642&#34; target=&#34;_blank&#34;&gt;deviantart&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

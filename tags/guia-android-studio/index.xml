@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Guia Android Studio on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/guia-android-studio/index.xml</link>
-    <description>Recent content in Guia Android Studio on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/guia-android-studio/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo instalar el IDE Android Studio en Linux y pequeña guía de uso</title>
-      <link>https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/</guid>
-      <description>&lt;figure&gt;
+    <channel>
+        <title>Guia Android Studio on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/guia-android-studio/index.xml</link>
+        <description>Recent content in Guia Android Studio on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/guia-android-studio/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo instalar el IDE Android Studio en Linux y pequeña guía de uso</title>
+            <link>https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-instalar-el-ide-android-studio-en-linux-y-pequena-guia-de-uso/</guid>
+            <description>&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudio.png&#34;&gt;
-          &lt;amp-img
+          &lt;img
             on=&#34;tap:lightbox1&#34;
             role=&#34;button&#34;
             tabindex=&#34;0&#34;
@@ -27,7 +31,7 @@
             sizes=&#34;(min-width: 402px) 402px, 100vw&#34;
             width=&#34;402&#34;
             height=&#34;302&#34;&gt;
-          &lt;/amp-img&gt;
+          &lt;/img&gt;
         &lt;/a&gt;
 &lt;/figure&gt;
 
@@ -54,7 +58,7 @@ apt-get install oracle-java7-installer
 
 &lt;p&gt;Con esto ya deberíamos tener listo el JDK, lanzamos Android Studio y veremos algo como esto:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE-1024x734.png&#34; alt=&#34;AndroidStudioIDE&#34; width=&#34;1024px&#34; height=&#34;734px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioIDE-1024x734.png&#34; alt=&#34;AndroidStudioIDE&#34; width=&#34;1024px&#34; height=&#34;734px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;exportar-proyectos-de-eclipse-e-importarlos-android-studio&#34;&gt;Exportar proyectos de eclipse e importarlos Android Studio&lt;/h1&gt;
 
@@ -79,17 +83,17 @@ build files&lt;/strong&gt;.&lt;/li&gt;
 
 &lt;p&gt;Algunas de las características nuevas de este IDE es la posiblidad de visualizar cómo se verá nuestra aplicación en distintos dispositivos, para ello abrimos un archivo de &lt;em&gt;layout&lt;/em&gt;, abajo hay una pestaña llamada &lt;em&gt;text&lt;/em&gt;, la seleccionamos y podremos editar el archivo manualmente. A la derecha hay otra pestaña llamada &lt;em&gt;Preview&lt;/em&gt;, la abrimos y veremos algo como esto:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/LayoutPreviewAndroidStudio.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png&#34; alt=&#34;LayoutPreviewAndroidStudio&#34; width=&#34;1024px&#34; height=&#34;733px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/LayoutPreviewAndroidStudio.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/LayoutPreviewAndroidStudio-1024x733.png&#34; alt=&#34;LayoutPreviewAndroidStudio&#34; width=&#34;1024px&#34; height=&#34;733px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;También es posible visualizar la interfaz de la aplicación para distintas APIs, la anterior era para la API 17, esta para a 10:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioPreviewAPI10.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png&#34; alt=&#34;AndroidStudioPreviewAPI10&#34; width=&#34;1024px&#34; height=&#34;735px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioPreviewAPI10.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/AndroidStudioPreviewAPI10-1024x735.png&#34; alt=&#34;AndroidStudioPreviewAPI10&#34; width=&#34;1024px&#34; height=&#34;735px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;De igual modo, podemos seleccionar qué idioma mostrar en la interfaz para asegurarnos de que la aplicación se verá bien en todos los idiomas.&lt;/p&gt;
 
 &lt;p&gt;Otra de las características que resulta de lo más cómoda es mostrar las cadenas de texto que escribimos en el código mediante &lt;code&gt;R.string.&lt;/code&gt;, dejando el ratón encima del texto veremos el identificadorL:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/Screenshot-from-2013-05-16-121607.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png&#34; alt=&#34;Mostrar cadenas de Texto AndroidStudio&#34; width=&#34;1024px&#34; height=&#34;735px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/Screenshot-from-2013-05-16-121607.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/Screenshot-from-2013-05-16-121607-1024x735.png&#34; alt=&#34;Mostrar cadenas de Texto AndroidStudio&#34; width=&#34;1024px&#34; height=&#34;735px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Para terminar os dejo unas cuantas combinaciones de teclas para ahorrar tiempo al programar:&lt;/p&gt;
 
@@ -227,7 +231,7 @@ build files&lt;/strong&gt;.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Instalar JDK en Debian&lt;/em&gt; »» &lt;a href=&#34;http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html&#34; target=&#34;_blank&#34;&gt;webupd8&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

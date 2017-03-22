@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Bash on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/bash/index.xml</link>
-    <description>Recent content in Bash on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Obtener La Dimensión De Una Imagen en Internet</title>
-      <link>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</link>
-      <pubDate>Sat, 01 Oct 2016 16:32:13 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
-      <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
+    <channel>
+        <title>Bash on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/bash/index.xml</link>
+        <description>Recent content in Bash on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Obtener La Dimensión De Una Imagen en Internet</title>
+            <link>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</link>
+            <pubDate>Sat, 01 Oct 2016 16:32:13 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
+            <description>&lt;h2 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h2&gt;
 
 &lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
 
@@ -45,15 +49,15 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Convertir archivos mp4 a mp3 masívamente</title>
-      <link>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</guid>
-      <description>&lt;p&gt;Ya mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; target=&#34;_blank&#34;&gt;Renombrar archivos masivamente en GNU/Linux&lt;/a&gt;. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Convertir archivos mp4 a mp3 masívamente</title>
+            <link>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</guid>
+            <description>&lt;p&gt;Ya mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; target=&#34;_blank&#34;&gt;Renombrar archivos masivamente en GNU/Linux&lt;/a&gt;. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -88,15 +92,15 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;p&gt;Por último, fijamos IFS a su valor predeterminado.&lt;/p&gt;
 
 &lt;p&gt;Otra opción es usar el programa &lt;em&gt;SoundConverter&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo invertir una cadena en Unix</title>
-      <link>https://elbauldelprogramador.com/como-invertir-una-cadena-en-unix/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-invertir-una-cadena-en-unix/</guid>
-      <description>&lt;p&gt;Existe un comando que realiza esta operación, &lt;code&gt;rev&lt;/code&gt;. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo invertir una cadena en Unix</title>
+            <link>https://elbauldelprogramador.com/como-invertir-una-cadena-en-unix/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-invertir-una-cadena-en-unix/</guid>
+            <description>&lt;p&gt;Existe un comando que realiza esta operación, &lt;code&gt;rev&lt;/code&gt;. De acuerdo a la descripción que proporciona la documentación funciona de la siguiente manera:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Copia los archivos especificados a la salida estandar, invirtiendo el orden de los caracteres de cada línea. Si no se especifican ficheros, rev lee de la entrada estandar (el teclado).&lt;/p&gt;
@@ -167,7 +171,7 @@ php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;NixCraft&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/how-to-reverse-string-in-unix-shell-script/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

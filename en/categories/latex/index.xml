@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Latex on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/categories/latex/index.xml</link>
-    <description>Recent content in Latex on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/categories/latex/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Creating trees, Dependency graphs and Support Vector Machines in LaTeX with Tikz</title>
-      <link>https://elbauldelprogramador.com/en/creating-trees-dependency-graphs-svms-in-tikz/</link>
-      <pubDate>Thu, 16 Feb 2017 16:50:27 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/creating-trees-dependency-graphs-svms-in-tikz/</guid>
-      <description>&lt;p&gt;My computer science final project was about building a dependency parser for Spanish. Writing the documentation I had to draw some trees representing a dependency graph and a visual explanation of what an SVM (Support Vector Machine ) is.&lt;/p&gt;
+    <channel>
+        <title>Latex on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/categories/latex/index.xml</link>
+        <description>Recent content in Latex on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/categories/latex/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Creating trees, Dependency graphs and Support Vector Machines in LaTeX with Tikz</title>
+            <link>https://elbauldelprogramador.com/en/creating-trees-dependency-graphs-svms-in-tikz/</link>
+            <pubDate>Thu, 16 Feb 2017 16:50:27 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/creating-trees-dependency-graphs-svms-in-tikz/</guid>
+            <description>&lt;p&gt;My computer science final project was about building a dependency parser for Spanish. Writing the documentation I had to draw some trees representing a dependency graph and a visual explanation of what an SVM (Support Vector Machine ) is.&lt;/p&gt;
 
 &lt;p&gt;To draw all this pictures I&amp;rsquo;ve used &lt;code&gt;Tikz&lt;/code&gt;, a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/latex&#34; title=&#34;Post about LaTeX&#34;&gt;LaTeX package&lt;/a&gt;. Here is the code:&lt;/p&gt;
 
@@ -54,7 +58,7 @@
 &lt;p&gt;And the result:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34; alt=&#34;Dependenty tree in tikz&#34; title=&#34;Dependenty tree in tikz&#34; width=&#34;799&#34; height=&#34;194&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34; alt=&#34;Dependenty tree in tikz&#34; title=&#34;Dependenty tree in tikz&#34; width=&#34;799&#34; height=&#34;194&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Dependenty tree in tikz&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -109,7 +113,7 @@
 &lt;p&gt;Result:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34; alt=&#34;Other Dependency Tree in tikz&#34; title=&#34;Other Dependency Tree in tikz&#34; width=&#34;926&#34; height=&#34;485&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34; alt=&#34;Other Dependency Tree in tikz&#34; title=&#34;Other Dependency Tree in tikz&#34; width=&#34;926&#34; height=&#34;485&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Other Dependency Tree in tikz&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -139,7 +143,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34; alt=&#34;Yet another example of a Dependency tree in tikz&#34; title=&#34;Yet another example of a Dependency tree in tikz&#34; width=&#34;795&#34; height=&#34;513&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34; alt=&#34;Yet another example of a Dependency tree in tikz&#34; title=&#34;Yet another example of a Dependency tree in tikz&#34; width=&#34;795&#34; height=&#34;513&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Yet another example of a Dependency tree in tikz&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -198,7 +202,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34; alt=&#34;Support Vector Machine in Latex with Tikz&#34; title=&#34;Support Vector Machine in Latex with Tikz&#34; width=&#34;811&#34; height=&#34;652&#34;&gt;&lt;/amp-img&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34; alt=&#34;Support Vector Machine in Latex with Tikz&#34; title=&#34;Support Vector Machine in Latex with Tikz&#34; width=&#34;811&#34; height=&#34;652&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Support Vector Machine in Latex with Tikz&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -210,7 +214,7 @@
 &lt;li&gt;Align all leaf nodes in tikz-qtree | &lt;a href=&#34;http://tex.stackexchange.com/questions/340929/align-all-leaf-nodes-in-tikz-qtree&#34; target=&#34;_blank&#34; title=&#34;Align all leaf nodes in tikz-qtree&#34;&gt;tex.stackexchange.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Align independent tikzpictures | &lt;a href=&#34;http://tex.stackexchange.com/questions/342978/align-independent-tikzpictures&#34; target=&#34;_blank&#34; title=&#34;Align independent tikzpictures&#34;&gt;tex.stackexchange.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

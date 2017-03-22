@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Marta on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/author/marta/index.xml</link>
-    <description>Recent content in Marta on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/author/marta/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
-      <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
-      <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
-      <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
+    <channel>
+        <title>Marta on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/author/marta/index.xml</link>
+        <description>Recent content in Marta on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/author/marta/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
+            <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
+            <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
+            <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
 
 &lt;h2 id=&#34;cómo-empezó-todo&#34;&gt;Cómo empezó todo&amp;hellip;&lt;/h2&gt;
 
@@ -52,12 +56,12 @@
 &lt;p&gt;Estos son los gráficos que finalmente incluí en la que iba a ser la chachi documentación extra profesional a 5 minutos de que la entrega se cerrase.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Primer gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Segundo gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -100,7 +104,7 @@
 &lt;p&gt;Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos medidas, en dos listas separadas: tiempo de ejecución y coste de la solución obtenida. De antemano tenía guardados los distintos casos que tenía que ejecutar y las mejores soluciones conocidas de cada algoritmo, que usé para calcular la desviación de cada solución con la siguiente fórmula:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.&lt;/p&gt;
@@ -126,19 +130,19 @@
 &lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso pequeño&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso grande&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;¿Qué algoritmo funciona mejor en casos pequeños? ¿Y en casos grandes?&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico de convergencia&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -452,16 +456,16 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Mini Curso de LaTeX - Figuras, Enlaces y cabeceras</title>
-      <link>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Mini Curso de LaTeX - Figuras, Enlaces y cabeceras</title>
+            <link>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -625,16 +629,16 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 
 &lt;p&gt;¡Nos vemos en próximas entradas!
 Marta.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos</title>
-      <link>https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos</title>
+            <link>https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -730,7 +734,7 @@ en cuenta que todos las operaciones dentro del for tienen eficiencia &lt;span cl
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Para representar la sumatoria dentro del entorno matemático utilizamos la opción &lt;code&gt;\sum&lt;/code&gt;, después, utilizamos &lt;code&gt;_&lt;/code&gt; y &lt;code&gt;^&lt;/code&gt; para establecer los límites de la sumatoria. &lt;code&gt;\qquad\&lt;/code&gt; lo usamos para dejar un pequeño espacio (podemos usar &lt;code&gt;\quad&lt;/code&gt; o &lt;code&gt;\qquad\&lt;/code&gt;). Así, el texto de arriba quedaría &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;//s0.wp.com/latex.php?latex=%5Csum_%7Bi%3D0%7D%5E%7Bs.size%28%29%7D+%3D+s.size%28%29&amp;bg=ffffff&amp;fg=000&amp;s=0&#34; alt=&#34;\sum_{i=0}^{s.size()} = s.size()&#34; title=&#34;\sum_{i=0}^{s.size()} = s.size()&#34; class=&#34;latex&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Para representar la sumatoria dentro del entorno matemático utilizamos la opción &lt;code&gt;\sum&lt;/code&gt;, después, utilizamos &lt;code&gt;_&lt;/code&gt; y &lt;code&gt;^&lt;/code&gt; para establecer los límites de la sumatoria. &lt;code&gt;\qquad\&lt;/code&gt; lo usamos para dejar un pequeño espacio (podemos usar &lt;code&gt;\quad&lt;/code&gt; o &lt;code&gt;\qquad\&lt;/code&gt;). Así, el texto de arriba quedaría &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;//s0.wp.com/latex.php?latex=%5Csum_%7Bi%3D0%7D%5E%7Bs.size%28%29%7D+%3D+s.size%28%29&amp;bg=ffffff&amp;fg=000&amp;s=0&#34; alt=&#34;\sum_{i=0}^{s.size()} = s.size()&#34; title=&#34;\sum_{i=0}^{s.size()} = s.size()&#34; class=&#34;latex&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Otro detalle a destacar, es que en el párrafo de introducción, cuando menciono variables matemáticas, las menciono entre signos de dólar. Esto es para que salgan en cursiva y se puedan diferenciar del resto del texto.&lt;/p&gt;
 
@@ -796,16 +800,16 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 &lt;p&gt;Esto ha sido un pequeño ejemplo del uso de las matemáticas en LaTeX, los demás símbolos matemáticos que hay se usan exactamente igual a como hemos visto aquí.&lt;/p&gt;
 
 &lt;p&gt;En el proximo artículo veremos cómo añadir figuras, enlaces y tablas al documento.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Mini Curso de LaTeX - Introducción</title>
-      <link>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Mini Curso de LaTeX - Introducción</title>
+            <link>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -975,16 +979,16 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Con esto completamos una pequeña introducción a LaTeX, en el siguiente artículo veremos cómo incluir código fuente en nuestro documento.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Comparación de técnicas algorítmicas básicas con el problema de la Mochila</title>
-      <link>https://elbauldelprogramador.com/comparacion-de-tecnicas-algoritmicas-basicas-con-el-problema-de-la-mochila/</link>
-      <pubDate>Wed, 08 Jul 2015 11:40:40 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/comparacion-de-tecnicas-algoritmicas-basicas-con-el-problema-de-la-mochila/</guid>
-      <description>&lt;p&gt;&lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;600px&#34; height=&#34;520px&#34; /&gt;
+        </item>
+        
+        <item>
+            <title>Comparación de técnicas algorítmicas básicas con el problema de la Mochila</title>
+            <link>https://elbauldelprogramador.com/comparacion-de-tecnicas-algoritmicas-basicas-con-el-problema-de-la-mochila/</link>
+            <pubDate>Wed, 08 Jul 2015 11:40:40 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/comparacion-de-tecnicas-algoritmicas-basicas-con-el-problema-de-la-mochila/</guid>
+            <description>&lt;p&gt;&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Comparación de técnicas algorítmicas básicas con el problema de la Mochila.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;600px&#34; height=&#34;520px&#34; /&gt;
 &lt;/figure&gt;
 &lt;em&gt;Créditos de la imagen &lt;a href=&#34;https://en.wikipedia.org/wiki/File:Knapsack.svg&#34;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
 
@@ -1271,7 +1275,7 @@ Tiempo: 2.7e-05
 &lt;li&gt;En Branch &amp;amp; Bound, si no definimos una buena estrategia de cotas y de poda, exploraremos muchísimos nodos y el tiempo de ejecución se nos subirá por las nubes.
 &lt;/int&gt;&lt;/elemento&gt;&lt;/bool&gt;&lt;/unsigned&gt;&lt;/vector&gt;&lt;/objeto&gt;&lt;/float&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

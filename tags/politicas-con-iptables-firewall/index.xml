@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Politicas Con Iptables Firewall on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/politicas-con-iptables-firewall/index.xml</link>
-    <description>Recent content in Politicas Con Iptables Firewall on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/politicas-con-iptables-firewall/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>20 ejemplos de iptables para SysAdmins novatos</title>
-      <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
-      <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
+    <channel>
+        <title>Politicas Con Iptables Firewall on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/politicas-con-iptables-firewall/index.xml</link>
+        <description>Recent content in Politicas Con Iptables Firewall on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/politicas-con-iptables-firewall/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>20 ejemplos de iptables para SysAdmins novatos</title>
+            <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</guid>
+            <description>&lt;p&gt;Linux por defecto trae un cortafuegos llamado NetFilter. Según el sitio oficil de proyecto:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;netfiltes es un conjunto de hooks (Ganchos) dentro del kernel de linux que permiten a los módulos del kernel registrar funciones callbacks con la pila de red. Una función callback registrada se llama entonces para cada paquete que atraviesa el hook correspondiente dentro de la pila de red.&lt;/p&gt;
@@ -558,15 +562,15 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
 &lt;p&gt;E incluimos al final:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;kern.warning /var/log/iptables.log
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Bloquear una IP atacando el servidor mediante iptables</title>
-      <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
-      <description>&lt;p&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Bloquear una IP atacando el servidor mediante iptables</title>
+            <link>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/</guid>
+            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Applic-Firewall-icon.png&#34; alt=&#34;Applic-Firewall-icon&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ayer ojeando el archivo de log detecté que había una ip mandando peticiones POST indiscriminadamente a la página de login del blog y decidí investigar un poco.&lt;/p&gt;
 
@@ -600,7 +604,7 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Iptables Drop IP Address&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/linux-iptables-drop/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

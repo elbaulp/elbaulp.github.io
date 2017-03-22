@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Python on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/python/index.xml</link>
-    <description>Recent content in Python on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo parsear el frontmatter con Python</title>
-      <link>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</link>
-      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</guid>
-      <description>&lt;p&gt;Hace poco he migrado el blog de &lt;em&gt;Jekyll&lt;/em&gt; a &lt;em&gt;Hugo&lt;/em&gt;. El proceso ha sido fácil, pero he tenido que cambiar varias cosas en el &lt;em&gt;frontmatter&lt;/em&gt; de los artículos.&lt;/p&gt;
+    <channel>
+        <title>Python on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/python/index.xml</link>
+        <description>Recent content in Python on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo parsear el frontmatter con Python</title>
+            <link>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</link>
+            <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/</guid>
+            <description>&lt;p&gt;Hace poco he migrado el blog de &lt;em&gt;Jekyll&lt;/em&gt; a &lt;em&gt;Hugo&lt;/em&gt;. El proceso ha sido fácil, pero he tenido que cambiar varias cosas en el &lt;em&gt;frontmatter&lt;/em&gt; de los artículos.&lt;/p&gt;
 
 &lt;p&gt;Tras buscar en Google encontré un &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34;&gt;parseador&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;python&lt;/a&gt; para &lt;em&gt;frontmatter&lt;/em&gt; escritos en &lt;em&gt;YAML&lt;/em&gt;. A continuación se explica cómo instalarlo y usarlo.&lt;/p&gt;
 
@@ -91,15 +95,15 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Repositorio Python-Frontmatter en github&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
-      <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
-      <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
-      <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Pasé De Usar Excel a Usar R Y Python</title>
+            <link>https://elbauldelprogramador.com/de-excel-a-python-y-r/</link>
+            <pubDate>Fri, 04 Nov 2016 15:23:40 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
+            <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
 
 &lt;h2 id=&#34;cómo-empezó-todo&#34;&gt;Cómo empezó todo&amp;hellip;&lt;/h2&gt;
 
@@ -137,12 +141,12 @@
 &lt;p&gt;Estos son los gráficos que finalmente incluí en la que iba a ser la chachi documentación extra profesional a 5 minutos de que la entrega se cerrase.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Primer gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Segundo gráfico horrible&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -185,7 +189,7 @@
 &lt;p&gt;Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos medidas, en dos listas separadas: tiempo de ejecución y coste de la solución obtenida. De antemano tenía guardados los distintos casos que tenía que ejecutar y las mejores soluciones conocidas de cada algoritmo, que usé para calcular la desviación de cada solución con la siguiente fórmula:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.&lt;/p&gt;
@@ -211,19 +215,19 @@
 &lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso pequeño&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso grande&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;¿Qué algoritmo funciona mejor en casos pequeños? ¿Y en casos grandes?&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Gráfico de convergencia&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -537,15 +541,15 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Los artículos etiquetados con estos temas se encuentran en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34;&gt;/tags/r&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34;&gt;/tags/python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con  Python</title>
-      <link>https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/</link>
-      <pubDate>Thu, 30 Jun 2016 10:59:47 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/</guid>
-      <description>&lt;p&gt;Hace poco me encontré con el problema de añadir a todas las etiquetas de imágenes del blog los atributos de tamaño (Altura y anchura). Hacerlo a mano era inviable debido a la cantidad de artículos. Así que pensé que una buena forma sería hacerlo con &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34;&gt;python&lt;/a&gt;. El razonamiento es el siguiente:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con  Python</title>
+            <link>https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/</link>
+            <pubDate>Thu, 30 Jun 2016 10:59:47 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/</guid>
+            <description>&lt;p&gt;Hace poco me encontré con el problema de añadir a todas las etiquetas de imágenes del blog los atributos de tamaño (Altura y anchura). Hacerlo a mano era inviable debido a la cantidad de artículos. Así que pensé que una buena forma sería hacerlo con &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34;&gt;python&lt;/a&gt;. El razonamiento es el siguiente:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Iterar sobre todos los artículos del blog.&lt;/li&gt;
@@ -605,15 +609,15 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;How to save back changes made to a HTML file using BeautifulSoup in Python? | &lt;a href=&#34;http://stackoverflow.com/a/14369600/1612432&#34; title=&#34;How to save back changes made to a HTML file using BeautifulSoup in Python?&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Replace SRC of all IMG elements using Parser | &lt;a href=&#34;http://stackoverflow.com/a/1579733/1612432&#34; title=&#34;Replace SRC of all IMG elements using Parser&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Crear Una Lista De Listas De Forma Eficiente en Python</title>
-      <link>https://elbauldelprogramador.com/python-lista-de-listas-eficiente/</link>
-      <pubDate>Tue, 19 Apr 2016 08:48:34 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/python-lista-de-listas-eficiente/</guid>
-      <description>&lt;blockquote&gt;
+        </item>
+        
+        <item>
+            <title>Crear Una Lista De Listas De Forma Eficiente en Python</title>
+            <link>https://elbauldelprogramador.com/python-lista-de-listas-eficiente/</link>
+            <pubDate>Tue, 19 Apr 2016 08:48:34 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/python-lista-de-listas-eficiente/</guid>
+            <description>&lt;blockquote&gt;
 &lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario &lt;a href=&#34;http://stackoverflow.com/users/1612432/algui91&#34; target=&#34;_blank&#34; title=&#34;Perfil algui91&#34;&gt;algui91&lt;/a&gt;, que preguntaba &lt;a href=&#34;http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python&#34; target=&#34;_blank&#34; title=&#34;Link a pregunta&#34;&gt;Build a List of Lists eficiently in python&lt;/a&gt;. La respuesta es del usuario &lt;a href=&#34;http://stackoverflow.com/users/1219295/roland-smith&#34; target=&#34;_blank&#34; title=&#34;Perfil roland&#34;&gt;Roland&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -658,15 +662,15 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;ul&gt;
 &lt;li&gt;Build a List of Lists eficiently in python | &lt;a href=&#34;http://stackoverflow.com/questions/23040784/build-a-list-of-list-efficiently-in-python&#34; title=&#34;Build a List of Lists eficiently in python&#34; target=&#34;_blank&#34;&gt;stackoverlow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Generar listas de reproducción de una determinada duración con Python</title>
-      <link>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
-      <description>&lt;p&gt;A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la &lt;a href=&#34;http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro&#34; title=&#34;Técnica pomodoro&#34; target=&#34;_blank&#34;&gt;técnica Pomodoro&lt;/a&gt;, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Generar listas de reproducción de una determinada duración con Python</title>
+            <link>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
+            <description>&lt;p&gt;A muchos de nosotros nos gusta escuchar música mientras programamos. Hoy se me ocurrió que estaría bien generar listas de reproducción de una duración determinada. La razón tiene sus orígenes en la &lt;a href=&#34;http://es.wikipedia.org/wiki/T%C3%A9cnica_Pomodoro&#34; title=&#34;Técnica pomodoro&#34; target=&#34;_blank&#34;&gt;técnica Pomodoro&lt;/a&gt;, que consiste concentrarse en realizar una tarea durante 25 min, sin distraerse, y descansar 5 min. Se repite cuatro veces y al cuarto descanso en lugar de 5 se descansan 15 min. Ésta técnica pretende mejorar la productividad.&lt;/p&gt;
 
 &lt;p&gt;Para ello he creado un pequeño script en python que genera automáticamente las listas de reproducción dado un directorio con ficheros mp3 o mp4 y una duración en minutos.&lt;/p&gt;
 
@@ -833,15 +837,15 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 &lt;p&gt;Ya que el script lo he hecho en media hora, se puede mejorar bastante. Ahora mismo no busca los ficheros de música recursivamente, en el futuro lo añadiré. &lt;del datetime=&#34;2014-04-05T15:37:18+00:00&#34;&gt;Tiene un fallo, cuando se está generando la lista, si la duración total es menor que la indicada por parámetro, y el fichero de música procesándose en ese momento es muy grande (por ejemplo 40 min), la lista de reproducción no será del tamaño correcto.&lt;/del&gt; (Solucionado)&lt;/p&gt;
 
 &lt;p&gt;Para aquellos que estén interesados, el código está en &lt;a href=&#34;https://github.com/elbaulp/genPlaylistByName&#34; title=&#34;Repositorio&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Introducción a las expresiones regulares en python</title>
-      <link>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</guid>
-      <description>&lt;p&gt;En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Introducción a las expresiones regulares en python</title>
+            <link>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</guid>
+            <description>&lt;p&gt;En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).&lt;/p&gt;
 
 &lt;p&gt;Son recopilaciones que he hecho durante el curso de *Programming languages *&lt;a href=&#34;https://elbauldelprogramador.com/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; title=&#34;Nuevos Cursos disponibles en Udacity, la universidad online gratuita&#34;&gt;en udacity&lt;/a&gt; y voy a intentar explicarlos lo más claramente posible.&lt;/p&gt;
 
@@ -921,7 +925,7 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 &lt;span class=&#34;c1&#34;&gt;#  Ejemplos no válidos&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;esc &amp;quot; ape&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

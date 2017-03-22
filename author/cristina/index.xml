@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cristina on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/author/cristina/index.xml</link>
-    <description>Recent content in Cristina on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/author/cristina/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Compilar la parte no gratuita de OpenCV 3.0&#43; desde fuente</title>
-      <link>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</link>
-      <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
-      <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
+    <channel>
+        <title>Cristina on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/author/cristina/index.xml</link>
+        <description>Recent content in Cristina on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/author/cristina/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Compilar la parte no gratuita de OpenCV 3.0&#43; desde fuente</title>
+            <link>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:38 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/compilar-la-parte-no-gratuita-de-opencv-3.0-desde-fuente/</guid>
+            <description>&lt;p&gt;En mi último post &lt;a href=&#34;https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&#34;&gt;Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA&lt;/a&gt; Expliqué cómo compilar OpenCV desde el código fuente con soporte para JAVA, sin embargo, La parte no gratuita de OpenCV no se incluye por defecto. Si quieres usar parte de la parte privativa de OpenCV, como los descriptores SIFT o SURF, deberás hacer lo siguiente:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-descarga-opencv-3-2-descomprime-y-crea-un-directorio-donde-construirlo&#34;&gt;[1]. Descarga OpenCV 3.2, descomprime y crea un directorio donde construirlo&lt;/h1&gt;
 
@@ -43,7 +47,7 @@
 &lt;p&gt;Fíjate cuando estés generando el makefile, que la salida para el campo de Java es así:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -104,15 +108,15 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA</title>
-      <link>https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/</link>
-      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/</guid>
-      <description>&lt;p&gt;Si quieres compilar OpenCV 3.2 por ti mismo con soporte para Java, esto te ayudará. También te ayudará si, compilado OpenCV, quisieras saber como usarlo en IntelliJ IDEA. ¡Empecemos!&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Compilar OpenCV 3.2 para Java y usarlo en IntelliJ IDEA</title>
+            <link>https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/</link>
+            <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/compile-opencv-3.2-with-java-intellij-idea/</guid>
+            <description>&lt;p&gt;Si quieres compilar OpenCV 3.2 por ti mismo con soporte para Java, esto te ayudará. También te ayudará si, compilado OpenCV, quisieras saber como usarlo en IntelliJ IDEA. ¡Empecemos!&lt;/p&gt;
 
 &lt;p&gt;Para compilar OpenCV 3.2 con soporte para Java debes comprobar que tienes instalado en tu sistema lo siguiente:&lt;/p&gt;
 
@@ -149,7 +153,7 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 
 &lt;p&gt;Comprueba que cuando estás generando el &lt;em&gt;makefile&lt;/em&gt; la salida en el campo de Java es la siguiente:
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;construcción &lt;em&gt;makefile&lt;/em&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
@@ -179,12 +183,12 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
  y selecciona la pestaña &lt;strong&gt;Dependencies&lt;/strong&gt;. Aquí, hacemos click en &lt;em&gt;+&lt;/em&gt; y añadimos &lt;strong&gt;opencv-320.jar&lt;/strong&gt; y la librería, que se encuentra en &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;añadiendo .jar file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;añadiendo .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -246,18 +250,18 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;p&gt;Por último ejecutamos el ejemplo &lt;strong&gt;HelloOpenCV&lt;/strong&gt; y comprobamos que funciona, escribiendo la detección de la cara de lenna en la imágen &lt;strong&gt;faceDetection.png&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;201px&#34; height=&#34;190px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;ejemplo detección de caras&lt;/figcaption&gt;
 &lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cambia La Imágen De Fondo Del Terminal Gnome Y Pon Un Color De Texto a Juego, Automáticamente</title>
-      <link>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</link>
-      <pubDate>Mon, 18 Jul 2016 16:08:56 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</guid>
-      <description>&lt;p&gt;Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Cambia La Imágen De Fondo Del Terminal Gnome Y Pon Un Color De Texto a Juego, Automáticamente</title>
+            <link>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</link>
+            <pubDate>Mon, 18 Jul 2016 16:08:56 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</guid>
+            <description>&lt;p&gt;Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -395,31 +399,31 @@ Cuando finalice, sólo necesitarás incluir los ficheros &lt;strong&gt;.so&lt;/s
 &lt;h4 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h4&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux2.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;386px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux2.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;386px&#34; /&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux3.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;650px&#34; height=&#34;386px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux3.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;650px&#34; height=&#34;386px&#34; /&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux4.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;385px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux4.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;385px&#34; /&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux5.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;1003px&#34; height=&#34;581px&#34; /&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux5.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;1003px&#34; height=&#34;581px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;h4 id=&#34;enlace-al-código&#34;&gt;Enlace al código&lt;/h4&gt;
 
 &lt;p&gt;Puedes bajarte el script en &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;Repositorio My Terminals Background Setter&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Biometría Aplicada a La Seguridad - Reconocimiento De Patrones</title>
-      <link>https://elbauldelprogramador.com/biometria-seguridad-patrones/</link>
-      <pubDate>Tue, 26 Jan 2016 10:51:21 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/biometria-seguridad-patrones/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;405px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Biometría Aplicada a La Seguridad - Reconocimiento De Patrones</title>
+            <link>https://elbauldelprogramador.com/biometria-seguridad-patrones/</link>
+            <pubDate>Tue, 26 Jan 2016 10:51:21 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/biometria-seguridad-patrones/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;405px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: pixabay&lt;a href=&#34;https://pixabay.com/en/biometrics-eye-security-154660/&#34;&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
 &lt;/figure&gt;
 
@@ -514,7 +518,7 @@ perfectamente separables cuando se usan las dos componentes del vector
 clases,resultando imposible separarlas.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/separability.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/separability.png&#34; title=&#34;Separabilidad de dos clases con vectores
+&lt;a href=&#34;https://elbauldelprogramador.com/img/separability.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/separability.png&#34; title=&#34;Separabilidad de dos clases con vectores
   bidimensionales&#34; alt=&#34;Separabilidad de dos clases con vectores
   bidimensionales&#34; width=&#34;320px&#34; height=&#34;316px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
@@ -568,7 +572,7 @@ Biometr%C3%ADa&#34; title=&#34;Wikipedia, “Biometría, según wikipedia.”&#3
 &lt;li&gt;&lt;a href=&#34;http://www.biometria.gov.ar/
 acerca-de-la-biometria/historia-de-la-biometria.aspx&#34; title=&#34;G. Argentina, “Historia de la biometría.”&#34;&gt;G. Argentina, “Historia de la biometría.”&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

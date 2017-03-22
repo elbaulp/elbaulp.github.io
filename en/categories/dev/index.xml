@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dev on The Programmer&#39;s Chest</title>
-    <link>https://elbauldelprogramador.com/en/categories/dev/index.xml</link>
-    <description>Recent content in Dev on The Programmer&#39;s Chest</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/en/categories/dev/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
-      <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
-      <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
-      <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
+    <channel>
+        <title>Dev on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/categories/dev/index.xml</link>
+        <description>Recent content in Dev on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
+            <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
+            <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
 
 &lt;h1 id=&#34;1-download-opencv-3-2-unpack-and-create-build-directory&#34;&gt;[1]. Download OpenCV 3.2, unpack and create build directory&lt;/h1&gt;
 
@@ -44,7 +48,7 @@
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -105,15 +109,15 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to convert a column to VectorUDT/DenseVector in Spark</title>
-      <link>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</link>
-      <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m starting to use &lt;code&gt;spark&lt;/code&gt; and was reading its documentation for its &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;MlLib linearRegression&#34;&gt;&lt;code&gt;MLlib&lt;/code&gt; library&lt;/a&gt;. At first it seemed simple enough to use, but when reading a &lt;code&gt;csv&lt;/code&gt; file with the training data I kept getting the below error:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to convert a column to VectorUDT/DenseVector in Spark</title>
+            <link>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</link>
+            <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;m starting to use &lt;code&gt;spark&lt;/code&gt; and was reading its documentation for its &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;MlLib linearRegression&#34;&gt;&lt;code&gt;MLlib&lt;/code&gt; library&lt;/a&gt;. At first it seemed simple enough to use, but when reading a &lt;code&gt;csv&lt;/code&gt; file with the training data I kept getting the below error:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
@@ -263,15 +267,15 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Training data is from the book &lt;a href=&#34;http://amzn.to/2kKFAgi&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Create music playlists with a given length</title>
-      <link>https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/</link>
-      <pubDate>Fri, 03 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
-      <description>&lt;p&gt;Many of us like to listen to music while programming. Today I thought that it would be nice if I could create a playlist with a fixed length I can choose.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Create music playlists with a given length</title>
+            <link>https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/</link>
+            <pubDate>Fri, 03 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
+            <description>&lt;p&gt;Many of us like to listen to music while programming. Today I thought that it would be nice if I could create a playlist with a fixed length I can choose.&lt;/p&gt;
 
 &lt;p&gt;After a little thinking I decided to write a little &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;posts about python&#34;&gt;python&lt;/a&gt; script that do the work for me. It accepts as params a directory where the music is, and the duration for the playlist.&lt;/p&gt;
 
@@ -442,15 +446,15 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 &lt;h1 id=&#34;contribute&#34;&gt;Contribute&lt;/h1&gt;
 
 &lt;p&gt;If you want to improve it yourself, it hosted at &lt;a href=&#34;https://github.com/elbaulp/genPlaylistByName&#34; title=&#34;Repositorio&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to modify a variable inside a function in R</title>
-      <link>https://elbauldelprogramador.com/en/acceder-variable-dentro-funcion-r/</link>
-      <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/acceder-variable-dentro-funcion-r/</guid>
-      <description>
+        </item>
+        
+        <item>
+            <title>How to modify a variable inside a function in R</title>
+            <link>https://elbauldelprogramador.com/en/acceder-variable-dentro-funcion-r/</link>
+            <pubDate>Tue, 31 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/acceder-variable-dentro-funcion-r/</guid>
+            <description>
 
 &lt;p&gt;Lets suppose the following &lt;code&gt;R&lt;/code&gt; snippet:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span&gt;&lt;/span&gt;SGD &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -510,15 +514,15 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 &lt;li&gt;Advanced environments in R | &lt;a href=&#34;http://adv-r.had.co.nz/Environments.html&#34; target=&#34;_blank&#34; title=&#34;Advanced environments in R&#34;&gt;adv-r.had.co.nz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>How to manage multiple patches - A Quilt tutorial</title>
-      <link>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</link>
-      <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</guid>
-      <description>&lt;p&gt;I am using &lt;a href=&#34;https://elbauldelprogramador.com/tags/dwm/&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt; since a couple of years, even wrote a patch to allow the user color its &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34;&gt;status bar&lt;/a&gt;. Since then, I never check out the new code in DWM that was being released because I did not think I would be able to merge the new code with my personalized DWM. That was until I discovered &lt;a href=&#34;https://github.com/jceb/dwm-patches&#34; target=&#34;_blank&#34; title=&#34;DWM-Patches&#34;&gt;DWM-Patches&lt;/a&gt; and learned to use &lt;em&gt;quilt&lt;/em&gt;.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to manage multiple patches - A Quilt tutorial</title>
+            <link>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</link>
+            <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</guid>
+            <description>&lt;p&gt;I am using &lt;a href=&#34;https://elbauldelprogramador.com/tags/dwm/&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt; since a couple of years, even wrote a patch to allow the user color its &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34;&gt;status bar&lt;/a&gt;. Since then, I never check out the new code in DWM that was being released because I did not think I would be able to merge the new code with my personalized DWM. That was until I discovered &lt;a href=&#34;https://github.com/jceb/dwm-patches&#34; target=&#34;_blank&#34; title=&#34;DWM-Patches&#34;&gt;DWM-Patches&lt;/a&gt; and learned to use &lt;em&gt;quilt&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;what-is-quilt&#34;&gt;What is Quilt?&lt;/h1&gt;
 
@@ -702,15 +706,15 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
 &lt;li&gt;UsingQuilt | &lt;a href=&#34;https://wiki.debian.org/UsingQuilt&#34; target=&#34;_blank&#34; title=&#34;Using Quilt | Debian Wiki&#34;&gt;wiki.debian.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;How To Survive With Many Patches | &lt;a href=&#34;https://stuff.mit.edu/afs/athena/system/i386_deb50/os/usr/share/doc/quilt/quilt.html&#34; target=&#34;_blank&#34; title=&#34;How to survive with many patches&#34;&gt;stuff.mit.edu&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to parse frontmatter with python</title>
-      <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
-      <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
-      <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>How to parse frontmatter with python</title>
+            <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
+            <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
+            <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
 
 &lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
 
@@ -787,15 +791,15 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Python-Frontmatter&amp;rsquo;s Githup repo&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
-      <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
-      <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</guid>
-      <description>&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA</title>
+            <link>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</link>
+            <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/</guid>
+            <description>&lt;p&gt;If you are wishing to compile OpenCV 3.2 by your own with Java support, possibly this will help. Also it is for you if, done that, you want to use it in IntelliJ IDEA. Let&amp;rsquo;s start!&lt;/p&gt;
 
 &lt;p&gt;For compiling OPENCV 3.2 with Java support you must make sure you have the following installed:&lt;/p&gt;
 
@@ -832,7 +836,7 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
 
 &lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
@@ -862,12 +866,12 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
  and choose &lt;strong&gt;Dependencies&lt;/strong&gt; tab. Here, we click to add and select the &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and  the library, that is in &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;adding .jar file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/amp-img&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;adding .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -929,18 +933,18 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
 &lt;p&gt;Finally we run &lt;strong&gt;HelloOpenCV&lt;/strong&gt; example and see it works! printing lenna&amp;rsquo;s face detection to &lt;strong&gt;faceDetection.png&lt;/strong&gt; image.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img sizes=&#34;(min-width: 531px) 531px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;531&#34; height=&#34;528&#34;&gt;&lt;/amp-img&gt;
+    &lt;img sizes=&#34;(min-width: 531px) 531px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;531&#34; height=&#34;528&#34;&gt;&lt;/img&gt;
 &lt;figcaption&gt;example face detection&lt;/figcaption&gt;
 &lt;/figure&gt;</description>
-    </item>
-    
-    <item>
-      <title>How to Solve &#39;Missing URL for Attribute &#39;Src&#39; in Tag &#39;a&#39;&#39; Error in Amp-mustache</title>
-      <link>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</link>
-      <pubDate>Sun, 31 Jul 2016 05:37:13 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</guid>
-      <description>&lt;h1 id=&#34;what-is-amp-mustache-and-how-it-works&#34;&gt;What is Amp-mustache and how it works&lt;/h1&gt;
+        </item>
+        
+        <item>
+            <title>How to Solve &#39;Missing URL for Attribute &#39;Src&#39; in Tag &#39;a&#39;&#39; Error in Amp-mustache</title>
+            <link>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</link>
+            <pubDate>Sun, 31 Jul 2016 05:37:13 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</guid>
+            <description>&lt;h1 id=&#34;what-is-amp-mustache-and-how-it-works&#34;&gt;What is Amp-mustache and how it works&lt;/h1&gt;
 
 &lt;p&gt;Recently I have been implementing &lt;em&gt;Google AMP pages&lt;/em&gt; in my site. Everything was going well until I decide to implement lists with &lt;code&gt;amp-mustache&lt;/code&gt;. &lt;a href=&#34;https://www.ampproject.org/docs/reference/extended/amp-mustache.html&#34; title=&#34;Docs for amp-mustache&#34;&gt;This component&lt;/a&gt; of &lt;em&gt;AMP&lt;/em&gt; allows to populate elements from a &lt;em&gt;json&lt;/em&gt;, for example one could create a list from this &lt;em&gt;json&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1000,7 +1004,7 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;spa
 &lt;li&gt;&lt;a href=&#34;https://ampbyexample.com/components/amp-list/&#34; title=&#34;Amp reference for amp-list&#34;&gt;ampbyexample.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/38672182/1612432&#34; title=&#34;Error trying to implement amp-mustache&#34;&gt;My question in StackOverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

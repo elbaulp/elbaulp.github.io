@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Setontouchlistener on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/setontouchlistener/index.xml</link>
-    <description>Recent content in Setontouchlistener on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/setontouchlistener/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en  Android</title>
-      <link>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</link>
-      <pubDate>Tue, 30 Jun 2015 16:48:42 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</guid>
-      <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34;&gt;Android&lt;/a&gt;, cuando se tiene un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;&lt;code&gt;ListView&lt;/code&gt;&lt;/a&gt;, dentro de un &lt;code&gt;ScrollView&lt;/code&gt;, es posible que el último capture todos los eventos &lt;code&gt;onTouch&lt;/code&gt;, y no sea posible utilizar el &lt;code&gt;ListView&lt;/code&gt;.&lt;/p&gt;
+    <channel>
+        <title>Setontouchlistener on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/setontouchlistener/index.xml</link>
+        <description>Recent content in Setontouchlistener on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/setontouchlistener/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Hacer Scroll en Un ListView Que Está Dentro De Un ScrollView en  Android</title>
+            <link>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</link>
+            <pubDate>Tue, 30 Jun 2015 16:48:42 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</guid>
+            <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34;&gt;Android&lt;/a&gt;, cuando se tiene un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;&lt;code&gt;ListView&lt;/code&gt;&lt;/a&gt;, dentro de un &lt;code&gt;ScrollView&lt;/code&gt;, es posible que el último capture todos los eventos &lt;code&gt;onTouch&lt;/code&gt;, y no sea posible utilizar el &lt;code&gt;ListView&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para solucionar el problema, bastaría con deshabilitar la captura del evento &lt;code&gt;onTouch&lt;/code&gt; para el &lt;code&gt;ScrollView&lt;/code&gt;, si lo que estamos pulsando es el &lt;code&gt;ListView&lt;/code&gt;, es decir:&lt;/p&gt;
 
@@ -51,7 +55,7 @@ disallowIntercept   True if the child does not want the parent to intercept touc
 &lt;/blockquote&gt;
 
 &lt;p&gt;Es decir, le pasaremos &lt;code&gt;true&lt;/code&gt; cuando la vista hija no quiera que el padre intercepte eventos &lt;code&gt;onTouch&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

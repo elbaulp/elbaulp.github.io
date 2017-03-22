@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Script on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/categories/script/index.xml</link>
-    <description>Recent content in Script on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/categories/script/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Buscar archivos con locate mediante expresiones regulares</title>
-      <link>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
-      <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
+    <channel>
+        <title>Script on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/script/index.xml</link>
+        <description>Recent content in Script on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/script/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Buscar archivos con locate mediante expresiones regulares</title>
+            <link>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
+            <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
@@ -45,7 +49,7 @@
 &lt;p&gt;Siempre que necesito crear una expresión regular uso una herramienta llamada &lt;strong&gt;regex tester&lt;/strong&gt; que permite visualizar qué cadenas de texto coincidirían con el patrón:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/amp-img&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
     &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -90,15 +94,15 @@ cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43; syntax highlighted script</title>
-      <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
-      <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>C&#43;&#43; syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&amp;gt;#!/bin/bash&amp;lt;/span&amp;gt;
 
 &lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
@@ -148,16 +152,16 @@ cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&
 
 &lt;p&gt;Regards, I hope that it is useful&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio</title>
-      <link>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</guid>
-      <description>&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio</title>
+            <link>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</guid>
+            <description>&lt;div class=&#34;separator&#34; &gt;
+&lt;a href=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Llevaba tiempo queriendo instalar en mi equipo la distribución &lt;a target=&#34;_blank&#34; href=&#34;http://crunchbanglinux.org/&#34;&gt;CrunchBang&lt;/a&gt;, que es una distro muy ligera basada en debian que viene con &lt;a target=&#34;_blank&#34; href=&#34;http://openbox.org/&#34;&gt;openbox&lt;/a&gt;, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.&lt;/p&gt;
@@ -228,17 +232,17 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;p&gt;Os dejo una captura:&lt;/p&gt;
 
 &lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;  &gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;160&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;160&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Convertir archivos mp4 a mp3 masívamente</title>
-      <link>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</guid>
-      <description>&lt;p&gt;Ya mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; target=&#34;_blank&#34;&gt;Renombrar archivos masivamente en GNU/Linux&lt;/a&gt;. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Convertir archivos mp4 a mp3 masívamente</title>
+            <link>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</guid>
+            <description>&lt;p&gt;Ya mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; target=&#34;_blank&#34;&gt;Renombrar archivos masivamente en GNU/Linux&lt;/a&gt;. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -273,15 +277,15 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;p&gt;Por último, fijamos IFS a su valor predeterminado.&lt;/p&gt;
 
 &lt;p&gt;Otra opción es usar el programa &lt;em&gt;SoundConverter&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Copiar archivos recursivamente</title>
-      <link>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</guid>
-      <description>&lt;p&gt;Hice un pequeño script que consiste simplemente en dar dos rutas, una origen y otra destino, para copiar todos los archivos mp3 de la ruta origen (con una profundidad máxima de una carpeta), es decir, que si tenemos una carpeta con archivos mp3, y en esa misa carpeta tenemos otra carpeta con archivos mp3, el script tambien copiara los mp3 de la segunda carpeta.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Copiar archivos recursivamente</title>
+            <link>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/copiar-archivos-recursivamente/</guid>
+            <description>&lt;p&gt;Hice un pequeño script que consiste simplemente en dar dos rutas, una origen y otra destino, para copiar todos los archivos mp3 de la ruta origen (con una profundidad máxima de una carpeta), es decir, que si tenemos una carpeta con archivos mp3, y en esa misa carpeta tenemos otra carpeta con archivos mp3, el script tambien copiara los mp3 de la segunda carpeta.&lt;/p&gt;
 
 &lt;p&gt;Bueno, despues de dar la ruta origen y la destino, simplemente se crea en la ruta destino una carpeta con el mismo nombre que la carpeta que contiene los mp3, y los copia.&lt;/p&gt;
 
@@ -335,15 +339,15 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 
 &lt;p&gt;Saludos, y espero que os sirva de algo.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Crear miniaturas de imágenes</title>
-      <link>https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/</guid>
-      <description>&lt;h3 id=&#34;creé-una-versión-mejorada-de-este-script-aquí-1&#34;&gt;Creé una Versión mejorada de este script &lt;a href=&#34;https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/&#34;&gt;aquí&lt;/a&gt;&lt;/h3&gt;
+        </item>
+        
+        <item>
+            <title>Crear miniaturas de imágenes</title>
+            <link>https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/</guid>
+            <description>&lt;h3 id=&#34;creé-una-versión-mejorada-de-este-script-aquí-1&#34;&gt;Creé una Versión mejorada de este script &lt;a href=&#34;https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/&#34;&gt;aquí&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Este script es muy simple, pero resulta muy útil cuando tenemos muchas imágenes y queremos hacer miniaturas, por ejemplo, para subirlas a nuestra web.&lt;/p&gt;
 
@@ -372,15 +376,15 @@ $ ./NombreDelScript *
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El * significa que convertirá todas las imagenes del directorio&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Crear miniaturas de imágenes [Mejorado]</title>
-      <link>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</guid>
-      <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Crear miniaturas de imágenes [Mejorado]</title>
+            <link>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-miniaturas-de-imagenes-mejorado/</guid>
+            <description>&lt;p&gt;He mejorado el &lt;a href=&#34;https://elbauldelprogramador.com/crear-imagenes-en-miniaturas/&#34;&gt;script que subí hace unos días&lt;/a&gt; para crear miniaturas de &lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Añadir automáticamente el tamaño de una imagen con python&#34;&gt;imágenes&lt;/a&gt;, y ahora se puede ejecutar desde cualquier lugar sin necesidad de copiar el script en la carpeta de las imágenes de las que queremos hacer miniaturas. Además, podemos seleccionar solo las imágenes que deseemos, o todas.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -427,16 +431,16 @@ $ ./NombreDelScript *
  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Imagemagick no esta instalado, puede instalarlo haciendo &amp;#39;sudo aptitude install imagemagick&amp;#39;&amp;quot;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Cómo ordenar imágenes por resolución</title>
-      <link>https://elbauldelprogramador.com/como-ordenar-imagenes-por-resolucion/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/como-ordenar-imagenes-por-resolucion/</guid>
-      <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34;&gt;&lt;amp-img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
+        </item>
+        
+        <item>
+            <title>Cómo ordenar imágenes por resolución</title>
+            <link>https://elbauldelprogramador.com/como-ordenar-imagenes-por-resolucion/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-ordenar-imagenes-por-resolucion/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en &lt;em&gt;superuser&lt;/em&gt;. El usuario &lt;em&gt;&lt;a href=&#34;http://superuser.com/users/4421/flammable&#34;&gt;flammable&lt;/a&gt;&lt;/em&gt; preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:&lt;/p&gt;
@@ -511,15 +515,15 @@ $ ./NombreDelScript *
 &lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
 
 &lt;p&gt;&lt;em&gt;How to sort images into folders, based on resolution?&lt;/em&gt; »» &lt;a href=&#34;http://superuser.com/questions/17562/how-to-sort-images-into-folders-based-on-resolution&#34; target=&#34;_blank&#34;&gt;superuser.com&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ejecutar un script al modificar un fichero con inotify</title>
-      <link>https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/</guid>
-      <description>&lt;p&gt;La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;editar y crear archivos cifrados con GPG en Vim&lt;/a&gt;. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Ejecutar un script al modificar un fichero con inotify</title>
+            <link>https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/</guid>
+            <description>&lt;p&gt;La idea de querer ejecutar un script al modificar un fichero surgió a raiz del artículo donde expliqué cómo &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;editar y crear archivos cifrados con GPG en Vim&lt;/a&gt;. Aunque parezca un poco dificil encontrarle utilidad a esta idea, puede resultar bastante cómodo por ejemplo compilar automáticamente un programa cada vez que modificamos el código, borrar ficheros generados automáticamente etc, hay multidud de aplicaciones posibles en función de nuestras necesidades.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -583,15 +587,15 @@ Script ejecutado tras editar
 &lt;li&gt;&lt;em&gt;How to execute a command whenever a file changes?&lt;/em&gt; | &lt;a href=&#34;http://superuser.com/questions/181517/how-to-execute-a-command-whenever-a-file-changes&#34; target=&#34;_blank&#34;&gt;superuser.com&lt;/a&gt;&lt;br&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Bash: Execute script on file save?&lt;/em&gt; | &lt;a href=&#34;http://stackoverflow.com/questions/3283228/bash-execute-script-on-file-save&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Gestión básica de usuarios en linux</title>
-      <link>https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/</guid>
-      <description>&lt;p&gt;Hace un tiempo hice un script para gestionar los usuarios en linux de forma sencilla, personalmente creo que es fácil de usar. Sus características son las siguientes:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Gestión básica de usuarios en linux</title>
+            <link>https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/</guid>
+            <description>&lt;p&gt;Hace un tiempo hice un script para gestionar los usuarios en linux de forma sencilla, personalmente creo que es fácil de usar. Sus características son las siguientes:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Crear usuarios.&lt;/li&gt;
@@ -820,15 +824,15 @@ main
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Si no visualizáis bien el código, haced clic &lt;a href=&#34;http://pastebin.com/2UbqU3Yk&#34;&gt;aquí.&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Renombrar archivos masivamente en GNU/Linux</title>
-      <link>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</guid>
-      <description>&lt;p&gt;En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Renombrar archivos masivamente en GNU/Linux</title>
+            <link>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</guid>
+            <description>&lt;p&gt;En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.&lt;/p&gt;
 
 &lt;p&gt;Si queremos renombrar todos los archivos para eliminar la página web del nombre del archivo, no es necesario ir uno por uno renombrando, usando el comando rename de GNU/linux lo conseguimos fácilmente.&lt;/p&gt;
 
@@ -894,15 +898,15 @@ main
 12. Mis ego depresiones.mp3
 13. 13.mp3
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Script resaltado sintaxis bash</title>
-      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
-      <description>&lt;p&gt;Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&amp;#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Script resaltado sintaxis bash</title>
+            <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&amp;#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.&lt;/p&gt;
 
 &lt;p&gt;Aquí el código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -942,15 +946,15 @@ main
 &lt;p&gt;Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo lo subo al blog sin problemas.
 Saludos.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Script resaltado sintaxis bash (Mejorado)</title>
-      <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
-      <description>&lt;p&gt;Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Script resaltado sintaxis bash (Mejorado)</title>
+            <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
+            <description>&lt;p&gt;Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;em&amp;gt;Directorio de comandos&amp;lt;/em&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -982,15 +986,15 @@ Saludos.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Script resaltado sintaxis c&#43;&#43;</title>
-      <link>https://elbauldelprogramador.com/script-resaltado-sintaxis/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/script-resaltado-sintaxis/</guid>
-      <description>&lt;p&gt;He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es &lt;a href=&#34;http://alexgorbatchev.com/SyntaxHighlighter/&#34; target=&#34;_blank&#34;&gt;esta&lt;/a&gt;.&lt;/p&gt;
+        </item>
+        
+        <item>
+            <title>Script resaltado sintaxis c&#43;&#43;</title>
+            <link>https://elbauldelprogramador.com/script-resaltado-sintaxis/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/script-resaltado-sintaxis/</guid>
+            <description>&lt;p&gt;He estado un tiempo intentando instalar unos script hechos en javascript, para resaltar la sintaxis del codigo fuente que tengo en el blog, pero no conseguí instalarlo. Se llama SyntaxHighlighter, su web es &lt;a href=&#34;http://alexgorbatchev.com/SyntaxHighlighter/&#34; target=&#34;_blank&#34;&gt;esta&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Ya que no lo consegui me decidi a crear un pequeño script que por lo menos resalte las palabras reservadas del lengüaje. Lo hice para c++, en los proximos días intentaré hacer otro para bash y python.&lt;br /&gt; Aqui esta el codigo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -1049,7 +1053,7 @@ Saludos.&lt;/p&gt;
     Saludos, espero que sea útil&lt;br /&gt;
 &lt;/p&gt;
 </description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>

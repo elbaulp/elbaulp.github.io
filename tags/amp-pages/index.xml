@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Amp Pages on El Baúl del programador</title>
-    <link>https://elbauldelprogramador.com/tags/amp-pages/index.xml</link>
-    <description>Recent content in Amp Pages on El Baúl del programador</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es-ES</language>
-    <atom:link href="https://elbauldelprogramador.com/tags/amp-pages/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Cómo solucionar errores Al Implementar Amp-mustache</title>
-      <link>https://elbauldelprogramador.com/error-al-implementar-amp-mustache/</link>
-      <pubDate>Sat, 30 Jul 2016 16:27:54 +0000</pubDate>
-      
-      <guid>https://elbauldelprogramador.com/error-al-implementar-amp-mustache/</guid>
-      <description>&lt;h1 id=&#34;amp-mustache-da-error-al-sustituir-las-etiquetas&#34;&gt;Amp-mustache da error al sustituir las etiquetas&lt;/h1&gt;
+    <channel>
+        <title>Amp Pages on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/amp-pages/index.xml</link>
+        <description>Recent content in Amp Pages on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo.png</url>
+            <link>https://elbauldelprogramador.com</link>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/amp-pages/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo solucionar errores Al Implementar Amp-mustache</title>
+            <link>https://elbauldelprogramador.com/error-al-implementar-amp-mustache/</link>
+            <pubDate>Sat, 30 Jul 2016 16:27:54 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/error-al-implementar-amp-mustache/</guid>
+            <description>&lt;h1 id=&#34;amp-mustache-da-error-al-sustituir-las-etiquetas&#34;&gt;Amp-mustache da error al sustituir las etiquetas&lt;/h1&gt;
 
 &lt;p&gt;Intentando implementar la etiqueta &lt;code&gt;amp-mustache&lt;/code&gt; para el blog encontré muchos problemas, la idea era usar una plantilla para que fuera rellenada desde un &lt;a href=&#34;https://elbauldelprogramador.com/como-mapear-json-a-objetos-java-con-jackson-objectmapper/&#34; title=&#34;Cómo mapear json a objetos Java con jackson ObjectMapper&#34;&gt;json&lt;/a&gt;. El código era bastante simple:&lt;/p&gt;
 
@@ -29,9 +33,9 @@
       &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;card related&amp;quot;&lt;/span&gt;
          &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{{id}}{% endraw %}&amp;quot;&lt;/span&gt;
          &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;raw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%}{{&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}}{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;101&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;101&amp;quot;&lt;/span&gt;
                  &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;75&amp;quot;&lt;/span&gt;
-                 &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}}{% endraw %}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+                 &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}}{% endraw %}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{{title}}{% endraw %}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -87,9 +91,9 @@
             &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;card related&amp;quot;&lt;/span&gt;
                &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{ id }}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;
                &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{ url }}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-               &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;101&amp;quot;&lt;/span&gt;
+               &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;101&amp;quot;&lt;/span&gt;
                         &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;75&amp;quot;&lt;/span&gt;
-                        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{ thumbnail }}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+                        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{ thumbnail }}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
                     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{% raw %}{{ title }}{% endraw %}{{ &amp;quot;{% endraw &amp;quot; }}%}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
             &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -97,7 +101,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Así ya todo funciona correctamente, espero haberos ayudado.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+        </item>
+        
+    </channel>
 </rss>
