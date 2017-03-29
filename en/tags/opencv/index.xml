@@ -155,11 +155,12 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ cmake -DBUILD_SHARED_LIBS&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;OFF ..
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:
+&lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
+
 &lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/img&gt;
-&lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
+    &lt;img sizes=&#34;(min-width: 983px) 983px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; width=&#34;983px&#34; height=&#34;164px&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;That is, there is a specified ant and JNI path, and Java wrappers is set to YES.&lt;/p&gt;
 
@@ -187,13 +188,13 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
  and choose &lt;strong&gt;Dependencies&lt;/strong&gt; tab. Here, we click to add and select the &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and  the library, that is in &lt;strong&gt;opencv3.2.0/build/lib&lt;/strong&gt; :&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/img&gt;
-&lt;figcaption&gt;adding .jar file&lt;/figcaption&gt;
+    &lt;img sizes=&#34;(min-width: 1022px) 1022px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-Opencv-jar-to-IntelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;341&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;adding .jar file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/img&gt;
-&lt;figcaption&gt;adding .so file&lt;/figcaption&gt;
+    &lt;img sizes=&#34;(min-width: 734px) 734px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/adding-libpath-to-intelliJ-project.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;734&#34; height=&#34;291&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;adding .so file&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;finally, we take the face detection example from &lt;a href=&#34;http://docs.opencv.org/2.4.4-beta/doc/tutorials/introduction/desktop_java/java_dev_intro.html&#34; title=&#34;docs.opencv.org&#34;&gt;opencv documentation&lt;/a&gt; , correct it (because it is for OpenCV version 2.4.4)  and store it in a file called &lt;strong&gt;helloOpenCV.java&lt;/strong&gt; inside &lt;code&gt;src-&amp;gt;main-&amp;gt;java&lt;/code&gt; folder.  The example code adapted to OpenCV version 3.2 is :&lt;/p&gt;
@@ -255,7 +256,7 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 
 &lt;figure&gt;
     &lt;img sizes=&#34;(min-width: 531px) 531px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/example-face-detection-with-opencv.png&#34; title=&#34;&#34; alt=&#34;&#34; width=&#34;531&#34; height=&#34;528&#34;&gt;&lt;/img&gt;
-&lt;figcaption&gt;example face detection&lt;/figcaption&gt;
+    &lt;figcaption&gt;example face detection&lt;/figcaption&gt;
 &lt;/figure&gt;</description>
         </item>
         

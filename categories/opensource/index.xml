@@ -475,9 +475,7 @@ A continuación les detallo puntualmente la implementación de la clase:&lt;/p&g
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</guid>
-            <description>&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s1600/1329912632_stock_connect.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+            <description>&lt;p&gt;&lt;img sizes=&#34;(min-width: 128px) 128px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Llevaba tiempo queriendo instalar en mi equipo la distribución &lt;a target=&#34;_blank&#34; href=&#34;http://crunchbanglinux.org/&#34;&gt;CrunchBang&lt;/a&gt;, que es una distro muy ligera basada en debian que viene con &lt;a target=&#34;_blank&#34; href=&#34;http://openbox.org/&#34;&gt;openbox&lt;/a&gt;, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.&lt;/p&gt;
 
@@ -497,7 +495,7 @@ A continuación les detallo puntualmente la implementación de la clase:&lt;/p&g
 
 &lt;p&gt;De esta forma lo tenemos todo solucionado.&lt;/p&gt;
 
-&lt;h4 id=&#34;fondos-de-pantalla-aleatorios&#34;&gt;Fondos de pantalla aleatorios&lt;/h4&gt;
+&lt;h1 id=&#34;fondos-de-pantalla-aleatorios&#34;&gt;Fondos de pantalla aleatorios&lt;/h1&gt;
 
 &lt;p&gt;Para lograr esto usé un script que encontré en la red hace tiempo y lo modifiqué para adaptarlo a openbox, con la particularidad de que aplico un fondo de pantalla distinto y seleccionado aleatoriamente para cada una de las pantallas. El script en cuestión es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -544,11 +542,24 @@ cat &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span 
 nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Os dejo una captura:&lt;/p&gt;
+&lt;p&gt;Os dejo una captura, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/wall_aleatorio&#34; target=&#34;_blank&#34; title=&#34;GitHub&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;160&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s400/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;</description>
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s900/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;
+            alt=&#34;Captura de pantalla&#34;
+            title=&#34;Captura de pantalla&#34;
+            sizes=&#34;(min-width: 900px) 900px, 100vw&#34;
+            width=&#34;900&#34;
+            height=&#34;360&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;</description>
         </item>
         
         <item>

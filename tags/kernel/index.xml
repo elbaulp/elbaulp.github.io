@@ -279,13 +279,13 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
             
             <guid>https://elbauldelprogramador.com/compilar-e-instalar-el-kenerl-4-2/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Compilar-e-Instalar-El-Kernel-4.2.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Compilar-e-Instalar-El-Kernel-4.2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://pixabay.com/en/linux-logo-penguin-tux-text-151619/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;pixabay&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/Compilar-e-Instalar-El-Kernel-4.2.png&#34;&gt;&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Compilar-e-Instalar-El-Kernel-4.2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: &lt;a href=&#34;https://pixabay.com/en/linux-logo-penguin-tux-text-151619/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;pixabay&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Vamos a explicar hoy cómo compilar e instalar la versión 4.2 del &lt;strong&gt;kernel&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h2&gt;
+&lt;h1 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h1&gt;
 
 &lt;p&gt;Para compilar el &lt;strong&gt;kernel&lt;/strong&gt; hara falta instalar los siguientes paquetes en el sistema:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
@@ -297,7 +297,7 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install kernel-package
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;descargar-el-código-fuente-del-kernel&#34;&gt;Descargar el código fuente del kernel&lt;/h2&gt;
+&lt;h1 id=&#34;descargar-el-código-fuente-del-kernel&#34;&gt;Descargar el código fuente del kernel&lt;/h1&gt;
 
 &lt;p&gt;Para ello&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz
@@ -307,7 +307,7 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ tar xvf linux-4.2.tar.xz
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;configurar-el-kernel&#34;&gt;Configurar el kernel&lt;/h2&gt;
+&lt;h1 id=&#34;configurar-el-kernel&#34;&gt;Configurar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Copiamos la configuración existente del kernel instalado&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; linux-4.2
@@ -320,7 +320,7 @@ $ cp /boot/config-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span 
 
 &lt;p&gt;Si no estamos seguros de qué podemos quitar y añadir de la configuración, es mejor dejarlo tal y como está, ya que al haber copiado la configuración del kernel actual, estamos seguros de que funcionará.&lt;/p&gt;
 
-&lt;h2 id=&#34;compilar-el-kernel&#34;&gt;Compilar el kernel&lt;/h2&gt;
+&lt;h1 id=&#34;compilar-el-kernel&#34;&gt;Compilar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Primero debemos hacer una limpieza:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ make-kpkg clean
@@ -333,7 +333,7 @@ $ fakeroot make-kpkg --initrd --revision&lt;span class=&#34;o&#34;&gt;=&lt;/span
 
 &lt;p&gt;es importante reemplazar la &lt;strong&gt;X&lt;/strong&gt; de &lt;code&gt;CONCURRENCY_LEVEL=X&lt;/code&gt; por el número de procesadores de tu máquina, para una compilación más rápida.&lt;/p&gt;
 
-&lt;h2 id=&#34;instalar-el-kernel&#34;&gt;Instalar el kernel&lt;/h2&gt;
+&lt;h1 id=&#34;instalar-el-kernel&#34;&gt;Instalar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Una vez compilado, basta con ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
@@ -348,9 +348,11 @@ $ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; more
 $ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; egrep -i --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&lt;/em&gt; | &lt;a href=&#34;http://www.cyberciti.biz/faq/debian-ubuntu-building-installing-a-custom-linux-kernel/&#34; title=&#34;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&lt;/em&gt; | &lt;a href=&#34;http://www.cyberciti.biz/faq/debian-ubuntu-building-installing-a-custom-linux-kernel/&#34; title=&#34;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>
