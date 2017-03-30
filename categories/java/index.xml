@@ -1053,11 +1053,11 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
             <guid>https://elbauldelprogramador.com/configurar-log4j2-en-netbeans-un-logger-para-java/</guid>
             <description>&lt;p&gt;&lt;em&gt;Log4j2&lt;/em&gt; es un &lt;em&gt;Logger&lt;/em&gt; para Java que descubrí hace poco y me gustó bastante. En éste artículo veremos cómo instalar y configurar Log4j2 en Netbeans. Aunque el proceso es similar para cualquier IDE.&lt;/p&gt;
 
-&lt;h2 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h2&gt;
+&lt;h1 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h1&gt;
 
 &lt;p&gt;Asumiremos que el lector ya tiene Netbeans y Maven instalados y configurados en su máquina. Hay más instrucciones de instalación en la web de &lt;a href=&#34;https://logging.apache.org/log4j/2.x/maven-artifacts.html&#34;&gt;Log4j2&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;instalar-log4j2&#34;&gt;Instalar Log4j2&lt;/h2&gt;
+&lt;h1 id=&#34;instalar-log4j2&#34;&gt;Instalar Log4j2&lt;/h1&gt;
 
 &lt;p&gt;En Netbeans, crearemos un nuevo proyecto Java con soporte para Maven (Nuevo Proyecto » Maven » Aplicación Java). Una vez hecho ésto, añadimos las siguientes dependencias en el fichero &lt;code&gt;pom.xml&lt;/code&gt;:&lt;/p&gt;
 
@@ -1078,7 +1078,7 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
 
 &lt;p&gt;Hecho esto, en la carpeta &lt;em&gt;dependencias&lt;/em&gt;, hacemos click derecho y damos a que descargue las dependencias declaradas.&lt;/p&gt;
 
-&lt;h2 id=&#34;anadir-un-fichero-de-configuración-personalizado&#34;&gt;Anadir un fichero de configuración personalizado&lt;/h2&gt;
+&lt;h1 id=&#34;anadir-un-fichero-de-configuración-personalizado&#34;&gt;Anadir un fichero de configuración personalizado&lt;/h1&gt;
 
 &lt;p&gt;Por defecto &lt;em&gt;Log4j2&lt;/em&gt; ofrece un fichero de configuración, pero podemos modificarlo a nuestro gusto, para colorear la salida de los distintos niveles de log, y formatear la línea a nuestro gusto. En éste caso usaré el siguiente fichero &lt;code&gt;log4j2.json&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -1130,7 +1130,7 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h2&gt;
+&lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
 
 &lt;p&gt;Crearemos una clase básica a modo de ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;org.apache.logging.log4j.LogManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -1158,10 +1158,10 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
 &lt;p&gt;Al compilar y ejecutar, deberían aparecer en la consola los mensajes de log coloreados, como se muestra en la imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png&#34; alt=&#34;Configurar Log4j2 en Netbeans1&#34; width=&#34;364px&#34; height=&#34;89px&#34; /&gt;
+    &lt;img sizes=&#34;(min-width: 364px) 364px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans1.png&#34; alt=&#34;Configurar Log4j2 en Netbeans1&#34; width=&#34;364px&#34; height=&#34;89px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;establecer-un-nivel-de-log-por-defecto-en-toda-la-aplicación&#34;&gt;Establecer un nivel de log por defecto en toda la aplicación&lt;/h2&gt;
+&lt;h1 id=&#34;establecer-un-nivel-de-log-por-defecto-en-toda-la-aplicación&#34;&gt;Establecer un nivel de log por defecto en toda la aplicación&lt;/h1&gt;
 
 &lt;p&gt;Cuando depuremos, será útil que aparezcan todos los niveles de log en la consola, desde &lt;em&gt;fatal&lt;/em&gt; hasta &lt;em&gt;trace&lt;/em&gt;. Pero en producción sería conveniente loggear únicamente eventos a un nivel determinado, por ejemplo, a partir de &lt;code&gt;warn&lt;/code&gt;. Para ello podemos crear ésta función que encontré en &lt;a href=&#34;http://stackoverflow.com/a/18409096/1612432&#34;&gt;SO&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
@@ -1219,7 +1219,7 @@ El _Floating Action Button_ de abajo a la izquierda lanza el lector de QRs, que 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png&#34; alt=&#34;Configurar Log4j2 en Netbeans2&#34; width=&#34;434px&#34; height=&#34;49px&#34; /&gt;
+    &lt;img sizes=&#34;(min-width: 434px) 434px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Configurar-el-logger-Log4j2-en-Netbeans2.png&#34; alt=&#34;Configurar Log4j2 en Netbeans2&#34; width=&#34;434px&#34; height=&#34;49px&#34; /&gt;
 &lt;/figure&gt;</description>
         </item>
         

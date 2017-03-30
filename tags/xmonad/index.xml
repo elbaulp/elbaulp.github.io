@@ -27,7 +27,11 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;configurar-trayer&#34;&gt;Configurar trayer&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Hace tiempo que dejé de usar &lt;em&gt;xmonad&lt;/em&gt; ahora uso &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM, el gestor de ventanas más eficiente&#34;&gt;DWM&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;configurar-trayer&#34;&gt;Configurar trayer&lt;/h1&gt;
 
 &lt;p&gt;La documentación oficial de xmonad configura &lt;strong&gt;trayer&lt;/strong&gt; de forma se ejecute al iniciar sesión modificando el archivo &lt;strong&gt;~/.xsession&lt;/strong&gt; tal que así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -177,7 +181,7 @@ import System.IO
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;, &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;0, xF86XK_Calculator&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;, spawn &lt;span class=&#34;s2&#34;&gt;&amp;quot;~/bin/trayerxmonad.sh&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;configurar-fondos-de-pantalla-aleatorios&#34;&gt;Configurar fondos de pantalla aleatorios&lt;/h4&gt;
+&lt;h1 id=&#34;configurar-fondos-de-pantalla-aleatorios&#34;&gt;Configurar fondos de pantalla aleatorios&lt;/h1&gt;
 
 &lt;p&gt;Antes de continuar, es necesario instalar &lt;strong&gt;feh&lt;/strong&gt; para establecer fondos de pantalla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install feh
@@ -209,11 +213,29 @@ feh --bg-fill $picsfolder$randomfile1
 
 &lt;p&gt;Así luce mi escritorio con xmonad:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34; alt=&#34;xmonad Desktop&#34; width=&#34;1024px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/01/Screenshot-from-2013-01-02-1852312-1024x409.png&#34;
+            alt=&#34;xmonad Desktop&#34;
+            title=&#34;xmonad Desktop&#34;
+            sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34;
+            width=&#34;1024&#34;
+            height=&#34;409&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Mi escritorio en Xmonad&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Askubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Askubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

@@ -21,7 +21,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/</guid>
-            <description>&lt;h2 id=&#34;consultas-agrupadas&#34;&gt;Consultas agrupadas&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;consultas-agrupadas&#34;&gt;Consultas agrupadas&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -35,11 +35,11 @@
 
 &lt;p&gt;Lo que hace es comprobar que todos las columnas incluidos en la cláusula SELECT fuera de funciones sumarias, estén dentro de la cláusula GROUP BY, aunque pueden estar en cualquier orden y en el GROUP BY pueden aparecer columnas que no estén en el SELECT. Si encuentra alguna columna en el SELECT (que no esté dentro de una función sumaria) que no aparezca en el GROUP BY, entonces nos retorna el error anterior.&lt;/p&gt;
 
-&lt;h3 id=&#34;order-by&#34;&gt;ORDER BY&lt;/h3&gt;
+&lt;h2 id=&#34;order-by&#34;&gt;ORDER BY&lt;/h2&gt;
 
 &lt;p&gt;Como característica adicional, se pueden incluir números en la ordenación, que serán sustituidos por la columna correspondiente del SELECT en el orden que indique el número.  La ordenación es el último paso en la ejecución de una consulta SQL, y para ello Oracle suele necesitar crear objetos temporales que son creados en el tablespace Temporal. Por eso es recomendable hacer las ordenaciones del lado de cliente (siempre que sea posible), ya que el servidor puede cargarse bastante si tiene que hacer, por ejemplo, 300 ordenaciones de tablas de 2 millones de registros.&lt;/p&gt;
 
-&lt;h3 id=&#34;group-by&#34;&gt;GROUP BY&lt;/h3&gt;
+&lt;h2 id=&#34;group-by&#34;&gt;GROUP BY&lt;/h2&gt;
 
 &lt;p&gt;Agrupa las filas seleccionadas por la cláusula WHERE por los campos que aparecen en la cláusula GROUP BY. Estos grupos devuelven una única fila por grupo a la que se le pueden añadir una serie de funciones estadísticas llamadas agregados. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;group_by_expression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -59,7 +59,7 @@
 &lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMtr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMrc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMdl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;funciones-de-agregado&#34;&gt;Funciones de Agregado&lt;/h3&gt;
+&lt;h2 id=&#34;funciones-de-agregado&#34;&gt;Funciones de Agregado&lt;/h2&gt;
 
 &lt;p&gt;Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de registros para devolver un único valor que se aplica a un grupo de registros. También se utilizan para obtener resultados estadísticos sobre las columnas de una tabla o sobre la misma tabla; en este caso, la consulta devuelve un solo registro con los resultados.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Select&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;From&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LiFacturas&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -76,7 +76,7 @@
 &lt;li&gt;STDEV | STDEVP | VAR | VARP. Desviación típica y Varianza.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

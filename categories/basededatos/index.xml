@@ -1043,7 +1043,7 @@ Dni: 12345678
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/consulta-de-datos-clausula-from/</guid>
-            <description>&lt;p&gt;En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. Las tablas deben existir y si no existiera alguna aparecería el error: ORA-00942: table or view does not exist.  Su sintaxis es :&lt;/p&gt;
+            <description>&lt;p&gt;En esta clausula se indican la tabla o tablas a las que vamos a tener acceso. Las tablas deben existir y si no existiera alguna aparecería el error: &lt;code&gt;ORA-00942: table or view does not exist&lt;/code&gt;.  Su sintaxis es :&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;table_source&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,...&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;table_source&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE_NAME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;view_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;derived_table&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;joined_table&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1153,7 +1153,7 @@ nombre.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;FULL&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;OUTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;JOIN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FACTURAS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCodCli&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCodCli&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-where-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34;&gt;Consulta de Datos - Cláusula WHERE&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-cláusula-where-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where/&#34;&gt;Consulta de Datos - Cláusula WHERE&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1162,7 +1162,7 @@ nombre.&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/</guid>
-            <description>&lt;h2 id=&#34;consultas-agrupadas&#34;&gt;Consultas agrupadas&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;consultas-agrupadas&#34;&gt;Consultas agrupadas&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -1176,11 +1176,11 @@ nombre.&lt;/p&gt;
 
 &lt;p&gt;Lo que hace es comprobar que todos las columnas incluidos en la cláusula SELECT fuera de funciones sumarias, estén dentro de la cláusula GROUP BY, aunque pueden estar en cualquier orden y en el GROUP BY pueden aparecer columnas que no estén en el SELECT. Si encuentra alguna columna en el SELECT (que no esté dentro de una función sumaria) que no aparezca en el GROUP BY, entonces nos retorna el error anterior.&lt;/p&gt;
 
-&lt;h3 id=&#34;order-by&#34;&gt;ORDER BY&lt;/h3&gt;
+&lt;h2 id=&#34;order-by&#34;&gt;ORDER BY&lt;/h2&gt;
 
 &lt;p&gt;Como característica adicional, se pueden incluir números en la ordenación, que serán sustituidos por la columna correspondiente del SELECT en el orden que indique el número.  La ordenación es el último paso en la ejecución de una consulta SQL, y para ello Oracle suele necesitar crear objetos temporales que son creados en el tablespace Temporal. Por eso es recomendable hacer las ordenaciones del lado de cliente (siempre que sea posible), ya que el servidor puede cargarse bastante si tiene que hacer, por ejemplo, 300 ordenaciones de tablas de 2 millones de registros.&lt;/p&gt;
 
-&lt;h3 id=&#34;group-by&#34;&gt;GROUP BY&lt;/h3&gt;
+&lt;h2 id=&#34;group-by&#34;&gt;GROUP BY&lt;/h2&gt;
 
 &lt;p&gt;Agrupa las filas seleccionadas por la cláusula WHERE por los campos que aparecen en la cláusula GROUP BY. Estos grupos devuelven una única fila por grupo a la que se le pueden añadir una serie de funciones estadísticas llamadas agregados. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;group_by_expression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -1200,7 +1200,7 @@ nombre.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;GROUP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMtr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMrc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;camion&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cCmnMdl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;funciones-de-agregado&#34;&gt;Funciones de Agregado&lt;/h3&gt;
+&lt;h2 id=&#34;funciones-de-agregado&#34;&gt;Funciones de Agregado&lt;/h2&gt;
 
 &lt;p&gt;Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de registros para devolver un único valor que se aplica a un grupo de registros. También se utilizan para obtener resultados estadísticos sobre las columnas de una tabla o sobre la misma tabla; en este caso, la consulta devuelve un solo registro con los resultados.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Select&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;From&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LiFacturas&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -1217,7 +1217,7 @@ nombre.&lt;/p&gt;
 &lt;li&gt;STDEV | STDEVP | VAR | VARP. Desviación típica y Varianza.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-cláusula-having-y-order-by-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-having-y/&#34;&gt;Consulta de Datos - Cláusula HAVING y ORDER BY&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1238,7 +1238,7 @@ nombre.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;Having&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;clausula-order-by&#34;&gt;Clausula ORDER BY&lt;/h3&gt;
+&lt;h1 id=&#34;clausula-order-by&#34;&gt;Clausula ORDER BY&lt;/h1&gt;
 
 &lt;p&gt;Nos devuelve las filas ordenadas por una serie de columnas. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_by_expression&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ASC&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DESC&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,...&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -1257,7 +1257,7 @@ nombre.&lt;/p&gt;
 
 &lt;p&gt;Los valores nulos se consideran como los más pequeños posibles.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-operadores-union-all-intersect-minus-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/&#34;&gt;Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-operadores-union-all-intersect-minus-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-operadores-union-all/&#34;&gt;Consulta de Datos - Operadores UNION [ALL], INTERSECT, MINUS.&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1418,7 +1418,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;operador-between&#34;&gt;Operador BETWEEN:&lt;/h2&gt;
+&lt;h1 id=&#34;operador-between&#34;&gt;Operador BETWEEN:&lt;/h1&gt;
 
 &lt;p&gt;Para indicar que deseamos recuperar los registros según el intervalo de valores de un campo emplearemos el operador BETWEEN cuya sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Columna&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Expresi&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Not&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Between&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;And&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor2&lt;/span&gt;
@@ -1426,7 +1426,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;en este caso la consulta devolvería los registros que contengan en columna o expresión un valor incluido en el intervalo valor1, valor2 (ambos inclusive). Si anteponemos el operador NOT devolverá aquellos valores no incluidos en el intervalo.&lt;/p&gt;
 
-&lt;h2 id=&#34;operador-like&#34;&gt;Operador LIKE:&lt;/h2&gt;
+&lt;h1 id=&#34;operador-like&#34;&gt;Operador LIKE:&lt;/h1&gt;
 
 &lt;p&gt;Este operador se utiliza para realizar comprobaciones de columnas o expresiones con patrones de caracteres. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expresi&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_a_comparar&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;patr&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
@@ -1452,7 +1452,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;operador-in&#34;&gt;Operador IN:&lt;/h2&gt;
+&lt;h1 id=&#34;operador-in&#34;&gt;Operador IN:&lt;/h1&gt;
 
 &lt;p&gt;Se utiliza para comprobar si un valor pertenece a una lista de valores. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expresion&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IN&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;subconsulta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expresion&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;o&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;,...&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
@@ -1460,11 +1460,11 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;La lista de valores se puede obtener a partir de una setencia select o bien indicando el&lt;br /&gt; conjunto de valores separados por comas&lt;/p&gt;
 
-&lt;h2 id=&#34;operador-is-null&#34;&gt;Operador IS NULL:&lt;/h2&gt;
+&lt;h1 id=&#34;operador-is-null&#34;&gt;Operador IS NULL:&lt;/h1&gt;
 
 &lt;p&gt;En SQL el valor nulo tiene un valor diferente a 0 y a cadena vacía. Por tanto, para preguntar&lt;br /&gt; si un atributo contiene, o no, un valor nulo, hay que utilizar el predicado IS [NOT] NULL.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema&#34;&gt;Siguiente tema&lt;/h2&gt;
+&lt;h1 id=&#34;siguiente-tema&#34;&gt;Siguiente tema&lt;/h1&gt;
 
 &lt;p&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-group-by/&#34;&gt;Consulta de Datos. Cláusula GROUP BY&lt;/a&gt;&lt;/p&gt;</description>
         </item>
@@ -1505,7 +1505,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;product_id&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;order_items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;indicaciones&#34;&gt;Indicaciones&lt;/h4&gt;
+&lt;h1 id=&#34;indicaciones&#34;&gt;Indicaciones&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;El orden de las cláusulas en las sentencia &lt;code&gt;SELECT&lt;/code&gt; es significativo. Se puede omitir cualquiera de las cláusulas opcionales, pero cuando se usan, deben aparecer en el orden apropiado.&lt;/li&gt;
@@ -1538,7 +1538,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
   &lt;a href=&#34;https://elbauldelprogramador.com/pdfs/SOLOTABLAS.pdf&#34; target=&#34;_blank&#34;&gt;Descargar Resumen de Tablas SQL&lt;/a&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-introducción-a-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34;&gt;Introducción a PL/SQL&lt;/a&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;siguiente-tema-introducción-a-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql/&#34;&gt;Introducción a PL/SQL&lt;/a&gt;&lt;/h1&gt;
 </description>
         </item>
         
@@ -1580,7 +1580,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;El predicado &lt;code&gt;EXISTS&lt;/code&gt; se utiliza en comparaciones de verdad/falso para determinar si la subconsulta devuelve algún registro.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/&#34;&gt;Consulta de Datos - Tablas Resumen operadores y Funciones Oracle&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-tablas-resumen-operadores-y-funciones-oracle-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/&#34;&gt;Consulta de Datos - Tablas Resumen operadores y Funciones Oracle&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
