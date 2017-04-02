@@ -27,7 +27,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-la-aplicación&#34;&gt;Crear la aplicación&lt;/h2&gt;
+&lt;h1 id=&#34;crear-la-aplicación&#34;&gt;Crear la aplicación&lt;/h1&gt;
 
 &lt;p&gt;Vamos a crear una aplicación trivial a modo de ejemplo, la llamaremos &lt;strong&gt;pruebaformularios&lt;/strong&gt;. Para crearla ejecutamos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py startapp pruebaformularios
@@ -35,7 +35,7 @@
 
 &lt;p&gt;La aplicación hemos de crearla dentro de un proyecto existente.&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-los-modelos&#34;&gt;Crear los modelos&lt;/h2&gt;
+&lt;h1 id=&#34;crear-los-modelos&#34;&gt;Crear los modelos&lt;/h1&gt;
 
 &lt;p&gt;El ejemplo que vamos a ver va a disponer de un solo modelo &lt;em&gt;Persona&lt;/em&gt; que estará compuesto de varios campos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# pruebaformularios/models.py&lt;/span&gt;
@@ -53,7 +53,7 @@
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dni&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;crear-la-vista&#34;&gt;Crear la Vista&lt;/h2&gt;
+&lt;h1 id=&#34;crear-la-vista&#34;&gt;Crear la Vista&lt;/h1&gt;
 
 &lt;p&gt;El siguiente paso es crear la vista para este modelo. En este ejemplo se mostrará una lista de Personas y se dará la posibilidad de añadir nuevas personas mediante un formulario. Dado que crear una lista de objetos es algo muy común Django proporciona una clase llamada &lt;em&gt;ListView&lt;/em&gt; de la que podemos heredar para facilitar la tarea. A esto se le llama &lt;strong&gt;vistas genéricas&lt;/strong&gt; En las referencias (2) se dispone de más información sobre este tema.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# pruebaformularios/views.py&lt;/span&gt;
@@ -68,7 +68,7 @@
 
 &lt;p&gt;Como vemos, de una forma tan sencilla como esta estamos creando una vista que permitirá mostrar una lista de objetos persona.&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-la-plantilla&#34;&gt;Crear la plantilla&lt;/h2&gt;
+&lt;h1 id=&#34;crear-la-plantilla&#34;&gt;Crear la plantilla&lt;/h1&gt;
 
 &lt;p&gt;Para ser capaces de mostrar al usuario una lista de &lt;em&gt;personas&lt;/em&gt; es necesario crear una plantilla. Nos basaremos en una plantilla base llamada &lt;em&gt;base.html&lt;/em&gt; que se puede encontrar en &lt;em&gt;django/contrib/databrowse/templates/databrowse/base.html&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;{% raw %}
@@ -87,7 +87,7 @@
 
 &lt;p&gt;De esta forma nuestra plantilla hereda todo el contenido de &lt;em&gt;base.html&lt;/em&gt; y le añadimos contenido en el bloque &lt;em&gt;content&lt;/em&gt;. Es importante que guardemos ambas plantillas dentro de nuestra aplicación &lt;em&gt;pruebaformularios&lt;/em&gt; en el directorio &lt;em&gt;./templates/pruebaformularios/&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;configurar-el-proyecto-para-que-encuentre-las-plantillas&#34;&gt;Configurar el proyecto para que encuentre las plantillas&lt;/h2&gt;
+&lt;h1 id=&#34;configurar-el-proyecto-para-que-encuentre-las-plantillas&#34;&gt;Configurar el proyecto para que encuentre las plantillas&lt;/h1&gt;
 
 &lt;p&gt;Con la plantilla creada, el siguiente paso es configurar el proyecto para que sea capaz de encontrar la plantilla. Abrimos el &lt;em&gt;settings.py&lt;/em&gt; de nuestro proyecto y en &lt;em&gt;TEMPLATE_DIRS&lt;/em&gt; escribimos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TEMPLATE_DIRS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -101,7 +101,7 @@
 
 &lt;p&gt;De esta manera django encontrará nuestras plantillas y podremos usarlas.&lt;/p&gt;
 
-&lt;h2 id=&#34;configurar-el-urls-py&#34;&gt;Configurar el urls.py&lt;/h2&gt;
+&lt;h1 id=&#34;configurar-el-urls-py&#34;&gt;Configurar el urls.py&lt;/h1&gt;
 
 &lt;p&gt;Falta configurar el mapeo URL para la vista que acabamos de crear (&lt;em&gt;PersonaList&lt;/em&gt;). Para ello creamos un archivo llamado &lt;strong&gt;urls.py&lt;/strong&gt; en el directorio de nuestra aplicación con el siguiente contenido:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# pruebaformularios/urls.py&lt;/span&gt;
@@ -144,10 +144,10 @@ $ python manage.py runserver
 &lt;p&gt;Si todo ha ido bien, deberíamos ver la siguiente página en &lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34; title=&#34;localhost&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/personas/list&#34;&gt;http://127.0.0.1:8000/personas/list&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
+    &lt;img sizes=&#34;(min-width: 161px) 161px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/10/Crear-formularios-en-Django-a-partir-de-un-Modelo-con-ModelForm.png&#34; alt=&#34;Crear formularios en Django a partir de un Modelo con ModelForm&#34; width=&#34;161px&#34; height=&#34;153px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;crear-un-formulario-a-partir-de-un-modelo-con-modelform&#34;&gt;Crear un formulario a partir de un Modelo con ModelForm&lt;/h2&gt;
+&lt;h1 id=&#34;crear-un-formulario-a-partir-de-un-modelo-con-modelform&#34;&gt;Crear un formulario a partir de un Modelo con ModelForm&lt;/h1&gt;
 
 &lt;p&gt;Ahora que tenemos todo listo para mostrar al usuario una lista de personas, vamos a ofrecerle la posibilidad de añadir gente a la lista. Para ello crearemos una clase que extienda de &lt;em&gt;ModelForm&lt;/em&gt; (3) en &lt;em&gt;models.py&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# models.py&lt;/span&gt;
@@ -161,7 +161,7 @@ $ python manage.py runserver
 
 &lt;p&gt;Con esto crearemos un formulario basándonos en los campos del modelo &lt;em&gt;Persona&lt;/em&gt;, lo cual transformará cada campo del modelo en su correspondiente widget en HTML.&lt;/p&gt;
 
-&lt;h2 id=&#34;definir-la-función-que-añadirá-personas&#34;&gt;Definir la función que añadirá Personas&lt;/h2&gt;
+&lt;h1 id=&#34;definir-la-función-que-añadirá-personas&#34;&gt;Definir la función que añadirá Personas&lt;/h1&gt;
 
 &lt;p&gt;Para ser capaces de registrar una nueva Persona en la base de datos, debemos declarar una función que se encargue de dicha tarea y mapear ésta función con una URL, en nuestro ejemplo la dirección que usaremos para añadir una nueva persona será &lt;em&gt;/personas/add&lt;/em&gt;. La función la creamos en el fichero &lt;em&gt;views.py&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# views.py&lt;/span&gt;
@@ -220,7 +220,7 @@ $ python manage.py runserver
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;asociar-la-función-con-una-url&#34;&gt;Asociar la función con una url&lt;/h2&gt;
+&lt;h1 id=&#34;asociar-la-función-con-una-url&#34;&gt;Asociar la función con una url&lt;/h1&gt;
 
 &lt;p&gt;Lo siguiente que hacemos es mapear la función anterior con una URL, de modo que al acceder a &lt;em&gt;/personas/add&lt;/em&gt; se nos presente el formulario:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlpatterns&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;patterns&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -231,7 +231,7 @@ $ python manage.py runserver
 
 &lt;p&gt;El nombre será usado después en la plantilla.&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-la-plantilla-con-el-formulario&#34;&gt;Crear la plantilla con el formulario&lt;/h2&gt;
+&lt;h1 id=&#34;crear-la-plantilla-con-el-formulario&#34;&gt;Crear la plantilla con el formulario&lt;/h1&gt;
 
 &lt;p&gt;Por último, la plantilla que contiene el formulario quedaría así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;{% raw %}
@@ -248,7 +248,7 @@ $ python manage.py runserver
 
 &lt;p&gt;De nuevo usamos el &lt;em&gt;namespace&lt;/em&gt; creado anteriormente en el &lt;em&gt;urls.py&lt;/em&gt; global y el nombre que acabamos de darle a la función para agregar personas.&lt;/p&gt;
 
-&lt;h2 id=&#34;probando-el-ejemplo&#34;&gt;Probando el ejemplo&lt;/h2&gt;
+&lt;h1 id=&#34;probando-el-ejemplo&#34;&gt;Probando el ejemplo&lt;/h1&gt;
 
 &lt;p&gt;Eso es todo, accediendo a &lt;a href=&#34;http://127.0.0.1:8000/personas/add&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/personas/add&#34;&gt;http://127.0.0.1:8000/personas/add&lt;/a&gt;&lt;/a&gt; veremos el formulario y podremos añadir nuevas personas, que irán apareciendo en la lista.&lt;/p&gt;
 
@@ -260,7 +260,7 @@ Haga click &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#3
 
 &lt;p&gt;Ya sabemos que &lt;em&gt;upersonas&lt;/em&gt; es &lt;em&gt;/personas/&lt;/em&gt; y &lt;em&gt;padd&lt;/em&gt; es &lt;em&gt;add&lt;/em&gt;, luego este enlace nos llevará a la dirección &lt;em&gt;/personas/add&lt;/em&gt;, mostrando el formulario.&lt;/p&gt;
 
-&lt;h2 id=&#34;código-completo&#34;&gt;Código completo&lt;/h2&gt;
+&lt;h1 id=&#34;código-completo&#34;&gt;Código completo&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# models.py&lt;/span&gt;
 &lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django.db&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;
 &lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django.forms&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ModelForm&lt;/span&gt;
@@ -366,11 +366,13 @@ Haga click &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#3
 
 &lt;p&gt;Espero que os haya servido de ayuda.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;(1) Documentación ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
-&lt;em&gt;(2) Vistas genéricas&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;
-&lt;em&gt;(3) ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(1) Documentación ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/#modelform&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(2) Vistas genéricas&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/class-based-views/generic-display/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(3) ModelForm&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.5/topics/forms/modelforms/&#34; target=&#34;_blank&#34;&gt;docs.django.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
