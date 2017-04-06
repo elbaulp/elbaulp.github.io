@@ -3434,5 +3434,63 @@ rm temp
 </description>
         </item>
         
+        <item>
+            <title>C&#43;&#43; syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keyWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace&amp;quot;&lt;/span&gt;
+
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include/#include/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# coloreo el include&lt;/span&gt;
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#define/#define/&amp;quot;&lt;/span&gt; &amp;lt; temp &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# coloreo el define&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keyWords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp $rutaCodigo
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^class /class/g&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;I am going to explain a bit the code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The variable &lt;em&gt;keyWords&lt;/em&gt; contains the key words of c ++, fewer &amp;#8220;class&amp;#8221;, which later I will explain because. In this variable, the words have to be separated by a space, and all in the same line, In order that the &amp;#8220;for&amp;#8221; takes word to word.&lt;/p&gt;
+
+&lt;p&gt;Both following lines&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include..... and sed &amp;quot;&lt;/span&gt;s/^#define...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;search the pattern &amp;#8220;#define&amp;#8221; or &amp;#8220;#include&amp;#8221;, initially of every line of the text, this is indicated by &lt;em&gt;^&lt;/em&gt;, and replaces it with his corresponding style, to format the text. Once we enter the &amp;#8220;for&amp;#8221;, there is applied basically the same procedure that for it &amp;#8220;define&amp;#8221; and &amp;#8220;include&amp;#8221;, but with every word of the variable keyWords.&lt;/p&gt;
+
+&lt;p&gt;Finally, I do the same for the reserved word &amp;#8220;class&amp;#8221;, the motive for which I have left this one by the end, it is because the label &lt;span class=&#34;class&#34;&gt; contains the word, &amp;#8220;class&amp;#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.&lt;/p&gt;
+
+&lt;p&gt;How Use It:&lt;/p&gt;
+
+&lt;p&gt;It is necessary to create a css class for the blog, of this form:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;.prp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#0a0&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nc&#34;&gt;.cpp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#a40&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once done this, we have to execute the script and introduce the code path to formatting with this style.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bashyc.blogspot.com/p/curso-c.html#ejercicio111&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; you can see the result.&lt;/p&gt;
+
+&lt;p&gt;Regards, I hope that it is useful&lt;/p&gt;
+</description>
+        </item>
+        
     </channel>
 </rss>

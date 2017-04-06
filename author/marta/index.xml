@@ -468,7 +468,7 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
             
             <guid>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&#34; alt=&#34;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -477,7 +477,7 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
+&lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
 
 &lt;p&gt;Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas:&lt;/p&gt;
 
@@ -486,11 +486,14 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
 &lt;li&gt;La orden &lt;strong&gt;figure&lt;/strong&gt;: para insertar nuestra imagen.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Para colocar un enlace en nuestro documento, debemos hacer dos cosas:
-1. Poner una &lt;strong&gt;etiqueta&lt;/strong&gt; en el lugar que queramos referenciar.
-2. Poner un &lt;strong&gt;enlace&lt;/strong&gt; a esa etiqueta donde queramos referenciarla.&lt;/p&gt;
+&lt;p&gt;Para colocar un enlace en nuestro documento, debemos hacer dos cosas:&lt;/p&gt;
 
-&lt;h2 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Poner una &lt;strong&gt;etiqueta&lt;/strong&gt; en el lugar que queramos referenciar.&lt;/li&gt;
+&lt;li&gt;Poner un &lt;strong&gt;enlace&lt;/strong&gt; a esa etiqueta donde queramos referenciarla.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
 
 &lt;p&gt;Para ello, ponemos justo al inicio de la sección &lt;em&gt;Código del programa&lt;/em&gt; lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;codigo&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -511,7 +514,7 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 
 &lt;p&gt;Debemos compilar dos veces para que LaTeX establezca bien los enlaces, y tras compilar dos veces, si hacemos click sobre programa nos llevará al código de nuestro programa.&lt;/p&gt;
 
-&lt;h2 id=&#34;incluir-imágenes-en-el-documento&#34;&gt;Incluir imágenes en el documento&lt;/h2&gt;
+&lt;h1 id=&#34;incluir-imágenes-en-el-documento&#34;&gt;Incluir imágenes en el documento&lt;/h1&gt;
 
 &lt;p&gt;Ahora vamos a ver como introducir una imagen en nuestro documento. Debemos tenerla en la misma carpeta que nuestro arhivo .tex, y para insertarla usamos la orden figure e includegraphics, cuya sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[opciones donde insertar la imagen]
@@ -525,18 +528,24 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;graphicx&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para incluir imágenes en nuestro código&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Respecto a las opciones de tamaño, son las siguientes:
-* &lt;strong&gt;width&lt;/strong&gt; : para escalar las imágenes un determinado ancho
-* &lt;strong&gt;height&lt;/strong&gt; : para escalar las imágenes un determinado alto
-* &lt;strong&gt;angle&lt;/strong&gt; : para rotar las imagenes según las agujas del reloj
-* &lt;strong&gt;scale&lt;/strong&gt; : para escalar imágenes&lt;/p&gt;
+&lt;p&gt;Respecto a las opciones de tamaño, son las siguientes:&lt;/p&gt;
 
-&lt;p&gt;Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguientes:
-* &lt;strong&gt;h&lt;/strong&gt;: Insertar la imagen justo aquí (&lt;em&gt;here&lt;/em&gt;)
-* &lt;strong&gt;b&lt;/strong&gt;: Insertar la imagen al final de la página (&lt;em&gt;bottom&lt;/em&gt;)
-* &lt;strong&gt;t&lt;/strong&gt;: Insertar la imagen al principio de la página (&lt;em&gt;top&lt;/em&gt;)
-* &lt;strong&gt;p&lt;/strong&gt;: Insertar la imagen en una página especial que contenga otras figuras o imágenes (&lt;em&gt;p&lt;/em&gt;)
-* &lt;strong&gt;!&lt;/strong&gt;: Insertar la imagen sin considerar las opciones de LaTeX (como por ejemplo, el número máximo de figuras por página) que podrían hacer que no se insertara la imagen donde queremos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;width&lt;/strong&gt; : para escalar las imágenes un determinado ancho&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;height&lt;/strong&gt; : para escalar las imágenes un determinado alto&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;angle&lt;/strong&gt; : para rotar las imagenes según las agujas del reloj&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;scale&lt;/strong&gt; : para escalar imágenes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;h&lt;/strong&gt;: Insertar la imagen justo aquí (&lt;em&gt;here&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;b&lt;/strong&gt;: Insertar la imagen al final de la página (&lt;em&gt;bottom&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t&lt;/strong&gt;: Insertar la imagen al principio de la página (&lt;em&gt;top&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;p&lt;/strong&gt;: Insertar la imagen en una página especial que contenga otras figuras o imágenes (&lt;em&gt;p&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;!&lt;/strong&gt;: Insertar la imagen sin considerar las opciones de LaTeX (como por ejemplo, el número máximo de figuras por página) que podrían hacer que no se insertara la imagen donde queremos.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Estos parámetros también nos valen para las tablas. También podemos combinarlos o establecer una jerarquía. Por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;table&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[!hbp]
@@ -554,7 +563,7 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h2&gt;
+&lt;h1 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h1&gt;
 
 &lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para personalizar la cabecera y el pie de pagina&lt;/span&gt;
@@ -585,15 +594,18 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[C]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[rgb]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;0.2,0.4,0.5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt; de&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\pageref&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;LastPage&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete &lt;code&gt;hyperref&lt;/code&gt; que incluímos antes, en concreto estas dos:
-1. &lt;strong&gt;colorlinks=true&lt;/strong&gt;: con esta opción establecemos que queremos cambiar el color de los links, al activarla, por defecto nuestros links se quedan de color rojo.
-2. &lt;strong&gt;linkcolor&lt;/strong&gt;: y con esta, establecemos el color. Podemos ponerle valores como red, blue, green&amp;#8230;&lt;/p&gt;
+&lt;p&gt;Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete &lt;code&gt;hyperref&lt;/code&gt; que incluímos antes, en concreto estas dos:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;colorlinks=true&lt;/strong&gt;: con esta opción establecemos que queremos cambiar el color de los links, al activarla, por defecto nuestros links se quedan de color rojo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;linkcolor&lt;/strong&gt;: y con esta, establecemos el color. Podemos ponerle valores como red, blue, green&amp;#8230;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Así, nuestro paquete &lt;code&gt;hyperref&lt;/code&gt; quedaría de la siguiente forma:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[colorlinks=true,linkcolor=magenta]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hyperref&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para poder poner &amp;quot;enlaces&amp;quot; en nuestro codigo&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;compilar-el-documento-y-generar-el-pdf&#34;&gt;Compilar el documento y generar el PDF&lt;/h2&gt;
+&lt;h1 id=&#34;compilar-el-documento-y-generar-el-pdf&#34;&gt;Compilar el documento y generar el PDF&lt;/h1&gt;
 
 &lt;p&gt;Ahora que ya tenemos nuestro fichero escrito, ¿cómo lo convertimos a PDF?. Si usas Linux, tienes que bajarte el paquete &lt;code&gt;texlive&lt;/code&gt; y ejecutar en terminal el siguiente comando en el directorio donde tengas tu fichero .tex:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;pdflatex nombrefichero.tex
@@ -603,11 +615,14 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;pdflatex -shell-escape nombrefichero.tex
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;editores-de-texto&#34;&gt;Editores de Texto&lt;/h2&gt;
+&lt;h1 id=&#34;editores-de-texto&#34;&gt;Editores de Texto&lt;/h1&gt;
 
-&lt;p&gt;También tienes la opción de configurar tu editor de texto favorito con un plugin para compilar LaTeX directamente desde ahí. Para hacerlo en Sublime Text tienes que seguir los siguientes pasos:
-1. Ve a Tools &amp;gt; build system &amp;gt; new build system
-2. Pega el siguiente código y guarda el archivo con el nombre que quieras:&lt;/p&gt;
+&lt;p&gt;También tienes la opción de configurar tu editor de texto favorito con un plugin para compilar LaTeX directamente desde ahí. Para hacerlo en Sublime Text tienes que seguir los siguientes pasos:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ve a Tools &amp;gt; build system &amp;gt; new build system&lt;/li&gt;
+&lt;li&gt;Pega el siguiente código y guarda el archivo con el nombre que quieras:&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &amp;quot;cmd&amp;quot;: [&amp;quot;pdflatex&amp;quot;,&amp;quot;-shell-escape&amp;quot;,&amp;quot;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;file_name&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;    &amp;quot;selector&amp;quot;: &amp;quot;text.tex.latex&amp;quot;&lt;/span&gt;
@@ -630,8 +645,9 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 
 &lt;p&gt;Quiero despedirme no sin antes dedicar todo esto a mi profesor, Francisco Miguel García, ya que sin su ayuda seguramente aún seguiría haciendo mis documentos con el Microsoft Word y a mi amigo, Alejandro Alcalde, por dejarme publicarlo en su blog y llegar así a más gente.&lt;/p&gt;
 
-&lt;p&gt;¡Nos vemos en próximas entradas!
-Marta.&lt;/p&gt;</description>
+&lt;p&gt;¡Nos vemos en próximas entradas!&lt;/p&gt;
+
+&lt;p&gt;Marta.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -641,7 +657,7 @@ Marta.&lt;/p&gt;</description>
             
             <guid>https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Incluir c\xF3digo fuente y s\xEDmbolos matem\xE1ticos&#34; alt=&#34;Mini Curso de LaTeX - Incluir c\xF3digo fuente y s\xEDmbolos matem\xE1ticos&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -650,7 +666,7 @@ Marta.&lt;/p&gt;</description>
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
+&lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
 
 &lt;p&gt;Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incluir código fuente en el documento.&lt;/p&gt;
 
@@ -662,7 +678,7 @@ Marta.&lt;/p&gt;</description>
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h3&gt;
+&lt;h2 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h2&gt;
 
 &lt;p&gt;Incluimos el paquete &lt;code&gt;minted&lt;/code&gt; en nuestra cabecera:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;minted&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para resaltar código fuente&lt;/span&gt;
@@ -677,7 +693,7 @@ Marta.&lt;/p&gt;</description>
 return 0;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;añadir-ficheros&#34;&gt;Añadir ficheros&lt;/h2&gt;
+&lt;h1 id=&#34;añadir-ficheros&#34;&gt;Añadir ficheros&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Si, como en nuestro caso, tenemos el fichero en un fichero a parte podemos exportarlo directamente a nuestro documento, Copiando lo siguiente en nuestra cabecera:&lt;/li&gt;
@@ -717,7 +733,7 @@ return 0;
 
 &lt;p&gt;Empezamos nueva sección, para ello:&lt;/p&gt;
 
-&lt;h3 id=&#34;símbolos-matemáticos&#34;&gt;Símbolos matemáticos&lt;/h3&gt;
+&lt;h2 id=&#34;símbolos-matemáticos&#34;&gt;Símbolos matemáticos&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\newpage&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Análisis de la eficiencia del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

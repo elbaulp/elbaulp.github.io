@@ -38,60 +38,61 @@
 &lt;p&gt;Terminada, la aplicación de prueba debe quedar algo así:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;aligncenter  wp-image-964&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 484px) 484px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;principal&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/principal1.png&#34; alt=&#34;adapter android&#34; width=&#34;484px&#34; height=&#34;807px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Antes de nada, hay que crear un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;layout&lt;/a&gt; que define cómo ha de verse cada fila del ListView:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/LinearLayout1&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#999999&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;2dp&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:padding=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;2dp&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
 
-   &lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckBox&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerVertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 
-   &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_torightof=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/leido&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Titulo del post&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerVertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_toRightOf=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/leido&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Titulo del post&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 
-   &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_alignparentright=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:paddingtop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;25/05/2012&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:textappearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_alignParentRight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvTitulo&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:paddingTop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;25/05/2012&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 
-   &lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/ivCalendar&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_aligntop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_margintop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:layout_toleftof=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:contentdescription=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/imagen_content_description&amp;quot;&lt;/span&gt;
-       &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/calendar&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/relativelayout&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;ImageView&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/ivCalendar&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;22dp&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_alignTop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginTop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_toLeftOf=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/tvFecha_publicacion&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:contentDescription=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/imagen_content_description&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/calendar&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Creando así el aspecto deseado para cada línea del ListView:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;customrow&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/customrow1.png&#34; alt=&#34;adapter android&#34; width=&#34;307px&#34; height=&#34;50px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 307px) 307px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;customrow&#34; src=&#34;https://elbauldelprogramador.com/img/2012/09/customrow1.png&#34; alt=&#34;adapter android&#34; width=&#34;307px&#34; height=&#34;50px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El primer paso es crear una clase que representará los datos a almacenar:&lt;/p&gt;
@@ -155,7 +156,7 @@
        &lt;span class=&#34;n&#34;&gt;dest&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;writeInt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getChecked&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
-   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CREATOR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CREATOR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Parcelable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Creator&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;createFromParcel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Parcel&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
@@ -201,10 +202,10 @@
    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;CustomAdapter&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertViewCounter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
-  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LayoutInflater&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
- &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PostAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;PostAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
        &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Constructing CustomAdapter&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
@@ -376,12 +377,12 @@
 &lt;h1 id=&#34;activar-checkbox-al-pulsar-en-una-fila-de-la-lista&#34;&gt;Activar checkBox al pulsar en una fila de la lista&lt;/h1&gt;
 
 &lt;p&gt;El principal problema que hay cuando se añade un checkBox a un ListView, es que dicho CheckBox tiene la propiedad de requerir el foco, impidiento que el listView se comporte correctamente. La forma de solucionar este problema es tan sencilla como quitar el foco al CheckBox:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_centervertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckBox&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/leido&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerVertical=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:focusable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Es necesario hacer un cambio más, y es crear un evento on click y asociarlo al checkbox:&lt;/p&gt;
@@ -446,7 +447,7 @@
    &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;c1&#34;&gt;//...&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;checkbox&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postdata&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
 
       &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;19/09/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Moborobo, herramienta de Administración Integrada para Android en el PC&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PostData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;23/09/2012&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Cómo crear shortcodes en WordPress que soporten parámetros&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;

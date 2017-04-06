@@ -1952,64 +1952,6 @@ iptables -i ethX -A INPUT -s xx.xx.xx.xx -j DROP
         </item>
         
         <item>
-            <title>C&#43;&#43; syntax highlighted script</title>
-            <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
-            <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;path&amp;quot;&lt;/span&gt;&amp;gt;#!/bin/bash&amp;lt;/span&amp;gt;
-
-&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;case&amp;lt;/span&amp;gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;in&amp;lt;/span&amp;gt;
-0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;keyWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace&amp;quot;&lt;/span&gt;
-
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;sed&amp;lt;/span&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include/&amp;lt;span class=&amp;quot;&lt;/span&gt;prp&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;#include&amp;lt;/span&amp;gt;/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# coloreo el include&lt;/span&gt;
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;sed&amp;lt;/span&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#define/&amp;lt;span class=&amp;quot;&lt;/span&gt;prp&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;#define&amp;lt;/span&amp;gt;/&amp;quot;&lt;/span&gt; &amp;lt; temp &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# coloreo el define&lt;/span&gt;
-
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;for&amp;lt;/span&amp;gt; word &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;in&amp;lt;/span&amp;gt; $keyWords
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;do&amp;lt;/span&amp;gt;
-&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;comentario&amp;quot;&lt;/span&gt;&amp;gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&amp;lt;/span&amp;gt;
-&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;sed&amp;lt;/span&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&amp;lt;span class=&amp;quot;&lt;/span&gt;cpp&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word&amp;lt;/span&amp;gt;/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
-    &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;cp&amp;lt;/span&amp;gt; temp $rutaCodigo
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;done&amp;lt;/span&amp;gt;
-&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;sed&amp;lt;/span&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^class /&amp;lt;span class=&amp;quot;&lt;/span&gt;cpp&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;class&amp;lt;/span&amp;gt;/g&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;rm&amp;lt;/span&amp;gt; temp
-  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;echo&amp;lt;/span&amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
-&amp;lt;span &lt;span class=&#34;nv&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;esac&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;** I am going to explain a bit the code: **&lt;/p&gt;
-
-&lt;p&gt;The variable * keyWords * contains the key words of c ++, fewer &amp;#8220;class&amp;#8221;, which later I will explain because. In this variable, the words have to be separated by a space, and all in the same line, In order that the &amp;#8220;for&amp;#8221; takes word to word.&lt;/p&gt;
-
-&lt;p&gt;Both following lines&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include..... and sed &amp;quot;&lt;/span&gt;s/^#define...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;search the pattern &amp;#8220;#define&amp;#8221; or &amp;#8220;#include&amp;#8221;, initially of every line of the text, this is indicated by * ^ *, and replaces it with his corresponding style, to format the text. Once we enter the &amp;#8220;for&amp;#8221;, there is applied basically the same procedure that for it &amp;#8220;define&amp;#8221; and &amp;#8220;include&amp;#8221;, but with every word of the variable keyWords.&lt;/p&gt;
-
-&lt;p&gt;Finally, I do the same for the reserved word &amp;#8220;class&amp;#8221;, the motive for which I have left this one by the end, it is because the label &lt;span class=&#34;class&#34;&gt; contains the word, &amp;#8220;class&amp;#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.&lt;/p&gt;
-
-&lt;p&gt;How Use It:&lt;/p&gt;
-
-&lt;p&gt;It is necessary to create a css class for the blog, of this form:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;.prp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#0a0&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;nc&#34;&gt;.cpp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#a40&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Once done this, we have to execute the script and introduce the code path to formatting with this style.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bashyc.blogspot.com/p/curso-c.html#ejercicio111&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; you can see the result.&lt;/p&gt;
-
-&lt;p&gt;Regards, I hope that it is useful&lt;/p&gt;
-</description>
-        </item>
-        
-        <item>
             <title>Cambiar fondo en la pantalla de login en Debian y Ubuntu</title>
             <link>https://elbauldelprogramador.com/cambiar-fondo-en-la-pantalla-de-login-en-debian-y-ubuntu/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -4780,6 +4722,104 @@ $ apt-get install grive
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu &amp;amp; Debian&lt;/em&gt; »» &lt;a href=&#34;https://openlinuxforums.org/index.php?topic=3144.0&#34; target=&#34;_blank&#34;&gt;openlinuxforums.org&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Créditos de la imagen&lt;/em&gt; »» &lt;a href=&#34;https://plus.google.com/+MuktwareMagazine/posts/ZPN9MxuV7VR&#34; target=&#34;_blank&#34;&gt;plus.google.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Sincronizar Google Drive en Linux en 4 pasos [Actualización]</title>
+            <link>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos-actualizacion/</guid>
+            <description>&lt;figure&gt;
+  &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/google-drive-linux3.jpg&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;800px&#34; height=&#34;701px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hace poco vimos en un artículo cómo &lt;a href=&#34;https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/&#34; title=&#34;Sincronizar Google Drive en Linux en 4 pasos&#34;&gt;Sincronizar Google Drive en Linux en 4 pasos&lt;/a&gt;. Llevo usando ese método unas semanas y hasta ahora todo funcionaba correctamente. Sin embargo me he dado cuenta que cuando se usa con archivos muy grandes puede haber problemas, ya que &lt;em&gt;grive&lt;/em&gt; vuelve a ejecutarse varias veces mientras está subiendo archivos, con lo cual acaban pasando cosas extrañas, como quedarse subiendo el archivo indefinidamente o inundar la memoria RAM. Aplicar los siguientes cambios parece que soluciona los problemas.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;el-problema&#34;&gt;El problema&lt;/h1&gt;
+
+&lt;p&gt;Tal y como se explicó en el artículo anterior, se tiene un script encargado de detectar los cambios locales con &lt;a href=&#34;https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify/&#34; title=&#34;Ejecutar un script al modificar un fichero con inotify&#34;&gt;inotify&lt;/a&gt; y una entrada en &lt;a href=&#34;http://es.wikipedia.org/wiki/Cron_%28Unix%29&#34; title=&#34;Cron wikipedia&#34; target=&#34;_blank&#34;&gt;cron&lt;/a&gt; ejecutando &lt;em&gt;grive&lt;/em&gt; cada X tiempo para descargar los cambios remotos. Por tanto, puede ocurrir que en un determinado instante grive se esté ejecutando más de una vez, y si está realizando alguna operación de descarga o subida &lt;em&gt;inotify&lt;/em&gt; detectará que los ficheros están cambiando y volverá a lanzar &lt;em&gt;grive&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es decir, si estamos subiendo/descargando un archivo lo bastante grande para que tarde más que los periodos de pausa que hay en el script y en cron, el comportamiento de &lt;em&gt;grive&lt;/em&gt; no será el correcto porque los archivos están cambiando continuamente mientras están siendo descargados.&lt;/p&gt;
+
+&lt;h1 id=&#34;posible-solución&#34;&gt;Posible solución&lt;/h1&gt;
+
+&lt;p&gt;Tras haber hecho varias pruebas, una solución que parece ser correcta es la siguiente:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Modificar la entrada en cron para &lt;em&gt;grive&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Modificar el script para que compruebe si hay alguna instancia de &lt;em&gt;grive&lt;/em&gt; en ejecución, y, en ese caso, esperar a que termine.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El script quedaría así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Google Drive Grive script that syncs your Google Drive folder on change&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This functionality is currently missing in Grive and there are still no&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# official Google Drive app for Linux coming from Google.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# This script will only detect local changes and trigger a sync. Remote&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# changes will go undetected and are probably still best sync on a periodic&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# basis via cron.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Kudos to Nestal Wan for writing the excellent Grive software&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Also thanks to Google for lending some free disk space to me&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Peter Österberg, 2012&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;GRIVE_COMMAND_WITH_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/bin/grive   &lt;span class=&#34;c1&#34;&gt;# Path to your grive binary, change to match your system&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;GDRIVE_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~/Drive                      &lt;span class=&#34;c1&#34;&gt;# Path to the folder that you want to be synced&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;TIMEOUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;               &lt;span class=&#34;c1&#34;&gt;# Timeout time in seconds, for periodic syncs. Nicely pointed out by ivanmacx&lt;/span&gt;
+
+&lt;span class=&#34;nb&#34;&gt;declare&lt;/span&gt; -i esta_grive_ejecutando
+
+&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    inotifywait -t &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; -e modify -e move -e create -e delete -r $GDRIVE_PATH
+    &lt;span class=&#34;nv&#34;&gt;esta_grive_ejecutando&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pidof grive&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$e&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;sta_grive_ejecutando&amp;quot;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Grive está ejecutandose, PID: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$e&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;sta_grive_ejecutando. Esperando...&amp;quot;&lt;/span&gt;
+        sleep $TIMEOUT
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; $GDRIVE_PATH &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; $GRIVE_COMMAND_WITH_PATH
+    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esta pequeña modificación logramos que no haya varias instancias de &lt;em&gt;grive&lt;/em&gt; en ejecución. Además podríamos dejar la entrada en cron, ya que de esta forma si cron está ejecutando &lt;em&gt;grive&lt;/em&gt;, el script no lo hará, porque detecta que ya hay una instancia en ejecución.&lt;/p&gt;
+
+&lt;h1 id=&#34;script-para-cron&#34;&gt;Script para CRON&lt;/h1&gt;
+
+&lt;p&gt;Sería muy similar, salvo que no monitoriza el estado del directorio con inotify, de esta forma obtendremos los cambios remotos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+&lt;span class=&#34;nv&#34;&gt;TIMEOUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60
+
+&lt;span class=&#34;nb&#34;&gt;declare&lt;/span&gt; -i is_grive_cron_running
+
+&lt;span class=&#34;nv&#34;&gt;is_grive_cron_running&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pidof grive&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;is_grive_cron_running&amp;quot;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Grive está corriendo en cron: &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;is_grive_cron_running. Esperando...&amp;quot;&lt;/span&gt;
+    sleep $TIMEOUT
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;HOME/Drive&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; grive &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee /tmp/GRIVE_LOG
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lo guardamos como &lt;em&gt;update-grive.sh&lt;/em&gt;, le damos permisos de ejecución &lt;code&gt;chmod +x update-grive.sh&lt;/code&gt; y lo añadimos a crontab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;*/10 * * * *  /home/hkr/bin/update-grive.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Howto: Auto-sync Google Drive to a local folder with Grive _ Ubuntu &amp;amp; Debian&lt;/em&gt; »» &lt;a href=&#34;https://openlinuxforums.org/index.php?topic=3144.0&#34; target=&#34;_blank&#34;&gt;openlinuxforums.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
