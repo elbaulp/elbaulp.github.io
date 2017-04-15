@@ -1315,8 +1315,8 @@
             tabindex="0"
             layout="responsive"
             src="/img/2013/04/dns.jpg"
-            alt="C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)"
-            title="C\xF3mo configurar un servidor DNS - Parte 2 (La Zona Primaria)"
+            alt="Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)"
+            title="Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)"
             sizes="(min-width: 450px) 450px, 100vw"
             width="450"
             height="361">
@@ -1595,6 +1595,15 @@
                 "vars": {
                     "eventCategory": "catslinks",
                     "eventAction": "catClick"
+                }
+            },
+            "similar_post" : {
+                "on": "click",
+                "selector": "#related-post",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "similar_post",
+                    "eventAction": "https:\/\/elbauldelprogramador.com\/tags\/in-addr\/index.arpa\/"
                 }
             }
         }

@@ -1565,6 +1565,15 @@ Los que me leéis habitualmente probablemente hayais visto los artículos que es
                     "eventCategory": "catslinks",
                     "eventAction": "catClick"
                 }
+            },
+            "similar_post" : {
+                "on": "click",
+                "selector": "#related-post",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "similar_post",
+                    "eventAction": "https:\/\/elbauldelprogramador.com\/tags\/.init_array-\/index.fini_array\/"
+                }
             }
         }
     }

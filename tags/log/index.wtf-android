@@ -1568,6 +1568,15 @@ Todos sabemos el humor que gastan chicos de Google, y a raiz de una pregunta en 
                     "eventCategory": "catslinks",
                     "eventAction": "catClick"
                 }
+            },
+            "similar_post" : {
+                "on": "click",
+                "selector": "#related-post",
+                "request": "event",
+                "vars": {
+                    "eventCategory": "similar_post",
+                    "eventAction": "https:\/\/elbauldelprogramador.com\/tags\/log\/index.wtf-android\/"
+                }
             }
         }
     }
