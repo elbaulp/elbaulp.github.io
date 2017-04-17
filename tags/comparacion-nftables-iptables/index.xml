@@ -25,7 +25,7 @@
 &lt;p&gt;El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura &lt;em&gt;Seguridad en Sistemas Operativos&lt;/em&gt; de la facultad de Ingeniería Informática de Granada (ETSIIT), puedes leer el otro trabajo publicado en el blog, &lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion/&#34; title=&#34;Biometría Aplicada a La Seguridad&#34;&gt;Biometría Aplicada a La Seguridad&lt;/a&gt;. Este trabajo es autoría de Jose Maria Caballero Alba &lt;caballeroalba&gt; y Edlin Lastenia Morel Mateo&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;qué-es-nftables&#34;&gt;Qué es nftables&lt;/h2&gt;
+&lt;h1 id=&#34;qué-es-nftables&#34;&gt;Qué es nftables&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://netfilter.org/projects/nftables/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;&lt;strong&gt;nftables&lt;/strong&gt;&lt;/a&gt; es un  nuevo  framework  que  sustituye  al antiguo  &lt;strong&gt;iptables&lt;/strong&gt;. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  &lt;strong&gt;iptables&lt;/strong&gt;  o en su defecto la nomenclatura  de sus reglas.&lt;/p&gt;
 
@@ -55,11 +55,11 @@
 
 &lt;p&gt;Interfaz unificada para reemplazar las utilidades &lt;strong&gt;iptables/ip6tables/arptables/ebtables&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducción-a-nftables&#34;&gt;Introducción a nftables&lt;/h2&gt;
+&lt;h1 id=&#34;introducción-a-nftables&#34;&gt;Introducción a nftables&lt;/h1&gt;
 
 &lt;p&gt;Como ya dijimos en la descripción del problema,  &lt;strong&gt;nftables&lt;/strong&gt;  es un nuevo framework que sustituye  al antiguo &lt;strong&gt;iptables&lt;/strong&gt; para el filtrado de paquetes y clasificación de estos en Linux. &lt;strong&gt;nftables&lt;/strong&gt; es una combinación del núcleo de Linux y una utilidad  de espacio de usuario (lo que sería la antigua &lt;strong&gt;iptables&lt;/strong&gt;, &lt;code&gt;nft&lt;/code&gt;).  Usa la infraestructura de Netfilter, como el connection tracking  system.&lt;/p&gt;
 
-&lt;h3 id=&#34;requisitos-de-nftables&#34;&gt;Requisitos de nftables&lt;/h3&gt;
+&lt;h2 id=&#34;requisitos-de-nftables&#34;&gt;Requisitos de nftables&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;nftables&lt;/strong&gt;  está operativo  desde el kernel 3.13, para  poder usarlo necesitamos  compilar este kernel o un kernel superior.  Además de la utilidad  nft para poder usar el framework la cual necesita las librerías libmnl (normalmente en los repositorios) y libnftnl.&lt;/p&gt;
 
@@ -75,7 +75,7 @@ sudo update−grub2
 
 &lt;p&gt;Una vez hecho esto, reiniciamos y ya tendríamos el kernel disponible en la selección de inicio de grub,  para  comprobar  que esta  todo  correcto,  basta  con abrir  un terminal  y poner &lt;code&gt;iuname -r&lt;/code&gt;  debería de salir que tenemos un kernel 3.16.3&lt;/p&gt;
 
-&lt;h3 id=&#34;instalación-de-la-utilidad-nft&#34;&gt;Instalación  de  la  utilidad nft&lt;/h3&gt;
+&lt;h2 id=&#34;instalación-de-la-utilidad-nft&#34;&gt;Instalación  de  la  utilidad nft&lt;/h2&gt;
 
 &lt;p&gt;Para  esto instalaremos  las 2 librerías necesarias (libmnl y libnfnl), para ambas necesitamos hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://git.netflter.org/lib&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mnl o fnl&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
@@ -101,11 +101,11 @@ make install
 
 &lt;p&gt;Al cual debe responder &lt;code&gt;nft:  no command specified&lt;/code&gt;. Confirmando su correcta  instalación.&lt;/p&gt;
 
-&lt;h2 id=&#34;iptables-vs-nftables&#34;&gt;&lt;strong&gt;iptables&lt;/strong&gt; vs  &lt;strong&gt;nftables&lt;/strong&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;iptables-vs-nftables&#34;&gt;&lt;strong&gt;iptables&lt;/strong&gt; vs  &lt;strong&gt;nftables&lt;/strong&gt;&lt;/h1&gt;
 
 &lt;p&gt;Es interesante comparar  el uso de &lt;strong&gt;iptables&lt;/strong&gt;  de manera  práctica  y compararlo  con lo que sería la traducción a &lt;strong&gt;nftables&lt;/strong&gt;,  tenemos  que tener  en cuenta  que algunas  opciones de &lt;strong&gt;iptables&lt;/strong&gt;  no están disponibles en &lt;strong&gt;nftables&lt;/strong&gt; por estar aún en desarrollo y viceversa.&lt;/p&gt;
 
-&lt;h3 id=&#34;diferencias-principales-entre-nftables-y-iptables&#34;&gt;Diferencias principales entre nftables y iptables&lt;/h3&gt;
+&lt;h2 id=&#34;diferencias-principales-entre-nftables-y-iptables&#34;&gt;Diferencias principales entre nftables y iptables&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;La primera  y más distinguible  es la sintaxis,  en &lt;strong&gt;iptables&lt;/strong&gt;,  las flags van precedidas de dos guiones o uno (-p tcp)  en &lt;strong&gt;nftables&lt;/strong&gt; usa una sintaxis más limpia, inspirada  en tcpdump.&lt;/li&gt;
@@ -118,9 +118,9 @@ make install
 &lt;li&gt;No es necesario el uso de guiones (-) o dobles guiones (-) para  el uso delas banderas&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;tablas-cadenas-y-reglas-en-nftables&#34;&gt;Tablas cadenas y reglas en nftables&lt;/h2&gt;
+&lt;h1 id=&#34;tablas-cadenas-y-reglas-en-nftables&#34;&gt;Tablas cadenas y reglas en nftables&lt;/h1&gt;
 
-&lt;h3 id=&#34;creando-tablas-con-nftables&#34;&gt;Creando tablas con nftables&lt;/h3&gt;
+&lt;h2 id=&#34;creando-tablas-con-nftables&#34;&gt;Creando tablas con nftables&lt;/h2&gt;
 
 &lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt; seguimos contando  con las mismas tablas  que en &lt;strong&gt;iptables&lt;/strong&gt;,  que siguen siendo las zonas en las que podemos crear cadenas y después crear reglas en ellas. La diferencia principal y más notable respecto a &lt;strong&gt;iptables&lt;/strong&gt; que podemos crear nuestras  tablas  y además no nos obliga a configurar una cadena  a la hora de crearla.  Para  configurar una tabla en &lt;strong&gt;nftables&lt;/strong&gt; tenemos el siguiente formato:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft create table &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ip&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; nombre tabla
@@ -132,7 +132,7 @@ make install
 
 &lt;p&gt;Esto creará la tabla de tipo ip (por defecto, si no lo hemos especificado) filter, la cual no contiene cadenas ni reglas. Solo contiene la definición de la tabla en sí misma.&lt;/p&gt;
 
-&lt;h3 id=&#34;borrando-tablas-en-nftables&#34;&gt;Borrando tablas en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;borrando-tablas-en-nftables&#34;&gt;Borrando tablas en nftables&lt;/h2&gt;
 
 &lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt;  sí que se nos permite  borrar  una tabla,  con esto borraríamos la tabla,  sus cadenas y sus reglas. El formato a usar seria el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft delete table nombretabla
@@ -140,7 +140,7 @@ make install
 
 &lt;p&gt;Y no es necesario nada  más, con esto podemos borrar  una tabla  en &lt;strong&gt;nftables&lt;/strong&gt;,  cosa que con &lt;strong&gt;iptables&lt;/strong&gt;  no podíamos.&lt;/p&gt;
 
-&lt;h3 id=&#34;creando-cadenas-en-nftables&#34;&gt;Creando cadenas en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;creando-cadenas-en-nftables&#34;&gt;Creando cadenas en nftables&lt;/h2&gt;
 
 &lt;p&gt;En  &lt;strong&gt;nftables&lt;/strong&gt;  no tenemos  cadenas  por defecto dentro  de nuestras  tablas,  pero tenemos la posibilidad  de an˜adir las cadena  de tipo  base (input,  output, forward,  postrouting, prerouting) o crear cadenas personalizadas,  con el siguiente formato  seria para  las tipo base:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add chain ip nombreTabla nombreCadena typefilter hook &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;cadenabase&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; priority 0
@@ -158,7 +158,7 @@ make install
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add chain filter input
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;borrando-tablas-en-nftables-1&#34;&gt;Borrando tablas en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;borrando-tablas-en-nftables-1&#34;&gt;Borrando tablas en nftables&lt;/h2&gt;
 
 &lt;p&gt;En  &lt;strong&gt;nftables&lt;/strong&gt;  por  el contrario  podemos  borrar  tanto  cadenas  base  como no base,  solo necesitamos el nombre de la cadena, no nos importa  si es de un tipo u otro, tenemos el siguiente formato:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft delete chain nombreTabla nombreCadena
@@ -170,7 +170,7 @@ make install
 
 &lt;p&gt;El único requisito que nos impone &lt;strong&gt;nftables&lt;/strong&gt; para poder borrar una cadena es que no esté vacía.&lt;/p&gt;
 
-&lt;h3 id=&#34;creando-reglas-en-nftables&#34;&gt;Creando reglas en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;creando-reglas-en-nftables&#34;&gt;Creando reglas en nftables&lt;/h2&gt;
 
 &lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt;  podemos ver a la hora de an˜adir  reglas que es mucho más comprensible para  el usuario.  El formato para  añadir una regla es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule nombreTabla nombreCadena tcp upd ip daddr saddr dport sport drop accept reject counter
@@ -182,7 +182,7 @@ make install
 
 &lt;p&gt;Podemos  apreciar  que &lt;strong&gt;nftables&lt;/strong&gt;  ofrece una  interfaz  más clara  en la creación de reglas respecto de &lt;strong&gt;iptables&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;borrando-reglas-en-nftables&#34;&gt;Borrando reglas en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;borrando-reglas-en-nftables&#34;&gt;Borrando reglas en nftables&lt;/h2&gt;
 
 &lt;p&gt;Para  eliminar  una  regla  en &lt;strong&gt;nftables&lt;/strong&gt;  lo podemos  hacer  de manera  similar  a  como lo hacemos en &lt;strong&gt;iptables&lt;/strong&gt;,  listando  las reglas de una  tabla  especifica (en nuestro  caso filter) con el parámetro -a para  que nos muestre  el número de las reglas dentro  de la tabla.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft list &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;table — tables&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombreTabla − a&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
@@ -196,9 +196,9 @@ nft list table filter -a
 nft delete rule flter input  handle 2.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;acciones-sobre-los-paquetes&#34;&gt;Acciones sobre los  paquetes&lt;/h2&gt;
+&lt;h1 id=&#34;acciones-sobre-los-paquetes&#34;&gt;Acciones sobre los  paquetes&lt;/h1&gt;
 
-&lt;h3 id=&#34;aceptando-y-rechazando-paquetes-en-nftables&#34;&gt;Aceptando y rechazando paquetes en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;aceptando-y-rechazando-paquetes-en-nftables&#34;&gt;Aceptando y rechazando paquetes en nftables&lt;/h2&gt;
 
 &lt;p&gt;Suponiendo  que ya tengamos  (como lo visto en los ejemplos anteriores)  una  cadena  y una tabla,  para  aceptar  los paquetes  de una cadena especifica podemos hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule nombreTabla nombreCadena &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;operadores&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; accept
@@ -212,7 +212,7 @@ nft delete rule flter input  handle 2.
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule nombreTabla nombreCadena &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;operadores&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; drop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;saltando-a-cadenas&#34;&gt;Saltando a cadenas&lt;/h3&gt;
+&lt;h2 id=&#34;saltando-a-cadenas&#34;&gt;Saltando a cadenas&lt;/h2&gt;
 
 &lt;p&gt;De manera  similar a &lt;strong&gt;iptables&lt;/strong&gt;,  también podemos tener  cadenas personalizadas,  una vez tengamos creado alguna, podemos redirigir los paquetes  que venga por una cadena base (por ej input)  a esta cadena para  tratarlos ahí&amp;hellip;  El formato a seguir es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule nombreTabla nombreCadena&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;operadores&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; jump cadenaPersonalizada
@@ -220,7 +220,7 @@ nft delete rule flter input  handle 2.
 nft add rule filter input  tcp dport  &lt;span class=&#34;m&#34;&gt;9999&lt;/span&gt; jump pruebaCadenaPersonal
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;log-de-paquetes-en-nftales&#34;&gt;Log  de  paquetes en nftales&lt;/h3&gt;
+&lt;h2 id=&#34;log-de-paquetes-en-nftales&#34;&gt;Log  de  paquetes en nftales&lt;/h2&gt;
 
 &lt;p&gt;Para poder hacer un log de paquetes completo en &lt;strong&gt;nftables&lt;/strong&gt;, necesitamos una versión mayor o igual a la 3.17, si se usa un kernel menor, se puede usar el siguiente comando para  permitir  el log:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;modprobe iptLOG
@@ -234,11 +234,11 @@ nft add rule filter input  tcp dport  &lt;span class=&#34;m&#34;&gt;9999&lt;/spa
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule filter input  tcp dport  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; ct state  new log prefix &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nueva conexión ssh&amp;quot;&lt;/span&gt; accept
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;nat-en-nftables&#34;&gt;NAT en nftables&lt;/h3&gt;
+&lt;h2 id=&#34;nat-en-nftables&#34;&gt;NAT en nftables&lt;/h2&gt;
 
 &lt;p&gt;Como en &lt;strong&gt;iptables&lt;/strong&gt;,  &lt;strong&gt;nftables&lt;/strong&gt;  también puede hacer nat  y de manera  más simple por su sintaxis,  de nuevo, distinguimos entre SNAT (source nat)  y DNAT (destination nat).&lt;/p&gt;
 
-&lt;h4 id=&#34;snat-en-nftables&#34;&gt;SNAT en nftables&lt;/h4&gt;
+&lt;h2 id=&#34;snat-en-nftables&#34;&gt;SNAT en nftables&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  /proc/sys/net/ipv4/ipForward
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -256,7 +256,7 @@ nft add chain nat  postrouting   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt
 
 &lt;p&gt;De esta  manera,  si nuestro  host  es un router  que está  conectado  a la red indicada  los host que tengan  configurada  como gateway  nuestro  host,  cambiará 8.8.8.8 de los paquetes  que salgan  de nuestra  red.&lt;/p&gt;
 
-&lt;h4 id=&#34;dnat-en-nftables&#34;&gt;DNAT en nftables&lt;/h4&gt;
+&lt;h2 id=&#34;dnat-en-nftables&#34;&gt;DNAT en nftables&lt;/h2&gt;
 
 &lt;p&gt;Para  hacer  dnat,  si tenemos  algún servidor  web en nuestra  red y queremos que sea accesible desde el exterior  si se está usando nat,  debemos de seguir el mismo formato que en el anterior  caso, y bastaría con lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nft add rule nat  prerouting  iif wlan0 tcp dport  &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; dnat  192.168.1.3
@@ -264,7 +264,7 @@ nft add chain nat  postrouting   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt
 
 &lt;p&gt;De esta manera, se podrá acceder al servidor web desde el exterior de nuestra  red.  Cabe decir que &lt;strong&gt;nftables&lt;/strong&gt; nos permite  hacer tambien un set de puertos para un mismo destino.&lt;/p&gt;
 
-&lt;h2 id=&#34;ejemplos-de-nftables&#34;&gt;Ejemplos de nftables&lt;/h2&gt;
+&lt;h1 id=&#34;ejemplos-de-nftables&#34;&gt;Ejemplos de nftables&lt;/h1&gt;
 
 &lt;p&gt;Para  terminar  podemos exponer un uso práctico de &lt;strong&gt;nftables&lt;/strong&gt; en una red, el problema es:&lt;/p&gt;
 
@@ -308,14 +308,13 @@ nft add rule filter input  ip saddr 192.168.2.0/24 ip daddr  8.8.8.8, 8.8.8.4 dr
 nft add rule filter input  ip daddr  192.168.3.0/24 drop
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h2&gt;
+&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;nftables&lt;/strong&gt; es un framework que su finalidad es eliminar o solventar problemas de &lt;strong&gt;iptables&lt;/strong&gt; remplazándolo, presenta una mejora en la sintaxis, las tablas y las cadenas son completamente configurables dando una flexibilidad al usuario para que defina sola las reglas que se vayan a utilizar. Ipv4 y Ipv6 se pueden utilizar en una sola tabla simplificando la administración.&lt;/p&gt;
 
 &lt;p&gt;Se pueden especificar diferentes acciones en una sola regla lo cual nos permite el ahorro de tiempo y creación de reglas engorrosas como se solía hacer con &lt;strong&gt;iptables&lt;/strong&gt;, además soportara nuevos protocolos sin la necesidad de hacer una actualización del kernel.&lt;/p&gt;
 
-&lt;p&gt;Como podemos analizar &lt;strong&gt;nftables&lt;/strong&gt; nos proporciona  numerosas ventajas y soluciones de problemas en la clasificación de paquetes sin embargo hay que tener en mente que aún esta en desarrollo.
-&lt;/caballeroalba&gt;&lt;/p&gt;</description>
+&lt;p&gt;Como podemos analizar &lt;strong&gt;nftables&lt;/strong&gt; nos proporciona  numerosas ventajas y soluciones de problemas en la clasificación de paquetes sin embargo hay que tener en mente que aún esta en desarrollo.&lt;/p&gt;</description>
         </item>
         
     </channel>

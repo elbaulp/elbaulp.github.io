@@ -23,7 +23,7 @@
             <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
             <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
 
-&lt;h2 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h2&gt;
+&lt;h1 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h1&gt;
 
 &lt;p&gt;Para ello basta ejecutar el siguiente comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git filter-branch --index-filter &lt;span class=&#34;s1&#34;&gt;&amp;#39;git rm -r --cached --ignore-unmatch &amp;lt;file/dir&amp;gt;&amp;#39;&lt;/span&gt; HEAD
@@ -33,7 +33,7 @@
 
 &lt;p&gt;Y reemplazar &lt;code&gt;&amp;lt;file/dir&amp;gt;&lt;/code&gt; con la ruta de nuestro fichero.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-eliminar-por-completo-el-rastro-del-fichero&#34;&gt;2. Eliminar por completo el rastro del fichero&lt;/h2&gt;
+&lt;h1 id=&#34;2-eliminar-por-completo-el-rastro-del-fichero&#34;&gt;2. Eliminar por completo el rastro del fichero&lt;/h1&gt;
 
 &lt;p&gt;El comando anterior crea una copia de seguridad en caso de que hayamos cometido un error, si ejecutamos&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git lola --name-status
@@ -47,7 +47,7 @@ $ git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --al
 $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;3-enviar-los-cambios&#34;&gt;3. Enviar los cambios&lt;/h2&gt;
+&lt;h1 id=&#34;3-enviar-los-cambios&#34;&gt;3. Enviar los cambios&lt;/h1&gt;
 
 &lt;p&gt;Una vez hecho esto, solo resta enviar los cambios a Github:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git push origin master
@@ -55,7 +55,7 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 
 &lt;p&gt;Y habremos solucionado el problema.&lt;/p&gt;
 
-&lt;h2 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h2&gt;
+&lt;h1 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;

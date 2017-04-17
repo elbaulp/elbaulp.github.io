@@ -1149,12 +1149,12 @@ Dni: 12345678
             <description>&lt;p&gt;En un proyecto reciente he tenido que trabajar con las librerías de compatibilidad de Android, en este caso para crear diálogos que permitan elegir fecha y hora, como estos:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/pickers1.png&#34; alt=&#34;&#34; title=&#34;pickers&#34; width=&#34;400px&#34; height=&#34;186px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/pickers1.png&#34; alt=&#34;&#34; title=&#34;pickers&#34; width=&#34;400px&#34; height=&#34;186px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En Android recomiendan usar un &lt;a href=&#34;http://developer.android.com/reference/android/support/v4/app/DialogFragment.html&#34; title=&#34;DialogFrgment&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;DialogFragment&lt;/code&gt;&lt;/a&gt;, que permite mostrar éstos diálogos en distintos layouts. Si pretendes que tu aplicación soporte este tipo de diálogos para versiones inferiores a Android 3.0, debes usar el DialogFragment mencionado anteriormente, si por lo contrario tu aplicación usa un &lt;em&gt;minSdkVersion&lt;/em&gt; igual o superior a 11, puedes usar este otro &lt;a href=&#34;http://developer.android.com/reference/android/app/DialogFragment.html&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;DialogFragment&lt;/code&gt;&lt;/a&gt;. En este artículo se va a tratar la versión para soportar versiones anteriores a la 3.0.&lt;/p&gt;
 
-&lt;h2 id=&#34;requisitos-previos&#34;&gt;Requisitos previos&lt;/h2&gt;
+&lt;h1 id=&#34;requisitos-previos&#34;&gt;Requisitos previos&lt;/h1&gt;
 
 &lt;p&gt;Antes de empezar, es necesario descargar &lt;a href=&#34;http://developer.android.com/tools/extras/support-library.html&#34; target=&#34;_blank&#34;&gt;Support Library&lt;/a&gt; y agregarlas a nuestro proyecto Android (En eclipse, botón derecho en el proyecto &amp;rsaquo;&amp;rsaquo; propiedades &amp;rsaquo;&amp;rsaquo; Java Build Path &amp;rsaquo;&amp;rsaquo; lib).&lt;/p&gt;
 
@@ -1164,7 +1164,7 @@ Dni: 12345678
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-un-timepickerdialog&#34;&gt;Crear un TimePickerDialog&lt;/h2&gt;
+&lt;h1 id=&#34;crear-un-timepickerdialog&#34;&gt;Crear un TimePickerDialog&lt;/h1&gt;
 
 &lt;p&gt;El primer paso es crear una clase &lt;em&gt;fragment&lt;/em&gt; que herede de &lt;em&gt;DialogFragment&lt;/em&gt; y devuelva un &lt;em&gt;TimePickerDialog&lt;/em&gt; desde el método &lt;a href=&#34;http://developer.android.com/reference/android/support/v4/app/DialogFragment.html#onCreateDialog%28android.os.Bundle%29&#34; target=&#34;_blank&#34;&gt;&lt;code&gt;&lt;em&gt; onCreateDialog()&lt;/em&gt;&lt;/code&gt;&lt;/a&gt; del &lt;em&gt;fragment&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.app.Dialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -1202,11 +1202,11 @@ Dni: 12345678
 &lt;p&gt;Para cerciorarnos que se está usando la librería de compatibilidad, basta con ver el &lt;code&gt;import android.support.v4.app.DialogFragment;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Por ahora dejaremos el método &lt;code&gt;onTimeSet&lt;/code&gt; vacío; pasemos a crear la interfaz. A modo de ejemplo, crearemos un botón que muestre el dialogo cuando sea pulsado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:onclick=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;mostrarDialogoDeTiempo&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Diálogo de tiempo&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;Button&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:onClick=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;mostrarDialogoDeTiempo&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Diálogo de tiempo&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Luego, creamos el método &lt;code&gt;mostrarDialogoDeTiempo&lt;/code&gt; que será llamado al pulsar el botón:&lt;/p&gt;
@@ -1221,12 +1221,12 @@ Dni: 12345678
 &lt;p&gt;Para comprobar que funciona, lanzamos el emulador, en este caso, con la versión 2.3 de Android:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/device-2013-01-12-1337262.png&#34; alt=&#34;TimePickerFragment Suportv4&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/device-2013-01-12-1337262.png&#34; alt=&#34;TimePickerFragment Suportv4&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;El proceso de creación de un &lt;strong&gt;DatePickerDialog&lt;/strong&gt; es muy similar.&lt;/p&gt;
 
-&lt;h2 id=&#34;crear-un-datepickerdialog&#34;&gt;Crear un DatePickerDialog&lt;/h2&gt;
+&lt;h1 id=&#34;crear-un-datepickerdialog&#34;&gt;Crear un DatePickerDialog&lt;/h1&gt;
 
 &lt;p&gt;Definimos la clase:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.app.DatePickerDialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -1259,11 +1259,11 @@ Dni: 12345678
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Al igual que antes, creamos un botón que muestre el diálogo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:onclick=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;mostrarDialogoDeFecha&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Diálogo de fecha&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;Button&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:onClick=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;mostrarDialogoDeFecha&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Diálogo de fecha&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;He implementamos el método que responderá al pulsar el botón:&lt;/p&gt;
@@ -1274,12 +1274,12 @@ Dni: 12345678
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/device-2013-01-12-1352432.png&#34; alt=&#34;DateTimePicker supportv4 Android&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/device-2013-01-12-1352432.png&#34; alt=&#34;DateTimePicker supportv4 Android&#34; width=&#34;480&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Así de simple, es similar a crear un &lt;strong&gt;timePickerDialog&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;developer.android&lt;/em&gt; »» &lt;a href=&#34;http://developer.android.com/guide/topics/ui/controls/pickers.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
@@ -2717,9 +2717,11 @@ Este nivel será loggeado, incluso en las versiones definitivas de la aplicació
 &lt;span class=&#34;n&#34;&gt;finish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Finish all previous activities&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/6330260/finish-all-previous-activities&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Finish all previous activities&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/6330260/finish-all-previous-activities&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>

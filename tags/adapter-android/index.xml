@@ -1080,10 +1080,14 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34;&gt;En los ejemplos mostrados hasta ahora&lt;/a&gt;, solo hemos visto objetos de tipo &lt;strong&gt;TexView&lt;/strong&gt;, vamos a ver unos cuantos más (En cada ejemplo pondré la definición XML del objeto, y su manipulación mediante código):&lt;/p&gt;
 
-&lt;h3 id=&#34;button&#34;&gt;Button&lt;/h3&gt;
+&lt;h1 id=&#34;button&#34;&gt;Button&lt;/h1&gt;
 
 &lt;p&gt;Botones simples, para realizar acciones al pulsar sobre ellos.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Púlsame&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_centerinparent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/button1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;Button&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Púlsame&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerInParent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/button1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Recoger el botón en una variable para usarlo&lt;/span&gt;
         &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;button1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Button&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;button1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -1103,14 +1107,16 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;p&gt;En este caso, hemos declarado una variable como miembro de la clase, (&lt;strong&gt;&lt;em&gt;public int contador = 0;&lt;/em&gt;&lt;/strong&gt;), para que cada vez que pulsemos el botón nos salga un mensaje con el número de veces que lo hemos pulsado:&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s1600/botnoes.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  alt=&#34;Evento onClick botón&#34; title=&#34;Evento onClick botón&#34; height=&#34;400&#34; width=&#34;244&#34; src=&#34;https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s400/botnoes.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s1600/botnoes.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 244px) 244px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  alt=&#34;Evento onClick botón&#34; title=&#34;Evento onClick botón&#34; height=&#34;400&#34; width=&#34;244&#34; src=&#34;https://2.bp.blogspot.com/-PjwBUdkujQ8/TgTXxxpUc7I/AAAAAAAAAqA/8Kp4-XQJOF4/s400/botnoes.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;edittext&#34;&gt;EditText&lt;/h3&gt;
+&lt;h1 id=&#34;edittext&#34;&gt;EditText&lt;/h1&gt;
 
 &lt;p&gt;Son campos de texto en los que el usuario puede escribir.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;edittext&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;200dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_above=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/button1&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/editText1&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_centerinparent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;EditText&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;200dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_above=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/button1&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/editText1&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerInParent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EditText&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;editText1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EditText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;editText1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
@@ -1133,14 +1139,15 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;p&gt;Lo que hemos hecho con este EditText, es fijarle un onKeyListener, que comprobará (con el if), que hemos pulsado la tecla enter, y si es cierto, mostrar el texto escrito:&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s1600/onKeyListener.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;242&#34; src=&#34;https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s400/onKeyListener.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s1600/onKeyListener.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 242px) 242px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;242&#34; src=&#34;https://2.bp.blogspot.com/-iZ_aYmpCNUA/TgTbkhTZXRI/AAAAAAAAAqI/5_ycBPJAZaQ/s400/onKeyListener.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;imageview&#34;&gt;ImageView&lt;/h3&gt;
+&lt;h1 id=&#34;imageview&#34;&gt;ImageView&lt;/h1&gt;
 
 &lt;p&gt;Nos permite mostrar imágenes en la pantalla.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/imageView&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/icon&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;imageview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/imageView&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:src=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/icon&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imageView1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;imageView1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setImageResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;icon&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -1148,14 +1155,18 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;p&gt;El icono es el que viene por defecto al crear un proyecto. Este es el resultado:&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s1600/ImageView.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ejemplo ImageView&#34; title=&#34;Ejemplo ImageView&#34;  height=&#34;400&#34; width=&#34;299&#34; src=&#34;https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s400/ImageView.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s1600/ImageView.png&amp;quot;  &amp;gt;&amp;lt;img sizes=&amp;quot;(min-width: 299px) 299px, 100vw&amp;quot; on=&amp;quot;tap:lightbox1&amp;quot; role=&amp;quot;button&amp;quot; tabindex=&amp;quot;0&amp;quot; layout=&amp;quot;responsive&amp;quot; alt=&amp;quot;Ejemplo ImageView&amp;quot; title=&amp;quot;Ejemplo ImageView&amp;quot;  height=&amp;quot;400&amp;quot; width=&amp;quot;299&amp;quot; src=&amp;quot;https://2.bp.blogspot.com/-Gjh19FWfN9s/TgYPUIHd8nI/AAAAAAAAAqQ/-tN7V-Fz_KU/s400/ImageView.png&amp;quot; /&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;checkbox&#34;&gt;CheckBox&lt;/h3&gt;
+&lt;h1 id=&#34;checkbox&#34;&gt;CheckBox&lt;/h1&gt;
 
 &lt;p&gt;Es un tipo de botón con dos estados, activo o inactivo, practicamente tiene el mismo comportamiento de un botón, una de sus características es que podemos comprobar si el botón esta activo o no:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CheckBox&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_centerinparent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/button1&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/checkBox1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;checkbox&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CheckBox&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_centerInParent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/button1&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/checkBox1&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CheckBox&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;checkbox1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CheckBox&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;checkBox1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;checkbox1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnCheckedChangeListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OnCheckedChangeListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -1170,9 +1181,7 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;p&gt;En este caso, hemos usado como listener onCheckedChanged, que se ejecutará cada vez que el estado del checkbox cambie.&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s1600/CheckBox.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;243&#34; src=&#34;https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s400/CheckBox.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s1600/CheckBox.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 243px) 243px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;243&#34; src=&#34;https://3.bp.blogspot.com/-RVlpxkRmpiU/TgYZa-VfDRI/AAAAAAAAAqY/9Go0syOziVY/s400/CheckBox.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Estos son los componentes gráficos básicos, también disponemos de RadioButton, ToggleButton (Parecidos a los checkBox, pero con una luz que se ilumina al estar activos, y con la característica de que el texto cambia dependiendo de su estado, aunque esto se puede conseguir con el checkbox facilmente.)&lt;/p&gt;
 
@@ -1182,9 +1191,7 @@ Recuerda que este método recibe como parámetro la posición del item presionad
 
 &lt;hr /&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-i-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;/checkbox&gt;&lt;/imageview&gt;&lt;/edittext&gt;&lt;/button&gt;&lt;/p&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-adapters-i-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28&#34;&gt;Programación Android: Interfaz gráfica - Adapters I&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

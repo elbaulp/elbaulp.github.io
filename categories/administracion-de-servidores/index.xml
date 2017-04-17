@@ -1398,7 +1398,7 @@ fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;actualización&#34;&gt;[Actualización]&lt;/h4&gt;
+&lt;h1 id=&#34;actualización&#34;&gt;[Actualización]&lt;/h1&gt;
 
 &lt;p&gt;En un comentario hecho en la página de &lt;a href=&#34;https://plus.google.com/b/108003822606696308728/108003822606696308728/posts/idbcxhy5vzG&#34; target=&#34;_blank&#34;&gt;Google+ del blog&lt;/a&gt; un usuario indicó que es posible obtener una salida simplificada de todos los comandos de abajo con la opción &lt;em&gt;+short&lt;/em&gt;.&lt;/p&gt;
 
@@ -1406,7 +1406,7 @@ fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig ejemplo.com
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-distintos-tipos-de-registros-dns&#34;&gt;Obtener distintos tipos de registros DNS&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-distintos-tipos-de-registros-dns&#34;&gt;Obtener distintos tipos de registros DNS&lt;/h1&gt;
 
 &lt;p&gt;La sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @servidor-dns ejemplo.com tipo-de-registro
@@ -1432,7 +1432,7 @@ google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194
 google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.233
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-los-servidores-de-nombres&#34;&gt;Obtener los servidores de nombres&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-los-servidores-de-nombres&#34;&gt;Obtener los servidores de nombres&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com NS
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -1445,7 +1445,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns3.
 google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns4.google.com.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-registros-mx-de-correo&#34;&gt;Obtener registros MX (De correo)&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-registros-mx-de-correo&#34;&gt;Obtener registros MX (De correo)&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com MX
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -1459,7 +1459,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span
 google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; alt2.aspmx.l.google.com.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-registros-txt&#34;&gt;Obtener registros TXT&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-registros-txt&#34;&gt;Obtener registros TXT&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig @208.67.222.222 google.com TXT
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -1469,7 +1469,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span
 google.com.        &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;    IN  TXT &lt;span class=&#34;s2&#34;&gt;&amp;quot;v=spf1 include:_spf.google.com ip4:216.73.93.70/31 ip4:216.73.93.72/31 ~all&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-todos-los-tipos-de-registros-en-una-misma-consulta&#34;&gt;Obtener todos los tipos de registros en una misma consulta&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-todos-los-tipos-de-registros-en-una-misma-consulta&#34;&gt;Obtener todos los tipos de registros en una misma consulta&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig any google.com
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -1487,7 +1487,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns3.
 google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.google.com.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;realizar-una-consulta-inversa&#34;&gt;Realizar una consulta inversa&lt;/h4&gt;
+&lt;h1 id=&#34;realizar-una-consulta-inversa&#34;&gt;Realizar una consulta inversa&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dig -x 173.194.34.233
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -1499,9 +1499,11 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;dig – Linux DNS Lookup utility cheat sheet&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;dig – Linux DNS Lookup utility cheat sheet&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
