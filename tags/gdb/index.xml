@@ -33,7 +33,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;auth-overflow-c&#34;&gt;_auth&lt;em&gt;overflow.c&lt;/em&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;auth-overflow-c&#34;&gt;&lt;code&gt;auth_overflow.c&lt;/code&gt;&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -150,7 +150,7 @@ Program exited with code 034.
 
 &lt;p&gt;Sin embargo, esto ha funcionado ha consecuencia de la colocación de las variables en memoria. ¿Qué pasaría si &lt;em&gt;auth_flag&lt;/em&gt; y &lt;em&gt;password_buffer&lt;/em&gt; estuvieran declaradas al revés?:&lt;/p&gt;
 
-&lt;h2 id=&#34;auth-overflow2-c&#34;&gt;_auth&lt;em&gt;overflow2.c&lt;/em&gt;&lt;/h2&gt;
+&lt;h1 id=&#34;auth-overflow2-c&#34;&gt;&lt;code&gt;auth_overflow2.c&lt;/code&gt;&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -410,7 +410,7 @@ Program received signal SIGSEGV, Segmentation fault.
 
 &lt;p&gt;Experimentando un poco con gdb se descubre que repetir la dirección 8 veces es suficiente para sobrescribir la dirección de retorno original. El comando &lt;em&gt;$(perl -e &amp;#8216;print &amp;#8220;xbfx84x04x08&amp;#8243;&amp;#8216;x8)&lt;/em&gt; repite la dirección 8 veces, el motivo por el que hay que escribir la dirección al revés es porque internamente se almacenan las direcciones en &lt;a href=&#34;http://es.wikipedia.org/wiki/Endianness&#34; target=&#34;_blank&#34;&gt;little endian&lt;/a&gt;. En los resultados de arriba se puede ver cómo se sutituye la dirección de retorno 0x080484bb(entre paréntesis), por la deseada, 0x080484bf.&lt;/p&gt;
 
-&lt;h2 id=&#34;en-arquitecturas-x86-64&#34;&gt;En arquitecturas x86_64&lt;/h2&gt;
+&lt;h1 id=&#34;en-arquitecturas-x86-64&#34;&gt;En arquitecturas x86_64&lt;/h1&gt;
 
 &lt;p&gt;Si tenemos un procesador de 64-bits, el proceso es similar, aunque con gdb debemos usar la opción &lt;em&gt;g&lt;/em&gt; junto al comando examine para que se muestren las direcciones enteras:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b 9

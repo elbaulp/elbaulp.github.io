@@ -3935,14 +3935,19 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Sin estilos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:textcolor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#00FF00&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:typeface=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;monospace&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:textColor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#00FF00&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:typeface=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;monospace&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Con estilos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/textview&amp;gt;&amp;lt;textview&lt;/span&gt;  &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;style=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@style/CodeFont&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;definiendo-estilos&#34;&gt;Definiendo estilos&lt;/h3&gt;
+&lt;h1 id=&#34;definiendo-estilos&#34;&gt;Definiendo estilos&lt;/h1&gt;
 
 &lt;p&gt;Los estilos se definen en un fichero de recursos distinto al layout, colocado en el directorio /res/values. Éstos ficheros no tienen porqué tener un nombre en concreto, pero por convención se suelen llamar &lt;strong&gt;&lt;em&gt;styles.xml ó themes.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -3951,28 +3956,40 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Para cada estilo que queramos definir, hay que añadir un elemento ***&lt;/p&gt;
 
 &lt;p&gt;y un atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; para ese estílo (es obligatorio), después, añadiremos un elemento &lt;strong&gt;&lt;em&gt;&lt;item&gt;&lt;/item&gt;&lt;/em&gt;&lt;/strong&gt; para cada propiedad del estilo, que debe tener obligatoriamente el atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; que declara la propiedad del estilo y su valor. Los valores para &lt;strong&gt;&lt;em&gt;&lt;item&gt;&lt;/item&gt;&lt;/em&gt;&lt;/strong&gt; pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CodeFont&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;parent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/TextAppearance.Medium&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:layout_width&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;fill_parent&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:layout_height&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;wrap_content&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:textColor&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#00FF00&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:typeface&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;monospace&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En tiempo de compilación, los elementos se convierten en un recurso que podremos referenciar posteriormente mediante el atributo name del estilo, como vimos en el primer ejemplo (&lt;strong&gt;&lt;em&gt;@style/CodeFont&lt;/em&gt;&lt;/strong&gt;).&lt;/p&gt;
 
 &lt;p&gt;El atributo &lt;strong&gt;&lt;em&gt;parent&lt;/em&gt;&lt;/strong&gt; es opcional y especifica el ID de otro estilo del cual queremos heredar sus propiedades, pudiendo así sobreescribirlas.&lt;/p&gt;
 
-&lt;h3 id=&#34;herencia&#34;&gt;Herencia&lt;/h3&gt;
+&lt;h1 id=&#34;herencia&#34;&gt;Herencia&lt;/h1&gt;
 
 &lt;p&gt;Como acabamos de ver, el atributo parent sirve para heredar propiedades de otros estilos, podemos heredar tanto de estilos del sistema como de los nuestros propios:&lt;/p&gt;
 
 &lt;p&gt;Del sistema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;GreenText&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;parent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/TextAppearance&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:textColor&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#00FF00&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;De nuestros propios estilos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CodeFont.Red&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:textColor&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#FF0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CodeFont.Red.Big&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:textSize&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;30sp&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, no usamos el atributo parent, ya que estamos usando un estilo propio, también se puede apreciar que podemos heredar cuantas veces queramos, como es el caso de (&lt;strong&gt;&lt;em&gt;CodeFont.Red.Big&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;h3 id=&#34;aplicar-estilos-y-temas-a-la-interfaz-gráfica&#34;&gt;Aplicar estilos y temas a la interfaz gráfica&lt;/h3&gt;
+&lt;h1 id=&#34;aplicar-estilos-y-temas-a-la-interfaz-gráfica&#34;&gt;Aplicar estilos y temas a la interfaz gráfica&lt;/h1&gt;
 
 &lt;p&gt;Hay dos formas de aplicar estilos a la UI:&lt;/p&gt;
 
@@ -3989,34 +4006,29 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Para aplicarlos sobre actividades, usamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:theme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/Theme.Dialog&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:theme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/Theme.Translucent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:theme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/Theme.Dialog&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:theme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/Theme.Translucent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este caso, estos temas ya vienen predefinidos, y se ven así, respectivamente:&lt;/p&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s1600/dialog.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-xNsjnNc-zek/TiR5wvxSZhI/AAAAAAAAAsE/O3AMPDV-dU8/s400/dialog.png&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s1600/translucid.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-_EEUkaXoSd0/TiR50goq7tI/AAAAAAAAAsM/yNHm5WdG6b0/s400/translucid.png&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;A continuación, dejo una captura del ejemplo que he hecho para esta entrada, que se puede descargar desde:&lt;/p&gt;
 
-&lt;p&gt;&lt;a class=&#34;aligncenter download-button&#34; href=&#34;https://elbauldelprogramador.com/&#34; rel=&#34;nofollow&#34;&gt; Download &amp;ldquo;EstilosyTemas&amp;rdquo; &lt;small&gt;EstilosyTemas.zip &amp;ndash; Downloaded 1629 times &amp;ndash; &lt;/small&gt; &lt;/a&gt;
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png&#34;  &gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s1600/device-2011-07-18-203800.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-3lk1C3aehjI/TiR8Xj6GwGI/AAAAAAAAAsU/ZlAzXKyo-A0/s400/device-2011-07-18-203800.png&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Para saber más acerca de los estilos y temas visite la página oficial: &lt;a href=&#34;http://developer.android.com/guide/topics/ui/themes.html&#34;&gt;Applying Styles and Themes&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;siguiente-tema-programación-android-recursos-introducción-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos/&#34;&gt;Programación Android: Recursos - Introducción&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;&lt;/textview&gt;&lt;/p&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-introducción-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos/&#34;&gt;Programación Android: Recursos - Introducción&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
