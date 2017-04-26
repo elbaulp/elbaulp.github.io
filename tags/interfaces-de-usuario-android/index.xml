@@ -716,7 +716,7 @@
 
 &lt;p&gt;Para cada estilo que queramos definir, hay que añadir un elemento ***&lt;/p&gt;
 
-&lt;p&gt;y un atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; para ese estílo (es obligatorio), después, añadiremos un elemento &lt;strong&gt;&lt;em&gt;&lt;item&gt;&lt;/item&gt;&lt;/em&gt;&lt;/strong&gt; para cada propiedad del estilo, que debe tener obligatoriamente el atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; que declara la propiedad del estilo y su valor. Los valores para &lt;strong&gt;&lt;em&gt;&lt;item&gt;&lt;/item&gt;&lt;/em&gt;&lt;/strong&gt; pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:&lt;/p&gt;
+&lt;p&gt;y un atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; para ese estílo (es obligatorio), después, añadiremos un elemento &lt;code&gt;&amp;lt;item&amp;gt;&lt;/code&gt; para cada propiedad del estilo, que debe tener obligatoriamente el atributo &lt;strong&gt;&lt;em&gt;name&lt;/em&gt;&lt;/strong&gt; que declara la propiedad del estilo y su valor. Los valores para &lt;code&gt;&amp;lt;item&amp;gt;&lt;/code&gt; pueden ser una palabra clave, valor hexadecimal, una referencia a un recurso u otro valor dependiendo de la propiedad del estilo. Veamos un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;CodeFont&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;parent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:style/TextAppearance.Medium&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:layout_width&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;fill_parent&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android:layout_height&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;wrap_content&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
@@ -756,7 +756,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;A una View individual, añadiendo el atributo style a un elemento del layout.&lt;/li&gt;
-&lt;li&gt;A una aplicación o actividad completa, mediante el atributo &lt;strong&gt;&lt;em&gt;android:theme&lt;/em&gt;&lt;/strong&gt; del elemento &lt;strong&gt;&lt;em&gt;&lt;activity&gt; o &lt;application&gt;&lt;/application&gt;&lt;/activity&gt;&lt;/em&gt;&lt;/strong&gt;en el Android manifest.&lt;/li&gt;
+&lt;li&gt;A una aplicación o actividad completa, mediante el atributo &lt;strong&gt;&lt;em&gt;android:theme&lt;/em&gt;&lt;/strong&gt; del elemento &lt;code&gt;&amp;lt;activity&amp;gt; o &amp;lt;application&amp;gt;&lt;/code&gt; en el Android manifest.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Como vimos al principio, para aplicar un estilo a una View concreta usamos &lt;strong&gt;&lt;em&gt;style=&amp;#8221;@style/NombreDelEstilo&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
