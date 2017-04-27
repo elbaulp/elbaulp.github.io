@@ -21,7 +21,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
-            <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h1&gt;
 
 &lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
 
@@ -59,13 +59,13 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h2&gt;
+&lt;h1 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h1&gt;
 
 &lt;p&gt;Como cada aplicación se ejecuta en un proceso Linux distinto, todos los componentes y procesos de dicha aplicación corren en el mismo hilo. Esto se puede modificar con el atributo &lt;strong&gt;&lt;em&gt;process&lt;/em&gt;&lt;/strong&gt; de cada componente (activity, provider, receiver y service). En la etiqueta &lt;strong&gt;&lt;em&gt;application&lt;/em&gt;&lt;/strong&gt; del manifest podemos poner este atributo para que sea aplicado a todos sus elementos.&lt;/p&gt;
 
 &lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -76,7 +76,7 @@
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/</guid>
             <description>&lt;p&gt;Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos &lt;strong&gt;&lt;em&gt;callback&lt;/em&gt;&lt;/strong&gt; que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-los-receiver&#34;&gt;Ciclo de vida de los Receiver&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-los-receiver&#34;&gt;Ciclo de vida de los Receiver&lt;/h1&gt;
 
 &lt;p&gt;Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de difusión, que capturan con el método callback:&lt;/p&gt;
 
@@ -88,11 +88,11 @@
 
 &lt;p&gt;Se soluciona lanzando un servicio desde este método que se encarga de hacer las tareas pesadas, así, al tener el servicio su propio ciclo de vida, seguirá ejecutandose, aunque el receiver se considere inactivo.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-los-contentprovider&#34;&gt;Ciclo de vida de los ContentProvider&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-los-contentprovider&#34;&gt;Ciclo de vida de los ContentProvider&lt;/h1&gt;
 
 &lt;p&gt;Su ciclo es muy corto, permanecen activos mientras sean referenciados por un ContentResolver.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-las-actividades&#34;&gt;Ciclo de vida de las Actividades&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-las-actividades&#34;&gt;Ciclo de vida de las Actividades&lt;/h1&gt;
 
 &lt;p&gt;Tiene tres estados:&lt;/p&gt;
 
@@ -105,7 +105,7 @@
 &lt;p&gt;La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;ciclo de vida actividades&#34; alt=&#34;ciclo de vida actividades&#34;  height=&#34;711&#34; width=&#34;545&#34; src=&#34;https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 545px) 545px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;ciclo de vida actividades&#34; alt=&#34;ciclo de vida actividades&#34;  height=&#34;711&#34; width=&#34;545&#34; src=&#34;https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -119,7 +119,7 @@
 
 &lt;p&gt;Para realizar esta operación usaríamos el método &lt;strong&gt;&lt;em&gt;onSavedInstanceState()&lt;/em&gt;&lt;/strong&gt;, que crearía un &lt;strong&gt;&lt;em&gt;Bundle&lt;/em&gt;&lt;/strong&gt; con los datos necesarios que pasaríamos al método &lt;strong&gt;&lt;em&gt;onCreate()&lt;/em&gt;&lt;/strong&gt; la segunda vez que cargaramos la actividad, sin necesidad de volver a descargar los datos.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-service&#34;&gt;Ciclo de vida de Service&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-service&#34;&gt;Ciclo de vida de Service&lt;/h1&gt;
 
 &lt;p&gt;Los servicios se pueden usar de dos formas, dependiendo de como lo lancemos, su ciclo será uno u otro.&lt;/p&gt;
 
@@ -131,10 +131,10 @@
 &lt;p&gt;A continuación el diagrama con el ciclo de vida de los servicios:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ciclo de vida servicios&#34; title=&#34;Ciclo de vida servicios&#34;  height=&#34;521&#34; width=&#34;432&#34; src=&#34;https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 432px) 432px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ciclo de vida servicios&#34; title=&#34;Ciclo de vida servicios&#34;  height=&#34;521&#34; width=&#34;432&#34; src=&#34;https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-limpieza-de-procesos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_18/&#34;&gt;Fundamentos programación Android: Limpieza de Procesos&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-limpieza-de-procesos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_18/&#34;&gt;Fundamentos programación Android: Limpieza de Procesos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -143,7 +143,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android/</guid>
-            <description>&lt;h2 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;Hemos visto&lt;/a&gt; que un proyecto Android está formado por varias carpetas estructuradas, pero lo que se instala en los dispositivos es un fichero con extensión &lt;strong&gt;&lt;em&gt;.apk (application package)&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -159,7 +159,7 @@
 &lt;li&gt;A cada aplicación se le asigna un identificador de usuario &lt;strong&gt;&lt;em&gt;(uid)&lt;/em&gt;&lt;/strong&gt; distinto. Los permisos de los archivos que refieren a la aplicación (caché, datos etc) son solo accesibles por dicho usuario. Es posible asignar un mismo &lt;strong&gt;&lt;em&gt;uid&lt;/em&gt;&lt;/strong&gt; a dos aplicaciones para que compartan una misma máquina virtual y recursos.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h2&gt;
+&lt;h1 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h1&gt;
 
 &lt;p&gt;La característica principal de Android es la reutilización de componentes de una aplicación por otra.&lt;/p&gt;
 
@@ -173,7 +173,7 @@
 
 &lt;p&gt;Para realizar todas estas operaciones, Android proporciona cuatro tipos de &lt;strong&gt;&lt;em&gt;componentes básicos&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;h3 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h3&gt;
+&lt;h2 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h2&gt;
 
 &lt;p&gt;Son las encargadas de mostrar la interfaz de usuario e interactuar con él. Responden a los eventos generados por el usuario (pulsar botones etc). Heredan de la clase &lt;strong&gt;&lt;em&gt;Activity&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -191,7 +191,7 @@
 
 &lt;p&gt;Para esta aplicación definimos como punto de entrada &lt;strong&gt;&lt;em&gt;recibidosActivity&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;CrearMensajeActivity&lt;/em&gt;&lt;/strong&gt;, para que otras aplicaciones puedan reutilizarlas.&lt;/p&gt;
 
-&lt;h3 id=&#34;servicios&#34;&gt;Servicios&lt;/h3&gt;
+&lt;h2 id=&#34;servicios&#34;&gt;Servicios&lt;/h2&gt;
 
 &lt;p&gt;No tienen interfaz visual y se ejecutan en segundo plano, se encargan de realizar tareas que deben continuar ejecutandose cuando nuestra aplicación no está en primer plano. Todos los servicios extienden de la clase &lt;strong&gt;&lt;em&gt;Service&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -199,13 +199,13 @@
 
 &lt;p&gt;Los servicios disponen de un mecanismo para ejecutar tareas pesadas sin bloquear la aplicación ya que se ejecutan en un hilo distinto.&lt;/p&gt;
 
-&lt;h3 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h3&gt;
+&lt;h2 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h2&gt;
 
 &lt;p&gt;Simplemente reciben un mensaje y reaccionan ante él, extienden de la clase &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt;, no tienen interfaz de usuario, pero pueden lanzar Actividades como respuesta a un evento o usar &lt;strong&gt;&lt;em&gt;NotificationManager&lt;/em&gt;&lt;/strong&gt; para informar al usuario.&lt;/p&gt;
 
 &lt;p&gt;Android habitualmente lanza muchas notificaciones de sistema (llamadas entrantes, nuevos correos, nuevos sms etc). Si ponemos como ejemplo la aplicación del correo mencionada anteriormente, esta tendría un &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; escuchando el mensaje &lt;strong&gt;&lt;em&gt;nuevo_correo&lt;/em&gt;&lt;/strong&gt;, que lanzaría el servicio cada vez que detectara uno. Cuando esto sucediera, se mandaría un aviso a la barra del sistema para alertar al usuario.&lt;/p&gt;
 
-&lt;h3 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h3&gt;
+&lt;h2 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h2&gt;
 
 &lt;p&gt;Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase &lt;strong&gt;&lt;em&gt;ContentProvider&lt;/em&gt;&lt;/strong&gt; para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada &lt;strong&gt;&lt;em&gt;ContentResolver&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -213,7 +213,7 @@
 
 &lt;p&gt;Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -236,7 +236,7 @@
 
 &lt;p&gt;Es muy importante implementar bien los métodos de estado, para evitar perden información.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

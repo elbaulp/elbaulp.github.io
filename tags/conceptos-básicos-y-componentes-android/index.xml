@@ -21,7 +21,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android/</guid>
-            <description>&lt;h2 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;Hemos visto&lt;/a&gt; que un proyecto Android está formado por varias carpetas estructuradas, pero lo que se instala en los dispositivos es un fichero con extensión &lt;strong&gt;&lt;em&gt;.apk (application package)&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 &lt;li&gt;A cada aplicación se le asigna un identificador de usuario &lt;strong&gt;&lt;em&gt;(uid)&lt;/em&gt;&lt;/strong&gt; distinto. Los permisos de los archivos que refieren a la aplicación (caché, datos etc) son solo accesibles por dicho usuario. Es posible asignar un mismo &lt;strong&gt;&lt;em&gt;uid&lt;/em&gt;&lt;/strong&gt; a dos aplicaciones para que compartan una misma máquina virtual y recursos.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h2&gt;
+&lt;h1 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h1&gt;
 
 &lt;p&gt;La característica principal de Android es la reutilización de componentes de una aplicación por otra.&lt;/p&gt;
 
@@ -51,7 +51,7 @@
 
 &lt;p&gt;Para realizar todas estas operaciones, Android proporciona cuatro tipos de &lt;strong&gt;&lt;em&gt;componentes básicos&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;h3 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h3&gt;
+&lt;h2 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h2&gt;
 
 &lt;p&gt;Son las encargadas de mostrar la interfaz de usuario e interactuar con él. Responden a los eventos generados por el usuario (pulsar botones etc). Heredan de la clase &lt;strong&gt;&lt;em&gt;Activity&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -69,7 +69,7 @@
 
 &lt;p&gt;Para esta aplicación definimos como punto de entrada &lt;strong&gt;&lt;em&gt;recibidosActivity&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;CrearMensajeActivity&lt;/em&gt;&lt;/strong&gt;, para que otras aplicaciones puedan reutilizarlas.&lt;/p&gt;
 
-&lt;h3 id=&#34;servicios&#34;&gt;Servicios&lt;/h3&gt;
+&lt;h2 id=&#34;servicios&#34;&gt;Servicios&lt;/h2&gt;
 
 &lt;p&gt;No tienen interfaz visual y se ejecutan en segundo plano, se encargan de realizar tareas que deben continuar ejecutandose cuando nuestra aplicación no está en primer plano. Todos los servicios extienden de la clase &lt;strong&gt;&lt;em&gt;Service&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -77,13 +77,13 @@
 
 &lt;p&gt;Los servicios disponen de un mecanismo para ejecutar tareas pesadas sin bloquear la aplicación ya que se ejecutan en un hilo distinto.&lt;/p&gt;
 
-&lt;h3 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h3&gt;
+&lt;h2 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h2&gt;
 
 &lt;p&gt;Simplemente reciben un mensaje y reaccionan ante él, extienden de la clase &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt;, no tienen interfaz de usuario, pero pueden lanzar Actividades como respuesta a un evento o usar &lt;strong&gt;&lt;em&gt;NotificationManager&lt;/em&gt;&lt;/strong&gt; para informar al usuario.&lt;/p&gt;
 
 &lt;p&gt;Android habitualmente lanza muchas notificaciones de sistema (llamadas entrantes, nuevos correos, nuevos sms etc). Si ponemos como ejemplo la aplicación del correo mencionada anteriormente, esta tendría un &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; escuchando el mensaje &lt;strong&gt;&lt;em&gt;nuevo_correo&lt;/em&gt;&lt;/strong&gt;, que lanzaría el servicio cada vez que detectara uno. Cuando esto sucediera, se mandaría un aviso a la barra del sistema para alertar al usuario.&lt;/p&gt;
 
-&lt;h3 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h3&gt;
+&lt;h2 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h2&gt;
 
 &lt;p&gt;Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase &lt;strong&gt;&lt;em&gt;ContentProvider&lt;/em&gt;&lt;/strong&gt; para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada &lt;strong&gt;&lt;em&gt;ContentResolver&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -91,7 +91,7 @@
 
 &lt;p&gt;Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

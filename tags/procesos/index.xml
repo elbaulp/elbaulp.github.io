@@ -21,7 +21,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
-            <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h1&gt;
 
 &lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
 
@@ -59,13 +59,13 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h2&gt;
+&lt;h1 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h1&gt;
 
 &lt;p&gt;Como cada aplicación se ejecuta en un proceso Linux distinto, todos los componentes y procesos de dicha aplicación corren en el mismo hilo. Esto se puede modificar con el atributo &lt;strong&gt;&lt;em&gt;process&lt;/em&gt;&lt;/strong&gt; de cada componente (activity, provider, receiver y service). En la etiqueta &lt;strong&gt;&lt;em&gt;application&lt;/em&gt;&lt;/strong&gt; del manifest podemos poner este atributo para que sea aplicado a todos sus elementos.&lt;/p&gt;
 
 &lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

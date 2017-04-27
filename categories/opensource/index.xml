@@ -1151,7 +1151,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/</guid>
-            <description>&lt;h2 id=&#34;Components&#34;&gt;Componentes de las aplicaciones&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;Components&#34;&gt;Componentes de las aplicaciones&lt;/h1&gt;
 
 &lt;p&gt;Los componentes de las aplicaciones son esenciales para una aplicación android. Cada componente es un punto diferente a través del cual el sistema puede entrar en la aplicación.  No todos los componentes son puntos reales de entrada para el usuarioy algunos dependen los unos de los otros, pero cada uno existe como entidad propia y desempeña un papel específico en el cual cada uno es un elemento único que ayuda a definir el comportamiento global de la aplicación.&lt;/p&gt;
 
@@ -1161,19 +1161,19 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;A continuación los cuatro tipos de componentes:&lt;/p&gt;
 
-&lt;h3 id=&#34;actividades&#34;&gt;&lt;strong&gt;Actividades&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;actividades&#34;&gt;&lt;strong&gt;Actividades&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Una &lt;em&gt;Actividad&lt;/em&gt; representa una pantalla con una interfaz de usuario. Por ejemplo, una aplicación de email puede tener una actividad que muestre una lista con los nuevos mails, otra actividad para redactar un correo y otra para leer nuestro correo. Aunque las actividades trabajan juntas de forma coherente, cada una es independiente de la otra. Por lo tanto, una aplicación distinta puede iniciar cualquiera de estas actividades (si la aplicación de email lo permite). Por ejemplo, la aplicación de la cámara puede iniciar la actividad en la aplicación email para componer un nuevo correo, para que el usuario pueda compartir una imagen.&lt;/p&gt;
 
 &lt;p&gt;Una actividad se implementa como una subclase de &lt;a href=&#34;http://developer.android.com/reference/android/app/Activity.html&#34;&gt;Activity&lt;/a&gt;, puedes leer más acerca de esto en la &lt;a href=&#34;http://developer.android.com/guide/topics/fundamentals/activities.html&#34;&gt;guía para desrrolladores de Actividades&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;servicios&#34;&gt;&lt;strong&gt;Servicios&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;servicios&#34;&gt;&lt;strong&gt;Servicios&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Un &lt;em&gt;servicio&lt;/em&gt; es un componente que se ejecuta en segundo plano para llevar a cabo operaciones de larga duración o para realizar trabajos de procesos remotos. Un servicio no proporciona una interfaz de usuario. Por ejemplo, un servicio puede reproducir música en segundo plano mientras el usuario se encuentra en otra aplicación, o puede navegar por la red sin bloquear la interacción del usuario con otra actividad. Otro componente, como una actividad, puede iniciar el servicio y permitir que se ejecute o dejar que interactue con ella.&lt;/p&gt;
 
 &lt;p&gt;Un servicio se implementa como una subclase de &lt;a href=&#34;http://developer.android.com/reference/android/app/Service.html&#34;&gt;Service&lt;/a&gt;, puedes leer más acerca de esto en la &lt;a href=&#34;http://developer.android.comhttp://developer.android.com/guide/topics/fundamentals/services.html&#34;&gt;guía para desarrolladores de servicios&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;proveedores-de-contenido&#34;&gt;&lt;strong&gt;Proveedores de contenido&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;proveedores-de-contenido&#34;&gt;&lt;strong&gt;Proveedores de contenido&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Un &lt;em&gt;Proveedor de contenido&lt;/em&gt; gestiona un conjunto de datos compartidos de una aplicación.  Se pueden almacenar los datos en el sistema de Archivos, en una base de datos SQLite, en la red o en cualquier otra zona de almacenamiento persistente a la cual la aplicación pueda acceder. Mediante los proveedores de contenido, otras aplicaciones pueden consultar o incluso modificar la información (Si el proveedor de contenido lo permite). Por ejemplo, el sistema Android proporciona un proveedor de contenido que gestiona la información de los contactos del usuario. Así, cualquier aplicación con los permisos adecuados podrá consultar el proveedor de contenidos (Como &lt;a href=&#34;http://developer.android.com/reference/android/provider/ContactsContract.Data.html&#34;&gt;&lt;code&gt;ContactsContract.Data&lt;/code&gt;&lt;/a&gt;) para leer y escribir información sobre una persona en particular.&lt;/p&gt;
 
@@ -1181,7 +1181,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Un proveedor de contenido se implementa como una subclase de &lt;a href=&#34;http://developer.android.com/reference/android/content/ContentProvider.html&#34;&gt;ContentProvider&lt;/a&gt; y debe implementar un conjunto de estándares de APIs que permita a otras aplicaciones realizar transacciones. Para más información lee &lt;a href=&#34;http://developer.android.com/guide/topics/providers/content-providers.html&#34;&gt;Content Providers&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;receptor-de-notificaciones&#34;&gt;&lt;strong&gt;Receptor de notificaciones&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;receptor-de-notificaciones&#34;&gt;&lt;strong&gt;Receptor de notificaciones&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Un &lt;em&gt;Receptor de notificaciones&lt;/em&gt; es un componente que responde a la emisión de un mensaje en el sistema, por ejemplo, una emisión que anuncia que la pantalla se ha apagado, la barería esta baja o que se ha echado una foto. Las aplicaciones pueden iniciar emisiones, como por ejemplo permitir a otra aplicación que sepa que se han descargado datos al dispositivo y ya están disponibles para su uso.  Aunque estas emisiones no muestran una interfaz al usuario, pueden &lt;a href=&#34;http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;crear una notificación en la barra de estado&lt;/a&gt; para avisar al usuario. Más comúnmente, sin embargo, un receptor de emisión es solo un &amp;#8220;gateway&amp;#8221; (puerta de enlace) a otro componente y además no conlleva mucho trabajo. Se prodría iniciar un servicio para realizar algún trabajo basado en el evento.&lt;/p&gt;
 
@@ -1193,7 +1193,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Debido a que el sistema ejecuta cada aplicación en procesos separados y con permisos que restringen el acceso a otras aplicaciones, su aplicación no podrá directamente activar componentes de otras aplicaciones. El sistema Android, sin embargo, puede. Por eso, activar un componente en otra aplicación, debes enviar un mensaje al sistema que especifique tu &lt;em&gt;intent (intento)&lt;/em&gt; de iniciar un componente en particular. El sistema activará el componente por ti.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-fundamentos-aplicaciones-android-parte-iii-activando-componentes-6&#34;&gt;Siguiente: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_19/&#34;&gt;Fundamentos aplicaciones Android. (Parte III) -Activando Componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-fundamentos-aplicaciones-android-parte-iii-activando-componentes-6&#34;&gt;Siguiente: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_19/&#34;&gt;Fundamentos aplicaciones Android. (Parte III) -Activando Componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1202,7 +1202,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte/</guid>
-            <description>&lt;h2 id=&#34;vista-rápida&#34;&gt;Vista rápida&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;vista-rápida&#34;&gt;Vista rápida&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -1213,7 +1213,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;Los recursos no-código de la aplicación (imágenes, archivos de diseño (layout) etc.) deben incluir alternativas para las distintas configuraciones de los dispositivos (tales como cadenas de texto distintas para cada idioma y diseños diferentes para los distintos tamaños de las pantallas.)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;fundamentos-de-las-aplicaciones&#34;&gt;Fundamentos de las aplicaciones&lt;/h2&gt;
+&lt;h1 id=&#34;fundamentos-de-las-aplicaciones&#34;&gt;Fundamentos de las aplicaciones&lt;/h1&gt;
 
 &lt;p&gt;Las aplicaciones Android están escritas en el lenguaje de programación Java. El SDK de android compila todo el código con todos los datos y archivos de recursos en un &lt;em&gt;paquete Android&lt;/em&gt;, un archivo de extensión &lt;code&gt;.apk&lt;/code&gt;. Todo el código dentro de un archivo &lt;code&gt;.apk&lt;/code&gt; se considera una aplicación y es lo que usan los dispositívos para instalar dicha aplicación&lt;/p&gt;
 
@@ -1235,7 +1235,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;Una aplicación puede solicitar permisos para acceder a datos del dispositivo como los contactos, SMS, la tarjeta SD, cámara, bluetooth y más. Los permisos de la aplicación se conceden en el instalación de la misma, y los otorga el usuario.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-fundamentos-aplicaciones-android-parte-ii-componentes-https-elbauldelprogramador-com-fundamentos-aplicaciones-android-parte-18&#34;&gt;Siguiente: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/&#34;&gt;Fundamentos aplicaciones Android – (Parte II) – Componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-fundamentos-aplicaciones-android-parte-ii-componentes-https-elbauldelprogramador-com-fundamentos-aplicaciones-android-parte-18&#34;&gt;Siguiente: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/&#34;&gt;Fundamentos aplicaciones Android – (Parte II) – Componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1246,7 +1246,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <guid>https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_19/</guid>
             <description>&lt;p&gt;Continuando con el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-aplicaciones-android-parte_18/&#34;&gt;tema de los componentes&lt;/a&gt;, en esta entrada vamos a ver:&lt;/p&gt;
 
-&lt;h2 id=&#34;ActivatingComponents&#34;&gt;Activando componentes&lt;/h2&gt;
+&lt;h1 id=&#34;ActivatingComponents&#34;&gt;Activando componentes&lt;/h1&gt;
 
 &lt;p&gt;3 de los 4 tipos de componentes, actividades, servicios y emisor de notificaciones se activan mediante un mensaje asíncrono llamado &lt;em&gt;intent(intento)&lt;/em&gt;. Los intents enlazan componentes individuales el uno al otro en tiempo de ejecución (se puede pensar que son los mensajeros que solicitan una acción de otro componente), si el componente pertenece a tu aplicación o a otra.&lt;/p&gt;
 
@@ -1278,7 +1278,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_17/</guid>
-            <description>&lt;h2 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;actividades-y-tareas&#34;&gt;Actividades y tareas&lt;/h1&gt;
 
 &lt;p&gt;Las actividades conforme se van ejecutando van apilandose en una pila. Cuando finalizamos una actividad, con el método &lt;strong&gt;&lt;em&gt;finish()&lt;/em&gt;&lt;/strong&gt; o con la tecla atrás del teléfono, la actividad se extrae de la pila, quedando encima de la pila la actividad que se abrió anteriormente.&lt;/p&gt;
 
@@ -1316,13 +1316,13 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h2&gt;
+&lt;h1 id=&#34;procesos-e-hilos&#34;&gt;Procesos e Hilos&lt;/h1&gt;
 
 &lt;p&gt;Como cada aplicación se ejecuta en un proceso Linux distinto, todos los componentes y procesos de dicha aplicación corren en el mismo hilo. Esto se puede modificar con el atributo &lt;strong&gt;&lt;em&gt;process&lt;/em&gt;&lt;/strong&gt; de cada componente (activity, provider, receiver y service). En la etiqueta &lt;strong&gt;&lt;em&gt;application&lt;/em&gt;&lt;/strong&gt; del manifest podemos poner este atributo para que sea aplicado a todos sus elementos.&lt;/p&gt;
 
 &lt;p&gt;Para gestionar tareas pesadas podemos usar hilos para ejecutar dichas tareas en un hilo aparte (ejecutarlas en segundo plano). Para llevar a cabo esta operación usaremos el objeto &lt;strong&gt;&lt;em&gt;Thread&lt;/em&gt;&lt;/strong&gt; de java, aunque Android proporciona otros objetos para facilitar el trabajo, como &lt;strong&gt;&lt;em&gt;Handler, AsyncTask o Looper.&lt;/em&gt;&lt;/strong&gt; (entre otros).&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-ciclo-de-vida-de-los-componentes-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34;&gt;Fundamentos programación Android: Ciclo de vida de los componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1333,7 +1333,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/</guid>
             <description>&lt;p&gt;Cada componente tiene un ciclo de vida distinto. Las superclases de estos componentes tienen métodos &lt;strong&gt;&lt;em&gt;callback&lt;/em&gt;&lt;/strong&gt; que les permiten reaccionar ante un cambio de estado. Cada método callback está obligado a llamar al mismo método de su padre.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-los-receiver&#34;&gt;Ciclo de vida de los Receiver&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-los-receiver&#34;&gt;Ciclo de vida de los Receiver&lt;/h1&gt;
 
 &lt;p&gt;Tienen un ciclo de vida muy corto, ya que se activan al producirse un mensaje de difusión, que capturan con el método callback:&lt;/p&gt;
 
@@ -1345,11 +1345,11 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Se soluciona lanzando un servicio desde este método que se encarga de hacer las tareas pesadas, así, al tener el servicio su propio ciclo de vida, seguirá ejecutandose, aunque el receiver se considere inactivo.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-los-contentprovider&#34;&gt;Ciclo de vida de los ContentProvider&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-los-contentprovider&#34;&gt;Ciclo de vida de los ContentProvider&lt;/h1&gt;
 
 &lt;p&gt;Su ciclo es muy corto, permanecen activos mientras sean referenciados por un ContentResolver.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-las-actividades&#34;&gt;Ciclo de vida de las Actividades&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-las-actividades&#34;&gt;Ciclo de vida de las Actividades&lt;/h1&gt;
 
 &lt;p&gt;Tiene tres estados:&lt;/p&gt;
 
@@ -1362,7 +1362,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;p&gt;La clase Activity dispone de métodos que se llaman cada vez que ésta cambia de estado, para permitirnos realiar tareas como guardar los datos antes de cambiar de estado, y cargar la actividad más rápido la proxima vez que se muestre. A continuación un diagrama con los distintos estados por los que pasa una actividad:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;ciclo de vida actividades&#34; alt=&#34;ciclo de vida actividades&#34;  height=&#34;711&#34; width=&#34;545&#34; src=&#34;https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 545px) 545px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;ciclo de vida actividades&#34; alt=&#34;ciclo de vida actividades&#34;  height=&#34;711&#34; width=&#34;545&#34; src=&#34;https://4.bp.blogspot.com/-rzvsPpVkc5s/TfsiicRNDwI/AAAAAAAAAng/UkVWUYQySbM/s1600/activity_lifecycle.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -1376,7 +1376,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Para realizar esta operación usaríamos el método &lt;strong&gt;&lt;em&gt;onSavedInstanceState()&lt;/em&gt;&lt;/strong&gt;, que crearía un &lt;strong&gt;&lt;em&gt;Bundle&lt;/em&gt;&lt;/strong&gt; con los datos necesarios que pasaríamos al método &lt;strong&gt;&lt;em&gt;onCreate()&lt;/em&gt;&lt;/strong&gt; la segunda vez que cargaramos la actividad, sin necesidad de volver a descargar los datos.&lt;/p&gt;
 
-&lt;h3 id=&#34;ciclo-de-vida-de-service&#34;&gt;Ciclo de vida de Service&lt;/h3&gt;
+&lt;h1 id=&#34;ciclo-de-vida-de-service&#34;&gt;Ciclo de vida de Service&lt;/h1&gt;
 
 &lt;p&gt;Los servicios se pueden usar de dos formas, dependiendo de como lo lancemos, su ciclo será uno u otro.&lt;/p&gt;
 
@@ -1388,10 +1388,10 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;p&gt;A continuación el diagrama con el ciclo de vida de los servicios:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ciclo de vida servicios&#34; title=&#34;Ciclo de vida servicios&#34;  height=&#34;521&#34; width=&#34;432&#34; src=&#34;https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 432px) 432px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ciclo de vida servicios&#34; title=&#34;Ciclo de vida servicios&#34;  height=&#34;521&#34; width=&#34;432&#34; src=&#34;https://2.bp.blogspot.com/-7eOY6RsbVQ0/TfsqCsNCg0I/AAAAAAAAAno/y-bkegRUNiw/s1600/service_lifecycle.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-limpieza-de-procesos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_18/&#34;&gt;Fundamentos programación Android: Limpieza de Procesos&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-limpieza-de-procesos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_18/&#34;&gt;Fundamentos programación Android: Limpieza de Procesos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1400,7 +1400,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android/</guid>
-            <description>&lt;h2 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;Hemos visto&lt;/a&gt; que un proyecto Android está formado por varias carpetas estructuradas, pero lo que se instala en los dispositivos es un fichero con extensión &lt;strong&gt;&lt;em&gt;.apk (application package)&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1416,7 +1416,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;A cada aplicación se le asigna un identificador de usuario &lt;strong&gt;&lt;em&gt;(uid)&lt;/em&gt;&lt;/strong&gt; distinto. Los permisos de los archivos que refieren a la aplicación (caché, datos etc) son solo accesibles por dicho usuario. Es posible asignar un mismo &lt;strong&gt;&lt;em&gt;uid&lt;/em&gt;&lt;/strong&gt; a dos aplicaciones para que compartan una misma máquina virtual y recursos.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h2&gt;
+&lt;h1 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h1&gt;
 
 &lt;p&gt;La característica principal de Android es la reutilización de componentes de una aplicación por otra.&lt;/p&gt;
 
@@ -1430,7 +1430,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Para realizar todas estas operaciones, Android proporciona cuatro tipos de &lt;strong&gt;&lt;em&gt;componentes básicos&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 
-&lt;h3 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h3&gt;
+&lt;h2 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h2&gt;
 
 &lt;p&gt;Son las encargadas de mostrar la interfaz de usuario e interactuar con él. Responden a los eventos generados por el usuario (pulsar botones etc). Heredan de la clase &lt;strong&gt;&lt;em&gt;Activity&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -1448,7 +1448,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Para esta aplicación definimos como punto de entrada &lt;strong&gt;&lt;em&gt;recibidosActivity&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;CrearMensajeActivity&lt;/em&gt;&lt;/strong&gt;, para que otras aplicaciones puedan reutilizarlas.&lt;/p&gt;
 
-&lt;h3 id=&#34;servicios&#34;&gt;Servicios&lt;/h3&gt;
+&lt;h2 id=&#34;servicios&#34;&gt;Servicios&lt;/h2&gt;
 
 &lt;p&gt;No tienen interfaz visual y se ejecutan en segundo plano, se encargan de realizar tareas que deben continuar ejecutandose cuando nuestra aplicación no está en primer plano. Todos los servicios extienden de la clase &lt;strong&gt;&lt;em&gt;Service&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -1456,13 +1456,13 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Los servicios disponen de un mecanismo para ejecutar tareas pesadas sin bloquear la aplicación ya que se ejecutan en un hilo distinto.&lt;/p&gt;
 
-&lt;h3 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h3&gt;
+&lt;h2 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h2&gt;
 
 &lt;p&gt;Simplemente reciben un mensaje y reaccionan ante él, extienden de la clase &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt;, no tienen interfaz de usuario, pero pueden lanzar Actividades como respuesta a un evento o usar &lt;strong&gt;&lt;em&gt;NotificationManager&lt;/em&gt;&lt;/strong&gt; para informar al usuario.&lt;/p&gt;
 
 &lt;p&gt;Android habitualmente lanza muchas notificaciones de sistema (llamadas entrantes, nuevos correos, nuevos sms etc). Si ponemos como ejemplo la aplicación del correo mencionada anteriormente, esta tendría un &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; escuchando el mensaje &lt;strong&gt;&lt;em&gt;nuevo_correo&lt;/em&gt;&lt;/strong&gt;, que lanzaría el servicio cada vez que detectara uno. Cuando esto sucediera, se mandaría un aviso a la barra del sistema para alertar al usuario.&lt;/p&gt;
 
-&lt;h3 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h3&gt;
+&lt;h2 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h2&gt;
 
 &lt;p&gt;Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase &lt;strong&gt;&lt;em&gt;ContentProvider&lt;/em&gt;&lt;/strong&gt; para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada &lt;strong&gt;&lt;em&gt;ContentResolver&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -1470,7 +1470,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1479,7 +1479,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_16/</guid>
-            <description>&lt;h2 id=&#34;intents&#34;&gt;Intents&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;intents&#34;&gt;Intents&lt;/h1&gt;
 
 &lt;p&gt;Las Actividades, Servicios y BroadcastReceiver se activan a través de mensajes asíncronos llamados &lt;strong&gt;&lt;em&gt;intent&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -1495,7 +1495,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;Para pasar los intents a un mensaje de difusión debemos pasar el Intent al método &lt;strong&gt;&lt;em&gt;Context.sendBroadcast()&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Context.sendOrderedBroadcast()&lt;/em&gt;&lt;/strong&gt; o &lt;strong&gt;&lt;em&gt;Context.sendStickyBroadcast()&lt;/em&gt;&lt;/strong&gt;, así el intent se entregará a todas las clases &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; que estén escuchando, y podrán analizarlo con &lt;strong&gt;&lt;em&gt;onReceive().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;androidmanifest&#34;&gt;AndroidManifest&lt;/h2&gt;
+&lt;h1 id=&#34;androidmanifest&#34;&gt;AndroidManifest&lt;/h1&gt;
 
 &lt;p&gt;Para poder usar un componente, además de crearlo extendiendo de su clase correspondiente, es necesario definirlo en el &lt;strong&gt;&lt;em&gt;AndroidManifest.xml&lt;/em&gt;&lt;/strong&gt;. Este archivo podemos editarlo directamente como XML, o con el formulario que nos facilita eclipse.&lt;/p&gt;
 
@@ -1509,7 +1509,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;&amp;lt;intent&amp;gt;&lt;/code&gt;: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-actividades-tareas-procesos-e-hilos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-actividades-tareas-procesos-e-hilos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -1532,7 +1532,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 
 &lt;p&gt;Es muy importante implementar bien los métodos de estado, para evitar perden información.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
