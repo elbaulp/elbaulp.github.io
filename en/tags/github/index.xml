@@ -46,7 +46,7 @@ So go to &lt;a href=&#34;https://developer.github.com/program/&#34; title=&#34;g
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span&gt;&lt;/span&gt;install.packages&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;jsonlite&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;If you have not installed &lt;code&gt;stringr&lt;/code&gt; package, install it as we just do with &lt;code&gt;jsonlite&lt;/code&gt;. We are using it to make some common operations on strings. Install &lt;code&gt;ggplot2&lt;/code&gt; if you have not, too. We must use it to make the graphics.&lt;/p&gt;
+&lt;p&gt;If you have not installed &lt;code&gt;stringr&lt;/code&gt; package, install it as we just do with &lt;code&gt;jsonlite&lt;/code&gt;. We are using it to make some common operations on strings. Install &lt;code&gt;ggplot2&lt;/code&gt; if you have not, too. We must use it to make the graphics, and install &lt;code&gt;httpuv&lt;/code&gt;, a package to work with HTTP.&lt;/p&gt;
 
 &lt;p&gt;For connecting to the GitHub app, we will need to install &lt;code&gt;rgithub&lt;/code&gt; package. We do it directly from github source code. Note that it have a dependency on package &lt;code&gt;devtools&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;devtools&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
