@@ -134,18 +134,18 @@
 
 &lt;p&gt;&lt;em&gt;Enunciado: Una appMovimientoSonido que reconozca un patrón de movimientos de vuestra elección usando el giroscopio y/o el acelerómetro, una vez detectado el patrón, se reproducirá un sonido.&lt;/em&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;movement-sound&#34;&gt;Movement Sound&lt;/h2&gt;
+&lt;h1 id=&#34;movement-sound&#34;&gt;Movement Sound&lt;/h1&gt;
 
 &lt;p&gt;En esta aplicación se usa el acelerómetro y el giroscopio, para mostrar sus valores por pantalla. El giroscopio es capaz de detectar una rotación del dispositivo, al hacerlo, reproduce un sonido. Por contra, el acelerómetro detecta una sacudida del dispositivo y reproduce un sonido distinto. Debido a que no en todos los dispositivos se obtienen valores precisos para los sensores, solo se mostrarán aquellos que tengan sentido.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/movementSound.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/movementSound.png&#34; title=&#34;Aplicación Movement Sound&#34; alt=&#34;Aplicación Movement Sound&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Aplicación Movement Sound&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/npi/movementSound.png&#34;&gt;&lt;img sizes=&#34;(min-width: 338px) 338px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/movementSound.png&#34; title=&#34;Aplicación Movement Sound&#34; alt=&#34;Aplicación Movement Sound&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;Aplicación Movement Sound&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;implementación&#34;&gt;Implementación&lt;/h3&gt;
+&lt;h2 id=&#34;implementación&#34;&gt;Implementación&lt;/h2&gt;
 
-&lt;h4 id=&#34;para-instanciar-ambos-sensores-en-el-oncreate&#34;&gt;Para instanciar ambos sensores en el &lt;code&gt;onCreate&lt;/code&gt;:&lt;/h4&gt;
+&lt;h2 id=&#34;para-instanciar-ambos-sensores-en-el-oncreate&#34;&gt;Para instanciar ambos sensores en el &lt;code&gt;onCreate&lt;/code&gt;:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Get the sensors to use&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mSensorManager&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SensorManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getSystemService&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;SENSOR_SERVICE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;mSensorAcc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mSensorManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getDefaultSensor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Sensor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;TYPE_ACCELEROMETER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -239,17 +239,16 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h5 id=&#34;permisos-requeridos-para-el-androidmanifest&#34;&gt;Permisos requeridos para el AndroidManifest&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.hardware.sensor.gyroscope&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/uses-permission&amp;gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.hardware.sensor.accelerometer&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;h3 id=&#34;permisos-requeridos-para-el-androidmanifest&#34;&gt;Permisos requeridos para el AndroidManifest&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.hardware.sensor.gyroscope&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.hardware.sensor.accelerometer&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Código de la aplicación | &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_npi/tree/master/Android/MovementSound&#34;&gt;github.com/elbaulp/movementSound&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;AndroidWearMotionSensors | &lt;a href=&#34;https://github.com/drejkim/AndroidWearMotionSensors&#34;&gt;github.com/drejkim&lt;/a&gt;
-&lt;/uses-permission&gt;&lt;/li&gt;
+&lt;li&gt;AndroidWearMotionSensors | &lt;a href=&#34;https://github.com/drejkim/AndroidWearMotionSensors&#34;&gt;github.com/drejkim&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
