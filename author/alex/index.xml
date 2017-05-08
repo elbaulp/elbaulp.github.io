@@ -16,6 +16,68 @@
         <atom:link href="https://elbauldelprogramador.com/author/alex/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Cómo iterar sobre varias colecciones en Scala</title>
+            <link>https://elbauldelprogramador.com/iterate-multiple-collections-scala/</link>
+            <pubDate>Mon, 08 May 2017 12:12:39 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/iterate-multiple-collections-scala/</guid>
+            <description>&lt;p&gt;Cuando empecé a trabajar con &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala&#34; title=&#34;artículos sobre scala&#34;&gt;scala&lt;/a&gt; me encontré con que me resultaba difícil resolver problemas triviales, fáciles de resolver en lenguajes que ya conocía. Supongo que esa es la parte más frustrante de aprender un lenguaje nuevo, al menos en mi opinión.&lt;/p&gt;
+
+&lt;h1 id=&#34;iterar-sobre-varias-colecciones-a-la-vez-en-python&#34;&gt;Iterar sobre varias colecciones a la vez en python&lt;/h1&gt;
+
+&lt;p&gt;Uno de esos problemas triviales es iterar sobre dos colecciones al mismo tiempo. La forma más “&lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;&lt;em&gt;pythonic&lt;/em&gt;&lt;/a&gt;” es simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;que resulta en:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;iterar-sobre-varias-colecciones-a-la-vez-en-scala&#34;&gt;Iterar sobre varias colecciones a la vez en scala&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora bien, ¿cual es la forma &lt;em&gt;idiomática&lt;/em&gt; de hacerlo en &lt;em&gt;scala&lt;/em&gt;?. En mi caso concreto necesitaba iterar sobre la colección y además disponer del índice del elemento actual, esto se puede conseguir con el método &lt;code&gt;zipWithIndex&lt;/code&gt;, y luego llamar a &lt;code&gt;zipped&lt;/code&gt; para convertirlos en tuplas junto a las demás colecciones sobre las que queramos iterar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipWithIndex&lt;/span&gt;
+
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipped&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En el ejemplo de arriba estoy juntando tres colecciones a la vez &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, que son del tipo &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes de conocer la forma &lt;em&gt;idiomática&lt;/em&gt; estaba iterando de este modo bastante feo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/** Constituent tree of this sentence; includes head words */&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Estas porciones de código son parte de mi trabajo de fin de Grado, el proyecto consistía en crear un &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_grammar&#34; target=&#34;_blank&#34; title=&#34;Dependency Parsing&#34;&gt;Parseo de Dependencias&lt;/a&gt; para el Castellano, puedes ver el proyecto completo en &lt;a href=&#34;https://elbauldelprogramador.com/tags/github&#34; title=&#34;Artículos sobre Github&#34;&gt;GitHub&lt;/a&gt;: &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP_Dependency_Parsing&#34;&gt;NLP_Dependency_Parsing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17199534/scala-for-loop-over-two-lists-simultaneously&#34; target=&#34;_blank&#34; title=&#34;Scala for loop over two lists simultaneously&#34;&gt;Scala for loop over two lists simultaneously&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>Mi experiencia en la GameJam 2017 </title>
             <link>https://elbauldelprogramador.com/gamejam-2017-unlimitosis</link>
             <pubDate>Tue, 11 Apr 2017 09:53:42 +0200</pubDate>
@@ -5207,149 +5269,6 @@ rbw_load_theme simple
 &lt;p&gt;Por último, solo espero continuar manteniendo el blog por muchos años más, intentando escribir artículos interesantes, y que vosotros los leáis :-).&lt;/p&gt;
 
 &lt;p&gt;Saludos!&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>15 Ejemplos De Las Mejores Visualizaciones De Datos</title>
-            <link>https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/</link>
-            <pubDate>Mon, 02 May 2016 17:41:09 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/</guid>
-            <description>&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Este artículo se actualizó el 23/09/2016 para añadir &lt;em&gt;Olympic Feathers&lt;/em&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;El siguiente artículo es una traducción del blog &lt;a href=&#34;http://www.data-visualization.org&#34; target=&#34;_blank&#34; title=&#34;http://www.data-visualization.org&#34;&gt;data-visualization.org&lt;/a&gt;. Gracias a su propietario por concederme el permiso de traducción. He traducido únicamente las 14 de las 20 visualizaciones que más me han gustado.&lt;/p&gt;
-
-&lt;p&gt;La visualización de datos no solo tiene como propósito el análisis de dichos datos, a menudo combina elementos estéticos. A continuación se muestran 14 ejemplos de las mejores visualizaciones de datos encontrados en internet.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;1-flight-patterns-patrones-de-vuelo&#34;&gt;1. Flight Patterns (Patrones de vuelo)&lt;/h1&gt;
-
-&lt;p&gt;Los &lt;a href=&#34;http://www.aaronkoblin.com/work/flightpatterns/index.html&#34; target=&#34;_blank&#34; title=&#34;Patrones de vuelo&#34;&gt;patrones de vuelo&lt;/a&gt; quizá no sea la primera cosa que se viene a la mente cuando se habla de ejemplos de visualización de datos “bonitos”, pero &lt;a href=&#34;http://www.aaronkoblin.com/work.html&#34; target=&#34;_blank&#34; title=&#34;Autor&#34;&gt;Aaron Koblin&lt;/a&gt; creó una red de planes de vuelo por todo Estados Unidos. Los lectores pueden ver un vídeo de los vuelos alrededor de los EEUU en un día. Cuando cae la noche, la pantalla casi se vuelve negra por completo cuando la noche cae y los vuelos disminuyen, luego la costa este vuelve a iluminarse. A medida que el país despierta los vuelos ploriferan. La visualización es interactiva, lo que permite al visitante ver el tráfico aéreo basándose en altitud, marca o modelo de los aviones. El proyecto se desarrolló como parte de “Celestial Mechanics” por Scott Hessels y Gabriel Dunne realizando un estudio de vuelos y aviones.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-flight-patterns.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;837px&#34; height=&#34;514px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;2-diplomas-originales&#34;&gt;2. Diplomas originales&lt;/h1&gt;
-
-&lt;p&gt;Los doctorandos trabajan muy duro para conseguir acabar sus tésis para que luego queden simplemente almacenadas y olvidadas. Sin embargo algunos deciden no seguir ese camino y hacen de su duro trabajo una obra de arte. El doctor Stephen Gaeta transformó su tésis sobre una arritmia cardiaca usando sus palabras para crear una imagen de un corazón anatómico. &lt;a href=&#34;http://streetanatomy.com/&#34; target=&#34;_blank&#34; title=&#34;Street Anatomy&#34;&gt;&lt;em&gt;Street Anatomy&lt;/em&gt;&lt;/a&gt; mostró este ejemplo de visualización de datos en su web &lt;a href=&#34;http://streetanatomy.com/2011/03/29/diplomas-are-boring/&#34; target=&#34;_blank&#34; title=&#34;Diplomas son aburridos&#34;&gt;“Los diplomas son aburridos”&lt;/a&gt;, el corazón y la arritmia cardiaca se aparecen en rojo, azul y negro junto al texto en gris. Puedes ver más ejemplos de diplomas originales en la &lt;a href=&#34;http://store.streetanatomy.com/artist/stephen-gaeta&#34; target=&#34;_blank&#34; title=&#34;Galería street anatomy&#34;&gt;galería de &lt;em&gt;Street Anatomy&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-diplomas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;334px&#34; height=&#34;450px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;3-relacionando-los-genes-con-enfermedades&#34;&gt;3. Relacionando los genes con enfermedades&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://circos.ca/intro/genomic_data/&#34; target=&#34;_blank&#34; title=&#34;Application of Circos to Genomics&#34;&gt;&lt;em&gt;Application of Circos to Genomics&lt;/em&gt;&lt;/a&gt; permite comparar genomas secuancialmente y plasmar la relación entre ellos en pares visualmente. &lt;em&gt;Circos&lt;/em&gt; es un software para visialización de datos usando un diseño circular. Esto permite representar los 24 cromosomas (Incluidos el X, Y) y posicionarlos con genes relacionados con ciertas enfermedades colocados fuera del círculo. Los datos dentro de los anillos cromosómico tienen líneas grises que enlazan genes relacionados con  enfermedadades situados en la misma ruta bioquímica, así como líneas de color que muestran paralelismo para un subconjunto del genoma. Las zonas rojas sombreadas alrededor del círculo muestran la posición de los genes asociados a enfermedades como cáncer, epilépsia, enfermedades cardiácas y neuropatías. Las naranjas, verdes y azules representan diabetes, sordera y Alzheimer, respectivamente.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-genoma-enfermedades.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;534px&#34; height=&#34;528px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;4-bubble-bandwidth&#34;&gt;4. Bubble Bandwidth&lt;/h1&gt;
-
-&lt;p&gt;Seguro que alguna vez te has preguntado qué aplicaciones te consumen la mayor cantidad de ancho de banda. Palo Alto Networks desarrolló una visualización en forma de burbuja que representaba esto mismo. Cada burbuja representa una aplicación y el nivel de ancho de banda que consumen. Los colores azul, verde, naranja, naranja oscuro y rojo representan el nivel de riesgo que presenta cada aplicación. En principio podría pensarse que las aplicaciones que más consumen son las redes sociales, sin embargo son las aplicaciones de negocios.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-bubble-bandwidth.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;521px&#34; height=&#34;483px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;5-nike-y-fathom&#34;&gt;5. Nike y Fathom&lt;/h1&gt;
-
-&lt;p&gt;El siguiente ejemplo de visualización de datos surge de la asociación entre Fathom y Nike+. Fathom es una compañia de visialización de datos y Nike tiene un brazalete para deportistas que monitoriza la actividad física. Junta ambas cosas y se obtienen unas gráficas que revelan tendencias y patrones en la actividad física. Los datos personales pueden compararse con los de otros usuarios publicados en &lt;a href=&#34;http://YearinNikeFuel.com&#34; target=&#34;_blank&#34; title=&#34;YearinNikeFuel.com&#34;&gt;YearinNikeFuel.com&lt;/a&gt;. Los colores denotan intensidad, niveles de actividad y patrones de comportamiento.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-nike-fathom.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;570px&#34; height=&#34;445px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;6-el-clima-de-2014&#34;&gt;6. El Clima de 2014&lt;/h1&gt;
-
-&lt;p&gt;El usuario de Bēhance, Sonja Kuijpers, creó una ejemplo de visualización de datos del clima desde 2014 en su ciudad, Eindhoven en Netherlands. La visualización (&lt;a href=&#34;https://www.behance.net/gallery/22539163/Weather-Eindhoven-2014-infographic&#34; target=&#34;_blank&#34; title=&#34;Enlace al ejemplo original&#34;&gt;Con forma de sol&lt;/a&gt;) incluye la fuerza del viento, precipitaciones, temperatura y tormentas. La temperatura está en Grados Celsius y las tormentas se representan con rayos rojos. Kuijpers usa una barra verde azulada para represtar una perceptción diaria. La fuerza del viento se representa con barras variando entre moradas moradas oscuras, moradas claras, amarillas y rojo brillante.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-clima-2014.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;691px&#34; height=&#34;587px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;7-we-feel-fine&#34;&gt;7. We Feel Fine&lt;/h1&gt;
-
-&lt;p&gt;La web &lt;a href=&#34;http://www.wefeelfine.org/index.html&#34; target=&#34;_blank&#34; title=&#34;We Feel Fine&#34;&gt;&lt;em&gt;We Feel Fine&lt;/em&gt;&lt;/a&gt; llevó la visualizción de datos al terreno de las emociones. &lt;em&gt;The sight&lt;/em&gt;, de Jonathan Harris y Sep Kamvar escanea blogs en busca de frases que contengan &lt;em&gt;“I Fell”&lt;/em&gt; (Me siento) o &lt;em&gt;“I am feeling”&lt;/em&gt; (Me siento también) y se traducen en una serie de interfaces interactivas en el gráfico. Cada partícula es un sentiemiento, de un único individuo y expresa el sentimiento mediante el color, tamaño, forma y opacidad de la partícula. Pulsando en la partícula vemos la frase completa o fotografía del sentimiento. El gráfico se puede organizar en varios ejes, recopila también la edad, género, clima del área, lugar y fecha en la que se publicó el sentimiento. A partir de estos datos, &lt;em&gt;We Feel Fine&lt;/em&gt; creó 6 movimientos, cada uno mostrando los datos en distintas formas. Rabia, por ejemplo, muestra rectángulos coloreados (para las imágenes) o círculos (Para las frases) flotando alrededor de la pantalla a distintos ratios y velocidades. El tamaño denota la longitud de la frase y el color el sentimiento. Los montículos, por otro lado, representan los sentimientos como montículos que se agitan y se doblan.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-we-feel-fine.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;592px&#34; height=&#34;585px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;8-tópicos&#34;&gt;8. Tópicos&lt;/h1&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Nota del traductor: Según he entendido, un trope es algo así como un tópico en cualquier película, serie o libro. Por ejemplo ciertas caracteristicas que son comunes a un personaje, a una historia etc. Si alguien sabe de una mejor definición, por favor que comente en está página.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Compararando &lt;a href=&#34;http://tvtropes.org/pmwiki/pmwiki.php/Main/Trope&#34; target=&#34;_blank&#34; title=&#34;Tropes&#34;&gt;&lt;em&gt;tropes&lt;/em&gt;&lt;/a&gt;, podemos definir un &lt;em&gt;trope&lt;/em&gt; como patrones en las tramas de las novelas, películas etc. Elijah Meeks se basó en estos patrones para crear el siguiente ejemplo de visualización de datos. Usando datos de &lt;em&gt;TV Tropes&lt;/em&gt;, comparó las 50.000 entradas usando 6 temáticas para encontar similitudes entre series de televisión. Por ejemplo, &lt;em&gt;Angel&lt;/em&gt; y &lt;em&gt;Star Wars: La guerra de los clones&lt;/em&gt; comparten &lt;em&gt;tropes&lt;/em&gt;. En concreto hasta 100 tropes, sin embargo, la totalidad de los &lt;em&gt;tropes&lt;/em&gt; para &lt;em&gt;Angel&lt;/em&gt; es del 10%, y para &lt;em&gt;Star Wars&lt;/em&gt; el 25%. Esto se debe a que &lt;em&gt;Angel&lt;/em&gt; tiene casi 1000 &lt;em&gt;Tropes&lt;/em&gt;  y &lt;em&gt;Star Wars&lt;/em&gt; solo 386. Los &lt;em&gt;Tropes&lt;/em&gt; se dividen en 6 categorías, cada una con un color asignado. Meta (amarillo), Tradicional (rojo), Id (morado), Video juegos (verde), LampShade (Verde azulado) y super natural (azul). La combinación de colores ilustra qué &lt;em&gt;tropes&lt;/em&gt; se comparten con distintos diseños. Meek compara varias series de televisión en     &lt;a href=&#34;https://dhs.stanford.edu/algorithmic-literacy/tv-tropes-pt-3-if-you-liked-dwarf-fortress-youll-love-twilight-breaking-dawn/&#34; target=&#34;_blank&#34; title=&#34;TV Tropes Pt. 3: If you like Dwarf Fortress, you’ll love Twilight: Breaking Dawn&#34;&gt;TV Tropes Pt. 3: If you like Dwarf Fortress, you’ll love Twilight: Breaking Dawn&lt;/a&gt;
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-Tropes.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;514px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;9-el-uso-de-las-redes-sociales&#34;&gt;9. El uso de las redes sociales&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Mike Mason&lt;/em&gt;  creo varios ejemplos de visualizaciones de datos y la primera es, sin duda, preciosa. Originalmente fue el desarrollador &lt;em&gt;Eric Fischer&lt;/em&gt; quién creo un programa que mapeaba el uso de Twitter y Flickr a nivel mundial mediante geo-tagging. Los puntos rojos/naranjas son fotos subidas a Flickr. Los azules son tweets. Los blancos representan ambas cosas, un tweet y una foto subida a Flickr.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-twitter-flickr.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;614px&#34; height=&#34;453px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;10-las-curvas-del-rio-mississippi&#34;&gt;10. Las curvas del Rio Mississippi&lt;/h1&gt;
-
-&lt;p&gt;Cambiamos ahora de tipo de visualización en los 20 de los mejores ejemplos de visualización de datos para visitar una, que sin ser tecnológica es intrínseca y elaborada. &lt;em&gt;Harold N. Fisk&lt;/em&gt; documentó las curvas y giros de las más de 2.320 millas del Rio Mississippi en el 1944. &lt;a href=&#34;http://flavorwire.com/214951/gorgeous-vintage-maps-of-the-mississippi-rivers-path-over-time&#34; target=&#34;_blank&#34; title=&#34;Ver mapa en Flavorwire&#34;&gt;El maravilloso mapa Vintage del camino del río a lo largo del tiempo está en Flavorwire&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-rio-mississippi-Flavorwire.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;455px&#34; height=&#34;652px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;11-las-subcomunidades-de-reddit&#34;&gt;11. Las subcomunidades de Reddit&lt;/h1&gt;
-
-&lt;p&gt;Las sub-comunidades de Reddit visualizadas con &lt;a href=&#34;http://rhiever.github.io/redditviz/#information&#34; target=&#34;_blank&#34; title=&#34;Redditviz&#34;&gt;Redditviz&lt;/a&gt;, un mapa interactivo del interés de los usuarios de Reddit, creado por &lt;a href=&#34;http://www.randalolson.com/&#34; target=&#34;_blank&#34; title=&#34;Web de Randy Olson&#34;&gt;Randy Olson&lt;/a&gt;. El mapa consiste en puntos de distintos tamaños y colores. El rojo representa muchas subreddits o comunidades relacionadas entre sí mientras que el azul indica menos relación. Los datos se recopilaron haciendo uso de redes troncales y mostró que la estructura de la comunidad Reddit es &lt;a href=&#34;https://peerj.com/articles/cs-4/&#34; target=&#34;_blank&#34; title=&#34;Noticia en peerj.com&#34;&gt;“scale-free, small-world y modular”&lt;/a&gt;. Haciendo click en un punto, el lector no solo obtiene más información sobre la subcomunidad, sino que además se le muestra un listado con temáticas cercanas o relacionadas.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-subcomunidades-reddit-redditviz.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;605px&#34; height=&#34;459px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;12-más-rutas-de-vuelo&#34;&gt;12. Más rutas de vuelo&lt;/h1&gt;
-
-&lt;p&gt;Otra visualización del camino seguido por los aviones, esta vez corresponden con los vuelos de un día en Londres. En total hay más de 6000 vuelos cada día en esta ciudad. Podéis ver el vídeo en &lt;a href=&#34;https://vimeo.com/132804154&#34; target=&#34;_blank&#34; title=&#34;Vimeo&#34;&gt;vimeo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-vuelos-londres.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;587px&#34; height=&#34;273px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;13-rutas-de-corredores&#34;&gt;13. Rutas de corredores&lt;/h1&gt;
-
-&lt;p&gt;Las rutas que siguen los corredores mientras hacen ejercicio junto con aplicaciones que guardan la actividad realizada hacen posible el siguiente ejemplo de visualización de datos. Nathan Yau, creo este proyecto con 22 visualizaciones extrayendo datos de las aplicaciones que usan los deportistas. En &lt;a href=&#34;http://www.visualcomplexity.com/vc/project_details.cfm?id=980&amp;index=980&amp;domain=&#34; target=&#34;_blank&#34;&gt;visual complexity&lt;/a&gt; remarcan que los corredores suelen seguir unos patrones concretos. En el ejemplo de abajo, el patrón es que los corredores suelen salir junto al mar, parques y todos corren por rutas similares. El proyecto recopiló información de corredores de &lt;a href=&#34;http://flowingdata.com/2014/02/05/where-people-run/&#34; target=&#34;_blank&#34;&gt;18 ciudades de EEUU y 4 de Europa.&lt;/a&gt;
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-corredores.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;513px&#34; height=&#34;413px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;14-cartografía-de-llamdas-telefónicas&#34;&gt;14. Cartografía de llamdas telefónicas&lt;/h1&gt;
-
-&lt;p&gt;De nuevo otro proyecto de Visual Complexity con este ejemplo de visualización de datos que muestra una &lt;a href=&#34;http://www.visualcomplexity.com/vc/project_details.cfm?id=985&amp;index=985&amp;domain=&#34; target=&#34;_blank&#34; title=&#34;Visiar el proyecto&#34;&gt;cartografía de llamadas de teléfono&lt;/a&gt; llena de color y patrones. En primera instancia fue un gráfico del &lt;a href=&#34;http://www.nytimes.com/imagepages/2011/07/03/opinion/sunday/03phoneimg.html?ref=sunday-review&#34; target=&#34;_blank&#34; title=&#34;Visitar el New Yorl Times&#34;&gt;New York Times &lt;/a&gt;. El proyecto lo desarrollaron investigadores del MIT, AT&amp;T; e IBM. Las llamadas telefónicas en áreas pequeñas se representan con líneas más finas y de una altura proporcional al volumen de la llamada. Los arcos representan miles de llamadas a distintas partes del Estado. Colores diferentes denotan distintos estados de EEUU.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/20-ejemplos-visualizacion-datos-cartografia-llamadas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;823px&#34; height=&#34;519px&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;15-olympic-feathers&#34;&gt;15. Olympic Feathers&lt;/h1&gt;
-
-&lt;p&gt;Olympic Feathers es una visualización de datos interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Para más información, visita el artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;p&gt;Fuente original | &lt;a href=&#34;http://www.data-visualization.org/top-20-beautiful-data-vizs.html&#34; title=&#34;Top 20 Most Beautiful Data Visualization Examples&#34;&gt;data-visualization.org&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>
