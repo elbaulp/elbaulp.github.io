@@ -21,7 +21,9 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/</guid>
-            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/alert-300x300.jpeg&#34; alt=&#34;alert&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;&lt;/p&gt;
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/alert-300x300.jpeg&#34; alt=&#34;alert&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Como es habitual, hoy traigo otro episodio de &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;security Now!&lt;/a&gt; que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.&lt;/p&gt;
 
@@ -61,7 +63,6 @@
 
 &lt;p&gt;El informe del escaner se puede encontrar en PDF en el siguiente enlace: &lt;a href=&#34;bit.ly/upnpflaws&#34; target=&#34;_blank&#34;&gt;bit.ly/upnpflaws&lt;/a&gt;, del cual extraigo un fragmento:&lt;/p&gt;
 
-&lt;blockquote&gt;
 &lt;p&gt;*“Universal Plug and Play (UPnP) is a protocol standard that allows easy communication
 between computers and network-enabled devices. This protocol is enabled by default on
 millions of systems, including routers, printers, media servers, IP cameras, smart TVs, home
@@ -103,13 +104,14 @@ the Nexpose vulnerability management platform.”&lt;/p&gt;
 
 &lt;p&gt;En resumen, el 2.2% del total de direcciones IPv4 del mundo responde a paquetes UPnP. Sobre el 20% de esas IPs están expuestas a la API de SOAP, es decir, al enviar el paquete de solicitud UPnP, el objetivo del paquete responde con una cadena de identificación, versión del sistema Operativo que está ejecutando, versión de la librería UPnP junto a más información. Lo cual permite elegir el exploit a utilizar para lograr explotar la vulnerabilidad. Incluso indica dónde se está ejecutando su servicio HTTP (el servicio HTTP de UPnP). Una vez conectado a ese servidor, es interactua con la API de SOAP para cambiar la configuraión del router.&lt;/p&gt;
 
-&lt;p&gt;A continuación en las referencias proporciono una herramienta que &lt;a href=&#34;http://www.grc.com/intro.htm&#34; target=&#34;_blank&#34;&gt;Steve Gibson&lt;/a&gt; ha creado para comprobar si eres vulnerable a paquetes UPnP.&lt;/p&gt;
+&lt;p&gt;A continuación en las referencias proporciono una herramienta que &lt;a href=&#34;http://www.grc.com/intro.htm&#34; target=&#34;_blank&#34;&gt;Steve Gibson&amp;lt;/aha creado para comprobar si eres vulnerable a paquetes UPnP.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Test UPnP&lt;/em&gt; »» &lt;a href=&#34;https://www.grc.com/x/ne.dll?bh0bkyd2&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;
-&lt;em&gt;Unplug UPnP&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/389&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Test UPnP&lt;/em&gt; »» &lt;a href=&#34;https://www.grc.com/x/ne.dll?bh0bkyd2&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Unplug UPnP&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/389&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>
