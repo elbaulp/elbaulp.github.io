@@ -6,7 +6,7 @@
         <description>Recent content in Posts on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Mon, 08 May 2017 12:12:39 +0100</lastBuildDate>
+        <lastBuildDate>Tue, 16 May 2017 10:25:24 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/post/index.xml</link>
@@ -15,6 +15,94 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/post/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo escribir a un fichero en Scala</title>
+            <link>https://elbauldelprogramador.com/write-to-file-scala/</link>
+            <pubDate>Tue, 16 May 2017 10:25:24 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/write-to-file-scala/</guid>
+            <description>&lt;p&gt;En mi último post hablé de &lt;a href=&#34;https://elbauldelprogramador.com/iterate-multiple-collections-scala/&#34; title=&#34;Iterar sobre varias colecciones en Scala&#34;&gt;Cómo iterar múltiples colecciones en Scala&lt;/a&gt;, uno de los muchos problemas que encontré desarrollando mi &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;Parseo de dependencias en español&#34;&gt;proyecto de fin de carrera.&lt;/a&gt; Otro de los problemas que encontré fue al &lt;strong&gt;escribir a un fichero&lt;/strong&gt; en &lt;strong&gt;Scala&lt;/strong&gt;, la implementación estándar de Scala no tiene soporte para esta tarea, así que tuve que implementar mi propia manera de hacerlo.&lt;/p&gt;
+
+&lt;h1 id=&#34;primer-enfoque&#34;&gt;Primer enfoque&lt;/h1&gt;
+
+&lt;p&gt;Como siempre, lo primero que hice fue buscar en &lt;em&gt;Stack Overflow&lt;/em&gt; para saber cómo resolvía la gente este tipo de problema, &lt;a href=&#34;http://stackoverflow.com/users/247533/rex-kerr&#34; target=&#34;_blank&#34; title=&#34;Rex kerr&#34;&gt;Rex kerr&lt;/a&gt; propone la siguiente implementación en la pregunta &lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/4608061#4608061&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y para usarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.io._&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Five&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;file!&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;example.txt&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;mi-enfoque&#34;&gt;Mi enfoque&lt;/h1&gt;
+
+&lt;p&gt;Basándome en la respuesta de &lt;em&gt;Rex kerr&lt;/em&gt;, &lt;strong&gt;modifiqué y adapté su código&lt;/strong&gt; y lo encapsulé en un &lt;code&gt;object&lt;/code&gt; llamado &lt;code&gt;FileUtils&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Any&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;src/main/resources/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asInstanceOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;FileUtils&lt;/code&gt; encapsula dos métodos adicionales, &lt;code&gt;saveOject&lt;/code&gt; y &lt;code&gt;getObject[T]&lt;/code&gt;, el primero simplemente &lt;strong&gt;guarda el objecto&lt;/strong&gt; que se le pasa como parámetro en un fichero, el último &lt;strong&gt;devuelve el contenido&lt;/strong&gt; del fichero como una instancia de tipo &lt;code&gt;T&lt;/code&gt;. La razón de estos dos métodos se debe a que necesitaba una forma de guardar las &lt;strong&gt;características extraidas&lt;/strong&gt; por el modelo para ahorrar tiempo de cómputo en futuras ejecuciones del proyecto.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
+
+&lt;p&gt;A modo de ejemplo, mi objeto &lt;code&gt;FileUtils&lt;/code&gt; se puede usar del siguiente modo (El código es del fichero &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing/blob/dev/src/main/scala/com/elbauldelprogramador/nlp/parser/DependencyParser.scala#L161&#34; target=&#34;_blank&#34; title=&#34;DependencyParser.scala&#34;&gt;DependencyParser.scala&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;@switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]]&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]),&lt;/span&gt;
+                   &lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]),&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;sentences&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con &lt;code&gt;(getClass.getResource(&amp;quot;/XY&amp;quot;) != null: @switch) match&lt;/code&gt; compruebo si el fichero ya existe, de ser así, simplemente lo leo llamando a &lt;code&gt;FileUtils.getObject&lt;/code&gt;, pasándole el tipo. De este modo ahorro tener que volver a llamar al método &lt;code&gt;eF&lt;/code&gt;, encargado de extraer las características. Si el fichero no existe, extraigo las características con &lt;code&gt;eF&lt;/code&gt; y luego las almaceno en un fichero llamando a &lt;code&gt;FileUtils.saveOject&lt;/code&gt; para usos futuros.&lt;/p&gt;
+
+&lt;p&gt;Eso es todo, ¿conoces &lt;strong&gt;algún otro modo de escribir/leer&lt;/strong&gt; ficheros en Scala?, deja un comentario!&lt;/p&gt;
+
+&lt;h1 id=&#34;recursos&#34;&gt;Recursos&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Cómo iterar sobre varias colecciones en Scala</title>
@@ -5679,85 +5767,6 @@ Control-Flow Enforcement Technology (CET&#34;&gt;Youtube.com&lt;/a&gt;&amp;rdquo
 &lt;p&gt;Creo que con este cambio el blog puede estar más personalizado para cada lector, permitiéndole recibir artículos únicamente de los temas que le interesan.&lt;/p&gt;
 
 &lt;p&gt;A lo largo del tiempo iré creado nuevos feeds conforme nazcan nuevas categorías.&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>¿Qué Aplicación De Mensajería Móvil Es Más Segura?</title>
-            <link>https://elbauldelprogramador.com/aplicacion-mensajeria-movil-segura-whatsapp-signal-allo/</link>
-            <pubDate>Thu, 23 Jun 2016 17:16:56 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/aplicacion-mensajeria-movil-segura-whatsapp-signal-allo/</guid>
-            <description>&lt;blockquote&gt;
-&lt;p&gt;Este artículo es un resumen de los aspectos más importantes de una nota que he leido en el blog de &lt;a href=&#34;https://www.schneier.com/blog/archives/2016/06/comparing_messa.html&#34; title=&#34;Comparing Messaging Apps&#34;&gt;Bruce Schneier&lt;/a&gt; y del blog de &lt;a href=&#34;https://theintercept.com/2016/06/22/battle-of-the-secure-messaging-apps-how-signal-beats-whatsapp/&#34; title=&#34;Battle of the Secure Messaging Apps: How Signal Beats WhatsApp&#34;&gt;Michah Lee&lt;/a&gt; en el que se comparan las distintas aplicaciones de mensajería (WhatsApp, Signal y Allo) en función de su privacidad y seguridad. Recomiendo leer el articulo original, sin embargo, he escrito un resumen con las características de cada aplicación&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Para los impacientes, este es el resumen extremo del artículo:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WhatsApp, Signal y Allo usan el mismo protocolo seguro para enviar mensajes (El protocolo de &lt;em&gt;Open Whisper Systems&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;Se diferencian en la información que cifran, &lt;em&gt;metadatos&lt;/em&gt; que almacenan y qué es lo que almacenan en sus bases de datos. Es esto último lo que en teoría el gobierno puede fisgonear.&lt;/li&gt;
-&lt;li&gt;Para quien busque la total privacidad y seguridad, no hay más opción que &lt;em&gt;Signal&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;whatsapp&#34;&gt;WhatsApp&lt;/h1&gt;
-
-&lt;h2 id=&#34;pros&#34;&gt;Pros&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/whatsapp-mensajes-cifrados-extremo-a-extremo/&#34; title=&#34;WhatsApp: Entendiendo Su Cifrado Extremo a Extremo&#34;&gt;Cifra todos los mensajes&lt;/a&gt;, imágenes, vídeos y notas de voz.&lt;/li&gt;
-&lt;li&gt;Si el gobierno solicita los mensajes de un usuario, WhatsApp no puede darselos, porque no conoce la clave que los descifran.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;contras&#34;&gt;Contras&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Aunque usen Signal, los servidores de WhatsApp ven los mensajes que los usuarios mandan a través de su servicio. No pueden saber el contenido del mensaje, pero sí quienes están hablando y cuando. En otras palabras, almacenan &lt;em&gt;metadatos&lt;/em&gt; (Se reservan el derecho en su &lt;a href=&#34;https://www.WhatsApp.com/legal/#Privacy&#34;&gt;política de privacidad&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;WhatsApp may retain date and time stamp information associated with successfully delivered messages and the mobile phone numbers involved in the messages, as well as any other information which WhatsApp is legally compelled to collect.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Dicho esto, si el gobierno les pide &lt;em&gt;metadatos&lt;/em&gt;, pueden dárselos.&lt;/li&gt;
-&lt;li&gt;Al registrarnos en WhatsApp podemos facilitar nuestra lista de contactos. Pueden almancenar esa lista de contactos y compartírsela al gobierno si se la piden.&lt;/li&gt;
-&lt;li&gt;Las copias de seguridad que sugiere WhatsApp para almacenar en la nube no están cifradas, por tanto cedemos las conversaciones al servidor de terceros que almacene la copia.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;allo&#34;&gt;Allo&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Por defecto Google puede leer todos tus mensajes, Para habilitar cifrado punto a punto hay que pasar a modo incógnito.&lt;/li&gt;
-&lt;li&gt;El que venga deshabilitado por defecto es peligroso.&lt;/li&gt;
-&lt;li&gt;El beneficio de no cifrar, es que google usa aprendizaje automático para sugerirte las respuestas que debes dar a la conversación. (Aprende lo qué tú contestarías)&lt;/li&gt;
-&lt;li&gt;Hasta que no se libere Allo, no se sabe dónde se almacenaran las conversaciones y por cuanto tiempo.&lt;/li&gt;
-&lt;li&gt;La tecnología que hay detrás es buena, pero moviendose en la dirección incorrecta en términos de privacidad. Si te preocupa tu privacidad, no la uses.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;signal&#34;&gt;Signal&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;El elemento diferenciador de Signal con WhatsApp y Allo es que es &lt;strong&gt;&lt;a href=&#34;https://github.com/WhisperSystems&#34; title=&#34;Repositorio en GitHub&#34;&gt;software libre&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;No tienen modelo de negocio, al contrario que Google o Facebook, que hacen dinero con anuncios. Signal vive de donaciones y subvenciones.&lt;/li&gt;
-&lt;li&gt;Sin anuncios que mostrar, Signal almacena la menor cantidad de información del usuario posible.&lt;/li&gt;
-&lt;li&gt;Como WhatsApp, todos los mensajes están &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos electrónicos con GPG usando Mailvelope&#34;&gt;cifrados&lt;/a&gt; punto a punto.&lt;/li&gt;
-&lt;li&gt;En su &lt;a href=&#34;https://whispersystems.org/signal/privacy/&#34;&gt;política de privacidad&lt;/a&gt;, dicen que no almacenan &lt;em&gt;metadatos&lt;/em&gt; de los mensajes. &lt;em&gt;Moxie&lt;/em&gt; (Fundadod de &lt;em&gt;Open Whisper Systems&lt;/em&gt;) dice que la única información que guardan es la última conexión del usuario, con una precisión de tan solo un dia (Ni horas ni minutos ni segundos se almacenan).&lt;/li&gt;
-&lt;li&gt;Comparte la lista de contactos, pero no la envía en texto plano, les aplica un hash y el servidor responde con los hashes que tienen en comun ambas cuentas. (Compara hashes solo)&lt;/li&gt;
-&lt;li&gt;En sus copias de seguridad, al contrario que WhatsApp, no incluye los mensajes. Así que no hay riesgo de que se filtren los mensajes a terceros. (Como desventaja, no hay copia de los mensajes.)&lt;/li&gt;
-&lt;li&gt;Si el gobierno pide a &lt;em&gt;Open Whisper Systems&lt;/em&gt; que le facilite información o &lt;em&gt;metadatos&lt;/em&gt;, Signal no tiene nada que dar.&lt;/li&gt;
-&lt;li&gt;Desde el punto de vista de privacidad, Signal es el claro ganador. Pero tiene algunas desventajas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;contras-1&#34;&gt;Contras&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Lo usa poca gente.&lt;/li&gt;
-&lt;li&gt;Menos caracterísitcas&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;¿Y Tú, qué opinas? Déjanos un comentario!&lt;/p&gt;</description>
         </item>
         
     </channel>

@@ -16,6 +16,94 @@
         <atom:link href="https://elbauldelprogramador.com/author/alex/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Cómo escribir a un fichero en Scala</title>
+            <link>https://elbauldelprogramador.com/write-to-file-scala/</link>
+            <pubDate>Tue, 16 May 2017 10:25:24 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/write-to-file-scala/</guid>
+            <description>&lt;p&gt;En mi último post hablé de &lt;a href=&#34;https://elbauldelprogramador.com/iterate-multiple-collections-scala/&#34; title=&#34;Iterar sobre varias colecciones en Scala&#34;&gt;Cómo iterar múltiples colecciones en Scala&lt;/a&gt;, uno de los muchos problemas que encontré desarrollando mi &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;Parseo de dependencias en español&#34;&gt;proyecto de fin de carrera.&lt;/a&gt; Otro de los problemas que encontré fue al &lt;strong&gt;escribir a un fichero&lt;/strong&gt; en &lt;strong&gt;Scala&lt;/strong&gt;, la implementación estándar de Scala no tiene soporte para esta tarea, así que tuve que implementar mi propia manera de hacerlo.&lt;/p&gt;
+
+&lt;h1 id=&#34;primer-enfoque&#34;&gt;Primer enfoque&lt;/h1&gt;
+
+&lt;p&gt;Como siempre, lo primero que hice fue buscar en &lt;em&gt;Stack Overflow&lt;/em&gt; para saber cómo resolvía la gente este tipo de problema, &lt;a href=&#34;http://stackoverflow.com/users/247533/rex-kerr&#34; target=&#34;_blank&#34; title=&#34;Rex kerr&#34;&gt;Rex kerr&lt;/a&gt; propone la siguiente implementación en la pregunta &lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/4608061#4608061&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;y para usarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.io._&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Five&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;file!&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;example.txt&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;mi-enfoque&#34;&gt;Mi enfoque&lt;/h1&gt;
+
+&lt;p&gt;Basándome en la respuesta de &lt;em&gt;Rex kerr&lt;/em&gt;, &lt;strong&gt;modifiqué y adapté su código&lt;/strong&gt; y lo encapsulé en un &lt;code&gt;object&lt;/code&gt; llamado &lt;code&gt;FileUtils&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Any&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;src/main/resources/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asInstanceOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;FileUtils&lt;/code&gt; encapsula dos métodos adicionales, &lt;code&gt;saveOject&lt;/code&gt; y &lt;code&gt;getObject[T]&lt;/code&gt;, el primero simplemente &lt;strong&gt;guarda el objecto&lt;/strong&gt; que se le pasa como parámetro en un fichero, el último &lt;strong&gt;devuelve el contenido&lt;/strong&gt; del fichero como una instancia de tipo &lt;code&gt;T&lt;/code&gt;. La razón de estos dos métodos se debe a que necesitaba una forma de guardar las &lt;strong&gt;características extraidas&lt;/strong&gt; por el modelo para ahorrar tiempo de cómputo en futuras ejecuciones del proyecto.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
+
+&lt;p&gt;A modo de ejemplo, mi objeto &lt;code&gt;FileUtils&lt;/code&gt; se puede usar del siguiente modo (El código es del fichero &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing/blob/dev/src/main/scala/com/elbauldelprogramador/nlp/parser/DependencyParser.scala#L161&#34; target=&#34;_blank&#34; title=&#34;DependencyParser.scala&#34;&gt;DependencyParser.scala&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;@switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]]&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]),&lt;/span&gt;
+                   &lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]),&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;sentences&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con &lt;code&gt;(getClass.getResource(&amp;quot;/XY&amp;quot;) != null: @switch) match&lt;/code&gt; compruebo si el fichero ya existe, de ser así, simplemente lo leo llamando a &lt;code&gt;FileUtils.getObject&lt;/code&gt;, pasándole el tipo. De este modo ahorro tener que volver a llamar al método &lt;code&gt;eF&lt;/code&gt;, encargado de extraer las características. Si el fichero no existe, extraigo las características con &lt;code&gt;eF&lt;/code&gt; y luego las almaceno en un fichero llamando a &lt;code&gt;FileUtils.saveOject&lt;/code&gt; para usos futuros.&lt;/p&gt;
+
+&lt;p&gt;Eso es todo, ¿conoces &lt;strong&gt;algún otro modo de escribir/leer&lt;/strong&gt; ficheros en Scala?, deja un comentario!&lt;/p&gt;
+
+&lt;h1 id=&#34;recursos&#34;&gt;Recursos&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>Cómo iterar sobre varias colecciones en Scala</title>
             <link>https://elbauldelprogramador.com/iterate-multiple-collections-scala/</link>
             <pubDate>Mon, 08 May 2017 12:12:39 +0100</pubDate>
@@ -5180,94 +5268,6 @@ rbw_load_theme simple
 &lt;ul&gt;
 &lt;li&gt;Repositorio en GitHub | &lt;a href=&#34;https://github.com/elbaulp/Markdown2LatexConversor&#34; title=&#34;Markdown2LatexConversor&#34;&gt;Markdown2LatexConversor&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>El Baúl Del Programador Cumple 7 Años</title>
-            <link>https://elbauldelprogramador.com/7-cumpleanios/</link>
-            <pubDate>Sat, 07 May 2016 09:55:51 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/7-cumpleanios/</guid>
-            <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios0.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios0.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;512px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hoy este humilde blog cumple nada más y nada menos que 7 años. Todo empezó con la recomendación de un profesor cuando cursaba un Módulo superior en Desarrollo de Aplicaciones Informáticas, y hasta estas fechas hemos llegado. La verdad es que nunca esperé que llegara a mantener tanto tiempo el blog.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;un-poquito-de-historia&#34;&gt;Un poquito de Historia&lt;/h1&gt;
-
-&lt;p&gt;No siempre se llamó “El Baúl del Programador”, en sus orígenes se llamaba “BashyC Programación”, ya que mi primera intención era hablar sobre &lt;em&gt;Bash&lt;/em&gt; y &lt;em&gt;C&lt;/em&gt;, que eran los únicos lenguajes que sabía y de lo que solía escribir, algunos ejemplos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/gestion-basica-de-usuarios-en-linux/&#34; title=&#34;Gestión básica de usuarios en linux con Bash&#34;&gt;Gestión básica de usuarios en linux con Bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/copiar-archivos-recursivamente/&#34; title=&#34;Copiar archivos recursivamente&#34;&gt;Copiar archivos recursivamente&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/script-resaltado-sintaxis-bash/&#34; title=&#34;Script resaltado sintaxis bash&#34;&gt;Script resaltado sintaxis bash&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Pero pronto empecé a hablar sobre más cosas, así que surgió la necesidad de cambiarle el nombre, y así llegó “El Baúl del Programador”.&lt;/p&gt;
-
-&lt;h1 id=&#34;plataformas-usadas&#34;&gt;Plataformas usadas&lt;/h1&gt;
-
-&lt;p&gt;Al principio, el blog se alojaba en &lt;strong&gt;Blogger&lt;/strong&gt;, conforme necesité hacer cosas más complejas, lo migré a &lt;strong&gt;Wordpress&lt;/strong&gt; en un servidor dedicado, de este arduo proceso surgieron los siguiente artículos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-migrar-de-blogger-a-wordpress-sin-perder-seo-y-tips-de-seguridad/&#34; title=&#34;Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad&#34;&gt;Cómo migrar de Blogger a WordPress sin perder SEO y Tips de seguridad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/&#34; title=&#34;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&#34;&gt;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Con la migración a un &lt;strong&gt;servidor dedicado&lt;/strong&gt;, tuve que aprender a administrar servidores y tener sumo cuidado configurándolos para que fueran seguros, de aquí salieron muchos artículos, entre los cuales podría destacar:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/ &amp;quot;Instalación y optimización de un servidor web con Nginx (I&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/&#34; title=&#34;Bloquear una IP atacando el servidor mediante iptables&#34;&gt;Bloquear una IP atacando el servidor mediante iptables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/ &amp;quot;Cómo configurar un servidor DNS – Parte 1 (Introducción&#34;&gt;Cómo configurar un servidor DNS – Parte 1 (Introducción)&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-ocultar-la-version-de-bind-y-como-averiguarla/ &amp;quot;Cómo ocultar la versión de BIND (Y cómo averiguarla&#34;&gt;Cómo ocultar la versión de BIND (Y cómo averiguarla)&lt;/a&gt;&amp;rdquo;)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/&#34; title=&#34;Cómo enviar los emails de /var/mail/root a una cuenta de correo&#34;&gt;Cómo enviar los emails de /var/mail/root a una cuenta de correo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Estuve unos cuantos años con &lt;strong&gt;Wordpress&lt;/strong&gt; y un servidor dedicado, hasta versioné por completo el estado del blog con &lt;strong&gt;Git&lt;/strong&gt; y &lt;strong&gt;Capistrano&lt;/strong&gt;, como mostré en &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/&#34; title=&#34;Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy&#34;&gt;Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Cuando descubrí &lt;strong&gt;Jekyll&lt;/strong&gt; y la facilidad que ofrece para centrarse en el contenido y olvidarse de la administración del servidor, migré el blog a &lt;strong&gt;GitHub&lt;/strong&gt; y es lo que uso actualmente.&lt;/p&gt;
-
-&lt;h1 id=&#34;máquina-del-tiempo&#34;&gt;Máquina del tiempo&lt;/h1&gt;
-
-&lt;p&gt;Por este séptimo aniversario quisiera echar la vista atrás y mostrar cómo ha evolucionado el blog a lo largo de los años, todo esto es posible gracias a &lt;a href=&#34;https://web.archive.org&#34; target=&#34;_blank&#34; title=&#34;WayBack Machine&#34;&gt;WayBack Machine&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;blogger&#34;&gt;Blogger&lt;/h2&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1882px&#34; height=&#34;987px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios2.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios2.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1879px&#34; height=&#34;987px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;wordpress&#34;&gt;WordPress&lt;/h2&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios3.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios3.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1880px&#34; height=&#34;984px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios4.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios4.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1877px&#34; height=&#34;984px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios5.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios5.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1882px&#34; height=&#34;985px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;jekyll&#34;&gt;Jekyll&lt;/h2&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/7-cumpleanios6.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/7-cumpleanios6.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1134px&#34; height=&#34;1046px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;terminando&#34;&gt;Terminando&lt;/h1&gt;
-
-&lt;p&gt;Por último, solo espero continuar manteniendo el blog por muchos años más, intentando escribir artículos interesantes, y que vosotros los leáis :-).&lt;/p&gt;
-
-&lt;p&gt;Saludos!&lt;/p&gt;</description>
         </item>
         
     </channel>
