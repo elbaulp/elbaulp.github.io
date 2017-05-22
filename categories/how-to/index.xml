@@ -1945,7 +1945,7 @@ php composer.phar update
 
 &lt;p&gt;A lo largo del tutorial, se asumirá que el dispositivo usb está en &lt;strong&gt;/dev/sda&lt;/strong&gt; y que la distribución a instalar es debian testing.&lt;/p&gt;
 
-&lt;h3 id=&#34;método-1&#34;&gt;Método 1&lt;/h3&gt;
+&lt;h1 id=&#34;método-1&#34;&gt;Método 1&lt;/h1&gt;
 
 &lt;p&gt;El primer paso es desmontar el usb:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo umount /dev/sda
@@ -1981,7 +1981,7 @@ sudo umount /dev/sda
 
 &lt;p&gt;Ahora es posible iniciar debian desde USB e instalar debian testing.&lt;/p&gt;
 
-&lt;h3 id=&#34;método-2&#34;&gt;Método 2&lt;/h3&gt;
+&lt;h1 id=&#34;método-2&#34;&gt;Método 2&lt;/h1&gt;
 
 &lt;p&gt;Descargar la ISO deseada de debian y ejecutar lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cat debian.versión.iso &amp;gt; /dev/sdX &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync
@@ -1989,15 +1989,15 @@ sudo umount /dev/sda
 
 &lt;p&gt;Donde &lt;strong&gt;/dev/sdX&lt;/strong&gt; ha de ser el dispositivo USB&lt;/p&gt;
 
-&lt;h3 id=&#34;método-3-sugerido-en-los-comentarios-por-cioran&#34;&gt;Método 3 (Sugerido en los comentarios por cioran)&lt;/h3&gt;
+&lt;h1 id=&#34;método-3-sugerido-en-los-comentarios-por-cioran&#34;&gt;Método 3 (Sugerido en los comentarios por cioran)&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/ruta/debian.iso &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1M&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;hr /&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;Boot Debian from an USB device&lt;/em&gt; »» &lt;a href=&#34;http://www.debian-administration.org/article/Boot_Debian_from_an_USB_device&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Boot Debian from an USB device&lt;/em&gt; »» &lt;a href=&#34;http://www.debian-administration.org/article/Boot_Debian_from_an_USB_device&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         
