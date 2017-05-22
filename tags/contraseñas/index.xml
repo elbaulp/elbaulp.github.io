@@ -16,6 +16,138 @@
         <atom:link href="https://elbauldelprogramador.com/tags/contrase%C3%B1as/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Crear y administrar contraseñas inteligentemente</title>
+            <link>https://elbauldelprogramador.com/good-passwords/</link>
+            <pubDate>Mon, 22 May 2017 12:46:41 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/good-passwords/</guid>
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;Recientemente hemos visto mucho revuelo en &lt;a href=&#34;https://elbauldelprogramador.com/categories/seguridad&#34; title=&#34;Posts sobre seguridad&#34;&gt;seguridad&lt;/a&gt; con el &lt;strong&gt;RansomWare WannaCry&lt;/strong&gt; y el robo de más de &lt;strong&gt;230 millones de contraseñás y cuentas&lt;/strong&gt;. En estos tiempos más que nunca es necesario tener &lt;strong&gt;buenos hábitos al crear contraseñas al darnos de alta en nuevos servicios&lt;/strong&gt;. En este artículo mencionaré algunas buenas prácticas que llevo llevando a cabo desde hace unos años.&lt;/p&gt;
+
+&lt;h1 id=&#34;crea-buenas-contrasenas&#34;&gt;Crea Buenas Contrasenas&lt;/h1&gt;
+
+&lt;p&gt;El primer paso es &lt;em&gt;crear una &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet y cuando la longitud de la misma no importa&#34;&gt;contraseña&lt;/a&gt; fuerte y aleatoria&lt;/em&gt;. Hay muchas webs que se dedican a generar este tipo de contraseñas, por ejemplo la web de &lt;a href=&#34;https://www.grc.com/passwords.htm&#34; target=&#34;_blank&#34; title=&#34;Perfect Passwords&#34;&gt;Steve Gibson&lt;/a&gt;  o la herramienta incorporada a tal fin en &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, para cada nueva cuenta que crees en cualquier servicio, genera una contraseña de gran longitud con caracteres, números y símbolos. Una buena elección son contraseñas &lt;strong&gt;de 50 caracteres o más&lt;/strong&gt;, abajo muestro un ejemplo de la herramienta integrada en &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;
+            alt=&#34;LastPass password generator&#34;
+            title=&#34;LastPass password generator&#34;
+            sizes=&#34;(min-width: 420px) 420px, 100vw&#34;
+            width=&#34;420&#34;
+            height=&#34;521&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;LastPass password generator&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si no quieres usar &lt;strong&gt;LastPass&lt;/strong&gt; puedes usar el &lt;strong&gt;generador de Steve&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;
+            srcset=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png 1000w, https://elbauldelprogramador.com/img/steveperfectpasswords-800.png 800w&#34;
+            alt=&#34;Steve&#39;s Perfect Passwords&#34;
+            title=&#34;Steve&#39;s Perfect Passwords&#34;
+            sizes=&#34;(min-width: 1152px) 1152px, 100vw&#34;
+            width=&#34;1152&#34;
+            height=&#34;277&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Steve&#39;s Perfect Passwords&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Veamos cuanto &lt;strong&gt;tiempo se tardaría en descifrar una contraseña&lt;/strong&gt; de estas características, por ejemplo esta de tamaño 50: 8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;
+            alt=&#34;How long would it take to crack the password?&#34;
+            title=&#34;How long would it take to crack the password?&#34;
+            sizes=&#34;(min-width: 803px) 803px, 100vw&#34;
+            width=&#34;803&#34;
+            height=&#34;227&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;How long would it take to crack the password? | source: &lt;a href=&#34;https://howsecureismypassword.net/&#34; target=&#34;_blank&#34; title=&#34;howsecure&#34;&gt;howsecureismypassword.net&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;en la web de &lt;strong&gt;Steve Gibson&lt;/strong&gt; vemos:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;
+            alt=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
+            title=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
+            sizes=&#34;(min-width: 842px) 842px, 100vw&#34;
+            width=&#34;842&#34;
+            height=&#34;753&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator | source: &lt;a href=&#34;https://www.grc.com/haystack.htm&#34; target=&#34;_blank&#34; title=&#34;haystack&#34;&gt;grc.com/haystack.htm&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;usa-un-administrador-de-contraseñas&#34;&gt;Usa un Administrador de Contraseñas&lt;/h1&gt;
+
+&lt;p&gt;Está claro que usando este tipo de contraseñas &lt;strong&gt;es imposible memorizarlas&lt;/strong&gt;, eso es signo de una buena contraseña.&lt;/p&gt;
+
+&lt;p&gt;Para poder administrar tales contraseñas deberías usar un &lt;strong&gt;administrador de contraseñas&lt;/strong&gt;, yo uso &lt;strong&gt;LastPass&lt;/strong&gt;, ya que han demostrado que saben tomarse la seguridad en serio. Baso esta opinión en el conocimiento de Steve Gibson en seguridad, si quieres comprobarlo por tí mismo aquí hay unos cuantos recursos: &lt;a href=&#34;https://www.youtube.com/watch?v=z4-h5gWpvAc&#34; target=&#34;_blank&#34; title=&#34;I&#34;&gt;I&lt;/a&gt;, &lt;a href=&#34;https://blog.lastpass.com/2010/07/lastpass-gets-green-light-from-security.html/&#34; target=&#34;_blank&#34; title=&#34;II&#34;&gt;II&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Incluso si estás usando LastPass para generar y almacenar las contraseñas de forma segura, aún podemos añadir una capa extra de seguridad: &lt;strong&gt;“Usar LastPass inteligentemente”&lt;/strong&gt;, veamos lo que quiero decir con esto en la siguiente sección.&lt;/p&gt;
+
+&lt;h2 id=&#34;buenas-prácticas-usando-un-administrador-de-contraseñas&#34;&gt;Buenas Prácticas usando un Administrador de Contraseñas&lt;/h2&gt;
+
+&lt;p&gt;La posibilidad de que alguien te ataque y te robe todos los datos de &lt;strong&gt;LastPAss&lt;/strong&gt; aún existen, aunque toda la información se guarda cifrada. Supongamos que alguien consigue nuestros datos de LastPass, y pongámonos en el &lt;strong&gt;peor de los casos, la consiguen descifrada&lt;/strong&gt;. Si en lugar de almacenar toda la contraseña en &lt;em&gt;LastPass&lt;/em&gt;, almacenamos solo la &lt;strong&gt;parte que no podemos memorizar&lt;/strong&gt; aún estaremos a salvo, veamos un ejemplo:&lt;/p&gt;
+
+&lt;p&gt;Cuando generas la contraseña, la almacenas en el gestor de contraseñas, pero en el servicio en el que te estás dando de alta, supongamos Google, estableces la siguiente contraseña:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;UnaContraseñaQuePuedesMemorizar&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;De este modo, incluso aunque roben todos los datos de LastPass, el ladrón no será capaz de acceder a tu cuenta, ya que &lt;strong&gt;solo conoce parte de tu contraseña&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;fortaleciendo-tu-presencia-online&#34;&gt;Fortaleciendo tu presencia Online&lt;/h1&gt;
+
+&lt;p&gt;Cada vez más servicios ofrecen &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificacion en dos factores&lt;/a&gt;, deberías habilitarla.&lt;/p&gt;
+
+&lt;h2 id=&#34;tfa&#34;&gt;TFA&lt;/h2&gt;
+
+&lt;p&gt;Cuando activas la &lt;strong&gt;autentificacion en dos factores&lt;/strong&gt;, se te muestran los códigos de respaldo en caso de que pierdas tu teléfono o no puedas generar un código para la autentificacion.&lt;/p&gt;
+
+&lt;h2 id=&#34;protegiendo-los-códigos-de-respaldo-de-tu-tfa&#34;&gt;Protegiendo los códigos de respaldo de tu TFA&lt;/h2&gt;
+
+&lt;p&gt;Es importante que descarues y guardes estos códigos en un lugar seguro. La mejor idea es imprimirlos en papel y guardarlos en una caja del banco. Pero para la mayoría de gente basta con guardarlos en un disco duro externo o imprimirlos.&lt;/p&gt;
+
+&lt;p&gt;Eso es todo, creo que aplicando estos consejos estarás más protegido que la mayoría de gente, pero recuerda que nada es seguro al 100%.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;¿Qué tipo de consejos o mejores prácticas usas tú?, deja un comentario!&lt;/em&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
             <title>Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo</title>
             <link>https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
