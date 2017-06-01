@@ -21,9 +21,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii/</guid>
-            <description>&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
-
-&lt;ul&gt;
+            <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
@@ -33,7 +31,7 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;instalar-php-fpm&#34;&gt;Instalar PHP-FPM&lt;/h2&gt;
+&lt;h1 id=&#34;instalar-php-fpm&#34;&gt;Instalar PHP-FPM&lt;/h1&gt;
 
 &lt;p&gt;En lugar de instalar php5, instalaremos php5-fpm (FastCGI Process Manager), una implementación alternativa con algunas características adicionales. En Ubuntu se puede instalar desde repositorios, para debian los agregamos a mano al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;deb http://packages.dotdeb.org stable all
@@ -74,7 +72,7 @@ service php5-fpm start
 &lt;li&gt;Una última modificación al archivo &lt;em&gt;/etc/php5/fpm/pool.d/www.conf&lt;/em&gt; y agregamos la línea &lt;em&gt;listen = /var/run/php-fpm.socket&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;probando-php&#34;&gt;Probando PHP&lt;/h3&gt;
+&lt;h2 id=&#34;probando-php&#34;&gt;Probando PHP&lt;/h2&gt;
 
 &lt;p&gt;Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en &lt;em&gt;/usr/local/nginx/http/&lt;/em&gt; y asignarle como grupo y usuario &lt;em&gt;www-data&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;?php echo &amp;quot;Probando que PHP funciona&amp;quot;;??&amp;gt;&amp;#39;&lt;/span&gt; &amp;gt; /usr/local/nginx/html/index.php
@@ -83,7 +81,7 @@ chown www-data:www-data /usr/local/nginx/html/index.php
 
 &lt;p&gt;De nuevo nos dirigimos al &lt;em&gt;localhost&lt;/em&gt; y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.&lt;/p&gt;
 
-&lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;

@@ -25,17 +25,17 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;objetivos-de-bolt&#34;&gt;Objetivos de Bolt&lt;/h3&gt;
+&lt;h1 id=&#34;objetivos-de-bolt&#34;&gt;Objetivos de Bolt&lt;/h1&gt;
 
 &lt;p&gt;Bolt se centra en ser lo más sencillo y simple posible. Es muy rápido de instalar, de fácil configuración y usa unas plantillas muy elegantes. Ha sido creado usando bibliotecas &lt;a href=&#34;https://elbauldelprogramador.com/opensource/&#34;&gt;open source&lt;/a&gt; modernas y es el más adecuado para crear webs en &lt;a href=&#34;https://elbauldelprogramador.com/?s=html5&#34;&gt;HTML5&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;datos-técnicos&#34;&gt;Datos técnicos&lt;/h3&gt;
+&lt;h1 id=&#34;datos-técnicos&#34;&gt;Datos técnicos&lt;/h1&gt;
 
 &lt;p&gt;Bolt está escrito en &lt;a href=&#34;https://elbauldelprogramador.com/php/&#34;&gt;PHP&lt;/a&gt;, en cuanto a &lt;a href=&#34;https://elbauldelprogramador.com/basededatos/&#34;&gt;bases de datos&lt;/a&gt; es capaz de usar SQLite, MySQL o PostgreSQL. Está construido sobre el &lt;a href=&#34;http://silex.sensiolabs.org/&#34; target=&#34;_blank&#34;&gt;framework Silex&lt;/a&gt;. En cuanto a la licencia, está bajo la &lt;a href=&#34;http://opensource.org/licenses/mit-license.php&#34; target=&#34;_blank&#34;&gt;MIT-license&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Una aspecto a favor de Bolt es la flexibilidad que ofrece a los programadores, con una capacidad de configuración muy alta. De igual manera, por su simpleza es muy útil para cualquier tipo de persona que desee escribir en una web de forma rápida y sencilla.&lt;/p&gt;
 
-&lt;h3 id=&#34;instalando-bolt&#34;&gt;Instalando Bolt&lt;/h3&gt;
+&lt;h1 id=&#34;instalando-bolt&#34;&gt;Instalando Bolt&lt;/h1&gt;
 
 &lt;p&gt;Tras esta breve introducción a Bolt, voy a pasar a explicar cómo instalarlo y configurarlo.&lt;/p&gt;
 
@@ -49,7 +49,7 @@
 
 &lt;p&gt;En la página oficial ofrecen tres formas de instalar Bolt. &lt;strong&gt;Desde línea de comandos&lt;/strong&gt;, usando SFTP o la &lt;strong&gt;instalación para desarrolladores&lt;/strong&gt;. En ester artículo cubriré la primera y tercera opción.&lt;/p&gt;
 
-&lt;h3 id=&#34;instalar-bolt-desde-línea-de-comandos&#34;&gt;Instalar Bolt desde línea de comandos&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-bolt-desde-línea-de-comandos&#34;&gt;Instalar Bolt desde línea de comandos&lt;/h1&gt;
 
 &lt;p&gt;Empecemos por la más sencilla, bastarán 3 órdenes en la terminal para finalizar la instalación:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;curl -O http://bolt.cm/distribution/bolt_latest.tgz
@@ -61,11 +61,15 @@ chmod -R &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; files/ app/database/ app
 
 &lt;p&gt;Eso es todo, así de fácil es instalar Bolt. La primera vez que visites la web deberás registrar un usuario para administar la web:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Login-to-bolt-CMS.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Login-to-bolt-CMS-1024x819.png&#34; alt=&#34;crear usuario en bolt&#34; width=&#34;1024px&#34; height=&#34;819px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Login-to-bolt-CMS-1024x819.png&#34; alt=&#34;crear usuario en bolt&#34; width=&#34;1024px&#34; height=&#34;819px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Ya en el panel de administración, puedes agregar contenido de muestra dirigiendote a &lt;em&gt;Settings » Check Database&lt;/em&gt; y hacer click en &lt;strong&gt;Add some sample Records with Loripsum text&lt;/strong&gt;. Tras hacer click tendremos contenido que mostrar en la web:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Bolt-Home-PAge-CMS.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Bolt-Home-PAge-CMS-1024x819.png&#34; alt=&#34;Bolt Home PAge CMS&#34; width=&#34;1024px&#34; height=&#34;819px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Bolt-Home-PAge-CMS-1024x819.png&#34; alt=&#34;Bolt Home PAge CMS&#34; width=&#34;1024px&#34; height=&#34;819px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install php5-sqlite&lt;/span&gt;
@@ -89,7 +93,7 @@ chmod -R &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; files/ app/database/ app
   databasename: bolt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;instalar-bolt-por-el-método-para-desarrolladores&#34;&gt;Instalar Bolt por el método para desarrolladores&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-bolt-por-el-método-para-desarrolladores&#34;&gt;Instalar Bolt por el método para desarrolladores&lt;/h1&gt;
 
 &lt;p&gt;Este método no es mucho más complicado que el anterior. La ventaja es que permite estar a la última en cuanto a la versión, y el método de actualización es muy sencillo. En este caso se usará &lt;strong&gt;git&lt;/strong&gt; y &lt;strong&gt;Composer&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://github.com/bobdenotter/bolt.git bolt
@@ -113,20 +117,24 @@ php composer.phar update
 
 &lt;p&gt;Algo que me ha llamado mucho la atención es la facilidad que se le da al desarrollador para depurar el entorno. Si estás logeado y con el modo depuración activado (&lt;em&gt;debug:true&lt;/em&gt; en el archivo &lt;em&gt;config.yml&lt;/em&gt;) verás una barra de depuración abajo a la derecha:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/bolt-debug.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/bolt-debug.png&#34; alt=&#34;bolt debug&#34; width=&#34;748px&#34; height=&#34;55px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 748px) 748px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/bolt-debug.png&#34; alt=&#34;bolt debug&#34; width=&#34;748px&#34; height=&#34;55px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Desde ahí se puede acceder a estadísticas de carga, uso de memoria, entradas del log, consultas a la base de datos etc.&lt;/p&gt;
 
 &lt;p&gt;Incluso cuando estés desarrollando una extensión puedes obtener información de cualquier objeto o variable, en las plantillas hay que escribir &lt;em&gt;{% raw %}{{ print(variable) }}{% endraw %}&lt;/em&gt; y en código &lt;em&gt;\util::var_dump($variable);&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 
 &lt;p&gt;Creo que este CMS promete mucho, personalmente me ha gustado y en un futuro no descartaría mover el blog de WordPress a Bolt.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Visto en&lt;/em&gt; »» &lt;a href=&#34;http://www.genbetadev.com/gestores-de-contenido/bolt-un-cms-sencillo-y-rapido-como-un-rayo&#34; target=&#34;_blank&#34;&gt;Genbeta::Dev&lt;/a&gt;
-&lt;em&gt;Sitio Oficial&lt;/em&gt; »» &lt;a href=&#34;http://bolt.cm/&#34; target=&#34;_blank&#34;&gt;bolt.cm&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Visto en&lt;/em&gt; »» &lt;a href=&#34;http://www.genbetadev.com/gestores-de-contenido/bolt-un-cms-sencillo-y-rapido-como-un-rayo&#34; target=&#34;_blank&#34;&gt;Genbeta::Dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Sitio Oficial&lt;/em&gt; »» &lt;a href=&#34;http://bolt.cm/&#34; target=&#34;_blank&#34;&gt;bolt.cm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>
