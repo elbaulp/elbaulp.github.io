@@ -476,11 +476,11 @@ retval  rv
 
 &lt;p&gt;Hacía tiempo que el &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; web &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;instalar-django-bajo-un-entorno-virtual-con-virtualenv&#34;&gt;Instalar django bajo un entorno virtual con virtualenv&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-django-bajo-un-entorno-virtual-con-virtualenv&#34;&gt;Instalar django bajo un entorno virtual con virtualenv&lt;/h1&gt;
 
 &lt;p&gt;Django desde la version 1.8 (LTS) solo soporta python 2.7 o 3.x (recomendado). En este tutorial se usará la version estable 1.10.2.&lt;/p&gt;
 
-&lt;h4 id=&#34;usando-python-2-7&#34;&gt;Usando python 2.7&lt;/h4&gt;
+&lt;h2 id=&#34;usando-python-2-7&#34;&gt;Usando python 2.7&lt;/h2&gt;
 
 &lt;p&gt;Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante &lt;strong&gt;pip&lt;/strong&gt;, que ya viene incluido en python 2.7.9, en caso de tener otra version anterior, deberemos instalarlo.&lt;/p&gt;
 
@@ -492,7 +492,7 @@ retval  rv
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip install --upgrade virtualenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;usando-python-3-x&#34;&gt;Usando python 3.x&lt;/h4&gt;
+&lt;h2 id=&#34;usando-python-3-x&#34;&gt;Usando python 3.x&lt;/h2&gt;
 
 &lt;p&gt;En caso de usar la version 3.4 o superior, ya tendremos disponible pip por lo que no será necesario su instalación. En otro caso, procederemos a instalar pip.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install python3-pip python3-dev build-essential
@@ -502,7 +502,7 @@ retval  rv
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo pip3 install --upgrade virtualenv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;inicializar-el-entorno-virtual&#34;&gt;Inicializar el entorno virtual&lt;/h4&gt;
+&lt;h2 id=&#34;inicializar-el-entorno-virtual&#34;&gt;Inicializar el entorno virtual&lt;/h2&gt;
 
 &lt;p&gt;Con virtualenv instalado ahora creamos un entorno virtual (lo llamaremos python-env) en el que instalar todo lo relacionado con &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; y sus dependencias:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ virtualenv python-env
@@ -512,20 +512,20 @@ retval  rv
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; python-env/bin/activate
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;instalar-django&#34;&gt;Instalar Django&lt;/h4&gt;
+&lt;h2 id=&#34;instalar-django&#34;&gt;Instalar Django&lt;/h2&gt;
 
 &lt;p&gt;Por último, instalamos &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ pip install --upgrade django
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;configurando-django&#34;&gt;Configurando Django&lt;/h3&gt;
+&lt;h1 id=&#34;configurando-django&#34;&gt;Configurando Django&lt;/h1&gt;
 
 &lt;p&gt;Asumiremos que la versión instalada es la 1.10:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ python -m django --version
 1.10.2
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;crear-un-proyecto&#34;&gt;Crear un proyecto&lt;/h4&gt;
+&lt;h2 id=&#34;crear-un-proyecto&#34;&gt;Crear un proyecto&lt;/h2&gt;
 
 &lt;p&gt;Para inicializar un proyecto debemos ejecutar el siguiente comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ django-admin.py startproject mysite
@@ -551,15 +551,15 @@ retval  rv
 &lt;li&gt;mysite/wsgi.py. Punto de entrada para servidores webs compatibles con &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface&#34; title=&#34;Qué es WSGI&#34; target=&#34;_blank&#34;&gt;WSGI&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;el-servidor-de-desarrollo&#34;&gt;El servidor de desarrollo&lt;/h4&gt;
+&lt;h2 id=&#34;el-servidor-de-desarrollo&#34;&gt;El servidor de desarrollo&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; proporciona un servidor simple que nos permita probar nuestro proyecto de forma local, para iniciarlo hay que ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py runserver
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;el-fichero-de-configuración-settings-py&#34;&gt;El fichero de configuración settings.py&lt;/h4&gt;
+&lt;h2 id=&#34;el-fichero-de-configuración-settings-py&#34;&gt;El fichero de configuración settings.py&lt;/h2&gt;
 
-&lt;h5 id=&#34;configurar-la-base-de-datos&#34;&gt;Configurar la base de datos&lt;/h5&gt;
+&lt;h3 id=&#34;configurar-la-base-de-datos&#34;&gt;Configurar la base de datos&lt;/h3&gt;
 
 &lt;p&gt;Para modificar la configuración de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de datos&#34;&gt;base de datos&lt;/a&gt; editamos el fichero &lt;em&gt;mysite/settings.py&lt;/em&gt;, en este tutorial usaremos &lt;em&gt;sqlite&lt;/em&gt; por ser la más sencilla.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DATABASES&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -575,7 +575,7 @@ retval  rv
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h5 id=&#34;aplicaciones-instaladas&#34;&gt;Aplicaciones instaladas&lt;/h5&gt;
+&lt;h3 id=&#34;aplicaciones-instaladas&#34;&gt;Aplicaciones instaladas&lt;/h3&gt;
 
 &lt;p&gt;En &lt;em&gt;INSTALLED_APPS&lt;/em&gt; se definen las aplicaciones instaladas en nuestro proyecto, por defecto tendremos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;INSTALLED_APPS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -594,7 +594,7 @@ retval  rv
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;crear-una-aplicación&#34;&gt;Crear una aplicación&lt;/h3&gt;
+&lt;h1 id=&#34;crear-una-aplicación&#34;&gt;Crear una aplicación&lt;/h1&gt;
 
 &lt;p&gt;Para crear una nueva aplicación basta con ejecutar el comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py startapp polls
@@ -653,7 +653,7 @@ retval  rv
 &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;activar-el-panel-de-administración&#34;&gt;Activar el panel de administración&lt;/h4&gt;
+&lt;h2 id=&#34;activar-el-panel-de-administración&#34;&gt;Activar el panel de administración&lt;/h2&gt;
 
 &lt;p&gt;Primero deberemos crear un usuario con permiso de administración, esto es posible directamente con un comando de manage.py en el que solo debemos seguir los pasos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;createsuperuser&lt;/span&gt;
@@ -671,7 +671,7 @@ retval  rv
 &lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;{{ title }}&#34; title=&#34;{{ title }}&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 336px) 336px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;Introducción a Django - Instalación y primer proyecto&#34; title=&#34;Introducción a Django - Instalación y primer proyecto&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado &lt;em&gt;admin.py&lt;/em&gt; en el directorio &lt;em&gt;polls&lt;/em&gt;:&lt;/p&gt;
@@ -684,10 +684,10 @@ retval  rv
 &lt;p&gt;Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;h4 id=&#34;escribir-la-primera-vista&#34;&gt;Escribir la primera vista&lt;/h4&gt;
+&lt;h2 id=&#34;escribir-la-primera-vista&#34;&gt;Escribir la primera vista&lt;/h2&gt;
 
 &lt;p&gt;Hemos mencionado antes que en &lt;em&gt;views.py&lt;/em&gt; se define qué se va a mostrar al usuario. Veamos la vista más simple que podemos crear. En &lt;em&gt;polls/views.py&lt;/em&gt; escribe lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;django.http&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HttpResponse&lt;/span&gt;
@@ -718,14 +718,16 @@ retval  rv
 
 &lt;p&gt;Tras modificar estos ficheros, veremos el mensaje &lt;strong&gt;Hello, world. You&amp;#8217;re at the poll index.&lt;/strong&gt; en &lt;a href=&#34;http://127.0.0.1:8000/polls&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/polls&#34;&gt;http://127.0.0.1:8000/polls&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;ejemplo-completo&#34;&gt;Ejemplo completo&lt;/h4&gt;
+&lt;h2 id=&#34;ejemplo-completo&#34;&gt;Ejemplo completo&lt;/h2&gt;
 
 &lt;p&gt;Para no alargar mucho este artículo, he intentado dar unas nociones básicas de cómo instalar y empezar a usar django. El ejemplo completo de la documentación oficial citada en las referencias lo podéis encontrar en &lt;a href=&#34;https://github.com/elbaulp/djangoTutorialv1.5&#34; title=&#34;Ejemplo en Github&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Documentación Oficial&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/intro/tutorial01/&#34; target=&#34;_blank&#34;&gt;djangoproject.com&lt;/a&gt;
-&lt;em&gt;Imagen de aruseni&lt;/em&gt; »» &lt;a href=&#34;http://aruseni.deviantart.com/art/Django-white-and-green-318200642&#34; target=&#34;_blank&#34;&gt;deviantart&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Documentación Oficial&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/intro/tutorial01/&#34; target=&#34;_blank&#34;&gt;djangoproject.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Imagen de aruseni&lt;/em&gt; »» &lt;a href=&#34;http://aruseni.deviantart.com/art/Django-white-and-green-318200642&#34; target=&#34;_blank&#34;&gt;deviantart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

@@ -1906,7 +1906,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/introduccion-base-de-datos/</guid>
-            <description>&lt;h2 id=&#34;introducción-a-bases-de-datos&#34;&gt;Introducción a bases de datos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;introducción-a-bases-de-datos&#34;&gt;Introducción a bases de datos&lt;/h1&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Todo lo que voy a escribir a continuación sobre base de datos, lo he sacado de los apuntes de mi profesor de Bases de Datos.&lt;/p&gt;
@@ -1916,7 +1916,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;elementos-relacionados-con-un-sistema-de-base-de-datos&#34;&gt;Elementos relacionados con un sistema de base de datos:&lt;/h2&gt;
+&lt;h1 id=&#34;elementos-relacionados-con-un-sistema-de-base-de-datos&#34;&gt;Elementos relacionados con un sistema de base de datos:&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Datos.-&lt;/strong&gt; En una BD existen dos tipos de datos: &lt;strong&gt;&lt;em&gt;el diccionario de datos (DD)&lt;/em&gt;&lt;/strong&gt; que son los datos de uso interno del software que gestiona la base de datos, como son el tamaño de los campos, el tipo, los usuarios… Y por otra parte están &lt;strong&gt;&lt;em&gt;los datos que el cliente necesita almacenar.&lt;/em&gt;&lt;/strong&gt; La información de los datos debe estar integrada, es decir, como si se tratara de un único fichero. Además, los datos deben ser compartidos, es decir, muchos usuarios pueden acceder a la misma información, eso sí, con acceso controlado.&lt;/li&gt;
@@ -1944,7 +1944,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;niveles-de-abstracción-de-la-información&#34;&gt;Niveles de abstracción de la información.&lt;/h2&gt;
+&lt;h1 id=&#34;niveles-de-abstracción-de-la-información&#34;&gt;Niveles de abstracción de la información.&lt;/h1&gt;
 
 &lt;p&gt;Uno de los objetivos de un sistema de bases de datos es proporcionar a los usuarios una visión abstracta de la información, ocultando ciertos detalles acerca de cómo se almacenan los datos, pero permitiendo una recuperación eficaz de la información.&lt;/p&gt;
 
@@ -1974,7 +1974,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/ul&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sistema gestor de base de datos - sgbd&#34; title=&#34;sistema gestor de base de datos - sgbd&#34; height=&#34;300&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s320/figura1.1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sistema gestor de base de datos - sgbd&#34; title=&#34;sistema gestor de base de datos - sgbd&#34; height=&#34;300&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TMsDbV2ZnZI/AAAAAAAAADs/xVmeBhnwGno/s800/figura1.1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En el siguiente ejemplo de una base de datos se puede observar que se han obtenido dos subesquemas (esquemas externos) a partir del único esquema conceptual formado por las entidades: VENDEDORES, VENTAS y ARTICULOS. La estructura de cada subesquema obedece a las necesidades concretas del tipo de usuario que lo va a utilizar. Por ejemplo:&lt;/p&gt;
@@ -1984,7 +1984,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;li&gt;El otro subesquema lo utilizará un programa que listará una relación de empleados por departamento, por lo que sólo necesita conocer los nombres de todos los empleados y el departamento al que pertenecen.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;subesquemas&#34;&gt;SUBESQUEMAS&lt;/h3&gt;
+&lt;h2 id=&#34;subesquemas&#34;&gt;SUBESQUEMAS&lt;/h2&gt;
 
 &lt;p&gt;Esquema externo o subesquema para el programa “Ventas por departamento”&lt;/p&gt;
 
@@ -2015,15 +2015,15 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;esquema-conceptual&#34;&gt;ESQUEMA CONCEPTUAL&lt;/h3&gt;
+&lt;h2 id=&#34;esquema-conceptual&#34;&gt;ESQUEMA CONCEPTUAL&lt;/h2&gt;
 
 &lt;p&gt;Esquema conceptual de toda la base de datos, formado por los siguientes registros conceptuales:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; height=&#34;66&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s320/tabla1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; height=&#34;66&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMtBOVu7K0I/AAAAAAAAADw/KH1tI0GGlFU/s800/tabla1.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;esquema-interno&#34;&gt;ESQUEMA INTERNO&lt;/h3&gt;
+&lt;h2 id=&#34;esquema-interno&#34;&gt;ESQUEMA INTERNO&lt;/h2&gt;
 
 &lt;p&gt;Esquema interno de toda la base de datos:&lt;/p&gt;
 
@@ -2041,7 +2041,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;articulos&#34;&gt;ARTICULOS&lt;/h4&gt;
+&lt;h2 id=&#34;articulos&#34;&gt;ARTICULOS&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2061,9 +2061,9 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 
 &lt;p&gt;A continuación podemos observar algunas ocurrencias de los registros externos y conceptuales.&lt;/p&gt;
 
-&lt;h3 id=&#34;vistas-externas&#34;&gt;VISTAS EXTERNAS&lt;/h3&gt;
+&lt;h2 id=&#34;vistas-externas&#34;&gt;VISTAS EXTERNAS&lt;/h2&gt;
 
-&lt;h4 id=&#34;ventas-por-departamento&#34;&gt;VENTAS_POR_DEPARTAMENTO&lt;/h4&gt;
+&lt;h2 id=&#34;ventas-por-departamento&#34;&gt;VENTAS_POR_DEPARTAMENTO&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2101,7 +2101,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;empleados-por-departamento&#34;&gt;EMPLEADOS_POR_DEPARTAMENTO&lt;/h4&gt;
+&lt;h2 id=&#34;empleados-por-departamento&#34;&gt;EMPLEADOS_POR_DEPARTAMENTO&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2129,9 +2129,9 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&#34;vista-conceptual&#34;&gt;VISTA CONCEPTUAL&lt;/h3&gt;
+&lt;h2 id=&#34;vista-conceptual&#34;&gt;VISTA CONCEPTUAL&lt;/h2&gt;
 
-&lt;h4 id=&#34;vendedores&#34;&gt;VENDEDORES&lt;/h4&gt;
+&lt;h2 id=&#34;vendedores&#34;&gt;VENDEDORES&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2153,7 +2153,7 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&#34;ventas&#34;&gt;VENTAS&lt;/h4&gt;
+&lt;h2 id=&#34;ventas&#34;&gt;VENTAS&lt;/h2&gt;
 
 &lt;table&gt;
 &lt;thead&gt;
@@ -2177,12 +2177,12 @@ principal es la de recuperar filas de la tabla o tablas. Además, esta sentencia
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;funcionamiento-de-un-sgbd&#34;&gt;Funcionamiento de un SGBD&lt;/h2&gt;
+&lt;h1 id=&#34;funcionamiento-de-un-sgbd&#34;&gt;Funcionamiento de un SGBD&lt;/h1&gt;
 
 &lt;p&gt;Para describir el funcionamiento de un SGBD supondremos el caso de un programa de aplicación, que lee un registro de una base de datos, para ello realiza una solicitud al &lt;abbr title=&#34;Sistema Gestor de Base de Datos&#34;&gt;SGBD&lt;/abbr&gt;, esencialmente la secuencia, mostrada en el esquema de la figura 1.2, es la siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Funcionamiento de un SGBD&#34; height=&#34;255&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s320/figura1.2.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Funcionamiento de un SGBD&#34; height=&#34;255&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TMwEXF5RGLI/AAAAAAAAAD0/VfTA_V3C7x0/s800/figura1.2.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;ol&gt;
@@ -2200,7 +2200,7 @@ cualquier indicación de error.&lt;/li&gt;
 &lt;li&gt;El programa puede ahora trabajar con los datos pedidos.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;lenguajes-de-un-sgbd&#34;&gt;Lenguajes de un SGBD&lt;/h2&gt;
+&lt;h1 id=&#34;lenguajes-de-un-sgbd&#34;&gt;Lenguajes de un SGBD&lt;/h1&gt;
 
 &lt;p&gt;Para comunicarnos con la base de datos necesitamos un lenguaje, este lenguaje nos
 permitirá realizar varios procedimientos:&lt;/p&gt;
@@ -2211,7 +2211,7 @@ permitirá realizar varios procedimientos:&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;DCL&lt;/strong&gt; son todas las sentencias que definen restricciones de control de acceso a los datos. Generan información en el diccionario de datos.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;tipos-de-bases-de-datos&#34;&gt;Tipos de Bases de Datos&lt;/h2&gt;
+&lt;h1 id=&#34;tipos-de-bases-de-datos&#34;&gt;Tipos de Bases de Datos&lt;/h1&gt;
 
 &lt;p&gt;Según la estructura lógica, a nivel conceptual o a nivel externo, los SGBD se clasifican en:&lt;/p&gt;
 
@@ -2222,7 +2222,7 @@ programador tiene que recorrer la base de datos registro a registro, especifican
 &lt;li&gt;&lt;strong&gt;Relacional:&lt;/strong&gt; prácticamente es el más extendido en la actualidad, será el que seguiremos en este módulo, y al que dedicaremos un tema posteriormente.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;siguiente-tema-diseño-de-bases-de-datos-i-conceptos-del-modelo-relacional-https-elbauldelprogramador-com-diseno-de-bases-de-datos-i-conceptos&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/&#34;&gt;Diseño de Bases de Datos ( I ) – Conceptos del Modelo Relacional&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-diseño-de-bases-de-datos-i-conceptos-del-modelo-relacional-https-elbauldelprogramador-com-diseno-de-bases-de-datos-i-conceptos&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/diseno-de-bases-de-datos-i-conceptos/&#34;&gt;Diseño de Bases de Datos ( I ) – Conceptos del Modelo Relacional&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2248,7 +2248,7 @@ programador tiene que recorrer la base de datos registro a registro, especifican
 &lt;li&gt;&lt;strong&gt;Control de transacciones.&lt;/strong&gt; Gestiona una serie de operaciones que se pueden anular o llevar a cabo al final.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;diccionario-de-datos&#34;&gt;Diccionario de Datos&lt;/h3&gt;
+&lt;h1 id=&#34;diccionario-de-datos&#34;&gt;Diccionario de Datos&lt;/h1&gt;
 
 &lt;p&gt;Agrupa los metadatos de una base de datos. En este diccionario aparecen todos los objetos de la base de datos con su nombre, función, control de acceso (seguridad) y correspondencia física en los archivos de datos.&lt;/p&gt;
 
@@ -2270,7 +2270,7 @@ programador tiene que recorrer la base de datos registro a registro, especifican
 
 &lt;p&gt;Es lo más común. El servidor lanza un proceso en la máquina central. Este proceso está a la escucha de nuevos usuarios, cuando estos llegan se produce una conexión que permite que el servidor y el cliente se comuniquen. Esto permite una accesibilidad a la base de datos desde distintas máquinas.&lt;/p&gt;
 
-&lt;h3 id=&#34;herramientas-de-los-rdbms&#34;&gt;Herramientas de los RDBMS&lt;/h3&gt;
+&lt;h1 id=&#34;herramientas-de-los-rdbms&#34;&gt;Herramientas de los RDBMS&lt;/h1&gt;
 
 &lt;p&gt;Para el uso de las bases de datos, los RDBMS proporcionan diversas herramientas, que
 además tienen finalidades distintas en función de qué tipo de usuario las utiliza:&lt;/p&gt;
@@ -2289,7 +2289,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;li&gt;Herramientas de creación de aplicaciones hacia Internet&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;sql-structure-query-language&#34;&gt;SQL(Structure Query Language)&lt;/h3&gt;
+&lt;h1 id=&#34;sql-structure-query-language&#34;&gt;SQL(Structure Query Language)&lt;/h1&gt;
 
 &lt;p&gt;SQL es el lenguaje de consulta universal para bases de datos.&lt;/p&gt;
 
@@ -2322,7 +2322,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;span class=&#34;k&#34;&gt;REVOKE&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-componentes-del-lenguaje-sql-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/componentes-del-lenguaje-sql-sql/&#34;&gt;Componentes del lenguaje SQL&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-componentes-del-lenguaje-sql-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/componentes-del-lenguaje-sql-sql/&#34;&gt;Componentes del lenguaje SQL&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2333,7 +2333,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
             <guid>https://elbauldelprogramador.com/introduccion-plsql/</guid>
             <description>&lt;p&gt;Ahora que el &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-tablas-resumen/&#34;&gt;temario de SQL&lt;/a&gt; está terminado, voy a empezar a escribir sobre &lt;a href=&#34;http://es.wikipedia.org/wiki/PL/SQL&#34;&gt;PL/SQL&lt;/a&gt;. Empezaré con una introducción.&lt;/p&gt;
 
-&lt;h3 id=&#34;introducción&#34;&gt;Introducción&lt;/h3&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;El trabajo realizado &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;hasta ahora&lt;/a&gt; con la base de datos se ha hecho de forma interactiva: el usuario introducía una orden (en SQL) y Oracle proporcionaba una respuesta. Esta forma de trabajar no resulta operativa en un entorno de producción, porque todos los usuarios no conocen ni utilizan SQL, y además suelen producirse frecuentes errores.&lt;/p&gt;
 
@@ -2347,7 +2347,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 
 &lt;p&gt;PL/SQL soporta todos los comandos de consulta y manipulación de datos, aportando sobre SQL las estructuras de control y otros elementos propios de los lenguajes procedimentales de tercera generación. Su unidad de trabajo es el bloque, formado por un conjunto de declaraciones, instrucciones y mecanismos de gestión de errores y excepciones.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-introducción-a-pl-sql-transacciones-4&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34;&gt;Introducción a PL/SQL - Transacciones&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-introducción-a-pl-sql-transacciones-4&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-plsql-transacciones/&#34;&gt;Introducción a PL/SQL - Transacciones&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2356,7 +2356,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/introduccion-plsql-transacciones/</guid>
-            <description>&lt;h3 id=&#34;transacciones&#34;&gt;Transacciones&lt;/h3&gt;
+            <description>&lt;h1 id=&#34;transacciones&#34;&gt;Transacciones&lt;/h1&gt;
 
 &lt;p&gt;Oracle es un sistema de base de datos puramente transaccional, de tal forma, que la instrucción &lt;code&gt;BEGIN TRANSACTION&lt;/code&gt; no existe.&lt;/p&gt;
 
@@ -2410,7 +2410,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;siguiente-tema-fundamentos-de-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-de-plsql/&#34;&gt;Fundamentos de PL/SQL&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-de-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-de-plsql/&#34;&gt;Fundamentos de PL/SQL&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
