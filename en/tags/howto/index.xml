@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Howto on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/howto/index.xml</link>
+        <description>Recent content in Howto on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/tags/howto/index.xml</link>
+            <title>Howto on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/howto/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to write to a file in Scala</title>
+            <link>https://elbauldelprogramador.com/en/write-to-file-scala/</link>
+            <pubDate>Tue, 16 May 2017 10:25:24 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/write-to-file-scala/</guid>
+            <description>&lt;p&gt;In my last post I talked about &lt;a href=&#34;https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/&#34; title=&#34;iterate multiple collections in Scala&#34;&gt;how to iterate through multiple collections in scala&lt;/a&gt;, a problem I faced when working on my &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP depdendency parsing&#34;&gt;final project&lt;/a&gt;. Other problem I faced was writing to a file in &lt;strong&gt;Scala&lt;/strong&gt;, since standard Scala does not have this feature, I had to implement it and added to my personal library.&lt;/p&gt;
+
+&lt;h1 id=&#34;first-approach&#34;&gt;First approach&lt;/h1&gt;
+
+&lt;p&gt;The first step I made was, as always, &lt;strong&gt;search on &lt;em&gt;Stack Overflow&lt;/em&gt;&lt;/strong&gt; to know how other people were solving this problem, &lt;a href=&#34;http://stackoverflow.com/users/247533/rex-kerr&#34; target=&#34;_blank&#34; title=&#34;Rex kerr&#34;&gt;Rex kerr&lt;/a&gt; proposed this implementation on the question &lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/4608061#4608061&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and to use it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.io._&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Five&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;file!&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;example.txt&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;my-approach&#34;&gt;My approach&lt;/h1&gt;
+
+&lt;p&gt;Based on &lt;em&gt;Rex Kerr&lt;/em&gt; solution, I &lt;strong&gt;modified and adapted&lt;/strong&gt; his code and encapsulate it in a &lt;code&gt;object&lt;/code&gt; called &lt;code&gt;FileUtils&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Any&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;src/main/resources/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asInstanceOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;FileUtils&lt;/code&gt; encapsulates two additional methods, &lt;code&gt;saveOject&lt;/code&gt; and &lt;code&gt;getObject[T]&lt;/code&gt;, the former simply &lt;strong&gt;save the object&lt;/strong&gt; passed in as parameter and store it in a file, the latter &lt;strong&gt;returns the contents&lt;/strong&gt; of the file as an instance of type &lt;code&gt;T&lt;/code&gt;. The reason to do this was because I needed to store the &lt;strong&gt;extracted features&lt;/strong&gt; of the model in order to save computation time in future runs.&lt;/p&gt;
+
+&lt;h1 id=&#34;example-of-use&#34;&gt;Example of use&lt;/h1&gt;
+
+&lt;p&gt;As an example, my &lt;code&gt;FileUtils&lt;/code&gt; object can be used as follows (this snippet of code is from &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing/blob/dev/src/main/scala/com/elbauldelprogramador/nlp/parser/DependencyParser.scala#L161&#34; target=&#34;_blank&#34; title=&#34;DependencyParser.scala&#34;&gt;DependencyParser.scala&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;@switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]]&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]),&lt;/span&gt;
+                   &lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]),&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;sentences&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With &lt;code&gt;(getClass.getResource(&amp;quot;/XY&amp;quot;) != null: @switch) match&lt;/code&gt; I am testing if the file already exists, if it does, I simply call &lt;code&gt;FileUtils.getObject&lt;/code&gt; and pass in the type, saving the time to compute again the features for the model with the method &lt;code&gt;eF&lt;/code&gt;. If the file was not present, I extract the features calling &lt;code&gt;eF&lt;/code&gt; and then save them with &lt;code&gt;FileUtils.saveOject&lt;/code&gt; for future use.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, is there &lt;strong&gt;another way you write/read&lt;/strong&gt; files in scala? Let me know in the comments!&lt;/p&gt;
+
+&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to iterate through multiple collections in Scala</title>
+            <link>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</link>
+            <pubDate>Mon, 08 May 2017 12:12:30 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</guid>
+            <description>&lt;p&gt;When I first started working with &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34; title=&#34;post about scala scala&#34;&gt;scala&lt;/a&gt; I&amp;rsquo;ve found myself unable to do trivial things I have being doing in other languages I already known. That is the most frustrating part of learning a new programming language, in my opinion.&lt;/p&gt;
+
+&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-python&#34;&gt;Iterate through multiple collections at once in python&lt;/h1&gt;
+
+&lt;p&gt;One common thing to do is iterate through two collections at a time. The &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;post about python&#34;&gt;pythonic&lt;/a&gt; way of doing this is simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which result is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-scala&#34;&gt;Iterate through multiple collections at once in scala&lt;/h1&gt;
+
+&lt;p&gt;Now, what is the &lt;em&gt;idiomatic&lt;/em&gt; way of doing it in &lt;em&gt;scala&lt;/em&gt;?. In my case I needed to iterate through the collection and also have the index of the current item being iterated, this can be achieved with the method &lt;code&gt;zipWithIndex&lt;/code&gt;, then call &lt;code&gt;zipped&lt;/code&gt; along with any collection you want to iterate at the same time:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipWithIndex&lt;/span&gt;
+
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipped&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the example above I am &lt;strong&gt;zipping&lt;/strong&gt; together three collections &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, which correspond with types &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before I knew about the &lt;em&gt;idiomatic&lt;/em&gt; way I was iterating trough the collection in a ugly way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/** Constituent tree of this sentence; includes head words */&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This code is part of my final project in Computer Engineering, it was about creating a &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_grammar&#34; target=&#34;_blank&#34; title=&#34;Dependency Parsing&#34;&gt;Dependency Parser&lt;/a&gt;, you can check it on &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/github&#34; title=&#34;Posts about github&#34;&gt;GitHub&lt;/a&gt;: &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP_Dependency_Parsing&#34;&gt;NLP_Dependency_Parsing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17199534/scala-for-loop-over-two-lists-simultaneously&#34; target=&#34;_blank&#34; title=&#34;Scala for loop over two lists simultaneously&#34;&gt;Scala for loop over two lists simultaneously&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to Compile  OpenCV 3.0&#43; nonfree part from source</title>
+            <link>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</link>
+            <pubDate>Tue, 07 Mar 2017 20:31:54 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/</guid>
+            <description>&lt;p&gt;In my last post &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;Compile OpenCV from source with JAVA support&lt;/a&gt; I explained how to Compile OpenCV from source with JAVA support, however, the OpenCV nonfree part was not included. If you are planning to use private features from OpenCV like SIFT or SURF descriptors, you should go as follows:&lt;/p&gt;
+
+&lt;h1 id=&#34;1-download-opencv-3-2-unpack-and-create-build-directory&#34;&gt;[1]. Download OpenCV 3.2, unpack and create build directory&lt;/h1&gt;
+
+&lt;p&gt;following the steps of &lt;a href=&#34;https://elbauldelprogramador.com/en/compile-opencv-3.2-with-java-intellij-idea/&#34; title=&#34;Compile OpenCV 3.2 with Java and use it in IntelliJ IDEA&#34;&gt;my last post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;2-download-and-unpack-nonfree-part&#34;&gt;[2]. Download and unpack nonfree part&lt;/h1&gt;
+
+&lt;p&gt;nonfree part has been separated in OpenCV3+, so you need to download it separately from &lt;a href=&#34;https://github.com/opencv/opencv_contrib&#34; title=&#34;github opencv repository&#34;&gt;github opencv repo&lt;/a&gt;  or clone the repository. Then extract &lt;strong&gt;opencv_contrib&lt;/strong&gt; and move it inside your opencv folder :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~ $ cp Downloads/opencv-contrib opencv-3.2.0/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;3-generate-makefiles&#34;&gt;[3]. generate makefiles&lt;/h1&gt;
+
+&lt;p&gt;we move to the build folder inside opencv folder and type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris~$ cmake -DBUILD_SHARED_LIBS&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;OFF -DCMAKE_BUILD_TYPE&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Release&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;
+-DCMAKE_INSTALL_PREFIX&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;../dist -DOPENCV_EXTRA_MODULES_PATH&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;../opencv_contrib/modules ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With &lt;code&gt;DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib/modules&lt;/code&gt; we are specifying where to found the nonfree part.&lt;/p&gt;
+
+&lt;p&gt;If makefiles generation went ok, you can now build. If using openCV in JAVA, you must make sure &lt;code&gt;$JAVA_HOME&lt;/code&gt; variable is set to JDK&amp;rsquo;s path and visible to child processes. For that when doing: &lt;code&gt;echo $JAVA_HOME&lt;/code&gt; the JDK path must be displayed. If not, in terminal, set de variable value to JDK path and export it, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~$ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;JAVA_HOME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/jdk1.8.0_111/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice that when generating the makefile, the output in the Java field looks like this:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/output-build-makefiles-opencv-java.png&#34; title=&#34;Building makefiles for JAVA openCV&#34; alt=&#34;Building makefiles for JAVA openCV output&#34; width=&#34;983&#34; height=&#34;164&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;building makefiles&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;That is, there is a specified ant and JNI path, and Java wrappers is set to YES.&lt;/p&gt;
+
+&lt;h1 id=&#34;4-build&#34;&gt;[4]. Build&lt;/h1&gt;
+
+&lt;p&gt;run &lt;em&gt;make&lt;/em&gt; to build openCV with Java and create a jar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ make -j8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;-j8 is because JDK8. You should put here your JAVA version.&lt;/p&gt;
+
+&lt;p&gt;Make sure the files &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so or .dll) are created inside /build.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
+opencv-320.jar
+opencv-320.jar.dephelper
+
+cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep libopencv_java320.so
+libopencv_java320.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;5-edit-features2d-manual-hpp-file&#34;&gt;[5]. Edit features2d_manual.hpp file&lt;/h1&gt;
+
+&lt;p&gt;Ok, if building was successfull, then move to &lt;code&gt;/modules/features2d/misc/java/src/cpp&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cris@cris ~/opencv-3.2.02 $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; modules/features2d/misc/java/src/cpp/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and edit  features2d_manual.hpp with your favorite text editor, as following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In line 8, under &lt;code&gt;#include &amp;quot;features2d_converters.hpp&amp;quot;&lt;/code&gt;
+add &lt;code&gt;#include &amp;quot;opencv2/xfeatures2d.hpp&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;In line 121, in &lt;strong&gt;create&lt;/strong&gt; method,  inside &lt;code&gt;case SITF&lt;/code&gt; and  &lt;code&gt;case SURF&lt;/code&gt; replace :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;//name = name + &amp;quot;SIFT&amp;quot;;&lt;/code&gt; by &lt;code&gt;fd=xfeatures2d::SIFT::create();&lt;/code&gt;
+and &lt;code&gt;//name = name + &amp;quot;SURF&amp;quot;;&lt;/code&gt; by &lt;code&gt;fd=xfeatures2d::SURF::create();&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;do the same in line 242 for SIFT and SURF extractors:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SIFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfeatures2d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SIFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SURF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfeatures2d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SURF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;5-rebuild-to-apply-changes&#34;&gt;[5].Rebuild to apply changes&lt;/h1&gt;
+
+&lt;p&gt;move to your opencv/build folder and run &lt;code&gt;make install&lt;/code&gt;
+when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and &lt;strong&gt;.jar&lt;/strong&gt; files on your openCV project and you would be able to use SIFT and SURF decriptors in your code.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/a/35266046/5032130&#34; target=&#34;_blank&#34;&gt;SURF and SIFT algorithms doesn&amp;rsquo;t work in OpenCV 3.0 Java | Stackoverflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to change summary color in Android&#39;s preferences</title>
+            <link>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</link>
+            <pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/cambiar-el-color-del-summary-en-una-preferencia-android/</guid>
+            <description>&lt;p&gt;In a previous post we shown how to create a &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-dialogo-personalizado-en-las-preferencias-android/&#34; title=&#34;Cómo crear un diálogo personalizado en las preferencias Android&#34;&gt;custom dialog for an Android preference&lt;/a&gt;. This post shows how to change the summary color in an Android preference. The &lt;em&gt;summary&lt;/em&gt; is the text appearing below the preference&amp;rsquo;s title.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;getting-the-default-layout&#34;&gt;Getting the default layout&lt;/h1&gt;
+
+&lt;p&gt;To accomplish this task, first it is necessary to create a custom &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34;&gt;layout&lt;/a&gt;. Searching in the Android source code I found one in &lt;em&gt;&lt;a href=&#34;https://android.googlesource.com/platform/frameworks/base/+/master/core/res/res/layout/preference_child.xml&#34; target=&#34;_blank&#34;&gt;frameworks/base/core/res/res/layout/preference_child.xml&lt;/a&gt;&lt;/em&gt;. Lets remove unnecessary code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- Layout for a visually child-like Preference in a PreferenceActivity. --&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:baselineAligned=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center_vertical&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:minHeight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/listPreferredItemHeight&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:paddingEnd=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/scrollbarSize&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:paddingStart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;16dip&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;0dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginBottom=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginEnd=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_marginTop=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;6dip&amp;quot;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_weight=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:ellipsize=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;marquee&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:fadingEdge=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:singleLine=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceMedium&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+
+        &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+android:id/summary&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_alignStart=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@android:id/title&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:maxLines=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;4&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textAppearance=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textAppearanceSmall&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;na&#34;&gt;android:textColor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;?android:attr/textColorSecondary&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;layout-to-show-errors&#34;&gt;Layout to show errors&lt;/h1&gt;
+
+&lt;p&gt;The above layout would be used by default, when an error occurs and want to highlighted, a different layout would be used to indicate to the user where the error is. This layout is identical to the above except for the Summary color. The only necessary change to the previous layout is in the &lt;code&gt;TextView&lt;/code&gt; with ID &lt;strong&gt;&lt;em&gt;@android:id/summary&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;preference_child_summary_error.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
+android:textColor=&amp;quot;@color/red&amp;quot;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34; title=&#34;Programación Android: Interfaz gráfica – Estilos y Temas&#34;&gt;color definition&lt;/a&gt; is created in &lt;strong&gt;&lt;em&gt;./res/values/colors.xml&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;color&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;red&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#ff0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/color&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;changing-color-at-runtime&#34;&gt;Changing color at runtime&lt;/h1&gt;
+
+&lt;p&gt;With the layouts created, they can be used as required at runtime. In this example, when the user inputs a password that does not meet the security requirements, the summary color is changed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;newValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mDialogoPersonalizado&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setLayoutResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;preference_child_summary_error&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mDialogoPersonalizado&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setSummary&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Mensaje de error&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mDialogoPersonalizado&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setLayoutResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;preference_child&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mDialogoPersonalizado&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setSummary&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;********&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mEditorDialogoPerso&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;diagPerso&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mPasswordDialogoPerso&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;passw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mEditorDialogoPerso&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;commit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As seen in the previous post, &lt;code&gt;mDialogoPersonalizado&lt;/code&gt;&amp;rsquo;s type is &lt;code&gt;Preference&lt;/code&gt;. When a password of length inferior to 8 characters is introduced by the user, the following message is shown:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34;&gt;&lt;img sizes=&#34;(min-width: 419px) 419px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/02/Cambiar-el-color-del-summary-en-una-Preferencia-Android.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;419px&#34; height=&#34;97px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to search files with locate using regular expressions.</title>
+            <link>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
+            <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
+            <description>&lt;p&gt;In GNU/Linux, &lt;code&gt;locate&lt;/code&gt; command is useful to find files in the file system by querying a database. Here is how to use with regular expressions.&amp;rdquo; Its &lt;code&gt;man&lt;/code&gt; description is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;locate reads one or more databases prepared by updatedb(8) and writes file names matching at least one of the PATTERNs to standard output, one per line.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This post arises from a problem I had some days ago. I have a file with some of my &lt;a href=&#34;https://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; target=&#34;_blank&#34; title=&#34;Favorite songs&#34;&gt;Favorite songs&lt;/a&gt;. I update this file on a regular basis and I wanted to generate a playlist from that file. The solution was to write a &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; which loop through all items in the file and search where the each file is located in the hard drive.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Some time ago I improved this idea and wrote a &lt;code&gt;Python&lt;/code&gt; script to &lt;a href=&#34;https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;create music playlists with a given length&#34;&gt;create music playlists with a given length&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;regular-expressions-in-locate&#34;&gt;Regular expressions in Locate&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; accepts complex &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;regexs&lt;/a&gt;, in order to enable them, give &lt;code&gt;locate&lt;/code&gt; &lt;code&gt;-regex&lt;/code&gt; option.&lt;/p&gt;
+
+&lt;p&gt;Basically the problem is as follows: Given a text file with filenames, get the absolute path for each file in the textfile. For example, a file name &lt;em&gt;“Author - Song Name”&lt;/em&gt; will be stored in the file as &lt;em&gt;“Song Name”&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;writing-the-regular-expression&#34;&gt;Writing the regular expression&lt;/h1&gt;
+
+&lt;p&gt;Here is the &lt;code&gt;regex&lt;/code&gt; needed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$i.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$i&lt;/code&gt; stores the song name.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.*&lt;/code&gt; match zero or more characters after the song name.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; match only files with &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;em&gt;mp3&lt;/em&gt; or &lt;em&gt;mp4&lt;/em&gt; extensions&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;When building regular expressions, I find useful to use some king of tool like &lt;strong&gt;regex texter&lt;/strong&gt;, that allows to visualize the regular expression:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;script&#34;&gt;Script&lt;/h1&gt;
+
+&lt;p&gt;Once the regular expression is finished, the script that process the file with the song names and creates a playlist is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat TEXT_FILE_WITH_SONG_NAMES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+
+&amp;gt; /path/to/playlist.m3u
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in $nombres
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;locate --regex -i \&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i.*(\.mp4|\.mp3)\&amp;quot;&amp;quot;&lt;/span&gt;
+    locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i.*(\.mp4|\.mp3)&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /path/to/playlist.m3u
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; is set to line break, because &lt;code&gt;for&lt;/code&gt; by default would consider the space as a separator, instead of a new line.&lt;/p&gt;
+
+&lt;p&gt;As an alternative, suggested  by &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt; is to use &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat ARCHIVO_CON_LISTA_DE_NOMBRES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+&amp;gt; /path/to/playlist.m3u
+
+cat $nombres &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; i
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;locate --regex -i \&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i.*(\.mp4|\.mp3)\&amp;quot;&amp;quot;&lt;/span&gt;
+    locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i.*(\.mp4|\.mp3)&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /path/to/playlist.m3u
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;And so &lt;code&gt;IFS&lt;/code&gt; is no longer needed.&lt;/p&gt;
+
+&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to remove slotted packages in gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
+            <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
+            <description>
+
+&lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
+
+&lt;p&gt;First use &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; to list package matching PKG:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ equery list emacs
+ * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are two &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; packages, slotted in &lt;code&gt;:24&lt;/code&gt; and &lt;code&gt;:25&lt;/code&gt;, respectively. In order to remove the older version, execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo emerge -C emacs-24.5-r3:24
+Password:
+ * This action can remove important packages! In order to be safer, use
+ * &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;emerge -pv --depclean &amp;lt;atom&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; to check &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; reverse dependencies before
+ * removing packages.
+
+ app-editors/emacs
+    selected: 24.5-r3
+   protected: none
+     omitted: 25.1
+
+All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
+
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; removal.
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class=&#34;s1&#34;&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
+
+&amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
+&amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 1
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+ * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+ * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
+
+ * Regenerating GNU info directory index...
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After removing the package, check what packages depended on it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; $ equery depends emacs-24.5-r3:24
+ * These packages depend on emacs-24.5-r3:24:
+app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/markdown-mode-2.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/quilt-el-0.48.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/scala-mode-2.10.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-python/cython-0.24.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-scheme/guile-1.8.8-r3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/cmake-3.6.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/desktop-file-utils-0.23 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The last step:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>How to parse frontmatter with python</title>
+            <link>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</link>
+            <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
+            <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
+
+&lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
+
+&lt;h1 id=&#34;install-python-frontmatter&#34;&gt;Install Python-Frontmatter&lt;/h1&gt;
+
+&lt;p&gt;Simply run&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo pip install python-frontmatter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;using-python-frontmatter&#34;&gt;Using Python-Frontmatter&lt;/h1&gt;
+
+&lt;h2 id=&#34;example-1-add-new-values-to-frontmatter&#34;&gt;Example 1: Add new values to frontmatter&lt;/h2&gt;
+
+&lt;p&gt;Once installed, it is easy to use. Let&amp;rsquo;s see as an example one of the problems I faced. In &lt;em&gt;Jekyll&lt;/em&gt; I was the fall back author for all posts that did not have one defined in its frontmatter, but in &lt;em&gt;Hugo&lt;/em&gt; I need to specify the author for every post written. To accomplish this, I wrote the following script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;frontmatter&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;os.path&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;basename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;splitext&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;glob&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Where are the files to modify&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;en/*.markdown&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Loop through all files&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Parse file&amp;#39;s front matter&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;alex&amp;quot;&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# Save the modified file&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That&amp;rsquo;s it!, so simple. Let&amp;rsquo;s see another example&lt;/p&gt;
+
+&lt;h2 id=&#34;example-2-modify-existing-values-in-frontmatter&#34;&gt;Example 2: Modify existing values in frontmatter&lt;/h2&gt;
+
+&lt;p&gt;In this case, I had two frontmatter variables, &lt;code&gt;mainclass&lt;/code&gt; and &lt;code&gt;categories&lt;/code&gt;. I wanted to include the value of &lt;code&gt;mainclass&lt;/code&gt; into &lt;code&gt;categories&lt;/code&gt;, and keep all the current categories of &lt;code&gt;categories&lt;/code&gt;. Here is the script:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# If no categories exists, create one with the value of mainclass&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mainclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]]&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Categories exists&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mainclass&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;# If categories contains a single item, ex: categories: &amp;#39;category1&amp;#39;&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# If categories is a list, ex: categories: [cat1, cat2]&lt;/span&gt;
+                &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+            &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Save the file.&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Python-Frontmatter&amp;rsquo;s Githup repo&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to Change Portage Folders to Other Location in Gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
+            <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
+            <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So first I decided to change all the &lt;code&gt;portage&lt;/code&gt; files to my secondary hard disk drive, here is how to change &lt;code&gt;portage&lt;/code&gt; folders to a new location.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-etc-portage-make-conf-file&#34;&gt;Changing /etc/portage/make.conf file&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose the new directory is &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first thing to to is update the environment variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; and &lt;code&gt;PKGDIR&lt;/code&gt; to point to the new location, so in the file &lt;code&gt;make.conf&lt;/code&gt; we need to write:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/portage&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;syncing-portage-tree&#34;&gt;Syncing portage tree&lt;/h1&gt;
+
+&lt;p&gt;Now that we had updated the variables, we need to &lt;code&gt;sync&lt;/code&gt; portage:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that, &lt;code&gt;portage&lt;/code&gt; now knows about the new location, but there is one more thing to do.&lt;/p&gt;
+
+&lt;h1 id=&#34;symlinking-make-profile-to-the-new-location&#34;&gt;Symlinking make.profile to the new location&lt;/h1&gt;
+
+&lt;p&gt;After syncing &lt;code&gt;portage&lt;/code&gt;, one last thing to do is symlinking &lt;code&gt;make.profile&lt;/code&gt; to the new location, previously it was a symlink to &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, but we need to update it to the new location. Here is how:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now everything is right and we have changed the &lt;code&gt;portage&lt;/code&gt; location and get rid of the space problems.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-only-the-tmp-directory-var-tmp-portage&#34;&gt;Changing only the tmp directory (/var/tmp/portage)&lt;/h1&gt;
+
+&lt;p&gt;After doing the previous steps, I realized that it would be a better option to only change the location of the &lt;code&gt;tmp&lt;/code&gt; portage directory (by default &lt;code&gt;/var/tmp/portage&lt;/code&gt;), that was the original problem, because I did not had enough space left there. So a better option would be leave &lt;code&gt;make.conf&lt;/code&gt; as we had it previously, and only add a new variable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope it helps!.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

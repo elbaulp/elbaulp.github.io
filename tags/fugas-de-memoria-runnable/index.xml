@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Fugas De Memoria Runnable on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/fugas-de-memoria-runnable/index.xml</link>
+        <description>Recent content in Fugas De Memoria Runnable on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/fugas-de-memoria-runnable/index.xml</link>
+            <title>Fugas De Memoria Runnable on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/fugas-de-memoria-runnable/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fugas de memoria en Android: Handlers &amp; Clases Internas</title>
+            <link>https://elbauldelprogramador.com/fugas-de-memoria-android-handlers-clases-internas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fugas-de-memoria-android-handlers-clases-internas/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Éste artículo es una traducción del blog de &lt;a href=&#34;http://www.androiddesignpatterns.com&#34; title=&#34;Blog de Alex&#34;&gt;Alex Lockwood&lt;/a&gt;. Gracias por el permiso.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Seamos directos, consideremos el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SampleActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Handler&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mLeakyHandler&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Handler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;handleMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Message&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;// ...&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Aunque no es obvio de inmediato, éste código puede causar fugas de memoria (&lt;em&gt;memory leak&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/&#34; title=&#34;Eliminar recursos sin usar en Android&#34;&gt;&lt;em&gt;Android Lint&lt;/em&gt;&lt;/a&gt; mostrará la siguiente advertencia:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In Android, Handler classes should be static or leaks might occur.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Es decir, las clases de tipo &lt;code&gt;Handler&lt;/code&gt; deben ser estáticas, de lo contrario pueden ocurrir fugas de memoria (&lt;em&gt;memory leak&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h1 id=&#34;algunos-conceptos-a-entender&#34;&gt;Algunos conceptos a entender&lt;/h1&gt;
+
+&lt;p&gt;Pero, ¿dónde ocurre ésta pérdida o filtración de memoria (&lt;em&gt;memory leak&lt;/em&gt;) y cómo se produce? Determinemos el origen del problema fijándonos en lo que sabemos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cuando se inicia una aplicación en Android, el &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;11 Framewors web gratuitos&#34;&gt;framework&lt;/a&gt; crea un objeto &lt;a href=&#34;http://developer.android.com/reference/android/os/Looper.html&#34;&gt;Looper&lt;/a&gt; para el hilo principal de la aplicación. Un &lt;code&gt;Looper&lt;/code&gt; implementa una cola de mensajes simples, que procesa objetos &lt;a href=&#34;http://developer.android.com/reference/android/os/Message.html&#34;&gt;Message&lt;/a&gt;, los cuales se añaden a la cola de mensajes del &lt;code&gt;Looper&lt;/code&gt; y son procesados uno a uno. El &lt;code&gt;Looper&lt;/code&gt; del hilo principal de la aplicación existe durante todo el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android-ciclo/&#34; title=&#34;Programación Android - Ciclo de vida de las Activities&#34;&gt;ciclo de vida de la aplicación&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Al instanciar un &lt;a href=&#34;http://developer.android.com/reference/android/os/Handler.html&#34;&gt;Handler&lt;/a&gt; en el hilo principal, se asocia a la cola de mensajes del &lt;code&gt;Looper&lt;/code&gt;. Los mensajes publicados en la cola de mensajes mantendrán una referencia al &lt;code&gt;Handler&lt;/code&gt;, para que el framework pueda llamar a &lt;a href=&#34;http://developer.android.com/reference/android/os/Handler.html#handleMessage(android.os.Message)&#34;&gt;Handler#handleMessage&lt;/a&gt; cuando el &lt;code&gt;Looper&lt;/code&gt; procese eventualmente el mensaje.&lt;/li&gt;
+&lt;li&gt;En Java, tanto las clases no-estáticas internas como anónimas mantienen una referencia implícita a su clase externa. Por contra, las clases estáticas internas, no.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;dónde-se-produce-la-fuga-de-memoria-memory-leak&#34;&gt;¿Dónde se produce la fuga de memoria? (&lt;em&gt;memory leak&lt;/em&gt;)&lt;/h1&gt;
+
+&lt;p&gt;Entonces, ¿Dónte está exáctamente la pérdida de memoria (&lt;em&gt;memory leak&lt;/em&gt;)?, es muy sutil, pero consideremos ahora el siguiente fragmento de código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SampleActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Handler&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mLeakyHandler&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Handler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;handleMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Message&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;// ...&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Publicar un mensaje y retrasar su ejecución 10 minutos&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mLeakyHandler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;postDelayed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Regresar a la activity anterior&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;finish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando la actividad &lt;a href=&#34;https://elbauldelprogramador.com/eliminar-la-pila-de-actividades-back-stack-en-android/&#34; title=&#34;Finalizar actividades en Android&#34;&gt;finaliza&lt;/a&gt; al llamar a &lt;code&gt;finish&lt;/code&gt;, el mensaje que hemos retrasado seguirá pendiente de ejecución en la cola de mensajes del hilo principal durante 10 minutos antes de ser procesado. El mensaje mantiene una referencia al &lt;code&gt;Handler&lt;/code&gt; del &lt;code&gt;Activity&lt;/code&gt;, y el &lt;code&gt;Handler&lt;/code&gt; mantiene una referencia implícita a su clase externa (&lt;code&gt;SampleActivity&lt;/code&gt;, en éste caso). Dicha referencia persistirá hasta que el mensaje sea procesado, lo cual impide al contexto de la &lt;code&gt;Activity&lt;/code&gt; ser recolectado por el recolector de basura (Garbage collector). Ésto causa la perdida de los recursos de la aplicación. Nótese que ocurre lo mismo con la clase anónima &lt;code&gt;Runnable&lt;/code&gt; mostrada en el código. Instancias no estáticas de clases anónimas mantienen una referencia implícita a su clase externa, causando así pérdida o filtración del contexto (Clase &lt;code&gt;Context&lt;/code&gt;), y por tanto, un (&lt;em&gt;memory leak&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h1 id=&#34;posibles-soluciones-para-evitar-la-fuga&#34;&gt;Posibles soluciones para evitar la fuga&lt;/h1&gt;
+
+&lt;p&gt;Para corregir el problema, podemos crear una subclase de &lt;code&gt;Handler&lt;/code&gt; en un nuevo fichero o crear una clase interna estática. Las clases estáticas internas no mantienen una referencia implícita a su clase externa, de modo que la &lt;code&gt;Activity&lt;/code&gt; no tendrá fugas de memoria (&lt;em&gt;memory leak&lt;/em&gt;). Si se necesita invocar métodos de la clase externa desde el &lt;code&gt;Handler&lt;/code&gt;, basta con que el &lt;code&gt;Handler&lt;/code&gt; mantenga una referencia débil (&lt;code&gt;WeakReference&lt;/code&gt;) a la &lt;code&gt;Activity&lt;/code&gt;, así no habrá fugas de memoria accidentales. Para corregir la otra fuga existente al instanciar la clase anónima &lt;code&gt;Runnable&lt;/code&gt;, basta con crear una variable estática de la clase (Ya que, como hemos dicho, instancias estáticas de clases anónimas no mantienen una referencia implícita a su clase externa):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SampleActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+  &lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;  * Clase interna estática&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;  */&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MyHandler&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Handler&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WeakReference&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sampleactivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;MyHandler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SampleActivity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;mActivity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WeakReference&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sampleactivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;handleMessage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Message&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;SampleActivity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;// ...&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyHandler&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mHandler&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MyHandler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+  &lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;  * Instancia de clase anónima estática, no mantiene referencia&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;  */&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sRunnable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Runnable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+
+  &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Programar mensaje para 10 min&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mHandler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;postDelayed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sRunnable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Salir a la activity anterior.&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;finish&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+
+&lt;p&gt;La diferencia entre clases internas estáticas y no-estáticas es sutil, pero es una sutileza que todo desarrollador Android debería comprender. ¿Cual es la conclusión? Evitar a toda costa usar clases internas no estáticas en una &lt;code&gt;Activity&lt;/code&gt; si las instancias de la clase interna pueden seguir ejecutándose aún cuando el ciclo de vida de la &lt;code&gt;Activity&lt;/code&gt; acabe. En su lugar, usar clases internas estáticas que mantengan una referencia débil a la &lt;code&gt;Activity&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to Leak a Context: Handlers &amp;amp; Inner Classes&lt;/em&gt; »» &lt;a href=&#34;http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html&#34; target=&#34;_blank&#34;&gt;androiddesignpatterns.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;photo credit: &lt;a href=&#34;https://www.flickr.com/photos/nyuhuhuu/4653088356/&#34;&gt;nyuhuhuu&lt;/a&gt; via &lt;a href=&#34;http://photopin.com&#34;&gt;photopin&lt;/a&gt; &lt;a href=&#34;http://creativecommons.org/licenses/by/2.0/&#34;&gt;cc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

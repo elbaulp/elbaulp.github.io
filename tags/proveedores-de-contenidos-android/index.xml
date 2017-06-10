@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Proveedores De Contenidos Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/proveedores-de-contenidos-android/index.xml</link>
+        <description>Recent content in Proveedores De Contenidos Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/proveedores-de-contenidos-android/index.xml</link>
+            <title>Proveedores De Contenidos Android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/proveedores-de-contenidos-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Proveedores de Contenidos - Leer datos mediante URIs</title>
+            <link>https://elbauldelprogramador.com/programacion-android-proveedores-de_28/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-proveedores-de_28/</guid>
+            <description>&lt;p&gt;Ya que las URIs definidas por un Proveedor de contenidos (CV) son únicas para ese proveedor, es muy importante que estas URIs estén bien documentadas. Los proveedores que Android proporciona hacen esto definiendo constantes que representan las cadenas de la URI.&lt;/p&gt;
+
+&lt;p&gt;Consideremos estas tres URIs definidas en el SDK de Android:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MediaStore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Media&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;INTERNAL_CONTENT_URI&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;MediaStore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Images&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Media&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;EXTERNAL_CONTENT_URI&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Sus URIs equivalentes serán como las siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;content:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//media/internal/images&lt;/span&gt;
+&lt;span class=&#34;nl&#34;&gt;content:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//media/external/images&lt;/span&gt;
+&lt;span class=&#34;nl&#34;&gt;content:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//contacts/people&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El proveedor &lt;em&gt;MediaStore&lt;/em&gt; define dos URIs y &lt;em&gt;Contacts&lt;/em&gt; uno. Si te das cuenta, las constantes están definidas usando esquema jerárquico. Por ejemplo, la URI de los contactos se señala como &lt;em&gt;Contacts.People.CONTENT_URI.&lt;/em&gt; Esto se debe a que las bases de datos de contactos pueden tener muchas tablas para representar la entidad de un contacto. &lt;em&gt;People&lt;/em&gt; es una de las tablas o colecciones. Cada entidad primaria de una base de datos puede llevar su propia URI de contenido.&lt;/p&gt;
+
+&lt;p&gt;En _&lt;strong&gt;Contacts.Pople.CONTENT_URI&lt;/strong&gt;_, Contacts es un paquete de java y People es una clase dentro de ese paquete. Hay que saber que Contacts y Contacts.People están obsoletos desde Android 2.0 y que ahora poseen nuevas URIs equivalentes que veremos más adelante. Sin embargo, para propositos educativos podemos seguir usandolos aunque estén obsoletos.&lt;/p&gt;
+
+&lt;p&gt;Dadas estas URIs, el código para recuperar una única fila del proveedor de contactos sería:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uriBase&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uriPersona&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;withAppendedPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;21&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;//Consultamos el registro&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//managedQuery es un método de la clase Activity&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Cursor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uriPersona&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, cogemos la uri base &lt;em&gt;Contacts.People.CONTENT_URI&lt;/em&gt;, le añadimos un id de contacto y llamamos al método &lt;em&gt;managedQuery&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En el método managedQuery podemos especificar el orden de los resultados, las columnas a seleccionar y una condición (en el ejemplo están a null.)&lt;/p&gt;
+
+&lt;p&gt;Vamos a ver ahora como crear un cursor que devuelva una lista de columnas de la tabla People del proveedor contatcs.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Array que especifica la proyección (columnas a seleccionar)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;projection&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;//obtenemos la URI base&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mContactsUri&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;Cursor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;managedCursor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mContactsUri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+                                    &lt;span class=&#34;n&#34;&gt;projection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Qué columnas devolverá&lt;/span&gt;
+                                    &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;// Cláusula where&lt;/span&gt;
+                                    &lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NAME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot; ASC&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//Clausula order by&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;siguiente-tema-usando-cursores-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-cursores/&#34;&gt;Usando cursores&lt;/a&gt;&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

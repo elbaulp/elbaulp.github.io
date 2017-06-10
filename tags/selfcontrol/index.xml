@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Selfcontrol on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/selfcontrol/index.xml</link>
+        <description>Recent content in Selfcontrol on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/selfcontrol/index.xml</link>
+            <title>Selfcontrol on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/selfcontrol/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>SelfControl, aparta las distracciones de tu pc cuando estás trabajando</title>
+            <link>https://elbauldelprogramador.com/selfcontrol-aparta-las-distracciones-de-tu-pc-cuando-estas-trabajando/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/selfcontrol-aparta-las-distracciones-de-tu-pc-cuando-estas-trabajando/</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/selfcontrol11.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;selfcontrol&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/selfcontrol11.png&#34; alt=&#34;&#34; width=&#34;192px&#34; height=&#34;192px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Es fácil distraerse cuando estás sentado enfrente de un ordenador, sobre todo cuando se tienen pocas ganas de trabajar. Leyendo mi RSS encontré una aplicación que puede llegar a ser muy útil si te distras fácilmente; SelfControl.&lt;/p&gt;
+
+&lt;p&gt;Esta aplicación bloquea las páginas de internet durante el tiempo que digamos, es bastante fácil de usar y configurar.&lt;/p&gt;
+
+&lt;p&gt;Antes de instalarlo es necesario resolver las dependencias del paquete instalando lo siguiente:&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install libgtk2-perl libyaml-perl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras instalarlos, bajamos el e instalamos SelfControl:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
+sudo dpkg --install selfcontrol_0.9-1_all.deb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/Selfcontro11.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Selfcontro1&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/Selfcontro11.png&#34; alt=&#34;&#34; width=&#34;415px&#34; height=&#34;378px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde aparecen las webs bloqueadas, una entrada de texto para añadir las páginas a bloquear y por cuanto tiempo.&lt;/p&gt;
+
+&lt;p&gt;Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos una terminal para ver el estado de &lt;a title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34; href=&#34;//20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo iptables --list
+Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+
+  Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+
+  Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si no sale algo parecido quizá no tengas instalado iptables, aunque la mayoría de las distribuciones lo traen por defecto.&lt;/p&gt;
+
+&lt;p&gt;Una vez que ejecutemos el programa aparecerá algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo iptables --list
+Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+
+  Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+
+  Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+  SelfControl  all  --  anywhere             anywhere
+
+  Chain SelfControl &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+  DROP       all  --  anywhere             www.example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Sítio Oficial | &lt;a href=&#34;http://svn.jklmnop.net/projects/SelfControl.html&#34; target=&#34;_blank&#34;&gt;SelfControl &lt;/a&gt;
+Fuente | &lt;a href=&#34;http://www.datamation.com/open-source/15-must-have-linux-applications-1.html&#34; target=&#34;_blank&#34;&gt;15 Must Have Linux Applications&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

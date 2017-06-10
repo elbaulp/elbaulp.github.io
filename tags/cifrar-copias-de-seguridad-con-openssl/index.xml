@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cifrar Copias De Seguridad Con Openssl on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/cifrar-copias-de-seguridad-con-openssl/index.xml</link>
+        <description>Recent content in Cifrar Copias De Seguridad Con Openssl on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/cifrar-copias-de-seguridad-con-openssl/index.xml</link>
+            <title>Cifrar Copias De Seguridad Con Openssl on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/cifrar-copias-de-seguridad-con-openssl/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo cifrar archivos con openssl</title>
+            <link>https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/</guid>
+            <description>&lt;figure&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34;
+            alt=&#34;Cómo cifrar archivos con openssl&#34;
+            title=&#34;Cómo cifrar archivos con openssl&#34;
+            sizes=&#34;(min-width: 256px) 256px, 100vw&#34;
+            width=&#34;256&#34;
+            height=&#34;256&#34;&gt;
+          &lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo &lt;strong&gt;cifrar archivos con openssl&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;generar-las-claves-públicas-y-privadas&#34;&gt;Generar las claves públicas y privadas&lt;/h1&gt;
+
+&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ openssl genrsa -out clave.pem 4096
+$ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con el primer comando generamos la clave, en &lt;em&gt;clave.pem&lt;/em&gt; se encuentran tanto la clave privada como la pública, con el segundo comando extraemos la pública a un archivo distinto.&lt;/p&gt;
+
+&lt;h1 id=&#34;método-elegido-para-cifrar-los-archivos&#34;&gt;Método elegido para cifrar los archivos&lt;/h1&gt;
+
+&lt;p&gt;El sistema de claves pública/privada no puede cifrar archivos de gran tamaño. Por tanto usaremos un &lt;a href=&#34;http://es.wikipedia.org/wiki/Criptograf%C3%ADa_sim%C3%A9trica&#34; target=&#34;_blank&#34;&gt;cifrado simétrico&lt;/a&gt; para el cifrado normal. Cada vez que cifremos un fichero se usará una clave simétrica generada aleatoriamente. Esta clave simétrica es la que &lt;strong&gt;cifraremos de forma &lt;a href=&#34;http://es.wikipedia.org/wiki/Criptograf%C3%ADa_asim%C3%A9trica&#34; target=&#34;_blank&#34;&gt;asimétrica&lt;/a&gt;&lt;/strong&gt; con la &lt;strong&gt;llave pública&lt;/strong&gt; que hemos generado con los comandos de arriba. En resumen:&lt;/p&gt;
+
+&lt;h2 id=&#34;para-cifrar-los-archivos&#34;&gt;Para cifrar los archivos&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Generamos una clave aleatoriamente, de gran longitud (40-50 caracteres por ejemplo).&lt;/li&gt;
+&lt;li&gt;Ciframos el archivo con la clave generada en 1.&lt;/li&gt;
+&lt;li&gt;Ciframos la clave generada en 1 con nuestra clave pública.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;para-descifrar-los-archivos&#34;&gt;Para descifrar los archivos&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Desciframos la clave generada en 1 y cifrada con la llave pública en 3&lt;/li&gt;
+&lt;li&gt;Desciframos el archivo con la clave que acabamos de descifrar en 1&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;aplicar-los-pasos-con-openssl&#34;&gt;Aplicar los pasos con openssl&lt;/h1&gt;
+
+&lt;p&gt;Ahora procedemos a aplicar los pasos descritos anteriormente con openssl:&lt;/p&gt;
+
+&lt;h2 id=&#34;cifrando-los-archivos&#34;&gt;Cifrando los archivos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, generar clave aleatoria&lt;/span&gt;
+$ openssl rand -base64 &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; -out key.txt
+&lt;span class=&#34;c1&#34;&gt;# Paso 2, cifrar el archivo con la clave simétrica&lt;/span&gt;
+$ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
+&lt;span class=&#34;c1&#34;&gt;# Paso 3, cifrar la clave generada en el paso 1 con la llave pública&lt;/span&gt;
+$ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Los argumentos significan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;enc -aes-256-cbc:&lt;/strong&gt; Tipo de cifrado simétrico.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-pass file:key.txt:&lt;/strong&gt; La clave con la que cifrar el archivo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-in:&lt;/strong&gt; Fichero de entrada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-out:&lt;/strong&gt; Fichero de salida.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rsautl:&lt;/strong&gt; Indica que vamos a usar RSA para firmar, verificar, cifrar o descifrar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-encrypt:&lt;/strong&gt; Encriptar el fichero de entrada con una llave RSA pública.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-inkey:&lt;/strong&gt; Llave con la que cifrar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-pubin:&lt;/strong&gt; Indica que vamos a firmar con una llave pública.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;descifrado-de-archivos&#34;&gt;Descifrado de archivos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3&lt;/span&gt;
+$ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
+&lt;span class=&#34;c1&#34;&gt;# Paso 2, Descifrar el archivo con la clave&lt;/span&gt;
+$ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-d:&lt;/strong&gt; Descifra los datos de entrada.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;script-para-descifrar-varios-archivos-de-una-vez&#34;&gt;Script para descifrar varios archivos de una vez&lt;/h1&gt;
+
+&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;directorio a=&amp;quot;&lt;/span&gt;a&lt;span class=&#34;s2&#34;&gt;&amp;quot; los=&amp;quot;&lt;/span&gt;los&lt;span class=&#34;s2&#34;&gt;&amp;quot; archivos=&amp;quot;&lt;/span&gt;archivos&lt;span class=&#34;s2&#34;&gt;&amp;quot; cifrados=&amp;quot;&lt;/span&gt;cifrados&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc&amp;quot;&lt;/span&gt; -out &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;openssl rsautl -decrypt -inkey ./clave.pem -in \&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc\&amp;quot; -out \&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt\&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;OIFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;IFS&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;$&amp;#39;\n&amp;#39;&lt;/span&gt;
+
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;find &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -type f -name &lt;span class=&#34;s2&#34;&gt;&amp;quot;*.encrypted&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Decrypting &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt;
+    openssl enc -aes-256-cbc -d -pass file:&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;quot;&lt;/span&gt; -in &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; -out &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; .encrypted&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;OIFS&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Espero que os sea de utilidad.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Encrypt tar.gz file on create&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/95920/encrypt-tar-gz-file-on-create/96182#96182&#34; target=&#34;_blank&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;how to encrypt a large file in openssl using public key&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/7143514/how-to-encrypt-a-large-file-in-openssl-using-public-key&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Documentación oficial de openssl&lt;/em&gt; »» &lt;a href=&#34;http://www.openssl.org/docs/apps/openssl.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

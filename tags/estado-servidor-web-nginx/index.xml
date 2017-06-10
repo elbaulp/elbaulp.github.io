@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Estado Servidor Web Nginx on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/estado-servidor-web-nginx/index.xml</link>
+        <description>Recent content in Estado Servidor Web Nginx on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/estado-servidor-web-nginx/index.xml</link>
+            <title>Estado Servidor Web Nginx on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/estado-servidor-web-nginx/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo habilitar la página de estado en Nginx</title>
+            <link>https://elbauldelprogramador.com/como-hablitar-la-pagina-de-estado-en-nginx/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-hablitar-la-pagina-de-estado-en-nginx/</guid>
+            <description>&lt;p&gt;Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;habilitar-el-módulo-httpstubstatusmodule&#34;&gt;Habilitar el módulo HttpStubStatusModule&lt;/h1&gt;
+
+&lt;p&gt;Es necesario compilar nginx con éste módulo. Para comprobar si está compilado debe aparecer &lt;code&gt;--with-http_stub_status_module&lt;/code&gt; al ejecutar el comando&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;nginx -V
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De no tenerlo, hay que volver a &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;compilar nginx&lt;/a&gt; con éste módulo activo.&lt;/p&gt;
+
+&lt;h1 id=&#34;habilitar-la-página-de-estado-en-nginx&#34;&gt;Habilitar la página de estado en nginx&lt;/h1&gt;
+
+&lt;p&gt;Hay que editar el fichero &lt;em&gt;nginx.conf&lt;/em&gt;, y añadir en el bloque &lt;strong&gt;&lt;em&gt;server { /*&amp;#8230;*/ }&lt;/em&gt;&lt;/strong&gt; lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;location /nginx_status &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Hablitar las estadísticas&lt;/span&gt;
+        stub_status on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# No registrar en los logs los accesos a la página de estado&lt;/span&gt;
+        access_log   off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Perminir que únicamente mi IP pueda visitar la página #&lt;/span&gt;
+        allow X.X.X.X&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Denegar el acceso al resto del mundo #&lt;/span&gt;
+        deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Tras esto, es necesario reiniciar nginx para que sea consciente de los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service nginx reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora al dirigirse a la dirección &lt;strong&gt;&lt;em&gt;midominio.com/nginx_status&lt;/em&gt;&lt;/strong&gt; veremos algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Active connections: 291
+server accepts handled requests
+   &lt;span class=&#34;m&#34;&gt;16630948&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16630948&lt;/span&gt; 31070465
+Reading: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; Writing: &lt;span class=&#34;m&#34;&gt;179&lt;/span&gt; Waiting: 106
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;active connections&lt;/em&gt; &amp;#8212; Número de conexiones abieras.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;server accepts handled requests&lt;/em&gt; &amp;#8212; En el ejemplo, nginx ha aceptado 16630948 conexiones, procesado 16630948 de ellas (Ninguna fue cerrada) y ha procesado 31070465 (1.8 peticiones por conexión).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;reading&lt;/em&gt; &amp;#8212; Peticiones de cabecera leídas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;writing&lt;/em&gt; &amp;#8212; Peticiones leidas, procesadas, o escritas en respuesta al cliente.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;waiting&lt;/em&gt; &amp;#8212; Conexiones &lt;em&gt;keep-alive&lt;/em&gt;, activas en el momento (Lectura + Escritura)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enable and see current status page&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/nginx-enable-and-see-current-status-page&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HttpStubStatusModule&lt;/em&gt; »» &lt;a href=&#34;http://wiki.nginx.org/HttpStubStatusModule&#34; target=&#34;_blank&#34;&gt;wiki.nginx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

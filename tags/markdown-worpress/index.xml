@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Markdown Worpress on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/markdown-worpress/index.xml</link>
+        <description>Recent content in Markdown Worpress on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/markdown-worpress/index.xml</link>
+            <title>Markdown Worpress on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/markdown-worpress/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Chuleta de Markdown para wordpress</title>
+            <link>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/</guid>
+            <description>&lt;p&gt;En su última actualización, el plugin &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;JetPack&lt;/a&gt; introdujo la notación Markdown para formatear artículos y comentarios. La siguiente chuleta pretende servir de referencia tanto a los lectores como a mi, aprovechando así la ocasión para practicar y memorizar el formato.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;guía-de-markdown-para-wordpress&#34;&gt;Guía de Markdown para wordpress&lt;/h1&gt;
+
+&lt;h2 id=&#34;negrita-o-cursiva&#34;&gt;&lt;strong&gt;Negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; :&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;negrita&lt;/strong&gt;, &lt;strong&gt;negrita&lt;/strong&gt;, &lt;em&gt;cursiva&lt;/em&gt;,&lt;em&gt;cursiva&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;__negrita__, **negrita**, *cursiva*,_cursiva_
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;enlaces-en-línea-2&#34;&gt;Enlaces en &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Texto alternativo&#34;&gt;línea&lt;/a&gt;:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;Un [enlace](/ &amp;quot;Texto alternativo&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;enlaces-referenciados-1&#34;&gt;Enlaces &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; title=&#34;Artículo de Jetpack sobre el Markdown&#34;&gt;referenciados&lt;/a&gt;:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;[referenciados][1], en cualquier parte del texto debe haber [1]: http://enlace. &amp;quot;titulo&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;imágenes-en-línea-alt-3&#34;&gt;Imágenes en línea: &lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Alt&#34; title=&#34;Título&#34; /&gt;:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt](/img/2013/12/favicon.ico &amp;quot;Título&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;imágenes-referenciadas-alt-3&#34;&gt;Imágenes referenciadas: &lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Alt&#34; title=&#34;Título&#34; /&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;![Alt][2] Al igual que en los enlaces referenciados, en algún lugar del texto debe aparecer [2]: Ruta/a/la/imagen &amp;quot;Titulo&amp;quot;.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;imágenes-enlazadas-texto-alternativo-4-5&#34;&gt;Imágenes enlazadas: &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Imágenes enlazadas&#34;&gt;&lt;img src=&#34;https://elbauldelprogramador.com/img/2013/12/favicon.ico&#34; alt=&#34;Texto Alternativo&#34; /&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;[![Texto Alternativo](/img/2013/12/favicon.ico)](/ &amp;quot;Imágenes enlazadas&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;notas-al-pie-sup-id-fnref-2416-1-a-href-fn-2416-1-rel-footnote-1-a-sup&#34;&gt;Notas al pie&lt;sup id=&#34;fnref-2416-1&#34;&gt;&lt;a href=&#34;#fn-2416-1&#34; rel=&#34;footnote&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;[^1] y donde esté la nota al pie: [^1]: Notal al pie.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;listas-sin-numerar&#34;&gt;Listas sin numerar:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+&lt;li&gt;Elemento 2&lt;/li&gt;
+&lt;li&gt;Elemento 3&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Elemento 4&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;* Elemento 1
+* Elemento 2
+- Elemento 3
+- Elemento 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;listas-numeradas&#34;&gt;Listas numeradas:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Elemento 1&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Elemento 2&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;1. Elemento 1
+2. Elemento 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;citas&#34;&gt;Citas&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Texto citado&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Cita anidada&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Texto citado
+&amp;gt;&amp;gt; Cita anidada
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;preformato&#34;&gt;Preformato&lt;/h2&gt;
+
+&lt;p&gt;Si se empieza cada línea con dos o más espacios el texto no se formateará.&lt;/p&gt;
+
+&lt;h2 id=&#34;código-en-línea&#34;&gt;Código en línea&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;`cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;bloques-de-código&#34;&gt;Bloques de código&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+
+
+```
+cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ó&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;~~~
+cout &amp;lt;&amp;lt; &amp;quot;Hola&amp;quot; &amp;lt;&amp;lt; endl;
+~~~
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;cabeceras&#34;&gt;Cabeceras&lt;/h2&gt;
+
+&lt;h1 id=&#34;header-1&#34;&gt;Header 1&lt;/h1&gt;
+
+&lt;h2 id=&#34;header-2&#34;&gt;Header 2&lt;/h2&gt;
+
+&lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
+
+&lt;h4 id=&#34;header-4&#34;&gt;Header 4&lt;/h4&gt;
+
+&lt;h5 id=&#34;header-5&#34;&gt;Header 5&lt;/h5&gt;
+
+&lt;h6 id=&#34;header-6&#34;&gt;Header 6&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;abreviaturas&#34;&gt;Abreviaturas&lt;/h2&gt;
+
+&lt;p&gt;El &lt;em&gt;markdown&lt;/em&gt; convierte texto a HTML.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Artículo de Jetpack sobre el Markdown&lt;/em&gt; »» &lt;a href=&#34;http://jetpack.me/support/markdown/&#34; target=&#34;_blank&#34;&gt;jetpack.me&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

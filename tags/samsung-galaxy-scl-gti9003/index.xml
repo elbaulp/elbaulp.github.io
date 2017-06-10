@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Samsung Galaxy Scl Gti9003 on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/samsung-galaxy-scl-gti9003/index.xml</link>
+        <description>Recent content in Samsung Galaxy Scl Gti9003 on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/samsung-galaxy-scl-gti9003/index.xml</link>
+            <title>Samsung Galaxy Scl Gti9003 on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/samsung-galaxy-scl-gti9003/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android</title>
+            <link>https://elbauldelprogramador.com/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/</guid>
+            <description>&lt;p&gt;Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.
+Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Paso 1:&lt;/strong&gt; Instalar busybox (Herramienta que provee de varias utilidades estándares de Unix) desde la play Store, (Requiere &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/&#34; title=&#34;Rootear Samsung Galaxy S GT-I9003&#34;&gt;root&lt;/a&gt;) En caso de que el teléfono no esté rooteado, puedes seguir los pasos indicados en el vídeo de más abajo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paso 2:&lt;/strong&gt; Para conseguir que tu dispositivo sea aún más poderoso, instala &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.botbrew.basil&#34;&gt;BostBrew Basil&lt;/a&gt;, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paso 3:&lt;/strong&gt; Instalar los paquetes necesarios&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Conectamos el teléfono al pc mediante adb con &lt;code&gt;./adb shell&lt;/code&gt; y ejecutamos los comandos de &lt;strong&gt;botbrew&lt;/strong&gt; así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;/data/botbrew-basil/init -- comando aquí
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Es decir, para instalar un entorno debian completo, se haría lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sh-4.1# /data/botbrew-basil/init -- apt-get install repository-emdebian
+sh-4.1# /data/botbrew-basil/init -- apt-get install debianbotbrew-debian-minimal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Existe la posibilidad de instalar el paquete &lt;strong&gt;botbrew-wrapper&lt;/strong&gt; para evitar tener que preceder los comandos con la ruta mencionada arriba:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;shell@android:/ &lt;span class=&#34;c1&#34;&gt;# /data/botbrew-basil/init -- apt-get install botbrew-wrapper&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;A partir de ahora basta con ejecutar el comando &lt;strong&gt;botbrew2&lt;/strong&gt; y seguidamente los comandos deseados, por ejemplo, para isntalar gcc y g++:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;shell@android:/ &lt;span class=&#34;c1&#34;&gt;# su&lt;/span&gt;
+shell@android:/ &lt;span class=&#34;c1&#34;&gt;# botbrew2&lt;/span&gt;
+shell@android:/ &lt;span class=&#34;c1&#34;&gt;# apt-get install gcc g++&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, probemos con un hola Mundo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Hola mundo!&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Compilado y ejecutado desde Android&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba de que funciona:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Screenshot_2012-12-04-17-14-141.png&#34; alt=&#34;&#34; title=&#34;Compilando código C/C++ en android&#34; width=&#34;800px&#34; height=&#34;480px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Y no solo eso, también podemos instalar python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# apt-get install python2.7-minimal&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# cd /tmp&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# echo &amp;quot;print &amp;quot;Hola Mundo desde Android!&amp;quot;&amp;quot; &amp;gt;&amp;gt; hello.py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# python2.7 hello.py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Hola&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mundo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;desde&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Android&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De nuevo, com prueba, una captura de pantalla:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Screenshot_2012-12-04-17-32-141.png&#34; alt=&#34;&#34; title=&#34;Ejecutando programas en python desde Android&#34; width=&#34;800px&#34; height=&#34;480px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A continuación un vídeo explicando el proceso de instalación de busybox sin permisos de root:&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Geeknizer&lt;/em&gt; »» &lt;a href=&#34;http://geeknizer.com/install-run-linux-applications-on-android/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;XDA-Developers&lt;/em&gt; »» &lt;a href=&#34;http://forum.xda-developers.com/showpost.php?p=26261600&amp;postcount=119&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Rootear Samsung Galaxy S GT-I9003</title>
+            <link>https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/</guid>
+            <description>&lt;p&gt;Hacía tiempo que quería rootear mi terminal, y hoy me he decidido a hacerlo. Hay mucha información sobre como rootear terminales Android, sin embargo voy a escribir esta entrada explicando el proceso bajo GNU/Linux. (Aunque también vale para Windows, simplemente hay que descargar SuperOneClick e ir al paso 3)&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Como primer paso, vamos a descargar la aplicación SuperOneClick de esta &lt;a href=&#34;http://shortfuse.org/?p=80&#34;&gt;dirección&lt;/a&gt;. Como vamos a ejecutarla bajo Gnu/linux, necesitamos seguir los siguientes pasos para lograr ejecutarla:&lt;/p&gt;
+
+&lt;p&gt;1.- Tenemos que instalar mono, para ello añadimos el siguiente repositorio a nuestro source.list (En mi caso para Debien squeeze):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;deb http://backports.debian.org/debian-backports squeeze main
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Después actualizamos los repositorios e instalamos mono&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude update
+sudo aptitude install mono-complete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para conseguir que el ADB se ejecute, debemos instalar las siguientes librerías:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install lib32ncurses5 lib32stdc++
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora damos permisos de ejecución a adblinux, que se encuentra en una carpeta llamada ADB de SuperOneClick&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;chmod &lt;span class=&#34;m&#34;&gt;755&lt;/span&gt; adblinux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Solo queda ejecutar SuperOneClick&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo mono SuperOneClick.exe
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Este comando ejecutará la aplicación, que será como la de la imagen:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s1600/Screenshot-SuperOneClick.png&#34;&gt;&lt;img layout=&#34;responsive&#34;  height=&#34;346&#34; width=&#34;800&#34; src=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s800/Screenshot-SuperOneClick.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;2.- Ya tenemos la aplicación funcionando correctamente, vamos a preparar el terminal:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Es necesario configurar nuestro terminal en modo depuración: &lt;code&gt;Settings -&amp;gt; Application -&amp;gt; Development -&amp;gt; USB debugging&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Tenemos que asegurarnos que no tenemos montada la tarjeta SD: &lt;code&gt;Settings -&amp;gt; SD card and phone storage -&amp;gt; Unmount SD card&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;3.- Ya está todo listo, conectamos el terminal al pc, hacemos click en el botón Root de SuperOneClick y esperamos a que termine.&lt;/p&gt;
+
+&lt;p&gt;Una vez terminado, tenemos que reiniciar el teléfono, y nos encontraremos con una aplicación como la de la imagen, que nos pedirá permiso cada vez que una aplicación necesite permisos de Root:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;img layout=&#34;responsive&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;solución-de-problemas&#34;&gt;Solución de problemas&lt;/h1&gt;
+
+&lt;p&gt;Intentando rootear mi terminal, SuperOneClick no detectaba el teléfono y se quedaba esperando con el mensaje &amp;#8220;Waiting for devide&amp;#8230;&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;Resolví este problema apagando el teléfono mientras estaba conectado al pc, y SuperOneClick esperando el dispositivo (Waiting for devide&amp;#8230;). Una vez apagado, volví a encenderlo y SuperOneClick lo detectó, rooteandolo correctamente.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; No solo bastó con apagar el terminal, necesité quitar la tarjeta SIM del teléfono, porque de lo contrario SuperOneClick me tiraba un error y no rooteaba el móvil.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para finalizar, en el momento que deseemos deshacer el rooteo, basta con pulsar el botón unroot.&lt;/p&gt;
+
+&lt;p&gt;Espero que les sirva de ayuda.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Tipos de gobernadores en las CPUs</title>
+            <link>https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/</guid>
+            <description>&lt;p&gt;Para los que tengáis vuestro terminal &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003&#34;&gt;rooteado&lt;/a&gt; voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):&lt;/p&gt;
+
+&lt;p&gt;Lo que hacen los gobernadores es definir unas reglas de cambio de frecuencias en el micro, ya sea una velocidad de reloj mayor o menor, y cuando han de cambiarse estas frecuencias.&lt;/p&gt;
+
+&lt;p&gt;El gobernador define las características de energía de la CPU del sistema que a su vez afectan el rendimiento de la CPU. Cada gobernador tiene su propia conducta, propósito e idoneidad en términos de carga de trabajo.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;La frecuencia a la que una CPU puede operar viene limitada por su diseño. A menudo, una CPU solo puede funcionar en un número determinado de frecuencias discretas. Por ejemplo en mi Galaxy S son cuatro frecuencias (300mHz, 600mHz, 800mHz y 1000mHz). También, los valores de los parametros &lt;strong&gt;scaling_max_freq y scaling_min_freq&lt;/strong&gt; se fijan por defecto a las frecuencias máximas y mínimas disponibles en la CPU. Para elegir bien un gobernador, tenemos que tener en cuenta la carga de trabajo a la que se va a someter a la CPU. A continuación voy a explicar por encima la función de cada gobernador:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;Performance:&lt;/em&gt;&lt;/strong&gt; En este gobernanor solo se considera el rendimiento, fuerza a la CPU a ejecutarse en la frecuencia más alta (&lt;strong&gt;scaling_max_freq&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;ondemand:&lt;/em&gt;&lt;/strong&gt; La principal consideración es la adaptación a la carga actual. Comprueba la carga regularmente, cuando ésta sobrepasa el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;) la CPU se ejecuta a la frecuencia máxima. Cuando la carga cae por debajo del umbral, se ajusta la frecuencia de la CPU a la siguiente más baja. Este gobernador causa menos latencia que el conservative.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;conservative:&lt;/em&gt;&lt;/strong&gt;La princpial consideración es la adaptación más cercana a la carga actual. Al igual que el gobernador Ondemand, el gobernador Conservative ajusta la frecuencia de reloj según el uso. Sin embargo, mientras el gobernador Ondemand lo hace de una manera agresiva (es decir, desde lo máximo a lo mínimo y viceversa), el gobernador Conservative cambia de frecuencias gradualmente. El gobernador Conservative se ajustará a una frecuencia de reloj que estime correcta para la carga, en lugar de elegir simplemente entre máxima y mínima, es decir, cuando la carga supera el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;), se ajusta la frecuencia de la CPU a la siguiente más alta. Cuando la carga cae por debajo del umbral (&lt;strong&gt;down_threshold&lt;/strong&gt;) se ajusta la frecuencia a la siguiente más baja. Aunque esto podría proporcionar un significativo ahorro en consumo de energía, lo hace siempre a una latencia mayor que la del gobernador Ondemand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;em&gt;userspace:&lt;/em&gt;&lt;/strong&gt; Se deja el control a los programas en el espacio del usuario. Se ajusta la frecuencia al valor especificado por el programa en el espacio de usuario (mediante el uso del parámetro &lt;strong&gt;scaling_setspeed&lt;/strong&gt;). De todos lo gobernadores, Userspace es el más adaptable; y dependiendo de cómo se configure, puede ofrecer el mejor balance entre rendimiento y consumo para su sistema.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Fuentes: &lt;a target=&#34;_blank&#34; href=&#34;http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaai%2Fcpufreq%2FUnderstandingCPUFreqSubsystem.htm&#34;&gt;publib.boulder.ibm.com&lt;/a&gt; y &lt;a target=&#34;_blank&#34; href=&#34;http://docs.fedoraproject.org/es-ES/Fedora/14/html/Power_Management_Guide/cpufreq_governors.html#governor_types&#34;&gt;docs.fedoraproject.org&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

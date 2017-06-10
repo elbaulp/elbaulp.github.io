@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Linux on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/categories/linux/index.xml</link>
+        <description>Recent content in Linux on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/categories/linux/index.xml</link>
+            <title>Linux on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to remove slotted packages in gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
+            <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
+            <description>
+
+&lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
+
+&lt;p&gt;First use &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; to list package matching PKG:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ equery list emacs
+ * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are two &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; packages, slotted in &lt;code&gt;:24&lt;/code&gt; and &lt;code&gt;:25&lt;/code&gt;, respectively. In order to remove the older version, execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo emerge -C emacs-24.5-r3:24
+Password:
+ * This action can remove important packages! In order to be safer, use
+ * &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;emerge -pv --depclean &amp;lt;atom&amp;gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; to check &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; reverse dependencies before
+ * removing packages.
+
+ app-editors/emacs
+    selected: 24.5-r3
+   protected: none
+     omitted: 25.1
+
+All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
+
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; removal.
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class=&#34;s1&#34;&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
+
+&amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
+&amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
+&amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 1
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+ * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+ * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
+
+ * Regenerating GNU info directory index...
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After removing the package, check what packages depended on it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; $ equery depends emacs-24.5-r3:24
+ * These packages depend on emacs-24.5-r3:24:
+app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/markdown-mode-2.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/quilt-el-0.48.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+app-emacs/scala-mode-2.10.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;virtual/emacs-23&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-python/cython-0.24.1 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-scheme/guile-1.8.8-r3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/cmake-3.6.3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/desktop-file-utils-0.23 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The last step:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>How to Change Portage Folders to Other Location in Gentoo</title>
+            <link>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</link>
+            <pubDate>Wed, 17 Aug 2016 08:06:32 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
+            <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;quot;/var/tmp/portage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;So first I decided to change all the &lt;code&gt;portage&lt;/code&gt; files to my secondary hard disk drive, here is how to change &lt;code&gt;portage&lt;/code&gt; folders to a new location.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-etc-portage-make-conf-file&#34;&gt;Changing /etc/portage/make.conf file&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose the new directory is &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The first thing to to is update the environment variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; and &lt;code&gt;PKGDIR&lt;/code&gt; to point to the new location, so in the file &lt;code&gt;make.conf&lt;/code&gt; we need to write:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/portage&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;syncing-portage-tree&#34;&gt;Syncing portage tree&lt;/h1&gt;
+
+&lt;p&gt;Now that we had updated the variables, we need to &lt;code&gt;sync&lt;/code&gt; portage:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that, &lt;code&gt;portage&lt;/code&gt; now knows about the new location, but there is one more thing to do.&lt;/p&gt;
+
+&lt;h1 id=&#34;symlinking-make-profile-to-the-new-location&#34;&gt;Symlinking make.profile to the new location&lt;/h1&gt;
+
+&lt;p&gt;After syncing &lt;code&gt;portage&lt;/code&gt;, one last thing to do is symlinking &lt;code&gt;make.profile&lt;/code&gt; to the new location, previously it was a symlink to &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, but we need to update it to the new location. Here is how:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now everything is right and we have changed the &lt;code&gt;portage&lt;/code&gt; location and get rid of the space problems.&lt;/p&gt;
+
+&lt;h1 id=&#34;changing-only-the-tmp-directory-var-tmp-portage&#34;&gt;Changing only the tmp directory (/var/tmp/portage)&lt;/h1&gt;
+
+&lt;p&gt;After doing the previous steps, I realized that it would be a better option to only change the location of the &lt;code&gt;tmp&lt;/code&gt; portage directory (by default &lt;code&gt;/var/tmp/portage&lt;/code&gt;), that was the original problem, because I did not had enough space left there. So a better option would be leave &lt;code&gt;make.conf&lt;/code&gt; as we had it previously, and only add a new variable:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/home/hkr/ssd2/&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Hope it helps!.&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Can&#39;t Update to Firefox 48 in Gentoo, NSS Version Too Old</title>
+            <link>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
+            <pubDate>Thu, 04 Aug 2016 09:05:17 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
+            <description>&lt;p&gt;Today, when I check for updates in my &lt;em&gt;Gentoo&lt;/em&gt; machine, the new Firefox 48 was released. But when I tried to update I kept getting this error:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;I tried to enable the &lt;code&gt;NSS&lt;/code&gt; &lt;em&gt;USE&lt;/em&gt; flag, but did not work, so I went to the &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo forums&lt;/a&gt; and asked there. After a few minutes they answered me, it is a current &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; that need to be solved. But fortunately there is a workaround until the bug is fixed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;=dev-libs/nss-3.24 ~amd64&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
+emerge -u nss
+&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Executing the above in a terminal as root will force portage to install the version 3.24 of &lt;em&gt;NSS&lt;/em&gt;, and then firefox will not complain about the old version.&lt;/p&gt;
+
+&lt;p&gt;Once firefox 48 is installed, we can enjoy the &lt;a href=&#34;http://arstechnica.com/information-technology/2016/08/firefox-48-ships-bringing-rust-mainstream-and-multiprocess-for-some/&#34; title=&#34;Firefox 48 ships, bringing Rust mainstream and multiprocess for some&#34;&gt;new multiprocessing feature&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;em&gt;fedeliallalinea&lt;/em&gt; for solving me the problem in the forums!&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;br /&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
+
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one &amp;#8220;*&amp;#8221;, that are the comments in bash, and any character after &amp;#8221; (. *) &amp;#8220;. &amp;#8220;&amp;amp;&amp;#8221;, it is in order that in this place, it prints everything what coincided with the pattern &amp;#8221; (. *) &amp;#8220;, that is to say, the comment.&lt;/p&gt;
+
+&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
+
+&lt;p&gt;I hope that it is useful&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script [Improved]</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</guid>
+            <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;quot;&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>C&#43;&#43; syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;br /&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keyWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace&amp;quot;&lt;/span&gt;
+
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include/#include/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# coloreo el include&lt;/span&gt;
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#define/#define/&amp;quot;&lt;/span&gt; &amp;lt; temp &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# coloreo el define&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keyWords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp $rutaCodigo
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^class /class/g&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;I am going to explain a bit the code:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The variable &lt;em&gt;keyWords&lt;/em&gt; contains the key words of c ++, fewer &amp;#8220;class&amp;#8221;, which later I will explain because. In this variable, the words have to be separated by a space, and all in the same line, In order that the &amp;#8220;for&amp;#8221; takes word to word.&lt;/p&gt;
+
+&lt;p&gt;Both following lines&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^#include..... and sed &amp;quot;&lt;/span&gt;s/^#define...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;search the pattern &amp;#8220;#define&amp;#8221; or &amp;#8220;#include&amp;#8221;, initially of every line of the text, this is indicated by &lt;em&gt;^&lt;/em&gt;, and replaces it with his corresponding style, to format the text. Once we enter the &amp;#8220;for&amp;#8221;, there is applied basically the same procedure that for it &amp;#8220;define&amp;#8221; and &amp;#8220;include&amp;#8221;, but with every word of the variable keyWords.&lt;/p&gt;
+
+&lt;p&gt;Finally, I do the same for the reserved word &amp;#8220;class&amp;#8221;, the motive for which I have left this one by the end, it is because the label &lt;span class=&#34;class&#34;&gt; contains the word, &amp;#8220;class&amp;#8221;, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.&lt;/p&gt;
+
+&lt;p&gt;How Use It:&lt;/p&gt;
+
+&lt;p&gt;It is necessary to create a css class for the blog, of this form:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;.prp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#0a0&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nc&#34;&gt;.cpp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;#a40&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once done this, we have to execute the script and introduce the code path to formatting with this style.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bashyc.blogspot.com/p/curso-c.html#ejercicio111&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; you can see the result.&lt;/p&gt;
+
+&lt;p&gt;Regards, I hope that it is useful&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

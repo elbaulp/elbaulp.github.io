@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ecuaciones Lineales on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/ecuaciones-lineales/index.xml</link>
+        <description>Recent content in Ecuaciones Lineales on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/ecuaciones-lineales/index.xml</link>
+            <title>Ecuaciones Lineales on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/ecuaciones-lineales/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo resolver sistemas de ecuaciones lineales con dos incógnitas en Python</title>
+            <link>https://elbauldelprogramador.com/como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-resolver-sistemas-de-ecuaciones-lineales-con-dos-incognitas/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;El siguiente artículo es una colaboración de &lt;a href=&#34;http://dealgebra.blogspot.mx/&#34; title=&#34;Visitar blog&#34; target=&#34;_blank&#34;&gt;Rogelio González&lt;/a&gt;, al que agradezco su interés por colaborar en este blog.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Una ecuación no es más que una igualdad en la que hay cantidades desconocidas llamadas incógnitas. Las soluciones son los valores que tienen las incógnitas cuando satisfacen la igualdad. Un sistema de ecuaciones es la reunión de 2 o mas ecuaciones con 2 o más incógnitas. Así:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;$$x+y=3\2x+3y=3$$&lt;/p&gt;
+
+&lt;p&gt;Es un sistema de ecuaciones cuyas soluciones son $$x=6, y=-3$$. Los sistemas de ecuaciones tienen aplicaciones en todas las ciencias entonces es útil tener un algoritmo que las resuelva y comprender qué es lo que hace. Normalmente utilizaríamos algo de algebra lineal para resolverlo pero hoy vamos a hacerlo de otro modo.&lt;/p&gt;
+
+&lt;h3 id=&#34;tipos-de-sistemas-de-ecuaciones&#34;&gt;Tipos de sistemas de ecuaciones&lt;/h3&gt;
+
+&lt;p&gt;Aunque de manera intuitiva nos puede parecer que todo sistema tiene soluciones únicas esto no es así. El sistema pueder tener soluciones unicas como el primer ejemplo,infinitas soluciones o no tener solución. ¿Qué hace distinto un sistema de otro? o en otras palabras ¿Qué método tenemos que nos diga que sistema es?&lt;/p&gt;
+
+&lt;h3 id=&#34;determinantes&#34;&gt;Determinantes&lt;/h3&gt;
+
+&lt;p&gt;El &lt;strong&gt;determinante&lt;/strong&gt; de nuestro sistema es el que nos dirá qué tipo de sistema es. El determinante del sistema:&lt;/p&gt;
+
+&lt;p&gt;$$ax+by=c\dx+ey=f$$&lt;/p&gt;
+
+&lt;p&gt;Viene dado por $$ae-bd$$, en el primer ejemplo el determinante es &lt;strong&gt;1&lt;/strong&gt; pues $$1\cdot 3-1\cdot 2=1$$.En general si el determinante ($$D$$) es distinto de cero tenemos soluciones únicas, si el determinante es cero entonces o hay infinitas soluciones o no hay ninguna. En &amp;#8220;el caso fácil&amp;#8221; cuando $$D\neq 0$$ las soluciones están dadas por:&lt;/p&gt;
+
+&lt;p&gt;$$x=\frac{ec-bf}{ae-bd}\y=\frac{af-dc}{ae-bd}$$&lt;/p&gt;
+
+&lt;p&gt;Ahora &amp;#8220;el caso difícil&amp;#8221; cuando $$D=0$$ ¿Cómo saber si el sistema tiene infinitas soluciones o ninguna? Pongamos atención en los siguientes sistemas:&lt;/p&gt;
+
+&lt;p&gt;$$x+y=3\ 2x+2y=6$$&lt;/p&gt;
+
+&lt;p&gt;$$x+y=3\ 2x+2y=5$$&lt;/p&gt;
+
+&lt;p&gt;En el primer sistema es fácil ver que la segunda ecuación es solo la primera multiplicada por 2 y es coherente el resultado. Sin embargo en el segundo sistema el lado izquierdo de la igualdad nos dice de nuevo que la segunda ecuación es solo la primera multiplicada por 2 pero el lado derecho no puede ser cierto pues el doble de 3 no es 5. Entonces decimos que el primer sistema tiene soluciones infinitas pues las soluciones de la primera ecuación siempre cumplen la segunda pues básicamente es la misma ecuación. El segundo sistema no tiene soluciones y podemos verlo en el absurdo de que el doble de 3 es 5. Podemos decir pues que en un sistema con $$D=0$$ lo importante es ver por qué número debemos multiplicar la primera ecuación para obtener la segunda y la parte derecha de las ecuaciones nos dirán si es coherente o no, en otras palabras si tiene infinitas soluciones o ninguna.&lt;/p&gt;
+
+&lt;h3 id=&#34;ideas-llevadas-a-python&#34;&gt;Ideas llevadas a Python&lt;/h3&gt;
+
+&lt;p&gt;&amp;#8220;El caso difícil&amp;#8221; lo podemos resolver sabiendo cuál es el número por el que tengo que multiplicar la primera ecuación para obtener la segunda, podríamos hacer &lt;code&gt;m = d / a&lt;/code&gt; donde &lt;strong&gt;m&lt;/strong&gt; sería nuestro &amp;#8220;número&amp;#8221;y después ver si &lt;code&gt;m * c = f&lt;/code&gt; :&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El sistema tiene infinitas soluciones&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El sistema no tiene soluciones&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Uniendo &amp;#8220;el caso difícil&amp;#8221; con &amp;#8220;el caso fácil&amp;#8221; tenemos el código completo del algoritmo, tendremos que verificar antes que a,b,d,e no sean todos cero pues entonces no sería un sistema de ecuaciones, salvando esto podemos usar el algoritmo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sys&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;det&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;det&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;det&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;det&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;La solucion al sistema es x= &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; e y= &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%d&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El sistema tiene infinitas soluciones&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El sistema no tiene soluciones&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;¿Por qué tantas matemáticas y poco código? Creo que todos lo sabemos: la idea que soporta el código es lo interesante y no solo lo interesante &lt;em&gt;es&lt;/em&gt; lo importante. No todo programador es matemático (no es necesario serlo) pero es una gran ventaja tener esa &amp;#8220;intuición&amp;#8221; que nos dan las matemáticas.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

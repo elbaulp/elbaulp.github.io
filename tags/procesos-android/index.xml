@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Procesos Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/procesos-android/index.xml</link>
+        <description>Recent content in Procesos Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/procesos-android/index.xml</link>
+            <title>Procesos Android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/procesos-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fundamentos programación Android: Limpieza de Procesos</title>
+            <link>https://elbauldelprogramador.com/fundamentos-programacion-android_18/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_18/</guid>
+            <description>&lt;p&gt;Android va destruyendo componentes inactivos para liberar memória, pero los elminia teniendo en cuenta cual es el de menor importancia:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Los primeros en ser elmininados son los procesos vacíos (Son aplicaciones cerradas que se mantienen en memoria para cargar rápidamente la aplicación la proxima vez que se abra.)&lt;/li&gt;
+&lt;li&gt;Procesos en segundo plano, estos son las aplicaciones que ya han ejecutado su método &lt;strong&gt;onStop()&lt;/strong&gt;, Android confecciona una lista con los procesos en este estado y elimina en primer lugar el más antiguo.&lt;/li&gt;
+&lt;li&gt;Despues elminina los procesos de servicio. (si sigue necesitando más memoria.)&lt;/li&gt;
+&lt;li&gt;Si aún necesita más memoria, elimina los procesos pausados.&lt;/li&gt;
+&lt;li&gt;Si con esto sigue necesitando, finalmente elimina el proceso en primer plano.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Es muy importante implementar bien los métodos de estado, para evitar perden información.&lt;/p&gt;
+
+&lt;h1 id=&#34;siguiente-tema-programación-android-trabajar-con-actividades-y-pasar-parámetros-entre-ellas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;Programación Android: Trabajar con actividades y pasar parámetros entre ellas&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

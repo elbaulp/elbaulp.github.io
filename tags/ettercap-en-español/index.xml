@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ettercap En Español on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/ettercap-en-espa%C3%B1ol/index.xml</link>
+        <description>Recent content in Ettercap En Español on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/ettercap-en-espa%C3%B1ol/index.xml</link>
+            <title>Ettercap En Español on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/ettercap-en-espa%C3%B1ol/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Esnifando la red (Pruebas de seguridad): Ettercap y Wireshark (Man in the middle)</title>
+            <link>https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad/</guid>
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;Recientemente he leido los problemas de &lt;a href=&#34;https://elbauldelprogramador.com/categorias/#seguridad&#34; title=&#34;Artículos sobre seguridad&#34;&gt;seguridad&lt;/a&gt; que tiene &lt;a href=&#34;http://gizmovil.com/2011/05/fallo-de-seguridad-en-whatsapp-que-permite-acceder-a-los-mensajes-y-numeros-de-telefono&#34;&gt;WhatsApp&lt;/a&gt;, con lo que me entró curiosidad por hacer algunas pruebas yo mismo y esnifar el tráfico de red de mi móvil, pero en este caso para la aplicación que estoy desarrollando, &lt;a href=&#34;https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/&#34;&gt;WifiBar&lt;/a&gt;. Antes de nada voy a explicar las técnicas y programas que he usado.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ettercap-y-wireshark&#34;&gt;Ettercap y Wireshark&lt;/h1&gt;
+
+&lt;p&gt;Bien, vamos con los programas, he usado &lt;a href=&#34;http://ettercap.sourceforge.net/&#34;&gt;ettercap&lt;/a&gt; y &lt;a href=&#34;http://www.wireshark.org/&#34;&gt;wireshark&lt;/a&gt;. Estos programitas se usan para lo siguiente, Ettercap principalmente lo he usado para el envenenamiento ARP de la máquina objetivo (en este caso el móvil), para realizar la técnica de &lt;em&gt;Man on the Middle&lt;/em&gt;, que consiste en establecer la puerta de enlace predeterminada del equipo objetivo a la dirección ip del equipo atacante. De esta manera nuestro equipo atacante estará situado entre el router y el objetivo, logrando así escuchar todo el tráfico de red que genera el objetivo. (Más adelante explicaré como hacer esto).&lt;/p&gt;
+
+&lt;p&gt;Wireshark finalmente lo uso para &lt;em&gt;“Ver”&lt;/em&gt; el tráfico que genera el objetivo.&lt;/p&gt;
+
+&lt;p&gt;Podemos instalar estos dos programas mediante la consola:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez instalado, abrimos ettercap:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo ettercap -C
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Y nos abrirá una pantalla como esta:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 669px) 669px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;449&#34; width=&#34;669&#34; src=&#34;https://2.bp.blogspot.com/-6aC4HXLtK7k/TdlRoid4i2I/AAAAAAAAAgs/XHR8h0qNXss/s800/ettercap1.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Una vez abierta, le damos a &lt;code&gt;Sniff -&amp;gt; Unified sniffing&lt;/code&gt;, y tendremos que introducir la interfaz que queramos esnifar, en mi caso wlan0 (Ya que el móvil se conecta por wifi).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 616px) 616px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;79&#34; width=&#34;616&#34; src=&#34;https://4.bp.blogspot.com/-bJscHRVIt3U/TdlSWHzopEI/AAAAAAAAAg0/9iVj3S96Jpo/s800/interface.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El siguente paso es escanear la red en busca de host, &lt;code&gt;Hosts -&amp;gt; Scan for hosts&lt;/code&gt;. Al pulsar comenzará a escanear y en el recuadro de abajo nos aparecerá cuantos host encontró, en mi caso:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 667px) 667px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;444&#34; width=&#34;667&#34; src=&#34;https://2.bp.blogspot.com/-UHuz1c4HInM/TdlTPkAoLYI/AAAAAAAAAg8/gEU_PTHohgA/s800/host.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para ver las ips de los hosts encontrados vamos a &lt;code&gt;Hosts -&amp;gt; hosts list&lt;/code&gt;, nos quedamos con la ip de nuestro objetivo y pasamos al siguiente paso, &lt;code&gt;Targets -&amp;gt; Select TARGET(s)&lt;/code&gt;, aquí debemos poner como &lt;code&gt;target1&lt;/code&gt; nuestra puerta de enlace predeterminada, y como target 2 el objetivo:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 541px) 541px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;93&#34; width=&#34;541&#34; src=&#34;https://3.bp.blogspot.com/-lFH6pB11PTA/TdlUjkVJPJI/AAAAAAAAAhE/m_W8MFwPLfA/s800/target.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Ahora hacemos &lt;code&gt;Start -&amp;gt; Start sniffing&lt;/code&gt;, y despues, procedemos al envenenamiento ARP. &lt;code&gt;Mitm -&amp;gt; Arp poisoning&lt;/code&gt;. lo que nos pedirá unos parámetros, yo he puesto oneway, que fuerza a envenenar solo desde Target1 a Target2, útil para envenenar solo el objetivo y no el router:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 530px) 530px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;78&#34; width=&#34;530&#34; src=&#34;https://4.bp.blogspot.com/-KMyx2G5WS_0/TdlWJa5riyI/AAAAAAAAAhM/fyZXGORdX7A/s800/arp.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si ejecutamos antes de realizar todo esto &lt;code&gt;arp -a&lt;/code&gt; en el equipo objetivo, vemos que la puerta de enlace tiene una MAC asociada, despues de hacer en envenenamiento, esta MAC es la del equipo atacante.&lt;/p&gt;
+
+&lt;p&gt;Ahora llega el turno de wireshark,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo wireshark
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Vamos a &lt;code&gt;Capture -&amp;gt; Options&lt;/code&gt;, aquí seleccionaremos la interfaz a esniffar, que debe ser la misma que usamos en ettercap, dejamos marcada la casilla &lt;em&gt;Capture packets in promiscuous mode&lt;/em&gt; y clicamos en start:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; layout=&#34;responsive&#34;  height=&#34;594&#34; width=&#34;640&#34; src=&#34;https://3.bp.blogspot.com/-W8mrGI5blBY/TdlYTc3yTLI/AAAAAAAAAhU/p3uTj_g8We4/s800/capture.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Todo esto me sirvió para descubrir que mi aplicación manda cierta información en Texto plano, como usuario y contraseña de la Base de datos y consultas SQL, de modo que tendré que encriptarlo:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-IJWXvfdJegA/TdlZvAxBggI/AAAAAAAAAhc/-i-VAe-xow8/s1600/bd.png&#34;&gt;&lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; layout=&#34;responsive&#34;  height=&#34;483&#34; width=&#34;800&#34; src=&#34;https://1.bp.blogspot.com/-IJWXvfdJegA/TdlZvAxBggI/AAAAAAAAAhc/-i-VAe-xow8/s800/bd.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Atención:&lt;/strong&gt; Una vez terminemos de esnifar, no se nos puede olvidar quitar el envenenamiento ARP &lt;code&gt;Mitm -&amp;gt; Stop mitm attack(s)&lt;/code&gt;, ya que si no, al apagar el equipo atacante el objetivo se queda sin conexión, al hacer el atacante de puerta de enlace. Por último, &lt;code&gt;Start -&amp;gt; Stop sniffing&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo proximo que quiero intentar es conseguir sacar el Id y contraseña del chat de tuenti (Red social española), para conectarme a dicho chat sin necesidad de entrar en la web, usando emphaty por ejemplo, hay gente que ya lo ha conseguido &lt;a href=&#34;http://blogguino.blogspot.com/2010/05/tuenti-chat-en-empathy-sin-contactos.html&#34;&gt;ojeando las cookies&lt;/a&gt;, pero voy a hacerlo de esta forma, ya que ojeando con wireshark conseguí sacar el ID y demás, pronto escribiré una entrada si lo consigo.&lt;/p&gt;
+
+&lt;h1 id=&#34;bibliografia&#34;&gt;Bibliografia&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.bujarra.com/ProcedimientoManInTheMiddle.html&#34;&gt;Bujarra.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>[Vídeo tutoriales] Ataque Man in the middle</title>
+            <link>https://elbauldelprogramador.com/video-tutoriales-ataque-man-in-middle/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/video-tutoriales-ataque-man-in-middle/</guid>
+            <description>
+
+&lt;p&gt;En la &lt;a href=&#34;https://elbauldelprogramador.com/esnifando-la-red-pruebas-de-seguridad/&#34;&gt;anterior entrada&lt;/a&gt; expliqué como hacer un ataque mitm para capturar el tráfico de red de un equipo.&lt;/p&gt;
+
+&lt;p&gt;En casiDiablo ví 3 interesantes videotutoriales que quiero compartir con vosotros:&lt;/p&gt;
+
+&lt;h3 id=&#34;vídeo-tutoriales&#34;&gt;Vídeo tutoriales&lt;/h3&gt;
+
+&lt;p&gt;Los siguientes tres video tutoriales axplican en detalle cómo funciona el ARP Spoofing; y fueron creados por &lt;a href=&#34;http://icaix.com&#34;&gt;Miguel Angel Calvo&lt;/a&gt; (&lt;strong&gt;todos los derechos reservados&lt;/strong&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://casidiablo.net/videotutoriales/ARP.htm?keepThis=true&amp;amp;TB_iframe=true&amp;amp;height=635&amp;amp;width=800&#34; title=&#34;Arp Spoofing :: Conceptos básicos&#34;&gt;Ver el video 1&lt;/a&gt;&lt;/strong&gt; – Aquí se explican los conceptos básicos del ARP Spoofing (&lt;a href=&#34;http://casidiablo.net/descargar/ARP+Spooging+Video+Tutorial &amp;quot;Arp Spoofing :: Conceptos básicos (1MB&#34;&gt;descargar&lt;/a&gt;&amp;rdquo;))&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://casidiablo.net/videotutoriales/ettercap.htm?keepThis=true&amp;amp;TB_iframe=true&amp;amp;height=635&amp;amp;width=800&#34; title=&#34;Arp Spoofing con ettercap :: Usando ettercap para envenenar la tabla ARP de las víctimas&#34;&gt;Ver el video 2&lt;/a&gt;&lt;/strong&gt; – En donde se explica el uso del &lt;a href=&#34;http://ettercap.sourceforge.net/&#34;&gt;Ettercap&lt;/a&gt; para realizar un ARP Spoofing (&lt;a href=&#34;http://casidiablo.net/descargar/Video+Tutorial+Ettercap &amp;quot;Arp Spoofing con ettercap :: Usando ettercap para envenenar la tabla ARP de las víctimas (2,1MB&#34;&gt;descargar&lt;/a&gt;&amp;rdquo;))&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://casidiablo.net/videotutoriales/arpwatch.htm?keepThis=true&amp;amp;TB_iframe=true&amp;amp;height=635&amp;amp;width=800&#34; title=&#34;Detección del Arp Spoofing :: Usar arpwatch para detectar cambios extraños en la red&#34;&gt;Ver el video 3&lt;/a&gt;&lt;/strong&gt; – En donde nos enseñan a detectar si estamos bajo un ataque ARP Spoofing (&lt;a href=&#34;http://casidiablo.net/descargar/Video+Tutorial+arpwatch &amp;quot;Detección del Arp Spoofing :: Usar arpwatch para detectar cambios extraños en la red (2,1MB&#34;&gt;descargar&lt;/a&gt;&amp;rdquo;))&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;fuente-original&#34;&gt;Fuente original:&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://casidiablo.net/man-in-the-middle/&#34;&gt;casidiablo.net&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Androidmanifest on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/androidmanifest/index.xml</link>
+        <description>Recent content in Androidmanifest on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/androidmanifest/index.xml</link>
+            <title>Androidmanifest on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/androidmanifest/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fundamentos programación Android: Intents y AndroidManifest</title>
+            <link>https://elbauldelprogramador.com/fundamentos-programacion-android_16/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fundamentos-programacion-android_16/</guid>
+            <description>&lt;h1 id=&#34;intents&#34;&gt;Intents&lt;/h1&gt;
+
+&lt;p&gt;Las Actividades, Servicios y BroadcastReceiver se activan a través de mensajes asíncronos llamados &lt;strong&gt;&lt;em&gt;intent&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Un intent es un objeto que contiene todos los datos del mensaje.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Hay tres métodos para activar cada uno de los componentes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Las actividades se muestran pasando un Intent al método &lt;strong&gt;&lt;em&gt;Context.startActivity()&lt;/em&gt;&lt;/strong&gt; o &lt;strong&gt;&lt;em&gt;Activity.startActivityForResult()&lt;/em&gt;&lt;/strong&gt;. Una vez lanzada la actividad, dentro de la misma podemos abrir el objeto Intent para obtener los parámetros usando el método &lt;strong&gt;&lt;em&gt;getIntent()&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Para lanzar servicios o interactuar con ellos pasaremos el intent al método &lt;strong&gt;&lt;em&gt;Context.startService()&lt;/em&gt;&lt;/strong&gt;. Para analizar el Intent dentro del proceso usaremos &lt;strong&gt;&lt;em&gt;onBind().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Para pasar los intents a un mensaje de difusión debemos pasar el Intent al método &lt;strong&gt;&lt;em&gt;Context.sendBroadcast()&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;Context.sendOrderedBroadcast()&lt;/em&gt;&lt;/strong&gt; o &lt;strong&gt;&lt;em&gt;Context.sendStickyBroadcast()&lt;/em&gt;&lt;/strong&gt;, así el intent se entregará a todas las clases &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; que estén escuchando, y podrán analizarlo con &lt;strong&gt;&lt;em&gt;onReceive().&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;androidmanifest&#34;&gt;AndroidManifest&lt;/h1&gt;
+
+&lt;p&gt;Para poder usar un componente, además de crearlo extendiendo de su clase correspondiente, es necesario definirlo en el &lt;strong&gt;&lt;em&gt;AndroidManifest.xml&lt;/em&gt;&lt;/strong&gt;. Este archivo podemos editarlo directamente como XML, o con el formulario que nos facilita eclipse.&lt;/p&gt;
+
+&lt;p&gt;Cada componente tiene su propia etiqueta xml:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;activity&amp;gt;&lt;/code&gt;: Para actividades.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;service&amp;gt;&lt;/code&gt;: Para servicios.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;receiver&amp;gt;&lt;/code&gt;: Para receptores de mensajes de difusión.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;provider&amp;gt;&lt;/code&gt;: Para proveedores de contenidos.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;intent&amp;gt;&lt;/code&gt;: Para categorizar componentes, así cuando se les llame no hay que saber el nombre del intent, android lo elige basandose en su categoría y parámetros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-actividades-tareas-procesos-e-hilos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;Fundamentos programación Android: Actividades, Tareas, Procesos e Hilos&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

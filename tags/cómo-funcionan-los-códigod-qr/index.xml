@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cómo Funcionan Los Códigod Qr on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/c%C3%B3mo-funcionan-los-c%C3%B3digod-qr/index.xml</link>
+        <description>Recent content in Cómo Funcionan Los Códigod Qr on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/c%C3%B3mo-funcionan-los-c%C3%B3digod-qr/index.xml</link>
+            <title>Cómo Funcionan Los Códigod Qr on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/c%C3%B3mo-funcionan-los-c%C3%B3digod-qr/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Estructura y seguridad de los QR Codes</title>
+            <link>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
+
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/linkentrada2-300x300.png&#34; alt=&#34;QR Code&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidamente piezas coches durante su ensamblaje en Japón, y se diseñaron muy bien.&lt;/p&gt;
+
+&lt;p&gt;Todos son cuadrados y siempre tienen una zona llamada &lt;em&gt;zona tranquila&lt;/em&gt; ó &lt;strong&gt;quiet zone&lt;/strong&gt;. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.&lt;/p&gt;
+
+&lt;p&gt;La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaultargetdownright2.png&#34; alt=&#34;qrbaultargetdownright&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un &lt;a href=&#34;http://es.wikipedia.org/wiki/Ciclo_de_trabajo&#34; target=&#34;_blank&#34;&gt;ciclo de trabajo del 50%&lt;/a&gt;. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaulinnercorners2.png&#34; alt=&#34;qrbaulinnercorners&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.&lt;/p&gt;
+
+&lt;p&gt;La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.&lt;/p&gt;
+
+&lt;p&gt;A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.&lt;/p&gt;
+
+&lt;p&gt;La codificación del contenido comienza en la esquina inferior derecha y se almacena en bloques de 2&amp;#215;4, la razón del tamaño es para que sean lo más cuadrados posibles, de esta forma los bits en un byte ocupan la menor área posible.&lt;/p&gt;
+
+&lt;p&gt;Los diseñadores prestaron mucha atención a la corrección de errores, y desarrollaron tres niveles &lt;strong&gt;bajo, medio, cuartil y alto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 564px) 564px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Custom_QR_code_Wikipedia2.png&#34; alt=&#34;Custom_QR_code_Wikipedia&#34; width=&#34;564px&#34; height=&#34;396px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de corrección es similar al estilo de corrección de errores &lt;strong&gt;Reed-Solomon&lt;/strong&gt; (Información en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction&#34; target=&#34;_blank&#34;&gt;inglés&lt;/a&gt;, inf. en &lt;a href=&#34;http://es.wikipedia.org/wiki/Reed-Solomon&#34; target=&#34;_blank&#34;&gt;Español&lt;/a&gt;) que usan los discos duros. Al igual que en los QR Codes, en los discos duros puede haber un pequeño defecto en la superficie que cause la pérdida de una región física. Esta tecnología permite una recuperación robusta de los datos.&lt;/p&gt;
+
+&lt;p&gt;Esencialmente hay un mosaico de 2&amp;#215;4 que se extiende a lo largo de un borde y luego da la vuelta. Pero no como un &lt;a href=&#34;http://en.wikipedia.org/wiki/Raster_scan&#34; target=&#34;_blank&#34;&gt;raster scan&lt;/a&gt;, que salta de nuevo hacia donde empezó. En lugar de eso, se da la vuelta y regresa al punto de origen, dos bits más hayá. Luego vuelve a girar y regresar.&lt;/p&gt;
+
+&lt;p&gt;Uno de los problemas que se encontraron los diseñadores fue a la hora de que los datos emularan las características de reparación del QR Code. Habría un problema de señalización en banda, que es el término usado en teoría de la información para referirse al problema de intentar tener datos de formato, que deben estar separados del contenido, el problema es que el código se imprime con tinta. ¿Cómo se diferencia qué es datos y qué es formato?&lt;/p&gt;
+
+&lt;p&gt;Se plantearon organizar la información, pero ¿que pasa si la información ordenada se parece a uno de los cuadrados principales?, ¿y si aparecen demasiados espacios en blanco consecutivos?. Eso sería un problema. De nuevo el QR Code actua de forma similar a los discos duros usando una tecnología llamada Self-Clocking (Autosincronizable). En lugar de malgastar espacio con una señal de reloj o una traza de reloj además de los datos, organizaron los datos de forma que fueran autosincronizables, para que proporcionen su propia información de sinconización.&lt;/p&gt;
+
+&lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
+
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
+
+&lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
+
+&lt;p&gt;Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.&lt;/p&gt;
+
+&lt;p&gt;Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.&lt;/p&gt;
+
+&lt;h1 id=&#34;pasemos-a-ver-los-aspectos-de-seguridad&#34;&gt;&lt;strong&gt;Pasemos a ver los aspectos de seguridad.&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
+
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+
+&lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
+
+&lt;p&gt;Otro buen intérprete es &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ..&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;&lt;/strong&gt;, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 382: QR Codes&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/382&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

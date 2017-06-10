@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cláusula Where Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/cl%C3%A1usula-where-android/index.xml</link>
+        <description>Recent content in Cláusula Where Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/cl%C3%A1usula-where-android/index.xml</link>
+            <title>Cláusula Where Android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/cl%C3%A1usula-where-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Usando la cláusula Where</title>
+            <link>https://elbauldelprogramador.com/programacion-android-usando-la-clausula/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-usando-la-clausula/</guid>
+            <description>&lt;p&gt;Los proveedores de conteido ofrecen dos formas de pasar una cláusula &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where&#34;&gt;where&lt;/a&gt;:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A través de la URI&lt;/li&gt;
+&lt;li&gt;Combinando una cadena y un conjunto de argumentos string-array reemplazables.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En esta entrada vamos a ver ambas.&lt;/p&gt;
+
+&lt;h3 id=&#34;cláusula-where-mediante-la-uri&#34;&gt;Cláusula Where mediante la URI&lt;/h3&gt;
+
+&lt;p&gt;Imaginemos que queremos recuperar un lugar (De la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu&#34;&gt;FavSites&lt;/a&gt;) cuyo id sea 23. Usaríamos el siguiente código:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//... Inicializamos la actividad...&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;siteUri&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;content://com.elbauldelprogramador.provider.FavSites/sites/23&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Cursor&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;managedCursor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;siteUri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+                                &lt;span class=&#34;n&#34;&gt;projection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//Columnas a devolver&lt;/span&gt;
+                                &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;//Cláusula WHERE&lt;/span&gt;
+                                &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;      &lt;span class=&#34;c1&#34;&gt;//Cláusula ORDER BY&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo se ha dejado el argumento que hace referencia a la cláusula where a null ya que hemos especificado el ID del registro que queremos en la URI. En este caso el ID está embebido en la URI. Se usa la URI como vehículo para pasar la cláusula where. Esto se hace evidente cuando nos fijamos cómo se implementa el proveedor para los Sites de la aplicación, que corresponde al método query. A continuación un fragmento de código del método query:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Devuelve un id de sitio&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//content://.../sites/23&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;siteId&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getPathSegments&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;queryBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setTables&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;favSitesTableMetaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;TABLE_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;queryBuilder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;appendWhere&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;favSitesTableMEtaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;_ID&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;=&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;siteId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos la id del sitio se extrae de la URI. La Uri se divide en segmentos (path) del a forma &lt;code&gt;content://. . . /seg1/seg2/seg3&lt;/code&gt;, en nuestro ejemplo el primer segmento es el id 23.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Las clases Uri y UriMatcher se usan para identificar las URIs y extraer parámetros de ellas, más adelante las veremos. SQLiteQueryBuilder es una clase asistente en android.database.sqlite que permite construir consultas SQL que se ejecutarán por SQLiteDatabase en una instancia de una base de datos SQLite.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;cláusulas-where-explícitas&#34;&gt;Cláusulas where explícitas&lt;/h3&gt;
+
+&lt;p&gt;Vamos a ver una vez más la estructura del método &lt;em&gt;managedQuery&lt;/em&gt; de la clase Activity:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Cursor&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;projection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;selection&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;selectionArgs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sortOrder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El parámetro &lt;em&gt;selection&lt;/em&gt;, es el que actúa como cláusula Where (Representa un filtro en el que elegimos qué filas queremos que se nos devuelvan). Si en este argumento pasamos &lt;em&gt;null&lt;/em&gt; se nos devolverán todas las filas para la URI dada. En este parámetro podemos incluir ?, que serán reemplazados por los valores del parámetro &lt;em&gt;selectionArgs&lt;/em&gt; en el orden que vayan apareciendo.&lt;/p&gt;
+
+&lt;p&gt;Los siguientes códigos que se muestran son equivalentes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Método Uri&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;content://com.elbauldelprogramador.provider.FavSites/sites/23&amp;quot;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;//Método explícito&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;managedQuery&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;content://com.elbauldelprogramador.provider.FavSites/sites&amp;quot;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;_ID=?&amp;quot;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Te preguntarás qué método usar en según que situación. Por convención se suele usar el método mediate URI cuando sea posible aplicarlo, y el explícito en casos especiales (Como en el ejemplo de arriba.)&lt;/p&gt;
+
+&lt;h3 id=&#34;siguiente-tema-insertando-registros-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-insertando/&#34;&gt;Insertando registros&lt;/a&gt;&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Conceptos Básicos Y Componentes Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/conceptos-b%C3%A1sicos-y-componentes-android/index.xml</link>
+        <description>Recent content in Conceptos Básicos Y Componentes Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/conceptos-b%C3%A1sicos-y-componentes-android/index.xml</link>
+            <title>Conceptos Básicos Y Componentes Android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/conceptos-b%C3%A1sicos-y-componentes-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Fundamentos programación Android: Conceptos básicos y componentes</title>
+            <link>https://elbauldelprogramador.com/fundamentos-programacion-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/fundamentos-programacion-android/</guid>
+            <description>&lt;h1 id=&#34;conceptos-básicos&#34;&gt;Conceptos básicos&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;Hemos visto&lt;/a&gt; que un proyecto Android está formado por varias carpetas estructuradas, pero lo que se instala en los dispositivos es un fichero con extensión &lt;strong&gt;&lt;em&gt;.apk (application package)&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Estos ficheros se generan con la herramienta apk (En el directorio tools del SDK) al terminar de compilar.&lt;/p&gt;
+
+&lt;p&gt;Las aplicaciones en Android tienen su propio entorno seguro de ejecución:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cada aplicación se ejecuta en su propio proceso Linux. El sistema lo crea cuando ejecutamos la aplicación y lo destruye cuando no se use pasado un rato o cuando el Sistema necesite recursos para otra aplicación&lt;/li&gt;
+&lt;li&gt;Cada proceso se ejecuta en su propia máquina virtual, de esta manera está aislada del resto. De esta forma ante cualquier fallo en la aplicación solo afecta a su máquina virtual, no al resto.&lt;/li&gt;
+&lt;li&gt;A cada aplicación se le asigna un identificador de usuario &lt;strong&gt;&lt;em&gt;(uid)&lt;/em&gt;&lt;/strong&gt; distinto. Los permisos de los archivos que refieren a la aplicación (caché, datos etc) son solo accesibles por dicho usuario. Es posible asignar un mismo &lt;strong&gt;&lt;em&gt;uid&lt;/em&gt;&lt;/strong&gt; a dos aplicaciones para que compartan una misma máquina virtual y recursos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;componentes-de-las-aplicaciones&#34;&gt;Componentes de las aplicaciones&lt;/h1&gt;
+
+&lt;p&gt;La característica principal de Android es la reutilización de componentes de una aplicación por otra.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, imaginemos que estamos desarrollando una aplicación que almacena datos de libros junto con una fotografía de su portada. En lugar de tener que escribir el código para capturar o seleccionar la imagen de la portada, podemos pasar el control a la aplicación de la cámara del teléfono, o a la galería, así una vez tomemos una foto o seleccionemos una imagen de la galería se nos devuelve el control a nuestra aplicación con la imagen seleccionada.&lt;/p&gt;
+
+&lt;p&gt;Para poder realizar estas operaciones, estamos obligados a dividir nuestras aplicaciones en módulos independientes que solo realicen una tarea concreta.&lt;/p&gt;
+
+&lt;p&gt;Veamos ahora otro ejemplo, muchos terminales tienen la opción de compartir algo en las redes sociales, por ejemplo Twitter, un módulo claramente definido de esta aplicación es por ejemplo la opción de &lt;strong&gt;&lt;em&gt;&amp;#8220;enviar un mensaje o tweet&amp;#8221;&lt;/em&gt;&lt;/strong&gt;, si seguimos la filosofía de dividir nuestras aplicaciones en módulos, la función de enviar un mensaje sería una actividad independiente que recibe como parámetro el mensaje a enviar, si no recibe parámetro se mostrará el formulario para escribirlo. Dicha actividad usará la API de Twitter para enviar el mensaje y finalmente cerrará la actividad devolviendo el control a la aplicación que la llamó. De esta forma, y con los filtros adecuados en el &lt;strong&gt;&lt;em&gt;AndroidManifest.xml&lt;/em&gt;&lt;/strong&gt;, cada aplicación que quiera compartir algo en twitter llamará a esta actividad pasandole como parámetro el mensaje.&lt;/p&gt;
+
+&lt;p&gt;Con esto llegamos a la conclusión de que las aplicaciones Android no tienen un punto de entrada y otro de salida, podemos definir todos los que necesitemos.&lt;/p&gt;
+
+&lt;p&gt;Para realizar todas estas operaciones, Android proporciona cuatro tipos de &lt;strong&gt;&lt;em&gt;componentes básicos&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h2 id=&#34;actividades-activity&#34;&gt;Actividades (Activity)&lt;/h2&gt;
+
+&lt;p&gt;Son las encargadas de mostrar la interfaz de usuario e interactuar con él. Responden a los eventos generados por el usuario (pulsar botones etc). Heredan de la clase &lt;strong&gt;&lt;em&gt;Activity&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;El aspecto de la actividad se aplica pasando un objeto View(Encargado de dibujar una parte rectangular en la pantalla, pueden contener más objetos View, además todos los componentes de la interfaz (botones, imagenes etc) heredan de View) al método &lt;strong&gt;&lt;em&gt;Activity.setContentView()&lt;/em&gt;&lt;/strong&gt;, que es el método encargado de dibujar la pantalla. Normalmente las vistas ocupan toda la pantalla, pero se pueden configurar para que se muestren como flotantes. Las actividades también pueden llamar a componentes que se mostrarán sobre su View (como dialogos o menús).&lt;/p&gt;
+
+&lt;p&gt;Por cada pantalla distinta hay una actividad distinta, normalmente las aplicaciones tienen una actividad fijada como punto de entrada. Por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;Una aplicación que lee el correo tendrá las siguientes actividades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RecibidosActivity: muestra el listado de mensajes recibidos.&lt;/li&gt;
+&lt;li&gt;LeerMensajeActivity: Muestra el contenido de un mensaje.&lt;/li&gt;
+&lt;li&gt;CrearMensajeActivity: recibe como parámetro los datos necesarios, si no hay, muestra el formulario para rellenarlos y envia el mensaje.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para esta aplicación definimos como punto de entrada &lt;strong&gt;&lt;em&gt;recibidosActivity&lt;/em&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;em&gt;CrearMensajeActivity&lt;/em&gt;&lt;/strong&gt;, para que otras aplicaciones puedan reutilizarlas.&lt;/p&gt;
+
+&lt;h2 id=&#34;servicios&#34;&gt;Servicios&lt;/h2&gt;
+
+&lt;p&gt;No tienen interfaz visual y se ejecutan en segundo plano, se encargan de realizar tareas que deben continuar ejecutandose cuando nuestra aplicación no está en primer plano. Todos los servicios extienden de la clase &lt;strong&gt;&lt;em&gt;Service&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Continuando con el ejemplo anterior, la aplicación de correo tendrá un servicio que comprobará y descargará nuevos correos. Es posible lanzar o conectar con un servicio en ejecución con la interfaz que proporciona la clase &lt;strong&gt;&lt;em&gt;Service.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Los servicios disponen de un mecanismo para ejecutar tareas pesadas sin bloquear la aplicación ya que se ejecutan en un hilo distinto.&lt;/p&gt;
+
+&lt;h2 id=&#34;receptores-de-mensajes-de-distribución-broadcastreceiver&#34;&gt;Receptores de mensajes de distribución (BroadcastReceiver)&lt;/h2&gt;
+
+&lt;p&gt;Simplemente reciben un mensaje y reaccionan ante él, extienden de la clase &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt;, no tienen interfaz de usuario, pero pueden lanzar Actividades como respuesta a un evento o usar &lt;strong&gt;&lt;em&gt;NotificationManager&lt;/em&gt;&lt;/strong&gt; para informar al usuario.&lt;/p&gt;
+
+&lt;p&gt;Android habitualmente lanza muchas notificaciones de sistema (llamadas entrantes, nuevos correos, nuevos sms etc). Si ponemos como ejemplo la aplicación del correo mencionada anteriormente, esta tendría un &lt;strong&gt;&lt;em&gt;BroadcastReceiver&lt;/em&gt;&lt;/strong&gt; escuchando el mensaje &lt;strong&gt;&lt;em&gt;nuevo_correo&lt;/em&gt;&lt;/strong&gt;, que lanzaría el servicio cada vez que detectara uno. Cuando esto sucediera, se mandaría un aviso a la barra del sistema para alertar al usuario.&lt;/p&gt;
+
+&lt;h2 id=&#34;proveedores-de-contenido-contentprovider&#34;&gt;Proveedores de contenido (ContentProvider)&lt;/h2&gt;
+
+&lt;p&gt;Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase &lt;strong&gt;&lt;em&gt;ContentProvider&lt;/em&gt;&lt;/strong&gt; para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada &lt;strong&gt;&lt;em&gt;ContentResolver&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Con esta clase se permite acceder al sistema de ficheros, bases de datos SQLite o cualquier otra fuente de datos unificada.&lt;/p&gt;
+
+&lt;p&gt;Un lector de correo podría disponer de un ContentProvider para acceder a la bandeja de entrada y los datos del mensaje.&lt;/p&gt;
+
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-intents-y-androidmanifest-2&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;Fundamentos programación Android: Intents y AndroidManifest&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

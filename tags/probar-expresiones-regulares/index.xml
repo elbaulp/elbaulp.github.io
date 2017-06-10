@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Probar Expresiones Regulares on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/probar-expresiones-regulares/index.xml</link>
+        <description>Recent content in Probar Expresiones Regulares on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/probar-expresiones-regulares/index.xml</link>
+            <title>Probar Expresiones Regulares on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/probar-expresiones-regulares/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introducción a las expresiones regulares en python</title>
+            <link>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</guid>
+            <description>&lt;p&gt;En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).&lt;/p&gt;
+
+&lt;p&gt;Son recopilaciones que he hecho durante el curso de *Programming languages &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; title=&#34;Nuevos Cursos disponibles en Udacity, la universidad online gratuita&#34;&gt;en udacity&lt;/a&gt;&lt;/em&gt; y voy a intentar explicarlos lo más claramente posible.&lt;/p&gt;
+
+&lt;p&gt;Lo primero que hay que hacer para usar expresiones regulares es importar el módulo &lt;strong&gt;re&lt;/strong&gt; de python con &lt;strong&gt;&lt;em&gt;import re&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;r&amp;#39;[a-z]+-?[a-z]+&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (&lt;em&gt;-?&lt;/em&gt;) seguido nuevamente de uno o más caracteres de la &lt;strong&gt;a&lt;/strong&gt; a la &lt;strong&gt;z&lt;/strong&gt;, en minúsculas.&lt;/p&gt;
+
+&lt;p&gt;Algunos casos de ejemplo son los siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Ejemplos válidos:&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;well-liked&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;well-liked&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;html&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;html&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Ejemplos no válidos:&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;a-b-c&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;a-b-c&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;a--b&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;a--b&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.&lt;/p&gt;
+
+&lt;p&gt;El siguiente ejemplo servirá para coincidir con cadenas que representen funciones matemáticas de un solo parámetro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;r&amp;quot;[a-z]+( *[0-9]+ *)&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esto encontrará cadenas que empiecen con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con \, despues buscamos por cero o más espácios ( *) seguidos de números (&lt;em&gt;[0-9]+&lt;/em&gt;) y nuevamente cero o más espacios.&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Ejemplos válidos&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;cos(0)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;cos(0)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;sqrt(   2     )&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;sqrt(   2     )&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Ejemplos no válidos&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;cos     (0)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;cos     (0)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;sqrt(x)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;sqrt(x)&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.&lt;/p&gt;
+
+&lt;p&gt;Veamos otro más, esta vez queremos encontrar cadenas que contengan caracteres de escape () y comillas&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;r&amp;#39;&amp;quot;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;]|(?:\.))*&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (&lt;em&gt;r&amp;#8217;&amp;rdquo;&amp;rdquo;&amp;#8217;&lt;/em&gt;), lo que encontremos, lo vamos a encontrar cero o más veces (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:)&lt;/em&gt;&amp;#8221;&amp;#8216;*), &lt;strong&gt;(?:)&lt;/strong&gt; coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que &lt;strong&gt;no&lt;/strong&gt; sea un \, y nótese que debemos escaparlo (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^])&lt;/em&gt;&amp;#8221;&amp;#8216;*) &lt;strong&gt;ó (&lt;em&gt;|&lt;/em&gt;)&lt;/strong&gt; un &lt;code&gt;.&lt;/code&gt; seguido de cualquier caracter
+(&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^\]|(?:.))&lt;/em&gt;&amp;#8221;&amp;#8216;*)&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;r&amp;#39;&amp;quot;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;]|(?:\.))*&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#  Ejemplos válidos:&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;I say, &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;hello.&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;I say, &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;hello.&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#  Ejemplos no válidos:&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;r&amp;#39;&amp;quot;[^&amp;quot;]*&amp;quot;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con (&lt;em&gt;r&amp;rsquo;&amp;ldquo;&amp;rsquo;&lt;/em&gt;), no pueden contener ningún caracter &lt;strong&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt; entre la cadena (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]&#39;&lt;/code&gt;&lt;/strong&gt;), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]*&amp;quot;&#39;&lt;/code&gt;&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#  Ejemplos  válidos:&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;cuneiform&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;sumerian writing&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#  Ejemplos no válidos&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;esc &amp;quot; ape&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

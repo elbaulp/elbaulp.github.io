@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ejecutar Excepciones En Sql on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/ejecutar-excepciones-en-sql/index.xml</link>
+        <description>Recent content in Ejecutar Excepciones En Sql on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/ejecutar-excepciones-en-sql/index.xml</link>
+            <title>Ejecutar Excepciones En Sql on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/ejecutar-excepciones-en-sql/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>PL/SQL. Excepciones</title>
+            <link>https://elbauldelprogramador.com/plsql-excepciones/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/plsql-excepciones/</guid>
+            <description>&lt;p&gt;Anteriormente dijimos que un bloque de código puede contener una sección denominada &lt;code&gt;EXCEPTION&lt;/code&gt;. Esta sección es la encargada de recoger todas las anomalías que se puedan producir dentro del bloque de código.&lt;/p&gt;
+
+&lt;p&gt;Una excepción es una situación especial dentro de la ejecución de un programa, que puede ser capturada para asignar un nuevo comportamiento. Una excepción puede ser un error de ejecución (una división entre 0) o cualquier otro tipo de suceso.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Las excepciones deben ser declaradas dentro de la sección &lt;code&gt;DECLARE&lt;/code&gt;, como si de una variable se tratase:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;e_sin_alumnos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Una vez que la excepción está definida, ésta debe ser lanzada, ya sea automáticamente por Oracle ( cuando se produce un error controlado por Oracle ), o lanzada manualmente por el usuario a través de la instrucción &lt;strong&gt;&lt;code&gt;RAISE &amp;lt;excepcion&amp;gt;&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La sintaxis del manejador de excepciones es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nb_excepcion_1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;instrucciones&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;excep1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nb_excepcion_2&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;instrucciones&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;excep2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nb_excepcion_n&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;instrucciones&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;excepn&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OTHERS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;instrucciones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;VALOR_NEGATIVO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;RAISE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VALOR_NEGATIVO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VALOR_NEGATIVO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;dbms_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;El valor no puede ser negativo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Cuando se produce un error, se ejecuta el bloque &lt;code&gt;EXCEPTION&lt;/code&gt;. Si existe un bloque de excepción apropiado para el tipo de error producido se ejecuta dicho bloque. Si este último no existe, se ejecutará el bloque de excepción &lt;code&gt;WHEN OTHERS&lt;/code&gt; &lt;code&gt;THEN&lt;/code&gt; ( en el caso de haberlo definido, este bloque debe ser el último manejador de excepciones ). Una vez finalizada la ejecución del bloque de &lt;code&gt;EXCEPTION&lt;/code&gt; no se continúa ejecutando el bloque anterior.&lt;/p&gt;
+
+&lt;p&gt;En ocasiones queremos enviar un mensaje de error personalizado al producirse una excepción PL/SQL. Para ello es necesario utilizar la instruccion &lt;strong&gt;&lt;code&gt;RAISE_APPLICATION_ERROR&lt;/code&gt;.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RAISE_APPLICATION_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;error_num&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mensaje&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;error_num&lt;/strong&gt; es un entero negativo comprendido entre -20001 y -20999.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;mensaje&lt;/strong&gt; es la descripción del error.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;v_div&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v_div&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DUAL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OTHERS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;RAISE_APPLICATION_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20001&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;No se puede dividir por cero&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Dentro del bloque de excepciones conviene recordar la existencia de la excepción &lt;strong&gt;&lt;code&gt;OTHERS&lt;/code&gt;&lt;/strong&gt;, que simboliza cualquier condición de excepción que no ha sido declarada. Se utiliza comúnmente para controlar cualquier tipo de error que no ha sido previsto. En ese caso, es común observar la sentencia &lt;strong&gt;&lt;code&gt;ROLLBACK&lt;/code&gt;&lt;/strong&gt; en el grupo de sentencias de la excepción o alguna de las funciones &lt;strong&gt;&lt;code&gt;SQLCODE&lt;/code&gt;&lt;/strong&gt; – &lt;strong&gt;&lt;code&gt;SQLERRM&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;SQLCODE&lt;/code&gt;&lt;/strong&gt; devuelve el número del error de Oracle y un 0 (cero) en caso de éxito al ejecutarse una sentencia SQL.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;SQLERRM&lt;/code&gt;&lt;/strong&gt; devuelve el la descripción del correspondiente mensaje de error. También es posible entregarle a la función &lt;code&gt;SQLERRM&lt;/code&gt; un número negativo que represente un error de Oracle y ésta devolverá el mensaje asociado.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Estas funciones no pueden ser utilizadas directamente en una sentencia SQL, pero sí se puede asignar su valor a alguna variable de programa y luego usar esta última en alguna sentencia.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SET&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SERVEROUTPUT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;err_num&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;err_msg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;msg&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SQLERRM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1403&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MSG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DUAL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OTHERS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;err_num&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;SQLCODE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;err_msg&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SQLERRM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Error:&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TO_CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;err_num&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;err_msg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;e_sinreg&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;Select&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Articulos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;If&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;RAISE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e_sinreg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; Esto nunca llegará a mostrarse. &amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ZERO_DIVIDE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;No se puede dividir por 0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e_sinreg&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Hay menos de 10 articulos.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OTHERS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Se ha producido otra excepción.&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Las líneas de código debajo del manejador específico se ejecutarán cuando esa excepción se produzca. Algunas excepciones se lanzarán automáticamente cuando se produzcan ciertos tipos de errores en la ejecución del bloque de código. Cada excepción automática tiene asociado un código de error &lt;code&gt;ORA-XXXX&lt;/code&gt; el cual si se produce, hará que se lance la excepción correspondiente.
+A continuación se muestra una lista de las excepciones automáticas predefinidas por Oracle:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;262&#34; width=&#34;294&#34; alt=&#34;Tabla errores oracle&#34; title=&#34;Tabla errores oracle&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TUWDM6WfCxI/AAAAAAAAATM/0b1NleX1IY4/s320/image.0WG9PV&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;siguiente-tema-pl-sql-cursores-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-cursores/&#34;&gt;PL/SQL - Cursores&lt;/a&gt;&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

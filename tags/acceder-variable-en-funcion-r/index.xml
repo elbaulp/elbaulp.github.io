@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Acceder Variable En Funcion R on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/acceder-variable-en-funcion-r/index.xml</link>
+        <description>Recent content in Acceder Variable En Funcion R on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/acceder-variable-en-funcion-r/index.xml</link>
+            <title>Acceder Variable En Funcion R on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/acceder-variable-en-funcion-r/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo modificar Una Variable Desde Dentro De Una Función en R</title>
+            <link>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</link>
+            <pubDate>Fri, 22 Apr 2016 06:40:33 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</guid>
+            <description>&lt;p&gt;Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Haciendo una práctica de Aprendizaje Automático, en concreto implementando &lt;em&gt;Gradiente Descendente Estocástico&lt;/em&gt; (&lt;strong&gt;Stochastic Gradient Descent&lt;/strong&gt;) o &lt;em&gt;SGD&lt;/em&gt; para &lt;em&gt;Regresión Logística&lt;/em&gt; e intentando hacer el código lo más eficiente posible (Y eso en R significa evitar el uso de for a toda costa) me encontré con la siguiente situación:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span&gt;&lt;/span&gt;SGD &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;# Stochastic gradient descent&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+
+  w &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+  &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+  update &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Aqui dentro se necesita modificar w, y modificarla&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kr&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;above.tolerance&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    w.old &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; w
+    &lt;span class=&#34;kp&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;data&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; update&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  w
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bien, tal y como está el código de arriba no funciona, ya que aunque la función &lt;code&gt;update&lt;/code&gt; puede ver el valor de &lt;code&gt;w&lt;/code&gt;, que está en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;, pero no puede modificar su valor, lo que modifica es una copia local, en el ámbito de &lt;code&gt;update&lt;/code&gt;. Para que Gradiente Descendente Estocástico funcione se necesita que para cada punto se actualice el vector de pesos &lt;code&gt;w&lt;/code&gt; y quede reflejado en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para lograr este comportamiento, al principio pensé en declarar &lt;code&gt;w&lt;/code&gt; como variable global con el operador &lt;code&gt;&amp;lt;&amp;lt;-&lt;/code&gt;, lo cual es una terrible idea, porque &lt;code&gt;w&lt;/code&gt; sería global a todo el programa. En este caso solo necesitamos que &lt;code&gt;w&lt;/code&gt; pueda modificarse desde &lt;code&gt;update&lt;/code&gt;. Así que buscando un poco encontré la forma de crear un entorno local a la función &lt;code&gt;SGD&lt;/code&gt;, y luego usarlo dentro de &lt;code&gt;update&lt;/code&gt;, aquí está el código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span&gt;&lt;/span&gt;SGD &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;# Stochastic gradient descent&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+
+  w.env &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new.env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+  w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+
+  &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+  update &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Aqui dentro se necesita modificar w, y modificarla&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Se usa la variable w.env$w&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;kr&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;above.tolerance&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    w.old &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w
+    &lt;span class=&#34;kp&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;data&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; update&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con este sencillo cambio, dentro de &lt;code&gt;update&lt;/code&gt; se está accediendo y modificando la variable &lt;code&gt;w&lt;/code&gt;, actualizándola correctamente en cada iteración de &lt;code&gt;apply&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Espero que os sea útil.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Entornos Avanzados en R | &lt;a href=&#34;http://adv-r.had.co.nz/Environments.html&#34; target=&#34;_blank&#34; title=&#34;Entornos avanzados en R&#34;&gt;adv-r.had.co.nz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

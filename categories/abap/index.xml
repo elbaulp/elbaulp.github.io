@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Abap on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/abap/index.xml</link>
+        <description>Recent content in Abap on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/categories/abap/index.xml</link>
+            <title>Abap on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/abap/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Introducción a ABAP</title>
+            <link>https://elbauldelprogramador.com/introduccion-abap/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-abap/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-es-abap&#34;&gt;Qué es ABAP&lt;/h1&gt;
+
+&lt;p&gt;El lenguaje de programación ABAP (antiguamente ABAP/4) es un lenguaje propio del ERP SAP y su uso sólo se puede entender a través de este software empresarial. En un principio, SAP era sinónimo de ERP. Sin embargo, en la actualidad SAP comprende un paquete mucho más amplio de herramientas. Por supuesto, el ERP sigue siendo el núcleo del negocio de SAP, pero su cartera se ido ampliando con otros productos como CRM (customer relationship management), SCM (Supply Chain Management) y SRM (Supplier Relationship Management) entre otros.&lt;/p&gt;
+
+&lt;p&gt;Como lenguaje de programación propietario de SAP, ABAP se ha utilizado y se utiliza como elemento de programación específico para la mayor parte de sus productos. Literalmente las siglas ABAP significan &lt;em&gt;Advanced Business Application Programming&lt;/em&gt; y tiene muchos elementos en común con el lenguaje C. Originalmente fue definido como un lenguaje estructurado de cuarta generación (de ahí el antiguo nombre de ABAP/4), posteriormente ha incorporado elementos propios de lenguajes orientados a objetos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 979px) 979px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-Apariencia.png&#34; alt=&#34;SAP-Apariencia&#34; width=&#34;979px&#34; height=&#34;602px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;características-del-lenguaje-abap&#34;&gt;Características del lenguaje ABAP&lt;/h1&gt;
+
+&lt;h2 id=&#34;como-lenguaje-estructurado&#34;&gt;Como lenguaje estructurado&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Contiene sentencias y palabras clave propias del lenguaje.&lt;/li&gt;
+&lt;li&gt;Es un lenguaje orientado a eventos bien definidos.&lt;/li&gt;
+&lt;li&gt;Es interpretado, no compilado.&lt;/li&gt;
+&lt;li&gt;Se utiliza tanto en programación de informes como en programación de diálogo para SAP.&lt;/li&gt;
+&lt;li&gt;Se encuentra completamente integrado dentro del entorno de desarrollo de SAP.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;como-lenguaje-orientado-a-objetos-contiene&#34;&gt;Como lenguaje orientado a objetos contiene&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Objetos.&lt;/li&gt;
+&lt;li&gt;Clases.&lt;/li&gt;
+&lt;li&gt;Atributos.&lt;/li&gt;
+&lt;li&gt;Métodos&lt;/li&gt;
+&lt;li&gt;Interfaces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Se podría decir que ABAP se comporta como lenguaje de cuarta generación y como lenguaje orientado a objetos a la vez dentro de SAP. Muchas veces es difícil ver las diferencias.&lt;/p&gt;
+
+&lt;h1 id=&#34;para-qué-sirve-el-lenguaje-abap&#34;&gt;Para qué sirve el lenguaje ABAP&lt;/h1&gt;
+
+&lt;p&gt;Los usuarios interactúan con SAP a través de transacciones. Estas transacciones representan procesos y funcionalidades propias del negocio de las empresas que instalan SAP.&lt;/p&gt;
+
+&lt;p&gt;ABAP es el lenguaje utilizado por programadores ABAP para crear nuevas transacciones que no existen en el estándar de SAP. Pero también sirve para ampliar transacciones que ya existen en el estándar cuando la funcionalidad que proveen es insuficiente para su negocio. Ya que SAP está programado en ABAP, todas las funciones complementarias al estándar se han de programar también en ABAP mediante alguna de las formas que SAP permite&amp;#8230; user exits, BADIs, enhancements, BTEs&amp;#8230;&lt;/p&gt;
+
+&lt;h1 id=&#34;el-entorno-de-desarrollo-abap&#34;&gt;El entorno de desarrollo ABAP&lt;/h1&gt;
+
+&lt;p&gt;Dentro de SAP, el lenguaje ABAP posee su propio entorno de desarrollo denominado &lt;em&gt;ABAP Workbench&lt;/em&gt;. Este entorno no es más que un conjunto de transacciones necesarias para poder programar ABAP, todas ellas agrupadas bajo un área común.&lt;/p&gt;
+
+&lt;p&gt;Algunas de las transacciones más importantes dentro del &lt;em&gt;ABAP Workbench&lt;/em&gt; son:&lt;/p&gt;
+
+&lt;h2 id=&#34;se11-diccionario-de-datos&#34;&gt;SE11 - Diccionario de datos&lt;/h2&gt;
+
+&lt;p&gt;Bajo la transacción SE11 se agrupan las herramientas necesarias para la creación, mantenimiento y ampliación de objetos de la base de datos. Tablas, estructuras, elementos de datos, dominios, etc. Se generan a través del diccionario de datos. Pero también nos permite visualizar el contenido de las diferentes tablas del sistema tanto aquellas creados por nosotros como los que son propiedad de SAP.&lt;/p&gt;
+
+&lt;h2 id=&#34;se38-editor-abap&#34;&gt;SE38 - Editor ABAP&lt;/h2&gt;
+
+&lt;p&gt;Es la herramienta básica de programación. Permite la programación de informes y del código asociado a pantallas de diálogo. También nos permite realizar ampliaciones de contenido sobre el código propietario de SAP.&lt;/p&gt;
+
+&lt;h2 id=&#34;se51-screen-painter&#34;&gt;SE51 - Screen painter&lt;/h2&gt;
+
+&lt;p&gt;Es la herramienta utilizada en la creación y desarrollo de pantallas de diálogo en SAP. Sin embargo, la programación ABAP de la estructura de pantallas se realiza conjuntamente con el editor ABAP.&lt;/p&gt;
+
+&lt;h2 id=&#34;se80-object-navigator&#34;&gt;SE80 - Object Navigator&lt;/h2&gt;
+
+&lt;p&gt;Agrupa todas o casi todas las transacciones de desarrollo ABAP en una sola transacción. Nos permite trabajar a la vez con diferentes herramientas de programación bajo un área común.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 983px) 983px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/SAP-SE80-Object-Navigator.png&#34; alt=&#34;SAP-SE80-Object-Navigator&#34; width=&#34;983px&#34; height=&#34;604px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;se09-stms-sistema-gestor-de-transportes&#34;&gt;SE09/STMS - Sistema gestor de transportes&lt;/h2&gt;
+
+&lt;p&gt;El desarrollo en ABAP se realiza sobre un entorno de desarrollo al cual sólo tienen acceso los programadores y consultores. Éste se encuentra separado del entorno productivo en el cual trabajan los usuarios del ERP. Así pues, todo nuevo desarrollo o ampliación se debe mover al entorno productivo a través de un sistema que comunique todos los entornos. Éste sistema es el gestor de transportes y las transacciones SE09 y STMS son sus transacciones más conocidas.&lt;/p&gt;
+
+&lt;p&gt;Finalmente, hay que decir que el &lt;em&gt;ABAP workbench&lt;/em&gt; es propio de SAP pero últimamente SAP también permite programar ABAP mediante herramientas no propietarias de SAP, sobre todo con &lt;em&gt;Eclipse&lt;/em&gt;. Sin embargo, con estas plataformas se pierde mucha de la funcionalidad propia del &lt;em&gt;ABAP Workbench&lt;/em&gt;.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación ABAP: Hola Mundo en Reports</title>
+            <link>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-abap-hola-mundo-en-reports/</guid>
+            <description>&lt;p&gt;&lt;em&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://www.blogdesap.com/&#34; title=&#34;Blog de SAP&#34; target=&#34;_blank&#34;&gt;Óscar Arranz&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para iniciarnos en la programación ABAP nada mejor que el clásico “Hola mundo”. Con este tutorial podremos crear nuestro primer programa ABAP y, a su vez, ir viendo paso a paso algunos fundamentos básicos de programación de este lenguaje.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;crear-nuestro-programa-abap&#34;&gt;CREAR NUESTRO PROGRAMA ABAP&lt;/h3&gt;
+
+&lt;p&gt;Después de acceder a nuestro entorno SAP ECC vamos a la transacción &lt;strong&gt;SE38&lt;/strong&gt; para escribir el nombre de nuestro programa. Todo programa en ABAP tendrá que empezar siempre por la letra Z o Y ya que el resto de letras están reservadas para los programas propietarios SAP.&lt;/p&gt;
+
+&lt;p&gt;Al pulsar el botón &lt;strong&gt;Crear&lt;/strong&gt; lo básico que SAP no solicita es:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Título&lt;/strong&gt;: la descripción de nuestro programa que aparecerá cuando ejecutemos nuestro programa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tipo&lt;/strong&gt;: nuestro programa es ejecutable de por sí. Así que lo categorizamos como programa ejecutable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Status&lt;/strong&gt;: este programa es sólo una prueba así que le daremos el status de programa de test.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aplicación&lt;/strong&gt;: describe, dentro de los módulos disponibles de SAP, en qué categoría se puede introducir. Por ejemplo, puede estar asociado al módulo de compras, al de ventas, etc. Al ser un programa de test no lo asignaremos a ninguna aplicación.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-crear.png&#34; alt=&#34;Crear Hola Mundo ABAP&#34; width=&#34;689px&#34; height=&#34;646px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Al pulsar el botón &lt;strong&gt;Grabar&lt;/strong&gt; SAP nos devuelve a otra pantalla, donde nos pide que asignemos la capa de transporte. Básicamente, nos está diciendo que este programa podrá ser transportado desde nuestro entorno de desarrollo a un entorno productivo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-objeto.png&#34; alt=&#34;hola-mundo-objeto&#34; width=&#34;468px&#34; height=&#34;312px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, como a nosotros esto ahora mismo no nos interesa pulsaremos el botón &lt;strong&gt;Objeto Local&lt;/strong&gt;. Esto significa que no lo vamos a poder transportar a productivo nunca.&lt;/p&gt;
+
+&lt;h3 id=&#34;primeras-sentencias-abap&#34;&gt;PRIMERAS SENTENCIAS ABAP&lt;/h3&gt;
+
+&lt;p&gt;Una vez creado nuestro programa, SAP nos genera automáticamente una serie de líneas de comentario y una línea de report.&lt;/p&gt;
+
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En ABAP todas las sentencias que empiezan por &lt;strong&gt;asterisco&lt;/strong&gt; son comentarios no ejecutables. Y en estas líneas que SAP nos ha creado automáticamente se espera que escribamos una descripción general del propósito del programa.&lt;/p&gt;
+
+&lt;p&gt;En segundo lugar nos encontramos con la sentencia &lt;strong&gt;REPORT&lt;/strong&gt; creada también de forma automática. Ésta es siempre la primera sentencia que se ha de escribir y sirve para indicar que el resto de sentencias que siguen corresponden a un programa de tipo report.&lt;/p&gt;
+
+&lt;p&gt;En general la estructura de toda sentencia en ABAP sigue el mismo esquema, empieza con la palabra clave y acaba en un punto.&lt;/p&gt;
+
+&lt;h3 id=&#34;declaración-de-una-variable&#34;&gt;DECLARACIÓN DE UNA VARIABLE&lt;/h3&gt;
+
+&lt;p&gt;Para declarar una variable simple utilizaremos la palabra clave &lt;strong&gt;DATA&lt;/strong&gt; seguida del nombre de nuestra variable, su longitud, el tipo de variable y acabando con un punto.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-abap&#34; data-lang=&#34;abap&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;&amp;lt;nombre_variable&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;&amp;lt;tipo&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este caso nuestra variable contendrá la cadena de caracteres de nuestro ‘Hola mundo’ y por lo tanto será de tipo carácter &amp;copy;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-abap&#34; data-lang=&#34;abap&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;g_texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;c&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;eventos&#34;&gt;Eventos&lt;/h3&gt;
+
+&lt;p&gt;En todo report ABAP hay dos eventos muy importantes, el evento &lt;strong&gt;START-OF-SELECTION&lt;/strong&gt; y el evento &lt;strong&gt;END-OF-SELECTION&lt;/strong&gt;. Cuando introducimos una palabra clave de evento, todas las sentencias a continuación estarán incluidas dentro de ese evento.&lt;/p&gt;
+
+&lt;h4 id=&#34;evento-start-of-selection&#34;&gt;Evento START-OF-SELECTION&lt;/h4&gt;
+
+&lt;p&gt;Todas las sentencias que siguen a este evento hacen referencia a operaciones a realizar antes de que el programa presente resultados en pantalla. Aquí incluimos la asignación de nuestro texto ‘hola mundo’ (entre comillas simples) a nuestra variable mediante la palabra clave &lt;strong&gt;MOVE&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-abap&#34; data-lang=&#34;abap&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;MOVE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;‘&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Hola&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mundo&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TO&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;g_texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;evento-end-of-selection&#34;&gt;Evento END-OF-SELECTION&lt;/h4&gt;
+
+&lt;p&gt;Cualquier sentencia que siga a este evento provoca la presentación de resultados en pantalla. Aquí pues escribimos la sentencia &lt;strong&gt;WRITE&lt;/strong&gt; que muestra nuestro texto en pantalla.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-abap&#34; data-lang=&#34;abap&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WRITE&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;g_texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-abap.png&#34; alt=&#34;hola-mundo-abap&#34; width=&#34;688px&#34; height=&#34;331px&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;verificación-y-activación&#34;&gt;VERIFICACIÓN Y ACTIVACIÓN&lt;/h3&gt;
+
+&lt;p&gt;Antes de poder ejecutar nuestro report hay que hacer dos pasos muy importantes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Verificar la sintaxis a través del menú &lt;strong&gt;Programa / Verificar / Sintaxis&lt;/strong&gt; y comprobar que lo escrito es sintácticamente correcto de acuerdo a las normas ABAP.&lt;/li&gt;
+&lt;li&gt;Activar el programa a través del menú &lt;strong&gt;Programa / Activar&lt;/strong&gt;. Aunque ABAP no es un lenguaje compilado, aun así hay que generarlo para poder ejecutarlo. Mientras no lo hagamos, y si intentamos ejecutarlo, SAP sólo podría lanzar la última versión activa que tuviese en memoria.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;ejecución-del-programa&#34;&gt;EJECUCIÓN DEL PROGRAMA&lt;/h3&gt;
+
+&lt;p&gt;A través del menú &lt;strong&gt;Programa / Ejecutar / Proceso directo&lt;/strong&gt; o, simplemente, pulsando &lt;strong&gt;F8&lt;/strong&gt; obtendremos el resultado de nuestro programa en pantalla.&lt;/p&gt;
+
+&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-salida.png&#34; alt=&#34;hola-mundo-salida&#34; width=&#34;633px&#34; height=&#34;205px&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;transacciones&#34;&gt;TRANSACCIONES&lt;/h3&gt;
+
+&lt;p&gt;Si queremos avanzar un poco más en nuestro “Hola mundo” podemos incluir nuestro programa en una transacción. Ya que los usuarios nunca podrán acceder al ABAP Workbench, no podrán ejecutar tampoco nuestros programas a través de la transacción SE38. Así que tenemos que crear siempre transacciones específicas para usuarios.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Accedemos a la transacción SE93&lt;/li&gt;
+&lt;li&gt;Como nombre de transacción escribiremos Z_HOLA. De nuevo, recordar que como clientes sólo podemos utilizar la Z o la Y como letra de inicio de nuestros objetos ABAP.&lt;/li&gt;
+&lt;li&gt;Pulsamos crear, damos una descripción e indicamos que nuestra transacción es transacción de report.&lt;/li&gt;
+&lt;li&gt;Indicamos el nombre de nuestro programa y grabamos como objeto local.
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/hola-mundo-transaccion.png&#34; alt=&#34;hola-mundo-transaccion&#34; width=&#34;469px&#34; height=&#34;219px&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ya está. Ahora utilizando la transacción Z_HOLA se ejecutará el resultado del programa Z_HOLA_MUNDO.&lt;/p&gt;
+
+&lt;p&gt;&lt;/tipo&gt;&lt;/nombre_variable&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

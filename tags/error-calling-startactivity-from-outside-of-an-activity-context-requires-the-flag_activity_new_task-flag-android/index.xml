@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Error Calling Startactivity From Outside Of An Activity Context Requires The Flag_activity_new_task Flag Android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/error-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag-android/index.xml</link>
+        <description>Recent content in Error Calling Startactivity From Outside Of An Activity Context Requires The Flag_activity_new_task Flag Android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/error-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag-android/index.xml</link>
+            <title>Error Calling Startactivity From Outside Of An Activity Context Requires The Flag_activity_new_task Flag Android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/error-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag-android/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag</title>
+            <link>https://elbauldelprogramador.com/solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/</guid>
+            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/android2.png&#34; alt=&#34;Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag&#34; width=&#34;132px&#34; height=&#34;154px&#34; /&gt;
+En una aplicación que estoy haciendo, la cual espero poder presentar en el blog en breve, me encontré con un problema que llevó un tiempo solucionar. La aplicación terminaba inesperadamente al intentar lanzar una actividad desde un &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34;&gt;Servicio&lt;/a&gt;, concretamente el error era:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Calling startActivity from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK flag&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Así que como es habitual busqué en stackoverflow y encontré la solución, el código que generaba el problema era el siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setAction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_SEND&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;EXTRA_TEXT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;text/plain&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addFlags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FLAG_ACTIVITY_NEW_TASK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;createChooser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Compartir en&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;la-solución&#34;&gt;La solución&lt;/h3&gt;
+
+&lt;p&gt;Sin embargo, aún añadiendo el Flag &lt;em&gt;FLAG_ACTIVITY_NEW_TASK&lt;/em&gt; el error persistia. El problema reside en que el método &lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#createChooser%28android.content.Intent,%20java.lang.CharSequence%29&#34; target=&#34;_blank&#34;&gt;createChooser()&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;, devuelve un nuevo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34;&gt;intent&lt;/a&gt;, según la documentación, y por tanto el flag que acabamos de añadir no se copia automáticamente en el nuevo intent y es necesario volver a añadirlo.&lt;/p&gt;
+
+&lt;p&gt;Una posible solución es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;createChooser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Compartir en&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addFlags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;FLAG_ACTIVITY_NEW_TASK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;De esta forma el error &lt;strong&gt;&lt;em&gt;Calling startActivity() from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK flag&lt;/em&gt;&lt;/strong&gt; deberá estar solucionado.&lt;/p&gt;
+
+&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+
+&lt;p&gt;&lt;em&gt;Solución en Stackoverflow&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Sentencia Create on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/sentencia-create/index.xml</link>
+        <description>Recent content in Sentencia Create on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/sentencia-create/index.xml</link>
+            <title>Sentencia Create on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/sentencia-create/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Lenguaje Definición de Datos(DDL) - CREATE</title>
+            <link>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/</guid>
+            <description>&lt;p&gt;En esta entrada vamos a ver la orden CREATE&lt;/p&gt;
+
+&lt;p&gt;CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos tablas, vistas etc.&lt;/p&gt;
+
+&lt;h3 id=&#34;creación-de-una-tabla&#34;&gt;Creación de una tabla&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombrecol1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipocol1&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_restricci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;UNIQUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condici&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Nombre_tabla_ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;colref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CASCADE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]],...&lt;/span&gt;
+
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Restricciones&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tablespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tablespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nombre tabla:&lt;/strong&gt; Es el nombre de la nueva tabla. Debe ser único dentro de la BD y además debe identificar su contenido, el nombre de la tabla puede ser una cadena de 1 a 30 caracteres alfanuméricos (0-9, a-z, subrayado, $, #) empezando siempre por un carácter alfabético.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;nombreCol:&lt;/strong&gt; Es el nombre de una columna de la tabla. Los nombres de columna deben cumplir las reglas de los identificadores y deben ser únicos en la tabla.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;tipoCol:&lt;/strong&gt; Especifica el tipo de datos de la columna. Se permiten los tipos de datos del sistema o definidos por el usuarioEspecifica el tipo de datos de la columna. Se permiten los tipos de datos del sistema o definidos por el usuario.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cuando almacenamos datos las tablas se ajustan a una serie de restricciones predefinidas, por ejemplo que una columna no pueda tomar valores negativos o que una columna tenga que almacenarse en mayúsculas.&lt;/p&gt;
+
+&lt;p&gt;La integridad hace referencia al hecho de que los datos de la BD han de ajustarse a restricciones antes de almacenarse en la BD y una restricción de integridad será una regla que restringe el rango de valores de una o más columnas de una tabla.&lt;/p&gt;
+
+&lt;p&gt;Existe otro tipo de integridad que es la integridad referencial, que garantiza que los valores de una o varias columnas de una tabla dependan de los valores de otro o otras columnas de otra tabla.&lt;/p&gt;
+
+&lt;p&gt;Las restricciones se definen dentro de la orden CREATE TABLE y pare ello se utiliza la cláusula CONSTRAINT. Una vez creadas las restricciones se pueden añadir, modificar o borrar a través de la orden ALTER TABLE.&lt;/p&gt;
+
+&lt;p&gt;Una cláusula CONSTRAINT puede restringir una sola columna, se habla en este caso de restricción de columna o puede restringir un grupo de columnas de una tabla, en este caso se llama restricción de tabla.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CONSTRAINT.&lt;/strong&gt; Es una palabra clave opcional que indica el principio de la definición de una restricción para la columna o tabla : PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY o CHECK. Las restricciones son propiedades especiales que exigen la integridad de los datos y pueden crear índices para la tabla y sus columnas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;nombre_restricción.&lt;/strong&gt; Los nombres de restricción deben ser únicos en una base de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NULL | NOT NULL.&lt;/strong&gt; Son palabras clave que determinan si se permiten o no valores NULL en la columna. Si la restricción es NOT NULL significa que dicha columna no puede tener valores nulos, es decir, ha de tener un valor obligatoriamente; en caso contrario causa una excepción.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PRIMARY KEY.&lt;/strong&gt; Es una restricción que indica qué columna o columnas formarán la clave primaria de la tabla. Sólo se puede crear una restricción PRIMARY KEY por cada tabla.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UNIQUE.&lt;/strong&gt; Es una restricción que proporciona la integridad de entidad para la columna o columnas indicada a través de un índice único. Una tabla puede tener varias restricciones UNIQUE.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DEFAULT.&lt;/strong&gt; Especifica el valor suministrado para la columna cuando no se ha especificado explícitamente un valor durante la inserción.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;REFERENCES.&lt;/strong&gt; Es una restricción que proporciona integridad referencial para los datos de una columna o columnas. Las restricciones REFERENCES requieren que cada valor de la columna o columnas existan en la columna o columnas de referencia correspondiente de la tabla a la que se hace referencia. Las restricciones REFERENCES pueden hacer referencia sólo a columnas que sean restricciones PRIMARY KEY en la tabla de referencia.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nombre_tabla_ref.&lt;/strong&gt; Es el nombre de la tabla a la que hace referencia la restricción REFERENCES.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(colref [,&amp;#8230;n]).&lt;/strong&gt; Es una columna o lista de columnas de la tabla a la que hace referencia la restricción REFERENCES.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ON DELETE CASCADE.&lt;/strong&gt; Especifica qué acción tiene lugar en una fila de la tabla creada, si esa fila tiene una relación referencial y la fila a la que hace referencia se elimina en la tabla primaria. En nuestro caso si se elimina una fila de la tabla primaria, también se elimina las filas de la tabla desde donde se hace referencia.
+Cuando la restricción de Integridad Referencial se realiza sobre la definición de un campo en la sentencia CREATE TABLE solo se utiliza la clausula REFERENCES, no se utiliza la clausula FOREIGN KEY; esta última se utiliza cuando la restricción se crea a nivel de tabla.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CHECK.&lt;/strong&gt; Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;notas&#34;&gt;Notas&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;En Oracle no se pueden crear campos calculados ni de autoincremento de forma directa sobre una tabla.&lt;/li&gt;
+&lt;li&gt;Los datos tipo autoincremento se realizan mediante la utilización de secuencias.&lt;/li&gt;
+&lt;li&gt;Los datos o campos calculados se realizan mediante la utilización de tablas auxiliares. Esta tabla auxiliar tiene la misma clave primaria que la tabla que “deberia” tener los campos calculados y, además, los campos que guardan los datos calculados. Sobre la tabla origen se definen los triggers necesarios para que actualicen los datos de la tabla auxiliar.&lt;/li&gt;
+&lt;li&gt;Los usuarios pueden consultar sus propias tablas mediante la vista &lt;code&gt;USER_TABLES&lt;/code&gt;, y sus restricciones en la vista &lt;code&gt;USER_CONSTRAINTS&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;La sentencia CREATE TABLE también nos permite crear una tabla a partir de una consulta a otra u otras tablas que ya existen. La nueva tabla obtendrá los datos obtenidos de la consulta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombrecol1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipocol1&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_restricci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;UNIQUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;][&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condici&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Nombre_tabla_ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;colref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DELETE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CASCADE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]],...&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Restricciones&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tablespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tablespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Consulta_SQL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;ejemplo-1-restricciones-sobre-columnas&#34;&gt;Ejemplo 1: Restricciones sobre columnas&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Emp1&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empno&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pk_emp1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nn_ename1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;
+                            &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;upper_ename1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CHECK&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;UPPER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mgr&lt;/span&gt;       &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_mgr1&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scott&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;emp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;hiredate&lt;/span&gt;  &lt;span class=&#34;nb&#34;&gt;DATE&lt;/span&gt;          &lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SYSDATE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sal&lt;/span&gt;       &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ck_sal1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CHECK&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sal&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;comm&lt;/span&gt;      &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;k&#34;&gt;DEFAULT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;    &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;     &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nn_deptno1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;
+                            &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scott&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;ejemplo-2-restricciones-sobre-la-tabla&#34;&gt;Ejemplo 2: Restricciones sobre la tabla&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;docindex&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;doc_oid&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INTEGER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;token_frequency&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;SMALLINT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;token_occurrence_data&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;VARCHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pk_docindex&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;token&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;doc_oid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;emp&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empno&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;       &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FOREIGN&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;descripción-de-la-estructura-de-una-tabla&#34;&gt;Descripción de la estructura de una tabla&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_tabla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

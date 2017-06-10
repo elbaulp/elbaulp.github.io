@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Print_r Php No Bonito on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/print_r-php-no-bonito/index.xml</link>
+        <description>Recent content in Print_r Php No Bonito on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/print_r-php-no-bonito/index.xml</link>
+            <title>Print_r Php No Bonito on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/print_r-php-no-bonito/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Mostrar Información De Variables PHP Depurando</title>
+            <link>https://elbauldelprogramador.com/variables-php-depurar-print_r-var_dump/</link>
+            <pubDate>Thu, 02 Jun 2016 14:52:24 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/variables-php-depurar-print_r-var_dump/</guid>
+            <description>&lt;figure&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/como-mostrar-variables-php-depurar-print_r-var_dump.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/como-mostrar-variables-php-depurar-print_r-var_dump.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;702px&#34; height=&#34;355px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario Plummer, que preguntaba &lt;a href=&#34;http://stackoverflow.com/questions/19816438/make-var-dump-look-pretty&#34; target=&#34;_blank&#34; title=&#34;Make var_dump look pretty&#34;&gt;Make var_dump look pretty&lt;/a&gt;. La respuesta es del usuario AbraCadaver&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Desarrollando una página en &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34; title=&#34;Crear Shortcodes en Wordpress&#34;&gt;PHP&lt;/a&gt; para una asignatura de la facultad estuve buscando formas de ver el contenido de las Variables en una página php. En concreto quería mostrar todas las variables definidas, pero podríamos mostrar cualquier variable. El comando en cuestión es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;highlight_string(&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; . var_export(get_defined_vars(), true) . &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Podemos crear una función para reutilizar este comando con la variable que queramos, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function pretty_print($var)&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;    highlight_string(&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; . var_export(&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$var&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, true) . &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El resultado es algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;pretty_print($_SESSION);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;// Salida&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;array&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+  &lt;span class=&#34;s1&#34;&gt;&amp;#39;logged_user&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;a&amp;#39;,&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;  &amp;#39;logged_user_id&amp;#39; =&amp;gt; &amp;#39;1&amp;#39;,&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;  &amp;#39;is_admin&amp;#39; =&amp;gt; true,&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Espero que os sea de utilidad&lt;/p&gt;
+
+&lt;h4 id=&#34;fuente&#34;&gt;Fuente&lt;/h4&gt;
+
+&lt;p&gt;Make var_dump look pretty | &lt;a href=&#34;http://stackoverflow.com/a/19816742/1612432&#34; title=&#34;Make var_dump look pretty&#34; target=&#34;_blank&#34;&gt;stackoverlow.com&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

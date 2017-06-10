@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Amp Pages on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/amp-pages/index.xml</link>
+        <description>Recent content in Amp Pages on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/tags/amp-pages/index.xml</link>
+            <title>Amp Pages on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/amp-pages/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>How to Solve &#39;Missing URL for Attribute &#39;Src&#39; in Tag &#39;a&#39;&#39; Error in Amp-mustache</title>
+            <link>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</link>
+            <pubDate>Sun, 31 Jul 2016 05:37:13 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-solve-missing-url-for-attribute-src-in-tag-a-error-in-amp-mustache/</guid>
+            <description>&lt;h1 id=&#34;what-is-amp-mustache-and-how-it-works&#34;&gt;What is Amp-mustache and how it works&lt;/h1&gt;
+
+&lt;p&gt;Recently I have been implementing &lt;em&gt;Google AMP pages&lt;/em&gt; in my site. Everything was going well until I decide to implement lists with &lt;code&gt;amp-mustache&lt;/code&gt;. &lt;a href=&#34;https://www.ampproject.org/docs/reference/extended/amp-mustache.html&#34; title=&#34;Docs for amp-mustache&#34;&gt;This component&lt;/a&gt; of &lt;em&gt;AMP&lt;/em&gt; allows to populate elements from a &lt;em&gt;json&lt;/em&gt;, for example one could create a list from this &lt;em&gt;json&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;quot;items&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;amp-carousel&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;https://ampbyexample.com/components/amp-carousel&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+    &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;And then we have a template like this one to generate the content:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;auto&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;100&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;fixed-height&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;https://ampbyexample.com/json/examples.json&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-mustache&amp;quot;&lt;/span&gt;
+          &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-template-id&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{{url}}{% endraw %}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{{title}}{% endraw %}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This code would be populated from the &lt;em&gt;json&lt;/em&gt; by replacing each &lt;code&gt;{% raw %}{{tag}}{% endraw %}&lt;/code&gt; with its corresponding value in the &lt;em&gt;json&lt;/em&gt;. Up until here all seems to be pretty easy, but when you are using &lt;em&gt;Jekyll&lt;/em&gt; on your site things change a little. Lets see why.&lt;/p&gt;
+
+&lt;h1 id=&#34;how-to-make-amp-mustache-work-in-jekyll&#34;&gt;How to make amp-mustache work in jekyll&lt;/h1&gt;
+
+&lt;p&gt;In &lt;em&gt;Jekyll&lt;/em&gt; there are liquid tags, and they have the same syntax &lt;code&gt;amp-mustache&lt;/code&gt; templates have, so when &lt;em&gt;jekyll&lt;/em&gt; is building the site, it will interpret each &lt;code&gt;{% raw %}{{tag}}{% endraw %}&lt;/code&gt; in the example above as &lt;em&gt;liquid&lt;/em&gt; variables. However, since this variables do not exists they will be left blank, and so the template would not be populated.&lt;/p&gt;
+
+&lt;p&gt;In my case, the error &lt;code&gt;Missing URL for attribute &#39;src&#39; in tag &#39;a&#39;.&lt;/code&gt; came from this piece of code &lt;code&gt;&amp;lt;a href={% raw %}{{url}}{% endraw %}&amp;gt;&lt;/code&gt;, because &lt;em&gt;jekyll&lt;/em&gt; do not find any variable which name was &lt;code&gt;url&lt;/code&gt; and in consequence leave it blank. To solve this problem we need to tell &lt;em&gt;jekyll&lt;/em&gt; that those tags are not liquid tags. This is easily done with: &lt;code&gt;{% raw %}{% raw %}{{ tag }}{% endraw %}{{ &amp;quot;{% endraw &amp;quot; }}%}&lt;/code&gt;. Knowing this, the code for generate a list with &lt;code&gt;amp-mustache&lt;/code&gt; would be as follow:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;auto&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;100&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;fixed-height&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;https://ampbyexample.com/json/examples.json&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-mustache&amp;quot;&lt;/span&gt;
+          &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;amp-template-id&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;{% raw %}{% raw %}{{url}}{% endraw %}{{ &amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{%&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;endraw&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;}}%}&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;{% raw %}{% raw %}{{title}}{% endraw %}{{ &amp;quot;{% endraw &amp;quot; }}%}&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;amp-list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ampbyexample.com/components/amp-list/&#34; title=&#34;Amp reference for amp-list&#34;&gt;ampbyexample.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/q/38672182/1612432&#34; title=&#34;Error trying to implement amp-mustache&#34;&gt;My question in StackOverflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

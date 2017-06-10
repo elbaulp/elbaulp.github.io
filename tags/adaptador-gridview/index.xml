@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Adaptador Gridview on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/adaptador-gridview/index.xml</link>
+        <description>Recent content in Adaptador Gridview on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/adaptador-gridview/index.xml</link>
+            <title>Adaptador Gridview on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/adaptador-gridview/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear un GridView con Adaptador personalizado en Android</title>
+            <link>https://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-un-gridview-con-adaptador-personalizado-en-android/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;strong&gt;James Revelo Urrea&lt;/strong&gt;. Su blog es &lt;a href=&#34;http://www.hermosaprogramacion.com&#34; title=&#34;Blog del colaborador&#34; target=&#34;_blank&#34;&gt;www.hermosaprogramacion.com&lt;/a&gt;. Muchas gracias.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+  &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34;&gt;&lt;img sizes=&#34;(min-width: 700px) 700px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34; title=&#34;Crear un GridView con Adaptador personalizado en Android&#34; alt=&#34;Crear un GridView con Adaptador personalizado en Android&#34; width=&#34;700px&#34; height=&#34;350px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;poblar-un-gridview-con-un-adaptador-de-imageviews-en-android&#34;&gt;Poblar un GridView con un Adaptador de ImageViews en Android&lt;/h1&gt;
+
+&lt;p&gt;Un &lt;code&gt;GridView&lt;/code&gt; es una &lt;code&gt;AdapterView&lt;/code&gt; capaz de organizar datos en forma de cuadricula para mejorar la accesibilidad del usuario. A diferencia de un &lt;code&gt;ListView&lt;/code&gt;, este contenedor permite scrolling horizontal y vertical en sus interacciones.&lt;/p&gt;
+
+&lt;p&gt;Si sigues leyendo este artículo aprenderás a crear un &lt;code&gt;GridView&lt;/code&gt; cuyos elementos sean imágenes en miniatura. Al ser seleccionadas el usuario visualizará la imagen en tamaño real. Este ejemplo comprende la creación un layout efectivo para un GridView, la implementación de un &lt;a href=&#34;https://elbauldelprogramador.com/adapter-personalizado-en-android/&#34; title=&#34;Cómo crear un adapter personalizado en Android&#34;&gt;adaptador personalizado&lt;/a&gt; con elementos &lt;a href=&#34;https://elbauldelprogramador.com/optimizando-la-interfaz-android-compound-drawables/&#34; title=&#34;Optimizando la interfaz Android – Compound Drawables&#34;&gt;ImageView&lt;/a&gt; y la comunicación con &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34; title=&#34;Programación Android: Intents – Conceptos básicos&#34;&gt;Intents&lt;/a&gt; para acceder a los detalles completos de cada imagen.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;diseño-de-un-gridview-en-android&#34;&gt;Diseño de un GridView en Android&lt;/h2&gt;
+
+&lt;p&gt;Como se venía diciendo, un &lt;strong&gt;GridView&lt;/strong&gt; organiza los elementos en forma de grilla. Por lo general se encuentran en aplicaciones que muestran una galería de imágenes seleccionables o en aplicaciones que presentan productos a sus clientes.&lt;/p&gt;
+
+&lt;p&gt;Son considerados mejor alternativa que las listas, si se desea aprovechar el espacio de dispositivos con tamaños de pantalla amplios como las tabletas. O cuando un dispositivo se encuentra en estado &lt;strong&gt;LandScape&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;scrolling-vertical&#34;&gt;Scrolling Vertical&lt;/h3&gt;
+
+&lt;p&gt;El despliegue por defecto de los elementos de un GridView es vertical. El orden de los elementos va de izquierda a derecha y así mismo se definen los indices (basados en inicio 0) en nuestras estructuras de datos relacionadas.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34;&gt;&lt;img sizes=&#34;(min-width: 700px) 700px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34; title=&#34;Crear un GridView con Adaptador personalizado en Android&#34; alt=&#34;Crear un GridView con Adaptador personalizado en Android&#34; width=&#34;700px&#34; height=&#34;350px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Como ves, en el anterior ejemplo se comienza en la parte superior izquierda con el indice 0 hasta terminar el recorrido de izquierda a derecha en la parte inferior derecha con el indice 5.&lt;/p&gt;
+
+&lt;h3 id=&#34;scrolling-horizontal&#34;&gt;Scrolling Horizontal&lt;/h3&gt;
+
+&lt;p&gt;En este caso se recorre el Grid en función de cada fila. Lo que quiere decir que accederemos a las posiciones de arriba hacia abajo.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34;&gt;&lt;img sizes=&#34;(min-width: 700px) 700px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/11/gridview-scrolling-horizontal.png&#34; title=&#34;Crear un GridView con Adaptador personalizado en Android&#34; alt=&#34;Crear un GridView con Adaptador personalizado en Android&#34; width=&#34;700px&#34; height=&#34;350px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;La ilustración muestra el recorrido vertical de los elementos.&lt;/p&gt;
+
+&lt;h2 id=&#34;diseño-de-una-actividad-basada-en-un-gridview&#34;&gt;Diseño de una actividad basada en un GridView&lt;/h2&gt;
+
+&lt;p&gt;A continuación comenzaremos a crear una aplicación de ejemplo que contenga un &lt;code&gt;GridView&lt;/code&gt;. Se trata de una aplicación que muestra algunas fotos que han sido guardadas hipotéticamente por el usuario. Si el usuario presiona uno de los elementos, se despliega una actividad nueva que muestra la foto en tamaño original.&lt;/p&gt;
+
+&lt;p&gt;A la actividad basada en el &lt;code&gt;GridView&lt;/code&gt; se le ha denominado &lt;code&gt;Main&lt;/code&gt; y a aquella que despliega la imagen completa se le llamó &lt;code&gt;Details&lt;/code&gt;. Puedes descargar el proyecto completo desde el siguiente enlace:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/s/e56vsfojei6z2ow/Pics.rar?dl=0&#34;&gt;Descargar Código&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En el archivo de diseño de &lt;code&gt;Main&lt;/code&gt; se escribirá un layout cuyo nodo principal sea un elemento &lt;code&gt;&amp;lt;gridview&amp;gt;&lt;/code&gt;. Veamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;GridView&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/gridview&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:columnWidth=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;90dp&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:numColumns=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;auto_fit&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:verticalSpacing=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:horizontalSpacing=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;10dp&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:stretchMode=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;columnWidth&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;center&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;La distribución de nuestros elementos se ve afectada en el GridView por los siguientes atributos descriptivos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;android:columnWidth&lt;/code&gt;: Es el ancho de cada columna de la cuadrícula.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android:numColumns&lt;/code&gt;: Se refiere a la cantidad de columnas que deseas establecer en tu GridView. Aunque podemos usar un número entero predeterminado, también es posible usar la bandera &lt;code&gt;&amp;quot;auto_fit&amp;quot;&lt;/code&gt;, la cual ajusta el número de columnas dependiendo de las dimensiones de la pantalla del dispositivo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android:verticalSpacing&lt;/code&gt;: Espacio vertical entre las fila del GridView.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android:horizontalSpacing&lt;/code&gt;: Espacio horizontal entre las columnas del GridView.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;android:stretchMode&lt;/code&gt;: Define el modo en que se extenderán las columnas con en relación al layout si existe algún espacio vacío. Para su valor puedes usar las siguientes constantes:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Constante&lt;/th&gt;
+&lt;th&gt;Descripción&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;none&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;No se aplica un modo de extensión&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;spacingWidth&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Se extiende el espacio que existe entre cada columna&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;columnWidth&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;El espacio se reparte equitativamente&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;spacingWidthUniform&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Se reparte el espacio uniformemente&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;android:gravity&lt;/code&gt;: Define la ubicación del contenido dentro de cada celda. Existen muchos valores que puedes utilizar, entre ellos: &lt;code&gt;top&lt;/code&gt;, &lt;code&gt;rigth&lt;/code&gt;, &lt;code&gt;left&lt;/code&gt;, &lt;code&gt;bottom&lt;/code&gt; y &lt;code&gt;center&lt;/code&gt;.
+Por otra parte, el layout para &lt;code&gt;Details&lt;/code&gt; consta simplemente de un &lt;code&gt;ImageView&lt;/code&gt; como nodo raíz:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;ImageView&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:contentDescription=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/imageDesc&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/originalImage&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;crear-un-adaptador-personalizado-para-el-gridview&#34;&gt;Crear un Adaptador personalizado para el GridView&lt;/h2&gt;
+
+&lt;p&gt;El siguiente paso es crear un adaptador que infle Image Views a partir de los recursos de nuestro proyecto. Para ello crearás una nueva clase llamada &lt;code&gt;ImageAdapter&lt;/code&gt; y la extenderás de &lt;code&gt;BaseAdapter&lt;/code&gt;. La idea es declarar un array que relacione los identificadores de cada recurso drawable con un indice.&lt;/p&gt;
+
+&lt;p&gt;Este concepto facilitará el trabajo para poblar el GridView , ya que podemos controlar el orden de aparición de las imágenes. Teniendo esto en mente, la definición de la clase se verá de la siguiente forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ImageAdapter&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BaseAdapter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// Contexto de la aplicación&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;// Array de identificadores&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mThumbIds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e13&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e14&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e15&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;drawable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;e9&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;};&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ImageAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;mContext&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getCount&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mThumbIds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getItem&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getItemId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getThumbId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mThumbIds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];}&lt;/span&gt;
+
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ViewGroup&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;//ImageView a retornar&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+
+        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;            Crear un nuevo Image View de 90x90&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;            y con recorte alrededor del centro&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;             */&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mContext&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setLayoutParams&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GridView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LayoutParams&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setScaleType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ScaleType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CENTER_CROP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;convertView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;//Setear la imagen desde el recurso drawable&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setImageResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mThumbIds&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]);&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El adaptador establece por defecto los métodos &lt;code&gt;getItem()&lt;/code&gt; y &lt;code&gt;getItemId()&lt;/code&gt; debido a que no se está usando fuentes de datos estructuradas como una lista o mapa hash.&lt;/p&gt;
+
+&lt;p&gt;La lógica del método &lt;code&gt;getView()&lt;/code&gt; es sencilla. Por cada item del GridView se crea un nuevo &lt;code&gt;ImageView&lt;/code&gt; con un tamaño de &lt;code&gt;90x90&lt;/code&gt; y un tipo de escala &lt;code&gt;CENTER_CROP&lt;/code&gt;. Esto significa que el tamaño total de la imagen será recortado conservando su proporción con respecto al centro, si en algún momento llega a ser necesario.&lt;/p&gt;
+
+&lt;p&gt;Luego de ello solo seteas el contenido con el método &lt;code&gt;setImageResource(),&lt;/code&gt; apuntando hacia nuestro array de identificadores con la posición actual.&lt;/p&gt;
+
+&lt;h2 id=&#34;visualizar-la-imagen-original-en-otra-actividad&#34;&gt;Visualizar la imagen original en otra Actividad&lt;/h2&gt;
+
+&lt;p&gt;Para que &lt;code&gt;Details&lt;/code&gt; se entere de que imagen debemos expandir, es necesario enviar la posición del recurso drawable desde &lt;code&gt;Main&lt;/code&gt;. La forma de averiguar la posición es mediante la sobrescritura del método &lt;code&gt;onItemClick()&lt;/code&gt; de la interfaz &lt;code&gt;OnItemClickListener&lt;/code&gt;.
+Recuerda que este método recibe como parámetro la posición del item presionado. Así que obtendremos la instancia del &lt;code&gt;GridView&lt;/code&gt; y la relacionaremos con una nueva escucha en el método &lt;code&gt;onCreate()&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;Seteando el adaptador al GridView&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;GridView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gridview&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GridView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;gridview&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gridview&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+
+&lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;Creando una nueva escucha para los elementos del Grid&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;gridview&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnItemClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AdapterView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;OnItemClickListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onItemClick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AdapterView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;?&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;parent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;        Iniciar una nueva actividad al presionar la foto&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;         */&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Details&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;position&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Posición del elemento&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Si observas, el &lt;code&gt;Intent&lt;/code&gt; creado en &lt;code&gt;onItemClick()&lt;/code&gt; lleva consigo el valor de la posición del item actualmente procesado y luego se inicia la actividad &lt;code&gt;Details&lt;/code&gt;. Finalmente recibes ese valor desde &lt;code&gt;onCreate()&lt;/code&gt;en &lt;code&gt;Details&lt;/code&gt; y asignas el recurso drawable con la referencia:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;Recibiendo el identificador de la imagen&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getIntExtra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;position&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// -1 si no se encontró la referencia&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ImageAdapter&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ImageAdapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+&lt;span class=&#34;cm&#34;&gt;/*&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;Seteando el recurso en el ImageView&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;originalImage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ImageView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;originalImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;originalImage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setImageResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;adapter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getThumbId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Ahora solo ejecuta la aplicación y prueba su funcionamiento.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Networkmanager on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/networkmanager/index.xml</link>
+        <description>Recent content in Networkmanager on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/networkmanager/index.xml</link>
+            <title>Networkmanager on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/networkmanager/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Resolver El Error “Can&#39;t Open Display: :0.0” Al Conectarse a Una Red Wi-Fi</title>
+            <link>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</link>
+            <pubDate>Mon, 03 Oct 2016 14:15:35 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/cant-open-display-0-0-wifi-net/</guid>
+            <description>&lt;h1 id=&#34;problema-can-t-open-display-0-0&#34;&gt;Problema: Can&amp;rsquo;t Open Display: :0.0&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;NetworkManager&lt;/em&gt; tiene la costumbre de cambiar el nombre del host (&lt;em&gt;hostname&lt;/em&gt;) al conectarse a una red, y esto a veces provoca que las aplicaciones con interfaz gráfica no puedan lanzarse. El típico error que se obtiene cuando esto ocurre es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Can&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t Open Display: :0.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solución-establecer-de-forma-permanente-un-hostname&#34;&gt;Solución: Establecer de forma permanente un hostname&lt;/h1&gt;
+
+&lt;p&gt;Tras mucho investigar, descubrí que el problema estaba en &lt;em&gt;NetworkManager&lt;/em&gt;, y para solucionarlo basta con hacer permanente el &lt;em&gt;hostname&lt;/em&gt;. Para ello en el fichero &lt;code&gt;/etc/hosts&lt;/code&gt; debemos añadir un alias a &lt;code&gt;localhost&lt;/code&gt; con el nombre que queramos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;127.0.0.1	localhost NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Luego, en el fichero de configuración de &lt;em&gt;NetworkManager&lt;/em&gt; (&lt;code&gt;/etc/NetworkManager/NetworkManager.conf&lt;/code&gt;) escribimos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;main&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;plugins&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;keyfile
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;keyfile&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;hostname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esto bastará.&lt;/p&gt;
+
+&lt;h1 id=&#34;cuando-la-solución-no-funciona&#34;&gt;Cuando la solución no funciona&lt;/h1&gt;
+
+&lt;p&gt;Recientemente se actualizó &lt;em&gt;NetworkManager&lt;/em&gt; y la solución de arriba dejó de funcionar. Esto se debe a que &lt;em&gt;NetworkManager&lt;/em&gt; ya no mira el nombre del host en el fichero de configuración, como mencionan en el &lt;em&gt;man&lt;/em&gt; de &lt;code&gt;NetworkManager.conf&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;hostname: This key is deprecated and has no effect since the hostname is now stored in /etc/hostname or other system configuration files according to build options.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Por tanto la solución ahora es más sencilla, basta con añadir el nombre para el host en &lt;code&gt;/etc/hostname&lt;/code&gt;, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat /etc/hostname
+NombreDeseado
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bbs.archlinux.org/viewtopic.php?id=59575&#34; title=&#34;Can&#39;t open display: :0.0&#34;&gt;Arch Linux forums&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://wiki.gnome.org/Projects/NetworkManager/SystemSettings&#34; title=&#34;System settings gnome&#34;&gt;System Settings gnome&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
