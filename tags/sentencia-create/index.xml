@@ -25,7 +25,7 @@
 
 &lt;p&gt;CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos tablas, vistas etc.&lt;/p&gt;
 
-&lt;h3 id=&#34;creación-de-una-tabla&#34;&gt;Creación de una tabla&lt;/h3&gt;
+&lt;h1 id=&#34;creación-de-una-tabla&#34;&gt;Creación de una tabla&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombrecol1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipocol1&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_restricci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -76,7 +76,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;li&gt;&lt;strong&gt;CHECK.&lt;/strong&gt; Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;notas&#34;&gt;Notas&lt;/h4&gt;
+&lt;h2 id=&#34;notas&#34;&gt;Notas&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;En Oracle no se pueden crear campos calculados ni de autoincremento de forma directa sobre una tabla.&lt;/li&gt;
@@ -97,7 +97,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Consulta_SQL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;ejemplo-1-restricciones-sobre-columnas&#34;&gt;Ejemplo 1: Restricciones sobre columnas&lt;/h4&gt;
+&lt;h2 id=&#34;ejemplo-1-restricciones-sobre-columnas&#34;&gt;Ejemplo 1: Restricciones sobre columnas&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Emp1&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empno&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pk_emp1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nn_ename1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;
@@ -111,7 +111,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
                             &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scott&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;ejemplo-2-restricciones-sobre-la-tabla&#34;&gt;Ejemplo 2: Restricciones sobre la tabla&lt;/h4&gt;
+&lt;h2 id=&#34;ejemplo-2-restricciones-sobre-la-tabla&#34;&gt;Ejemplo 2: Restricciones sobre la tabla&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;docindex&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;doc_oid&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INTEGER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -126,11 +126,11 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
    &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FOREIGN&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;descripción-de-la-estructura-de-una-tabla&#34;&gt;Descripción de la estructura de una tabla&lt;/h3&gt;
+&lt;h1 id=&#34;descripción-de-la-estructura-de-una-tabla&#34;&gt;Descripción de la estructura de una tabla&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_tabla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

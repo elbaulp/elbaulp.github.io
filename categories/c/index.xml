@@ -3124,8 +3124,7 @@ $ sudo cp dwm-personalized /usr/bin
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</guid>
-            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34; class=&#34;alignleft&#34; /&gt;
-Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Desafío de ingeniería inversa en C – Soluciones&#34;&gt;ingeniería inversa en C&lt;/a&gt;, o &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;explotación de buffers overflows&lt;/a&gt;. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt;, creada por los binarios compilados con el compilador de GNU.&lt;/p&gt;
+            <description>&lt;p&gt;Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Desafío de ingeniería inversa en C – Soluciones&#34;&gt;ingeniería inversa en C&lt;/a&gt;, o &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;explotación de buffers overflows&lt;/a&gt;. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt;, creada por los binarios compilados con el compilador de GNU.&lt;/p&gt;
 
 &lt;p&gt;Estas secciones se crean para los &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-destructor/&#34;&gt;destructores&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-constructor/&#34;&gt;constructores&lt;/a&gt;, respectivamente. Los constructores se llaman justo antes de ejecutar la función &lt;code&gt;main()&lt;/code&gt; y los destructores se llaman justo antes de que &lt;code&gt;main()&lt;/code&gt; finalize con la llamada al sistema &lt;code&gt;exit&lt;/code&gt;.&lt;/p&gt;
 
@@ -3287,19 +3286,20 @@ Idx Name          Size      VMA       LMA       File off  Algn
  &lt;span class=&#34;mf&#34;&gt;80495e4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c0830408&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c840408&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;La primera dirección apunta a la tabla de desplazamiento global (_GLOBAL_OFFSET_TABLE_) y la segunda a __do_global_dtors_aux.
-La última dirección (3c840408) corresponde con la dirección de la función &lt;code&gt;miDestructor&lt;/code&gt;, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada.&lt;/p&gt;
+&lt;p&gt;La primera dirección apunta a la tabla de desplazamiento global (_GLOBAL_OFFSET_TABLE_) y la segunda a __do_global_dtors_aux.&lt;/p&gt;
+
+&lt;p&gt;La última dirección (3c840408) corresponde con la dirección de la función &lt;code&gt;miDestructor&lt;/code&gt;, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada.&lt;/p&gt;
 
 &lt;p&gt;Aún así, espero que os haya resultado útil para aprender sobre los constructores y destructores en C, y hayáis conocido un poco más a fondo la estructura de un ejecutable.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34;&gt;http://www.exploit-db.com/papers/13234/&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Replace .ctors/.dtors with .init_array/.fini_array&lt;/em&gt; »» &lt;a href=&#34;http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46770&#34; target=&#34;_blank&#34;&gt;gcc.gnu.org&lt;/a&gt;
-&lt;em&gt;Abusing .CTORS and .DTORS For FUN and PROFIT&lt;/em&gt; »» &lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34; target=&#34;_blank&#34;&gt;exploit-db.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/stdlib.h&gt;&lt;/stdio.h&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Replace .ctors/.dtors with .init_array/.fini_array&lt;/em&gt; »» &lt;a href=&#34;http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46770&#34; target=&#34;_blank&#34;&gt;gcc.gnu.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Abusing .CTORS and .DTORS For FUN and PROFIT&lt;/em&gt; »» &lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34; target=&#34;_blank&#34;&gt;exploit-db.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>

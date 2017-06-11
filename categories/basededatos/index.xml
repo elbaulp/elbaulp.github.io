@@ -2419,7 +2419,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/</guid>
-            <description>&lt;h2 id=&#34;modificar-la-estrutura-de-una-tabla&#34;&gt;Modificar la estrutura de una tabla&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;modificar-la-estrutura-de-una-tabla&#34;&gt;Modificar la estrutura de una tabla&lt;/h1&gt;
 
 &lt;p&gt;Para modificar la estructura de una tabla se utiliza el comando ALTER TABLE.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Tabla&lt;/span&gt;
@@ -2479,7 +2479,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;alter&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_table&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COLUMN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_columna&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-vistas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/&#34;&gt;Lenguaje Definición de Datos (DDL) - Vistas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-vistas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-vistas/&#34;&gt;Lenguaje Definición de Datos (DDL) - Vistas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2492,7 +2492,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 
 &lt;p&gt;En este post explicaré el funcionamiento de la orden DROP.&lt;/p&gt;
 
-&lt;h2 id=&#34;borrado-de-una-tabla-estructura-y-datos&#34;&gt;Borrado de una tabla (estructura y datos)&lt;/h2&gt;
+&lt;h1 id=&#34;borrado-de-una-tabla-estructura-y-datos&#34;&gt;Borrado de una tabla (estructura y datos)&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Drop&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_tabla&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CASCADE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -2503,7 +2503,7 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;p&gt;Cada usuario puede borrar sus propias tablas, pero no puede borrar las de otro usuario al menos que tenga concedido un permiso adecuado.
 Si se hace referencia a la clave primaria de esta tabla mediante restricciones FOREIGN KEY o REFERENCES, la clausula CASCADE CONSTRAINT permite suprimir estas restricciones de integridad referencial en las tablas ‘descendientes’.&lt;/p&gt;
 
-&lt;h2 id=&#34;borrado-de-los-registros-de-una-tabla&#34;&gt;Borrado de los registros de una tabla&lt;/h2&gt;
+&lt;h1 id=&#34;borrado-de-los-registros-de-una-tabla&#34;&gt;Borrado de los registros de una tabla&lt;/h1&gt;
 
 &lt;p&gt;Con la orden TRUNCATE se eliminan todas las filas de una tabla y se puede liberar espacio utilizado por esta tabla. Es una orden del lenguaje DDL y por tanto no se puede anular. Tampoco activa disparadores DELETE por lo que es más rápido que una orden DELETE. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Truncate&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;table&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_table&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;REUSE&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;STORAGE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
@@ -2512,7 +2512,7 @@ Si se hace referencia a la clave primaria de esta tabla mediante restricciones F
 &lt;p&gt;Con DROP STORAGE se desasigna todo el espacio.
 Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-alter-table-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/&#34;&gt;Lenguaje Definición de Datos (DDL) - ALTER TABLE&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-alter-table-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl-alter/&#34;&gt;Lenguaje Definición de Datos (DDL) - ALTER TABLE&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2521,7 +2521,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/</guid>
-            <description>&lt;h2 id=&#34;sinónimos&#34;&gt;Sinónimos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;sinónimos&#34;&gt;Sinónimos&lt;/h1&gt;
 
 &lt;p&gt;Un sinónimo es un nuevo nombre que se puede asignar a una tabla o a una vista y con ellos podemos darle nombres diferentes a un mismo objeto.&lt;/p&gt;
 
@@ -2549,9 +2549,11 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 
 &lt;p&gt;Solamente el administrador de la BD y usuarios con privilegios adecuados pueden suprimir sinónimos de tipo public.&lt;/p&gt;
 
-&lt;p&gt;NOTA: Para ver los sinónimos que son propiedad del usuario se utiliza la vista &lt;strong&gt;USER_SYNONYM&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Para ver los sinónimos que son propiedad del usuario se utiliza la vista &lt;strong&gt;USER_SYNONYM&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&#34;pseudocolumnas&#34;&gt;Pseudocolumnas&lt;/h2&gt;
+&lt;h1 id=&#34;pseudocolumnas&#34;&gt;Pseudocolumnas&lt;/h1&gt;
 
 &lt;p&gt;Las pesudocolumnas son similares a los campos de una tabla, pero no lo son, aunque si pueden ser utilizados en instrucciones DML (Select, Insert…).&lt;/p&gt;
 
@@ -2564,7 +2566,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;employee_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hire_date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SYSDATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;employees&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ROWNUM&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-lenguaje-manipulación-de-datos-dml-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;Lenguaje Manipulación de Datos (DML)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-lenguaje-manipulación-de-datos-dml-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;Lenguaje Manipulación de Datos (DML)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2590,7 +2592,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
   &lt;span class=&#34;k&#34;&gt;JOIN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;departments&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manager_id&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;employee_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;vistas-interactivas&#34;&gt;Vistas interactivas.&lt;/h2&gt;
+&lt;h1 id=&#34;vistas-interactivas&#34;&gt;Vistas interactivas.&lt;/h1&gt;
 
 &lt;p&gt;Son vistas que se definen sin utilizar el comando CREATE VIEW, sino directamente sobre el comando SELECT. Por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cCodCli&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cNomCli&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Importe&lt;/span&gt;
@@ -2604,13 +2606,13 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 
 &lt;p&gt;En el caso anterior, LP actúa como una vista interactiva.&lt;/p&gt;
 
-&lt;h2 id=&#34;borrado-de-una-vista&#34;&gt;Borrado de una vista.&lt;/h2&gt;
+&lt;h1 id=&#34;borrado-de-una-vista&#34;&gt;Borrado de una vista.&lt;/h1&gt;
 
 &lt;p&gt;La orden para borrar una vista es DROP VIEW. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DROP&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;VIEW&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Nombre_vista&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-índices-y-secuencias-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/&#34;&gt;Lenguaje Definición de Datos (DDL) - Índices y secuencias&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-índices-y-secuencias-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/&#34;&gt;Lenguaje Definición de Datos (DDL) - Índices y secuencias&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2619,7 +2621,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl/</guid>
-            <description>&lt;h2 id=&#34;creación-de-un-índice&#34;&gt;Creación de un índice&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;creación-de-un-índice&#34;&gt;Creación de un índice&lt;/h1&gt;
 
 &lt;p&gt;Los índices sirven para mejorar el rendimiento de las consultas. El optimizador de Oracle los utiliza implícitamente y se actualizan de forma automática al actualizar las filas.&lt;/p&gt;
 
@@ -2636,13 +2638,13 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INDEX&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;emp_hiredate_idx&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;ON&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;employees&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hire_date&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;borrado-de-un-índice&#34;&gt;Borrado de un índice&lt;/h2&gt;
+&lt;h1 id=&#34;borrado-de-un-índice&#34;&gt;Borrado de un índice&lt;/h1&gt;
 
 &lt;p&gt;Cuando se borra una tabla, automáticamente se borran los índices asociados a ella. Los índices ocupan espacio dentro de la BD como si de una tabla se tratara y por esa razón se aconseja tener solo como índices aquellas columnas por las cuales se realizan consultas de forma periódica. Para borrar un índice se utiliza la orden:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;drop&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_indice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;creación-de-una-secuencia&#34;&gt;Creación de una secuencia&lt;/h2&gt;
+&lt;h1 id=&#34;creación-de-una-secuencia&#34;&gt;Creación de una secuencia&lt;/h1&gt;
 
 &lt;p&gt;Las secuencias se utilizan para generar números de forma automática, sin embargo, esto no garantiza la ausencia de ‘huecos’: si se solicitan números a una secuencia y no se utilizan, estos valores se pierdan.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SEQUENCE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Nombre_secuencia&lt;/span&gt;
@@ -2653,7 +2655,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CYCLE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NOCYCLE&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ORDER&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NOODER&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;utilización-de-las-secuencias&#34;&gt;Utilización de las secuencias&lt;/h2&gt;
+&lt;h1 id=&#34;utilización-de-las-secuencias&#34;&gt;Utilización de las secuencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Nombresecuencia.CURRVAL&lt;/strong&gt;: Devuelve el valor actual de la secuencia.&lt;/li&gt;
@@ -2678,7 +2680,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;employee_id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;employees&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Valdivia&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-sinónimos-y-pseudocolumnas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/&#34;&gt;Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-lenguaje-definición-de-datos-ddl-sinónimos-y-pseudocolumnas-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datos-ddl_27/&#34;&gt;Lenguaje Definición de Datos (DDL) - Sinónimos y Pseudocolumnas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2691,7 +2693,7 @@ Con DROP REUSE mantendrá reservado el espacio para nuevas filas.&lt;/p&gt;
 
 &lt;p&gt;CREATE sirve para crear objetos de la base de datos, entre estos objetos tenemos tablas, vistas etc.&lt;/p&gt;
 
-&lt;h3 id=&#34;creación-de-una-tabla&#34;&gt;Creación de una tabla&lt;/h3&gt;
+&lt;h1 id=&#34;creación-de-una-tabla&#34;&gt;Creación de una tabla&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombrecol1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipocol1&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_restricci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -2742,7 +2744,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;li&gt;&lt;strong&gt;CHECK.&lt;/strong&gt; Es una restricción que exige la integridad del dominio al limitar los valores posibles que se pueden escribir en una o varias columnas.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;notas&#34;&gt;Notas&lt;/h4&gt;
+&lt;h2 id=&#34;notas&#34;&gt;Notas&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;En Oracle no se pueden crear campos calculados ni de autoincremento de forma directa sobre una tabla.&lt;/li&gt;
@@ -2763,7 +2765,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Consulta_SQL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;ejemplo-1-restricciones-sobre-columnas&#34;&gt;Ejemplo 1: Restricciones sobre columnas&lt;/h4&gt;
+&lt;h2 id=&#34;ejemplo-1-restricciones-sobre-columnas&#34;&gt;Ejemplo 1: Restricciones sobre columnas&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Emp1&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empno&lt;/span&gt;     &lt;span class=&#34;nb&#34;&gt;NUMBER&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pk_emp1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;PRIMARY&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;ename&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;VARCHAR2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nn_ename1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NOT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;NULL&lt;/span&gt;
@@ -2777,7 +2779,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
                             &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scott&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;ejemplo-2-restricciones-sobre-la-tabla&#34;&gt;Ejemplo 2: Restricciones sobre la tabla&lt;/h4&gt;
+&lt;h2 id=&#34;ejemplo-2-restricciones-sobre-la-tabla&#34;&gt;Ejemplo 2: Restricciones sobre la tabla&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TABLE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;docindex&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;doc_oid&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;INTEGER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -2792,11 +2794,11 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
    &lt;span class=&#34;k&#34;&gt;CONSTRAINT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fk_deptno&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FOREIGN&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;KEY&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REFERENCES&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;dept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;deptno&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;job&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;descripción-de-la-estructura-de-una-tabla&#34;&gt;Descripción de la estructura de una tabla&lt;/h3&gt;
+&lt;h1 id=&#34;descripción-de-la-estructura-de-una-tabla&#34;&gt;Descripción de la estructura de una tabla&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DESCRIBE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_tabla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-data-definition-language-ddl-drop-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-drop/&#34;&gt;Data Definition Language(DDL) - DROP.&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -2817,7 +2819,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;inserción-de-registros&#34;&gt;Inserción de registros&lt;/h2&gt;
+&lt;h1 id=&#34;inserción-de-registros&#34;&gt;Inserción de registros&lt;/h1&gt;
 
 &lt;p&gt;La sentencia INSERT nos permite introducir nuevas filas en una tabla de la base de datos. Su sintaxis más simple es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Insert&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;into&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lista_campos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Values&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lista&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;de&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;&amp;quot;de&amp;quot;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valores&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;&amp;quot;valores&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
@@ -2855,7 +2857,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MATRICULAS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;borrado-de-registros&#34;&gt;Borrado de registros&lt;/h2&gt;
+&lt;h1 id=&#34;borrado-de-registros&#34;&gt;Borrado de registros&lt;/h1&gt;
 
 &lt;p&gt;La sentencia DELETE nos permite borrar filas de una tabla de la base de datos. Su sintaxis más simple es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Delete&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Where&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condici&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -2871,7 +2873,7 @@ Cuando la restricción de Integridad Referencial se realiza sobre la definición
 &lt;p&gt;Una vez que se han eliminado los registros utilizando la sentencia DELETE, no puede deshacer la operación. Si desea saber qué registros se eliminarán, primero examine los resultados de una consulta de selección que utilice el mismo criterio y después ejecute la consulta de borrado. Mantenga copias de seguridad de sus datos en todo momento. Si elimina los registros equivocados podrá recuperarlos desde las copias de seguridad.
 Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&gt;
 
-&lt;h3 id=&#34;modificación-de-registros&#34;&gt;Modificación de registros&lt;/h3&gt;
+&lt;h2 id=&#34;modificación-de-registros&#34;&gt;Modificación de registros&lt;/h2&gt;
 
 &lt;p&gt;La sentencia UPDATE nos permite modificar filas de una tabla de la base de datos. Su sintaxis más simple es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Update&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;Set&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columna1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;columna2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;valor2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.....]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Where&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;condici&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -2885,7 +2887,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 
 &lt;p&gt;Este tipo de actualizaciones sólo son válidas si la Sentencia SELECT devuelve un único valor, que además debe de ser compatible con la columna que se actualiza.&lt;/p&gt;
 
-&lt;h3 id=&#34;sentencia-merge&#34;&gt;Sentencia MERGE&lt;/h3&gt;
+&lt;h2 id=&#34;sentencia-merge&#34;&gt;Sentencia MERGE&lt;/h2&gt;
 
 &lt;p&gt;Este comando sirve para actualizar los valores de los registros de una tabla a partir de valores de registros de otra tabla o consulta. Permite pues combinar los datos de dos tablas a fin de actualizar la primera. Su sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MERGE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tabla&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;alias&lt;/span&gt;
@@ -2922,16 +2924,16 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 &lt;p&gt;La situación se muestra en la ilustración siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;470&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s800/merge.png&#34; width=&#34;765&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 765px) 765px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;470&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TRnrV2IJs1I/AAAAAAAAAOg/YMDC7sjbyQ0/s800/merge.png&#34; width=&#34;765&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;y el resultado después de ejecutar la sentencia MERGE sería:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;136&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s800/tablamerge.png&#34; width=&#34;374&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 375px) 375px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;136&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TRnrQ3Xb0EI/AAAAAAAAAOY/hBO4ZHrwZqA/s800/tablamerge.png&#34; width=&#34;374&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;siguiente-tema-consulta-de-datos-cláusula-select-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34;&gt;Consulta de Datos - Cláusula Select&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-consulta-de-datos-cláusula-select-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34;&gt;Consulta de Datos - Cláusula Select&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
