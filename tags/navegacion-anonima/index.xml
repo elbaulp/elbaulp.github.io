@@ -23,20 +23,17 @@
             
             <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/</guid>
             <description>&lt;ul&gt;
-&lt;li&gt;Logrando el anonimato con Tor (Parte 1)
-
-&lt;ul&gt;
+&lt;li&gt;Logrando el anonimato con Tor (Parte 1)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este artículo veremos cómo lograrlo y verdaderamente saber contra qué luchamos.&lt;/p&gt;
 
 &lt;p&gt;Primero instalemos Tor y empecemos a usarlo para desasirnos de algunas cosas. Hay muchos tutoriales en Internet que describen cómo instalar y usar Tor, pero mencionemos una vez más todos los pasos requeridos.&lt;/p&gt;
 
-&lt;h2 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h2&gt;
+&lt;h1 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h1&gt;
 
 &lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;bash&amp;quot;&lt;/span&gt;&amp;gt;# &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;deb http://deb.torproject.org/torproject.org lucid main&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
@@ -85,7 +82,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 &lt;p&gt;Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-medium wp-image-1027 alignnone&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn12-300x298.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;298px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-medium wp-image-1027 alignnone&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn12-300x298.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;298px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podemos ver que configuramos el navegador para conectarse a traves del proxy que está corriendo en IP 127.0.0.1 y el puerto 8118, el cual es exactamente nuestro proxy Privoxy. Así nuestro navegador web se conecta a Privoxy, el cual se conecta en turnos a Tor, que nos permite navegar en Internet anónimamente.&lt;/p&gt;
@@ -93,7 +90,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 &lt;p&gt;Verifiquemos si el navegador está efectivamente usando la red Tor para navegar en internet de manera anónima. Podemos hacerlo visitando la URI &lt;a href=&#34;http://check.torproject.org/&#34; target=&#34;_blank&#34;&gt;Check Torproject&lt;/a&gt;. Si ves algo como la siguiente imagen, entonces hemos configurado Tor exitosamente y podemos navegar en Internet de forma anónima.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn21-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn21-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En vez de configurarlo manualmente, también podemos usar Tor Browser Bundle, el cual integra prácticamente todo lo que necesitamos. Simplemente tenemos que descargar Tor Browser Bundle, extraerlo y ejecutar el script start-for-browser, de la siguiente manera:&lt;/p&gt;
@@ -105,7 +102,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 &lt;p&gt;Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn31-284x300.png&#34; alt=&#34;&#34; width=&#34;284px&#34; height=&#34;300px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 284px) 284px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn31-284x300.png&#34; alt=&#34;&#34; width=&#34;284px&#34; height=&#34;300px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en &amp;#8220;View the Network&amp;#8221; (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando - esto puede estar más actualizado en &lt;a href=&#34;http://torstatus.all.de/index.php?SR=Bandwidth&amp;SO=Desc&#34; target=&#34;_blank&#34;&gt;Nodos Tor&lt;/a&gt;.&lt;/p&gt;
@@ -113,12 +110,12 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 &lt;p&gt;El script tambien abrirá el navegador web Tor una vez que nos conectemos con éxito a la red Tor. Este navegador está basado en Firefox y se ve como en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn41-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn41-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podemos ver que nuestro navegador está usando efectivamente la red Tor y podemos navegar en Internet de manera anónima.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-cómo-funciona-tor&#34;&gt;2. Cómo funciona Tor&lt;/h2&gt;
+&lt;h1 id=&#34;2-cómo-funciona-tor&#34;&gt;2. Cómo funciona Tor&lt;/h1&gt;
 
 &lt;p&gt;Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como &lt;a href=&#34;http://www.google.com&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt; estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino - el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# traceroute www.google.com&lt;/span&gt;
@@ -152,7 +149,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 
 &lt;p&gt;Con motivo de esconder la información del nivel de aplicación que pueda comprometer nuestro anonimato, podemos usar &lt;a href=&#34;https://www.torproject.org/torbutton/&#34; target=&#34;_blank&#34;&gt;Torbutton&lt;/a&gt;, una extensión de Firefox que inhabilita muchos posibles filtrados de información que nos puedan comprometer. O lo que es mejor, podemos usar&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34; target=&#34;_blank&#34;&gt; Tor browser bundle&lt;/a&gt;, el cual usa Vidalia para configurar e iniciar Tor. Éste además abre el navegador Web Tor con Torbutton integrado, el que podemos usar para buscar anónimamente en internet.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-variables-de-configuración-de-tor&#34;&gt;3. Variables de configuración de Tor&lt;/h2&gt;
+&lt;h1 id=&#34;3-variables-de-configuración-de-tor&#34;&gt;3. Variables de configuración de Tor&lt;/h1&gt;
 
 &lt;p&gt;Presentemos lo que el manual dice sobre las variables de configuración que usamos en este artículo:&lt;/p&gt;
 
@@ -164,7 +161,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 &lt;li&gt;&lt;strong&gt;SocksPort&lt;/strong&gt;: Activa este puerto para esperar conexiones de aplicaciones Socks-speaking. Configuralo en 0 si no quieres permitir conexiones con aplicaciones vía SOCKS. Configuralo en &amp;#8220;auto&amp;#8221; para dejar que Tor seleccione un puerto por vos. (Default: 9050)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;4-configurar-resolución-dns-de-forma-segura&#34;&gt;4. Configurar resolución DNS de forma segura&lt;/h2&gt;
+&lt;h1 id=&#34;4-configurar-resolución-dns-de-forma-segura&#34;&gt;4. Configurar resolución DNS de forma segura&lt;/h1&gt;
 
 &lt;p&gt;La única cosa que debemos realmente observar cuando usamos Tor es la resolución de DNS. Usualmente nuestra máquina cliente está usando nuestros propios servidores DNS, los cuales en turnos usan los servidores DNS del ISP, por lo tanto un intruso puede todavía obtener la IP origen y destino con el que nos estamos comunicando. Este es un comportamiento no deseado, porque el servidor DNS ve qué hostname estamos intentando resolver y conectarnos, lo que puede derivar en una revelación de usuario.&lt;/p&gt;
 
@@ -190,11 +187,18 @@ WarnUnsafeSocks 1
 
 &lt;p&gt;En el próximo artículo describiremos cómo configurar el mecanismo de resolución de DNS para evitar cualquier posible robo de información.&lt;/p&gt;
 
-&lt;h2 id=&#34;5-conclusión&#34;&gt;5. Conclusión&lt;/h2&gt;
+&lt;h1 id=&#34;5-conclusión&#34;&gt;5. Conclusión&lt;/h1&gt;
 
 &lt;p&gt;Podemos ver que si somos cuidadosos podemos ser totalmente anónimos en Internet. Debemos vigilar que no resolvamos los hostnames de forma local y debemos no incluir información sensible en los datos de una aplicación que pueda desenmascararnos. Si cumplimos con esto, podemos realmente navegar de manera anónima en Internet.&lt;/p&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias:&lt;/h3&gt;
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;QRYzre4bf7I&#34;
+    layout=&#34;responsive&#34;
+    width=&#34;480&#34;
+    height=&#34;270&#34;&gt;
+&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias:&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Manual de Tor, &lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34;&gt;https://www.torproject.org/docs/tor-manual.html.en&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
@@ -215,12 +219,12 @@ WarnUnsafeSocks 1
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;1-usando-burp-con-tor&#34;&gt;1. Usando Burp con Tor&lt;/h2&gt;
+&lt;h1 id=&#34;1-usando-burp-con-tor&#34;&gt;1. Usando Burp con Tor&lt;/h1&gt;
 
 &lt;p&gt;Ya hemos visto en profundidad cómo configurar nuestro navegador web para usar Privoxy, el cual en turnos usa Tor para mantener el anonimato en internet. ¿Pero qué pasa si queremos interceptar peticiones con Burp? Para comprender mejor qué sucede, la imagen siguiente representa la cadena de nodos que cada petición (y respuesta) debe atravesar parapoder usar el proxy (en nuestro caso, Burp) sobre la red de Tor:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;diagrama de nodos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/081012_1604_AchievingAn11.png&#34; width=&#34;300px&#34; height=&#34;128px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;diagrama de nodos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/081012_1604_AchievingAn11.png&#34; width=&#34;300px&#34; height=&#34;128px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella - en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).&lt;/p&gt;
@@ -234,7 +238,7 @@ WarnUnsafeSocks 1
 &lt;p&gt;Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/081012_1604_AchievingAn21.png&#34; width=&#34;501px&#34; height=&#34;498px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 501px) 501px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn2&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/081012_1604_AchievingAn21.png&#34; width=&#34;501px&#34; height=&#34;498px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;De esta forma Firefox envía todos los paquetes a través del proxy Burp, que corre en el host 127.0.0.1 en el puerto 8080.&lt;/p&gt;
@@ -242,7 +246,7 @@ WarnUnsafeSocks 1
 &lt;p&gt;A continuación es necesario configurar Burp para usar proxy SOCKS, el cual se inicializa y configura a través de Tor. El proxy SOCKS trabaja en un nivel más bajo que el proxy HTTP, por lo tanto tiene la posibilidad de redirigir no sólo peticiones HTTP. SOCKS es básicamente un proxy TCP, el cual puede interceptar y filtrar todas las conexiones TCP que pasan a través de él, lo que le permite no ser específico por aplicación; la aplicación sólo necesita tener la capacidad de enviar sus paquetes de datos a través del proxy SOCKS. Es posible configurar Burp para usar SOCKS en las opciones de Burp indicando &amp;#8220;use SOCKS proxy&amp;#8221;, como se puede observar en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn3&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/081012_1604_AchievingAn32.png&#34; width=&#34;642px&#34; height=&#34;234px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 642px) 642px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn3&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/081012_1604_AchievingAn32.png&#34; width=&#34;642px&#34; height=&#34;234px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;De esta forma se configura Burp para que use el proxy SOCKS corriendo en el host 127.0.0.1 (localhost) en el puerto 9050. Si se consultan nuevamente los puertos que estan en estado de escucha nuevamente, se puede observar que el puerto 9050 está asociado al servicio Tor:&lt;/p&gt;
@@ -252,22 +256,22 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 
 &lt;p&gt;Repasando, hemos configurado el navegador para que use el proxy Burp en el puerto 8080, el cual en turnos utiliza el proxy SOCKS en el puerto 9050, razón por la cual exitosamente se logra el encadenamiento de proxies y en consecuencia se navega en internet de manera anónima, mientras seguimos teniendo la ventaja de poder modificar las peticiones con Burp.&lt;/p&gt;
 
-&lt;h2 id=&#34;2-configurar-tor-para-resolver-los-hostnames-de-forma-segura&#34;&gt;2. Configurar Tor para resolver los hostnames de forma segura&lt;/h2&gt;
+&lt;h1 id=&#34;2-configurar-tor-para-resolver-los-hostnames-de-forma-segura&#34;&gt;2. Configurar Tor para resolver los hostnames de forma segura&lt;/h1&gt;
 
 &lt;p&gt;En el artículo anterior aparecen los tipos de proxies SOCKS y algunas variables de configuración de Tor que se pueden usar en el archivo de configuración torrc. Además se debate porqué es importante resolver los hostnames de forma segura. Para revisar esta información visita la &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; target=&#34;_blank&#34;&gt;parte 1&lt;/a&gt;. Para continuar profundizando, analizaremos cómo configurar Tor para resolver los hostnames de forma segura.&lt;/p&gt;
 
 &lt;p&gt;Para realizarlo, disponemos de las siguientes soluciones:&lt;/p&gt;
 
-&lt;h3 id=&#34;a-usar-socks4a&#34;&gt;A: &lt;strong&gt;Usar SOCKS4a&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;a-usar-socks4a&#34;&gt;A: &lt;strong&gt;Usar SOCKS4a&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;No todas las aplicaciones soportan SOCKS4a, por lo tanto esta solución no es del todo viable, ya que necesitamos una solución universal que funcione con todas las aplicaciones.&lt;/p&gt;
 
-&lt;h3 id=&#34;b-torificar-la-resolución-de-hostnames&#34;&gt;B: *&lt;strong&gt;Torificar* la resolución de hostnames&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;b-torificar-la-resolución-de-hostnames&#34;&gt;B: *&lt;strong&gt;Torificar* la resolución de hostnames&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Es posible intentar &lt;em&gt;torificar&lt;/em&gt; la aplicación de resolución de DNS que utilizamos. Pero es necesario tener cuidado, debido a que algunas aplicaciones no fueron construidas pensando en el modo anónimo. Algunos protocolos, como FTP (modo activo/pasivo), envían la propia dirección IP en la sección de datos del FTP, lo que lo hace muy difícil de anonimizar. Esto ocurre en el modo activo del data transfer en FTP. La siguiente imagen resume la inicialización de la trasferencia FTP:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn4&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/081012_1604_AchievingAn42.png&#34; width=&#34;591px&#34; height=&#34;245px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 591px) 591px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;081012_1604_AchievingAn4&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/081012_1604_AchievingAn42.png&#34; width=&#34;591px&#34; height=&#34;245px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Se pueden observar todos los pasos necesarios para empezar a enviar la información del servidor al cliente. Parece no ser mucho si no se presta atención. En el paso C, se envía el comando PORT, el cual es la raiz de los problemas para anonimizar. El comando PORT usa un formato como el siguiente:&lt;/p&gt;
@@ -276,7 +280,7 @@ tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0
 
 &lt;p&gt;No está relacionado directamente con el esquema de resolución de DNS, pero vale la pena nombrarlo ya que está relacionado con la utilización de Tor en una aplicación.&lt;/p&gt;
 
-&lt;h3 id=&#34;c-usar-tor-resolve&#34;&gt;C: &lt;strong&gt;Usar tor-resolve&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;c-usar-tor-resolve&#34;&gt;C: &lt;strong&gt;Usar tor-resolve&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Con tor-resolve se puede obtener la dirección IP de un hostname de manera muy sencilla. Todo lo que se necesita hacer es correr este programa con el hostname especificado, por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# tor-resolve www.google.com 127.0.0.1:9050&lt;/span&gt;
@@ -300,7 +304,7 @@ AutomapHostsSuffixes .exit,.onion
 
 &lt;p&gt;Es necesario además asegurar que etc/resolv.conf no cambió para la próxima vez que los programas dhclient o dhcpcd estén corriendo. Para inhabilitar los cambios de dhclient sobre resolv.conf con sus propios nameservers, es necesario borrar el domain-name, domain-name-servers ydomain-search del archivo de configuración /etc/dhcp3/dhclient.conf . Para inhabilitar los cambios de dhcpcd en resolv.conf, es necesario borrar domain_name, domain_name_servers y domain_server del archivo de configuración /etc/dhcpcd.conf. Si tenemos ambos programas instalados, cambiar ambos archivos adecuadamente probablmente sea lo mejor.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-cuál-proxy-elegir&#34;&gt;3. ¿Cuál Proxy elegir?&lt;/h2&gt;
+&lt;h1 id=&#34;3-cuál-proxy-elegir&#34;&gt;3. ¿Cuál Proxy elegir?&lt;/h1&gt;
 
 &lt;p&gt;Hay algunos proxies disponibles que podríamos usar, pero la mayoría de las comunidades utilizan Privoxy o Polipo. Hay un par de razones por las cuales es preferible usar Polipo que Privoxy, y se describen en detalle aquí: Privoxy vs. Polipo. Para resumir, estas son las razones por las cuales Polipo es la mejor opción:&lt;/p&gt;
 
@@ -312,7 +316,7 @@ AutomapHostsSuffixes .exit,.onion
 
 &lt;p&gt;Pero hay otra pregunta que debemos hacernos. ¿Por qué necesitamos incluso un proxy HTTP si podemos usar el proxy de Tor SOCKS desde el navegador? La respuesta es que generalmente el proxy SOCKS del navegador usa algunas variables de configuración default que no toleran Tor de la misma forma que Privoxy o Polipo pueden. Lo más sorprendente son los timeouts, que ocurren muy frecuentemente si usamos directamente el proxy SOCKS.&lt;/p&gt;
 
-&lt;h2 id=&#34;4-tor-hidden-services-cómo-puedo-mantenerme-anónimo-y-hostear-mi-propio-servidor-en-la-red-tor&#34;&gt;4. Tor Hidden Services: Cómo puedo mantenerme anónimo y hostear mi propio servidor en la red Tor&lt;/h2&gt;
+&lt;h1 id=&#34;4-tor-hidden-services-cómo-puedo-mantenerme-anónimo-y-hostear-mi-propio-servidor-en-la-red-tor&#34;&gt;4. Tor Hidden Services: Cómo puedo mantenerme anónimo y hostear mi propio servidor en la red Tor&lt;/h1&gt;
 
 &lt;p&gt;Los servicios ocultos de Tor usan el hostname que termina con el dominio .onion . Ese TLD (Top Level Domain) no puede ser usado sobre Internet normalmente; sus correspondientes hostnames sólo pueden usarse sobre la red de Tor, la cual sabe cómo resolverlos dentro de sus direcciones IP ocultas.&lt;/p&gt;
 
@@ -325,7 +329,7 @@ dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m
 
 &lt;p&gt;Pero hay más que contar en esta historia que sólo la resolución de los dominios .onion, pero no entraremos en detalle por el momento - queda pendiente para futuros artículos.&lt;/p&gt;
 
-&lt;h2 id=&#34;5-opciones-de-log-en-tor&#34;&gt;5. Opciones de log en Tor&lt;/h2&gt;
+&lt;h1 id=&#34;5-opciones-de-log-en-tor&#34;&gt;5. Opciones de log en Tor&lt;/h1&gt;
 
 &lt;p&gt;Si instalamos Vidalia, entonces podemos ver nuestros logs en el &amp;#8220;Message Log&amp;#8221;, pero si no usamos Vidalia, obtener nuestros logs puede ser un poco más complicado. Si todo está configurado y funcionando, probablemente podemos obtener los logs buscando en el directorio /var/log/tor. El siguiente comando muestra los logs como aparecen en la pantalla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;tail -f /var/log/tor/tor
@@ -345,69 +349,69 @@ dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m
 
 &lt;p&gt;Esto efectivamente loggea todos los mensajes al archivo /varlog/tor/tor.&lt;/p&gt;
 
-&lt;h2 id=&#34;6-opciones-de-configuración-avanzada-de-tor&#34;&gt;6. Opciones de configuración avanzada de Tor&lt;/h2&gt;
+&lt;h1 id=&#34;6-opciones-de-configuración-avanzada-de-tor&#34;&gt;6. Opciones de configuración avanzada de Tor&lt;/h1&gt;
 
-&lt;h3 id=&#34;httpproxy&#34;&gt;HTTPProxy&lt;/h3&gt;
+&lt;h2 id=&#34;httpproxy&#34;&gt;HTTPProxy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Configura a Tor para hacer peticiones de directorio a través del host:port especificado por esta variable de configuración.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;httpproxyauthenticator&#34;&gt;HTTPProxyAuthenticator&lt;/h3&gt;
+&lt;h2 id=&#34;httpproxyauthenticator&#34;&gt;HTTPProxyAuthenticator&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica el nombre de usuario y contraseña usados para autenticarse en el proxy HTTP.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;httpsproxy&#34;&gt;HTTPSProxy&lt;/h3&gt;
+&lt;h2 id=&#34;httpsproxy&#34;&gt;HTTPSProxy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Configura a Tor para hacer todas las peticiones de conexión SSL através del host:port especificado en esta variable.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;httpsproxyauthenticator&#34;&gt;HTTPSProxyAuthenticator&lt;/h3&gt;
+&lt;h2 id=&#34;httpsproxyauthenticator&#34;&gt;HTTPSProxyAuthenticator&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica el nombre de usuario y contraseña necesarios para autenticarse en el proxy HTTPS.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;socks4proxy&#34;&gt;Socks4Proxy&lt;/h3&gt;
+&lt;h2 id=&#34;socks4proxy&#34;&gt;Socks4Proxy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Configura a Tor para establecer todas las conexiones a través del proxy SOCKS4 en el host:port.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;socks5proxy&#34;&gt;Socks5Proxy&lt;/h3&gt;
+&lt;h2 id=&#34;socks5proxy&#34;&gt;Socks5Proxy&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Configura a Tor para establecer todas las conexiones a través del proxy SOCKS5 en el host:port.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;socks5proxyusername&#34;&gt;Socks5ProxyUsername&lt;/h3&gt;
+&lt;h2 id=&#34;socks5proxyusername&#34;&gt;Socks5ProxyUsername&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica el nombre de usuario utilizado para autenticarse en el proxy SOCKS5.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;socks5proxypassword&#34;&gt;Socks5ProxyPassword&lt;/h3&gt;
+&lt;h2 id=&#34;socks5proxypassword&#34;&gt;Socks5ProxyPassword&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica la contraseña utilizada para autenticarse en el proxy SOCKS5.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;keepaliveperiod&#34;&gt;KeepAlivePeriod&lt;/h3&gt;
+&lt;h2 id=&#34;keepaliveperiod&#34;&gt;KeepAlivePeriod&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica el tiempo que usa Tor para enviar &lt;em&gt;keepalives&lt;/em&gt; para mantener la conexión abierta.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;controlport&#34;&gt;ControlPort&lt;/h3&gt;
+&lt;h2 id=&#34;controlport&#34;&gt;ControlPort&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Especifica el puerto en el cual podemos conectarnos a Tor y controlarlo. Si se setea en &amp;#8216;auto&amp;#8217;, Tor automáticamente elige un puerto por nosotros, de otra manera usa el especificado.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;newcircuitperiod&#34;&gt;NewCircuitPeriod&lt;/h3&gt;
+&lt;h2 id=&#34;newcircuitperiod&#34;&gt;NewCircuitPeriod&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Considera construir un nuevo circuito por cada N segundos (default: 30 segundos).&lt;/li&gt;
@@ -415,19 +419,19 @@ dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m
 
 &lt;p&gt;Las opciones de configuración que son relevantes para el proxy SOCKS en la red Tor son las siguientes:&lt;/p&gt;
 
-&lt;h3 id=&#34;socksport&#34;&gt;SocksPort:&lt;/h3&gt;
+&lt;h2 id=&#34;socksport&#34;&gt;SocksPort:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Determina en qué número de puerto el proxy SOCKS escuchará por conexiones entrantes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;sockslistenaddress&#34;&gt;SocksListenAddress&lt;/h3&gt;
+&lt;h2 id=&#34;sockslistenaddress&#34;&gt;SocksListenAddress&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Determina en qué dirección IP los proxies SOCKS escucharán las conexiones entrantes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;sockstimeout&#34;&gt;SocksTimeout&lt;/h3&gt;
+&lt;h2 id=&#34;sockstimeout&#34;&gt;SocksTimeout&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Determina en cuánto tiempo Tor puede intentar establecer un circuito antes de que se cumpla el timeout (default: 2 minutos).&lt;/li&gt;
@@ -435,13 +439,15 @@ dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m
 
 &lt;p&gt;Deberíamos comprender las últimas 3 variables de configuración, dado que son muy importantes porque el proxy SOCKS es obligatorio como un entry point a la red Tor.&lt;/p&gt;
 
-&lt;h2 id=&#34;7-finalizando&#34;&gt;7. Finalizando&lt;/h2&gt;
+&lt;h1 id=&#34;7-finalizando&#34;&gt;7. Finalizando&lt;/h1&gt;
 
 &lt;p&gt;Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Internet, para usar una aplicación sobre la red Tor incluso cuando no traen soporte para el servidor proxy SOCKS.&lt;/p&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-2/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-2/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>
