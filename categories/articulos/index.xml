@@ -6937,31 +6937,27 @@ Un resumen de las razones que menciona en su artículo son:&lt;/p&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Java no es un lenguaje de &lt;a href=&#34;http://en.wikipedia.org/wiki/Lazy_evaluation&#34; target=&#34;_blank&#34;&gt;evaluación perezosa&lt;/a&gt;. En Java, los programadores pueden enredarse y terminar generando errores con heap y stack.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El artículo presenta una implementación simple de código Clojure que al pasarla a lenguaje Java falla en tiempo de ejecución.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;A partir de esta idea los programadores pueden lograr cosas muy malas, por ello tendríamos que evitarla.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Y por último, afirma que es &amp;#8220;peligrosamente ineficiente&amp;#8221; en Java/JVM, reconociendo que no tiene referencias para respaldar esta afirmación, y que de algún modo está ignorando si Clojure y Scala corren en la JVM aparentemente sin problemas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Java no es un lenguaje de &lt;a href=&#34;http://en.wikipedia.org/wiki/Lazy_evaluation&#34; target=&#34;_blank&#34;&gt;evaluación perezosa&lt;/a&gt;. En Java, los programadores pueden enredarse y terminar generando errores con heap y stack.&lt;/li&gt;
+&lt;li&gt;El artículo presenta una implementación simple de código Clojure que al pasarla a lenguaje Java falla en tiempo de ejecución.&lt;/li&gt;
+&lt;li&gt;A partir de esta idea los programadores pueden lograr cosas muy malas, por ello tendríamos que evitarla.&lt;/li&gt;
+&lt;li&gt;Y por último, afirma que es &amp;#8220;peligrosamente ineficiente&amp;#8221; en Java/JVM, reconociendo que no tiene referencias para respaldar esta afirmación, y que de algún modo está ignorando si Clojure y Scala corren en la JVM aparentemente sin problemas.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Esos puntos son básicamente un resumen del artículo.&lt;/p&gt;
 
 &lt;p&gt;Mira, como Elliott señala, Java no es Haskell. Ni Lisp. Es su propio lenguaje, basado en una historia imperativa y orientada a objetos, pero no por ello menos apta a incorporar características funcionales dentro de su desarrollo que la aptitud de Lisp para incorporar características de programación orientada a objetos. Sin embargo, si haces sandeces, como intentar regenerar una lista infinita (implícitamente de evaluación perezosa) en Clojure mediante la creación de una lista actualizada que se extiende hasta el infinito&amp;#8230; vas a reventar la JVM. Uh. Ni siquiera el supercomputador en USS Enterprise de dentro de 500 años tendrá la posibilidad de construir esa lista.&lt;/p&gt;
 
-&lt;p&gt;Migrar código de un lenguaje a otro no es un ejercicio trivial. Si intentas migrar línea-a-línea y expresión-por-expresión, puedes esperar que tu código traducido no sea idiomáticamente correcto. (Ya lo se, &lt;a href=&#34;http://blogs.tedneward.com/2012/12/21/Envoy+In+Scala+JavaScript+And+More.aspx&#34;&gt;habiendo hecho la prueba.&lt;/a&gt;) La raiz del problema en el código traducido es doble. Por un lado, (el más necio y poco elegante) simula de muy mala forma cómo debería verse una lista infinita en Java &amp;#8212; un comentador hizo un mejor trabajo mostrando cómo un &lt;strong&gt;Iterator&lt;/strong&gt; puede crearse para realizar la misma tarea que Haskell, de hecho, ya hace produciendo el valor siguiente bajo demanda, en lugar de intentar crear una lista de &lt;strong&gt;Integers&lt;/strong&gt; extendiéndose hasta el infinito. Para alguien que profesa tener experiencia y amor por Haskell, es impactante que Elliott cometa este tipo de error, lo cual genera la impresión de que está intentando crear &lt;a href=&#34;http://es.wikipedia.org/wiki/Falacia_del_hombre_de_paja&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;una falacia del hombre de paja&lt;/em&gt;&lt;/a&gt;. Además asume que cualquiera que programe en Java funcionalmente tendrá que crear todas sus herramientas funcionales a mano, y honestamente, usando Guava o FJ en este caso haría este código ejemplo MUCHO más facil de digerir. El hecho de que ignore ambas en su falacia nuevamente reafirma la idea de que está deliberadamente tergiversando ideas para mostrar su punto.*
-*&lt;/p&gt;
+&lt;p&gt;Migrar código de un lenguaje a otro no es un ejercicio trivial. Si intentas migrar línea-a-línea y expresión-por-expresión, puedes esperar que tu código traducido no sea idiomáticamente correcto. (Ya lo se, &lt;a href=&#34;http://blogs.tedneward.com/2012/12/21/Envoy+In+Scala+JavaScript+And+More.aspx&#34;&gt;habiendo hecho la prueba.&lt;/a&gt;) La raiz del problema en el código traducido es doble. Por un lado, (el más necio y poco elegante) simula de muy mala forma cómo debería verse una lista infinita en Java &amp;#8212; un comentador hizo un mejor trabajo mostrando cómo un &lt;strong&gt;Iterator&lt;/strong&gt; puede crearse para realizar la misma tarea que Haskell, de hecho, ya hace produciendo el valor siguiente bajo demanda, en lugar de intentar crear una lista de &lt;strong&gt;Integers&lt;/strong&gt; extendiéndose hasta el infinito. Para alguien que profesa tener experiencia y amor por Haskell, es impactante que Elliott cometa este tipo de error, lo cual genera la impresión de que está intentando crear &lt;a href=&#34;http://es.wikipedia.org/wiki/Falacia_del_hombre_de_paja&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;una falacia del hombre de paja&lt;/em&gt;&lt;/a&gt;. Además asume que cualquiera que programe en Java funcionalmente tendrá que crear todas sus herramientas funcionales a mano, y honestamente, usando Guava o FJ en este caso haría este código ejemplo MUCHO más facil de digerir. El hecho de que ignore ambas en su falacia nuevamente reafirma la idea de que está deliberadamente tergiversando ideas para mostrar su punto.&lt;/p&gt;
 
 &lt;p&gt;Su cuestión subyacente parece ser simple: &amp;#8220;Trabajo con malos programadores, que no parecen entender cómo escribir código funcional en Java sin enredar todo.&amp;#8221; Hermano, estás en la peor&amp;#8230; &amp;#8220;Los malos programadores removerán cielo y tierra para hacerlo mal.&amp;#8221; -Glenn Vanderburg.&lt;/p&gt;
 
 &lt;p&gt;Pero lo que es realemente patético es que esas funcionalidades vienen en Java 8, incluyendo expresiones lambda y soporte de librerías incluyendo una interface Stream para precisamente permitir que este tipo de código sea escrito sin dolor. Esos programadores con los que Elliott está trabajando van a estar incluso más exitados por usar sus funcionalidades (y todas las ventajas asociadas por hacerlo, incluyendo composición y mucho más) en su código Java. Lo que puede hacer a Elliott más feliz es que al menos él no tendrá que haberlo escrito; va a estar escrito por personas más inteligentes que cualquiera.&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
-
-&lt;p&gt;&lt;em&gt;DZone&lt;/em&gt; »» &lt;a href=&#34;http://java.dzone.com/articles/functional-programming-java-%E2%80%93&#34; target=&#34;_blank&#34;&gt;On Functional Programming in Java – It&amp;rsquo;s Coming&amp;hellip;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;DZone&lt;/em&gt; »» &lt;a href=&#34;http://java.dzone.com/articles/functional-programming-java-%E2%80%93&#34; target=&#34;_blank&#34;&gt;On Functional Programming in Java – It&amp;rsquo;s Coming&amp;hellip;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -6970,14 +6966,17 @@ Un resumen de las razones que menciona en su artículo son:&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</guid>
-            <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Homomorphic Encryption&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34; alt=&#34;&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/a&gt;
-Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
+            <description>&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 256px) 256px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Homomorphic Encryption&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34; alt=&#34;&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;][1]
+&lt;/figure&gt;
+
+&lt;p&gt;Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
 
 &lt;p&gt;Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt; (Cifrado Homomórfico) ó &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico).&lt;/p&gt;
 
 &lt;h3 id=&#34;qué-es-el-cifrado-homomórfico-ó-homomorphic-encryption&#34;&gt;¿Qué es el cifrado homomórfico ó &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;?&lt;/h3&gt;
 
-&lt;p&gt;Los chicos de &lt;a href=&#34;http://es.wikipedia.org/wiki/RSA&#34; target=&#34;_blank&#34;&gt;RSA&lt;/a&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o ****Homomorphic Encryption. ****Pero se quedó como una pregunta abierta.&lt;/p&gt;
+&lt;p&gt;Los chicos de &lt;a href=&#34;http://es.wikipedia.org/wiki/RSA&#34; target=&#34;_blank&#34;&gt;RSA&lt;/a&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;. Pero se quedó como una pregunta abierta.&lt;/p&gt;
 
 &lt;p&gt;Y hace solo tres años un estudiante de posgrado sorprendió al mundo al demostrar que este sistema es posible. Lo que este estudiante hizo fue demostrar matemáticamente que es posible realizar operaciones de cálculo estándares &amp;#8212; como sumar, multiplicar etc &amp;#8212; a datos cifrados sin la necesidad de descifrarlos previamente.&lt;/p&gt;
 
@@ -7021,9 +7020,9 @@ Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security 
 &lt;p&gt;Los sistemas homomórficos trabajan en estos retículos hiper-dimensionales añadiendo ruido a los nodos para deplazarlos con respecto a su posición original. Como se ha mencionado en los párrafos anteriores, el problema está en que el ruido se va acumulando, en operaciones de suma se duplica cuando hay dos sumandos, y en la multiplicación se eleva al cuadrado cuando se multiplican dos números. Con lo que el ruido se va de las manos muy rápidamente, como consecuencia se está limitado a un número determinado de operecaciones antes de que el ruido interfiera demasiado en los datos reales.&lt;/p&gt;
 
 &lt;p&gt;Un sistema &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico) no tiene esta limitación, por definición es posible realizar cualquier tipo de operación, por muy compleja que sea. Craig consiguió evitar que el ruido quedara fuera de control porque, tras realiazar un número determinado de operaciones, los datos se vuelven a cifrar (Sin descifrarlos previamente, es decir, el cifrado homomórfico realiza su propio cifrado) elimiando el ruido de modo que nunca sobrepase el sistema.
-Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno **pequeño al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
+Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno &lt;strong&gt;pequeño&lt;/strong&gt; al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
 
-&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el **sistema totalmente homomórfico **tiene un tama��o de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
+&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el &lt;strong&gt;sistema totalmente homomórfico&lt;/strong&gt; tiene un tamaño de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
 
 &lt;p&gt;En resumen, es una forma completamente distinta de cifrar y tratar datos para la cual los computadores estándares actuales de 64-bits de ancho de palabra no están capacitados.&lt;/p&gt;
 
@@ -7031,16 +7030,16 @@ Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema
 
 &lt;p&gt;Queda así abierto un nuevo campo en la investigación criptográfica. De aquí a 20, 30 años habrá aplicaciones que funcionarán de un modo totalmente distinto al que estamos acostumbrados, y la gente se preguntará ¿No se ha hecho el cifrado siempre de esta manera?, y no será así, recordaremos lo que solíamos usar y nos daremos cuenta que era estúpido en comparación.&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
 &lt;p class=&#34;alert&#34;&gt;
-&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 376 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio
+    &lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 376 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio
 &lt;/p&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;
-&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/376&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/376&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -7973,110 +7972,86 @@ En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay est�
             
             <guid>https://elbauldelprogramador.com/los-origenes-de-los-simbolos-tecnologicos-mas-famosos-y-frecuentes/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;720px&#34; height=&#34;626px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png&#34;&gt;&lt;img sizes=&#34;(min-width: 720px) 720px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/LOS-ORÍGENES-DE-LOS-SÍMBOLOS-TECNOLÓGICOS-MÁS-FAMOSOS-Y-FRECUENTES.png&#34; title=&#34;Los orígenes de los símbolos tecnológicos más famosos y frecuentes&#34; alt=&#34;Los orígenes de los símbolos tecnológicos más famosos y frecuentes&#34; width=&#34;720px&#34; height=&#34;626px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Contínuamente exploramos el mundo de los orígenes pero es muy raro que discutamos sobre dónde provienen los símbolos más comunes de tecnología. Lo que es sorprendente considerando la frecuencia con la que vemos y usamos estos símbolos. Afortunadamente, Visual.ly ha creado un gráfico que puede decirte casi todo lo que necesitas saber, desde dónde se originó el símbolo de Blouetooth hasta porqué ‘@’ es tan comunmente usado. Cada símbolo viene con su propia historia de origen, la mayoría de las cuales son mucho más interesantes de lo que piensas. Por ejemplo, ¿sabías que la tecla de comando Apple está inspirada en un símbolo sueco que indica una atracción destacable en un camping? Debe haber algunos símbolos incluidos en este gráfico que posiblemente nunca has oído o visto.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/at.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2297 aligncenter&#34; alt=&#34;@&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/at.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
-&lt;span &gt;Ah @, el único símbolo en la lista para ganar un lugar en el la colección de arquitectura y diseño del MoMa. ¿Cómo este símbolo fetichista se ha vuelto tan potente con los años? Probablemente tenga algo que ver con los profundos y misteriosos orígenes de la runa de las redes. Fue conocida con muchos nombres: el caracol (en Francia e Italia), el pequeño ratón (en China), la cola del mono (Alemania). En 1971, Raymond Tomlinson, un programador de Bolt, Beranek &amp;amp; Newman, decidió insertar el símbolo entre las direcciones de red del ordenador para separar al usuario de la terminal. Previamente al uso de Tomlinsons, el símbolo @ también embellecía el teclado de American Underwood en 1885 como un símbolo taquigráfico de contabilidad que significa “con una tasa de”. Vuelve aún más atrás y las cosas comenzarán a ponerse turbias. Algunos sugieren que @ tiene sus orígenes en el siglo VI, cuando los monjes lo adoptaron como una forma mejor para escribir la palabra latina para “en” (at) o “al rededor de” (toward) - lo que no debe confundirse con A.D., la abreviación para Anno Domini, o los años después de la muerte de Cristo.&lt;/span&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;Ahora, a pesar de que estaremos extremadamente impresionados si puedes leer este infograma en ese tamaño, lo hemos desarmado:&lt;/p&gt;
 
-&lt;h1 id=&#34;span-a-href-img-2014-03-sweddishcampground-jpg-img-on-tap-lightbox1-role-button-tabindex-0-layout-responsive-class-size-full-wp-image-2298-aligncenter-alt-src-img-2014-03-sweddishcampground-jpg-width-160px-height-160px-a-span&#34;&gt;&lt;span &gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/sweddishcampground.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2298 aligncenter&#34; alt=&#34;⌘&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/sweddishcampground.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/span&gt;&lt;/h1&gt;
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2297 aligncenter&#34; alt=&#34;@&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/at.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][1]
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-&lt;span &gt;¿Qué tienen en común los campings suecos y el excesivo uso del logo de Apple? Mucho, de acuerdo con Andy Hertzfeld del equipo de desarrollo original de Mac. Mientras trabajaba con otros miembros del equipo para configurar comandos de menú directamente en teclas del teclado, Hetzferld y su equipo decidieron agregar una tecla funcional especial. La idea era simple: cuando se presionaba en combianción con otras teclas, esta &amp;#8220;tecla Apple&amp;#8221; debía seleccionar el comando de menú correspondiente. Jobs lo odió - o más precisamente el símbolo que representaba el botón - el cual era otra imagen más del logo Apple. Hetzfeld recuerda su reacción: &amp;#8220;¡Hay demasiadas &amp;#8216;Apples&amp;#8217; en la pantalla! ¡Es ridículo! ¡Estamos tomando al logo Apple en vano!&amp;#8221;. Luego le siguió un rediseño apresurado, en el cual Susan Kare, bitmap artist, filtró en un diccionario internacional de símbolos y eligió un simbólo floral que, en Suecia, indicaba una atracción importante en un camping. Conocido alternativamente como &amp;#8220;el bucle Gorgon&amp;#8221;, y en el estandard Unicode, señal de un lugar de interés&amp;#8221;, el símbolo de comandos ha permanecido como pilar en el teclado Apple hasta la actualidad.&lt;/span&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
-&lt;p &gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/power.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2299 aligncenter&#34; alt=&#34;power&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/power.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-&lt;span &gt;Está estampado en remeras; te dice qué botón iniciará tu Prius; incluso aparece en los envoltorios de los condones NYC. Hace mucho tiempo atrás, como en la 2da Guerra Mundial, los ingenieros solían usar el sistema binario para etiquetar los botones de encendido y conmutadores giratorios o con teclas: un 1 significaba &amp;#8220;on&amp;#8221; y un 0 significaba &amp;#8220;off&amp;#8221;. En 1973, la Comisión Electrotécnica Internacional (International Electrotechnical Commision) codificó vagamente un círculo roto con una línea dentro como Estado &amp;#8220;en espera&amp;#8221; (standby power state) y mantuvo esa historia incluso hasta hoy. El Instituto de Ingenieros Eléctricos y  Electrónicos (IEEE), sin embargo, decidió que era muy impreciso, y alteró la definición para que signifique sencillamente &amp;#8220;power&amp;#8221;.&lt;/span&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
-&lt;p &gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/Ethernet.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ethernet&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Ethernet.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-&lt;span &gt;A pesar de haber sido &amp;#8220;inventado&amp;#8221; muchos años antes, el objeto que hoy reconocemos como el símbolo del puerto Ethernet fue originalmente diseñado por David Hill, de IBM. De acuerdo con Hill, el símbolo fue parte de un set de símbolos destinados para representar varias conexiones de red locales disponibles en simultáneo. La serie de bloques, que es explícitamente no-jerárquica, representa a cada computadora/terminal. Mientras Hill menciona al pasar los últimos bocetos Ethernet de Bob Metcalfe, el símbolo moderno los utiliza para inspiración.&lt;/span&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
-&lt;p &gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/bluetooth.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2301 aligncenter&#34; alt=&#34;bluetooth&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/bluetooth.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  Probablemente escuchaste la historia del rey danés del siglo X, Harald Blátand, que está relacionada con Bluetooth, ¿no? Él era un renombrado conocedor de arándanos; de hecho uno de sus dientes tenía un coloreado permanente de azul; etc etc etc. Lo que probablemente no sepas es que el símbolo de Bluetooth es en realidad una combinación de dos runas que representan las iniciales de Harald. Lo que pasa es que el primer receptor también tenía una forma &amp;#8220;estilo diente&amp;#8221;, y fue - adivinaste - azul. Pero ésto no termina aquí. Según las notas de Bluetooth SIG, Blátand &amp;#8220;fue instrumental para unir grupos opuestos en partes de lo que ahora es Noruega, Suecia y Dinamarca - tan sencillo como la tecnología Bluetooth fue diseñada para permitir colaboración entre industrias en desacuerdo como el mercado de las computadoras, celulares y automóviles.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;&lt;span &gt;Ah @, el único símbolo en la lista para ganar un lugar en el la colección de arquitectura y diseño del MoMa. ¿Cómo este símbolo fetichista se ha vuelto tan potente con los años? Probablemente tenga algo que ver con los profundos y misteriosos orígenes de la runa de las redes. Fue conocida con muchos nombres: el caracol (en Francia e Italia), el pequeño ratón (en China), la cola del mono (Alemania). En 1971, Raymond Tomlinson, un programador de Bolt, Beranek &amp;amp; Newman, decidió insertar el símbolo entre las direcciones de red del ordenador para separar al usuario de la terminal. Previamente al uso de Tomlinsons, el símbolo @ también embellecía el teclado de American Underwood en 1885 como un símbolo taquigráfico de contabilidad que significa “con una tasa de”. Vuelve aún más atrás y las cosas comenzarán a ponerse turbias. Algunos sugieren que @ tiene sus orígenes en el siglo VI, cuando los monjes lo adoptaron como una forma mejor para escribir la palabra latina para “en” (at) o “al rededor de” (toward) - lo que no debe confundirse con A.D., la abreviación para Anno Domini, o los años después de la muerte de Cristo.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/pause.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;pause&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/pause.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/sweddishcampground.jpg&#34;&gt;&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2298 aligncenter&#34; alt=&#34;⌘&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/sweddishcampground.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  Tan lejos como el símbolo de pausa ha llegado, muchos han notado que se parece a la notación para una conexión abierta de un esquema eléctrico. Algunos dicen que es sencillamente un símbolo de stop con un pedazo truncado en el medio. Nosotros hemos puesto nuestra moneda en un origen más clásico: En la notación musical, la cesura indica una - espera un momento - pausa.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;¿Qué tienen en común los campings suecos y el excesivo uso del logo de Apple? Mucho, de acuerdo con Andy Hertzfeld del equipo de desarrollo original de Mac. Mientras trabajaba con otros miembros del equipo para configurar comandos de menú directamente en teclas del teclado, Hetzferld y su equipo decidieron agregar una tecla funcional especial. La idea era simple: cuando se presionaba en combianción con otras teclas, esta &amp;#8220;tecla Apple&amp;#8221; debía seleccionar el comando de menú correspondiente. Jobs lo odió - o más precisamente el símbolo que representaba el botón - el cual era otra imagen más del logo Apple. Hetzfeld recuerda su reacción: &amp;#8220;¡Hay demasiadas &amp;#8216;Apples&amp;#8217; en la pantalla! ¡Es ridículo! ¡Estamos tomando al logo Apple en vano!&amp;#8221;. Luego le siguió un rediseño apresurado, en el cual Susan Kare, bitmap artist, filtró en un diccionario internacional de símbolos y eligió un simbólo floral que, en Suecia, indicaba una atracción importante en un camping. Conocido alternativamente como &amp;#8220;el bucle Gorgon&amp;#8221;, y en el estandard Unicode, señal de un lugar de interés&amp;#8221;, el símbolo de comandos ha permanecido como pilar en el teclado Apple hasta la actualidad.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/Firewire.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;firewire&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Firewire.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/power.jpg&#34;&gt;&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2299 aligncenter&#34; alt=&#34;power&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/power.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  Tiempo atrás en 1995, un pequeño grupo de Apple - el desarrollador principal de FireWire - con la tarea de diseñar un símbolo que pueda reflejar adecuadamente la nueva tecnología en la que estaban trabajando. Con la intención original de ser una alternativa serie a SCSI, el principal encanto de FireWire fue que prometía conectividad de alta velocidad para equipos de audio y video digital. Por lo tanto los diseñadores optaron por un símbolo con tres puntas, representando audio, video y datos. Inicialmente el símbolo era rojo, pero fue luego cambiado a amarillo por razones desconocidas.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;Está estampado en remeras; te dice qué botón iniciará tu Prius; incluso aparece en los envoltorios de los condones NYC. Hace mucho tiempo atrás, como en la 2da Guerra Mundial, los ingenieros solían usar el sistema binario para etiquetar los botones de encendido y conmutadores giratorios o con teclas: un 1 significaba &amp;#8220;on&amp;#8221; y un 0 significaba &amp;#8220;off&amp;#8221;. En 1973, la Comisión Electrotécnica Internacional (International Electrotechnical Commision) codificó vagamente un círculo roto con una línea dentro como Estado &amp;#8220;en espera&amp;#8221; (standby power state) y mantuvo esa historia incluso hasta hoy. El Instituto de Ingenieros Eléctricos y  Electrónicos (IEEE), sin embargo, decidió que era muy impreciso, y alteró la definición para que signifique sencillamente &amp;#8220;power&amp;#8221;.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/Sleep.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sleep&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Sleep.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/Ethernet.jpg&#34;&gt;&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Ethernet&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Ethernet.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  La gente estaba confundida con el estado &amp;#8220;standby&amp;#8221; (en espera). Parecía un poco intuitivo para un equipo electrónico que no estaba ni encendido ni apagado. Por lo tanto, luego de que la IEEE apañara el botón de standby de ICE (¿recuerdas?), decidieron que un rebautismo era necesario. El cuerpo gubernamental renombró al modo standby como &amp;#8220;sleep&amp;#8221; (dormir), para invocar el estado en que los humanos no están ni activados ni apagados. Hoy en día, una luna creciente es de facto el símbolo de estado sleep en aparatos de Estados Unidos y Europa. ¡Su poder metafórico es innegable! Viaja a Japón, supongo, y probablemente verás el botón &amp;#8220;zzz&amp;#8221; ocasional.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;A pesar de haber sido &amp;#8220;inventado&amp;#8221; muchos años antes, el objeto que hoy reconocemos como el símbolo del puerto Ethernet fue originalmente diseñado por David Hill, de IBM. De acuerdo con Hill, el símbolo fue parte de un set de símbolos destinados para representar varias conexiones de red locales disponibles en simultáneo. La serie de bloques, que es explícitamente no-jerárquica, representa a cada computadora/terminal. Mientras Hill menciona al pasar los últimos bocetos Ethernet de Bob Metcalfe, el símbolo moderno los utiliza para inspiración.&lt;/span&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/usb.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;usb&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/usb.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/bluetooth.jpg&#34;&gt;&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-full wp-image-2301 aligncenter&#34; alt=&#34;bluetooth&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/bluetooth.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  Creado como parte de la especificación de USB 1.0, el ícono USB fue dibujado con la intención de parecerse al Tridente de Neptuno, el poderoso Dreizack (Pero esto no significa que deberías salir a pinchar gente o intentar domesticar delfines con tu disco flash). En lugar de los triángulos puntiagudos en el extremo de la lanza de tres puntas, los promotores del USB decidieron modificar las figuras a un triángulo, un cuadrado y un círculo. Esto se hizo para simbolizar los diferentes periféricos que pueden ser acoplados usando el standard.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;Probablemente escuchaste la historia del rey danés del siglo X, Harald Blátand, que está relacionada con Bluetooth, ¿no? Él era un renombrado conocedor de arándanos; de hecho uno de sus dientes tenía un coloreado permanente de azul; etc etc etc. Lo que probablemente no sepas es que el símbolo de Bluetooth es en realidad una combinación de dos runas que representan las iniciales de Harald. Lo que pasa es que el primer receptor también tenía una forma &amp;#8220;estilo diente&amp;#8221;, y fue - adivinaste - azul. Pero ésto no termina aquí. Según las notas de Bluetooth SIG, Blátand &amp;#8220;fue instrumental para unir grupos opuestos en partes de lo que ahora es Noruega, Suecia y Dinamarca - tan sencillo como la tecnología Bluetooth fue diseñada para permitir colaboración entre industrias en desacuerdo como el mercado de las computadoras, celulares y automóviles.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/Play.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Play&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Play.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;pause&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/pause.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][2]
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  Mientras que los símbolos de play/pause no son nativos de las computadoras, han hecho su trabajo con los teclados, reproductores multimedia (reales y virtuales) y todos los otros aparatos que pueden reproducir audio o video. Desafortunadamente, ni el triángulo que apunta hacia la derecha ni la doble barra de pausa parecen tener un origen definido. Su primera aparición fue como símbolos de la cinta en un magnetófono de bobina abierta a mediados de los &amp;#8217;60. En algunos casos, estaban acompañados por los símbolos (doble triángulo) rebobinar y adelantar. La dirección de la flecha de play indicaba la dirección en que la sinta se movería. Fácil.
-&lt;/p&gt;
-&lt;p dir=&#34;ltr&#34;&gt;
-  -
-&lt;/p&gt;
+&lt;p&gt;Tan lejos como el símbolo de pausa ha llegado, muchos han notado que se parece a la notación para una conexión abierta de un esquema eléctrico. Algunos dicen que es sencillamente un símbolo de stop con un pedazo truncado en el medio. Nosotros hemos puesto nuestra moneda en un origen más clásico: En la notación musical, la cesura indica una - espera un momento - pausa.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/03/sbbod.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Play&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/sbbod.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;firewire&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Firewire.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][3]
+&lt;/figure&gt;
 
-&lt;p dir=&#34;ltr&#34;&gt;
-  Este terror es conocido por muchos nombres: la hipnótica rueda del destino, la pizza giratoria, la ruleta de la muerte, la SBBOD: &amp;#8220;Spinning Beach Ball Of Death&amp;#8221; (la pelota playera de la muerte). Apple la llama oficialmente &amp;#8220;spinning wait cursor&amp;#8221; (el cursor de espera giratorio), pero muchos usuarios de Mac simplemente la llaman con una sola palabra. Su primera aparición fue en el OSX de Apple y sigue indicando que una aplicación no está respondiendo a los eventos del sistema. Como muchos han notado, la SBBOD es, de hecho, una evolución del cursor de espera tipo reloj-pulsera que la compañía usó al principio en las primeras versiones de Mac OS. Mientras los orígenes de su diseño permanecen en el misterio, Apple probablemente descartó el reloj porque recordaba a los usuarios el tiempo que pasaba mientras el programa permanecía perpetuamente colgado. A pesar de esto, las últimas revisiones han comprobado un sólo pensamiento: es completamente posible despreciar una bella e hipnótica rueda giratoria.
-&lt;/p&gt;
+&lt;p&gt;Tiempo atrás en 1995, un pequeño grupo de Apple - el desarrollador principal de FireWire - con la tarea de diseñar un símbolo que pueda reflejar adecuadamente la nueva tecnología en la que estaban trabajando. Con la intención original de ser una alternativa serie a SCSI, el principal encanto de FireWire fue que prometía conectividad de alta velocidad para equipos de audio y video digital. Por lo tanto los diseñadores optaron por un símbolo con tres puntas, representando audio, video y datos. Inicialmente el símbolo era rojo, pero fue luego cambiado a amarillo por razones desconocidas.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;sleep&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Sleep.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][4]
+&lt;/figure&gt;
 
-&lt;p&gt;&lt;em&gt;Lifehack&lt;/em&gt; »» &lt;a href=&#34;http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html&#34; target=&#34;_blank&#34;&gt;The Origins Of Famous, Iconic and Frequently Used Tech Symbols&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;La gente estaba confundida con el estado &amp;#8220;standby&amp;#8221; (en espera). Parecía un poco intuitivo para un equipo electrónico que no estaba ni encendido ni apagado. Por lo tanto, luego de que la IEEE apañara el botón de standby de ICE (¿recuerdas?), decidieron que un rebautismo era necesario. El cuerpo gubernamental renombró al modo standby como &amp;#8220;sleep&amp;#8221; (dormir), para invocar el estado en que los humanos no están ni activados ni apagados. Hoy en día, una luna creciente es de facto el símbolo de estado sleep en aparatos de Estados Unidos y Europa. ¡Su poder metafórico es innegable! Viaja a Japón, supongo, y probablemente verás el botón &amp;#8220;zzz&amp;#8221; ocasional.&lt;/p&gt;
+
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;usb&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/usb.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][5]
+&lt;/figure&gt;
+
+&lt;p&gt;Creado como parte de la especificación de USB 1.0, el ícono USB fue dibujado con la intención de parecerse al Tridente de Neptuno, el poderoso Dreizack (Pero esto no significa que deberías salir a pinchar gente o intentar domesticar delfines con tu disco flash). En lugar de los triángulos puntiagudos en el extremo de la lanza de tres puntas, los promotores del USB decidieron modificar las figuras a un triángulo, un cuadrado y un círculo. Esto se hizo para simbolizar los diferentes periféricos que pueden ser acoplados usando el standard.&lt;/p&gt;
+
+&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Play&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/Play.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][6]
+&lt;/figure&gt;
+
+&lt;p&gt;Mientras que los símbolos de play/pause no son nativos de las computadoras, han hecho su trabajo con los teclados, reproductores multimedia (reales y virtuales) y todos los otros aparatos que pueden reproducir audio o video. Desafortunadamente, ni el triángulo que apunta hacia la derecha ni la doble barra de pausa parecen tener un origen definido. Su primera aparición fue como símbolos de la cinta en un magnetófono de bobina abierta a mediados de los &amp;#8217;60. En algunos casos, estaban acompañados por los símbolos (doble triángulo) rebobinar y adelantar. La dirección de la flecha de play indicaba la dirección en que la sinta se movería. Fácil.&lt;/p&gt;
+
+&lt;figure&gt;
+[&lt;img sizes=&#34;(min-width: 160px) 160px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Play&#34; src=&#34;https://elbauldelprogramador.com/img/2014/03/sbbod.jpg&#34; width=&#34;160px&#34; height=&#34;160px&#34; /&gt;][7]
+&lt;/figure&gt;
+
+&lt;p&gt;Este terror es conocido por muchos nombres: la hipnótica rueda del destino, la pizza giratoria, la ruleta de la muerte, la SBBOD: &amp;#8220;Spinning Beach Ball Of Death&amp;#8221; (la pelota playera de la muerte). Apple la llama oficialmente &amp;#8220;spinning wait cursor&amp;#8221; (el cursor de espera giratorio), pero muchos usuarios de Mac simplemente la llaman con una sola palabra. Su primera aparición fue en el OSX de Apple y sigue indicando que una aplicación no está respondiendo a los eventos del sistema. Como muchos han notado, la SBBOD es, de hecho, una evolución del cursor de espera tipo reloj-pulsera que la compañía usó al principio en las primeras versiones de Mac OS. Mientras los orígenes de su diseño permanecen en el misterio, Apple probablemente descartó el reloj porque recordaba a los usuarios el tiempo que pasaba mientras el programa permanecía perpetuamente colgado. A pesar de esto, las últimas revisiones han comprobado un sólo pensamiento: es completamente posible despreciar una bella e hipnótica rueda giratoria.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Lifehack&lt;/em&gt; »» &lt;a href=&#34;http://www.lifehack.org/articles/technology/the-origins-famous-iconic-and-frequently-used-tech-symbols.html&#34; target=&#34;_blank&#34;&gt;The Origins Of Famous, Iconic and Frequently Used Tech Symbols&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -9287,8 +9262,8 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
             
             <guid>https://elbauldelprogramador.com/los-10-artculos-ms-visitados-de-2015/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/los10articulosmasvisitados2015.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/los10articulosmasvisitados2015.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;512px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: Buffer&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/los10articulosmasvisitados2015.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/los10articulosmasvisitados2015.png&#34; title=&#34;Los 10 Artículos Más Visitados De 2015&#34; alt=&#34;Los 10 Artículos Más Visitados De 2015&#34; width=&#34;1024px&#34; height=&#34;512px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: Buffer&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Prácticamente hemos terminado este 2015. Llegadas estas fechas, me gusta acudir a las estadísticas para sacar conclusiones y ver qué artículos han gustado más. Abajo se muestra una lista con los 10 más visitados. ¿Y a tí, qué artículo del blog ha sido el que más te ha gustado?, déjanos un comentario con tu opinión.&lt;/p&gt;

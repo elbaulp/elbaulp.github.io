@@ -434,14 +434,17 @@ Matriz de adyacencias: se asocia cada fila y cada columna a cada nodo del grafo,
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</guid>
-            <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Homomorphic Encryption&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34; alt=&#34;&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;&lt;/a&gt;
-Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
+            <description>&lt;figure&gt;
+    [&lt;img sizes=&#34;(min-width: 256px) 256px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Homomorphic Encryption&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/Apps-preferences-desktop-cryptography-icon1.png&#34; alt=&#34;&#34; width=&#34;256px&#34; height=&#34;256px&#34; /&gt;][1]
+&lt;/figure&gt;
+
+&lt;p&gt;Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
 
 &lt;p&gt;Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt; (Cifrado Homomórfico) ó &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico).&lt;/p&gt;
 
 &lt;h3 id=&#34;qué-es-el-cifrado-homomórfico-ó-homomorphic-encryption&#34;&gt;¿Qué es el cifrado homomórfico ó &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;?&lt;/h3&gt;
 
-&lt;p&gt;Los chicos de &lt;a href=&#34;http://es.wikipedia.org/wiki/RSA&#34; target=&#34;_blank&#34;&gt;RSA&lt;/a&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o ****Homomorphic Encryption. ****Pero se quedó como una pregunta abierta.&lt;/p&gt;
+&lt;p&gt;Los chicos de &lt;a href=&#34;http://es.wikipedia.org/wiki/RSA&#34; target=&#34;_blank&#34;&gt;RSA&lt;/a&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;. Pero se quedó como una pregunta abierta.&lt;/p&gt;
 
 &lt;p&gt;Y hace solo tres años un estudiante de posgrado sorprendió al mundo al demostrar que este sistema es posible. Lo que este estudiante hizo fue demostrar matemáticamente que es posible realizar operaciones de cálculo estándares &amp;#8212; como sumar, multiplicar etc &amp;#8212; a datos cifrados sin la necesidad de descifrarlos previamente.&lt;/p&gt;
 
@@ -485,9 +488,9 @@ Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security 
 &lt;p&gt;Los sistemas homomórficos trabajan en estos retículos hiper-dimensionales añadiendo ruido a los nodos para deplazarlos con respecto a su posición original. Como se ha mencionado en los párrafos anteriores, el problema está en que el ruido se va acumulando, en operaciones de suma se duplica cuando hay dos sumandos, y en la multiplicación se eleva al cuadrado cuando se multiplican dos números. Con lo que el ruido se va de las manos muy rápidamente, como consecuencia se está limitado a un número determinado de operecaciones antes de que el ruido interfiera demasiado en los datos reales.&lt;/p&gt;
 
 &lt;p&gt;Un sistema &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico) no tiene esta limitación, por definición es posible realizar cualquier tipo de operación, por muy compleja que sea. Craig consiguió evitar que el ruido quedara fuera de control porque, tras realiazar un número determinado de operaciones, los datos se vuelven a cifrar (Sin descifrarlos previamente, es decir, el cifrado homomórfico realiza su propio cifrado) elimiando el ruido de modo que nunca sobrepase el sistema.
-Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno **pequeño al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
+Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno &lt;strong&gt;pequeño&lt;/strong&gt; al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
 
-&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el **sistema totalmente homomórfico **tiene un tama��o de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
+&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema **homomórfico ** a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el &lt;strong&gt;sistema totalmente homomórfico&lt;/strong&gt; tiene un tamaño de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
 
 &lt;p&gt;En resumen, es una forma completamente distinta de cifrar y tratar datos para la cual los computadores estándares actuales de 64-bits de ancho de palabra no están capacitados.&lt;/p&gt;
 
@@ -495,16 +498,16 @@ Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema
 
 &lt;p&gt;Queda así abierto un nuevo campo en la investigación criptográfica. De aquí a 20, 30 años habrá aplicaciones que funcionarán de un modo totalmente distinto al que estamos acostumbrados, y la gente se preguntará ¿No se ha hecho el cifrado siempre de esta manera?, y no será así, recordaremos lo que solíamos usar y nos daremos cuenta que era estúpido en comparación.&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
 &lt;p class=&#34;alert&#34;&gt;
-&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 376 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio
+    &lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 376 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio
 &lt;/p&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;
-&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/376&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/376&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
