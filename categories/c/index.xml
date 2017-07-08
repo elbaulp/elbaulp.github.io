@@ -3309,8 +3309,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mini-grep-en-c-busca-palabras-en-archivos/</guid>
-            <description>&lt;p&gt;Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:
-Para buscar una palabra:&lt;/p&gt;
+            <description>&lt;p&gt;Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:&lt;/p&gt;
+
+&lt;p&gt;Para buscar una palabra:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;grep palabra fichero1 &amp;lt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ficheros2...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -3320,10 +3321,10 @@ Para buscar una palabra:&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo de ejecución:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr-&amp;gt; ./grep cout max.php grep.cpp smtp.cpp
-grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     cout &amp;lt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Uso: grep &amp;lt;palabra a=&amp;quot;&lt;/span&gt;a&lt;span class=&#34;s2&#34;&gt;&amp;quot; buscar=&amp;quot;&lt;/span&gt;buscar&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;]&amp;gt;&amp;quot;&lt;/span&gt; &amp;lt; &amp;lt; endl&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;56&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     cout &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; nombre &amp;lt;&amp;lt; &amp;quot;(&amp;quot; &amp;lt;&amp;lt; n&lt;/span&gt;linea &amp;lt;&amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;) t&amp;quot;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; remove_left_white_spaces(cadena) &amp;lt;&amp;lt; endl;&lt;/span&gt;
-&lt;span class=&#34;s&#34;&gt;smtp.cpp(56)     cout &amp;lt;&amp;lt; &amp;quot;socket cre&lt;/span&gt;atedn&lt;span class=&#34;s2&#34;&gt;&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;smtp.cpp(75)    cout &amp;lt;&amp;lt; &amp;quot;&lt;/span&gt;Connectedn&lt;span class=&#34;s2&#34;&gt;&amp;quot;;&lt;/span&gt;
+grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     cout &amp;lt;&amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Uso: grep &amp;lt;palabra a buscar&amp;quot;&lt;/span&gt;&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;lt;&amp;lt; endl;&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;grep.cpp(56)     cout &amp;lt;&amp;lt; nombre &amp;lt;&amp;lt; &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;lt;&amp;lt; nlinea &amp;lt;&amp;lt; &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; t&lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;lt;&amp;lt; remove_left_white_spaces(cadena) &amp;lt;&amp;lt; endl;&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;smtp.cpp(56)     cout &amp;lt;&amp;lt; &amp;quot;&lt;/span&gt;socket created&lt;span class=&#34;s2&#34;&gt;&amp;quot;;&lt;/span&gt;
+&lt;span class=&#34;s2&#34;&gt;smtp.cpp(75)     cout &amp;lt;&amp;lt; &amp;quot;&lt;/span&gt;Connectedn&lt;span class=&#34;s2&#34;&gt;&amp;quot;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.&lt;/p&gt;
@@ -3349,7 +3350,7 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;56&lt;span class=&#34;o&#34;
 &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
-         &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Uso: grep &amp;lt;/fstream&amp;gt;&amp;lt;/string&amp;gt;&amp;lt;/iostream&amp;gt;&amp;lt;/ficheros...&amp;gt;&amp;lt;/firchero1&amp;gt;&amp;lt;/palabra&amp;gt;&amp;lt;palabra a=&amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot; buscar=&amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buscar&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;]&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Uso: grep &amp;lt;palabra a buscar&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;]&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
          &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
          &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -3387,10 +3388,6 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;56&lt;span class=&#34;o&#34;
                &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;(&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlinea&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;) t&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cadena&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;/ficheros...&gt;&lt;/firchero1&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/palabra&gt;&lt;/p&gt;
 </description>
         </item>
         

@@ -829,7 +829,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
             
             <guid>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34; alt=&#34;Mini Curso de LaTeX - Introducción&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;ul&gt;
@@ -838,7 +838,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h2&gt;
+&lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
 
 &lt;p&gt;¡Hola &lt;em&gt;internet&lt;/em&gt;!&lt;/p&gt;
 
@@ -850,7 +850,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 
 &lt;p&gt;Vamos a imaginar que tenemos que hacer una pequeña documentación que acompañe a un programa muy simple que hemos hecho para unas prácticas.&lt;/p&gt;
 
-&lt;h2 id=&#34;cabecera-de-un-documento&#34;&gt;Cabecera de un documento&lt;/h2&gt;
+&lt;h1 id=&#34;cabecera-de-un-documento&#34;&gt;Cabecera de un documento&lt;/h1&gt;
 
 &lt;p&gt;Lo primero que debemos hacer en un documento de LaTeX es poner una cabecera, esto es, establecer la configuración del documento. La primera línea de cualquier documento LaTeX sería la siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;clase&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -875,7 +875,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 
 &lt;p&gt;El siguiente paso, es especificarle a LaTeX los paquetes que necesitaremos usar en nuestro documento, podemos ir añadiéndolos conforme los vayamos necesitando a la hora de hacer el documento, pero vamos a añadir de primeras los más básicos. La sintáxis de uso de paquetes es:&lt;/p&gt;
 
-&lt;h3 id=&#34;paquetes&#34;&gt;Paquetes&lt;/h3&gt;
+&lt;h2 id=&#34;paquetes&#34;&gt;Paquetes&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;paquete&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -887,7 +887,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para poder añadirle a enumerate un argumento con el tipo de &amp;quot;contador&amp;quot; que queremos&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;comienzo-del-documento&#34;&gt;Comienzo del documento&lt;/h2&gt;
+&lt;h1 id=&#34;comienzo-del-documento&#34;&gt;Comienzo del documento&lt;/h1&gt;
 
 &lt;p&gt;Tras añadir los paquetes podríamos añadir otras opciones al documento tales como el encabezado, el pie de página&amp;#8230; Pero no nos vamos a entretener ahora en eso. Vamos a empezar nuestro documento con el comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -916,7 +916,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 &lt;span class=&#34;k&#34;&gt;\tableofcontents&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% nos crea un indice con enlaces a las diferentes secciones y subsecciones&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;secciones&#34;&gt;Secciones&lt;/h3&gt;
+&lt;h2 id=&#34;secciones&#34;&gt;Secciones&lt;/h2&gt;
 
 &lt;p&gt;Y ahora vamos a empezar en la primera sección, para indicarle a LaTeX que vamos a empezar una sección lo hacemos de la siguiente manera:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Descripción del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -934,7 +934,7 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
 
 &lt;p&gt;Con este comando tendríamos una subsección en Descripción del programa llamada Funcionamiento general.&lt;/p&gt;
 
-&lt;h3 id=&#34;formateo-del-texto&#34;&gt;Formateo del texto&lt;/h3&gt;
+&lt;h2 id=&#34;formateo-del-texto&#34;&gt;Formateo del texto&lt;/h2&gt;
 
 &lt;p&gt;Ahora tenemos que empezar a escribir normalmente, cuando queramos cambiar de párrafo hacemos un doble salto de línea, si queremos hacer un salto de línea lo hacemos con una doble barra y, si queremos poner nuestro texto en negrita, en cursiva o con subrayado lo haríamos con los siguientes comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Esto es un texto en negrita&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
@@ -957,7 +957,7 @@ en &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;amsmath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% paquete basico de matematicas&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;tablas-en-latex&#34;&gt;Tablas en Latex&lt;/h3&gt;
+&lt;h2 id=&#34;tablas-en-latex&#34;&gt;Tablas en Latex&lt;/h2&gt;
 
 &lt;p&gt;Y para hacer una tabla usamos la orden &lt;code&gt;tabular&lt;/code&gt; (si escribimos &lt;code&gt;tab&lt;/code&gt; en Sublime Text y le damos a tabulación nos completa la sintaxis) cuya sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
