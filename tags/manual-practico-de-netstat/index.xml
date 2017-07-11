@@ -26,13 +26,13 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;netstat-es-un-paquete-de-herramienas-de-red&#34;&gt;Netstat es un paquete de herramienas de red&lt;/h2&gt;
+&lt;h1 id=&#34;netstat-es-un-paquete-de-herramienas-de-red&#34;&gt;Netstat es un paquete de herramienas de red&lt;/h1&gt;
 
 &lt;p&gt;El comando &lt;em&gt;netstat&lt;/em&gt; sirve para varias cosas, como mostrar estadísticas de la red, imprimir la tabla de rutas, mostrar conexiones activas y mucho más. Para cada una de las opciones de uso menciondas existe un comando específico que realiza la misma tarea. Pero netstat los abarca todos bajo un mismo comando, y además es multiplataforma. Lo cual quiere decir que podremos usarlo tanto en Windows, Linux o Mac.&lt;/p&gt;
 
 &lt;p&gt;Tras esta pequeña introducción, veamos algunas salidas de este comando:&lt;/p&gt;
 
-&lt;h2 id=&#34;mostrar-las-conexiones-de-red&#34;&gt;Mostrar las conexiones de red&lt;/h2&gt;
+&lt;h1 id=&#34;mostrar-las-conexiones-de-red&#34;&gt;Mostrar las conexiones de red&lt;/h1&gt;
 
 &lt;p&gt;Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo netstat -apA inet
@@ -93,7 +93,7 @@ udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Proto&lt;/strong&gt;: Indica el protocolo usado por el socket, puede ser TCP o UDP (Son protocolos de red). TCP se usa para obtener conexiones en las que se asegura que todos los paquetes llegan a su destino, en el orden correcto. El problema es que se vuelve muy lento si la conexión es mala. UDP es mucho más rápido, pero puede perder paquetes o entregarlos en un orden incorrecto. En resumen, TCP se usa para navegar por internet y descargar ficheros y UDP se usa en videos streaming y juegos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Recv-Q y Send-Q&lt;/strong&gt;: Indican la cantidad de bytes que hay en cola para dicho socket. En Recv-Q datos esperando a ser leidos y en Send-Q a ser enviados. Normalmente ambas columnas han de estar a 0. De lo contrario puede que exista algún problema. En el ejemplo hay dos sockets con valores distintos a cero, los miraremos más adelante.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Local Address y Foreign Address&lt;/strong&gt;: A qué host y puerto está conectado cada socket. La dirección local siempre será el ordenador en el que se está ejecutando netstat, en este caso se llama * hkr-pc*. Foreign Address puede ser cualquier otro pc en internet, o la misma máquina local. Aunque parezca algo extraño, en ocasiones es útil que en ambas columnas aparezca la máquina local, lo cual indica que dicha máquina se está comunicando con ella misma a través de la red.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local Address y Foreign Address&lt;/strong&gt;: A qué host y puerto está conectado cada socket. La dirección local siempre será el ordenador en el que se está ejecutando netstat, en este caso se llama &lt;em&gt;hkr-pc&lt;/em&gt;. Foreign Address puede ser cualquier otro pc en internet, o la misma máquina local. Aunque parezca algo extraño, en ocasiones es útil que en ambas columnas aparezca la máquina local, lo cual indica que dicha máquina se está comunicando con ella misma a través de la red.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;State&lt;/strong&gt;: Muestra el estado del socket. TCP dispone de una serie de estados, algunos de ellos son &lt;em&gt;LISTEN&lt;/em&gt; (Esperando a que otra máquina establezca conexión),&lt;em&gt;ESTABLISHED&lt;/em&gt; (Listo para comunicarse). En la lista aparecen varios más, como &lt;em&gt;CLOSE WAIT&lt;/em&gt;, este estado indica que la máquina remota cerró la conexión, pero el programa local no ha seguido la petición y permanece abierto. Normalmente, un estado como este y cantidades distintas a cero en las columnas &lt;strong&gt;Recv-Q&lt;/strong&gt; y &lt;strong&gt;Send-Q&lt;/strong&gt; suelen ir de la mano. Otro estado que aparece en el ejemplo es &lt;em&gt;TIME WAIT&lt;/em&gt;, puedes consultar una lista completa de los estados TCP en la referencias.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;PID/Program name&lt;/strong&gt;: El indicador de proceso del socket en ejecución y el nombre del programa ejecutando dicho proceso.&lt;/li&gt;
 &lt;/ul&gt;
@@ -132,7 +132,7 @@ tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 
 &lt;p&gt;Netstat también sirve para mostrar la tabla de rutas (&lt;strong&gt;Routing Table&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;h2 id=&#34;imprimiendo-la-tabla-de-rutas-routing-table&#34;&gt;Imprimiendo la tabla de rutas (Routing Table)&lt;/h2&gt;
+&lt;h1 id=&#34;imprimiendo-la-tabla-de-rutas-routing-table&#34;&gt;Imprimiendo la tabla de rutas (Routing Table)&lt;/h1&gt;
 
 &lt;p&gt;La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ netstat -r
@@ -156,7 +156,7 @@ default         10.61.29.89     0.0.0.0         UG        &lt;span class=&#34;m&
 &lt;li&gt;&lt;strong&gt;iface&lt;/strong&gt;: Establece la interfaz de red a usar para enviar los paquetes.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;mostrar-estadísticas-e-interfaces&#34;&gt;Mostrar estadísticas e interfaces&lt;/h2&gt;
+&lt;h1 id=&#34;mostrar-estadísticas-e-interfaces&#34;&gt;Mostrar estadísticas e interfaces&lt;/h1&gt;
 
 &lt;p&gt;También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ netstat -i
@@ -183,7 +183,7 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 
 &lt;p&gt;Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la &lt;a href=&#34;http://linuxacademy.com&#34; target=&#34;_blank&#34;&gt;Linux Academy&lt;/a&gt;, perteneciente al autor cuyo artículo he traducido.&lt;/p&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;a href=&#34;http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/&#34; target=&#34;_blank&#34;&gt;pinehead.tv&lt;/a&gt;&lt;/li&gt;
