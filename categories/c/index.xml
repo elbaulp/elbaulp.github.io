@@ -3772,11 +3772,7 @@ Contenido del fichero
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/ocultarrevelar-informacion-dentro-de/</guid>
-            <description>&lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://lh4.ggpht.com/_IlK2pNFFgGM/TROxbBd0LMI/AAAAAAAAAOA/YQiMnAyp4EQ/text-x-c%2B%2Bsrc.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;El jueves pasado me mandaron hacer una práctica en MP (Metodología de la Programación) que consiste en la inserción y extracción de un mensaje &amp;#8216;oculto&amp;#8217; en una imagen.&lt;/p&gt;
+            <description>&lt;p&gt;El jueves pasado me mandaron hacer una práctica en MP (Metodología de la Programación) que consiste en la inserción y extracción de un mensaje &amp;#8216;oculto&amp;#8217; en una imagen.&lt;/p&gt;
 
 &lt;p&gt;El mensaje se oculta modificando el valor de cada pixel para que contenga parte de la información a ocultar. El tipo de imágenes que se usan son &lt;strong&gt;pgm y ppm&lt;/strong&gt;, en blanco y negro y a color respectivamente. Voy a explicar en detalle en qué consiste el programa:&lt;/p&gt;
 
@@ -3786,7 +3782,7 @@ Contenido del fichero
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;imágenes-pgm-portable-grey-map-file-format&#34;&gt;Imágenes PGM (Portable Grey Map file format)&lt;/h3&gt;
+&lt;h1 id=&#34;imágenes-pgm-portable-grey-map-file-format&#34;&gt;Imágenes PGM (Portable Grey Map file format)&lt;/h1&gt;
 
 &lt;p&gt;Para representar las imágenes en blanco y negro podemos usar un rango de valores para indicar todas las tonalidades de gris que van desde el negro hasta el blanco. En nuestro caso, las imágenes almacenarán en cada píxel un valor de gris desde el 0 al 255. Por ejemplo, un píxel con valor 128 tendrá un gris intermedio entre blanco y negro.&lt;/p&gt;
 
@@ -3796,10 +3792,10 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;En la siguiente figura se muestra un ejemplo de imagen 256&amp;#215;256 de niveles de gris. Observe el zoom de una región 10&amp;#215;10 para apreciar con detalle los grises que la componen:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;215&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;215&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-HM2vxizK_lg/T2Ynr-0h-3I/AAAAAAAACPM/uc-h3WbSs6Y/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A21%253A10%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;imágenes-ppm-portable-pix-map-file-format&#34;&gt;Imágenes PPM (Portable Pix Map file format)&lt;/h3&gt;
+&lt;h1 id=&#34;imágenes-ppm-portable-pix-map-file-format&#34;&gt;Imágenes PPM (Portable Pix Map file format)&lt;/h1&gt;
 
 &lt;p&gt;Para representar un color de forma numérica, no es fácil usar un único valor, sino que se deben incluir tres números. Existen múltiples propuestas sobre el rango de valores y el significado de cada una de esas componentes, generalmente adaptadas a diferentes objetivos y necesidades.&lt;/p&gt;
 
@@ -3809,14 +3805,14 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 
 &lt;p&gt;En el caso de este tipo de imágenes, en lugar de 1 byte por pixel, se usan 3, uno por cada componente de color.&lt;/p&gt;
 
-&lt;h3 id=&#34;ocultar-revelar-un-mensaje&#34;&gt;Ocultar/Revelar un mensaje&lt;/h3&gt;
+&lt;h1 id=&#34;ocultar-revelar-un-mensaje&#34;&gt;Ocultar/Revelar un mensaje&lt;/h1&gt;
 
 &lt;p&gt;Si tenemos en cuenta que los valores que se almacenan en cada píxel corresponden a un valor en el rango [0,255] y que, por tanto, el contenido de una imagen no es más que una secuencia de valores consecutivos en este rango. Si consideramos que el ojo humano no es capaz de detectar cambios muy pequeños en dichos valores, podemos insertar el mensaje deseado modificando ligeramente cada uno de ellos. Concretamente, si cambiamos el valor del bit menos significativo, habremos afectado al valor del píxel, como mucho, en una unidad de entre las 255. La imagen la veremos, por tanto, prácticamente igual.&lt;/p&gt;
 
 &lt;p&gt;Ahora que disponemos del bit menos significativo para cambiarlo como deseemos, podemos usar todos los bits menos significativos de la imagen para codificar el mensaje. Por otro lado, el mensaje será una cadena-C, es decir, una secuencia de valores de tipo char que terminan en un cero. En este caso, igualmente, tenemos una secuencia de bytes (8 bits) que queremos insertar en la imagen. Dado que podemos modificar los bits menos significativos de la imagen, podemos “repartir” cada carácter del mensaje en 8 píxeles consecutivos. En la siguiente figura mostramos un esquema que refleja esta idea:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;125&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;125&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-nwIaqapwV4o/T2YqBj4r0LI/AAAAAAAACPY/r8DKpFArxa8/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A31%253A18%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Donde los valores de arriba corresponden a los píxeles de la imágen y los de abajo al mensaje.&lt;/p&gt;
@@ -3824,13 +3820,13 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;Hasta aquí el planteamiento del problema. Para resolverlo va a ser necesario usar operadores a nivel de bits, que en C++ son los siguientes:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;273&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;273&#34; width=&#34;400&#34; src=&#34;https://2.bp.blogspot.com/-WPpC6XNKFfE/T2Yr3ccQAAI/AAAAAAAACPo/n7ddoxUaC90/s400/Screenshot%2B-%2B03182012%2B-%2B07%253A39%253A03%2BPM.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Siento no poder poner algún trozo de código de ejemplo para que lo veáis, pero debido a que son unas prácticas evaluables, no puedo arriesgarme a que algún compañero copie el código. (Que ya me pasó una vez y me suspendieron). Sin embargo os dejo unas capturas del programa:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;400&#34; src=&#34;https://1.bp.blogspot.com/-sXM7u0P77Y8/T2YuiaI_NuI/AAAAAAAACP0/whBXKD_rcPI/s400/ejemplo.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Como podéis comprobar, Lenna aparentemente no ha cambiado su aspecto :D. En el caso de la imagen a color pasaría exactamente lo mismo.&lt;/p&gt;
@@ -3847,7 +3843,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;p&gt;El resultado es:&lt;/p&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;175&#34; width=&#34;320&#34; src=&#34;https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;175&#34; width=&#34;320&#34; src=&#34;https://3.bp.blogspot.com/-_DE2i5TQNZ4/T2Ywb7jrYmI/AAAAAAAACQA/149R0QIZXiQ/s320/invertidas.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Si por ejemplo desplazamos todos los bits a la derecha una posición, iremos haciendo la imagen más oscura:&lt;/p&gt;
@@ -3855,15 +3851,15 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;320&#34; src=&#34;https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;316&#34; width=&#34;320&#34; src=&#34;https://2.bp.blogspot.com/-7ZGLJJVhVgE/T2YxwfFUPwI/AAAAAAAACQM/Y0GbfsbP5QQ/s320/oscura.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Por último, si deplazamos todos los bits la izquierda una posición, es decir, pasa lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;figure&gt;
-   &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;177&#34; width=&#34;320&#34; src=&#34;https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;177&#34; width=&#34;320&#34; src=&#34;https://1.bp.blogspot.com/-foHh4zTqIws/T2YyemfSLUI/AAAAAAAACQY/AEZr2nNe41U/s320/clara.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Eso es todo, Saludos!&lt;/p&gt;</description>
@@ -3877,16 +3873,11 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
             <guid>https://elbauldelprogramador.com/opengl-practicas-informatica-grafica-modelos-jerarquicos-un-robot/</guid>
             <description>&lt;p&gt;El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad &lt;a href=&#34;http://www.csc.villanova.edu/~mdamian/Past/graphicsF10/code/robotSkeleton.cpp&#34;&gt;http://www.csc.villanova.edu&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Aquí dejo el código y un vídeo demostrativo, también está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_ig_practicas/tree/master/P3&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;ZBX2a1c3KCE&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+&lt;p&gt;Aquí dejo el código y un &lt;a href=&#34;https://www.youtube.com/watch?v=ZBX2a1c3KCE&#34;&gt;vídeo demostrativo&lt;/a&gt;, también está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_ig_practicas/tree/master/P3&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;código-fuente&#34;&gt;Código Fuente&lt;/h2&gt;
+&lt;h1 id=&#34;código-fuente&#34;&gt;Código Fuente&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Program: robotSkeleton.cpp (Chapter 10)&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; *&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; * Draw a Hierarchical Robot using cylinders (quadrics).&lt;/span&gt;
@@ -3900,10 +3891,10 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 &lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
 
 &lt;span class=&#34;cp&#34;&gt;#ifdef __APPLE__&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;glut&amp;gt;glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;GLUT/glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#else&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glut&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;/&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;gl&amp;gt;glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//  #include &amp;lt;windows.h&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;GL/glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#endif&lt;/span&gt;
 
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;math.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -3914,10 +3905,10 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 
 &lt;span class=&#34;n&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Variables&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spped&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;translation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zoom&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;*/&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define DEGREES_PER_PIXEL  0.6f&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define UNITS_PER_PIXEL        0.1f&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define ZOOM_FACTOR        0.04f&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/* Variables to control the spped of rotation/translation/zoom */&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define DEGREES_PER_PIXEL	0.6f&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define UNITS_PER_PIXEL		0.1f&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define ZOOM_FACTOR		0.04f&lt;/span&gt;
 
 &lt;span class=&#34;cm&#34;&gt;/* Enumeration of body parts */&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -4445,7 +4436,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
 
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;srand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;glutInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;glutInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutInitDisplayMode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GLUT_DOUBLE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GLUT_RGB&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GLUT_DEPTH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutInitWindowSize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutCreateWindow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Hierarchical Robot&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -4464,9 +4455,7 @@ necesitaremos ancho⋅alto bytes.&lt;/p&gt;
   &lt;span class=&#34;cm&#34;&gt;/* start event processing */&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutMainLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;/windows.h&gt;&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
         <item>

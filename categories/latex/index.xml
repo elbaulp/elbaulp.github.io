@@ -1256,7 +1256,7 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
             <guid>https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/</guid>
             <description>&lt;p&gt;Si trabajas habitualmente con &lt;a href=&#34;https://elbauldelprogramador.com/category/latex/&#34; title=&#34;Tutoriales sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt;, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabaja limpio.&lt;/p&gt;
 
-&lt;h2 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h2&gt;
+&lt;h1 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -1282,7 +1282,7 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ …
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;mediante-un-script&#34;&gt;Mediante un script&lt;/h2&gt;
+&lt;h1 id=&#34;mediante-un-script&#34;&gt;Mediante un script&lt;/h1&gt;
 
 &lt;p&gt;Este script lo encontré en el blog de &lt;a href=&#34;http://texblog.org&#34; target=&#34;_blank&#34; title=&#34;TexBlog&#34;&gt;Tom&lt;/a&gt;, en su artículo &lt;a href=&#34;http://texblog.org/2015/08/20/hiding-latex-metafiles-from-project-directory/&#34; target=&#34;_blank&#34; title=&#34;Hiding LaTeX metafiles from project directory&#34;&gt;Hiding LaTeX metafiles from project directory&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
@@ -1304,7 +1304,7 @@ pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles 
 ln -s metafiles/main.pdf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h2&gt;
+&lt;h1 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h1&gt;
 
 &lt;p&gt;Para aportar algo al artículo de &lt;em&gt;Tom&lt;/em&gt;, miré la documentación de LatexMK, &lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/&#34; title=&#34;Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos&#34;&gt;comando que ya hemos visto en este blog&lt;/a&gt;, y tiene la opción &lt;code&gt;-output-directory&lt;/code&gt; que permite especificar donde se guardaran todos los metaficheros, su uso es simple:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;latexmk -shell-escape -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main.tex

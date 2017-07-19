@@ -24,16 +24,11 @@
             <guid>https://elbauldelprogramador.com/opengl-practicas-informatica-grafica-modelos-jerarquicos-un-robot/</guid>
             <description>&lt;p&gt;El curso pasado hice unas prácticas Informática Gráfica (IG) en la que había que implementar algún objeto con modelos jerárquicos. La práctica se basa en una plantilla que encontré de la universidad &lt;a href=&#34;http://www.csc.villanova.edu/~mdamian/Past/graphicsF10/code/robotSkeleton.cpp&#34;&gt;http://www.csc.villanova.edu&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Aquí dejo el código y un vídeo demostrativo, también está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_ig_practicas/tree/master/P3&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;ZBX2a1c3KCE&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
+&lt;p&gt;Aquí dejo el código y un &lt;a href=&#34;https://www.youtube.com/watch?v=ZBX2a1c3KCE&#34;&gt;vídeo demostrativo&lt;/a&gt;, también está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_ig_practicas/tree/master/P3&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;código-fuente&#34;&gt;Código Fuente&lt;/h2&gt;
+&lt;h1 id=&#34;código-fuente&#34;&gt;Código Fuente&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Program: robotSkeleton.cpp (Chapter 10)&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; *&lt;/span&gt;
 &lt;span class=&#34;cm&#34;&gt; * Draw a Hierarchical Robot using cylinders (quadrics).&lt;/span&gt;
@@ -47,10 +42,10 @@
 &lt;span class=&#34;cm&#34;&gt; */&lt;/span&gt;
 
 &lt;span class=&#34;cp&#34;&gt;#ifdef __APPLE__&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;glut&amp;gt;glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;GLUT/glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#else&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glut&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;/&lt;/span&gt;  &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;windows&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;gl&amp;gt;glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//  #include &amp;lt;windows.h&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;GL/glut.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#endif&lt;/span&gt;
 
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;math.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -61,10 +56,10 @@
 
 &lt;span class=&#34;n&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Variables&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spped&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rotation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;translation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zoom&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;*/&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define DEGREES_PER_PIXEL  0.6f&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define UNITS_PER_PIXEL        0.1f&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;#define ZOOM_FACTOR        0.04f&lt;/span&gt;
+&lt;span class=&#34;cm&#34;&gt;/* Variables to control the spped of rotation/translation/zoom */&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define DEGREES_PER_PIXEL	0.6f&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define UNITS_PER_PIXEL		0.1f&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;#define ZOOM_FACTOR		0.04f&lt;/span&gt;
 
 &lt;span class=&#34;cm&#34;&gt;/* Enumeration of body parts */&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -592,7 +587,7 @@
 
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;srand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;glutInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;glutInit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutInitDisplayMode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GLUT_DOUBLE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GLUT_RGB&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GLUT_DEPTH&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutInitWindowSize&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutCreateWindow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Hierarchical Robot&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -611,9 +606,7 @@
   &lt;span class=&#34;cm&#34;&gt;/* start event processing */&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;glutMainLoop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;/windows.h&gt;&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>
