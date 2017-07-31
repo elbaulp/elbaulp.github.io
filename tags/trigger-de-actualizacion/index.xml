@@ -22,7 +22,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</guid>
-            <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Los disparadores (o triggers) son &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloques de código PL/SQL&lt;/a&gt; asociados a una tabla y que se ejecutan automáticamente como reacción a una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;operación DML&lt;/a&gt; específica (&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt; o &lt;code&gt;DELETE&lt;/code&gt;) sobre dicha tabla.&lt;/p&gt;
 
@@ -58,7 +58,7 @@
 &lt;li&gt;No se llame a procedimientos que utilicen sentencias de control de transacciones&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;predicados-condicionales&#34;&gt;Predicados condicionales&lt;/h2&gt;
+&lt;h1 id=&#34;predicados-condicionales&#34;&gt;Predicados condicionales&lt;/h1&gt;
 
 &lt;p&gt;Cuando se crea un trigger para más de una operación DML, se puede utilizar un predicado condicional en las sentencias que componen el trigger que indique que tipo de operación o sentencia ha disparado el trigger. Estos predicados condicionales son los siguientes:&lt;/p&gt;
 
@@ -93,7 +93,7 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;tipos-de-triggers&#34;&gt;Tipos de triggers&lt;/h2&gt;
+&lt;h1 id=&#34;tipos-de-triggers&#34;&gt;Tipos de triggers&lt;/h1&gt;
 
 &lt;p&gt;Los triggers pueden definirse para las operaciones &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; o Update, y pueden dispararse antes o después de la operación. Finalmente, el nivel de los disparadores puede ser la fila o registro o la orden.&lt;/p&gt;
 
@@ -133,7 +133,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;orden-de-ejecución-de-los-triggers&#34;&gt;Orden de ejecución de los triggers&lt;/h2&gt;
+&lt;h1 id=&#34;orden-de-ejecución-de-los-triggers&#34;&gt;Orden de ejecución de los triggers&lt;/h1&gt;
 
 &lt;p&gt;Una misma tabla puede tener varios triggers asociados. En tal caso es necesario conocer el orden en el que se van a ejecutar.&lt;/p&gt;
 
@@ -148,7 +148,7 @@
 &lt;li&gt;Se ejecuta, si existe, el disparador de tipo &lt;code&gt;AFTER&lt;/code&gt; con nivel de orden.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;restricciones-de-los-triggers&#34;&gt;Restricciones de los Triggers.&lt;/h2&gt;
+&lt;h1 id=&#34;restricciones-de-los-triggers&#34;&gt;Restricciones de los Triggers.&lt;/h1&gt;
 
 &lt;p&gt;El cuerpo de un disparador es un &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloque PL/SQL&lt;/a&gt;. Cualquier orden que sea legal en un bloque PL/SQL , es legal en el cuerpo de un disparador, con las siguientes restricciones:&lt;/p&gt;
 
@@ -158,7 +158,7 @@
 &lt;li&gt;El disparador no puede declarar &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;variables&lt;/a&gt; de tipo &lt;code&gt;LONG&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;utilización-de-old-y-new-en-los-disparadores-con-nivel-de-fila&#34;&gt;Utilización de :old y :new en los disparadores con nivel de fila.&lt;/h2&gt;
+&lt;h1 id=&#34;utilización-de-old-y-new-en-los-disparadores-con-nivel-de-fila&#34;&gt;Utilización de :old y :new en los disparadores con nivel de fila.&lt;/h1&gt;
 
 &lt;p&gt;Un disparador con nivel de fila se ejecuta una vez por cada fila procesada por la orden que provoca el disparo. Dentro del disparador, puede accederse a la fila que está siendo actualmente
 procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt;:old&lt;/code&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;code&gt;:new&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -225,7 +225,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;span class=&#34;cm&#34;&gt;END;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;la-cláusula-when&#34;&gt;La cláusula WHEN&lt;/h2&gt;
+&lt;h1 id=&#34;la-cláusula-when&#34;&gt;La cláusula WHEN&lt;/h1&gt;
 
 &lt;p&gt;La cláusula &lt;code&gt;WHEN&lt;/code&gt; sólo es válida para disparadores con nivel de fila. Si está presente, el cuerpo del disparador sólo se ejecutará para las filas que cumplan la condición especificada en la cláusula.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TRIGGER&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tr1&lt;/span&gt;
@@ -255,13 +255,13 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;raise_application_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;se&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;puede&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;modificar&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;el&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cliente&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;tabla-mutando&#34;&gt;Tabla Mutando&lt;/h2&gt;
+&lt;h1 id=&#34;tabla-mutando&#34;&gt;Tabla Mutando&lt;/h1&gt;
 
 &lt;p&gt;Cuando se realiza un trigger sobre una tabla, dicha tabla se dice que está en &lt;strong&gt;“proceso de mutación”&lt;/strong&gt;, es decir, que se están realizando cambios sobre ella y que por tanto &lt;strong&gt;dentro del trigger no se debe hacer ningún tipo de acceso a dicha tabla con operaciones DML (&lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; o &lt;code&gt;UPDATE&lt;/code&gt;).&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Si queremos conocer los valores del registro de la tabla sobre la que se ha disparado el trigger, este último debe estar declarado de forma &lt;code&gt;FOR EACH ROW&lt;/code&gt; y acceder a sus valores mediante las pseudocolumnas :NEW y :OLD.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

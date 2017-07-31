@@ -2993,7 +2993,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 &lt;li&gt;Cerrar el cursor&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;1-declarar-el-cursor&#34;&gt;1. Declarar el cursor&lt;/h2&gt;
+&lt;h1 id=&#34;1-declarar-el-cursor&#34;&gt;1. Declarar el cursor&lt;/h1&gt;
 
 &lt;p&gt;Al igual que cualquier otra variable, el cursor se declara en la sección &lt;code&gt;DECLARE&lt;/code&gt;. Se define el nombre que tendrá el cursor y qué consulta &lt;code&gt;SELECT&lt;/code&gt; ejecutará. No es más que una declaración. La sintaxis básica es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CURSOR&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_cursor&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;instrucci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_SELECT&lt;/span&gt;
@@ -3004,7 +3004,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 
 &lt;p&gt;Antes de utilizar un cursor se debe abrir. En ese momento se ejecuta la sentencia &lt;code&gt;SELECT&lt;/code&gt; asociada y se almacena el resultado en el área de contexto (estructura interna de memoria que maneja el cursor). Un puntero señala a la primera fila&lt;/p&gt;
 
-&lt;h2 id=&#34;2-abrir-el-cursor&#34;&gt;2. Abrir el cursor&lt;/h2&gt;
+&lt;h1 id=&#34;2-abrir-el-cursor&#34;&gt;2. Abrir el cursor&lt;/h1&gt;
 
 &lt;p&gt;Al abrir el cursor se ejecuta la sentencia &lt;code&gt;SELECT&lt;/code&gt; asociada y cuyo resultado se guarda en el servidor en un área de memoria interna (tablas temporales) de las cuales se va retornando cada una de las filas según se va pidiendo desde el cliente. Al abrir un cursor, un puntero señalará al primer registro.&lt;/p&gt;
 
@@ -3015,7 +3015,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 
 &lt;p&gt;Una vez que el cursor está abierto, se podrá empezar a pedir los resultados al servidor.&lt;/p&gt;
 
-&lt;h2 id=&#34;3-recuperar-cada-una-de-sus-filas&#34;&gt;3.Recuperar cada una de sus filas.&lt;/h2&gt;
+&lt;h1 id=&#34;3-recuperar-cada-una-de-sus-filas&#34;&gt;3.Recuperar cada una de sus filas.&lt;/h1&gt;
 
 &lt;p&gt;Una vez que el cursor está abierto en el servidor se podrá hacer la petición de recuperación de fila. En cada recuperación solo se accederá a una &lt;strong&gt;única&lt;/strong&gt; fila. La sintaxis de recuperación de fila de un cursor es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FETCH&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_cursor&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variables&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -3024,7 +3024,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 &lt;p&gt;Podremos recuperar filas mientras la consulta &lt;code&gt;SELECT&lt;/code&gt; tenga filas pendientes de recuperar. Para saber cuándo no hay más filas podemos consultar los siguientes atributos de un cursor:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;74&#34; width=&#34;584&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 584px) 584px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;74&#34; width=&#34;584&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TUhwFtXwPiI/AAAAAAAAAT4/hCYNcjrUIuA/s1600/image.7HS4PV&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Al recuperar un registro, la información recuperada se guarda en una o varias variables. Si sólo se hace referencia a una variable, ésta se puede declarar con &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;&lt;code&gt;%ROWTYPE&lt;/code&gt;&lt;/a&gt;. Si se utiliza una lista de variables, cada variable debe coincidir en tipo y orden con cada una de las columnas de la sentencia &lt;code&gt;SELECT&lt;/code&gt;.&lt;/p&gt;
@@ -3050,7 +3050,7 @@ Hay que tener en mucho cuidado con la restricción de ON DELETE CASCADE.&lt;/p&g
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LOOP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;4-cerrar-el-cursor&#34;&gt;4. Cerrar el cursor&lt;/h2&gt;
+&lt;h1 id=&#34;4-cerrar-el-cursor&#34;&gt;4. Cerrar el cursor&lt;/h1&gt;
 
 &lt;p&gt;Una vez que se han recuperado todas las filas del cursor, hay que cerrarlo para que se liberen de la memoria del servidor los objetos temporales creados. Si no cerrásemos el cursor, la tabla
 temporal quedaría en el servidor almacenada con el nombre dado al cursor y la siguiente vez ejecutásemos ese bloque de código, nos daría la excepción &lt;code&gt;CURSOR_ALREADY_OPEN&lt;/code&gt; (cursor ya abierto) cuando intentásemos abrir el cursor. Para cerrar el cursor se utiliza la siguiente sintaxis:&lt;/p&gt;
@@ -3066,7 +3066,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;li&gt;El nombre del cursor es un identificador, no una variable. Se utiliza para identificar la consulta, por eso no se puede utilizar en expresiones.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;atributos-en-cursores-implícitos&#34;&gt;Atributos en cursores implícitos&lt;/h2&gt;
+&lt;h1 id=&#34;atributos-en-cursores-implícitos&#34;&gt;Atributos en cursores implícitos&lt;/h1&gt;
 
 &lt;p&gt;Los cursores implícitos no se pueden manipular por el usuario, pero Oracle sí permite el uso de sus atributos. Las sentencia a través de las que podemos obtener información de estos atributos son: &lt;code&gt;SELECT ... INTO, [INSERT, UPDATE, DELETE&lt;/code&gt;]&lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;3&lt;/a&gt;.&lt;/p&gt;
 
@@ -3121,7 +3121,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;cursores-parametrizados&#34;&gt;Cursores Parametrizados&lt;/h2&gt;
+&lt;h1 id=&#34;cursores-parametrizados&#34;&gt;Cursores Parametrizados&lt;/h1&gt;
 
 &lt;p&gt;Los cursores son aquellos que permiten utilizar la orden OPEN para pasarle al cursor el valor de uno o varios de sus parámetros.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;DECLARE&lt;/span&gt;
@@ -3140,7 +3140,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;cursores-de-actualización&#34;&gt;Cursores de actualización&lt;/h2&gt;
+&lt;h1 id=&#34;cursores-de-actualización&#34;&gt;Cursores de actualización&lt;/h1&gt;
 
 &lt;p&gt;Los cursores de actualización se declaran igual que los cursores explícitos, añadiendo &lt;code&gt;FOR UPDATE&lt;/code&gt; al final de la sentencia &lt;code&gt;SELECT&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CURSOR&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_cursor&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IS&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;instrucci&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n_SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FOR&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;UPDATE&lt;/span&gt;
@@ -3173,7 +3173,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-procedimientos-y-funciones-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;PL/SQL - Procedimientos y Funciones&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-procedimientos-y-funciones-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/&#34;&gt;PL/SQL - Procedimientos y Funciones&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3204,7 +3204,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xNumFac&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FACTURAS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;atributos-type-y-rowtype&#34;&gt;Atributos %TYPE y %ROWTYPE.&lt;/h2&gt;
+&lt;h1 id=&#34;atributos-type-y-rowtype&#34;&gt;Atributos %TYPE y %ROWTYPE.&lt;/h1&gt;
 
 &lt;p&gt;Se puede declarar el tipo de una variable tomándolo de otro identificador, usando el atributo &lt;code&gt;%TYPE&lt;/code&gt; y se puede declarar el tipo de una variable también cuando es un tipo estructurado con el atributo &lt;code&gt;%ROWTYPE&lt;/code&gt;. Esto es particularmente útil cuando una variable va a tomar valores de una columna de una tabla. Declarar variables con el atributo &lt;code&gt;%TYPE&lt;/code&gt; tiene dos ventajas. Primero, no necesitamos conocer el tipo exacto de la columna de la tabla. Segundo, si cambiamos la definición y/o tipo de la columna de la tabla, el tipo de la variable cambia automáticamente en tiempo de ejecución.&lt;/p&gt;
 
@@ -3220,7 +3220,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 
 &lt;p&gt;Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo podremos acceder a los objetos del usuario donde estemos conectados y a los que ese usuario pueda acceder porque le hayan otorgado permisos.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-estructuras-básicas-de-control-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/&#34;&gt;PL/SQL - Estructuras básicas de control&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-estructuras-básicas-de-control-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/&#34;&gt;PL/SQL - Estructuras básicas de control&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3229,7 +3229,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/plsql-disparadores-o-triggers/</guid>
-            <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Los disparadores (o triggers) son &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloques de código PL/SQL&lt;/a&gt; asociados a una tabla y que se ejecutan automáticamente como reacción a una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-manipulacion-de-datos-dml/&#34;&gt;operación DML&lt;/a&gt; específica (&lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;UPDATE&lt;/code&gt; o &lt;code&gt;DELETE&lt;/code&gt;) sobre dicha tabla.&lt;/p&gt;
 
@@ -3265,7 +3265,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;li&gt;No se llame a procedimientos que utilicen sentencias de control de transacciones&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;predicados-condicionales&#34;&gt;Predicados condicionales&lt;/h2&gt;
+&lt;h1 id=&#34;predicados-condicionales&#34;&gt;Predicados condicionales&lt;/h1&gt;
 
 &lt;p&gt;Cuando se crea un trigger para más de una operación DML, se puede utilizar un predicado condicional en las sentencias que componen el trigger que indique que tipo de operación o sentencia ha disparado el trigger. Estos predicados condicionales son los siguientes:&lt;/p&gt;
 
@@ -3300,7 +3300,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;tipos-de-triggers&#34;&gt;Tipos de triggers&lt;/h2&gt;
+&lt;h1 id=&#34;tipos-de-triggers&#34;&gt;Tipos de triggers&lt;/h1&gt;
 
 &lt;p&gt;Los triggers pueden definirse para las operaciones &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; o Update, y pueden dispararse antes o después de la operación. Finalmente, el nivel de los disparadores puede ser la fila o registro o la orden.&lt;/p&gt;
 
@@ -3340,7 +3340,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&#34;orden-de-ejecución-de-los-triggers&#34;&gt;Orden de ejecución de los triggers&lt;/h2&gt;
+&lt;h1 id=&#34;orden-de-ejecución-de-los-triggers&#34;&gt;Orden de ejecución de los triggers&lt;/h1&gt;
 
 &lt;p&gt;Una misma tabla puede tener varios triggers asociados. En tal caso es necesario conocer el orden en el que se van a ejecutar.&lt;/p&gt;
 
@@ -3355,7 +3355,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;li&gt;Se ejecuta, si existe, el disparador de tipo &lt;code&gt;AFTER&lt;/code&gt; con nivel de orden.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;restricciones-de-los-triggers&#34;&gt;Restricciones de los Triggers.&lt;/h2&gt;
+&lt;h1 id=&#34;restricciones-de-los-triggers&#34;&gt;Restricciones de los Triggers.&lt;/h1&gt;
 
 &lt;p&gt;El cuerpo de un disparador es un &lt;a href=&#34;https://elbauldelprogramador.com/bloques-plsql/&#34;&gt;bloque PL/SQL&lt;/a&gt;. Cualquier orden que sea legal en un bloque PL/SQL , es legal en el cuerpo de un disparador, con las siguientes restricciones:&lt;/p&gt;
 
@@ -3365,7 +3365,7 @@ temporal quedaría en el servidor almacenada con el nombre dado al cursor y la s
 &lt;li&gt;El disparador no puede declarar &lt;a href=&#34;https://elbauldelprogramador.com/plsql-declaracion-de-variables/&#34;&gt;variables&lt;/a&gt; de tipo &lt;code&gt;LONG&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;utilización-de-old-y-new-en-los-disparadores-con-nivel-de-fila&#34;&gt;Utilización de :old y :new en los disparadores con nivel de fila.&lt;/h2&gt;
+&lt;h1 id=&#34;utilización-de-old-y-new-en-los-disparadores-con-nivel-de-fila&#34;&gt;Utilización de :old y :new en los disparadores con nivel de fila.&lt;/h1&gt;
 
 &lt;p&gt;Un disparador con nivel de fila se ejecuta una vez por cada fila procesada por la orden que provoca el disparo. Dentro del disparador, puede accederse a la fila que está siendo actualmente
 procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt;:old&lt;/code&gt;&lt;/strong&gt; y &lt;strong&gt;&lt;code&gt;:new&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
@@ -3432,7 +3432,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;span class=&#34;cm&#34;&gt;END;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;la-cláusula-when&#34;&gt;La cláusula WHEN&lt;/h2&gt;
+&lt;h1 id=&#34;la-cláusula-when&#34;&gt;La cláusula WHEN&lt;/h1&gt;
 
 &lt;p&gt;La cláusula &lt;code&gt;WHEN&lt;/code&gt; sólo es válida para disparadores con nivel de fila. Si está presente, el cuerpo del disparador sólo se ejecutará para las filas que cumplan la condición especificada en la cláusula.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;TRIGGER&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tr1&lt;/span&gt;
@@ -3462,13 +3462,13 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;raise_application_error&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;se&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;puede&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;modificar&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;el&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cliente&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;tabla-mutando&#34;&gt;Tabla Mutando&lt;/h2&gt;
+&lt;h1 id=&#34;tabla-mutando&#34;&gt;Tabla Mutando&lt;/h1&gt;
 
 &lt;p&gt;Cuando se realiza un trigger sobre una tabla, dicha tabla se dice que está en &lt;strong&gt;“proceso de mutación”&lt;/strong&gt;, es decir, que se están realizando cambios sobre ella y que por tanto &lt;strong&gt;dentro del trigger no se debe hacer ningún tipo de acceso a dicha tabla con operaciones DML (&lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;INSERT&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt; o &lt;code&gt;UPDATE&lt;/code&gt;).&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Si queremos conocer los valores del registro de la tabla sobre la que se ha disparado el trigger, este último debe estar declarado de forma &lt;code&gt;FOR EACH ROW&lt;/code&gt; y acceder a sus valores mediante las pseudocolumnas :NEW y :OLD.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-registros-y-tablas-8&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-registros-y-tablas/&#34;&gt;PL/SQL - Registros y Tablas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3479,11 +3479,11 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
             <guid>https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/</guid>
             <description>&lt;p&gt;Como PL/SQL es un lenguaje 3GL, cuenta con las estructuras típicas de control de flujo: bifurcaciones condicionales y bucles:&lt;/p&gt;
 
-&lt;h2 id=&#34;bifurcaciones-condicionales&#34;&gt;Bifurcaciones condicionales:&lt;/h2&gt;
+&lt;h1 id=&#34;bifurcaciones-condicionales&#34;&gt;Bifurcaciones condicionales:&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;if&#34;&gt;IF&lt;/h3&gt;
+&lt;h2 id=&#34;if&#34;&gt;IF&lt;/h2&gt;
 
 &lt;p&gt;La sintaxis básica es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condici&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;ó&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
@@ -3498,7 +3498,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 
 &lt;p&gt;Como en cualquier lenguaje de programación, &amp;#8220;condición&amp;#8221; es cualquier expresión que de cómo resultado un valor booleano. Hay que saber que las estructuras IF se pueden anidar unas dentro de otras.&lt;/p&gt;
 
-&lt;h4 id=&#34;if-then&#34;&gt;IF - THEN&lt;/h4&gt;
+&lt;h2 id=&#34;if-then&#34;&gt;IF - THEN&lt;/h2&gt;
 
 &lt;p&gt;Se evalúa la condición y si resulta &lt;strong&gt;verdadera&lt;/strong&gt;, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte &lt;strong&gt;falsa o nula&lt;/strong&gt;, NO se realiza NINGUNA acción.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha_nac&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;1-01-1970&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;--No termina con un ;&lt;/span&gt;
@@ -3514,7 +3514,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;if-then-else&#34;&gt;IF - THEN - ELSE&lt;/h4&gt;
+&lt;h2 id=&#34;if-then-else&#34;&gt;IF - THEN - ELSE&lt;/h2&gt;
 
 &lt;p&gt;Se evalúa la condición y si resulta &lt;strong&gt;verdadera&lt;/strong&gt;, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte &lt;strong&gt;falsa&lt;/strong&gt;, se ejecutan las instrucciones que siguen a la instrucción &lt;code&gt;ELSE&lt;/code&gt;. Sólo se permite una instrucción &lt;code&gt;ELSE&lt;/code&gt; en cada instrucción IF.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fecha_nac&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1970&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
@@ -3524,7 +3524,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;if-then-elsif&#34;&gt;IF - THEN - ELSIF&lt;/h4&gt;
+&lt;h2 id=&#34;if-then-elsif&#34;&gt;IF - THEN - ELSIF&lt;/h2&gt;
 
 &lt;p&gt;Se evalúa la condición y si resulta &lt;strong&gt;verdadera&lt;/strong&gt;, se ejecutan uno o más líneas de código de programa. En el caso de que la condición resulte ser &lt;strong&gt;falsa&lt;/strong&gt;, se evalúa la condición especificada en el &lt;code&gt;ELSIF&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condicion&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
@@ -3550,7 +3550,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;                        &lt;span class=&#34;c1&#34;&gt;--Sólo se necesita un único END IF&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;case&#34;&gt;CASE&lt;/h4&gt;
+&lt;h2 id=&#34;case&#34;&gt;CASE&lt;/h2&gt;
 
 &lt;p&gt;La instrucción &lt;code&gt;CASE&lt;/code&gt; puede evaluar múltiples expresiones y devolver para cada una de ellas un valor/bloque de instrucciones. El resultado de cada &lt;code&gt;WHEN&lt;/code&gt; puede ser un valor o una sentencia, en el primer caso el resultado de una sentencia &lt;code&gt;CASE&lt;/code&gt; se puede guardar en una variable.&lt;/p&gt;
 
@@ -3600,7 +3600,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
 
 &lt;p&gt;En esta sintaxis después del &lt;code&gt;CASE&lt;/code&gt; no aparece ninguna variable y cada &lt;code&gt;WHEN&lt;/code&gt; tiene su propia condición a evaluar.&lt;/p&gt;
 
-&lt;h4 id=&#34;bucles&#34;&gt;BUCLES&lt;/h4&gt;
+&lt;h2 id=&#34;bucles&#34;&gt;BUCLES&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LOOP&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;sentencias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LOOP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -3681,7 +3681,7 @@ incondicional.&lt;/p&gt;
 
 &lt;p&gt;En el caso de especificar &lt;code&gt;REVERSE&lt;/code&gt; el bucle se recorre en sentido inverso.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-pl-sql-excepciones-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34;&gt;PL/SQL - Excepciones&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-excepciones-1&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-excepciones/&#34;&gt;PL/SQL - Excepciones&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>

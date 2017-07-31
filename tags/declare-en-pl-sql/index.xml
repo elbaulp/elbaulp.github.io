@@ -44,7 +44,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;COUNT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;INTO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xNumFac&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FACTURAS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;atributos-type-y-rowtype&#34;&gt;Atributos %TYPE y %ROWTYPE.&lt;/h2&gt;
+&lt;h1 id=&#34;atributos-type-y-rowtype&#34;&gt;Atributos %TYPE y %ROWTYPE.&lt;/h1&gt;
 
 &lt;p&gt;Se puede declarar el tipo de una variable tomándolo de otro identificador, usando el atributo &lt;code&gt;%TYPE&lt;/code&gt; y se puede declarar el tipo de una variable también cuando es un tipo estructurado con el atributo &lt;code&gt;%ROWTYPE&lt;/code&gt;. Esto es particularmente útil cuando una variable va a tomar valores de una columna de una tabla. Declarar variables con el atributo &lt;code&gt;%TYPE&lt;/code&gt; tiene dos ventajas. Primero, no necesitamos conocer el tipo exacto de la columna de la tabla. Segundo, si cambiamos la definición y/o tipo de la columna de la tabla, el tipo de la variable cambia automáticamente en tiempo de ejecución.&lt;/p&gt;
 
@@ -60,7 +60,7 @@
 
 &lt;p&gt;Un bloque tiene acceso a los objetos identificados dentro de su esquema. Solo podremos acceder a los objetos del usuario donde estemos conectados y a los que ese usuario pueda acceder porque le hayan otorgado permisos.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-estructuras-básicas-de-control-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/&#34;&gt;PL/SQL - Estructuras básicas de control&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-estructuras-básicas-de-control-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-estructuras-basicas-de-control/&#34;&gt;PL/SQL - Estructuras básicas de control&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

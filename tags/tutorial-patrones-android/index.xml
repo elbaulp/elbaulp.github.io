@@ -6,7 +6,7 @@
         <description>Recent content in Tutorial Patrones Android on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Wed, 17 Feb 2016 06:25:54 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 31 Jul 2017 14:02:04 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/tutorial-patrones-android/</link>
@@ -19,7 +19,7 @@
         <item>
             <title>Crear Un Patrón De Desbloqueo Android</title>
             <link>https://elbauldelprogramador.com/patron-desbloqueo-android/</link>
-            <pubDate>Wed, 17 Feb 2016 06:25:54 +0000</pubDate>
+            <pubDate>Mon, 31 Jul 2017 14:02:04 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/patron-desbloqueo-android/</guid>
             <description>&lt;blockquote&gt;
@@ -34,10 +34,11 @@
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;p&gt;Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso de Android&#34;&gt;Android1&lt;/a&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/android/&#34; title=&#34;Curso nuevo de Android&#34;&gt;Android2&lt;/a&gt;
-{: .notice-info }&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si te interesa android, puedes echar un vistazo a los cursos disponibles en el blog, &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso de Android&#34;&gt;Android1&lt;/a&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/android/&#34; title=&#34;Curso nuevo de Android&#34;&gt;Android2&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;h2 id=&#34;photo-gesture&#34;&gt;Photo Gesture&lt;/h2&gt;
+&lt;h1 id=&#34;photo-gesture&#34;&gt;Photo Gesture&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;Enunciado: reconozca un patrón de gestos sobre pantalla de vuestra elección. Una vez detectado el patrón se debe ejecutar la aplicación de cámara y realizar automáticamente una foto transcurridos 3 segundos. Los gestos a detectar son similares a los que se realizan con la pantalla de bloqueo Android, cuanto más complejo sea el que se detecta mejor puntuación tendrá.&lt;/em&gt;&lt;/p&gt;
 
@@ -53,15 +54,15 @@
 &lt;p&gt;En esta aplicación se le pide al usuario que establezca un patrón de bloqueo, puede ser tan complejo como el patrón de bloqueo usado en &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso de Android&#34;&gt;Android&lt;/a&gt;. Una vez establecido, cuando se introduzca correctamente la aplicación tomará una foto a los 3 segundos. A continuación mostramos la pantalla principal de la aplicación.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/photoGesture.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/photoGesture.png&#34; title=&#34;Pantalla principal de photoGesture&#34; alt=&#34;Pantalla principal de photoGesture&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/npi/photoGesture.png&#34;&gt;&lt;img sizes=&#34;(min-width: 338px) 338px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/photoGesture.png&#34; title=&#34;Pantalla principal de photoGesture&#34; alt=&#34;Pantalla principal de photoGesture&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Pantalla principal de photoGesture&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Al pulsar &lt;em&gt;“Establecer patrón”&lt;/em&gt; veremos lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/setPattern.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/setPattern.png&#34; title=&#34;Establecer patrón&#34; alt=&#34;Establecer patrón&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Establecer patrón&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/npi/setPattern.png&#34;&gt;&lt;img sizes=&#34;(min-width: 338px) 338px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/setPattern.png&#34; title=&#34;Establecer patrón&#34; alt=&#34;Establecer patrón&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Establecer patrón&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Es posible hacer que el patrón no sea visible cuando lo introducimos, para añadir una capa extra de seguridad.&lt;/p&gt;
@@ -69,20 +70,20 @@
 &lt;p&gt;Cuando pulsemos &lt;em&gt;Establecer patrón&lt;/em&gt; se nos pedirá que lo dibujemos dos veces, para confirmarlo:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/drawingPatter.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/drawingPatter.png&#34; title=&#34;Dibujando el patrón&#34; alt=&#34;Dibujando el patrón&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Dibujando el patrón&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/npi/drawingPatter.png&#34;&gt;&lt;img sizes=&#34;(min-width: 338px) 338px, 100vw&#34;on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/drawingPatter.png&#34; title=&#34;Dibujando el patrón&#34; alt=&#34;Dibujando el patrón&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Dibujando el patrón&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Hecho esto, cuando volvamos a la pantalla principal, en lugar de “Establecer patrón” aparecerá “Echar foto”. Si pulsamos sobre ese botón, se nos pide el patrón establecido. Si se introduce bien, aparecerá la cámara con una cuenta atrás, al llegar a 0 se echará una foto:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/npi/countdown.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/countdown.png&#34; title=&#34;Cuenta atrás para echar la foto&#34; alt=&#34;Cuenta atrás para echar la foto&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Cuenta atrás para echar la foto&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/npi/countdown.png&#34;&gt;&lt;img sizes=&#34;(min-width: 338px) 338px, 100vw&#34;on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/npi/countdown.png&#34; title=&#34;Cuenta atrás para echar la foto&#34; alt=&#34;Cuenta atrás para echar la foto&#34; width=&#34;338px&#34; height=&#34;600px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Cuenta atrás para echar la foto&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;La foto se guardará en la galería.&lt;/p&gt;
 
-&lt;h3 id=&#34;implementación&#34;&gt;Implementación&lt;/h3&gt;
+&lt;h2 id=&#34;implementación&#34;&gt;Implementación&lt;/h2&gt;
 
 &lt;p&gt;Se ha reutilizado el ejemplo que el autor de la librería creo para demostar su uso, y se ha modificado para ajustarlo a los requisitos de la práctica. Para ello, cuando se introduce correctamente el parón, se incia la actividad de hacer una foto:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
@@ -140,7 +141,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mCamera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;takePicture&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mShutter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mPicture&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h5 id=&#34;mostrando-una-vista-previa-de-la-cámara&#34;&gt;Mostrando una vista previa de la cámara&lt;/h5&gt;
+&lt;h3 id=&#34;mostrando-una-vista-previa-de-la-cámara&#34;&gt;Mostrando una vista previa de la cámara&lt;/h3&gt;
 
 &lt;p&gt;Para crear la parte superior de la pantalla, en la que se muestra una vista previa de la cámara, hay que crear una clase extendiendo de &lt;code&gt;SurfaceView&lt;/code&gt; que hemos llamado &lt;code&gt;CameraPreview&lt;/code&gt;, esta clase implementa la interfaz &lt;code&gt;SurfaceHolder.Callback&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/** A basic Camera preview class */&lt;/span&gt;
@@ -208,18 +209,17 @@
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h5 id=&#34;permisos-requeridos-para-el-androidmanifest&#34;&gt;Permisos requeridos para el AndroidManifest&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.permission.CAMERA&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/uses-permission&amp;gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;h3 id=&#34;permisos-requeridos-para-el-androidmanifest&#34;&gt;Permisos requeridos para el AndroidManifest&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.permission.CAMERA&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.permission.WRITE_EXTERNAL_STORAGE&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;referencias&#34;&gt;Referencias&lt;/h3&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Código de la aplicación | &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_npi/tree/master/Android/PhotoGesture&#34;&gt;github.com/elbaulp/photoGesture&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Página oficial de Android | &lt;a href=&#34;http://developer.android.com/guide/topics/media/camera.html&#34;&gt;developer.android.com/guide/topics/media/camera&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Librería PatternLock | &lt;a href=&#34;https://github.com/DreaminginCodeZH/PatternLock&#34;&gt;github.com/DreaminginCodeZH/PatternLock&lt;/a&gt;
-&lt;/uses-permission&gt;&lt;/patternview.cell&gt;&lt;/li&gt;
+&lt;li&gt;Librería PatternLock | &lt;a href=&#34;https://github.com/DreaminginCodeZH/PatternLock&#34;&gt;github.com/DreaminginCodeZH/PatternLock&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
