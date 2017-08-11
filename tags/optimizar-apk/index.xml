@@ -6,7 +6,7 @@
         <description>Recent content in Optimizar Apk on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 11 Dec 2015 10:47:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 11 Aug 2017 11:55:52 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/optimizar-apk/</link>
@@ -19,12 +19,12 @@
         <item>
             <title>Pon a dieta a tus APKs</title>
             <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
-            <pubDate>Fri, 11 Dec 2015 10:47:00 +0000</pubDate>
+            <pubDate>Fri, 11 Aug 2017 11:55:52 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: Cyril&lt;/span&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;Pon a dieta a tus APKs&#34; alt=&#34;Pon a dieta a tus APKs&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;Crédito de la imagen: Cyril&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android &lt;a href=&#34;https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/&#34; title=&#34;Eliminar recursos sin usar en Android&#34;&gt;eliminando recursos sin usar&lt;/a&gt;. En el blog de &lt;strong&gt;&lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;&lt;/strong&gt; encontré un artículo muy interesante con varios consejos para reducir el tamaño del &lt;em&gt;APK&lt;/em&gt; y optimizar el código en &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/&#34; title=&#34;Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy&#34;&gt;producción&lt;/a&gt;. A continuación pasamos a traducir las partes importantes:&lt;/p&gt;
@@ -58,7 +58,7 @@
 
 &lt;p&gt;En muchos (si no todos) los casos, el crecimiento en tamaño es obligatorio para cumplir los &lt;em&gt;requerimientos y expectativas del usuario&lt;/em&gt;. Sin embargo, &lt;strong&gt;Cyril&lt;/strong&gt; está convencido de que el peso de un APK crece, en general, a mayor velocidad que las expectativas del usuario. De hecho, la mayoría de aplicaciones en &lt;strong&gt;Play Store&lt;/strong&gt; ocupan el doble o más de lo que deberían. A continuación se discutirán algunas técnicas/reglas que se pueden usar para reducir el tamaño final de la aplicación.&lt;/p&gt;
 
-&lt;h2 id=&#34;el-formato-apk&#34;&gt;EL formato APK&lt;/h2&gt;
+&lt;h1 id=&#34;el-formato-apk&#34;&gt;EL formato APK&lt;/h1&gt;
 
 &lt;p&gt;Antes de realizar ninguna optimización, es importante entender el formato del APK. A grandes rasgos, un &lt;strong&gt;APK&lt;/strong&gt; es un fichero archivado compuesto de varios ficheros de forma comprimida. Como programador, se pueden ver fácilmente sus contenidos descomprimiéndolo con el comando &lt;code&gt;unzip&lt;/code&gt;.&lt;/p&gt;
 
@@ -90,7 +90,7 @@ resources.arsc
 &lt;div class=&#34;clearfix&#34;&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&#34;reducir-el-tamaño-del-apk&#34;&gt;Reducir el tamaño del APK&lt;/h2&gt;
+&lt;h1 id=&#34;reducir-el-tamaño-del-apk&#34;&gt;Reducir el tamaño del APK&lt;/h1&gt;
 
 &lt;p&gt;Ésto puede llevarse a cabo con diversas técnicas. Ya que cada aplicación es distinta, no hay una regla absoluta para hacer “adelgazar” a un &lt;strong&gt;APK&lt;/strong&gt;. No obstante, el &lt;strong&gt;APK&lt;/strong&gt; se compone de 3 componentes sobre los que podemos actuar:&lt;/p&gt;
 
@@ -102,23 +102,23 @@ resources.arsc
 
 &lt;p&gt;Los consejos que mostramos a continuación consisten en minimizar la cantidad de espacio usado por cada uno de éstos componentes. Minimizando así el tamaño del APK.&lt;/p&gt;
 
-&lt;h3 id=&#34;ten-un-código-con-buena-higiene&#34;&gt;Ten un código con buena higiene&lt;/h3&gt;
+&lt;h2 id=&#34;ten-un-código-con-buena-higiene&#34;&gt;Ten un código con buena higiene&lt;/h2&gt;
 
-&lt;p&gt;Probablemente sea muy obvio, pero el hábito de tener un código limpio es el primer paso para reducir el tamaño de la aplicación final. “*Conoce tu código como la palma de tu mano*”. Deshazte de todas las librerías de dependencias sin usar. Haz el código mejor día tras día. Límpialo continuamente. Centrase en en mantener un código base limpio y actualizado es por lo general la mejor forma de producir &lt;strong&gt;APKs&lt;/strong&gt; más pequeños conteniendo únicamente lo estrictamente necesario para la aplicación.&lt;/p&gt;
+&lt;p&gt;Probablemente sea muy obvio, pero el hábito de tener un código limpio es el primer paso para reducir el tamaño de la aplicación final. &lt;em&gt;“Conoce tu código como la palma de tu mano”&lt;/em&gt;. Deshazte de todas las librerías de dependencias sin usar. Haz el código mejor día tras día. Límpialo continuamente. Centrase en en mantener un código base limpio y actualizado es por lo general la mejor forma de producir &lt;strong&gt;APKs&lt;/strong&gt; más pequeños conteniendo únicamente lo estrictamente necesario para la aplicación.&lt;/p&gt;
 
 &lt;p&gt;Conseguir ésto es generalmente más fácil cuando se empieza un proyecto desde cero. Es más difícil contra más viejo es el proyecto. De hecho, proyectos con gran trasfondo histórico tienden a tratar con trozos de código &lt;em&gt;muertos&lt;/em&gt; y/o prácticamente inútiles. Afortunadamente, existen algunas herramientas para ayudarnos a hacer la colada&amp;#8230;&lt;/p&gt;
 
-&lt;h3 id=&#34;ejecutar-proguard&#34;&gt;Ejecutar Proguard&lt;/h3&gt;
+&lt;h2 id=&#34;ejecutar-proguard&#34;&gt;Ejecutar Proguard&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; es una herramienta extremadamente útil que &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Ofuscamiento de código&#34;&gt;ofusca&lt;/a&gt;, optimiza y reduce el código en tiempo de compilación. Una de sus características principales para reducir el tamaño es el &lt;em&gt;Tree-Shaking&lt;/em&gt;. &lt;strong&gt;Proguard&lt;/strong&gt; básicamente recorre todos los directorios con código para detectar trozos que no se usan. Todos los que encuentre (es decir, los no usados) se eliminan del &lt;strong&gt;APK&lt;/strong&gt; final. &lt;strong&gt;Proguard&lt;/strong&gt; también renombra campos, &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Introducción a las Clases&#34;&gt;clases&lt;/a&gt; e interfaces para hacer el código lo más ligero posible.&lt;/p&gt;
 
 &lt;p&gt;Como habrás adivinado &lt;strong&gt;Proguard&lt;/strong&gt; es extremadamente útil y eficiente. Pero un gran poder conlleva una gran responsabilidad. Muchos desarrolladores consideran &lt;strong&gt;Proguard&lt;/strong&gt; una herramienta muy molesta porque, por defecto, rompe aplicaciones que se basan fuertemente en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reflection_(computer_programming)&#34; title=&#34;Definición de Reflexión&#34;&gt;reflexión&lt;/a&gt;. Depende de los desarrolladores el configurar &lt;strong&gt;Proguard&lt;/strong&gt; para especificar en qué clases, campos etc puede realizar las optimizaciones.&lt;/p&gt;
 
-&lt;h3 id=&#34;usar-lint-extensamente&#34;&gt;Usar Lint extensamente&lt;/h3&gt;
+&lt;h2 id=&#34;usar-lint-extensamente&#34;&gt;Usar Lint extensamente&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; trabaja en la lado Java. Desafortunadamente, no opera en el lado de los recursos. Como consecuencia, si una imagen &lt;code&gt;my_image&lt;/code&gt; en &lt;code&gt;res/drawable&lt;/code&gt; no se usa, &lt;strong&gt;Proguard&lt;/strong&gt; solo elimina su referencia en la clase &lt;code&gt;R&lt;/code&gt;, pero no la imagen.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; es un analizador de código estático que ayuda a detectar recursos sin usar con una simple llamada a &lt;code&gt;./gradlew lint&lt;/code&gt;. Genera un informe en HTML, en la sección “*UnusedResources*” estarán listados todos los recursos. Es seguro borrar dichos recursos siempre que no se accedan a ellos mediante reflexión en el código.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; es un analizador de código estático que ayuda a detectar recursos sin usar con una simple llamada a &lt;code&gt;./gradlew lint&lt;/code&gt;. Genera un informe en HTML, en la sección &lt;em&gt;“UnusedResources”&lt;/em&gt; estarán listados todos los recursos. Es seguro borrar dichos recursos siempre que no se accedan a ellos mediante reflexión en el código.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; analiza recuros (ficheros en el directorio &lt;code&gt;/res&lt;/code&gt;) pero ignora los assets (Ficheros en &lt;code&gt;/assets&lt;/code&gt;). Debido a que los assets se acceden mediante su nombre en lugar de una referencia Java o XML (Ver &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-2/&#34; title=&#34;Recursos compilados y no compilados&#34;&gt;Recursos compilados y no compilados&lt;/a&gt;). Y por ello &lt;strong&gt;Lint&lt;/strong&gt; no puede determinar si un asset se usa en el proyecto. Ésto es tarea del programador.&lt;/p&gt;
 
@@ -126,7 +126,7 @@ resources.arsc
 &lt;p&gt;&lt;strong&gt;Nota del traductor&lt;/strong&gt;: Existen otras herramientas para eliminar los recursos sin usar automáticamente, como la vista en el artículo “ELIMINAR RECURSOS SIN USAR EN ANDROID” mencionado al principio de éste artículo.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&#34;ser-obstinado-con-los-recursos&#34;&gt;Ser obstinado con los recursos&lt;/h3&gt;
+&lt;h2 id=&#34;ser-obstinado-con-los-recursos&#34;&gt;Ser obstinado con los recursos&lt;/h2&gt;
 
 &lt;p&gt;Android soporta un gran número de dispositivos. De hecho, ha sido diseñado para soportar dispositivos independientemente de su configuración: &lt;a href=&#34;http://sebastien-gabriel.com/designers-guide-to-dpi/home&#34; title=&#34;Designers guide to DPI&#34;&gt;Densidad de pantalla&lt;/a&gt;, forma de la pantalla, tamaño etc. En Android 4.4, el framework soporta nativamente varias densidades: &lt;strong&gt;ldpi, mdpi, tvdpi, hdpi, xhdpi, xxhdpi&lt;/strong&gt; y &lt;strong&gt;xxxhdpi&lt;/strong&gt;. Aunque que Android las soporte no quiere decir que haya que exportar todos los assets a cada una de ellas.&lt;/p&gt;
 
@@ -136,7 +136,7 @@ resources.arsc
 
 &lt;p&gt;De igual manera, tener una única variante de una imagen en &lt;code&gt;drawable-nodpi&lt;/code&gt; puede conseguir reducir el espacio. Es posible permitirse ésto en raros casos, si la imagen se va a mostrar muy pocas veces, por ejemplo.&lt;/p&gt;
 
-&lt;h3 id=&#34;minimizar-configuraciones-de-recursos&#34;&gt;Minimizar configuraciones de recursos&lt;/h3&gt;
+&lt;h2 id=&#34;minimizar-configuraciones-de-recursos&#34;&gt;Minimizar configuraciones de recursos&lt;/h2&gt;
 
 &lt;p&gt;El desarrollo en Android a menudo recae en el uso de librerías externas como la &lt;em&gt;Android Support Library&lt;/em&gt;, &lt;em&gt;Google Play Services&lt;/em&gt;, &lt;em&gt;Facebook SDK&lt;/em&gt;, etc. Todas éstas librerías traen recursos que no son necesariamente útiles a nuestra aplicación. Por ejemplo, &lt;em&gt;Google Play Services&lt;/em&gt; viene con traducciones para idiomas que tu aplicación no soporta. También usa recursos &lt;strong&gt;mdpi&lt;/strong&gt;, por ejemplo, que pueden no ser de utilidad en nuestra aplicación.&lt;/p&gt;
 
@@ -148,70 +148,79 @@ resources.arsc
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;comprimir-imágenes&#34;&gt;Comprimir imágenes&lt;/h3&gt;
+&lt;h2 id=&#34;comprimir-imágenes&#34;&gt;Comprimir imágenes&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Aapt&lt;/strong&gt; viene con un &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;compresor de imágenes lossless&lt;/a&gt;. Por ejemplo, una imagen PNG que no requiera de más de 256 colores puede convertirse en otra con una paleta de colores 8-bits (&lt;em&gt;8 bits = 1B = 256 valores&lt;/em&gt;). Aunque &lt;strong&gt;aapt&lt;/strong&gt; haga ésto por nosotros, sería buena idea optimizar además la imagen por nuestra cuenta, para ello hay varias herramientas, como &lt;em&gt;pngquant&lt;/em&gt;, &lt;em&gt;imageAlpha&lt;/em&gt;, &lt;em&gt;imageOptim&lt;/em&gt; o &lt;em&gt;optipng&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Android tiene un tipo especial de imágenes: &lt;a href=&#34;https://developer.android.com/tools/help/draw9patch.html&#34; title=&#34;Documentación Android&#34;&gt;&lt;em&gt;9-patches&lt;/em&gt;&lt;/a&gt;. Para optimizar éstas imágenes basta con decirle al diseñador que reduzca al mínimo las áreas “estirables” y el contenido.&lt;/p&gt;
 
-&lt;h3 id=&#34;limitar-el-número-de-arquitecturas&#34;&gt;Limitar el número de arquitecturas&lt;/h3&gt;
+&lt;h2 id=&#34;limitar-el-número-de-arquitecturas&#34;&gt;Limitar el número de arquitecturas&lt;/h2&gt;
 
 &lt;p&gt;Android trata generalmente con Java, pero en ciertas ocasiones es necesario usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-al-ndk-de-android/&#34; title=&#34;Introducción al NDK de Android&#34;&gt;código nativo&lt;/a&gt;. En el ecosistema actual de Android bastará con desarrollar para las arquitecturas armabi y x86. En &lt;a href=&#34;http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/&#34; title=&#34;Android NDK How to reduce libs size&#34;&gt;éste artículo&lt;/a&gt; se puede encontrar más información sobre el tema.&lt;/p&gt;
 
-&lt;h3 id=&#34;re-usar-siempre-que-sea-posible&#34;&gt;Re-usar siempre que sea posible&lt;/h3&gt;
+&lt;h2 id=&#34;re-usar-siempre-que-sea-posible&#34;&gt;Re-usar siempre que sea posible&lt;/h2&gt;
 
 &lt;p&gt;Ésta sea quizá una de las optimizaciones principales más importantes que se aprenden al empezar en el desarrollo móvil. En un &lt;code&gt;ListView&lt;/code&gt; o &lt;code&gt;RecyclerView&lt;/code&gt;, re-usar ayuda a mantener un &lt;em&gt;scrolling&lt;/em&gt; fluido (Más sobre el reciclaje de vistas en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/adapter-personalizado-en-android/&#34; title=&#34;Crear un adapter personalizado&#34;&gt;Crear un adapter personalizado&lt;/a&gt;). Re-usar puede además ayudar a reducir el tamaño final del &lt;strong&gt;APK&lt;/strong&gt;. Por ejemplo, Android provee de varias utilidades para colorear un asset ya sea usando &lt;code&gt;android:tint&lt;/code&gt; y &lt;code&gt;android:tintmode&lt;/code&gt; en Android L o &lt;code&gt;ColorFilter&lt;/code&gt; en todas las veriones.&lt;/p&gt;
 
 &lt;p&gt;También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas &lt;code&gt;ic_arrow_expand&lt;/code&gt; y &lt;code&gt;ic_arrow_collapse&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 512px) 512px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Podemos deshacernos fácilmente de &lt;code&gt;ic_arrow_collapse&lt;/code&gt; creando un &lt;code&gt;RotateDrawable&lt;/code&gt; basándonos en &lt;code&gt;ic_arrow_expand&lt;/code&gt;. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;rotate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/ic_arrow_expand&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:fromdegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;180&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:pivotx=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;50%&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:pivoty=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;50%&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:todegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;180&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;rotate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/ic_arrow_expand&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:fromDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;180&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:pivotX=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;50%&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:pivotY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;50%&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:toDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;180&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;renderizar-en-código-cuando-sea-necesario&#34;&gt;Renderizar en código cuando sea necesario&lt;/h3&gt;
+&lt;h2 id=&#34;renderizar-en-código-cuando-sea-necesario&#34;&gt;Renderizar en código cuando sea necesario&lt;/h2&gt;
 
 &lt;p&gt;En ciertas ocasiones renderizar gráficos directamente desde código puede conllevar un gran beneficio. Uno de los mejores ejemplos de una ganancia colosal en peso son las animaciones &lt;em&gt;frame-by-frame&lt;/em&gt;. &lt;strong&gt;Cyril&lt;/strong&gt; ha estado trabajando recientemente con &lt;em&gt;Android Wear&lt;/em&gt; y ha echado un vistazo a la &lt;a href=&#34;https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary&#34;&gt;&lt;em&gt;Android Wearable support library&lt;/em&gt;&lt;/a&gt;. Como las otras librerías, contiene varias clases útiles cuando se trabaja con dispositivos &lt;em&gt;wearables&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el &lt;strong&gt;APK&lt;/strong&gt; resultante pesaba más de &lt;strong&gt;1.5MB&lt;/strong&gt;. Tras investigar en &lt;code&gt;wearable-support.aar&lt;/code&gt;, descubrió que se empaquetan dos animaciones &lt;em&gt;frame-by-frame&lt;/em&gt; en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).&lt;/p&gt;
 
-&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1596px) 1596px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;La animación para el “éxito” se construye con un &lt;code&gt;AnimationDrawable&lt;/code&gt; definido en un XML:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;utf-8&amp;#39;?&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;animation-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:oneshot=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00163&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00164&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00165&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00166&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00167&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00168&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00169&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00170&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00171&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00172&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00173&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00174&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00175&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;333&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00185&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00186&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00187&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00188&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00189&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00190&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00191&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00192&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00193&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&amp;lt;/animation-list&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00163&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00164&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00165&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00166&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00167&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00168&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00169&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00170&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00171&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00172&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00173&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00174&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00175&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;333&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00185&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00186&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00187&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00188&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00189&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00190&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00191&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00192&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@drawable/generic_confirmation_00193&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;33&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/animation-list&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Lo malo es, que cada &lt;em&gt;frame&lt;/em&gt; se muestra durante 33ms, lo que hace que la animación se ejecute a 30fps. Mostrar un &lt;em&gt;frame&lt;/em&gt; cada 16ms habría resultado en una librería dos veces más pesada. El &lt;em&gt;frame&lt;/em&gt; &lt;code&gt;generic_confirmation_00175&lt;/code&gt; (línea 15) se muestra durante 333ms, le sigue &lt;code&gt;generic_confirmation_00185&lt;/code&gt;. Ésta es una gran optimización que evita que 9 &lt;em&gt;frames&lt;/em&gt; (del 176 al 184 incluidos) se empaqueten en la aplicación. Desafortunadamente, &lt;code&gt;wearable-support.aar&lt;/code&gt; contiene estos 9 &lt;em&gt;frames&lt;/em&gt; que no son usados para 3 densidades.&lt;/p&gt;
 
 &lt;p&gt;Realizar la animación mediante código requiere de más tiempo de desarrollo. sin embargo, puede reducir notablemente la cantidad de assets del &lt;strong&gt;APK&lt;/strong&gt; y además mantener una animación fluida a 60fps. Al momento de traducir éste artículo, Android no proporciona una herramienta que permita renderizar éstas animaciones de forma sencilla. Esperemos que estén trabajando en ello.&lt;/p&gt;
 
-&lt;h3 id=&#34;ir-aún-más-lejos&#34;&gt;Ir aún más lejos&lt;/h3&gt;
+&lt;h2 id=&#34;ir-aún-más-lejos&#34;&gt;Ir aún más lejos&lt;/h2&gt;
 
 &lt;p&gt;Todas las técnicas descritas arriba están enfocadas principalmente en la aplicación/librería. ¿Se podría ir más lejos si tuviéramos control total sobre la cadena de distribución?. Seguramente se podría, pero implicaría algún trabajo en el lado del servidor, o más específicamente, en el lado de la &lt;em&gt;Play Store&lt;/em&gt;. Por ejemplo, la &lt;em&gt;Play Store&lt;/em&gt; podría tener un sistema de paquetes que empaquetara únicamente las librerías nativas necesarias para cada dispositivo.&lt;/p&gt;
 
@@ -219,7 +228,7 @@ resources.arsc
 
 &lt;p&gt;El empaquetado del &lt;strong&gt;APK&lt;/strong&gt; del lado del servidor parece extremadamente potente. Pero es muy arriesgado porque el &lt;strong&gt;APK&lt;/strong&gt; final entregado al usuario sería completamente distinto al enviado por el desarrollador a la &lt;em&gt;Play Store&lt;/em&gt;. Entregar un &lt;strong&gt;APK&lt;/strong&gt; con algunos recursos/assets eliminados simplemente rompería las aplicaciones.&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h3&gt;
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
 &lt;p&gt;El diseño trata de obtener lo mejor posible a partir de un conjunto de restricciones. El peso/tamaño de un &lt;strong&gt;APK&lt;/strong&gt; es claramente una de esas restricciones. No hay que tener miedo de empeorar un aspecto de la aplicación para mejorar otros. Por ejemplo, no hay que dudar en reducir la calidad del renderizado de la UI si como consecuencia se logra reducir el tamaño del APK y la aplicación se hace más fluida. El 99% de los usuarios no notarán que la calidad ha bajado, pero sí notarán que la aplicación va más fluida. Al fin y al cabo, una aplicación se juzga por su totalidad, no por la suma de ciertos aspecto por separado.&lt;/p&gt;
 
@@ -227,9 +236,11 @@ resources.arsc
 &lt;p&gt;Gracias al &lt;a href=&#34;https://twitter.com/cyrilmottier&#34; title=&#34;@cyrilmottier&#34;&gt;Cyril&lt;/a&gt; por permitirme traducir su artículo original &lt;em&gt;“Putting Your APKs on Diet”&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

@@ -22,7 +22,7 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/plsql-procedimientos-y-funciones/</guid>
-            <description>&lt;h2 id=&#34;procedimientos&#34;&gt;Procedimientos&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;procedimientos&#34;&gt;Procedimientos&lt;/h1&gt;
 
 &lt;p&gt;Una vez que tenemos escrito un bloque de código, podemos guardarlo en un fichero .sql para su posterior uso, o bien guardarlo en base de datos para que pueda ser ejecutado por cualquier aplicación. El segundo caso se realiza mediante procedimientos almacenados (Stored Procedure).&lt;/p&gt;
 
@@ -70,7 +70,7 @@
 
 &lt;p&gt;Una vez creado y compilado el procedimiento almacenado podemos ejecutarlo. Existen dos formas de pasar argumentos a un procedimiento almacenado a la hora de ejecutarlo. Estas son:&lt;/p&gt;
 
-&lt;h3 id=&#34;notación-posicional&#34;&gt;Notación posicional&lt;/h3&gt;
+&lt;h2 id=&#34;notación-posicional&#34;&gt;Notación posicional&lt;/h2&gt;
 
 &lt;p&gt;Se pasan los valores de los parámetros en el mismo orden en que el procedure los define.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
@@ -79,7 +79,7 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;notación-nominal&#34;&gt;Notación nominal&lt;/h3&gt;
+&lt;h2 id=&#34;notación-nominal&#34;&gt;Notación nominal&lt;/h2&gt;
 
 &lt;p&gt;Se pasan los valores en cualquier orden nombrando explícitamente el parámetro y su valor separados por el símbolo =&amp;gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;BEGIN&lt;/span&gt;
@@ -118,7 +118,7 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;funciones&#34;&gt;Funciones&lt;/h2&gt;
+&lt;h1 id=&#34;funciones&#34;&gt;Funciones&lt;/h1&gt;
 
 &lt;p&gt;Para crear una función usaremos la siguiente sintaxis:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;CREATE&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;OR&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;REPLACE&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;FUNCTION&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre_func&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;param1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;param2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,...&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;RETURN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tipo_dato&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;IS&lt;/span&gt;
@@ -130,7 +130,7 @@
 &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-pl-sql-paquetes-packages-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-paquetes-packages/&#34;&gt;PL/SQL - Paquetes (Packages)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-pl-sql-paquetes-packages-3&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/plsql-paquetes-packages/&#34;&gt;PL/SQL - Paquetes (Packages)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

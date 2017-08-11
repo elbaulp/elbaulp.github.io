@@ -6,7 +6,7 @@
         <description>Recent content in Switch on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Fri, 11 Aug 2017 12:07:29 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/switch/</link>
@@ -19,12 +19,12 @@
         <item>
             <title>Por qué un switch es más rápido que su homólogo if-then-else</title>
             <link>https://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            <pubDate>Fri, 11 Aug 2017 12:07:29 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/por-que-un-switch-es-mas-rapido-que-su-homologo-if-then-else/</guid>
             <description>&lt;p&gt;En este artículo pretendo explicar el motivo por el cual un switch es mucho más rápido que su homólogo en secuencias if-then-else, para ello analizaremos la implementación del switch.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;El switch se basa en una implementación muy eficiente llamada en inglés &lt;strong&gt;jump table&lt;/strong&gt; o tabla de saltos. Esta tabla es un array, donde la entrada &lt;em&gt;i&lt;/em&gt; es la dirección de un segmento de código que implementa la acción que el switch debería ejecutar cuando la condición es igual a &lt;em&gt;i&lt;/em&gt;. El código realiza una referencia al array dentro de la tabla de saltos usando el índice del switch y determinar así el destino para una instrucción de salto (instrucción &lt;strong&gt;jmp&lt;/strong&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/asm&#34;&gt;ensamblador&lt;/a&gt;).&lt;/p&gt;
 
@@ -34,7 +34,7 @@
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/&#34;&gt;GCC&lt;/a&gt; selecciona qué metodo de traducción aplica al switch dependiendo del número de casos y valores. Las tablas de saltos se usan cuando hay un número determinado de casos (cuatro por ejemplo) y abarcan un número pequeño de valores. Por ejemplo:&lt;/p&gt;
 
-&lt;h2 id=&#34;sentencia-switch&#34;&gt;Sentencia switch&lt;/h2&gt;
+&lt;h1 id=&#34;sentencia-switch&#34;&gt;Sentencia switch&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;switch_eg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
@@ -65,7 +65,7 @@
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;traducción-a-extended-c&#34;&gt;Traducción a extended C&lt;/h2&gt;
+&lt;h1 id=&#34;traducción-a-extended-c&#34;&gt;Traducción a extended C&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;switch_eg_impl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;cm&#34;&gt;/*Tabla de punteros a código*/&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -247,7 +247,7 @@
 &lt;p&gt;Estas declaraciones dicen que dentro de la sección llamada &lt;strong&gt;.rodata&lt;/strong&gt; &lt;em&gt;(Read-Only Data)&lt;/em&gt; debería haber una secuencia de siete palabras &lt;strong&gt;long&lt;/strong&gt; (4-byte) cuyo valor se dá por la dirección de la instrucción asociada a la etiqueta (.L3 etc). La etiqueta &lt;strong&gt;.L7&lt;/strong&gt; marca el inicio de la asignación de la tabla de saltos. La dirección asociada a esta etiqueta sirve como la base para el salto indirecto en la línea 21.
 Tanto en la versión extendida de C, como en ensamblador, el código asociado a las etiquetas (loc_* para extended C y .L* para ensamblador) implementan las distintas ramas del switch. La mayoría calculan un valor para devolver en la variable &lt;em&gt;result&lt;/em&gt; (o el registro &lt;em&gt;%eax&lt;/em&gt;) y saltan al final de la función (en el código ensamblador se salta a la etiqueta &lt;strong&gt;.L8&lt;/strong&gt;).&lt;/p&gt;
 
-&lt;p&gt;El patrón seguido para calcular un resultado no se da para los cases 102 y 103 en el código C. La lógica del programa para estos dos casos en las versiones ensamblador y C extendido es tener dos destinos ditintos para ambos casos (*loc_C, loc_B y .L5, .L4 *). Los dos bloques de código convergen en el código que incrementa &lt;em&gt;result&lt;/em&gt; en 11 (etiquetado como &lt;em&gt;rest&lt;/em&gt; en C extendido y .L5 en ensamblador)&lt;/p&gt;
+&lt;p&gt;El patrón seguido para calcular un resultado no se da para los cases 102 y 103 en el código C. La lógica del programa para estos dos casos en las versiones ensamblador y C extendido es tener dos destinos ditintos para ambos casos (&lt;em&gt;loc_C, loc_B y .L5, .L4&lt;/em&gt;). Los dos bloques de código convergen en el código que incrementa &lt;em&gt;result&lt;/em&gt; en 11 (etiquetado como &lt;em&gt;rest&lt;/em&gt; en C extendido y .L5 en ensamblador)&lt;/p&gt;
 
 &lt;p&gt;Comprender todo el código visto requiere examinarlo con detenimiento y paso a paso. Aún así, el objetivo de este artículo era demostrar que el uso de tablas de salto o &lt;strong&gt;jump tables&lt;/strong&gt; permite una forma muy eficiente de implementar ramas multidireccionales. En este ejemplo, el programa puede ramificarse a cinco posiciones distintas de un solo salto, incluso si tuvieramos un switch con cientos de cases, sería manejado con un solo acceso a la tabla de saltos.&lt;/p&gt;
 
@@ -318,9 +318,11 @@ Tanto en la versión extendida de C, como en ensamblador, el código asociado a 
 
 &lt;p&gt;Tras analizar y entender cómo se implementa el switch, la razón por la que es más rápido que una sucesión de if-then-else es simple. El factor determinante es la existencia de la tabla de saltos y que solo se requiere de una comparación para determinar a qué sentencia case saltar. Mientras que en una secuencia de if-then-else se requiere la comprobación de todas y cada una de las expresiones que comprenden el if, hasta que se satisfaga alguna o se llegue al final del bloque.&lt;/p&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Computer Systems: A Programmer&amp;rsquo;s Perspective&lt;/em&gt; »» &lt;a href=&#34;http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=013034074X&amp;linkCode=as2&amp;tag=elbaudelpro-21&#34; target=&#34;_blank&#34;&gt;Ver libro en Amazon&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Computer Systems: A Programmer&amp;rsquo;s Perspective&lt;/em&gt; »» &lt;a href=&#34;http://www.amazon.es/gp/product/013034074X/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=013034074X&amp;linkCode=as2&amp;tag=elbaudelpro-21&#34; target=&#34;_blank&#34;&gt;Ver libro en Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>
