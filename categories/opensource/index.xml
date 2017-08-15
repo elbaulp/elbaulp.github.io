@@ -3167,7 +3167,7 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22&lt;span class=&#34;o&#34;
 
 &lt;p&gt;Casi todas las llamadas que se hacen desde &lt;em&gt;managedQuery&lt;/em&gt; y &lt;em&gt;ContentResolver&lt;/em&gt; se dirigen a las clase &lt;em&gt;provider&lt;/em&gt;. Saber cómo un proveedor implementa cada uno de estos métodos no dá suficientes pistas de cómo se usan dichos métodos. &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;En entradas posteriores&lt;/a&gt;, veremos cómo implementar desde cero un content provider.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-1-4&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un/&#34;&gt;Implementando un Content Provider (Parte 1)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-implementando-un-content-provider-parte-1-4&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un/&#34;&gt;Implementando un Content Provider (Parte 1)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3221,7 +3221,7 @@ content://contacts/people/23
 &lt;p&gt;Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;siguiente-tema-proveedores-de-contenidos-leer-datos-mediante-uris-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de_28/&#34;&gt;Proveedores de Contenidos - Leer datos mediante URIs&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-proveedores-de-contenidos-leer-datos-mediante-uris-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de_28/&#34;&gt;Proveedores de Contenidos - Leer datos mediante URIs&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3230,51 +3230,47 @@ content://contacts/people/23
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</guid>
-            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://elbauldelprogramador.com/img/2013/07/iconoAndroid.png&#34;  id=&#34;logo&#34;  class=&#34;icono&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
+            <description>&lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;La regla básica es que la acción, categoría o datos característicos de un intent deben coincidir, o estar presentes, en los intent-filter de la actividad. De forma análoga a los íntents, un intent-filter puede establecer varias acciones, categorías y atributos. Lo que quiere decir que una misma actividad (con varios intent-filters), puede ser válida y por lo tanto responder a intents de distinto tipo. Vamos a ver los distintos critérios que se siguen para considerar si el intent coincide con el intent-filter:&lt;/p&gt;
 
-&lt;h3 id=&#34;action&#34;&gt;Action&lt;/h3&gt;
+&lt;h1 id=&#34;action&#34;&gt;Action&lt;/h1&gt;
 
 &lt;p&gt;Si un intent tiene una acción establecida, el intent-filter debe tener esa acción declarada o no tener ninguna acción definida. Es decir, si una actividad no tiene declarado ningún intent filter, se considera una opción para cualquier intent con una acción.&lt;/p&gt;
 
-&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+&lt;h1 id=&#34;data&#34;&gt;Data&lt;/h1&gt;
 
 &lt;p&gt;Si no se especifica ningún tipo de dato en un intent-filter, éste no coincidirá con ningún intent que sí que tenga establecido cualquier tipo de dato adicional. Es decir, esa actividad solo se considerará una opción para los intent que no tengan especificado ningún dato.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-type&#34;&gt;Data type&lt;/h3&gt;
+&lt;h1 id=&#34;data-type&#34;&gt;Data type&lt;/h1&gt;
 
 &lt;p&gt;Para que se considere como coincidencia un tipo de dato, el intent debe ser uno de los tipos de datos declarados en el intent-filter. Para determinar el tipo de dato android tiene dos formas. La primera es determinar el tipo de dato a partir de la URI (si la URI es una content URI) o si la URI es un fichero (file://&amp;#8230;). La segunda es mirar en el tipo de dato explícito del intent. Para que esto funcione correctamente el intent no debe tener una URI de datos adjunta, ya que se toma automáticamente cuando llamamos al método &lt;em&gt;setType()&lt;/em&gt; en el intent. Es posible cubrir multitud de subtipos con *.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-scheme&#34;&gt;Data scheme&lt;/h3&gt;
+&lt;h1 id=&#34;data-scheme&#34;&gt;Data scheme&lt;/h1&gt;
 
 &lt;p&gt;Para que un esquema de datos coincida (data scheme), el esquema de datos ha de estar presente tanto en el intent como en el intent-filter de la actividad. Un esquema de datos es la primera parte de una URI, por ejemplo, &lt;em&gt;http://, file://, content://, ftp://&lt;/em&gt; etc. Los intent no tienen definido ningún método para establecer el esquema de datos, ya que viene dado por la URI del intent.&lt;/p&gt;
 
 &lt;p&gt;En el caso de que el esquema sea del tipo &lt;em&gt;content: ó file:&lt;/em&gt;, se considera una coincidencia independientemente de lo que se especifique en el intent-filter. Se aplica esta regla porque cada componente debe saber como leer datos desde urls del tipo &lt;em&gt;content&lt;/em&gt; o &lt;em&gt;file&lt;/em&gt;, ya que son locales al dispositivo.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-authority&#34;&gt;Data Authority&lt;/h3&gt;
+&lt;h1 id=&#34;data-authority&#34;&gt;Data Authority&lt;/h1&gt;
 
 &lt;p&gt;En el caso de que no se especifique authority alguno en el intent-filter, se obtendrá una coincidéncia para cualquier data URI authority. Si por el contrario se especifica en el intent-filter, como ejemplo pongamos &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, entonces se considerará una coincidencia un esquema de datos y una authority.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo fácil para comprender esto podría ser que tengamos esto declarado como authority en el intent-filter &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, y como esquema de datos &lt;em&gt;https&lt;/em&gt;, todo intent fallará si usamos lo siguiente, &lt;em&gt;/path&lt;/em&gt;, ya que el esquema de datos &lt;em&gt;http&lt;/em&gt; no está declarado.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-path&#34;&gt;Data Path&lt;/h3&gt;
+&lt;h1 id=&#34;data-path&#34;&gt;Data Path&lt;/h1&gt;
 
 &lt;p&gt;Ningún path (ruta) especificado en el intent-filter resultará ser una coincidencia para cualquier path entrante. Para validar un intent, el esquema de datos, el authority y el path trabajan juntos. Es decir en &lt;em&gt;&lt;a href=&#34;http://elbauldelprogramador.org/path&#34;&gt;http://elbauldelprogramador.org/path&lt;/a&gt;&lt;/em&gt; los tres trabajan juntos para validar el intent.&lt;/p&gt;
 
-&lt;h3 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h3&gt;
+&lt;h1 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h1&gt;
 
 &lt;p&gt;Cada &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias&#34;&gt;categoría&lt;/a&gt; debe estar presente en el intent-filter. En el caso de que en el intent-filter no exista ninguna categoría especificada, esa actividad solo será una coincidencia para los intent que no tengan ninguna categoría especificada. Sin embargo, hay que tener en cuenta que los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intent implícitos&lt;/a&gt; que se pasan &lt;strong&gt;startActivity()&lt;/strong&gt; contienen al menos una categoría que es &lt;em&gt;android.intent-category.DEFAULT&lt;/em&gt;. Por lo tanto, hemos de tener en cuenta que si queremos llamar a una actividad mediante un intent implícito debemos registrar dicha categoría en el intent-filter.&lt;/p&gt;
 
 &lt;p&gt;Si una actividad no tiene declarada la categoría por defecto, pero conocemos su nombre de componente, podémos llamarle mediante un intent explícito.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3297,12 +3293,12 @@ content://contacts/people/23
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;creando-el-proyecto&#34;&gt;CREANDO EL PROYECTO&lt;/h2&gt;
+&lt;h1 id=&#34;creando-el-proyecto&#34;&gt;CREANDO EL PROYECTO&lt;/h1&gt;
 
 &lt;p&gt;Arrancamos eclipse con todo configurado correctamente y vamos a Archivo-&amp;gt;nuevo-&amp;gt;Proyecto Android:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;crear Proyecto Android&#34; alt=&#34;crear Proyecto Android&#34;  height=&#34;605&#34; width=&#34;800&#34; src=&#34;https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s800/nuevoProyecto.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;crear Proyecto Android&#34; alt=&#34;crear Proyecto Android&#34;  height=&#34;605&#34; width=&#34;800&#34; src=&#34;https://3.bp.blogspot.com/-yu9kW8WAiD8/Tfjrq_ZBS9I/AAAAAAAAAmU/CX2f8KDBR9A/s800/nuevoProyecto.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Despues de esto se nos mostrará un dialogo para configurar el proyecto, debemos introducir:&lt;/p&gt;
@@ -3319,34 +3315,34 @@ content://contacts/people/23
 &lt;/ul&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;configuracion proyecto Android&#34; alt=&#34;configuracion proyecto Android&#34;  height=&#34;625&#34; width=&#34;782&#34; src=&#34;https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s800/ConfigurarPoryecto.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 782px) 782px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;configuracion proyecto Android&#34; alt=&#34;configuracion proyecto Android&#34;  height=&#34;625&#34; width=&#34;782&#34; src=&#34;https://4.bp.blogspot.com/-nhOjIrNDwN8/Tfj1iSJ8I7I/AAAAAAAAAmc/J5ME2LrOGRE/s800/ConfigurarPoryecto.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Ya hemos creado nuestro primer proyecto Android, ahora vamos a ver de qué se compone:&lt;/p&gt;
 
-&lt;h2 id=&#34;componentes-del-proyecto&#34;&gt;COMPONENTES DEL PROYECTO&lt;/h2&gt;
+&lt;h1 id=&#34;componentes-del-proyecto&#34;&gt;COMPONENTES DEL PROYECTO&lt;/h1&gt;
 
 &lt;p&gt;Los proyectos de Android siguen una estructura fija de carpetas que debemos respetar. Podemos ver esta estructura con la vista &lt;strong&gt;&lt;em&gt;Package Explorer&lt;/em&gt;&lt;/strong&gt; que proporciona eclipse:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Estructura proyectos Android&#34; alt=&#34;Estructura proyectos Android&#34;  height=&#34;507&#34; width=&#34;239&#34; src=&#34;https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s800/estructuraCarpetas.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 239px) 239px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Estructura proyectos Android&#34; alt=&#34;Estructura proyectos Android&#34;  height=&#34;507&#34; width=&#34;239&#34; src=&#34;https://3.bp.blogspot.com/-8mEhB--FnqI/Tfj3eqQKPhI/AAAAAAAAAmk/mf2HiIbzU8c/s800/estructuraCarpetas.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;carpeta-src-de-fuentes&#34;&gt;Carpeta src (de fuentes)&lt;/h3&gt;
+&lt;h2 id=&#34;carpeta-src-de-fuentes&#34;&gt;Carpeta src (de fuentes)&lt;/h2&gt;
 
 &lt;p&gt;Esta carpeta contiene el código fuente organizado en paquetes. Aquí irán las clases java de nuestra aplicación.&lt;/p&gt;
 
-&lt;h3 id=&#34;carpeta-gen-archivos-generados&#34;&gt;Carpeta gen (archivos generados)&lt;/h3&gt;
+&lt;h2 id=&#34;carpeta-gen-archivos-generados&#34;&gt;Carpeta gen (archivos generados)&lt;/h2&gt;
 
 &lt;p&gt;Aquí van los archivos que genera el compilador en sus pasadas, como el archivo de recursos &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt;, esta carpeta normalmente no se debe tocar.&lt;/p&gt;
 
-&lt;h3 id=&#34;carpeta-assets-de-recursos-varios&#34;&gt;Carpeta assets (De recursos varios)&lt;/h3&gt;
+&lt;h2 id=&#34;carpeta-assets-de-recursos-varios&#34;&gt;Carpeta assets (De recursos varios)&lt;/h2&gt;
 
 &lt;p&gt;Almacena recursos que pueda necesitar nuestra aplicación, como ficheros de música etc.&lt;/p&gt;
 
 &lt;p&gt;Podremos acceder a ellos fácilmente con la clase del sistema &lt;strong&gt;&lt;em&gt;AssetManager&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;clase-de-recursos-res&#34;&gt;Clase de recursos (res)&lt;/h3&gt;
+&lt;h2 id=&#34;clase-de-recursos-res&#34;&gt;Clase de recursos (res)&lt;/h2&gt;
 
 &lt;p&gt;Esta carpeta es una de la que más vamos a usar junto con &lt;strong&gt;&lt;em&gt;src&lt;/em&gt;&lt;/strong&gt;, contiene todos los recursos necesarios para la aplicación. Todos los archivos de esta carpeta son indexados por el compilador y se genera el fichero de recursos &lt;strong&gt;&lt;em&gt;R&lt;/em&gt;&lt;/strong&gt;, que nos permite acceder a ellos de una forma rápida.&lt;/p&gt;
 
@@ -3365,13 +3361,13 @@ content://contacts/people/23
 
 &lt;p&gt;Algunas carpetas pueden tener varias versiones para adaptarse a diferentes tamaños de pantallas, idiomas etc.&lt;/p&gt;
 
-&lt;h3 id=&#34;el-archivo-manifest-androidmanifest-xml&#34;&gt;El archivo Manifest (AndroidManifest.xml)&lt;/h3&gt;
+&lt;h2 id=&#34;el-archivo-manifest-androidmanifest-xml&#34;&gt;El archivo Manifest (AndroidManifest.xml)&lt;/h2&gt;
 
 &lt;p&gt;Todos los proyectos tienen un archivo como este, en él se detallan las características principales (módulos, permisos, nombre, icono&amp;#8230;).&lt;/p&gt;
 
 &lt;p&gt;Ahora que hemos explicado la estructura de un proyecto Android, veamos el ejemplo &lt;strong&gt;&lt;em&gt;Hola Mundo&lt;/em&gt;&lt;/strong&gt; al detalle&lt;/p&gt;
 
-&lt;h2 id=&#34;profundizando-en-el-8220-hola-mundo-8221&#34;&gt;Profundizando en el &amp;#8220;Hola Mundo&amp;#8221;&lt;/h2&gt;
+&lt;h1 id=&#34;profundizando-en-el-8220-hola-mundo-8221&#34;&gt;Profundizando en el &amp;#8220;Hola Mundo&amp;#8221;&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;app.tutorial.holaMundo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.app.Activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -3393,22 +3389,22 @@ content://contacts/people/23
 
 &lt;p&gt;Por lo tanto, &lt;strong&gt;&lt;em&gt;R.layout.main&lt;/em&gt;&lt;/strong&gt; referencia a un archivo xml situado en la carpeta ./res/layout (ficheros de definición de pantalla).&lt;/p&gt;
 
-&lt;h3 id=&#34;archivo-res-layout-main-xml&#34;&gt;Archivo ./res/layout/main.xml&lt;/h3&gt;
+&lt;h2 id=&#34;archivo-res-layout-main-xml&#34;&gt;Archivo ./res/layout/main.xml&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;En este archivo se define una pantalla en la que los elementos se agruparán de forma lineal (LinearLayout) y con un componente de texto (TextView). Al componente de texto le fijamos el texto a mostrar con la referencia &lt;strong&gt;&lt;em&gt;@string/hello&lt;/em&gt;&lt;/strong&gt; (valor del item en ./res/values/strings.xml)&lt;/p&gt;
 
-&lt;h3 id=&#34;archivo-res-values-strings-xml&#34;&gt;Archivo ./res/values/strings.xml&lt;/h3&gt;
+&lt;h2 id=&#34;archivo-res-values-strings-xml&#34;&gt;Archivo ./res/values/strings.xml&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello World, MainActivity!&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
@@ -3434,7 +3430,7 @@ content://contacts/people/23
 
 &lt;p&gt;En este archivo se definen el paquete por defecto, datos de versión, icono (mediante una referencia). El nombre de la aplicación (otra referencia al fichero strings.xml). Despues se define el comportamiento de la aplicación. Se añaden dos filtros para que la actividad que definimos anteriormente sea usada como principal (&lt;strong&gt;&lt;em&gt;android.intent.action.MAIN&lt;/em&gt;&lt;/strong&gt;) y para que sea incluida en el menú de aplicaciones (&lt;strong&gt;&lt;em&gt;android.intent.category.LAUNCHER&lt;/em&gt;&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-fundamentos-programación-android-conceptos-básicos-y-componentes-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34;&gt;Fundamentos programación Android: Conceptos básicos y componentes&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-fundamentos-programación-android-conceptos-básicos-y-componentes-5&#34;&gt;Siguiente tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34;&gt;Fundamentos programación Android: Conceptos básicos y componentes&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3466,7 +3462,7 @@ content://contacts/people/23
 &lt;li&gt;Registrar el proveedor en el Android Manifest.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&#34;planteamiento-de-la-base-de-datos&#34;&gt;Planteamiento de la base de datos&lt;/h3&gt;
+&lt;h1 id=&#34;planteamiento-de-la-base-de-datos&#34;&gt;Planteamiento de la base de datos&lt;/h1&gt;
 
 &lt;p&gt;El siguiente planteamiento de la base de datos pertenece a la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu&#34;&gt;FavSites&lt;/a&gt;, proyecto que realicé tiempo atrás y registrado bajo licencia &lt;a href=&#34;https://elbauldelprogramador.com/evaluando-el-estado-de-la-licencia-gpl&#34;&gt;GPLv3&lt;/a&gt;. Esta base de datos contiene una única tabla con las columnas nombre, descripción, latitud, longitud y foto. Estos nombres de columnas pasarán a formar parte de los metadatos en nuestra clase FavSitesProviderMetadata.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//FavSites for Android&lt;/span&gt;
@@ -3594,7 +3590,7 @@ content://contacts/people/23
 
 &lt;p&gt;Además, la clase &lt;em&gt;favSitesTableMEtaData&lt;/em&gt; hereda de la clase &lt;em&gt;BaseColumns&lt;/em&gt;, la cual proporciona el campo estandar &lt;em&gt;_ID&lt;/em&gt;, que representa el identificador de la fila. Con todas estas definiciones de metadatos, estamos listos para continuar con la implementación de nuestro proveedor.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-2-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08/&#34;&gt;Implementando un Content Provider (Parte 2)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-implementando-un-content-provider-parte-2-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08/&#34;&gt;Implementando un Content Provider (Parte 2)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3780,7 +3776,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-implementando-un-content-provider-parte-3-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_14/&#34;&gt;Implementando un Content Provider (Parte 3)&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-implementando-un-content-provider-parte-3-7&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_14/&#34;&gt;Implementando un Content Provider (Parte 3)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3797,7 +3793,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Como ya se vió en la &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_08&#34;&gt;entrada anterior&lt;/a&gt;, se usa UriMatcher para descifrar el tipo de URI. En función de esta, la clase &lt;em&gt;favSitesTableMEtaData&lt;/em&gt; tiene definida las constantes de los tipos MIME a devolver para cada URI.&lt;/p&gt;
 
-&lt;h4 id=&#34;implementación-del-método-query&#34;&gt;Implementación del método Query&lt;/h4&gt;
+&lt;h1 id=&#34;implementación-del-método-query&#34;&gt;Implementación del método Query&lt;/h1&gt;
 
 &lt;p&gt;El método &lt;em&gt;query&lt;/em&gt; es el responsable de devolver una colección de filas en función de una URI dada y una &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where&#34;&gt;cláusula where&lt;/a&gt;.&lt;/p&gt;
 
@@ -3809,7 +3805,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;El método query usa las proyecciones (projecttions) que creamos para identificar las columnas devueltas. Básicamente, query devuelve un &lt;a href=&#34;https://elbauldelprogramador.com/plsql-cursores&#34;&gt;cursor&lt;/a&gt;. Durante la llamada al método query, se usa el objeto &lt;em&gt;&lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html&#34;&gt;SQLiteQueryBuilder&lt;/a&gt;&lt;/em&gt; para formular y ejecutar la consulta.&lt;/p&gt;
 
-&lt;h4 id=&#34;implementación-del-método-insert&#34;&gt;Implementación del método Insert&lt;/h4&gt;
+&lt;h1 id=&#34;implementación-del-método-insert&#34;&gt;Implementación del método Insert&lt;/h1&gt;
 
 &lt;p&gt;Éste método se encarga de insertar registros en la base de datos y devuelve una URI que apunta al registro insertado. Al igual que el método anterior, usa UriMatcher para identificar el tipo de URI. Primero comprueba si la URI coincide correctamente con el tipo de colección de datos de dicha URI. Si esta comprobación falla, se lanza una excepción.&lt;/p&gt;
 
@@ -3817,19 +3813,19 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Después, se usa el objeto &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/reference/android/database/sqlite/SQLiteDatabase.html&#34;&gt;SQLiteDatabase&lt;/a&gt; para insertar el nuevo registro y devolver el ID que se acaba de insertar. Por último, se crea una URI nueva a partir del ID devuelto por la base de datos.&lt;/p&gt;
 
-&lt;h4 id=&#34;implementación-del-método-update&#34;&gt;Implementación del método Update&lt;/h4&gt;
+&lt;h1 id=&#34;implementación-del-método-update&#34;&gt;Implementación del método Update&lt;/h1&gt;
 
 &lt;p&gt;Se encarga de actualizar registros que cumplan las condiciones que establece la &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-where&#34;&gt;cláusula where&lt;/a&gt;. Éste método devuelve el número de registros actualizados.&lt;/p&gt;
 
 &lt;p&gt;También usa UriMatcher para identificar el tipo de URI. Si la URI es una colección de datos, se aplica la cláusula where para aplicar el update a los registros que cumplan las condiciones de dicha cláusula. Si por el contrario, el tipo de URI es de un solo registro, se extrae el ID (En este caso de un lugar) de la URI y se especifica como una cláusula where adicional para identificar el lugar almacenado en la base de datos que tenga asignado ese ID. Una vez acabado el proceso de actualizar los registros, Update devuelve el número de registros que se modificaron.&lt;/p&gt;
 
-&lt;h4 id=&#34;implementación-de-método-delete&#34;&gt;Implementación de método Delete&lt;/h4&gt;
+&lt;h1 id=&#34;implementación-de-método-delete&#34;&gt;Implementación de método Delete&lt;/h1&gt;
 
 &lt;p&gt;Se encarga de eliminar registros basandose en la cláusula where que se le pasa como parámetro. Devuelve el número de filas eliminadas.&lt;/p&gt;
 
 &lt;p&gt;Usa UriMatcher, al igual que los anteriores. Si la URI es una colección, se aplica la cláusula where para borrar todos los registros que cumplan esas condiciones. Si no existe la cláusula, se eliminan todos los registros. En el caso de que la URI corresponda a un único elemento, se extrae su ID de la URI y se especifíca como cláusula where adicional (al igual que en el método update). Por último, devuelve el número de registros elminados.&lt;/p&gt;
 
-&lt;h4 id=&#34;usando-urimatcher-para-conocer-el-tipo-de-uri&#34;&gt;Usando UriMatcher para conocer el tipo de URI&lt;/h4&gt;
+&lt;h1 id=&#34;usando-urimatcher-para-conocer-el-tipo-de-uri&#34;&gt;Usando UriMatcher para conocer el tipo de URI&lt;/h1&gt;
 
 &lt;p&gt;Hemos hablado mucho en esta sección de UriMatcher, ahora es el momento de profundizar en él. La mayoría de los métodos de un proveedor de contenidos están sobrecargados. Por ejemplo, se llama al mismo método query() tanto para recuperar un único registro o múltiples. Es el método el que debe averiguar el tipo de URI. La utilidad que ofrece Android con UriMatcher ayuda precisamente a realizar este trabajo de identificar el tipo de URI.&lt;/p&gt;
 
@@ -3876,7 +3872,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;usando-los-mapas-de-proyecciones-projection-maps&#34;&gt;Usando los mapas de proyecciones (Projection Maps)&lt;/h4&gt;
+&lt;h1 id=&#34;usando-los-mapas-de-proyecciones-projection-maps&#34;&gt;Usando los mapas de proyecciones (Projection Maps)&lt;/h1&gt;
 
 &lt;p&gt;El proveedor de contenido actúa de intermediario entre un conjunto abstracto de columnas y un conjunto real de columnas en una base de datos, sin embargo los conjuntos de columnas pueden ser distintos. Mientras construimos consultas (queries), es necesario hacer un mapeo entre las columnas de la cláusula where y las columnas reales de la base de datos. Para configurar este &lt;em&gt;projection map&lt;/em&gt; necesitamos la ayuda de la clase &lt;em&gt;&lt;a href=&#34;http://developer.android.com/reference/android/database/sqlite/SQLiteQueryBuilder.html&#34;&gt;SQLiteQueryBuilder.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
@@ -3913,7 +3909,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;n&#34;&gt;qb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setProjectionMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sSitesProjectionMap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;siguiente-tema-implementando-un-content-provider-parte-4-8&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_29/&#34;&gt;Implementando un Content Provider (Parte 4)&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-implementando-un-content-provider-parte-4-8&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un_29/&#34;&gt;Implementando un Content Provider (Parte 4)&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3924,7 +3920,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
             <guid>https://elbauldelprogramador.com/programacion-android-implementando-un_29/</guid>
             <description>&lt;p&gt;En esta última parte de una serie de &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;4 artículos&lt;/a&gt; en los que se ha ido explicando cómo implementar un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;ContentProvider&lt;/a&gt; desde cero, se va a ver cómo registrar dicho proveedor y cómo darle uso.&lt;/p&gt;
 
-&lt;h4 id=&#34;registrar-el-proveedor&#34;&gt;Registrar el proveedor&lt;/h4&gt;
+&lt;h1 id=&#34;registrar-el-proveedor&#34;&gt;Registrar el proveedor&lt;/h1&gt;
 
 &lt;p&gt;Para poder usar el proveedor es necesario registrarlo en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;AndroidManifest:&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;provider&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.SitesProvider&amp;quot;&lt;/span&gt;
@@ -3933,7 +3929,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;añadir-registros&#34;&gt;Añadir registros&lt;/h4&gt;
+&lt;h1 id=&#34;añadir-registros&#34;&gt;Añadir registros&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Insertando registros...&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;ContentValues&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cv&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContentValues&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 
@@ -3956,7 +3952,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;inserted uri:&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insertedUri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;eliminar-registros&#34;&gt;Eliminar registros&lt;/h4&gt;
+&lt;h1 id=&#34;eliminar-registros&#34;&gt;Eliminar registros&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ContentResolver&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getContentResolver&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FavSitesProviderMetaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;favSitesTableMEtaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
@@ -3966,7 +3962,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
          &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;5&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;obtener-el-número-de-registros&#34;&gt;Obtener el número de registros&lt;/h4&gt;
+&lt;h1 id=&#34;obtener-el-número-de-registros&#34;&gt;Obtener el número de registros&lt;/h1&gt;
 
 &lt;p&gt;Para realizar esto, debemos crear un &lt;a href=&#34;https://elbauldelprogramador.com/plsql-cursores&#34;&gt;cursor&lt;/a&gt; y contar el número de registros de este:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FavSitesProviderMetaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;favSitesTableMEtaData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CONTENT_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -3979,7 +3975,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;n&#34;&gt;cur&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;mostrar-la-lista-de-sítios&#34;&gt;Mostrar la lista de sítios&lt;/h4&gt;
+&lt;h1 id=&#34;mostrar-la-lista-de-sítios&#34;&gt;Mostrar la lista de sítios&lt;/h1&gt;
 
 &lt;p&gt;Muestra todo el contenido de la tabla sites de la base de datos.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
@@ -4045,7 +4041,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Espero que este conjunto de cuatro artículos os haya servido de ayuda. En los próximos artículos veremos en profundidad los intents.&lt;/p&gt;
 
-&lt;h4 id=&#34;siguiente-tema-intents-conceptos-básicos-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34;&gt;Intents - Conceptos básicos&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-intents-conceptos-básicos-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34;&gt;Intents - Conceptos básicos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4056,7 +4052,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
             <guid>https://elbauldelprogramador.com/programacion-android-insertando/</guid>
             <description>&lt;p&gt;En la entrada anterior hablamos de cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-la-clausula&#34;&gt;obtener regístros&lt;/a&gt; de los proveedores de contenidos (CV) usando &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;URIs&lt;/a&gt;. Ahora vamos a ver como insertar registros.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Anroid utiliza una clase llamada &lt;em&gt;android.content.ContentValues&lt;/em&gt; para retener los valores de un solo registro, que será el que se insertará. Los &lt;em&gt;ContentValues&lt;/em&gt; son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos&#34;&gt;bases de datos&lt;/a&gt;. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a &lt;em&gt;android.content.ContentResolver&lt;/em&gt; que lo inserte usando una URI.&lt;/p&gt;
 
@@ -4096,7 +4092,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Nuevo registro añadido&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Uri:&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insertedUri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;añadir-archivos-a-un-content-provider&#34;&gt;Añadir archivos a un Content Provider&lt;/h2&gt;
+&lt;h1 id=&#34;añadir-archivos-a-un-content-provider&#34;&gt;Añadir archivos a un Content Provider&lt;/h1&gt;
 
 &lt;p&gt;Puede que en ocasiones necesitemos añadir un archivo a una base de datos. Lo normal es guardar el archivo en disco y actualizar el registro en la base de datos para que apunte al archivo correspondiente. Android usa este protocolo y lo automatiza mediante la definición de un procedimiento específico para guardar y recibir estos archivos. Usa un convenio en el cual una referencia a un nombre de archivo se guarda en un registro con un nombre de columna reservado llamado &lt;strong&gt;_data&lt;/strong&gt;.&lt;/p&gt;
 
@@ -4122,7 +4118,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;El código usa el flujo de salida para escribir.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4131,11 +4127,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/programacion-android-intents-categorias/</guid>
-            <description>&lt;div class=&#34;separator&#34; &gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría &lt;em&gt;CATEGORY_LAUNCHER&lt;/em&gt;.&lt;/p&gt;
+            <description>&lt;p&gt;Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría &lt;em&gt;CATEGORY_LAUNCHER&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;La convención usada para nombrar a las categorías es (para el caso de CATEGORY_LAUNCHER):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;android.intent.category.LAUNCHER
@@ -4145,10 +4137,10 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.PrincipalActivity&amp;quot;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/app_name&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;intent&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.intent.action.MAIN&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.intent.category.LAUNCHER&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/category&amp;gt;&amp;lt;/action&amp;gt;&amp;lt;/intent&amp;gt;&lt;/span&gt;
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.intent.action.MAIN&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;android.intent.category.LAUNCHER&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -4166,7 +4158,6 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addCategory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CATEGORY_LAUNCHER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PackageManager&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getPackageManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolveinfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;queryIntentActivities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolveinfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;PackageManager permite encontrar actividades que coincidan con un intent sin llegar a invocarlas. Una vez ejecutado lo de arriba, podemos iterar sobre la lista e invocar a la actividad que coincida con el nombre que deseemos:&lt;/p&gt;
@@ -4192,9 +4183,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Si quisiéramos invocar un intent para volver a la pantalla principal, basta con cambiar la categoría del código de arriba de &lt;em&gt;Intent.CATEGORY_LAUNCHER&lt;/em&gt; a &lt;em&gt;Intent.CATEGORY_HOME&lt;/em&gt;&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;siguiente-tema-cómo-se-resuelven-los-intents-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven/&#34;&gt;Cómo se resuelven los Intents&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-cómo-se-resuelven-los-intents-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven/&#34;&gt;Cómo se resuelven los Intents&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>

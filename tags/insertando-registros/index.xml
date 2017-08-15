@@ -24,7 +24,7 @@
             <guid>https://elbauldelprogramador.com/programacion-android-insertando/</guid>
             <description>&lt;p&gt;En la entrada anterior hablamos de cómo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-la-clausula&#34;&gt;obtener regístros&lt;/a&gt; de los proveedores de contenidos (CV) usando &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;URIs&lt;/a&gt;. Ahora vamos a ver como insertar registros.&lt;/p&gt;
 
-&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;Anroid utiliza una clase llamada &lt;em&gt;android.content.ContentValues&lt;/em&gt; para retener los valores de un solo registro, que será el que se insertará. Los &lt;em&gt;ContentValues&lt;/em&gt; son un dicionario de pares clave/valor, al igual que los nombres de columnas y valores de las &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos&#34;&gt;bases de datos&lt;/a&gt;. La forma de insertar un registro es rellenando el ContentValues primero y despues decir a &lt;em&gt;android.content.ContentResolver&lt;/em&gt; que lo inserte usando una URI.&lt;/p&gt;
 
@@ -64,7 +64,7 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Nuevo registro añadido&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Uri:&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insertedUri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;añadir-archivos-a-un-content-provider&#34;&gt;Añadir archivos a un Content Provider&lt;/h2&gt;
+&lt;h1 id=&#34;añadir-archivos-a-un-content-provider&#34;&gt;Añadir archivos a un Content Provider&lt;/h1&gt;
 
 &lt;p&gt;Puede que en ocasiones necesitemos añadir un archivo a una base de datos. Lo normal es guardar el archivo en disco y actualizar el registro en la base de datos para que apunte al archivo correspondiente. Android usa este protocolo y lo automatiza mediante la definición de un procedimiento específico para guardar y recibir estos archivos. Usa un convenio en el cual una referencia a un nombre de archivo se guarda en un registro con un nombre de columna reservado llamado &lt;strong&gt;_data&lt;/strong&gt;.&lt;/p&gt;
 
@@ -90,7 +90,7 @@
 
 &lt;p&gt;El código usa el flujo de salida para escribir.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-actualizar-y-borrar-registros-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-actualizar-y/&#34;&gt;Actualizar y borrar registros&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

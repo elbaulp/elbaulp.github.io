@@ -3889,51 +3889,47 @@ adios
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</guid>
-            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  src=&#34;https://elbauldelprogramador.com/img/2013/07/iconoAndroid.png&#34;  id=&#34;logo&#34;  class=&#34;icono&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
+            <description>&lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;La regla básica es que la acción, categoría o datos característicos de un intent deben coincidir, o estar presentes, en los intent-filter de la actividad. De forma análoga a los íntents, un intent-filter puede establecer varias acciones, categorías y atributos. Lo que quiere decir que una misma actividad (con varios intent-filters), puede ser válida y por lo tanto responder a intents de distinto tipo. Vamos a ver los distintos critérios que se siguen para considerar si el intent coincide con el intent-filter:&lt;/p&gt;
 
-&lt;h3 id=&#34;action&#34;&gt;Action&lt;/h3&gt;
+&lt;h1 id=&#34;action&#34;&gt;Action&lt;/h1&gt;
 
 &lt;p&gt;Si un intent tiene una acción establecida, el intent-filter debe tener esa acción declarada o no tener ninguna acción definida. Es decir, si una actividad no tiene declarado ningún intent filter, se considera una opción para cualquier intent con una acción.&lt;/p&gt;
 
-&lt;h3 id=&#34;data&#34;&gt;Data&lt;/h3&gt;
+&lt;h1 id=&#34;data&#34;&gt;Data&lt;/h1&gt;
 
 &lt;p&gt;Si no se especifica ningún tipo de dato en un intent-filter, éste no coincidirá con ningún intent que sí que tenga establecido cualquier tipo de dato adicional. Es decir, esa actividad solo se considerará una opción para los intent que no tengan especificado ningún dato.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-type&#34;&gt;Data type&lt;/h3&gt;
+&lt;h1 id=&#34;data-type&#34;&gt;Data type&lt;/h1&gt;
 
 &lt;p&gt;Para que se considere como coincidencia un tipo de dato, el intent debe ser uno de los tipos de datos declarados en el intent-filter. Para determinar el tipo de dato android tiene dos formas. La primera es determinar el tipo de dato a partir de la URI (si la URI es una content URI) o si la URI es un fichero (file://&amp;#8230;). La segunda es mirar en el tipo de dato explícito del intent. Para que esto funcione correctamente el intent no debe tener una URI de datos adjunta, ya que se toma automáticamente cuando llamamos al método &lt;em&gt;setType()&lt;/em&gt; en el intent. Es posible cubrir multitud de subtipos con *.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-scheme&#34;&gt;Data scheme&lt;/h3&gt;
+&lt;h1 id=&#34;data-scheme&#34;&gt;Data scheme&lt;/h1&gt;
 
 &lt;p&gt;Para que un esquema de datos coincida (data scheme), el esquema de datos ha de estar presente tanto en el intent como en el intent-filter de la actividad. Un esquema de datos es la primera parte de una URI, por ejemplo, &lt;em&gt;http://, file://, content://, ftp://&lt;/em&gt; etc. Los intent no tienen definido ningún método para establecer el esquema de datos, ya que viene dado por la URI del intent.&lt;/p&gt;
 
 &lt;p&gt;En el caso de que el esquema sea del tipo &lt;em&gt;content: ó file:&lt;/em&gt;, se considera una coincidencia independientemente de lo que se especifique en el intent-filter. Se aplica esta regla porque cada componente debe saber como leer datos desde urls del tipo &lt;em&gt;content&lt;/em&gt; o &lt;em&gt;file&lt;/em&gt;, ya que son locales al dispositivo.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-authority&#34;&gt;Data Authority&lt;/h3&gt;
+&lt;h1 id=&#34;data-authority&#34;&gt;Data Authority&lt;/h1&gt;
 
 &lt;p&gt;En el caso de que no se especifique authority alguno en el intent-filter, se obtendrá una coincidéncia para cualquier data URI authority. Si por el contrario se especifica en el intent-filter, como ejemplo pongamos &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, entonces se considerará una coincidencia un esquema de datos y una authority.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo fácil para comprender esto podría ser que tengamos esto declarado como authority en el intent-filter &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, y como esquema de datos &lt;em&gt;https&lt;/em&gt;, todo intent fallará si usamos lo siguiente, &lt;em&gt;/path&lt;/em&gt;, ya que el esquema de datos &lt;em&gt;http&lt;/em&gt; no está declarado.&lt;/p&gt;
 
-&lt;h3 id=&#34;data-path&#34;&gt;Data Path&lt;/h3&gt;
+&lt;h1 id=&#34;data-path&#34;&gt;Data Path&lt;/h1&gt;
 
 &lt;p&gt;Ningún path (ruta) especificado en el intent-filter resultará ser una coincidencia para cualquier path entrante. Para validar un intent, el esquema de datos, el authority y el path trabajan juntos. Es decir en &lt;em&gt;&lt;a href=&#34;http://elbauldelprogramador.org/path&#34;&gt;http://elbauldelprogramador.org/path&lt;/a&gt;&lt;/em&gt; los tres trabajan juntos para validar el intent.&lt;/p&gt;
 
-&lt;h3 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h3&gt;
+&lt;h1 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h1&gt;
 
 &lt;p&gt;Cada &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias&#34;&gt;categoría&lt;/a&gt; debe estar presente en el intent-filter. En el caso de que en el intent-filter no exista ninguna categoría especificada, esa actividad solo será una coincidencia para los intent que no tengan ninguna categoría especificada. Sin embargo, hay que tener en cuenta que los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intent implícitos&lt;/a&gt; que se pasan &lt;strong&gt;startActivity()&lt;/strong&gt; contienen al menos una categoría que es &lt;em&gt;android.intent-category.DEFAULT&lt;/em&gt;. Por lo tanto, hemos de tener en cuenta que si queremos llamar a una actividad mediante un intent implícito debemos registrar dicha categoría en el intent-filter.&lt;/p&gt;
 
 &lt;p&gt;Si una actividad no tiene declarada la categoría por defecto, pero conocemos su nombre de componente, podémos llamarle mediante un intent explícito.&lt;/p&gt;
 
-&lt;hr /&gt;
-
-&lt;h4 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
