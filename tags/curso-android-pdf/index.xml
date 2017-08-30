@@ -2994,7 +2994,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
             <guid>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</guid>
             <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
 
-&lt;h3 id=&#34;introducción-a-los-intents&#34;&gt;Introducción a los Intents&lt;/h3&gt;
+&lt;h1 id=&#34;introducción-a-los-intents&#34;&gt;Introducción a los Intents&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -3041,7 +3041,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;intents-disponibles-en-android&#34;&gt;Intents disponibles en Android&lt;/h3&gt;
+&lt;h1 id=&#34;intents-disponibles-en-android&#34;&gt;Intents disponibles en Android&lt;/h1&gt;
 
 &lt;p&gt;En &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/guide/appendix/g-app-intents.html&#34;&gt;developer.android.com/guide/appendix/g-app-intents.html&lt;/a&gt; se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y &lt;strong&gt;WEB_SEARCH&lt;/strong&gt;, que abren el navegador en una url específica o realizan una búsqueda.&lt;/p&gt;
 
@@ -3078,7 +3078,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;composición-de-los-intents&#34;&gt;Composición de los intents&lt;/h3&gt;
+&lt;h1 id=&#34;composición-de-los-intents&#34;&gt;Composición de los intents&lt;/h1&gt;
 
 &lt;p&gt;Un intent está formado por una acción, datos (que se representan mediante URIs), datos extra en pares clave/valor y un nombre de clase explícito, llamado nombre del componente.&lt;/p&gt;
 
@@ -3086,7 +3086,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Es necesario aclarar algo, cuando un intent trae consigo un nombre de componente, se le llama intent explícito. Cuando no lo lleva y depende de la acción y los datos se llama intent implícito.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&#34;intents-y-data-uris&#34;&gt;Intents y Data URIs&lt;/h3&gt;
+&lt;h1 id=&#34;intents-y-data-uris&#34;&gt;Intents y Data URIs&lt;/h1&gt;
 
 &lt;p&gt;Como vimos un poco más arriba los URIs para las acciones ACTION_DIAL y ACTION_CALL tienen la estructura &lt;em&gt;tel:número&lt;/em&gt;, y la manera de usar esta URI en el intent para pasarla como dato es la siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;tel:555-555-555&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
@@ -3096,7 +3096,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;La sección de &lt;em&gt;datos&lt;/em&gt; de un intent no son datos realmente, se trata de punteros a datos. Está representado por un string que representa una URI. Una Uri de un intent puede contener argumentos, como las urls de las web.&lt;/p&gt;
 
-&lt;h3 id=&#34;acciones-genéricas&#34;&gt;Acciones genéricas&lt;/h3&gt;
+&lt;h1 id=&#34;acciones-genéricas&#34;&gt;Acciones genéricas&lt;/h1&gt;
 
 &lt;p&gt;Vamos a volver a ver el código que invoca al navegador web para analizarlo más en profundidad:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -3116,7 +3116,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;SE puede obtener más informacion del elemento &lt;em&gt;data&lt;/em&gt; en &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/guide/topics/manifest/data-element.html&#34;&gt;developer.android.com/guide/topics/manifest/data-element.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;infomación-extra&#34;&gt;Infomación extra&lt;/h3&gt;
+&lt;h1 id=&#34;infomación-extra&#34;&gt;Infomación extra&lt;/h1&gt;
 
 &lt;p&gt;Los intents admiten además de las acciones y datos, un atributo adicional llamado &lt;em&gt;extras&lt;/em&gt;. Este tipo de dato viene dado por la forma clave/valor, en la cual el nombre de la clave normalmente suele empezar con el nombre del paquete y el valor puede ser de cualqueira de los tipos fundamentales u objetos arbitrários, siempre que se implemente la inrefaz android.os.Parcelable. Esta información extra se representa mediante la clase &lt;em&gt;android.os.Bundle&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//Obtener un bundle&lt;/span&gt;
@@ -3149,7 +3149,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;La clase intent tiene declarados unas claves extras que acompañan a ciertas acciones, pueden verse en &lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&#34;&gt;developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&lt;/a&gt;. Por ejemplo EXTRA_SUBJECT nos permite almacenar el asunto de un email. El valor de esta clave es &lt;em&gt;android.intent.extra.SUBJECT&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;usar-componentes-para-invocar-directamente-una-activity&#34;&gt;Usar componentes para invocar directamente una activity&lt;/h3&gt;
+&lt;h1 id=&#34;usar-componentes-para-invocar-directamente-una-activity&#34;&gt;Usar componentes para invocar directamente una activity&lt;/h1&gt;
 
 &lt;p&gt;Una forma más directa de iniciar una actividad es mediante el su ComponentName, que es una abstracción del nombre del paquete y de la clase. Existen varios métodos para realizar esta acción en la clase Intent:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ComponentName&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -3179,7 +3179,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.&lt;/p&gt;
 
-&lt;h4 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -3968,7 +3968,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;framelayout&#34;&gt;FrameLayout&lt;/h3&gt;
+&lt;h1 id=&#34;framelayout&#34;&gt;FrameLayout&lt;/h1&gt;
 
 &lt;p&gt;Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte superior izquierda de la pantalla.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
@@ -3992,10 +3992,10 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;FrameLayout Android&#34; title=&#34;FrameLayout Android&#34;  height=&#34;436&#34; width=&#34;328&#34; src=&#34;https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s800/frameLayout.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 328px) 328px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;FrameLayout Android&#34; title=&#34;FrameLayout Android&#34;  height=&#34;436&#34; width=&#34;328&#34; src=&#34;https://2.bp.blogspot.com/-YNiwbTTpG5Y/TgMwa0LJnoI/AAAAAAAAApg/PKXOsoXfMoU/s800/frameLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;linearlayout&#34;&gt;LinearLayout&lt;/h3&gt;
+&lt;h1 id=&#34;linearlayout&#34;&gt;LinearLayout&lt;/h1&gt;
 
 &lt;p&gt;Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad &lt;strong&gt;&lt;em&gt;android:orientation=&amp;#8221;horizontal | vertical&amp;#8221;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
@@ -4022,10 +4022,10 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;En este caso, he pueso un fondo de color a cada texto (con la propiedad &lt;strong&gt;&lt;em&gt;android:background&lt;/em&gt;&lt;/strong&gt;) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;LinearLayout Android&#34; title=&#34;LinearLayout Android&#34;  height=&#34;435&#34; width=&#34;326&#34; src=&#34;https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s800/LinearLayout.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 326px) 326px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;LinearLayout Android&#34; title=&#34;LinearLayout Android&#34;  height=&#34;435&#34; width=&#34;326&#34; src=&#34;https://3.bp.blogspot.com/-tT2G6ADQahI/TgM14QuwAjI/AAAAAAAAApw/PqPNv1ryoTs/s800/LinearLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;relativelayout&#34;&gt;RelativeLayout&lt;/h3&gt;
+&lt;h1 id=&#34;relativelayout&#34;&gt;RelativeLayout&lt;/h1&gt;
 
 &lt;p&gt;Este Layout permite que coloquemos los elementos en un lugar con respecto a la posición de otro, es decir, colocar un botón a la derecha de un texto, o centrarlo en la pantalla, o por ejemplo, colocar un texto encima de tal elemento y a la derecha de este otro.&lt;/p&gt;
 
@@ -4059,10 +4059,10 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Como vemos, hemos centrado el texto1 en la pantalla con &lt;strong&gt;&lt;em&gt;android:layout_centerInParent=&amp;#8221;true&amp;#8221;&lt;/em&gt;&lt;/strong&gt; y hemos puesto debajo del texto1 al texto2 con &lt;strong&gt;&lt;em&gt;android:layout_below=&amp;#8221;@id/text1&amp;#8243;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;relativeLayout Android&#34; alt=&#34;relativeLayout Android&#34;  height=&#34;437&#34; width=&#34;326&#34; src=&#34;https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 326px) 326px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;relativeLayout Android&#34; alt=&#34;relativeLayout Android&#34;  height=&#34;437&#34; width=&#34;326&#34; src=&#34;https://1.bp.blogspot.com/-pB2RUTDnOSg/TgOGYaZCVaI/AAAAAAAAAp4/r_qjr4tJoKc/s800/RelativeLayout.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-componentes-gráficos-y-eventos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;Programación Android: Interfaz gráfica - Componentes gráficos y Eventos&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-componentes-gráficos-y-eventos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_25/&#34;&gt;Programación Android: Interfaz gráfica - Componentes gráficos y Eventos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4083,7 +4083,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;li&gt;&lt;strong&gt;&lt;em&gt;Submenús:&lt;/em&gt;&lt;/strong&gt; Menús desplegados al pulsar sobre un elemento de otro menú.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;options-menu&#34;&gt;Options Menu&lt;/h3&gt;
+&lt;h1 id=&#34;options-menu&#34;&gt;Options Menu&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
@@ -4143,7 +4143,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;context-menu&#34;&gt;Context Menu&lt;/h3&gt;
+&lt;h1 id=&#34;context-menu&#34;&gt;Context Menu&lt;/h1&gt;
 
 &lt;p&gt;Los menús contextuales son similares a los menús mostrados al hacer click con el botón derecho de un ratón en un PC, para crearlos, debemos sobreescribir el método &lt;strong&gt;&lt;em&gt;onCreateContextMenu()&lt;/em&gt;&lt;/strong&gt;, donde inflaremos el archivo xml.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
@@ -4185,20 +4185,20 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Aquí dejo algunas capturas de pantalla de la aplicación:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Option menu Android&#34; title=&#34;Option Menu android&#34;  height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s800/optionmenu.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Option menu Android&#34; title=&#34;Option Menu android&#34;  height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://3.bp.blogspot.com/-JIhItNsspfQ/ThdvxHzhiLI/AAAAAAAAArI/n5vFz4sOjvA/s800/optionmenu.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;800&#34; width=&#34;480&#34; alt=&#34;Option menu Android&#34; title=&#34;Option menu Android&#34; src=&#34;https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s800/optionmenu-about.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;800&#34; width=&#34;480&#34; alt=&#34;Option menu Android&#34; title=&#34;Option menu Android&#34; src=&#34;https://1.bp.blogspot.com/-bBsrepZGNdM/ThdvxuQJ0XI/AAAAAAAAArQ/vxr-eRx3mJM/s800/optionmenu-about.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  title=&#34;Context menu Android&#34; alt=&#34;Context menu Android&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s800/contextMenu.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  title=&#34;Context menu Android&#34; alt=&#34;Context menu Android&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/-wiia8Yo7Ass/Thdvx_KduPI/AAAAAAAAArY/wVFBRmQeX68/s800/contextMenu.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Podéis encontrar más información sobre Menús en la &lt;a href=&#34;http://developer.android.com/guide/topics/ui/menus.html&#34;&gt;página oficial de Android&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Espero que os sirva de ayuda.&lt;/p&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-diálogos-y-notificaciones-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/&#34;&gt;Programación Android: Interfaz gráfica - Diálogos y notificaciones&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-diálogos-y-notificaciones-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/&#34;&gt;Programación Android: Interfaz gráfica - Diálogos y notificaciones&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4212,7 +4212,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;300&#34; width=&#34;514&#34; src=&#34;https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 515px) 515px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;300&#34; width=&#34;514&#34; src=&#34;https://3.bp.blogspot.com/-qMw4Dx_mS0U/TgDfg6rdMCI/AAAAAAAAApU/Pl9tUQckM5g/s1600/layoutparams.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Los objetos &lt;strong&gt;&lt;em&gt;View&lt;/em&gt;&lt;/strong&gt; se pueden definir de dos maneras:&lt;/p&gt;
@@ -4252,7 +4252,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Los objetos View pueden tener otros muchos atributos, como padding, colores, imágenes, fondos, márgentes etc&lt;/p&gt;
 
-&lt;h3 id=&#34;context&#34;&gt;Context&lt;/h3&gt;
+&lt;h1 id=&#34;context&#34;&gt;Context&lt;/h1&gt;
 
 &lt;p&gt;Si ya has programado algo en Android, o has visto alguno de los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;ejemplos&lt;/a&gt;, probablemente hayas visto que muchos métodos referidos a la vista piden como parámetro un objeto de tipo &lt;strong&gt;&lt;em&gt;context&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -4266,7 +4266,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;li&gt;Usando otros métodos como &lt;strong&gt;&lt;em&gt;getApplicationContext() o getApplication()&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-layouts-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34;&gt;Programación Android: Interfaz gráfica - Layouts&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-layouts-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34;&gt;Programación Android: Interfaz gráfica - Layouts&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4306,7 +4306,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;A pesar de los numerosos mecanismos de acceso a datos permitidos en Android, en este &lt;a href=&#34;https://elbauldelprogramador.com/planteamiento-de-la-segunda-parte-del.html&#34;&gt;segundo tomo del Curso de programación Android&lt;/a&gt;, me voy a centrar en SQlite y la abstracción del CV, ya que los CV componen la base del intercambio de datos, el cual es mucho más común en Android que en cualquier otro Framework.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&#34;siguiente-tema-programación-android-arquitectura-de-los-proveedore-de-contenidos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-arquitectura-de/&#34;&gt;Programación Android: Arquitectura de los Proveedore de contenidos&lt;/a&gt;&lt;/h3&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-arquitectura-de-los-proveedore-de-contenidos-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-arquitectura-de/&#34;&gt;Programación Android: Arquitectura de los Proveedore de contenidos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4365,7 +4365,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
                                     &lt;span class=&#34;n&#34;&gt;Contacts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;People&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NAME&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot; ASC&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//Clausula order by&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;siguiente-tema-usando-cursores-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-cursores/&#34;&gt;Usando cursores&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-usando-cursores-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-usando-cursores/&#34;&gt;Usando cursores&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4396,7 +4396,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
    &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;ejemplo&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;siguiente-tema-programación-android-recursos-plurales-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-plurales/&#34;&gt;Programación Android: Recursos - Plurales&lt;/a&gt;&lt;/h4&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-plurales-1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-plurales/&#34;&gt;Programación Android: Recursos - Plurales&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4416,13 +4416,13 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;p&gt;Dos dispositivos distintos, usando recursos por defecto:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s800/resource_devices_diagram1.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 421px) 421px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://4.bp.blogspot.com/-i4yy82wXUUw/TjApp4KaOZI/AAAAAAAAAs4/pvOrsmzXM24/s800/resource_devices_diagram1.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Dos dispositivos distintos, usando recursos alternativos:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s800/resource_devices_diagram2.png&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 421px) 421px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Recursos en Android&#34; alt=&#34;Recursos en Android&#34;  height=&#34;137&#34; width=&#34;421&#34; src=&#34;https://3.bp.blogspot.com/-gHivH4Mcffk/TjAp28O15AI/AAAAAAAAAtA/CbSojjJctp0/s800/resource_devices_diagram2.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Por ejemplo, podemos crear iconos más pequeños para que sean mostrados en los terminales con pantallas más pequeñas o diseñar una disposición de pantalla diferente para cuando la aplicación se esté ejecutando en modo apaisado, para conseguir esto, simplemente creamos una carpeta de recursos añadiendo el sufijo que indica la situación en la que debe usarse.&lt;/p&gt;
@@ -4433,7 +4433,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;Para saber más acerca de los tipos de sufijos que se pueden usar, visita &lt;a href=&#34;http://developer.android.com/guide/topics/resources/providing-resources.html&#34;&gt;Providing Resources en la página oficial de Android.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-programación-android-recursos-usando-recursos-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-usando/&#34;&gt;Programación Android: Recursos - Usando recursos&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-usando-recursos-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-usando/&#34;&gt;Programación Android: Recursos - Usando recursos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -4442,7 +4442,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/programacion-android-recursos-layout/</guid>
-            <description>&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
 
 &lt;p&gt;En Android, cada pantalla de una aplicación habitualmente se carga desde un fichero XML que actua de recurso. Un recurso layout es un recurso clave que se usa en Android para componer la UI de nuestra aplicación. Vamos a considerar el segmenteo de código siguiente como ejemplo de una &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_17/&#34;&gt;actividad&lt;/a&gt; en Android.&lt;/p&gt;
 
@@ -4462,8 +4462,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;vertical&amp;quot;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/text1&amp;quot;&lt;/span&gt;
         &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
@@ -4505,7 +4504,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;El valor del atributo id, indica que la constante llamada text1 será usada para identificar únicamente a esa vista. El signo + de &lt;strong&gt;&lt;em&gt;+id/text1&lt;/em&gt;&lt;/strong&gt; significa que el ID text1 será creado si no existe. En la siguiente entrada se tratará la sintaxis de los recursos.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-programación-android-recursos-sintaxis-de-los-recursos-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-sintaxis/&#34;&gt;Programación Android: Recursos - Sintaxis de los Recursos&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-sintaxis-de-los-recursos-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-sintaxis/&#34;&gt;Programación Android: Recursos - Sintaxis de los Recursos&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -5245,7 +5244,7 @@ content://com.elbauldelprogramador.provider.FavSites/sites/64
 
 &lt;p&gt;El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los recursos excepto los raw y lo coloca en el fichero .apk (Android package) final. Este fichero es el que contiene el código de las aplicaciones Android y los recursos, similar a los .jar de Java. Estos ficheros son los que usamos para instalar aplicaciones en Android.&lt;/p&gt;
 
-&lt;h2 id=&#34;siguiente-tema-programación-android-recursos-arrays-de-strings-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-arrays-de/&#34;&gt;Programación Android:Recursos - Arrays de strings&lt;/a&gt;&lt;/h2&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-arrays-de-strings-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-arrays-de/&#34;&gt;Programación Android:Recursos - Arrays de strings&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
