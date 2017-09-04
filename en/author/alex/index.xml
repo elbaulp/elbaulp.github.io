@@ -6,7 +6,7 @@
         <description>Recent content in Alex on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Thu, 27 Jul 2017 12:21:35 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 04 Sep 2017 13:52:08 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/author/alex/</link>
@@ -17,543 +17,601 @@
         <atom:link href="https://elbauldelprogramador.com/en/author/alex/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Creating and managing passwords intelligently</title>
-            <link>https://elbauldelprogramador.com/en/good-passwords/</link>
-            <pubDate>Thu, 27 Jul 2017 12:21:35 +0100</pubDate>
+            <title>22 Podcasts / Youtube Channels / Blogs about Science</title>
+            <link>https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/</link>
+            <pubDate>Mon, 04 Sep 2017 13:52:08 +0100</pubDate>
             
-            <guid>https://elbauldelprogramador.com/en/good-passwords/</guid>
-            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+            <guid>https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/</guid>
+            <description>&lt;h1 id=&#34;what-is-this-list&#34;&gt;What is this list?&lt;/h1&gt;
+
+&lt;p&gt;I am going to finish this &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/lists/&#34;&gt;series of posts&lt;/a&gt; about resources I follow about &lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;Computer Science&#34;&gt;Computer Science&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/&#34; title=&#34;Mathematics&#34;&gt;Mathematics&lt;/a&gt; with a list of resources about &lt;em&gt;science&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you follow some resource not listed below feel free to post a comment and I will add it, or better, send me a &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/resources-blogs-podcast-youtube-channels-about-science.en.md&#34; target=&#34;_blank&#34; title=&#34;Pull Request!&#34;&gt;Pull Request!&lt;/a&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;07.27.2017: &lt;strong&gt;Added&lt;/strong&gt; &lt;em&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/em&gt; to useful links.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&#34;https://twitter.com/sinclair_88&#34; target=&#34;_blank&#34; title=&#34;@sinclair_88&#34;&gt;@sinclair_88&lt;/a&gt; for proposing the idea of this curated list.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Recently there has been a lot of noise in the &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/security/&#34; title=&#34;posts about security&#34;&gt;security&lt;/a&gt; field with &lt;strong&gt;wannaCry&lt;/strong&gt; and a &lt;strong&gt;breach with more than 230M accounts stolen&lt;/strong&gt;. Today more than ever it is necessary to have &lt;em&gt;good habits creating passwords&lt;/em&gt; when creating new accounts in any new service you sign up. This post shows some good practices I&amp;rsquo;ve been using since I became more security conscious.&lt;/p&gt;
-
-&lt;h1 id=&#34;create-good-passwords&#34;&gt;Create Good Passwords&lt;/h1&gt;
-
-&lt;p&gt;The first thing is to create a &lt;em&gt;strong and random enough password&lt;/em&gt;. There are many websites and tools for this purpose, such as &lt;a href=&#34;https://www.grc.com/passwords.htm&#34; target=&#34;_blank&#34; title=&#34;Perfect Passwords&#34;&gt;Steve Gibson&amp;rsquo;s page&lt;/a&gt; or the built-in tool in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;For example, for every new account you create in any service make a long password containing characters, numbers and symbols (see LastPass generator). A good choice for the &lt;strong&gt;password length would be anything above 50 character&lt;/strong&gt;, below is an example of the tool integrated in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;
-            alt=&#34;LastPass password generator&#34;
-            title=&#34;LastPass password generator&#34;
-            sizes=&#34;(min-width: 420px) 420px, 100vw&#34;
-            width=&#34;420&#34;
-            height=&#34;521&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;LastPass password generator&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;If you do not want to use &lt;strong&gt;LastPass&lt;/strong&gt; you can use &lt;strong&gt;Steve&amp;rsquo;s generator&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;
-            srcset=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png 1000w, https://elbauldelprogramador.com/img/steveperfectpasswords-800.png 800w&#34;
-            alt=&#34;Steve&#39;s Perfect Passwords&#34;
-            title=&#34;Steve&#39;s Perfect Passwords&#34;
-            sizes=&#34;(min-width: 1152px) 1152px, 100vw&#34;
-            width=&#34;1152&#34;
-            height=&#34;277&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Steve&#39;s Perfect Passwords&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;Lets see how much time would it take to &lt;strong&gt;crack this 50-length&lt;/strong&gt; randomly generated password: 8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;
-            alt=&#34;How long would it take to crack the password?&#34;
-            title=&#34;How long would it take to crack the password?&#34;
-            sizes=&#34;(min-width: 803px) 803px, 100vw&#34;
-            width=&#34;803&#34;
-            height=&#34;227&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;How long would it take to crack the password? | source: &lt;a href=&#34;https://howsecureismypassword.net/&#34; target=&#34;_blank&#34; title=&#34;howsecure&#34;&gt;howsecureismypassword.net&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;and what does it says &lt;strong&gt;Steve&amp;rsquo;s version?&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;
-            alt=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
-            title=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
-            sizes=&#34;(min-width: 842px) 842px, 100vw&#34;
-            width=&#34;842&#34;
-            height=&#34;753&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator | source: &lt;a href=&#34;https://www.grc.com/haystack.htm&#34; target=&#34;_blank&#34; title=&#34;haystack&#34;&gt;grc.com/haystack.htm&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;use-a-password-manager&#34;&gt;Use a password manager&lt;/h1&gt;
-
-&lt;p&gt;Of course using such passwords you &lt;strong&gt;can&amp;rsquo;t expect to memorize them&lt;/strong&gt;, and that is a sign of a strong and good password.&lt;/p&gt;
-
-&lt;p&gt;In order to manage your passwords you should use a password manager, I am using LastPass as these guys have demonstrated they know how to store your passwords in a secure way. ( I am basing this opinion on Steve Gibson&amp;rsquo;s knowledge on security, here are some talks about it: &lt;a href=&#34;https://www.youtube.com/watch?v=z4-h5gWpvAc&#34; target=&#34;_blank&#34; title=&#34;I&#34;&gt;I&lt;/a&gt;, &lt;a href=&#34;https://blog.lastpass.com/2010/07/lastpass-gets-green-light-from-security.html/&#34; target=&#34;_blank&#34; title=&#34;II&#34;&gt;II&lt;/a&gt;).&lt;/p&gt;
-
-&lt;p&gt;Even if you&amp;rsquo;re​ using LastPass to generate and store your passwords securely, there is an extra layer you could put on top of that: &lt;strong&gt;“use LastPass intelligently”&lt;/strong&gt;, as I explain in the next section.&lt;/p&gt;
-
-&lt;h2 id=&#34;best-practices-to-use-a-password-manager&#34;&gt;Best Practices To Use A Password  Manager&lt;/h2&gt;
-
-&lt;p&gt;So far you have a password stored in your password manager that&amp;rsquo;s​ impossible to memorize, that&amp;rsquo;s what a password manager is for. But the possibility that someone attack you and get all your LastPass information still could exists. Let&amp;rsquo;s suppose &lt;strong&gt;someone stole&lt;/strong&gt; all your data in LastPass, and to put us in the worst case scenario, &lt;strong&gt;ALL THE STOLEN DATA IS decrypted&lt;/strong&gt;. Well, one way to solve that is to only store &lt;em&gt;part of the password&lt;/em&gt; in LastPass, let me explain:&lt;/p&gt;
-
-&lt;p&gt;When you generate your password, you store that randomly generated password in your LastPass vault, but In the service itself, let&amp;rsquo;s say your Google account you set your password to:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;APASSWORDYOUCANMEMORIZE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;That way, even if all your LastPass data is stolen, the thief wouldn&amp;rsquo;t be able to log in into your accounts, as &lt;strong&gt;they only know part of your password.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;hardering-online-presence&#34;&gt;Hardering online presence&lt;/h1&gt;
-
-&lt;p&gt;These days more and more services offer a Two factor authentication option, you should enable it in all services you use.&lt;/p&gt;
-
-&lt;h2 id=&#34;tfa&#34;&gt;TFA&lt;/h2&gt;
-
-&lt;p&gt;When you enable TFA, the service will show your backup&amp;rsquo;s codes in the case you lose your phone or can&amp;rsquo;t generate a TFA code.&lt;/p&gt;
-
-&lt;h2 id=&#34;securing-your-tfa-backup-s&#34;&gt;Securing your TFA backup&amp;rsquo;s&lt;/h2&gt;
-
-&lt;p&gt;It is important that you save this backup&amp;rsquo;s codes, but In a secure place. The best thing would be to print it in paper and store them in a banks box. But for most of us stored them in a external HDD or print them would do the trick.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it, In this days I think applying this tips and bests practices should have your password pretty secure, but &lt;strong&gt;remember, nothing is complete secure&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;What tips do you use to secure your passwords? Let me know in the comments!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;useful-links&#34;&gt;Useful links&lt;/h1&gt;
+&lt;h1 id=&#34;more-lists&#34;&gt;More lists&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/&#34; target=&#34;_blank&#34; title=&#34;Passwords Evolved: Authentication Guidance for the Modern Era&#34;&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>Why I am removing Google Analytics</title>
-            <link>https://elbauldelprogramador.com/en/why-am-i-removing-google-analytics/</link>
-            <pubDate>Tue, 25 Jul 2017 12:12:46 +0200</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/why-am-i-removing-google-analytics/</guid>
-            <description>&lt;p&gt;As I am more concerned about my privacy on the internet as time goes by, I feel morally obligated to the the same for my readers, that is why I am removing all stuff that can be used to track my users on the internet.&lt;/p&gt;
-
-&lt;p&gt;The first step is to remove &lt;strong&gt;Google Analytics&lt;/strong&gt; due to its tracking nature. This is a big sacifice for my since I won&amp;rsquo;t be able to see any statistics about how the blog is performing anymore.&lt;/p&gt;
-
-&lt;p&gt;There is still work to be done, I only have &lt;strong&gt;one ad&lt;/strong&gt; and it will continue there until I can figure out an alternative which give me similar revenue. I hope you can understand this decision, since managing and writing a blog is time consuming and this is a way of compensate all that work. I have some alternatives to the ad, but none of them have work so far. You can check them in &lt;a href=&#34;https://elbauldelprogramador.com/en/apoyanos/&#34;&gt;/en/apoyanos/&lt;/a&gt;. Here are a few of them:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://amzn.to/2uwxMBQ&#34; target=&#34;_blank&#34; title=&#34;Amazon&#34;&gt;Amazon&lt;/a&gt; affiliate link.&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;http://patreon.com/elbauldelprogramador&#34; target=&#34;_blank&#34; title=&#34;Pateron&#34;&gt;patreon&lt;/a&gt; page.&lt;/li&gt;
-&lt;li&gt;A &lt;a href=&#34;https://www.paypal.me/elbaul&#34; target=&#34;_blank&#34; title=&#34;Paypal&#34;&gt;paypal&lt;/a&gt; account.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com//en/resources-channels-podcast-to-learn-math/&#34; title=&#34;11 Resources / Channels / Podcasts about Mathematics&#34;&gt;14 Resources / Channels / Podcasts about Mathematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;52 Blogs / Channels / Podcasts about Computer Science, Security &amp;amp; Data Science&#34;&gt;52 Blogs / Channels / Podcasts about Computer Science, Security &amp;amp; Data Science&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hope you like the change!&lt;/p&gt;
-</description>
-        </item>
-        
-        <item>
-            <title>How to write to a file in Scala</title>
-            <link>https://elbauldelprogramador.com/en/write-to-file-scala/</link>
-            <pubDate>Tue, 16 May 2017 10:25:24 +0200</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/write-to-file-scala/</guid>
-            <description>&lt;p&gt;In my last post I talked about &lt;a href=&#34;https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/&#34; title=&#34;iterate multiple collections in Scala&#34;&gt;how to iterate through multiple collections in scala&lt;/a&gt;, a problem I faced when working on my &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP depdendency parsing&#34;&gt;final project&lt;/a&gt;. Other problem I faced was writing to a file in &lt;strong&gt;Scala&lt;/strong&gt;, since standard Scala does not have this feature, I had to implement it and added to my personal library.&lt;/p&gt;
-
-&lt;h1 id=&#34;first-approach&#34;&gt;First approach&lt;/h1&gt;
-
-&lt;p&gt;The first step I made was, as always, &lt;strong&gt;search on &lt;em&gt;Stack Overflow&lt;/em&gt;&lt;/strong&gt; to know how other people were solving this problem, &lt;a href=&#34;http://stackoverflow.com/users/247533/rex-kerr&#34; target=&#34;_blank&#34; title=&#34;Rex kerr&#34;&gt;Rex kerr&lt;/a&gt; proposed this implementation on the question &lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/4608061#4608061&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;and to use it:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.io._&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Five&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;file!&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;example.txt&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;my-approach&#34;&gt;My approach&lt;/h1&gt;
-
-&lt;p&gt;Based on &lt;em&gt;Rex Kerr&lt;/em&gt; solution, I &lt;strong&gt;modified and adapted&lt;/strong&gt; his code and encapsulate it in a &lt;code&gt;object&lt;/code&gt; called &lt;code&gt;FileUtils&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Any&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;src/main/resources/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asInstanceOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code&gt;FileUtils&lt;/code&gt; encapsulates two additional methods, &lt;code&gt;saveOject&lt;/code&gt; and &lt;code&gt;getObject[T]&lt;/code&gt;, the former simply &lt;strong&gt;save the object&lt;/strong&gt; passed in as parameter and store it in a file, the latter &lt;strong&gt;returns the contents&lt;/strong&gt; of the file as an instance of type &lt;code&gt;T&lt;/code&gt;. The reason to do this was because I needed to store the &lt;strong&gt;extracted features&lt;/strong&gt; of the model in order to save computation time in future runs.&lt;/p&gt;
-
-&lt;h1 id=&#34;example-of-use&#34;&gt;Example of use&lt;/h1&gt;
-
-&lt;p&gt;As an example, my &lt;code&gt;FileUtils&lt;/code&gt; object can be used as follows (this snippet of code is from &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing/blob/dev/src/main/scala/com/elbauldelprogramador/nlp/parser/DependencyParser.scala#L161&#34; target=&#34;_blank&#34; title=&#34;DependencyParser.scala&#34;&gt;DependencyParser.scala&lt;/a&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;@switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]]&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])]&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]),&lt;/span&gt;
-                   &lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]),&lt;/span&gt;
-                   &lt;span class=&#34;n&#34;&gt;sentences&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;With &lt;code&gt;(getClass.getResource(&amp;quot;/XY&amp;quot;) != null: @switch) match&lt;/code&gt; I am testing if the file already exists, if it does, I simply call &lt;code&gt;FileUtils.getObject&lt;/code&gt; and pass in the type, saving the time to compute again the features for the model with the method &lt;code&gt;eF&lt;/code&gt;. If the file was not present, I extract the features calling &lt;code&gt;eF&lt;/code&gt; and then save them with &lt;code&gt;FileUtils.saveOject&lt;/code&gt; for future use.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s it, is there &lt;strong&gt;another way you write/read&lt;/strong&gt; files in scala? Let me know in the comments!&lt;/p&gt;
-
-&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>How to iterate through multiple collections in Scala</title>
-            <link>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</link>
-            <pubDate>Mon, 08 May 2017 12:12:30 +0100</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</guid>
-            <description>&lt;p&gt;When I first started working with &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34; title=&#34;post about scala scala&#34;&gt;scala&lt;/a&gt; I&amp;rsquo;ve found myself unable to do trivial things I have being doing in other languages I already known. That is the most frustrating part of learning a new programming language, in my opinion.&lt;/p&gt;
-
-&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-python&#34;&gt;Iterate through multiple collections at once in python&lt;/h1&gt;
-
-&lt;p&gt;One common thing to do is iterate through two collections at a time. The &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;post about python&#34;&gt;pythonic&lt;/a&gt; way of doing this is simple:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;which result is:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-scala&#34;&gt;Iterate through multiple collections at once in scala&lt;/h1&gt;
-
-&lt;p&gt;Now, what is the &lt;em&gt;idiomatic&lt;/em&gt; way of doing it in &lt;em&gt;scala&lt;/em&gt;?. In my case I needed to iterate through the collection and also have the index of the current item being iterated, this can be achieved with the method &lt;code&gt;zipWithIndex&lt;/code&gt;, then call &lt;code&gt;zipped&lt;/code&gt; along with any collection you want to iterate at the same time:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipWithIndex&lt;/span&gt;
-
-  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipped&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;In the example above I am &lt;strong&gt;zipping&lt;/strong&gt; together three collections &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, which correspond with types &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Before I knew about the &lt;em&gt;idiomatic&lt;/em&gt; way I was iterating trough the collection in a ugly way:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/** Constituent tree of this sentence; includes head words */&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-   &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This code is part of my final project in Computer Engineering, it was about creating a &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_grammar&#34; target=&#34;_blank&#34; title=&#34;Dependency Parsing&#34;&gt;Dependency Parser&lt;/a&gt;, you can check it on &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/github&#34; title=&#34;Posts about github&#34;&gt;GitHub&lt;/a&gt;: &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP_Dependency_Parsing&#34;&gt;NLP_Dependency_Parsing&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17199534/scala-for-loop-over-two-lists-simultaneously&#34; target=&#34;_blank&#34; title=&#34;Scala for loop over two lists simultaneously&#34;&gt;Scala for loop over two lists simultaneously&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>My experience in Game Jam 2017 </title>
-            <link>https://elbauldelprogramador.com/en/my-first-game-jam-unlimitosis/</link>
-            <pubDate>Tue, 11 Apr 2017 09:53:42 +0200</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/my-first-game-jam-unlimitosis/</guid>
-            <description>
-
-&lt;p&gt;Some weeks ago I participated in my first &lt;strong&gt;GameJam&lt;/strong&gt;. I&amp;rsquo;ve never program a Game so this was a challenge for me. We have 48 hours to think and develop a Game from scratch. Our team decided to use &lt;strong&gt;Godot&lt;/strong&gt; engine. The team was formed by four people: &lt;a href=&#34;https://elbauldelprogramador.com/en/author/cristina/&#34;&gt;@Cristina&lt;/a&gt;, &lt;a href=&#34;http://elenoideart.deviantart.com/&#34; target=&#34;_blank&#34; title=&#34;@ElenoideArt&#34;&gt;@ElenoideArt&lt;/a&gt;, @JJ Ramos and me.&lt;/p&gt;
-
-&lt;h1 id=&#34;game-description&#34;&gt;Game Description&lt;/h1&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/gamejam17-unlimitosis.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/gamejam17-unlimitosis.jpg&#34;
-            alt=&#34;Unlimitosis&#34;
-            title=&#34;Unlimitosis&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;640&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Unlimitosis&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;@Elenoide was our game designer and it is also a &lt;strong&gt;biologist&lt;/strong&gt;, so we thought a game in which cells pops ups in the screen and eventually become &lt;em&gt;Carcinogens&lt;/em&gt;, the player has to kill those cells before they spread. Here is a screen record:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;LeyDyRMDmQ4&#34;
-    layout=&#34;responsive&#34;
-    sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-    width=&#34;800&#34; height=&#34;600&#34;&gt;
-&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, the game is very basic, but hey, none of us knew how to create a game the day before. If you want to improve it, prove it or play it, the code is in &lt;a href=&#34;https://github.com/elbaulp/GranadaGameJam17&#34; target=&#34;_blank&#34; title=&#34;Unlimitosis Repo&#34;&gt;Unlimitosis Repo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;documentation&#34;&gt;Documentation&lt;/h1&gt;
-
-&lt;p&gt;In order to learn &lt;em&gt;Godot&lt;/em&gt; we use its documentation, it is very well explained and extense. Also, there is a &lt;a href=&#34;https://github.com/TutorialDoctor/TD-Godot-Games&#34; target=&#34;_blank&#34; title=&#34;TutorialDoctor&#34;&gt;github repo with a lot of examples&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;play-the-game&#34;&gt;Play the Game&lt;/h1&gt;
-
-&lt;p&gt;Thanks to &lt;strong&gt;JJ Ramos&lt;/strong&gt; we have a web version for the game at &lt;a href=&#34;http://juanjoseramos.com/unlimitosis/&#34; target=&#34;_blank&#34; title=&#34;http://juanjoseramos.com/unlimitosis/&#34;&gt;juanjoseramos.com/unlimitosis/&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        
-        <item>
-            <title>Recommended Books</title>
-            <link>https://elbauldelprogramador.com/en/recommended-books/</link>
-            <pubDate>Tue, 04 Apr 2017 09:24:41 +0100</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/recommended-books/</guid>
-            <description>&lt;p&gt;Bellow is a collection of books I&amp;rsquo;ve read. I will be updating it each time I finish a new book.&lt;/p&gt;
-
-&lt;p&gt;If you are looking for more books, You can check the following two collections. I&amp;rsquo;ve not read those books, but they are in my &lt;strong&gt;TODO&lt;/strong&gt; list of books to read:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/&#34;&gt;18 books about Data Science &amp;amp; Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/&#34; title=&#34;21 Non-Fiction book&#34;&gt;21 Non-Fiction books&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
+&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
 
 &lt;div class=&#34;row-post flex-grid&#34;&gt;
+
+    &lt;article class=&#34;box-item animate&#34;&gt;
+       &lt;h3&gt;Looking Glass Universe&lt;/h3&gt;
+       &lt;figure&gt;
+         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/LGU.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34;&gt;&lt;/img&gt;
+       &lt;/figure&gt;
+
+       &lt;p&gt;Curiouser and curiouser... About the strange world of maths and physics&lt;/p&gt;
+
+       &lt;div class=&#34;tags&#34;&gt;
+         &lt;a href=&#34;https://www.youtube.com/user/LookingGlassUniverse/&#34; target=&#34;_blank&#34; title=&#34;Looking Glass Universe&#34;&gt;Looking Glass Universe&lt;/a&gt;
+       &lt;/div&gt;
+   &lt;/article&gt;
+
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;Programming Scala, 2nd Edition&lt;/h2&gt;
+    &lt;h3&gt;Sixty Simbols&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/programmingscala.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/programmingscala.jpg&#34;
-          alt=&#34;Programming Scala, 2nd Edition&#34;
-          title=&#34;Programming Scala, 2nd Edition&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;341&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sixtysimbols.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
     &lt;/figure&gt;
-    &lt;p&gt;This is the first book I&#39;ve read when learning &lt;strong&gt;Scala&lt;/strong&gt;. I strongly recommend it for anyone who wants to learn scala from scratch. It goes from the basis to advanced topics.&lt;/p&gt;
+
+    &lt;p&gt;Cool videos about physics and astronomy.&lt;/p&gt;
+
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://amzn.to/2njGcel&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCvBqzzvUBLCs8Y7Axb-jZew&#34; target=&#34;_blank&#34; title=&#34;Sixty Symbols&#34;&gt;Sixty Symbols&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Veritasium&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/veritasium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;An element of truth - videos about science, education, and anything else I find interesting.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA&#34; target=&#34;_blank&#34; title=&#34;Veritasium&#34;&gt;Veritasium&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Sciencium&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Exciting discoveries in science, recent and historical.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCGRB1ZjIqAiaGwt-XLq9CnA&#34; target=&#34;_blank&#34; title=&#34;Sciencium&#34;&gt;Sciencium&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;ASAP Science&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/asapscience.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Your weekly dose of fun and interesting science.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCC552Sd-3nyi_tk2BudLUzA&#34; target=&#34;_blank&#34; title=&#34;ASAPScience&#34;&gt;ASAPScience&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Physics Girl&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physicsgirl.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Physics videos for every atom and eve.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UC7DdEm33SyaTDtWYGO2CwdA&#34; target=&#34;_blank&#34; title=&#34;Physics Girl&#34;&gt;Physics Girl&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Science Magazine&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencemag.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;The latest videos from Science magazine, the world&#39;s leading outlet for scientific news, commentary, and cutting-edge research.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCv0aU2eKry3kdSTnFa8QAWA&#34; target=&#34;_blank&#34; title=&#34;Science Magazine&#34;&gt;Science Magazine&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;SmarterEveryDay&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/smartereveryday.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;I explore the world using science. That&#39;s pretty much all there is to it. Watch 2 videos. If you learn something AWESOME, subscribe.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UC6107grRI4m0o2-emgoDnAA&#34; target=&#34;_blank&#34; title=&#34;SmarterEveryDay&#34;&gt;SmarterEveryDay&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;VSauce&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/vsauce.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Our World is Amazing. &lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA&#34; target=&#34;_blank&#34; title=&#34;Vsauce&#34;&gt;Vsauce&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&#34;podcasts&#34;&gt;Podcasts&lt;/h1&gt;
+
+&lt;div class=&#34;row-post flex-grid&#34;&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;60 seconds Science&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/60secscience.png&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Tune in every weekday for quick reports and commentaries on the world of science—it&#39;ll just take a minute&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=60-second-science&#34; target=&#34;_blank&#34; title=&#34;60-Second Science&#34;&gt;60-Second Science&lt;/a&gt; | &lt;a href=&#34;https://www.scientificamerican.com/podcast/60-second-science/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Discovery&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/discovery.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Explorations in the world of science.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002w557/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;Discovery&#34;&gt;Discovery&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002w557&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Physics World Science&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physicsworld.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Physics World is the world&#39;s leading physics magazine. Every month it brings you features from the world&#39;s leading physicists and science writers, comprehensive news and analysis, incisive opinion pieces, sound careers advice, reviews of the best new books and multimedia, and the ever-popular Lateral Thoughts page.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://physicsworld.com/podcast&#34; target=&#34;_blank&#34; title=&#34;Physics World Science&#34;&gt;Physics World Science&lt;/a&gt; | &lt;a href=&#34;http://physicsworld.com/cws/channel/multimedia/podcasts&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Science in Action&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/scienceinaction.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;The latest science research and news stories from all over the world.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002vsnb/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;Science in Action&#34;&gt;Science in Action&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002vsnb&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Science Magazine Podcast&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencemag.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://www.sciencemag.org/rss/podcast.xml&#34; target=&#34;_blank&#34; title=&#34;Science Magazine Podcast&#34;&gt;Science Magazine Podcast&lt;/a&gt; | &lt;a href=&#34;http://www.sciencemag.org/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Science Talk&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencetalk.png&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Join host Steve Mirsky each week as he explores the latest developments in science and technology through interviews with leading scientists and journalists&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-talk&#34; target=&#34;_blank&#34; title=&#34;Science Talk&#34;&gt;Science Talk&lt;/a&gt; | &lt;a href=&#34;https://www.scientificamerican.com/podcast/science-talk/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;The Guardian&#39;s Science Weekly&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/theguardian.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;The best place to learn about the big discoveries and debates in biology, chemisty, physics and sometimes even maths&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.theguardian.com/science/series/science/podcast.xml&#34; target=&#34;_blank&#34; title=&#34;The Guardian&#39;s Science Weekly&#34;&gt;The Guardian&#39;s Science Weekly&lt;/a&gt; | &lt;a href=&#34;https://www.theguardian.com/science/series/science&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;The Infinite Monkey Cage&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/infinitemonkey.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Witty, irreverent look at the world through scientists&#39; eyes. With Brian Cox and Robin Ince&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://www.bbc.co.uk/programmes/b00snr0w/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;The Infinite Monkey Cage&#34;&gt;The Infinite Monkey Cage&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/b00snr0w&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;The Titanium Physicists Podcast&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/titanium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Every episode, I bring together two of my physicists with some of the most fun and interesting people I have ever met, and we have a conversation about a wizard-level physics topic.  It’s fun, and fascinating, and entirely unique.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://titaniumphysics.libsyn.com/rss&#34; target=&#34;_blank&#34; title=&#34;The Titanium Physicists Podcast&#34;&gt;The Titanium Physicists Podcast&lt;/a&gt; | &lt;a href=&#34;http://titaniumphysics.com&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;Test-Driven Machine Learning&lt;/h2&gt;
+    &lt;h3&gt;ScienceVS&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/tdd.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/tdd.jpg&#34;
-          alt=&#34;Test-Driven Machine Learning&#34;
-          title=&#34;Test-Driven Machine Learning&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;320&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
+               on=&#34;tap:lightbox1&#34;
+               role=&#34;button&#34;
+               tabindex=&#34;0&#34;
+               layout=&#34;responsive&#34;
+               src=&#34;https://elbauldelprogramador.com/img/sciencevs.png&#34;
+               alt=&#34;Science Vs Podcast&#34;
+               title=&#34;Science Vs Podcast&#34;
+               sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
+               width=&#34;100&#34;
+               height=&#34;100&#34;&gt;
+      &lt;/img&gt;
     &lt;/figure&gt;
-    &lt;p&gt;This is a different book about &lt;strong&gt;software testing&lt;/strong&gt;, in addition of teaching you what &lt;strong&gt;TDD&lt;/strong&gt; (&lt;em&gt;Test-Driven Development&lt;/em&gt;) is, this book takes &lt;strong&gt;TDD&lt;/strong&gt; from a &lt;em&gt;Machine Learning&lt;/em&gt; perspective. How can you better develop your Machine Learning system using &lt;strong&gt;TDD&lt;/strong&gt; and &lt;strong&gt;BDD&lt;/strong&gt; in order to improve you model accuracy.&lt;/p&gt;
+
+    &lt;p&gt;There are a lot of fads, blogs and strong opinions, but then there’s SCIENCE. Science Vs is the show from Gimlet Media that finds out what’s fact, what’s not, and what’s somewhere in between. We do the hard work of sifting through all the science so you don&#39;t have to. This season we tackle immigration, climate change, true love and artificial sweeteners.&lt;/p&gt;
+
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://amzn.to/2nHfptg&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+      &lt;a href=&#34;https://gimletmedia.com/science-vs/&#34; target=&#34;_blank&#34; title=&#34;Science Vs Podcast&#34;&gt;Science Vs Podcast&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;256 blog Hacks&lt;/h2&gt;
+    &lt;h3&gt;Radio Skylab&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/256bloghacks.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/256bloghacks.jpg&#34;
-          alt=&#34;256 blog hacks&#34;
-          title=&#34;256 blog hacks&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;390&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
+               on=&#34;tap:lightbox1&#34;
+               role=&#34;button&#34;
+               tabindex=&#34;0&#34;
+               layout=&#34;responsive&#34;
+               src=&#34;https://elbauldelprogramador.com/img/radopsky.jpg&#34;
+               alt=&#34;Radio Skylab&#34;
+               title=&#34;Radio Skylab&#34;
+               sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
+               width=&#34;100&#34;
+               height=&#34;100&#34;&gt;
+      &lt;/img&gt;
     &lt;/figure&gt;
 
-    &lt;p&gt;Yegor is a &lt;strong&gt;Russian blogger&lt;/strong&gt; and a &lt;em&gt;software developer&lt;/em&gt; with a very successful blog. In his book he gives to the user a series of tips for newbies bloggers. If you already have a blog with a decent number of visitor (around 50K-100K visitors/month) there is very little you can extract from this book. On the other hand, if you want to start your blog the book is helpful for you.&lt;/p&gt;
+    &lt;p&gt;Radio Skylab is a casual podcast about space, science and other curiosities. Made with enthusiasm from the Canary Islands by four scientific disseminators:&lt;/p&gt;
+
+    &lt;p&gt;Víctor Manchado (@vmanchado) is the editor of Pirulo Cosmico, a blog where astronomy is explained in a simple way. Daniel Marín (@eurekablog) is responsible for the popular blog of astronomy and astronautics Eureka. Premio Bitácoras 2012, Prize 20Blogs 2015 to the best blog in the category of science, and Naukas Award 2013 to the best blog of scientific popularization. Kavy Pazos (@molasaber) is the creator of Mola Saber, the blog that through infographics and articles fuses art and science. Víctor R. Ruiz (@vrruiz) is the creator of Infoastro, a site about astronomical news; And Blogalia, the first blog service in Spanish.&lt;/p&gt;
 
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://amzn.to/2nL4Hlq&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+      &lt;a href=&#34;http://radioskylab.es/&#34; target=&#34;_blank&#34; title=&#34;Radio Skylab&#34;&gt;Radio Skylab&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;otros&#34;&gt;Otros&lt;/h1&gt;
+
+&lt;div class=&#34;row-post flex-grid&#34;&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;CGP Grey&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/cgpgrey.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UC2C_jShtL725hvbm1arSV9w&#34; target=&#34;_blank&#34; title=&#34;CGP Grey&#34;&gt;CGP Grey&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Kurzgesagt – In a Nutshell&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/inanutshell.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Videos explaining things with optimistic nihilism. We are a small team who want to make science look beautiful. Because it is beautiful. &lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q&#34; target=&#34;_blank&#34; title=&#34;Kurzgesagt – In a Nutshell&#34;&gt;Kurzgesagt – In a Nutshell&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>14 Resources / Channels / Podcasts about Mathematics</title>
+            <link>https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/</link>
+            <pubDate>Mon, 04 Sep 2017 13:40:44 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/</guid>
+            <description>&lt;h1 id=&#34;what-is-this-list&#34;&gt;What is this list?&lt;/h1&gt;
+
+&lt;p&gt;Below is a curated list of Podcast, Youtube Channels and Blogs I follow about Mathematics.&lt;/p&gt;
+
+&lt;p&gt;If you follow some resource about Mathematics not listed below feel free to post a comment and I will add it, or better, send me a &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/resources-channels-podcast-to-learn-math.en.md&#34; target=&#34;_blank&#34; title=&#34;Pull Request!&#34;&gt;Pull Request!&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Thanks to &lt;a href=&#34;https://twitter.com/sinclair_88&#34; target=&#34;_blank&#34; title=&#34;@sinclair_88&#34;&gt;@sinclair_88&lt;/a&gt; for proposing the idea of this curated list.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;other-lists&#34;&gt;Other Lists&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;55 Blogs / Channels / Podcast about Computer Science, Security &amp;amp; Data Science&#34;&gt;55 Blogs / Channels / Podcast about Computer Science, Security &amp;amp; Data Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/&#34; title=&#34;22 Podcasts / Youtube Channels / Blogs about Science&#34;&gt;22 Podcasts / Youtube Channels / Blogs about Science&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;podcasts&#34;&gt;Podcasts&lt;/h1&gt;
+
+&lt;div class=&#34;row-post flex-grid&#34;&gt;
+   &lt;article class=&#34;box-item animate&#34;&gt;
+       &lt;h3&gt;Math Mutation&lt;/h3&gt;
+       &lt;figure&gt;
+         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathmutation.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
+       &lt;/figure&gt;
+       &lt;p&gt;Welcome to Math Mutation, a short podcast for people of all ages, where we explore fun, interesting, or just plain weird corners of mathematics that you probably didn&#39;t hear in school.&lt;/p&gt;
+       &lt;div class=&#34;tags&#34;&gt;
+         &lt;a href=&#34;http://mathmutation.blogspot.com.es/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;MathMutation&lt;/a&gt;
+       &lt;/div&gt;
+   &lt;/article&gt;
+
+   &lt;article class=&#34;box-item animate&#34;&gt;
+       &lt;h3&gt;Rel Prime&lt;/h3&gt;
+       &lt;figure&gt;
+         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/relprime.png&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
+       &lt;/figure&gt;
+       &lt;p&gt;Relatively Prime is a mathematics podcast all about the stories behind the Queen of the Sciences that Samuel Hansen dreamt up in an extreme bout of egotism and delusions of grandeur where he spent too long listening to Radiolab, This American Life, and Snap Judgment and began to think, “Hey, I could do that.”&lt;/p&gt;
+       &lt;div class=&#34;tags&#34;&gt;
+         &lt;a href=&#34;http://relprime.com/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;Rel Prime&lt;/a&gt;
+       &lt;/div&gt;
+   &lt;/article&gt;
+
+   &lt;article class=&#34;box-item animate&#34;&gt;
+       &lt;h3&gt;Ben Ben Blue&lt;/h3&gt;
+       &lt;figure&gt;
+         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/bbb.png&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34;&gt;&lt;/img&gt;
+       &lt;/figure&gt;
+
+       &lt;p&gt;A podcast by Grant Sanderson, Ben Eater and Ben Stenhaug about education, technology, and whatever else comes to mind.&lt;/p&gt;
+
+       &lt;div class=&#34;tags&#34;&gt;
+         &lt;a href=&#34;http://benbenandblue.libsyn.com/rss&#34; target=&#34;_blank&#34; title=&#34;Ben Ben Blue&#34;&gt;Ben Ben Blue&lt;/a&gt;
+       &lt;/div&gt;
+   &lt;/article&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
+
+&lt;div class=&#34;row-post flex-grid&#34;&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;3Blue1Brow&lt;/h3&gt;
+
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/3b1b.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;3Blue1Brow-postn is some combination of math and entertainment, depending on your disposition. The goal is for explanations to be driven by animations and for difficult problems to be made simple with changes in perspective.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw&#34; target=&#34;_blank&#34; title=&#34;3Blue1Brow-postn&#34;&gt;3Blue1Brow&lt;/a&gt;, he also have a podcast: &lt;a href=&#34;https://www.benbenandblue.com/&#34; target=&#34;_blank&#34; title=&#34;https://www.benbenandblue.com/&#34;&gt;benbenandblue.com&lt;/a&gt;.
     &lt;/div&gt;
   &lt;/article&gt;
 
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;Hacking, The art of Exploitation&lt;/h2&gt;
+    &lt;h3&gt;MathoLoger&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/artofexploitation.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/artofexploitation.jpg&#34;
-          alt=&#34;The art of exploitation&#34;
-          title=&#34;The art of exploitation&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;342&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathologer.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
     &lt;/figure&gt;
-    &lt;p&gt;One of my first books on &lt;strong&gt;security&lt;/strong&gt;, I really liked this one. It covers in depth concepts about how programs works,  how them can be exploited and its internals (What the compiler actually do). If you are interested in how a buffer overflow works, check my post about &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;buffer overflows and Exploits&#34;&gt;buffer overflows and Exploits&lt;/a&gt;. You will learn how to exploit buffers overflows and many more things.&lt;/p&gt;
+
+    &lt;p&gt;Enter the world of the Mathologer in which beautiful math(s) rules.&lt;/p&gt;
+
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://amzn.to/2njWF1E&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg&#34; target=&#34;_blank&#34; title=&#34;MathLoger&#34;&gt;MathLoger&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;Learning From Data&lt;/h2&gt;
+    &lt;h3&gt;MinutePhysics&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/ml/Learning From-Data-by-Yaser.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/ml/Learning From-Data-by-Yaser.jpg&#34;
-          alt=&#34;Learning from data&#34;
-          title=&#34;Learning from data&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;340&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/minutephysics.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
     &lt;/figure&gt;
-    &lt;p&gt;This Book is the one I follow while taking a course on &lt;strong&gt;Machine Learning&lt;/strong&gt; in my faculty. It is very theorical, but it covers all the basis on Machine Learning and it is also possible to follow the book &lt;a href=&#34;http://work.caltech.edu/telecourse.html&#34; target=&#34;_blank&#34;&gt;through Caltech MOOC&lt;/a&gt;. The MOOC is Taught by Caltech Professor Yaser Abu-Mostafa (One of the book authors).&lt;/p&gt;
+
+    &lt;p&gt;Simply put: cool physics and other sweet science.&lt;/p&gt;
+
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.amazon.com/Learning-Data-Yaser-S-Abu-Mostafa/dp/1600490069/&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg&#34; target=&#34;_blank&#34; title=&#34;MinutePhysics&#34;&gt;MinutePhysics&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h2&gt;Pro Git&lt;/h2&gt;
+    &lt;h3&gt;MinutoDeFísica&lt;/h3&gt;
     &lt;figure&gt;
-      &lt;a href=&#34;https://elbauldelprogramador.com/img/progit.jpg&#34;&gt;
-        &lt;img
-          on=&#34;tap:lightbox1&#34;
-          role=&#34;button&#34;
-          tabindex=&#34;0&#34;
-          layout=&#34;responsive&#34;
-          src=&#34;https://elbauldelprogramador.com/img/progit.jpg&#34;
-          alt=&#34;Pro Git&#34;
-          title=&#34;Pro Git&#34;
-          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
-          width=&#34;260&#34;
-          height=&#34;321&#34;&gt;
-        &lt;/img&gt;
-      &lt;/a&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/MinutoDeFisica.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
     &lt;/figure&gt;
-    &lt;p&gt;If you are a computer scientist you must know how to use &lt;strong&gt;git&lt;/strong&gt;, this book covers git from beginner level to more advanced topics, totally recommended for everybody. &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34;&gt;Check out the git cheatsheet I&#39;ve wrote when I&#39;ve read the&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;p&gt;En pocas palabras: física genial y ciencia interesante&lt;/p&gt;
+
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://amzn.to/2nPnWdP&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt; | &lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34; title=&#34;Ver en gitscm.com&#34;&gt;See on gitscm.com&lt;/a&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCMnPZh6PyA5PSYoNt0cjuxg&#34; target=&#34;_blank&#34; title=&#34;MinutoDeFísica&#34;&gt;MinutoDeFísica&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;NumberPhile&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Videos about numbers - it&#39;s that simple.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A&#34; target=&#34;_blank&#34; title=&#34;NumberPhile&#34;&gt;NumberPhile&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;NumberPhile2&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile2.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;This is Numberphile&#39;s &#34;second channel&#34; for extra footage or stuff that didn&#39;t quite fit on the main channel&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg&#34; target=&#34;_blank&#34; title=&#34;NumberPhile2&#34;&gt;NumberPhile2&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;PBS Infinite Series&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pbsinfiniteseries.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Mathematician Kelsey Houston-Edwards offers ambitious content for viewers that are eager to attain a greater understanding of the world around them. Math is pervasive - a robust yet precise language - and with each episode you’ll begin to see the math that underpins everything in this puzzling, yet fascinating, universe.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g&#34; target=&#34;_blank&#34; title=&#34;PBS Infinite Series&#34;&gt;PBS Infinite Series&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;StandUpMaths&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/standupmaths.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;I do mathematics and stand-up. Sometimes simultaneously. Occasionally while being filmed. (It&#39;s quite the Venn diagram.)&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A&#34; target=&#34;_blank&#34; title=&#34;StandUpMaths&#34;&gt;StandUpMaths&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;blogs&#34;&gt;Blogs&lt;/h1&gt;
+
+&lt;div class=&#34;row-post flex-grid&#34;&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Physics.org Mathematics section&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Mathematics section on Physics.org&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://phys.org/science-news/mathematics/&#34; target=&#34;_blank&#34; title=&#34;Physics.org Mathematics&#34;&gt;Physics.org Mathematics&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Physics.org Quantum Physics section&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Physics.org Quantum Physics section&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://phys.org/physics-news/quantum-physics/&#34; target=&#34;_blank&#34; title=&#34;Quantum Physics section on physics.org&#34;&gt;Quantum Physics section on physics.org&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Quanta.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Quanta Magazine is an editorially independent online publication launched by the Simons Foundation to enhance public understanding of science. Why Quanta? Albert Einstein called photons “quanta of light.” Our goal is to “illuminate science.”&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.quantamagazine.org/&#34; target=&#34;_blank&#34; title=&#34;Quanta Magazine&#34;&gt;Quanta Magazine&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 &lt;/div&gt;
-</description>
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;List of interesting math podcasts? | &lt;a href=&#34;http://math.stackexchange.com/q/3/144541&#34; target=&#34;_blank&#34; title=&#34;List of interesting math podcasts?&#34;&gt;math.stackexchange.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
-            <title>54 Blogs / Channels / Podcast about Computer Science, Security &amp; Data Science</title>
+            <title>55 Blogs / Channels / Podcast about Computer Science, Security &amp; Data Science</title>
             <link>https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/</link>
-            <pubDate>Wed, 29 Mar 2017 11:37:55 +0100</pubDate>
+            <pubDate>Mon, 04 Sep 2017 13:39:55 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/</guid>
             <description>&lt;h1 id=&#34;what-is-this-list&#34;&gt;What is this list?&lt;/h1&gt;
@@ -569,8 +627,8 @@
 &lt;h1 id=&#34;more-lists&#34;&gt;More lists&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/&#34; title=&#34;11 Resources / Channels / Podcasts about Mathematics&#34;&gt;13 Resources / Channels / Podcasts about Mathematics&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/&#34; title=&#34;21 Podcasts / Youtube Channels / Blogs about Science&#34;&gt;21 Podcasts / Youtube Channels / Blogs about Science&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/&#34; title=&#34;11 Resources / Channels / Podcasts about Mathematics&#34;&gt;14 Resources / Channels / Podcasts about Mathematics&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/&#34; title=&#34;22 Podcasts / Youtube Channels / Blogs about Science&#34;&gt;22 Podcasts / Youtube Channels / Blogs about Science&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;computer-science-programming-data-science-security&#34;&gt;Computer Science (Programming, Data Science &amp;amp; Security)&lt;/h1&gt;
@@ -743,6 +801,20 @@
       &lt;a href=&#34;https://www.theguardian.com/technology/series/chips-with-everything/podcast.xml&#34; target=&#34;_blank&#34; title=&#34;Chips with everything&#34;&gt;Chips with everything&lt;/a&gt; | &lt;a href=&#34;https://www.theguardian.com/technology/series/chips-with-everything&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h3&gt;Geek Speak&lt;/h3&gt;
+    &lt;figure&gt;
+      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/geekspeak.png&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;A weekly talk show about technology, science, and human creativity that excites, educates, and fosters curiosity. Discussions touch upon how technology affects society and how we react to that change. Hosts are passionate about explaining complex concepts in simple, easy to digest, chunks. We bridge the gaps between Geeks and the rest of humanity.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://geekspeak.org/episodes/rss.xml&#34; target=&#34;_blank&#34; title=&#34;Chips with everything&#34;&gt;Geek Speak&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
 &lt;/div&gt;
 
 &lt;h3 id=&#34;security&#34;&gt;Security&lt;/h3&gt;
@@ -1381,356 +1453,537 @@
         </item>
         
         <item>
-            <title>21 Podcasts / Youtube Channels / Blogs about Science</title>
-            <link>https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/</link>
-            <pubDate>Tue, 14 Mar 2017 20:13:47 +0100</pubDate>
+            <title>Creating and managing passwords intelligently</title>
+            <link>https://elbauldelprogramador.com/en/good-passwords/</link>
+            <pubDate>Thu, 27 Jul 2017 12:21:35 +0100</pubDate>
             
-            <guid>https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/</guid>
-            <description>&lt;h1 id=&#34;what-is-this-list&#34;&gt;What is this list?&lt;/h1&gt;
-
-&lt;p&gt;I am going to finish this &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/lists/&#34;&gt;series of posts&lt;/a&gt; about resources I follow about &lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;Computer Science&#34;&gt;Computer Science&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/&#34; title=&#34;Mathematics&#34;&gt;Mathematics&lt;/a&gt; with a list of resources about &lt;em&gt;science&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;If you follow some resource not listed below feel free to post a comment and I will add it, or better, send me a &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/resources-blogs-podcast-youtube-channels-about-science.en.md&#34; target=&#34;_blank&#34; title=&#34;Pull Request!&#34;&gt;Pull Request!&lt;/a&gt;.&lt;/p&gt;
+            <guid>https://elbauldelprogramador.com/en/good-passwords/</guid>
+            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;Thanks to &lt;a href=&#34;https://twitter.com/sinclair_88&#34; target=&#34;_blank&#34; title=&#34;@sinclair_88&#34;&gt;@sinclair_88&lt;/a&gt; for proposing the idea of this curated list.&lt;/p&gt;
+&lt;p&gt;07.27.2017: &lt;strong&gt;Added&lt;/strong&gt; &lt;em&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/em&gt; to useful links.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h1 id=&#34;more-lists&#34;&gt;More lists&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com//en/resources-channels-podcast-to-learn-math/&#34; title=&#34;11 Resources / Channels / Podcasts about Mathematics&#34;&gt;13 Resources / Channels / Podcasts about Mathematics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;52 Blogs / Channels / Podcasts about Computer Science, Security &amp;amp; Data Science&#34;&gt;52 Blogs / Channels / Podcasts about Computer Science, Security &amp;amp; Data Science&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
-
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Sixty Simbols&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sixtysimbols.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Cool videos about physics and astronomy.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCvBqzzvUBLCs8Y7Axb-jZew&#34; target=&#34;_blank&#34; title=&#34;Sixty Symbols&#34;&gt;Sixty Symbols&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Veritasium&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/veritasium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;An element of truth - videos about science, education, and anything else I find interesting.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCHnyfMqiRRG1u-2MsSQLbXA&#34; target=&#34;_blank&#34; title=&#34;Veritasium&#34;&gt;Veritasium&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Sciencium&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Exciting discoveries in science, recent and historical.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCGRB1ZjIqAiaGwt-XLq9CnA&#34; target=&#34;_blank&#34; title=&#34;Sciencium&#34;&gt;Sciencium&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;ASAP Science&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/asapscience.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Your weekly dose of fun and interesting science.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCC552Sd-3nyi_tk2BudLUzA&#34; target=&#34;_blank&#34; title=&#34;ASAPScience&#34;&gt;ASAPScience&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics Girl&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physicsgirl.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Physics videos for every atom and eve.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC7DdEm33SyaTDtWYGO2CwdA&#34; target=&#34;_blank&#34; title=&#34;Physics Girl&#34;&gt;Physics Girl&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Science Magazine&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencemag.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;The latest videos from Science magazine, the world&#39;s leading outlet for scientific news, commentary, and cutting-edge research.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCv0aU2eKry3kdSTnFa8QAWA&#34; target=&#34;_blank&#34; title=&#34;Science Magazine&#34;&gt;Science Magazine&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;SmarterEveryDay&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/smartereveryday.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;I explore the world using science. That&#39;s pretty much all there is to it. Watch 2 videos. If you learn something AWESOME, subscribe.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC6107grRI4m0o2-emgoDnAA&#34; target=&#34;_blank&#34; title=&#34;SmarterEveryDay&#34;&gt;SmarterEveryDay&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;VSauce&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/vsauce.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Our World is Amazing. &lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA&#34; target=&#34;_blank&#34; title=&#34;Vsauce&#34;&gt;Vsauce&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-&lt;/div&gt;
-
-&lt;h1 id=&#34;podcasts&#34;&gt;Podcasts&lt;/h1&gt;
-
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;60 seconds Science&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/60secscience.png&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Tune in every weekday for quick reports and commentaries on the world of science—it&#39;ll just take a minute&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=60-second-science&#34; target=&#34;_blank&#34; title=&#34;60-Second Science&#34;&gt;60-Second Science&lt;/a&gt; | &lt;a href=&#34;https://www.scientificamerican.com/podcast/60-second-science/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Discovery&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/discovery.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Explorations in the world of science.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002w557/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;Discovery&#34;&gt;Discovery&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002w557&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics World Science&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physicsworld.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Physics World is the world&#39;s leading physics magazine. Every month it brings you features from the world&#39;s leading physicists and science writers, comprehensive news and analysis, incisive opinion pieces, sound careers advice, reviews of the best new books and multimedia, and the ever-popular Lateral Thoughts page.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://physicsworld.com/podcast&#34; target=&#34;_blank&#34; title=&#34;Physics World Science&#34;&gt;Physics World Science&lt;/a&gt; | &lt;a href=&#34;http://physicsworld.com/cws/channel/multimedia/podcasts&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Science in Action&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/scienceinaction.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;The latest science research and news stories from all over the world.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002vsnb/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;Science in Action&#34;&gt;Science in Action&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/p002vsnb&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Science Magazine Podcast&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencemag.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://www.sciencemag.org/rss/podcast.xml&#34; target=&#34;_blank&#34; title=&#34;Science Magazine Podcast&#34;&gt;Science Magazine Podcast&lt;/a&gt; | &lt;a href=&#34;http://www.sciencemag.org/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Science Talk&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/sciencetalk.png&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Join host Steve Mirsky each week as he explores the latest developments in science and technology through interviews with leading scientists and journalists&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.scientificamerican.com/sciam/xml/iTunes.cfm?id=science-talk&#34; target=&#34;_blank&#34; title=&#34;Science Talk&#34;&gt;Science Talk&lt;/a&gt; | &lt;a href=&#34;https://www.scientificamerican.com/podcast/science-talk/&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;The Guardian&#39;s Science Weekly&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/theguardian.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;The best place to learn about the big discoveries and debates in biology, chemisty, physics and sometimes even maths&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.theguardian.com/science/series/science/podcast.xml&#34; target=&#34;_blank&#34; title=&#34;The Guardian&#39;s Science Weekly&#34;&gt;The Guardian&#39;s Science Weekly&lt;/a&gt; | &lt;a href=&#34;https://www.theguardian.com/science/series/science&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;The Infinite Monkey Cage&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/infinitemonkey.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Witty, irreverent look at the world through scientists&#39; eyes. With Brian Cox and Robin Ince&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://www.bbc.co.uk/programmes/b00snr0w/episodes/downloads.rss&#34; target=&#34;_blank&#34; title=&#34;The Infinite Monkey Cage&#34;&gt;The Infinite Monkey Cage&lt;/a&gt; | &lt;a href=&#34;http://www.bbc.co.uk/programmes/b00snr0w&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;The Titanium Physicists Podcast&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/titanium.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Every episode, I bring together two of my physicists with some of the most fun and interesting people I have ever met, and we have a conversation about a wizard-level physics topic.  It’s fun, and fascinating, and entirely unique.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://titaniumphysics.libsyn.com/rss&#34; target=&#34;_blank&#34; title=&#34;The Titanium Physicists Podcast&#34;&gt;The Titanium Physicists Podcast&lt;/a&gt; | &lt;a href=&#34;http://titaniumphysics.com&#34; target=&#34;_blank&#34; title=&#34;Website&#34;&gt;Website&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;ScienceVS&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
-               on=&#34;tap:lightbox1&#34;
-               role=&#34;button&#34;
-               tabindex=&#34;0&#34;
-               layout=&#34;responsive&#34;
-               src=&#34;https://elbauldelprogramador.com/img/sciencevs.png&#34;
-               alt=&#34;Science Vs Podcast&#34;
-               title=&#34;Science Vs Podcast&#34;
-               sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
-               width=&#34;100&#34;
-               height=&#34;100&#34;&gt;
-      &lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;There are a lot of fads, blogs and strong opinions, but then there’s SCIENCE. Science Vs is the show from Gimlet Media that finds out what’s fact, what’s not, and what’s somewhere in between. We do the hard work of sifting through all the science so you don&#39;t have to. This season we tackle immigration, climate change, true love and artificial sweeteners.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://gimletmedia.com/science-vs/&#34; target=&#34;_blank&#34; title=&#34;Science Vs Podcast&#34;&gt;Science Vs Podcast&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Radio Skylab&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
-               on=&#34;tap:lightbox1&#34;
-               role=&#34;button&#34;
-               tabindex=&#34;0&#34;
-               layout=&#34;responsive&#34;
-               src=&#34;https://elbauldelprogramador.com/img/radopsky.jpg&#34;
-               alt=&#34;Radio Skylab&#34;
-               title=&#34;Radio Skylab&#34;
-               sizes=&#34;(min-width: 100px) 100px, 100vw&#34;
-               width=&#34;100&#34;
-               height=&#34;100&#34;&gt;
-      &lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Radio Skylab is a casual podcast about space, science and other curiosities. Made with enthusiasm from the Canary Islands by four scientific disseminators:&lt;/p&gt;
-
-    &lt;p&gt;Víctor Manchado (@vmanchado) is the editor of Pirulo Cosmico, a blog where astronomy is explained in a simple way. Daniel Marín (@eurekablog) is responsible for the popular blog of astronomy and astronautics Eureka. Premio Bitácoras 2012, Prize 20Blogs 2015 to the best blog in the category of science, and Naukas Award 2013 to the best blog of scientific popularization. Kavy Pazos (@molasaber) is the creator of Mola Saber, the blog that through infographics and articles fuses art and science. Víctor R. Ruiz (@vrruiz) is the creator of Infoastro, a site about astronomical news; And Blogalia, the first blog service in Spanish.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;http://radioskylab.es/&#34; target=&#34;_blank&#34; title=&#34;Radio Skylab&#34;&gt;Radio Skylab&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-
-&lt;/div&gt;
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Recently there has been a lot of noise in the &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/security/&#34; title=&#34;posts about security&#34;&gt;security&lt;/a&gt; field with &lt;strong&gt;wannaCry&lt;/strong&gt; and a &lt;strong&gt;breach with more than 230M accounts stolen&lt;/strong&gt;. Today more than ever it is necessary to have &lt;em&gt;good habits creating passwords&lt;/em&gt; when creating new accounts in any new service you sign up. This post shows some good practices I&amp;rsquo;ve been using since I became more security conscious.&lt;/p&gt;
+
+&lt;h1 id=&#34;create-good-passwords&#34;&gt;Create Good Passwords&lt;/h1&gt;
+
+&lt;p&gt;The first thing is to create a &lt;em&gt;strong and random enough password&lt;/em&gt;. There are many websites and tools for this purpose, such as &lt;a href=&#34;https://www.grc.com/passwords.htm&#34; target=&#34;_blank&#34; title=&#34;Perfect Passwords&#34;&gt;Steve Gibson&amp;rsquo;s page&lt;/a&gt; or the built-in tool in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;For example, for every new account you create in any service make a long password containing characters, numbers and symbols (see LastPass generator). A good choice for the &lt;strong&gt;password length would be anything above 50 character&lt;/strong&gt;, below is an example of the tool integrated in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;
+            alt=&#34;LastPass password generator&#34;
+            title=&#34;LastPass password generator&#34;
+            sizes=&#34;(min-width: 420px) 420px, 100vw&#34;
+            width=&#34;420&#34;
+            height=&#34;521&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;LastPass password generator&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;If you do not want to use &lt;strong&gt;LastPass&lt;/strong&gt; you can use &lt;strong&gt;Steve&amp;rsquo;s generator&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;
+            srcset=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png 1000w, https://elbauldelprogramador.com/img/steveperfectpasswords-800.png 800w&#34;
+            alt=&#34;Steve&#39;s Perfect Passwords&#34;
+            title=&#34;Steve&#39;s Perfect Passwords&#34;
+            sizes=&#34;(min-width: 1152px) 1152px, 100vw&#34;
+            width=&#34;1152&#34;
+            height=&#34;277&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Steve&#39;s Perfect Passwords&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;otros&#34;&gt;Otros&lt;/h1&gt;
+&lt;p&gt;Lets see how much time would it take to &lt;strong&gt;crack this 50-length&lt;/strong&gt; randomly generated password: 8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;
+            alt=&#34;How long would it take to crack the password?&#34;
+            title=&#34;How long would it take to crack the password?&#34;
+            sizes=&#34;(min-width: 803px) 803px, 100vw&#34;
+            width=&#34;803&#34;
+            height=&#34;227&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;How long would it take to crack the password? | source: &lt;a href=&#34;https://howsecureismypassword.net/&#34; target=&#34;_blank&#34; title=&#34;howsecure&#34;&gt;howsecureismypassword.net&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;and what does it says &lt;strong&gt;Steve&amp;rsquo;s version?&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;
+            alt=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
+            title=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
+            sizes=&#34;(min-width: 842px) 842px, 100vw&#34;
+            width=&#34;842&#34;
+            height=&#34;753&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator | source: &lt;a href=&#34;https://www.grc.com/haystack.htm&#34; target=&#34;_blank&#34; title=&#34;haystack&#34;&gt;grc.com/haystack.htm&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;use-a-password-manager&#34;&gt;Use a password manager&lt;/h1&gt;
+
+&lt;p&gt;Of course using such passwords you &lt;strong&gt;can&amp;rsquo;t expect to memorize them&lt;/strong&gt;, and that is a sign of a strong and good password.&lt;/p&gt;
+
+&lt;p&gt;In order to manage your passwords you should use a password manager, I am using LastPass as these guys have demonstrated they know how to store your passwords in a secure way. ( I am basing this opinion on Steve Gibson&amp;rsquo;s knowledge on security, here are some talks about it: &lt;a href=&#34;https://www.youtube.com/watch?v=z4-h5gWpvAc&#34; target=&#34;_blank&#34; title=&#34;I&#34;&gt;I&lt;/a&gt;, &lt;a href=&#34;https://blog.lastpass.com/2010/07/lastpass-gets-green-light-from-security.html/&#34; target=&#34;_blank&#34; title=&#34;II&#34;&gt;II&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Even if you&amp;rsquo;re​ using LastPass to generate and store your passwords securely, there is an extra layer you could put on top of that: &lt;strong&gt;“use LastPass intelligently”&lt;/strong&gt;, as I explain in the next section.&lt;/p&gt;
+
+&lt;h2 id=&#34;best-practices-to-use-a-password-manager&#34;&gt;Best Practices To Use A Password  Manager&lt;/h2&gt;
+
+&lt;p&gt;So far you have a password stored in your password manager that&amp;rsquo;s​ impossible to memorize, that&amp;rsquo;s what a password manager is for. But the possibility that someone attack you and get all your LastPass information still could exists. Let&amp;rsquo;s suppose &lt;strong&gt;someone stole&lt;/strong&gt; all your data in LastPass, and to put us in the worst case scenario, &lt;strong&gt;ALL THE STOLEN DATA IS decrypted&lt;/strong&gt;. Well, one way to solve that is to only store &lt;em&gt;part of the password&lt;/em&gt; in LastPass, let me explain:&lt;/p&gt;
+
+&lt;p&gt;When you generate your password, you store that randomly generated password in your LastPass vault, but In the service itself, let&amp;rsquo;s say your Google account you set your password to:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;APASSWORDYOUCANMEMORIZE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;That way, even if all your LastPass data is stolen, the thief wouldn&amp;rsquo;t be able to log in into your accounts, as &lt;strong&gt;they only know part of your password.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;hardering-online-presence&#34;&gt;Hardering online presence&lt;/h1&gt;
+
+&lt;p&gt;These days more and more services offer a Two factor authentication option, you should enable it in all services you use.&lt;/p&gt;
+
+&lt;h2 id=&#34;tfa&#34;&gt;TFA&lt;/h2&gt;
+
+&lt;p&gt;When you enable TFA, the service will show your backup&amp;rsquo;s codes in the case you lose your phone or can&amp;rsquo;t generate a TFA code.&lt;/p&gt;
+
+&lt;h2 id=&#34;securing-your-tfa-backup-s&#34;&gt;Securing your TFA backup&amp;rsquo;s&lt;/h2&gt;
+
+&lt;p&gt;It is important that you save this backup&amp;rsquo;s codes, but In a secure place. The best thing would be to print it in paper and store them in a banks box. But for most of us stored them in a external HDD or print them would do the trick.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, In this days I think applying this tips and bests practices should have your password pretty secure, but &lt;strong&gt;remember, nothing is complete secure&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What tips do you use to secure your passwords? Let me know in the comments!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;useful-links&#34;&gt;Useful links&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/&#34; target=&#34;_blank&#34; title=&#34;Passwords Evolved: Authentication Guidance for the Modern Era&#34;&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Why I am removing Google Analytics</title>
+            <link>https://elbauldelprogramador.com/en/why-am-i-removing-google-analytics/</link>
+            <pubDate>Tue, 25 Jul 2017 12:12:46 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/why-am-i-removing-google-analytics/</guid>
+            <description>&lt;p&gt;As I am more concerned about my privacy on the internet as time goes by, I feel morally obligated to the the same for my readers, that is why I am removing all stuff that can be used to track my users on the internet.&lt;/p&gt;
+
+&lt;p&gt;The first step is to remove &lt;strong&gt;Google Analytics&lt;/strong&gt; due to its tracking nature. This is a big sacifice for my since I won&amp;rsquo;t be able to see any statistics about how the blog is performing anymore.&lt;/p&gt;
+
+&lt;p&gt;There is still work to be done, I only have &lt;strong&gt;one ad&lt;/strong&gt; and it will continue there until I can figure out an alternative which give me similar revenue. I hope you can understand this decision, since managing and writing a blog is time consuming and this is a way of compensate all that work. I have some alternatives to the ad, but none of them have work so far. You can check them in &lt;a href=&#34;https://elbauldelprogramador.com/en/apoyanos/&#34;&gt;/en/apoyanos/&lt;/a&gt;. Here are a few of them:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2uwxMBQ&#34; target=&#34;_blank&#34; title=&#34;Amazon&#34;&gt;Amazon&lt;/a&gt; affiliate link.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;http://patreon.com/elbauldelprogramador&#34; target=&#34;_blank&#34; title=&#34;Pateron&#34;&gt;patreon&lt;/a&gt; page.&lt;/li&gt;
+&lt;li&gt;A &lt;a href=&#34;https://www.paypal.me/elbaul&#34; target=&#34;_blank&#34; title=&#34;Paypal&#34;&gt;paypal&lt;/a&gt; account.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hope you like the change!&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>How to write to a file in Scala</title>
+            <link>https://elbauldelprogramador.com/en/write-to-file-scala/</link>
+            <pubDate>Tue, 16 May 2017 10:25:24 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/write-to-file-scala/</guid>
+            <description>&lt;p&gt;In my last post I talked about &lt;a href=&#34;https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/&#34; title=&#34;iterate multiple collections in Scala&#34;&gt;how to iterate through multiple collections in scala&lt;/a&gt;, a problem I faced when working on my &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP depdendency parsing&#34;&gt;final project&lt;/a&gt;. Other problem I faced was writing to a file in &lt;strong&gt;Scala&lt;/strong&gt;, since standard Scala does not have this feature, I had to implement it and added to my personal library.&lt;/p&gt;
+
+&lt;h1 id=&#34;first-approach&#34;&gt;First approach&lt;/h1&gt;
+
+&lt;p&gt;The first step I made was, as always, &lt;strong&gt;search on &lt;em&gt;Stack Overflow&lt;/em&gt;&lt;/strong&gt; to know how other people were solving this problem, &lt;a href=&#34;http://stackoverflow.com/users/247533/rex-kerr&#34; target=&#34;_blank&#34; title=&#34;Rex kerr&#34;&gt;Rex kerr&lt;/a&gt; proposed this implementation on the question &lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/4608061#4608061&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and to use it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;java.io._&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;Five&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;strings&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;in&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;a&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;file!&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;example.txt&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;foreach&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;my-approach&#34;&gt;My approach&lt;/h1&gt;
+
+&lt;p&gt;Based on &lt;em&gt;Rex Kerr&lt;/em&gt; solution, I &lt;strong&gt;modified and adapted&lt;/strong&gt; his code and encapsulate it in a &lt;code&gt;object&lt;/code&gt; called &lt;code&gt;FileUtils&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;printToFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.File&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;java.io.PrintWriter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;PrintWriter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;op&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Any&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;src/main/resources/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;oos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;openStream&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;asInstanceOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;ois&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;FileUtils&lt;/code&gt; encapsulates two additional methods, &lt;code&gt;saveOject&lt;/code&gt; and &lt;code&gt;getObject[T]&lt;/code&gt;, the former simply &lt;strong&gt;save the object&lt;/strong&gt; passed in as parameter and store it in a file, the latter &lt;strong&gt;returns the contents&lt;/strong&gt; of the file as an instance of type &lt;code&gt;T&lt;/code&gt;. The reason to do this was because I needed to store the &lt;strong&gt;extracted features&lt;/strong&gt; of the model in order to save computation time in future runs.&lt;/p&gt;
+
+&lt;h1 id=&#34;example-of-use&#34;&gt;Example of use&lt;/h1&gt;
+
+&lt;p&gt;As an example, my &lt;code&gt;FileUtils&lt;/code&gt; object can be used as follows (this snippet of code is from &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing/blob/dev/src/main/scala/com/elbauldelprogramador/nlp/parser/DependencyParser.scala#L161&#34; target=&#34;_blank&#34; title=&#34;DependencyParser.scala&#34;&gt;DependencyParser.scala&lt;/a&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;/XY&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;@switch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;match&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]]&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]),&lt;/span&gt;
+                   &lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;DblVector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withDefaultValue&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]),&lt;/span&gt;
+                   &lt;span class=&#34;n&#34;&gt;sentences&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;FileUtils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saveOject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;With &lt;code&gt;(getClass.getResource(&amp;quot;/XY&amp;quot;) != null: @switch) match&lt;/code&gt; I am testing if the file already exists, if it does, I simply call &lt;code&gt;FileUtils.getObject&lt;/code&gt; and pass in the type, saving the time to compute again the features for the model with the method &lt;code&gt;eF&lt;/code&gt;. If the file was not present, I extract the features calling &lt;code&gt;eF&lt;/code&gt; and then save them with &lt;code&gt;FileUtils.saveOject&lt;/code&gt; for future use.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it, is there &lt;strong&gt;another way you write/read&lt;/strong&gt; files in scala? Let me know in the comments!&lt;/p&gt;
+
+&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/4604237/how-to-write-to-a-file-in-scala/&#34; target=&#34;_blank&#34; title=&#34;How to write to a file in Scala?&#34;&gt;How to write to a file in Scala?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to iterate through multiple collections in Scala</title>
+            <link>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</link>
+            <pubDate>Mon, 08 May 2017 12:12:30 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</guid>
+            <description>&lt;p&gt;When I first started working with &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34; title=&#34;post about scala scala&#34;&gt;scala&lt;/a&gt; I&amp;rsquo;ve found myself unable to do trivial things I have being doing in other languages I already known. That is the most frustrating part of learning a new programming language, in my opinion.&lt;/p&gt;
+
+&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-python&#34;&gt;Iterate through multiple collections at once in python&lt;/h1&gt;
+
+&lt;p&gt;One common thing to do is iterate through two collections at a time. The &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;post about python&#34;&gt;pythonic&lt;/a&gt; way of doing this is simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;which result is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-scala&#34;&gt;Iterate through multiple collections at once in scala&lt;/h1&gt;
+
+&lt;p&gt;Now, what is the &lt;em&gt;idiomatic&lt;/em&gt; way of doing it in &lt;em&gt;scala&lt;/em&gt;?. In my case I needed to iterate through the collection and also have the index of the current item being iterated, this can be achieved with the method &lt;code&gt;zipWithIndex&lt;/code&gt;, then call &lt;code&gt;zipped&lt;/code&gt; along with any collection you want to iterate at the same time:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipWithIndex&lt;/span&gt;
+
+  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipped&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;In the example above I am &lt;strong&gt;zipping&lt;/strong&gt; together three collections &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, which correspond with types &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Before I knew about the &lt;em&gt;idiomatic&lt;/em&gt; way I was iterating trough the collection in a ugly way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/** Constituent tree of this sentence; includes head words */&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This code is part of my final project in Computer Engineering, it was about creating a &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_grammar&#34; target=&#34;_blank&#34; title=&#34;Dependency Parsing&#34;&gt;Dependency Parser&lt;/a&gt;, you can check it on &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/github&#34; title=&#34;Posts about github&#34;&gt;GitHub&lt;/a&gt;: &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP_Dependency_Parsing&#34;&gt;NLP_Dependency_Parsing&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17199534/scala-for-loop-over-two-lists-simultaneously&#34; target=&#34;_blank&#34; title=&#34;Scala for loop over two lists simultaneously&#34;&gt;Scala for loop over two lists simultaneously&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>My experience in Game Jam 2017 </title>
+            <link>https://elbauldelprogramador.com/en/my-first-game-jam-unlimitosis/</link>
+            <pubDate>Tue, 11 Apr 2017 09:53:42 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/my-first-game-jam-unlimitosis/</guid>
+            <description>
+
+&lt;p&gt;Some weeks ago I participated in my first &lt;strong&gt;GameJam&lt;/strong&gt;. I&amp;rsquo;ve never program a Game so this was a challenge for me. We have 48 hours to think and develop a Game from scratch. Our team decided to use &lt;strong&gt;Godot&lt;/strong&gt; engine. The team was formed by four people: &lt;a href=&#34;https://elbauldelprogramador.com/en/author/cristina/&#34;&gt;@Cristina&lt;/a&gt;, &lt;a href=&#34;http://elenoideart.deviantart.com/&#34; target=&#34;_blank&#34; title=&#34;@ElenoideArt&#34;&gt;@ElenoideArt&lt;/a&gt;, @JJ Ramos and me.&lt;/p&gt;
+
+&lt;h1 id=&#34;game-description&#34;&gt;Game Description&lt;/h1&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/gamejam17-unlimitosis.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/gamejam17-unlimitosis.jpg&#34;
+            alt=&#34;Unlimitosis&#34;
+            title=&#34;Unlimitosis&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;640&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Unlimitosis&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;@Elenoide was our game designer and it is also a &lt;strong&gt;biologist&lt;/strong&gt;, so we thought a game in which cells pops ups in the screen and eventually become &lt;em&gt;Carcinogens&lt;/em&gt;, the player has to kill those cells before they spread. Here is a screen record:&lt;/p&gt;
+
+&lt;p&gt;&lt;amp-youtube
+    data-videoid=&#34;LeyDyRMDmQ4&#34;
+    layout=&#34;responsive&#34;
+    sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
+    width=&#34;800&#34; height=&#34;600&#34;&gt;
+&lt;/amp-youtube&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the game is very basic, but hey, none of us knew how to create a game the day before. If you want to improve it, prove it or play it, the code is in &lt;a href=&#34;https://github.com/elbaulp/GranadaGameJam17&#34; target=&#34;_blank&#34; title=&#34;Unlimitosis Repo&#34;&gt;Unlimitosis Repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;documentation&#34;&gt;Documentation&lt;/h1&gt;
+
+&lt;p&gt;In order to learn &lt;em&gt;Godot&lt;/em&gt; we use its documentation, it is very well explained and extense. Also, there is a &lt;a href=&#34;https://github.com/TutorialDoctor/TD-Godot-Games&#34; target=&#34;_blank&#34; title=&#34;TutorialDoctor&#34;&gt;github repo with a lot of examples&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;play-the-game&#34;&gt;Play the Game&lt;/h1&gt;
+
+&lt;p&gt;Thanks to &lt;strong&gt;JJ Ramos&lt;/strong&gt; we have a web version for the game at &lt;a href=&#34;http://juanjoseramos.com/unlimitosis/&#34; target=&#34;_blank&#34; title=&#34;http://juanjoseramos.com/unlimitosis/&#34;&gt;juanjoseramos.com/unlimitosis/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>Recommended Books</title>
+            <link>https://elbauldelprogramador.com/en/recommended-books/</link>
+            <pubDate>Tue, 04 Apr 2017 09:24:41 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/recommended-books/</guid>
+            <description>&lt;p&gt;Bellow is a collection of books I&amp;rsquo;ve read. I will be updating it each time I finish a new book.&lt;/p&gt;
+
+&lt;p&gt;If you are looking for more books, You can check the following two collections. I&amp;rsquo;ve not read those books, but they are in my &lt;strong&gt;TODO&lt;/strong&gt; list of books to read:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/&#34;&gt;18 books about Data Science &amp;amp; Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/5-libros-de-no-ficcion-que-todo-geek-deberia-leer/&#34; title=&#34;21 Non-Fiction book&#34;&gt;21 Non-Fiction books&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/br&gt;&lt;/br&gt;&lt;/p&gt;
 
 &lt;div class=&#34;row-post flex-grid&#34;&gt;
-
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;CGP Grey&lt;/h3&gt;
+    &lt;h2&gt;Programming Scala, 2nd Edition&lt;/h2&gt;
     &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/cgpgrey.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/programmingscala.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/programmingscala.jpg&#34;
+          alt=&#34;Programming Scala, 2nd Edition&#34;
+          title=&#34;Programming Scala, 2nd Edition&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;341&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
     &lt;/figure&gt;
-
+    &lt;p&gt;This is the first book I&#39;ve read when learning &lt;strong&gt;Scala&lt;/strong&gt;. I strongly recommend it for anyone who wants to learn scala from scratch. It goes from the basis to advanced topics.&lt;/p&gt;
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC2C_jShtL725hvbm1arSV9w&#34; target=&#34;_blank&#34; title=&#34;CGP Grey&#34;&gt;CGP Grey&lt;/a&gt;
+      &lt;a href=&#34;http://amzn.to/2njGcel&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
 
-
   &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Kurzgesagt – In a Nutshell&lt;/h3&gt;
+    &lt;h2&gt;Test-Driven Machine Learning&lt;/h2&gt;
     &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/inanutshell.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/tdd.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/tdd.jpg&#34;
+          alt=&#34;Test-Driven Machine Learning&#34;
+          title=&#34;Test-Driven Machine Learning&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;320&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
     &lt;/figure&gt;
-
-    &lt;p&gt;Videos explaining things with optimistic nihilism. We are a small team who want to make science look beautiful. Because it is beautiful. &lt;/p&gt;
-
+    &lt;p&gt;This is a different book about &lt;strong&gt;software testing&lt;/strong&gt;, in addition of teaching you what &lt;strong&gt;TDD&lt;/strong&gt; (&lt;em&gt;Test-Driven Development&lt;/em&gt;) is, this book takes &lt;strong&gt;TDD&lt;/strong&gt; from a &lt;em&gt;Machine Learning&lt;/em&gt; perspective. How can you better develop your Machine Learning system using &lt;strong&gt;TDD&lt;/strong&gt; and &lt;strong&gt;BDD&lt;/strong&gt; in order to improve you model accuracy.&lt;/p&gt;
     &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q&#34; target=&#34;_blank&#34; title=&#34;Kurzgesagt – In a Nutshell&#34;&gt;Kurzgesagt – In a Nutshell&lt;/a&gt;
+      &lt;a href=&#34;http://amzn.to/2nHfptg&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
     &lt;/div&gt;
   &lt;/article&gt;
-&lt;/div&gt;</description>
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h2&gt;256 blog Hacks&lt;/h2&gt;
+    &lt;figure&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/256bloghacks.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/256bloghacks.jpg&#34;
+          alt=&#34;256 blog hacks&#34;
+          title=&#34;256 blog hacks&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;390&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
+    &lt;/figure&gt;
+
+    &lt;p&gt;Yegor is a &lt;strong&gt;Russian blogger&lt;/strong&gt; and a &lt;em&gt;software developer&lt;/em&gt; with a very successful blog. In his book he gives to the user a series of tips for newbies bloggers. If you already have a blog with a decent number of visitor (around 50K-100K visitors/month) there is very little you can extract from this book. On the other hand, if you want to start your blog the book is helpful for you.&lt;/p&gt;
+
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://amzn.to/2nL4Hlq&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h2&gt;Hacking, The art of Exploitation&lt;/h2&gt;
+    &lt;figure&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/artofexploitation.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/artofexploitation.jpg&#34;
+          alt=&#34;The art of exploitation&#34;
+          title=&#34;The art of exploitation&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;342&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;p&gt;One of my first books on &lt;strong&gt;security&lt;/strong&gt;, I really liked this one. It covers in depth concepts about how programs works,  how them can be exploited and its internals (What the compiler actually do). If you are interested in how a buffer overflow works, check my post about &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;buffer overflows and Exploits&#34;&gt;buffer overflows and Exploits&lt;/a&gt;. You will learn how to exploit buffers overflows and many more things.&lt;/p&gt;
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://amzn.to/2njWF1E&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h2&gt;Learning From Data&lt;/h2&gt;
+    &lt;figure&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/ml/Learning From-Data-by-Yaser.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/ml/Learning From-Data-by-Yaser.jpg&#34;
+          alt=&#34;Learning from data&#34;
+          title=&#34;Learning from data&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;340&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;p&gt;This Book is the one I follow while taking a course on &lt;strong&gt;Machine Learning&lt;/strong&gt; in my faculty. It is very theorical, but it covers all the basis on Machine Learning and it is also possible to follow the book &lt;a href=&#34;http://work.caltech.edu/telecourse.html&#34; target=&#34;_blank&#34;&gt;through Caltech MOOC&lt;/a&gt;. The MOOC is Taught by Caltech Professor Yaser Abu-Mostafa (One of the book authors).&lt;/p&gt;
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;https://www.amazon.com/Learning-Data-Yaser-S-Abu-Mostafa/dp/1600490069/&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+
+  &lt;article class=&#34;box-item animate&#34;&gt;
+    &lt;h2&gt;Pro Git&lt;/h2&gt;
+    &lt;figure&gt;
+      &lt;a href=&#34;https://elbauldelprogramador.com/img/progit.jpg&#34;&gt;
+        &lt;img
+          on=&#34;tap:lightbox1&#34;
+          role=&#34;button&#34;
+          tabindex=&#34;0&#34;
+          layout=&#34;responsive&#34;
+          src=&#34;https://elbauldelprogramador.com/img/progit.jpg&#34;
+          alt=&#34;Pro Git&#34;
+          title=&#34;Pro Git&#34;
+          sizes=&#34;(min-width: 260px) 260px, 100vw&#34;
+          width=&#34;260&#34;
+          height=&#34;321&#34;&gt;
+        &lt;/img&gt;
+      &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;p&gt;If you are a computer scientist you must know how to use &lt;strong&gt;git&lt;/strong&gt;, this book covers git from beginner level to more advanced topics, totally recommended for everybody. &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34;&gt;Check out the git cheatsheet I&#39;ve wrote when I&#39;ve read the&lt;/a&gt;.&lt;/p&gt;
+    &lt;div class=&#34;tags&#34;&gt;
+      &lt;a href=&#34;http://amzn.to/2nPnWdP&#34; target=&#34;_blank&#34;&gt;See on Amazon&lt;/a&gt; | &lt;a href=&#34;https://git-scm.com/book/en/v2&#34; target=&#34;_blank&#34; title=&#34;Ver en gitscm.com&#34;&gt;See on gitscm.com&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+</description>
         </item>
         
         <item>
@@ -1966,219 +2219,6 @@ line 4
 &lt;h1 id=&#34;contribute-to-this-cheatsheet&#34;&gt;Contribute to this cheatsheet&lt;/h1&gt;
 
 &lt;p&gt;If you want to contribute to this Emacs cheatsheet, you can add your useful packages and shortcuts via &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/chuleta-atajos-teclado-emacs.en.markdown&#34; target=&#34;_blank&#34; title=&#34;Pull Request&#34;&gt;Pull Request&lt;/a&gt;.&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>13 Resources / Channels / Podcasts about Mathematics</title>
-            <link>https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/</link>
-            <pubDate>Fri, 24 Feb 2017 21:42:53 +0100</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/en/resources-channels-podcast-to-learn-math/</guid>
-            <description>&lt;h1 id=&#34;what-is-this-list&#34;&gt;What is this list?&lt;/h1&gt;
-
-&lt;p&gt;Below is a curated list of Podcast, Youtube Channels and Blogs I follow about Mathematics.&lt;/p&gt;
-
-&lt;p&gt;If you follow some resource about Mathematics not listed below feel free to post a comment and I will add it, or better, send me a &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/resources-channels-podcast-to-learn-math.en.md&#34; target=&#34;_blank&#34; title=&#34;Pull Request!&#34;&gt;Pull Request!&lt;/a&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Thanks to &lt;a href=&#34;https://twitter.com/sinclair_88&#34; target=&#34;_blank&#34; title=&#34;@sinclair_88&#34;&gt;@sinclair_88&lt;/a&gt; for proposing the idea of this curated list.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;other-lists&#34;&gt;Other Lists&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-channels-blogs-podcast-about-computer-science-security-data-science/&#34; title=&#34;54 Blogs / Channels / Podcast about Computer Science, Security &amp;amp; Data Science&#34;&gt;54 Blogs / Channels / Podcast about Computer Science, Security &amp;amp; Data Science&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/en/resources-blogs-podcast-youtube-channels-about-science/&#34; title=&#34;21 Podcasts / Youtube Channels / Blogs about Science&#34;&gt;21 Podcasts / Youtube Channels / Blogs about Science&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;podcasts&#34;&gt;Podcasts&lt;/h1&gt;
-
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-   &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;Math Mutation&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathmutation.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-       &lt;/figure&gt;
-       &lt;p&gt;Welcome to Math Mutation, a short podcast for people of all ages, where we explore fun, interesting, or just plain weird corners of mathematics that you probably didn&#39;t hear in school.&lt;/p&gt;
-       &lt;div class=&#34;tags&#34;&gt;
-         &lt;a href=&#34;http://mathmutation.blogspot.com.es/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;MathMutation&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-
-   &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;Rel Prime&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/relprime.png&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-       &lt;/figure&gt;
-       &lt;p&gt;Relatively Prime is a mathematics podcast all about the stories behind the Queen of the Sciences that Samuel Hansen dreamt up in an extreme bout of egotism and delusions of grandeur where he spent too long listening to Radiolab, This American Life, and Snap Judgment and began to think, “Hey, I could do that.”&lt;/p&gt;
-       &lt;div class=&#34;tags&#34;&gt;
-         &lt;a href=&#34;http://relprime.com/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;Rel Prime&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
-
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;3Blue1Brow&lt;/h3&gt;
-
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/3b1b.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;3Blue1Brow-postn is some combination of math and entertainment, depending on your disposition. The goal is for explanations to be driven by animations and for difficult problems to be made simple with changes in perspective.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw&#34; target=&#34;_blank&#34; title=&#34;3Blue1Brow-postn&#34;&gt;3Blue1Brow&lt;/a&gt;, he also have a podcast: &lt;a href=&#34;https://www.benbenandblue.com/&#34; target=&#34;_blank&#34; title=&#34;https://www.benbenandblue.com/&#34;&gt;benbenandblue.com&lt;/a&gt;.
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MathoLoger&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathologer.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Enter the world of the Mathologer in which beautiful math(s) rules.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg&#34; target=&#34;_blank&#34; title=&#34;MathLoger&#34;&gt;MathLoger&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MinutePhysics&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/minutephysics.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Simply put: cool physics and other sweet science.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg&#34; target=&#34;_blank&#34; title=&#34;MinutePhysics&#34;&gt;MinutePhysics&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MinutoDeFísica&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/MinutoDeFisica.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;En pocas palabras: física genial y ciencia interesante&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCMnPZh6PyA5PSYoNt0cjuxg&#34; target=&#34;_blank&#34; title=&#34;MinutoDeFísica&#34;&gt;MinutoDeFísica&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;NumberPhile&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Videos about numbers - it&#39;s that simple.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A&#34; target=&#34;_blank&#34; title=&#34;NumberPhile&#34;&gt;NumberPhile&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;NumberPhile2&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile2.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;This is Numberphile&#39;s &#34;second channel&#34; for extra footage or stuff that didn&#39;t quite fit on the main channel&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg&#34; target=&#34;_blank&#34; title=&#34;NumberPhile2&#34;&gt;NumberPhile2&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;PBS Infinite Series&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pbsinfiniteseries.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Mathematician Kelsey Houston-Edwards offers ambitious content for viewers that are eager to attain a greater understanding of the world around them. Math is pervasive - a robust yet precise language - and with each episode you’ll begin to see the math that underpins everything in this puzzling, yet fascinating, universe.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g&#34; target=&#34;_blank&#34; title=&#34;PBS Infinite Series&#34;&gt;PBS Infinite Series&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;StandUpMaths&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/standupmaths.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;I do mathematics and stand-up. Sometimes simultaneously. Occasionally while being filmed. (It&#39;s quite the Venn diagram.)&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A&#34; target=&#34;_blank&#34; title=&#34;StandUpMaths&#34;&gt;StandUpMaths&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;blogs&#34;&gt;Blogs&lt;/h1&gt;
-
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics.org Mathematics section&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Mathematics section on Physics.org&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://phys.org/science-news/mathematics/&#34; target=&#34;_blank&#34; title=&#34;Physics.org Mathematics&#34;&gt;Physics.org Mathematics&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics.org Quantum Physics section&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Physics.org Quantum Physics section&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://phys.org/physics-news/quantum-physics/&#34; target=&#34;_blank&#34; title=&#34;Quantum Physics section on physics.org&#34;&gt;Quantum Physics section on physics.org&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Quanta.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Quanta Magazine is an editorially independent online publication launched by the Simons Foundation to enhance public understanding of science. Why Quanta? Albert Einstein called photons “quanta of light.” Our goal is to “illuminate science.”&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.quantamagazine.org/&#34; target=&#34;_blank&#34; title=&#34;Quanta Magazine&#34;&gt;Quanta Magazine&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;List of interesting math podcasts? | &lt;a href=&#34;http://math.stackexchange.com/q/3/144541&#34; target=&#34;_blank&#34; title=&#34;List of interesting math podcasts?&#34;&gt;math.stackexchange.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
         </item>
         
         <item>

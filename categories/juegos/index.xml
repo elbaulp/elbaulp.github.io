@@ -297,13 +297,13 @@ Pero no se debe usar inmediatamente, ya que esta imagen es de 24-bit y &lt;code&
 &lt;p&gt;Así que ahora tenemos dos imágenes, la imagen cargada antigua (loadedImage), y la nueva imagen optimizada (optimizedImage).&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;240&#34; src=&#34;https://lh5.ggpht.com/_IlK2pNFFgGM/TT6GiUQZr0I/AAAAAAAAAQ4/bJGLBtK7gnE/displayformat.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;240&#34; src=&#34;https://lh5.ggpht.com/_IlK2pNFFgGM/TT6GiUQZr0I/AAAAAAAAAQ4/bJGLBtK7gnE/displayformat.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;SDL_DisplayFormat() crea una imagen nueva optimizada pero no se deshace de la otra. Por eso hay que llamar a SDL_FreeSurface().&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;240&#34; src=&#34;https://lh6.ggpht.com/_IlK2pNFFgGM/TT6G2JAjz0I/AAAAAAAAAQ8/NtLIOitNd24/freesurface.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;240&#34; src=&#34;https://lh6.ggpht.com/_IlK2pNFFgGM/TT6G2JAjz0I/AAAAAAAAAQ8/NtLIOitNd24/freesurface.jpg&#34; width=&#34;320&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; optimizedImage&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
