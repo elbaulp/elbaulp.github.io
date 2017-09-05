@@ -23,16 +23,16 @@
             
             <guid>https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/</guid>
             <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;468px&#34; height=&#34;239px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34;&gt;&lt;img sizes=&#34;(min-width: 468px) 468px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;468px&#34; height=&#34;239px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;QUIC&lt;/strong&gt; es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña &lt;em&gt;FAQ&lt;/em&gt; (Frequently Asked Questions) en &lt;em&gt;Google Drive&lt;/em&gt;, al parecer dicha &lt;em&gt;FAQ&lt;/em&gt; es autoría del propio grupo de desarrollo de &lt;em&gt;QUIC&lt;/em&gt;, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en &lt;a href=&#34;https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/&#34; title=&#34;Qué es QUIC, el nuevo protocolo desarrollado por Google&#34;&gt;Qué es QUIC, el nuevo protocolo desarrollado por Google&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;prueba-de-concepto&#34;&gt;Prueba de concepto&lt;/h2&gt;
+&lt;h1 id=&#34;prueba-de-concepto&#34;&gt;Prueba de concepto&lt;/h1&gt;
 
 &lt;p&gt;Para hacer pruebas con éste protocolo, se ha descargado el código fuente de &lt;strong&gt;Chromium&lt;/strong&gt;, y se ha compilado con soporte para QUIC. En ésta sección se verá cómo realizar éstos pasos, y se procederá a realizar un análisis del protocolo mediante capturas de tráfico con WireShark.&lt;/p&gt;
 
-&lt;h3 id=&#34;descargar-el-código&#34;&gt;Descargar el código&lt;/h3&gt;
+&lt;h2 id=&#34;descargar-el-código&#34;&gt;Descargar el código&lt;/h2&gt;
 
 &lt;p&gt;Los pasos se encuentran en (3), los seguidos para la prueba de concepto fueron:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Instalar depot_tools&lt;/span&gt;
@@ -86,7 +86,7 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 &lt;span class=&#34;c1&#34;&gt;# Resto de la página web&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;estructura-de-un-paquete-quic&#34;&gt;Estructura de un paquete QUIC&lt;/h3&gt;
+&lt;h2 id=&#34;estructura-de-un-paquete-quic&#34;&gt;Estructura de un paquete QUIC&lt;/h2&gt;
 
 &lt;p&gt;Procedemos ahora a detallar la estructura de los paquetes QUIC tal y como se especifica en los documentos (6) y (7).&lt;/p&gt;
 
@@ -94,7 +94,7 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;Todo paquete QUIC consiste en una sección de cabecera (&lt;strong&gt;Header&lt;/strong&gt; a partir de ahora), y una sección de carga (&lt;strong&gt;payload&lt;/strong&gt; a partir de ahora). El payload de un paquete contiene una secuencia de cuadros (&lt;strong&gt;frames&lt;/strong&gt; a partir de ahora). El payload de un paquete FEC (&lt;strong&gt;Forward Error Correction&lt;/strong&gt;) contiene información reduntante. El payload de cada paquete es un bloque encriptado AEAD (&lt;strong&gt;Authenticated Encryption with Associated Data&lt;/strong&gt;). Los datos asociados (Que son autenticados) incluyen la totalidad de la cabecera.Por tanto, hay dos tipos de paquetes, paquetes de datos y paquetes FEC. Los paquetes tienen una cabecera común de longitud variable entre 2 y 19 bytes, seguido de un bloque de autentificación encriptado. Cuando el bloque se descifra, el resultado mostrado abajo incluye una cabecera de 1 o 2 bytes, seguidos de datos adicionales. Los paquetes FEC contienen datos de paridad para permitir la recuperación de paquetes. Los paquetes de datos contienen los payloads, datos ACK y control de datos (flujos o finalización de sesiones).&lt;/p&gt;
 
-&lt;h4 id=&#34;cabecera&#34;&gt;Cabecera&lt;/h4&gt;
+&lt;h2 id=&#34;cabecera&#34;&gt;Cabecera&lt;/h2&gt;
 
 &lt;p&gt;Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;       8
@@ -137,10 +137,10 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 &lt;li&gt;El par 0xC0 no se usan actualmente, y deberían estar a 0.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h5&gt;
+&lt;h3 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h3&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img sizes=&#34;(min-width: 370px) 370px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Header: CID&lt;/strong&gt;. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga $$2^{32}$$ conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de $$2^{32}$$ en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.&lt;/p&gt;
@@ -153,7 +153,7 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;Por ejemplo, supongamos que los paquetes se transmiten mediante TCP con control de congestión, y el margen de congestión actual es de 20 paquetes. Si se pierde un paquete, dentro de 1 RTT, o unos 20 paquetes adicionales, el receptor será informado de que un paquete perdido ya no está pendiente. Como resultado, el emisor puede continuar enviando solo el byte de menor peso (8bits) del número de secuencia del paquete (64bits). El receptor puede deducir fácilmente basándose en esos bits, qué valor deberían tener los 56 bits restantes, y puede usarlos posteriormente para descifrar el paquete.&lt;/p&gt;
 
-&lt;h4 id=&#34;payload&#34;&gt;Payload&lt;/h4&gt;
+&lt;h2 id=&#34;payload&#34;&gt;Payload&lt;/h2&gt;
 
 &lt;p&gt;Después de la cabecera, siempre hay un bloque payload de texto cifrado autentificado por un algoritmo AEAD. Dicho bloque consiste conceptualmente en un número de bits redundantes de autenticación, concatenados a una cadena de bytes de tamaño igual al texto plano del payload. Actualmente se estima que son necesarios unos 64 bits de autenticación.&lt;/p&gt;
 
@@ -177,7 +177,7 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 
 &lt;p&gt;&lt;strong&gt;Payload: Self Identifying Frames&lt;/strong&gt;. Se espera que la carga de cada paquete QUIC sea una lista concatenada de datos llamada Frames. Cada frame tiene bytes iniciales que identifican el frame, así como información sobre el formato del frame y su contenido. Por ejemplo, hay frames que transportan información de acuse (&lt;strong&gt;acknowledgement information&lt;/strong&gt;), y también hay frames que transportan datos de flujo individuales. Existen una amplia variedad de frames para miscelánica. A continuación se presentan los distintos tipos de frames y su estructura.&lt;/p&gt;
 
-&lt;h4 id=&#34;frames-dentro-del-payload&#34;&gt;Frames dentro del Payload&lt;/h4&gt;
+&lt;h2 id=&#34;frames-dentro-del-payload&#34;&gt;Frames dentro del Payload&lt;/h2&gt;
 
 &lt;p&gt;Todos los frames comienzan con un byte que especifica su tipo, pero se espera poder empaquetar flags adicionales específicos para cada tipo de frame en ese byte. Como resultado, serán los primeros bits de un byte que especifique el tipo de frame los que identificarán el tipo de frame, y los bits restantes serán usados para codificar el formato dentro del frame (como ocurre con la cabecera).&lt;/p&gt;
 
@@ -268,53 +268,55 @@ x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&
 +--------+--------+--------+--------+--------+
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;análisis-del-tráfico-con-wireshark&#34;&gt;Análisis del tráfico con WireShark&lt;/h3&gt;
+&lt;h2 id=&#34;análisis-del-tráfico-con-wireshark&#34;&gt;Análisis del tráfico con WireShark&lt;/h2&gt;
 
 &lt;p&gt;La captura realizada fue la siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1920px&#34; height=&#34;1080px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1920px) 1920px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;1920px&#34; height=&#34;1080px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Se procederá a mostrar algunas capturas más detalladas de la cabecera únicamente, ya que el resto del paquete está cifrado, sin embargo, a lo largo de éste documento se ha detallado cómo sería la estructura del payload una vez descifrado.&lt;/p&gt;
 
 &lt;p&gt;Como se mostró más arriba, la cabecera del primer paquete indica que el paquete contiene información que especificará la versión de QUIC a usar:&lt;/p&gt;
 
-&lt;h5 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión-1&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h5&gt;
+&lt;h3 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión-1&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h3&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img sizes=&#34;(min-width: 370px) 370px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Dicha información se encuentra aquí:&lt;/p&gt;
 
-&lt;h5 id=&#34;información-sobre-la-versión-a-usar&#34;&gt;Información sobre la versión a usar&lt;/h5&gt;
+&lt;h3 id=&#34;información-sobre-la-versión-a-usar&#34;&gt;Información sobre la versión a usar&lt;/h3&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;594px&#34; height=&#34;244px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34;&gt;&lt;img sizes=&#34;(min-width: 594px) 594px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;594px&#34; height=&#34;244px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;También se puede apreciar en la captura el número de secuencia y el identificador de conexión. Si escogemos cualquier otro paquete que no sea el primero, se comprobará que el bit que especifica si existe la versión está desactivado:&lt;/p&gt;
 
-&lt;h5 id=&#34;paquetes-distintos-al-primero&#34;&gt;Paquetes distintos al primero&lt;/h5&gt;
+&lt;h3 id=&#34;paquetes-distintos-al-primero&#34;&gt;Paquetes distintos al primero&lt;/h3&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;596px&#34; height=&#34;246px&#34; /&gt;&lt;/a&gt;
+&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34;&gt;&lt;img sizes=&#34;(min-width: 596px) 596px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;596px&#34; height=&#34;246px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Y por tanto no aparece información relevante respecto a qué versión se usa.&lt;/p&gt;
 
 &lt;p&gt;Los siguientes datos del paquete correspondientes al payload no se pueden analizar por estar cifrados. Sin embargo, una vez descifrados, el contenido del payload variará dependiendo del tipo de frame que haya sido enviado.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;(1) Chromium. Código de la parte cliente&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8j7I2&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(2) Chromium. Código de la parte servidor&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8iUF1&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(3) Chromium. Obtener el código fuente&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/developers/how-tos/get-the-code&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(4) Chromium. Playing with QUIC&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/quic/playing-with-quic&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(5) Google. QUIC Crypto&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(6) Google. QUIC: Design Document and Specification Rationale&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;
-&lt;em&gt;(7) Google. QUIC Wire Layout Specification&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(1) Chromium. Código de la parte cliente&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8j7I2&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(2) Chromium. Código de la parte servidor&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8iUF1&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(3) Chromium. Obtener el código fuente&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/developers/how-tos/get-the-code&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(4) Chromium. Playing with QUIC&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/quic/playing-with-quic&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(5) Google. QUIC Crypto&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(6) Google. QUIC: Design Document and Specification Rationale&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(7) Google. QUIC Wire Layout Specification&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
