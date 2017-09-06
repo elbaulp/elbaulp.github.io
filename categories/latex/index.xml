@@ -1076,7 +1076,7 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h3&gt;
+&lt;h1 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h1&gt;
 
 &lt;p&gt;Para instalarlo, es necesaria una versión de python igual o superior a la 2.6, y &lt;em&gt;Pygments&lt;/em&gt;. Para instalar el último ejecuta:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# easy_install Pygments&lt;/span&gt;
@@ -1086,11 +1086,11 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install python-setuptools&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;instalar-minted&#34;&gt;Instalar minted&lt;/h3&gt;
+&lt;h1 id=&#34;instalar-minted&#34;&gt;Instalar minted&lt;/h1&gt;
 
 &lt;p&gt;Descarga el paquete desde su &lt;a href=&#34;http://code.google.com/p/minted/downloads/list&#34; target=&#34;_blank&#34;&gt;repositorio&lt;/a&gt;. Extráelo y sitúate en su directorio. Luego ejecuta la instrucción &lt;em&gt;make&lt;/em&gt;.&lt;/p&gt;
 
-&lt;h3 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h3&gt;
+&lt;h1 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h1&gt;
 
 &lt;p&gt;Ya está todo listo para usar, empecemos con un ejemplo básico extraido del manual, disponible para descargar en las referencias:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1114,10 +1114,10 @@ Notación infija &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; Notación
 &lt;p&gt;Este trozo de código dará como resultado lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/mintedEjemploC.png&#34; alt=&#34;Ejemplo minted C&#34; width=&#34;599px&#34; height=&#34;246px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 599px) 599px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/mintedEjemploC.png&#34; alt=&#34;Ejemplo minted C&#34; width=&#34;599px&#34; height=&#34;246px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;insertar-código-desde-un-archivo-de-código-fuente&#34;&gt;Insertar código desde un archivo de código fuente&lt;/h3&gt;
+&lt;h1 id=&#34;insertar-código-desde-un-archivo-de-código-fuente&#34;&gt;Insertar código desde un archivo de código fuente&lt;/h1&gt;
 
 &lt;p&gt;Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en lugar de copiar todas esas líneas. &lt;strong&gt;Minted&lt;/strong&gt; proporciona un comando para tal fin. &lt;code&gt;\newmintedfile[]{}&lt;/code&gt;. Veamos un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\newmintedfile&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[myJava]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;java&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
@@ -1192,10 +1192,10 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 &lt;p&gt;El resultado será:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/newmintedfileEjemplo.png&#34; alt=&#34;newmintedfileEjemplo&#34; width=&#34;733px&#34; height=&#34;940px&#34;&gt;&lt;/img&gt;
+    &lt;img sizes=&#34;(min-width: 733px) 733px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/newmintedfileEjemplo.png&#34; alt=&#34;newmintedfileEjemplo&#34; width=&#34;733px&#34; height=&#34;940px&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;creando-un-comando&#34;&gt;Creando un comando&lt;/h3&gt;
+&lt;h1 id=&#34;creando-un-comando&#34;&gt;Creando un comando&lt;/h1&gt;
 
 &lt;p&gt;Puede resultar incómodo y pesado tener que escribir una y otra vez &lt;em&gt;\myJava[label=&amp;#8221;&lt;/em&gt;&amp;#8221;]{*.java}*. Así que creamos un comando para facilitar las cosas:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\newmintedfile&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[myJava]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;java&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
@@ -1216,11 +1216,11 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 
 &lt;p&gt;Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.&lt;/p&gt;
 
-&lt;h3 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h3&gt;
+&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
 
 &lt;p&gt;Para mi, minted es el mejor paquete que hay para resaltar código en $$\LaTeX$$. Y recomiendo a todo el mundo que aprenda a programar en él.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Manual de referencia Minted&lt;/em&gt; »» &lt;a href=&#34;http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf&#34; target=&#34;_blank&#34;&gt;Descargar&lt;/a&gt;&lt;/li&gt;
