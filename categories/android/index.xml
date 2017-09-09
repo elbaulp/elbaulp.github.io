@@ -8694,7 +8694,7 @@ sudo aptitude install mono-complete
 &lt;p&gt;Este comando ejecutará la aplicación, que será como la de la imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s1600/Screenshot-SuperOneClick.png&#34;&gt;&lt;img layout=&#34;responsive&#34;  height=&#34;346&#34; width=&#34;800&#34; src=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s800/Screenshot-SuperOneClick.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s1600/Screenshot-SuperOneClick.png&#34;&gt;&lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; layout=&#34;responsive&#34;  height=&#34;346&#34; width=&#34;800&#34; src=&#34;https://1.bp.blogspot.com/-m5BLQYMKlGo/ToIa7Z8PYiI/AAAAAAAAAxg/hp9LVGRaQTQ/s800/Screenshot-SuperOneClick.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;2.- Ya tenemos la aplicación funcionando correctamente, vamos a preparar el terminal:&lt;/p&gt;
@@ -8709,7 +8709,7 @@ sudo aptitude install mono-complete
 &lt;p&gt;Una vez terminado, tenemos que reiniciar el teléfono, y nos encontraremos con una aplicación como la de la imagen, que nos pedirá permiso cada vez que una aplicación necesite permisos de Root:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;img layout=&#34;responsive&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;img sizes=&#34;(min-width: 480px) 480px, 100vw&#34; layout=&#34;responsive&#34; height=&#34;800&#34; width=&#34;480&#34; src=&#34;https://lh5.googleusercontent.com/-6_6VWUHX_fA/ToIg3Si55bI/AAAAAAAAAxo/aXmmt_TEloU/s800/SC20110927-211316.png&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;solución-de-problemas&#34;&gt;Solución de problemas&lt;/h1&gt;
@@ -8733,8 +8733,11 @@ sudo aptitude install mono-complete
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/solucionar-android-calling-startactivity-from-outside-of-an-activity-context-requires-the-flag_activity_new_task-flag/</guid>
-            <description>&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/android2.png&#34; alt=&#34;Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag&#34; width=&#34;132px&#34; height=&#34;154px&#34; /&gt;
-En una aplicación que estoy haciendo, la cual espero poder presentar en el blog en breve, me encontré con un problema que llevó un tiempo solucionar. La aplicación terminaba inesperadamente al intentar lanzar una actividad desde un &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34;&gt;Servicio&lt;/a&gt;, concretamente el error era:&lt;/p&gt;
+            <description>&lt;p&gt;&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 132px) 132px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/android2.png&#34; alt=&#34;Solucionar el error en Android Calling startActivity from outside of an Activity  context requires the FLAG_ACTIVITY_NEW_TASK flag&#34; width=&#34;132px&#34; height=&#34;154px&#34; /&gt;
+&lt;figure&gt;&lt;/p&gt;
+
+&lt;p&gt;En una aplicación que estoy haciendo, la cual espero poder presentar en el blog en breve, me encontré con un problema que llevó un tiempo solucionar. La aplicación terminaba inesperadamente al intentar lanzar una actividad desde un &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android/&#34;&gt;Servicio&lt;/a&gt;, concretamente el error era:&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -8753,7 +8756,7 @@ En una aplicación que estoy haciendo, la cual espero poder presentar en el blog
 &lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;createChooser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sendIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Compartir en&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;la-solución&#34;&gt;La solución&lt;/h3&gt;
+&lt;h1 id=&#34;la-solución&#34;&gt;La solución&lt;/h1&gt;
 
 &lt;p&gt;Sin embargo, aún añadiendo el Flag &lt;em&gt;FLAG_ACTIVITY_NEW_TASK&lt;/em&gt; el error persistia. El problema reside en que el método &lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#createChooser%28android.content.Intent,%20java.lang.CharSequence%29&#34; target=&#34;_blank&#34;&gt;createChooser()&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;, devuelve un nuevo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos/&#34;&gt;intent&lt;/a&gt;, según la documentación, y por tanto el flag que acabamos de añadir no se copia automáticamente en el nuevo intent y es necesario volver a añadirlo.&lt;/p&gt;
 
@@ -8764,9 +8767,11 @@ En una aplicación que estoy haciendo, la cual espero poder presentar en el blog
 
 &lt;p&gt;De esta forma el error &lt;strong&gt;&lt;em&gt;Calling startActivity() from outside of an Activity context requires the FLAG_ACTIVITY_NEW_TASK flag&lt;/em&gt;&lt;/strong&gt; deberá estar solucionado.&lt;/p&gt;
 
-&lt;h4 id=&#34;referencias&#34;&gt;Referencias&lt;/h4&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;Solución en Stackoverflow&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Solución en Stackoverflow&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/14529492/context-wants-flag-activity-new-task-but-ive-already-set-that-flag&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
