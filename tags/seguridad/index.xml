@@ -1467,16 +1467,18 @@ Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Goog
 
 &lt;p&gt;El método consiste en conseguir 3 cosas:&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;La dirección de correo de la persona a suplantar.&lt;/em&gt;
-&lt;em&gt;Dirección de correo de facebook de la persona a quién se va a engañar.&lt;/em&gt;
-&lt;em&gt;Un sistema para enviar correos SMTP&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;La dirección de correo de la persona a suplantar.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dirección de correo de facebook de la persona a quién se va a engañar.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Un sistema para enviar correos SMTP&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Los pasos a seguir podéis leerlos en la entrada de &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Chema: Suplantación de identidad en Facebook&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Voy a explicar lo que yo he hecho:&lt;/p&gt;
 
 &lt;p&gt;Al principio al establecer comunicación mediante telnet por el puerto 25 (el de SMTP) y escribrir los comandos siempre recibía el siguiente error:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&amp;lt;strong&amp;gt;550 5.6.0 Invalid header found &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;see RFC2822 section 3.6&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&amp;lt;/strong&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;550&lt;/span&gt; 5.6.0 Invalid header found &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;see RFC2822 section 3.6&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Tras buscar un poco el motivo descubrí que se debía a que me estaba saltando algunas cabeceras del protocolo, concretamente *From, To * y &lt;em&gt;Date.&lt;/em&gt;&lt;/p&gt;
@@ -1514,7 +1516,6 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 &lt;p&gt;También probé con dos programas (sin éxito), uno en&lt;a href=&#34;https://elbauldelprogramador.com/c/&#34;&gt; C++&lt;/a&gt; y otro en &lt;a href=&#34;https://elbauldelprogramador.com/python&#34;&gt;python&lt;/a&gt; que encontré en stackoverflow:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;/sys&amp;gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netinet&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netdb&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
      &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -1645,9 +1646,7 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 
 &lt;p&gt;Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.&lt;/p&gt;
 
-&lt;h5 id=&#34;fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Elladodelmal&lt;/a&gt;&lt;/h5&gt;
-
-&lt;p&gt;&lt;/string&gt;&lt;/stdio&gt;&lt;/netdb&gt;&lt;/netinet&gt;&lt;/sys&gt;&lt;/iostream&gt;&lt;/p&gt;</description>
+&lt;h1 id=&#34;fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Elladodelmal&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>

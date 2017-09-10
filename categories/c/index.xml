@@ -979,7 +979,7 @@ ejemplo, para llamar a la función mostrar, basta escribir:&lt;/li&gt;
 
 &lt;p&gt;Para aquel que quiera simplemente aplicar el parche y empezar a usarlo, debe leer únicamente la siguiente sección. Aquellos que estén interesados en los detalles técnicos pueden leer el artículo completo.&lt;/p&gt;
 
-&lt;h2 id=&#34;aplicar-y-usar-el-parche&#34;&gt;Aplicar y usar el parche&lt;/h2&gt;
+&lt;h1 id=&#34;aplicar-y-usar-el-parche&#34;&gt;Aplicar y usar el parche&lt;/h1&gt;
 
 &lt;p&gt;El primer paso es situarnos en el directorio con el código de DWM y descargar el parche:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget https://raw.githubusercontent.com/algui91/myDWM/master/patches/dwm-6.1-simplestatuscolor.diff
@@ -993,7 +993,7 @@ ejemplo, para llamar a la función mostrar, basta escribir:&lt;/li&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo make clean install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h3 id=&#34;crear-una-barra-de-estado-con-dwmstatus&#34;&gt;Crear una barra de estado con dwmstatus&lt;/h3&gt;
+&lt;h2 id=&#34;crear-una-barra-de-estado-con-dwmstatus&#34;&gt;Crear una barra de estado con dwmstatus&lt;/h2&gt;
 
 &lt;p&gt;Éste parche solo funciona con la aplicación &lt;strong&gt;dwmstatus&lt;/strong&gt;, para descargarlo e instalarlo basta con hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git clone git://git.suckless.org/dwmstatus
@@ -1003,7 +1003,7 @@ $ dwmstatus
 
 &lt;p&gt;Con esto tendremos &lt;strong&gt;dwmstatus&lt;/strong&gt; ejecutándose y mostrando información.&lt;/p&gt;
 
-&lt;h3 id=&#34;coloreando-la-barra-de-estado&#34;&gt;Coloreando la barra de estado&lt;/h3&gt;
+&lt;h2 id=&#34;coloreando-la-barra-de-estado&#34;&gt;Coloreando la barra de estado&lt;/h2&gt;
 
 &lt;p&gt;Para darle color, basta con modificar el código de &lt;strong&gt;dwmstatus&lt;/strong&gt; e indicar qué colores usar. Por ejemplo, en el fichero &lt;code&gt;dwmstatus.c&lt;/code&gt; la línea que formatea el estado es la siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;status&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;smprintf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;L:%s A:%s U:%s %s&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;avgs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmutc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmbln&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -1016,10 +1016,10 @@ $ dwmstatus
 &lt;p&gt;Coloreará &lt;code&gt;L:%s&lt;/code&gt; con el color 1, &lt;code&gt;L:%s&lt;/code&gt; con el color 2 y &lt;code&gt;U:%s %s&lt;/code&gt; con el color 3. He aquí un ejemplo de la mía:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;702px&#34; height=&#34;13px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 702px) 702px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/07/simplestatuscolor-in-dwmstatus-dwm6.1.png&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34; alt=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34; width=&#34;702px&#34; height=&#34;13px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;h2 id=&#34;dentro-del-código&#34;&gt;Dentro del código&lt;/h2&gt;
+&lt;h1 id=&#34;dentro-del-código&#34;&gt;Dentro del código&lt;/h1&gt;
 
 &lt;p&gt;Pasemos ahora a ver qué hace el código para ser capaz de colorear la barra de estado. Explicaremos paso a paso lo que hace cada trozo de código en cada fichero:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* ##### config.def.h ##### */&lt;/span&gt;
@@ -1151,12 +1151,14 @@ $ dwmstatus
      x = m-&amp;gt;ww;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;p&gt;Todo el trabajo está en mi cuenta de Github, Tanto mi configuración actual de DWM como mi DWMstatus. En los siguientes enlaces.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;myDWMstatus&lt;/em&gt; »» &lt;a href=&#34;https://github.com/elbaulp/myDWMstatus&#34; target=&#34;_blank&#34;&gt;github.com/elbaulp/myDWMstatus&lt;/a&gt;
-&lt;em&gt;myDWM&lt;/em&gt; »» &lt;a href=&#34;https://github.com/elbaulp/myDWM&#34; target=&#34;_blank&#34;&gt;github.com/elbaulp/myDWM&lt;/a&gt;&lt;/p&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;myDWMstatus&lt;/em&gt; »» &lt;a href=&#34;https://github.com/elbaulp/myDWMstatus&#34; target=&#34;_blank&#34;&gt;github.com/elbaulp/myDWMstatus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;myDWM&lt;/em&gt; »» &lt;a href=&#34;https://github.com/elbaulp/myDWM&#34; target=&#34;_blank&#34;&gt;github.com/elbaulp/myDWM&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>

@@ -3942,26 +3942,26 @@ adios
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;descargar-la-base-de-datos&#34;&gt;Descargar la base de datos&lt;/h3&gt;
+&lt;h1 id=&#34;descargar-la-base-de-datos&#34;&gt;Descargar la base de datos&lt;/h1&gt;
 
 &lt;p&gt;Es más sencillo descargar una copia de la base de datos para realizar las sustituciones necesarias, ya que podremos aplicar las expresiones regulares en cualquier editor de texto. Para ello, si usamos PhpMyadmin hay que entrar al panel de administración, seleccionar la base de datos a exportar, en este caso la de WordPress, pulsar el botón &lt;em&gt;Export&lt;/em&gt; y dejar todo tal y como aparece en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img//2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;1046px&#34; height=&#34;803px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1046px) 1046px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img//2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma.png&#34; title=&#34;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&#34; alt=&#34;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&#34; width=&#34;1046px&#34; height=&#34;803px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&#34;generar-la-expresión-regular-necesaria&#34;&gt;Generar la expresión regular necesaria&lt;/h3&gt;
+&lt;h1 id=&#34;generar-la-expresión-regular-necesaria&#34;&gt;Generar la expresión regular necesaria&lt;/h1&gt;
 
 &lt;p&gt;Ahora que tenemos la base de datos descargada, la descomprimimos y nos paramos a pensar qué expresión regular nos hace falta. En este caso, buscamos reemplazar URLs del tipo &lt;strong&gt;&lt;em&gt;dominio.com/2011/12/nombre-artículo&lt;/em&gt;&lt;/strong&gt; por otras del tipo &lt;strong&gt;&lt;em&gt;dominio.com/nombre-articulo&lt;/em&gt;&lt;/strong&gt;. Es necesario usar antes el plugin para redireccionar los artículos de blogger a WordPress para que se creen los enlaces del tipo &lt;em&gt;dominio.com/nombre-articulo&lt;/em&gt;. Con esto en mente, construimos la siguiente expresión regular:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;elbauldelprogramador&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;com&lt;span class=&#34;se&#34;&gt;\/\d&lt;/span&gt;+&lt;span class=&#34;se&#34;&gt;\/\d&lt;/span&gt;+&lt;span class=&#34;se&#34;&gt;\/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;?:&lt;span class=&#34;se&#34;&gt;\w&lt;/span&gt;+-?&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;html
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;h4 id=&#34;explicación-de-la-expresión-regular&#34;&gt;Explicación de la expresión regular&lt;/h4&gt;
+&lt;h2 id=&#34;explicación-de-la-expresión-regular&#34;&gt;Explicación de la expresión regular&lt;/h2&gt;
 
 &lt;p&gt;Lo que tienen las expresiones regulares es que cuando pasa un tiempo, y aunque la hayas creado tú, es probable que no tengas ni idea de por qué la hiciste y cómo se te ocurrió. Hace tiempo en la sección &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Sección Viñetas Geek&#34; target=&#34;_blank&#34;&gt;Viñetas Geek de Domingo&lt;/a&gt; apareció una imagen que refleja esta sensación:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg&#34; title=&#34;Explicado simplemente - Expresiones regulares del día anterior&#34; alt=&#34;Explicado simplemente - Expresiones regulares del día anterior&#34; width=&#34;329px&#34; height=&#34;533px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg&#34;&gt;&lt;img sizes=&#34;(min-width: 329px) 329px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/12/Explicado-simplemente-Expresiones-regulares-del-día-anterior.jpg&#34; title=&#34;Explicado simplemente - Expresiones regulares del día anterior&#34; alt=&#34;Explicado simplemente - Expresiones regulares del día anterior&#34; width=&#34;329px&#34; height=&#34;533px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Así que pasemos a explicarla:&lt;/p&gt;
@@ -3980,7 +3980,7 @@ adios
 &lt;p&gt;Esto debería bastar, con cualquier editor, en este caso con Geany, podemos buscar y reemplazar las cadenas que coincidan con esta expresión:&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;586px&#34; height=&#34;256px&#34; /&gt;&lt;/a&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 586px) 586px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/01/Sustituir-los-enlaces-de-blogger-por-los-de-Wordpress-al-migrar-de-plataforma1.png&#34; title=&#34;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&#34; alt=&#34;Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma&#34; width=&#34;586px&#34; height=&#34;256px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Lo cual sustituirá la URL antigua por lo que coincidión en la expresión &lt;em&gt;((?:\w+-?)+)&lt;/em&gt;, cuyo contenido se puede referenciar con \1, donde 1 es el número del grupo, si hubiera varios, se referenciarían con \1, \2 etc. Con esto, ya podemos dejar de usar el plugin.&lt;/p&gt;</description>
