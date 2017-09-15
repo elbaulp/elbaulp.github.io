@@ -69,7 +69,7 @@ git push repo2 -f --mirror
 
 &lt;h1 id=&#34;mantener-sincronizada-una-única-rama&#34;&gt;Mantener sincronizada una única rama&lt;/h1&gt;
 
-&lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta=&amp;quot;distinta&amp;quot; de=&amp;quot;de&amp;quot; master=&amp;quot;master&amp;quot;&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
+&lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta de master&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
 
 &lt;p&gt;Para activarlo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;

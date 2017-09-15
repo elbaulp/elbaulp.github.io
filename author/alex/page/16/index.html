@@ -1611,6 +1611,34 @@
     <a href="https://elbauldelprogramador.com/categories/dev/"><span>dev</span></a>
   </span>
   <div class="box-body">
+    <time datetime="2017-03-17T18:04:24JST" class="date">Mar 17, 2017</time>
+    <a class="post-link" href="https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/">
+      <h2 class="post-title">Cómo crear  simples shortcodes en WordPress</h2>
+    </a>
+    <p class="description">Es bastante simple:
+Buscamos el archivo function.php de nuestro tema instalado y pegamos el siguiente código php.
+&lt;?php // Short code function Nombre_de_nuestro_shortcode( $atts, $content = null ) { return &#39;Código de nuestro shortcode&#39;; } add_shortcode(&#39;nombre_de_nuestro_shortcode&#39;, &#39;Nombre_de_nuestro_shortcode&#39;); ?&gt;  A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:
+[nombre_de_nuestro_shortcode]  Así de sencillo es crear shortcodes en WordPress.</p>
+    <div class="tags">
+      
+         
+            <a href="https://elbauldelprogramador.com/tags/atajos-wordpress">atajos wordpress</a>
+         
+            <a href="https://elbauldelprogramador.com/tags/php">php</a>
+         
+            <a href="https://elbauldelprogramador.com/tags/shortcodes">shortcodes</a>
+         
+      
+    </div>
+  </div>
+</article>
+
+    
+      <article class="box-item post-dev shown">
+  <span class="ribbon">
+    <a href="https://elbauldelprogramador.com/categories/dev/"><span>dev</span></a>
+  </span>
+  <div class="box-body">
     <time datetime="2017-03-17T18:05:21JST" class="date">Mar 17, 2017</time>
     <a class="post-link" href="https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/">
       <h2 class="post-title">Cómo crear shortcodes en WordPress que soporten parámetros</h2>
@@ -1882,74 +1910,6 @@ wget -r -A.tar.gz &lt;url&gt;  Donde:</p>
             <a href="https://elbauldelprogramador.com/tags/funcion-ptrace-c">funcion ptrace C</a>
          
             <a href="https://elbauldelprogramador.com/tags/ingenieria-inversa-c">ingenieria inversa C</a>
-         
-      
-    </div>
-  </div>
-</article>
-
-    
-      <article class="box-item post-security-now shown">
-  <span class="ribbon">
-    <a href="https://elbauldelprogramador.com/categories/security-now/"><span>security-now</span></a>
-  </span>
-  <div class="box-body">
-    <time datetime="2017-03-21T16:13:21JST" class="date">Mar 21, 2017</time>
-    <a class="post-link" href="https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/">
-      <h2 class="post-title">Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación  Web</h2>
-    </a>
-    <p class="description"><p>Hacía mucho tiempo que no traducía episodios del podcast <a href="https://elbauldelprogramador.com/security-now/">Security Now!</a>. Hoy os traigo la traducción del episodio <a href="http://twit.tv/show/security-now/495">#495</a>, donde <em>Steve</em> describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado <em>Google</em>. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.</p>
-
-<h1 id="qué-hay-mal-en-el-protocolo-actual">¿Qué hay mal en el protocolo actual?</h1>
-
-<ul>
-<li>Páginas web inmensas</li>
-<li>Un modelo textual basado en petición/respuesta muy simple. Es el cliente quien solicita recursos, no el servidor quien las envía por sí mismo.</li>
-<li>Cada petición es independiente, stateless y no presupone de ningún conocimiento o contexto previo.</li>
-<li>TCP es muy lento al iniciar una conexión.</li>
-<li>La negociación inicial de TLS también es muy costosa.</li>
-<li>Se realizan múltiples conexiones.</li>
-</ul>
-
-<h1 id="http2-corrige-todos-éstos-problemas">HTTP2 corrige todos éstos problemas</h1>
-
-<p>HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en éstos puntos):</p>
-
-<ul>
-<li><strong>Frames</strong>: Dividen la única conexión existente en varios frames enumerados. Se componen de:
-
-<ul>
-<li>Una cabecera de 9 bytes:</li>
-<li>Los primeros 24 bits (Solo se usan 14 bits si no se tiene el permiso del otro pc)</li>
-<li>8 bits que determinan el tipo de <em>frame</em>.</li>
-<li>8 bits conteniendo los <em>flags</em> del <em>frame</em>.</li>
-<li>32 bits para el Identificador del flujo (<strong>Stream ID</strong>). El bit más significativo siempre es 0.</li>
-<li><em>Payload</em> de longitud variada.</li>
-</ul></li>
-<li><strong>Streams</strong> (<em>flujos</em>):
-
-<ul>
-<li>El solicitante puede asignarles prioridades.</li>
-<li>Se les puede asignar inter-dependencias.</li>
-</ul></li>
-<li><strong>Compresión de cabeceras HTTP</strong>:
-
-<ul>
-<li>Cómo funciona LZ (<em>Lempel-Ziv</em>). (PKZIP, GZIP, LZW, LZA, etc).</li>
-<li>Un único contexto comprimido para la conexión.</li>
-</ul></li>
-<li><strong>Speculative Push</strong> (Push especulativo).</li>
-</ul>
-
-<p>Empecemos a profundizar en cada uno de éstos puntos:</p></p>
-    <div class="tags">
-      
-         
-            <a href="https://elbauldelprogramador.com/tags/como-funciona-http2">como funciona http2</a>
-         
-            <a href="https://elbauldelprogramador.com/tags/detalles-tecnicos-http2">detalles tecnicos http2</a>
-         
-            <a href="https://elbauldelprogramador.com/tags/http2">http2</a>
          
       
     </div>

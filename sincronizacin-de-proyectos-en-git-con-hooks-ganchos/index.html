@@ -204,7 +204,7 @@
         "wordCount": 537,
         "datePublished" : "2017-09-08T12:15:30",
         "dateModified" : "2017-09-08T12:15:24",
-        "articleBody": "  Repositorio espejo (Mirror repo) Problema Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en git, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (mirror repos)\n\nRepositorios a sincronizar Supongamos que los repositorios se llaman repo1 y repo2. Pretendemos que repo2 esté sincronizado (sea un espejo) del repo1. Ésto significa que no tendremos que clonar en ningún momento el repo2. En local únicamente tendremos el repo1.\nSolución La respuesta, como es habitual, la encontré tras buscar un poco en stackoverflow. Gracias a Manoj Govindan\nAñadir repo2 como remote Dentro de repo1 añadiremos un nuevo remote que sea el repo2:\ngit remote add repo2 \u0026lt;url-repo2\u0026gt;  Configurar el hook (gancho) post-commit Dentro del repositorio, crearemos un nuevo hook que se ejecute cada vez que hagamos un commit en repo1. Por cada commit, ejecutaremos un git push repo2, lo cual enviará los cambios al repo2.\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-commit # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 -f --mirror\u0026quot; \u0026gt; .git/hooks/post-commit  En contenido del hook, para que se vea más claro es el siguiente:\n#!/bin/bash git push repo2 -f --mirror  Conclusión Nota: Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el commit del repo1, sigue siendo necesario ejecutar git push en repo1\nMantener sincronizada una única rama Un problema similar podría ser mantener sincronizado en repo2 únicamente las ramas master. De forma que podamos crear tantas ramas como necesitemos en repo1 sin que se vean reflejadas en repo2. Para ello, en lugar de usar el hook post-commit, usaremos post-merge. Éste hook se ejecutará cada vez que se haga un git merge \u0026lt;rama distinta=\u0026quot;distinta\u0026quot; de=\u0026quot;de\u0026quot; master=\u0026quot;master\u0026quot;\u0026gt; sobre master.\nPara activarlo:\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-merge # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 master:master\u0026quot; \u0026gt; .git/hooks/post-merge  El contenido del hook es:\n#!/bin/bash git push repo2 master:master  git push repo2 master:master podría leerse como: Publica en el repo2 en la rama master, el contenido de la rama master del repo actual\nReferencias  Automatically mirror a git repository ",
+        "articleBody": "  Repositorio espejo (Mirror repo) Problema Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en git, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (mirror repos)\n\nRepositorios a sincronizar Supongamos que los repositorios se llaman repo1 y repo2. Pretendemos que repo2 esté sincronizado (sea un espejo) del repo1. Ésto significa que no tendremos que clonar en ningún momento el repo2. En local únicamente tendremos el repo1.\nSolución La respuesta, como es habitual, la encontré tras buscar un poco en stackoverflow. Gracias a Manoj Govindan\nAñadir repo2 como remote Dentro de repo1 añadiremos un nuevo remote que sea el repo2:\ngit remote add repo2 \u0026lt;url-repo2\u0026gt;  Configurar el hook (gancho) post-commit Dentro del repositorio, crearemos un nuevo hook que se ejecute cada vez que hagamos un commit en repo1. Por cada commit, ejecutaremos un git push repo2, lo cual enviará los cambios al repo2.\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-commit # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 -f --mirror\u0026quot; \u0026gt; .git/hooks/post-commit  En contenido del hook, para que se vea más claro es el siguiente:\n#!/bin/bash git push repo2 -f --mirror  Conclusión Nota: Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el commit del repo1, sigue siendo necesario ejecutar git push en repo1\nMantener sincronizada una única rama Un problema similar podría ser mantener sincronizado en repo2 únicamente las ramas master. De forma que podamos crear tantas ramas como necesitemos en repo1 sin que se vean reflejadas en repo2. Para ello, en lugar de usar el hook post-commit, usaremos post-merge. Éste hook se ejecutará cada vez que se haga un git merge \u0026lt;rama distinta de master\u0026gt; sobre master.\nPara activarlo:\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-merge # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 master:master\u0026quot; \u0026gt; .git/hooks/post-merge  El contenido del hook es:\n#!/bin/bash git push repo2 master:master  git push repo2 master:master podría leerse como: Publica en el repo2 en la rama master, el contenido de la rama master del repo actual\nReferencias  Automatically mirror a git repository ",
         "image": {
             "@type": "ImageObject",
             "url": "https://elbauldelprogramador.com/img/2013/03/git-logo.png",
@@ -229,7 +229,7 @@
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "articleBody": "  Repositorio espejo (Mirror repo) Problema Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en git, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (mirror repos)\n\nRepositorios a sincronizar Supongamos que los repositorios se llaman repo1 y repo2. Pretendemos que repo2 esté sincronizado (sea un espejo) del repo1. Ésto significa que no tendremos que clonar en ningún momento el repo2. En local únicamente tendremos el repo1.\nSolución La respuesta, como es habitual, la encontré tras buscar un poco en stackoverflow. Gracias a Manoj Govindan\nAñadir repo2 como remote Dentro de repo1 añadiremos un nuevo remote que sea el repo2:\ngit remote add repo2 \u0026lt;url-repo2\u0026gt;  Configurar el hook (gancho) post-commit Dentro del repositorio, crearemos un nuevo hook que se ejecute cada vez que hagamos un commit en repo1. Por cada commit, ejecutaremos un git push repo2, lo cual enviará los cambios al repo2.\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-commit # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 -f --mirror\u0026quot; \u0026gt; .git/hooks/post-commit  En contenido del hook, para que se vea más claro es el siguiente:\n#!/bin/bash git push repo2 -f --mirror  Conclusión Nota: Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el commit del repo1, sigue siendo necesario ejecutar git push en repo1\nMantener sincronizada una única rama Un problema similar podría ser mantener sincronizado en repo2 únicamente las ramas master. De forma que podamos crear tantas ramas como necesitemos en repo1 sin que se vean reflejadas en repo2. Para ello, en lugar de usar el hook post-commit, usaremos post-merge. Éste hook se ejecutará cada vez que se haga un git merge \u0026lt;rama distinta=\u0026quot;distinta\u0026quot; de=\u0026quot;de\u0026quot; master=\u0026quot;master\u0026quot;\u0026gt; sobre master.\nPara activarlo:\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-merge # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 master:master\u0026quot; \u0026gt; .git/hooks/post-merge  El contenido del hook es:\n#!/bin/bash git push repo2 master:master  git push repo2 master:master podría leerse como: Publica en el repo2 en la rama master, el contenido de la rama master del repo actual\nReferencias  Automatically mirror a git repository ",
+        "articleBody": "  Repositorio espejo (Mirror repo) Problema Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en git, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (mirror repos)\n\nRepositorios a sincronizar Supongamos que los repositorios se llaman repo1 y repo2. Pretendemos que repo2 esté sincronizado (sea un espejo) del repo1. Ésto significa que no tendremos que clonar en ningún momento el repo2. En local únicamente tendremos el repo1.\nSolución La respuesta, como es habitual, la encontré tras buscar un poco en stackoverflow. Gracias a Manoj Govindan\nAñadir repo2 como remote Dentro de repo1 añadiremos un nuevo remote que sea el repo2:\ngit remote add repo2 \u0026lt;url-repo2\u0026gt;  Configurar el hook (gancho) post-commit Dentro del repositorio, crearemos un nuevo hook que se ejecute cada vez que hagamos un commit en repo1. Por cada commit, ejecutaremos un git push repo2, lo cual enviará los cambios al repo2.\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-commit # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 -f --mirror\u0026quot; \u0026gt; .git/hooks/post-commit  En contenido del hook, para que se vea más claro es el siguiente:\n#!/bin/bash git push repo2 -f --mirror  Conclusión Nota: Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el commit del repo1, sigue siendo necesario ejecutar git push en repo1\nMantener sincronizada una única rama Un problema similar podría ser mantener sincronizado en repo2 únicamente las ramas master. De forma que podamos crear tantas ramas como necesitemos en repo1 sin que se vean reflejadas en repo2. Para ello, en lugar de usar el hook post-commit, usaremos post-merge. Éste hook se ejecutará cada vez que se haga un git merge \u0026lt;rama distinta de master\u0026gt; sobre master.\nPara activarlo:\n# Crear el hook que se ejecutará en cada commit mv .git/hooks/pre-commit.sample .git/hooks/post-merge # Añadir el comando a ejecutar echo -e \u0026quot;#!/bin/bash\\n\\ngit push repo2 master:master\u0026quot; \u0026gt; .git/hooks/post-merge  El contenido del hook es:\n#!/bin/bash git push repo2 master:master  git push repo2 master:master podría leerse como: Publica en el repo2 en la rama master, el contenido de la rama master del repo actual\nReferencias  Automatically mirror a git repository ",
         "wordCount": "537",
         "mainEntityOfPage": "https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/",
         "headline": "Sincronización de proyectos en git con hooks (ganchos)",
@@ -1489,7 +1489,7 @@ git push repo2 -f --mirror
 
 <h1 id="mantener-sincronizada-una-única-rama">Mantener sincronizada una única rama</h1>
 
-<p>Un problema similar podría ser mantener sincronizado en <em>repo2</em> únicamente las ramas <em>master</em>. De forma que podamos crear tantas ramas como necesitemos en <em>repo1</em> sin que se vean reflejadas en <em>repo2</em>. Para ello, en lugar de usar el <em>hook</em> <code>post-commit</code>, usaremos <code>post-merge</code>. Éste <em>hook</em> se ejecutará cada vez que se haga un <code>git merge &lt;rama distinta=&quot;distinta&quot; de=&quot;de&quot; master=&quot;master&quot;&gt;</code> sobre master.</p>
+<p>Un problema similar podría ser mantener sincronizado en <em>repo2</em> únicamente las ramas <em>master</em>. De forma que podamos crear tantas ramas como necesitemos en <em>repo1</em> sin que se vean reflejadas en <em>repo2</em>. Para ello, en lugar de usar el <em>hook</em> <code>post-commit</code>, usaremos <code>post-merge</code>. Éste <em>hook</em> se ejecutará cada vez que se haga un <code>git merge &lt;rama distinta de master&gt;</code> sobre master.</p>
 
 <p>Para activarlo:</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="c1"># Crear el hook que se ejecutará en cada commit</span>
@@ -2601,6 +2601,42 @@ git push repo2 master:master
    
 
    
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
+
+   
        
    
 
@@ -2664,44 +2700,288 @@ git push repo2 master:master
 
    
 
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
-
-   
 
 
 
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 
@@ -3468,242 +3748,6 @@ git push repo2 master:master
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
         
     
 
@@ -3737,46 +3781,6 @@ git push repo2 master:master
 
     
         
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
     
 
     
@@ -3831,15 +3835,15 @@ git push repo2 master:master
     <h1>Quizá también te interese leer...</h1>
     <ul>
     
-        <li><a id="related-post"  href="https://elbauldelprogramador.com/manual-de-git-gratuito/" title="Manual De Git Gratuito">Manual De Git Gratuito</a></li>
-    
-        <li><a id="related-post"  href="https://elbauldelprogramador.com/21-aliases-utiles-para-git/" title="21 alias útiles para git">21 alias útiles para git</a></li>
+        <li><a id="related-post"  href="https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/" title="Cómo mostrar información de un repositorio Git en el prompt de tu terminal">Cómo mostrar información de un repositorio Git en el prompt de tu terminal</a></li>
     
         <li><a id="related-post"  href="https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/" title="Git: Mini Tutorial y chuleta de comandos">Git: Mini Tutorial y chuleta de comandos</a></li>
     
-        <li><a id="related-post"  href="https://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/" title="Gource: Visualizar la evolución de un repositorio Git">Gource: Visualizar la evolución de un repositorio Git</a></li>
+        <li><a id="related-post"  href="https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/" title="Cómo cifrar archivos con openssl">Cómo cifrar archivos con openssl</a></li>
     
-        <li><a id="related-post"  href="https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/" title="Cómo Eliminar Ficheros Demasiado Grandes Para GitHub">Cómo Eliminar Ficheros Demasiado Grandes Para GitHub</a></li>
+        <li><a id="related-post"  href="https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/" title="Sincronización de proyectos en git con hooks (ganchos)">Sincronización de proyectos en git con hooks (ganchos)</a></li>
+    
+        <li><a id="related-post"  href="https://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/" title="Gource: Visualizar la evolución de un repositorio Git">Gource: Visualizar la evolución de un repositorio Git</a></li>
     
     </ul>
 

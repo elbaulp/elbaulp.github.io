@@ -6,7 +6,7 @@
         <description>Recent content in Gentoo on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Sat, 04 Feb 2017 12:53:37 +0100</lastBuildDate>
+        <lastBuildDate>Fri, 15 Sep 2017 17:44:41 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/gentoo/</link>
@@ -15,6 +15,79 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/tags/gentoo/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Actualizar automáticamente el kernel en Gentoo</title>
+            <link>https://elbauldelprogramador.com/actualizar-kernel-gentoo-automaticamente/</link>
+            <pubDate>Fri, 15 Sep 2017 17:44:41 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/actualizar-kernel-gentoo-automaticamente/</guid>
+            <description>&lt;p&gt;Llevo unos cuantos años usando &lt;a href=&#34;https://elbauldelprogramador.com/categories/gentoo/&#34; title=&#34;post sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;, y cada vez que salía una actualización del &lt;a href=&#34;https://elbauldelprogramador.com/tags/kernel/&#34; title=&#34;posts sobre kernel&#34;&gt;kernel&lt;/a&gt; terminaba visitando la página &lt;a href=&#34;https://wiki.gentoo.org/wiki/Kernel/Upgrade&#34; target=&#34;_blank&#34; title=&#34;Kernel/Upgrade&#34;&gt;Kernel/Upgrade&lt;/a&gt; de la Wiki de Gentoo. Tras casi aprenderme los pasos de memoria, decidí que iba siendo hora de escribir un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash/&#34; title=&#34;post sobre bash&#34;&gt;script&lt;/a&gt; que automatizara el proceso.&lt;/p&gt;
+
+&lt;p&gt;El script es bastante simple, lo publico por si a alguien le resulta útil:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;## Upgrade gentoo kernel&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# The first and only argument must be the folder name of the new kernel.&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Stop script when an error occurs&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o errexit
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o pipefail
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o nounset
+&lt;span class=&#34;c1&#34;&gt;# For debugging purposes&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o xtrace
+
+&lt;span class=&#34;nb&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/src/&amp;#39;&lt;/span&gt;
+
+_usage &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;script_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;newkernelfolder&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+_main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Backing up old kernel...&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/linux/&amp;quot;&lt;/span&gt;
+    cp .config ~/kernel-config-&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Copying old configuration...&amp;quot;&lt;/span&gt;
+    cp /usr/src/linux/.config /tmp/.config
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Setting new kernel as default...&amp;quot;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#ln -sf /usr/src/&amp;quot;$1&amp;quot; /usr/src/linux&lt;/span&gt;
+    cp /tmp/.config /usr/src/linux/
+    eselect kernel &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; 2
+    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/src/linux/
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Building...&amp;quot;&lt;/span&gt;
+    make -j4 olddefconfig
+    make -j4 modules_prepare
+    emerge --ask @module-rebuild
+    make -j4
+    make install
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Please, update your EFI entry: cp /boot/vmlinuz-*-gentoo /boot/efi/boot/bootx64.efi&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    _main &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+    _usage
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Para usarlo basta con ejecutar:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo ./updatekernel.sh &amp;lt;nombre-carpeta-kernel&amp;gt;
+&lt;span class=&#34;c1&#34;&gt;## por ejemplo&lt;/span&gt;
+$ sudo ./updatekernel.sh linux-4.12.12-gentoo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;El script se puede mejorar aún bastante, si te apetece &lt;strong&gt;contribuir&lt;/strong&gt;, está alojado en mi repositorio de &lt;a href=&#34;https://github.com/elbaulp/dotfiles/blob/master/home/bin/updatekernel.sh&#34; target=&#34;_blank&#34; title=&#34;elbaulp/dotfiles&#34;&gt;Dotfiles.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Tras escribir el script, me dí cuenta que portage tiene una opción para añadir hooks a los paquetes, concretamente hay uno para que el kernel se compile e instale automáticamente. Al probarlo me dí cuenta de que no usa el &lt;code&gt;.config&lt;/code&gt; del kernel anterior. Seguramente se pueda configurar para que lo haga,  pero ya que escribí el script, decidí usarlo.&lt;/p&gt;
+
+&lt;p&gt;Espero que te sea útil!&lt;/p&gt;</description>
+        </item>
         
         <item>
             <title>Cómo eliminar un paquete slotted en Gentoo</title>
