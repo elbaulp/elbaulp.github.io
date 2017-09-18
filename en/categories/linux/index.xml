@@ -86,7 +86,45 @@ _main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&g
 
 &lt;p&gt;After writing the script, I saw &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/portage/&#34; title=&#34;portage posts&#34;&gt;portage&lt;/a&gt; already have hooks for execute actions when new &lt;strong&gt;ebuilds&lt;/strong&gt; are downloaded, but when I tried it I realized that the &lt;code&gt;.config&lt;/code&gt; from my previous kernel was not being picked up. I am sure there is a way to tell portage hooks to use the previous config, but since I&amp;rsquo;ve already wrote the script, I decided to use it.&lt;/p&gt;
 
-&lt;p&gt;Hope you find the script useful!&lt;/p&gt;</description>
+&lt;p&gt;Hope you find the script useful!&lt;/p&gt;
+
+&lt;h1 id=&#34;update&#34;&gt;Update&lt;/h1&gt;
+
+&lt;p&gt;I posted this script on the &lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/&#34; target=&#34;_blank&#34; title=&#34;Gentoo Subreddit /r/Gentoo&#34;&gt;Gentoo subreddit /r/Gentoo&lt;/a&gt; and it has received a lot of comments. Some redditors had posted its own ways to update a kernel automatically, here are some of them:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn1zjmj/&#34; target=&#34;_blank&#34; title=&#34;htay6r7ce script&#34;&gt;htay6r7ce&lt;/a&gt; script:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;eselect kernel list
+eselect kernel &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Use current kernel config and store copy&lt;/span&gt;
+gunzip /proc/config.gz -c &amp;gt; /root/config&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; cp /root/config /root/config-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;#  Optionally change module settings in the config file, or use --menuconfig&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#  with genkernel.&lt;/span&gt;
+genkernel --makeopts&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-j9 --splash --kernel-config&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/root/config all
+
+&lt;span class=&#34;c1&#34;&gt;# Update packages with kernel modules&lt;/span&gt;
+emerge -1 @module-rebuild
+
+&lt;span class=&#34;c1&#34;&gt;# Cleanup old files&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; name in &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;ls /lib/modules/ &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -V &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -n -3&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+  rm -rf /boot/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;initramfs,kernel,System.map&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;-genkernel-x86_64-&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:?&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+  rm -rf /lib/modules/&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:?&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Update boot config file&lt;/span&gt;
+grub-mkconfig -o /boot/grub/grub.cfg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn3x5hp/&#34; target=&#34;_blank&#34; title=&#34;Btirooh Script&#34;&gt;Btirooh script&lt;/a&gt; its repo &lt;a href=&#34;https://github.com/jeekkd/gentoo-kernel-build&#34; target=&#34;_blank&#34; title=&#34;jeekkd/gentoo-kernel-build&#34;&gt;jeekkd/gentoo-kernel-build&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn32vf3/&#34; target=&#34;_blank&#34; title=&#34;KernelKunt&#34;&gt;KernelKunt&lt;/a&gt; has its script on github: &lt;a href=&#34;https://github.com/t4nki/kupdate&#34; target=&#34;_blank&#34; title=&#34;t4nki/kupdate&#34;&gt;t4nki/kupdate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;And finally, &lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn2tgbk/&#34; target=&#34;_blank&#34; title=&#34;sQu1rr&#34;&gt;sQu1rr&lt;/a&gt; kernel update on &lt;a href=&#34;https://gist.github.com/sQu1rr/6d40a81a40de44b5f4e5b2b50899f888&#34; target=&#34;_blank&#34; title=&#34;Github Gists&#34;&gt;github gists.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of them are far more elaborate than mine, so I will try to use them and improve mine.&lt;/p&gt;</description>
         </item>
         
         <item>
