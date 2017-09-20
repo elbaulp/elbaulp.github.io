@@ -9502,7 +9502,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 &lt;li&gt;&lt;code&gt;git log --pretty=format:&amp;quot;%h - %an, %ar : %s&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --pretty=format;&amp;quot;%h %s&amp;quot; --graph&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --since=2.weeks&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git log &amp;lt;branch&amp;gt; --not master&lt;/code&gt;  # Muestra commit de &lt;branch&gt; sin incluir los de master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log &amp;lt;branch&amp;gt; --not master&lt;/code&gt;  # Muestra commit de &lt;code&gt;&amp;lt;branch&amp;gt;&lt;/code&gt; sin incluir los de master&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --abbrev-commit --pretty=oneline&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git diff master...contrib&lt;/code&gt;  # Muestra solo el trabajo que la rama contrib actual ha introducido desde su antecesor común con master&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log &amp;lt;branch1&amp;gt;..&amp;lt;branch2&amp;gt;&lt;/code&gt;   # Commits de branch2 que no están en branch1&lt;/li&gt;
@@ -9520,7 +9520,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 &lt;li&gt;&lt;code&gt;git fetch &amp;lt;remote&amp;gt;&lt;/code&gt;   #  descarga trabajo nuevo a máquina local, no sobreescribe nada tuyo. ( git pull sí hace merge automaticamente si se esta realizando un seguimiento de esa branch)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push [remote-name] [branch-name]&lt;/code&gt;  #  sii nadie ha hecho push antes&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote show [remote-name]&lt;/code&gt;  #  inspecciona remote.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git remote rename &amp;lt;old-name&amp;gt; &amp;lt;new-name&amp;gt;&lt;/code&gt;   #  también renombra branches: quedaría &lt;new-name&gt;/master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote rename &amp;lt;old-name&amp;gt; &amp;lt;new-name&amp;gt;&lt;/code&gt;   #  también renombra branches: quedaría &lt;code&gt;&amp;lt;new-name&amp;gt;/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote rm &amp;lt;remote-name&amp;gt;&lt;/code&gt;   #  p.e si el contribuidor ya no contribuye más&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -9576,7 +9576,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 &lt;li&gt;&lt;code&gt;git branch &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea rama. Puntero al commit actual&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # cambiar a la rama especificada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea y cambia de rama&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git merge &amp;lt;rama&amp;gt;&lt;/code&gt;   #  Mezcla la rama actual con &lt;rama&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge &amp;lt;rama&amp;gt;&lt;/code&gt;   #  Mezcla la rama actual con &lt;code&gt;&amp;lt;rama&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git branch -d &amp;lt;rama&amp;gt;&lt;/code&gt;   # elimina la rama&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin --delete &amp;lt;branchName&amp;gt;&lt;/code&gt;   #  Elimina una rama del servidor&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git mergetool&lt;/code&gt;  # Herramienta gráfica para resolver conflictos&lt;/li&gt;
@@ -9616,7 +9616,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;una rama&gt; a master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/li&gt;
 &lt;li&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
 
@@ -9662,7 +9662,7 @@ A día de hoy, muchas de estas industrias siguen escribiendo sus programas en CO
 &lt;h2 id=&#34;generar-un-changelog&#34;&gt;GENERAR UN CHANGELOG&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git shortlog --no-merges master --not &amp;lt;tag&amp;gt;&lt;/code&gt;   # Recopila todos los commits desde &lt;tag&gt; y los agrupa por autor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git shortlog --no-merges master --not &amp;lt;tag&amp;gt;&lt;/code&gt;   # Recopila todos los commits desde &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; y los agrupa por autor&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;recomendaciones&#34;&gt;RECOMENDACIONES&lt;/h2&gt;
