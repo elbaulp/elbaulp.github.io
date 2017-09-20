@@ -32,7 +32,7 @@
 
 &lt;h1 id=&#34;qué-es-quic&#34;&gt;¿Qué es QUIC?&lt;/h1&gt;
 
-&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de *&lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection*. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34;&gt;TLS/SSL&lt;/a&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
+&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de &lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34;&gt;TLS/SSL&lt;/a&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
 
 &lt;h1 id=&#34;cuales-son-algunas-de-las-técnicas-empleadas-en-quic&#34;&gt;¿Cuales son algunas de las técnicas empleadas en QUIC?&lt;/h1&gt;
 
@@ -64,7 +64,7 @@
 
 &lt;h1 id=&#34;udp-no-tiene-controles-de-congestión-no-causará-quic-un-colapso-en-internet-si-es-ampliamente-adoptado&#34;&gt;UDP no tiene controles de congestión, ¿No causará QUIC un colapso en internet si es ampliamente adoptado?&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar $$\mathcal{Q}$$ flujos multiplexados, y compartir un ancho de banda con $$\mathcal{T}$$ flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de $$\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}$$ de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos $$\mathcal{Q}$$ adicionales).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar \(\mathcal{Q}\) flujos multiplexados, y compartir un ancho de banda con \(\mathcal{T}\) flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de \(\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}\) de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos \(\mathcal{Q}\) adicionales).&lt;/p&gt;
 
 &lt;h1 id=&#34;por-qué-no-utilizar-estándares-existentes-como-sctp-sobre-dtls&#34;&gt;¿Por qué no utilizar estándares existentes como SCTP sobre DTLS?&lt;/h1&gt;
 

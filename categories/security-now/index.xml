@@ -101,7 +101,7 @@
 &lt;ul&gt;
 &lt;li&gt;Un código de autentificación basado en Hashes.&lt;/li&gt;
 &lt;li&gt;Similar a cuando se usa una clave en otros sistemas para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrar/descifrar&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Una forma de crear un “_keyed hash_” (Un hash, de alguna manera, que venga dado por una clave).&lt;/li&gt;
+&lt;li&gt;Una forma de crear un &lt;em&gt;keyed hash&lt;/em&gt; (Un hash, de alguna manera, que venga dado por una clave).&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Cada usuario obtiene su propia función hash.&lt;/li&gt;
 &lt;li&gt;A cada &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Configurar un servidor DNS&#34;&gt;dominio&lt;/a&gt; de un sitio web se le aplica un hash para producir una clave privada personal.&lt;/li&gt;
@@ -153,13 +153,13 @@ El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, S
 
 &lt;p&gt;La diferencia pues, es que una función &lt;em&gt;hash&lt;/em&gt; es simplemente una función, &lt;em&gt;SHA-256&lt;/em&gt; es el mismo &lt;em&gt;SHA-256&lt;/em&gt; para todo el mundo, ésta funcionalidad es útil para algunos casos, por ejemplo para comprobar que un fichero descargado no ha sido modificado por nadie. El que sube el fichero, publica el resultado de aplicarle la función &lt;em&gt;hash&lt;/em&gt;, y cuando tú lo descargas, vuelves a pasárselo, si el resultado es el mismo, el fichero no ha sido alterado.&lt;/p&gt;
 
-&lt;p&gt;Si embargo, un &lt;em&gt;Keyed hash&lt;/em&gt; es distinto, la salida de la función viene determinada por la clave secreta. Por tanto, se tendrán tantas funciones &lt;em&gt;hash&lt;/em&gt; como posibles claves se puedan generar a partir de la longitud de la clave. Si la longitud de la clave es 256 bits, se pueden generar $$2^{256}$$ distintas claves, y por tanto $$2^{256}$$ distitas funciones &lt;em&gt;hash&lt;/em&gt;. &lt;strong&gt;SQRL&lt;/strong&gt; usa un &lt;em&gt;keyed hash&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Si embargo, un &lt;em&gt;Keyed hash&lt;/em&gt; es distinto, la salida de la función viene determinada por la clave secreta. Por tanto, se tendrán tantas funciones &lt;em&gt;hash&lt;/em&gt; como posibles claves se puedan generar a partir de la longitud de la clave. Si la longitud de la clave es 256 bits, se pueden generar \(2^{256}\) distintas claves, y por tanto \(2^{256}\) distitas funciones &lt;em&gt;hash&lt;/em&gt;. &lt;strong&gt;SQRL&lt;/strong&gt; usa un &lt;em&gt;keyed hash&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;cómo-usa-sqrl-la-hmac&#34;&gt;Cómo usa &lt;strong&gt;SQRL&lt;/strong&gt; la HMAC&lt;/h1&gt;
 
 &lt;p&gt;Veamos un ejemplo. Cuando vas a un sitio web, el dominio del sitio, por ejemplo amazon.com, o Twit.tv, el que sea. A ese dominio se le aplica un &lt;em&gt;hash&lt;/em&gt; usando &lt;em&gt;HMAC&lt;/em&gt;, lo que devuelve un resumen de una longitud fija, pero usando como clave tu identidad de SQRL. Ésta identidad, se creará al momento de instalar SQRL, y cada usuario tendrá su propia función &lt;em&gt;hash&lt;/em&gt;, completamente distinta de los demás. El resultado de la función &lt;em&gt;hash&lt;/em&gt; para el sitio visitado, por ejemplo amazon, será la clave privada para esa web.&lt;/p&gt;
 
-&lt;p&gt;SQRL genera una clave privada única para cada sitio web distinto que visitas, si dos usuarios de &lt;strong&gt;SQRL&lt;/strong&gt; visitan el mismo sitio web, la función &lt;em&gt;hash&lt;/em&gt; personal de cada uno dará un resultado distinto, ya que se está usando &lt;em&gt;HMAC&lt;/em&gt;. Por tanto, usando una identidad maestra junto con la función &lt;em&gt;HMAC&lt;/em&gt;, &lt;strong&gt;SQRL&lt;/strong&gt; crea una galaxia de claves privadas de tal modo que cada usuario tenga una clave distinta cuando visitan sitios distintos. Como dijimos antes, con $$2^{256}$$ hay claves de sobra. Tantas que no hay que preocuprarse por posibles colisiones.&lt;/p&gt;
+&lt;p&gt;SQRL genera una clave privada única para cada sitio web distinto que visitas, si dos usuarios de &lt;strong&gt;SQRL&lt;/strong&gt; visitan el mismo sitio web, la función &lt;em&gt;hash&lt;/em&gt; personal de cada uno dará un resultado distinto, ya que se está usando &lt;em&gt;HMAC&lt;/em&gt;. Por tanto, usando una identidad maestra junto con la función &lt;em&gt;HMAC&lt;/em&gt;, &lt;strong&gt;SQRL&lt;/strong&gt; crea una galaxia de claves privadas de tal modo que cada usuario tenga una clave distinta cuando visitan sitios distintos. Como dijimos antes, con \(2^{256}\) hay claves de sobra. Tantas que no hay que preocuprarse por posibles colisiones.&lt;/p&gt;
 
 &lt;p&gt;Resumiendo lo visto hasta ahora, &lt;em&gt;SQRL&lt;/em&gt; consiste en un usuario con una identidad maestra, para el cual el sistema crea automáticamente una clave privada para cada sitio que visita. Eso sí, cuando se visita la misma web, se obtiene la misma clave privada.&lt;/p&gt;
 
@@ -1074,7 +1074,7 @@ Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema
 
 &lt;h1 id=&#34;qué-es-quic&#34;&gt;¿Qué es QUIC?&lt;/h1&gt;
 
-&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de *&lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection*. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34;&gt;TLS/SSL&lt;/a&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
+&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de &lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34;&gt;TLS/SSL&lt;/a&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
 
 &lt;h1 id=&#34;cuales-son-algunas-de-las-técnicas-empleadas-en-quic&#34;&gt;¿Cuales son algunas de las técnicas empleadas en QUIC?&lt;/h1&gt;
 
@@ -1106,7 +1106,7 @@ Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema
 
 &lt;h1 id=&#34;udp-no-tiene-controles-de-congestión-no-causará-quic-un-colapso-en-internet-si-es-ampliamente-adoptado&#34;&gt;UDP no tiene controles de congestión, ¿No causará QUIC un colapso en internet si es ampliamente adoptado?&lt;/h1&gt;
 
-&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar $$\mathcal{Q}$$ flujos multiplexados, y compartir un ancho de banda con $$\mathcal{T}$$ flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de $$\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}$$ de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos $$\mathcal{Q}$$ adicionales).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar \(\mathcal{Q}\) flujos multiplexados, y compartir un ancho de banda con \(\mathcal{T}\) flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de \(\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}\) de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos \(\mathcal{Q}\) adicionales).&lt;/p&gt;
 
 &lt;h1 id=&#34;por-qué-no-utilizar-estándares-existentes-como-sctp-sobre-dtls&#34;&gt;¿Por qué no utilizar estándares existentes como SCTP sobre DTLS?&lt;/h1&gt;
 

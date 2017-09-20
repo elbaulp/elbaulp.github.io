@@ -57,9 +57,9 @@ Los parámetros a ajustar son:&lt;/p&gt;
 
 &lt;p&gt;El primero (&lt;a href=&#34;http://nls.io/optimize-nginx-and-php-fpm-max_children/&#34; title=&#34;Optimize nginx and PHP-FPM (max_children)&#34; target=&#34;_blank&#34;&gt;Guillaume Moigneu&lt;/a&gt;) consiste en calcular &lt;em&gt;pm.max_children&lt;/em&gt; basándonos en la fórmula:&lt;/p&gt;
 
-&lt;p&gt;$$pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}$$&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}\]&lt;/p&gt;
 
-&lt;p&gt;Donde $$RAM_{restoProc}$$ es la memoria usada por los otros procesos y $$RAM_{mediaPHP}$$ es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:&lt;/p&gt;
+&lt;p&gt;Donde \(RAM_{restoProc}\) es la memoria usada por los otros procesos y \(RAM_{mediaPHP}\) es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;ps -ylA --sort:rss &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v php5-fpm &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;!/RSS/ { s+=$8 } END { printf &amp;quot;%s\n&amp;quot;, &amp;quot;Memoria total usada por otros procesos&amp;quot;; printf &amp;quot;%dM\n&amp;quot;, s/1024 }&amp;#39;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -69,21 +69,21 @@ Los parámetros a ajustar son:&lt;/p&gt;
 
 &lt;p&gt;Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de &lt;em&gt;max_children&lt;/em&gt;, &lt;em&gt;min_spare_servers&lt;/em&gt; y &lt;em&gt;max_spare_servers&lt;/em&gt; se suelen calcular evaluando el rendimiento y &lt;em&gt;start_servers&lt;/em&gt;, suele ser:&lt;/p&gt;
 
-&lt;p&gt;$$ start\_servers = \frac{min\_spare\_servers + (max\_spare\_servers - min\_spare\_servers)}{2} $$&lt;/p&gt;
+&lt;p&gt;\[start\_servers = \frac{min\_spare\_servers + (max\_spare\_servers - min\_spare\_servers)}{2}\]&lt;/p&gt;
 
 &lt;h4 id=&#34;segundo-método&#34;&gt;Segundo método&lt;/h4&gt;
 
 &lt;p&gt;El segundo método (&lt;a href=&#34;http://myshell.co.uk/index.php/adjusting-child-processes-for-php-fpm-nginx/&#34; title=&#34;Adjusting child processes for PHP-FPM (Nginx)&#34; target=&#34;_blank&#34;&gt;myshell.co.uk&lt;/a&gt;) es calcularlo en base a:&lt;/p&gt;
 
-&lt;p&gt;$$ pm.max\_children = RAM_{total} / RAM_{maxPHP} $$&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = RAM_{total} / RAM_{maxPHP}\]&lt;/p&gt;
 
-&lt;p&gt;Donde $$RAM_{maxPHP}$$ es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.&lt;/p&gt;
+&lt;p&gt;Donde \(RAM_{maxPHP}\) es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.&lt;/p&gt;
 
 &lt;h4 id=&#34;tercer-método&#34;&gt;Tercer método&lt;/h4&gt;
 
 &lt;p&gt;Por último, otro método (&lt;a href=&#34;https://github.com/perusio/php-fpm-example-config&#34; title=&#34;Example configuration of php-fpm&#34; target=&#34;_blank&#34;&gt;Perusio&lt;/a&gt;) es realizando la operación siguiente:&lt;/p&gt;
 
-&lt;p&gt;$$pm.max\_children = 1.2 \cdot RAM_{total}/RAM_{mediaPHP}$$&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = 1.2 \cdot RAM_{total}/RAM_{mediaPHP}\]&lt;/p&gt;
 
 &lt;h3 id=&#34;optimizando-nginx&#34;&gt;Optimizando Nginx&lt;/h3&gt;
 
