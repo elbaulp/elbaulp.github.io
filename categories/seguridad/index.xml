@@ -161,6 +161,210 @@
         </item>
         
         <item>
+            <title>Biometría Aplicada a La Seguridad - Introducción</title>
+            <link>https://elbauldelprogramador.com/biometria-seguridad-introduccion/</link>
+            <pubDate>Mon, 25 Jan 2016 11:05:30 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/biometria-seguridad-introduccion/</guid>
+            <description>&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34;&gt;&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34; title=&#34;Biometría Aplicada a La Seguridad - Introducción&#34; alt=&#34;Biometría Aplicada a La Seguridad - Introducción&#34; width=&#34;640px&#34; height=&#34;405px&#34; /&gt;&lt;/a&gt;
+    &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: pixabay&lt;a href=&#34;https://pixabay.com/en/biometrics-eye-security-154660/&#34;&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura &lt;em&gt;Seguridad en Sistemas Operativos&lt;/em&gt; de la facultad de Ingeniería Informática de Granada (ETSIIT). Los componentes del grupo fueron &lt;a href=&#34;http://twitter.com/MPV_Prod&#34;&gt;@MPV_Prod&lt;/a&gt; , &lt;a href=&#34;http://twitter.com/_musicalnote&#34;&gt;@_musicalnote&lt;/a&gt; y &lt;a href=&#34;http://twitter.com/elbaulp&#34;&gt;@ElBaulP&lt;/a&gt;. Este primer artículo es autoría de @MPV_Prod.&lt;/p&gt;
+
+&lt;h1 id=&#34;índice&#34;&gt;Índice&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Biometría aplicada a la seguiridad - Introducción&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-patrones&#34; title=&#34;Biometría aplicada a la seguiridad - Reconocimiento de patrones&#34;&gt;Biometría aplicada a la seguiridad - Reconocimiento de patrones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometría aplicada a la seguiridad - Sistemas biométricos&#34;&gt;Biometría aplicada a la seguiridad - Sistemas biométricos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción-sobre-qué-es-la-biometría&#34;&gt;Introducción sobre qué es la biometría.&lt;/h1&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;La &lt;strong&gt;biometría&lt;/strong&gt; es el método de reconocimiento de personas basándose en uno o más rasgos fisiológicos o de comportamiento.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Actualmente, el avance de la tecnología, nos ha permitido la automatización y perfeccionamiento de los procesos de reconocimiento biométrico, en especial los relacionados con la &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Posts sobre seguridad&#34;&gt;seguridad&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;La biometría es una técnica que se remonta bastantes años atrás, anterior al uso de los ordenadores. Ya en el siglo XIX, disciplinas como el sistema de Bertillon o “Antropometría” (estudio de las medidas del cuerpo) y el estudio de las huellas dactilares (tesis publicada en 1823 por Jan Purkinge sobre nueve grupos de configuraciones en estas mientras estudiaba las glándulas sudoríparas) forman parte de los primeros estudios biométricos. Más tarde, en torno a 1900, Scotland Yard (Policía Metropolitana de Londres), comienza a hacer uso de las huellas dactilares para identificación y detención de criminales en busca y captura.&lt;/p&gt;
+
+&lt;p&gt;No obstante, los procesos manuales eran laboriosos, pues había que obtener, en primer lugar, por algún medio no siempre preciso, las huellas dactilares de los posibles autores y cotejarlas de forma manual y a vista, con las previamente almacenadas en archivo.&lt;/p&gt;
+
+&lt;p&gt;Ya a comienzos de los 70, una empresa de Wall Street, &lt;em&gt;Shearson Hamil&lt;/em&gt;, instala un sistema de identificación automática basado en huella dactilar para el control del acceso físico a sus instalaciones, convirtiéndose esta en la primera solución biométrica para uso comercial, aunque muy costosa para la época.&lt;/p&gt;
+
+&lt;p&gt;Hoy en día, microprocesadores y electrónica avanzada han reducido el costo y aumentado la exactitud y las técnicas de biometría informática se aplican en multitud de casos y escenarios.&lt;/p&gt;
+
+&lt;h2 id=&#34;cómo-funciona-un-sistema-biométrico&#34;&gt;Cómo funciona un sistema biométrico&lt;/h2&gt;
+
+&lt;p&gt;Los sistemas biométricos se basan en métodos automáticos para reconocer a personas sobre la base del análisis de sus características fisiológicas o de comportamiento.&lt;/p&gt;
+
+&lt;p&gt;En función de la técnica empleada, consideraremos diferentes parámetros, como los surcos de las huellas dactilares, la geometría de la mano, la voz, etc. A partir de éstos, obtendremos un patrón único para cada persona que será usado en posteriores comparaciones.&lt;/p&gt;
+
+&lt;p&gt;Para ello, el usuario deberá registrar su &lt;a href=&#34;https://elbauldelprogramador.com/como-eliminar-tu-identidad-online-la-guia-fundamental-para-el-anonimato-y-la-seguridad-en-internet/&#34; title=&#34;Cómo eliminar tu identidad online&#34;&gt;identidad&lt;/a&gt; en el sistema mediante la captura de una serie de parámetros biométricos. Esto se conoce como &lt;strong&gt;proceso de registro&lt;/strong&gt; y se compone de las siguientes fases:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Captura&lt;/em&gt; - Se leen mediante algún dispositivo los datos que presenta el usuario.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Procesamiento&lt;/em&gt; - Se extraen ciertas características personales de la muestra capturada y se crea un modelo con ellas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Inscripción&lt;/em&gt; - Se almacena el modelo procesado para que el sistema pueda &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34; title=&#34;SQRL y la idea de eliminar el uso de usuarios y contraseñas&#34;&gt;autenticar&lt;/a&gt; a las personas mediante su uso.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Posteriormente, en el &lt;strong&gt;proceso de autenticación&lt;/strong&gt; se captura una muestra biométrica del usuario y se compara con las características ya registradas. Esto puede realizarse de dos formas:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Identificación&lt;/em&gt; - Se compara la muestra recogida con una base de datos de rasgos biométricos previamente registrados. Este es el único dato que se conoce del usuario, por lo que se trata de un proceso de cálculo costoso, al tener que comparar con cada una de las muestras almacenadas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Verificación&lt;/em&gt; - En este caso, en primer lugar se realiza una identificación por nombre de usuario, o cualquier otro método, seleccionándose así, directamente, el patrón con el que comparar la muestra registrada.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En el uso de un sistema biométrico existen unas características que es necesario establecer previamente y que son críticas en el funcionamiento del mismo. Estas son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Aceptación&lt;/em&gt; - Es el factor más crítico en el éxito de un sistema, ya que este depende de la aceptación por el usuario. Así,
+
+&lt;ul&gt;
+&lt;li&gt;El aparato no debe causar incomodidad o preocupación.&lt;/li&gt;
+&lt;li&gt;Debe de ser fácil de usar.&lt;/li&gt;
+&lt;li&gt;El sistema biométrico debe de trabajar correctamente.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tasa de Falsa Aceptación (FAR)&lt;/em&gt; - Es la probabilidad de que un sistema vincule erróneamente a un individuo con la información biométrica existente de otra persona, de forma que este usuario no autorizado pase por alguien que sí lo estuviese. Sus valores suelen oscilar entre 0.0001% y 0.1% para ser aceptables.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tasa de Falso Rechazo (FRR)&lt;/em&gt; - Es la probabilidad de que el sistema no vincule a un individuo con su propia plantilla biométrica existente en el registro. Sus valores suelen estar entre el 0.00066 % y el 1 % para ser aceptables.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tasa de Error Equitativa (EER)&lt;/em&gt; - La FAR y la FRR son inversamente proporcionales y afectarán de manera creciente o decreciente a la sensibilidad del dispositivo. La Tasa de Error Equitativa es el punto de corte de las dos anteriores y corresponde a una indicación buena de la ejecución del método biométrico. Es mejor cuanto más pequeña.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Rendimiento&lt;/em&gt; - Viene dado por el tiempo total que tarda un dispositivo en la identificación de una persona. Mientras que la mayoría de fabricantes sólo especifican el tiempo de comprobación del lector, también deberíamos de tener en cuenta otras medidas como:
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Tiempo de comprobación&lt;/em&gt; - Es el tiempo transcurrido desde la presentación al dispositivo de la característica biométrica hasta la comprobación de la identidad (~2sg).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Facilidad de uso&lt;/em&gt; - Varía dependiendo de lo que se le solicite al usuario (introducción del número de ID o uso de tarjetas, tiempo de posicionamiento, etc).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 239px) 239px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Biometricserror.jpg&#34; alt=&#34;Biometric Error&#34; title=&#34;Biometric Error&#34; width=&#34;239&#34; height=&#34;210&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;EER&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;métodos-de-biometría-estática&#34;&gt;Métodos de biometría estática&lt;/h2&gt;
+
+&lt;p&gt;Los métodos estáticos son aquellos que miden la anatomía del usuario.&lt;/p&gt;
+
+&lt;h3 id=&#34;huella-dactilar&#34;&gt;Huella dactilar&lt;/h3&gt;
+
+&lt;p&gt;La identificación basada en huella dactilar es la más antigua de las técnicas biométricas como ya hemos visto. Es el rasgo más utilizado para la autenticación debido a que la mayoría de la población tiene huellas dactilares únicas e inalterables (no sirve para personas con huellas digitales dañadas) y, por tanto, la variedad de tecnología de captura disponible es muy amplia.&lt;/p&gt;
+
+&lt;p&gt;A la hora de llevar a cabo una búsqueda de coincidencias entre huellas, nos encontramos dos técnicas diferentes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Basada en minucias&lt;/em&gt;: aquí, nos centraremos en determinadas formas fácilmente identificables existentes en la huella dactilar o “minucias”. Así, el modelo consistirá en una serie de dichas minucias, indicando si posición dentro de la huella, de forma que para el análisis, la plantilla correspondiente a cada usuario es un esquema que indica qué minucias se deben detectar, su posición y la distancia de separación entre ellas. El problema de esta técnica reside en la complejidad de extraer de forma precisa las minucias cuando la calidad de la muestra es deficiente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 515px) 515px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/huellas3.png&#34; width=&#34;515&#34; height=&#34;392&#34; alt=&#34;Minucias&#34; title=&#34;Minucias&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Minucias&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Basada en correlación&lt;/em&gt;: nos basamos en el patrón global seguido por la huella, es decir, un esquema general de la misma, sin atender a las minucias.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 609px) 609px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/crestas.png&#34; width=&#34;609&#34; height=&#34;210&#34; alt=&#34;Correlación&#34; title=&#34;Correlación&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Correlación&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;geometría-de-la-mano&#34;&gt;Geometría de la mano&lt;/h3&gt;
+
+&lt;p&gt;Se basa en la forma de la mano para confirmar la identidad del usuario.  No requiere información detallada de éstos, por lo que es bastante aceptada. Su uso recomendado es el de verificación, no para identificación, por el coste de cómputo que este último supondría.&lt;/p&gt;
+
+&lt;p&gt;Para capturar la muestra, se coloca la mano en la superficie de un lector y este toma una serie de imágenes 3D de la mano, con información relativa a curvas de los dedos, grosor y longitud, altura y anchura del dorso de la mano, etc. No obstante, no se tienen en cuenta rasgos superficiales.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 206px) 206px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/bio2.png&#34; width=&#34;206&#34; height=&#34;245&#34; alt=&#34;Escaner Morfología&#34; title=&#34;Escaner Morfología&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Escaner Morfología&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 350px) 350px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/extraccionmano.png&#34; width=&#34;350&#34; height=&#34;192&#34; alt=&#34;Modelo Mano&#34; title=&#34;Modelo Mano&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Modelo Mano&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;modelo-de-la-retina&#34;&gt;Modelo de la retina&lt;/h3&gt;
+
+&lt;p&gt;Es una técnica con una FAR prácticamente nula (inmune incluso a ojos falsos y trasplantes). Sin embargo, requiere de la colaboración por parte del usuario, al tratarse de un proceso intrusivo. El usuario debe permanecer inmóvil con la pupila cerca del sensor para que se tome la muestra mediante infrarrojos.&lt;/p&gt;
+
+&lt;p&gt;Aunque se trate de una tecnología que aparentemente ofrece un alto grado de seguridad, la falta de aceptación por parte de los usuarios, unido al alto coste de los dispositivos, hacen que su utilización se limite a instalaciones militares, nucleares o laboratorios.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1278px) 1278px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/RetinaViewer.png&#34; width=&#34;1278&#34; height=&#34;768&#34; alt=&#34;Modelo Retina&#34; title=&#34;Modelo Retina&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Modelo Retina&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;modelo-del-iris&#34;&gt;Modelo del iris&lt;/h3&gt;
+
+&lt;p&gt;Es un método muy similar al anterior en cuanto a FAR y FRR, aunque aquí utiliza un escáner externo del iris del ojo, en lugar de la retina.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 315px) 315px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Iris_Scanner.jpg&#34; width=&#34;315&#34; height=&#34;462&#34; alt=&#34;Escaner Iris&#34; title=&#34;Escaner Iris&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Escaner Iris&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;reconocimiento-facial&#34;&gt;Reconocimiento facial&lt;/h3&gt;
+
+&lt;p&gt;El reconocimiento facial es una técnica que permite reconocer personas a partir de imágenes o fotografías haciendo uso de programas de cálculo que analizan imágenes de rostros humanos.&lt;/p&gt;
+
+&lt;p&gt;Uno de los principales inconvenientes que presenta esta técnica es la facilidad de cambio en el rostro, por ejemplo, utilizando unas gafas de sol o dejándose crecer la barba. Asimismo, debe considerarse que el rostro de las personas varía con la edad.&lt;/p&gt;
+
+&lt;p&gt;Aun así, es una técnica satisfactoria para todas las personas y puede utilizarse para tareas de vigilancia sin necesidad de adquirir equipo específico.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 538px) 538px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/keylemon-2.png&#34; width=&#34;538&#34; height=&#34;535&#34; alt=&#34;Análisis Facial&#34; title=&#34;Análisis Facial&#34; &gt;&lt;/img&gt;
+    &lt;figcaption&gt;Análisis Facial&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;métodos-de-biometría-dinámica&#34;&gt;Métodos de biometría dinámica&lt;/h2&gt;
+
+&lt;p&gt;Los métodos dinámicos son aquellos que miden el comportamiento del usuario.&lt;/p&gt;
+
+&lt;h2 id=&#34;reconocimiento-de-la-voz&#34;&gt;Reconocimiento de la voz&lt;/h2&gt;
+
+&lt;p&gt;Es un método natural de identificación que las personas utilizan a diario. Estas aplicaciones se basan en redes neuronales para aprender a identificar voces. Sin embargo, la autenticación se complica debido a factores como el ruido de fondo, la calidad de la muestra y su duración, además de que la voz no es tan única o permanente como otras características, por lo que siempre es necesario considerar un margen de error.&lt;/p&gt;
+
+&lt;p&gt;Por tanto, más que para control de acceso, esta técnica va más encaminada a sistemas de respuesta por voz y centros de atención telefónica.&lt;/p&gt;
+
+&lt;h2 id=&#34;firma-manuscrita-dinámica&#34;&gt;Firma manuscrita dinámica&lt;/h2&gt;
+
+&lt;p&gt;Analiza la firma manuscrita para confirmar la identidad del usuario. El movimiento natural y la práctica a lo largo del tiempo realizando la firm2a crea un patrón reconocible.&lt;/p&gt;
+
+&lt;h2 id=&#34;dinámica-de-tecleo&#34;&gt;Dinámica de tecleo&lt;/h2&gt;
+
+&lt;p&gt;Se basa en la existencia de un patrón de escritura en teclado que es permanente y propio de cada individuo. Mide parámetros como la fuerza de tecleo, la duración de la pulsación y el periodo de tiempo que pasa entre que se presiona una tecla y otra.&lt;/p&gt;
+
+&lt;p&gt;No obstante, el patrón puede verse alterado por situaciones como el estado físico o psíquico del usuario o la falta de costumbre de usar teclado (evolución del patrón).&lt;/p&gt;
+
+&lt;h1 id=&#34;índice-1&#34;&gt;Índice&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Biometría aplicada a la seguiridad - Introducción&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-patrones&#34; title=&#34;Biometría aplicada a la seguiridad - Reconocimiento de patrones&#34;&gt;Biometría aplicada a la seguiridad - Reconocimiento de patrones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometría aplicada a la seguiridad - Sistemas biométricos&#34;&gt;Biometría aplicada a la seguiridad - Sistemas biométricos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=8478976361&amp;amp;linkCode;=as2&amp;amp;tag;=bmacoc-21&#34; title=&#34;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la seguridad&#34;&gt;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
+seguridad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/9814656526/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=9814656526&amp;amp;linkCode;=as2&amp;amp;tag;=bmab-21&#34; title=&#34;C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition&#34;&gt;C. H. Chen and C. H. Chen, Handbook of Pattern Recognition and Computer Vision 4th edition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/
+Biometr%C3%ADa&#34; title=&#34;Wikipedia, “Biometría, según wikipedia.”&#34;&gt;Wikipedia, “Biometría, según wikipedia.”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.biometria.gov.ar/
+acerca-de-la-biometria/historia-de-la-biometria.aspx&#34; title=&#34;G. Argentina, “Historia de la biometría.”&#34;&gt;G. Argentina, “Historia de la biometría.”&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>20 ejemplos de iptables para SysAdmins novatos</title>
             <link>https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -767,33 +971,30 @@ iptables -I OUTPUT &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -j LOG –log-pr
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/</guid>
-            <description>&lt;p&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34;&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;wp-image-901 aligncenter&#34; title=&#34;rainbow&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34; width=&#34;536px&#34; height=&#34;303px&#34; /&gt;&lt;/a&gt;
-&lt;/p&gt;
+            <description>&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 536px) 536px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;rainbow&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34; width=&#34;536px&#34; height=&#34;303px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de &lt;em&gt;Windows for Workgroups&lt;/em&gt; hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;a title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; target=&#34;_blank&#34;&gt;no suelen almacenar las contraseñas reales&lt;/a&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
 
-&lt;p&gt;Ahora re-expliquemos las Tablas Arcoiris:
-&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;Ahora re-expliquemos las Tablas Arcoiris:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Toma un &amp;#8220;diccionario&amp;#8221; - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Encríptalas a todas.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Graba los resultados en un DVD.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Toma un &amp;#8220;diccionario&amp;#8221; - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.&lt;/li&gt;
+&lt;li&gt;Encríptalas a todas.&lt;/li&gt;
+&lt;li&gt;Graba los resultados en un DVD.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original - una &amp;#8220;tabla arcoiris&amp;#8221;. Para usarla,&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Toma tu tabla de hashes robada&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;por cada hash&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;búscala en la tabla arcoiris&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Toma tu tabla de hashes robada&lt;/li&gt;
+&lt;li&gt;por cada hash&lt;/li&gt;
+&lt;li&gt;búscala en la tabla arcoiris&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Si está allí, lo resolviste.&lt;/p&gt;

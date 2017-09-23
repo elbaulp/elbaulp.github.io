@@ -59,6 +59,7 @@ _main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&g
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Building...&amp;quot;&lt;/span&gt;
     make -j4 olddefconfig
     make -j4 modules_prepare
+    make modules_install
     emerge --ask @module-rebuild
     make -j4
     make install

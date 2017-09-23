@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Script on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/script/</link>
+        <description>Recent content in Script on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/script/</link>
+            <title>Script on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/script/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Script resaltado sintaxis bash</title>
+            <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;Como os dije, he hecho el script para el resaltado de bash, me ha costado un poco mas, porque queria intentar resaltar mas cosas, pero al final desistí, y lo hice un poco más simple. Hay que tener en cuenta, que habrá muchas palabras que no se resalten, ya que en la terminal de gnu/Linux existen muchísimos comandos, y obviamente, no puedo ponerlos todos, cuando querais que un determinado comando se resalte (como ls, telnet, ftp&amp;#8230;) o cualquiera que useis, simplemente añadirlo a la variable keyWords.&lt;/p&gt;
+
+&lt;p&gt;Aquí el código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;quot;&lt;/span&gt;
+
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+    sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Bien, voy a explicarlo un poco:&lt;/p&gt;
+
+&lt;p&gt;La estructura es bastante similar a la del &lt;a href=&#34;https://elbauldelprogramador.com/script-resaltado-sintaxis/&#34;&gt;script de resaltado de sintáxis de c++&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Esta línea es la que se encarga de resaltar los comentarios. Simplemente buscamos una #, que es como se defienen los comentarios en bash, y cualquier carácter despues (.*). El &amp;amp; que hay en la siguiente sección, es para que en ese lugar, se coloque todo lo que coincidió con el patrón (.*), es decir, el comentario.&lt;/p&gt;
+
+&lt;p&gt;Hay un pequeño problema, y es que no conseguí formar la expresión regular 100% correcta para los comentarios, de modo que en cualquier lugar en el que exista una #, se la tratará como comentario, esto sucede por ejemplo al principio del script (#!/bin/bash).&lt;/p&gt;
+
+&lt;p&gt;Espero que os sea útil, y si quieren modificarlo, háganlo, me lo envian, y yo lo subo al blog sin problemas.
+Saludos.&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>Script resaltado sintaxis bash (Mejorado)</title>
+            <link>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bash-syntax-highlighted-script-improved/</guid>
+            <description>&lt;p&gt;Gracias a DavidRSM, he mejorado el script de resaltado de sintaxis para bash, y ahora permite muchas más palabras clave. Simplemente hay que añadir a la variable keywords los nombres de los comandos que se encuentran en /bin/, y /sbin/, Podéis agregar más palabras clave concatenándolas a la variable, de esta manera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;em&amp;gt;Directorio de comandos&amp;lt;/em&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Select a File&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;quot;&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$keywords&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in $keywords
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+    sed &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/b&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;wordb/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;word/&amp;quot;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;rutaCodigo&amp;quot;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;No se seleciciono nada.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -495,65 +495,6 @@ ss src 5.39.89.44:25
         </item>
         
         <item>
-            <title>Avances en el proyecto Android de fin de curso [WifiBar]</title>
-            <link>https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/avances-en-el-proyecto-android-de-fin/</guid>
-            <description>&lt;p&gt;Como ya sabéis tengo que realizar un proyecto de fin de curso, el cual ya expliqué en &lt;a href=&#34;https://elbauldelprogramador.com/conectar-base-de-datos-sql-server-2008/&#34;&gt;qué consistía&lt;/a&gt;, y escribo esta entrada para mostraros un poco los avances que voy haciendo.&lt;/p&gt;
-
-&lt;p&gt;He de decir que el proyecto no lo estoy haciendo solo, lo formamos un equipo de 3 personas compañeros de clase. Nos repartimos las tareas para que uno se encargara de hacer la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;base de datos&lt;/a&gt;, otro la interfaz gŕafica y yo lo que viene siendo la programación interna del programa (Conectar a la base de datos, mandar y recibir consultas, manejar los datos, rellenar los elementos gŕaficos con estos datos etc). El código está bajo licencia &lt;a href=&#34;http://www.gnu.org/licenses/&#34;&gt;GPLv3.0&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A continuación voy a explicar mediante capturas de pantalla algunas funcionalidades que tiene el programa.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;305&#34; src=&#34;https://1.bp.blogspot.com/-7UI6P-RRixQ/TdAVCyzDQ6I/AAAAAAAAAeY/SZHOWPXVFcg/s500/icono.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Lo primero que hace la aplicación al iniciarse, es comprobar que la red WiFi del dispositivo esté activada, en caso de no estarla, se notifica al usuario y se sale de la aplicación, ya que sin conexión no es funcional.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;306&#34; src=&#34;https://3.bp.blogspot.com/-iZj8DYLsOEk/TdAO0_aJG_I/AAAAAAAAAdw/yfXZ9wAuX5E/s500/noWifi.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En segundo lugar se comprueba que la conexión con el servidor (donde se encuentra la base de datos) esté establecida, en caso negativo, se muestra otro mensaje de error y se finaliza&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;305&#34; src=&#34;https://2.bp.blogspot.com/-fTXix1DkoxI/TdAQO7DotiI/AAAAAAAAAd4/zak_5vQrvzc/s500/noServer.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Si ninguno de los mensajes de arriba se muestra, entramos en la primera Activity (en la cual se consultará a la base de datos la información necesaria para esta actividad), en la que debemos seleccionar un camarero y pulsar el botón.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;306&#34; src=&#34;https://4.bp.blogspot.com/-5yIexsA06XI/TdATUJ39qDI/AAAAAAAAAeA/Wn81Cw1o6Dw/s500/camarero.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Una vez pulsado el botón, pasamos a la siguiente actividad, en la que se debe seleccionar una mesa para abrirla, cerrarla o realizar pedidos sobre ella. Al igual que en la actividad de camareros, se solicita la información de las mesas a la base de datos.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;306&#34; src=&#34;https://4.bp.blogspot.com/-BZjhH4BNz0k/TdAT8kH3-PI/AAAAAAAAAeQ/zCUx8mF0G3c/s500/selecci%25C3%25B3nMesa.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;500&#34; width=&#34;306&#34; src=&#34;https://4.bp.blogspot.com/-j67USPZqytc/TdAT8mhHWMI/AAAAAAAAAeI/HMMy-r8hBhU/s500/mesa.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Al pulsar en &lt;em&gt;Hacer comanda&lt;/em&gt; vamos a un intent en el que se deben elegir los pedidos del cliente (pero aún está a medio hacer)&lt;/p&gt;
-
-&lt;p&gt;Cosas a tener en cuenta:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;La interfaz gráfica aún es poco vistosa, pero ahora mismo nos vamos a ocupar de que la aplicación funcione adecuadamente y despues mejoraremos la interfaz.&lt;/li&gt;
-&lt;li&gt;Como el código es bastante extenso no lo voy a mostrar aquí, sin embargo se puede ver en el repositorio de &lt;a href=&#34;https://github.com/elbaulp/WifiBar&#34;&gt;github-WifiBar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;El proyecto debemos realizarlo todos los alumnos del curso, por lo que si alguno anda perdido y ver el código le sirve de ayuda no me importa que copien algo en concreto, o si les aporta ideas nuevas para su proyecto, pero por favor, no me lo plagieis :-).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Estoy bastante contento con este proyecto, ya que me ha permitido iniciarme en la programación para Android.&lt;/p&gt;</description>
-        </item>
-        
-        <item>
             <title>Chat y Foros de Próxima Generación, de pioneros del Código Abierto</title>
             <link>https://elbauldelprogramador.com/chat-y-foros-de-proxima-generacion-de-pioneros-del-codigo-abierto/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
