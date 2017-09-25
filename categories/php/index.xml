@@ -17,51 +17,6 @@
         <atom:link href="https://elbauldelprogramador.com/categories/php/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Colocar los botones sociales de jetpack al principio del artículo en WordPress</title>
-            <link>https://elbauldelprogramador.com/colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/</guid>
-            <description>&lt;p&gt;A día de hoy, el famoso plugin para wordpress &lt;strong&gt;&lt;em&gt;jetpack&lt;/em&gt;&lt;/strong&gt; no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;colocar-los-botones-sociales-al-principio-de-los-artículos&#34;&gt;Colocar los botones sociales al principio de los artículos&lt;/h1&gt;
-
-&lt;p&gt;El primer paso es editar el archivo &lt;strong&gt;&lt;em&gt;modules/sharedaddy/sharing-service.php&lt;/em&gt;&lt;/strong&gt; del plugin y eliminar o comentar las últimas líneas, que deberían ser:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.&lt;/p&gt;
-
-&lt;p&gt;Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;sharing_display()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama &lt;strong&gt;&lt;em&gt;content-single.php&lt;/em&gt;&lt;/strong&gt;. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.&lt;/p&gt;
-
-&lt;h1 id=&#34;mostrar-los-botones-sociales-al-final-del-artículo-en-la-página-principal&#34;&gt;Mostrar los botones sociales al final del artículo en la página principal&lt;/h1&gt;
-
-&lt;p&gt;En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado &lt;strong&gt;&lt;em&gt;loop.php&lt;/em&gt;&lt;/strong&gt;, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace &lt;strong&gt;Seguir leyendo&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &amp;lt;span class=&amp;quot;meta-nav&amp;quot;&amp;gt;→&amp;lt;/span&amp;gt;&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;echo sharing_display();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Foro WordPress&lt;/em&gt; »» &lt;a href=&#34;http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
             <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
             <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
