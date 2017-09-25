@@ -62,6 +62,49 @@
         </item>
         
         <item>
+            <title>Cómo añadir contenido por defecto a los artículos en WordPress</title>
+            <link>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
+            <description>
+
+&lt;figure&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2012/05/Screenshot-05302012-111511-AM1.png&#34;
+            alt=&#34;Como añádir contenido por defecto en wordpress&#34;
+            title=&#34;Como añádir contenido por defecto en wordpress&#34;
+            sizes=&#34;(min-width: 123px) 123px, 100vw&#34;
+            width=&#34;123&#34;
+            height=&#34;116&#34;&gt;
+          &lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
+
+&lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;   $content = &amp;quot;AQUI TU CONTENIDO POR DEFECTO&amp;quot;;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt; return $content;&lt;/span&gt;
+&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
+
+&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to Add Default Content in Your WordPress Post Editor&lt;/em&gt; »» &lt;a href=&#34;http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/&#34; target=&#34;_blank&#34;&gt;wpbeginner&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+        <item>
             <title>Cómo crear  simples shortcodes en WordPress</title>
             <link>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
