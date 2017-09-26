@@ -148,58 +148,6 @@ Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span cl
         </item>
         
         <item>
-            <title>Como crear un PPA (Personal Package Archive)</title>
-            <link>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/como-crear-un-repositorio-ppa-how/</guid>
-            <description>&lt;p&gt;Hace poco hablé de qué eran los &lt;a href=&#34;https://elbauldelprogramador.com/que-son-los-ppa-what-ppa-is/&#34;&gt;sistemas de paquetes PPA&lt;/a&gt;, para los interesados en crear uno, a continuación voy a explicar como hacerlo, es bastante sencillo.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Antes de nada, debemos crear una cuenta en &lt;a href=&#34;https://login.launchpad.net/+new_account&#34; target=&#34;_blank&#34;&gt;Launchpad&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Una vez creada, nos dirigimos al panel principal de nuestra cuenta, que será &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Ya en el panel de control, hay que hacer clic en &amp;#8220;Create a new PPA&amp;#8221;, que nos lleva a &lt;a href=&#34;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&#34;&gt;https://launchpad.net/~NOMBRE_USUARIO/+activate-ppa&lt;/a&gt;, en esta página rellenamos los datos de nuestro PPA y lo activamos.&lt;/li&gt;
-&lt;li&gt;Tras activar el PPA, es necesario subir paquetes al sistema, hay &lt;a target=&#34;_blank&#34; href=&#34;https://help.launchpad.net/Packaging/PPA/Uploading&#34;&gt;varias formas de hacerlo&lt;/a&gt;, pero la más sencilla es la siguiente:&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;ftp-en-ubuntu-9-10-y-posteriores&#34;&gt;FTP en Ubuntu 9.10 y posteriores:&lt;/h1&gt;
-
-&lt;p&gt;Visita la página de información general de tu PPA, y encontrarás algo similar a:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;dput ppa: your-lp-id/ppa&amp;lt;source.changes&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;El archivo source.changes suele ser generado por debuild. Si no estás seguro de lo que esto significa, puedes familiarizarte con la creacion de paquetes para ubuntu &lt;a target=&#34;_blank&#34; href=&#34;https://wiki.ubuntu.com/PackagingGuide&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Si no estais en ubuntu se puede subir por FTP:&lt;/p&gt;
-
-&lt;p&gt;En primer lugar, hay que decirle a dput dónde enviar su paquete y por qué método. Para ello, editamos el archivo &lt;em&gt;~/dput.cf&lt;/em&gt; para que quede así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;my-ppa&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;fqdn&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ppa.launchpad.net
-&lt;span class=&#34;nv&#34;&gt;method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ftp
-&lt;span class=&#34;nv&#34;&gt;incoming&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ~&amp;lt;your_launchpad_id&amp;gt;/&amp;lt;ppa_name&amp;gt;/ubuntu/
-&lt;span class=&#34;nv&#34;&gt;login&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; anonymous
-&lt;span class=&#34;nv&#34;&gt;allow_unsigned_uploads&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;También es necesario:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Cambiar la primera línea al nombre que desea utilizar para referirse al PPA, manteniendo los corchetes. No se puede usar el nombre ppa, ya que puede haber conflictos con una linea en /etc/dput.cf y causar fallos como (&amp;#8216;Could not find person or team named&amp;#8217;.)&lt;/li&gt;
-&lt;li&gt;Si estás subiendo el paquete a un equipo de PPA, hay que cambiar &lt;code&gt;&amp;lt;your-launchpad-id&amp;gt;&lt;/code&gt; al nombre del equipo de Launchpad (Dejando la tilde (~)). Como es de esperar, debes ser miembro del equipo antes de poder subir el paquete a su PPA.&lt;/li&gt;
-&lt;li&gt;Fijar correctamente el &lt;code&gt;&amp;lt;ppa-name&amp;gt;&lt;/code&gt;, por defecto es ppa, usad el nombre específico para otros PPA en el mismo contexto. No confundais el nombre del PPA con el nombre que habeis elegido para para mostrar el PPA en Launchpad.&lt;/li&gt;
-&lt;li&gt;A continuación, hay que abrir un terminal y escribir lo siguiente:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$  dput my-ppa P_V_source.changes
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Remplazad P con el nombre del paquete y V con el número de la versión.&lt;/p&gt;
-
-&lt;p&gt;Podéis ver posibles errores en la subida de paquetes &lt;a href=&#34;https://help.launchpad.net/Packaging/UploadErrors&#34; target=&#34;_blank&#34;&gt;aqui.&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        
-        <item>
             <title>Conectar base de datos ORACLE a aplicación Java remotamente</title>
             <link>https://elbauldelprogramador.com/conectar-base-de-datos-oracle/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
