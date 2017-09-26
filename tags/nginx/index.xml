@@ -191,6 +191,118 @@
         </item>
         
         <item>
+            <title>Cómo configurar un balanceador de carga en entornos cloud</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
+            <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
+
+&lt;h1 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h1&gt;
+
+&lt;p&gt;Para configurar el load balancer a mano, usaremos nginx.&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;Balancear cargas a lo largo de múltiples instancias de aplicaciones es una técnica muy usada para optimizar la utilización de recursos, maximizar el rendimiento, reducir latencia, y asegurar tolerancia a fallos.&lt;/p&gt;
+
+&lt;p&gt;Nginx puede configurarse para hacer las veces de un balanceador de carga Http para distribuir el tráfico a varios servidores de aplicaciones.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;métodos-de-balanceo-en-nginx&#34;&gt;Métodos de balanceo en nginx&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Round-Robin&lt;/em&gt;: Las peticiones a los servidores se distribuyen al estilo round robin.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;least-connected&lt;/em&gt;: La siguiente petición se asigna al servidor con menos conexiones activas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ip-hash&lt;/em&gt;: Se usa una función hash para determinar el servidor al que debería enviarse la siguiente petición, basándose en la ip del cliente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;configuraciones-por-defecto&#34;&gt;Configuraciones por defecto&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        server srv1.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+        location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            proxy_pass http://myapp1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;En este ejemplo, hay 3 instancias de la misma aplicación. ejecutándose en srv1-srv3. Si no se especifíca ningún método de balanceo, se aplica round-robin. Todas las peticiones se redirigen al grupo de servidores &lt;code&gt;myapp1&lt;/code&gt; y nginx se encarga de realizar el balanceo Http mediante round-robin.&lt;/p&gt;
+
+&lt;h2 id=&#34;balanceo-least-connected&#34;&gt;Balanceo Least Connected&lt;/h2&gt;
+
+&lt;p&gt;En este método de balanceo, se permite controlar la carga que reciben los servidores. Nginx intentará no sobrecargar un servidor ocupado con demasiadas peticiones, enviándolas a los servidores menos ocupados.&lt;/p&gt;
+
+&lt;p&gt;Para activar este método, hay que añadir la directiva &lt;code&gt;least_conn&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        least_conn&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv1.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id=&#34;balanceo-ponderado&#34;&gt;Balanceo ponderado&lt;/h1&gt;
+
+&lt;p&gt;Si se quiere dar más ponderación, es posible usar el parámetro &lt;code&gt;weight&lt;/code&gt; en los servidores, para asignarles más “peso” a la hora de tomar decisiones de balanceo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        server srv1.example.com &lt;span class=&#34;nv&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Con esta configuración, 5 peticiones nuevas se distribuirán de la siguiente forma: 3 a srv1, 1 a srv2 y 1 a srv3.&lt;/p&gt;
+
+&lt;h1 id=&#34;control-de-estado-health-checks&#34;&gt;Control de estado (Health checks)&lt;/h1&gt;
+
+&lt;p&gt;Si un servidor falla, nginx lo marcará como en mal estado y evitará enviarle peticiones.&lt;/p&gt;
+
+&lt;h1 id=&#34;configurar-el-balanceo-de-carga-en-entornos-cloud&#34;&gt;Configurar el balanceo de carga en entornos cloud&lt;/h1&gt;
+
+&lt;p&gt;Visto cómo crear el balanceo de carga a mano, ahora pasemos a administrar y crear de forma sencilla un sistema de balanceo. En este caso usando &lt;em&gt;Arsys&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Para ello, en el panel de control hacemos click en &lt;em&gt;Red&lt;/em&gt; » Balanceadores. Allí crearemos uno nuevo&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 815px) 815px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga1.png&#34; alt=&#34;Balanceadoresdecarga1&#34; width=&#34;815px&#34; height=&#34;531px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Donde se especifica el nombre, puertos y direcciones a usar.&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es elegir el tipo de Control de estado a realizar, y el método de balanceo (Round robin o least connections)&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 815px) 815px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga2.png&#34; alt=&#34;Balanceadoresdecarga2&#34; width=&#34;812px&#34; height=&#34;532px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Por último, se especifica la aplicación que será balanceada entre todos los servidores virtuales disponibles.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 815px) 815px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/03/Balanceadoresdecarga3.png&#34; alt=&#34;Balanceadoresdecarga3&#34; width=&#34;815px&#34; height=&#34;529px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h1&gt;
+
+&lt;p&gt;La opción de crear y configurar el balanceador a mano puede ser buena para aprender, pero a la larga, conforme las necesidades de la aplicación vayan aumentando será más y más tedioso. Sin embargo, con un entorno cloud, podremos crear, modificar y borrar servidores y balanceadores a golpe de click.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Nginx Docs&lt;/em&gt; »» &lt;a href=&#34;http://nginx.org/en/docs/http/load_balancing.html&#34; target=&#34;_blank&#34;&gt;nginx.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>Cómo crear un Front Controller en PHP</title>
             <link>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>

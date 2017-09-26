@@ -80,7 +80,7 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 &lt;p&gt;Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “&lt;em&gt;No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”&lt;/em&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Esquema servidores DNS&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/dns.png&#34; width=&#34;513px&#34; height=&#34;399px&#34; /&gt;
+    &lt;img sizes=&#34;(min-width: 513px) 513px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Esquema servidores DNS&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/dns.png&#34; width=&#34;513px&#34; height=&#34;399px&#34; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En la figura de arriba, la parte superior izquierda representa los servidores root. En la jerga DNS, éstos servidores reprensentan el comienzo del camino en el sistema DNS. Suelen representarse con un punto (“.”). En los archivos de configuración, el mapeo entre IP y nombre acabará en un punto. A lo largo de esta series de artículos quedará más claro este concepto.&lt;/p&gt;
@@ -94,8 +94,8 @@ version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&
 &lt;p&gt;En la figura 2, &lt;em&gt;named&lt;/em&gt; ha recibido una petición. Busca en su fichero de configuración &lt;em&gt;named.conf&lt;/em&gt;, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.&lt;/p&gt;
 
 &lt;figure&gt;
-&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Figura 2 - Respondiendo a una petición&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/config.png&#34; width=&#34;411px&#34; height=&#34;185px&#34; /&gt;
-&lt;figcaption&gt;Figura 2 - Respondiendo a una petición&lt;/figcaption&gt;
+    &lt;img sizes=&#34;(min-width: 411px) 411px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Figura 2 - Respondiendo a una petición&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/config.png&#34; width=&#34;411px&#34; height=&#34;185px&#34; /&gt;
+    &lt;figcaption&gt;Figura 2 - Respondiendo a una petición&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h1 id=&#34;usando-named-conf&#34;&gt;Usando Named.conf&lt;/h1&gt;
