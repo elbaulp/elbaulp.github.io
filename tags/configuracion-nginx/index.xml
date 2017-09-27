@@ -45,79 +45,68 @@
 &lt;h3 id=&#34;preparando-el-entorno&#34;&gt;Preparando el entorno&lt;/h3&gt;
 
 &lt;p&gt;Lo primero que debemos hacer es instalar las dependencias necesarias para la compilación, para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apt-get install build-essential libssl-dev libpcre3-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apt-get install build-essential libssl-dev libpcre3-dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto descargamos la última versión de nginx, al momento de escribir este texto la 1.4.4:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget http://nginx.org/download/nginx-1.4.4.tar.gz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;wget http://nginx.org/download/nginx-1.4.4.tar.gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Descomprimimos el archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;tar xzvf nginx-1.4.4.tar.gz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tar xzvf nginx-1.4.4.tar.gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Antes de compilar cambiaremos un valor en el código fuente como medida de seguridad por ocultación. El valor a cambiar es la cadena asignada a la cabecera que indica el servidor usado en las peticiones HTTP. En concreto el archivo a cambiar es el alojado en &lt;code&gt;src/http/ngx_http_header_filter_module.c&lt;/code&gt;, concretamente en la línea 48:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Server: nginx&amp;quot;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Server: &amp;quot;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NGINX_VER&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Server: nginx&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Server: &amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NGINX_VER&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Cambiamos estas dos líneas a algo del estilo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Server: Mi servidor Web&amp;quot;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;Server: Mi servidor Web&amp;quot;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Server: Mi servidor Web&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Server: Mi servidor Web&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ya solo queda compilarlo e instalarlo, de momento necesitaremos los módulos siguientes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;--with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin -with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;--with-http_gzip_static_module --sbin-path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/usr/local/sbin -with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Aquí estamos habilitando la compresión de las páginas con gzip, SSL para conexiones seguras, deshabilitando el módulo de correo POP3, IMAP y SMTP. Dependiendo de las necesidades de nuestro servidor, deberemos activar o desactivar algunos módulos. Más tarde necesitaremos recompilar para añadir el módulo &lt;strong&gt;pagespeed&lt;/strong&gt;. La lista de todos los módulos disponibles se puede consultar en la &lt;a href=&#34;http://wiki.nginx.org/Modules&#34; title=&#34;Módulos nginx&#34; target=&#34;_blank&#34;&gt;documentación de nginx&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;compilar&#34;&gt;Compilar&lt;/h3&gt;
 
 &lt;p&gt;Ya está todo listo para compilar e instalar, dentro del directorio de nginx ejecutamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./configure --with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
---with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
---without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;./configure --with-http_gzip_static_module --sbin-path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/usr/local/sbin &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;--with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;--without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto deberíamos ver un resumen de la operación realizada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Configuration summary
-  + using system PCRE library
-  + using system OpenSSL library
-  + md5: using OpenSSL library
-  + sha1: using OpenSSL library
-  + using system zlib library
-
-  nginx path prefix: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx&amp;quot;&lt;/span&gt;
-  nginx binary file: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/sbin&amp;quot;&lt;/span&gt;
-  nginx configuration prefix: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx/conf&amp;quot;&lt;/span&gt;
-  nginx configuration file: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx/conf/nginx.conf&amp;quot;&lt;/span&gt;
-  nginx pid file: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx/logs/nginx.pid&amp;quot;&lt;/span&gt;
-  nginx error log file: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx/logs/error.log&amp;quot;&lt;/span&gt;
-  nginx http access log file: &lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/local/nginx/logs/access.log&amp;quot;&lt;/span&gt;
-  nginx http client request body temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;quot;client_body_temp&amp;quot;&lt;/span&gt;
-  nginx http proxy temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;quot;proxy_temp&amp;quot;&lt;/span&gt;
-  nginx http fastcgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;quot;fastcgi_temp&amp;quot;&lt;/span&gt;
-  nginx http uwsgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;quot;uwsgi_temp&amp;quot;&lt;/span&gt;
-  nginx http scgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;quot;scgi_temp&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Configuration summary
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  + using system PCRE library
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  + using system OpenSSL library
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  + md5: using OpenSSL library
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  + sha1: using OpenSSL library
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  + using system zlib library
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx path prefix: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx binary file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/sbin&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx configuration prefix: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/conf&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx configuration file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/conf/nginx.conf&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx pid file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/nginx.pid&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx error log file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/error.log&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http access log file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/access.log&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http client request body temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;client_body_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http proxy temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;proxy_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http fastcgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fastcgi_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http uwsgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;uwsgi_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  nginx http scgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para compilar e instalar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;make -j &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;make -j &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto, es necesario descargar el script que permite iniciar, detener, reiniciar y recargar nginx mediante el comando &lt;strong&gt;service&lt;/strong&gt;, podemos descargarlo desde&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
-mv nginx /etc/init.d/nginx
-sudo chmod +x /etc/init.d/nginx
-sudo chown root:root /etc/init.d/nginx
-update-rc.d nginx defaults
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv nginx /etc/init.d/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo chmod +x /etc/init.d/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo chown root:root /etc/init.d/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;update-rc.d nginx defaults&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con esto hemos descargaro el script, lo hemos movido al directorio en el que será llamado al inicio del sistema, dado permisos de ejecución y asignado a root como propietario. Hecho esto, para iniciar nuestro servidor web hay que ejecutar el comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;service nginx start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;service nginx start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección &lt;em&gt;localhost&lt;/em&gt;, donde veremos lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -127,56 +116,55 @@ update-rc.d nginx defaults
 &lt;h3 id=&#34;configuración&#34;&gt;Configuración&lt;/h3&gt;
 
 &lt;p&gt;Ya que está todo listo, vamos a realizar unos cuantos ajustes a la configuración por defecto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    include       mime.types&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    default_type  application/octet-stream&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    gzip on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    gzip_buffers &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; 8k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    gzip_disable &lt;span class=&#34;s2&#34;&gt;&amp;quot;MSIE [1-6]\.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    gzip_proxied any&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    log_format  main  &lt;span class=&#34;s1&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;quot;$request&amp;quot; &amp;#39;&lt;/span&gt;
-                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;quot;$http_referer&amp;quot; &amp;#39;&lt;/span&gt;
-                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;quot;$http_user_agent&amp;quot; &amp;quot;$http_x_forwarded_for&amp;quot;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    index              index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-        server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-        root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-    access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
-        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-                deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-                access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-                log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;user  www-data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;worker_processes  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pid        /var/run/nginx.pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;error_log  logs/error.log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;events &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    worker_connections  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    include       mime.types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    default_type  application/octet-stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_buffers &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt; 8k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_disable &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_proxied any&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    log_format  main  &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    access_log  logs/access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    sendfile        on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    keepalive_timeout  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    index              index.html index.htm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    server &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        listen       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        server_name localhost&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        root html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    access_log  logs/host.access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        location ~ /&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                deny all&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                access_log off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                log_not_found off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -187,10 +175,9 @@ http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Cambiamos los permisos del directorio donde se alojan los recursos web a este último usuario y reiniciamos nginx:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;chown -R www-data:www-data /usr/local/nginx/html/
-service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; service nginx start
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;chown -R www-data:www-data /usr/local/nginx/html/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;service nginx destroy &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; service nginx start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
 
 &lt;ul&gt;

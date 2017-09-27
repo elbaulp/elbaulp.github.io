@@ -37,15 +37,13 @@
 &lt;h1 id=&#34;instalar-mailx&#34;&gt;Instalar MailX&lt;/h1&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apt-get install mailx
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apt-get install mailx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;modificar-el-archivo-bashrc&#34;&gt;Modificar el archivo .bashrc&lt;/h1&gt;
 
 &lt;p&gt;Para cada usuario del que deseemos recibir alertas, habrá que añadir la siguiente línea a su &lt;em&gt;bashrc&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;ALERTA - Acceso a la Shell (ServerName) el:&amp;#39;&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;date&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;who&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; mail -s &lt;span class=&#34;s2&#34;&gt;&amp;quot;Alerta: Acceso shell de `who | cut -d&amp;#39;(&amp;#39; -f2 | cut -d&amp;#39;)&amp;#39; -f1`&amp;quot;&lt;/span&gt; correo@electrónico.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ALERTA - Acceso a la Shell (ServerName) el:&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;date&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;who&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; mail -s &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Alerta: Acceso shell de `who | cut -d&amp;#39;(&amp;#39; -f2 | cut -d&amp;#39;)&amp;#39; -f1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; correo@electrónico.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, ahora recibiremos un correo por cada acceso al sistema.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;

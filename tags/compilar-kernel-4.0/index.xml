@@ -32,66 +32,56 @@
 &lt;h1 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h1&gt;
 
 &lt;p&gt;Para compilar el &lt;strong&gt;kernel&lt;/strong&gt; hara falta instalar los siguientes paquetes en el sistema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;y además este:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install kernel-package
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install kernel-package&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;descargar-el-código-fuente-del-kernel&#34;&gt;Descargar el código fuente del kernel&lt;/h1&gt;
 
 &lt;p&gt;Para ello&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez descargado, lo extraemos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ tar xvf linux-4.2.tar.xz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ tar xvf linux-4.2.tar.xz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;configurar-el-kernel&#34;&gt;Configurar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Copiamos la configuración existente del kernel instalado&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; linux-4.2
-$ cp /boot/config-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; .config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linux-4.2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ cp /boot/config-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;uname -r&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y lo configuramos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ make menuconfig
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ make menuconfig&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si no estamos seguros de qué podemos quitar y añadir de la configuración, es mejor dejarlo tal y como está, ya que al haber copiado la configuración del kernel actual, estamos seguros de que funcionará.&lt;/p&gt;
 
 &lt;h1 id=&#34;compilar-el-kernel&#34;&gt;Compilar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Primero debemos hacer una limpieza:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ make-kpkg clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ make-kpkg clean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y por último compilarlo con&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CONCURRENCY_LEVEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X
-$ fakeroot make-kpkg --initrd --revision&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1.0.NAS kernel_image kernel_headers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CONCURRENCY_LEVEL&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;X
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ fakeroot make-kpkg --initrd --revision&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.NAS kernel_image kernel_headers&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;es importante reemplazar la &lt;strong&gt;X&lt;/strong&gt; de &lt;code&gt;CONCURRENCY_LEVEL=X&lt;/code&gt; por el número de procesadores de tu máquina, para una compilación más rápida.&lt;/p&gt;
 
 &lt;h1 id=&#34;instalar-el-kernel&#34;&gt;Instalar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Una vez compilado, basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
-$ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Reiniciamos y listo, podemos comprobar que estamos usando este kernel con cualquiera de estos comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ uname -a
-$ uname -r
-$ uname -mrs
-$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; more
-$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; egrep -i --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ uname -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ uname -r
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ uname -mrs
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dmesg &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; more
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dmesg &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; egrep -i --color &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

@@ -47,13 +47,12 @@
 &lt;h1 id=&#34;compilar-e-instalar-atom&#34;&gt;Compilar e instalar Atom&lt;/h1&gt;
 
 &lt;p&gt;Una vez instalados los requisitos, comenzamos a instalar &lt;strong&gt;Atom&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/atom/atom
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; atom
-script/build &lt;span class=&#34;c1&#34;&gt;# Crea la aplicación en $TMPDIR/atom-build/Atom&lt;/span&gt;
-sudo script/grunt install &lt;span class=&#34;c1&#34;&gt;# Instala los binarios a /usr/local/bin/atom&lt;/span&gt;
-script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $TMPDIR/atom-build&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone https://github.com/atom/atom
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; atom
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;script/build &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Crea la aplicación en $TMPDIR/atom-build/Atom
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo script/grunt install &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Instala los binarios a /usr/local/bin/atom
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;script/grunt mkdeb # Genera un paquete .deb en  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$TMPDIR&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/atom-build&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez terminado, podemos instalar el fichero .deb que reside en el directorio &lt;code&gt;$TMPDIR/atom-build&lt;/code&gt;, normalmente el directorio &lt;code&gt;$TMPDIR&lt;/code&gt; es &lt;code&gt;/tmp&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Hecho esto, ya podemos ejecutar Atom desde la consola o desde el menú que nuestro Sistema Operativo haya creado como enlace a la aplicación.&lt;/p&gt;
@@ -83,17 +82,15 @@ script/grunt mkdeb &lt;span class=&#34;c1&#34;&gt;# Genera un paquete .deb en  $
 &lt;p&gt;Uno de ellos es &lt;em&gt;build&lt;/em&gt;, que permite compilar el projecto abierto directamente desde &lt;strong&gt;Atom&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apm install build
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apm install build&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez instalado, basta con situarnos en el proyecto y pulsar &lt;code&gt;alt-Ctrl-b&lt;/code&gt;. Si necesitamos añadir opciones adicionales a make, podemos hacerlo en la preferencias del paquete.&lt;/p&gt;
 
 &lt;h2 id=&#34;git-plus&#34;&gt;Git plus&lt;/h2&gt;
 
 &lt;p&gt;Otro paquete interesante es &lt;strong&gt;&lt;a href=&#34;https://atom.io/packages/git-plus&#34; title=&#34;Git Plus&#34; target=&#34;_blank&#34;&gt;git-plus&lt;/a&gt;&lt;/strong&gt;, que permite hacer cosas en git sin necesidad de la línea de comandos, para instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;apm install git-plus
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apm install git-plus&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una demostración de su uso:&lt;/p&gt;
 
 &lt;figure&gt;

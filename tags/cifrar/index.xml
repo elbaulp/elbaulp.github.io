@@ -44,10 +44,9 @@
 &lt;h1 id=&#34;generar-las-claves-públicas-y-privadas&#34;&gt;Generar las claves públicas y privadas&lt;/h1&gt;
 
 &lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ openssl genrsa -out clave.pem 4096
-$ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ openssl genrsa -out clave.pem &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con el primer comando generamos la clave, en &lt;em&gt;clave.pem&lt;/em&gt; se encuentran tanto la clave privada como la pública, con el segundo comando extraemos la pública a un archivo distinto.&lt;/p&gt;
 
 &lt;h1 id=&#34;método-elegido-para-cifrar-los-archivos&#34;&gt;Método elegido para cifrar los archivos&lt;/h1&gt;
@@ -74,14 +73,13 @@ $ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
 &lt;p&gt;Ahora procedemos a aplicar los pasos descritos anteriormente con openssl:&lt;/p&gt;
 
 &lt;h2 id=&#34;cifrando-los-archivos&#34;&gt;Cifrando los archivos&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, generar clave aleatoria&lt;/span&gt;
-$ openssl rand -base64 &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; -out key.txt
-&lt;span class=&#34;c1&#34;&gt;# Paso 2, cifrar el archivo con la clave simétrica&lt;/span&gt;
-$ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
-&lt;span class=&#34;c1&#34;&gt;# Paso 3, cifrar la clave generada en el paso 1 con la llave pública&lt;/span&gt;
-$ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Paso 1, generar clave aleatoria
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl rand -base64 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -out key.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Paso 2, cifrar el archivo con la clave simétrica
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Paso 3, cifrar la clave generada en el paso 1 con la llave pública
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Los argumentos significan:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -96,12 +94,11 @@ $ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;descifrado-de-archivos&#34;&gt;Descifrado de archivos&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3&lt;/span&gt;
-$ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
-&lt;span class=&#34;c1&#34;&gt;# Paso 2, Descifrar el archivo con la clave&lt;/span&gt;
-$ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Paso 2, Descifrar el archivo con la clave
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -111,29 +108,28 @@ $ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -o
 &lt;h1 id=&#34;script-para-descifrar-varios-archivos-de-una-vez&#34;&gt;Script para descifrar varios archivos de una vez&lt;/h1&gt;
 
 &lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;directorio a=&amp;quot;&lt;/span&gt;a&lt;span class=&#34;s2&#34;&gt;&amp;quot; los=&amp;quot;&lt;/span&gt;los&lt;span class=&#34;s2&#34;&gt;&amp;quot; archivos=&amp;quot;&lt;/span&gt;archivos&lt;span class=&#34;s2&#34;&gt;&amp;quot; cifrados=&amp;quot;&lt;/span&gt;cifrados&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-
-openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc&amp;quot;&lt;/span&gt; -out &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;openssl rsautl -decrypt -inkey ./clave.pem -in \&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc\&amp;quot; -out \&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt\&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;OIFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;IFS&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;$&amp;#39;\n&amp;#39;&lt;/span&gt;
-
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;find &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -type f -name &lt;span class=&#34;s2&#34;&gt;&amp;quot;*.encrypted&amp;quot;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Decrypting &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt;
-    openssl enc -aes-256-cbc -d -pass file:&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;quot;&lt;/span&gt; -in &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; -out &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; .encrypted&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;OIFS&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -ne &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Usage: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;directorio a=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; los=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;los&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; archivos=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;archivos&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; cifrados=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cifrados&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;openssl rsautl -decrypt -inkey ./clave.pem -in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/key.enc&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -out &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/key.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;openssl rsautl -decrypt -inkey ./clave.pem -in \&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/key.enc\&amp;#34; -out \&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/key.txt\&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;OIFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$IFS&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;find &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -type f -name &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;*.encrypted&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Decrypting &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    openssl enc -aes-256-cbc -d -pass file:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/key.txt&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -out &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .encrypted&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$OIFS&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Espero que os sea de utilidad.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -187,19 +183,18 @@ openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&a
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://github.com/mozilla/addon-sdk.git
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; addon-sdk
-&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; bin/activate
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
-git clone git://github.com/toberndo/mailvelope.git
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mailvelope
-git checkout -t origin/firefox
-git submodule init
-git submodule update
-make build
-make dist-ff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/mozilla/addon-sdk.git
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; addon-sdk
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bin/activate
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ..
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/toberndo/mailvelope.git
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; mailvelope
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git checkout -t origin/firefox
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule init
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule update
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make build
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make dist-ff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
 
 &lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;
@@ -337,14 +332,12 @@ make dist-ff
 &lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
 
 &lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat ~/.vimrc
-:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ~/.vimrc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:let g:GPGDefaultRecipients&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

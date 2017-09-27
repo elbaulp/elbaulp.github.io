@@ -35,13 +35,11 @@
 &lt;p&gt;Wireshark finalmente lo uso para &lt;em&gt;“Ver”&lt;/em&gt; el tráfico que genera el objetivo.&lt;/p&gt;
 
 &lt;p&gt;Podemos instalar estos dos programas mediante la consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr-pc:~$ sudo aptitude install ettercap wireshark&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez instalado, abrimos ettercap:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo ettercap -C
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr-pc:~$ sudo ettercap -C&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y nos abrirá una pantalla como esta:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -75,9 +73,8 @@
 &lt;p&gt;Si ejecutamos antes de realizar todo esto &lt;code&gt;arp -a&lt;/code&gt; en el equipo objetivo, vemos que la puerta de enlace tiene una MAC asociada, despues de hacer en envenenamiento, esta MAC es la del equipo atacante.&lt;/p&gt;
 
 &lt;p&gt;Ahora llega el turno de wireshark,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@hkr-pc:~$ sudo wireshark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr-pc:~$ sudo wireshark&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Vamos a &lt;code&gt;Capture -&amp;gt; Options&lt;/code&gt;, aquí seleccionaremos la interfaz a esniffar, que debe ser la misma que usamos en ettercap, dejamos marcada la casilla &lt;em&gt;Capture packets in promiscuous mode&lt;/em&gt; y clicamos en start:&lt;/p&gt;
 
 &lt;figure&gt;

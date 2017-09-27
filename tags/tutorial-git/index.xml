@@ -406,10 +406,9 @@ Muchos archivos son para uso local y no aportan información al repositorio. Par
 &lt;/ul&gt;
 
 &lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
-$ git config diff.exif.textconv exiftool
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ‘*.jpeg &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;exif’ » .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git config diff.exif.textconv exiftool&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
@@ -420,12 +419,11 @@ $ git config diff.exif.textconv exiftool
 &lt;/ul&gt;
 
 &lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave &lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;quot;%ad&amp;quot; -1`&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;c&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`git log --pretty=format:&amp;#34;%ad&amp;#34; -1`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;puts&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -434,17 +432,16 @@ $ git config diff.exif.textconv exiftool
 &lt;/ul&gt;
 
 &lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
-
-git add date_test.txt .gitattributes
-git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;quot;Testing date expansion in Git&amp;quot;&lt;/span&gt;
-rm date_test.txt
-git checkout date_test.txt
-cat date_test.txt
-&lt;span class=&#34;nv&#34;&gt;$Da&lt;/span&gt;te: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; » .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git add date_test.txt .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git commit -m &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Testing date expansion in Git&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;rm date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git checkout date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$Date&lt;/span&gt;&lt;span class=&#34;&#34;&gt;: Tue Apr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:26:52 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -0700$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ &amp;quot;Sincronización de proyectos en git con hooks (ganchos&#34;&gt;Hay dos tipos&lt;/a&gt;&amp;rdquo;), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
@@ -454,12 +451,12 @@ cat date_test.txt
 &lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
 
 &lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
-*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
-/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
-build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
-doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;*.a &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# no .a files
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;*!lib.a &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/TODO &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# only ignore the root TODO file, not subdir/TODO*
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;build/ &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ignore all files in the build/ directory*
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
         </item>
         
     </channel>

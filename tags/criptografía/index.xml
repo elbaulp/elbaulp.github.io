@@ -542,9 +542,8 @@ El contenido del curso es el siguiente:&lt;/p&gt;
 &lt;h1 id=&#34;cifrar-el-usb-usando-la-terminal&#34;&gt;Cifrar el usb usando la terminal&lt;/h1&gt;
 
 &lt;p&gt;Para los que se sientan más cómodos usando la terminal, es posible instalar &lt;em&gt;Veracrypt&lt;/em&gt; sin interfaz gráfica y ejecutar el comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;veracrypt -t -c /dev/dispositivo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;veracrypt -t -c /dev/dispositivo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y seguir los pasos indicados, similares a los vistos arriba&lt;/p&gt;
 
 &lt;figure&gt;
@@ -567,13 +566,11 @@ El contenido del curso es el siguiente:&lt;/p&gt;
 &lt;h1 id=&#34;montar-y-desmontar-el-dispositivo-mediante-la-línea-de-comandos&#34;&gt;Montar y desmontar el dispositivo mediante la línea de comandos&lt;/h1&gt;
 
 &lt;p&gt;Para montar, basta ejecutar el comando&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;veracrypt /dev/dispositivo /ruta/a/montar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;veracrypt /dev/dispositivo /ruta/a/montar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y para desmontar&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;veracrypt -d /dev/dispositivo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;veracrypt -d /dev/dispositivo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, ya tenemos nuestro USB cifrado!&lt;/p&gt;</description>
         </item>
         

@@ -31,64 +31,60 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantalla DVI-I-2&lt;/p&gt;
 
 &lt;p&gt;El siguiente paso es hacer que este comando se ejecute siempre al iniciar el pc, para ello tenemos que modificar el archivo de autoarranque de OpenBox, que se llama &lt;em&gt;autostart&lt;/em&gt; y suele estar en &lt;em&gt;~/.config/openbox&lt;/em&gt;. Añadimos la siguiente línea debajo de &lt;em&gt;lxsession &amp;amp;&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;De esta forma lo tenemos todo solucionado.&lt;/p&gt;
 
 &lt;h1 id=&#34;fondos-de-pantalla-aleatorios&#34;&gt;Fondos de pantalla aleatorios&lt;/h1&gt;
 
 &lt;p&gt;Para lograr esto usé un script que encontré en la red hace tiempo y lo modifiqué para adaptarlo a openbox, con la particularidad de que aplico un fondo de pantalla distinto y seleccionado aleatoriamente para cada una de las pantallas. El script en cuestión es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$HOME&lt;span class=&#34;s2&#34;&gt;&amp;quot;/Ruta/Imagenes/&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;bgSaved&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$HOME&lt;span class=&#34;s2&#34;&gt;&amp;quot;/.config/nitrogen/bg-saved.cfg&amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; $picsfolder
-
-&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;*.jpg&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;$&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#echo $randomfile&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;randomfile2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;$&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-
-
-
-cat &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;[:0.0]&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;file=/usr/share/backgrounds/transparent--i.e-solid-colour.png&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;mode=1&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;bgcolor=#252627&lt;/span&gt;
-
-&lt;span class=&#34;s2&#34;&gt;[xin_0]&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;file=&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;picsfolder&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;randomfile1&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;mode=4&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;bgcolor=#000000&lt;/span&gt;
-
-&lt;span class=&#34;s2&#34;&gt;[xin_1]&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;file=&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;picsfolder&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;randomfile2&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;mode=4&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;bgcolor=#000000&amp;quot;&lt;/span&gt; &amp;gt; &lt;span class=&#34;nv&#34;&gt;$b&lt;/span&gt;gSaved
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/Ruta/Imagenes/&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bgSaved&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/.config/nitrogen/bg-saved.cfg&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;*.jpg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RANDOM%N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#echo $randomfile
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RANDOM%N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;randomfile2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[:0.0]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=/usr/share/backgrounds/transparent--i.e-solid-colour.png
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=1
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#252627
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;[xin_0]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder$randomfile1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=4
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#000000
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;[xin_1]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder$randomfile2&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=4
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#000000&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$bgSaved&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La variable &lt;em&gt;picsfolder&lt;/em&gt; es el directorio donde residen las imágenes. &lt;em&gt;bsSaved&lt;/em&gt; es un archivo de configuración que almacena los datos del último fondo de pantalla que se estableció, y que modificaremos con los nuevos fondos.&lt;/p&gt;
 
 &lt;p&gt;Las siguientes líneas seleccionan dos imágenes aleatórias y una vez seleccionadas modificamos el archivo bg-saved.cfg para establecer nuestros fondos de pantalla aleatórios.&lt;/p&gt;
 
 &lt;p&gt;Para conseguir que esto funcione debemos volver a modificar el archivo &lt;em&gt;autostart&lt;/em&gt; de openbox, colocando las siguientes líneas (En este caso debajo del comando xrandr):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## Set desktop wallpaper&lt;/span&gt;
-/home/hkr/Pictures/wall_aleatorio.sh
-nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;## Set desktop wallpaper
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/home/hkr/Pictures/wall_aleatorio.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nitrogen --restore &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Os dejo una captura, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/wall_aleatorio&#34; target=&#34;_blank&#34; title=&#34;GitHub&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -122,13 +118,11 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;h1 id=&#34;xrootconsole&#34;&gt;xrootconsole&lt;/h1&gt;
 
 &lt;p&gt;&lt;code&gt;xrootconsole&lt;/code&gt; muestra en una ventana transparente el fichero que se le proporcione como entrada (o la entrada estándar stdin). Su objetivo es ser lo más simple posible y consumir pocos recursos. Este programa no es interactivo, por lo que solo servirá para mostrar información y nada más. Un ejemplo de uso:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrootconsole &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;archivo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrootconsole &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;archivo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Un ejemplo más completo sería el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -144,18 +138,17 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;En este caso estoy mostrando salidas del comando &lt;a href=&#34;https://elbauldelprogramador.com/comandos-ss-iproute2-linux/&#34; title=&#34;Algunos comandos útiles con iproute2&#34;&gt;ss&lt;/a&gt; usando un &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; que he creado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-        ss &amp;gt; /tmp/ss.out
-        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;XROOT_PID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$!&lt;/span&gt;
-        sleep 30
-        &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; $XROOT_PID
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        ss &amp;gt; /tmp/ss.out
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XROOT_PID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$!&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        sleep &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kill&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$XROOT_PID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si decides usar este programa, es probable que quieras agregarlo al &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; de inicio de tu entorno de escritorio favorito, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/tags/xmonad&#34;&gt;xmonad&lt;/a&gt; u &lt;a href=&#34;https://elbauldelprogramador.com/tags/openbox&#34;&gt;openbox&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Como he mencionado, xrootconsole no es interactivo, si quieres ejecutar algo como htop, necesitas Tilda.&lt;/p&gt;
@@ -163,24 +156,21 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 &lt;h1 id=&#34;tilda&#34;&gt;Tilda&lt;/h1&gt;
 
 &lt;p&gt;Tilda es una ventana de terminal muy configurable. No tiene bordes y permanece oculta al escritorio hasta que se pulsa una tecla. Lo primero que hay que hacer es instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install tilda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo aptitude install tilda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez instalado, lo ejecutamos y haremos algunos cambios:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Pestaña General    » desabilita “Always on top”
-Pestaña Appearance » habilita la transparencia y fíjalo al 100%
-Pestaña Colors     » Elige “Green on Black” o “Personalize”
-Pestaña Scrolling  » Desabilítalo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Pestaña General    » desabilita “Always on top”
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Appearance » habilita la transparencia y fíjalo al &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Colors     » Elige “Green on Black” o “Personalize”
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Scrolling  » Desabilítalo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.&lt;/p&gt;
 
 &lt;h1 id=&#34;eterm&#34;&gt;Eterm&lt;/h1&gt;
 
 &lt;p&gt;La última opción es Eterm, otra terminal que podemos usar para tener de fondo de pantalla mostrando información. Por ejemplo mostrar la salida del &lt;strong&gt;dmesg&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Eterm --buttonbar &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Eterm --buttonbar &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --scrollbar off -f white -n dmesg -g &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;211&lt;/span&gt;&lt;span class=&#34;&#34;&gt;×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una breve explicación de los argumentos:&lt;/p&gt;
 
 &lt;ul&gt;

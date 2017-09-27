@@ -54,9 +54,8 @@
 &lt;/ol&gt;
 
 &lt;p&gt;Reinicia el equipo y el problema debería haber desaparecido. En caso contrario, abre un terminal pulsando &lt;strong&gt;Win+X&lt;/strong&gt; y selecciona &lt;strong&gt;Símbolo del sistema (Administrador)&lt;/strong&gt;. Introduce lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;bcdedit /set disabledynamictick yes
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;bcdedit /set disabledynamictick yes&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;desactivar-programas-de-inicio-innecesarios&#34;&gt;Desactivar programas de inicio innecesarios&lt;/h1&gt;
 
 &lt;ol&gt;

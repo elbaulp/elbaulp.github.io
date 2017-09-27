@@ -84,423 +84,422 @@
 &lt;h1 id=&#34;robots-txt&#34;&gt;Robots.txt&lt;/h1&gt;
 
 &lt;p&gt;El robots.txt es algo a tener en cuenta y que debe colocarse en la raíz de la instalación de wordpress. El siguiente archivo es una combinación de los ejemplos que encontré en &lt;a href=&#34;http://www.zonaw.com/robots-txt-optimizado-para-wordpress&#34; target=&#34;_blank&#34;&gt;zonaw&lt;/a&gt; y &lt;a href=&#34;http://ayudawordpress.com/robotstxt-perfecto-para-wordpress/&#34; target=&#34;_blank&#34;&gt;ayudawordpress&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Sitemap&lt;/span&gt;
-
-Sitemap: http://tuweb.com/feed
-
-&lt;span class=&#34;c1&#34;&gt;# Ficheros y directorios a des/indexar de nuestro WordPress&lt;/span&gt;
-
-User-Agent: *
-Allow: /img/
-Allow: /feed/$
-Disallow: /wp-
-Disallow: /wp-content/plugins/
-Disallow: /wp-content/themes/
-Disallow: /wp-includes/
-Disallow: /wp-admin/
-Disallow: /wp-content/
-Disallow: /trackback/
-Disallow: /feed/
-Disallow: /*/feed/$
-Disallow: /*/feed/rss/$
-Disallow: /*/trackback/$
-Disallow: /*/*/feed/$
-Disallow: /*/*/feed/rss/$
-Disallow: /*/*/trackback/$
-Disallow: /*/*/*/feed/$
-Disallow: /*/*/*/feed/rss/$
-Disallow: /*/*/*/trackback/$
-Disallow: /comments/feed
-Disallow: /?s&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
-Disallow: /search
-Disallow: /archives/
-Disallow: /index.php
-Disallow: /*?
-Disallow: /*.php$
-Disallow: /*.js$
-Disallow: /*.inc$
-Disallow: /*.css$
-Disallow: */feed/
-Disallow: */trackback/
-Disallow: /page/
-Disallow: /tag/
-Disallow: /category/
-
-&lt;span class=&#34;c1&#34;&gt;# Reglas para los bots mÃ¡s conocidos&lt;/span&gt;
-
-User-agent: Googlebot
-
-User-agent: Googlebot-Image
-Disallow: /wp-includes/
-Allow: /img/
-
-User-agent: Mediapartners-Google*
-Disallow:
-
-User-agent: ia_archiver
-Disallow: /
-
-User-agent: duggmirror
-Disallow: /
-
-User-agent: noxtrumbot
-Crawl-delay: 50
-
-User-agent: msnbot
-Crawl-delay: 30
-
-User-agent: Slurp
-Crawl-delay: 10
-
-User-agent: MSIECrawler
-Disallow: /
-
-User-agent: WebCopier
-Disallow: /
-
-User-agent: HTTrack
-Disallow: /
-
-User-agent: Microsoft.URL.Control
-Disallow: /
-
-User-agent: libwww
-Disallow: /
-
-User-agent: noxtrumbot
-Crawl-delay: 50
-User-agent: msnbot
-Crawl-delay: 30
-User-agent: Slurp
-Crawl-delay: 10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Sitemap
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Sitemap: http://tuweb.com/feed
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ficheros y directorios a des/indexar de nuestro WordPress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-Agent: *
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Allow: /img/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Allow: /feed/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-content/plugins/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-content/themes/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-includes/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-admin/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-content/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /trackback/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /feed/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/feed/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/feed/rss/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/trackback/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/feed/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/feed/rss/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/trackback/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/*/feed/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/*/feed/rss/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*/*/*/trackback/$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /comments/feed
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /?s&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /search
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /archives/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /index.php
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*?
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*.php$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*.js$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*.inc$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /*.css$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: */feed/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: */trackback/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /page/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /tag/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /category/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Reglas para los bots mÃ¡s conocidos
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Googlebot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Googlebot-Image
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /wp-includes/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Allow: /img/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Mediapartners-Google*
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: ia_archiver
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: duggmirror
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: noxtrumbot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: msnbot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Slurp
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: MSIECrawler
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: WebCopier
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: HTTrack
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Microsoft.URL.Control
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: libwww
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disallow: /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: noxtrumbot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: msnbot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;User-agent: Slurp
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Crawl-delay: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;htaccess&#34;&gt;.htaccess&lt;/h1&gt;
 
 &lt;p&gt;Por último, el htaccess es algo importante también, os dejo un ejemplo de configuración, muchas de las reglas están generadas por plugins:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;SetEnv PHP_VER 5_TEST
-SetEnv REGISTER_GLOBALS 0
-
-&lt;span class=&#34;c1&#34;&gt;#long permalinks&lt;/span&gt;
-RewriteRule ^post/&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?/?&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?/?$ /index.php?p&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;page&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;#Begin gzip and deflate&lt;/span&gt;
-
-    AddOutputFilterByType DEFLATE text/html text/css application/x-javascript text/plain text/xml image/x-icon
-
-&lt;span class=&#34;c1&#34;&gt;# CANONICAL ROBOTS.TXT&lt;/span&gt;
-
- RewriteBase /
- RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^/robots.txt$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
- RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; robots.txt &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
- RewriteRule .* http://www.TUDOMINIO.com/robots.txt &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;301,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# CANONICAL URLs&lt;/span&gt;
-
- RedirectMatch &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; ^/tag/$      http://www.TUDOMINIO.com/
- RedirectMatch &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; ^/search/$   http://www.TUDOMINIO.com/
- RedirectMatch &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; ^/category/$ http://www.TUDOMINIO.com/
-
-RewriteRule ^login$ http://www.TUDOMINIO.com/wp-login.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RedirectMatch &lt;span class=&#34;m&#34;&gt;301&lt;/span&gt; @admin http://www.TUDOMINIO.com/wp-admin
-
-&lt;span class=&#34;c1&#34;&gt;## EXPIRES CACHING ##&lt;/span&gt;
-
-ExpiresActive On
-ExpiresByType image/jpg &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 year&amp;quot;&lt;/span&gt;
-ExpiresByType image/jpeg &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 year&amp;quot;&lt;/span&gt;
-ExpiresByType image/gif &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType image/png &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 year&amp;quot;&lt;/span&gt;
-ExpiresByType text/css &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType application/pdf &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType text/x-javascript &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType application/x-shockwave-flash &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType image/x-icon &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 1 year&amp;quot;&lt;/span&gt;
-ExpiresDefault &lt;span class=&#34;s2&#34;&gt;&amp;quot;access 2 days&amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;## EXPIRES CACHING ##&lt;/span&gt;
-
-Options +FollowSymLinks
-RewriteEngine on
-RewriteRule ^download/&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;^/&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;$ wp-content/plugins/download-monitor/download.php?id&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# +ASKAPACHE PASSPRO 4.6.6&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#######################################################&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#               __                          __&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#   ____ ______/ /______ _____  ____ ______/ /_  ___&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# / /_/ (__  ) ,&amp;lt; / /_/ / /_/ / /_/ / /__/ / / /  __/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#                     /_/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +APRO SIDS&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 60000001&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#Directories should not be left open for public browsing&lt;/span&gt;
-Options -Indexes
-DirectoryIndex index.html index.php /index.php
-&lt;span class=&#34;c1&#34;&gt;# -SID 60000001&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 60000002&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;ENV:REDIRECT_STATUS&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; 200
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# -SID 60000002&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 30140004&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.*/wp-comments-post.php.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 30140004&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 30140005&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_METHOD&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;POST
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^/&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;wp-admin/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-content/plugins/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-includes/&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.* &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP:Content-Length&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^$
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 30140005&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 30140009&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.*/wp-comments-post.php.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_REFERER&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^-?$
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 30140009&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 30140010&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_USER_AGENT&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;opera&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;mozilla&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;firefox&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;msie&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;safari&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.*$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_USER_AGENT&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^-?$
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.+/trackback/? HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_METHOD&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;POST
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 30140010&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 40140013&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^/&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;wp-login.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-admin/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-content/plugins/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-includes/&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.* &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ///.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.+?&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;?&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;http&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;ftp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;ssl&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;https&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:/.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.*??.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.*.&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;asp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;ini&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;dll&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /.*.&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;htpasswd&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;htaccess&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;aahtpasswd&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.* HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 40140013&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 50140001&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_METHOD&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;GET&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;HEAD&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;POST&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;PROPFIND&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;OPTIONS&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;PUT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 50140001&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 50140002&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; .+ HTTP/&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0.9&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;1.0&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;1.1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 50140002&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 50140003&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^/&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;wp-login.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-admin/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-content/plugins/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-includes/&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.* &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z0-9.+_/-?&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;%#&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+ HTTP/ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 50140003&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# +SID 50140006&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP:Content-Disposition&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; .php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP:Content-Type&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; image/.+ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 50140006&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 50140005&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_COOKIE&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^.*PHPSESS?ID.*$
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_COOKIE&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^.*PHPSESS?ID&lt;span class=&#34;o&#34;&gt;=([&lt;/span&gt;0-9a-z&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;.*$
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 50140005&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# +SID 40140011&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;THE_REQUEST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;A-Z&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;3,9&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /wp-content/.*$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !^.+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;flexible-upload-wp25js&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;media&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.php$
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; ^.+.&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;html&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;htm&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;txt&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;$
-RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;F,NS,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -SID 40140011&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -APRO SIDS&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#               __                          __&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#   ____ ______/ /______ _____  ____ ______/ /_  ___&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# / /_/ (__  ) ,&amp;lt; / /_/ / /_/ / /_/ / /__/ / / /  __/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#                     /_/&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#######################################################&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# -ASKAPACHE PASSPRO 4.6.6&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# BEGIN W3TC Browser Cache&lt;/span&gt;
-
-    AddType text/css .css
-    AddType application/x-javascript .js
-    AddType text/x-component .htc
-    AddType text/html .html .htm
-    AddType text/richtext .rtf .rtx
-    AddType image/svg+xml .svg .svgz
-    AddType text/plain .txt
-    AddType text/xsd .xsd
-    AddType text/xsl .xsl
-    AddType text/xml .xml
-    AddType video/asf .asf .asx .wax .wmv .wmx
-    AddType video/avi .avi
-    AddType image/bmp .bmp
-    AddType application/java .class
-    AddType video/divx .divx
-    AddType application/msword .doc .docx
-    AddType application/vnd.ms-fontobject .eot
-    AddType application/x-msdownload .exe
-    AddType image/gif .gif
-    AddType application/x-gzip .gz .gzip
-    AddType image/x-icon .ico
-    AddType image/jpeg .jpg .jpeg .jpe
-    AddType application/vnd.ms-access .mdb
-    AddType audio/midi .mid .midi
-    AddType video/quicktime .mov .qt
-    AddType audio/mpeg .mp3 .m4a
-    AddType video/mp4 .mp4 .m4v
-    AddType video/mpeg .mpeg .mpg .mpe
-    AddType application/vnd.ms-project .mpp
-    AddType application/x-font-otf .otf
-    AddType application/vnd.oasis.opendocument.database .odb
-    AddType application/vnd.oasis.opendocument.chart .odc
-    AddType application/vnd.oasis.opendocument.formula .odf
-    AddType application/vnd.oasis.opendocument.graphics .odg
-    AddType application/vnd.oasis.opendocument.presentation .odp
-    AddType application/vnd.oasis.opendocument.spreadsheet .ods
-    AddType application/vnd.oasis.opendocument.text .odt
-    AddType audio/ogg .ogg
-    AddType application/pdf .pdf
-    AddType image/png .png
-    AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
-    AddType audio/x-realaudio .ra .ram
-    AddType application/x-shockwave-flash .swf
-    AddType application/x-tar .tar
-    AddType image/tiff .tif .tiff
-    AddType application/x-font-ttf .ttf .ttc
-    AddType audio/wav .wav
-    AddType audio/wma .wma
-    AddType application/vnd.ms-write .wri
-    AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
-    AddType application/zip .zip
-
-    ExpiresActive On
-    ExpiresByType text/css A31536000
-    ExpiresByType application/x-javascript A31536000
-    ExpiresByType text/x-component A31536000
-    ExpiresByType text/html A3600
-    ExpiresByType text/richtext A3600
-    ExpiresByType image/svg+xml A3600
-    ExpiresByType text/plain A3600
-    ExpiresByType text/xsd A3600
-    ExpiresByType text/xsl A3600
-    ExpiresByType text/xml A3600
-    ExpiresByType video/asf A31536000
-    ExpiresByType video/avi A31536000
-    ExpiresByType image/bmp A31536000
-    ExpiresByType application/java A31536000
-    ExpiresByType video/divx A31536000
-    ExpiresByType application/msword A31536000
-    ExpiresByType application/vnd.ms-fontobject A31536000
-    ExpiresByType application/x-msdownload A31536000
-    ExpiresByType image/gif A31536000
-    ExpiresByType application/x-gzip A31536000
-    ExpiresByType image/x-icon A31536000
-    ExpiresByType image/jpeg A31536000
-    ExpiresByType application/vnd.ms-access A31536000
-    ExpiresByType audio/midi A31536000
-    ExpiresByType video/quicktime A31536000
-    ExpiresByType audio/mpeg A31536000
-    ExpiresByType video/mp4 A31536000
-    ExpiresByType video/mpeg A31536000
-    ExpiresByType application/vnd.ms-project A31536000
-    ExpiresByType application/x-font-otf A31536000
-    ExpiresByType application/vnd.oasis.opendocument.database A31536000
-    ExpiresByType application/vnd.oasis.opendocument.chart A31536000
-    ExpiresByType application/vnd.oasis.opendocument.formula A31536000
-    ExpiresByType application/vnd.oasis.opendocument.graphics A31536000
-    ExpiresByType application/vnd.oasis.opendocument.presentation A31536000
-    ExpiresByType application/vnd.oasis.opendocument.spreadsheet A31536000
-    ExpiresByType application/vnd.oasis.opendocument.text A31536000
-    ExpiresByType audio/ogg A31536000
-    ExpiresByType application/pdf A31536000
-    ExpiresByType image/png A31536000
-    ExpiresByType application/vnd.ms-powerpoint A31536000
-    ExpiresByType audio/x-realaudio A31536000
-    ExpiresByType image/svg+xml A31536000
-    ExpiresByType application/x-shockwave-flash A31536000
-    ExpiresByType application/x-tar A31536000
-    ExpiresByType image/tiff A31536000
-    ExpiresByType application/x-font-ttf A31536000
-    ExpiresByType audio/wav A31536000
-    ExpiresByType audio/wma A31536000
-    ExpiresByType application/vnd.ms-write A31536000
-    ExpiresByType application/vnd.ms-excel A31536000
-    ExpiresByType application/zip A31536000
-
-        BrowserMatch ^Mozilla/4 gzip-only-text/html
-        BrowserMatch ^Mozilla/4.0&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;678&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; no-gzip
-        BrowserMatch bMSIE !no-gzip !gzip-only-text/html
-        BrowserMatch bMSI&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;E&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; !no-gzip !gzip-only-text/html
-
-        Header append Vary User-Agent &lt;span class=&#34;nv&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;!dont-vary
-
-        AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon
-
-        Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; Pragma &lt;span class=&#34;s2&#34;&gt;&amp;quot;public&amp;quot;&lt;/span&gt;
-        Header append Cache-Control &lt;span class=&#34;s2&#34;&gt;&amp;quot;public, must-revalidate, proxy-revalidate&amp;quot;&lt;/span&gt;
-
-    FileETag MTime Size
-
-         Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; X-Powered-By &lt;span class=&#34;s2&#34;&gt;&amp;quot;W3 Total Cache/0.9.2.4&amp;quot;&lt;/span&gt;
-
-        Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; Pragma &lt;span class=&#34;s2&#34;&gt;&amp;quot;public&amp;quot;&lt;/span&gt;
-        Header append Cache-Control &lt;span class=&#34;s2&#34;&gt;&amp;quot;public, must-revalidate, proxy-revalidate&amp;quot;&lt;/span&gt;
-
-    FileETag MTime Size
-
-         Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; X-Powered-By &lt;span class=&#34;s2&#34;&gt;&amp;quot;W3 Total Cache/0.9.2.4&amp;quot;&lt;/span&gt;
-
-        Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; Pragma &lt;span class=&#34;s2&#34;&gt;&amp;quot;public&amp;quot;&lt;/span&gt;
-        Header append Cache-Control &lt;span class=&#34;s2&#34;&gt;&amp;quot;public, must-revalidate, proxy-revalidate&amp;quot;&lt;/span&gt;
-
-    FileETag MTime Size
-
-         Header &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; X-Powered-By &lt;span class=&#34;s2&#34;&gt;&amp;quot;W3 Total Cache/0.9.2.4&amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# END W3TC Browser Cache&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# BEGIN W3TC Page Cache core&lt;/span&gt;
-
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;.*/&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?w3tc_rewrite_test$ &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;?w3tc_rewrite_test&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP:Accept-Encoding&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; gzip
-    RewriteRule .* - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;W3TC_ENC:_gzip&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_METHOD&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;POST
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;QUERY_STRING&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_HOST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www.TUDOMINIO.com
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sitemap&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;_index&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?.xml&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;.gz&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;a-z0-9_-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+-sitemap&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?.xml&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;.gz&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/wp-admin/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;/xmlrpc.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;/wp-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;cron&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;login&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;register&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;mail&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-.*.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;index.php&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;wp-comments-popup.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-links-opml.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-locations.php&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_COOKIE&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;comment_author&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-postpass&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wordpress_&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;a-f0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wordpress_logged_in&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_USER_AGENT&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;W3 Total Cache/0.9.2.4&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond &lt;span class=&#34;s2&#34;&gt;&amp;quot;%{DOCUMENT_ROOT}/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.html%{ENV:W3TC_ENC}&amp;quot;&lt;/span&gt; -f
-    RewriteRule .* &lt;span class=&#34;s2&#34;&gt;&amp;quot;/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.html%{ENV:W3TC_ENC}&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_METHOD&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;POST
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;QUERY_STRING&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_HOST&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www.TUDOMINIO.com
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; /$ &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sitemap&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;_index&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?.xml&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;.gz&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;a-z0-9_-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+-sitemap&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?.xml&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;.gz&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;?&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;/wp-admin/&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;/xmlrpc.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;/wp-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;cron&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;login&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;register&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;mail&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-.*.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;index.php&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC,OR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_URI&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;wp-comments-popup.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-links-opml.php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-locations.php&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_COOKIE&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;comment_author&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wp-postpass&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wordpress_&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;a-f0-9&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;wordpress_logged_in&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;HTTP_USER_AGENT&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;W3 Total Cache/0.9.2.4&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;NC&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    RewriteCond &lt;span class=&#34;s2&#34;&gt;&amp;quot;%{DOCUMENT_ROOT}/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.xml%{ENV:W3TC_ENC}&amp;quot;&lt;/span&gt; -f
-    RewriteRule .* &lt;span class=&#34;s2&#34;&gt;&amp;quot;/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.xml%{ENV:W3TC_ENC}&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# END W3TC Page Cache core&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# BEGIN WordPress&lt;/span&gt;
-
-RewriteEngine on
-RewriteBase /
-RewriteRule ^download/&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;^/&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;$ http://www.TUDOMINIO.com/wp-content/plugins/download-monitor/download.php?id&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index.php$ - &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-f
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-d
-RewriteRule . /index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# END WordPress&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;SetEnv PHP_VER 5_TEST
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SetEnv REGISTER_GLOBALS &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#long permalinks
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^post/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?/?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?/?$ /index.php?p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;page&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;QSA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#Begin gzip and deflate
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddOutputFilterByType DEFLATE text/html text/css application/x-javascript text/plain text/xml image/x-icon
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# CANONICAL ROBOTS.TXT
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RewriteBase /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^/robots.txt$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; robots.txt &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RewriteRule .* http://www.TUDOMINIO.com/robots.txt &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;301&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# CANONICAL URLs
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RedirectMatch &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;301&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^/tag/$      http://www.TUDOMINIO.com/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RedirectMatch &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;301&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^/search/$   http://www.TUDOMINIO.com/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; RedirectMatch &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;301&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^/category/$ http://www.TUDOMINIO.com/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^login$ http://www.TUDOMINIO.com/wp-login.php &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RedirectMatch &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;301&lt;/span&gt;&lt;span class=&#34;&#34;&gt; @admin http://www.TUDOMINIO.com/wp-admin
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## EXPIRES CACHING ##
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresActive On
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType image/jpg &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 year&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType image/jpeg &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 year&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType image/gif &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 month&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType image/png &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 year&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType text/css &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 month&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType application/pdf &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 month&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType text/x-javascript &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 month&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType application/x-shockwave-flash &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 month&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresByType image/x-icon &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 1 year&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExpiresDefault &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;access 2 days&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## EXPIRES CACHING ##
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Options +FollowSymLinks
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteEngine on
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^download/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;&#34;&gt;^/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ wp-content/plugins/download-monitor/download.php?id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +ASKAPACHE PASSPRO 4.6.6
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#######################################################
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#               __                          __
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#   ____ ______/ /______ _____  ____ ______/ /_  ___
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# / /_/ (__  ) ,&amp;lt; / /_/ / /_/ / /_/ / /__/ / / /  __/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#                     /_/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +APRO SIDS
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 60000001
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#Directories should not be left open for public browsing
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Options -Indexes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DirectoryIndex index.html index.php /index.php
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 60000001
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 60000002
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ENV:REDIRECT_STATUS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 60000002
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 30140004
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.*/wp-comments-post.php.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 30140004
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 30140005
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_METHOD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;POST
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-admin/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-content/plugins/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-includes/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.* &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP:Content-Length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 30140005
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 30140009
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.*/wp-comments-post.php.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_REFERER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^-?$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 30140009
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 30140010
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_USER_AGENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^.*&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;opera&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mozilla&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;firefox&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;msie&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;safari&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.*$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_USER_AGENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^-?$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.+/trackback/? HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_METHOD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;POST
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 30140010
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 40140013
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-login.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-admin/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-content/plugins/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-includes/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.* &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ///.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.+?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ftp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ssl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:/.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.*??.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.*.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;asp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ini&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;dll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /.*.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;htpasswd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;htaccess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;aahtpasswd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.* HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 40140013
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 50140001
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_METHOD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HEAD&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;POST&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;PROPFIND&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;OPTIONS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;PUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 50140001
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 50140002
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .+ HTTP/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 50140002
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 50140003
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-login.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-admin/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-content/plugins/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-includes/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.* &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z0-9.+_/-?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%#&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+ HTTP/ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 50140003
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 50140006
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP:Content-Disposition&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .php &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP:Content-Type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image/.+ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 50140006
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 50140005
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_COOKIE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^.*PHPSESS?ID.*$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_COOKIE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^.*PHPSESS?ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=([&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-9a-z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.*$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 50140005
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# +SID 40140011
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;THE_REQUEST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;A-Z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]{&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /wp-content/.*$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_FILENAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !^.+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;flexible-upload-wp25js&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;media&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.php$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_FILENAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ^.+.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;htm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;txt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;F,NS,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -SID 40140011
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -APRO SIDS
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#               __                          __
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#   ____ ______/ /______ _____  ____ ______/ /_  ___
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  / __ `/ ___/ //_/ __ `/ __ / __ `/ ___/ __ / _
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# / /_/ (__  ) ,&amp;lt; / /_/ / /_/ / /_/ / /__/ / / /  __/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# __,_/____/_/|_|__,_/ .___/__,_/___/_/ /_/___/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#                     /_/
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#######################################################
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# -ASKAPACHE PASSPRO 4.6.6
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# BEGIN W3TC Browser Cache
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/css .css
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-javascript .js
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/x-component .htc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/html .html .htm
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/richtext .rtf .rtx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/svg+xml .svg .svgz
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/plain .txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/xsd .xsd
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/xsl .xsl
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType text/xml .xml
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/asf .asf .asx .wax .wmv .wmx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/avi .avi
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/bmp .bmp
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/java .class
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/divx .divx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/msword .doc .docx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-fontobject .eot
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-msdownload .exe
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/gif .gif
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-gzip .gz .gzip
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/x-icon .ico
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/jpeg .jpg .jpeg .jpe
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-access .mdb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/midi .mid .midi
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/quicktime .mov .qt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/mpeg .mp3 .m4a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/mp4 .mp4 .m4v
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType video/mpeg .mpeg .mpg .mpe
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-project .mpp
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-font-otf .otf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.database .odb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.chart .odc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.formula .odf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.graphics .odg
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.presentation .odp
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.spreadsheet .ods
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.oasis.opendocument.text .odt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/ogg .ogg
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/pdf .pdf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/png .png
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-powerpoint .pot .pps .ppt .pptx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/x-realaudio .ra .ram
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-shockwave-flash .swf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-tar .tar
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType image/tiff .tif .tiff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/x-font-ttf .ttf .ttc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/wav .wav
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType audio/wma .wma
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-write .wri
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/vnd.ms-excel .xla .xls .xlsx .xlt .xlw
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    AddType application/zip .zip
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresActive On
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/css A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-javascript A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/x-component A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/html A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/richtext A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/svg+xml A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/plain A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/xsd A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/xsl A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType text/xml A3600
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/asf A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/avi A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/bmp A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/java A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/divx A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/msword A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-fontobject A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-msdownload A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/gif A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-gzip A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/x-icon A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/jpeg A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-access A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/midi A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/quicktime A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/mpeg A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/mp4 A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType video/mpeg A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-project A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-font-otf A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.database A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.chart A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.formula A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.graphics A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.presentation A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.spreadsheet A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.oasis.opendocument.text A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/ogg A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/pdf A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/png A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-powerpoint A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/x-realaudio A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/svg+xml A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-shockwave-flash A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-tar A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType image/tiff A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/x-font-ttf A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/wav A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType audio/wma A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-write A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/vnd.ms-excel A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ExpiresByType application/zip A31536000
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        BrowserMatch ^Mozilla/4 gzip-only-text/html
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        BrowserMatch ^Mozilla/4.0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;678&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; no-gzip
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        BrowserMatch bMSI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !no-gzip !gzip-only-text/html
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header append Vary User-Agent &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;!dont-vary
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        AddOutputFilterByType DEFLATE text/css application/x-javascript text/x-component text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Pragma &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header append Cache-Control &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public, must-revalidate, proxy-revalidate&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    FileETag MTime Size
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; X-Powered-By &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;W3 Total Cache/0.9.2.4&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Pragma &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header append Cache-Control &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public, must-revalidate, proxy-revalidate&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    FileETag MTime Size
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; X-Powered-By &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;W3 Total Cache/0.9.2.4&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Pragma &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        Header append Cache-Control &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;public, must-revalidate, proxy-revalidate&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    FileETag MTime Size
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         Header &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; X-Powered-By &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;W3 Total Cache/0.9.2.4&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# END W3TC Browser Cache
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# BEGIN W3TC Page Cache core
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteEngine On
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteBase /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteRule ^&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.*/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?w3tc_rewrite_test$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?w3tc_rewrite_test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP:Accept-Encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; gzip
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteRule .* - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;W3TC_ENC:_gzip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_METHOD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;POST
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;QUERY_STRING&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;www.TUDOMINIO.com
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sitemap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?.xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.gz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a-z0-9_-&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+-sitemap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?.xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.gz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/wp-admin/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/xmlrpc.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/wp-&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;register&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-.*.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;index.php&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-comments-popup.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-links-opml.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-locations.php&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_COOKIE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;comment_author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-postpass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wordpress_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a-f0-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wordpress_logged_in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_USER_AGENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;W3 Total Cache/0.9.2.4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%{DOCUMENT_ROOT}/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.html%{ENV:W3TC_ENC}&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteRule .* &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.html%{ENV:W3TC_ENC}&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_METHOD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;POST
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;QUERY_STRING&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_HOST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;www.TUDOMINIO.com
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sitemap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_index&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?.xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.gz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a-z0-9_-&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+-sitemap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?.xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.gz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/wp-admin/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/xmlrpc.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/wp-&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cron&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;register&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-.*.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;index.php&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC,OR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_URI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-comments-popup.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-links-opml.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-locations.php&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_COOKIE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;comment_author&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wp-postpass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wordpress_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a-f0-9&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wordpress_logged_in&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;HTTP_USER_AGENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;W3 Total Cache/0.9.2.4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteCond &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%{DOCUMENT_ROOT}/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.xml%{ENV:W3TC_ENC}&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    RewriteRule .* &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/wp-content/w3tc/pgcache/%{REQUEST_URI}/_index%{ENV:W3TC_UA}%{ENV:W3TC_REF}%{ENV:W3TC_SSL}.xml%{ENV:W3TC_ENC}&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# END W3TC Page Cache core
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# BEGIN WordPress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteEngine on
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteBase /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^download/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;([&lt;/span&gt;&lt;span class=&#34;&#34;&gt;^/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ http://www.TUDOMINIO.com/wp-content/plugins/download-monitor/download.php?id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteBase /
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^index.php$ - &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_FILENAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !-f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_FILENAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !-d
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule . /index.php &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# END WordPress&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
         </item>
         
         <item>

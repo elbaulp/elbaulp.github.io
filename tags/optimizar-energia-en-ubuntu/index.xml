@@ -128,13 +128,11 @@
 &lt;/figure&gt;
 
 &lt;p&gt;Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando &amp;#8216;iwconfig&amp;#8217; que podemos ejecutar en una consola de Ubuntu:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo iwconfig wlan0 txpower off
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo iwconfig wlan0 txpower off&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Usamos el siguiente comando para encender nuestra Wifi/Wireless nuevamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo iwconfig wlan0 txpower on
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo iwconfig wlan0 txpower on&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nota: Reemplazar &amp;#8216;wlan0&amp;#8242; con el nombre de tu placa de red wireless que se muesta en &amp;#8216;System&amp;#8217; &amp;gt; &amp;#8216;Administration&amp;#8217; &amp;gt; &amp;#8216;Network Tools&amp;#8217; bajo la lista desplegable &amp;#8216;Network Device&amp;#8217;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -160,9 +158,8 @@
 &lt;/figure&gt;
 
 &lt;p&gt;Linux provee un mecanismo de ajuste sencillo para ahorrar consumo de energía en nuestro procesador mediante la distribución de la carga de procesamiento entre los procesadores disponibles. Si tu laptop viene con multi-procesador, puedes tomar ventaja de la característica &amp;#8216;balance de procesadores&amp;#8217; de Linux para ahorrar consumo de energía, ejecutando este comando en una consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /sys/devices/system/cpu/sched_mc_power_savings
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /sys/devices/system/cpu/sched_mc_power_savings&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;discos-y-sistema-de-archivos&#34;&gt;Discos y Sistema de archivos&lt;/h1&gt;
 
 &lt;figure&gt;
@@ -192,41 +189,35 @@
 &lt;p&gt;El Kernel de Linux 2.6.20 y superiores deberían proveer la opción &amp;#8216;relatime&amp;#8217;.&lt;/p&gt;
 
 &lt;p&gt;Debe ejecutarse el siguiente comando en la consola para activar la opción &amp;#8216;relatime&amp;rsquo;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;mount -o remount,relatime /
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;mount -o remount,relatime /&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;opciones-de-ahorro-de-energía-del-disco-rígido&#34;&gt;Opciones de Ahorro de Energía del Disco Rígido&lt;/h2&gt;
 
 &lt;p&gt;Algunos fabricantes de discos rígidos implementan opciones de ahorro de energía en el hardware por lo tanto podemos reducir la energía que nuestro disco rígido consume. Podemos solo activar esta opción cuando vemos &lt;em&gt;AdvancedPM=yes&lt;/em&gt; luego de ejecutar el siguiente comando en la consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hdparm -i /dev/sda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hdparm -i /dev/sda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Este es un ejemplo de hdparm:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FUJITSU, &lt;span class=&#34;nv&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000000A0, &lt;span class=&#34;nv&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NS9BT742705B
-&lt;span class=&#34;nv&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt; HardSect NotMFM HdSw&amp;gt;15uSec Fixed DTR&amp;gt;10Mbs &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-&lt;span class=&#34;nv&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DualPortCache, &lt;span class=&#34;nv&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;8192kB, &lt;span class=&#34;nv&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16, &lt;span class=&#34;nv&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16
-&lt;span class=&#34;nv&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16514064, &lt;span class=&#34;nv&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;234441648
-&lt;span class=&#34;nv&#34;&gt;IORDY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;tPIO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:240,w/IORDY:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;tDMA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:120,rec:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-PIO modes: pio0 pio1 pio2 pio3 pio4
-DMA modes: mdma0 mdma1 mdma2
-UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
-&amp;lt;strong&amp;gt;AdvancedPM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes&amp;lt;/strong&amp;gt;: &lt;span class=&#34;nv&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x80 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;128&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;WriteCache&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;enabled
-Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;* signifies the current active mode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;FUJITSU, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;000000A0, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NS9BT742705B
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt; HardSect NotMFM HdSw&amp;gt;15uSec Fixed DTR&amp;gt;10Mbs &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/16/63, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DualPortCache, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;8192kB, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/16/63, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16514064&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;234441648&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IORDY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tPIO&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt;min:240,w/IORDY:120&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tDMA&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt;min:120,rec:120&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;PIO modes: pio0 pio1 pio2 pio3 pio4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DMA modes: mdma0 mdma1 mdma2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt;strong&amp;gt;AdvancedPM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes&amp;lt;/strong&amp;gt;: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0x80 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WriteCache&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;enabled
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;* signifies the current active mode&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Podemos activar el modo de ahorro de energía usando el comando hdparm, por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hdparm -B &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -S &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; /dev/sda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hdparm -B &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -S &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /dev/sda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;activar-el-modo-laptop&#34;&gt;Activar el Modo Laptop&lt;/h1&gt;
 
 &lt;p&gt;Podemos mejorar la vida de la batería activando el modo Laptop Linux para que Linux reduzca las operaciones de E/S cuando nuestra laptop está con poca energía. No todo el hardware viene con el modo laptop por lo tanto necesitamos checkear si nuestro hardware soporta este modo ejecutando el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo gedit /proc/sys/vm/laptop_mode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo gedit /proc/sys/vm/laptop_mode&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si encontramos que el valor en el archivo de texto laptop_mode es 0, significa que el modo está desactivado. Simplemente setea este a 5 con gedit y guarda el archivo para activar el modo laptop.&lt;/p&gt;
 
 &lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
@@ -236,9 +227,8 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
 &lt;blockquote&gt;
 &lt;p&gt;You can install PowerTop through the Ubuntu Software Centre and run it by typing the following command from your console.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo powertop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo powertop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&amp;#8220;Wakeups per second&amp;#8221; es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando &amp;#8220;Wakeups per second&amp;#8221; muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuraci��n del hardware o cerrando algunos softwares activos en el sistema.&lt;/p&gt;
 
 &lt;p&gt;A continuación vemos un ejemplo de análisis de PowerTOP en el consumo de energía de mi laptop.&lt;/p&gt;

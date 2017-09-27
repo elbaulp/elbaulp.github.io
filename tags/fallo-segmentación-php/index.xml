@@ -75,18 +75,15 @@ set apc.shm_size = 64M&lt;/p&gt;
 &lt;p&gt;El parámetro del kernel se puede cambiar de varias formas, tal y como mencionaba el usuario del foro se cambia únicamente durante la sesión activa del Sistema Operativo, tras reiniciar el servidor se establecerá su valor por defecto (30Mb). Para hacer los cambios permanentes, debemos escribir el valor del parámetro en el fichero &lt;em&gt;/etc/sysctl.conf&lt;/em&gt; o en &lt;em&gt;/etc/sysctl.d/99-sysctl.conf&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo, para establecer el valor a 256 Mb escribiríamos al final de uno de estos archivos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;kernel.shmmax&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;268435456
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;kernel.shmmax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y luego cargamos el fichero para aplicar los cambios:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sysctl -p
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sysctl -p&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para comprobar que se actualizó el valor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;cat /proc/sys/kernel/shmmax
-268435456
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;cat /proc/sys/kernel/shmmax
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

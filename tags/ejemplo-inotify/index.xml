@@ -29,53 +29,49 @@
 &lt;p&gt;A mi personalmente me hacía falta para cifrar un archivo automáticamente tras modificarlo, pero más tarde caí en la cuenta de que eso ya lo hace el plugin de Vim.&lt;/p&gt;
 
 &lt;p&gt;Antes de poder usar el script es necesario instalar &lt;em&gt;inotify-tools&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install inotify-tools&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# aptitude install inotify-tools&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hecho esto, ahora es posible ejecutar el script que he creado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;directory&amp;gt; &amp;lt;file to=&amp;quot;&lt;/span&gt;to&lt;span class=&#34;s2&#34;&gt;&amp;quot; watch=&amp;quot;&lt;/span&gt;watch&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt; &amp;lt;script to=&amp;quot;&lt;/span&gt;to&lt;span class=&#34;s2&#34;&gt;&amp;quot; execute=&amp;quot;&lt;/span&gt;execute&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; 1
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;hange
-  &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;#./ * &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;hange&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt; ./&lt;span class=&#34;nv&#34;&gt;$3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;directory&amp;gt; &amp;lt;file to=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; watch=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;watch&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt; &amp;lt;script to=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;to&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; execute=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;execute&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -ne &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;&#34;&gt; true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;inotifywait -e close_write &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$change&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;#./ * &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$change&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El script recibe 3 parámetros; El directorio donde se encuentra el fichero, el nombre del fichero y el script a ejecutar al detectar cambios. Veamos un ejemplo trivial que simplemente escribirá un texto al final del fichero:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat ejemplo
-elbauldelprogramador.com
-$ cat script.sh
-&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Script ejecutado tras editar&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ejemplo
-$ ./notifyChangesOnFile.sh . ejemplo script.sh
-Setting up watches.
-Watches established.
-./ CLOSE_WRITE,CLOSE ejemplo
-Setting up watches.
-Watches established.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ejemplo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;elbauldelprogramador.com
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ cat script.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Script ejecutado tras editar&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; ejemplo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ ./notifyChangesOnFile.sh . ejemplo script.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Setting up watches.
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Watches established.
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;./ CLOSE_WRITE,CLOSE ejemplo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Setting up watches.
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Watches established.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras ejecutar &lt;em&gt;notifyChangesOnFile.sh&lt;/em&gt; abrimos el fichero de ejemplo con cualquier editor y cuando guardemos aparece en pantalla &lt;code&gt;./ CLOSE_WRITE,CLOSE ejemplo&lt;/code&gt; indicando que se ha modificado. Si volvemos a mirar el fichero de ejemplo su contenido es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat ejemplo
-elbauldelprogramador.com
-
-
-
-
-escribimos algo para modificar el fichero y guardamos
-Script ejecutado tras editar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ejemplo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;elbauldelprogramador.com
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;escribimos algo para modificar el fichero y guardamos
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Script ejecutado tras editar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Espero que sea de utilidad, el repositorio de &lt;em&gt;inotify-tools&lt;/em&gt; está en github (Enlace en las referencias).&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;

@@ -55,54 +55,52 @@
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h1 id=&#34;ejecución-del-script&#34;&gt;Ejecución del script&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Help function&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
-  &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; 1
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-  mkdir &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;hange &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~ $pdf_substring &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-      cp &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/*.pdf ./
-      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;============&amp;gt; iNotify &amp;lt;============&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;==&amp;gt;   Updated parent pdf file   &amp;lt;==&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;===================================&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file&lt;/span&gt;
-listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory&lt;/span&gt;
-latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Help function
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Check correct execution of the script
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -ne &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Create directory if it doesn&amp;#39;t exist
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ! -d &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  mkdir &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Copy the pdf from the temporal directory to the parent directory
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;&#34;&gt; listen_pdf_update &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;&#34;&gt; true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;inotifywait -e close_write &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$change&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;~ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$pdf_substring&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      cp &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/*.pdf ./
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;============&amp;gt; iNotify &amp;lt;============&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;==&amp;gt;   Updated parent pdf file   &amp;lt;==&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;===================================&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Set up listener for the target PDF file
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;listen_pdf_update &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Set up latex listener for changes in the directory
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;latexmk -shell-escape -silent -bibtex -view&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pdf -xelatex -pdf -pvc -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Kill all processes created in this script
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kill&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -9 -&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Lo único que hay que hacer es ejecutar el script desde el directorio de trabajo pasando como argumento el directorio donde irán los outputs de la compilación:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Para más información sobre el script, vea el &lt;a href=&#34;https://github.com/lulivi/Latex-PDF-auto-updater&#34;&gt;repositorio del script&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -137,22 +135,53 @@ latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/s
 &lt;/blockquote&gt;
 
 &lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
-https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-750x750+0+0 8-bit sRGB 149KB 0.000u 0:00.000
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;750x750+0+0 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-bit sRGB 149KB &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.000u &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:00.000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ identify -format &lt;span class=&#34;s2&#34;&gt;&amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&lt;/span&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
-&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;750&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;quot;width=\&amp;quot;%[fx:w]\&amp;quot; height=\&amp;quot;%[fx:h]\&amp;quot;\n&amp;quot;&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo Ejecutar Diff a La Salida De Dos Comandos</title>
+            <link>https://elbauldelprogramador.com/como-ejecutar-diff-a-la-salida-de-dos-comandos/</link>
+            <pubDate>Thu, 07 Jan 2016 11:54:12 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-ejecutar-diff-a-la-salida-de-dos-comandos/</guid>
+            <description>&lt;h1 id=&#34;problema&#34;&gt;Problema&lt;/h1&gt;
+
+&lt;p&gt;Recientemente necesité ejecutar el comando &lt;code&gt;diff&lt;/code&gt; sobre la salida de otros dos comandos. Es decir, &lt;code&gt;diff&lt;/code&gt; recibe como parámetros los ficheros sobre los que se quiere mostrar las diferencias, pero yo buscaba hacer un &lt;code&gt;diff&lt;/code&gt; a la salida de dos comandos, no dos ficheros. Un ejemplo:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ diff &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;readelf --all ./helloc&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;readelf --all ./hellocpp&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Este fue el comando que me vino a la cabeza inmediatamente, pero no funciona, ya que &lt;code&gt;$()&lt;/code&gt; sustituye el resultado del comando en su interior, en este caso &lt;code&gt;readelf&lt;/code&gt;. De este modo &lt;code&gt;diff&lt;/code&gt; recibe como parámetros el resultado de ejecutar ese comando. Veamoslo más claro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ diff &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls dir1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls dir2&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Al sustituir el resultado de &lt;code&gt;ls dir1&lt;/code&gt;, &lt;code&gt;diff&lt;/code&gt; recibe como parámetros los ficheros del directorio 1, y no es eso lo que queremos. Queremos la diferencia entre ambos directorios.&lt;/p&gt;
+
+&lt;p&gt;Bastó una rápida consulta a Google para solucionar el problema.&lt;/p&gt;
+
+&lt;h1 id=&#34;solución&#34;&gt;Solución&lt;/h1&gt;
+
+&lt;p&gt;En &lt;em&gt;askubuntu&lt;/em&gt;, el usuario &lt;a href=&#34;http://askubuntu.com/users/23949/ternary&#34; target=&#34;_blank&#34; title=&#34;Ternary url&#34;&gt;Ternary&lt;/a&gt; preguntó exáctamente lo mismo que yo intentaba resolver, &lt;a href=&#34;http://askubuntu.com/users/1059/gilles&#34; target=&#34;_blank&#34; title=&#34;Guilles home&#34;&gt;Guilles&lt;/a&gt; proporcionó la solución, veamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ diff &amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;readelf --all ./helloc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;readelf --all ./hellocpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Listo, no es necesario nada más que reemplazar &lt;code&gt;$&lt;/code&gt; por &lt;code&gt;&amp;lt;&lt;/code&gt;, esto realiza una &lt;a href=&#34;http://www.gnu.org/software/bash/manual/bash.html#Process-Substitution&#34; target=&#34;_blank&#34; title=&#34;Manual gnu&#34;&gt;sustitución de procesos&lt;/a&gt; en lugar de sustitución de comandos. El resultado es que ahora &lt;code&gt;diff&lt;/code&gt; tendrá como parámetros descriptores de ficheros (&lt;code&gt;diff /dev/fd/5 /dev/fd/6&lt;/code&gt;) correspondientes a dos &lt;code&gt;pipes&lt;/code&gt; creadas por bash. Cuando &lt;code&gt;diff&lt;/code&gt; abre dichos ficheros, se conecta al lado de lectura de cada &lt;em&gt;pipe&lt;/em&gt; o tubería, mientras que el lado de escritura de cada tubería está conectado al comando &lt;code&gt;readelf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Cómo ejecutar diff a la salida de dos comandos | &lt;a href=&#34;http://askubuntu.com/questions/229447/how-do-i-diff-the-output-of-two-commands&#34; title=&#34;How do I diff the output of two commands&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -166,27 +195,26 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo a la vez que útil:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;  ! &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -d &lt;span class=&#34;s2&#34;&gt;&amp;quot;mp3f&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-   mkdir mp3f
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls *.mp4&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;****-----------------------------------------------------------------------------****&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;ffmpeg -i &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i -f mp3 -ab 320000 -vn ./mp3f/`basename &amp;quot;&lt;/span&gt;$i&lt;span class=&#34;s2&#34;&gt;&amp;quot; .mp4`.mp3&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;****-----------------------------------------------------------------------------****&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
-   ffmpeg -i $i -f mp3 -ab &lt;span class=&#34;m&#34;&gt;320000&lt;/span&gt; -vn ./mp3f/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; .mp4&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.mp3
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  ! &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mp3f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mkdir mp3f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls *.mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; -f mp3 -ab 320000 -vn ./mp3f/`basename &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; .mp4`.mp3&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f mp3 -ab &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;320000&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -vn ./mp3f/&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hay que establecer la variable IFS al salto de línea, ya que por defecto es el espacio. Por lo tanto en el for, si hay un archivo con espacios, por ejemplo &amp;#8220;Song of The Week.mp4&amp;#8243;, el for considerará cada palabra un archivo distinto e intentará convertir &lt;strong&gt;Song, of, The, Week.mp4.&lt;/strong&gt; por separado.&lt;/p&gt;
 
 &lt;p&gt;Dentro del for se usa ffmpeg para convertir el archivo a mp3, con un bitrate de 320kbps, &lt;strong&gt;-vn&lt;/strong&gt; es para elmininar el vídeo.&lt;/p&gt;
@@ -213,61 +241,51 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;p&gt;Algunos ejemplos:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;elbauldelprogramador&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; rev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;elbauldelprogramador&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; rev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Dará el siguiente resultado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rodamargorpledluable
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;rodamargorpledluable&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Es posible usar la siguiente sintaxis:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rev&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Esta línea es una prueba&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;rev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Esta línea es una prueba&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;abeurp anu se aeníl atsE
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;abeurp anu se aeníl atsE&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;ejemplo-en-perl&#34;&gt;Ejemplo en Perl&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;perl -ne &lt;span class=&#34;s1&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;quot;n&amp;quot;;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;elbauldelprogramador&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;perl -ne &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;#34;n&amp;#34;;&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;elbauldelprogramador&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ó&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;elbauldelprogramador&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; perl -ne &lt;span class=&#34;s1&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;quot;n&amp;quot;;&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;elbauldelprogramador&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; perl -ne &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;chomp;print scalar reverse . &amp;#34;n&amp;#34;;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;script-bash-para-invertir-cadenas&#34;&gt;Script bash para invertir cadenas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$len-1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; i&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; i-- &lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;$&lt;span class=&#34;nv&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;reverse&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$len&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i&amp;gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i-- &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reverse&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$reverse&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;input&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$reverse&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para ejecutarlo escribimos lo siguiente en la terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;./script elbauldelprogramador
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;./script elbauldelprogramador&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;En los comentarios de la fuente original en nixcraft (enlace al final de la entrada) un lector escribió dos ejemplos más, en &lt;a href=&#34;https://elbauldelprogramador.com/python/&#34;&gt;python&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/php/&#34;&gt;PHP&lt;/a&gt;:&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Ejemplo en python:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; foo &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; python -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;import sys;print(sys.stdin.read().strip()[::-1])&amp;#39;&lt;/span&gt;
-python -c &lt;span class=&#34;s1&#34;&gt;&amp;#39;import sys;print(sys.stdin.read().strip()[::-1])&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; foo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; foo &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; python -c &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;import sys;print(sys.stdin.read().strip()[::-1])&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;python -c &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;import sys;print(sys.stdin.read().strip()[::-1])&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ejemplo en PHP:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; foo &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));&amp;#39;&lt;/span&gt;
-php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; foo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; foo &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; php -r &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php -r &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; foo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;hr /&gt;
 
 &lt;h1 id=&#34;fuente-original&#34;&gt;Fuente original&lt;/h1&gt;

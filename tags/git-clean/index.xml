@@ -31,33 +31,29 @@
 &lt;h1 id=&#34;creando-el-script-para-smudge&#34;&gt;Creando el script para smudge&lt;/h1&gt;
 
 &lt;p&gt;Bastará con crear un &lt;em&gt;script&lt;/em&gt; que contenga:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;quot;url: &amp;quot;)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;#34;url: &amp;#34;)&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Lo llamaremos &lt;code&gt;siteurl.smudge&lt;/code&gt;, y le daremos permisos de ejecución.&lt;/p&gt;
 
 &lt;h1 id=&#34;creando-el-script-para-clean&#34;&gt;Creando el script para clean&lt;/h1&gt;
 
 &lt;p&gt;Similar al anterior:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;quot;url: http:\/\/elbauldelprogramador\.com&amp;quot;)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;#34;url: http:\/\/elbauldelprogramador\.com&amp;#34;)&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;añadir-los-scripts-a-los-filtros&#34;&gt;Añadir los scripts a los filtros&lt;/h1&gt;
 
 &lt;p&gt;Solo resta añadir los filtros a la configuración de git:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git config filter.siteurl.smudge siteurl.smudge
-$ git config filter.siteurl.clean siteurl.clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git config filter.siteurl.smudge siteurl.smudge
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git config filter.siteurl.clean siteurl.clean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los &lt;em&gt;scripts&lt;/em&gt; tienen que estar en el &lt;em&gt;PATH&lt;/em&gt; del sistema, y tener permisos de ejecucion.
 {: .notice}&lt;/p&gt;
 
 &lt;h1 id=&#34;el-gitattributes&#34;&gt;El Gitattributes&lt;/h1&gt;
 
 &lt;p&gt;Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero &lt;code&gt;.gitattributes&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;_config.yml &lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;siteurl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;_config.yml &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;siteurl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Gracias Julián.&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;

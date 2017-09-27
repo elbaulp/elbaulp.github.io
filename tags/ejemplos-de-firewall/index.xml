@@ -31,14 +31,12 @@
 &lt;p&gt;Esta aplicación bloquea las páginas de internet durante el tiempo que digamos, es bastante fácil de usar y configurar.&lt;/p&gt;
 
 &lt;p&gt;Antes de instalarlo es necesario resolver las dependencias del paquete instalando lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install libgtk2-perl libyaml-perl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo aptitude install libgtk2-perl libyaml-perl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras instalarlos, bajamos el e instalamos SelfControl:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
-sudo dpkg --install selfcontrol_0.9-1_all.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;wget http://svn.jklmnop.net/projects/SelfControl/selfcontrol_0.9-1_all.deb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo dpkg --install selfcontrol_0.9-1_all.deb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora que está todo listo ejecutamos SelfControl desde la línea de comandos y nos aparecerá esta ventanita:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
@@ -50,36 +48,34 @@ sudo dpkg --install selfcontrol_0.9-1_all.deb
 &lt;p&gt;Donde aparecen las webs bloqueadas, una entrada de texto para añadir las páginas a bloquear y por cuanto tiempo.&lt;/p&gt;
 
 &lt;p&gt;Antes de configurarlo, hay que asegurarse de que todo esté correcto, abrimos una terminal para ver el estado de &lt;a title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34; href=&#34;//20-ejemplos-de-iptables-para-sysadmins/&#34; target=&#34;_blank&#34;&gt;iptables&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo iptables --list
-Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-
-  Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-
-  Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo iptables --list
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Chain INPUT &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Chain FORWARD &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Chain OUTPUT &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si no sale algo parecido quizá no tengas instalado iptables, aunque la mayoría de las distribuciones lo traen por defecto.&lt;/p&gt;
 
 &lt;p&gt;Una vez que ejecutemos el programa aparecerá algo así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo iptables --list
-Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-
-  Chain FORWARD &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-
-  Chain OUTPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-  SelfControl  all  --  anywhere             anywhere
-
-  Chain SelfControl &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; references&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-  target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
-  DROP       all  --  anywhere             www.example.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo iptables --list
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Chain INPUT &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Chain FORWARD &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Chain OUTPUT &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;policy ACCEPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  SelfControl  all  --  anywhere             anywhere
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Chain SelfControl &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; references&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  target     prot opt &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt;               destination
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  DROP       all  --  anywhere             www.example.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Sítio Oficial | &lt;a href=&#34;http://svn.jklmnop.net/projects/SelfControl.html&#34; target=&#34;_blank&#34;&gt;SelfControl &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fuente | &lt;a href=&#34;http://www.datamation.com/open-source/15-must-have-linux-applications-1.html&#34; target=&#34;_blank&#34;&gt;15 Must Have Linux Applications&lt;/a&gt;&lt;/li&gt;

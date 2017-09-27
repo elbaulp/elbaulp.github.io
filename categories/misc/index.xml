@@ -389,35 +389,30 @@
 &lt;h2 id=&#34;crear-una-carta-amenazadora&#34;&gt;Crear una carta amenazadora&lt;/h2&gt;
 
 &lt;p&gt;Para el primer ejemplo crearemos un fichero de texto con una amenaza (En un USB de poco tamaño, a ser posible), el texto es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Esto es una amenaza&amp;quot;&lt;/span&gt; &amp;gt; carta.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Esto es una amenaza&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; carta.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto, borraremos el fichero que acabamos de crear.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ rm carta.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ rm carta.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;crear-una-imagen-del-disco-a-analizar&#34;&gt;Crear una imagen del disco a analizar&lt;/h2&gt;
 
 &lt;p&gt;En informática forense, lo ideal es crear una imagen del disco a analizar, para evitar modificarlo. Usaremos un pendrive por ser de menor capacidad:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive&lt;/span&gt;
-$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas&lt;/span&gt;
-$ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;&gt;# Montamos la imagen para analizarla&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ dd &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdc &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;image.disco &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# /dev/sdc es el pendrive
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ chmod &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;444&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image.disco &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;análisis-de-la-imagen&#34;&gt;Análisis de la imagen&lt;/h2&gt;
 
 &lt;p&gt;Una vez montada la imagen, crearemos un fichero que contendrá las palabras más frecuentes usadas en una amenaza. En este caso se usarán dos únicamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat busquedaEvidencias.txt
-esto
-amenaza
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat busquedaEvidencias.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;esto
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;amenaza&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;buscando-evidencias-en-la-imagen&#34;&gt;Buscando evidencias en la imagen&lt;/h2&gt;
 
 &lt;p&gt;Ahora solo resta buscar en la imagen creada del pendrive por palabras contenidas en el fichero creado arriba:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;grep -aibf busquedaEvidencias.txt imagen.disco
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;grep -aibf busquedaEvidencias.txt imagen.disco&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -439,11 +434,10 @@ amenaza
 &lt;h2 id=&#34;crear-la-imagen-del-disco&#34;&gt;Crear la imagen del disco&lt;/h2&gt;
 
 &lt;p&gt;Lo primero es copiar cualquier imagen, luego la borramos. Volvemos a crear una imagen del disco como en el paso anterior, con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive&lt;/span&gt;
-$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas&lt;/span&gt;
-$ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;&gt;# Montamos la imagen para analizarla&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ dd &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdc &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;image.disco &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# /dev/sdc es el pendrive
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ chmod &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;444&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image.disco &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;instalar-autopsy&#34;&gt;Instalar autopsy&lt;/h2&gt;
 
 &lt;p&gt;Tras esto, instalamos &lt;em&gt;autopsy&lt;/em&gt; (Está disponible en los repositorios de linux). La pantalla principal es esta:&lt;/p&gt;

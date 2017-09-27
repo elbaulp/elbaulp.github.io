@@ -89,18 +89,17 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 &lt;p&gt;Pasemos ahora a describir los distintos componentes de la aplicación.&lt;/p&gt;
 
 &lt;p&gt;La apliación creada por defecto tendrá un &lt;em&gt;Activity&lt;/em&gt; muy simple, uno de los métodos más importantes de esta clase es &lt;code&gt;onCreate&lt;/code&gt;, en él se crean y se instancias los componentes necesarios para dicha &lt;em&gt;Activity&lt;/em&gt;, se instancias componentes gráficos, se establecen los &lt;em&gt;callbacks&lt;/em&gt; necesarios, eventos etc. El código más simple que se puede obtener en este método es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;cm&#34;&gt;/**&lt;/span&gt;
-&lt;span class=&#34;cm&#34;&gt;   * Método encargado de “inflar” la actividad.&lt;/span&gt;
-&lt;span class=&#34;cm&#34;&gt;   * Inicializar cada componente de la actividad&lt;/span&gt;
-&lt;span class=&#34;cm&#34;&gt;   * con su correspondiente View.&lt;/span&gt;
-&lt;span class=&#34;cm&#34;&gt;   */&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;activity_main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;protected&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;   * Método encargado de “inflar” la actividad.
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;   * Inicializar cada componente de la actividad
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;   * con su correspondiente View.
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;   */&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;activity_main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Es importante añadir la línea &lt;code&gt;setContentView(R.layout.activity_main);&lt;/code&gt;, ya que aquí se define qué &lt;em&gt;layout&lt;/em&gt; (Interfaz gráfica) va a usar esta &lt;em&gt;Activity&lt;/em&gt;. De no añadirla, cualquier referencia que intentemos hacer de un componente gráfico fallará.&lt;/p&gt;
 
 &lt;h2 id=&#34;ciclo-de-vida-de-una-activity&#34;&gt;Ciclo de vida de una Activity&lt;/h2&gt;
@@ -114,25 +113,23 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 &lt;h3 id=&#34;res-layout-activity-main-xml&#34;&gt;./res/layout/activity_main.xml&lt;/h3&gt;
 
 &lt;p&gt;Este es el fichero que especifica qué interfaz gráfica queremos en nuestra &lt;em&gt;Activity&lt;/em&gt; (Recordemos la llamada &lt;code&gt;setContentView(R.layout.activity_main);&lt;/code&gt;). En este caso, la interfaz es un simple &lt;code&gt;TextView&lt;/code&gt; que mostrará el mensaje &lt;em&gt;Hola Mundo&lt;/em&gt;. (El texto se ha especificado haciendo referencia al fichero de cadenas (&lt;em&gt;strings.xml&lt;/em&gt;) definido más abajo, en concreto se hace referencia a la cadena de texto de valor &lt;code&gt;hello_world&lt;/code&gt;).&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;match_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;tools:context=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.MainActivity&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
-        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello_world&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;tools:context=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.MainActivity&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello_world&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;res-values-strings-xml&#34;&gt;./res/values/strings.xml&lt;/h3&gt;
 
 &lt;p&gt;Aquí se definen las cadenas de texto a usar en la aplicación. Siempre deben escribirse en un fichero &lt;code&gt;XML&lt;/code&gt; dentro de la carpeta &lt;code&gt;values&lt;/code&gt;, ya que de este modo podremos traducir la aplicación a otro idioma fácilmente con tan solo crear otra carpeta llamada &lt;code&gt;values-de&lt;/code&gt;, por ejemplo, que contenga las cadenas de texto en Alemán. En este caso, se crea una única cadena de texto de nombre &lt;code&gt;hello_world&lt;/code&gt; y de valor &lt;em&gt;Hello World!&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;hello_world&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello world!&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello_world&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Hello world!&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En el &lt;a href=&#34;https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/&#34; title=&#34;Tutorial Android Hola mundo a fondo&#34;&gt;siguiente artículo&lt;/a&gt; se verá a fondo la aplicación &lt;em&gt;Hola Mundo&lt;/em&gt; tal y como la crea en estos momentos &lt;em&gt;Android Studio&lt;/em&gt;, usando &lt;em&gt;Fragments&lt;/em&gt; en lugar de &lt;em&gt;Activity&lt;/em&gt;.
 {: .notice-info }&lt;/p&gt;
 

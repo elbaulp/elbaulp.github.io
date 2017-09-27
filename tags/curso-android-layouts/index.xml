@@ -31,24 +31,23 @@
 &lt;h1 id=&#34;framelayout&#34;&gt;FrameLayout&lt;/h1&gt;
 
 &lt;p&gt;Este tipo de Layout es el más básico, coloca a sus objetos hijos en la parte superior izquierda de la pantalla.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;framelayout&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/app_name&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/framelayout&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;framelayout&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/app_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/framelayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como se puede apreciar en en resultado, si hay más de un hijo, los objetos se amontonan unos encima de otros.&lt;/p&gt;
 
 &lt;figure&gt;
@@ -58,27 +57,26 @@
 &lt;h1 id=&#34;linearlayout&#34;&gt;LinearLayout&lt;/h1&gt;
 
 &lt;p&gt;Este tipo de layout coloca sus hijos unos detras de otros, también comenzando por la esquina superior izquierda de la pantalla. Podemos colocarlos alineados horizontalmente o verticalmente mediante su propiedad &lt;strong&gt;&lt;em&gt;android:orientation=&amp;#8221;horizontal | vertical&amp;#8221;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/app_name&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#0ff&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#ff0&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;horizontal&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/app_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#0ff&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#ff0&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En este caso, he pueso un fondo de color a cada texto (con la propiedad &lt;strong&gt;&lt;em&gt;android:background&lt;/em&gt;&lt;/strong&gt;) para diferenciarlo bien, y he usado la horientación horizontal, de haber usado la orientación vertical, los textos aparecerían uno debajo del otro:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -90,32 +88,31 @@
 &lt;p&gt;Este Layout permite que coloquemos los elementos en un lugar con respecto a la posición de otro, es decir, colocar un botón a la derecha de un texto, o centrarlo en la pantalla, o por ejemplo, colocar un texto encima de tal elemento y a la derecha de este otro.&lt;/p&gt;
 
 &lt;p&gt;Para conseguir esto, &lt;strong&gt;&lt;em&gt;RelativeLayout&lt;/em&gt;&lt;/strong&gt; proporciona propiedades como &lt;strong&gt;&lt;em&gt;android:layout_toRightOf o android:layout_alignLeft&lt;/em&gt;&lt;/strong&gt;, que toman como valores los identificadores de los objetos, o valores booleanos.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;horizontal&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;fill_parent&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/app_name&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#0ff&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_centerinparent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/text1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-
-  &lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@+id/text2&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;wrap_content&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@string/hello&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;#ff0&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;@id/text1&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/relativelayout&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;relativelayout&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:orientation=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;horizontal&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/app_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#0ff&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_centerinparent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@+id/text1&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;textview&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@+id/text2&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:background=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#ff0&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:layout_below=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@id/text1&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/relativelayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como vemos, hemos centrado el texto1 en la pantalla con &lt;strong&gt;&lt;em&gt;android:layout_centerInParent=&amp;#8221;true&amp;#8221;&lt;/em&gt;&lt;/strong&gt; y hemos puesto debajo del texto1 al texto2 con &lt;strong&gt;&lt;em&gt;android:layout_below=&amp;#8221;@id/text1&amp;#8243;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;figure&gt;

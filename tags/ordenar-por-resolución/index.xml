@@ -31,29 +31,27 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;el-script&#34;&gt;El script&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; image in *.jpg *.JPG *.jpeg *.JPEG *.gif *.GIF *.bmp *.BMP *.png *.PNG&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   mkdir -p $res&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   mv &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt; $res&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image in *.jpg *.JPG *.jpeg *.JPEG *.gif *.GIF *.bmp *.BMP *.png *.PNG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;identify -format %wx%h&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;&#34;&gt;n &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mkdir -p &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mv &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Yo lo modifiqué un poco acorde a mis necesidades:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /ruta/mis/fondos
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; image in *.jpg *.png&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   mkdir -p /tmp/fondos/$res&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   cp &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt; /tmp/fondos/$res&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /ruta/mis/fondos
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image in *.jpg *.png&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;identify -format %wx%h&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;&#34;&gt;n &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mkdir -p /tmp/fondos/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   cp &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /tmp/fondos/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para no modificar las imágenes originales, ya que están en &lt;em&gt;Drive&lt;/em&gt;, y así poder seleccionar las que eliminar posteriormente.&lt;/p&gt;
 
 &lt;h1 id=&#34;qué-hace-el-script&#34;&gt;Qué hace el script&lt;/h1&gt;
@@ -73,26 +71,24 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Tras ésto, tenemos organizadas todas las imágenes en carpetas por resolución. Mi objetivo era eliminar las de menor resolución, así que fui apuntando dichas imágenes para luego borrarlas en la carpeta original (La de Drive), donde están todas juntas. Tras almacenar en un archivo los nombres de las imágenes a borrar, ejecuté el siguiente comando en la carpeta original:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;cat ../ABorrar&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   find /Carpeta/original/ -iname $i -exec rm &lt;span class=&#34;s1&#34;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i in &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat ../ABorrar&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   find /Carpeta/original/ -iname &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -exec rm &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;renombrar-las-imágenes-para-que-contengan-su-resolución&#34;&gt;Renombrar las imágenes para que contengan su resolución&lt;/h1&gt;
 
 &lt;p&gt;Como menciona Juanjo en el comentario, otra opción más adecuada es &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; title=&#34;Renombrar archivos masívamente&#34;&gt;renombrar&lt;/a&gt; cada imagen con su resolución, para ello el siguiente script podría servir:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /ruta/imagenes/
-
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; image in *.jpg *.png&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    rename &lt;span class=&#34;s2&#34;&gt;&amp;quot;s/^/[&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;res] - /&amp;quot;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;image&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /ruta/imagenes/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image in *.jpg *.png&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;identify -format %wx%h&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;&#34;&gt;n &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    rename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;s/^/[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;] - /&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Así, las imágenes quedarán, por ejemplo, &lt;code&gt;[1280x1024] - nombre original.jpg&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;

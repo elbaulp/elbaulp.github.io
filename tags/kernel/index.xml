@@ -25,64 +25,62 @@
             <description>&lt;p&gt;Llevo unos cuantos años usando &lt;a href=&#34;https://elbauldelprogramador.com/categories/gentoo/&#34; title=&#34;post sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;, y cada vez que salía una actualización del &lt;a href=&#34;https://elbauldelprogramador.com/tags/kernel/&#34; title=&#34;posts sobre kernel&#34;&gt;kernel&lt;/a&gt; terminaba visitando la página &lt;a href=&#34;https://wiki.gentoo.org/wiki/Kernel/Upgrade&#34; target=&#34;_blank&#34; title=&#34;Kernel/Upgrade&#34;&gt;Kernel/Upgrade&lt;/a&gt; de la Wiki de Gentoo. Tras casi aprenderme los pasos de memoria, decidí que iba siendo hora de escribir un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash/&#34; title=&#34;post sobre bash&#34;&gt;script&lt;/a&gt; que automatizara el proceso.&lt;/p&gt;
 
 &lt;p&gt;El script es bastante simple, lo publico por si a alguien le resulta útil:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env bash&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;## Upgrade gentoo kernel&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# The first and only argument must be the folder name of the new kernel.&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# Stop script when an error occurs&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o errexit
-&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o pipefail
-&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o nounset
-&lt;span class=&#34;c1&#34;&gt;# For debugging purposes&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o xtrace
-
-&lt;span class=&#34;nb&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/src/&amp;#39;&lt;/span&gt;
-
-_usage &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;script_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;newkernelfolder&amp;gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-_main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Backing up old kernel...&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/linux/&amp;quot;&lt;/span&gt;
-    cp .config ~/kernel-config-&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Copying old configuration...&amp;quot;&lt;/span&gt;
-    cp /usr/src/linux/.config /tmp/.config
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Setting new kernel as default...&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;#ln -sf /usr/src/&amp;quot;$1&amp;quot; /usr/src/linux&lt;/span&gt;
-    cp /tmp/.config /usr/src/linux/
-    eselect kernel &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; 2
-    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/src/linux/
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Building...&amp;quot;&lt;/span&gt;
-    make -j4 olddefconfig
-    make -j4 modules_prepare
-    make modules_install
-    emerge --ask @module-rebuild
-    make -j4
-    make install
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Please, update your EFI entry: cp /boot/vmlinuz-*-gentoo /boot/efi/boot/bootx64.efi&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-
-
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    _main &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-    _usage
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## Upgrade gentoo kernel
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# The first and only argument must be the folder name of the new kernel.
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Stop script when an error occurs
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -o errexit
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -o pipefail
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -o nounset
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# For debugging purposes
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -o xtrace
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;readonly&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;/usr/src/&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_usage &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;script_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Usage: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;newkernelfolder&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_main &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Backing up old kernel...&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/linux/&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cp .config ~/kernel-config-&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;uname -r&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Copying old configuration...&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cp /usr/src/linux/.config /tmp/.config
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Setting new kernel as default...&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#ln -sf /usr/src/&amp;#34;$1&amp;#34; /usr/src/linux
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cp /tmp/.config /usr/src/linux/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    eselect kernel &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /usr/src/linux/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Building...&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    make -j4 olddefconfig
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    make -j4 modules_prepare
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    make modules_install
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    emerge --ask @module-rebuild
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    make -j4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    make install
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Please, update your EFI entry: cp /boot/vmlinuz-*-gentoo /boot/efi/boot/bootx64.efi&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -eq &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    _main &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    _usage
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para usarlo basta con ejecutar:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo ./updatekernel.sh &amp;lt;nombre-carpeta-kernel&amp;gt;
-&lt;span class=&#34;c1&#34;&gt;## por ejemplo&lt;/span&gt;
-$ sudo ./updatekernel.sh linux-4.12.12-gentoo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo ./updatekernel.sh &amp;lt;nombre-carpeta-kernel&amp;gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## por ejemplo
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo ./updatekernel.sh linux-4.12.12-gentoo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El script se puede mejorar aún bastante, si te apetece &lt;strong&gt;contribuir&lt;/strong&gt;, está alojado en mi repositorio de &lt;a href=&#34;https://github.com/elbaulp/dotfiles/blob/master/home/bin/updatekernel.sh&#34; target=&#34;_blank&#34; title=&#34;elbaulp/dotfiles&#34;&gt;Dotfiles.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Tras escribir el script, me dí cuenta que portage tiene una opción para añadir hooks a los paquetes, concretamente hay uno para que el kernel se compile e instale automáticamente. Al probarlo me dí cuenta de que no usa el &lt;code&gt;.config&lt;/code&gt; del kernel anterior. Seguramente se pueda configurar para que lo haga,  pero ya que escribí el script, decidí usarlo.&lt;/p&gt;
@@ -202,13 +200,11 @@ $ sudo ./updatekernel.sh linux-4.12.12-gentoo
 &lt;/figure&gt;
 
 &lt;p&gt;Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando &amp;#8216;iwconfig&amp;#8217; que podemos ejecutar en una consola de Ubuntu:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo iwconfig wlan0 txpower off
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo iwconfig wlan0 txpower off&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Usamos el siguiente comando para encender nuestra Wifi/Wireless nuevamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo iwconfig wlan0 txpower on
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo iwconfig wlan0 txpower on&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nota: Reemplazar &amp;#8216;wlan0&amp;#8242; con el nombre de tu placa de red wireless que se muesta en &amp;#8216;System&amp;#8217; &amp;gt; &amp;#8216;Administration&amp;#8217; &amp;gt; &amp;#8216;Network Tools&amp;#8217; bajo la lista desplegable &amp;#8216;Network Device&amp;#8217;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -234,9 +230,8 @@ $ sudo ./updatekernel.sh linux-4.12.12-gentoo
 &lt;/figure&gt;
 
 &lt;p&gt;Linux provee un mecanismo de ajuste sencillo para ahorrar consumo de energía en nuestro procesador mediante la distribución de la carga de procesamiento entre los procesadores disponibles. Si tu laptop viene con multi-procesador, puedes tomar ventaja de la característica &amp;#8216;balance de procesadores&amp;#8217; de Linux para ahorrar consumo de energía, ejecutando este comando en una consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /sys/devices/system/cpu/sched_mc_power_savings
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /sys/devices/system/cpu/sched_mc_power_savings&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;discos-y-sistema-de-archivos&#34;&gt;Discos y Sistema de archivos&lt;/h1&gt;
 
 &lt;figure&gt;
@@ -266,41 +261,35 @@ $ sudo ./updatekernel.sh linux-4.12.12-gentoo
 &lt;p&gt;El Kernel de Linux 2.6.20 y superiores deberían proveer la opción &amp;#8216;relatime&amp;#8217;.&lt;/p&gt;
 
 &lt;p&gt;Debe ejecutarse el siguiente comando en la consola para activar la opción &amp;#8216;relatime&amp;rsquo;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;mount -o remount,relatime /
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;mount -o remount,relatime /&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;opciones-de-ahorro-de-energía-del-disco-rígido&#34;&gt;Opciones de Ahorro de Energía del Disco Rígido&lt;/h2&gt;
 
 &lt;p&gt;Algunos fabricantes de discos rígidos implementan opciones de ahorro de energía en el hardware por lo tanto podemos reducir la energía que nuestro disco rígido consume. Podemos solo activar esta opción cuando vemos &lt;em&gt;AdvancedPM=yes&lt;/em&gt; luego de ejecutar el siguiente comando en la consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hdparm -i /dev/sda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hdparm -i /dev/sda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Este es un ejemplo de hdparm:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FUJITSU, &lt;span class=&#34;nv&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000000A0, &lt;span class=&#34;nv&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NS9BT742705B
-&lt;span class=&#34;nv&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt; HardSect NotMFM HdSw&amp;gt;15uSec Fixed DTR&amp;gt;10Mbs &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-&lt;span class=&#34;nv&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DualPortCache, &lt;span class=&#34;nv&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;8192kB, &lt;span class=&#34;nv&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16, &lt;span class=&#34;nv&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16
-&lt;span class=&#34;nv&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16514064, &lt;span class=&#34;nv&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;234441648
-&lt;span class=&#34;nv&#34;&gt;IORDY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;tPIO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:240,w/IORDY:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;tDMA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:120,rec:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-PIO modes: pio0 pio1 pio2 pio3 pio4
-DMA modes: mdma0 mdma1 mdma2
-UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
-&amp;lt;strong&amp;gt;AdvancedPM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes&amp;lt;/strong&amp;gt;: &lt;span class=&#34;nv&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x80 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;128&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;WriteCache&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;enabled
-Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;* signifies the current active mode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;FUJITSU, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;000000A0, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NS9BT742705B
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt; HardSect NotMFM HdSw&amp;gt;15uSec Fixed DTR&amp;gt;10Mbs &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/16/63, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DualPortCache, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;8192kB, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/16/63, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16514064&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;234441648&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IORDY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tPIO&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt;min:240,w/IORDY:120&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tDMA&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;&lt;span class=&#34;&#34;&gt;min:120,rec:120&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;PIO modes: pio0 pio1 pio2 pio3 pio4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DMA modes: mdma0 mdma1 mdma2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt;strong&amp;gt;AdvancedPM&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;yes&amp;lt;/strong&amp;gt;: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0x80 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WriteCache&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;enabled
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;* signifies the current active mode&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Podemos activar el modo de ahorro de energía usando el comando hdparm, por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hdparm -B &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -S &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; /dev/sda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hdparm -B &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -S &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /dev/sda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;activar-el-modo-laptop&#34;&gt;Activar el Modo Laptop&lt;/h1&gt;
 
 &lt;p&gt;Podemos mejorar la vida de la batería activando el modo Laptop Linux para que Linux reduzca las operaciones de E/S cuando nuestra laptop está con poca energía. No todo el hardware viene con el modo laptop por lo tanto necesitamos checkear si nuestro hardware soporta este modo ejecutando el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo gedit /proc/sys/vm/laptop_mode
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo gedit /proc/sys/vm/laptop_mode&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si encontramos que el valor en el archivo de texto laptop_mode es 0, significa que el modo está desactivado. Simplemente setea este a 5 con gedit y guarda el archivo para activar el modo laptop.&lt;/p&gt;
 
 &lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
@@ -310,9 +299,8 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
 &lt;blockquote&gt;
 &lt;p&gt;You can install PowerTop through the Ubuntu Software Centre and run it by typing the following command from your console.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo powertop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo powertop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&amp;#8220;Wakeups per second&amp;#8221; es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando &amp;#8220;Wakeups per second&amp;#8221; muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuraci��n del hardware o cerrando algunos softwares activos en el sistema.&lt;/p&gt;
 
 &lt;p&gt;A continuación vemos un ejemplo de análisis de PowerTOP en el consumo de energía de mi laptop.&lt;/p&gt;
@@ -363,66 +351,56 @@ Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
 &lt;h1 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h1&gt;
 
 &lt;p&gt;Para compilar el &lt;strong&gt;kernel&lt;/strong&gt; hara falta instalar los siguientes paquetes en el sistema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;y además este:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo apt-get install kernel-package
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install kernel-package&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;descargar-el-código-fuente-del-kernel&#34;&gt;Descargar el código fuente del kernel&lt;/h1&gt;
 
 &lt;p&gt;Para ello&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez descargado, lo extraemos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ tar xvf linux-4.2.tar.xz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ tar xvf linux-4.2.tar.xz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;configurar-el-kernel&#34;&gt;Configurar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Copiamos la configuración existente del kernel instalado&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; linux-4.2
-$ cp /boot/config-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; .config
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linux-4.2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ cp /boot/config-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;uname -r&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y lo configuramos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ make menuconfig
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ make menuconfig&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si no estamos seguros de qué podemos quitar y añadir de la configuración, es mejor dejarlo tal y como está, ya que al haber copiado la configuración del kernel actual, estamos seguros de que funcionará.&lt;/p&gt;
 
 &lt;h1 id=&#34;compilar-el-kernel&#34;&gt;Compilar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Primero debemos hacer una limpieza:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ make-kpkg clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ make-kpkg clean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y por último compilarlo con&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CONCURRENCY_LEVEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X
-$ fakeroot make-kpkg --initrd --revision&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1.0.NAS kernel_image kernel_headers
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CONCURRENCY_LEVEL&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;X
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ fakeroot make-kpkg --initrd --revision&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.NAS kernel_image kernel_headers&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;es importante reemplazar la &lt;strong&gt;X&lt;/strong&gt; de &lt;code&gt;CONCURRENCY_LEVEL=X&lt;/code&gt; por el número de procesadores de tu máquina, para una compilación más rápida.&lt;/p&gt;
 
 &lt;h1 id=&#34;instalar-el-kernel&#34;&gt;Instalar el kernel&lt;/h1&gt;
 
 &lt;p&gt;Una vez compilado, basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
-$ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Reiniciamos y listo, podemos comprobar que estamos usando este kernel con cualquiera de estos comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ uname -a
-$ uname -r
-$ uname -mrs
-$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; more
-$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; egrep -i --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ uname -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ uname -r
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ uname -mrs
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dmesg &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; more
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dmesg &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; egrep -i --color &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

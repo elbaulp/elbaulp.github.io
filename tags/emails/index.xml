@@ -58,19 +58,18 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://github.com/mozilla/addon-sdk.git
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; addon-sdk
-&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; bin/activate
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
-git clone git://github.com/toberndo/mailvelope.git
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mailvelope
-git checkout -t origin/firefox
-git submodule init
-git submodule update
-make build
-make dist-ff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/mozilla/addon-sdk.git
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; addon-sdk
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bin/activate
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ..
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/toberndo/mailvelope.git
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; mailvelope
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git checkout -t origin/firefox
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule init
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule update
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make build
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make dist-ff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
 
 &lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;
@@ -181,6 +180,53 @@ make dist-ff
 &lt;p&gt;El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro &lt;strong&gt;passphrase&lt;/strong&gt; y descifraremos el mensaje.&lt;/p&gt;
 
 &lt;p&gt;Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo enviar los emails de /var/mail/root a una cuenta de correo</title>
+            <link>https://elbauldelprogramador.com/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/</guid>
+            <description>&lt;p&gt;En sistemas operativos como &lt;a href=&#34;https://elbauldelprogramador.com/tags/debian&#34;&gt;Debian&lt;/a&gt;, muchos de los programas y demonios envían mensajes al usuario &lt;em&gt;root&lt;/em&gt; para informar del estado del sistema. Los mensajes se almacenan en el archivo &lt;em&gt;/var/mail/root&lt;/em&gt;. El problema es que se almacena el correo en texto plano, es decir, con todas las cabeceras típicas del protocolo de correo. Pueden usarse programas como &lt;strong&gt;mutt&lt;/strong&gt; para administrar los mensajes. Sin embargo, considero más organizado redireccionar todos los mensajes a una cuenta de correo típica.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;requisitos&#34;&gt;Requisitos&lt;/h1&gt;
+
+&lt;p&gt;Es necesario que el sistema tenga instalado el programa &lt;strong&gt;sendmail&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;configurar-el-reenvío&#34;&gt;Configurar el reenvío&lt;/h1&gt;
+
+&lt;p&gt;Normalmente, la configuración del reenvío de correo se realiza en el archivo &lt;strong&gt;/etc/aliases&lt;/strong&gt;, un ejemplo del contenido de este archivo es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /etc/aliases
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mailer-daemon: postmaster
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;postmaster: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nobody: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;hostmaster: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;usenet: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;news: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;webmaster: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;www: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ftp: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;abuse: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;noc: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;security: root
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;clamav: root&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos, todo se redirecciona a la cuenta local del usuario &lt;em&gt;root&lt;/em&gt;. Bastaría con redireccionar la cuenta &lt;em&gt;root&lt;/em&gt; a una dirección de correo para obtener todos los mensajes del sistema en nuestra bandeja de entrada, y tener así nuestro servidor un poco más controlado. Para ello añadimos en el archivo anterior la siguiente línea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Redireccionar todo el correo de root a mi cuenta
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;root: direccion@correo.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para aplicar los cambios hay que ejecutar el comando &lt;code&gt;newaliases&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;A partir de ahora, recibiremos en nuestra bandeja de entrada los mensajes del sistema, podemos crear un filtro si usamos gmail para organizarlos y quitarlos de la bandeja principal.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to send emails stored in /var/spool/mail/root to a gmail inbox&lt;/em&gt; »» &lt;a href=&#34;http://serverfault.com/questions/554922/how-to-send-emails-stored-in-var-spool-mail-root-to-a-gmail-inboxbr/&#34; target=&#34;_blank&#34;&gt;serverfault.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

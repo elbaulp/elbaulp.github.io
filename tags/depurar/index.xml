@@ -31,69 +31,64 @@
 &lt;h1 id=&#34;añadir-un-punto-de-ruptura&#34;&gt;Añadir un punto de ruptura&lt;/h1&gt;
 
 &lt;p&gt;El primer paso para depurar, es establecer un punto de ruptura en la línea deseada. En este caso lo estableceremos en la vista principal (IndexView), en el fichero &lt;em&gt;polls/views.py&lt;/em&gt;. Es necesario importar el módulo &lt;strong&gt;pdb&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# polls/views.py&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
-&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pdb&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;IndexView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ListView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;template_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;polls/index.html&amp;#39;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;context_object_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;latest_poll_list&amp;#39;&lt;/span&gt;
-
-        &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_queryset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-                &lt;span class=&#34;sd&#34;&gt;&amp;quot;&amp;quot;&amp;quot;Return the last five published polls (not including those set to be&lt;/span&gt;
-&lt;span class=&#34;sd&#34;&gt;                published in the future)&lt;/span&gt;
-&lt;span class=&#34;sd&#34;&gt;                &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-                &lt;span class=&#34;n&#34;&gt;pdb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_trace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;## Punto de ruptura&lt;/span&gt;
-                &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-                                &lt;span class=&#34;n&#34;&gt;pub_date__lte&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timezone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;now&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-                       &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-
-&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c&#34;&gt;# polls/views.py&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ...&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pdb&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;IndexView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ListView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;template_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;polls/index.html&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context_object_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;latest_poll_list&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;get_queryset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Return the last five published polls (not including those set to be
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;                published in the future)
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;                &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pdb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_trace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## Punto de ruptura&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub_date__lte&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timezone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;now&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                       &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez establecido el punto de ruptura, lanzamos la aplicación con&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ python manage.py runserver
-Validating models...
-
-&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; errors found
-November 04, &lt;span class=&#34;m&#34;&gt;2013&lt;/span&gt; - 17:58:08
-Django version 1.5.2, using settings &lt;span class=&#34;s1&#34;&gt;&amp;#39;mysite.settings&amp;#39;&lt;/span&gt;
-Development server is running at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ python manage.py runserver
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Validating models...
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; errors found
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;November &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2013&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:58:08
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Django version &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.5.2, using settings &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;mysite.settings&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Development server is running at http://127.0.0.1:8000/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Quit the server with CONTROL-C.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con la aplicación ejecutándose, nos dirigimos a &lt;a href=&#34;http://127.0.0.1:8000/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/&#34;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/a&gt;. Como hemos establecido el punto de ruptura en la vista pincipal (/), el depurador aparecerá en la terminal inmediatamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt; ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;get_queryset&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
--&amp;gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; Poll.objects.filter&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Pdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt; ~/Desarrollo/python-env/djangoTutorialv1.5/polls/views.py&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;get_queryset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-&amp;gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Poll.objects.filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pdb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de aquí la depuración es muy parecida a &lt;strong&gt;gdb&lt;/strong&gt;, lo primero que debe hacerse para familiarizarse con este entorno es leer la ayuda:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Pdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
-
-Documented commands &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &amp;lt;topic&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
-&lt;span class=&#34;o&#34;&gt;========================================&lt;/span&gt;
-EOF    bt         cont      &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt;  jump  pp       run      unt
-a      c          &lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;  &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;    l     q        s        &lt;span class=&#34;k&#34;&gt;until&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt;  cl         d         h       list  quit     step     up
-args   clear      debug     &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;    n     r        tbreak   w
-b      commands   disable   ignore  next  restart  u        whatis
-&lt;span class=&#34;nb&#34;&gt;break&lt;/span&gt;  condition  down      j       p     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;   &lt;span class=&#34;nb&#34;&gt;unalias&lt;/span&gt;  where
-
-Miscellaneous &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; topics:
-&lt;span class=&#34;o&#34;&gt;==========================&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt;  pdb
-
-Undocumented commands:
-&lt;span class=&#34;o&#34;&gt;======================&lt;/span&gt;
-retval  rv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pdb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Documented commands &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;lt;topic&amp;gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;========================================&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;EOF    bt         cont      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  jump  pp       run      unt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;a      c          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;continue&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    l     q        s        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;until&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  cl         d         h       list  quit     step     up
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;args   clear      debug     &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    n     r        tbreak   w
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;b      commands   disable   ignore  next  restart  u        whatis
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  condition  down      j       p     &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unalias&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  where
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Miscellaneous &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt; topics:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==========================&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  pdb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Undocumented commands:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;======================&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;retval  rv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Por ejemplo, con &lt;code&gt;p &amp;lt;exp&amp;gt;&lt;/code&gt; se imprimirá por pantalla el valor de la expresión:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;p Poll.objects.filter&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;pub_date__lte&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;timezone.now&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;.order_by&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)[&lt;/span&gt;:5&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&amp;lt;poll: &lt;span class=&#34;nv&#34;&gt;titulo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Titulo&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;encuesta&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;encuesta&amp;quot;&lt;/span&gt;&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;p Poll.objects.filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub_date__lte&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;timezone.now&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.order_by&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt;poll: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;titulo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Titulo&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;encuesta&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;encuesta&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Que devuelve una sola encuesta, ya que solo existe esta en la base de datos.&lt;/p&gt;
 
 &lt;p&gt;¿Hacéis uso de pdb en vuestras aplicaciones durante su desarrollo?, ¿añadiríais algo al artículo?, compártelo en los comentarios.&lt;/p&gt;

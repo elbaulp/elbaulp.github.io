@@ -39,167 +39,151 @@
 &lt;h1 id=&#34;uso-básico&#34;&gt;Uso básico&lt;/h1&gt;
 
 &lt;p&gt;Veamos un ejemplo sencillo, supongamos el siguiente fichero:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;# fichero.txt
-linea 1
-linea 2
-linea 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;# fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;fichero.txt&lt;/code&gt; será nuestra base.&lt;/p&gt;
 
 &lt;h1 id=&#34;crear-un-parche&#34;&gt;Crear un parche&lt;/h1&gt;
 
 &lt;p&gt;Para crear un parche basta con ejecutar &lt;code&gt;quilt new parche1.diff&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt new parche1.diff
-Patch patches/parche1.diff is now on top
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt new parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Patch patches/parche1.diff is now on top&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;editar-el-fichero&#34;&gt;Editar el fichero&lt;/h1&gt;
 
 &lt;p&gt;Y luego especificamos el fichero sobre el que queremos hacer el parche:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt edit fichero.txt
-File fichero.txt added to patch patches/parche1.diff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt edit fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero.txt added to patch patches/parche1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora podemos empezar a editar &lt;code&gt;fichero.txt&lt;/code&gt;, por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;linea 1
-modificación 1 (Por parche1.diff)
-linea 2
-linea 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;modificación 1 (Por parche1.diff)
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;ver-los-cambios&#34;&gt;Ver los cambios&lt;/h1&gt;
 
 &lt;p&gt;Tras terminar de editar, podemos ver el diff:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt diff
-&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gu&#34;&gt;@@ -1,3 +1,4 @@&lt;/span&gt;
- linea 1
-&lt;span class=&#34;gi&#34;&gt;+modificaci&amp;lt;C3&amp;gt;&amp;lt;B3&amp;gt;n 1 (Por parche1.diff)&lt;/span&gt;
- linea 2
- linea 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;Index: _drafts/fichero.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -1,3 +1,4 @@
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+modificaci&amp;lt;C3&amp;gt;&amp;lt;B3&amp;gt;n 1 (Por parche1.diff)
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;generar-el-parche&#34;&gt;Generar el parche&lt;/h1&gt;
 
 &lt;p&gt;Aún no hemos generado el parche, para crearlo ejecutamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt refresh
-Refreshed patch patches/parche1.diff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt refresh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Refreshed patch patches/parche1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;administrar-parches&#34;&gt;Administrar parches&lt;/h1&gt;
 
 &lt;p&gt;Listo, ahora en el directorio &lt;code&gt;patches/&lt;/code&gt; deberemos tener un fichero llamado &lt;code&gt;parche1.diff&lt;/code&gt; con nuestros cambios. Actualmente solo tenemos uno, si queremos deshacer los cambios y volver al estado original de &lt;code&gt;fichero.txt&lt;/code&gt; basta con hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt pop
-Removing patch patches/parche1.diff
-Restoring fichero.txt
-
-No patches applied
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt pop
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;No patches applied&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como vemos, &lt;code&gt;fichero.txt&lt;/code&gt; vuelve a su estado original:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span&gt;&lt;/span&gt;$ cat fichero.txt
-linea 1
-linea 2
-linea 3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si tuvieramos más de un parche, &lt;code&gt;quilt pop&lt;/code&gt; aceptaría el nombre del parche, o la opción &lt;code&gt;-a&lt;/code&gt; para eliminar todos los parches. Creemos un segundo parche:&lt;/p&gt;
 
 &lt;h1 id=&#34;segundo-parche&#34;&gt;Segundo parche&lt;/h1&gt;
 
 &lt;p&gt;Antes de crear un segundo parche, debemos aplicar el primero, o si tuvieramos varios, todos, para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt push -a
-Applying patch patches/parche1.diff
-patching file fichero.txt
-
-Now at patch patches/parche1.diff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt push -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Now at patch patches/parche1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora estamos en condiciones de crear el nuevo parche:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt new parche2.diff
-Patch patches/parche2.diff is now on top
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt new parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Patch patches/parche2.diff is now on top&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;listar-la-pila-de-parches&#34;&gt;Listar la pila de parches&lt;/h2&gt;
 
 &lt;p&gt;Ahora que tenemos varios parches, podemos ver el orden en el que se aplican con &lt;code&gt;quilt series&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt series
-patches/parche1.diff
-patches/parche2.diff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt series
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patches/parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patches/parche2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El último en la pila es &lt;code&gt;parche2&lt;/code&gt;, ahora mismo está vacío, ya que lo acabamos de crear. Para ester parche vamos a modificar &lt;code&gt;fichero.txt&lt;/code&gt; y crear uno nuevo, &lt;code&gt;fichero2.txt&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt add fichero2.txt
-File fichero2.txt added to patch patches/parche2.diff
-$ quilt add fichero.txt
-File fichero.txt added to patch patches/parche2.diff
-$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Linea creada por parche2.diff&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; fichero.txt
-$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Nuevo Fichero creado por parche2.diff&amp;quot;&lt;/span&gt; &amp;gt; fichero2.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt diff
-&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt&lt;/span&gt;
-&lt;span class=&#34;gu&#34;&gt;@@ -2,3 +2,4 @@ linea 1&lt;/span&gt;
- modificaci&amp;lt;C3&amp;gt;&amp;lt;B3&amp;gt;n 1 (Por parche1.diff)
- linea 2
- linea 3
-&lt;span class=&#34;gi&#34;&gt;+Linea creada por parche2.diff&lt;/span&gt;
-&lt;span class=&#34;gh&#34;&gt;Index: _drafts/fichero2.txt&lt;/span&gt;
-&lt;span class=&#34;gh&#34;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&#34;gd&#34;&gt;--- /dev/null&lt;/span&gt;
-&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt&lt;/span&gt;
-&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@&lt;/span&gt;
-&lt;span class=&#34;gi&#34;&gt;+Nuevo Fichero creado por parche2.diff&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt add fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero2.txt added to patch patches/parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ quilt add fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero.txt added to patch patches/parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Linea creada por parche2.diff&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nuevo Fichero creado por parche2.diff&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; fichero2.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;Index: _drafts/fichero.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -2,3 +2,4 @@ linea 1
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; modificaci&amp;lt;C3&amp;gt;&amp;lt;B3&amp;gt;n 1 (Por parche1.diff)
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+Linea creada por parche2.diff
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;Index: _drafts/fichero2.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- /dev/null
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+Nuevo Fichero creado por parche2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ya solo resta aplicar los cambios al parche, con &lt;code&gt;quilt refresh&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt refresh
-Refreshed patch patches/parche2.diff
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt refresh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Refreshed patch patches/parche2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Cuando terminemos de editar los parches, es recomendable volver al estado inicial, deshaciendo las modificaciones de todos los parches:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt pop -a
-Removing patch patches/parche2.diff
-Restoring fichero.txt
-Removing fichero2.txt
-
-Removing patch patches/parche1.diff
-Restoring fichero.txt
-
-No patches applied
-
-$ ll
-
--rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:31 fichero.txt
-drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:29 patches/
-drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:31 .pc/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt pop -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;No patches applied
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ ll
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:31 fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:29 patches/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:31 .pc/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para volver a aplicarlos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ quilt push -a
-Applying patch patches/parche1.diff
-patching file fichero.txt
-
-Applying patch patches/parche2.diff
-patching file fichero.txt
-patching file fichero2.txt
-
-Now at patch patches/parche2.diff
-
-$ ll
-
--rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 fichero2.txt
--rw-r--r-- &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr   &lt;span class=&#34;m&#34;&gt;89&lt;/span&gt; Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 fichero.txt
-drwxr-xr-x &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:29 patches/
-drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr 4.0K Jan &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 18:32 .pc/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt push -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/parche1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Now at patch patches/parche2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ ll
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;89&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:29 patches/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 .pc/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para ver un ejemplo real, y más complejo, puedes visitar mi repositorio &lt;a href=&#34;https://github.com/elbaulp/myDWM&#34; target=&#34;_blank&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;bibliografía&#34;&gt;Bibliografía&lt;/h1&gt;

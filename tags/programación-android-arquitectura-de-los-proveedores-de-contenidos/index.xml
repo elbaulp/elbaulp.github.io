@@ -38,31 +38,26 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;El registro de la authority se hace en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;androidManifest&lt;/a&gt;. A continuación se muestran dos ejemplos de como se deben registrar proveedores (en este caso de la aplicación &lt;a href=&#34;https://elbauldelprogramador.com/prueba-la-aplicacion-favsites-en-tu/&#34;&gt;FavSItes&lt;/a&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;provider&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.SitesProvider&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;na&#34;&gt;android:authorities=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;com.elbauldelprogramador.provider.FavSites&amp;quot;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;provider&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.SitesProvider&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;android:authorities=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;com.elbauldelprogramador.provider.FavSites&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Un authoroty es como un nombre de dominio para ese CV. Con el authority anterior, las urls de nuestro proveedor comenzarán con ese prefijo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;content://com.elbauldelprogramador.provider.FavSites
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;content://com.elbauldelprogramador.provider.FavSites&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como se ve, los CV, como los sitios web, tienen un nombre de dominio base que actúa como URL inicial.&lt;/p&gt;
 
 &lt;p&gt;Los CV también proporcionan URLs del tipo REST para recuperar o manipular datos. Para el registro que acabamos de ver, el URI para identificar un directorio o una colección de datos en la base de datos de FavSites será:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;content://com.elbauldelprogramador.provider.FavSites/sites
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;content://com.elbauldelprogramador.provider.FavSites/sites&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y para identificar un dato específico:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;content://com.elbauldelprogramador.provider.FavSites/sites/#
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;content://com.elbauldelprogramador.provider.FavSites/sites/#&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde # es el id del dato específico, en el caso de la mi aplicación, un lugar en el mapa. A continuación algunos ejemplos de URIs que se aceptan:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;content://media/internal/images
-content://media/external/images
-content://contacts/people
-content://contacts/people/23
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;content://media/internal/images
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;content://media/external/images
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;content://contacts/people
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;content://contacts/people/23&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Nótese que estos CV (content://media y content://contacts) no tienen una estructura completa como los vistos más arriba. Se debe a que no son CV de terceros, son propios de Android y él es quién los controla.&lt;/p&gt;
 &lt;/blockquote&gt;

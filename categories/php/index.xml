@@ -39,20 +39,18 @@
 &lt;h1 id=&#34;obtener-imágenes-subidas-por-año&#34;&gt;Obtener imágenes subidas por año&lt;/h1&gt;
 
 &lt;p&gt;Tenemos que encontrar el año en que fue subida la imagen. El código que vamos a escribir está fuera del &lt;strong&gt;WordPress loop&lt;/strong&gt;. Por eso utilizamos la función &lt;code&gt;get_the_time()&lt;/code&gt; para encontrar el año de la carga.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;incluir-imágenes-a-la-página&#34;&gt;Incluir imágenes a la página&lt;/h1&gt;
 
 &lt;p&gt;Ahora nuestro trabajo es comprobar si &lt;code&gt;$year&lt;/code&gt; es 2014. En caso afirmativo, añadimos la imagen. En WordPress como hemos mencionado, los detalles de cada archivo se almacenan en la tabla &lt;code&gt;wp_posts&lt;/code&gt; que contiene una columna llamada &lt;code&gt;post_parent&lt;/code&gt;. Esta columna es el punto de conexión para la imagen a una página o entrada. Para una imagen sin adjuntar, el valor &lt;code&gt;post_parent&lt;/code&gt; será 0.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;if(2014 == $year){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    wp_update_post( array(&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    ));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;if(2014 == $year){
+    wp_update_post( array(
+        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,
+        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id
+    ));
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
         </item>
         
@@ -73,24 +71,23 @@
 &lt;h1 id=&#34;crear-el-shortcode&#34;&gt;Crear el shortcode&lt;/h1&gt;
 
 &lt;p&gt;Editamos el archivo &lt;em&gt;functions.php&lt;/em&gt; de nuestro tema y añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function show_category_posts( $atts ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=dateℴ=ASC&amp;amp;posts;_per_page=-1&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    if ( have_posts() ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        while ( have_posts() ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            the_post();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;#39;.get_permalink().&amp;#39;&amp;quot;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    //Reset query&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    wp_reset_query();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $content;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function show_category_posts( $atts ){
+    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
+    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=dateℴ=ASC&amp;amp;posts;_per_page=-1&amp;#39;);
+    if ( have_posts() ){
+        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;
+        while ( have_posts() ){
+            the_post();
+            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#39;.get_permalink().&amp;#39;&amp;#34;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);
+        }
+        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;
+    }
+    //Reset query
+    wp_reset_query();
+    return $content;
+}
+add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
 
 &lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -110,9 +107,8 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mostrar_cat &lt;span class=&#34;nv&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mostrar_cat &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -138,184 +134,180 @@
 &lt;p&gt;Con todo esto en mente busqué cómo crear &lt;strong&gt;errores 404 personalizados&lt;/strong&gt; y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  You&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#some variables for the script to use&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#the administrator email address, according to wordpress&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#gets your blog&amp;#39;s url from wordpress&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$websitename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#sets the blog&amp;#39;s name, according to wordpress&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;lt;p&amp;gt;
+  You
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#some variables for the script to use
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#the administrator email address, according to wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#gets your blog&amp;#39;s url from wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#sets the blog&amp;#39;s name, according to wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#politely blames the user for all the problems they caused
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tried going to &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#starts assembling an output paragraph
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;All is not lost!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;elseif&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#this will help the user find what they want, and email me of a bad link
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;clicked a link to&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#now the message says You clicked a link to...
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#setup a message to be sent to me
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A user tried to go to &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; and received a 404 (page not found) error. &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;It wasn&amp;#39;t their fault, so try fixing it.
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;        They came from &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bad Link To &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;From: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;noreply@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;?&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#email you about problem
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;An administrator has been emailed
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;          about this problem, too.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#set a friendly message
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;
+  and it doesn&amp;#39;t exist.
 
-  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;#politely blames the user for all the problems they caused&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;tried going to &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#starts assembling an output paragraph&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;All is not lost!&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;elseif&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;#this will help the user find what they want, and email me of a bad link&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;clicked a link to&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#now the message says You clicked a link to...&lt;/span&gt;
-        &lt;span class=&#34;c1&#34;&gt;#setup a message to be sent to me&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;A user tried to go to &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-        &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; and received a 404 (page not found) error. &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;It wasn&amp;#39;t their fault, so try fixing it.&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;        They came from &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Bad Link To &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;From: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;noreply@&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;?&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#email you about problem&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;An administrator has been emailed&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;          about this problem, too.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#set a friendly message&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  and it doesn&amp;#39;t exist.&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  You can click back&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  and try again or search for what you&amp;#39;re looking for:&lt;/span&gt;
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;  You can click back
+  and try again or search for what you&amp;#39;re looking for:
 
 
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/searchform.php&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Esta porción de código hay que pegarla en el archivo 404.php de la plantilla en uso. Con este código informamos al lector que la página no existe y se proporciona un formulario de búsqueda, además se envía un correo al administrador del blog informándo de este error 404. Aún podemos tratar el error de una manera más amigable y ofrecer más opciones. Por ejemplo las últimas publicaciones del blog:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  Publicaciones recientes&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-         &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;publish&amp;#39;) );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;           foreach( $recent_posts as $recent ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;       echo &amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;lt;h4&amp;gt;
+  Publicaciones recientes
+&amp;lt;/h4&amp;gt;
+&amp;lt;ul&amp;gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$recent_posts&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt; &amp;#39;publish&amp;#39;) );
+           foreach( $recent_posts as $recent ){
+       echo &amp;#39;
 
-&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;a href=&amp;quot;&amp;#39; . get_permalink($recent[&amp;quot; id=&amp;quot;ID&amp;quot;&amp;gt;&amp;#39; .   $recent[&amp;quot;post_title&amp;quot;].&amp;#39;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/li&amp;gt; &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;           }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        ?&amp;gt;&lt;/span&gt;
+  &amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34; id=&amp;#34;ID&amp;#34;&amp;gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt; &amp;#39;;
+           }
+        ?&amp;gt;
 
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;$query = new WP_Query( $query_args );&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$query_args&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
+$query = new WP_Query( $query_args );
 
-&lt;span class=&#34;x&#34;&gt;if($query-&amp;gt;have_posts()){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   echo &amp;quot;&lt;/span&gt;
+if($query-&amp;gt;have_posts()){
+   echo &amp;#34;
 
-&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  Quizá buscaba...&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;&amp;quot;;&lt;/span&gt;
+&amp;lt;h4&amp;gt;
+  Quizá buscaba...
+&amp;lt;/h4&amp;gt;&amp;#34;;
 
-&lt;span class=&#34;x&#34;&gt;   // The Loop&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   echo &amp;#39;&lt;/span&gt;
+   // The Loop
+   echo &amp;#39;
 
-&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;     while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        echo &amp;#39;&lt;/span&gt;
+&amp;lt;ul&amp;gt;
+  &amp;#39;;
+     while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
+        echo &amp;#39;
 
-&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    ?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;          &amp;lt;a href=&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot; title=&amp;quot;Permanent Link to &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-       &lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-       &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-
-       &lt;span class=&#34;c1&#34;&gt;// Reset Post Data&lt;/span&gt;
-       &lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+  &amp;lt;li&amp;gt;
+    &amp;#39;;
+    ?&amp;gt;
+          &amp;lt;a href=&amp;#34;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;lt;/a&amp;gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;// Reset Post Data
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Al juntarlo todo, la estructura del código queda así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  Ha&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&#34;c1&#34;&gt;#some variables for the script to use&lt;/span&gt;
-   &lt;span class=&#34;c1&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#the administrator email address, according to wordpress&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#gets your blog&amp;#39;s url from wordpress&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$websitename&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#sets the blog&amp;#39;s name, according to wordpress&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;lt;p&amp;gt;
+  Ha
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#some variables for the script to use
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#the administrator email address, according to wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#gets your blog&amp;#39;s url from wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get_bloginfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#sets the blog&amp;#39;s name, according to wordpress
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#politely blames the user for all the problems they caused
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;intentado ir a &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#starts assembling an output paragraph
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;¡No está todo perdido!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;elseif&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#this will help the user find what they want, and email me of a bad link
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;pinchado en un enlace a&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#now the message says You clicked a link to...
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#setup a message to be sent to me
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A user tried to go to &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; and received a 404 (page not found) error. &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;It wasn&amp;#39;t their fault, so try fixing it.
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;      They came from &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bad Link To &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;From: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;lt;noreply@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;?&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#email you about problem
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;El administrador ha sido informado sobre este error.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#set a friendly message
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;
+     y no existe.
 
-   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;c1&#34;&gt;#politely blames the user for all the problems they caused&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;intentado ir a &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#starts assembling an output paragraph&lt;/span&gt;
-      &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;¡No está todo perdido!&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;elseif&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;c1&#34;&gt;#this will help the user find what they want, and email me of a bad link&lt;/span&gt;
-      &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;pinchado en un enlace a&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#now the message says You clicked a link to...&lt;/span&gt;
-      &lt;span class=&#34;c1&#34;&gt;#setup a message to be sent to me&lt;/span&gt;
-      &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;A user tried to go to &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-      &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; and received a 404 (page not found) error. &amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-      &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;It wasn&amp;#39;t their fault, so try fixing it.&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;      They came from &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;HTTP_REFERER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
-      &lt;span class=&#34;nb&#34;&gt;mail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Bad Link To &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-      &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;From: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;noreply@&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;?&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#email you about problem&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El administrador ha sido informado sobre este error.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#set a friendly message&lt;/span&gt;
-     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-     &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;     y no existe.&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Puede volver atrás&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;     e intentarlo de nuevo o buscar lo que desee en el formulario:&lt;/span&gt;
-
-
-&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/searchform.php&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   $query = new WP_Query( $query_args );&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;   if($query-&amp;gt;have_posts()){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;      echo &amp;quot;&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  Quizá buscaba...&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;&amp;quot;;&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;      // The Loop&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;      echo &amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;           echo &amp;#39;&lt;/span&gt;
-
-&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    ?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;             &amp;lt;a href=&amp;quot;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot; title=&amp;quot;Permanent Link to &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;quot;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-          &lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-          &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-          &lt;span class=&#34;c1&#34;&gt;// Reset Post Data&lt;/span&gt;
-          &lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;  Puede volver atrás
+     e intentarlo de nuevo o buscar lo que desee en el formulario:
 
 
-&lt;span class=&#34;x&#34;&gt;    &amp;lt;br /&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;      Publicaciones recientes&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    &amp;lt;/h4&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;publish&amp;#39;) );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;         foreach( $recent_posts as $recent ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            echo &amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;
+&amp;lt;/p&amp;gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$query_args&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
+   $query = new WP_Query( $query_args );
 
-&lt;span class=&#34;x&#34;&gt;      &amp;lt;li&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;a href=&amp;quot;&amp;#39; . get_permalink($recent[&amp;quot; id=&amp;quot;ID&amp;quot;&amp;gt;&amp;#39; .   $recent[&amp;quot;post_title&amp;quot;].&amp;#39;&amp;lt;/a&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;&amp;lt;/li&amp;gt; &amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;         }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;      ?&amp;gt;&lt;/span&gt;
+   if($query-&amp;gt;have_posts()){
+      echo &amp;#34;
 
-&lt;span class=&#34;x&#34;&gt;    &amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&amp;lt;h4&amp;gt;
+  Quizá buscaba...
+&amp;lt;/h4&amp;gt;&amp;#34;;
 
+      // The Loop
+      echo &amp;#39;
+
+&amp;lt;ul&amp;gt;
+  &amp;#39;;
+        while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
+           echo &amp;#39;
+
+  &amp;lt;li&amp;gt;
+    &amp;#39;;
+    ?&amp;gt;
+             &amp;lt;a href=&amp;#34;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;lt;/a&amp;gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;// Reset Post Data
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;
+
+
+    &amp;lt;br /&amp;gt;
+&amp;lt;h4&amp;gt;
+      Publicaciones recientes
+    &amp;lt;/h4&amp;gt;
+&amp;lt;ul&amp;gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$recent_posts&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt; &amp;#39;publish&amp;#39;) );
+         foreach( $recent_posts as $recent ){
+            echo &amp;#39;
+
+      &amp;lt;li&amp;gt;
+&amp;lt;a href=&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34; id=&amp;#34;ID&amp;#34;&amp;gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&amp;lt;/a&amp;gt;
+&amp;lt;/li&amp;gt; &amp;#39;;
+         }
+      ?&amp;gt;
+
+    &amp;lt;/ul&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Fuente | &lt;a href=&#34;http://codex.wordpress.org/Creating_an_Error_404_Page&#34; target=&#34;_blank&#34;&gt;Creating an Error 404 Page&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         

@@ -45,24 +45,21 @@
 &lt;h2 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h2&gt;
 
 &lt;p&gt;Dentro de &lt;em&gt;repo1&lt;/em&gt; añadiremos un nuevo &lt;em&gt;remote&lt;/em&gt; que sea el &lt;em&gt;repo2&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;configurar-el-hook-gancho-post-commit&#34;&gt;Configurar el hook (gancho) post-commit&lt;/h2&gt;
 
 &lt;p&gt;Dentro del repositorio, crearemos un nuevo &lt;em&gt;hook&lt;/em&gt; que se ejecute cada vez que hagamos un &lt;em&gt;commit&lt;/em&gt; en &lt;em&gt;repo1&lt;/em&gt;. Por cada &lt;em&gt;commit&lt;/em&gt;, ejecutaremos un &lt;em&gt;git push repo2&lt;/em&gt;, lo cual enviará los cambios al &lt;em&gt;repo2&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
-mv .git/hooks/pre-commit.sample .git/hooks/post-commit
-&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-commit
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-commit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En contenido del &lt;em&gt;hook&lt;/em&gt;, para que se vea más claro es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-git push repo2 -f --mirror
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 -f --mirror&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el &lt;em&gt;commit&lt;/em&gt; del &lt;em&gt;repo1&lt;/em&gt;, sigue siendo necesario ejecutar &lt;code&gt;git push&lt;/code&gt; en &lt;em&gt;repo1&lt;/em&gt;&lt;/p&gt;
@@ -72,18 +69,16 @@ git push repo2 -f --mirror
 &lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta de master&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
 
 &lt;p&gt;Para activarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
-mv .git/hooks/pre-commit.sample .git/hooks/post-merge
-&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 master:master&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-merge
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-merge
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 master:master&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-merge&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El contenido del &lt;em&gt;hook&lt;/em&gt; es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-git push repo2 master:master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 master:master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;git push repo2 master:master&lt;/code&gt; podría leerse como: &lt;em&gt;Publica en el repo2 en la rama master, el contenido de la rama master del repo actual&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -104,9 +99,8 @@ git push repo2 master:master
 &lt;h1 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h1&gt;
 
 &lt;p&gt;Para ello basta ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git filter-branch --index-filter &lt;span class=&#34;s1&#34;&gt;&amp;#39;git rm -r --cached --ignore-unmatch &amp;lt;file/dir&amp;gt;&amp;#39;&lt;/span&gt; HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git filter-branch --index-filter &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;git rm -r --cached --ignore-unmatch &amp;lt;file/dir&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; HEAD&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Y reemplazar &lt;code&gt;&amp;lt;file/dir&amp;gt;&lt;/code&gt; con la ruta de nuestro fichero.&lt;/p&gt;
@@ -114,23 +108,20 @@ git push repo2 master:master
 &lt;h1 id=&#34;2-eliminar-por-completo-el-rastro-del-fichero&#34;&gt;2. Eliminar por completo el rastro del fichero&lt;/h1&gt;
 
 &lt;p&gt;El comando anterior crea una copia de seguridad en caso de que hayamos cometido un error, si ejecutamos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git lola --name-status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git lola --name-status&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Veremos un commit parecido a este (&lt;code&gt;* SHA1 (refs/original/refs/heads/master) mensaje del commit&lt;/code&gt;)&lt;/p&gt;
 
 &lt;p&gt;En este commit aún está el fichero problemático, para borrarlo definitivamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git update-ref -d refs/original/refs/heads/master
-$ git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all
-$ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git update-ref -d refs/original/refs/heads/master
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git reflog expire --expire&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;now --all
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git gc --prune&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;now&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;3-enviar-los-cambios&#34;&gt;3. Enviar los cambios&lt;/h1&gt;
 
 &lt;p&gt;Una vez hecho esto, solo resta enviar los cambios a Github:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git push origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git push origin master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y habremos solucionado el problema.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h1&gt;
@@ -191,22 +182,19 @@ $ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
 &lt;h1 id=&#34;rainbow-bash&#34;&gt;Rainbow Bash&lt;/h1&gt;
 
 &lt;p&gt;Con este &lt;em&gt;prompt&lt;/em&gt; disponemos de iconos y varios temas a elegir. Los pasos de instalación se pueden seguir en el repositorio original, pero básicamente es ejecutar esto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/slok/rainbow-bash.git $HOME/.rainbow-bash
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone https://github.com/slok/rainbow-bash.git &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/.rainbow-bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y añadir al &lt;code&gt;.bashrc&lt;/code&gt; lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Prompt&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$HOME/.rainbow-bash
-&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; $RBW_PATH/init.sh
-rbw_load_theme simple
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Prompt
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/.rainbow-bash
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$RBW_PATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/init.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;rbw_load_theme simple&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;temas&#34;&gt;Temas&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Rainbow Bash&lt;/em&gt; tiene varios temas a elegir, para cambiarlos basta con modificar la línea&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;rbw_load_theme simple
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;rbw_load_theme simple&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;oh-my-git&#34;&gt;Oh My Git&lt;/h1&gt;
@@ -224,13 +212,11 @@ rbw_load_theme simple
 &lt;h2 id=&#34;instalar-oh-my-git&#34;&gt;Instalar Oh My Git&lt;/h2&gt;
 
 &lt;p&gt;Ya solo resta instalar Oh My Git, es tan simple como descargar el repositorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/arialdomartini/oh-my-git.git ~/.oh-my-git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone https://github.com/arialdomartini/oh-my-git.git ~/.oh-my-git&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y añadir a nuestro &lt;code&gt;.bash_aliases&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.oh-my-git/prompt.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ~/.oh-my-git/prompt.sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de ahora, al meternos en una carpeta con un repositorio git dentro, deberíamos ver lo siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -240,15 +226,14 @@ rbw_load_theme simple
 &lt;h2 id=&#34;volver-a-nuestro-prompt-por-defecto&#34;&gt;Volver a nuestro prompt por defecto&lt;/h2&gt;
 
 &lt;p&gt;Si cuando nos salgamos del repositorio queremos volver a nuestro &lt;em&gt;prompt&lt;/em&gt;, el que elegimos en &lt;em&gt;Rainbow Bash&lt;/em&gt; por ejemplo, basta con modificar &lt;code&gt;bashrc&lt;/code&gt; o &lt;code&gt;bash_aliases&lt;/code&gt;, en función de dónde tengáis vuestra configuración, al lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.oh-my-git/prompt.sh
-
-&lt;span class=&#34;nv&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$HOME/.rainbow-bash
-&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; $RBW_PATH/init.sh
-
-&lt;span class=&#34;nv&#34;&gt;PS1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;RBW_THEME_SIMPLE&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Tema elegido de Rainbow Bash&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;omg_ungit_prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;$PS1 &lt;span class=&#34;c1&#34;&gt;# Volvemos al prompt original si no estamos en un repo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ~/.oh-my-git/prompt.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/.rainbow-bash
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$RBW_PATH&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/init.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PS1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$RBW_THEME_SIMPLE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Tema elegido de Rainbow Bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;omg_ungit_prompt&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$PS1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; # Volvemos al prompt original si no estamos en un repo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 
 &lt;p&gt;A mi personalmente me resulta muy útil esta configuración de &lt;em&gt;prompts&lt;/em&gt;, espero que a vosotros también. No dudéis en comentar!&lt;/p&gt;
@@ -654,10 +639,9 @@ Muchos archivos son para uso local y no aportan información al repositorio. Par
 &lt;/ul&gt;
 
 &lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
-$ git config diff.exif.textconv exiftool
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ‘*.jpeg &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;exif’ » .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git config diff.exif.textconv exiftool&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
@@ -668,12 +652,11 @@ $ git config diff.exif.textconv exiftool
 &lt;/ul&gt;
 
 &lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave &lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;quot;%ad&amp;quot; -1`&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;c&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`git log --pretty=format:&amp;#34;%ad&amp;#34; -1`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;puts&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -682,17 +665,16 @@ $ git config diff.exif.textconv exiftool
 &lt;/ul&gt;
 
 &lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
-
-git add date_test.txt .gitattributes
-git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;quot;Testing date expansion in Git&amp;quot;&lt;/span&gt;
-rm date_test.txt
-git checkout date_test.txt
-cat date_test.txt
-&lt;span class=&#34;nv&#34;&gt;$Da&lt;/span&gt;te: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; » .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git add date_test.txt .gitattributes
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git commit -m &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Testing date expansion in Git&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;rm date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git checkout date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat date_test.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$Date&lt;/span&gt;&lt;span class=&#34;&#34;&gt;: Tue Apr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:26:52 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -0700$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ &amp;quot;Sincronización de proyectos en git con hooks (ganchos&#34;&gt;Hay dos tipos&lt;/a&gt;&amp;rdquo;), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
@@ -702,12 +684,12 @@ cat date_test.txt
 &lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
 
 &lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
-*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
-/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
-build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
-doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;*.a &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# no .a files
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;*!lib.a &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/TODO &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# only ignore the root TODO file, not subdir/TODO*
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;build/ &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ignore all files in the build/ directory*
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
         </item>
         
         <item>
@@ -723,9 +705,8 @@ doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/ser
 &lt;h1 id=&#34;git-ec&#34;&gt;git ec&lt;/h1&gt;
 
 &lt;p&gt;Como no, el primer alias tenía que ser uno que nos permita editar la configuración de git rápidamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git config --global alias.ec &lt;span class=&#34;s2&#34;&gt;&amp;quot;config --global -e&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git config --global alias.ec &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;config --global -e&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de ahora, podremos abrir la configuración de git con nuestro editor por defecto con &lt;code&gt;git ec&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;El resto del artículo asumirá que se tiene la configuración abierta con un editor, los aliases se escribirán directamente en la sección &lt;code&gt;[alias]&lt;/code&gt; de dicho fichero.&lt;/p&gt;
@@ -733,48 +714,41 @@ doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/ser
 &lt;h1 id=&#34;git-co-br-cm-st&#34;&gt;git co, br, cm, st&lt;/h1&gt;
 
 &lt;p&gt;Estos &lt;em&gt;aliases&lt;/em&gt; pretenden más que facilitar la escritura de &lt;code&gt;checkout&lt;/code&gt;, &lt;code&gt;branch&lt;/code&gt;, &lt;code&gt;commit -am&lt;/code&gt; y &lt;code&gt;status&lt;/code&gt;. Básicamente los comandos que más uso.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
-&lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
-&lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
-&lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;co&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; checkout
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; branch
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cm&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -am
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; status&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Veamos ahora una serie de aliases que he extraido de &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; target=&#34;_blank&#34; title=&#34;github Flow&#34;&gt;haacked&lt;/a&gt;:&lt;/p&gt;
 
 &lt;h1 id=&#34;actualizar-el-directorio-de-trabajo&#34;&gt;Actualizar el directorio de trabajo&lt;/h1&gt;
 
 &lt;p&gt;Para simplificar estos dos comandos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git pull --rebase --prune
-git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git pull --rebase --prune
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule update --init --recursive&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;en los que el primero obtiene los cambios desde el servidor, si se tienen commits locales, se ponen al principio de los descargados (&lt;code&gt;rebase&lt;/code&gt;), y con &lt;code&gt;prune&lt;/code&gt; se eliminan ramas que ya no existan en el servidor. El segundo simplemente actualiza recursivamente submódulos. El  &lt;em&gt;alias&lt;/em&gt; quedará:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;up&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git pull --rebase --prune &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git submodule update --init --recursive&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Este &lt;em&gt;alias&lt;/em&gt; es algo distinto, la exclamación indica que se va a ejecutar un comando en la &lt;em&gt;shell&lt;/em&gt;, es decir, podemos ejecutar cualquier comando, no solo de git. En este caso, se están ejecutando dos comandos git.&lt;/p&gt;
 
 &lt;h1 id=&#34;git-save-git-wip-git-undo-git-amend&#34;&gt;git save, git wip, git undo, git amend&lt;/h1&gt;
 
 &lt;p&gt;Estos dos &lt;em&gt;alias&lt;/em&gt; están destinados a cuando simplemente queremos guardar nuestros cambios, ya sea porque tenemos que irnos a hacer otras cosas, o simplemente no hemos acabado el trabajo y aún no tenemos un nombre para el commit adecuado. Con ellos, se guardan los cambios con un mensaje de commit &lt;code&gt;SAVEPOINT&lt;/code&gt; o &lt;code&gt;WIP&lt;/code&gt;, en función del alias que os guste más:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;WIP&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;save&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git add -A &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git commit -m &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wip&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -am &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;WIP&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez volvamos a trabajar, simplemente ejecutamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;undo&lt;/code&gt;, que elimina el último commit, pero deja intactos los cambios:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;undo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; reset HEAD~1 --mixed&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;O si simplemente queremos modificar el mensaje del commit, usamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;amend&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;amend&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -a --amend&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;resetear-el-directorio-de-trabajo-adecuadamente-git-wipe&#34;&gt;Resetear el directorio de trabajo adecuadamente, git wipe&lt;/h1&gt;
 
 &lt;p&gt;Cuantas veces hemos comenzado a trabajar o intentar añadir algo al código y al final lo único que hicimos fue ensuciar todo el directorio, montones de líneas de código sin ordenar etc. Lo mejor en estos casos es descartar todo y volver a empezar. Para ello es posible usar &lt;code&gt;git reset HEAD --hard&lt;/code&gt;, pero esto borrará todo, sin que quede constancia de lo que hicimos. Para descartar el código, pero que quede constancia de lo que hicimios, por si alguna vez nos hace falta, crearemos el &lt;em&gt;alias&lt;/em&gt; &lt;em&gt;wipe&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;wipe&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git add -A &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git commit -qm &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git reset HEAD~1 --hard&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hace un commit de todo lo que hay en el directorio de trabajo para luego hacer un &lt;em&gt;hard reset&lt;/em&gt; y eliminar dicho commit. A pesar de ello, el commit seguirá ahí, en la historia del repositorio, aunque inalcanzable. Estos commits son un poco complejos de recuperar, pero al menos seguimos teniendo aquel trabajo del que no quedamos del todo convencidos. Quizá algún día recuerdes que necesitabas una línea de código que escribiste. Para recuperarlo hay que ejecutar &lt;code&gt;git reflog&lt;/code&gt; y buscar el SHA del commit que tenga como mensaje “WIPE SAVEPOINT”.&lt;/p&gt;
 
 &lt;h1 id=&#34;alias-para-logs&#34;&gt;Alias para logs&lt;/h1&gt;
@@ -788,9 +762,8 @@ git submodule update --init --recursive
 &lt;/figure&gt;
 
 &lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;listar-commits-y-ficheros-modificados-git-ll&#34;&gt;Listar commits y ficheros modificados, git ll&lt;/h1&gt;
 
 &lt;figure&gt;
@@ -798,109 +771,97 @@ git submodule update --init --recursive
 &lt;/figure&gt;
 
 &lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --numstat
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;ll&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --numstat&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;mostar-commits-de-forma-compacta-y-con-fechas-git-lds&#34;&gt;Mostar commits de forma compacta y con fechas, git lds&lt;/h1&gt;
 
 &lt;figure&gt;
     &lt;a href=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34;&gt;&lt;img sizes=&#34;(min-width: 766px) 766px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitlds.png&#34; title=&#34;21 alias útiles para git&#34; alt=&#34;21 alias útiles para git&#34; width=&#34;766px&#34; height=&#34;502px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;lds&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;short&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si lo preferimos con fechas relativas, usaremos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;git ld&lt;/code&gt;:&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;a href=&#34;https://elbauldelprogramador.com/img/gitld.png&#34;&gt;&lt;img sizes=&#34;(min-width: 785px) 785px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/gitld.png&#34; title=&#34;21 alias útiles para git&#34; alt=&#34;21 alias útiles para git&#34; width=&#34;785px&#34; height=&#34;498px&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;ld&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;relative&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;buscar-ficheros-y-contenido-dentro-de-ficheros-grep&#34;&gt;Buscar ficheros y contenido dentro de ficheros (grep)&lt;/h1&gt;
 
 &lt;p&gt;Para buscar ficheros con conteniendo el nombre indicado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git ls-files | grep -i&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!git ls-files | grep -i&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git f one
-
-P3/oneway/Utils.py
-P3/oneway/__init__.py
-P3/oneway/ej1.py
-P3/oneway/ej2.py
-P3/oneway/ej3.py
-P3/oneway/ej4.py
-P3/oneway/ej5.py
-P3/oneway/ej6.py
-P3/oneway/ej7.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git f one
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/Utils.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/__init__.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej1.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej2.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej3.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej4.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej5.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej6.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P3/oneway/ej7.py&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para buscar contenido dentro de todo el repositorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
-&lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep -Ii
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gr&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep -Ii&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git grep Rabin
-
-P1/modularArith/ej4.py:def MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
-P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;90221078753392184154149622269679731705920869572364323146777389106744249167893287091491005751893264013854756094230384816436985035887367570198390830836626929620930395458607390051335962764852769424941031051670131521265969408350800112779692655340042253991970492761524977413231930703094065023050574077317620529581736775256036443993928340221545607375549860405933153255776836414051570996984167934585339322850189347872718439350738428272565094611168867981011370318335242028953808721309056435214502065537377043&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git grep Rabin
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P1/modularArith/ej4.py:def MillerRabin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;P1/modularArith/ej4.py:    print MillerRabin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;90221078753392184154149622269679731705920869572364323146777389106744249167893287091491005751893264013854756094230384816436985035887367570198390830836626929620930395458607390051335962764852769424941031051670131521265969408350800112779692655340042253991970492761524977413231930703094065023050574077317620529581736775256036443993928340221545607375549860405933153255776836414051570996984167934585339322850189347872718439350738428272565094611168867981011370318335242028953808721309056435214502065537377043&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para buscar desde el directorio raíz:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{} echo &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;gra&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git rev-parse --show-toplevel&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; | xargs -I{} echo &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;listar-todos-los-aliases-git-la&#34;&gt;Listar todos los aliases, git la&lt;/h1&gt;
 
 &lt;p&gt;Ahora que ya llevamos unos cuantos &lt;em&gt;aliases&lt;/em&gt;, quizá sean dificil de recordar hasta que nos acostumbremos, por ello, podemos crear un &lt;em&gt;alias&lt;/em&gt; que liste todos los nuestros &lt;em&gt;aliases&lt;/em&gt; :-):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git config -l | grep alias | cut -c 7-&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;la&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!git config -l | grep alias | cut -c 7-&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;listar-la-última-etiqueta-git-lt&#34;&gt;Listar la última etiqueta, git lt&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-&lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;lasttag&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; describe --tags --abbrev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lt&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; describe --tags --abbrev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;alias-para-hacer-merges-git-ours-git-theirs&#34;&gt;Alias para hacer merges, git ours, git theirs&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;ours&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theirs&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Eso es todo, comentad vuestras &lt;em&gt;alias&lt;/em&gt; para completar este artículo!&lt;/p&gt;
 
 &lt;h1 id=&#34;recopilación&#34;&gt;Recopilación&lt;/h1&gt;
 
 &lt;p&gt;Aquí se muestran todos los &lt;em&gt;alias&lt;/em&gt; vistos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;alias&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;ec&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; config --global -e
-  &lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
-  &lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
-  &lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
-  &lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
-  &lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
-  &lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;WIP&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
-  &lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
-  &lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
-  &lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate
-  &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --numstat
-  &lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
-  &lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;quot;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;quot;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
-  &lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git ls-files | grep -i&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
-  &lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
-  &lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{}   echo &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;TOPLEVEL/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!git config -l | grep alias | cut -c 7-&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-  &lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0
-  &lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; config --global -e
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;co&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; checkout
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; branch
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cm&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -am
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;st&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; status
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;up&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git pull --rebase --prune &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git submodule update --init --recursive
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;save&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git add -A &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git commit -m &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wip&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -am &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;WIP&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;undo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; reset HEAD~1 --mixed
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;amend&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; commit -a --amend
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wipe&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !git add -A &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git commit -qm &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git reset HEAD~1 --hard
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ll&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --numstat
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lds&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;short
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ld&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log --pretty&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;format:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --decorate --date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;relative
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!git ls-files | grep -i&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep -Ii
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gr&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep -Ii
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gra&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git rev-parse --show-toplevel&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; | xargs -I{}   echo &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;la&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!git config -l | grep alias | cut -c 7-&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lasttag&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; describe --tags --abbrev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lt&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; describe --tags --abbrev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ours&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theirs&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;; }; f&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -951,40 +912,34 @@ P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/
 &lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
 
 &lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
-$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /directorio/desado
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
 
 &lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bash config/prepare.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bash config/prepare.sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
 
 &lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
 
 &lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;usuario&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;aaaa@aaaa.com&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El Baúl del Programador&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;usuario&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;aaaa@aaaa.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;El Baúl del Programador&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El título del sitio WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;nombreDelRepo&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;git@github.com:TuUsuario/nombreDelRepo.git&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nombreDelRepo&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;git@github.com:TuUsuario/nombreDelRepo.git&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
 
 &lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
@@ -992,71 +947,65 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.miweb.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/la/web
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web/en/local&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/la/web/en/local
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
 
 &lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://desarrollo.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/el/subdominio/de/la/web/&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://desarrollo.miweb.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/el/subdominio/de/la/web/
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
 
 &lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
 
 &lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_user&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_user&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
 
 &lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
 
 &lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production wp:setup:remote&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
 
 &lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
 
 &lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production deploy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
 
 &lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
@@ -1066,29 +1015,24 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
 
 &lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:push&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:pull&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:backup&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
 
 &lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production uploads:sync&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
 
 &lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production wp:core:update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
@@ -1118,33 +1062,29 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;h1 id=&#34;creando-el-script-para-smudge&#34;&gt;Creando el script para smudge&lt;/h1&gt;
 
 &lt;p&gt;Bastará con crear un &lt;em&gt;script&lt;/em&gt; que contenga:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;quot;url: &amp;quot;)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;#34;url: &amp;#34;)&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Lo llamaremos &lt;code&gt;siteurl.smudge&lt;/code&gt;, y le daremos permisos de ejecución.&lt;/p&gt;
 
 &lt;h1 id=&#34;creando-el-script-para-clean&#34;&gt;Creando el script para clean&lt;/h1&gt;
 
 &lt;p&gt;Similar al anterior:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;quot;url: http:\/\/elbauldelprogramador\.com&amp;quot;)&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;#34;url: http:\/\/elbauldelprogramador\.com&amp;#34;)&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;añadir-los-scripts-a-los-filtros&#34;&gt;Añadir los scripts a los filtros&lt;/h1&gt;
 
 &lt;p&gt;Solo resta añadir los filtros a la configuración de git:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git config filter.siteurl.smudge siteurl.smudge
-$ git config filter.siteurl.clean siteurl.clean
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git config filter.siteurl.smudge siteurl.smudge
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git config filter.siteurl.clean siteurl.clean&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los &lt;em&gt;scripts&lt;/em&gt; tienen que estar en el &lt;em&gt;PATH&lt;/em&gt; del sistema, y tener permisos de ejecucion.
 {: .notice}&lt;/p&gt;
 
 &lt;h1 id=&#34;el-gitattributes&#34;&gt;El Gitattributes&lt;/h1&gt;
 
 &lt;p&gt;Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero &lt;code&gt;.gitattributes&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;_config.yml &lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;siteurl
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;_config.yml &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;siteurl&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Gracias Julián.&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;

@@ -33,35 +33,30 @@
 &lt;h1 id=&#34;instalar-android-resource-remover&#34;&gt;Instalar Android Resource Remover&lt;/h1&gt;
 
 &lt;p&gt;Bastante sencillo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;pip install android-resource-remover
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;pip install android-resource-remover&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;ejecutar-android-resource-remover&#34;&gt;Ejecutar Android Resource Remover&lt;/h1&gt;
 
 &lt;p&gt;Bastante sencillo también, basta con ejecutar&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;android-resource-remover
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;android-resource-remover&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;en el directorio del proyecto a limpiar.&lt;/p&gt;
 
 &lt;h2 id=&#34;problemas-en-la-instalación&#34;&gt;Problemas en la instalación&lt;/h2&gt;
 
 &lt;p&gt;Si por algún motivo, el proceso de instalación no finaliza correctamente, es posible que falten los siguientes paquetes en el sistema.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install libxml2-dev libxslt1-dev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo apt-get install libxml2-dev libxslt1-dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En mi caso tuve que instalarlos.&lt;/p&gt;
 
 &lt;p&gt;También es posible que sea necesario actualizar la librería xml con&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;easy_install --upgrade lxml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;easy_install --upgrade lxml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;uso-avanzado&#34;&gt;Uso avanzado&lt;/h1&gt;
 
 &lt;p&gt;En mi caso, me encontré con problemas al usar el programa sin argumentos. Concretamente los pasos que seguí fueron:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;lint --xml lint-result.xml -Wall --quiet --showall .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;lint --xml lint-result.xml -Wall --quiet --showall .&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El significado de los parámetros es:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -73,9 +68,8 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Una vez finalizado el análisis, es posible eliminar los recursos sin usar usando &lt;em&gt;Android Resource Remover&lt;/em&gt; con los siguientes parámetros:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;android-resource-remover --xml lint-result.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;android-resource-remover --xml lint-result.xml&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;eliminar-identificadores-sin-usar&#34;&gt;Eliminar Identificadores sin usar&lt;/h1&gt;
 
 &lt;p&gt;Aunque &lt;em&gt;Android Resource Remover&lt;/em&gt; por defecto eliminar únicamente recursos de tipo imágenes, ficheros xml etc, es posible hacer una ligera modificación al código para que elimine los identificadores sin usar. La línea a modificar es &lt;code&gt;root.findall(&#39;.//issue[@id=&amp;quot;UnusedResources&amp;quot;]&#39;)&lt;/code&gt;, basta modificarla a &lt;code&gt;root.findall(&#39;.//issue[@id=&amp;quot;UnusedIDs&amp;quot;]&#39;)&lt;/code&gt; y ejecutar de nuevo los pasos mencionados arriba.&lt;/p&gt;

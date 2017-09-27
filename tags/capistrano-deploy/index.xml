@@ -58,40 +58,34 @@
 &lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
 
 &lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
-$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /directorio/desado
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
 
 &lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bash config/prepare.sh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bash config/prepare.sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
 
 &lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
 
 &lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;usuario&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;aaaa@aaaa.com&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;El Baúl del Programador&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;usuario&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;aaaa@aaaa.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;El Baúl del Programador&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# El título del sitio WordPress&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;nombreDelRepo&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;git@github.com:TuUsuario/nombreDelRepo.git&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nombreDelRepo&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;git@github.com:TuUsuario/nombreDelRepo.git&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
 
 &lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
@@ -99,71 +93,65 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://www.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.miweb.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/la/web
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://localhost&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/la/web/en/local&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/la/web/en/local
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
 
 &lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;http://desarrollo.miweb.com&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;IP.DEL.SERVIDOR.&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;USUARIO SSH&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/ruta/donde/reside/el/subdominio/de/la/web/&lt;/span&gt;
-&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;quot;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot; # Rama del repositorio que se subirá&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://desarrollo.miweb.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;%w{web app db}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/ruta/donde/reside/el/subdominio/de/la/web/
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; # Rama del repositorio que se subirá&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
 
 &lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
 
 &lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_user&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;localhost&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;db_name&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;root&lt;/span&gt;
-  &lt;span class=&#34;l l-Scalar l-Scalar-Plain&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p p-Indicator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_user&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_user&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;localhost&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;db_name&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
 
 &lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
 
 &lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production wp:setup:remote&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
 
 &lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
 
 &lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production deploy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
 
 &lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
@@ -173,29 +161,24 @@ $ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
 &lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
 
 &lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:push&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:pull&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production db:backup&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
 
 &lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production uploads:sync&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
 
 &lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ bundle &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cap production wp:core:update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;

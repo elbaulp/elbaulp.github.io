@@ -35,20 +35,17 @@
 &lt;p&gt;El script es válido para &lt;strong&gt;versiones de gnome &amp;lt; 3.8&lt;/strong&gt;. Lo he probado en Linux Mint Debian Edition y en Ubuntu 14.04. En este último tuve que instalar gnome-shell.&lt;/p&gt;
 
 &lt;p&gt;Para instalar gnome-shell:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ sudo apt-get install gnome-shell
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install gnome-shell&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para comprobar la versión de gnome:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ gnome-shell --version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ gnome-shell --version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;instalar-imagemagick-y-gawk&#34;&gt;instalar ImageMagick y gawk&lt;/h4&gt;
 
 &lt;p&gt;Usaremos funciones de ImageMagick para convertir las imágenes, y gawk para filtrar por expresiones. Para instalarlos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ sudo apt-get install gawk
-    cris@cris ~ $ sudo apt-get install imagemagick
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install gawk
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install imagemagick&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;hr /&gt;
 
 &lt;h2 id=&#34;expliación-del-script&#34;&gt;Expliación del script&lt;/h2&gt;
@@ -58,13 +55,12 @@
 &lt;h4 id=&#34;declaración-de-variables&#34;&gt;Declaración de variables&lt;/h4&gt;
 
 &lt;p&gt;Inicialmente declaramos las variables con la ruta de los comandos que vamos a tilizar frecuentemente. No es obligatorio, pero es recomendable. La variable &lt;strong&gt;ROUTE&lt;/strong&gt; contiene la ruta del directorio donde guardamos las imágenes que queremos poner de fondo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/gconftool-2&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/sort&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/gawk&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/usr/bin/convert&amp;quot;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;/miRuta/*&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gconftool-2&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/sort&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gawk&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/convert&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/miRuta/*&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -77,86 +73,74 @@
 &lt;h4 id=&#34;tomar-imágenes&#34;&gt;Tomar imágenes&lt;/h4&gt;
 
 &lt;p&gt;tomamos aleatoriamente una imágen de &lt;strong&gt;miRuta&lt;/strong&gt; para la terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e $ROUTE&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;shuf -n &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Limpiamos la ruta, quedándonos solo con el nombre de la imágen:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILE&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Redimensionamos la imágen (sólo si es necesario, por ejemplo, si las imágenes que queremos usar son tamaño fondo de escritorio). Para no modificar la imágen original ni guardar muchas copias innecesarias, la guardamos en /tmp.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    convert &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILE&amp;quot;&lt;/span&gt; -resize %50 &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    convert &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -resize %50 &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como mis imágenes son tamaño fondo de escritorio, las redimensiono a la mitad de su tamaño para que se aprecien mejor en el terminal.&lt;/p&gt;
 
 &lt;p&gt;Opcional: tomamos otra imágen aleatoriamente de la carpeta para fondo de escritorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e $ROUTE&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;shuf -n &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;ponemos-la-imágen-de-fondo-en-el-terminal&#34;&gt;Ponemos la imágen de fondo en el terminal&lt;/h4&gt;
 
 &lt;p&gt;modificamos algunas configuraciones que vienen por defecto antes de aplicar los cambios, para que tengan efecto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;image&amp;quot;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#solido por defecto&lt;/span&gt;
-
-    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
-
-    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
-
-    $GCONFT --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;span class=&#34;s2&#34;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#solido por defecto
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora, ya podemos tomar la imágen redimensionada y ponerla como imágen de fondo del terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Por último, ponemos un color oscuro de fondo del terminal y un nivel de opacidad alto, para que se vea mejor el texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;#181824243131&amp;quot;&lt;/span&gt;
-
-    $GCONFT --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;span class=&#34;s2&#34;&gt;&amp;quot;0.78&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#181824243131&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0.78&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;ponemos-color-del-texto-a-juego&#34;&gt;Ponemos color del texto a juego&lt;/h4&gt;
 
 &lt;p&gt;Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de esos colores. Con &lt;strong&gt;convert&lt;/strong&gt; podemos indicar el número de colores que deseamos sacar y la profundidad. Luego los ordenamos segun su orden numérico y filtramos solo el  código hexadecimal de los colores con &lt;strong&gt;gawk&lt;/strong&gt;. Lo guardamos en un fichero de texto llamado paleta.txt que se creara en /tmp.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;$C&lt;/span&gt;NVRT &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILECONV&amp;quot;&lt;/span&gt; -colors &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -depth &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; -format &lt;span class=&#34;s1&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt; histogram:info:- &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; $SORT --general-numeric-sort &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; $GAWK &lt;span class=&#34;s1&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;/tmp/paleta.txt&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$CNVRT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -colors &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -depth &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; histogram:info:- &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --general-numeric-sort &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para finalizar, abrimos el fichero temporal &lt;strong&gt;paleta.txt&lt;/strong&gt; y leemos  6 primeras líneas, es decir, los 6 primeros colores:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;#abrir fichero&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt; /tmp/paleta.txt
-    &lt;span class=&#34;c1&#34;&gt;#leer 6 lineas&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color1 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color2 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color3 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color4 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color5 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color6 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;3
-    &lt;span class=&#34;c1&#34;&gt;#cerrar&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#abrir fichero
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt; /tmp/paleta.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#leer 6 lineas
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color1 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color2 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color3 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color4 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color5 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color6 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#cerrar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;y ponemos el último color leído como color de texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    $GCONFT --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$c&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;olor6&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$color6&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Lo de tomar el 6º color es porque como están ordenados de más claro a más oscuro, los colores claros &amp;ldquo; centrales&amp;rdquo; son los que mejor resultados dan. No obstante, puedes modificarlo dependiendo de tus fotos. El script no es infalible, la carpeta que yo uso tiene 700 imagenes y siempre hay  imágenes con las que falla eligiendo el color de texto más adecuado para su lectura, sobre todo en las  imágenes muy oscuras  donde no hay ningún color claro. Si se te ocurre alguna mejora, ¡comentala!&lt;/p&gt;
 
 &lt;p&gt;Opcional: si tambien quieres cambiar la imágen del escritorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background picture-uri &lt;span class=&#34;s2&#34;&gt;&amp;quot;file:///&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$F&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ILED&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    gsettings &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; org.gnome.desktop.background picture-uri &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;file:///&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILED&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;disfruta-y-luce-tus-terminales&#34;&gt;Disfruta y luce tus terminales&lt;/h4&gt;
 
 &lt;h4 id=&#34;planifica-la-ejecución&#34;&gt;Planifica la ejecución&lt;/h4&gt;
 
 &lt;p&gt;Para no tener que andar lanzando el script, puedes planificarlo con &lt;strong&gt;crontab&lt;/strong&gt; para que se ejecute, por ejemplo cada vez que inicias el sistema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;    cris@cris ~ $ crontab -e &lt;span class=&#34;c1&#34;&gt;#para abrir contab&lt;/span&gt;
-    @reboot /miRuta_al_script/CambiaTerminales.sh &lt;span class=&#34;c1&#34;&gt;# añadir tarea&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ crontab -e &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#para abrir contab
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    @reboot /miRuta_al_script/CambiaTerminales.sh # añadir tarea&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h4 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h4&gt;
 
 &lt;figure&gt;
@@ -194,26 +178,24 @@
 &lt;h1 id=&#34;cambiar-la-resolución-de-pantalla-de-la-tty&#34;&gt;Cambiar la resolución de pantalla de la tty&lt;/h1&gt;
 
 &lt;p&gt;Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio &lt;strong&gt;&lt;em&gt;/etc/grub.d/&lt;/em&gt;&lt;/strong&gt;. El fichero &lt;strong&gt;10_linux&lt;/strong&gt; se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, &lt;strong&gt;vga&lt;/strong&gt;, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
---------+-----------------------------------------------------
- &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                  0x302
- &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  0x300   0x301   0x303    0x305    0x307     0x31C
-&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x310   0x313    0x316    0x319     0x31D
-&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x311   0x314    0x317    0x31A     0x31E
-&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x312   0x315    0x318    0x31B     0x31F
-&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;--------+-----------------------------------------------------
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  0x302
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  0x300   0x301   0x303    0x305    0x307     0x31C
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          0x310   0x313    0x316    0x319     0x31D
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          0x311   0x314    0x317    0x31A     0x31E
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          0x312   0x315    0x318    0x31B     0x31F
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bits &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para mi caso concreto eligiré &lt;strong&gt;0x31B&lt;/strong&gt;. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de &lt;strong&gt;10_linux&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;quot;Loading Linux %s ...&amp;quot;&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-    cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; EOF&lt;/span&gt;
-&lt;span class=&#34;s&#34;&gt;         echo    &amp;#39;$message&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;s&#34;&gt;         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B&lt;/span&gt;
-&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;initrd&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;quot;Loading initial ramdisk ...&amp;quot;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;gettext_printf &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Loading Linux %s ...&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cat &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; EOF
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;         echo    &amp;#39;$message&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -n &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;initrd&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;gettext_printf &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Loading initial ramdisk ...&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Este trozo del script es el encargado de pasar los parámetros a la secuencia de inicio.&lt;/p&gt;
 
 &lt;p&gt;La segunda forma es mucho más cómoda, al igual que en el apartado anterior con la variable &lt;strong&gt;GRUB_GFXMODE&lt;/strong&gt;, hay otra llamada &lt;strong&gt;GRUB_CMDLINE_LINUX&lt;/strong&gt;. Es a esta variable a la que le asignamos el parámetro anterior, quedando &lt;strong&gt;GRUB_CMDLINE_LINUX=&amp;ldquo;vga=0x31B&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
@@ -221,38 +203,36 @@
 &lt;h1 id=&#34;aplicar-los-cambios&#34;&gt;Aplicar los cambios&lt;/h1&gt;
 
 &lt;p&gt;Para aplicar los cambios es necesario regenerar el archivo &lt;strong&gt;/boot/grub/grub.cfg&lt;/strong&gt; con el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# update-grub2&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# update-grub2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;### BEGIN /etc/grub.d/10_linux ###&lt;/span&gt;
-menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
- load_video
-  insmod gzio
- insmod part_msdos
-   insmod ext2
- &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;
-   search --no-floppy --fs-uuid --set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;
- linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro &lt;span class=&#34;nv&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x31B quiet
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;
- initrd  /boot/initrd.img-3.2.0-4-amd64
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64 (recovery mode)&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   load_video
-  insmod gzio
- insmod part_msdos
-   insmod ext2
- &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;
-   search --no-floppy --fs-uuid --set&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;
- linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;span class=&#34;nv&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro single &lt;span class=&#34;nv&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x31B
-  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;
- initrd  /boot/initrd.img-3.2.0-4-amd64
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;### END /etc/grub.d/10_linux ###&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;### BEGIN /etc/grub.d/10_linux ###
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;menuentry &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --class debian --class gnu-linux --class gnu --class os &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; load_video
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  insmod gzio
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; insmod part_msdos
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   insmod ext2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   search --no-floppy --fs-uuid --set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0x31B quiet
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; initrd  /boot/initrd.img-3.2.0-4-amd64
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;menuentry &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64 (recovery mode)&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --class debian --class gnu-linux --class gnu --class os &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   load_video
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  insmod gzio
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; insmod part_msdos
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   insmod ext2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;(hd0,msdos1)&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   search --no-floppy --fs-uuid --set&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;root ae9e059a-75a2-4f19-9631-206fc1fd65fa
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Loading Linux 3.2.0-4-amd64 ...&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linux   /boot/vmlinuz-3.2.0-4-amd64 &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UUID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ae9e059a-75a2-4f19-9631-206fc1fd65fa ro single &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vga&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0x31B
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; initrd  /boot/initrd.img-3.2.0-4-amd64
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;### END /etc/grub.d/10_linux ###&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Como se aprecia, aparece el parámetro &lt;strong&gt;vga&lt;/strong&gt;.&lt;/p&gt;</description>
         </item>
         
@@ -269,13 +249,11 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
 &lt;h1 id=&#34;xrootconsole&#34;&gt;xrootconsole&lt;/h1&gt;
 
 &lt;p&gt;&lt;code&gt;xrootconsole&lt;/code&gt; muestra en una ventana transparente el fichero que se le proporcione como entrada (o la entrada estándar stdin). Su objetivo es ser lo más simple posible y consumir pocos recursos. Este programa no es interactivo, por lo que solo servirá para mostrar información y nada más. Un ejemplo de uso:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrootconsole &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;archivo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrootconsole &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;archivo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Un ejemplo más completo sería el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -291,18 +269,17 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
 &lt;/figure&gt;
 
 &lt;p&gt;En este caso estoy mostrando salidas del comando &lt;a href=&#34;https://elbauldelprogramador.com/comandos-ss-iproute2-linux/&#34; title=&#34;Algunos comandos útiles con iproute2&#34;&gt;ss&lt;/a&gt; usando un &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; que he creado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-        ss &amp;gt; /tmp/ss.out
-        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
-        &lt;span class=&#34;nv&#34;&gt;XROOT_PID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$!&lt;/span&gt;
-        sleep 30
-        &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; $XROOT_PID
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        ss &amp;gt; /tmp/ss.out
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        xrootconsole --wrap --bottomup -geometry 230x50+10+20 /tmp/ss.out &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;XROOT_PID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$!&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        sleep &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kill&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$XROOT_PID&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si decides usar este programa, es probable que quieras agregarlo al &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; de inicio de tu entorno de escritorio favorito, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/tags/xmonad&#34;&gt;xmonad&lt;/a&gt; u &lt;a href=&#34;https://elbauldelprogramador.com/tags/openbox&#34;&gt;openbox&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Como he mencionado, xrootconsole no es interactivo, si quieres ejecutar algo como htop, necesitas Tilda.&lt;/p&gt;
@@ -310,24 +287,21 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
 &lt;h1 id=&#34;tilda&#34;&gt;Tilda&lt;/h1&gt;
 
 &lt;p&gt;Tilda es una ventana de terminal muy configurable. No tiene bordes y permanece oculta al escritorio hasta que se pulsa una tecla. Lo primero que hay que hacer es instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo aptitude install tilda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo aptitude install tilda&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez instalado, lo ejecutamos y haremos algunos cambios:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Pestaña General    » desabilita “Always on top”
-Pestaña Appearance » habilita la transparencia y fíjalo al 100%
-Pestaña Colors     » Elige “Green on Black” o “Personalize”
-Pestaña Scrolling  » Desabilítalo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Pestaña General    » desabilita “Always on top”
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Appearance » habilita la transparencia y fíjalo al &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Colors     » Elige “Green on Black” o “Personalize”
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Pestaña Scrolling  » Desabilítalo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.&lt;/p&gt;
 
 &lt;h1 id=&#34;eterm&#34;&gt;Eterm&lt;/h1&gt;
 
 &lt;p&gt;La última opción es Eterm, otra terminal que podemos usar para tener de fondo de pantalla mostrando información. Por ejemplo mostrar la salida del &lt;strong&gt;dmesg&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Eterm --buttonbar &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Eterm --buttonbar &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --scrollbar off -f white -n dmesg -g &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;211&lt;/span&gt;&lt;span class=&#34;&#34;&gt;×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una breve explicación de los argumentos:&lt;/p&gt;
 
 &lt;ul&gt;

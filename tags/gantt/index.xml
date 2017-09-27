@@ -43,92 +43,91 @@
 &lt;h1 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h1&gt;
 
 &lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
-canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-hgrid style/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-vgrid=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;*1&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;,
-today=1,
-today rule/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
-draw=black!64,
-dash pattern=on 3.5pt off 4.5pt,
-line width=1.5pt
-&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-today label font=&lt;span class=&#34;k&#34;&gt;\small\bfseries&lt;/span&gt;,
-title/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=none&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-title label font=&lt;span class=&#34;k&#34;&gt;\bfseries\footnotesize&lt;/span&gt;,
-title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below=7pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-include title in canvas=false,
-bar label font=&lt;span class=&#34;k&#34;&gt;\mdseries\small\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-bar label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=2cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-bar/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;draw=none, fill=black!63&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-bar incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=barblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-bar progress label font=&lt;span class=&#34;k&#34;&gt;\mdseries\footnotesize\color&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;black!70&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-group incomplete/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=groupblue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-group left shift=0,
-group right shift=0,
-group height=.5,
-group peaks tip position=0,
-group label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;left=.6cm&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-group progress label font=&lt;span class=&#34;k&#34;&gt;\bfseries\small&lt;/span&gt;,
-link/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;-latex, line width=1.5pt, linkred&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-link label font=&lt;span class=&#34;k&#34;&gt;\scriptsize\bfseries&lt;/span&gt;,
-link label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=-2pt and 0pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del diagrama&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[grid]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Septiembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Octubre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Noviembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Diciembre&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Enero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Febrero&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitle&lt;/span&gt;[
-title label node/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;below left=7pt and -3pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Semana:&lt;span class=&#34;k&#34;&gt;\quad&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\gantttitlelist&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;2,...,24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttgroup&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[progress=65]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Título del grupo&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=100,
-name=bar1
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 1&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=14,
-name=bar2
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 2&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=25,
-name=bar3
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 3&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=56,
-name=bar4
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 4&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=100,
-name=bar5
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 5&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=80,
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 6&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=49,
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 7&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;11&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Hito 2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=35,
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 8&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;12&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;22&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttbar&lt;/span&gt;[
-progress=0,
-]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Actividad 9&lt;span class=&#34;nb&#34;&gt;}}{&lt;/span&gt;23&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Q6 report&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttmilestone&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;M2: Project finished&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;24&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;&#34;&gt;\begin{ganttchart}[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;canvas/.append style={fill=none, draw=black!5, line width=.75pt},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;hgrid style/.style={draw=black!5, line width=.75pt},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;vgrid={*1{draw=black!5, line width=.75pt}},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;today=1,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;today rule/.style={
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;draw=black!64,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;dash pattern=on 3.5pt off 4.5pt,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;line width=1.5pt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;today label font=\small\bfseries,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;title/.style={draw=none, fill=none},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;title label font=\bfseries\footnotesize,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;title label node/.append style={below=7pt},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;include title in canvas=false,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;bar label font=\mdseries\small\color{black!70},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;bar label node/.append style={left=2cm},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;bar/.append style={draw=none, fill=black!63},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;bar incomplete/.append style={fill=barblue},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;bar progress label font=\mdseries\footnotesize\color{black!70},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group incomplete/.append style={fill=groupblue},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group left shift=0,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group right shift=0,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group height=.5,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group peaks tip position=0,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group label node/.append style={left=.6cm},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;group progress label font=\bfseries\small,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;link/.style={-latex, line width=1.5pt, linkred},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;link label font=\scriptsize\bfseries,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;link label node/.append style={below left=-2pt and 0pt},
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{1}{24}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Título del diagrama}{24} \\[grid]
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Septiembre}{4}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Octubre}{4}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Noviembre}{4}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Diciembre}{4}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Enero}{4}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle{Febrero}{4}\\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitle[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;title label node/.append style={below left=7pt and -3pt}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{Semana:\quad1}{1}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\gantttitlelist{2,...,24}{1} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttgroup[progress=65]{Título del grupo}{1}{24} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=100,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;name=bar1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 1}}{1}{1} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=14,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;name=bar2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 2}}{2}{2} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=25,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;name=bar3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 3}}{3}{3} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=56,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;name=bar4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 4}}{4}{4} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=100,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;name=bar5
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 5}}{5}{7} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=80,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 6}}{8}{8} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=49,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 7}}{9}{11} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttmilestone{Hito 1}{11}{11}  \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttmilestone{Hito 2}{12}{12} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=35,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 8}}{12}{22} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttbar[
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;progress=0,
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;]{\textbf{Actividad 9}}{23}{24} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttmilestone{Q6 report}{24}{24} \\
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttmilestone{M2: Project finished}{24}{24}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttlink[link type=f-s]{bar1}{bar2}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\ganttlink[link type=f-s]{bar4}{bar5}
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{ganttchart}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;comandos-básicos-del-diagrama-de-gantt&#34;&gt;Comandos básicos del diagrama de Gantt&lt;/h1&gt;
 
 &lt;p&gt;Veamos algunos de los comandos más útiles:&lt;/p&gt;

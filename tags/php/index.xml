@@ -29,29 +29,25 @@
 &lt;h1 id=&#34;colocar-los-botones-sociales-al-principio-de-los-artículos&#34;&gt;Colocar los botones sociales al principio de los artículos&lt;/h1&gt;
 
 &lt;p&gt;El primer paso es editar el archivo &lt;strong&gt;&lt;em&gt;modules/sharedaddy/sharing-service.php&lt;/em&gt;&lt;/strong&gt; del plugin y eliminar o comentar las últimas líneas, que deberían ser:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
+add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.&lt;/p&gt;
 
 &lt;p&gt;Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;sharing_display()&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;sharing_display()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama &lt;strong&gt;&lt;em&gt;content-single.php&lt;/em&gt;&lt;/strong&gt;. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.&lt;/p&gt;
 
 &lt;h1 id=&#34;mostrar-los-botones-sociales-al-final-del-artículo-en-la-página-principal&#34;&gt;Mostrar los botones sociales al final del artículo en la página principal&lt;/h1&gt;
 
 &lt;p&gt;En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado &lt;strong&gt;&lt;em&gt;loop.php&lt;/em&gt;&lt;/strong&gt;, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace &lt;strong&gt;Seguir leyendo&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &amp;lt;span class=&amp;quot;meta-nav&amp;quot;&amp;gt;→&amp;lt;/span&amp;gt;&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;echo sharing_display();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &amp;lt;span class=&amp;#34;meta-nav&amp;#34;&amp;gt;→&amp;lt;/span&amp;gt;&amp;#39;);
+echo sharing_display();&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -87,13 +83,12 @@
 &lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   $content = &amp;quot;AQUI TU CONTENIDO POR DEFECTO&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt; return $content;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
+function my_default_content( $content ) {
+   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
+ return $content;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
@@ -113,19 +108,17 @@
             <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
 
 &lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;// Short code&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;// Short code
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$content&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
 
 &lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
@@ -150,54 +143,50 @@
 
 &lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
 &lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;//[foo]&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;function foo_demo( $atts ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt; return &amp;quot;Esto es una prueba.&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;//[foo]
+function foo_demo( $atts ){
+ return &amp;#34;Esto es una prueba.&amp;#34;;
+}
+add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 
 &lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
 
 &lt;p&gt;Edita o crea un artículo y añade el shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;foo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;foo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Guárdalo y haz clic en publicar o vista previa.&lt;/p&gt;
 
 &lt;h1 id=&#34;cómo-pasar-parámetros-o-atributos-a-un-shortcode&#34;&gt;Cómo pasar parámetros o atributos a un shortcode&lt;/h1&gt;
 
 &lt;p&gt;La API del shortcode facilita mucho la tarea para poder añadirle parámetros como estos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;rap&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Nach&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Rock&amp;quot;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;Linkin Park&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;music &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;rap&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nach&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;music &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Rock&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Linkin Park&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Añade lo siguiente a tu archivo&amp;nbsp;&lt;strong&gt;functions.php :&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;// shortcode [music]&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;function show_music( $atts ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   $music_details=&amp;quot;&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;   // get attibutes and set defaults&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        extract(shortcode_atts(array(&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                &amp;#39;date&amp;#39; =&amp;gt; 0&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;       ), $atts));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    // Display info&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $music_details = &amp;#39;&amp;lt;div class=&amp;quot;info&amp;quot;&amp;gt;&amp;lt;ul&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Genero: &amp;#39; .$genero. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Autor: &amp;#39; .$autor. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Fecha: &amp;#39; .$date. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// shortcode [music]
+function show_music( $atts ){
+   $music_details=&amp;#34;&amp;#34;;
+   // get attibutes and set defaults
+        extract(shortcode_atts(array(
+                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;date&amp;#39; =&amp;gt; 0
+       ), $atts));
+    // Display info
+    $music_details = &amp;#39;&amp;lt;div class=&amp;#34;info&amp;#34;&amp;gt;&amp;lt;ul&amp;gt;&amp;#39;;
+    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Genero: &amp;#39; .$genero. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
+    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Autor: &amp;#39; .$autor. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
+    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Fecha: &amp;#39; .$date. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
+    $music_details .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;;
 
-&lt;span class=&#34;x&#34;&gt;    return $music_details;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;//add our shortcode music&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+    return $music_details;
+}
+//add our shortcode music
+add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
+add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -267,18 +256,279 @@
 &lt;p&gt;Luego, por otro lado, tienes que asegurarte que &lt;strong&gt;tu servidor web canaliza todas las peticiones hacia tu archivo &lt;code&gt;index.php&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;En Apache:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;RewriteEngine On
-RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-f
-RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;RewriteEngine On
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteCond %&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;REQUEST_FILENAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt; !-f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RewriteRule ^ index.php &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;QSA,L&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-   try_files   $uri $uri/ /index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;location / &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   try_files   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$uri&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$uri&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/ /index.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo instalar y configurar Nginx con php5-fpm</title>
+            <link>https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/</guid>
+            <description>&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/02/nginx-logo.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/02/nginx-logo.png&#34;
+            alt=&#34;instalar y configurar nginx&#34;
+            title=&#34;instalar y configurar nginx&#34;
+            sizes=&#34;(min-width: 350px) 350px, 100vw&#34;
+            width=&#34;350&#34;
+            height=&#34;90&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Nginx (Pronunciado engine-x) es un servidor &lt;a href=&#34;https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/&#34;&gt;HTTP&lt;/a&gt; de alto rendimiento, gratuito, software libre y &lt;a href=&#34;https://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso&#34; target=&#34;_blank&#34;&gt;proxy inverso&lt;/a&gt;, así como un servidor proxy &lt;a href=&#34;https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol&#34; target=&#34;_blank&#34;&gt;IMAP&lt;/a&gt;/&lt;a href=&#34;https://es.wikipedia.org/wiki/Post_Office_Protocol&#34; target=&#34;_blank&#34;&gt;POP3&lt;/a&gt;. Desarrollado por Igor Sysoev. Acualmente el &lt;a href=&#34;http://news.netcraft.com/archives/2012/01/03/january-2012-web-server-survey.html&#34; target=&#34;_blank&#34;&gt;12.18%&lt;/a&gt; de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h1&gt;
+
+&lt;p&gt;Antes de poder compilar nginx, es necesario instalar unos cuantos paquetes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# apt-get install build-essential libssl-dev libpcre3-dev&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El paquete &lt;code&gt;build-essential&lt;/code&gt; contiene las herramientas básicas para compilar programas desde código fuente, las otras dos librerías son necesarias para nginx durante el proceso de compilación.&lt;/p&gt;
+
+&lt;h1 id=&#34;descargar-y-compilar-nginx&#34;&gt;Descargar y compilar Nginx&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ wget http://nginx.org/download/nginx-1.2.6.tar.gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Descomprimimos el fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ tar zxvf nginx-1.2.6.tar.gz&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Una vez descomprimido, entramos en el directorio y compilamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; nginx-1.2.6
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;~/nginx-1.2.6$ ./configure --sbin-path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;~/nginx-1.2.6$ make
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;~/nginx-1.2.6$ sudo make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para consultar qué modulos hay disponibles hay que visitar la &lt;a href=&#34;http://wiki.nginx.org/Modules&#34; target=&#34;_blank&#34;&gt;pagina oficial de Nginx&lt;/a&gt; y decidir cuales queremos habilitar. Con la opción &lt;code&gt;--sbin-path=/usr/local/sbin&lt;/code&gt; establecemos la ruta en la que se instalará el ejecutable. Tras compilar se mostrará información de la localización de los distintos ficheros:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nginx path prefix: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx binary file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/sbin&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx configuration prefix: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/conf&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx configuration file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/conf/nginx.conf&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx pid file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/nginx.pid&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx error log file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/error.log&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http access log file: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/local/nginx/logs/access.log&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http client request body temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;client_body_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http proxy temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;proxy_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http fastcgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fastcgi_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http uwsgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;uwsgi_temp&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nginx http scgi temporary files: &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Es necesario descargar un script que permita detener, reiniciar e iniciar nginx, podemos descargar el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo mv nginx /etc/init.d/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo chmod +x /etc/init.d/nginx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo chown root:root /etc/init.d/nginx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
+
+&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# update-rc.d nginx defaults&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ahora estamos en condiciones de ejecutar nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /etc/init.d/nginx start
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ok &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Starting Nginx Server...:.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones &lt;strong&gt;localhost&lt;/strong&gt;. Si todo ha ido bien deberíamos ver esta pantalla:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/instalar-nginx-en-debian-1024x818.png&#34; alt=&#34;instalar nginx en debian&#34; width=&#34;1024px&#34; height=&#34;818px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Usando firebug se puede comprobar que efectivamente se está corriendo un servidor nginx:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 641px) 641px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/instalar-nginx-en-debian2.png&#34; alt=&#34;instalar nginx en debian2&#34; width=&#34;641px&#34; height=&#34;150px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;modificando-la-configuración-por-defecto&#34;&gt;Modificando la configuración por defecto&lt;/h1&gt;
+
+&lt;p&gt;Sustituimos la configuración por defecto por esta:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;user  www-data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;worker_processes  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pid        /var/run/nginx.pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;error_log  logs/error.log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;events &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    worker_connections  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    include       mime.types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    default_type  application/octet-stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_buffers &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt; 8k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_disable &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_proxied any&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    log_format  main  &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    access_log  logs/access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    sendfile        on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    keepalive_timeout  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    index              index.html index.htm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    server &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        listen       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        server_name localhost&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        root html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; access_log  logs/host.access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        location ~ /&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                deny all&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                access_log off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                log_not_found off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Se ha cambiado el usuario del servidor de “*nobody*” a “*www-data*”, éste último es el usuario por defecto para servidores webs.&lt;/li&gt;
+&lt;li&gt;Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.&lt;/li&gt;
+&lt;li&gt;Se habilita la compresión gzip para reducir el ancho de banda consumido.&lt;/li&gt;
+&lt;li&gt;Se define el formato que tendrán los ficheros de log.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Cambiamos los permisos de los ficheros que contienen la web y reiniciamos nginx para aplicar los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo chown -R www-data:www-data html/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ sudo service nginx destroy &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sudo service nginx start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;instalar-php5-fpm&#34;&gt;Instalar php5-fpm&lt;/h1&gt;
+
+&lt;p&gt;En lugar de instalar php5, instalaremos php5-fpm (&lt;em&gt;FastCGI Process Manager&lt;/em&gt;), una implementación alternativa con algunas características adicionales.&lt;/p&gt;
+
+&lt;p&gt;En ubuntu, ejecutamamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# apt-get install php5-fpm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En debian agregamos el repositorio al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;deb http://packages.dotdeb.org stable all
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;deb-src http://packages.dotdeb.org stable all&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apt-get update
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;wget http://www.dotdeb.org/dotdeb.gpg
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat dotdeb.gpg &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sudo apt-key add -&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Instalamos php:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Lo iniciamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# /etc/init.d/php5-fpm start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la configuración:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;user  www-data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;worker_processes  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pid        /var/run/nginx.pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;error_log  logs/error.log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;events &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    worker_connections  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    include       mime.types&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    default_type  application/octet-stream&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_buffers &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt; 8k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_disable &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_proxied any&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    log_format  main  &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    access_log  logs/access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    sendfile        on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    keepalive_timeout  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    index              index.php index.html index.htm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    upstream php &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        server &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    server &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        listen       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        server_name localhost&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        root html&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  access_log  logs/host.access.log  main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        location ~ /&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                deny all&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                access_log off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                log_not_found off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        location ~ &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php$ &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                include fastcgi_params&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                fastcgi_index index.php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                fastcgi_param SCRIPT_FILENAME &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$document_root$fastcgi_script_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                fastcgi_pass php&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Los principales cambios realizados son los siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Se ha añadido &lt;code&gt;index.php&lt;/code&gt; antes de &lt;code&gt;index.html index.htm&lt;/code&gt; para dar prioridad a los archivos php.&lt;/li&gt;
+&lt;li&gt;El bloque &lt;code&gt;upstream php&lt;/code&gt; que apunta a &lt;code&gt;PHP-FPM&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Un manejador para archivos php &lt;code&gt;location ~ \.php$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para terminar, añadimos los siguientes parámetros al final del archivo &lt;em&gt;/usr/local/nginx/fastcgi_params&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;fastcgi_connect_timeout &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_send_timeout &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;180&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_read_timeout &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;180&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_buffer_size 128k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_buffers &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; 256k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_busy_buffers_size 256k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_temp_file_write_size 256k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fastcgi_intercept_errors on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para aplicar los cambios, reiniciamos nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# service nginx restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutando archivos php.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Learn how to setup a web server pt2: Installing Nginx and PHP&lt;/em&gt; »» &lt;a href=&#34;http://blog.bryanbibat.net/2011/12/19/learn-how-to-setup-a-web-server-pt2-installing-nginx-and-php/&#34; target=&#34;_blank&#34;&gt;blog.bryanbibat.net&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HOWTO install php5-fpm on Debian Squeeze&lt;/em&gt; »» &lt;a href=&#34;http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/&#34; target=&#34;_blank&#34;&gt;fak3r.com&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -329,9 +579,8 @@ Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-grat
 
 &lt;p&gt;Lo primero es instalar symfony, en este caso voy a instalar la versión 2.3, que es la versión menor con soporte ahora mismo, ya que quiero que sea compatible con el máximo de versiones posible y para ello lo mejor es crearlo sobre la menor versión.
 Lo instalamos usando el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony 2.3.0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.3.0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;creamos-la-base-del-bundle&#34;&gt;Creamos la base del bundle&lt;/h1&gt;
 
 &lt;p&gt;Una vez instalado, creamos dentro de vendors el directorio del bundle siguiendo la estructura en la que queramos que luego se instale. En este caso voy a usar la estructura smsup\smsup-api-bundle.&lt;/p&gt;
@@ -339,83 +588,75 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  use Symfony\Component\DependencyInjection\ContainerBuilder;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\DependencyInjection\Extension;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-&lt;span class=&#34;x&#34;&gt;class SmsupapiExtension extends Extension&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    public function load(array $configs, ContainerBuilder $container)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+class SmsupapiExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;services:
-  smsup.smsupapi.sender:
-      class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;services:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  smsup.smsupapi.sender:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      class: smsup&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;&lt;span class=&#34;&#34;&gt;msupapiBundle&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;&lt;span class=&#34;&#34;&gt;lases&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;&lt;span class=&#34;&#34;&gt;msupSender&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class SmsupSender {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function Send($mensaje)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    echo &amp;quot;Su mensaje es: &amp;quot; . $mensaje;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class SmsupSender {
+  public function Send($mensaje)
+  {
+    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle;
 
-&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\Bundle\Bundle;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class SmsupapiBundle extends Bundle&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+class SmsupapiBundle extends Bundle
+{
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
 
 &lt;p&gt;Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada útil aun, vamos a subirlo a nuestro repositorio git y a añadirlo a packagist para que pueda ser descargado usando composer. Para esto debemos añadir el archivo composer.json, en el que vamos a definir nuestro bundle. En nuestro caso quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;smsup/smsup-api-bundle&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;symfony-bundle&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;description&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Bundle Symfony2 para el uso de la api de smsup.es para el envio de sms&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;keywords&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;sms&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;sms api&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;bundle sms&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;homepage&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;https://www.smsup.es&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;license&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;MIT&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;require&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;quot;php&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;gt;=5.3.2&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;quot;smsup/smsuplib&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;~2.0&amp;quot;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
-  &lt;span class=&#34;nt&#34;&gt;&amp;quot;autoload&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nt&#34;&gt;&amp;quot;psr-4&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;quot;smsup\\SmsupapiBundle\\&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;smsup/smsup-api-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;symfony-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bundle Symfony2 para el uso de la api de smsup.es para el envio de sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;keywords&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sms api&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;bundle sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;homepage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https://www.smsup.es&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;license&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MIT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;require&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt;=5.3.2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;smsup/smsuplib&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;~2.0&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;autoload&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;psr-4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;#34;smsup\\SmsupapiBundle\\&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Los parámetros importantes aquí son los siguientes:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -430,13 +671,11 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;p&gt;Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que todo es correcto. Antes vamos a eliminar el directorio que creamos en vendor, para que se instale limpiamente.&lt;/p&gt;
 
 &lt;p&gt;Como no hemos definido ninguna versión en nuestro repositorio, para que composer descargue el paquete, debemos cambiar en el archivo composer.json de symonfy, la estabilidad mínima de los paquetes a descargar, ya que la rama master se considera de desarrollo. Esto se hace cambiando &amp;ldquo;stable&amp;rdquo; por &amp;ldquo;dev&amp;rdquo; en:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;minimum-stability&amp;quot;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;stable&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;minimum-stability&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;stable&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para instalarlo ejecutamos la siguiente instruccion:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;composer require smsup/smsup-api-bundle master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;composer require smsup/smsup-api-bundle master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hemos incluido &amp;ldquo;master&amp;rdquo; para indicar que se descargue la rama master, ya que aún no definimos ninguna versión estable.&lt;/p&gt;
 
 &lt;p&gt;Tras esto ya tenemos nuestro bundle instalado correctamente en vendors y si ejecutamos el código que teníamos de prueba veremos de nuevo el mensaje &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;.&lt;/p&gt;
@@ -448,179 +687,172 @@ Vamos a añadir la funcionalidad y luego veremos como crear la primera versión 
 
 &lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\Builder\TreeBuilder;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\ConfigurationInterface;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class Configuration implements ConfigurationInterface&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    public function getConfigTreeBuilder()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $treeBuilder = new TreeBuilder();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $rootNode-&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;          children()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;          -&amp;gt;end()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        ;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        return $treeBuilder;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+class Configuration implements ConfigurationInterface
+{
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
+        $rootNode-&amp;gt;
+          children()
+            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+          -&amp;gt;end()
+        ;
+        return $treeBuilder;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function load(array $configs, ContainerBuilder $container)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $processor = new Processor();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $configuration = new Configuration();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function load(array $configs, ContainerBuilder $container)
+{
+    $processor = new Processor();
+    $configuration = new Configuration();
+    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
+    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;protected $apiId;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;protected $apiSecret;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;public function setApiid($apiId)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiId = $apiId;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;public function setApisecret($apiSecret)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;{&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiSecret = $apiSecret;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;protected $apiId;
+protected $apiSecret;
+public function setApiid($apiId)
+{
+  $this-&amp;gt;apiId = $apiId;
+}
+public function setApisecret($apiSecret)
+{
+  $this-&amp;gt;apiSecret = $apiSecret;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
 
 &lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  use smsup\smsuplib;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class SmsupSender {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $apiId;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $apiSecret;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function setApiid($apiId)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiId = $apiId;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function setApisecret($apiSecret)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiSecret = $apiSecret;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function getNewSms()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return new Sms;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function enviarSms(Sms $sms)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function eliminarSms($idsms)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function estadoSms($idsms)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function creditosDisponibles()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;CreditosDisponibles();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function resultadoPeticion($referencia)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  private function getSmsapilib()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  private function setResult($respuesta)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
+  use smsup\smsuplib;
+class SmsupSender {
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this-&amp;gt;apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this-&amp;gt;apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;CreditosDisponibles();
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
 
 &lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class Result {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function getResult()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;class Result {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  protected $result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  public function getResult()&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  {&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;  }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;
 
 &lt;p&gt;Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato &amp;lsquo;X.Y.Z&amp;rsquo; o &amp;lsquo;vX.Y.Z&amp;rsquo; (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta &amp;ldquo;v1.0.0&amp;rdquo;.
 Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;composer require smsup/smsup-api-bundle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;composer require smsup/smsup-api-bundle&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>

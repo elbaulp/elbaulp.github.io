@@ -31,12 +31,11 @@
 &lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Consultamos la versión para el dominio de la web&lt;/span&gt;
-$ dig @example.com -c CH -t txt version.bind
-&lt;span class=&#34;c1&#34;&gt;# Consultamos también en nuestros servidores DNS secundarios&lt;/span&gt;
-$ dig @direcciónDNS -c CH -t txt version.bind
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Consultamos la versión para el dominio de la web
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dig @example.com -c CH -t txt version.bind
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Consultamos también en nuestros servidores DNS secundarios
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ dig @direcciónDNS -c CH -t txt version.bind&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Tras ejecutar el primer comando deberiamos ver si estamos mostrando la versión de &lt;strong&gt;BIND&lt;/strong&gt;. En mi caso la respuesta era afirmativa, sin embargo al consultar la versión en el servidor DNS secundario la respuesta era &lt;strong&gt;&lt;em&gt;&amp;#8220;[Secured]&amp;#8221;&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Una vez hecho esto, pasamos a ocultar la versión.&lt;/p&gt;
@@ -46,28 +45,23 @@ $ dig @direcciónDNS -c CH -t txt version.bind
 &lt;p&gt;Esto no es más que &lt;strong&gt;seguridad mediante oscuridad&lt;/strong&gt;, ya que aunque se oculte la versión, hay herramientas que detectarán la versión de BIND, como &lt;strong&gt;&lt;a href=&#34;http://www.cyberciti.biz/tips/howto-remotely-determine-dns-server-version.html&#34; target=&#34;_blank&#34;&gt;fpdns&lt;/a&gt;&lt;/strong&gt;. Sin embargo, ocultandola evitaremos que scripts automatizados buscando versiones concretas puedan aprovecharse de cualquier vulnerabilidad.&lt;/p&gt;
 
 &lt;p&gt;Abrimos el fichero de configuración de &lt;strong&gt;BIND&lt;/strong&gt;, concretamente &lt;em&gt;/etc/bind/named.conf.options&lt;/em&gt; y añadimos la siguiente línea:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;version &lt;span class=&#34;s2&#34;&gt;&amp;quot;Texto a mostrar&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;version &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Texto a mostrar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Guardamos el fichero y reiniciamos &lt;strong&gt;BIND&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# service bind9 restart&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# service bind9 restart&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;mostrar-versión-de-bind-aún-cuando-está-oculta&#34;&gt;Mostrar versión de BIND aún cuando está oculta&lt;/h1&gt;
 
 &lt;p&gt;Instalamos &lt;em&gt;fpdns&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install fpdns
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo apt-get install fpdns&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Lo ejecutamos pasando como argumento el servidor del cual queremos determinar la versión:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ fpdns -D &amp;lt;dominio&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ fpdns -D &amp;lt;dominio&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La salida será algo de este estilo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com, ip&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: ISC BIND version -- version
-fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com, ip&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: ISC BIND version -- version
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;fingerprint &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;elbauldelprogramador.com, ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;: ISC BIND version -- version
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fingerprint &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;elbauldelprogramador.com, ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;: ISC BIND version -- version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

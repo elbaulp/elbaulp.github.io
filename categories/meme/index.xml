@@ -23,9 +23,8 @@
             
             <guid>https://elbauldelprogramador.com/meme-los-10-comandos-que-mas-utilizo-en/</guid>
             <description>&lt;p&gt;En &lt;a target=&#34;_blank&#34; href=&#34;http://www.ubuntizandoelplaneta.com/2011/01/meme-los-10-comandos-que-mas-utilizo.html&#34;&gt;ubuntizando el planeta&lt;/a&gt; he leido este meme que voy a publicar, que consiste en ejecutar la orden&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -rn &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -10
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;history&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; uniq -c &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort -rn &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; head -10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;en nuestro terminal para saber cuales son los comandos que más usamos en linux, seguro que os sorprendéis al ver vuestros resultados.&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
@@ -36,18 +35,18 @@
 &lt;a target=&#34;_blank&#34; href=&#34;http://www.nosolounix.com/&#34;&gt;No solo Unix&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Aqui mi salida en mi máquina &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34; title=&#34;Artículos sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;hkr@alex ~ $ &lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -rn &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; head -10
-    &lt;span class=&#34;m&#34;&gt;217&lt;/span&gt; git
-    &lt;span class=&#34;m&#34;&gt;130&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt;
-    &lt;span class=&#34;m&#34;&gt;106&lt;/span&gt; sudo
-    &lt;span class=&#34;m&#34;&gt;103&lt;/span&gt; ll
-     &lt;span class=&#34;m&#34;&gt;70&lt;/span&gt; gp &lt;span class=&#34;c1&#34;&gt;# Un alias a git push&lt;/span&gt;
-     &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; sshkey
-     &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;eval&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Para lanzar ssh-agent&lt;/span&gt;
-     &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt; blog &lt;span class=&#34;c1&#34;&gt;# Alias para lanzar el editor del blog (Emacs)&lt;/span&gt;
-     &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt; eselect
-     &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt; equery
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@alex ~ $ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;history&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; uniq -c &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort -rn &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; head -10
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;217&lt;/span&gt;&lt;span class=&#34;&#34;&gt; git
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;130&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;106&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sudo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;103&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ll
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;70&lt;/span&gt;&lt;span class=&#34;&#34;&gt; gp &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Un alias a git push
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sshkey
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eval&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Para lanzar ssh-agent
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;&#34;&gt; blog &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Alias para lanzar el editor del blog (Emacs)
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt; eselect
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;&#34;&gt; equery&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
         </item>
         
         <item>

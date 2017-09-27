@@ -29,25 +29,21 @@
 &lt;p&gt;La cadena de texto con el enlace en cuestión reside en el archivo de recursos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings/&#34;&gt;string.xml&lt;/a&gt;&lt;/strong&gt;. En un principio pensé que me bastaría usar la propiedad &lt;code&gt;android:autoLink=&amp;quot;web&amp;quot;&lt;/code&gt; en el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;layout.xml&lt;/a&gt; de la siguiente forma:&lt;/p&gt;
 
 &lt;h1 id=&#34;layout&#34;&gt;&lt;strong&gt;&lt;em&gt;layout&lt;/em&gt;&lt;/strong&gt;:&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
-    &lt;span class=&#34;err&#34;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;....&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-    android:autoLink=&amp;quot;web&amp;quot;
-    &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- .... --&amp;gt;&lt;/span&gt; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;lt;!--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;....&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;err&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    android:autoLink=&amp;#34;web&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- .... --&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;string&#34;&gt;&lt;strong&gt;&lt;em&gt;string&lt;/em&gt;&lt;/strong&gt;:&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;aboutAuthor&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Developed by &lt;span class=&#34;nt&#34;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;http://elbauldelprogramador.com&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Alejandro Alcalde.&lt;span class=&#34;nt&#34;&gt;&amp;lt;/a&amp;gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;aboutAuthor&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Developed by &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;a&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;href=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://elbauldelprogramador.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Alejandro Alcalde.&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/a&amp;gt;&amp;lt;/string&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Pero la propiedad &lt;code&gt;autoLink=&amp;quot;web&amp;quot;&lt;/code&gt;, funciona únicamente cuando el texto al que hace referencia contiene explícitamente la dirección, es decir, con esta cadena de texto sí funcionaría:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;aboutAuthor&amp;quot;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Developed by http://elbauldelprogramador.com&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;aboutAuthor&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Developed by http://elbauldelprogramador.com&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para conseguir hacer funcionar el primer ejemplo hay que hacer uso del método &lt;code&gt;setMovementMethod()&lt;/code&gt; de la clase &lt;code&gt;TextView&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span&gt;&lt;/span&gt;final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
-author.setMovementMethod(LinkMovementMethod.getInstance());
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;&#34;&gt;final TextView author = (TextView) view.findViewById(R.id.tv_about_athor);
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;author.setMovementMethod(LinkMovementMethod.getInstance());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Con el código anterior se consigue el comportamiento deseado:&lt;/p&gt;
 
 &lt;figure&gt;

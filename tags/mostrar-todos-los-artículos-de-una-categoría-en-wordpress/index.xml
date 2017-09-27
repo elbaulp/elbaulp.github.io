@@ -33,24 +33,23 @@
 &lt;h1 id=&#34;crear-el-shortcode&#34;&gt;Crear el shortcode&lt;/h1&gt;
 
 &lt;p&gt;Editamos el archivo &lt;em&gt;functions.php&lt;/em&gt; de nuestro tema y añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function show_category_posts( $atts ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=dateℴ=ASC&amp;amp;posts;_per_page=-1&amp;#39;);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    if ( have_posts() ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        while ( have_posts() ){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            the_post();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;&amp;#39;.get_permalink().&amp;#39;&amp;quot;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    }&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    //Reset query&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    wp_reset_query();&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    return $content;&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function show_category_posts( $atts ){
+    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
+    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=dateℴ=ASC&amp;amp;posts;_per_page=-1&amp;#39;);
+    if ( have_posts() ){
+        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;
+        while ( have_posts() ){
+            the_post();
+            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#39;.get_permalink().&amp;#39;&amp;#34;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);
+        }
+        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;
+    }
+    //Reset query
+    wp_reset_query();
+    return $content;
+}
+add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
 
 &lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -70,9 +69,8 @@
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mostrar_cat &lt;span class=&#34;nv&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mostrar_cat &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

@@ -39,20 +39,18 @@
 &lt;h1 id=&#34;obtener-imágenes-subidas-por-año&#34;&gt;Obtener imágenes subidas por año&lt;/h1&gt;
 
 &lt;p&gt;Tenemos que encontrar el año en que fue subida la imagen. El código que vamos a escribir está fuera del &lt;strong&gt;WordPress loop&lt;/strong&gt;. Por eso utilizamos la función &lt;code&gt;get_the_time()&lt;/code&gt; para encontrar el año de la carga.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;incluir-imágenes-a-la-página&#34;&gt;Incluir imágenes a la página&lt;/h1&gt;
 
 &lt;p&gt;Ahora nuestro trabajo es comprobar si &lt;code&gt;$year&lt;/code&gt; es 2014. En caso afirmativo, añadimos la imagen. En WordPress como hemos mencionado, los detalles de cada archivo se almacenan en la tabla &lt;code&gt;wp_posts&lt;/code&gt; que contiene una columna llamada &lt;code&gt;post_parent&lt;/code&gt;. Esta columna es el punto de conexión para la imagen a una página o entrada. Para una imagen sin adjuntar, el valor &lt;code&gt;post_parent&lt;/code&gt; será 0.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;if(2014 == $year){&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    wp_update_post( array(&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;    ));&lt;/span&gt;
-&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;if(2014 == $year){
+    wp_update_post( array(
+        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,
+        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id
+    ));
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
         </item>
         

@@ -45,24 +45,21 @@
 &lt;h2 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h2&gt;
 
 &lt;p&gt;Dentro de &lt;em&gt;repo1&lt;/em&gt; añadiremos un nuevo &lt;em&gt;remote&lt;/em&gt; que sea el &lt;em&gt;repo2&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;configurar-el-hook-gancho-post-commit&#34;&gt;Configurar el hook (gancho) post-commit&lt;/h2&gt;
 
 &lt;p&gt;Dentro del repositorio, crearemos un nuevo &lt;em&gt;hook&lt;/em&gt; que se ejecute cada vez que hagamos un &lt;em&gt;commit&lt;/em&gt; en &lt;em&gt;repo1&lt;/em&gt;. Por cada &lt;em&gt;commit&lt;/em&gt;, ejecutaremos un &lt;em&gt;git push repo2&lt;/em&gt;, lo cual enviará los cambios al &lt;em&gt;repo2&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
-mv .git/hooks/pre-commit.sample .git/hooks/post-commit
-&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-commit
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-commit
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-commit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En contenido del &lt;em&gt;hook&lt;/em&gt;, para que se vea más claro es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-git push repo2 -f --mirror
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 -f --mirror&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el &lt;em&gt;commit&lt;/em&gt; del &lt;em&gt;repo1&lt;/em&gt;, sigue siendo necesario ejecutar &lt;code&gt;git push&lt;/code&gt; en &lt;em&gt;repo1&lt;/em&gt;&lt;/p&gt;
@@ -72,18 +69,16 @@ git push repo2 -f --mirror
 &lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta de master&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
 
 &lt;p&gt;Para activarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
-mv .git/hooks/pre-commit.sample .git/hooks/post-merge
-&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;#!/bin/bash\n\ngit push repo2 master:master&amp;quot;&lt;/span&gt; &amp;gt; .git/hooks/post-merge
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-merge
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 master:master&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-merge&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El contenido del &lt;em&gt;hook&lt;/em&gt; es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-git push repo2 master:master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 master:master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;git push repo2 master:master&lt;/code&gt; podría leerse como: &lt;em&gt;Publica en el repo2 en la rama master, el contenido de la rama master del repo actual&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;

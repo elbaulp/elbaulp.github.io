@@ -29,13 +29,11 @@
 &lt;h1 id=&#34;instalación-de-gource&#34;&gt;Instalación de Gource&lt;/h1&gt;
 
 &lt;p&gt;Para instalar el programa basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install gource&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# aptitude install gource&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta &lt;em&gt;.git&lt;/em&gt; del repositorio que queramos visualizar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gource /ruta/a/.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gource /ruta/a/.git&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;El resultado es algo como esto:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -45,11 +43,10 @@
 &lt;p&gt;Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.&lt;/p&gt;
 
 &lt;p&gt;Es posible grabar en vídeo la visualización de &lt;em&gt;gource&lt;/em&gt; con el comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;gource ruta/a/.git/  -1280x1024 --max-files &lt;span class=&#34;m&#34;&gt;99999&lt;/span&gt; --disable-progress --stop-at-end &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-       --user-scale &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --highlight-all-users --output-ppm-stream - &lt;span class=&#34;se&#34;&gt;\&lt;/span&gt;
-       &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ffmpeg -y -b 3000K -r &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; -f image2pipe -vcodec ppm -i - -vcodec libx264 gource.mp4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gource ruta/a/.git/  -1280x1024 --max-files &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;99999&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --disable-progress --stop-at-end &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       --user-scale &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --highlight-all-users --output-ppm-stream - &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ffmpeg -y -b 3000K -r &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f image2pipe -vcodec ppm -i - -vcodec libx264 gource.mp4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde:&lt;/p&gt;
 
 &lt;ul&gt;

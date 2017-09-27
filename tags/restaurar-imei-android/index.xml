@@ -49,29 +49,26 @@
 &lt;ul&gt;
 &lt;li&gt;Haz una copia de la carpeta &lt;strong&gt;/efs&lt;/strong&gt; actual, tanto a la tarjeta del teléfono como a tu móvil. Si no tienes navegador root, puedes usar &lt;code&gt;adb&lt;/code&gt;:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ adb pull -p /efs /copia/en/pc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ adb pull -p /efs /copia/en/pc&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Elmina la carpeta &lt;strong&gt;/efs&lt;/strong&gt; del teléfono.&lt;/li&gt;
 &lt;li&gt;Reinícia el móvil, tras el reinicio, se habrá creado una nueva carpeta &lt;strong&gt;/efs&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Elimina los ficheros &lt;code&gt;nv_data.bin&lt;/code&gt; y &lt;code&gt;nv_data.bin.md5&lt;/code&gt; de la carpeta &lt;strong&gt;/efs&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;En la copia de seguridad que se hizo en 1), copia la carpeta &lt;code&gt;imei&lt;/code&gt; a &lt;strong&gt;/efs&lt;/strong&gt;, también el fichero &lt;code&gt;.nv_data&lt;/code&gt; (OJO:, lleva un punto delante). Puedes hacerlo con el navegador root o &lt;code&gt;adb&lt;/code&gt;:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ adb push -p /copia/en/pc/imei /efs/
-$ adb push -p /copia/en/pc/.nv_data /efs/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ adb push -p /copia/en/pc/imei /efs/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ adb push -p /copia/en/pc/.nv_data /efs/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Haz otra copia del fichero &lt;code&gt;.nv_data&lt;/code&gt; a la carpeta &lt;strong&gt;/efs&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;Llama a una de las copias de &lt;code&gt;.nv_data&lt;/code&gt; -&amp;gt; &lt;code&gt;nv_data.bin&lt;/code&gt; y a otra &lt;code&gt;nv_data.bin.bak&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Desde el PC, con &lt;code&gt;adb&lt;/code&gt;, ejecuta lo siguiente:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;$ adb shell
-$ su
-$ chown 1001:radio /efs/nv_data.bin
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ adb shell
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ su
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ chown &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1001&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:radio /efs/nv_data.bin&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;Reinicia el teléfono&amp;#8230; si todo ha ido bien, deberías tener número IMEI. Puedes comprobarlo marcando &lt;code&gt;*#06#&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -92,9 +89,8 @@ $ chown 1001:radio /efs/nv_data.bin
 &lt;li&gt;Ponemos el &lt;em&gt;Samsung Galaxy S2 (i9100)&lt;/em&gt; en modo &lt;strong&gt;Download&lt;/strong&gt;, apagándolo, y manteniendo pulsado VOLUMEN ABAJO + BOTÓN DEL CENTRO.&lt;/li&gt;
 &lt;li&gt;Ejecutamos &lt;strong&gt;heimdall&lt;/strong&gt; con el móvil conectado al pc mediante usb:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo heimdall flash --MODEM modem.bin --verbose --no-reboot
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo heimdall flash --MODEM modem.bin --verbose --no-reboot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si todo sale bien, veremos cómo se sube e instala el fichero, y se completa una barra de progreso en el móvil. Tras ésto, reiniciamos y deberíamos volver a tener red, y por tanto &lt;strong&gt;imei&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Espero que os sirva alguno de los métodos, como me sirvieron en su día a mi.&lt;/p&gt;</description>

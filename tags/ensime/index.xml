@@ -46,28 +46,25 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;`(format-time-string &amp;quot;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;quot;)`&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# -*- mode: snippet -*-
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# name: Modified
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# key: mod
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# --
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lastmod&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;2017-03-08T16:58:45+01:00&amp;quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;lastmod&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Otro ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# -*- mode: snippet -*-
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# name: CodeBlock
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# key: code
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# --
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
 
 &lt;h1 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
@@ -98,19 +95,17 @@
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Supongamos que tenemos el siguiente texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;línea 1
-línea 2
-línea 3
-línea 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;- línea 1
-- línea 2
-- línea 3
-- línea 4
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;- línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;- línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;- línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;- línea &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -131,9 +126,8 @@ línea 4
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Supongamos que tenemos un texto mal formateado, y queremos reemplazar un caracter en concreto por un salto de línea. Esto suele pasar por ejemplo al leer ficheros con codificaciones distintas. En los que el salto de línea se interpreta de otro modo. A modo de ejemplo, supongamos que vamos a reemplazar el caracter &lt;code&gt;^N&lt;/code&gt; por un salto de línea. Tenemos este texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ol&gt;
@@ -147,11 +141,10 @@ línea 4
 &lt;/ol&gt;&lt;/li&gt;
 &lt;li&gt;Pulsamos &lt;code&gt;Enter&lt;/code&gt; y deberíamos tener el siguiente texto:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;Lorem ipsum dolor sit amet
-, consectetur adipiscing elit.
- Fusce vestibulum.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Lorem ipsum dolor sit amet
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, consectetur adipiscing elit.
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Fusce vestibulum.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h2&gt;
@@ -171,14 +164,13 @@ línea 4
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;En el fichero de configuración (&lt;code&gt;~/.emacs/init.el&lt;/code&gt;) añadimos&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;;; Set a directory for backup files&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backup-directory-alist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;quot;.&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;~/.saves&amp;quot;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delete-old-versions&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;kept-new-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;kept-old-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c&#34;&gt;;; Set a directory for backup files&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setq&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;backup-directory-alist&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;~/.saves&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setq&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delete-old-versions&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kept-new-versions&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;kept-old-versions&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;version-control&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
@@ -192,10 +184,9 @@ línea 4
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Para sustituir el modo &lt;em&gt;buffer&lt;/em&gt;, por &lt;em&gt;ibuffer&lt;/em&gt; debemos añadir a nuestra configuración:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;;; make ibuffer the default&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;quot;\C-x\C-b&amp;quot;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c&#34;&gt;;; make ibuffer the default&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;global-set-key&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
 
 &lt;ol&gt;

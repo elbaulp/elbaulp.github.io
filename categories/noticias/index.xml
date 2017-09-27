@@ -17,23 +17,6 @@
         <atom:link href="https://elbauldelprogramador.com/categories/noticias/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Cómo hacer que google deje de usar tu Wifi para obtener datos de geolocalización</title>
-            <link>https://elbauldelprogramador.com/como-hacer-que-google-deje-de-usar-tu/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/como-hacer-que-google-deje-de-usar-tu/</guid>
-            <description>&lt;p&gt;Para quien no lo supiera, el coche de Google que va haciendo fotos a las calles para el streetView, recoge datos que deberían ser privados. Como por ejemplo datos de geolocalización mediante nuestra red wifi.&lt;/p&gt;
-
-&lt;p&gt;Debido a ciertas polémicas con respecto a este tema, google ha dado una solución para que el coche no recoja los datos de geolocalización.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;La solución consiste en añadir al nombre de nuestra red la cadena &lt;strong&gt;&lt;em&gt;_nomap&lt;/em&gt;&lt;/strong&gt; al final. De este modo el coche al pasar detectará esta cadena y la omitirá&lt;/p&gt;
-
-&lt;p&gt;Vía &lt;a target=&#39;_blank&#39; href=&#34;http://www.genbeta.com/seguridad/quieres-que-google-deje-de-usar-tu-wifi-para-obtener-datos-de-geolocalizacion-solo-hay-que-cambiarle-el-nombre&#34;&gt;GenBeta&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        
-        <item>
             <title>Dominio software libre -no oficial- “.42″ disponible</title>
             <link>https://elbauldelprogramador.com/dominio-software-libre-no-oficial-42/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -294,11 +277,10 @@
 &lt;p&gt;Como revelan en &lt;a href=&#34;http://www.webupd8.org/2010/11/grub-customizer-20-can-change-default.html&#34;&gt;WebUpd8&lt;/a&gt; y otras webs, &lt;strong&gt;hay bastantes mejoras en Grub Customizer 2.0&lt;/strong&gt;. Entre ellas, la posibilidad de seleccionar la entrada por defecto que está seleccionada para arrancar, además de cambiar la visibilidad del menú, el tiempo límite de interacción, o el establecimiento de parámetros del núcleo.&lt;/p&gt;
 
 &lt;p&gt;Además en el caso de GRUB2 hay algunas características especiales como &lt;strong&gt;cambiar los colores del menú o la imagen de fondo&lt;/strong&gt;. Para instalar la aplicación en Ubuntu podéis hacer lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo apt-get updatesudo
-apt-get install grub-customizer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo apt-get updatesudo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;apt-get install grub-customizer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Y a partir de ahí podréis lanzar la aplicación desde terminal o con el menú &lt;strong&gt;Aplicaciones/Herramientas de Sistema/Grub Customizer&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Para otras distros Linux basta con descargar &lt;a href=&#34;https://code.launchpad.net/grub-customizer&#34;&gt;Grub Customizer en Launchpad&lt;/a&gt;, algo para lo que, cuidado, &lt;strong&gt;necesitaréis tener instalado BZR&lt;/strong&gt;.&lt;/p&gt;

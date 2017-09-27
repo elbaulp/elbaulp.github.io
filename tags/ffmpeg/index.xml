@@ -27,27 +27,26 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo a la vez que útil:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;  ! &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -d &lt;span class=&#34;s2&#34;&gt;&amp;quot;mp3f&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-   mkdir mp3f
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls *.mp4&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;****-----------------------------------------------------------------------------****&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;quot;ffmpeg -i &lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i -f mp3 -ab 320000 -vn ./mp3f/`basename &amp;quot;&lt;/span&gt;$i&lt;span class=&#34;s2&#34;&gt;&amp;quot; .mp4`.mp3&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;****-----------------------------------------------------------------------------****&amp;quot;&lt;/span&gt;
-   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;
-   ffmpeg -i $i -f mp3 -ab &lt;span class=&#34;m&#34;&gt;320000&lt;/span&gt; -vn ./mp3f/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;i&amp;quot;&lt;/span&gt; .mp4&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;.mp3
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  ! &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mp3f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mkdir mp3f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls *.mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; -f mp3 -ab 320000 -vn ./mp3f/`basename &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; .mp4`.mp3&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f mp3 -ab &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;320000&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -vn ./mp3f/&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Hay que establecer la variable IFS al salto de línea, ya que por defecto es el espacio. Por lo tanto en el for, si hay un archivo con espacios, por ejemplo &amp;#8220;Song of The Week.mp4&amp;#8243;, el for considerará cada palabra un archivo distinto e intentará convertir &lt;strong&gt;Song, of, The, Week.mp4.&lt;/strong&gt; por separado.&lt;/p&gt;
 
 &lt;p&gt;Dentro del for se usa ffmpeg para convertir el archivo a mp3, con un bitrate de 320kbps, &lt;strong&gt;-vn&lt;/strong&gt; es para elmininar el vídeo.&lt;/p&gt;

@@ -53,11 +53,10 @@
 &lt;h1 id=&#34;instalar-bolt-desde-línea-de-comandos&#34;&gt;Instalar Bolt desde línea de comandos&lt;/h1&gt;
 
 &lt;p&gt;Empecemos por la más sencilla, bastarán 3 órdenes en la terminal para finalizar la instalación:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;curl -O http://bolt.cm/distribution/bolt_latest.tgz
-tar -xzf bolt_latest.tgz
-chmod -R &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; files/ app/database/ app/cache/ app/config/ theme/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;curl -O http://bolt.cm/distribution/bolt_latest.tgz
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tar -xzf bolt_latest.tgz
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;chmod -R &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;777&lt;/span&gt;&lt;span class=&#34;&#34;&gt; files/ app/database/ app/cache/ app/config/ theme/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;La razón de establecer los permisos a &lt;a href=&#34;https://elbauldelprogramador.com/programacion-bash-metacaracteres_12/&#34;&gt;777&lt;/a&gt; es porque en la mayoría de servidores el servidor web está en un grupo distinto a tu cuenta de usuario, por eso es necesario dar permisos de escritura a los ficheros de arriba.&lt;/p&gt;
 
 &lt;p&gt;Eso es todo, así de fácil es instalar Bolt. La primera vez que visites la web deberás registrar un usuario para administar la web:&lt;/p&gt;
@@ -73,49 +72,43 @@ chmod -R &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; files/ app/database/ app
 &lt;/figure&gt;
 
 &lt;p&gt;Por defecto Bolt usa Sqlite como base de datos, normalmente se instala con php5, si recibes un mensaje de error informando que el módulo SQLite no está disponible debes instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install php5-sqlite&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# aptitude install php5-sqlite&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Si prefieres usar MySQL o PostgreSQL debes editar el fichero de configuración &lt;strong&gt;/app/config/config.yml&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Para MySQL:&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;database:
-  driver: mysql
-  username: bolt
-  password: password
-  databasename: bolt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;database:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  driver: mysql
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  username: bolt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  password: password
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  databasename: bolt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;*Para PostgreSQL (&lt;strong&gt;Experimental&lt;/strong&gt;)*&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;database:
-  driver: postgres
-  username: bolt
-  password: password
-  databasename: bolt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;database:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  driver: postgres
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  username: bolt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  password: password
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  databasename: bolt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;instalar-bolt-por-el-método-para-desarrolladores&#34;&gt;Instalar Bolt por el método para desarrolladores&lt;/h1&gt;
 
 &lt;p&gt;Este método no es mucho más complicado que el anterior. La ventaja es que permite estar a la última en cuanto a la versión, y el método de actualización es muy sencillo. En este caso se usará &lt;strong&gt;git&lt;/strong&gt; y &lt;strong&gt;Composer&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git clone git://github.com/bobdenotter/bolt.git bolt
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; bolt
-curl -s http://getcomposer.org/installer &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; php
-php composer.phar install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/bobdenotter/bolt.git bolt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bolt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;curl -s http://getcomposer.org/installer &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; php
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php composer.phar install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Normalmente los ficheros creados deberían tener los permisos correctos, de no ser así, ejecuta:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;chmod -R &lt;span class=&#34;m&#34;&gt;777&lt;/span&gt; files/ app/database/ app/cache/ app/config/ theme/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;chmod -R &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;777&lt;/span&gt;&lt;span class=&#34;&#34;&gt; files/ app/database/ app/cache/ app/config/ theme/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Listo, puedes dirigirte a la web, registrar un usuario y empezar a escribir.&lt;/p&gt;
 
 &lt;p&gt;Para actualizar la instalación basta con hacer lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span&gt;&lt;/span&gt;git pull
-&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; bolt
-php composer.phar self-update
-php composer.phar update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git pull
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bolt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php composer.phar self-update
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;php composer.phar update&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;Algo que me ha llamado mucho la atención es la facilidad que se le da al desarrollador para depurar el entorno. Si estás logeado y con el modo depuración activado (&lt;em&gt;debug:true&lt;/em&gt; en el archivo &lt;em&gt;config.yml&lt;/em&gt;) verás una barra de depuración abajo a la derecha:&lt;/p&gt;
 
 &lt;figure&gt;
