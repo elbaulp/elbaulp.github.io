@@ -1926,6 +1926,97 @@ color: &amp;quot;#F57C00&amp;quot;
         </item>
         
         <item>
+            <title>Configurar dos pantallas en OpenBox bajo CruchBang y wallpaper aleatorio</title>
+            <link>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 128px) 128px, 100vw&#34; sizes=&#34;(min-width: 128px) 128px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Llevaba tiempo queriendo instalar en mi equipo la distribución &lt;a target=&#34;_blank&#34; href=&#34;http://crunchbanglinux.org/&#34;&gt;CrunchBang&lt;/a&gt;, que es una distro muy ligera basada en debian que viene con &lt;a target=&#34;_blank&#34; href=&#34;http://openbox.org/&#34;&gt;openbox&lt;/a&gt;, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.&lt;/p&gt;
+
+&lt;p&gt;Encontré un pequeño problema al instalarla, y era que al tener dos pantallas conectadas al pc, por defecto las clonaba, es decir, que aparecía lo mismo en las dos pantallas. Cuando cambiaba la configuración para mostrarlas como dos pantallas independientes todo iba bien, pero al reiniciar volvía a clonarlas.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantalla DVI-I-2&lt;/p&gt;
+
+&lt;p&gt;El siguiente paso es hacer que este comando se ejecute siempre al iniciar el pc, para ello tenemos que modificar el archivo de autoarranque de OpenBox, que se llama &lt;em&gt;autostart&lt;/em&gt; y suele estar en &lt;em&gt;~/.config/openbox&lt;/em&gt;. Añadimos la siguiente línea debajo de &lt;em&gt;lxsession &amp;amp;&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta forma lo tenemos todo solucionado.&lt;/p&gt;
+
+&lt;h1 id=&#34;fondos-de-pantalla-aleatorios&#34;&gt;Fondos de pantalla aleatorios&lt;/h1&gt;
+
+&lt;p&gt;Para lograr esto usé un script que encontré en la red hace tiempo y lo modifiqué para adaptarlo a openbox, con la particularidad de que aplico un fondo de pantalla distinto y seleccionado aleatoriamente para cada una de las pantallas. El script en cuestión es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/Ruta/Imagenes/&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bgSaved&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/.config/nitrogen/bg-saved.cfg&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;*.jpg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${#&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[@]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RANDOM%N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#echo $randomfile
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RANDOM%N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;randomfile2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cat &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[:0.0]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=/usr/share/backgrounds/transparent--i.e-solid-colour.png
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=1
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#252627
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;[xin_0]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder$randomfile1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=4
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#000000
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;[xin_1]
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;file=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$picsfolder$randomfile2&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;mode=4
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;bgcolor=#000000&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$bgSaved&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La variable &lt;em&gt;picsfolder&lt;/em&gt; es el directorio donde residen las imágenes. &lt;em&gt;bsSaved&lt;/em&gt; es un archivo de configuración que almacena los datos del último fondo de pantalla que se estableció, y que modificaremos con los nuevos fondos.&lt;/p&gt;
+
+&lt;p&gt;Las siguientes líneas seleccionan dos imágenes aleatórias y una vez seleccionadas modificamos el archivo bg-saved.cfg para establecer nuestros fondos de pantalla aleatórios.&lt;/p&gt;
+
+&lt;p&gt;Para conseguir que esto funcione debemos volver a modificar el archivo &lt;em&gt;autostart&lt;/em&gt; de openbox, colocando las siguientes líneas (En este caso debajo del comando xrandr):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;## Set desktop wallpaper
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/home/hkr/Pictures/wall_aleatorio.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nitrogen --restore &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Os dejo una captura, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/wall_aleatorio&#34; target=&#34;_blank&#34; title=&#34;GitHub&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s900/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;
+            alt=&#34;Captura de pantalla&#34;
+            title=&#34;Captura de pantalla&#34;
+            sizes=&#34;(min-width: 900px) 900px, 100vw&#34;
+            width=&#34;900&#34;
+            height=&#34;360&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;</description>
+        </item>
+        
+        <item>
             <title>Configurar xmonad con trayer y fondo de pantalla aleatorio</title>
             <link>https://elbauldelprogramador.com/configurar-xmonad-con-trayer-y-fondo-de-pantalla-aleatorio/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -2138,6 +2229,48 @@ color: &amp;quot;#F57C00&amp;quot;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Askubuntu&lt;/em&gt; »» &lt;a href=&#34;http://askubuntu.com/questions/117978/script-doesnt-run-via-crontab-but-works-fine-standalone&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Convertir archivos mp4 a mp3 masívamente</title>
+            <link>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/convertir-archivos-mp4-a-mp3-masivamente/</guid>
+            <description>&lt;p&gt;Ya mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; target=&#34;_blank&#34;&gt;Renombrar archivos masivamente en GNU/Linux&lt;/a&gt;. Hoy voy a enseñar un pequeño script que he tenido que crear para pasarme unos cuantos archivos en mp4 a mp3.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Es bastante sencillo a la vez que útil:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  ! &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;mp3f&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   mkdir mp3f
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; i in &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls *.mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; -f mp3 -ab 320000 -vn ./mp3f/`basename &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; .mp4`.mp3&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;****-----------------------------------------------------------------------------****&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   ffmpeg -i &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -f mp3 -ab &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;320000&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -vn ./mp3f/&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .mp4&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Hay que establecer la variable IFS al salto de línea, ya que por defecto es el espacio. Por lo tanto en el for, si hay un archivo con espacios, por ejemplo &amp;#8220;Song of The Week.mp4&amp;#8243;, el for considerará cada palabra un archivo distinto e intentará convertir &lt;strong&gt;Song, of, The, Week.mp4.&lt;/strong&gt; por separado.&lt;/p&gt;
+
+&lt;p&gt;Dentro del for se usa ffmpeg para convertir el archivo a mp3, con un bitrate de 320kbps, &lt;strong&gt;-vn&lt;/strong&gt; es para elmininar el vídeo.&lt;/p&gt;
+
+&lt;p&gt;Los archivos de salida se almacenan en una carpeta llamada &lt;strong&gt;mp3f&lt;/strong&gt;, y uso &lt;strong&gt;`basename &amp;#8220;$i&amp;#8221; .mp4`.mp3&lt;/strong&gt; para cambiar la extensión del archivo de &lt;strong&gt;mp4&lt;/strong&gt; a &lt;strong&gt;mp3&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por último, fijamos IFS a su valor predeterminado.&lt;/p&gt;
+
+&lt;p&gt;Otra opción es usar el programa &lt;em&gt;SoundConverter&lt;/em&gt;.&lt;/p&gt;</description>
         </item>
         
         <item>
