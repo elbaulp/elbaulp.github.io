@@ -6,7 +6,7 @@
         <description>Recent content in Linux on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 15 Sep 2017 17:44:34 +0200</lastBuildDate>
+        <lastBuildDate>Sun, 01 Oct 2017 12:35:09 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/categories/linux/</link>
@@ -19,7 +19,7 @@
         <item>
             <title>Upgrading Gentoo kernel automatically</title>
             <link>https://elbauldelprogramador.com/en/upgrade-gentoo-kernel-automatically/</link>
-            <pubDate>Fri, 15 Sep 2017 17:44:34 +0200</pubDate>
+            <pubDate>Sun, 01 Oct 2017 12:35:09 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/upgrade-gentoo-kernel-automatically/</guid>
             <description>&lt;p&gt;I&amp;rsquo;ve been using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/gentoo&#34; title=&#34;Posts about Gentoo&#34;&gt;Gentoo&lt;/a&gt; for a few years now. And every time a new kernel version went out, I ended visiting &lt;a href=&#34;https://wiki.gentoo.org/wiki/Kernel/Upgrade&#34; target=&#34;_blank&#34; title=&#34;Gentoo&#39;s wiki Kernel/Upgrade page&#34;&gt;Gentoo&amp;rsquo;s wiki page Kernel/Upgrade&lt;/a&gt; and following its steps to upgrade the kernel.&lt;/p&gt;
@@ -119,9 +119,31 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn3x5hp/&#34; target=&#34;_blank&#34; title=&#34;Btirooh Script&#34;&gt;Btirooh script&lt;/a&gt; its repo &lt;a href=&#34;https://github.com/jeekkd/gentoo-kernel-build&#34; target=&#34;_blank&#34; title=&#34;jeekkd/gentoo-kernel-build&#34;&gt;jeekkd/gentoo-kernel-build&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn32vf3/&#34; target=&#34;_blank&#34; title=&#34;KernelKunt&#34;&gt;KernelKunt&lt;/a&gt; has its script on github: &lt;a href=&#34;https://github.com/t4nki/kupdate&#34; target=&#34;_blank&#34; title=&#34;t4nki/kupdate&#34;&gt;t4nki/kupdate&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;And finally, &lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn2tgbk/&#34; target=&#34;_blank&#34; title=&#34;sQu1rr&#34;&gt;sQu1rr&lt;/a&gt; kernel update on &lt;a href=&#34;https://gist.github.com/sQu1rr/6d40a81a40de44b5f4e5b2b50899f888&#34; target=&#34;_blank&#34; title=&#34;Github Gists&#34;&gt;github gists.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn2tgbk/&#34; target=&#34;_blank&#34; title=&#34;sQu1rr&#34;&gt;sQu1rr&lt;/a&gt; kernel update on &lt;a href=&#34;https://gist.github.com/sQu1rr/6d40a81a40de44b5f4e5b2b50899f888&#34; target=&#34;_blank&#34; title=&#34;Github Gists&#34;&gt;github gists.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/Gentoo/comments/70b8sl/upgrading_gentoo_kernel_automatically/dn1zjmj/&#34; target=&#34;_blank&#34; title=&#34;Htay67ce&#34;&gt;htay6r7ce&lt;/a&gt; use the following &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/script&#34; title=&#34;Scipts&#34;&gt;script&lt;/a&gt;:&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;eselect kernel list
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;eselect kernel &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Use current kernel config and store copy
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;gunzip /proc/config.gz -c &amp;gt; /root/config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; cp /root/config /root/config-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;uname -r&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  Optionally change module settings in the config file, or use --menuconfig
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  with genkernel.
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;genkernel --makeopts&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-j9 --splash --kernel-config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/root/config all
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Update packages with kernel modules
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;emerge -1 @module-rebuild
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Cleanup old files
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; name in &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ls /lib/modules/ &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort -V &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; head -n -3&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  rm -rf /boot/&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;initramfs,kernel,System.map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-genkernel-x86_64-&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:?&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  rm -rf /lib/modules/&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:?&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Update boot config file
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;All of them are far more elaborate than mine, so I will try to use them and improve mine.&lt;/p&gt;</description>
         </item>
         

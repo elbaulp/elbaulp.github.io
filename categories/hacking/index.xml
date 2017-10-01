@@ -17,35 +17,6 @@
         <atom:link href="https://elbauldelprogramador.com/categories/hacking/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Desafío de ingeniería inversa en C</title>
-            <link>https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/</guid>
-            <description>&lt;p&gt;&lt;img sizes=&#34;(min-width: 432px) 432px, 100vw&#34;on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb1.png&#34; alt=&#34;&#34; title=&#34;Bomba&#34; width=&#34;532px&#34; height=&#34;449px&#34; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Puedes encontrar la solución a esta práctica en &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34;&gt;Desafío de ingeniería inversa en C - Soluciones&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;En la asignatura Estructura de Computadores de mi facultad, estamos haciendo una práctica que consiste en coger un ejecutable que haya compilado otro alumno, el cual pide una contraseña alfanumérica y otra numérica. Dicho ejecutable está compilado sin opción de depuración, es decir:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gcc -m32 -O&amp;lt;n&amp;gt; Bomba.c -o bomba&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Donde n es el nivel de optimización desado, en la práctica solo se permite hasta nivel 2. Como habŕas deducido del nombre del ejecutable, se trata de desactivar una bomba. Para lograr este objetivo, es necesario introducir correctamente ambas contraseñas y hacerlo en un periodo de tiempo limitado.&lt;/p&gt;
-
-&lt;p&gt;La tarea consiste en aplicar ingeniería inversa usando herramientas como objdump y gdb.&lt;/p&gt;
-
-&lt;p&gt;Ambas contraseñas pueden estar ocultas, es decir, haciendo operaciones de suma y resta a la contraseña para cambiar su valor y que no sea visible directamente mientras se depura el programa o haciendo uso de un editor hexadecimal como bless. La forma de ocultarlas queda a elección de cada uno, eso sí, está prohibido usar algoritmos de cifrado.&lt;/p&gt;
-
-&lt;p&gt;Hoy con esta entrada te animo a que intentes descubrir las contraseñas de mi programa. Cualquier comentario que publique la contraseña será moderado hasta que termine el plazo de la práctica de clase, por razones obvias ;-).&lt;/p&gt;
-
-&lt;p&gt;Cuando finalice este plazo, publicaré el código fuente y todos los comentarios, junto con alguna explicación de los programas que haya conseguido descifrar.&lt;/p&gt;
-
-&lt;p&gt;Todo aquel que quiera intentarlo, puede descargar el ejecutable de esta dirección: &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&#34;&gt;https://dl.dropbox.com/u/54765219/Bomba_El_Baul_del_Programador&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        
-        <item>
             <title>Desafío de ingeniería inversa en C. Soluciones</title>
             <link>https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
