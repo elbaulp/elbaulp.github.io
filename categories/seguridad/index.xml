@@ -6,7 +6,7 @@
         <description>Recent content in Seguridad on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Thu, 27 Jul 2017 12:21:26 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 02 Oct 2017 17:50:35 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/seguridad/</link>
@@ -15,6 +15,139 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/seguridad/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Estructura y seguridad de los QR Codes</title>
+            <link>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</link>
+            <pubDate>Mon, 02 Oct 2017 17:50:35 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
+
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/linkentrada2-300x300.png&#34; alt=&#34;QR Code&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidamente piezas coches durante su ensamblaje en Japón, y se diseñaron muy bien.&lt;/p&gt;
+
+&lt;p&gt;Todos son cuadrados y siempre tienen una zona llamada &lt;em&gt;zona tranquila&lt;/em&gt; ó &lt;strong&gt;quiet zone&lt;/strong&gt;. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.&lt;/p&gt;
+
+&lt;p&gt;La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaultargetdownright2.png&#34; alt=&#34;qrbaultargetdownright&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un &lt;a href=&#34;http://es.wikipedia.org/wiki/Ciclo_de_trabajo&#34; target=&#34;_blank&#34;&gt;ciclo de trabajo del 50%&lt;/a&gt;. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaulinnercorners2.png&#34; alt=&#34;qrbaulinnercorners&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.&lt;/p&gt;
+
+&lt;p&gt;La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.&lt;/p&gt;
+
+&lt;p&gt;A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.&lt;/p&gt;
+
+&lt;p&gt;La codificación del contenido comienza en la esquina inferior derecha y se almacena en bloques de 2&amp;#215;4, la razón del tamaño es para que sean lo más cuadrados posibles, de esta forma los bits en un byte ocupan la menor área posible.&lt;/p&gt;
+
+&lt;p&gt;Los diseñadores prestaron mucha atención a la corrección de errores, y desarrollaron tres niveles &lt;strong&gt;bajo, medio, cuartil y alto&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 564px) 564px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Custom_QR_code_Wikipedia2.png&#34; alt=&#34;Custom_QR_code_Wikipedia&#34; width=&#34;564px&#34; height=&#34;396px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de corrección es similar al estilo de corrección de errores &lt;strong&gt;Reed-Solomon&lt;/strong&gt; (Información en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction&#34; target=&#34;_blank&#34;&gt;inglés&lt;/a&gt;, inf. en &lt;a href=&#34;http://es.wikipedia.org/wiki/Reed-Solomon&#34; target=&#34;_blank&#34;&gt;Español&lt;/a&gt;) que usan los discos duros. Al igual que en los QR Codes, en los discos duros puede haber un pequeño defecto en la superficie que cause la pérdida de una región física. Esta tecnología permite una recuperación robusta de los datos.&lt;/p&gt;
+
+&lt;p&gt;Esencialmente hay un mosaico de 2&amp;#215;4 que se extiende a lo largo de un borde y luego da la vuelta. Pero no como un &lt;a href=&#34;http://en.wikipedia.org/wiki/Raster_scan&#34; target=&#34;_blank&#34;&gt;raster scan&lt;/a&gt;, que salta de nuevo hacia donde empezó. En lugar de eso, se da la vuelta y regresa al punto de origen, dos bits más hayá. Luego vuelve a girar y regresar.&lt;/p&gt;
+
+&lt;p&gt;Uno de los problemas que se encontraron los diseñadores fue a la hora de que los datos emularan las características de reparación del QR Code. Habría un problema de señalización en banda, que es el término usado en teoría de la información para referirse al problema de intentar tener datos de formato, que deben estar separados del contenido, el problema es que el código se imprime con tinta. ¿Cómo se diferencia qué es datos y qué es formato?&lt;/p&gt;
+
+&lt;p&gt;Se plantearon organizar la información, pero ¿que pasa si la información ordenada se parece a uno de los cuadrados principales?, ¿y si aparecen demasiados espacios en blanco consecutivos?. Eso sería un problema. De nuevo el QR Code actua de forma similar a los discos duros usando una tecnología llamada Self-Clocking (Autosincronizable). En lugar de malgastar espacio con una señal de reloj o una traza de reloj además de los datos, organizaron los datos de forma que fueran autosincronizables, para que proporcionen su propia información de sinconización.&lt;/p&gt;
+
+&lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
+
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
+
+&lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
+
+&lt;p&gt;Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.&lt;/p&gt;
+
+&lt;p&gt;Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.&lt;/p&gt;
+
+&lt;h1 id=&#34;pasemos-a-ver-los-aspectos-de-seguridad&#34;&gt;&lt;strong&gt;Pasemos a ver los aspectos de seguridad.&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
+
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+
+&lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
+
+&lt;p&gt;Otro buen intérprete es &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ..&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;&lt;/strong&gt;, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 382: QR Codes&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/382&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Editar y crear archivos cifrados con GPG en Vim</title>
+            <link>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</link>
+            <pubDate>Mon, 02 Oct 2017 17:32:33 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/GnuPG-Logo.png&#34; alt=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;gpg&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;GNU Privacy Guard&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-es-gpg&#34;&gt;¿Qué es &lt;strong&gt;gpg&lt;/strong&gt;?&lt;/h1&gt;
+
+&lt;p&gt;Me permito extraer el la definición de genbeta::Dev. Para una explicación más profunda del funcionamiento de &lt;strong&gt;gpg&lt;/strong&gt;, puedes dirigirte al artículo en GenBeta::Dev que cito en las referencias.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;a href=&#34;http://www.gnupg.org/download/index.en.html&#34; target=&#34;_blank&#34;&gt;podéis descargarlo desde la página oficial&lt;/a&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
+
+&lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ~/.vimrc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:let g:GPGDefaultRecipients&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;a href=&#34;http://www.vim.org/scripts/script.php?script_id=3645&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Introducción a &lt;strong&gt;gpg&lt;/strong&gt;&lt;/em&gt; »» &lt;a href=&#34;http://www.genbetadev.com/seguridad-informatica/manual-de-gpg-cifra-y-envia-datos-de-forma-segura&#34; target=&#34;_blank&#34;&gt;genbeta::dev&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Crear y administrar contraseñas inteligentemente</title>
@@ -158,6 +291,277 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/&#34; target=&#34;_blank&#34; title=&#34;Passwords Evolved: Authentication Guidance for the Modern Era&#34;&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Introducción Y Ejemplos De NfTables</title>
+            <link>https://elbauldelprogramador.com/ejemplos-nftables/</link>
+            <pubDate>Tue, 29 Mar 2016 06:02:46 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/ejemplos-nftables/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;El siguiente artículo forma parte de un trabajo en grupo realizado para la asignatura &lt;em&gt;Seguridad en Sistemas Operativos&lt;/em&gt; de la facultad de Ingeniería Informática de Granada (ETSIIT), puedes leer el otro trabajo publicado en el blog, &lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion/&#34; title=&#34;Biometría Aplicada a La Seguridad&#34;&gt;Biometría Aplicada a La Seguridad&lt;/a&gt;. Este trabajo es autoría de Jose Maria Caballero Alba &lt;code&gt;&amp;lt;caballeroalba&amp;gt;&lt;/code&gt; y Edlin Lastenia Morel Mateo&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;qué-es-nftables&#34;&gt;Qué es nftables&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://netfilter.org/projects/nftables/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;&lt;strong&gt;nftables&lt;/strong&gt;&lt;/a&gt; es un  nuevo  framework  que  sustituye  al antiguo  &lt;strong&gt;iptables&lt;/strong&gt;. Este  nuevo  software aún  no está  desarrollado  al 100% de sus funciones, tenemos  la problemática de la implantación,   que aunque  se incluye desde el kernel  3.13, las personas  aún  no están acostumbradas a su uso y por tanto  siguen usando  &lt;strong&gt;iptables&lt;/strong&gt;  o en su defecto la nomenclatura  de sus reglas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quizá te interese el artículo &lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34;&gt;20 ejemplos de &lt;strong&gt;iptables&lt;/strong&gt; para SysAdmins novatos,&lt;/a&gt; u otro de los múltiples artículos sobre &lt;a href=&#34;https://elbauldelprogramador.com/tag/#iptables&#34; title=&#34;Artículos etiquetados con iptables&#34;&gt;iptables disponibles&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;En pocas palabras:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Disponible desde el kernel 3.13 en adelante.&lt;/li&gt;
+&lt;li&gt;Trae una la nueva utilidad  &lt;code&gt;nft&lt;/code&gt; con una sintaxis diferente a la de &lt;strong&gt;iptables&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Tiene compatibilidad  con las instrucciones de &lt;strong&gt;iptables&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Infraestructura genérica  de conjuntos  que permite  construir  mapas  entre  asignaciones y acciones para  mejorar las búsquedas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Aún está bajo desarrollo.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Las diferencias con &lt;strong&gt;iptables&lt;/strong&gt;  son notables,  estas  son algunas diferencias proporcionadas  por su página oficial:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Máquina  de pseudo-estados  en el espacio del kernel,  &lt;strong&gt;nftables&lt;/strong&gt;  interpreta el mapa  de reglas proporcionadas  por el usuario  (con la nueva  sintaxis)  , esta se compila y entra  en la máquina  de estados como bytecode y esta misma la transfiere al kernel por la api Netlink’s de netflter.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Reduce el total  del código en el espacio del kernel.  Se puede elegir que selectores  de paquetes  de todos los protocolos existentes  puede usar  la máquina de pseudo-estados,  esto significa que no necesitamos  una  extensión  en espacio  de kernel  para  cada  protocolo  si queremos  soportarlo.    Esto  supone una ventaja,  ya que no necesitamos actualizar  el kernel para  obtener  nuevas características y esto ha sido diseñado para  trabajar en el espacio lógico de usuario.&lt;/p&gt;
+
+&lt;p&gt;Interfaz unificada para reemplazar las utilidades &lt;strong&gt;iptables/ip6tables/arptables/ebtables&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción-a-nftables&#34;&gt;Introducción a nftables&lt;/h1&gt;
+
+&lt;p&gt;Como ya dijimos en la descripción del problema,  &lt;strong&gt;nftables&lt;/strong&gt;  es un nuevo framework que sustituye  al antiguo &lt;strong&gt;iptables&lt;/strong&gt; para el filtrado de paquetes y clasificación de estos en Linux. &lt;strong&gt;nftables&lt;/strong&gt; es una combinación del núcleo de Linux y una utilidad  de espacio de usuario (lo que sería la antigua &lt;strong&gt;iptables&lt;/strong&gt;, &lt;code&gt;nft&lt;/code&gt;).  Usa la infraestructura de Netfilter, como el connection tracking  system.&lt;/p&gt;
+
+&lt;h2 id=&#34;requisitos-de-nftables&#34;&gt;Requisitos de nftables&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;nftables&lt;/strong&gt;  está operativo  desde el kernel 3.13, para  poder usarlo necesitamos  compilar este kernel o un kernel superior.  Además de la utilidad  nft para poder usar el framework la cual necesita las librerías libmnl (normalmente en los repositorios) y libnftnl.&lt;/p&gt;
+
+&lt;p&gt;Necesitamos instalar un kernel superior al 3.13, en este caso vamos a usar el ultimo kernel estables de kernel.org, siendo este a la fecha actual  el 3.16.5.&lt;/p&gt;
+
+&lt;p&gt;Por lo tanto,  para  la instalación debemos de hacer lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tar -xvJf linux-3.16.tar.xz
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linux-3.16
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make menuconfig
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo make modules_install
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo update−grub2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Una vez hecho esto, reiniciamos y ya tendríamos el kernel disponible en la selección de inicio de grub,  para  comprobar  que esta  todo  correcto,  basta  con abrir  un terminal  y poner &lt;code&gt;iuname -r&lt;/code&gt;  debería de salir que tenemos un kernel 3.16.3&lt;/p&gt;
+
+&lt;h2 id=&#34;instalación-de-la-utilidad-nft&#34;&gt;Instalación  de  la  utilidad nft&lt;/h2&gt;
+
+&lt;p&gt;Para  esto instalaremos  las 2 librerías necesarias (libmnl y libnfnl), para ambas necesitamos hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://git.netflter.org/lib&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mnl o fnl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; libnftnl
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sh autogen.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;./confgure
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ahora ya podemos instalar  la utilidad  nft:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://git.netflter.org/__nftables__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; __nftables__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sh autogen.sh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;./configure
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y para  comprobar  su correcto funcionamiento  tecleamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo nft&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Al cual debe responder &lt;code&gt;nft:  no command specified&lt;/code&gt;. Confirmando su correcta  instalación.&lt;/p&gt;
+
+&lt;h1 id=&#34;iptables-vs-nftables&#34;&gt;&lt;strong&gt;iptables&lt;/strong&gt; vs  &lt;strong&gt;nftables&lt;/strong&gt;&lt;/h1&gt;
+
+&lt;p&gt;Es interesante comparar  el uso de &lt;strong&gt;iptables&lt;/strong&gt;  de manera  práctica  y compararlo  con lo que sería la traducción a &lt;strong&gt;nftables&lt;/strong&gt;,  tenemos  que tener  en cuenta  que algunas  opciones de &lt;strong&gt;iptables&lt;/strong&gt;  no están disponibles en &lt;strong&gt;nftables&lt;/strong&gt; por estar aún en desarrollo y viceversa.&lt;/p&gt;
+
+&lt;h2 id=&#34;diferencias-principales-entre-nftables-y-iptables&#34;&gt;Diferencias principales entre nftables y iptables&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;La primera  y más distinguible  es la sintaxis,  en &lt;strong&gt;iptables&lt;/strong&gt;,  las flags van precedidas de dos guiones o uno (-p tcp)  en &lt;strong&gt;nftables&lt;/strong&gt; usa una sintaxis más limpia, inspirada  en tcpdump.&lt;/li&gt;
+&lt;li&gt;Las tablas y las cadenas son totalmente configurables en &lt;strong&gt;nftables&lt;/strong&gt;, contrariamente a &lt;strong&gt;iptables&lt;/strong&gt;, que solo ofrece un set definido de tablas  y cadenas, &lt;strong&gt;nftables&lt;/strong&gt; permite  crear  cadenas  y tablas  propias  con sus correspondientes  configuraciones en función de lo que necesites.&lt;/li&gt;
+&lt;li&gt;No hay distinción entre objetivos y targets,  en &lt;strong&gt;nftables&lt;/strong&gt; tenemos expresiones que son instrucciones  para  construir  nuestras  reglas.  Esto  es muy diferente en &lt;strong&gt;iptables&lt;/strong&gt;  que requiere sintaxis de objetivos y targets  para  usar protocolos.&lt;/li&gt;
+&lt;li&gt;Se pueden especificar varias acciones en una sola línea en &lt;strong&gt;nftables&lt;/strong&gt;, con &lt;strong&gt;iptables&lt;/strong&gt; solo podemos especificar una.&lt;/li&gt;
+&lt;li&gt;Los contadores  en &lt;strong&gt;iptables&lt;/strong&gt;  son establecidos de manera  fija para cada tabla  y reglas, en &lt;strong&gt;nftables&lt;/strong&gt; se puede establecer de manera opciones estos contadores.&lt;/li&gt;
+&lt;li&gt;Infraestructura de manera  genérica en lo sets en &lt;strong&gt;nftables&lt;/strong&gt;,  esto permite  configuraciones avanzadas  como diccionarios, mapas.&lt;/li&gt;
+&lt;li&gt;Actualizar  el kernel es una tarea que consume mucho tiempo, especial- mente si quieres mantener  más de un firewall en tu red.  Los distribuidores  normalmente usan versiones antiguas  del kernel de Linux por razones de estabilidad. Con la nueva máquina de estados de &lt;strong&gt;nftables&lt;/strong&gt; no es necesario actualizar  el kernel para  un nuevo protocolo, simplemente  es necesario actualizar  la utilidad nft.&lt;/li&gt;
+&lt;li&gt;No es necesario el uso de guiones (-) o dobles guiones (-) para  el uso delas banderas&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;tablas-cadenas-y-reglas-en-nftables&#34;&gt;Tablas cadenas y reglas en nftables&lt;/h1&gt;
+
+&lt;h2 id=&#34;creando-tablas-con-nftables&#34;&gt;Creando tablas con nftables&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt; seguimos contando  con las mismas tablas  que en &lt;strong&gt;iptables&lt;/strong&gt;,  que siguen siendo las zonas en las que podemos crear cadenas y después crear reglas en ellas. La diferencia principal y más notable respecto a &lt;strong&gt;iptables&lt;/strong&gt; que podemos crear nuestras  tablas  y además no nos obliga a configurar una cadena  a la hora de crearla.  Para  configurar una tabla en &lt;strong&gt;nftables&lt;/strong&gt; tenemos el siguiente formato:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft create table &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; nombre tabla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos tenemos un formato más sencillo que además podemos crear la tabla  solamente sin configurar nada y decidir si pertenece (o no) a la familia ip. Un ejemplo muy sencillo de crear una tabla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft create table filter&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto creará la tabla de tipo ip (por defecto, si no lo hemos especificado) filter, la cual no contiene cadenas ni reglas. Solo contiene la definición de la tabla en sí misma.&lt;/p&gt;
+
+&lt;h2 id=&#34;borrando-tablas-en-nftables&#34;&gt;Borrando tablas en nftables&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt;  sí que se nos permite  borrar  una tabla,  con esto borraríamos la tabla,  sus cadenas y sus reglas. El formato a usar seria el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft delete table nombretabla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y no es necesario nada  más, con esto podemos borrar  una tabla  en &lt;strong&gt;nftables&lt;/strong&gt;,  cosa que con &lt;strong&gt;iptables&lt;/strong&gt;  no podíamos.&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-cadenas-en-nftables&#34;&gt;Creando cadenas en nftables&lt;/h2&gt;
+
+&lt;p&gt;En  &lt;strong&gt;nftables&lt;/strong&gt;  no tenemos  cadenas  por defecto dentro  de nuestras  tablas,  pero tenemos la posibilidad  de an˜adir las cadena  de tipo  base (input,  output, forward,  postrouting, prerouting) o crear cadenas personalizadas,  con el siguiente formato  seria para  las tipo base:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add chain ip nombreTabla nombreCadena typefilter hook &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;cadenabase&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; priority &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add chain ip filter postrouting   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;&#34;&gt; filter hook postrouting  priority  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto no crearía la cadena de tipo base postrouting  dentro  de la tabla  filter, si queremos tener cadenas personalizadas,  simplemente hacemos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add chain nombre tabla  nombre cadena&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add chain filter input&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;borrando-tablas-en-nftables-1&#34;&gt;Borrando tablas en nftables&lt;/h2&gt;
+
+&lt;p&gt;En  &lt;strong&gt;nftables&lt;/strong&gt;  por  el contrario  podemos  borrar  tanto  cadenas  base  como no base,  solo necesitamos el nombre de la cadena, no nos importa  si es de un tipo u otro, tenemos el siguiente formato:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft delete chain nombreTabla nombreCadena&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft delete chain flter output&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El único requisito que nos impone &lt;strong&gt;nftables&lt;/strong&gt; para poder borrar una cadena es que no esté vacía.&lt;/p&gt;
+
+&lt;h2 id=&#34;creando-reglas-en-nftables&#34;&gt;Creando reglas en nftables&lt;/h2&gt;
+
+&lt;p&gt;En &lt;strong&gt;nftables&lt;/strong&gt;  podemos ver a la hora de an˜adir  reglas que es mucho más comprensible para  el usuario.  El formato para  añadir una regla es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nombreTabla nombreCadena tcp upd ip daddr saddr dport sport drop accept reject counter&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Los parámetros están simplificados, solo están algunos de los más usuales, se ver todas las opciones posibles en man  nft  Si quisiéramos usar  el ejemplo anterior  de &lt;strong&gt;iptables&lt;/strong&gt;, bastaría con esto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule flter input  tcp dport  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;&#34;&gt; drop.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Podemos  apreciar  que &lt;strong&gt;nftables&lt;/strong&gt;  ofrece una  interfaz  más clara  en la creación de reglas respecto de &lt;strong&gt;iptables&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;borrando-reglas-en-nftables&#34;&gt;Borrando reglas en nftables&lt;/h2&gt;
+
+&lt;p&gt;Para  eliminar  una  regla  en &lt;strong&gt;nftables&lt;/strong&gt;  lo podemos  hacer  de manera  similar  a  como lo hacemos en &lt;strong&gt;iptables&lt;/strong&gt;,  listando  las reglas de una  tabla  especifica (en nuestro  caso filter) con el parámetro -a para  que nos muestre  el número de las reglas dentro  de la tabla.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft list &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;table — tables&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nombreTabla − a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplo
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft list table filter -a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta manera,  identificamos la regla que queremos eliminar mediante  su handle, para ejecutar  a continuación  la orden de eliminación con el siguiente formato:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft delete rule nombreTabla nombreCadena handle númerodeRegla
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplo
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft delete rule flter input  handle &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;acciones-sobre-los-paquetes&#34;&gt;Acciones sobre los  paquetes&lt;/h1&gt;
+
+&lt;h2 id=&#34;aceptando-y-rechazando-paquetes-en-nftables&#34;&gt;Aceptando y rechazando paquetes en nftables&lt;/h2&gt;
+
+&lt;p&gt;Suponiendo  que ya tengamos  (como lo visto en los ejemplos anteriores)  una  cadena  y una tabla,  para  aceptar  los paquetes  de una cadena especifica podemos hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nombreTabla nombreCadena &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;operadores&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; accept&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y un ejemplo especifico, por ejemplo aceptar  el uso de ftp (hacia nuestro  host):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  tcp dport  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;&#34;&gt; accept&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para  rechazar  paquetes  haríamos  exactamente   lo mismo pero  cambiando  accept  por drop:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nombreTabla nombreCadena &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;operadores&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; drop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;saltando-a-cadenas&#34;&gt;Saltando a cadenas&lt;/h2&gt;
+
+&lt;p&gt;De manera  similar a &lt;strong&gt;iptables&lt;/strong&gt;,  también podemos tener  cadenas personalizadas,  una vez tengamos creado alguna, podemos redirigir los paquetes  que venga por una cadena base (por ej input)  a esta cadena para  tratarlos ahí&amp;hellip;  El formato a seguir es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nombreTabla nombreCadena&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;operadores&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; jump cadenaPersonalizada
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplo
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  tcp dport  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9999&lt;/span&gt;&lt;span class=&#34;&#34;&gt; jump pruebaCadenaPersonal&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;log-de-paquetes-en-nftales&#34;&gt;Log  de  paquetes en nftales&lt;/h2&gt;
+
+&lt;p&gt;Para poder hacer un log de paquetes completo en &lt;strong&gt;nftables&lt;/strong&gt;, necesitamos una versión mayor o igual a la 3.17, si se usa un kernel menor, se puede usar el siguiente comando para  permitir  el log:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;modprobe iptLOG&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para  usar el log de paquetes  hacemos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nombreTabla nombreCadena &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;operadores&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y el mismo ejemplo que usamos en &lt;strong&gt;iptables&lt;/strong&gt;  para  el login de conexiones ssh.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  tcp dport  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ct state  new log prefix &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nueva conexión ssh&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; accept&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;nat-en-nftables&#34;&gt;NAT en nftables&lt;/h2&gt;
+
+&lt;p&gt;Como en &lt;strong&gt;iptables&lt;/strong&gt;,  &lt;strong&gt;nftables&lt;/strong&gt;  también puede hacer nat  y de manera  más simple por su sintaxis,  de nuevo, distinguimos entre SNAT (source nat)  y DNAT (destination nat).&lt;/p&gt;
+
+&lt;h2 id=&#34;snat-en-nftables&#34;&gt;SNAT en nftables&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  /proc/sys/net/ipv4/ipForward&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Hecho esto, debemos hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add table nat
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add chain nat  prerouting   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;&#34;&gt; nat  hook prerouting  priority  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add chain nat  postrouting   &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;&#34;&gt; nat  hook postrouting  priority  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con  esto  hemos  creado  la  tabla nat  con  las  cadenas  base  prerouting  y  postrouting (creamos  las 2 para  el ejemplo de snat  y dnat,  aunque  no es necesario si solo se implementa  uno de los casos).&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nat  postrouting  ip saddr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.0/24 oif wlan0 snat  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.8.8.8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta  manera,  si nuestro  host  es un router  que está  conectado  a la red indicada  los host que tengan  configurada  como gateway  nuestro  host,  cambiará 8.8.8.8 de los paquetes  que salgan  de nuestra  red.&lt;/p&gt;
+
+&lt;h2 id=&#34;dnat-en-nftables&#34;&gt;DNAT en nftables&lt;/h2&gt;
+
+&lt;p&gt;Para  hacer  dnat,  si tenemos  algún servidor  web en nuestra  red y queremos que sea accesible desde el exterior  si se está usando nat,  debemos de seguir el mismo formato que en el anterior  caso, y bastaría con lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nat  prerouting  iif wlan0 tcp dport  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;&#34;&gt; dnat  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;De esta manera, se podrá acceder al servidor web desde el exterior de nuestra  red.  Cabe decir que &lt;strong&gt;nftables&lt;/strong&gt; nos permite  hacer tambien un set de puertos para un mismo destino.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplos-de-nftables&#34;&gt;Ejemplos de nftables&lt;/h1&gt;
+
+&lt;p&gt;Para  terminar  podemos exponer un uso práctico de &lt;strong&gt;nftables&lt;/strong&gt; en una red, el problema es:&lt;/p&gt;
+
+&lt;p&gt;Tenemos una empresa, en la cual tenemos 3 subredes: 192.168.1.0/24, 192.168.2.0/24 y 192.168.3.0/24.&lt;/p&gt;
+
+&lt;p&gt;Para la red 192.168.1.0/24 tenemos los requisitos siguientes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Esta compuesta por 2 servidores, uno web (192.168.1.2)y otro ftp (192.168.12), en los cuales se debe implementar  nat.&lt;/li&gt;
+&lt;li&gt;Los servidores SOLO deben de escuchar/responder peticiones, jamás hacerlas hacia el exterior.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para  red 192.168.2.0/24 tenemos los siguientes requisitos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Esta  formada  por trabajadores de la empresa,  por tanto  pueden  acceder hacia el exterior.&lt;/li&gt;
+&lt;li&gt;No se permite  el uso de ciertas páginas web (facebook y twitter).&lt;/li&gt;
+&lt;li&gt;No pueden recibir peticiones del exterior..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para  la red 192.168.3.0/24 tenemos los siguientes requisitos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Esta  formada  por  equipos en pruebas,  por  tanto solo pueden  tener  acceso entre  ellos y nunca  pueden  recibir  peticiones  desde el exterior  ni tampoco acceder a este.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para  la red 192.168.1.0/24:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule nat prerouting  ip daddr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.2 tcp dport &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;&#34;&gt; dnat &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add rule nat prerouting  ip daddr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.3 tcp dport &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;&#34;&gt; dnat &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para  la red 192.168.2.0/24:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft  add  rule  filter  input  ip saddr  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.2.0/24  ct  state  new,  established accept
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  ip daddr  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.2.0/24 ct state  new drop
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# (Suponiendo  facebook.es - 8.8.8.8 y twitter.es - 8.8.8.4)
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  ip saddr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.2.0/24 ip daddr  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.8.8.8, &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.8.8.4 drop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para  la red 192.168.3.0/24:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  ip saddr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.3.0/24 drop
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;nft add rule filter input  ip daddr  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.3.0/24 drop&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;nftables&lt;/strong&gt; es un framework que su finalidad es eliminar o solventar problemas de &lt;strong&gt;iptables&lt;/strong&gt; remplazándolo, presenta una mejora en la sintaxis, las tablas y las cadenas son completamente configurables dando una flexibilidad al usuario para que defina sola las reglas que se vayan a utilizar. Ipv4 y Ipv6 se pueden utilizar en una sola tabla simplificando la administración.&lt;/p&gt;
+
+&lt;p&gt;Se pueden especificar diferentes acciones en una sola regla lo cual nos permite el ahorro de tiempo y creación de reglas engorrosas como se solía hacer con &lt;strong&gt;iptables&lt;/strong&gt;, además soportara nuevos protocolos sin la necesidad de hacer una actualización del kernel.&lt;/p&gt;
+
+&lt;p&gt;Como podemos analizar &lt;strong&gt;nftables&lt;/strong&gt; nos proporciona  numerosas ventajas y soluciones de problemas en la clasificación de paquetes sin embargo hay que tener en mente que aún esta en desarrollo.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -1923,45 +2327,6 @@ Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Goog
         </item>
         
         <item>
-            <title>Editar y crear archivos cifrados con GPG en Vim</title>
-            <link>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/GnuPG-Logo.png&#34; alt=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;gpg&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;GNU Privacy Guard&lt;/em&gt;).&lt;/p&gt;
-
-&lt;h1 id=&#34;qué-es-gpg&#34;&gt;¿Qué es &lt;strong&gt;gpg&lt;/strong&gt;?&lt;/h1&gt;
-
-&lt;p&gt;Me permito extraer el la definición de genbeta::Dev. Para una explicación más profunda del funcionamiento de &lt;strong&gt;gpg&lt;/strong&gt;, puedes dirigirte al artículo en GenBeta::Dev que cito en las referencias.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;a href=&#34;http://www.gnupg.org/download/index.en.html&#34; target=&#34;_blank&#34;&gt;podéis descargarlo desde la página oficial&lt;/a&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
-
-&lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ~/.vimrc
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:let g:GPGDefaultRecipients&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;a href=&#34;http://www.vim.org/scripts/script.php?script_id=3645&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Introducción a &lt;strong&gt;gpg&lt;/strong&gt;&lt;/em&gt; »» &lt;a href=&#34;http://www.genbetadev.com/seguridad-informatica/manual-de-gpg-cifra-y-envia-datos-de-forma-segura&#34; target=&#34;_blank&#34;&gt;genbeta::dev&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
             <title>El modelo de seguridad de iOS (Charla del NESG en la UGR)</title>
             <link>https://elbauldelprogramador.com/el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -1990,7 +2355,9 @@ Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Goog
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/el-uso-de-contrasenas-en-una-evolucion-tecnologica/</guid>
-            <description>&lt;p&gt;&lt;img sizes=&#34;(min-width: 350px) 350px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png&#34; alt=&#34;El uso de contraseñas en una evolución tecnológica&#34; width=&#34;350px&#34; height=&#34;274px&#34; /&gt;&lt;/p&gt;
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 350px) 350px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/01/The-use-of-passwords-in-a-technological-evolution.png&#34; alt=&#34;El uso de contraseñas en una evolución tecnológica&#34; width=&#34;350px&#34; height=&#34;274px&#34; /&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;Hoy os traigo un artículo sobre la gran problemática que hay entorno a las contraseñas, y es que, por todos es conocido que usar contraseñas débiles puede comprometer cualquier sistema informático. A continuación resumo un artículo muy interesante que leí en &lt;strong&gt;The Hacker News&lt;/strong&gt;.&lt;/p&gt;
 
@@ -2179,100 +2546,6 @@ Por ejemplo, cuando un sitio está caido, puedes ver su página cacheada en Goog
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.bujarra.com/ProcedimientoManInTheMiddle.html&#34;&gt;Bujarra.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>Estructura y seguridad de los QR Codes</title>
-            <link>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</guid>
-            <description>&lt;blockquote&gt;
-&lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
-
-&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/linkentrada2-300x300.png&#34; alt=&#34;QR Code&#34; width=&#34;300px&#34; height=&#34;300px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.&lt;/p&gt;
-
-&lt;p&gt;Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidamente piezas coches durante su ensamblaje en Japón, y se diseñaron muy bien.&lt;/p&gt;
-
-&lt;p&gt;Todos son cuadrados y siempre tienen una zona llamada &lt;em&gt;zona tranquila&lt;/em&gt; ó &lt;strong&gt;quiet zone&lt;/strong&gt;. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.&lt;/p&gt;
-
-&lt;p&gt;La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaultargetdownright2.png&#34; alt=&#34;qrbaultargetdownright&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un &lt;a href=&#34;http://es.wikipedia.org/wiki/Ciclo_de_trabajo&#34; target=&#34;_blank&#34;&gt;ciclo de trabajo del 50%&lt;/a&gt;. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/qrbaulinnercorners2.png&#34; alt=&#34;qrbaulinnercorners&#34; width=&#34;280px&#34; height=&#34;280px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.&lt;/p&gt;
-
-&lt;p&gt;La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.&lt;/p&gt;
-
-&lt;p&gt;A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.&lt;/p&gt;
-
-&lt;p&gt;La codificación del contenido comienza en la esquina inferior derecha y se almacena en bloques de 2&amp;#215;4, la razón del tamaño es para que sean lo más cuadrados posibles, de esta forma los bits en un byte ocupan la menor área posible.&lt;/p&gt;
-
-&lt;p&gt;Los diseñadores prestaron mucha atención a la corrección de errores, y desarrollaron tres niveles &lt;strong&gt;bajo, medio, cuartil y alto&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 564px) 564px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/Custom_QR_code_Wikipedia2.png&#34; alt=&#34;Custom_QR_code_Wikipedia&#34; width=&#34;564px&#34; height=&#34;396px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.&lt;/p&gt;
-
-&lt;p&gt;Este tipo de corrección es similar al estilo de corrección de errores &lt;strong&gt;Reed-Solomon&lt;/strong&gt; (Información en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction&#34; target=&#34;_blank&#34;&gt;inglés&lt;/a&gt;, inf. en &lt;a href=&#34;http://es.wikipedia.org/wiki/Reed-Solomon&#34; target=&#34;_blank&#34;&gt;Español&lt;/a&gt;) que usan los discos duros. Al igual que en los QR Codes, en los discos duros puede haber un pequeño defecto en la superficie que cause la pérdida de una región física. Esta tecnología permite una recuperación robusta de los datos.&lt;/p&gt;
-
-&lt;p&gt;Esencialmente hay un mosaico de 2&amp;#215;4 que se extiende a lo largo de un borde y luego da la vuelta. Pero no como un &lt;a href=&#34;http://en.wikipedia.org/wiki/Raster_scan&#34; target=&#34;_blank&#34;&gt;raster scan&lt;/a&gt;, que salta de nuevo hacia donde empezó. En lugar de eso, se da la vuelta y regresa al punto de origen, dos bits más hayá. Luego vuelve a girar y regresar.&lt;/p&gt;
-
-&lt;p&gt;Uno de los problemas que se encontraron los diseñadores fue a la hora de que los datos emularan las características de reparación del QR Code. Habría un problema de señalización en banda, que es el término usado en teoría de la información para referirse al problema de intentar tener datos de formato, que deben estar separados del contenido, el problema es que el código se imprime con tinta. ¿Cómo se diferencia qué es datos y qué es formato?&lt;/p&gt;
-
-&lt;p&gt;Se plantearon organizar la información, pero ¿que pasa si la información ordenada se parece a uno de los cuadrados principales?, ¿y si aparecen demasiados espacios en blanco consecutivos?. Eso sería un problema. De nuevo el QR Code actua de forma similar a los discos duros usando una tecnología llamada Self-Clocking (Autosincronizable). En lugar de malgastar espacio con una señal de reloj o una traza de reloj además de los datos, organizaron los datos de forma que fueran autosincronizables, para que proporcionen su propia información de sinconización.&lt;/p&gt;
-
-&lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
-
-&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8&amp;#215;8.&lt;/p&gt;
-
-&lt;p&gt;Estos patrones de 8&amp;#215;8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
-
-&lt;p&gt;Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.&lt;/p&gt;
-
-&lt;p&gt;Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.&lt;/p&gt;
-
-&lt;h1 id=&#34;pasemos-a-ver-los-aspectos-de-seguridad&#34;&gt;&lt;strong&gt;Pasemos a ver los aspectos de seguridad.&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
-
-&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
-
-&lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.symantec.norton.snap&amp;hl=en&#34; target=&#34;_blank&#34;&gt;Norton Snap&lt;/a&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
-
-&lt;p&gt;Otro buen intérprete es &lt;strong&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.google.zxing.client.android&amp;feature=search_result#?t=W251bGwsMSwxLDEsImNvbS5nb29nbGUuenhpbmcuY2xpZW50LmFuZHJvaWQiXQ..&#34; target=&#34;_blank&#34;&gt;Barcode Scanner&lt;/a&gt;&lt;/strong&gt;, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt;Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Episode 382: QR Codes&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/382&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -4087,6 +4360,37 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 &lt;li&gt;Imagen | de &lt;a href=&#34;http://www.shutterstock.com/pic.mhtml?id=47788978&#34; target=&#34;_blank&#34;&gt;palsur&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5919918/how-your-passwords-are-stored-on-the-internet-and-when-your-password-strength-doesnt-matter&#34; target=&#34;_blank&#34;&gt;LifeHacker&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>El Token De Seguridad, Un Recurso Para Proteger Nuestras Cuenta</title>
+            <link>https://elbauldelprogramador.com/el-token-de-seguridad-un-recurso-para-proteger-nuestras-cuenta/</link>
+            <pubDate>Mon, 30 Mar 2015 14:51:38 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/el-token-de-seguridad-un-recurso-para-proteger-nuestras-cuenta/</guid>
+            <description>&lt;p&gt;A medida que han ido siendo más habituales todo tipo de transaccione online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran una mayor preocupación por reforzar la seguridad a acometer este tipo de operaciones. Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude que se comete a través d la suplantación de identidad con fórmulas como el sistema de pag &lt;a href=&#34;https://be.ceca.es/2000/vini/index.html&#34;&gt;Vini&lt;/a&gt;, con tarjetas virtuale y diversos métodos&lt;/p&gt;
+
+&lt;p&gt;Aunque la obsesión por la seguridad no es exclusiva de las entidade bancarias ya que hay miles de sites que dependen en gran medida de l confianza que ofrecen a sus usuarios. Por ello un servicio de token d seguridad puede ser un respaldo más que interesante para las persona que manejan passwords que protegen su información personal y su actividades&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo de esto podría ser la sala de póker online PokerStars dond sus usuarios pueden disponer de un servicio opcional de &lt;a href=&#34;http://www.pokerstars.es/poker/room/features/security/token/&#34;&gt;token de seguridad&lt;/a&gt; para proteger su cuenta personal. En este caso la misma sala proporciona el token de autenticación a través  de su Tienda VIP, algo que e habitual en estos dispositivos.&lt;/p&gt;
+
+&lt;p&gt;Este pequeño aparato electrónico puede presentar diferentes tipos, desde los token USB que almacenan claves criptográficas que pueden contene datos biométricos o firmas digitales, hasta un generador de contraseña dinámicas &amp;ldquo;OTP&amp;rdquo; (One Time Password) que generan una clave operativ durante un espacio limitado de tiempo para el ingreso a una cuent determinada. En el caso del mencionado token de seguridad de PokerStars cada vez que se pulsa el dispositivo, éste crea una clave que aparece e la pantalla durante solamente dos segundos y que permite el inicio d sesión en el software del usuario que tiene asignado el token&lt;/p&gt;
+
+&lt;p&gt;La contraseña del token es adicional al password usual que utiliza e usuario y cada vez que se pulsa el dispositivo genera una nueva clave  caduca la anterior. Este método es conocido como autenticación en  pasos al requerir usar &lt;strong&gt;Usuario &amp;gt; Password &amp;gt; Token&lt;/strong&gt;, por lo que s alguien pretende suplantar la identidad y tener acceso a la cuenta además de hacerse con el password del usuario debería robar físicament el token&lt;/p&gt;
+
+&lt;p&gt;La parte negativa de estos dispositivos es que en el caso de robo  pérdida el usuario se ve privado de la posibilidad de ingresar a s cuenta hasta llevar a cabo todo el protocolo establecido para esto casos con su proveedor del servicio, lo que puede resultar un desagradable molestia&lt;/p&gt;
+
+&lt;p&gt;Algunos sitios, principalmente bancos, ofrecen estos token de segurida a través de aplicaciones para móvil. Otro de los servicios que ofrece l posibilidad de un token de seguridad en el móvil es Google, por lo que  través de iPhone, Blackberry o Android se puede reforzar la seguridad e las cuentas de Gmail, Google Reader, etc… Para ello debes activarlo  través de tu cuenta de Google en &lt;a href=&#34;https://accounts.google.com/b/0/SmsAuthConfig&#34;&gt;est dirección&lt;/a&gt;, par posteriormente descargar Google Ahutenticator en tu Smartphone  ingresar el código token que recibes.&lt;/p&gt;
+
+&lt;p&gt;Lo habitual es configurar la aplicación de modo que no nos solicite e código en el equipo que utilizamos normalmente, porque se puede hacer u bastante pesado lo de tener que ingresar el token cada vez que t logueas en tu cuenta&lt;/p&gt;
+
+&lt;p&gt;En resumen, los token de seguridad son una opción más a la hora d proteger nuestra información personal, aunque por otro lado tampoco s pueden considerar infalibles, de hecho la empresa &lt;a href=&#34;http://www.emc.com/domains/rsa/index.htm&#34;&gt;RS Security&lt;/a&gt; dedicada a l criptografía y software de seguridad, reconoció en 2011 una intrusión e sus sistemas de seguridad que le obligó a sustituir muchos de su dispositivos&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;http://ads.adpv.com/pst_px.php?z=1779&amp;c=1513&amp;s=3012&#34; /&gt;
+&lt;/figure&gt;</description>
         </item>
         
     </channel>

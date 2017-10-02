@@ -1739,70 +1739,6 @@ acerca-de-la-biometria/historia-de-la-biometria.aspx&#34; title=&#34;G. Argentin
         </item>
         
         <item>
-            <title>El modelo de seguridad de iOS (Charla del NESG en la UGR)</title>
-            <link>https://elbauldelprogramador.com/el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/el-modelo-de-seguridad-de-ios-charla-del-nesg-en-la-ugr/</guid>
-            <description>
-
-&lt;p&gt;Hace aproximadamente dos meses empecé a asistir a las charlas del grupo de investigación NESG de mi facultad (Network Engineering &amp;amp; Security Group). En una de ellas, el conferenciante era Javier Tallón. Antiguo alumno de la facultad de Informática en Granada. Habló sobre el modelo de seguridad de iOS.&lt;/p&gt;
-
-&lt;p&gt;Recientemente me comunicó que había puesto a disposición pública las transparencias que usó. Las comparto hoy con vosotros.&lt;/p&gt;
-
-&lt;p&gt;Personalmente me gustó mucho la charla, no conocía gran parte de los aspectos de seguridad en iOS. Espero poder seguir acudiendo a este tipo de charlas por mucho tiempo.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Grupo investigación NESG&lt;/em&gt; »» &lt;a href=&#34;http://nesg.ugr.es/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Javier Tallón&lt;/em&gt; »» &lt;a href=&#34;http://jtsec.es/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        
-        <item>
-            <title>Entendiendo OAuth: Qué ocurre cuando te loggeas en un sitio con Google, Twitter o Facebook</title>
-            <link>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/</guid>
-            <description>&lt;p&gt;Loggearte en otro sitio con tu cuenta de Google, Twitter o Facebook no sólo es conveniente sino que además es más segura que crear una nueva cuenta, o ingresar tu contraseña de Google, Twitter o Facebook en un sitio de terceros. Aquí es donde OAuth entra en acción. Veamos cómo funciona y cómo mantiene nuestras contraseñas seguras en sitios de terceros.&lt;/p&gt;
-
-&lt;p&gt;Hace poco, &lt;a href=&#34;http://lifehacker.com/5917895/twitter-service-tweetgif-hacked-time-to-prune-your-twitter-apps&#34; target=&#34;_blank&#34;&gt; una aplicación de Twitter llamada Tweetgif fue hackeada&lt;/a&gt;, liberando informacion de usuario de 10000 cuentas de Twitter al público. De todas maneras, ninguna credencial de Twitter fue comprometida, dado que Tweetgif usó algo llamado OAuth. Si alguna vez te loggeaste en un sitio web de terceros con tu cuenta de Google, Facebook, o Twitter otorgándole permisos a la aplicación sobre esa cuenta, sin importar si lo sabías o no, has usado OAuth, y es una magnífica forma de entregar permisos.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;cómo-funciona-oauth&#34;&gt;Cómo funciona OAuth&lt;/h1&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/06/medium1.jpg&#34; alt=&#34;&#34; title=&#34;medium&#34; width=&#34;300px&#34; height=&#34;166px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Digamos que quieres usar una aplicación como Tweetgif para postear divertidas imágenes GIF animadas en tu cuenta de Twitter. Para lograrlo, es necesario darle a Tweetgif acceso a tu cuenta de Twitter, para poder obtener tu info y postear tweets en tu nombre. En los viejos tiempos, tenías que darle a una aplicación como Tweetgif tu nombre de usuario y contraseña de Twitter, para que pueda loggearse y acceder a los servicios. No solo tenías que confiar que usen esas credenciales sabiamente, sino que también debías mantenerlas protegidas de los hackers - lo que era un verdadero gran salto de fe. Es como darle las llaves de tu casa a un extraño y confiar que no hará copias para todos sus amigos y luego robar todas tus cosas.&lt;/p&gt;
-
-&lt;p&gt;OAuth evita este problema simplemente dándoles acceso a las cosas que quieras que accedan. En lugar de pedirte la contraseña, sucede lo siguiente:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Para convertirse en una aplicación de Twitter, Tweetgif adquirió dos tokens del servicio de Twitter: una &amp;ldquo;Consumer Key&amp;rdquo; (Clave de Consumidor) y una &amp;ldquo;Consumer Secret&amp;rdquo; (Secreto de Consumidor). Estos son los elementos que crean una conexión entre el consumidor (en este caso, Tweetgif) y el proovedor del servicio (en este caso, Twitter).&lt;/li&gt;
-&lt;li&gt;Cuando quieres accedef a Twitter a traves de Tweetgif, éste te redirecciona a la portada de Twitter. Si no estás loggeado, te loggeas en ese momento (recuerda que le estás dando tu usuario y contraseña a Twitter, no a Tweetgif).&lt;/li&gt;
-&lt;li&gt;Twitter luego te pregunta si quieres autorizar esta aplicación, y te aclara qué permisos se le dará a la misma. Quizás pueda ver tu timeline, o tal vez pueda no sólo ver el timeline sino también postear en tu nombre. En algunos casos, puedes sólamente estar dándole acceso solamente a tu nombre de usuario y avatar para usar en sitios como Lifehacker - es simplemente una forma más fácil y segura de comentar sin tener que crear una cuenta. Cuando presionas el botón &amp;ldquo;Autorizar&amp;rdquo;, se crea un &amp;ldquo;Access Token&amp;rdquo; (Vale para acceso) y un &amp;ldquo;Access Token Secret&amp;rdquo; (Vale para acceso secreto). Son como contraseñas, pero sólo permiten que Tweetgif acceda a tu cuenta y haga las cosas que le permitiste.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Por lo tanto, en lugar de darles la llave de toda tu casa, les estás dando una llave especial que sólo abre la única habitación que quieres que entren. Pero, para usar esta llave, tienen que pedírsela al guardia, y él puede negárselas cuando quiera.&lt;/p&gt;
-
-&lt;h1 id=&#34;entonces-deberías-usar-oauth&#34;&gt;¿Entonces deberías usar OAuth?&lt;/h1&gt;
-
-&lt;p&gt;¿Por qué es mejor que simplemente ingresar las credenciales de Twitter? Obviamente, esto evita que las aplicaciones de terceros hagan cosas poco claras que no quieres que hagan, pero lo más importante es que esto significa que incluso si ellos son hackeados - como pasó con Tweetgif ayer - tu contraseña de Twitter está todavía a salvo. Los hackers tendrán la posibilidad de postear en tu nombre, seguir personas, o hacer cualquier cosa que le hayas permitido a Tweetgif, pero todo lo que necesitas hacer es ir a tu configuración de Twitter y quitarle el acceso a dicha aplicación. De este modo, tus tokens se vuelven inútiles y tu cuenta está bajo control nuevamente, sin siquiera tener que cambiar la contraseña.&lt;/p&gt;
-
-&lt;p&gt;La gran desventaja de esta innovación es que algunos sitios podrían dejar loggear usando Facebook o Twitter e intentarán postear en tu perfil, incluso si no es realmente &lt;em&gt;necesario&lt;/em&gt;. Algunos sitios, como el reproductor de música &lt;a href=&#34;http://turntable.fm/&#34; target=&#34;_blank&#34;&gt;Turntable.fm&lt;/a&gt;, no te permiten crear una cuenta - debes loggearte con Facebook o Twitter. Es conveniente, dado que no tienes que crear una cuenta, pero luego éste intenta postear en tu perfil sobre qué estás haciendo en su sitio. De manera similar, &lt;a href=&#34;http://waxy.org/2012/02/the_perpetual_invisible_window_into_your_gmail_inbox/&#34; target=&#34;_blank&#34;&gt;Google no te dice realmente qué permisos otorgas&lt;/a&gt; cuando usas OAuth. Para evitar problemas, asegúrate de leer la política de privacidad de cada aplicación a la que te conectas, y si puedes, presta atención a los permisos que cada aplicación obtiene. Si detectas algo que no quieres que la aplicación haga, simplemente no la uses. O, como alternativa, fíjate si hay una opción para desactivar esta &amp;ldquo;característica&amp;rdquo; en la configuración de la aplicación (Turntable, por ejemplo, te permite desactivar los posteos en el muro de Facebook en su configuración luego de loggearte). Y, como siempre, asegúrate de regularmente reducir tus aplicaciones autorizadas así no te metes en problemas - si no has usado alguna por un tiempo, probablemente es mejor quitarla por completo.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fuente: &lt;a href=&#34;http://lifehacker.com/5918086/understanding-oauth-what-happens-when-you-log-into-a-site-with-google-twitter-or-facebook&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
             <title>Nueva Guía: Security for a Faster World</title>
             <link>https://elbauldelprogramador.com/nueva-guia-security-for-a-faster-world/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -2008,35 +1944,6 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 &lt;p&gt;Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html&#34; target=&#34;_blank&#34;&gt;Elladodelmal&lt;/a&gt;&lt;/h1&gt;</description>
-        </item>
-        
-        <item>
-            <title>El Token De Seguridad, Un Recurso Para Proteger Nuestras Cuenta</title>
-            <link>https://elbauldelprogramador.com/el-token-de-seguridad-un-recurso-para-proteger-nuestras-cuenta/</link>
-            <pubDate>Mon, 30 Mar 2015 14:51:38 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/el-token-de-seguridad-un-recurso-para-proteger-nuestras-cuenta/</guid>
-            <description>&lt;p&gt;A medida que han ido siendo más habituales todo tipo de transaccione online, tanto los servicios que las ofrecen como los usuarios que la utilizan muestran una mayor preocupación por reforzar la seguridad a acometer este tipo de operaciones. Buena prueba de ello es como la banc ha trabajado sin descanso por evitar el fraude que se comete a través d la suplantación de identidad con fórmulas como el sistema de pag &lt;a href=&#34;https://be.ceca.es/2000/vini/index.html&#34;&gt;Vini&lt;/a&gt;, con tarjetas virtuale y diversos métodos&lt;/p&gt;
-
-&lt;p&gt;Aunque la obsesión por la seguridad no es exclusiva de las entidade bancarias ya que hay miles de sites que dependen en gran medida de l confianza que ofrecen a sus usuarios. Por ello un servicio de token d seguridad puede ser un respaldo más que interesante para las persona que manejan passwords que protegen su información personal y su actividades&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo de esto podría ser la sala de póker online PokerStars dond sus usuarios pueden disponer de un servicio opcional de &lt;a href=&#34;http://www.pokerstars.es/poker/room/features/security/token/&#34;&gt;token de seguridad&lt;/a&gt; para proteger su cuenta personal. En este caso la misma sala proporciona el token de autenticación a través  de su Tienda VIP, algo que e habitual en estos dispositivos.&lt;/p&gt;
-
-&lt;p&gt;Este pequeño aparato electrónico puede presentar diferentes tipos, desde los token USB que almacenan claves criptográficas que pueden contene datos biométricos o firmas digitales, hasta un generador de contraseña dinámicas &amp;ldquo;OTP&amp;rdquo; (One Time Password) que generan una clave operativ durante un espacio limitado de tiempo para el ingreso a una cuent determinada. En el caso del mencionado token de seguridad de PokerStars cada vez que se pulsa el dispositivo, éste crea una clave que aparece e la pantalla durante solamente dos segundos y que permite el inicio d sesión en el software del usuario que tiene asignado el token&lt;/p&gt;
-
-&lt;p&gt;La contraseña del token es adicional al password usual que utiliza e usuario y cada vez que se pulsa el dispositivo genera una nueva clave  caduca la anterior. Este método es conocido como autenticación en  pasos al requerir usar &lt;strong&gt;Usuario &amp;gt; Password &amp;gt; Token&lt;/strong&gt;, por lo que s alguien pretende suplantar la identidad y tener acceso a la cuenta además de hacerse con el password del usuario debería robar físicament el token&lt;/p&gt;
-
-&lt;p&gt;La parte negativa de estos dispositivos es que en el caso de robo  pérdida el usuario se ve privado de la posibilidad de ingresar a s cuenta hasta llevar a cabo todo el protocolo establecido para esto casos con su proveedor del servicio, lo que puede resultar un desagradable molestia&lt;/p&gt;
-
-&lt;p&gt;Algunos sitios, principalmente bancos, ofrecen estos token de segurida a través de aplicaciones para móvil. Otro de los servicios que ofrece l posibilidad de un token de seguridad en el móvil es Google, por lo que  través de iPhone, Blackberry o Android se puede reforzar la seguridad e las cuentas de Gmail, Google Reader, etc… Para ello debes activarlo  través de tu cuenta de Google en &lt;a href=&#34;https://accounts.google.com/b/0/SmsAuthConfig&#34;&gt;est dirección&lt;/a&gt;, par posteriormente descargar Google Ahutenticator en tu Smartphone  ingresar el código token que recibes.&lt;/p&gt;
-
-&lt;p&gt;Lo habitual es configurar la aplicación de modo que no nos solicite e código en el equipo que utilizamos normalmente, porque se puede hacer u bastante pesado lo de tener que ingresar el token cada vez que t logueas en tu cuenta&lt;/p&gt;
-
-&lt;p&gt;En resumen, los token de seguridad son una opción más a la hora d proteger nuestra información personal, aunque por otro lado tampoco s pueden considerar infalibles, de hecho la empresa &lt;a href=&#34;http://www.emc.com/domains/rsa/index.htm&#34;&gt;RS Security&lt;/a&gt; dedicada a l criptografía y software de seguridad, reconoció en 2011 una intrusión e sus sistemas de seguridad que le obligó a sustituir muchos de su dispositivos&lt;/p&gt;
-
-&lt;p&gt;&lt;img on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;http://ads.adpv.com/pst_px.php?z=1779&amp;c=1513&amp;s=3012&#34; /&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>
