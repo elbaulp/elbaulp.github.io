@@ -656,6 +656,158 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
         </item>
         
         <item>
+            <title>How to convert a column to VectorUDT/DenseVector in Spark</title>
+            <link>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</link>
+            <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;m starting to use &lt;code&gt;spark&lt;/code&gt; and was reading its documentation for its &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;MlLib linearRegression&#34;&gt;&lt;code&gt;MLlib&lt;/code&gt; library&lt;/a&gt;. At first it seemed simple enough to use, but when reading a &lt;code&gt;csv&lt;/code&gt; file with the training data I kept getting the below error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;After hours of searching how to convert my &lt;code&gt;features&lt;/code&gt; column into &lt;code&gt;VectorUDT&lt;/code&gt; I finally found the solution. Here is how I did it.&lt;/p&gt;
+
+&lt;h1 id=&#34;convert-a-column-to-vectorudt-in-spark&#34;&gt;Convert a column to VectorUDT in Spark&lt;/h1&gt;
+
+&lt;p&gt;First, lets prepare the environment:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;SparkSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;local&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;appName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;spark session example&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/generated_data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;The code above just set up a &lt;code&gt;SparkSession&lt;/code&gt; and loads the data from the file &lt;code&gt;generated_data.csv&lt;/code&gt;. Last it prints the schema of that data, which is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_b&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_c&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_d&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_e&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;As it can be seen, &lt;code&gt;dependent_var&lt;/code&gt;&amp;rsquo;s type is &lt;code&gt;String&lt;/code&gt;, it must be &lt;code&gt;VectorUDT&lt;/code&gt;. In order to convert it we must use &lt;code&gt;VectorAssembler&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;StructType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;VectorUDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;udf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withColumn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;VectorAssembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setInputCols&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setOutputCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Above a &lt;code&gt;schema&lt;/code&gt; for the column is defined, which would be of &lt;code&gt;VectorUDT&lt;/code&gt; type, then a &lt;code&gt;udf&lt;/code&gt; (User Defined Function) is created in order to convert its values from &lt;code&gt;String&lt;/code&gt; to &lt;code&gt;Double&lt;/code&gt;. Last, a &lt;code&gt;VectorAssembler&lt;/code&gt; is created and the dataframe is transformed to the new &lt;code&gt;Scheme&lt;/code&gt;. By printing the &lt;code&gt;schema&lt;/code&gt; of &lt;code&gt;out&lt;/code&gt; we see that the type now its the correct:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_b&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_c&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_d&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_e&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;vector&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;nullable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;full-code&#34;&gt;Full code&lt;/h1&gt;
+
+&lt;p&gt;The entire code is below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;package&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;elbauldelprogramador&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.ml.feature.VectorAssembler&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.ml.regression.LinearRegression&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.mllib.linalg.VectorUDT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.sql.SparkSession&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.sql.functions.udf&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;org.apache.spark.sql.types.StructType&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;SimpleApp&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Unit&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;SparkSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;local&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;appName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;spark session example&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getOrCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/generated_data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;StructType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;VectorUDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;udf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;Double&lt;/span&gt;&lt;span class=&#34;&#34;&gt;, &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;withColumn&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toDouble&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)))&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;VectorAssembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setInputCols&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Array&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setOutputCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lr&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;LinearRegression&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setMaxIter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setRegParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setElasticNetParam&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;// Fit the model
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lrModel&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;other-method&#34;&gt;Other method&lt;/h1&gt;
+
+&lt;p&gt;I&amp;rsquo;ve just discovered other way of achieving the same result:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;inferSchema&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/generated_data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ind_var_d&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;formula&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;RFormula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setFormula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var ~ ind_var_d&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setFeaturesCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setLabelCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;label&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;train&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;formula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now, &lt;code&gt;train&lt;/code&gt; will have two additional columns, &lt;code&gt;features&lt;/code&gt; and &lt;code&gt;label&lt;/code&gt;, and &lt;code&gt;features&lt;/code&gt;&amp;rsquo;s type would be &lt;code&gt;Vector&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;end-notes&#34;&gt;End notes&lt;/h1&gt;
+
+&lt;p&gt;I am sure there is a better and cleaner way of doing this, but as I am just a beginner with &lt;code&gt;spark&lt;/code&gt; that did the trick for me. If you know a better solution, write it in the comments!&lt;/p&gt;
+
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Training data is from the book &lt;a href=&#34;http://amzn.to/2kKFAgi&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>How to remove slotted packages in gentoo</title>
             <link>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</link>
             <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
@@ -725,6 +877,182 @@ when finished, you just need to include the &lt;strong&gt;.so&lt;/strong&gt; and
 &lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+        </item>
+        
+        <item>
+            <title>How to manage multiple patches - A Quilt tutorial</title>
+            <link>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</link>
+            <pubDate>Mon, 30 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/how-to-mantain-patchs-quilt-tutorial/</guid>
+            <description>&lt;p&gt;I am using &lt;a href=&#34;https://elbauldelprogramador.com/tags/dwm/&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt; since a couple of years, even wrote a patch to allow the user color its &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34; title=&#34;Colorear la barra de estado con Simple StatusColor en DWM 6.1&#34;&gt;status bar&lt;/a&gt;. Since then, I never check out the new code in DWM that was being released because I did not think I would be able to merge the new code with my personalized DWM. That was until I discovered &lt;a href=&#34;https://github.com/jceb/dwm-patches&#34; target=&#34;_blank&#34; title=&#34;DWM-Patches&#34;&gt;DWM-Patches&lt;/a&gt; and learned to use &lt;em&gt;quilt&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;what-is-quilt&#34;&gt;What is Quilt?&lt;/h1&gt;
+
+&lt;p&gt;Well, here is its &lt;code&gt;man&lt;/code&gt; description:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Quilt is a tool to manage large sets of patches by keeping track of the changes each patch makes. Patches can be applied, un-applied, refreshed, etc. The key philosophical concept is that your primary output is patches.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;basic-usage&#34;&gt;Basic usage&lt;/h1&gt;
+
+&lt;p&gt;Lets see an easy example, suppose the file below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;# fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;line 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;line 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;line 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;fichero.txt&lt;/code&gt; would be our base file.&lt;/p&gt;
+
+&lt;h1 id=&#34;creating-a-patch&#34;&gt;Creating a patch&lt;/h1&gt;
+
+&lt;p&gt;To create a new patch, we need to execute &lt;code&gt;quilt new patch1.diff&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt new patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Patch patches/patch1.diff is now on top&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;making-changes&#34;&gt;Making changes&lt;/h1&gt;
+
+&lt;p&gt;Now, tell &lt;code&gt;quilt&lt;/code&gt; what file we want to edit:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt edit fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero.txt added to patch patches/patch1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now, we are all set to edit the file, lets write one sentence:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;edit 1 (by patch1.diff)
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;see-the-changes&#34;&gt;See the changes&lt;/h1&gt;
+
+&lt;p&gt;Once we have finish editing the file, we can see its diff:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;Index: _drafts/fichero.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -1,3 +1,4 @@
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+edit 1 (by patch1.diff)
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;creating-the-patch&#34;&gt;Creating the patch&lt;/h1&gt;
+
+&lt;p&gt;The patch it is not created yet, for that we need to execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt refresh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Refreshed patch patches/patch1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;manage-patches&#34;&gt;Manage Patches&lt;/h1&gt;
+
+&lt;p&gt;All right, now in &lt;code&gt;patches/&lt;/code&gt; there is a patch called &lt;code&gt;patch1.diff&lt;/code&gt;, it store our changes to &lt;code&gt;fichero.txt&lt;/code&gt;. Right now we only have one patch, in order to undo all the changes and restore &lt;code&gt;fichero.txt&lt;/code&gt; to its original state we must execute:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt pop
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;No patches applied&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now &lt;code&gt;fichero.txt&lt;/code&gt; do not have our modification:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;If we have more than one patch, &lt;code&gt;quilt pop&lt;/code&gt; accepts as input the patch name, or &lt;code&gt;-a&lt;/code&gt; option to remove all applied patches. Lets create one second patch:&lt;/p&gt;
+
+&lt;h1 id=&#34;second-patch&#34;&gt;Second patch&lt;/h1&gt;
+
+&lt;p&gt;Before creating a new patch, it is necessary to apply the first, or if we had many, all of them:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt push -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Now at patch patches/patch1.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now we can create a second patch:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt new patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Patch patches/patch2.diff is now on top&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;list-the-patch-stack&#34;&gt;List the patch stack&lt;/h2&gt;
+
+&lt;p&gt;In order to see how many patchs we have, execute &lt;code&gt;quilt series&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt series
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patches/patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patches/patch2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;The bottom patch is &lt;code&gt;patch2&lt;/code&gt;, right now it is empty, because at the moment we have not edit anything. For this patch we are goint to modify &lt;code&gt;fichero1.txt&lt;/code&gt; and create a second one, &lt;code&gt;fichero2.txt&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt add fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero2.txt added to patch patches/patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ quilt add fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;File fichero.txt added to patch patches/patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Line created by patch2.diff&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;New file created by patch2.diff&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; fichero2.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-diff&#34; data-lang=&#34;diff&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;Index: _drafts/fichero.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- _drafts.orig/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -2,3 +2,4 @@ linea 1
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; edit 1 (by patch1.diff)
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; linea 3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+Line created by patch2.diff
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;Index: _drafts/fichero2.txt
+===================================================================
+&lt;span class=&#34;gd&#34;&gt;--- /dev/null
+&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+New file created by patch2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Finally, all that is left is apply the changes with &lt;code&gt;quilt refresh&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt refresh
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Refreshed patch patches/patch2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;When finished editing, it is recommended to restore the initial state, undoing all the patchs:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt pop -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Removing patch patches/patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Restoring fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;No patches applied
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ ll
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:31 fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:29 patches/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:31 .pc/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;To apply them again:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ quilt push -a
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/patch1.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Applying patch patches/patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;patching file fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Now at patch patches/patch2.diff
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ ll
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 fichero2.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-rw-r--r-- &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;89&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 fichero.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:29 patches/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;drwxr-xr-x &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr hkr &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0K Jan &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:32 .pc/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;In order to see a real, more complicated example, visit my  &lt;a href=&#34;https://github.com/elbaulp/myDWM&#34; target=&#34;_blank&#34; title=&#34;DWM&#34;&gt;DWM&lt;/a&gt; repo.&lt;/p&gt;
+
+&lt;h1 id=&#34;bibliography&#34;&gt;Bibliography&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UsingQuilt | &lt;a href=&#34;https://wiki.debian.org/UsingQuilt&#34; target=&#34;_blank&#34; title=&#34;Using Quilt | Debian Wiki&#34;&gt;wiki.debian.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How To Survive With Many Patches | &lt;a href=&#34;https://stuff.mit.edu/afs/athena/system/i386_deb50/os/usr/share/doc/quilt/quilt.html&#34; target=&#34;_blank&#34; title=&#34;How to survive with many patches&#34;&gt;stuff.mit.edu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>

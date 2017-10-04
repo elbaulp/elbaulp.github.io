@@ -161,55 +161,6 @@
         </item>
         
         <item>
-            <title>Cómo Cambiar El Directorio De Portage a Otro Directorio en Gentoo</title>
-            <link>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</link>
-            <pubDate>Wed, 17 Aug 2016 08:30:50 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</guid>
-            <description>&lt;p&gt;Hace poco tuve problemas con &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;portage&lt;/a&gt; y su directorio de trabajo temporal en &lt;code&gt;/var/tmp/portage&lt;/code&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt; porque me quedé sin las 10GB mínimas que necesita:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;There is NOT at least &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt; GiB disk space at &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/var/tmp/portage&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Así que la primera solución que se me ocurrió fue hacer que &lt;code&gt;portage&lt;/code&gt; trabaje en otro directorio, concretamente en otro disco duro auxiliar en el que dispongo de más espacio. Veamos cómo conseguirlo:&lt;/p&gt;
-
-&lt;h1 id=&#34;cambiar-el-fichero-etc-portage-make-conf&#34;&gt;Cambiar el fichero /etc/portage/make.conf&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;Para ello necesitamos decirle a &lt;code&gt;portage&lt;/code&gt; que queremos cambiar el directorio por defecto, para ello editamos el fichero &lt;code&gt;/etc/portage/make.conf&lt;/code&gt; y añadimos las variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; y &lt;code&gt;PKGDIR&lt;/code&gt; apuntando al directorio deseado, en mi caso &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/home/hkr/ssd2/portage&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/distfiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/packages&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;sincronizar-el-árbol-de-portage&#34;&gt;Sincronizar el árbol de portage&lt;/h1&gt;
-
-&lt;p&gt;El siguiente paso es sincronizar &lt;code&gt;portage&lt;/code&gt; para que se de cuenta del cambio, para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;emerge --sync&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Tras esto, &lt;code&gt;portage&lt;/code&gt; ya conocerá la nueva localización de directorios, pero resta una cosa más por hacer.&lt;/p&gt;
-
-&lt;h1 id=&#34;crear-enlace-simbólico-para-make-profile&#34;&gt;Crear enlace simbólico para make.profile&lt;/h1&gt;
-
-&lt;p&gt;Ahora mismo &lt;code&gt;make.conf&lt;/code&gt; es un enlace a &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, el directorio antiguo, debemos enlazarlo con el directorio nuevo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Tras esto, tendremos &lt;code&gt;portage&lt;/code&gt; en un nuevo directorio.&lt;/p&gt;
-
-&lt;h1 id=&#34;cambiar-solo-el-directorio-temporal-var-tmp-portage&#34;&gt;Cambiar solo el directorio temporal /var/tmp/portage&lt;/h1&gt;
-
-&lt;p&gt;Mi problema orignal era no tener espacio en &lt;code&gt;/var/tmp/portage&lt;/code&gt;, resulta que este directorio también se puede cambiar, sin necesidad de mover de sitio lo ficheros de &lt;code&gt;portage&lt;/code&gt;, para ello basta con añadir al &lt;code&gt;make.conf&lt;/code&gt; la siguiente variable:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/home/hkr/ssd2/&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Sincronizamos y listo.&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
             <title>Error NSS Al Actualizar Firefox 48 en Gentoo</title>
             <link>https://elbauldelprogramador.com/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</link>
             <pubDate>Thu, 04 Aug 2016 08:55:12 +0000</pubDate>

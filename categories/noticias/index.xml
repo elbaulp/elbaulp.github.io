@@ -17,58 +17,6 @@
         <atom:link href="https://elbauldelprogramador.com/categories/noticias/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Grub Customizer 2.0, personaliza tu GRUB2</title>
-            <link>https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/</guid>
-            <description>
-
-&lt;p&gt;Los desarrolladores de &lt;a href=&#34;https://launchpad.net/grub-customizer&#34;&gt;Grub Customizer&lt;/a&gt; &lt;strong&gt;han lanzado la versión 2.0 de esta herramienta&lt;/strong&gt; para personalizar el aspecto y funcionamiento de nuestro gestor de arranque, algo que es bastante molesto desde la entrada de GRUB2 y que ahora se hace mucho más cómodo con esta solución.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 500px) 500px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Grub-customizer0&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TOpPJrxOdBI/AAAAAAAAAFk/RWhgQykL8wo/s1600/Grub-customizer0-500x321.jpg&#34; alt=&#34;Grub customizer&#34; width=&#34;500&#34; height=&#34;321&#34; &gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Como revelan en &lt;a href=&#34;http://www.webupd8.org/2010/11/grub-customizer-20-can-change-default.html&#34;&gt;WebUpd8&lt;/a&gt; y otras webs, &lt;strong&gt;hay bastantes mejoras en Grub Customizer 2.0&lt;/strong&gt;. Entre ellas, la posibilidad de seleccionar la entrada por defecto que está seleccionada para arrancar, además de cambiar la visibilidad del menú, el tiempo límite de interacción, o el establecimiento de parámetros del núcleo.&lt;/p&gt;
-
-&lt;p&gt;Además en el caso de GRUB2 hay algunas características especiales como &lt;strong&gt;cambiar los colores del menú o la imagen de fondo&lt;/strong&gt;. Para instalar la aplicación en Ubuntu podéis hacer lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;sudo apt-get updatesudo
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;apt-get install grub-customizer&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Y a partir de ahí podréis lanzar la aplicación desde terminal o con el menú &lt;strong&gt;Aplicaciones/Herramientas de Sistema/Grub Customizer&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Para otras distros Linux basta con descargar &lt;a href=&#34;https://code.launchpad.net/grub-customizer&#34;&gt;Grub Customizer en Launchpad&lt;/a&gt;, algo para lo que, cuidado, &lt;strong&gt;necesitaréis tener instalado BZR&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;fuente-a-href-http-www-muylinux-com-2010-11-22-grub-customizer-2-0-personaliza-tu-grub2-target-blank-muylinux-com-a&#34;&gt;Fuente: &lt;a href=&#34;http://www.muylinux.com/2010/11/22/grub-customizer-2-0-personaliza-tu-grub2&#34; target=&#34;_blank&#34;&gt; MuyLinux.com &lt;/a&gt;&lt;/h1&gt;
-</description>
-        </item>
-        
-        <item>
-            <title>Hacking y Seguridad en Comunicaciones Móviles GSM / GPRS / UMTS / LTE</title>
-            <link>https://elbauldelprogramador.com/hacking-y-seguridad-en-comunicaciones/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/hacking-y-seguridad-en-comunicaciones/</guid>
-            <description>&lt;p&gt;Os dejo un vídeo que demuestra como se puede suplantar la identidad de una red GSM / GPRS / UMTS / LTE.&lt;/p&gt;
-
-&lt;p&gt;El vídeo es de la &lt;strong&gt;&lt;em&gt;RootedCON 2011&lt;/em&gt;&lt;/strong&gt; de este año.&lt;/p&gt;
-
-&lt;p&gt;Visitar el vídeo en Vimeo: &lt;a href=&#34;https://vimeo.com/27258284 &amp;quot;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011&#34;&gt;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)&lt;/a&gt;&amp;rdquo;)&lt;/p&gt;
-
-&lt;p&gt;Una de las características que se conocen desde hace mucho tiempo es la posibilidad de falsificar, es decir, suplantar, a un operador de telefonía al que se conectan los teléfonos móviles. Normalmente, todos los usuarios que cuentan con un teléfono de última generación, como un iPhone o un Smartphone, lo tienen configurado para conectarse automáticamente a las redes.&lt;/p&gt;
-
-&lt;p&gt;Esta suplantación, que se puede hacer a las redes GSM, se puede extender, como enseñan desde hace más de un año los investigadores españoles José Picó y David Perez a las redes UMTS, es decir, a las tecnologías GPRS y EDGE. Si el dispositivo no tiene configurada la opción de conectarse solo a redes 3G o 3.5G, un atacante podrá simular ser cualquier operador ya que en las tecnologías GPRS y EDGE no se autentica la red, es decir, basta con suplantar el nombre de la red y engañar al usuario.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fuente: &lt;a target=&#34;_blank&#34; href=&#34;http://www.elladodelmal.com/2011/11/nuevo-libro-de-hacking-y-seguridad-en.html&#34;&gt;elladodelmal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Más info: &lt;a target=&#34;_blank&#34; href=&#34;http://www.seguridadapple.com/2011/01/atacando-iphone-e-ipad-con-redes-falsas.html&#34;&gt;seguridadApple&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        
-        <item>
             <title>Humanstxt Creator. Somos personas, no máquinas</title>
             <link>https://elbauldelprogramador.com/humanstxt-creator-somos-personas-no/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
