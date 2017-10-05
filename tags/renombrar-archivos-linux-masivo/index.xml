@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Renombrar Archivos Linux Masivo on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/renombrar-archivos-linux-masivo/</link>
+        <description>Recent content in Renombrar Archivos Linux Masivo on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 05 Sep 2017 12:54:22 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/renombrar-archivos-linux-masivo/</link>
+            <title>Renombrar Archivos Linux Masivo on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/renombrar-archivos-linux-masivo/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Renombrar archivos masivamente en GNU/Linux</title>
+            <link>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</link>
+            <pubDate>Tue, 05 Sep 2017 12:54:22 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/</guid>
+            <description>&lt;p&gt;En ocasiones, cuando bajamos archivos de internet (Normalmente música), cada archivo tiene en el nombre la dirección de la página web de donde se descargó.&lt;/p&gt;
+
+&lt;p&gt;Si queremos renombrar todos los archivos para eliminar la página web del nombre del archivo, no es necesario ir uno por uno renombrando, usando el comando &lt;code&gt;rename&lt;/code&gt; de GNU/linux lo conseguimos fácilmente.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo, pongamos que los archivos son los siguientes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Uno - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Lluvia y fuego - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Donde duele inspira - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Por amor al odio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Gregory Isaacs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Soy loco por ti - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Desde el barro &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Folio en blanco &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Improvisacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - In-extremis - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Sucio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Artesano del arte insano - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Cosquijazz - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - Mis ego depresiones - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Rafael Lechowski &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Flowklorikos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Queremos elmininar las siguientes partes del nombre: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; y &lt;strong&gt;www.HHGroups.com&lt;/strong&gt;. Para ello usamos la orden rename con la siguiente sintaxis:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;rename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s/Rafael Lechowski (Flowklorikos) - //g&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *.mp3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Lo que decimos con esa expresión regular es que reemplace lo que coincida con Rafael Lechowski (Flowklorikos) por nada, es decir, que lo elimine del nombre. Es necesario escapar con los espacios en blanco y los parentesis. El *.mp3 quiere decir que aplique el renombramiento a los archivos mp3.&lt;/p&gt;
+
+&lt;p&gt;Como resultado, ahora los ficheros tienen el siguiente nombre:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Uno - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Lluvia y fuego - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Donde duele inspira - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Por amor al odio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Gregory Isaacs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Soy loco por ti - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Desde el barro &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Folio en blanco &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Improvisacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. In-extremis - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Sucio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Artesano del arte insano - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Cosquijazz - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Mis ego depresiones - www.HHGroups.com.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt; - www.HHGroups.com.mp3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Falta eliminar la parte www.HHGroups.com, que lo conseguimos con esta orden:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;rename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;s/ - www.HHGroups.com//g&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *.mp3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y finalmente, tenemos todos nuestros archivos renombrados:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Uno.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Lluvia y fuego.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Donde duele inspira.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Por amor al odio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Gregory Isaacs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Soy loco por ti.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Desde el barro &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Folio en blanco &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Improvisacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. In-extremis.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Sucio &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;con Carlos Talavera&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Artesano del arte insano.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Cosquijazz.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. Mis ego depresiones.mp3
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.mp3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

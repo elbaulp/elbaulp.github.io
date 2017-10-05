@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Seguridad en La Red on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/seguridad-en-la-red/</link>
+        <description>Recent content in Seguridad en La Red on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/seguridad-en-la-red/</link>
+            <title>Seguridad en La Red on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/seguridad-en-la-red/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Por qué nuestro PC necesita un firewall activado</title>
+            <link>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</guid>
+            <description>&lt;p&gt;Hace poco os hablé de &lt;a href=&#34;https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks&#34;&gt;por qué Linux no era solo para geeks&lt;/a&gt;, sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red&lt;/p&gt;
+
+&lt;p&gt;¿Por qué es necesario convencer a todo el mundo que es necesario activar un cortafuegos (Firewall) en los ordenadores que tienen acceso a internet?, ya sean de escritorio o servidores. Se podría pensar que la tarea de un firewall es obvia para cualquier usuario que posea un ordenador. Sin embargo, circulan comentarios acerca de este tema que no lo hacen del todo cierto.&lt;/p&gt;
+
+&lt;p&gt;Podemos tomar como ejemplo el &lt;a target=&#34;_blank&#34; href=&#34;http://chakra-project.org/bbs/viewtopic.php?id=5185&#34;&gt;foro Chakra&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;También estoy en contra del uso del firewall (¿cuanta gente navega con un módem usb en linux, o desactiva el firewall del router?)&lt;/em&gt;&lt;/strong&gt;&lt;em&gt;, ¿Qué tipo de web porno o qué tipo de script hay que visitar/ejecutar para infectarte de malware en Linux? y puesto que tal vez 3 de cada mil personas por lo general descargan y ejecutan un script sin leerlo, ¿debo tener mi ordenador llenas de este software? En serio: ¿cuantas veces ejecutaste amarok o VLC y encontraste un exploit que hizo colgarse al pc?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;O &lt;a target=&#34;_blank&#34; href=&#34;http://www.linuxbsdos.com/2010/07/20/pclinuxos-2010-review/comment-page-2/#comments&#34;&gt;este&lt;/a&gt; otro de los fans de PCLinuxOS:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Casi todas las distros incluyen un firewall, pero está desactivado por defecto. No creo en la teoría de &amp;#8220;una única configuración del firewall arregla todo&amp;#8221;. Mis necesidades son diferentes a las vuestras. Incluyan el firewall, coloquen un icono en un lugar fácil de encontrar y dejen que nosotros hagamos el resto.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Al principio el firewall venía habilitado, pero la mayoría de los usuarios se quejaban por ello y los desarrolladores lo desabilitaron. PErsonalmente cada usuario deberia elegir si quiere activarlo o no.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;#8230;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lo que revelan estos comentarios es que muchos en nuestra comunidad no entienden las bases de la seguridad de red. Espero que este corto artículo pueda dejar un poco más claro este tema.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo fundamental en esta discusión es comprender el papel general que desempeña un firewall en un ordenador o sistema de ordenadores. En términos simples, un firewall protege un ordenador de ataques de red. Y hay firewalls basados en host y en red. Un firewall basado en host es aquel que se ejecuta y protege a un solo dispositivo. Ese sería el que se ejecuta en un ordenador personal, ya sea sobre un sistema Linux, BSD o cualquier otro sistema operativo.&lt;/p&gt;
+
+&lt;p&gt;Por otro lado, un firewall basado en red es aquel ejecutandose en un dispositivo al borde o en el perímetro de una red. Este dispositivo puede ser un router, un switch o un dispositivo VPN. Tu router por cable, DSL o fibra óptica está en esta categoría. El error que mucha gente comete es pensar que si tienen un firewall un uno de estos dispositvos, no necesitan otro en el ordenador personal situado detrás del router. Un mal pensamiento.&lt;/p&gt;
+
+&lt;p&gt;En una red de ordenadores, uno de ellos permite el acceso desde el exterior, la mejor practica de seguridad requiere que cada nodo de la red tenga por sí mismo seguridad, uno que trabaja en conjunto con el firewall perimetral (y también con otras medidas de seguridad). En la jerga profesional a esta practica se la conoce como &lt;strong&gt;seguridad en profundidad (Security in-depth)&lt;/strong&gt;. Se trata de un enfoque de seguridad por capas y este enfoque no es exclusivo del mundo de la informática. Se puede observar donde quiera que se mire. Por ejemplo, supón que vives en un complejo amurallado, ¿Dejarias las puertas y las ventanas de tu casa abiertas simplemente poque tienes una cerca alrededor?, por supuesto que no. O ¿dejarías tu coche abierto simplemente porque está en un parking? Probablemente tampoco. Las razones son obvias.&lt;/p&gt;
+
+&lt;p&gt;El mismo razonamiento y principio se debería aplicar a las redes locales. A parte del firewall perimetral, de otro ejecutandose en el dispositivo en el borde de la red (El router p.e), también deberías tener un firewall basado en host ejecutandose en tu ordenador de escritorio, servidor, netbook o notebook. Este enfoque por capas garantiza que si hay una brecha en tu defensa perimetral, si álguien &lt;em&gt;salta&lt;/em&gt; la &lt;em&gt;cerca&lt;/em&gt;, tu ordenador no estará &lt;em&gt;abierto&lt;/em&gt; para los intrusos.&lt;/p&gt;
+
+&lt;p&gt;Por lo tanto, solo porque tu equipo esté detrás de router por cable, DSL o fibra óptica con un firewall activado no implica que podamos desabilitar el firewall basado en host (En nuestro pc). &lt;strong&gt;Security in-depth.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Los mejores firewalls son capaces de realizar inspecciones de estado completas (&lt;strong&gt;stateful inspection&lt;/strong&gt;), también llamadas &lt;strong&gt;Stateful packet Filtering&lt;/strong&gt;, la cuales dictan que todas las conexiones salientes están permitidas mientras todas las conexiones entrantes que no están relacionadas con una conexión saliente esté bloqueada.&lt;/p&gt;
+
+&lt;p&gt;Algunas de las mejores distros linux, como Fedora, tienen un firewall habilitado fuera del nucleo. Así es como debe ser. El kernel linux tiene un firewall incorporado (Vale también par alos BSD), y hay varias interfaces gráficas para manejarlo. Lo menos que podemos esperar de los desarrolladores de las distros es que ser permita activarlo fuera del nucleo.&lt;/p&gt;
+
+&lt;p&gt;Tracucción de : &lt;a target=&#34;_blank&#34; href=&#34;http://www.linuxbsdos.com/2011/11/21/why-your-computer-needs-a-firewall-enabled/&#34;&gt;linuxbsdos.com&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

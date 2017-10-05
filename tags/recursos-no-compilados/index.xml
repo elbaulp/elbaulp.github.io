@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Recursos No Compilados on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/recursos-no-compilados/</link>
+        <description>Recent content in Recursos No Compilados on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/recursos-no-compilados/</link>
+            <title>Recursos No Compilados on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/recursos-no-compilados/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android: Recursos compilados y no compilados</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-2/</guid>
+            <description>&lt;p&gt;Android soporta principalmente dos tipos de recursos: archivos XML y archivos raw (como imágenes, audio y vídeo). Incluso dentro de los archivos XML, has podido ver que en algunos casos los recursos están definidos como valores dentro del archivo XML (las cadenas de texto, por ejemplo). En otras ocasiones, un archivo XML es un recurso por sí mismo, como los Layout.&lt;/p&gt;
+
+&lt;p&gt;Podemos encontrar dos tipos de archivos XML: uno se compilará a un formato binario y el otro se copiará tal como es al dispositivo. Como ejemplo podemos poner los ficheros XML de recursos&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings&#34;&gt; string &lt;/a&gt;y los ficheros de &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout&#34;&gt;layout&lt;/a&gt;, ambos se compilarán a un formato binario antes de formar parte del paquete de instalación. Estos ficheros XML tienen formatos predefinidos en los que los nodos XML se traducen a IDs.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Por supuesto, también se pueden elegir archivos XML para guardarlos con su formato propio, estos archivos no serán interpretados y se les asignará un ID de recurso para poder identificarlos. Sin embargo, podemos querer que estos ficheros también se compilen a un formato binario. Para lograrlo, hay que colocarlos bajo el directorio &lt;strong&gt;&lt;em&gt;./res/xml&lt;/em&gt;&lt;/strong&gt;. En tal caso, deberemos usar los lectores XMl que proporciona Android para acceder a los nodos del fichero.&lt;/p&gt;
+
+&lt;p&gt;Si colocamos cualquier tipo de archivo, incluyendo ficheros XML, bajo &lt;strong&gt;&lt;em&gt;./res/raw&lt;/em&gt;&lt;/strong&gt;, no se compilarán a un formato binario. Deberemos entonces, para leerlos, usar Stream. Los archivos de audio y vídeo entran en esta categoría también.&lt;/p&gt;
+
+&lt;p&gt;Hay que destacar, que al formar parte el directorio rar de ./res/*, incluso estos archivos raw de audio y vídeo serán localizados como todos los demás recursos.&lt;/p&gt;
+
+&lt;p&gt;Como vimos, los recursos se almacenan en varios subdirectorios según su tipo, a continuación vemos algunos de los subdirectorios más importantes de la carpeta res.:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;anim&lt;/strong&gt;: Archivos compilados de animaciones.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;drawable&lt;/strong&gt;: Bitmaps&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layout&lt;/strong&gt;: definición de vistas y UI.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: Arrays, colores, dimensiones, strings y estilos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;xml&lt;/strong&gt;: fircheros XML arbitrarios.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;raw&lt;/strong&gt;: ficheros raw no compilados.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los recursos excepto los raw y lo coloca en el fichero .apk (Android package) final. Este fichero es el que contiene el código de las aplicaciones Android y los recursos, similar a los .jar de Java. Estos ficheros son los que usamos para instalar aplicaciones en Android.&lt;/p&gt;
+
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos-arrays-de-strings-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-arrays-de/&#34;&gt;Programación Android:Recursos - Arrays de strings&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

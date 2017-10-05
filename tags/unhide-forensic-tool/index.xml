@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Unhide Forensic Tool on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/unhide-forensic-tool/</link>
+        <description>Recent content in Unhide Forensic Tool on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/unhide-forensic-tool/</link>
+            <title>Unhide Forensic Tool on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/unhide-forensic-tool/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Unhide Forensic Tool: Encuentra puertos y procesos ocultos</title>
+            <link>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 200px) 200px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/ghostbuster.jpg&#34; alt=&#34;Unhide Forensic Tool&#34; width=&#34;200px&#34; height=&#34;176px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Unhide Forensic Tool o simplemente &lt;strong&gt;&lt;em&gt;Unhide&lt;/em&gt;&lt;/strong&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;a href=&#34;https://es.wikipedia.org/wiki/Rootkit&#34; target=&#34;_blank&#34;&gt;RootKits&lt;/a&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compara las salidas /proc frente a /bin/ps&lt;/li&gt;
+&lt;li&gt;Compara la información adquirida a partir de /bin/ps con la información recopilada de procfs. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Compara la información recopilada de /bin/ps con la información de las llamadas al sistema (syscall scannig).&lt;/li&gt;
+&lt;li&gt;PIDs bruteforce. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Está disponible tanto para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/latest/download?source=files&#34; target=&#34;_blank&#34;&gt;Windows&lt;/a&gt; como para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/&#34; target=&#34;_blank&#34;&gt;Linux&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;./unhide-tcp --help
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Unhide-tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Copyright © &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Yago Jesus &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Patrick Gouin
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;License GPLv3+ : GNU GPL version &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt; or later
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http://www.unhide-forensics.info
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Usage: ./unhide-tcp &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Options :
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -V          Show version and &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -v          verbose
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -h          display this &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -f          show fuser output &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hidden ports
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -l          show lsof output &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hidden ports
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -o          log result into unhide-tcp.log file
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -s          use very quick version &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; server with lot of opened ports
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -n          use netstat instead of ss&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;a href=&#34;http://www.securitybydefault.com/2013/01/unhide-20121229-is-out.html&#34; target=&#34;_blank&#34;&gt;securitybydefault&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Las opciones de &lt;strong&gt;unhide-linux&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;./unhide-linux --help
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Unhide &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Copyright © &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Yago Jesus &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Patrick Gouin
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;License GPLv3+ : GNU GPL version &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt; or later
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http://www.unhide-forensics.info
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;NOTE : This version of unhide is &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; systems using Linux &amp;gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.6
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Usage: ./unhide-linux &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;options&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; test_list
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Option :
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -V          Show version and &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -v          verbose
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -h          display this &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;help&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -m          more checks &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;available only with procfs, checkopendir &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; checkchdir commands&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -r          use alternate sysinfo &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;&#34;&gt; in meta-test
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -f          log result into unhide-linux.log file
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -o          same as &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;-f&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   -d          &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;&lt;span class=&#34;&#34;&gt; a double check in brute &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Test_list :
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   Test_list is one or more of the following
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   Standard tests :
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      brute
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      proc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      procall
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      procfs
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      quick
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      reverse
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      sys
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   Elementary tests :
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkbrute
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkchdir
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetaffinity
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetparam
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetpgid
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetprio
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkRRgetinterval
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetsched
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkgetsid
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkkill
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checknoprocps
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkopendir
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkproc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkquick
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkreaddir
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checkreverse
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checksysinfo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checksysinfo2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      checksysinfo3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;a href=&#34;http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html&#34; target=&#34;_blank&#34;&gt;toolsyard.thehackernews.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ejemplos Hooks en Git on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/ejemplos-hooks-en-git/</link>
+        <description>Recent content in Ejemplos Hooks en Git on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 08 Sep 2017 12:15:30 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/ejemplos-hooks-en-git/</link>
+            <title>Ejemplos Hooks en Git on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/ejemplos-hooks-en-git/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Sincronización de proyectos en git con hooks (ganchos)</title>
+            <link>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</link>
+            <pubDate>Fri, 08 Sep 2017 12:15:30 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 910px) 913px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; alt=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34; width=&#34;910px&#34; height=&#34;380px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;repositorio-espejo-mirror-repo&#34;&gt;Repositorio espejo (Mirror repo)&lt;/h1&gt;
+
+&lt;h2 id=&#34;problema&#34;&gt;Problema&lt;/h2&gt;
+
+&lt;p&gt;Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos en git&#34;&gt;git&lt;/a&gt;, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (&lt;em&gt;mirror repos&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;repositorios-a-sincronizar&#34;&gt;Repositorios a sincronizar&lt;/h2&gt;
+
+&lt;p&gt;Supongamos que los repositorios se llaman &lt;em&gt;repo1&lt;/em&gt; y &lt;em&gt;repo2&lt;/em&gt;. Pretendemos que &lt;em&gt;repo2&lt;/em&gt; esté sincronizado (sea un espejo) del &lt;em&gt;repo1&lt;/em&gt;. Ésto significa que no tendremos que clonar en ningún momento el &lt;em&gt;repo2&lt;/em&gt;. En local únicamente tendremos el &lt;em&gt;repo1&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;solución&#34;&gt;Solución&lt;/h2&gt;
+
+&lt;p&gt;La respuesta, como es habitual, la encontré tras buscar un poco en &lt;em&gt;stackoverflow&lt;/em&gt;. Gracias a &lt;a href=&#34;http://stackoverflow.com/users/140185/manoj-govindan&#34; title=&#34;Perfil en stackoverflow&#34;&gt;Manoj Govindan&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h2&gt;
+
+&lt;p&gt;Dentro de &lt;em&gt;repo1&lt;/em&gt; añadiremos un nuevo &lt;em&gt;remote&lt;/em&gt; que sea el &lt;em&gt;repo2&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git remote add repo2 &amp;lt;url-repo2&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;configurar-el-hook-gancho-post-commit&#34;&gt;Configurar el hook (gancho) post-commit&lt;/h2&gt;
+
+&lt;p&gt;Dentro del repositorio, crearemos un nuevo &lt;em&gt;hook&lt;/em&gt; que se ejecute cada vez que hagamos un &lt;em&gt;commit&lt;/em&gt; en &lt;em&gt;repo1&lt;/em&gt;. Por cada &lt;em&gt;commit&lt;/em&gt;, ejecutaremos un &lt;em&gt;git push repo2&lt;/em&gt;, lo cual enviará los cambios al &lt;em&gt;repo2&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-commit
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-commit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En contenido del &lt;em&gt;hook&lt;/em&gt;, para que se vea más claro es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 -f --mirror&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el &lt;em&gt;commit&lt;/em&gt; del &lt;em&gt;repo1&lt;/em&gt;, sigue siendo necesario ejecutar &lt;code&gt;git push&lt;/code&gt; en &lt;em&gt;repo1&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;mantener-sincronizada-una-única-rama&#34;&gt;Mantener sincronizada una única rama&lt;/h1&gt;
+
+&lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta de master&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
+
+&lt;p&gt;Para activarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Crear el hook que se ejecutará en cada commit
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mv .git/hooks/pre-commit.sample .git/hooks/post-merge
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Añadir el comando a ejecutar
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 master:master&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; .git/hooks/post-merge&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El contenido del &lt;em&gt;hook&lt;/em&gt; es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git push repo2 master:master&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;git push repo2 master:master&lt;/code&gt; podría leerse como: &lt;em&gt;Publica en el repo2 en la rama master, el contenido de la rama master del repo actual&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
