@@ -11399,6 +11399,559 @@ Este nivel será loggeado, incluso en las versiones definitivas de la aplicació
         </item>
         
         <item>
+            <title>Introducción a Django - Instalación y primer proyecto</title>
+            <link>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-django-instalacion-y-primer-proyecto/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/jneight&#34; title=&#34;Perfil en Github de @jneight&#34;&gt;@Jneight&lt;/a&gt; por actualizar este artículo!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Hacía tiempo que el &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; web &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; estaba en mi lista de cosas a las que echar un vistazo. Por fin he podido sacar un hueco para instalarlo y trastearlo un poquito. Hoy comparto con vosotros lo que he aprendido mediante una pequeña introducción en la que veremos cómo instalar django bajo un entorno virtual para no ensuciar demasiado el sistema, y una pequeña aplicación sacada de la documentación oficial de &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;instalar-django-bajo-un-entorno-virtual-con-virtualenv&#34;&gt;Instalar django bajo un entorno virtual con virtualenv&lt;/h1&gt;
+
+&lt;p&gt;Django desde la version 1.8 (LTS) solo soporta python 2.7 o 3.x (recomendado). En este tutorial se usará la version estable 1.10.2.&lt;/p&gt;
+
+&lt;h2 id=&#34;usando-python-2-7&#34;&gt;Usando python 2.7&lt;/h2&gt;
+
+&lt;p&gt;Vamos a instalar virtualenv, lo cual nos permitirá crear un entorno virtual en el que trabajar con python e instalar fácilmente aplicaciones mediante &lt;strong&gt;pip&lt;/strong&gt;, que ya viene incluido en python 2.7.9, en caso de tener otra version anterior, deberemos instalarlo.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install python-pip python-dev build-essential&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Tras esto, ahora podremos instalar virtualenv:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo pip install --upgrade virtualenv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;usando-python-3-x&#34;&gt;Usando python 3.x&lt;/h2&gt;
+
+&lt;p&gt;En caso de usar la version 3.4 o superior, ya tendremos disponible pip por lo que no será necesario su instalación. En otro caso, procederemos a instalar pip.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo apt-get install python3-pip python3-dev build-essential&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ahora podremos instalar virtualenv:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo pip3 install --upgrade virtualenv&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;inicializar-el-entorno-virtual&#34;&gt;Inicializar el entorno virtual&lt;/h2&gt;
+
+&lt;p&gt;Con virtualenv instalado ahora creamos un entorno virtual (lo llamaremos python-env) en el que instalar todo lo relacionado con &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt; y sus dependencias:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ virtualenv python-env&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Al ejecutar este comando tendremos una carpeta llamada python-env, ahora activaremos el entorno virtual:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; python-env/bin/activate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;instalar-django&#34;&gt;Instalar Django&lt;/h2&gt;
+
+&lt;p&gt;Por último, instalamos &lt;strong&gt;&lt;em&gt;Django&lt;/em&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ pip install --upgrade django&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;configurando-django&#34;&gt;Configurando Django&lt;/h1&gt;
+
+&lt;p&gt;Asumiremos que la versión instalada es la 1.10:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ python -m django --version
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.10.2&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;crear-un-proyecto&#34;&gt;Crear un proyecto&lt;/h2&gt;
+
+&lt;p&gt;Para inicializar un proyecto debemos ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ django-admin.py startproject mysite&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El cual creará un directorio llamado &lt;em&gt;mysite&lt;/em&gt;, la estructura del proyecto es la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;mysite/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    manage.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    mysite/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        __init__.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        settings.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        urls.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        wsgi.py&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;El directorio &lt;em&gt;mysite&lt;/em&gt; más exterior es simplemente un contenedor para el proyecto, su nombre no influye en &lt;strong&gt;Django&lt;/strong&gt; y puede ser renombrado si así lo queremos.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;manage.py&lt;/em&gt; es un pequeño programa que nos ayudará a interaccionar con el proyecto.&lt;/li&gt;
+&lt;li&gt;El directorio interno &lt;em&gt;mysite&lt;/em&gt; es el paquete Python para el proyecto, El nombre de este directorio es el que usaremos cuando queramos importar algo de este proyecto.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;mysite/__init__.py&lt;/em&gt;. Fichero vacío que indica a Python que el directorio debe considerarse como un paquete.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;mysite/settings&lt;/em&gt;. Configuraciones del proyecto.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;mysite/urls.py&lt;/em&gt;. La declaración de URLs para este proyecto; como una &amp;#8220;Tabla de contenidos&amp;#8221; del proyecto.&lt;/li&gt;
+&lt;li&gt;mysite/wsgi.py. Punto de entrada para servidores webs compatibles con &lt;a href=&#34;http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface&#34; title=&#34;Qué es WSGI&#34; target=&#34;_blank&#34;&gt;WSGI&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;el-servidor-de-desarrollo&#34;&gt;El servidor de desarrollo&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Django&lt;/strong&gt; proporciona un servidor simple que nos permita probar nuestro proyecto de forma local, para iniciarlo hay que ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ python manage.py runserver&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;el-fichero-de-configuración-settings-py&#34;&gt;El fichero de configuración settings.py&lt;/h2&gt;
+
+&lt;h3 id=&#34;configurar-la-base-de-datos&#34;&gt;Configurar la base de datos&lt;/h3&gt;
+
+&lt;p&gt;Para modificar la configuración de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de datos&#34;&gt;base de datos&lt;/a&gt; editamos el fichero &lt;em&gt;mysite/settings.py&lt;/em&gt;, en este tutorial usaremos &lt;em&gt;sqlite&lt;/em&gt; por ser la más sencilla.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;DATABASES&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;default&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;ENGINE&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.db.backends.sqlite3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Add &amp;#39;postgresql_psycopg2&amp;#39;, &amp;#39;mysql&amp;#39;, &amp;#39;sqlite3&amp;#39; or &amp;#39;oracle&amp;#39;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;NAME&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;os&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;join&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BASE_DIR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;db.sqlite3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Or path to database file if using sqlite3.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# The following settings are not used with sqlite3:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;USER&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;PASSWORD&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;HOST&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Empty for localhost through domain sockets or &amp;#39;127.0.0.1&amp;#39; for localhost through TCP.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;PORT&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Set to empty string for default.&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;aplicaciones-instaladas&#34;&gt;Aplicaciones instaladas&lt;/h3&gt;
+
+&lt;p&gt;En &lt;em&gt;INSTALLED_APPS&lt;/em&gt; se definen las aplicaciones instaladas en nuestro proyecto, por defecto tendremos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;INSTALLED_APPS&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.auth&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.contenttypes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.sessions&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.messages&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.staticfiles&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La aplicación de ejemplo que creemos deberá referenciarse aquí para poder usarla.&lt;/p&gt;
+
+&lt;p&gt;Una vez tengamos configurado esto, procedemos a iniciar la base de datos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;crear-una-aplicación&#34;&gt;Crear una aplicación&lt;/h1&gt;
+
+&lt;p&gt;Para crear una nueva aplicación basta con ejecutar el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ python manage.py startapp polls&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Lo cual creará un directorio llamado &lt;em&gt;polls&lt;/em&gt;, cuyo contenido será:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;polls/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    __init__.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    admin.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    apps.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    migrations/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        __init__.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    models.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    tests.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    urls.py
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    views.py&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;admin.py es donde se definen los controladores para el panel de administración generado por django&lt;/li&gt;
+&lt;li&gt;apps.py para configuración especifica de la aplicación, hooks de inicialización, etc.&lt;/li&gt;
+&lt;li&gt;migrations/ migraciones a realizar en la BD a medida que evolucione models.py.&lt;/li&gt;
+&lt;li&gt;models.py archivo donde definiremos los modelos de datos de esta aplicación.&lt;/li&gt;
+&lt;li&gt;tests.py archivo para los tests automáticos.&lt;/li&gt;
+&lt;li&gt;urls.py donde definiremos las URLs de la aplicación.&lt;/li&gt;
+&lt;li&gt;views.py para las vistas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Primero necesitaremos modificar &lt;strong&gt;settings.py&lt;/strong&gt; para añadir la nueva aplicación a la lista de &lt;em&gt;INSTALLED_APPS&lt;/em&gt; y que django la inicie en cada arranque:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;INSTALLED_APPS&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;polls.apps.PollsConfig&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.admin&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.auth&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.contenttypes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.sessions&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.messages&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;django.contrib.staticfiles&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En &lt;strong&gt;models.py&lt;/strong&gt; se define los modelos que se usarán para crear la base de datos mediante &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Clases y objetos – Introducción&#34;&gt;clases&lt;/a&gt; en Python. En este caso necesitamos una tabla &lt;em&gt;Poll&lt;/em&gt; (Encuesta) y &lt;em&gt;Choice&lt;/em&gt; (Opción elegida). La encuesta tendrá dos campos, &lt;em&gt;question&lt;/em&gt; y &lt;em&gt;pub_date&lt;/em&gt;. Mientras que la opción elegida tendrá que hacer referencia a qué encuesta pertenece mediante una &lt;a href=&#34;https://elbauldelprogramador.com/lenguaje-definicion-de-datosddl-create/&#34; title=&#34;Lenguaje Definición de Datos(DDL) – CREATE&#34;&gt;foreignKey&lt;/a&gt;, un texto que describa la opción y el número de votos. Dicho esto, el fichero &lt;em&gt;models.py&lt;/em&gt; contendrá:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.db&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;question&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CharField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub_date&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DateTimeField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;date published&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Choice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;poll&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ForeignKey&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;choice_text&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CharField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;max_length&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;votes&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;models&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IntegerField&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Tras escribir los modelos que necesitamos, deberemos crear la migración correspondiente para posteriormente crear las nuevas tablas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;makemigrations&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pools&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;migrate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;activar-el-panel-de-administración&#34;&gt;Activar el panel de administración&lt;/h2&gt;
+
+&lt;p&gt;Primero deberemos crear un usuario con permiso de administración, esto es posible directamente con un comando de manage.py en el que solo debemos seguir los pasos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;manage&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;createsuperuser&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para poder acceder al panel de administración, debe estar añadido en la lista de urls, para ello comprobamos que &lt;em&gt;mysite/urls.py&lt;/em&gt; define este &lt;em&gt;urlpatterns&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.conf.urls&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.contrib&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlpatterns&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;^admin/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;site&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ejecutamos el servidor con &lt;em&gt;python manage.py runserver&lt;/em&gt; y entramos a &lt;a href=&#34;http://127.0.0.1:8000/admin/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/admin/&#34;&gt;http://127.0.0.1:8000/admin/&lt;/a&gt;&lt;/a&gt;. Deberíamos ver:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 336px) 336px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin01.png&#34; alt=&#34;Introducción a Django - Instalación y primer proyecto&#34; title=&#34;Introducción a Django - Instalación y primer proyecto&#34; width=&#34;336px&#34; height=&#34;192px&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para poder hacer accesibles los modelos que acabamos de crear desde el panel de administración, debemos configurar django para que los objetos Polls tengan una interfaz en el panel de administración. Para ello, crea un archivo llamado &lt;em&gt;admin.py&lt;/em&gt; en el directorio &lt;em&gt;polls&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.contrib&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;.models&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;site&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;register&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Debemos reiniciar el servidor para que los cambios se apliquen, ahora sí vemos la aplicación polls:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/09/admin03t.png&#34; alt=&#34;Introducción a Django – Instalación y primer proyecto&#34; width=&#34;400px&#34; height=&#34;134px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;escribir-la-primera-vista&#34;&gt;Escribir la primera vista&lt;/h2&gt;
+
+&lt;p&gt;Hemos mencionado antes que en &lt;em&gt;views.py&lt;/em&gt; se define qué se va a mostrar al usuario. Veamos la vista más simple que podemos crear. En &lt;em&gt;polls/views.py&lt;/em&gt; escribe lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.http&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HttpResponse&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HttpResponse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello, world. You&amp;#39;re at the poll index.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sin embargo, para conseguir que funcione, debemos crear un archivo &lt;em&gt;urls.py&lt;/em&gt; que asocie la función &lt;strong&gt;index&lt;/strong&gt; a una dirección URL. En &lt;em&gt;polls/urls.py&lt;/em&gt; escribe:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.conf.urls&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;views&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlpatterns&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;^$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;views&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;index&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y ahora debemos decir a &lt;em&gt;mysite/urls.py&lt;/em&gt; que use también &lt;em&gt;polls/urls.py&lt;/em&gt; cuando busque qué funciones asociar a qué urls:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.conf.urls&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;django.contrib&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urlpatterns&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;^polls/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;polls.urls&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)),&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;^admin/&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;admin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;site&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;urls&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Tras modificar estos ficheros, veremos el mensaje &lt;strong&gt;Hello, world. You&amp;#8217;re at the poll index.&lt;/strong&gt; en &lt;a href=&#34;http://127.0.0.1:8000/polls&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://127.0.0.1:8000/polls&#34;&gt;http://127.0.0.1:8000/polls&lt;/a&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ejemplo-completo&#34;&gt;Ejemplo completo&lt;/h2&gt;
+
+&lt;p&gt;Para no alargar mucho este artículo, he intentado dar unas nociones básicas de cómo instalar y empezar a usar django. El ejemplo completo de la documentación oficial citada en las referencias lo podéis encontrar en &lt;a href=&#34;https://github.com/elbaulp/djangoTutorialv1.5&#34; title=&#34;Ejemplo en Github&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Documentación Oficial&lt;/em&gt; »» &lt;a href=&#34;https://docs.djangoproject.com/en/1.10/intro/tutorial01/&#34; target=&#34;_blank&#34;&gt;djangoproject.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Imagen de aruseni&lt;/em&gt; »» &lt;a href=&#34;http://aruseni.deviantart.com/art/Django-white-and-green-318200642&#34; target=&#34;_blank&#34;&gt;deviantart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Introducción a HTML5</title>
+            <link>https://elbauldelprogramador.com/introduccion-html5/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-html5/</guid>
+            <description>&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML51.png&#34;&gt;&lt;img sizes=&#34;(min-width: 512px) 512px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML51.png&#34; title=&#34;Introducción a HTML5&#34; alt=&#34;Introducción a HTML5&#34; width=&#34;512px&#34; height=&#34;512px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Con este primer artículo de introducción a HTML5, presentamos una serie de artículos a modo de curso cuyo autor, al que agradezco su interés por colaborar en el blog, es &lt;a href=&#34;http://www.rogamainformatica.es/&#34; title=&#34;Roberto&#34; target=&#34;_blank&#34;&gt;Roberto&lt;/a&gt;. Si ya sabes algo puedes echar un vistazo al artículo &lt;a href=&#34;https://elbauldelprogramador.com/ejemplos-en-html5-almacenamiento-web/&#34; title=&#34;Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket&#34;&gt;Ejemplos en HTML5: Almacenamiento Web, SQL y WebSocket&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;un-poco-de-historia&#34;&gt;Un poco de historia&lt;/h1&gt;
+
+&lt;p&gt;Como bien indica su propio nombre es la 5 versión del estándar de WWW (&lt;em&gt;World Wide Web&lt;/em&gt;), el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;World Wide Web&#34; target=&#34;_blank&#34;&gt;W3C&lt;/a&gt; a estado años trabajando en este nuevo estándar despuesdespués del XHTML, el cual se puede denominar como uno de sus fracasos, al tener un lenguaje muy estricto, y no ser compatible con la mayoría de las webs publicadas en el momento del lanzamiento, esta nueva versión sí es compatible con todas las anteriores, ademas de incorporar nuevas mejoras, algunas de las novedades que mas ruido han hecho ha sido la desaparición del &lt;em&gt;case sensitive&lt;/em&gt;, con lo que podemos escribir por ejemplo la etiqueta ID de un div en mayúsculas o minúsculas y que los navegadores lo reconozcan sin producir error, aun así se recomienda seguir unos estándares, como son el de escribir todos los elementos en minúsculas, y sus valores entre comillas dobles &lt;em&gt;&amp;#8220;&amp;#8221;&lt;/em&gt;, aunque en esta versión sean validas las comillas simples &amp;#8221;; también se recomienda cerrar todas las etiquetas, aunque no sea obligatorio como en XHTML; así mismo también incluye nuevas funciones como la reproducción de vídeo y sonido, y algunas etiquetas nuevas, para ello hicieron un estudio sobre el nombrado de etiquetas de las webs mas famosas, y casi todas tenían una barra lateral, llamada &lt;strong&gt;aside&lt;/strong&gt;,un encabezado llamado &lt;strong&gt;header&lt;/strong&gt;, y un pie llamado &lt;strong&gt;footer&lt;/strong&gt;, así como las barras de navegación &lt;strong&gt;nav&lt;/strong&gt;; y un largo etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;por-dónde-empezar&#34;&gt;¿Por dónde empezar?&lt;/h1&gt;
+
+&lt;p&gt;Lo primero que debemos saber es que HTML sea cual sea su versión &lt;strong&gt;no es un lenguaje de programación&lt;/strong&gt;, tan solo es un lenguaje de marcas, se usan una serie de etiquetas estandarizadas, HTML se usa para crear la estructura de una web, y se ha puesto de moda para las aplicaciones móviles, gracias a &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 10 Mejores Frameworks gratuitos para Aplicaciones Web&#34; target=&#34;_blank&#34;&gt;Frameworks&lt;/a&gt; como PhoneGap a esta moda se a sumado Mozilla, con su S.O. Firefox OS; así que como podemos comprobar es casi obligatorio como mínimo conocerlo sea cual sea la plataforma a la que queramos desarrollar; como he dicho nos sirve para dar la estructura a una web (el esqueleto) después podremos darle colores, formas y organizarlo con las hojas de estilo en cascada (CSS) y se recomienda usar su ultima versión &lt;a href=&#34;https://elbauldelprogramador.com/generar-codigo-css-3-facilmente/&#34; title=&#34;Generar código CSS 3 fácilmente&#34; target=&#34;_blank&#34;&gt;CSS3&lt;/a&gt;, aunque esta es otra batalla de la que hablaremos en otra ocasión; ahora que sabemos que es, y para que sirve, es el momento de conocer la etiqueta que debe aparecer en cualquier documento HTML5.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esta etiqueta decimos que el documento es una pagina web HTML5; como vemos es muy sencilla, incluso nos la podemos aprender a diferencia de su antecesor HTML4.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;&#34;&gt;ó&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;según fuera tradicional o estricto, no vamos a entrar en las diferencias ya que esto hoy en día a pasado a la historia.&lt;/p&gt;
+
+&lt;p&gt;Todo el que empieza en esto esta deseando ir al código escribir su primera pagina web y verla funcionando. Esto se puede lograr con una estructura básica como la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;&#34;&gt;    El contenido de la pagina&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;A esta estructura le podemos dar “vida” simplemente abriendo nuestro blog de notas, y pegándolo, dándole el nombre que deseemos y la extensión html. Después de eso si la abrimos con cualquier navegador podemos verla funcionando.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML5.png&#34;&gt;&lt;img sizes=&#34;(min-width: 481px) 481px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Introducción-a-HTML5.png&#34; title=&#34;Introducción a HTML5&#34; alt=&#34;Introducción a HTML5&#34; width=&#34;481px&#34; height=&#34;409px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Ahora os explicare qué es cada etiqueta, la primera: el &lt;strong&gt;Doctipe&lt;/strong&gt;, ya la conocemos, seguidamente tenemos una etiqueta &lt;strong&gt;&lt;html&gt;&lt;/strong&gt;; que cierra al final del documento &lt;strong&gt;&lt;/html&gt;&lt;/strong&gt; podemos intuir que hay que incluir dentro todo el contenido html y justamente es así como funciona debemos escribir dentro todo el contenido de nuestra página, la siguiente etiqueta es el &lt;strong&gt;&lt;head&gt;&lt;/strong&gt; allí debemos incluir los enlaces a nuestras hojas de estilo, etiquetas de metadatos (mas adelante veremos que son y para que sirven), el titulo de la página, este se incluye dentro de las etiquetas &lt;strong&gt;&lt;title&gt;&lt;/strong&gt; &lt;strong&gt;&lt;/title&gt;&lt;/strong&gt; y como vemos en la imagen superior lo que escribamos aquí va a aparecer en la pestaña de nuestra pagina; se debe cerrar con &lt;strong&gt;&lt;/head&gt;&lt;/strong&gt;; seguidamente nos encontramos con &lt;strong&gt;&lt;body&gt;&lt;/strong&gt; aquí es donde escribiremos todo el cuerpo de nuestra web.&lt;/p&gt;
+
+&lt;p&gt;Estas son las etiquetas básicas, el body podemos complicarlo todo lo que queramos o necesitemos añadiendo tantas etiquetas &lt;div&gt; &lt;/div&gt; conocidas como divisiones, o capas, y dentro de cada una meteremos el contenido que deseemos, imágenes, texto, vídeo&amp;#8230;&lt;/p&gt;
+
+&lt;h1 id=&#34;etiquetas-de-html5&#34;&gt;Etiquetas de HTML5&lt;/h1&gt;
+
+&lt;p&gt;Las etiquetas mas usadas son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;html&amp;gt;: ya la conocemos; es la raíz de cualquier pagina, y todos los demás elementos deben
+descender de él.&lt;/li&gt;
+&lt;li&gt;&amp;lt;head&amp;gt;. Es la cabecera de la pagina, en ella incluiremos todos los enlaces a documentos
+externos y metadatos&lt;/li&gt;
+&lt;li&gt;&amp;lt;title&amp;gt;: es el titulo de la pagina.&lt;/li&gt;
+&lt;li&gt;&amp;lt;link&amp;gt; la usaremos para enlazar a documentos JS(&lt;a href=&#34;https://elbauldelprogramador.com/crear-webapps-con-soporte-html5-css3-y/&#34; title=&#34;Crear WebApps con soporte HTML5, CSS3 y JavaScript con el LungoJs framework&#34;&gt;Java Script&lt;/a&gt;) y CSS.&lt;/li&gt;
+&lt;li&gt;&amp;lt;meta&amp;gt;: define algún metadato, como las palabras clave, descripción de la pagina, etc&lt;/li&gt;
+&lt;li&gt;&amp;lt;body&amp;gt; Dentro de él tendremos el contenido de la página&lt;/li&gt;
+&lt;li&gt;&amp;lt;section&amp;gt; Nueva etiqueta solo disponible en paginas HTML5 y define una sección de la página&lt;/li&gt;
+&lt;li&gt;&amp;lt;nav&amp;gt; también es nueva en HTML5 se utiliza para contener los enlaces de navegación&lt;/li&gt;
+&lt;li&gt;&amp;lt;article&amp;gt; es otra de las novedades de la ultima versión del HTML aquí escribiremos los artículos, lo cual viene siendo algo que no tiene necesariamente que ver con el resto de la web.&lt;/li&gt;
+&lt;li&gt;&amp;lt;hx&amp;gt; sustituiremos la X por un numero desde el 1 al 6 se usa para definir encabezados, cuanto mas bajo sea el numero mas importante sera el encabezado, por lo que &amp;lt;h1&amp;gt; es mas importante que &amp;lt;h2&amp;gt; predefinido por nuestros navegadores disminuye la fuente de cada &amp;lt;hx&amp;gt; según aumente el numero por lo que &amp;lt;h2&amp;gt; tendrá una fuente (tamaño de letra) mayor que un &amp;lt;h3&amp;gt;, lo suyo es mantener esta concordancia aunque podemos editarlo desde nuestras hojas de estilos.&lt;/li&gt;
+&lt;li&gt;&amp;lt;header&amp;gt; nuevo elemento del HTML5 aquí escribiremos la cabecera de la pagina, normalmente es el lugar donde se coloca el logo, titulo de la web, y menú de navegación
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;footer&amp;gt; también hemos hablado de el antes, es otro de los nuevos elementos del HTML5 y como su nombre indica es el pie, generalmente de la pagina en la que este declarado, pero también es correcto usarlo para escribir cualquier otro pie que pueda aparecer en la pagina, por ejemplo el pie de un articulo, en donde podríamos colocar el nombre del autor que lo escribió&lt;/li&gt;
+&lt;li&gt;&amp;lt;p&amp;gt; lo que pongamos en su interior se mostrara como un párrafo&lt;/li&gt;
+&lt;li&gt;&amp;lt;hr&amp;gt; indica una separación entre secciones, artículos, o algún contenido, visualmente lo veremos como una linea horizontal&lt;/li&gt;
+&lt;li&gt;&amp;lt;ol&amp;gt; define una lista ordenada normalmente se visualizaran con un numero delante de cada elemento&lt;/li&gt;
+&lt;li&gt;&amp;lt;ul&amp;gt; define una lista sin orden&lt;/li&gt;
+&lt;li&gt;&amp;lt;li&amp;gt; se incluye dentro de cualquiera de los 2 elementos anteriores, son los elementos de la lista.&lt;/li&gt;
+&lt;li&gt;&amp;lt;figure&amp;gt; Nuevo elemento en HTML5 cada vez mas usado, se utiliza para incluir una imagen en su interior&lt;/li&gt;
+&lt;li&gt;&amp;lt;img&amp;gt; aquí declararemos la imagen que queremos mostrar&lt;/li&gt;
+&lt;li&gt;&amp;lt;div&amp;gt; la etiqueta mas usada, podemos sustituir casi cualquiera de las anteriores por esta, hasta la aparición del HTML5 se solían incluir todas las divisiones de la web con esta etiqueta y se le daban distintos estilos, según se fuera a usar, aun así, se recomienda no usarla si existe otra etiqueta mas moderna que haga lo que queremos hacer.
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;a&amp;gt; una de las etiquetas mas utilizadas, se utiliza para definir enlaces, ya sean interiores(dentro de las misma web) o exteriores (hacia otras webs)&lt;/li&gt;
+&lt;li&gt;&amp;lt;mark&amp;gt; cada vez mas utilizada es otra de las novedades HTML5 se utiliza para resaltar una parte de la pagina.&lt;/li&gt;
+&lt;li&gt;&amp;lt;span&amp;gt; muy usado para dar un estilo distinto a alguna parte de un párrafo&lt;/li&gt;
+&lt;li&gt;&amp;lt;iframe&amp;gt; se utiliza para insertar un contenido dentro de la pagina, ya sea un vídeo (si quisiéramos insertar un vídeo de YouTube esta seria la etiqueta) u otra pagina, así como cualquier otro contenido externo a nuestra pagina y que necesitemos se visualice en ella.&lt;/li&gt;
+&lt;li&gt;&amp;lt;embed&amp;gt; muy similar al anterior, pero con algunas mejoras, es otra de las novedades del HTML5&lt;/li&gt;
+&lt;li&gt;&amp;lt;vídeo&amp;gt; es la etiqueta que usaremos para visualizar un vídeo en nuestra web&lt;/li&gt;
+&lt;li&gt;&amp;lt;audio&amp;gt; exactamente lo mismo que la anterior, pero para audio, ambas son novedades del HTML5.&lt;/li&gt;
+&lt;li&gt;&amp;lt;canvas&amp;gt; es una capa especial para imágenes,(bitmaps) es utilizada para dibujar, especial para juegos e imágenes en movimiento&lt;/li&gt;
+&lt;li&gt;&amp;lt;table&amp;gt; como su nombre indica se usa para incluir tablas en la pagina, no se aconseja usarla&lt;/li&gt;
+&lt;li&gt;&amp;lt;tr&amp;gt; representa una fila de la tabla&lt;/li&gt;
+&lt;li&gt;&amp;lt;td&amp;gt; representa una celda de la tabla&lt;/li&gt;
+&lt;li&gt;&amp;lt;form&amp;gt; se usa para crear formularios, desde los cuales introduciremos datos, y ejecutaremos ciertas funciones.&lt;/li&gt;
+&lt;li&gt;&amp;lt;label&amp;gt; dentro de los formularios suele usarse para sacar un texto estático, el típico que aparece encima de la ya estándar caja de texto blanca que dice teclee su nombre.&lt;/li&gt;
+&lt;li&gt;&amp;lt;input&amp;gt; tenemos gran variedad de campos en artículos posteriores hablaremos de ellos, pero todos ellos sirven para interactuar con el usuario, ya sean un checkbox (la cajita blanca que marcaremos con un check); campos de texto para introducir nuestro nombre, teléfono, etc&amp;#8230;&lt;/li&gt;
+&lt;li&gt;&amp;lt;select&amp;gt; es el desplegable con distintas opciones que todos hemos visto para seleccionar nuestro país por ejemplo.&lt;/li&gt;
+&lt;li&gt;&amp;lt;option&amp;gt; cada una de las opciones del &amp;lt;select&amp;gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;textarea&amp;gt; es un campo de texto con varias lineas para escribir un texto extenso.
+Estas son las mas usadas, y estandarizadas, podemos ver todas desde multitud de webs, una buena de referencia es la de Mozilla.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Referencia etiquetas HTML5&lt;/em&gt; »» &lt;a href=&#34;https://developer.mozilla.org/es/docs/HTML/HTML5/HTML5_lista_elementos&#34; target=&#34;_blank&#34;&gt;developer.mozilla.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Introducción a las expresiones regulares en python</title>
+            <link>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</guid>
+            <description>&lt;p&gt;En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).&lt;/p&gt;
+
+&lt;p&gt;Son recopilaciones que he hecho durante el curso de *Programming languages &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; title=&#34;Nuevos Cursos disponibles en Udacity, la universidad online gratuita&#34;&gt;en udacity&lt;/a&gt;&lt;/em&gt; y voy a intentar explicarlos lo más claramente posible.&lt;/p&gt;
+
+&lt;p&gt;Lo primero que hay que hacer para usar expresiones regulares es importar el módulo &lt;strong&gt;re&lt;/strong&gt; de python con &lt;strong&gt;&lt;em&gt;import re&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;[a-z]+-?[a-z]+&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (&lt;em&gt;-?&lt;/em&gt;) seguido nuevamente de uno o más caracteres de la &lt;strong&gt;a&lt;/strong&gt; a la &lt;strong&gt;z&lt;/strong&gt;, en minúsculas.&lt;/p&gt;
+
+&lt;p&gt;Algunos casos de ejemplo son los siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplos válidos:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;well-liked&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;well-liked&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;html&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplos no válidos:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a-b-c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a-b-c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a--b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a--b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.&lt;/p&gt;
+
+&lt;p&gt;El siguiente ejemplo servirá para coincidir con cadenas que representen funciones matemáticas de un solo parámetro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[a-z]+( *[0-9]+ *)&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto encontrará cadenas que empiecen con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con \, despues buscamos por cero o más espácios ( *) seguidos de números (&lt;em&gt;[0-9]+&lt;/em&gt;) y nuevamente cero o más espacios.&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplos válidos&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cos(0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cos(0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sqrt(   2     )&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sqrt(   2     )&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Ejemplos no válidos&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cos     (0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cos     (0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sqrt(x)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;sqrt(x)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.&lt;/p&gt;
+
+&lt;p&gt;Veamos otro más, esta vez queremos encontrar cadenas que contengan caracteres de escape () y comillas&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;]|(?:\.))*&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (&lt;em&gt;r&amp;#8217;&amp;rdquo;&amp;rdquo;&amp;#8217;&lt;/em&gt;), lo que encontremos, lo vamos a encontrar cero o más veces (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:)&lt;/em&gt;&amp;#8221;&amp;#8216;*), &lt;strong&gt;(?:)&lt;/strong&gt; coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que &lt;strong&gt;no&lt;/strong&gt; sea un \, y nótese que debemos escaparlo (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^])&lt;/em&gt;&amp;#8221;&amp;#8216;*) &lt;strong&gt;ó (&lt;em&gt;|&lt;/em&gt;)&lt;/strong&gt; un &lt;code&gt;.&lt;/code&gt; seguido de cualquier caracter
+(&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^\]|(?:.))&lt;/em&gt;&amp;#8221;&amp;#8216;*)&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;]|(?:\.))*&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  Ejemplos válidos:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;I say, &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;hello.&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;I say, &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;hello.&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  Ejemplos no válidos:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;[^&amp;#34;]*&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con (&lt;em&gt;r&amp;rsquo;&amp;ldquo;&amp;rsquo;&lt;/em&gt;), no pueden contener ningún caracter &lt;strong&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt; entre la cadena (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]&#39;&lt;/code&gt;&lt;/strong&gt;), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]*&amp;quot;&#39;&lt;/code&gt;&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c&#34;&gt;#  Ejemplos  válidos:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;cuneiform&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;sumerian writing&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#  Ejemplos no válidos&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;&amp;#34;esc &amp;#34; ape&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>Introducción al NDK de Android</title>
+            <link>https://elbauldelprogramador.com/introduccion-al-ndk-de-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-al-ndk-de-android/</guid>
+            <description>&lt;p&gt;El NDK de Android es un conjunto de herramientas que permiten embeber código máquina nativo compilado en lenguajes C y/o C++, hoy veremos cómo crear un ejemplo en el NDK de Android.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;conceptos-básicos-del-ndk&#34;&gt;Conceptos básicos del NDK&lt;/h1&gt;
+
+&lt;p&gt;La Máquina Virtual de Android (VM) permite que el código de la aplicación (escrito en Java) llame a métodos implementados en código nativo a través de JNI. En una &lt;em&gt;nutshell&lt;/em&gt;, lo cual quiere decir que:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;El código fuente de la aplicación declarará uno o más métodos con la palabra reservada &lt;strong&gt;native&lt;/strong&gt; para indicar que dicho método está implementado en código nativo. Ej:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;native&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;byte&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;loadFile&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;filePath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Es necesario proporcionar una biblioteca compartida nativa que contenga la implentación de dichos métodos, que será empaquetada en el .apk de la aplicación. La biblioteca debe ser nombrada de acuerdo al estándar Unix &lt;em&gt;&lt;code&gt;lib&amp;lt;nombre&amp;gt;.so&lt;/code&gt;&lt;/em&gt;, y deberá contener un punto de entrada JNI estándar (veremos esto más adelante), por ejemplo: &lt;em&gt;&lt;code&gt;libFileLoader.so&lt;/code&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;La aplicación debe cargar explícitamente la biblioteca. Por ejemplo, para cargarla al iniciar la aplicación, simplemente añade la siguiente línea al código:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;loadLibrary&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;FileLoader&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;No hay que scribir el prefijo “lib” ni el sufijo “.so”.&lt;/p&gt;
+
+&lt;h1 id=&#34;primer-ejemplo-en-el-ndk-android-hola-mundo&#34;&gt;Primer ejemplo en el NDK Android - Hola Mundo&lt;/h1&gt;
+
+&lt;p&gt;En el &lt;em&gt;ndk&lt;/em&gt; existe un directorio que contiene varios ejemplos, importamos a eclipse el &lt;em&gt;HelloJni&lt;/em&gt;. Veamos la estructura del proyecto:&lt;/p&gt;
+
+&lt;p&gt;En el paquete &lt;em&gt;com.example.hellojni&lt;/em&gt; sólo hay una clase llamada &lt;em&gt;HelloJni&lt;/em&gt;, con el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;HelloJni&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;extends&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;/** Called when the activity is first created. */&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tv&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;TextView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stringFromJNI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;native&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;stringFromJNI&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;native&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;unimplementedStringFromJNI&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;loadLibrary&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello-jni&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En el método &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-hola-mundo/&#34;&gt;onCreate()&lt;/a&gt;&lt;/em&gt; se crea un &lt;em&gt;TextView&lt;/em&gt; que recogerá el texto a mostrar a través de la función nativa en C.&lt;/p&gt;
+
+&lt;p&gt;La función &lt;em&gt;stringFromJni()&lt;/em&gt; es el método nativo que implementa la biblioteca &lt;em&gt;hello-jni&lt;/em&gt;, la cual viene dentro de la aplicación en &lt;em&gt;libs/armeabi/libhello-jni.so&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;unimplementedStringFromJni()&lt;/em&gt; es una función no implementada por la biblioteca &lt;em&gt;hello-jni&lt;/em&gt;. Su único propósito es mostrar que es posible declarar tantos métodos nativos como queramos en nuestro código &lt;em&gt;Java&lt;/em&gt;, sus implementaciones sólo serán buscadas en las bibliotecas que estén cargadas en ese momento solo la primera vez que se las llame. Al llamar a éste método obtendremos una excepción del tipo &lt;em&gt;java.lang.UnsatisfiedLinkError&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por último, al final del código, como se comentó al principio del artículo se carga la biblioteca al inicio de la aplicación. Nótese que a pesar de que el fichero situado en &lt;em&gt;libs/armeabi/&lt;/em&gt; se llama &lt;em&gt;libhello-jni.so&lt;/em&gt;, al cargarlo desde Java se elimina el sufijo &lt;em&gt;.so&lt;/em&gt; y el prefijo &lt;em&gt;lib&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;La implementación del método &lt;em&gt;stringFromJNI()&lt;/em&gt; es la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;c&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;jni.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;/* This is a trivial JNI example where we use a native method
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt; * to return a new VM String. See the corresponding Java source
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt; * file located at:
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt; *
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt; *   apps/samples/hello-jni/project/src/com/example/hellojni/HelloJni.java
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt; */&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jstring&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Java_com_example_hellojni_HelloJni_stringFromJNI&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;JNIEnv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jobject&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;thiz&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NewStringUTF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello from JNI !&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como se puede apreciar, es necesario llamar a la función con el nombre del paquete Java y la clase donde se encuentra la llamada a la función. Es decir, &lt;em&gt;Java_com_example_hellojni_HelloJni&lt;/em&gt; corresponde con la ruta del proyecto &lt;em&gt;./src/com/example/hellojni/HelloJni&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejecutar-el-hola-mundo-del-ndk-de-android&#34;&gt;Ejecutar el Hola Mundo del NDK de Android&lt;/h1&gt;
+
+&lt;p&gt;Para compilar y ejecutar el programa, con el proyecto &lt;em&gt;Hello-Jni&lt;/em&gt; de ejemplo importado en eclipse, nos situamos en el directorio del proyecto desde el terminal y ejecutamos el comando &lt;em&gt;ndk-build&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ ndk-build
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Gdbserver      : &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;arm-linux-androideabi-4.6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; libs/armeabi/gdbserver
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Gdbsetup       : libs/armeabi/gdb.setup
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Compile thumb  : hello-jni &amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hello-jni.c
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SharedLibrary  : libhello-jni.so
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Install        : libhello-jni.so &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt; libs/armeabi/libhello-jni.so&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Con esto hemos compilado el código nativo de la aplicación.
+El siguiente paso es construir e instalar la aplicación como se hace normalmente en eclipse, o mediante línea de comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ ant debug
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ adb install bin/HelloJni.apk&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El primer comando compila y genera el &lt;em&gt;.apk&lt;/em&gt; y con el segundo lo instalamos en el emulador o dispositivo móvil.&lt;/p&gt;
+
+&lt;p&gt;Por último, la aplicación es tan simple como esto:&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/06/helloJni-NDK-de-android.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/2013/06/helloJni-NDK-de-android.png&#34;
+            alt=&#34;NKD android&#34;
+            title=&#34;NKD android&#34;
+            sizes=&#34;(min-width: 480px) 480px, 100vw&#34;
+            width=&#34;480&#34;
+            height=&#34;800&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Ejemplo Hola Mundo NKD&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Eso es todo, espero que esta pequeña introducción haya ayudado a iniciarse con el NDK de android.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Documentación del NDK&lt;/em&gt; »» &lt;a href=&#34;http://developer.android.com/tools/sdk/ndk/index.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
             <title>Introducción rápida a Ruby</title>
             <link>https://elbauldelprogramador.com/introduccion-a-ruby/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -11678,6 +12231,184 @@ Cabe destacar la asuencia de la sentencia &lt;code&gt;return&lt;/code&gt; en tod
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Ruby in Twenty MinutesRuby in Twenty Minutes&lt;/em&gt; »» &lt;a href=&#34;http://www.ruby-lang.org/en/documentation/quickstart/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Jugando con las secciones .dtors y .ctors de la tabla de secciones en C</title>
+            <link>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/jugando-con-la-seccion-dtors-de-la-tabla-de-secciones-en-c/</guid>
+            <description>&lt;p&gt;Los que me leéis habitualmente probablemente hayais visto los artículos que escribí sobre &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Desafío de ingeniería inversa en C – Soluciones&#34;&gt;ingeniería inversa en C&lt;/a&gt;, o &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;explotación de buffers overflows&lt;/a&gt;. Son temas que me llaman la atención, hoy quiero hablaros de dos secciones de la tabla de secciones en C llamadas &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt;, creada por los binarios compilados con el compilador de GNU.&lt;/p&gt;
+
+&lt;p&gt;Estas secciones se crean para los &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-destructor/&#34;&gt;destructores&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-el-constructor/&#34;&gt;constructores&lt;/a&gt;, respectivamente. Los constructores se llaman justo antes de ejecutar la función &lt;code&gt;main()&lt;/code&gt; y los destructores se llaman justo antes de que &lt;code&gt;main()&lt;/code&gt; finalize con la llamada al sistema &lt;code&gt;exit&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Veamos un ejemplo para aclarar su funcionamiento:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;c&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;miConstructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;__attribute__&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;miDestructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;__attribute__&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;destructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;En main() &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;EXIT_SUCCESS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;miConstructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;En el constructor&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;miDestructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;En el destructor&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La salida de este programa será:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;En el constructor
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;En main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;En el destructor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Al declarar &lt;code&gt;miConstructor&lt;/code&gt; como constructor la función se llama antes de ejecutar &lt;code&gt;main&lt;/code&gt;, lo mismo pasa para &lt;code&gt;miDescructor&lt;/code&gt;, pero en este caso se la llamará justo antes de salir de &lt;code&gt;main&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;La forma de controrlar la ejecución de ambas funciones es mediante las secciones &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt;. Estas secciones son un array de direcciones de 32 bits que terminan con una dirección nula (la dirección 0x00000000). Así se determina donde empieza y donde acaba el array. Parecido a lo que hice en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/ocultar-archivos-y-otras-imagenes-dentro-de-una-imagen/&#34; title=&#34;Ocultar archivos dentro de una imagen&#34;&gt;Ocultar archivos dentro de una imagen&lt;/a&gt; donde delimité el nombre del archivo por un pixel en blanco para saber que había llegado al final del nombre. De modo que entre el inicio de la sección &lt;em&gt;.dtors&lt;/em&gt; y &lt;em&gt;.ctors&lt;/em&gt; y la dirección nula se encuentran las funciones declaradas como destructores o constructores, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;Para localizar las funciones hay que usar el programa &lt;strong&gt;nm&lt;/strong&gt;, y &lt;strong&gt;objdump&lt;/strong&gt; para encontrar las dos secciones.&lt;/p&gt;
+
+&lt;p&gt;Sin embargo, mientras escribía este artículo &lt;a href=&#34;http://stackoverflow.com/q/16569495/1612432&#34; title=&#34;Pregunta en stackoverflow&#34;&gt;me dí cuenta de que ya no existen dichas secciones&lt;/a&gt;, han sido reemplazadas por &lt;em&gt;.init_array/.fini_array&lt;/em&gt;. Del mismo modo pueden verse usando &lt;strong&gt;nm&lt;/strong&gt;, y &lt;strong&gt;objdump&lt;/strong&gt;. Empecemos con &lt;strong&gt;nm&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ nm dtors
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495f0 d _DYNAMIC
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080496e4 d _GLOBAL_OFFSET_TABLE_
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080484dc R _IO_stdin_used
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         w _ITM_deregisterTMCloneTable
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         w _ITM_registerTMCloneTable
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         w _Jv_RegisterClasses
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080485d8 r __FRAME_END__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495ec d __JCR_END__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495ec d __JCR_LIST__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt; D __TMC_END__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt; A __bss_start
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080496fc D __data_start
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080483c0 t __do_global_dtors_aux
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495e4 t __do_global_dtors_aux_fini_array_entry
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049700&lt;/span&gt;&lt;span class=&#34;&#34;&gt; D __dso_handle
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495dc t __frame_dummy_init_array_entry
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         w __gmon_start__
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080484ba T __i686.get_pc_thunk.bx
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495e4 t __init_array_end
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080495dc t __init_array_start
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048450&lt;/span&gt;&lt;span class=&#34;&#34;&gt; T __libc_csu_fini
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048460&lt;/span&gt;&lt;span class=&#34;&#34;&gt; T __libc_csu_init
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         U __libc_start_main@@GLIBC_2.0
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt; A _edata
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049708&lt;/span&gt;&lt;span class=&#34;&#34;&gt; A _end
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080484c0 T _fini
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080484d8 R _fp_hw
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080482b8 T _init
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048320&lt;/span&gt;&lt;span class=&#34;&#34;&gt; T _start
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt; b completed.5730
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080496fc W data_start
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048350&lt;/span&gt;&lt;span class=&#34;&#34;&gt; t deregister_tm_clones
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;080483e0 t frame_dummy
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0804840c T main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048428&lt;/span&gt;&lt;span class=&#34;&#34;&gt; t miConstructor
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;0804843c t miDestructor
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         U puts@@GLIBC_2.0
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048380&lt;/span&gt;&lt;span class=&#34;&#34;&gt; t register_tm_clones&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;En la salida se muestran como &lt;em&gt;_init&lt;/em&gt; y &lt;em&gt;_fini&lt;/em&gt;. También es posible obtener más información sobre las secciones de la tabla con &lt;strong&gt;objdumb&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ objdump -h ./dtors
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;./dtors:     file format elf32-i386
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Sections:
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Idx Name          Size      VMA       LMA       File off  Algn
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .interp       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000013&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048134&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048134&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000134&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**0
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .note.ABI-tag &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000020&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048148&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048148&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000148&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .note.gnu.build-id &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000024&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048168&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048168&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000168&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .hash         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000028&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  0804818c  0804818c  0000018c  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .gnu.hash     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000020&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080481b4  080481b4  000001b4  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .dynsym       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000050&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080481d4  080481d4  000001d4  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .dynstr       0000004a  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048224&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048224&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000224&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**0
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .gnu.version  0000000a  0804826e  0804826e  0000026e  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**1
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .gnu.version_r &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000020&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048278&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048278&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000278&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .rel.dyn      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048298&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048298&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000298&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .rel.plt      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000018&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080482a0  080482a0  000002a0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .init         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000026&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080482b8  080482b8  000002b8  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .plt          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000040&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080482e0  080482e0  000002e0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .text         000001a0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048320&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048320&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000320&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**4
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .fini         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000017&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080484c0  080484c0  000004c0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .rodata       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000036&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080484d8  080484d8  000004d8  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .eh_frame_hdr 0000002c  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048510&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08048510&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000510&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .eh_frame     000000a0  0804853c  0804853c  0000053c  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .init_array   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080495dc  080495dc  000005dc  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .fini_array   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080495e4  080495e4  000005e4  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .jcr          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000004&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080495ec  080495ec  000005ec  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .dynamic      000000f0  080495f0  080495f0  000005f0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .got          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000004&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080496e0  080496e0  000006e0  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .got.plt      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000018&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080496e4  080496e4  000006e4  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .data         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080496fc  080496fc  000006fc  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .bss          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000004&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;08049704&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000704&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  ALLOC
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .comment      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000038&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000000&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000000&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000704&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**0
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, READONLY&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;El contenido que nos interesa es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .init_array   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080495dc  080495dc  000005dc  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;&#34;&gt; .fini_array   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;00000008&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  080495e4  080495e4  000005e4  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;**2
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                  CONTENTS, ALLOC, LOAD, DATA&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esta vez hemos obtenido más información, sabemos que ambas secciones ocupan 8 Bytes y se puede escribir en ellas, ya que no tienen la etiqueta READONLY. Para examinar el contenido basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objdump&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fini_array&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dtors&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Contents&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;section&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fini_array&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80495e4&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c0830408&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c840408&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;La primera dirección apunta a la tabla de desplazamiento global (_GLOBAL_OFFSET_TABLE_) y la segunda a __do_global_dtors_aux.&lt;/p&gt;
+
+&lt;p&gt;La última dirección (3c840408) corresponde con la dirección de la función &lt;code&gt;miDestructor&lt;/code&gt;, pero en little-endian (0804843c). Al poder modificar dicha tabla, sería posible tomar el control del programa explotando alguna vulnerabilidad y obtener una shell con permisos de root. El propósito inicial del artículo era mostar cómo explotar dicha vulnerabilidad, pero al no existir la sección .ctors y .dtors no va a ser posible, ya que he estado trasteando un poco con estas secciones nuevas y no he conseguido nada.&lt;/p&gt;
+
+&lt;p&gt;Aún así, espero que os haya resultado útil para aprender sobre los constructores y destructores en C, y hayáis conocido un poco más a fondo la estructura de un ejecutable.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34;&gt;http://www.exploit-db.com/papers/13234/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Replace .ctors/.dtors with .init_array/.fini_array&lt;/em&gt; »» &lt;a href=&#34;http://gcc.gnu.org/bugzilla/show_bug.cgi?id=46770&#34; target=&#34;_blank&#34;&gt;gcc.gnu.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Abusing .CTORS and .DTORS For FUN and PROFIT&lt;/em&gt; »» &lt;a href=&#34;http://www.exploit-db.com/papers/13234/&#34; target=&#34;_blank&#34;&gt;exploit-db.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

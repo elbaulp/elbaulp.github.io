@@ -6,7 +6,7 @@
         <description>Recent content in Articulos on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Wed, 04 Oct 2017 13:59:29 +0100</lastBuildDate>
+        <lastBuildDate>Thu, 05 Oct 2017 16:35:36 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/articulos/</link>
@@ -15,6 +15,68 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/articulos/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016</title>
+            <link>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</link>
+            <pubDate>Thu, 05 Oct 2017 16:35:36 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 750px) 750px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Olympic Feathers&lt;/strong&gt;, es una &lt;em&gt;visualización de datos&lt;/em&gt; interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.&lt;/p&gt;
+
+&lt;h1 id=&#34;cómo-surgió-la-idea&#34;&gt;Cómo surgió la idea&lt;/h1&gt;
+
+&lt;p&gt;Inicialmente Nadieh tenía pensado visualizar cada una de las 56 disciplinas como una “pluma” y usar el interior de la pluma para colocar todas las medallas en función de la edición de los juegos y género del ganador. Al final la idea del diseño usando forma de pluma no cuajó, pero lo mantuvo en el nombre del proyecto (&lt;em&gt;“Olympic feathers”&lt;/em&gt; o Plumas Olímpicas).&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-herramientas-usó&#34;&gt;Qué herramientas usó&lt;/h1&gt;
+
+&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;la-historia-de-las-olimpiadas&#34;&gt;La historia de las Olimpiadas&lt;/h1&gt;
+
+&lt;p&gt;Más de 5000 eventos en las Olimpiadas han tenido ganador, premiados con una medalla de oro desde 1904. Podemos investigar la visualización interactiva para ver cómo cada una de estas medallas se ganaron en las 56 disciplinas que han participado en los juegos, 41 de las cuales participaron también en los últimos Juegos Olímpicos de Rio.&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-nos-cuentan-los-datos&#34;&gt;Qué nos cuentan los datos&lt;/h1&gt;
+
+&lt;p&gt;La mayoría de deportes Olímpicos empezaron siendo solo para hombres. Afortunadamente esta tendiencia comenzó a cambiar en la segunda mitad el último siglo. Incluso el número de medallas que pueden ganarse para una disciplina comienza a ser el mismo para ambos géneros. En los juegos de Rio hubo 3 disciplinas en las que solo podía participar un género; La &lt;strong&gt;&lt;em&gt;lucha Greco-Romana&lt;/em&gt;&lt;/strong&gt;, aún en los juegos desde la primera edición, en la que solo participan hombres. Por otro lado, en  &lt;strong&gt;&lt;em&gt;Gimnasia Rítmica&lt;/em&gt;&lt;/strong&gt;, y &lt;strong&gt;&lt;em&gt;Natación Sincronizada&lt;/em&gt;&lt;/strong&gt;, en los juegos desde 1984, solo participan mujeres.&lt;/p&gt;
+
+&lt;h1 id=&#34;como-leer-las-plumas&#34;&gt;Como leer las plumas&lt;/h1&gt;
+
+&lt;p&gt;Cada círculo representa un grupo de deportes similares, como deportes de agua, deportes de pelotas etc. Dentro de cada círculo se muestran porciones, cada una de estas porciones es una &lt;strong&gt;pluma&lt;/strong&gt;, que representa una disciplina.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 292px) 292px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-2016.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;292&#34; height=&#34;214&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;Una pluma&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Una &lt;strong&gt;pluma&lt;/strong&gt; se divide en 31 secciones, irradiando hacia afuera. Empiezan desde los primeros juegos en 1896, en el centro del círculo hasta los últimos juegos en Rio 2016, en el exterior del círculo. Cada disciplina se hace el doble de ancha según el máximo de medallas que se podrían haber ganado durante una edición para un género (El ancho es el mismo para hombres y mujeres).&lt;/p&gt;
+
+&lt;p&gt;La siguiente división se hace por género. Por ejemplo, en la imagen de arriba, las barras que van hacia arriba, con un fondo rojo son medallas de oro ganadas por mujeres, las de abajo por hombres.&lt;/p&gt;
+
+&lt;p&gt;Las medallas se colorean en función del continente, como se muestra en la siguiente imagen:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 196px) 196px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-20162.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;196&#34; height=&#34;129&#34;&gt;&lt;/img&gt;
+    &lt;figcaption&gt;Representación de los continentes&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;detalles-técnicos-y-referencias&#34;&gt;Detalles técnicos y referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Google Lanza Contributor, Apoya a Tus Webs Favoritas Sin Ver Anuncios</title>
@@ -2405,68 +2467,6 @@ de caras, se podría decir que son “caras” estándares.), la constante va aj
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016</title>
-            <link>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</link>
-            <pubDate>Fri, 23 Sep 2016 13:01:18 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 750px) 750px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;750&#34; height=&#34;750&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hace unos meses publicamos &lt;a href=&#34;https://elbauldelprogramador.com/14-ejemplos-visualizacion-datos/&#34; title=&#34;15 Ejemplos De Las Mejores Visualizaciones De Datos&#34;&gt;15 Ejemplos De Las Mejores Visualizaciones De Datos&lt;/a&gt;, hoy os traemos otra visualización muy interesante de &lt;a href=&#34;http://www.visualcinnamon.com&#34; title=&#34;Sitio web de Nadieh Bremer&#34;&gt;&lt;em&gt;Nadieh Bremer&lt;/em&gt;&lt;/a&gt;, en la cual muestra &lt;strong&gt;todas las medallas de oro en los Juegos Olímpicos desde 1896&lt;/strong&gt;, en forma de plumas.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Olympic Feathers&lt;/strong&gt;, es una &lt;em&gt;visualización de datos&lt;/em&gt; interactiva que muestra la historia de las medallas olímpicas desde 1896 hasta hoy. Los gráficos muestran cómo se distribuyen las medallas por disciplina, país, género y geografía. También proporciona una visión de cómo han evolucionado las distintas disciplinas a lo largo del tiempo.&lt;/p&gt;
-
-&lt;h1 id=&#34;cómo-surgió-la-idea&#34;&gt;Cómo surgió la idea&lt;/h1&gt;
-
-&lt;p&gt;Inicialmente Nadieh tenía pensado visualizar cada una de las 56 disciplinas como una “pluma” y usar el interior de la pluma para colocar todas las medallas en función de la edición de los juegos y género del ganador. Al final la idea del diseño usando forma de pluma no cuajó, pero lo mantuvo en el nombre del proyecto (&lt;em&gt;“Olympic feathers”&lt;/em&gt; o Plumas Olímpicas).&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;qué-herramientas-usó&#34;&gt;Qué herramientas usó&lt;/h1&gt;
-
-&lt;p&gt;Para desarrollar el proyecto usó &lt;strong&gt;Excel&lt;/strong&gt;, &lt;strong&gt;R&lt;/strong&gt; (Puedes consultar &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;artículos sobre R en este enlace&lt;/a&gt;) , &lt;strong&gt;Sketch&lt;/strong&gt; y &lt;strong&gt;D3.js&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;la-historia-de-las-olimpiadas&#34;&gt;La historia de las Olimpiadas&lt;/h1&gt;
-
-&lt;p&gt;Más de 5000 eventos en las Olimpiadas han tenido ganador, premiados con una medalla de oro desde 1904. Podemos investigar la visualización interactiva para ver cómo cada una de estas medallas se ganaron en las 56 disciplinas que han participado en los juegos, 41 de las cuales participaron también en los últimos Juegos Olímpicos de Rio.&lt;/p&gt;
-
-&lt;h1 id=&#34;qué-nos-cuentan-los-datos&#34;&gt;Qué nos cuentan los datos&lt;/h1&gt;
-
-&lt;p&gt;La mayoría de deportes Olímpicos empezaron siendo solo para hombres. Afortunadamente esta tendiencia comenzó a cambiar en la segunda mitad el último siglo. Incluso el número de medallas que pueden ganarse para una disciplina comienza a ser el mismo para ambos géneros. En los juegos de Rio hubo 3 disciplinas en las que solo podía participar un género; La &lt;strong&gt;&lt;em&gt;lucha Greco-Romana&lt;/em&gt;&lt;/strong&gt;, aún en los juegos desde la primera edición, en la que solo participan hombres. Por otro lado, en  &lt;strong&gt;&lt;em&gt;Gimnasia Rítmica&lt;/em&gt;&lt;/strong&gt;, y &lt;strong&gt;&lt;em&gt;Natación Sincronizada&lt;/em&gt;&lt;/strong&gt;, en los juegos desde 1984, solo participan mujeres.&lt;/p&gt;
-
-&lt;h1 id=&#34;como-leer-las-plumas&#34;&gt;Como leer las plumas&lt;/h1&gt;
-
-&lt;p&gt;Cada círculo representa un grupo de deportes similares, como deportes de agua, deportes de pelotas etc. Dentro de cada círculo se muestran porciones, cada una de estas porciones es una &lt;strong&gt;pluma&lt;/strong&gt;, que representa una disciplina.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 292px) 292px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-2016.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;292&#34; height=&#34;214&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Una pluma&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Una &lt;strong&gt;pluma&lt;/strong&gt; se divide en 31 secciones, irradiando hacia afuera. Empiezan desde los primeros juegos en 1896, en el centro del círculo hasta los últimos juegos en Rio 2016, en el exterior del círculo. Cada disciplina se hace el doble de ancha según el máximo de medallas que se podrían haber ganado durante una edición para un género (El ancho es el mismo para hombres y mujeres).&lt;/p&gt;
-
-&lt;p&gt;La siguiente división se hace por género. Por ejemplo, en la imagen de arriba, las barras que van hacia arriba, con un fondo rojo son medallas de oro ganadas por mujeres, las de abajo por hombres.&lt;/p&gt;
-
-&lt;p&gt;Las medallas se colorean en función del continente, como se muestra en la siguiente imagen:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 196px) 196px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Plumas-Olimpicas-Visualizacion-medallas-Olimpicas-1896-hasta-20162.png&#34; alt=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34; width=&#34;196&#34; height=&#34;129&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Representación de los continentes&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;detalles-técnicos-y-referencias&#34;&gt;Detalles técnicos y referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Para conocer más sobre la elaboración del proyecto, puedes visitar el repositorio &lt;a href=&#34;https://github.com/nbremer/olympicfeathers/tree/gh-pages/data&#34; title=&#34;Olympic Feathers en GitHub&#34;&gt;Olympic Feathers en GitHub&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;La página del &lt;a href=&#34;https://nbremer.github.io/olympicfeathers/&#34; title=&#34;proyecto Olympic Feathers&#34;&gt;proyecto Olympic Feathers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Página personal de &lt;a href=&#34;http://www.visualcinnamon.com/portfolio/olympic-feathers&#34; title=&#34;Página Oficial de Nadieh Bremer&#34;&gt;Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Para escuchar Nadieh hablar de su proyecto en el podcast &lt;strong&gt;Data Stories&lt;/strong&gt;, visita el episodio &lt;a href=&#34;http://datastori.es/83-olympic-feathers-with-nadieh-bremer/&#34; title=&#34;83 \| Olympic Feathers with Nadieh Bremer&#34;&gt;83 | Olympic Feathers with Nadieh Bremer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -7880,6 +7880,118 @@ La discusión partió de una publicación en eLinux de un ingeniero de Sony, Tim
         </item>
         
         <item>
+            <title>Introducción a los Procesos</title>
+            <link>https://elbauldelprogramador.com/introduccion-los-procesos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
+            <description>&lt;h1 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h1&gt;
+
+&lt;p&gt;El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;1-2-composición-y-estructura&#34;&gt;1.2 . Composición y estructura&lt;/h1&gt;
+
+&lt;p&gt;El sistema operativo mantiene una tabla de procesos, dentro de la que se alamacena un &lt;strong&gt;bloque de control de proceso (BCP)&lt;/strong&gt; por cada proceso. Por razones de eficiencia, la tabla de procesos se contruye normalmente como una estructura estática que tiene un determinado número de BCP, todos ellos del mismo tamaño.&lt;/p&gt;
+
+&lt;p&gt;El BCP contiene la información básica del proceso:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Información de indentificación:&lt;/strong&gt; Esta información indentifica al usuario y al proceso. Como ejemplo, se incluyen los siguientes datos:
+
+&lt;ul&gt;
+&lt;li&gt;Identificador del proceso.&lt;/li&gt;
+&lt;li&gt;Identificador del proceso padre en caso de existir relaciones padre-hijo como es el caso de UNIX.&lt;/li&gt;
+&lt;li&gt;Información sobre el usuario (identificador del usuario, identificador del grupo).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estado del procesador:&lt;/strong&gt; Contiene los valores iniciales del estado del procesador o su valor en el instante en que fue interrumpido el proceso.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Información de control del proceso:&lt;/strong&gt; En esta sección se incluye diversa información que permite gestionar el proceso. Destacaremos los siguientes datos:
+
+&lt;ul&gt;
+&lt;li&gt;Información de planificación y estado:&lt;/li&gt;
+&lt;li&gt;Estado del proceso.&lt;/li&gt;
+&lt;li&gt;Evento por el que espera el proceso cuando está bloqueado.&lt;/li&gt;
+&lt;li&gt;Prioridad del proceso.&lt;/li&gt;
+&lt;li&gt;Información de planificación.&lt;/li&gt;
+&lt;li&gt;Descripción de los segmentos de memoria asignados al proceso.&lt;/li&gt;
+&lt;li&gt;Recursos asignados, tales como:&lt;/li&gt;
+&lt;li&gt;Archivos abiertos (tablas de descriptores o manejadores de archivo).&lt;/li&gt;
+&lt;li&gt;Puertos de comunicación asignados&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Punteros&lt;/strong&gt; para estructurar los procesos en colas o anillos: Por ejemplo, los procesos que están en estado de listo pueden estar organizados en una cola, de forma que se facilite la labor del planificador.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Comunicación entre procesos:&lt;/strong&gt; El BCP puede contener espacio para almacenar las señales y para algún mensaje enviado al proceso.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;1-3-estados-y-transiciones&#34;&gt;1.3 . Estados y transiciones&lt;/h1&gt;
+
+&lt;p&gt;Un proceso puede encontrarse en tres estados diferentes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;En ejecución:&lt;/strong&gt; En este estado se encuentra el proceso que está siendo ejecutado por el procesador. El estado del procesador residirá en los registros del procesador.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bloqueado:&lt;/strong&gt; Un proceso bloqueado está esperando a que ocurra un evento y no puede seguir ejecutandose hasta que termine el eventol. Una situación típica de proceso bloqueado se produce cuando el proceso solicita una operación E/S (Entrada / Salida). Hasta que no termina esta operación, el proceso queda bloqueado. En este estado el proceso reside en BCP.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Listo:&lt;/strong&gt; Un proceso está listo para ejecutar cuando puede entrar en fase de procesamiento. Dado que puede haber varios procesos en este estado, una de las tareas del sistema operativo será seleccionar aquel que debe pasar a ejecución. El módulo del SO que toma esta decisión se denomina &lt;strong&gt;planificador.&lt;/strong&gt; En este estado el proceso reside en BCP.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 445px) 445px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;La &lt;strong&gt;transición&lt;/strong&gt; entre cada uno de los tres estados puede hacerse de la siguiente manera:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Transición 1.&lt;/strong&gt; Ocurre cuando el programa que está en ejecución necesita algún elemento, señal, datos etc, para poder continuar ejecutandose.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 2.&lt;/strong&gt; Cuando un programa o proceso ha utilizado el tiempo asignado por la CPU (procesador) para su ejecución y tiene que dejar paso al siguiente proceso.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 3.&lt;/strong&gt; Cuando el proceso que está listo pasa al estado de ejecución; es decir, cuando al proceso le llega una nueva disposición del tiempo de la CPU para poder ejecutarse.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transición 4.&lt;/strong&gt; Cuando el proceso pasa de estar bloqueado a estar listo, es decir, cuando el proceso recibe una orden o señal que estaba esperando para pasar al estado de listo y posteriormente, tras la transición 3, pasar a ejecución.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;características&#34;&gt;Características&lt;/h1&gt;
+
+&lt;p&gt;Las características principales de los procesos son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Una característica fundamental de los procesos concurrentes es la competencia que se establece entre ellos cuando han de compartir recursos.&lt;/li&gt;
+&lt;li&gt;Cooperación, cuando dos o más procesos se están llevando a cabo de manera que uno depende del otro es necesario que exista una cooperación entre ambos.&lt;/li&gt;
+&lt;li&gt;Se pueden formar familias de procesos según sean o no interdependientes.&lt;/li&gt;
+&lt;li&gt;Una operación que sufren los procesos usualmente es el &lt;strong&gt;cambio de contexto&lt;/strong&gt;, que consiste en retirar el control de la CPU del proceso actual, y asignarla a otro proceso.&lt;/li&gt;
+&lt;li&gt;Los sistemas operativos deben proporcionar alguna forma de crear y destruir los procesos. Cada proceso tiene un padre y cero o más hijos. Así, existe una jerarquía de procesos que se puede representar en forma de árbol.&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Investigadores del MIT usan ecuaciones algebráicas para mejorar las transmisiones WIFI y LTE con coded TCP</title>
+            <link>https://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/investigadores-del-mit-usan-ecuaciones-algebraicas-para-mejorar-las-transmisiones-wifi-y-lte-coded-tcp/</guid>
+            <description>
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 296px) 296px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;alignleft  wp-image-1001&#34;  title=&#34;Algebra Packets MIT&#34; src=&#34;https://elbauldelprogramador.com/img/2012/10/Algebra-Packets-MIT1.jpg&#34; alt=&#34;paquetes algebráicos MIT TCP&#34; width=&#34;296px&#34; height=&#34;370px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Un equipo de investigadores del MIT, Caltech, Harvard, y otras universidades Europeas, han ideado una forma de potenciar el rendimiento en redes inalámbricas &amp;#8212; sin aumentar la potencia de transmisión o añádir más estaciones base. La creación de los investigadores, &lt;strong&gt;&lt;em&gt;coded TCP,&lt;/em&gt;&lt;/strong&gt;, en lugar de enviar paquetes simples, crea una ecuación que describe una serie de paquetes. Es una forma nueva de transmitir datos de modo que los paquetes perdidios no aumenten la latencia o re-envíen datos, ya que son la causa de que la red se congestione.&lt;/p&gt;
+
+&lt;p&gt;Un solo paquete perdido causa un aumento en la latencia &amp;#8212; El receptor tiene que solicitar de nuevo el paquete, y no puede hacer nada hasta que lo recibe. Si hay una cantidad significante de paquetes perdidos, resulta en un aumento considerable de la latencia, mucho re-envio de datos, y poco ancho de banda.&lt;/p&gt;
+
+&lt;p&gt;En &lt;strong&gt;&lt;em&gt;coded TCP,&lt;/em&gt;&lt;/strong&gt;, se agrupan bloques de paquetes y &lt;a href=&#34;http://www.mit.edu/~medard/papers2011/Modeling%20Network%20Coded%20TCP.pdf&#34; target=&#34;_blank&#34;&gt;se transforman en ecuaciones algebráicas&lt;/a&gt; (PDF), que describen los paquetes. Cuando se pierde una parte del mensaje, el receptor resuelve la ecuación para obtener los datos perdidos en lugar de solicitarlos al emisor. La resolución de la ecuación es simple y lineal, por lo que no requiere demasiado procesamiento por parte del router/smartphone/laptop. En las pruebas, &lt;strong&gt;coded TCP&lt;/strong&gt; produjo mejoras notables. El MIT descubrió que la red WiFi del campus (con un 2% de paquetes perdidos), ascendió de 1Mbps a 16Mbps. En un tren de alta velocidad (con una perdida de paquetes del 5%), la velocidad de conexión aumentó de 0.5Mbps a 13.5Mbps.&lt;/p&gt;
+
+&lt;p&gt;En realidad, estas mejoras no son del todo sorprendentes. El protocolo TCP fue diseñado para redes cableadas, donde la pérdida de paquetes es generalmente un signo de congestión. La redes inalámbricas necesitan algún método para la corrección de errores en la recepción (Forward Error Correction [FEC]), y eso es exáctamente lo que &lt;strong&gt;Codec TCP&lt;/strong&gt; proporciona.&lt;/p&gt;
+
+&lt;p&gt;En un futuro, se espera que el protocolo TCP codificado tenga una gran repercusión en el rendimiento de redes WIFI y LTE.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;A Bandwidth Breakthrough&lt;/em&gt; »» &lt;a href=&#34;http://www.technologyreview.com/news/429722/a-bandwidth-breakthrough/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Increasing wireless network speed by 1000%, by replacing packets with algebra&lt;/em&gt; »» &lt;a href=&#34;http://www.extremetech.com/computing/138424-increasing-wireless-network-speed-by-1000-by-replacing-packets-with-algebra&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;MIT researchers use algebraic equation that improves WiFi and LTE data streams&lt;/em&gt; »» &lt;a href=&#34;http://www.engadget.com/2012/10/24/mit-researchers-algebraic-equation-to-weave-wifi-and-lte-signals/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+        <item>
             <title>Investigadores más cerca de usar luz en lugar de cables en ordenadores</title>
             <link>https://elbauldelprogramador.com/investigadores-mas-cerca-de-usar-luz-en-lugar-de-cables-en-ordenadores/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -7958,6 +8070,64 @@ La discusión partió de una publicación en eLinux de un ingeniero de Sony, Tim
         </item>
         
         <item>
+            <title>Juegos Linux, The Clockwork Man 1 y 2</title>
+            <link>https://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/juegos-linux-clockwork-man-1-y-2/</guid>
+            <description>&lt;p&gt;Puedes encontrar más juegos para Linux &lt;a href=&#34;https://elbauldelprogramador.com/3-juegos-para-linux/&#34;&gt;aquí&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Pocas veces he visto juego que de soporte para los tres sistemas operativos (GNU/Linux, Mac OS y Windows), pero no es el caso de &lt;cite&gt;The Clockwork Man 1&lt;/cite&gt; y &lt;cite&gt;The Clockwork Man 2&lt;/cite&gt;.
+En The Clockwork Man ayudaremos a Miranda Calomy y su robot Sprocket a superar una aventura repleta de puzzles mediante un novedoso sistema de puntero y zoom, todo ello en coloridos escenarios con gráficos pintados a mano, entre los que destacan las decenas de artilugios &amp;#8220;científicos&amp;#8221; (hablamos de una época victoriana alternativa).&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;El precio de &lt;cite&gt;The Clockwork Man 1&lt;/cite&gt; es de $15, y el de &lt;cite&gt;The Clockwork Man 2&lt;/cite&gt; $20. Si no queréis comprarlo, os dejo los links de descarga de los Demos.&lt;/p&gt;
+
+&lt;h1 id=&#34;the-clockwork-man-1&#34;&gt;The Clockwork Man 1&lt;/h1&gt;
+
+&lt;p&gt;Para descargar el demo debéis ir a la página de arriba y en la parte de la derecha donde dice: &amp;#8220;Available languages&amp;#8221;, elegir el idioma deseado.&lt;/p&gt;
+
+&lt;h2 id=&#34;capturas-de-pantalla-y-tráiler&#34;&gt;Capturas de pantalla y Tráiler&lt;/h2&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;480&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TP5d7UlUQUI/AAAAAAAAAIQ/PaDDPtHZjZQ/s800/The_Clockwork_Man_-_Miranda_and_Esra_1_nu_567C78CA.jpg&#34; width=&#34;640&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TP5d88_SE6I/AAAAAAAAAIU/66h6TtGUEp0/s800/The_Clockwork_Man_-_Mirandas_Lab_1_nu_2E69EEDA.jpg&#34; width=&#34;640&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;480&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TP5d-BXqleI/AAAAAAAAAIY/sn6XHbaUHL0/s800/The_Clockwork_Man_-_New_Coventry_1_nu_1ECF3B5A.jpg&#34; width=&#34;640&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;480&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TP5d_W7jMSI/AAAAAAAAAIc/K68kwzbC93s/s800/The_Clockwork_Man_-_Zeppelin_Engine_Puzzle_1_nu_3B901B9F.jpg&#34; width=&#34;640&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;the-clockwork-man-2&#34;&gt;The Clockwork Man 2&lt;/h1&gt;
+
+&lt;p&gt;Para descargar el demo debéis ir a la página de arriba y en la parte de la derecha donde dice: &amp;#8220;Available languages&amp;#8221;, elegir el idioma deseado.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;600&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TP5l6xToHtI/AAAAAAAAAIg/4YCI6tXtnng/s800/The_Clockwork_Man_2_The_Hidden_World_Ireland_Map_1_nu_51920FC7.jpg&#34; width=&#34;800&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;600&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TP5l8u1kstI/AAAAAAAAAIk/JYQEE5LRCDQ/s800/The_Clockwork_Man_2_The_Hidden_World_London_Graveyard_1_nu_9BD24FA5.jpg&#34; width=&#34;800&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;600&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TP5l-1MdvCI/AAAAAAAAAIo/3mBUV8vpRF4/s800/The_Clockwork_Man_2_The_Hidden_World_Miranda_Martha_1_nu_76FCF17D.jpg&#34; width=&#34;800&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;600&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TP5mA4RM-dI/AAAAAAAAAIs/SLdx8rneHzY/s800/The_Clockwork_Man_2_The_Hidden_World_Stream_by_the_Bridge_1_nu_16F6F4DD.jpg&#34; width=&#34;800&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;</description>
+        </item>
+        
+        <item>
             <title>La generación GitHub: Por qué ahora todos estamos en el opensource</title>
             <link>https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
@@ -8030,6 +8200,20 @@ La discusión partió de una publicación en eLinux de un ingeniero de Sony, Tim
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;The GitHub generation: why we&amp;rsquo;re all in open source now&lt;/em&gt; »» &lt;a href=&#34;http://www.wired.co.uk/news/archive/2013-03/11/github-democracy&#34; target=&#34;_blank&#34;&gt;Wired.co.uk&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>La recursividad, explicada por Homer Simpson</title>
+            <link>https://elbauldelprogramador.com/la-recursividad-explicada-por-homer/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/la-recursividad-explicada-por-homer/</guid>
+            <description>&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif&#34;  &gt;&lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;240px&#34; src=&#34;https://elbauldelprogramador.com/img/2012/04/tumblr_ld50v7q6tn1qabw68o1_4001.gif&#34; width=&#34;320px&#34; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://plus.google.com/118038952320880179394/posts/6DB9jgDZU4Q&#34; target=&#34;_blank&#34;&gt;Fuente&lt;/a&gt;&lt;/p&gt;
+</description>
         </item>
         
         <item>
@@ -8147,187 +8331,6 @@ Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;grc.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;a href=&#34;http://twit.tv/show/security-now/376&#34; target=&#34;_blank&#34;&gt;twit.tv&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>Logrando el anonimato con Tor (Parte 1)</title>
-            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/</guid>
-            <description>&lt;ul&gt;
-&lt;li&gt;Logrando el anonimato con Tor (Parte 1)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este artículo veremos cómo lograrlo y verdaderamente saber contra qué luchamos.&lt;/p&gt;
-
-&lt;p&gt;Primero instalemos Tor y empecemos a usarlo para desasirnos de algunas cosas. Hay muchos tutoriales en Internet que describen cómo instalar y usar Tor, pero mencionemos una vez más todos los pasos requeridos.&lt;/p&gt;
-
-&lt;h1 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h1&gt;
-
-&lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;# &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;deb http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt; # &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;deb-src http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/apt/sources.list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Luego instalemos Tor y Privoxy:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# apt-get update
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; # apt-get install tor privoxy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;En este punto deberíamos mencionar que ambos son:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Tor: es usado para conectarnos con una red anónima sobre TCP&lt;/li&gt;
-&lt;li&gt;Privoxy: es usado para conectar nuestro navegador sobre un proxy HTTP.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Agrega la siguiente línea al archivo &lt;code&gt;/etc/privoxy/config&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;forward-socks4a / &amp;lt;a href=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http://127.0.0.1:9050&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; target=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_blank&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt;127.0.0.1:9050&amp;lt;/a&amp;gt; .&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/privoxy/config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Además debes agregar las siguientes línas al archivo &lt;code&gt;/etc/tor/torrc&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;AvoidDiskWrites &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ControlPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9051&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Log notice stdout
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;WarnUnsafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SocksListenAddress &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SocksPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Por el momento no entraremos en detalles sobre qué significa cada opción, pero describiremos las variables de configuración interesantes más adelante. Primero iniciemos Tor y Privoxy:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /etc/init.d/tor start
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# /etc/init.d/privoxy start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Comprobemoslo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# netstat -lntup
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:8118 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8520&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/privoxy
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9050 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8540&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/tor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34;size-medium wp-image-1027 alignnone&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn12-300x298.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;298px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Podemos ver que configuramos el navegador para conectarse a traves del proxy que está corriendo en IP 127.0.0.1 y el puerto 8118, el cual es exactamente nuestro proxy Privoxy. Así nuestro navegador web se conecta a Privoxy, el cual se conecta en turnos a Tor, que nos permite navegar en Internet anónimamente.&lt;/p&gt;
-
-&lt;p&gt;Verifiquemos si el navegador está efectivamente usando la red Tor para navegar en internet de manera anónima. Podemos hacerlo visitando la URI &lt;a href=&#34;http://check.torproject.org/&#34; target=&#34;_blank&#34;&gt;Check Torproject&lt;/a&gt;. Si ves algo como la siguiente imagen, entonces hemos configurado Tor exitosamente y podemos navegar en Internet de forma anónima.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn21-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En vez de configurarlo manualmente, también podemos usar Tor Browser Bundle, el cual integra prácticamente todo lo que necesitamos. Simplemente tenemos que descargar Tor Browser Bundle, extraerlo y ejecutar el script start-for-browser, de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# cd tor-browser_en-US
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# ./start-tor-browser&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 284px) 284px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn31-284x300.png&#34; alt=&#34;&#34; width=&#34;284px&#34; height=&#34;300px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en &amp;#8220;View the Network&amp;#8221; (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando - esto puede estar más actualizado en &lt;a href=&#34;http://torstatus.all.de/index.php?SR=Bandwidth&amp;SO=Desc&#34; target=&#34;_blank&#34;&gt;Nodos Tor&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;El script tambien abrirá el navegador web Tor una vez que nos conectemos con éxito a la red Tor. Este navegador está basado en Firefox y se ve como en la siguiente imagen:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/11/081012_1601_AchievingAn41-300x86.png&#34; alt=&#34;&#34; width=&#34;300px&#34; height=&#34;86px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Podemos ver que nuestro navegador está usando efectivamente la red Tor y podemos navegar en Internet de manera anónima.&lt;/p&gt;
-
-&lt;h1 id=&#34;2-cómo-funciona-tor&#34;&gt;2. Cómo funciona Tor&lt;/h1&gt;
-
-&lt;p&gt;Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como &lt;a href=&#34;http://www.google.com&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt; estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino - el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# traceroute www.google.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;El problema básico con esto es que todos los nodos intermediarios pueden monitorear nuestros paquetes transmitidos a traves de Internet. Incluso si usamos una conexión encriptada (HTTPS), algunos datos todavía pueden ser accedidos simplemente mirando en el encabezado TCP, como la IP de origen, la IP destino, tamaño de carga, tiempo de comunicación, etc.&lt;/p&gt;
-
-&lt;p&gt;¿Pero qué pasa si estamos usando Tor en el principio de la red? No podemos realmente ejecutar Traceroute cuando estamos usando Tor, dada la forma en que Tor fue diseñado. Dado que Tor no puede manejar paquetes ICMP (ping), no hay forma de saber a dónde serán dirigidos los paquetes. Esto es lo que hace que Tor sea seguro. Cuando estamos usando nuestro navegador conectado a la red Tor, estamos enviando peticiones a través de Internet usando el primer nodo de Tor, el cual la reenvía al siguiente nodo y el siguiente al siguiente, hasta que finalmente alcanza el destino.&lt;/p&gt;
-
-&lt;p&gt;En la red Tor, todavía necesitamos enviar nuestros paquetes a nuestra red personal, luego al ISP, dado que es nuestro proveedor de servicios de internet; sin ello, no podríamos incluso usar Internet. Pero adicionalmente, nuestros paquetes son además dirigidos a traves de la red Tor, donde son aleatoriamente dirigidos a nodos seguros. esto permite que nuestro tráfico no sea visto por un hábil atacante y el gobierno que está monitoreando el tráfico en cualquier ubicación en Internet.&lt;/p&gt;
-
-&lt;p&gt;El cliente conectado a la red Tor primero necesita una lista de nodos de Tor que puede ser obtenida de el servidor directorio. Podemos ver los nodos disponibles de Tor visitando &lt;a href=&#34;http://torstatus.all.de/index.php?SR=Bandwidth&amp;SO=Desc&#34; target=&#34;_blank&#34;&gt;Tor Nodes&lt;/a&gt;, donde podemos encontrar bastante información sobre los nodos de Tor, incluyendo hostname, router name, uptime, ancho de banda disponible, etc.&lt;/p&gt;
-
-&lt;p&gt;Después de que el cliente ha obtenido dicha lista, necesita construir un circuito de conexiones entre los nodos de la red Tor. Cada conexión entre los nodos subsecuentes en un circuito es encriptado con diferentes claves de encriptación, por lo tanto cada nodo sólo conoce el anterior y el siguiente nodo en el circuito. Deberíamos mencionar además que Tor trabaja sobre el protocolo TCP y puede ser usado por cualquier aplicación que pueda ser configurada para enviar su tráfico a través de un proxy SOCKS. Esto no es totalmente correcto debido a que podemos torificar la aplicación con el uso de tsocks, lo cual describiremos en uno de los artículos subsiguientes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Entonces al fin y al cabo, la red Tor provee una manera de esconder el vínculo entre la dirección origen y destino de una conexión dada. Por lo tanto, un intruso no puede determinar de dónde viene la información y hacia dónde va, lo que nos convierte en anónimos.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Pero la pregunta persiste: ¿puede realmente volvernos anónimos? La respuesta es sí y no. Necesitamos recordar que todos los paquetes que son enviados de nuestro cliente al servidor serán encriptados en el servidor. Esto realmente tiene sentido por cómo el servidor usaría la información y haría algo con ella si ésta fuera encriptada. En consecuencia, Tor provee anonimato sobre internet, pero no puede proveer los medios para mantenerte anónimo al servidor que está recibiendo la información.&lt;/p&gt;
-
-&lt;p&gt;Describamos esto un poco más. Si estamos enviando paquetes que contienen nuestro nombre de usuario, nombre de dominio o alguna otra información que indica nuestra presencia, entonces la máquina objetivo sabrá quiénes somos, aunque algún intruso que esté escuchando en un nodo intermediario tal vez no. Esto se reduce a lo siguiente:&lt;/p&gt;
-
-&lt;p&gt;En cada conexión a través de la red Tor, necesitamos tener en cuenta que a la información:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;El cliente la envía&lt;/li&gt;
-&lt;li&gt;Internet la direcciona&lt;/li&gt;
-&lt;li&gt;El servidor la recibe&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Con Tor, podemos asegurarnos que Internet aunque canaliza la información, no tiene idea sobre la dirección origen ni destino que usamos, lo cual es crucial para mantener el anonimato sobre Internet. Pero la información enviada de un cliente hacia un servidor son visibles en los dos extremos de la conexión. Por lo tanto, para ser verdaderamente anónimos, incluso en la máquina destino, necesitamos no encapsular ninguna información sensible en el paquete de datos del tráfico entre el cliente y el servidor.&lt;/p&gt;
-
-&lt;p&gt;Con motivo de esconder la información del nivel de aplicación que pueda comprometer nuestro anonimato, podemos usar &lt;a href=&#34;https://www.torproject.org/torbutton/&#34; target=&#34;_blank&#34;&gt;Torbutton&lt;/a&gt;, una extensión de Firefox que inhabilita muchos posibles filtrados de información que nos puedan comprometer. O lo que es mejor, podemos usar&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34; target=&#34;_blank&#34;&gt; Tor browser bundle&lt;/a&gt;, el cual usa Vidalia para configurar e iniciar Tor. Éste además abre el navegador Web Tor con Torbutton integrado, el que podemos usar para buscar anónimamente en internet.&lt;/p&gt;
-
-&lt;h1 id=&#34;3-variables-de-configuración-de-tor&#34;&gt;3. Variables de configuración de Tor&lt;/h1&gt;
-
-&lt;p&gt;Presentemos lo que el manual dice sobre las variables de configuración que usamos en este artículo:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AvoidDiskWrites&lt;/strong&gt;: Si es distinto de cero, intenta escribir en el disco con menos frecuencia. Esto es útil cuando usamos memoria flash u otro dispositivo que soporta solo un limitado número de escrituras. (Default: 0)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ControlPort&lt;/strong&gt;: Si está seteado, Tor aceptará conexiones en este puerto y permitirá a esas conexiones controlar el proceso de Tor usando el protocolo &amp;#8220;Tor Control Protocol&amp;#8221; (descripto en control-spec.txt) Nota: a menos que especifiques también uno o más HashedControlPassword o CookieAuthentication, seteando esta opción causará que Tor permita que cualquier proceso en el localhost lo controle. (Setear ambos métodos de autenticación significa que cualquiera de los dos es suficiente para autenticar Tor). Esta opción es requerida por muchos controladores de Tor; muchos usan el valor 9051. Setealo en &amp;#8220;auto&amp;#8221; para dejar que Tor elija un puerto por vos. (Default: 0)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Log&lt;/strong&gt;: Envía todos los mensajes a la salida standard, a la salida de error standard, o al log del sistema (el valor de &amp;#8220;syslog&amp;#8221; sólo lo provee Unix). Reconocidos niveles de severidad son debug, info, notice, warn y err. Recomendamos usar &amp;#8220;notice&amp;#8221; en la mayoría de los casos, debido a que algo más verborrágico podría proveer información sensible a un atacante que obtenga los logs. Si se da solo un nivel de severidad, todos los mensajes de ese nivel o uno mayor serán enviados al destino listado.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SocksListenAddress&lt;/strong&gt;: Bindea hacia esta dirección para esperar por conexiones de aplicaciones de Socks-speaking. (Default: 127.0.0.1) Puedes especificar incluso un puerto (e.g. 192.168.0.1:9100) esta directiva puede ser especificada múltiples veces para bindear múltiples direcciones/puertos.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SocksPort&lt;/strong&gt;: Activa este puerto para esperar conexiones de aplicaciones Socks-speaking. Configuralo en 0 si no quieres permitir conexiones con aplicaciones vía SOCKS. Configuralo en &amp;#8220;auto&amp;#8221; para dejar que Tor seleccione un puerto por vos. (Default: 9050)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;4-configurar-resolución-dns-de-forma-segura&#34;&gt;4. Configurar resolución DNS de forma segura&lt;/h1&gt;
-
-&lt;p&gt;La única cosa que debemos realmente observar cuando usamos Tor es la resolución de DNS. Usualmente nuestra máquina cliente está usando nuestros propios servidores DNS, los cuales en turnos usan los servidores DNS del ISP, por lo tanto un intruso puede todavía obtener la IP origen y destino con el que nos estamos comunicando. Este es un comportamiento no deseado, porque el servidor DNS ve qué hostname estamos intentando resolver y conectarnos, lo que puede derivar en una revelación de usuario.&lt;/p&gt;
-
-&lt;p&gt;Nuestro navegador web usa un proxy SOCKS para conectarse a Tor. Debemos saber qué tipo de proxies SOCKS existen. Hay tres tipos de proxies SOCKS, listados a continuación:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;SOCKS 4: usa direcciones IP&lt;/li&gt;
-&lt;li&gt;SOCKS 4a: usa hostnames&lt;/li&gt;
-&lt;li&gt;SOCKS 5: usa direcciones IP y hostnames&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Para probar si estamos resolviendo hostnames de forma local o remota, podemos editar la configuración torrc agregándole las siguientes líneas al archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;TestSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;WarnUnsafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;TestSocks:&lt;/strong&gt; Cuando está activada esta opción, Tor genera una entrada en el log notice-level por cada conexión al puerto Socks indicando si la petición usó un protocolo de socks seguro o uno inseguro (mira lo comentado en SafeSocks). esto ayuda a determinar si una aplicación que usa Tor está posiblemente filtrando las peticiones DNS. (Default: 0)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SafeSocks&lt;/strong&gt;: Cuando está activada esta opción, Tor rechazará conexiones a aplicaciones que usan variantes no seguras de protocolo de socks - una que solo provea una dirección IP, significa que la aplicación está resolviendo el DNS primero. Más específicamente, estos son socks4 y socks5 cuando no lo hace el servidor DNS remoto. (Defaults: 0)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WarnUnsafeSocks&lt;/strong&gt;: Cuando está activada esta opción, Tor alertará cuando una petición recibida sólo contiene una dirección IP en lugar de un hostname. Permitirle a aplicaciones que resuelvan sus DNS es usualmente una mala idea y puede proveer tu ubicación a atacantes. (Default: 1)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;En el próximo artículo describiremos cómo configurar el mecanismo de resolución de DNS para evitar cualquier posible robo de información.&lt;/p&gt;
-
-&lt;h1 id=&#34;5-conclusión&#34;&gt;5. Conclusión&lt;/h1&gt;
-
-&lt;p&gt;Podemos ver que si somos cuidadosos podemos ser totalmente anónimos en Internet. Debemos vigilar que no resolvamos los hostnames de forma local y debemos no incluir información sensible en los datos de una aplicación que pueda desenmascararnos. Si cumplimos con esto, podemos realmente navegar de manera anónima en Internet.&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;QRYzre4bf7I&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34;
-    height=&#34;270&#34;&gt;
-&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias:&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Manual de Tor, &lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34;&gt;https://www.torproject.org/docs/tor-manual.html.en&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Infosec&lt;/em&gt; »» &lt;a href=&#34;http://resources.infosecinstitute.com/tor-part-1/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
