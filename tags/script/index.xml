@@ -6,7 +6,7 @@
         <description>Recent content in Script on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Mon, 18 Jul 2016 16:08:56 +0000</lastBuildDate>
+        <lastBuildDate>Sat, 01 Oct 2016 16:32:13 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/script/</link>
@@ -15,6 +15,42 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/tags/script/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo Obtener La Dimensión De Una Imagen en Internet</title>
+            <link>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</link>
+            <pubDate>Sat, 01 Oct 2016 16:32:13 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
+            <description>&lt;h1 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h1&gt;
+
+&lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;solución-el-comando-identify-de-imagemagick&#34;&gt;Solución: el comando Identify de ImageMagick&lt;/h1&gt;
+
+&lt;p&gt;El comando &lt;code&gt;identify&lt;/code&gt; es un programa perteneciente a la suite &lt;em&gt;ImageMagick&lt;/em&gt;, citamos su página &lt;code&gt;man&lt;/code&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;750x750+0+0 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-bit sRGB 149KB &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.000u &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:00.000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
+        </item>
         
         <item>
             <title>Cambia La Imágen De Fondo Del Terminal Gnome Y Pon Un Color De Texto a Juego, Automáticamente</title>
@@ -1664,6 +1700,71 @@ Saludos.&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;No se seleciciono nada.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>Ocultar Los Metaficheros De LaTeX Del Directorio De Trabajo</title>
+            <link>https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/</link>
+            <pubDate>Thu, 19 Nov 2015 09:20:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/</guid>
+            <description>&lt;p&gt;Si trabajas habitualmente con &lt;a href=&#34;https://elbauldelprogramador.com/category/latex/&#34; title=&#34;Tutoriales sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt;, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabajo limpio.&lt;/p&gt;
+
+&lt;h1 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h1&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;La idea sería tener el directorio de trabajo organizado del siguiente modo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Directorio del proyecto/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.tex
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.bib
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.pdf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ chapter1.tex
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ chapter2.tex
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ …
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ metafiles/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.aux
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.bcf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.blg
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.glo
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.ist
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.log
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ main.toc
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ …
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ figures/
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ figure1.pdf
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;__ …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;mediante-un-script&#34;&gt;Mediante un script&lt;/h1&gt;
+
+&lt;p&gt;Este script lo encontré en el blog de &lt;a href=&#34;http://texblog.org&#34; target=&#34;_blank&#34; title=&#34;TexBlog&#34;&gt;Tom&lt;/a&gt;, en su artículo &lt;a href=&#34;http://texblog.org/2015/08/20/hiding-latex-metafiles-from-project-directory/&#34; target=&#34;_blank&#34; title=&#34;Hiding LaTeX metafiles from project directory&#34;&gt;Hiding LaTeX metafiles from project directory&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Create directory if it doesn&amp;#39;t exist
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ! -d &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;metafiles&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  mkdir metafiles
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Run pdflatex and biber with metafiles as in-/output directories
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pdflatex -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;biber --input-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles --output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pdflatex -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pdflatex -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;makeglossaries -d metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pdflatex -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Create a softlink to the output PDF
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ln -s metafiles/main.pdf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h1&gt;
+
+&lt;p&gt;Para aportar algo al artículo de &lt;em&gt;Tom&lt;/em&gt;, miré la documentación de LatexMK, &lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/&#34; title=&#34;Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos&#34;&gt;comando que ya hemos visto en este blog&lt;/a&gt;, y tiene la opción &lt;code&gt;-output-directory&lt;/code&gt; que permite especificar donde se guardaran todos los metaficheros, su uso es simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;latexmk -shell-escape -pdf -pvc -output-directory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;metafiles main.tex&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Esto tendrá un efecto parecido al script de &lt;em&gt;Tom&lt;/em&gt;, sin embargo el pdf también queda generado dentro de esta carpeta, podemos solucionarlo con un &lt;em&gt;soft link&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ln -s metafiles/main.pdf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Espero que os haya sido de utilidad, yo ya lo uso de forma habitual.&lt;/p&gt;</description>
         </item>
         
     </channel>
