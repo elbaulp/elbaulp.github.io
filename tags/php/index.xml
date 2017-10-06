@@ -570,29 +570,120 @@ add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/
         </item>
         
         <item>
-            <title>Nueva guía: PHP &amp; MySQL: Novice to Ninja, 5th Edition-Free 57 Page Preview</title>
-            <link>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</link>
+            <title>Mostrar el número de seguidores en Twitter en WordPress</title>
+            <link>https://elbauldelprogramador.com/mostrar-el-numero-de-seguidores-en-twitter-en-wordpress/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
-            <guid>https://elbauldelprogramador.com/nueva-guia-php-mysql-novice-to-ninja-5th-edition-free-57-page-preview/</guid>
-            <description>&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;&lt;img sizes=&#34;(min-width: 197px) 197px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/w_sitb33c1.gif&#34; alt=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; title=&#34;PHP &amp; MySQL: Novice to Ninja, 5th Edition--Free 57 Page Preview&#34; width=&#34;197px&#34; height=&#34;259px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+            <guid>https://elbauldelprogramador.com/mostrar-el-numero-de-seguidores-en-twitter-en-wordpress/</guid>
+            <description>&lt;p&gt;Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en el blog. Antes de nada, necesitamos instalar un plugin que nos permite añadir widgets que contengan código PHP, se llama WP PHP Widget y podéis descargarlo de la página de &lt;a href=&#34;http://wordpress.org/extend/plugins/wp-php-widget/&#34; target=&#34;_blank&#34;&gt;plugins de WordPress&lt;/a&gt;. Una vez que tengamos instalado el plugin, agregamos el widget a nuestra plantilla y pegamos el siguiente código:&lt;/p&gt;
 
-&lt;p&gt;PHP &amp;amp; MySQL: Novice to Ninja, 5th Edition is a hands-on guide that will help you build your first database driven website. In the fifth edition of this best-selling book, you&amp;#8217;ll learn how to use PHP (used on 20 million sites worldwide) to build your own working content management system using entirely free software. The book also teaches you best practices in database design using MySQL, and covers all the latest technologies.&lt;/p&gt;
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
+$response = file_get_contents ( $url );
+$t_profile = new SimpleXMLElement ( $response );
+$count = $t_profile-&amp;gt;followers_count;
+echo $count;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Listo, esto imprimirá el número de seguidores que tenemos en twitter.&lt;/p&gt;
 
-&lt;p&gt;You&amp;#8217;ll learn all about:&lt;/p&gt;
+&lt;p&gt;Este código no es mío, lo encontré navegando por internet, y le hice algunas modificaciones, concretamente creé una función que añadí al archivo &lt;code&gt;&amp;lt;strong&amp;gt;functions.php&amp;lt;/strong&amp;gt;&lt;/code&gt; del tema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function followers_count(){
+  $url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
+  $response = file_get_contents ( $url );
+  $t_profile = new SimpleXMLElement ( $response );
+  $count = $t_profile-&amp;gt;followers_count;
+  return $count;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y en el widget tengo lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;lt;p class=&amp;#34;twittercount&amp;#34;&amp;gt;
+    &amp;lt;a href=&amp;#34;http://twitter.com/elbaulp&amp;#34; title=&amp;#34;Follow on Twitter&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;
+        &amp;lt;img on=&amp;#34;tap:lightbox1&amp;#34; role=&amp;#34;button&amp;#34; tabindex=&amp;#34;0&amp;#34; layout=&amp;#34;responsive&amp;#34;  src=&amp;#34;twitter.png&amp;#34; alt=&amp;#34;Twitter&amp;#34; /&amp;gt;
+    &amp;lt;/a&amp;gt;
+    &amp;lt;span&amp;gt;&amp;lt; ?php echo followers_count();?&amp;gt;&amp;lt;/span&amp;gt; Followers
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Y el estilo es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;twittercount&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-moz-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;-webkit-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font-family&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Georgia&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;serif&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;font-style&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;italic&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;text-shadow&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rgba&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;text-align&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;border&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;solid&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;#EEE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;border-radius&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;background-color&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#EEE&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;inline&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Eso es todo.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Mostrar todos los post de una categoría en WordPress</title>
+            <link>https://elbauldelprogramador.com/mostrar-todos-los-post-de-una-categoria-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mostrar-todos-los-post-de-una-categoria-wordpress/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 231px) 231px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; alt=&#34;mostrar todos los post de una categoría wordpress&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;crear-el-shortcode&#34;&gt;Crear el shortcode&lt;/h1&gt;
+
+&lt;p&gt;Editamos el archivo &lt;em&gt;functions.php&lt;/em&gt; de nuestro tema y añadimos el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function show_category_posts( $atts ){
+    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
+    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=dateℴ=ASC&amp;amp;posts;_per_page=-1&amp;#39;);
+    if ( have_posts() ){
+        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;
+        while ( have_posts() ){
+            the_post();
+            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#39;.get_permalink().&amp;#39;&amp;#34;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);
+        }
+        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;
+    }
+    //Reset query
+    wp_reset_query();
+    return $content;
+}
+add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
+
+&lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Lo siguiente que hace este trozo de código es iterar sobre todos los artículos y crear una lista.&lt;/p&gt;
+
+&lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
+
+&lt;p&gt;Para usar el shortcode debemos conocer el &lt;strong&gt;id&lt;/strong&gt; de la categoría a mostrar, o reemplazar el parámetro &lt;strong&gt;cat=&lt;/strong&gt; por cualquiera de los siguientes:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;In-depth Tutorials&lt;/li&gt;
-&lt;li&gt;Hassle-free Setup Instructions&lt;/li&gt;
-&lt;li&gt;Object Oriented Programming (OOP)&lt;/li&gt;
-&lt;li&gt;Best-practice PHP Coding&lt;/li&gt;
-&lt;li&gt;Fun Example Project&lt;/li&gt;
-&lt;li&gt;Add a Shopping Cart&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;tt&gt;cat&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;int&lt;/em&gt;) - El usado por este código, requiere el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category_name&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;string&lt;/em&gt;) - Usar el slug de la categoría.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__and&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__in&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__not_in&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://elbauldelprogramador.tradepub.com/c/pubRD.mpl?sr=oc&amp;amp;_t=oc:&amp;amp;pc;=w_sitb33/prgm.cgi&#34;&gt;Descárgala desde aquí&lt;/a&gt; o
-Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; para ver las guías disponibles.&lt;/p&gt;
-</description>
+&lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;mostrar_cat &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Documentación función query_posts&lt;/em&gt; »» &lt;a href=&#34;http://codex.wordpress.org/Function_Reference/query_posts&#34; target=&#34;_blank&#34;&gt;codex.wordpress.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Parámetros de query_posts&lt;/em&gt; »» &lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34; target=&#34;_blank&#34;&gt;codex.wordpress.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
