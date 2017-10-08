@@ -2008,57 +2008,6 @@ de caras, se podría decir que son “caras” estándares.), la constante va aj
         </item>
         
         <item>
-            <title>¿Por Qué Se Cuelga Linux Al Copiar Ficheros a Un Usb?</title>
-            <link>https://elbauldelprogramador.com/por-que-se-cuelga-linux-al-copiar-ficheros-a-un-usb/</link>
-            <pubDate>Fri, 11 Aug 2017 12:05:27 +0100</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/por-que-se-cuelga-linux-al-copiar-ficheros-a-un-usb/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;
-    &lt;figcaption&gt;Crédito de la imagen: &lt;a href=&#34;https://pixabay.com/en/usb-drive-storage-plug-flash-38264/&#34;&gt;pixabay.com&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;La respuesta la encontré en &lt;a href=&#34;http://unix.stackexchange.com&#34; target=&#34;_blank&#34; title=&#34;stackexchange&#34;&gt;unix.stackexchange&lt;/a&gt;, en una pregunta que realizó el usuario &lt;a href=&#34;http://unix.stackexchange.com/users/52763/mikhail-morfikov&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;Mikhail Morfikov&lt;/a&gt;. Y la respuesta la dió el usuario &lt;a href=&#34;http://unix.stackexchange.com/users/52205/rmano&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;Rmano&lt;/a&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;descripción-del-problema&#34;&gt;Descripción del problema&lt;/h1&gt;
-
-&lt;p&gt;Este problema ocurre en sistemas de 64bits con bastante memoria, es un bug del &lt;a href=&#34;http://lwn.net/Articles/572911/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;kernel&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
-
-&lt;h1 id=&#34;cómo-solucionar-el-cuelgue-del-sistema-al-copiar-ficheros-a-un-usb&#34;&gt;Cómo solucionar el cuelgue del sistema al copiar ficheros a un usb&lt;/h1&gt;
-
-&lt;p&gt;Una posible solución consiste en ejecutar los siguientes comandos como &lt;em&gt;root&lt;/em&gt; :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /proc/sys/vm/dirty_background_bytes
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /proc/sys/vm/dirty_bytes&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Si queremos que se conserven entre reinicios, debemos añadirlos al fichero &lt;code&gt;/etc/rc.local&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Sin embargo, cambiar dichos valores afectará a la tasa de transferencia entre el usb y el disco duro, así que los ficheros tardarán más tiempo en copiarse, pero al menos el sistema no se colgará y podremos seguir usándolo.&lt;/p&gt;
-
-&lt;h1 id=&#34;restaurar-los-valores-por-defecto&#34;&gt;Restaurar los valores por defecto&lt;/h1&gt;
-
-&lt;p&gt;Para volver a los valores normales, hay que fijar los valores a&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /proc/sys/vm/dirty_background_bytes
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; /proc/sys/vm/dirty_bytes&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;El significado de estos parámetros es:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;/proc/sys/vm/dirty_background_bytes&lt;/code&gt;: Contains the amount of dirty memory at which the background kernel flusher threads will start writeback.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/proc/sys/vm/dirty_bytes&lt;/code&gt;: Contains the amount of dirty memory at which a process generating disk writes will itself start writeback.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;p&gt;Why is my PC freezing while I&amp;rsquo;m copying a file to a pendrive? | &lt;a href=&#34;http://unix.stackexchange.com/questions/107703/why-is-my-pc-freezing-while-im-copying-a-file-to-a-pendrive&#34; title=&#34;Why is my PC freezing while I&#39;m copying a file to a pendrive?&#34;&gt;unix.stackexchange.com&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        
-        <item>
             <title>Cómo salir del mundo de Google</title>
             <link>https://elbauldelprogramador.com/como-salir-mundo-google/</link>
             <pubDate>Tue, 21 Mar 2017 13:00:18 +0100</pubDate>
@@ -9328,50 +9277,78 @@ No estoy diciendo nada malo de esas arquitecturas… Son definitivamente buenas 
         </item>
         
         <item>
-            <title>Por qué la autentificación de 2 factores depende de la experiencia del usuario</title>
-            <link>https://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/</link>
+            <title>Probando RockMelt</title>
+            <link>https://elbauldelprogramador.com/probando-rockmelt/</link>
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
-            <guid>https://elbauldelprogramador.com/por-que-la-autentificacion-de-2-factores-depende-de-la-experiencia-del-usuario/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 700px) 700px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/08/2-factor-authentication1.jpg&#34; alt=&#34;Por qué la autentificación de 2 factores depende de la experiencia del usuario&#34; width=&#34;700px&#34; height=&#34;349px&#34;&gt;&lt;/img&gt;
+            <guid>https://elbauldelprogramador.com/probando-rockmelt/</guid>
+            <description>&lt;p&gt;Si queires saber más sobre RockMelt, haz clic &lt;a href=&#34;https://elbauldelprogramador.com/rockmelt-una-navegador-social-basado-en/&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;He estado probando el navegador RockMelt, y mis primeras impresiones han sido bastante buenas, me parece bastante sencillo.&lt;/p&gt;
+
+&lt;p&gt;Si sueles usuar mucho Twitter o Facebook este es tu navegador. Aunque aun queden cosas por mejorar, creo que este navegador va a tener mucho exito. Por ahora solo está disponible para Mac y Windows, espero que lo porten a Linux tambien.&lt;/p&gt;
+
+&lt;p&gt;Aquí dejo algunas capturas y explico un poco el funcionamiento del navegador, aunque no es demasiado difícil.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; width=&#34;800&#34; height=&#34;432&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5UHD6wzlI/AAAAAAAAAGY/NXFDcbJRQ5s/s800/principal.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Ya vimos en hace algún tiempo &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autentificación de Dos Factores ahora mismo&#34;&gt;todos los lugares en los que deberías habilitar la autentificación de 2 factores&lt;/a&gt;. Hoy, en este artículo original de Duo Security analizaremos los problemas que puede ocasionar esta tecnología en el usuario final.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;En esta barra lateral izquierda veremos a nuestros amigos conectados en facebook. Haciendo clic en alguno de ellos podremos chatear.&lt;/li&gt;
+&lt;li&gt;Con este botón podemos invitar, por defecto, a 3 amigos de facebook para que prueben RockMelt. Por cada invitación aceptada, recibiremos 2 más.&lt;/li&gt;
+&lt;li&gt;En esta sección, se mostraran los sitios a los que estemos suscritos por RSS, así como Los botones de Facebook y twitter para acceder a nuestras cuentas.&lt;/li&gt;
+&lt;li&gt;Cuando estamos en una página que dispone de RSS, este boton se pone de color verde, y si clicamos en él, nos podremos suscribir.&lt;/li&gt;
+&lt;li&gt;Haciendo Clic en él, compartiremos en facebook la página que estemos viendo en ese momento.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;Si hacemos clic en un contacto de la barra lateral izquierda, se nos abre una ventana independiente (Que podemos minimizar, maximizar o cerrar) en la que podemos chatear.&lt;/p&gt;
 
-&lt;p&gt;Con el reciente paso de Twitter a la criptografía de clave pública con &amp;#8220;&lt;em&gt;push&lt;/em&gt;&amp;#8220;, nosotros y muchos otros nos alegramos de verlos abandonar el sistema de autenticación de 2 factores SMS-only. No solo agregaron mejor seguridad, sino que también brindaron a sus usuarios una experiencia más atractiva. Como las distintas alternativas de &lt;em&gt;2 factores&lt;/em&gt; entre proveedores de servicios y plataformas continúan creciendo y cambiando, es importante que la industria se mantenga enfocada en los objetivos correctos para adoptar el sistema &lt;em&gt;2 Factores&lt;/em&gt;. Sin un enfoque diferenciado en cómo los usuarios experimentan la autenticación de 2 factores, la industria podría forzarse a una batalla innecesaria entre riesgo y conveniencia que podría terminar en un futuro negativo para esta tecnología - no por razones técnicas como por estéticas.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 356px) 356px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;356&#34; height=&#34;515&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Pcw4ksuI/AAAAAAAAAGI/BVm4HImHcF8/s800/chat1.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;h1 id=&#34;el-usuario-final-determina-el-éxito-de-cualquier-tecnología-nueva&#34;&gt;El usuario final determina el éxito de cualquier tecnología nueva&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Si pinchamos en este botón, podremos enviar un mensaje privado a ese contacto, o escribir algo en su muro.&lt;/li&gt;
+&lt;li&gt;Aquí veremos sus últimas actualizaciones de estado, y últimas publicaciones en el muro.&lt;/li&gt;
+&lt;li&gt;Con este botón añadimos al contacto a nuestros contactos favoritos.&lt;/li&gt;
+&lt;li&gt;Este botón me gustó bastante, si lo pulsamos, enviamos un enlace de la página en la que estemos en ese momento.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;De todos los controles de seguridad que dependen de la aceptación del usuario final, las decisiones respecto a cómo una tecnología es implementada deberían considerar un rango extenso de potenciales errores de usuario. Cuando construyes seguridad para usuarios finales, pero ignoras las necesidades fundamentales, tu implementación será más costosa para tu potencial usuario base. Es más, dado que el usuario promedio es lento en olvidar malas experiencias, desarrollarán un prejuicio contra la autentificación de &lt;em&gt;2 Factores&lt;/em&gt; en general.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 356px) 356px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;356&#34; height=&#34;285&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5SLPsoFbI/AAAAAAAAAGM/Eh4W0XfMpAY/s800/profileclic.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Tomemos por ejemplo el software de criptografía &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;PGP&lt;/a&gt;. La mayoría de nosotros luchará por recordar cuándo fue la útima vez que realmente usó &lt;a href=&#34;https://es.wikipedia.org/wiki/PGP&#34; title=&#34;Definición de PGP en Wikipedia&#34; target=&#34;_blank&#34;&gt;PGP&lt;/a&gt;. Luego, consideremos qué tan poco frecuente usamos PGP para manejar un problema de encriptado de archivos. PGP no es un mal software porque sea inseguro o no funcione, &lt;strong&gt;es malo porque nadie realmente solucionó los problemas de aceptación del usuario final a tiempo para que sea ampliamente adoptado.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Éste es el botón de nuestro perfil, desde aqui podemos actualizar nuestro estado, y, si no queremos estar conectados a nuestra cuenta de facebook mientras usamos el navegador, podemos salir pulsando el boton &amp;#8220;Log Out&amp;#8221;.&lt;/p&gt;
 
-&lt;p&gt;Para los usuarios que necesitaron PGP, la idea de servidores de claves, keyrings, huellas digitales, y el resto de los matices de PGP que solo un profesional de la seguridad podría apreciar descartando la viabilidad del software. Donde algunos softwares (especialmente los relacionados con &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Categoría Seguridad&#34;&gt;seguridad&lt;/a&gt;) fallan porque no cubren los requerimientos tecnológicos, PGP falla en ser adoptado ampliamente porque sus desarrolladores nunca respondieron a la pregunta &amp;#8220;¿Cómo podemos hacerlo viable para el usuario diario?&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;Esto es todo, a mi personalmente me ha gustado este navegador, podeis pedir un enlace de descarga &lt;a target=&#34;_blank&#34; href=&#34;http://www.rockmelt.com/&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&#34;con-la-autentificación-de-2-factores-todas-las-rutas-deben-llevar-a-buen-puerto&#34;&gt;Con la Autentificación de 2 Factores, Todas las rutas deben &lt;em&gt;llevar a buen puerto&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;Os dejo unas capturas de pantalla:&lt;/p&gt;
 
-&lt;p&gt;Twitter y muchas otras organizaciones ahora se encuentran luchando por unir las necesidades de seguridad junto con los deseos del usuario final con autenticación de 2 Factores. Desafortunadamente no muchas de ellas están teniendo en cuenta qué tan rápido mejora este proceso antes de que el usuario final quede impresionado con la 2FA. Dado que las organizaciones quieren facilitar cierto sentido de autenticación fuerte, integran el nivel mínimo de 2 factores requerido para tacharlo de su lista de cosas pendientes por hacer. Este alcance suele resultar en una experiencia pobre para el usuario, el cual acumula prejuicios contra la autenticación de 2 factores en general.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XTwlUxaI/AAAAAAAAAGc/_L7evpOeTco/s800/feed.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;La falla más obvia en la práctica es la idea de que los usuarios deberían estar atados a un dispositivo. Esto es de alguna forma irónico, considerando una de las principales quejas sobre la primera generación de la autenticación de 2 factores es que tienes que recordar tomar un solo token contigo todo el tiempo. Esto fue una queja, de hecho, algunas personas debieron incluso configurar una cámara web apuntando a su token para que de esa forma pudieran accederlo sin tener que recordar el dispositivo cada vez que se van de su casa. ¿Por qué entonces muchas soluciones de la segunda generación de la autenticación de 2 factores repiten esta mala práctica?&lt;/p&gt;
+&lt;figure&gt;
+   &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;   width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XWqHhpOI/AAAAAAAAAGg/302VsQxGXC8/s800/friends.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Si un usuario no puede identificarse en un servicio o sistema ellos se preocupan sobre porqué debido a una restricción con la plataforma de 2 Factores puedes apostar que te desactivarán la autenticación de 2 factores tan pronto como puedan. La conveniencia versus la ecuación de compensación de riesgo cambia dramáticamente cuando no permites que un usuario final haga lo que quiera. Los usuarios continuarán olvidando su teléfono, o no tendrán señal, o plan de datos, o perderán el token, o tendrán la linea no disponible. No darle lugar a estas cuestiones de la realidad crea críticas más que fans. La seguridad de la información ya tiene muchas críticas - necesitamos muchos, muchos más fans.&lt;/p&gt;
+&lt;figure&gt;
+   &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;   width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5XZec8rhI/AAAAAAAAAGk/1lMmLufkYOU/s800/perfil.png&#34; &gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;h1 id=&#34;cuando-la-primera-impresión-cuenta&#34;&gt;Cuando la primera impresión cuenta&lt;/h1&gt;
+&lt;figure&gt;
+   &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;   width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://2.bp.blogspot.com/_IlK2pNFFgGM/TO5XcVcrKjI/AAAAAAAAAGo/E1fNJEq8Ws0/s800/profile.png&#34; &gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Ofrecer a los usuarios demasiadas opciones para configurar la autentificación de 2 factores, la &amp;#8220;culpa&amp;#8221; vuelve al individuo si su experiencia es pobre. Las plataformas y servicios deberían ofrecer a sus usuarios la capacidad de determinar lo que tomará para 2 autenticación de factor para aumentar la seguridad(el valor) sin impedir su vida.&lt;/p&gt;
+&lt;figure&gt;
+   &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;   width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TO5Xffgh1JI/AAAAAAAAAGs/YIJH3F8p-7E/s800/twitter.png&#34; &gt;&lt;/img&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;Si alguien quiere actuar recíprocamente con Facebook, Gorjeo, GMail, o un juego del ordenador, cuando ellos quieren usar algo, ellos quieren usarlo. Si los proveedores de servicio grandes y plataformas que ofrecen 2 autenticación de factor siguen forzando a usar otro dispositivo o requieren el envío de un mensaje de texto, la batalla por la amplia adopción de 2 factor será mucho más difícil de lo que tiene que ser - un enorme impacto negativo para la seguridad de la información en su conjunto.&lt;/p&gt;
-
-&lt;p&gt;La oportunidad de resolver muchos de los problemas de seguridad con una autentificación fuerte es demasiado beneficiosa para perderla. Es de una importancia crítica que cuando un servicio o plataforma ofrece autentificación de 2 factores proporcionen a sus usuarios una experiencia positiva y no con un simple &lt;em&gt;checkbox&lt;/em&gt;. Los &lt;em&gt;checkboxs&lt;/em&gt; seguirán liderando la falla de la seguridad de los métodos de autentifiación que usen una sola contraseña.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Duo Security&lt;/em&gt; »» &lt;a href=&#34;https://blog.duosecurity.com/2013/08/why-2-factor-authentication-hinges-on-the-user-experience/&#34; target=&#34;_blank&#34;&gt;Why 2 Factor Authentication Hinges on the User Experience&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;figure&gt;
+   &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;   width=&#34;800&#34; height=&#34;450&#34; src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TO5XlHWcKsI/AAAAAAAAAGw/keQi7p95OTM/s800/updatesver.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+</description>
         </item>
         
         <item>
