@@ -154,13 +154,13 @@
 &lt;/div&gt;
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;expliación-del-script&#34;&gt;Expliación del script&lt;/h2&gt;
+&lt;h2 id=&#34;explicación-del-script&#34;&gt;Explicación del script&lt;/h2&gt;
 
 &lt;p&gt;La idea del script es modificar directamente los valores de configuración de terminal que se establecen en el fichero &lt;strong&gt;%gconf.xml&lt;/strong&gt; que se ubica en &lt;code&gt;home/user/.gconf/apps/gnome-terminal/profiles/Default/&lt;/code&gt;, para versiones de shell gnome &amp;lt; 3.8.&lt;/p&gt;
 
 &lt;h1 id=&#34;declaración-de-variables&#34;&gt;Declaración de variables&lt;/h1&gt;
 
-&lt;p&gt;Inicialmente declaramos las variables con la ruta de los comandos que vamos a tilizar frecuentemente. No es obligatorio, pero es recomendable. La variable &lt;strong&gt;ROUTE&lt;/strong&gt; contiene la ruta del directorio donde guardamos las imágenes que queremos poner de fondo.&lt;/p&gt;
+&lt;p&gt;Inicialmente declaramos las variables con la ruta de los comandos que vamos a utilizar frecuentemente. No es obligatorio, pero es recomendable. La variable &lt;strong&gt;ROUTE&lt;/strong&gt; contiene la ruta del directorio donde guardamos las imágenes que queremos poner de fondo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gconftool-2&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/sort&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gawk&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
@@ -172,7 +172,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;gconftool-2&lt;/strong&gt; : herramienta de configuración gnome. La usaremos con la opción set para modificar el archivo de configuración.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt; : comando que ordena líneas de texto.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : escaneador de patrones. Lo usaremo para filtrar patrón hexadecimal.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : escaneador de patrones. Lo usaremos para filtrar patrón hexadecimal.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;convert&lt;/strong&gt; : lo usaremos para redimensionar la imágen y convertirla en hibstograma.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -213,7 +213,7 @@
 &lt;/div&gt;
 &lt;h1 id=&#34;ponemos-color-del-texto-a-juego&#34;&gt;Ponemos color del texto a juego&lt;/h1&gt;
 
-&lt;p&gt;Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de esos colores. Con &lt;strong&gt;convert&lt;/strong&gt; podemos indicar el número de colores que deseamos sacar y la profundidad. Luego los ordenamos segun su orden numérico y filtramos solo el  código hexadecimal de los colores con &lt;strong&gt;gawk&lt;/strong&gt;. Lo guardamos en un fichero de texto llamado paleta.txt que se creara en /tmp.&lt;/p&gt;
+&lt;p&gt;Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de esos colores. Con &lt;strong&gt;convert&lt;/strong&gt; podemos indicar el número de colores que deseamos sacar y la profundidad. Luego los ordenamos según su orden numérico y filtramos solo el código hexadecimal de los colores con &lt;strong&gt;gawk&lt;/strong&gt;. Lo guardamos en un fichero de texto llamado paleta.txt que se creara en /tmp.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$CNVRT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -colors &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -depth &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; histogram:info:- &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --general-numeric-sort &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;

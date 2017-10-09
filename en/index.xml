@@ -6,7 +6,7 @@
         <description>Recent content on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Wed, 04 Oct 2017 13:47:29 +0100</lastBuildDate>
+        <lastBuildDate>Mon, 09 Oct 2017 20:09:46 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/</link>
@@ -15,6 +15,149 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/en/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Change your gnome shell background&#39;s image and put a text color that suits, automatically</title>
+            <link>https://elbauldelprogramador.com/en/imagen-terminal-color-texto-a-juego-linux/</link>
+            <pubDate>Mon, 09 Oct 2017 20:09:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/imagen-terminal-color-texto-a-juego-linux/</guid>
+            <description>&lt;p&gt;Sure you are that kind of person that spend hours in front of a computer with one or more terminals open. And sure, you are very used to the shell black background with white letters, or whatever shell style you put long time ago&amp;hellip; Because, lets be honest, changing it everyday is not the most fun job. But&amp;hellip; What if it changes itself automatically? What if you could just have your favorite pictures as shell backsground&amp;rsquo;s images, with a text that suits the colors in each of that images and you just have to no nothing?&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Here I want to tell you how I thought to do it with a bash script, and thus escape from the shell style routine.&lt;/p&gt;
+
+&lt;h1 id=&#34;before-we-start&#34;&gt;Before we start&amp;hellip;&lt;/h1&gt;
+
+&lt;h2 id=&#34;check-you-gnome-shell-version&#34;&gt;Check you gnome-shell version&lt;/h2&gt;
+
+&lt;p&gt;That script is valid only for &lt;strong&gt;gnome versions &amp;lt; 3.8&lt;/strong&gt;. I Have tested it in Linux Mint Debian Edition and in Ubuntu 14.04 (in this last I had to install gnome-shell).&lt;/p&gt;
+
+&lt;p&gt;To install gnome-shell (just in case you need to):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install gnome-shell&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;to check the gnome version:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ gnome-shell --version&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;install-imagemagick-and-gawk&#34;&gt;Install ImageMagick and gawk&lt;/h2&gt;
+
+&lt;p&gt;We are goint to use some ImageMagick functions to convert the images, and gawk for filtering expressions. To install them:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install gawk
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ sudo apt-get install imagemagick&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;script-explanation&#34;&gt;Script explanation&lt;/h1&gt;
+
+&lt;p&gt;What we want this script to do is to modify directly the shell configuration values that are set in the file &lt;strong&gt;%gconf.xml&lt;/strong&gt; which is placed at &lt;code&gt;home/user/.gconf/apps/gnome-terminal/profiles/Default/&lt;/code&gt; for gnome versions &amp;lt; 3.8.&lt;/p&gt;
+
+&lt;h2 id=&#34;variables-definition&#34;&gt;Variables definition&lt;/h2&gt;
+
+&lt;p&gt;Initially, we are declaring the variables with the path of the commands we are going to use frequently. It is not mandatory, but it is recommended. The &lt;strong&gt;ROUTE&lt;/strong&gt; variable contains the path for the folder where the images that we want to use as background images are placed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gconftool-2&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/sort&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/gawk&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/usr/bin/convert&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/myPath/*&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;gconftool-2&lt;/strong&gt; : gnome configuration tool. We use it with the &lt;em&gt;set&lt;/em&gt; option to modify the configuration file.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt; : command that sorts text lines.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : pattern scanner. We use it to filter the hexadecimal pattern.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;convert&lt;/strong&gt; : we use this command to resize the image and convert it to an hibstogram.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;taking-images&#34;&gt;Taking Images&lt;/h2&gt;
+
+&lt;p&gt;We take randomly an image of &lt;strong&gt;myPath&lt;/strong&gt; for the shell background:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;shuf -n &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;We clear the path name and take only the image&amp;rsquo;s name:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;basename &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Lets resize the image (just if needed, for example if the images we want to use are for desktop background). To not modify the original image neither keeping so many unnecessary copies, we save it in /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    convert &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -resize %50 &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;As my images are desktop background size, I resize them to the half of their size to fit better the shell.&lt;/p&gt;
+
+&lt;p&gt;Optional: we take another image from the folder to set it as desktop background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;shuf -n &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;set-the-terminal-s-background-image&#34;&gt;Set the terminal&amp;rsquo;s background image&lt;/h2&gt;
+
+&lt;p&gt;We modify some configurations that are by default before applying changes, to have an effect:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#solido por defecto
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now, we can just take the resized image and set it as terminal&amp;rsquo;s background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Last, we set a dark background color for shell and a high opacity level, to make the text looks better:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#181824243131&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0.78&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;set-the-text-color-to-suit-with-the-image&#34;&gt;Set the text color to suit with the image&lt;/h2&gt;
+
+&lt;p&gt;To do that, we first get the color hibstogram from the image, and then we take a color tone of them. With &lt;strong&gt;convert&lt;/strong&gt; we can specify the number of colors to take and the deeper we want to go in the image to get them. Then, we sort then according to their numeric order and filter just the hexadecimal code of the colors with &lt;strong&gt;gawk&lt;/strong&gt;. We save it in a text file called paleta.txt which will be created at /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$CNVRT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -colors &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -depth &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; histogram:info:- &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$SORT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --general-numeric-sort &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GAWK&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;To finish, we open the temporary file &lt;strong&gt;paleta.txt&lt;/strong&gt; and read the first 6 lines from it, that is, we read the first 6 colors:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# open file
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt; /tmp/paleta.txt
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#read 6 lines
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color1 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color2 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color3 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color4 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color5 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;&#34;&gt; color6 &amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;#close
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exec&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;and we set the last readed color as the shell&amp;rsquo;s text color:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$GCONFT&lt;/span&gt;&lt;span class=&#34;&#34;&gt; --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$color6&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Why taking the 6º color? well thats because as colors are ordered from dark to light, the lighther ones, that are the ones that give better results, are in the center possition of the hibstogram. However, you can modify it depending on your images. The script is not perfect! the image folder I use has 700 images and there is sometimes someone that fails suiting with text color, especially the very dark images where no light colors can be found. If you have any idea of improvement, comment it or let me know!&lt;/p&gt;
+
+&lt;p&gt;Optional: if you also want to change the desktop background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    gsettings &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; org.gnome.desktop.background picture-uri &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;file:///&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$FILED&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;enjoy-and-show-off-your-terminals&#34;&gt;Enjoy and show off your terminals&lt;/h1&gt;
+
+&lt;h1 id=&#34;plan-it-execution&#34;&gt;Plan it execution&lt;/h1&gt;
+
+&lt;p&gt;To avoid executing the script by hand, you can automate it execution using &lt;strong&gt;crontab&lt;/strong&gt;, for example, if you want it to execute each time you boot your pc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;    cris@cris ~ $ crontab -e &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# open crontab
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    @reboot /path_to_script/ChangeTerminals.sh # add task&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;some-examples&#34;&gt;Some examples&lt;/h1&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 656px) 656px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux2.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;386px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 650px) 650px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux3.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;650px&#34; height=&#34;386px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 656px) 656px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux4.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;385px&#34; /&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1003px) 1003px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux5.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;1003px&#34; height=&#34;581px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;link-to-code&#34;&gt;Link to code&lt;/h1&gt;
+
+&lt;p&gt;You can check the script at &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;My Terminals Background Setter Repository &#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
         
         <item>
             <title>Creating and managing passwords intelligently</title>
