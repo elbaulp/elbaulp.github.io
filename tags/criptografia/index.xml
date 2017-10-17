@@ -41,12 +41,10 @@
 &lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
 
 &lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ~/.vimrc
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:let g:GPGDefaultRecipients&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat ~/.vimrc
+:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;

@@ -31,31 +31,30 @@
 &lt;h2 id=&#34;ejemplo-1&#34;&gt;Ejemplo 1&lt;/h2&gt;
 
 &lt;p&gt;El código es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;&#34;&gt;\documentclass{standalone}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz-dependency}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{document}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{dependency}[edge slant=15pt,label theme = simple, edge theme = iron]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \begin{deptext}[column sep=1em]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    This \&amp;amp; time \&amp;amp; around \&amp;amp; , \&amp;amp; they \&amp;amp; &amp;#39;re \&amp;amp; moving \&amp;amp; even \&amp;amp; faster \&amp;amp;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    . \\
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \end{deptext}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \deproot{7}{ROOT}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{2}{1}{DET}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge[edge height=1.9cm]{7}{2}{TMOD}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{2}{3}{ADVMOD}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{7}{6}{AUX}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{7}{5}{NSUBJ}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{7}{4}{PUNCT}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{7}{10}{PUNCT}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge{7}{9}{ADVMOD}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \depedge[edge start x offset=-4pt]{9}{8}{ADVMOD}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{dependency}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{document}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-dependency}
+
+\begin{document}
+
+\begin{dependency}[edge slant=15pt,label theme = simple, edge theme = iron]
+  \begin{deptext}[column sep=1em]
+    This \&amp;amp; time \&amp;amp; around \&amp;amp; , \&amp;amp; they \&amp;amp; &amp;#39;re \&amp;amp; moving \&amp;amp; even \&amp;amp; faster \&amp;amp;
+    . \\
+  \end{deptext}
+  \deproot{7}{ROOT}
+  \depedge{2}{1}{DET}
+  \depedge[edge height=1.9cm]{7}{2}{TMOD}
+  \depedge{2}{3}{ADVMOD}
+  \depedge{7}{6}{AUX}
+  \depedge{7}{5}{NSUBJ}
+  \depedge{7}{4}{PUNCT}
+  \depedge{7}{10}{PUNCT}
+  \depedge{7}{9}{ADVMOD}
+  \depedge[edge start x offset=-4pt]{9}{8}{ADVMOD}
+\end{dependency}
+
+\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El resultado:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -64,52 +63,51 @@
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;ejemplo-2&#34;&gt;Ejemplo 2&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;&#34;&gt;\documentclass{standalone}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz-qtree,tikz-qtree-compat}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{document}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\tiny
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{tikzpicture}[every node/.style={align=center},scale=.9]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \tikzset{
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    edge from parent/.style={
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      draw,edge from parent
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      path={(\tikzparentnode.south)-- +(0,-8pt)-| (\tikzchildnode)}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    },
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    frontier/.style={distance from root=208pt}, % Align leaf nodes
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    level 1+/.style={level distance=18pt} % Distance between levels
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   \Tree [.S
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             [.NP Rolls-Royce\\NNP Motor\\NNP Cars\\NNPS Inc\\NNP ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             [.VP said\\VBD
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                [.SBAR [.none ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   [.S
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      [.NP it\\PRP ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      [. VP expects\\VBZ
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                         [.S
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                            [.NP its\\PRP\$ U.S\\NNP sales\\NNS ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                            [.VP to\\TO
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                               [.VP remain\\VB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                  [.ADJP steady\\JJ ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                  [.PP at\\IN
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                     [.NP
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                        [.QP about\\IN 1200\\CD ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                        cars\\NNS
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                     ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                  ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                               ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                            ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                         ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                      ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{tikzpicture}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{document}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-qtree,tikz-qtree-compat}
+
+\begin{document}
+
+\tiny
+\begin{tikzpicture}[every node/.style={align=center},scale=.9]
+  \tikzset{
+    edge from parent/.style={
+      draw,edge from parent
+      path={(\tikzparentnode.south)-- +(0,-8pt)-| (\tikzchildnode)}
+    },
+    frontier/.style={distance from root=208pt}, % Align leaf nodes
+    level 1+/.style={level distance=18pt} % Distance between levels
+  }
+
+   \Tree [.S
+             [.NP Rolls-Royce\\NNP Motor\\NNP Cars\\NNPS Inc\\NNP ]
+             [.VP said\\VBD
+                [.SBAR [.none ]
+                   [.S
+                      [.NP it\\PRP ]
+                      [. VP expects\\VBZ
+                         [.S
+                            [.NP its\\PRP\$ U.S\\NNP sales\\NNS ]
+                            [.VP to\\TO
+                               [.VP remain\\VB
+                                  [.ADJP steady\\JJ ]
+                                  [.PP at\\IN
+                                     [.NP
+                                        [.QP about\\IN 1200\\CD ]
+                                        cars\\NNS
+                                     ]
+                                  ]
+                               ]
+                            ]
+                         ]
+                      ]
+                   ]
+                ]
+             ]
+         ]
+\end{tikzpicture}
+\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Resultado:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -120,27 +118,26 @@
 &lt;h2 id=&#34;ejemplo-3&#34;&gt;Ejemplo 3&lt;/h2&gt;
 
 &lt;p&gt;El último ejemplo de árbol:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;&#34;&gt;\documentclass{standalone}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz-qtree,tikz-qtree-compat}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{document}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \begin{tikzpicture}[every node/.style={align=center},level distance=30pt]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \tikzset{edge from parent/.append style={&amp;lt;-, &amp;gt;=latex,thick}}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   \Tree [.said\\VBD
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             [.Inc.\\NNP Rolls-Royce\\NNP Motor\\NNP Cars\\NNPS ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             [.expects\\VBZ it\\PRP
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                [.remain\\VB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   [.sales\\NNS its\\PRP\$ U.S\\NNP ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   to\\TO
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   steady\\JJ
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                   [.at\\IN [.cars\\NNS [.about\\IN 1200\\CD ] ] ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;           ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   \end{tikzpicture}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{document}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-qtree,tikz-qtree-compat}
+
+\begin{document}
+  \begin{tikzpicture}[every node/.style={align=center},level distance=30pt]
+    \tikzset{edge from parent/.append style={&amp;lt;-, &amp;gt;=latex,thick}}
+   \Tree [.said\\VBD
+             [.Inc.\\NNP Rolls-Royce\\NNP Motor\\NNP Cars\\NNPS ]
+             [.expects\\VBZ it\\PRP
+                [.remain\\VB
+                   [.sales\\NNS its\\PRP\$ U.S\\NNP ]
+                   to\\TO
+                   steady\\JJ
+                   [.at\\IN [.cars\\NNS [.about\\IN 1200\\CD ] ] ]
+                ]
+             ]
+           ]
+   \end{tikzpicture}
+\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34;&gt;&lt;img sizes=&#34;(min-width: 795px) 795px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34; alt=&#34;Yet another example of a Dependency tree in tikz&#34; title=&#34;Yet another example of a Dependency tree in tikz&#34; width=&#34;795&#34; height=&#34;513&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Yet another example of a Dependency tree in tikz&lt;/figcaption&gt;
@@ -149,56 +146,55 @@
 &lt;h1 id=&#34;dibujando-una-máquina-de-soporte-vectorial-svm-en-tikz&#34;&gt;Dibujando una máquina de soporte vectorial (SVM) en Tikz&lt;/h1&gt;
 
 &lt;p&gt;Para la explicación gráfica de lo que es una SVM:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;&#34;&gt;\documentclass{standalone}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usepackage{tikz-qtree,tikz-qtree-compat}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\usetikzlibrary{calc}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\begin{document}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \tikzset{
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    leftNode/.style={circle,minimum width=.5ex, fill=none,draw},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    rightNode/.style={circle,minimum width=.5ex, fill=black,thick,draw},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    rightNodeInLine/.style={solid,circle,minimum width=.7ex, fill=black,thick,draw=white},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    leftNodeInLine/.style={solid,circle,minimum width=.7ex, fill=none,thick,draw},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \begin{tikzpicture}[
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        scale=2,
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        important line/.style={thick}, dashed line/.style={dashed, thin},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        every node/.style={color=black},
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \draw[dashed line, yshift=.7cm]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       (.2,.2) coordinate (sls) -- (2.5,2.5) coordinate (sle)
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (2,2){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[leftNodeInLine] (name) at (2,2){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.5,1.5){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[leftNodeInLine] (name) at (1.5,1.5){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node [above right] {$w\cdot x + b &amp;gt; 1$};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \draw[important line]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       (.7,.7) coordinate (lines) -- (3,3) coordinate (linee)
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node [above right] {$w\cdot x + b = 0$};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \draw[dashed line, xshift=.7cm]
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       (.2,.2) coordinate (ils) -- (2.5,2.5) coordinate (ile)
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.8,1.8){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[rightNodeInLine] (name) at (1.8,1.8){}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node [above right] {$w\cdot x + b &amp;lt; -1$};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \draw[very thick,&amp;lt;-&amp;gt;] ($(sls)+(.2,.2)$) -- ($(ils)+(.2,.2)$)
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       node[sloped,above, near end] {Margen};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \foreach \Point in {(.9,2.4), (1.3,2.5), (1.3,2.1), (2,3), (1,2.9)}{
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      \draw \Point node[leftNode]{};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    \foreach \Point in {(2.9,1.4), (2.3,.5), (3.3,.1), (2,0.9), (2.5,1)}{
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      \draw \Point node[rightNode]{};
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  \end{tikzpicture}
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;\end{document}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-qtree,tikz-qtree-compat}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+
+  \tikzset{
+    leftNode/.style={circle,minimum width=.5ex, fill=none,draw},
+    rightNode/.style={circle,minimum width=.5ex, fill=black,thick,draw},
+    rightNodeInLine/.style={solid,circle,minimum width=.7ex, fill=black,thick,draw=white},
+    leftNodeInLine/.style={solid,circle,minimum width=.7ex, fill=none,thick,draw},
+  }
+  \begin{tikzpicture}[
+        scale=2,
+        important line/.style={thick}, dashed line/.style={dashed, thin},
+        every node/.style={color=black},
+    ]
+    \draw[dashed line, yshift=.7cm]
+       (.2,.2) coordinate (sls) -- (2.5,2.5) coordinate (sle)
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (2,2){}
+       node[leftNodeInLine] (name) at (2,2){}
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.5,1.5){}
+       node[leftNodeInLine] (name) at (1.5,1.5){}
+       node [above right] {$w\cdot x + b &amp;gt; 1$};
+
+    \draw[important line]
+       (.7,.7) coordinate (lines) -- (3,3) coordinate (linee)
+       node [above right] {$w\cdot x + b = 0$};
+
+    \draw[dashed line, xshift=.7cm]
+       (.2,.2) coordinate (ils) -- (2.5,2.5) coordinate (ile)
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.8,1.8){}
+       node[rightNodeInLine] (name) at (1.8,1.8){}
+       node [above right] {$w\cdot x + b &amp;lt; -1$};
+
+    \draw[very thick,&amp;lt;-&amp;gt;] ($(sls)+(.2,.2)$) -- ($(ils)+(.2,.2)$)
+       node[sloped,above, near end] {Margen};
+
+    \foreach \Point in {(.9,2.4), (1.3,2.5), (1.3,2.1), (2,3), (1,2.9)}{
+      \draw \Point node[leftNode]{};
+    }
+
+    \foreach \Point in {(2.9,1.4), (2.3,.5), (3.3,.1), (2,0.9), (2.5,1)}{
+      \draw \Point node[rightNode]{};
+    }
+  \end{tikzpicture}
+\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34;&gt;&lt;img sizes=&#34;(min-width: 811px) 811px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34; alt=&#34;Support Vector Machine in Latex with Tikz&#34; title=&#34;Support Vector Machine in Latex with Tikz&#34; width=&#34;811&#34; height=&#34;652&#34;&gt;&lt;/img&gt;&lt;/a&gt;
 &lt;figcaption&gt;Support Vector Machine in Latex with Tikz&lt;/figcaption&gt;

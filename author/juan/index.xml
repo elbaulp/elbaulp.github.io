@@ -35,26 +35,25 @@ Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya 
 &lt;p&gt;Aunque la mayoría de la información se puede consular en  ficheros del sistema como &lt;code&gt;/proc/meminfo&lt;/code&gt; que es de dondel el propio programa extrae la información, a veces no está lo más legible posible y no en el mismo lugar, por eso esta es tan interesante.&lt;/p&gt;
 
 &lt;p&gt;Veamos por ejemplo un extracto del informe de memoria que hace:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ lshw -C memory
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;...
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;*-cache:0
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       descripción: L1 caché
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       id físico: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       ranura: L1-Cache
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       tamaño: 64KiB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       capacidad: 64KiB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       capacidades: internal write-back data
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       configuración: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  *-cache:1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       descripción: L2 caché
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       id físico: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       ranura: L2-Cache
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       tamaño: 4MiB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       capacidad: 4MiB
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       capacidades: internal write-back instruction
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       configuración: &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ lshw -C memory
+...
+*-cache:0
+       descripción: L1 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+       ranura: L1-Cache
+       tamaño: 64KiB
+       capacidad: 64KiB
+       capacidades: internal write-back data
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+  *-cache:1
+       descripción: L2 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+       ranura: L2-Cache
+       tamaño: 4MiB
+       capacidad: 4MiB
+       capacidades: internal write-back instruction
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Una sencilla forma de conocer la caché de nuestro procesador (entre otras muchas cosas relacionadas con memoria).&lt;/em&gt;&lt;/p&gt;
@@ -93,45 +92,41 @@ Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya 
 &lt;p&gt;Pero si quieres algo más rápido como para por ejemplo, ver la memoria que tienes libre y usada para &lt;em&gt;swap&lt;/em&gt; siempre puedes usar &lt;a href=&#34;https://linux.die.net/man/1/free&#34;&gt;free&lt;/a&gt;, instalada por defecto en la mayoría de las distros.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ free
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              total        used        free      shared  buff/cache   available
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Memoria:     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Swap:       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ free
+              total        used        free      shared  buff/cache   available
+Memoria:     &lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;
+Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;13-fdisk-http-man-cx-fdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;Aunque es una herramienta completa (merecería un post aparte) para realizar particiones en nuestro disco también nos puede servir sólo para consultar información relacionada, muy útil a si tenemos varios discos, por ejemplo, para ver nomenclatura, tamaños, etc, y no podemos dejar de mencionarla.&lt;/p&gt;
 
 &lt;p&gt;Ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;fdisk -l
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdb1  *           &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   100M  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;&#34;&gt; HPFS/NTFS/exFAT
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdb2            &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;114&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,1G  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;&#34;&gt; HPFS/NTFS/exFAT
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdb3         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;118&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,7G  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Extendida
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdb5         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     2G &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;82&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Linux swap / Solaris
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdb6         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;116&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,7G &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;83&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Linux&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fdisk -l
+Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
+/dev/sdb1  *           &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;   100M  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;114&lt;/span&gt;,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;118&lt;/span&gt;,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
+/dev/sdb5         &lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;     2G &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; Linux swap / Solaris
+/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;116&lt;/span&gt;,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;14-df-https-linux-die-net-man-1-df-du-https-linux-die-net-man-1-du-y-ncdu-https-dev-yorhel-nl-ncdu-man&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;El espacio libre que tenemos en nuestro sistema siempre es algo a tener en cuenta y para comprobarlo no necesitamos ninguna herramienta gráfica, mucho más rápido y eficiente desde terminal, veamos algunas utilidades.&lt;/p&gt;
 
 &lt;p&gt;Con &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt; podemos ver información relevante sobre nuestro sistema de ficheros, como el porcentaje de ocupación, entre otros. Así podremos comprobar de un vistazo el estado de las particiones, por si tuviéramos que realizar una reasignación de espacio.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ df
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udev                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% /dev
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tmpfs                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;&lt;span class=&#34;&#34;&gt;     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% /run
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sda6           &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% /
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sda7          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% /home
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df
+S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
+udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
+tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /run
+/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;% /
+/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;% /home
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ du -h
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,3G	./Tasks
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,8M	./Books
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,3G	.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ du -h
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	./Tasks
+&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8M	./Books
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Que nos dice el tamaño del directorio y de todo
 lo contenido en su interior.&lt;/p&gt;
 
@@ -140,17 +135,15 @@ lo contenido en su interior.&lt;/p&gt;
 &lt;p&gt;Y lo bueno que tiene es que entramos en una interfaz (directamente en terminal) donde no solo vemos el tamaño de los ficheros o directorios sino también el tamaño relativo al fichero de mayor peso, para de forma muy rápida ver los que más espacio están ocupando en disco en relación al resto.&lt;/p&gt;
 
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;/Microservices
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,3 GiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;##########] /Talks
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,8 MiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; /Books&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Microservices
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;/Talks
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;539&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,4 MiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;##########]  Testing Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;343&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,5 MiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;342&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,6 MiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;314&lt;/span&gt;&lt;span class=&#34;&#34;&gt;,2 MiB &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;#####     &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  Principles Of Microservices by Sam Newman.mp4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Talks
+&lt;span class=&#34;m&#34;&gt;539&lt;/span&gt;,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;343&lt;/span&gt;,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;342&lt;/span&gt;,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;314&lt;/span&gt;,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;#####     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  Principles Of Microservices by Sam Newman.mp4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;15-dd-https-linux-die-net-man-1-dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;Potente y simple herramienta que entre otras cosas nos sirve para grabar imágenes &lt;code&gt;.iso&lt;/code&gt; en memorias externas, algo que seguramente hayamos necesitado hacer en más de una ocación. Mucho más sencillo desde &lt;em&gt;terminal&lt;/em&gt;, así de simple, por ejemplo:&lt;/p&gt;
@@ -164,13 +157,12 @@ lo contenido en su interior.&lt;/p&gt;
 &lt;p&gt;Herramienta muy simple para ver los últimos comandos usados (en realidad todos).&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;$history&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  locate linux
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  clear
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  apropos ls
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  apropos &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  clear&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$history&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;  locate linux
+&lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;  clear
+&lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;  apropos ls
+&lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;  apropos &lt;span class=&#34;s2&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10&lt;/code&gt;&lt;/p&gt;
@@ -194,13 +186,12 @@ que el directorio en cuestión haya sufrido. Muy útil para copias de seguridad,
 &lt;p&gt;Ideal para buscar ficheros en todo nuestro sistema. Es algo bruto, ya que por defecto busca en todo el sistema pero usando alguna de las opciones podemos refinar un poco su comportamiento. Eso sí, necesitarás usar algún paginador como &lt;code&gt;less&lt;/code&gt;o &lt;code&gt;more&lt;/code&gt; para ver la salida poco a poco.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ locate password &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; less
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/bin/systemd-ask-password
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/bin/systemd-tty-ask-password-agent
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/boot/grub/i386-pc/legacy_password_test.mod
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/boot/grub/i386-pc/password.mod
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ locate password &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+/bin/systemd-ask-password
+/bin/systemd-tty-ask-password-agent
+/boot/grub/i386-pc/legacy_password_test.mod
+/boot/grub/i386-pc/password.mod
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;19-apropos-http-man7-org-linux-man-pages-man1-apropos-1-html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;rdquo;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
@@ -213,30 +204,28 @@ Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a
 &lt;p&gt;(Usamos &lt;code&gt;less&lt;/code&gt; para ver progresivamente la salida del comando)&lt;/p&gt;
 
 &lt;p&gt;Y vemos que entre otras cosas tenemos instalados conversores entre versiones de Python, quizás ni lo sabías :) .&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;2to3 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             - Python2 to Python3 converter
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;2to3-2.7 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         - Python2 to Python3 converter
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;2to3-3.5 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         - Python2 to Python3 converter
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;dh_python2 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       - calculates Python dependencies, adds maintainer script...
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;dh_python3 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       - calculates Python dependencies, adds maintainer script...
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;fab &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              - Simple Pythonic remote deployment tool
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;jwt3 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             - Python implementation of JSON Web Token
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
+2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
+jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
+:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;20-tree-https-linux-die-net-man-1-tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;Si algún momento has necesitado conocer las subcarpetas y ficheros de un subdirectorio estando en terminal probablemente hayas acabando entrando y saliendo de ellas, bajando y subiendo de nivel, todo esto es mucho más sencillo si podemos ver el árbol de directorios y ficheros desde terminal, grácias a la orden &lt;code&gt;tree&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt; $ tree .
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;├── css
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;│   └── kit.css
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;├── index.html
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;└── js
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ├── lib1.js
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    ├── lib2.js
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    └── lib3.js
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt; directories, &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt; files&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ tree .
+.
+├── css
+│   └── kit.css
+├── index.html
+└── js
+    ├── lib1.js
+    ├── lib2.js
+    └── lib3.js
+
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;sudo apt-get install tree&lt;/code&gt;&lt;/p&gt;
@@ -246,8 +235,7 @@ Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a
 &lt;p&gt;Y para acabar, ya que hemos hablado de &lt;code&gt;history&lt;/code&gt; y de &lt;code&gt;locate&lt;/code&gt; no podíamos dejar de lado reverse-i-search, por si lo que queremos es buscar comandos que previamente hemos usado. Es un poco especial porque no se ejecuta de forma común al resto, sino pulsando &lt;code&gt;Crtl + R&lt;/code&gt; en nuestra terminal, ya que en realidad es un comando para la manipulación del historial que consultamos con &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Un ejemplo, con solo poner &lt;code&gt;pyth&lt;/code&gt; nos sale una de las órdenes con python que hemos ejecutado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;reverse-i-search&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;pyth&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;: apropos python &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; less&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
 
 &lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;

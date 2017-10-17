@@ -41,12 +41,10 @@
 &lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
 
 &lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tty&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat ~/.vimrc
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:let g:GPGDefaultRecipients&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat ~/.vimrc
+:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -74,40 +72,32 @@
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;crear-una-clave&#34;&gt;Crear una clave&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --gen-key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
 
 &lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-public-key&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --export -a &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; public.key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --export&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --export -a “Nombre de Usuario&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --export-secret-key -a &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; private.key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
 
 &lt;p&gt;Es muy parecido a exportar una clave pública, pero tienes que pisar algunas protecciones que vienen por default. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
 
 &lt;h1 id=&#34;importar-una-clave-pública&#34;&gt;Importar una clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --import public.key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --import public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
 Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.&lt;/p&gt;
 
 &lt;h1 id=&#34;importar-una-clave-privada&#34;&gt;Importar una clave privada&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --allow-secret-key-import --import private.key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --allow-secret-key-import --import private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto agrega una clave privada en el archivo “*private.key&lt;em&gt;” a tu anillo de claves privadas. Hay una nota (&lt;/em&gt;) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
 
 &lt;h1 id=&#34;eliminar-una-clave-pública-de-tu-anillo-de-claves-públicas&#34;&gt;Eliminar una clave pública (de tu anillo de claves públicas):&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --delete-key &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -115,28 +105,22 @@ Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de cl
 &lt;/blockquote&gt;
 
 &lt;h1 id=&#34;eliminar-una-clave-secreta-una-clave-de-tu-anillo-de-claves-secreta&#34;&gt;Eliminar una clave secreta (una clave de tu anillo de claves secreta)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --delete-secret-key &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
 
 &lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-públicas&#34;&gt;Listar las claves de tu anillo de claves públicas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --list-keys&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --list-secret-keys&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-secret-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --fingerprint &amp;gt; fingerprint&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --fingerprint &amp;gt; fingerprint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
 
 &lt;h1 id=&#34;encriptar-datos&#34;&gt;Encriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg -e -u &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -r &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; somefile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt; somefile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
 Como por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg -e -u &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -r “Un amigo&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; mydata.tar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;#34; mydata.tar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -146,29 +130,23 @@ Como por ejemplo:&lt;/p&gt;
 &lt;p&gt;Un interesante comentario al margen, encripté el patch preventivo del kernel, un archivo de 55,247 bytes, y terminé con un archivo encriptado de 15,276 bytes.&lt;/p&gt;
 
 &lt;h1 id=&#34;desencriptar-datos&#34;&gt;Desencriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg -d mydata.tar.gpg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “&lt;code&gt;gpg -d mydata.tar.gpg&lt;/code&gt;” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
 
 &lt;p&gt;Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.&lt;/p&gt;
 
 &lt;p&gt;No he utilizado estos comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --edit-key&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;gpg --gen-revoke&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --edit-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-revoke&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
@@ -235,18 +213,17 @@ Como por ejemplo:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/mozilla/addon-sdk.git
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; addon-sdk
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt;&lt;span class=&#34;&#34;&gt; bin/activate
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; ..
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git clone git://github.com/toberndo/mailvelope.git
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt;&lt;span class=&#34;&#34;&gt; mailvelope
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git checkout -t origin/firefox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule init
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git submodule update
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make build
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;make dist-ff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone git://github.com/mozilla/addon-sdk.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; addon-sdk
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; bin/activate
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+git clone git://github.com/toberndo/mailvelope.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mailvelope
+git checkout -t origin/firefox
+git submodule init
+git submodule update
+make build
+make dist-ff&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
 
 &lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;

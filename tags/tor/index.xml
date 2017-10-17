@@ -224,13 +224,11 @@
 &lt;h1 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h1&gt;
 
 &lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;# &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;deb http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt; # &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;deb-src http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/apt/sources.list&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; &lt;span class=&#34;nv&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;# &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deb http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
+ # &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deb-src http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/apt/sources.list&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Luego instalemos Tor y Privoxy:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# apt-get update
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; # apt-get install tor privoxy&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get update
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt; # apt-get install tor privoxy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este punto deberíamos mencionar que ambos son:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -239,28 +237,24 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Agrega la siguiente línea al archivo &lt;code&gt;/etc/privoxy/config&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;forward-socks4a / &amp;lt;a href=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;http://127.0.0.1:9050&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; target=&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;_blank&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;gt;127.0.0.1:9050&amp;lt;/a&amp;gt; .&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/privoxy/config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;forward-socks4a / &amp;lt;a href=&amp;#34;&lt;/span&gt;http://127.0.0.1:9050&lt;span class=&#34;s2&#34;&gt;&amp;#34; target=&amp;#34;&lt;/span&gt;_blank&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;127.0.0.1:9050&amp;lt;/a&amp;gt; .&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/privoxy/config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Además debes agregar las siguientes línas al archivo &lt;code&gt;/etc/tor/torrc&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;AvoidDiskWrites &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ControlPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9051&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Log notice stdout
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;WarnUnsafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SocksListenAddress &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SocksPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;AvoidDiskWrites &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+ControlPort &lt;span class=&#34;m&#34;&gt;9051&lt;/span&gt;
+Log notice stdout
+SafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+WarnUnsafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+SocksListenAddress &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1
+SocksPort &lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Por el momento no entraremos en detalles sobre qué significa cada opción, pero describiremos las variables de configuración interesantes más adelante. Primero iniciemos Tor y Privoxy:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# /etc/init.d/tor start
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# /etc/init.d/privoxy start&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/tor start
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# /etc/init.d/privoxy start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Comprobemoslo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# netstat -lntup
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:8118 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8520&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/privoxy
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9050 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8540&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/tor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# netstat -lntup
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:8118 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0:* LISTEN &lt;span class=&#34;m&#34;&gt;8520&lt;/span&gt;/privoxy
+tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:9050 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0:* LISTEN &lt;span class=&#34;m&#34;&gt;8540&lt;/span&gt;/tor&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -276,10 +270,9 @@
 &lt;/figure&gt;
 
 &lt;p&gt;En vez de configurarlo manualmente, también podemos usar Tor Browser Bundle, el cual integra prácticamente todo lo que necesitamos. Simplemente tenemos que descargar Tor Browser Bundle, extraerlo y ejecutar el script start-for-browser, de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# cd tor-browser_en-US
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# ./start-tor-browser&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# cd tor-browser_en-US
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ./start-tor-browser&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -299,8 +292,7 @@
 &lt;h1 id=&#34;2-cómo-funciona-tor&#34;&gt;2. Cómo funciona Tor&lt;/h1&gt;
 
 &lt;p&gt;Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como &lt;a href=&#34;http://www.google.com&#34; target=&#34;_blank&#34;&gt;Google&lt;/a&gt; estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino - el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# traceroute www.google.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# traceroute www.google.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El problema básico con esto es que todos los nodos intermediarios pueden monitorear nuestros paquetes transmitidos a traves de Internet. Incluso si usamos una conexión encriptada (HTTPS), algunos datos todavía pueden ser accedidos simplemente mirando en el encabezado TCP, como la IP de origen, la IP destino, tamaño de carga, tiempo de comunicación, etc.&lt;/p&gt;
 
 &lt;p&gt;¿Pero qué pasa si estamos usando Tor en el principio de la red? No podemos realmente ejecutar Traceroute cuando estamos usando Tor, dada la forma en que Tor fue diseñado. Dado que Tor no puede manejar paquetes ICMP (ping), no hay forma de saber a dónde serán dirigidos los paquetes. Esto es lo que hace que Tor sea seguro. Cuando estamos usando nuestro navegador conectado a la red Tor, estamos enviando peticiones a través de Internet usando el primer nodo de Tor, el cual la reenvía al siguiente nodo y el siguiente al siguiente, hasta que finalmente alcanza el destino.&lt;/p&gt;
@@ -354,10 +346,9 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Para probar si estamos resolviendo hostnames de forma local o remota, podemos editar la configuración torrc agregándole las siguientes líneas al archivo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;TestSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;SafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;WarnUnsafeSocks &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;TestSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+SafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+WarnUnsafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;TestSocks:&lt;/strong&gt; Cuando está activada esta opción, Tor genera una entrada en el log notice-level por cada conexión al puerto Socks indicando si la petición usó un protocolo de socks seguro o uno inseguro (mira lo comentado en SafeSocks). esto ayuda a determinar si una aplicación que usa Tor está posiblemente filtrando las peticiones DNS. (Default: 0)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;SafeSocks&lt;/strong&gt;: Cuando está activada esta opción, Tor rechazará conexiones a aplicaciones que usan variantes no seguras de protocolo de socks - una que solo provea una dirección IP, significa que la aplicación está resolviendo el DNS primero. Más específicamente, estos son socks4 y socks5 cuando no lo hace el servidor DNS remoto. (Defaults: 0)&lt;/li&gt;
@@ -409,8 +400,7 @@
 &lt;p&gt;Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella - en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).&lt;/p&gt;
 
 &lt;p&gt;Esa es una visión general de cómo deberían trabajar todos en conjunto, pero todavía falta configurar todos los componentes para que funcionen juntos correctamente. Primero se debe instalar Burp Suite (No se considera necesario detallar los pasos para ello). Cuando Burp está inicializado, se debe ver el puerto 8080 abierto y en estado LISTEN:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ netstat -lntup tcp6 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:8080 :::* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4315&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/java&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -lntup tcp6 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:8080 :::* LISTEN &lt;span class=&#34;m&#34;&gt;4315&lt;/span&gt;/java&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:&lt;/p&gt;
@@ -428,9 +418,8 @@
 &lt;/figure&gt;
 
 &lt;p&gt;De esta forma se configura Burp para que use el proxy SOCKS corriendo en el host 127.0.0.1 (localhost) en el puerto 9050. Si se consultan nuevamente los puertos que estan en estado de escucha nuevamente, se puede observar que el puerto 9050 está asociado al servicio Tor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# netstat -lntup
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9050 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:* LISTEN &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8520&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/tor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# netstat -lntup
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:9050 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0:* LISTEN &lt;span class=&#34;m&#34;&gt;8520&lt;/span&gt;/tor&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Repasando, hemos configurado el navegador para que use el proxy Burp en el puerto 8080, el cual en turnos utiliza el proxy SOCKS en el puerto 9050, razón por la cual exitosamente se logra el encadenamiento de proxies y en consecuencia se navega en internet de manera anónima, mientras seguimos teniendo la ventaja de poder modificar las peticiones con Burp.&lt;/p&gt;
 
 &lt;h1 id=&#34;2-configurar-tor-para-resolver-los-hostnames-de-forma-segura&#34;&gt;2. Configurar Tor para resolver los hostnames de forma segura&lt;/h1&gt;
@@ -460,20 +449,17 @@
 &lt;h2 id=&#34;c-usar-tor-resolve&#34;&gt;C: &lt;strong&gt;Usar tor-resolve&lt;/strong&gt;&lt;/h2&gt;
 
 &lt;p&gt;Con tor-resolve se puede obtener la dirección IP de un hostname de manera muy sencilla. Todo lo que se necesita hacer es correr este programa con el hostname especificado, por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# tor-resolve www.google.com &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# tor-resolve www.google.com &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:9050&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este comando dice que queremos obtener la dirección IP del hostname www.google.com, y que queremos usar el proxy SOCKS de Tor corriendo en el host 127.0.0.1 en el puerto 9050, la cual es la combinación host:port default, pero la especificamos igual, por claridad.&lt;/p&gt;
 
 &lt;p&gt;D: &lt;strong&gt;Usar el servidor DNS local TorDNS&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;El servidor DNS local puede ser configurado, el cual direccionará todas las peticiones DNS através de la red de Tor. Tor provee un servidor DNS built-in, el cual puede ser setteado agregando variables de configuración al archivo /etc/tor/torrc . Más específicamente, es necesario agregar las siguientes variables:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;DNSPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;AutomapHostsOnResolve &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;AutomapHostsSuffixes .exit,.onion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DNSPort &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;
+AutomapHostsOnResolve &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+AutomapHostsSuffixes .exit,.onion&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para probar si TorDNS funciona, se puede usar el comando dig para consultarle a nuestro servidor DNS por una dirección IP. Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# dig @localhost -p &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;&#34;&gt; www.google.com&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; www.google.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para asegurarnos que todas las peticiones DNS son realmente enviadas a través de nuestro servidor DNS local, es necesario además cambiar el archivo /etc/resolv.conf para apuntar al servidor DNS 127.0.0.1:53, por lo tanto todas las aplicaciones de la máquina usarán el sevidor DNS TorDNS para la resolución de hostnames. Si hacemos esto, notaremos un poco de retardo cuando consultemos un hostname que todavía no esté en caché, pero con las conecciones de internet actuales esto no debería ser un problema. Pero si de todos modos molesta, podemos configurar un servidor de nombres local para cacheo que podría almacenar los hostnames y sus correspondientes direcciones IP. En Linux hay un programa llamado dnsmasq, el cual es un servidor liviano de cacheo de DHCP y DNS, entre otros, el cual acepta consultas DNS y las responde directamente de la caché local o las redirecciona a un servidor DNS real. Una buena explicación de ello puede encontrase en &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Es necesario además asegurar que etc/resolv.conf no cambió para la próxima vez que los programas dhclient o dhcpcd estén corriendo. Para inhabilitar los cambios de dhclient sobre resolv.conf con sus propios nameservers, es necesario borrar el domain-name, domain-name-servers ydomain-search del archivo de configuración /etc/dhcp3/dhclient.conf . Para inhabilitar los cambios de dhcpcd en resolv.conf, es necesario borrar domain_name, domain_name_servers y domain_server del archivo de configuración /etc/dhcpcd.conf. Si tenemos ambos programas instalados, cambiar ambos archivos adecuadamente probablmente sea lo mejor.&lt;/p&gt;
@@ -495,9 +481,8 @@
 &lt;p&gt;Los servicios ocultos de Tor usan el hostname que termina con el dominio .onion . Ese TLD (Top Level Domain) no puede ser usado sobre Internet normalmente; sus correspondientes hostnames sólo pueden usarse sobre la red de Tor, la cual sabe cómo resolverlos dentro de sus direcciones IP ocultas.&lt;/p&gt;
 
 &lt;p&gt;Veamos qué pasa si intentamos resolver un hostname de DuckDuckGo, el cual es un motor de búsqueda usado para buscar websites en la red anónima de Tor. Usemos los comandos dig y tor-resolve de la siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tor-resolve 3g2upl4pq6kufc4m.onion &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:9050
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;dig @localhost -p &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;&lt;span class=&#34;&#34;&gt; 3g2upl4pq6kufc4m.onion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tor-resolve 3g2upl4pq6kufc4m.onion &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:9050
+dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m.onion&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ambos comandos reportan la dirección IP 127.192.0.10. Podemos observar que esa dirección IP pertenerce al localhost, dado que todas las direcciones IP 127.0.0.0/24 son asignadas al localhost, de hecho 127.0.0.1 es la más comunmente usada. Esto efectivamente logra anonimizar los servidores web en la red Tor, ergo, no se pueden rastrear.&lt;/p&gt;
 
 &lt;p&gt;Pero hay más que contar en esta historia que sólo la resolución de los dominios .onion, pero no entraremos en detalle por el momento - queda pendiente para futuros artículos.&lt;/p&gt;
@@ -505,17 +490,13 @@
 &lt;h1 id=&#34;5-opciones-de-log-en-tor&#34;&gt;5. Opciones de log en Tor&lt;/h1&gt;
 
 &lt;p&gt;Si instalamos Vidalia, entonces podemos ver nuestros logs en el &amp;#8220;Message Log&amp;#8221;, pero si no usamos Vidalia, obtener nuestros logs puede ser un poco más complicado. Si todo está configurado y funcionando, probablemente podemos obtener los logs buscando en el directorio /var/log/tor. El siguiente comando muestra los logs como aparecen en la pantalla:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tail -f /var/log/tor/tor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tail -f /var/log/tor/tor&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Pero hay también varias opciones de log que podemos configurar en el archivo /etc/tor/torrc. Las variables de configuración relevantes son las siguientes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Log minSeverity-maxSeverity stderr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;stdout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;syslog&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log minSeverity-maxSeverity stderr&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;stdout&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;syslog&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Envía todos los mensajes entre la mínima y máxima severidad a alguno de los canales de salida: standard error, standard output o syslog.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Log minSeverity-maxSeverity file &amp;lt;filename&amp;gt;&amp;lt;/filename&amp;gt;&amp;lt;filename&amp;gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log minSeverity-maxSeverity file &amp;lt;filename&amp;gt;&amp;lt;/filename&amp;gt;&amp;lt;filename&amp;gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Los niveles de severidad son los siguientes: debug, info, notice, warn y err. Una buena opción de configuración es la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Log notice-err file /var/log/tor/tor&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log notice-err file /var/log/tor/tor&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto efectivamente loggea todos los mensajes al archivo /varlog/tor/tor.&lt;/p&gt;
 
 &lt;h1 id=&#34;6-opciones-de-configuración-avanzada-de-tor&#34;&gt;6. Opciones de configuración avanzada de Tor&lt;/h1&gt;
@@ -756,36 +737,29 @@ Debemos mencionar también que Torbutton está integrado dentro de Firefox solam
 &lt;p&gt;Tor tiene el proxy SOCKS corriendo en el puerto 9050 que podemos usar para asegurar anonimato en cualquier tráfico que se envíe a través del proxy SOCKS a la red Tor. Pero nuestra aplicación necesita tener soporte para este proxy, o de lo contrario no podremos usarla para acceder a internet de forma anónima. Pero no hay que alarmarse todavía. Hay una solución para este problema. Incluso si el programa no tiene soporte para el servidor proxy SOCKS, o cualquier otro servidor proxy que importe, podemos garantizarnos navegar en internet anónimamente utilizando el programa Torify. Éste usa un programa llamado tsocks que puede enviar conexiones TCP a través del servidor SOCKS. Podemos además utilizar directamente tsocks para lograrlo, como vemos a continuación:&lt;/p&gt;
 
 &lt;p&gt;Primero necesitamos instalar tsocks si todavía no lo hemos hecho. Por ejemplo, si utilizamos la distribución de Linux Ubuntu, ejecutamos en un terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;apt-get install tsocks&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install tsocks&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si instalamos en la distribución &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;Gentoo&lt;/a&gt;, primero tenemos que activar tordns useflag, la cual permite que las consultas de DNS sean enviadas por Tor y elimina el problema de filtración por DNS que comentábamos en la parte 2. Para instalarlo entonces debe ejecutarse:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;net-proxy/tsocks tordns&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt;&amp;gt; /etc/portage/package.use
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;emerge net-proxy/tsocks&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;net-proxy/tsocks tordns&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.use
+emerge net-proxy/tsocks&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Luego necesitamos configurar tsocks para usar Tor. Podemos hacerlo editando el archivo de configuración &lt;code&gt;/etc/tsocks.conf&lt;/code&gt; . Lo mínimo indispensable que debe contenter es lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.0/255.255.255.0
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server_type&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;server_port&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.0/255.255.255.0
+&lt;span class=&#34;nv&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1
+&lt;span class=&#34;nv&#34;&gt;server_type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;server_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con la variable de configuración local podemos especificar que esta máquina puede acceder directamente a la red 192.168.1.0/24. Las otras variables indican el host y el puerto del sevidor SOCKS de Tor y su tipo, el cual en este caso es 5 (el valor default es 4).&lt;/p&gt;
 
 &lt;p&gt;La sintaxis del comando de tordns es muy sencilla y se puede obtener en la página del &lt;a href=&#34;http://linux.die.net/man/1/tsocks&#34; target=&#34;_blank&#34;&gt;man page&lt;/a&gt; de Linux:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tsocks &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;aplicacion &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;argumentos para la aplicacion&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# o
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tsocks &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt;off&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# o
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tsocks&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tsocks &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;aplicacion &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;argumentos para la aplicacion&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# o
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;tsocks &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;on&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;off&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# o
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;tsocks&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Podemos ver que necesitamos especificar la aplicación que queremos que utilice el proxy de Tor. Nótese que sólo los paquetes TCP serán ruteados a través de Tor; los paquetes UDP serán distribuidos normalmente, por lo que tenemos que tener cuidado de ello. Podemos testear rápidamente esto accediendo a un archivo en nuestro propio servidor web Apache con el programa wget. Primero tenemos que hacer los siguientes cambios en nuestra máquina servidora para que podamos observar todos los accesos a los recursos de Apache:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tail -f /var/log/apache2/access.log&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tail -f /var/log/apache2/access.log&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A continuación deberíamos descargar algunos recursos normalmente (sin tsocks) para confirmar que la dirección IP se muestra correctamente. Cuando estamos seguros que eso ocurre, podríamos testear tsocks para asegurarnos que la IP es anónima:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;tsocks wget http://www.server.com/image.png&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tsocks wget http://www.server.com/image.png&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En el log de acceso deberíamos observar una entrada como la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;31&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.172.30.1 – – &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/Jul/2012:00:33:25 +0200&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; “GET /image.png HTTP/1.0″ &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;695&lt;/span&gt;&lt;span class=&#34;&#34;&gt; “-” “Wget/1.12 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;linux-gnu&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;”&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;31&lt;/span&gt;.172.30.1 – – &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;/Jul/2012:00:33:25 +0200&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; “GET /image.png HTTP/1.0″ &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;695&lt;/span&gt; “-” “Wget/1.12 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;linux-gnu&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;”&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Podemos ver que pedimos el archivo image.png de la dirección IP 31.172.30.1. Para verificar incluso si la IP es parte de la red Tor, podemos clickear en &amp;#8220;View the Network&amp;#8221; en la GUI Vidalia, la cual nos lista todos los nodos en la red Tor. Entre todos ellos está también el nodo con la IP 31.172.30.1 como se representa en la imagen siguiente:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -877,13 +851,12 @@ Debemos mencionar también que Torbutton está integrado dentro de Firefox solam
 &lt;/ol&gt;
 
 &lt;p&gt;Está bastante claro que a menos que sepamos qué estamos haciendo, deberíamos ejecutar un nodo non-exit en lugar de un exit. Hemos configurado un relay Tor con el uso de la GUI Vidalia, pero si quisiéramos hacerlo manualmente, podemos editar el archivo &lt;code&gt;/etc/tor/torrc&lt;/code&gt; y agregar las siguientes variables de configuración:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;DataDirectory /home/user/tor/Data/Tor
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;DirPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9030&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ORPort &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9001&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ExitPolicy accept *:80,accept *:443,reject *:*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Nickname Unnamed
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;RelayBandwidthBurst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DataDirectory /home/user/tor/Data/Tor
+DirPort &lt;span class=&#34;m&#34;&gt;9030&lt;/span&gt;
+ORPort &lt;span class=&#34;m&#34;&gt;9001&lt;/span&gt;
+ExitPolicy accept *:80,accept *:443,reject *:*
+Nickname Unnamed
+RelayBandwidthBurst &lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Describamos las variables de configuración - resumidas de  &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;2&lt;/a&gt;:&lt;/p&gt;
 
 &lt;h2 id=&#34;dirport&#34;&gt;DirPort&lt;/h2&gt;
@@ -927,28 +900,27 @@ Debemos mencionar también que Torbutton está integrado dentro de Firefox solam
 &lt;p&gt;Podemos ver que el archivo &lt;code&gt;secret_id_key&lt;/code&gt; contiene solo la clave privada RSA usada para encriptar/desencriptar el tráfico que pasa a través del relay.&lt;/p&gt;
 
 &lt;p&gt;Cuando reiniciemos Tor, deberíamos notar que toma un poquito más de tiempo porque está configurando e iniciando el relay. Pero esto no garantiza que el Tor relay esté inicializado y corriendo, por lo que tendremos que revisar los logs. Allí deberíamos ver las siguientes lineas que indican que Tor relay se inició correctamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Tor v0.2.2.37 &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;git-fce6eb1c44e87bc2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;. This is experimental software. Do not rely on it &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; strong anonymity. &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Running on Linux x86_64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Initialized libevent version &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.19-stable using method epoll. Good.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Opening OR listener on &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:9001
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Opening Directory listener on &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0:9030
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Opening Socks listener on &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:0
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Socks listener listening on port &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;51220&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Opening Control listener on &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:0
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Control listener listening on port &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;45896&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; OpenSSL OpenSSL &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.1c &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt; May &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt;&lt;span class=&#34;&#34;&gt; looks like version &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.9.8m or later&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; I will try SSL_OP to &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;&#34;&gt; renegotiation
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Your Tor server’s identity key fingerprint is ‘test 0B01A29C23F7C70E52D28AD5A9E70237143B7D4C’
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; We now have enough directory information to build circuits.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Bootstrapped &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%: Connecting to the Tor network.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; New control connection opened.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Guessed our IP address as xxx.xxx.xxx.xxx &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;source: &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;208&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.83.223.34&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Bootstrapped &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;85&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%: Finishing handshake with first hop.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Bootstrapped &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;90&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%: Establishing a Tor circuit.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Tor has successfully opened a circuit. Looks like client functionality is working.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Bootstrapped &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;&#34;&gt;%: Done.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Now checking whether ORPort xxx.xxx.xxx.xxx:9001 and DirPort xxx.xxx.xxx.xxx:9030 are reachable… &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;this may take up to &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;&#34;&gt; minutes — look &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;&#34;&gt; log messages indicating success&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Notice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; Self-testing indicates your DirPort is reachable from the outside. Excellent.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Tor v0.2.2.37 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;git-fce6eb1c44e87bc2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. This is experimental software. Do not rely on it &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; strong anonymity. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Running on Linux x86_64&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Initialized libevent version &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;.0.19-stable using method epoll. Good.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening OR listener on &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0:9001
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Directory listener on &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0:9030
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Socks listener on &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:0
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Socks listener listening on port &lt;span class=&#34;m&#34;&gt;51220&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Control listener on &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:0
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Control listener listening on port &lt;span class=&#34;m&#34;&gt;45896&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; OpenSSL OpenSSL &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.0.1c &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; May &lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt; looks like version &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.9.8m or later&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; I will try SSL_OP to &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; renegotiation
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Your Tor server’s identity key fingerprint is ‘test 0B01A29C23F7C70E52D28AD5A9E70237143B7D4C’
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; We now have enough directory information to build circuits.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;%: Connecting to the Tor network.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; New control connection opened.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Guessed our IP address as xxx.xxx.xxx.xxx &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;source: &lt;span class=&#34;m&#34;&gt;208&lt;/span&gt;.83.223.34&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt;%: Finishing handshake with first hop.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;90&lt;/span&gt;%: Establishing a Tor circuit.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Tor has successfully opened a circuit. Looks like client functionality is working.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;%: Done.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Now checking whether ORPort xxx.xxx.xxx.xxx:9001 and DirPort xxx.xxx.xxx.xxx:9030 are reachable… &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;this may take up to &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; minutes — look &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; log messages indicating success&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your DirPort is reachable from the outside. Excellent.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Las últimas líneas indican que Tor está verificando si los puertos ORPort y DirPort son accesibles desde afuera, y al mostrar &amp;#8220;Excellent&amp;#8221; significa que sí. Si esta verificación falla entonces necesitamos revisar nuestros firewalls y abrir los puertos 9001 y 9020. Podemos además ver que Tor publicó el &lt;em&gt;server descriptor&lt;/em&gt; en el directorio del servidor para permitir a los clientes saber que está abierto y pueden conectarse a través de él. El descriptor del servidor contiene información como por ejemplo la dirección, los puertos, las claves, etc.
 En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay están corriendo bien, lo aumenta nuestra seguridad de que todo está funcionando correctamente.&lt;/p&gt;
 

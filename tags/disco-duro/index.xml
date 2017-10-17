@@ -41,30 +41,25 @@
 &lt;h2 id=&#34;crear-una-carta-amenazadora&#34;&gt;Crear una carta amenazadora&lt;/h2&gt;
 
 &lt;p&gt;Para el primer ejemplo crearemos un fichero de texto con una amenaza (En un USB de poco tamaño, a ser posible), el texto es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Esto es una amenaza&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &amp;gt; carta.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Esto es una amenaza&amp;#34;&lt;/span&gt; &amp;gt; carta.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Tras esto, borraremos el fichero que acabamos de crear.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ rm carta.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ rm carta.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;crear-una-imagen-del-disco-a-analizar&#34;&gt;Crear una imagen del disco a analizar&lt;/h2&gt;
 
 &lt;p&gt;En informática forense, lo ideal es crear una imagen del disco a analizar, para evitar modificarlo. Usaremos un pendrive por ser de menor capacidad:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ dd &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdc &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;image.disco &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# /dev/sdc es el pendrive
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ chmod &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;444&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image.disco &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;análisis-de-la-imagen&#34;&gt;Análisis de la imagen&lt;/h2&gt;
 
 &lt;p&gt;Una vez montada la imagen, crearemos un fichero que contendrá las palabras más frecuentes usadas en una amenaza. En este caso se usarán dos únicamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ cat busquedaEvidencias.txt
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;esto
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;amenaza&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat busquedaEvidencias.txt
+esto
+amenaza&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;buscando-evidencias-en-la-imagen&#34;&gt;Buscando evidencias en la imagen&lt;/h2&gt;
 
 &lt;p&gt;Ahora solo resta buscar en la imagen creada del pendrive por palabras contenidas en el fichero creado arriba:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;grep -aibf busquedaEvidencias.txt imagen.disco&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep -aibf busquedaEvidencias.txt imagen.disco&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -86,10 +81,9 @@
 &lt;h2 id=&#34;crear-la-imagen-del-disco&#34;&gt;Crear la imagen del disco&lt;/h2&gt;
 
 &lt;p&gt;Lo primero es copiar cualquier imagen, luego la borramos. Volvemos a crear una imagen del disco como en el paso anterior, con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ dd &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sdc &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;image.disco &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# /dev/sdc es el pendrive
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ chmod &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;444&lt;/span&gt;&lt;span class=&#34;&#34;&gt; image.disco &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;instalar-autopsy&#34;&gt;Instalar autopsy&lt;/h2&gt;
 
 &lt;p&gt;Tras esto, instalamos &lt;em&gt;autopsy&lt;/em&gt; (Está disponible en los repositorios de linux). La pantalla principal es esta:&lt;/p&gt;
@@ -150,37 +144,29 @@
 &lt;p&gt;Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;df
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;df /ruta/a un/directorio
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;df /ruta/a un/archivo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df
+df /ruta/a un/directorio
+df /ruta/a un/archivo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado &lt;em&gt;/home/hkr/Desktop/combinaciones.cpp&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;df -T /home/hkr/Desktop/combinaciones.cpp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df -T /home/hkr/Desktop/combinaciones.cpp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Que tiene como salida:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;Filesystem    Type   1K-blocks      Used Available Use% Mounted on
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dev/sda6     ext4   &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;186362292&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;140452228&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;36443368&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% /home&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Filesystem    Type   1K-blocks      Used Available Use% Mounted on
+/dev/sda6     ext4   &lt;span class=&#34;m&#34;&gt;186362292&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;140452228&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;36443368&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;% /home&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como vemos, el resultado es que el archivo &lt;em&gt;combinaciones.cpp&lt;/em&gt; pertenece a la partición &lt;em&gt;/dev/sda6&lt;/em&gt;. Con el siguiente comando mostramos solo el nombre de la partición:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;df /home/hkr/Desktop/combinaciones.cpp &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df /home/hkr/Desktop/combinaciones.cpp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;O con este otro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;df /home/hkr/Desktop/combinaciones.cpp&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;df /home/hkr/Desktop/combinaciones.cpp&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;La salida para los dos comandos anteriores es la misma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;/dev/sda6&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/dev/sda6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Es recomendable colocar la siguiente función bash en nuestro archivo &lt;em&gt;~/.bashrc&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# find partition name for a given filename
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;findpart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;   &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;&#34;&gt; -e &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; df -P &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; not found&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# find partition name for a given filename
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;findpart&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; df -P &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; not found&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ejemplos de uso:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;findpart /foo/bar
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;findpart /etc
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;findpart /home/vivek/test.txt&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;findpart /foo/bar
+findpart /etc
+findpart /home/vivek/test.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
     &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;640&#34; height=&#34;108&#34;  src=&#34;https://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s800/Screenshot.png&#34;&gt;&lt;/img&gt;
 &lt;/figure&gt;

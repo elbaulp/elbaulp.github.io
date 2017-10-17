@@ -37,18 +37,15 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;750x750+0+0 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-bit sRGB 149KB &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.000u &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;:00.000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;750x750+0+0 &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;-bit sRGB 149KB &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.000u &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;:00.000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ identify -format &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ identify -format &lt;span class=&#34;s2&#34;&gt;&amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&lt;/span&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
+&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;n&#34;&gt;alias&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
         </item>
         
@@ -65,16 +62,13 @@
 &lt;p&gt;El otro día me hacía falta convertir cada una de las páginas de un documento pdf a imágenes individuales, con un poco de búsqueda en google lo solucioné y hoy lo comparto con vosotros.&lt;/p&gt;
 
 &lt;p&gt;Es necesario tener instalado el paquete imagemagick, si no lo tenemos instalado ejecutamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;sudo aptitude install imagemagick&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo aptitude install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Tras instalarlo basta con ejecutar el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;convert foo.pdf foo.png&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;convert foo.pdf foo.png&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;La extensión de la imagen podemos cambiarla a jpg por ejemplo.&lt;/p&gt;
 
 &lt;p&gt;Si las imágenes resultan con poca calidad, podemos ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;convert -density &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;400&lt;/span&gt;&lt;span class=&#34;&#34;&gt; foo.pdf -resize &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;&#34;&gt;% foo.png&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;convert -density &lt;span class=&#34;m&#34;&gt;400&lt;/span&gt; foo.pdf -resize &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;% foo.png&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Espero que os sea útil si alguna vez lo necesitáis.&lt;/p&gt;
 
 &lt;p&gt;Vía | &lt;a href=&#34;http://www.cyberciti.biz/faq/howto-convert-a-pdf-file-to-an-image/&#34; target=&#34;_blank&#34;&gt;cyberciti&lt;/a&gt; | &lt;a href=&#34;http://www.imagemagick.org/discourse-server/viewtopic.php?f=10&amp;t=13371&#34; target=&#34;_blank&#34;&gt;imagemagick.org&lt;/a&gt;&lt;/p&gt;

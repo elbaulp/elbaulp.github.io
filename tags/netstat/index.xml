@@ -39,72 +39,66 @@
 &lt;p&gt;Aquí entra en acción el comando &lt;strong&gt;ss&lt;/strong&gt;, sustituto de &lt;strong&gt;netstat&lt;/strong&gt;. Este comando está incluido en el paquete &lt;strong&gt;iproute2&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;La función de &lt;strong&gt;ss&lt;/strong&gt; es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;-n, --numeric
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Do now try to resolve service names.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -r, --resolve
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Try to resolve numeric address/ports.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -a, --all
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Display all sockets.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -l, --listening
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Display listening sockets.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -o, --options
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Show timer information.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -e, --extended
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Show detailed socket information
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -m, --memory
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Show socket memory usage.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -p, --processes
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Show process using socket.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -i, --info
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Show internal TCP information.
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;       -s, --summary
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              Print  summary  statistics.  This  option  does not parse socket
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              lists obtaining summary from various sources. It is useful  when
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              amount  of  sockets  is  so  huge  that parsing /proc/net/tcp is
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;              painful.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;-n, --numeric
+              Do now try to resolve service names.
+
+       -r, --resolve
+              Try to resolve numeric address/ports.
+
+       -a, --all
+              Display all sockets.
+
+       -l, --listening
+              Display listening sockets.
+
+       -o, --options
+              Show timer information.
+
+       -e, --extended
+              Show detailed socket information
+
+       -m, --memory
+              Show socket memory usage.
+
+       -p, --processes
+              Show process using socket.
+
+       -i, --info
+              Show internal TCP information.
+
+       -s, --summary
+              Print  summary  statistics.  This  option  does not parse socket
+              lists obtaining summary from various sources. It is useful  when
+              amount  of  sockets  is  so  huge  that parsing /proc/net/tcp is
+              painful.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ver la lista completa de opciones escribe &lt;code&gt;ss --help&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Algunos ejemplos prácticos:&lt;/p&gt;
 
 &lt;h1 id=&#34;mostrar-todos-los-sockects-a-la-escucha&#34;&gt;Mostrar todos los sockects a la escucha&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ ss -l
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                           :::sunrpc                                                         :::*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                            *:sunrpc                                                          *:*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                           ::1:smtp                                                           :::*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.1:smtp                                                            *:*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                            *:17500                                                           *:*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                            *:43076                                                           *:*
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;LISTEN     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                           :::50925                                                          :::*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ss -l
+State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::sunrpc                                                         :::*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:sunrpc                                                          *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                           ::1:smtp                                                           :::*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                     &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:smtp                                                            *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:17500                                                           *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:43076                                                           *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;                                                       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.36:60240                                                  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;207&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.97.227.239:ssh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
+&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;                                                       &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.36:60240                                                  &lt;span class=&#34;m&#34;&gt;207&lt;/span&gt;.97.227.239:ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El parámetro &lt;strong&gt;-o&lt;/strong&gt; permite establecer qué opciones mostrar, varios ejemplos son:&lt;/p&gt;
 
 &lt;h1 id=&#34;mostrar-conexiones-smtp-establecidas&#34;&gt;Mostrar conexiones SMTP establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -o state established &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -o state established &lt;span class=&#34;s1&#34;&gt;&amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -o state established &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -o state established &lt;span class=&#34;s1&#34;&gt;&amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado &lt;em&gt;established&lt;/em&gt;. Para mostrar otros estados puedes escribir:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -4 state NOMBRE-DEL-FILTRO&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -4 state NOMBRE-DEL-FILTRO&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Donde &lt;strong&gt;-4&lt;/strong&gt; indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -127,87 +121,71 @@
 &lt;/ol&gt;
 
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -4 state time-wait&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -4 state time-wait&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ss dst ADDRESS_PATTERN
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss dst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.5
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss dst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.5:http
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss dst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.5:smtp
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss dst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.5:443&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss dst ADDRESS_PATTERN
+
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5
+
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:http
+ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:smtp
+ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:443&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ss dst &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.1.2.100:http&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss dst &lt;span class=&#34;m&#34;&gt;123&lt;/span&gt;.1.2.100:http&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss dst *:http&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss dst *:http&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ss src ADDRESS_PATTERN
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## http (80) port only ##
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44:http
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44:80
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;## smtp (25) port only ##
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44:smtp
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;ss src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44:25&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss src ADDRESS_PATTERN
+&lt;span class=&#34;c1&#34;&gt;# Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44
+
+&lt;span class=&#34;c1&#34;&gt;## http (80) port only ##
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:http
+ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:80
+
+&lt;span class=&#34;c1&#34;&gt;## smtp (25) port only ##
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:smtp
+ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:25&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ss -ant &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; awk &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep -v &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; sort &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; uniq -c&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -ant &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ss -s&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;ss -tlnp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -tlnp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h1&gt;
 
 &lt;p&gt;Antiguamente se usaba el comando ifconfig:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ifconfig eth0 up
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# ifconfig eth0 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.1 netmask &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.255.255.0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 up
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ifconfig eth0 &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.1 netmask &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En &lt;strong&gt;iproute2&lt;/strong&gt; la configuración de interfaces de red se lleva a cabo con el subcomando &lt;strong&gt;link&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h1 id=&#34;activar-interfaz&#34;&gt;Activar interfaz&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ip link &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;&#34;&gt; eth0 up&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip link &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; eth0 up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Donde eth0 debe ser la interfaz de red a activar.&lt;/p&gt;
 
 &lt;h1 id=&#34;establecer-dirección-ip-a-la-interfaz&#34;&gt;Establecer dirección ip a la interfaz&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ip addr add &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.33/24 dev eth0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip addr add &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.33/24 dev eth0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ip addr ls
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# ip addr show
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# ip addr ls eth0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr ls
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr show
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ip addr ls eth0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h1&gt;
 
 &lt;p&gt;La versión moderna del comando &lt;code&gt;route -n&lt;/code&gt; o &lt;code&gt;netstat -r&lt;/code&gt; es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;# ip ro&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip ro&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para añádir o eliminar reglas de enrutamiento se usa &lt;code&gt;ip ro add|del destino via gateway&lt;/code&gt;. Para añadir una nueva ruta a 10.0.0.0/16:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ip ro add 10.0.0.0/16 via 192.168.0.1
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;&#34;&gt;# ip ro del &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0/16 via &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.0.1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro add 10.0.0.0/16 via 192.168.0.1
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ip ro del &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.0.0.0/16 via &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.0.1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h1&gt;
 
 &lt;p&gt;Para averiguar qué interfaz está usando tu pc, puedes usar el comando &lt;em&gt;ip route get IP&lt;/em&gt;. Así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c&#34;&gt;# ip route get 5.39.89.44
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.39.89.44 via &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.61.29.89 dev eth1  src &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.36&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip route get 5.39.89.44
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44 via &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89 dev eth1  src &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.36&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36&lt;/p&gt;
 
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
@@ -243,56 +221,55 @@
 &lt;h1 id=&#34;mostrar-las-conexiones-de-red&#34;&gt;Mostrar las conexiones de red&lt;/h1&gt;
 
 &lt;p&gt;Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo netstat -apA inet
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Active Internet connections &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;&#34;&gt;servers and established&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:sunrpc                *:*                     LISTEN      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpcbind
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:38768                 *:*                     LISTEN      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpc.statd
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; localhost:smtp          *:*                     LISTEN      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2861&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/exim4
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:17500                 *:*                     LISTEN      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dropbox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60706      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60684      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:44415      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.151.210.122:http    TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43597      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.21.91.121:http       TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:35340      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-33-113-45.ovh.:http TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:36162      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.74.254.120:https     ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:44472      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.74.254.123:http      TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:35336      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;&lt;span class=&#34;&#34;&gt;-33-113-45.ovh.:http TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43599      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.21.91.121:http       TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dropbox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60689      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60687      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60685      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:44416      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.151.210.122:http    TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dropbox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43601      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.21.91.121:http       TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60704      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:41758      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;199&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.119.233.72.sta:http ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60710      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:36232      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.74.254.123:https     ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60688      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dropbox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:60686      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.184.220.111:http     TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:43600      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.21.91.121:http       TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:bootpc                *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dhclient
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:sunrpc                *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpcbind
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:678                   *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpcbind
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; localhost:712           *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpc.statd
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:17500                 *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dropbox
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:mdns                  *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/avahi-daemon:
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:44290                 *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/rpc.statd
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:53066                 *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/dhclient
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:1900                  *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2905&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/minissdpd
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;udp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; *:45008                 *:*                                 &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/avahi-daemon:&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apA inet
+Active Internet connections &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;servers and established&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:38768                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:smtp          *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2861&lt;/span&gt;/exim4
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60706      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60684      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44415      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43597      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35340      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36162      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.120:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44472      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:http      TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35336      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43599      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60689      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60687      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60685      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44416      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
+tcp       &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43601      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60704      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:41758      &lt;span class=&#34;m&#34;&gt;199&lt;/span&gt;.119.233.72.sta:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60710      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36232      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60688      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60686      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43600      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:bootpc                *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:678                   *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:712           *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                                 &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:mdns                  *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:44290                 *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:53066                 *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:1900                  *:*                                 &lt;span class=&#34;m&#34;&gt;2905&lt;/span&gt;/minissdpd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:45008                 *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Las parámetros pasados a netstat son; &lt;em&gt;-a&lt;/em&gt; para mostrar todos los sockets, &lt;em&gt;-p&lt;/em&gt; muestra la columna PID/Program, &lt;em&gt;-A inet&lt;/em&gt; muestra solo sockets TCP/UDP. En Windows la opción &lt;em&gt;-A inet&lt;/em&gt; puede omitirse y &lt;em&gt;-p&lt;/em&gt; debe reemplazarse por &lt;em&gt;-o&lt;/em&gt;. En Mac, no hay equivalente a &lt;em&gt;-p&lt;/em&gt; y &lt;em&gt;-A inet&lt;/em&gt; debe reemplzarse por &lt;em&gt;-f inet&lt;/em&gt;. Para conocer los nombres de los programas en Mac usa &lt;em&gt;lsof -i&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;El singnificado de cada columna es el siguiente:&lt;/p&gt;
@@ -306,24 +283,23 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Procedamos a interpretar los resultados de netstat. En el ejemplo de arriba las direcciones de la columna &lt;strong&gt;Foreign adress&lt;/strong&gt; aparecen cortadas. Para verlas completas es necesario ejecutar netstat con el parámetro &lt;strong&gt;-W&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ sudo netstat -apWA inet &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;&#34;&gt; grep https
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;tcp        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;&lt;span class=&#34;&#34;&gt;/firefox.real&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apWA inet &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep https
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con el comando de arriba estoy mostrando únicamente las conexiones &lt;em&gt;https&lt;/em&gt; establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección &lt;a href=&#34; http://ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&#34; target=&#34;_blank&#34;&gt;ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&lt;/a&gt; podrás comprobar que dicha dirección pertenece al buscador &lt;strong&gt;duckduckgo&lt;/strong&gt;. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.&lt;/p&gt;
 
 &lt;p&gt;Veamos ahora la razón de que existan dos conexiones con datos pendientes en la cola de entrada y salida.&lt;/p&gt;
@@ -341,13 +317,12 @@
 &lt;h1 id=&#34;imprimiendo-la-tabla-de-rutas-routing-table&#34;&gt;Imprimiendo la tabla de rutas (Routing Table)&lt;/h1&gt;
 
 &lt;p&gt;La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ netstat -r
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Kernel IP routing table
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;default         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.61.29.89     &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.0.0.0         UG        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; eth1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.61.29.89     *               &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.255.255.255 UH        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; eth1
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.168.1.32    *               &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;&#34;&gt;.255.255.248 U         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; eth1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -r
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0         UG        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.255 UH        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.32    *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.248 U         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una breve explicación del significado de las columnas:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -364,13 +339,12 @@
 &lt;h1 id=&#34;mostrar-estadísticas-e-interfaces&#34;&gt;Mostrar estadísticas e interfaces&lt;/h1&gt;
 
 &lt;p&gt;También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;&#34;&gt;$ netstat -i
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Kernel Interface table
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;eth0       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; BMU
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;eth1       &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;253744&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;153622&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; BMRU
-&lt;/span&gt;&lt;span class=&#34;&#34;&gt;lo        &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;         &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;             &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt;      &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;&#34;&gt; LRU&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -i
+Kernel Interface table
+Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMU
+eth1       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;253744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;153622&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMRU
+lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; LRU&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El significado de cada columna es el siguiente:&lt;/p&gt;
 
 &lt;ul&gt;
