@@ -6,7 +6,7 @@
         <description>Recent content in Emacs on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Tue, 30 Aug 2016 14:10:30 +0000</lastBuildDate>
+        <lastBuildDate>Wed, 18 Oct 2017 19:04:01 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/emacs/</link>
@@ -15,6 +15,236 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/tags/emacs/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Chuleta de comandos para Org-Mode</title>
+            <link>https://elbauldelprogramador.com/chuleta-org-mode/</link>
+            <pubDate>Wed, 18 Oct 2017 19:04:01 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/chuleta-org-mode/</guid>
+            <description>&lt;p&gt;Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;
+            alt=&#34;Org mode quick reference&#34;
+            title=&#34;Org mode quick reference&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;480&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Org mode quick reference&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Para empezar, con &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.&lt;/p&gt;
+
+&lt;h1 id=&#34;secciones&#34;&gt;Secciones&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* Top level headline
+** Second level
+*** 3rd level
+    some text
+*** 3rd level
+    more text
+
+* Another top level headline&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;ciclar&#34;&gt;Ciclar&lt;/h1&gt;
+
+&lt;p&gt;Para ciclar sobre las secciones:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;moverse-entre-secciones&#34;&gt;Moverse entre secciones&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-n&lt;/code&gt; Siguiente sección.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-p&lt;/code&gt; Sección anterior.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;insertar-modificar-secciones&#34;&gt;Insertar/modificar secciones&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;árboles-dispersos&#34;&gt;Árboles dispersos&lt;/h1&gt;
+
+&lt;p&gt;Útil para ocultar partes del documento en las que no estamos trabajando actualmente.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code&gt;C-c C-c&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;listas&#34;&gt;Listas&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt; o &lt;code&gt;*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code&gt;1.&lt;/code&gt; o &lt;code&gt;1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;notas-al-pie&#34;&gt;Notas al pie&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie[fn:1].
+
+[fn:1] Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
+
+&lt;p&gt;Sintáxis: &lt;code&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code&gt;C-c C-l&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si no hay una URL, el enlace se considera interno al documento:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[#custom-id]]
+[[My Target][Find my target]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El último ejemplo, busca en el documento actual &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code&gt;C-u&lt;/code&gt;, se usa autocompletado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; o &lt;code&gt;mouse-1&lt;/code&gt; o &lt;code&gt;mouse-2&lt;/code&gt; abre el enlace.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;items&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; items&lt;/h1&gt;
+
+&lt;p&gt;Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&gt; TODO -&gt; DONE -&gt; (unmarked)&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.&lt;/li&gt;
+&lt;li&gt;C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
+
+&lt;p&gt;Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* TODO Organize party [0/3]
+  - [ ] call people [0/2]
+    - [ ] Peter
+    - [ ] Sarah
+  - [ ] order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;
+            alt=&#34;TODO Items checkboxes&#34;
+            title=&#34;TODO items checkboxes&#34;
+            sizes=&#34;(min-width: 244px) 244px, 100vw&#34;
+            width=&#34;244&#34;
+            height=&#34;100&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;TODO Items checkboxes&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;markup&#34;&gt;Markup&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*negrita*&lt;/code&gt; =&gt; &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/Cursiva/&lt;/code&gt; =&gt; &lt;em&gt;Cursiva&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=code=&lt;/code&gt; y &lt;code&gt;~verbatim~&lt;/code&gt; -&gt;  &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+tachar+&lt;/code&gt; -&gt; &lt;del&gt;tachar&lt;/del&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_subrayar_&lt;/code&gt; -&gt; &lt;span style=&#34;text-decoration: underline;&#34;&gt;subrayar&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;imágenes-y-tablas&#34;&gt;Imágenes y tablas&lt;/h1&gt;
+
+&lt;p&gt;Sintáxis de las tablas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;| HEADER1  | header2  |
+|----------+----------|
+| content1 | contend2 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;
+            alt=&#34;Creating tables in org-mode&#34;
+            title=&#34;Creating tables in org-mode&#34;
+            sizes=&#34;(min-width: 304px) 304px, 100vw&#34;
+            width=&#34;304&#34;
+            height=&#34;214&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Creating tables in org-mode&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Las imágenes son enlaces: &lt;code&gt;[[./img/a-image.jpg]]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;código-fuente&#34;&gt;Código fuente&lt;/h1&gt;
+
+&lt;p&gt;Para incluir código fuente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt; #+BEGIN_SRC emacs-lisp
+     (defun org-xor (a b)
+        &amp;#34;Exclusive or.&amp;#34;
+        (if a (not b) b))
+ #+END_SRC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;generará lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-xor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s&#34;&gt;&amp;#34;Exclusive or.&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code&gt;C-c &#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://orgmode.org/guide/&#34; title=&#34;Manual oficial de org-mode&#34;&gt;Manual oficial de org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Click en return para volver a la referencia. &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
         
         <item>
             <title>Chuleta De Comandos / Atajos De Teclado / Paquetes más útiles para Emacs</title>

@@ -6,7 +6,7 @@
         <description>Recent content in Articulos on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Sun, 08 Oct 2017 19:26:12 +0100</lastBuildDate>
+        <lastBuildDate>Wed, 18 Oct 2017 19:04:01 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/articulos/</link>
@@ -15,6 +15,236 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/articulos/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Chuleta de comandos para Org-Mode</title>
+            <link>https://elbauldelprogramador.com/chuleta-org-mode/</link>
+            <pubDate>Wed, 18 Oct 2017 19:04:01 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/chuleta-org-mode/</guid>
+            <description>&lt;p&gt;Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;
+            alt=&#34;Org mode quick reference&#34;
+            title=&#34;Org mode quick reference&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;480&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Org mode quick reference&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Para empezar, con &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.&lt;/p&gt;
+
+&lt;h1 id=&#34;secciones&#34;&gt;Secciones&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* Top level headline
+** Second level
+*** 3rd level
+    some text
+*** 3rd level
+    more text
+
+* Another top level headline&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;ciclar&#34;&gt;Ciclar&lt;/h1&gt;
+
+&lt;p&gt;Para ciclar sobre las secciones:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;moverse-entre-secciones&#34;&gt;Moverse entre secciones&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-n&lt;/code&gt; Siguiente sección.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-p&lt;/code&gt; Sección anterior.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;insertar-modificar-secciones&#34;&gt;Insertar/modificar secciones&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;árboles-dispersos&#34;&gt;Árboles dispersos&lt;/h1&gt;
+
+&lt;p&gt;Útil para ocultar partes del documento en las que no estamos trabajando actualmente.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code&gt;C-c C-c&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;listas&#34;&gt;Listas&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt; o &lt;code&gt;*&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code&gt;1.&lt;/code&gt; o &lt;code&gt;1)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;notas-al-pie&#34;&gt;Notas al pie&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie[fn:1].
+
+[fn:1] Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
+
+&lt;p&gt;Sintáxis: &lt;code&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code&gt;C-c C-l&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si no hay una URL, el enlace se considera interno al documento:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[#custom-id]]
+[[My Target][Find my target]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El último ejemplo, busca en el documento actual &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code&gt;C-u&lt;/code&gt;, se usa autocompletado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; o &lt;code&gt;mouse-1&lt;/code&gt; o &lt;code&gt;mouse-2&lt;/code&gt; abre el enlace.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;items&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; items&lt;/h1&gt;
+
+&lt;p&gt;Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&gt; TODO -&gt; DONE -&gt; (unmarked)&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.&lt;/li&gt;
+&lt;li&gt;C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
+
+&lt;p&gt;Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* TODO Organize party [0/3]
+  - [ ] call people [0/2]
+    - [ ] Peter
+    - [ ] Sarah
+  - [ ] order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;
+            alt=&#34;TODO Items checkboxes&#34;
+            title=&#34;TODO items checkboxes&#34;
+            sizes=&#34;(min-width: 244px) 244px, 100vw&#34;
+            width=&#34;244&#34;
+            height=&#34;100&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;TODO Items checkboxes&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;markup&#34;&gt;Markup&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*negrita*&lt;/code&gt; =&gt; &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/Cursiva/&lt;/code&gt; =&gt; &lt;em&gt;Cursiva&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=code=&lt;/code&gt; y &lt;code&gt;~verbatim~&lt;/code&gt; -&gt;  &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+tachar+&lt;/code&gt; -&gt; &lt;del&gt;tachar&lt;/del&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_subrayar_&lt;/code&gt; -&gt; &lt;span style=&#34;text-decoration: underline;&#34;&gt;subrayar&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;imágenes-y-tablas&#34;&gt;Imágenes y tablas&lt;/h1&gt;
+
+&lt;p&gt;Sintáxis de las tablas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;| HEADER1  | header2  |
+|----------+----------|
+| content1 | contend2 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;
+            alt=&#34;Creating tables in org-mode&#34;
+            title=&#34;Creating tables in org-mode&#34;
+            sizes=&#34;(min-width: 304px) 304px, 100vw&#34;
+            width=&#34;304&#34;
+            height=&#34;214&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Creating tables in org-mode&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Las imágenes son enlaces: &lt;code&gt;[[./img/a-image.jpg]]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;código-fuente&#34;&gt;Código fuente&lt;/h1&gt;
+
+&lt;p&gt;Para incluir código fuente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt; #+BEGIN_SRC emacs-lisp
+     (defun org-xor (a b)
+        &amp;#34;Exclusive or.&amp;#34;
+        (if a (not b) b))
+ #+END_SRC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;generará lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-xor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s&#34;&gt;&amp;#34;Exclusive or.&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code&gt;C-c &#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://orgmode.org/guide/&#34; title=&#34;Manual oficial de org-mode&#34;&gt;Manual oficial de org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Click en return para volver a la referencia. &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        </item>
         
         <item>
             <title>Todo lo que necesitas saber sobre Copyright y licencias en 2 minutos</title>
@@ -11117,7 +11347,7 @@ biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de l
         </item>
         
         <item>
-            <title>Cómo se almacenan tus contraseñas en internet (y cuando la longitud  de la misma no importa)</title>
+            <title>Cómo se almacenan tus contraseñas en internet (y cuándo la longitud  de la misma no importa)</title>
             <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
             <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
             
@@ -11126,7 +11356,19 @@ biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de l
     &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/original2.jpg&#34; alt=&#34;&#34; title=&#34;original&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero, ¿Qué quiere decir realmente cuando un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
+&lt;h1 id=&#34;changelog&#34;&gt;Changelog&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/josealberto4444&#34;&gt;Speedy&lt;/a&gt; ha cambiado:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Añadido apunte sobre seguridad de las contraseñas cuando están guardadas en bases de datos en texto plano o con cifrado básico.&lt;/li&gt;
+&lt;li&gt;Añadida explicación sobre tablas de arcoíris y qué contraseñas son más frecuentes ahí.&lt;/li&gt;
+&lt;li&gt;Eliminada recomendación de usar OAuth en sitios inseguros.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero ¿qué quiere decir realmente que un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
 
 &lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
 
@@ -11134,9 +11376,9 @@ biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de l
 
 &lt;h1 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Éste es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/categories/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método. Si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; target=&#34;_blank&#34;&gt;base de datos&lt;/a&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Este es claramente el peor método de todos, en términos de &lt;a href=&#34;https://elbauldelprogramador.com/categories/seguridad/&#34; target=&#34;_blank&#34;&gt;seguridad&lt;/a&gt;. La gran mayoría de sitios con reputación no usan este método, ya que si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De ninguna manera. No importa cual sea la longitud de tu contraseña o cómo de segura sea, si está almacenada en texto plano y el sitio es comprometido, tu contraseña será accesible por todo el mundo, sin ningún trabajo. Aún así, sí que importa en términos de ocultar la contraseña de amigos y conocidos, que pueden intentar adivinarla, pero no hay nada que hacer en el caso de que el sítio se vea comprometido.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Depende del ataque que se realice. Si la base de datos queda comprometida, no importa cual sea la longitud de tu contraseña o cómo de segura sea: si está almacenada en texto plano, tu contraseña será accesible para todo el mundo sin ningún trabajo. Por el contrario, si se pretende robar la contraseña por fuerza bruta o algún otro ataque, la fortaleza de tu contraseña será tu única salvaguarda, ¡por eso siempre debes escoger contraseñas seguras! También importa en términos de ocultarla de amigos y conocidos, que pueden intentar adivinarla, pero, como ya hemos dicho, no hay nada que hacer en el caso de que el sitio se vea comprometido.&lt;/p&gt;
 
 &lt;h1 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h1&gt;
 
@@ -11144,43 +11386,44 @@ biblioteca personal. Sin más dilaciones, he aquí la lista (La descrición de l
 
 &lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sítio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sitio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
 
 &lt;h1 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h1&gt;
 
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: Si se dispone del hash, no es posible ejecutar el algoritmo invertidamente para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: si se dispone del hash, no es posible ejecutar el algoritmo inverso para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
 
-&lt;p&gt;Aún así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas. &amp;#8212; Se puede mirar fácilmente en el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Aun así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; &amp;#8212; que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas &amp;#8212; se puede mirar fácilmente el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;a href=&#34;http://es.wikipedia.org/wiki/Secure_Hash_Algorithm&#34; target=&#34;_blank&#34;&gt;SHA-1&lt;/a&gt; para &amp;#8216;password1&amp;#8242;. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Jeff Atwood&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles se crackean rápidamente. Su mayor debilidad, sin embargo, no es la complejidad, si no la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles tienen más probabilidades de encontrarse en ellas. Su mayor debilidad, sin embargo, no es la complejidad, sino la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;a href=&#34;http://xkcd.com/936/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt; llamado &amp;#8220;correct horse battery staple&amp;#8221;) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
 
 &lt;h1 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria &amp;#8212; llamada &amp;#8220;salt&amp;#8221; &amp;#8212; al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, e incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes &amp;#8220;salteados&amp;#8221; en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;a href=&#34;http://lifehacker.com/5916177/65-million-linkedin-accounts-may-be-compromised-change-your-passwords-now&#34; target=&#34;_blank&#34;&gt;hackearon&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente, sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente. Sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo &amp;#8212; más que usar rainbow tables &amp;#8212; pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
 
 &lt;h1 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h1&gt;
 
 &lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;están apostando por los hashes lentos&lt;/a&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos &amp;#8212; como el algoritmo &lt;a href=&#34;http://en.wikipedia.org/wiki/Bcrypt&#34; target=&#34;_blank&#34;&gt;bcrypt&lt;/a&gt; &amp;#8212; los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que importa. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que es muy importante. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
 
 &lt;h1 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h1&gt;
 
-&lt;p&gt;Entonces, ¿Qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
+&lt;p&gt;Entonces, ¿qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;No usar servícios con mala seguridad:&lt;/strong&gt; Aunque no podemos controloar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servícios darnos de alta. Nunca deberíamos darnos de alta con servícios que usan texto plano o cifrado para almacenar las contraseña, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos demostrado más arriba, una contraseña más segura, es menos probable de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta que filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos, entonces esas cuentas estarán a salvo incluso si alguna de nuestras cuentas se compromete. Si usamos la misma contraseña para cada sitio, una vulnerabilidad en algún sitio puede significar un mundo de problemas para ti.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Usar OAuth si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Ya &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-oauth-que-ocurre-cuando-te-loggeas-en-un-sitio-con-google-twitter-o-facebook/&#34; target=&#34;_blank&#34;&gt;hablamos sobre OAuth antes&lt;/a&gt;, un protocolo que permite logearnos usando la cuenta de Google, Facebook o twitter. Si no sabemos cómo de seguro es un sitio, y ofrece la opción de usar OAuth, úsalo &amp;#8212; Es probable que Google, Facebook y twitter tengan mejor seguridad, y si el sitio es vulnerado, simplemente le denegamos acceso a nuestra cuenta de Google, Facebook o Twitter.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;strong&gt;No usar servicios con mala seguridad:&lt;/strong&gt; Aunque no podemos controlar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servicios darnos de alta. Nunca deberíamos darnos de alta con servicios que usan texto plano o cifrado para almacenar las contraseñas, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;a href=&#34;http://blog.cloudflare.com/keeping-passwords-safe-by-staying-up-to-date&#34; target=&#34;_blank&#34;&gt;servicio web CloudFlare&lt;/a&gt;, es hacer click en el enlace &amp;#8220;no recuerdo mi contraseña&amp;#8221;. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada &amp;#8212; y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos mostrado más arriba, una contraseña más segura es menos susceptible de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable &amp;#8212; solo significa que llevará más tiempo romperla. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta de que una filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos y alguna de ellas se compromete, el resto de cuentas estará a salvo. Si usamos la misma contraseña para todos los sitios, una vulnerabilidad en cualquiera de ellos puede significar un mundo de problemas para ti.&lt;/li&gt;
 
-&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Cumplir escrupulosamente el punto 4 si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Si no sabemos cómo de seguro es un sitio, el punto 4 juega un papel crucial, es decir, debemos asegurarnos de que la contraseña que usemos en él no la usamos en ningún otro sitio.&lt;/p&gt;
+
+&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;a href=&#34;https://elbauldelprogramador.com/noticias/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; target=&#34;_blank&#34;&gt;desarrollo de aplicaciones web&lt;/a&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/?s=udacity&#34; target=&#34;_blank&#34;&gt;udacity&lt;/a&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
 
