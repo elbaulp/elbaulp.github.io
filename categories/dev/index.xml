@@ -2840,11 +2840,11 @@ drwxr-xr-x &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; hkr hkr &lt;span class=&
 &lt;p&gt;Ejecuta el  &lt;em&gt;make&lt;/em&gt; para compilar openCV con soporte para Java y crear el jar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cris@cris ~/opencv-3.2.0/build $ make -j8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Cuando finalice, comprueba que se han creado los archivos &lt;strong&gt;opencv-320.jar&lt;/strong&gt; y &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so o .dll):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~/opencv-3.2.0/build $ find . -name opencv-320.jar*
     opencv-320.jar
     opencv-320.jar.dephelper
 
-    cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep libopencv_java320.so
+    cris@cris ~/opencv-3.2.0/build $ find . -name libopencv_java320.so
     libopencv_java320.so&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora que lo tenemos compilado, el siguiente paso será crear un ejemplo en Java para comprobar que funciona. Yo uso el IDE IntelliJ IDEA Ultimate 2016, por lo que en la siguiente sección explicaré como crear un proyecto en Java de OpenCV en INTELLIJ.&lt;/p&gt;
 
