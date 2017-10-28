@@ -6,7 +6,7 @@
         <description>Recent content in Seguridad on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Wed, 04 Oct 2017 13:48:14 +0100</lastBuildDate>
+        <lastBuildDate>Sat, 28 Oct 2017 11:23:44 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/seguridad/</link>
@@ -15,6 +15,135 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/seguridad/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Criptografía 101: Fundamentos matemáticos (I)</title>
+            <link>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/</link>
+            <pubDate>Sat, 28 Oct 2017 11:23:44 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/</guid>
+            <description>&lt;h1 id=&#34;aritmética-modular&#34;&gt;Aritmética modular&lt;/h1&gt;
+
+&lt;p&gt;Antes de profundizar en los temas sobre criptografía, es necesario tener una base matemática, ya que al fin y al cabo, la criptografía se basa en ellas.&lt;/p&gt;
+
+&lt;p&gt;Nos centraremos en la aritmética modular, y cómo operar con ella. La aritmética modular se define del siguiente modo:&lt;/p&gt;
+
+&lt;p&gt;\[a \equiv b\pmod n,\]&lt;/p&gt;
+
+&lt;p&gt;si \(b - a\) es múltiplo de \(n\) o, dicho de otro modo, \(a\) y \(b\) tienen el mismo resto cuando se dividen por \(n\).&lt;/p&gt;
+
+&lt;p&gt;Así, por ejemplo, \(3 \equiv 8 \pmod 5\), ya que \(8 - 3 = 5\), que es un multiplo de 5. También podemos comprobarlo sabiendo que el resto de dividir 3 entre 5 es 3 y el resto de 8 entre 5, también. A partir de ahora expresaremos el resto de dividir un número entre otro como sigue:&lt;/p&gt;
+
+&lt;p&gt;\[a\bmod n = r,\]&lt;/p&gt;
+
+&lt;p&gt;donde \(r\) es el resto de dividir \(a\) entre \(n\).&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;
+            alt=&#34;Modular Arithmetics&#34;
+            title=&#34;Modular Arithmetics&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;360&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;cálculo-de-inversos&#34;&gt;Cálculo de inversos&lt;/h2&gt;
+
+&lt;p&gt;Sea \(a \in \mathbb Z_n\), se dice que \(a\) tiene inverso, o que es una unidad, si \(\exists b \in \mathbb Z_n\ :\ ba = 1\), y se denota por \(a^{-1}\).&lt;/p&gt;
+
+&lt;p&gt;Al conjunto de todas las unidades de \(\mathbb Z_n\) lo llamaremos \(\mathcal{U}(\mathbb Z_n)\) y se define como:&lt;/p&gt;
+
+&lt;p&gt;\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : gcd(a, n) = 1\},\]&lt;/p&gt;
+
+&lt;p&gt;donde &lt;em&gt;gcd&lt;/em&gt; es el máximo común divisor.&lt;/p&gt;
+
+&lt;p&gt;Particularmente, si \(p\) es un número primo, todo elemento de \(\mathbb Z_p\), salvo el cero, tiene inverso, y por tanto \(\mathbb Z_p\) es un cuerpo. En criptografía, trabajaremos en cuerpos \(\mathbb Z_p\) con un \(p\) primo.&lt;/p&gt;
+
+&lt;p&gt;El número de unidades de \(\mathbb Z_n\), se puede calcular con la función de Euler \(\phi(n)\), y vale lo siguiente:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si \(p\) es un número primo, \(\phi(p) = p - 1\), ya que todos los elementos salvo el 0, son unidades.&lt;/li&gt;
+&lt;li&gt;Sean a, b, dos números enteros \( \phi(ab) = \phi(a)\phi(b)\ sii\ gcd(a, b) = 1\).&lt;/li&gt;
+&lt;li&gt;Sea \(p\) un primo, \(\phi(p^n) = p^n - p^{n-1}\).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Por ejemplo, \(\#\mathcal{U}(\mathbb Z_5) = 4\), ya que todos sus elementos tienen inverso (el 1,2,3,4), y \(\phi(5) = 4\), y por tanto, \(\mathbb Z_5\) es un cuerpo. Sin embargo, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), ya que \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). Las unidades de \(\mathbb Z_{15}\) son 1,2,4,7,8,11,13,14.&lt;/p&gt;
+
+&lt;h2 id=&#34;un-ejemplo-práctico&#34;&gt;Un ejemplo práctico&lt;/h2&gt;
+
+&lt;p&gt;Veamos ahora cómo calcular el inverso de un número en \(\mathbb Z_n\) mediante el algoritmo Extendido de Euclides implementado en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34; title=&#34;python&#34;&gt;python&lt;/a&gt;, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    Compute the Greatest Common Divisor d of a and b, and integers x and
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    y satisfying ax + by = d.
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    :returns: a tuple (d,x,y)
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Este algoritmo, devuelve una tupla &lt;code&gt;(d, x, y)&lt;/code&gt;, donde &lt;code&gt;d&lt;/code&gt; es el máximo común divisor de los números &lt;code&gt;a,b&lt;/code&gt; y &lt;code&gt;x&lt;/code&gt; es el inverso de &lt;code&gt;a&lt;/code&gt; mod &lt;code&gt;b&lt;/code&gt;.  Por ejemplo, si ejecutamos &lt;code&gt;gcd(2, 5)&lt;/code&gt;, nos devolverá &lt;code&gt;[1, -2, 1]&lt;/code&gt;, donde 1 es el &lt;code&gt;gcd(2, 5)&lt;/code&gt;, y \(-2\) su inverso, si lo queremos en positivo, basta con sumar 5 a \(-2\), que es 3, luego el inverso de 2 mod 5 es 3, ya que \(2 \cdot 3 = 6\), y 6 mod 5 = 1.&lt;/p&gt;
+
+&lt;p&gt;Para facilitar la tarea de calcular el inverso de un número, definiremos el siguiente método, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; a inverse does not exist&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si lo ejecutamos con los mismos números de antes, 2 y 5, nos devolverá \(2^{-1}\), es decir, 3.&lt;/p&gt;
+
+&lt;h1 id=&#34;agradecimientos&#34;&gt;Agradecimientos&lt;/h1&gt;
+
+&lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/josealberto4444/&#34; title=&#34;josealberto4444&#34;&gt;josealberto4444&lt;/a&gt; por ayudarme con correcciones.&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+
+&lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Apuntes de la asignatura criptografía del profesor &lt;strong&gt;Jesús García Miranda&lt;/strong&gt;, Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación (ETSIIT), Granada.&lt;/em&gt;&lt;/p&gt;
+
+
+
+
+&lt;h1 id=&#34;más-información&#34;&gt;Más información&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Aritm%25C3%25A9tica_modular&#34; title=&#34;Aritmética modular | wikipedia.org&#34;&gt;Aritmética modular | wikipedia.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
         
         <item>
             <title>Crear y administrar contraseñas inteligentemente</title>
