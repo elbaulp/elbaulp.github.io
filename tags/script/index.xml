@@ -43,11 +43,11 @@
 &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Cosquijazz - www.HHGroups.com.mp3
 &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Mis ego depresiones - www.HHGroups.com.mp3
 &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Queremos elmininar las siguientes partes del nombre: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; y &lt;strong&gt;www.HHGroups.com&lt;/strong&gt;. Para ello usamos la orden rename con la siguiente sintaxis:&lt;/p&gt;
+&lt;p&gt;Queremos elimininar las siguientes partes del nombre: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; y &lt;strong&gt;www.HHGroups.com&lt;/strong&gt;. Para ello usamos la orden rename con la siguiente sintaxis:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/Rafael Lechowski (Flowklorikos) - //g&amp;#39;&lt;/span&gt; *.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Lo que decimos con esa expresión regular es que reemplace lo que coincida con Rafael Lechowski (Flowklorikos) por nada, es decir, que lo elimine del nombre. Es necesario escapar con los espacios en blanco y los parentesis. El *.mp3 quiere decir que aplique el renombramiento a los archivos mp3.&lt;/p&gt;
 
-&lt;p&gt;Como resultado, ahora los ficheros tienen el siguiente nombre:&lt;/p&gt;
+&lt;p&gt;Como resultado, ahora los ficheros tienen los siguientes nombres:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
 &lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;. Uno - www.HHGroups.com.mp3
 &lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;. Lluvia y fuego - www.HHGroups.com.mp3

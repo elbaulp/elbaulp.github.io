@@ -6,7 +6,7 @@
         <description>Recent content in Alex on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Sat, 28 Oct 2017 11:23:55 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 30 Oct 2017 11:39:16 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/author/alex/</link>
@@ -15,6 +15,75 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/en/author/alex/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Rename files in bulk in GNU/Linux</title>
+            <link>https://elbauldelprogramador.com/en/rename-files-in-bulk-linux/</link>
+            <pubDate>Mon, 30 Oct 2017 11:39:16 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/rename-files-in-bulk-linux/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Note: Thanks to &lt;a href=&#34;https://elbauldelprogramador.com/author/cristina/&#34;&gt;Cristina H&lt;/a&gt; for translating this post to english.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sometimes when we get some files from the internet (usually music), each file contains in its name the name of the webpage from which it was downloaded.&lt;/p&gt;
+
+&lt;p&gt;If we want to rename all files to delete the web page from the file name, it is not necessary to rename files one by one, using the &lt;code&gt;rename&lt;/code&gt; command from GNU/Linux we can get it done easily.&lt;/p&gt;
+
+&lt;p&gt;For example, lets say the files are as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls
+&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Uno - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Lluvia y fuego - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Donde duele inspira - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Soy loco por ti - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - In-extremis - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Artesano del arte insano - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Cosquijazz - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Mis ego depresiones - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;We want to delete the following from their names: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; and &lt;strong&gt;www.HHGroups.com&lt;/strong&gt;. For that we use the rename command with the following syntax:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/Rafael Lechowski (Flowklorikos) - //g&amp;#39;&lt;/span&gt; *.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What we are saying with that expression is that we want to replace all that match with Rafael Lechowski (Flowklorikos) by nothing, that is, to delete it from the name. It is necessary to scape blanks and parenthesis. The *.mp3 means that we want to apply that renaming to all mp3 files.&lt;/p&gt;
+
+&lt;p&gt;As a result, now the files have the following names:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;. Uno - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;. Lluvia y fuego - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;. Donde duele inspira - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;. Soy loco por ti - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;. In-extremis - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;. Artesano del arte insano - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;. Cosquijazz - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;. Mis ego depresiones - www.HHGroups.com.mp3
+&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;. &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The only missing thing, is to delete the www.HHGroups.com part. We get it done with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/ - www.HHGroups.com//g&amp;#39;&lt;/span&gt; *.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And finally, we have all our files renamed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+&lt;span class=&#34;m&#34;&gt;01&lt;/span&gt;. Uno.mp3
+&lt;span class=&#34;m&#34;&gt;02&lt;/span&gt;. Lluvia y fuego.mp3
+&lt;span class=&#34;m&#34;&gt;03&lt;/span&gt;. Donde duele inspira.mp3
+&lt;span class=&#34;m&#34;&gt;04&lt;/span&gt;. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+&lt;span class=&#34;m&#34;&gt;05&lt;/span&gt;. Soy loco por ti.mp3
+&lt;span class=&#34;m&#34;&gt;06&lt;/span&gt;. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+&lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+&lt;span class=&#34;m&#34;&gt;08&lt;/span&gt;. In-extremis.mp3
+&lt;span class=&#34;m&#34;&gt;09&lt;/span&gt;. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;. Artesano del arte insano.mp3
+&lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;. Cosquijazz.mp3
+&lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;. Mis ego depresiones.mp3
+&lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;. &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;.mp3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
         
         <item>
             <title>Cryptography 101: Mathematical basis (I)</title>
