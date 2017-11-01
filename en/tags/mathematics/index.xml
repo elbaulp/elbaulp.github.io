@@ -151,7 +151,13 @@
             <pubDate>Tue, 24 Oct 2017 18:51:20 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/scala-category-theory-composition/</guid>
-            <description>&lt;p&gt;This is the first post I&#39;m going to write about &lt;strong&gt;Category Theory&lt;/strong&gt;.&lt;/p&gt;
+            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Thanks to &lt;strong&gt;Jesús López&lt;/strong&gt; for pointing out some errors&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;This is the first post I&#39;m going to write about &lt;strong&gt;Category Theory&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;I&#39;ve been wanting to learn Category Theory for a while, since it seems to have &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34; title=&#34;practical applications&#34;&gt;practical applications&lt;/a&gt; in software.&lt;/p&gt;
 
@@ -188,7 +194,7 @@ In mathematics, a category is an algebraic structure similar to a group but with
         &lt;/a&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
-&lt;p&gt;Each arrow can be &lt;strong&gt;composed&lt;/strong&gt;, f.e: If &lt;code&gt;A -&amp;gt; B&lt;/code&gt; and &lt;code&gt;B -&amp;gt; D&lt;/code&gt; then there must be an arrow from &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Arrows can be called &lt;strong&gt;morphisms&lt;/strong&gt;, they are &lt;strong&gt;functions&lt;/strong&gt;, and they can be composed. In the image above, you have:&lt;/p&gt;
+&lt;p&gt;Each arrow can be &lt;strong&gt;composed&lt;/strong&gt;, f.e: If &lt;code&gt;A -&amp;gt; B&lt;/code&gt; and &lt;code&gt;B -&amp;gt; D&lt;/code&gt; then there must be an arrow from &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Arrows can be called &lt;strong&gt;morphisms&lt;/strong&gt;, they can be composed. In the image above, you have:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;f: A -&amp;gt; B&lt;/code&gt;&lt;/li&gt;
@@ -202,7 +208,7 @@ In mathematics, a category is an algebraic structure similar to a group but with
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Associativity:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;For every object exists an &lt;strong&gt;unit arrow&lt;/strong&gt;, it goes from the object to itself: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, as shown below:&lt;/li&gt;
+&lt;li&gt;For every object exists an &lt;strong&gt;Identity Arrow&lt;/strong&gt;, it goes from the object to itself: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, as shown below:&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;figure&gt;
@@ -226,7 +232,7 @@ In mathematics, a category is an algebraic structure similar to a group but with
 
 &lt;p&gt;Now that I&#39;ve shown you a bit of theory, lets implement it in &lt;strong&gt;scala&lt;/strong&gt;. As I said at the beginning of the post, I will be using &lt;em&gt;property based tests&lt;/em&gt; to check the implementation is correct and satisfy the &lt;em&gt;category properties&lt;/em&gt;, that is, &lt;strong&gt;Identity&lt;/strong&gt; and &lt;strong&gt;associativity&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here is the definition of a simple &lt;em&gt;Category&lt;/em&gt;, you can check the full code at &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;Category.scala in my github repo&#34;&gt;Category.scala in my github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here is the definition of a simple &lt;em&gt;Category&lt;/em&gt; (Its actually an instance of a Category, the category &lt;strong&gt;Hask&lt;/strong&gt; in this case). A &lt;strong&gt;Hask&lt;/strong&gt; category has &lt;strong&gt;types as objects&lt;/strong&gt; and &lt;strong&gt;arrows as functions&lt;/strong&gt;. You can check the full code at &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;Category.scala in my github repo&#34;&gt;Category.scala in my github repo&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;

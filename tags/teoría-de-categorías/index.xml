@@ -22,7 +22,13 @@
             <pubDate>Tue, 24 Oct 2017 18:51:32 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</guid>
-            <description>&lt;p&gt;Este es el primer artículo de una serie que voy a escribir sobre &lt;strong&gt;teoría de categorías&lt;/strong&gt;.&lt;/p&gt;
+            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias a Jesús López por comentar en este artículo y corregir unos cuantos errores.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;Este es el primer artículo de una serie que voy a escribir sobre &lt;strong&gt;teoría de categorías&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Llevaba un tiempo queriendo aprender &lt;strong&gt;teoría de categorías&lt;/strong&gt;, ya que he leido bastante sobre el tema y parece que tiene &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34; title=&#34;aplicaciones en el desarrollo de software&#34;&gt;aplicaciones en el desarrollo de software&lt;/a&gt;.&lt;/p&gt;
 
@@ -60,7 +66,7 @@ En teoría de categorías, una categoría es una estructura algebraica que const
         &lt;figcaption&gt;Ejemplo de Categoría&lt;/figcaption&gt;
 &lt;/figure&gt;&lt;/p&gt;
 
-&lt;p&gt;Cada flecha puede &lt;strong&gt;componerse&lt;/strong&gt;, p.e: Si &lt;code&gt;A -&amp;gt; B&lt;/code&gt; y &lt;code&gt;B -&amp;gt; D&lt;/code&gt; entonces debe existir una flecha de &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Las flechas pueden llamarse &lt;strong&gt;morfismos&lt;/strong&gt;, son &lt;strong&gt;funciones&lt;/strong&gt;, y como tales se pueden componer. En la imagen de arriba tienes:&lt;/p&gt;
+&lt;p&gt;Cada flecha puede &lt;strong&gt;componerse&lt;/strong&gt;, p.e: Si &lt;code&gt;A -&amp;gt; B&lt;/code&gt; y &lt;code&gt;B -&amp;gt; D&lt;/code&gt; entonces debe existir una flecha de &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Las flechas pueden llamarse &lt;strong&gt;morfismos&lt;/strong&gt;, y se pueden componer. En la imagen de arriba tienes:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;f: A -&amp;gt; B&lt;/code&gt;&lt;/li&gt;
@@ -74,7 +80,7 @@ En teoría de categorías, una categoría es una estructura algebraica que const
 
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Asociatividad:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Para cada objeto existe una &lt;strong&gt;flecha unidad&lt;/strong&gt;, que va del objeto a sí mismo: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, como muestro debajo:&lt;/li&gt;
+&lt;li&gt;Para cada objeto existe una &lt;strong&gt;flecha Identidad, o morfismo Identidad&lt;/strong&gt;, que va del objeto a sí mismo: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, como muestro debajo:&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;figure&gt;
@@ -98,7 +104,7 @@ En teoría de categorías, una categoría es una estructura algebraica que const
 
 &lt;p&gt;Ahora que ya he comentado un poco de la teoría, vamos a implementarlo en &lt;strong&gt;scala&lt;/strong&gt;. Como dije al principio, voy a usar &lt;em&gt;tests basados en propiedades&lt;/em&gt; para comprobar que el objeto creado cumple las &lt;strong&gt;propiedades algebraicas&lt;/strong&gt; de una categoría. Estas propiedades son la &lt;strong&gt;Identidad&lt;/strong&gt; y &lt;strong&gt;asociatividad&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;El código de abajo es la definición de una &lt;em&gt;categoría&lt;/em&gt;, puedes consultar el código en el fichero &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/main/scala/elbaulp/Category.scala&#34; title=&#34;Category.scala de mi respositorio.&#34;&gt;Category.scala de mi respositorio.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El código de abajo es la definición de una &lt;em&gt;categoría&lt;/em&gt; (Para ser más precisos, es una instancia de la categoría &lt;strong&gt;Hask&lt;/strong&gt;). En la categoría &lt;strong&gt;Hask&lt;/strong&gt;, los objetos son tipos y las flechas funciones. Puedes consultar el código en el fichero &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/main/scala/elbaulp/Category.scala&#34; title=&#34;Category.scala de mi respositorio.&#34;&gt;Category.scala de mi respositorio.&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;
