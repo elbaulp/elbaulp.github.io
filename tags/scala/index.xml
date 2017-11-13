@@ -6,7 +6,7 @@
         <description>Recent content in Scala on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Tue, 24 Oct 2017 18:51:32 +0200</lastBuildDate>
+        <lastBuildDate>Mon, 13 Nov 2017 10:02:16 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/scala/</link>
@@ -17,12 +17,142 @@
         <atom:link href="https://elbauldelprogramador.com/tags/scala/" rel="self" type="application/rss+xml" />
         
         <item>
+            <title>Teoría de Categorías en Scala - Tipos y funciones</title>
+            <link>https://elbauldelprogramador.com/teoria-categorias-scala-tipos-funciones/</link>
+            <pubDate>Mon, 13 Nov 2017 10:02:16 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/teoria-categorias-scala-tipos-funciones/</guid>
+            <description>
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo forma parte de una serie sobre Teoría de Categorías en Scala que estoy escribiendo basándome en &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;el libro de Bartosz Milewski&lt;/a&gt;. Conforme voy leyendo, tomo notas y intento resolver los ejercicios propuestos por Bartosz, pero en Scala. El producto de ese trabajo son estos artículos que comparto en este blog. Todo el código está en &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, también puedes visitar la &lt;a href=&#34;https://elbauldelprogramador.com/scala-category-theory/&#34;&gt;tabla de contenidos&lt;/a&gt; de esta serie.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+
+&lt;p&gt;&lt;em&gt;En el artículo anterior escribí sobre&lt;/em&gt; &lt;a href=&#34;https://elbauldelprogramador.com/teoria-categorias-scala-composicion/&#34; title=&#34;composición en Teoría de Categorías&#34;&gt;composición en Teoría de Categorías&lt;/a&gt;, &lt;em&gt;hoy voy a hablar sobre &lt;strong&gt;tipos y funciones en Teoría de Categorías.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;tipos-y-funciones&#34;&gt;Tipos y Funciones&lt;/h1&gt;
+
+&lt;p&gt;Se pueden componer flechas, pero &lt;em&gt;no cualquier par de flechas&lt;/em&gt;, el destino de una flecha debe coincidir con el origen de la otra. En términos de programación: &lt;strong&gt;El tipo de retorno de una función debe coincidir con el tipo de entrada de la siguiente función.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;qué-son-los-tipos&#34;&gt;¿Qué son los tipos?&lt;/h1&gt;
+
+&lt;p&gt;Puedes pensar en un &lt;strong&gt;Tipo&lt;/strong&gt; como &lt;strong&gt;Conjuntos&lt;/strong&gt;, estos pueden ser &lt;em&gt;finitos&lt;/em&gt; (Booleanos, Chars) o &lt;em&gt;infinitos&lt;/em&gt; (Cadenas de texto, Enteros). En teoría de categorías existe una &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_de_conjuntos&#34; title=&#34;Categoría de Conjuntos&#34;&gt;Categoría de Conjuntos&lt;/a&gt;, llamada &lt;strong&gt;Set&lt;/strong&gt; (Conjunto). En esta categoría, los objetos son &lt;strong&gt;conjuntos&lt;/strong&gt;, y las flechas &lt;strong&gt;funciones de un conjunto a otro.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;La definición de arriba es en &lt;em&gt;el mundo matemático&lt;/em&gt;, en la realidad puedes pensar en los &lt;strong&gt;conjuntos como tipos&lt;/strong&gt; en un lenguaje de programación y en las &lt;strong&gt;funciones en el Set como funciones&lt;/strong&gt; en dicho lenguaje de programación. Pero hay un problema, en matemáticas una función simplemente &lt;em&gt;sabe la respuesta,&lt;/em&gt; pero en un lenguaje de programación eres tú quien debe implementar el código que calcule esa respuesta, y hay algunas funciones que nunca retornan. Como solución, muchos lenguajes de programación tienen un tipo llamado &lt;strong&gt;Tipo de fondo&lt;/strong&gt; (&lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34; title=&#34;Bottom type&#34;&gt;Bottom type&lt;/a&gt;), todos los tipos extienden de él. En Haskell este tipo se denota por &lt;code&gt;_|_&lt;/code&gt;, en &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt; por &lt;code&gt;Nothing&lt;/code&gt; (Puedes &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Nothing.html&#34; title=&#34;ver la documentación de este tipo&#34;&gt;ver la documentación de este tipo&lt;/a&gt;). Una función que devuelve el tipo fondo se llama &lt;strong&gt;Función Parcial&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;el-modelo-matemático&#34;&gt;El modelo matemático&lt;/h1&gt;
+
+&lt;p&gt;Si eres desarrollador, estoy seguro que como muchos, te has encontrado ejecutando un intérprete en tu cabeza, mientras depurabas algún programa. El ser humano no es muy bueno en esta tarea, ya que es muy complicado llevar cuenta de todas las variables. Existen alternativas para saber si un programa es correcto, la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_formal&#34; title=&#34;Semática Formal&#34;&gt;Semática Formal&lt;/a&gt;. En resumen, la &lt;strong&gt;Semántica Formal&lt;/strong&gt; es un método para formalizar el &lt;em&gt;significado&lt;/em&gt; de un lenguaje de programación, se ocupa de encontrar objetos matemáticos (llamados dominio) que representan lo que hace el programa.&lt;/p&gt;
+
+&lt;p&gt;Por contra a la &lt;em&gt;Semántica Formal&lt;/em&gt; está la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_operacional&#34; title=&#34;Semántica Operacional&#34;&gt;Semántica Operacional&lt;/a&gt;. Esta intenta demostrar ciertas propiedades de un programa (como su corrección), para ello construye demostraciones lógicas, aunque a menudo es complejo.&lt;/p&gt;
+
+&lt;p&gt;Teniendo un modelo matemático (&lt;em&gt;Semántica Formal&lt;/em&gt;) es posible escribir demostraciones formales que verifiquen la corrección de un programa.&lt;/p&gt;
+
+&lt;h1 id=&#34;funciones-puras-e-impuras&#34;&gt;Funciones Puras e Impuras&lt;/h1&gt;
+
+&lt;p&gt;Las &lt;em&gt;funciones puras&lt;/em&gt; son aquellas que devuelven siempre el mismo resultado para la misma entrada, sin efectos colaterales. Las funciones matemáticas son un buen ejemplo de funciones puras. Por el contrario, las &lt;em&gt;funciones impuras&lt;/em&gt; tienen efectos colaterales.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplos-de-tipos&#34;&gt;Ejemplos de Tipos&lt;/h1&gt;
+
+&lt;p&gt;Al fin hemos llegado al asunto de este artículo, &lt;strong&gt;los tipos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Voy a empezar desde abajo, es decir, con el &lt;strong&gt;Conjunto Vacío.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;¿Qué tipo definiría al &lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_vac%C3%ADo&#34; title=&#34;Conjunto Vacío&#34;&gt;Conjunto Vacío&lt;/a&gt;? Piensa un momento, lo mencioné un poco más arriba. En Haskell este tipo es &lt;code&gt;Void&lt;/code&gt;, en Scala &lt;code&gt;Nothing&lt;/code&gt;. Este conjunto no tiene ningún elemento. Anteriormente dije que hay una categoría llamada &lt;em&gt;Set&lt;/em&gt;, en la que los &lt;em&gt;objetos son conjuntos&lt;/em&gt; y las &lt;em&gt;flechas son funciones.&lt;/em&gt; En este contexto, si &lt;code&gt;A&lt;/code&gt; es un conjunto (El conjunto vacío), solo hay una función &lt;code&gt;f&lt;/code&gt; de &lt;code&gt;{}&lt;/code&gt; a &lt;code&gt;A&lt;/code&gt;, la &lt;a href=&#34;https://en.wikipedia.org/wiki/Function_(mathematics)#Empty_function&#34; title=&#34;Función Vacía&#34;&gt;Función Vacía&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;¿Podrías definir una función que tome como parámetro un objeto de tipo &lt;code&gt;Void&lt;/code&gt; (&lt;em&gt;un conjunto vacío&lt;/em&gt;)? sí, pero no podrías llamarla, ya que no puedes pasarle un parámetro de tipo &lt;code&gt;Void&lt;/code&gt;. Sin embargo, el tipo de retorno de esta función podría ser de cualquier tipo. Este tipo de funciones (las que devuelven cualquier tipo) se llaman &lt;strong&gt;polimórficas en el tipo de retorno&lt;/strong&gt;, ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;noPuedesLlamarme&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Void&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Una letra en minúscula en la declaración de una función en Haskell significa que &lt;code&gt;a&lt;/code&gt; puede ser de cualquier tipo. En Scala:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;noPuedesLlamarme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;noPuedesLlamarme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;str&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;¿Cual sería el tipo asociado al &lt;strong&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_unitario&#34; title=&#34;Conjunto Unitario&#34;&gt;Conjunto Unitario&lt;/a&gt;&lt;/strong&gt;? es decir, un conjunto de un solo elemento (Un posible valor). En C++ ese tipo es &lt;code&gt;void&lt;/code&gt; (No lo confundas con el &lt;code&gt;Void&lt;/code&gt; de Haskell, que representa el conjunto vacío). &lt;code&gt;void&lt;/code&gt; en C++ es un conjunto unitario, ya que tiene un único elemento. De hecho, puedes llamar a funciones que reciben &lt;code&gt;void&lt;/code&gt; como argumento. Ejemplos de estas funciones son &lt;code&gt;int f314() { ret 314 }&lt;/code&gt;, si la llamas, siempre devolverá 314. Aunque parezca no estar recibiendo ningún argumento, no es así. Si no pudieras pasarle argumento alguno no podrías llamarla. Por tanto, toma como argumento un valor ficticio con una única instancia (El conjunto Unitario, en este caso 314). El mismo ejemplo en Haskell y Scala:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- De Unit a Integer&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aquí es más evidente que &lt;code&gt;f314&lt;/code&gt; toma un parámetro, el tipo &lt;code&gt;Unit&lt;/code&gt; (El cual permite un solo valor). Puedes llamar a esta función con &lt;code&gt;f314()&lt;/code&gt;, lo cual denota más explícitamente que toma un solo parámetro.&lt;/p&gt;
+
+&lt;p&gt;En Scala, el tipo representando el &lt;strong&gt;Conjunto Unitario&lt;/strong&gt; también se llama &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Unit.html&#34; title=&#34;Unit&#34;&gt;Unit&lt;/a&gt;, su único valor se denota con &lt;code&gt;()&lt;/code&gt;, como en Haskell:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* de () =&amp;gt; Int */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aunque todo esto te parezca un sin sentido, o absurdo, el objetivo es construir los conceptos de abajo a arriba. Conforme profundices más en Teoría de Categorías, todo irá ganando sentido. Por ejemplo, con el conocimiento adquirido hasta el momento puedes evitar mencionar explícitamente elementos en un conjunto, ahora simplemente los referencias con flechas (Funciones en este caso, ya que estamos tratando con la categoría Set). Las funciones que van de &lt;strong&gt;Unit a cualquier tipo A&lt;/strong&gt; están en correspondencia una-a-una con los elementos de dicho conjunto A.&lt;/p&gt;
+
+&lt;p&gt;¿Qué pasa con las funciones que &lt;strong&gt;devuelven &lt;code&gt;void&lt;/code&gt; (en C++) o &lt;code&gt;Unit&lt;/code&gt; (en Scala, Haskell)&lt;/strong&gt;? Normalmente este tipo de funciones tienen &lt;strong&gt;efectos colaterales&lt;/strong&gt;, pero si son &lt;strong&gt;puras&lt;/strong&gt; simplemente hacen corresponder elementos de un conjunto A a un &lt;strong&gt;Conjunto Unitario&lt;/strong&gt;. Es decir, todos los elementos en un conjunto A irán a parar al mismo valor. Ejemplos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En Haskell &lt;code&gt;_&lt;/code&gt; significa que da igual el argumento que le pases a la función &lt;code&gt;f&lt;/code&gt;, ya que lo va a ignorar, puedes definir la función anterior de forma más genérica:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;No importa qué tipo de argumento le pases a &lt;code&gt;unit&lt;/code&gt;, siempre va a hacer corresponder ese argumento a &lt;code&gt;Unit&lt;/code&gt;. Este es el equivalente en Scala:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;El siguiente paso lógico en los tipos es el &lt;strong&gt;conjunto de dos elementos,&lt;/strong&gt; que corresponde con &lt;code&gt;bool&lt;/code&gt; en C++, &lt;code&gt;Bool&lt;/code&gt; en Haskell y &lt;code&gt;Boolean&lt;/code&gt; en Scala. Las funciones a booleanos se llaman predicados, seguro que estás familiarizado con nombre como &lt;code&gt;isDigit, isLower, isLetter&lt;/code&gt; etc.&lt;/p&gt;
+
+&lt;h1 id=&#34;ejercicios&#34;&gt;Ejercicios&lt;/h1&gt;
+
+&lt;p&gt;Quiero compartir contigo algunos de los ejercicios que he resuelto de los que propone Bartosz. Ten en cuenta que puedo estar equivocado, si detectas un error, o crees que algo puede mejorarse, &lt;strong&gt;deja un comentario&lt;/strong&gt;.
+Puedes ver la lista de ejercicios completa en el blog de Bartosz (Enlazado en las referencias), yo solo he resuelto el 1 y el 6.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ejercicio 1&lt;/li&gt;
+Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmutable, pero no supe hacerlo funcionar:
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;mutable.Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;,&lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mutable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getOrElseUpdate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Puedes probarlo con esta función:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nc&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Takes 5 secs
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;immediate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Ejercicio 6&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;
+            alt=&#34;Scala Category Theory functions and types&#34;
+            title=&#34;Scala Category Theory functions and types&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;527&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/24/types-and-functions/trackback/&#34; title=&#34;Types and Functions, by Bartosz Milewski&#34;&gt;Types and Functions, by Bartosz Milewski&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+        <item>
             <title>Teoría de Categorías en Scala - Composición</title>
             <link>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</link>
             <pubDate>Tue, 24 Oct 2017 18:51:32 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</guid>
-            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+            <description>
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo forma parte de una serie sobre Teoría de Categorías en Scala que estoy escribiendo basándome en &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;el libro de Bartosz Milewski&lt;/a&gt;. Conforme voy leyendo, tomo notas y intento resolver los ejercicios propuestos por Bartosz, pero en Scala. El producto de ese trabajo son estos artículos que comparto en este blog. Todo el código está en &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, también puedes visitar la &lt;a href=&#34;https://elbauldelprogramador.com/scala-category-theory/&#34;&gt;tabla de contenidos&lt;/a&gt; de esta serie.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+
+&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
 
 &lt;p&gt;&lt;em&gt;Gracias a Jesús López por comentar en este artículo y corregir unos cuantos errores.&lt;/em&gt;&lt;/p&gt;
 
