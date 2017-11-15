@@ -621,7 +621,7 @@ aplicaciones.&lt;/li&gt;
 debemos respetar.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/estructuraCarpetas.png&#34; width=&#34;469&#34; height=&#34;656&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;carpeta-res&#34;&gt;Carpeta Res&lt;/h3&gt;
@@ -663,7 +663,7 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 &lt;p&gt;La siguiente imagen muestra el ciclo de vida de una &lt;em&gt;Activity&lt;/em&gt;, esto es qué flujo de llamadas siguen las aplicaciones. Como vemos, &lt;code&gt;onCreate&lt;/code&gt; es el primero método en llamarse al lanzar una &lt;em&gt;Activity&lt;/em&gt;, es por ello que en él debemos hacer todas las inicializaciones necesarias. Si lo necesitamos, podemos implementar todos y cada uno de estos métodos. Por ejemplo, en una aplicación de vídeo, interesará detener la reproducción cuando se recibe una llamada, o cuando la pantalla se apaga, toda esa lógica deberá ir en el método &lt;code&gt;onPause&lt;/code&gt; o &lt;code&gt;onStop&lt;/code&gt;, y debería reanudarse implementando la lógica en &lt;code&gt;onRestart&lt;/code&gt; o &lt;code&gt;onResume&lt;/code&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
+  &lt;a href=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34;&gt;&lt;img width=&#34;513&#34; height=&#34;663&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/activityLifecycle.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;h3 id=&#34;res-layout-activity-main-xml&#34;&gt;./res/layout/activity_main.xml&lt;/h3&gt;
@@ -684,8 +684,7 @@ desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello_world&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello world!&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el &lt;a href=&#34;https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/&#34; title=&#34;Tutorial Android Hola mundo a fondo&#34;&gt;siguiente artículo&lt;/a&gt; se verá a fondo la aplicación &lt;em&gt;Hola Mundo&lt;/em&gt; tal y como la crea en estos momentos &lt;em&gt;Android Studio&lt;/em&gt;, usando &lt;em&gt;Fragments&lt;/em&gt; en lugar de &lt;em&gt;Activity&lt;/em&gt;.
-{: .notice-info }&lt;/p&gt;
+&lt;p&gt;En el &lt;a href=&#34;https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/&#34; title=&#34;Tutorial Android Hola mundo a fondo&#34;&gt;siguiente artículo&lt;/a&gt; se verá a fondo la aplicación &lt;em&gt;Hola Mundo&lt;/em&gt; tal y como la crea en estos momentos &lt;em&gt;Android Studio&lt;/em&gt;, usando &lt;em&gt;Fragments&lt;/em&gt; en lugar de &lt;em&gt;Activity&lt;/em&gt;.&lt;/p&gt;
 
 &lt;!-- &lt;a href=&#34;https://elbauldelprogramador.com/tutorial-android-hola-mundo-a-fondo/&#34; class=&#34;btn btn-info&#34;&gt;Siguiente artículo: Hola Mundo a fondo&lt;/a&gt; --&gt;</description>
         </item>
