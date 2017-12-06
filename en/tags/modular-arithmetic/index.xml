@@ -59,7 +59,7 @@ Given p prime, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) then \(a^{p-1} \equiv 1\p
 &lt;p&gt;There is more than one algorithm to compute modular exponentiation, here is one:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k &lt; n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
+&lt;li&gt;Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k \lt n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
 &lt;li&gt;Output: \(a^k \pmod n\)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -186,7 +186,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 &lt;li&gt;\(\lt 4&gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you look closely, &lt;2&gt; and &lt;3&gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;lt;a&gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.&lt;/p&gt;
+&lt;p&gt;If you look closely, &amp;lt;2&gt; and &amp;lt;3&gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;lt;a&gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.&lt;/p&gt;
 
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
