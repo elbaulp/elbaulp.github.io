@@ -32,7 +32,7 @@
 
 &lt;h1 id=&#34;modular-exponentiation&#34;&gt;Modular Exponentiation&lt;/h1&gt;
 
-&lt;p&gt;Given &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem&#34; title=&#34;Fermat&#39;s Theorem&#34;&gt;Fermat&#39;s Theorem&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Given &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem&#34; title=&#34;Fermat-Euler Theorem&#34;&gt;Fermat-Euler Theorem&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;
@@ -40,9 +40,9 @@ Given \(a,n \in \mathbb N\), if \(gcd(a,n) = 1\), \(a^{\phi(n)} \equiv 1\pmod n\
 &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat&#39;s theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).&lt;/p&gt;
+&lt;p&gt;Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat-Euler theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).&lt;/p&gt;
 
-&lt;p&gt;A particular case of Fermat&#39;s Theorem is &lt;em&gt;Fermat&#39;s Little Theorem:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A particular case of Fermat-Euler Theorem is &lt;em&gt;Fermat&#39;s Little Theorem:&lt;/em&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;
@@ -328,7 +328,7 @@ Here is what I&#39;ve done, I tried to do it with an immutable Map, but couldn&#
             <pubDate>Sat, 28 Oct 2017 11:23:55 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/</guid>
-            <description>&lt;h1 id=&#34;modular-aritmethic&#34;&gt;Modular Aritmethic&lt;/h1&gt;
+            <description>&lt;h1 id=&#34;modular-arithmetic&#34;&gt;Modular Arithmetic&lt;/h1&gt;
 
 &lt;p&gt;Before going straight to cryptography, it is necessary to have clear a few mathematical concepts, as cryptography in based on them.&lt;/p&gt;
 
