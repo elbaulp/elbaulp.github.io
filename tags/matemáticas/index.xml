@@ -59,7 +59,7 @@ Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1
 &lt;p&gt;Uno de los algoritmos usados para el cálculo de potencias modulares es el siguiente:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Entrada: \(a\in\mathbb Z_n\), un entero \(0 \leq k &lt; n\) cuya representación binaria es \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
+&lt;li&gt;Entrada: \(a\in\mathbb Z_n\), un entero \(0 \leq k \lt n\) cuya representación binaria es \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
 &lt;li&gt;Salida: \(a^k \pmod n\)&lt;/li&gt;
 &lt;/ul&gt;
 
