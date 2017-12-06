@@ -520,7 +520,6 @@
 </section>
 
     
-
     
     <p>Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro <code>apc.shm_size</code> junto con el parámetro del kernel <code>kernel.shmmax</code>. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.</p>
 
@@ -678,15 +677,15 @@ set apc.shm_size = 64M</p>
 <h1>Quizá también te interese leer...</h1>
 <ul>
 	
-	<li><a href="/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/">Incluir imágenes en una entrada de WordPress usando PHP</a></li>
-	
 	<li><a href="/como-instalar-nginx-con-php5-fpm/">Cómo instalar y configurar Nginx con php5-fpm</a></li>
-	
-	<li><a href="/colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/">Colocar los botones sociales de jetpack al principio del artículo en WordPress</a></li>
 	
 	<li><a href="/como-crear-un-front-controller-en-php/">Cómo crear un Front Controller en PHP</a></li>
 	
-	<li><a href="/como-crear-shortcodes-en-wordpress/">Cómo crear shortcodes en WordPress que soporten parámetros</a></li>
+	<li><a href="/mostrar-todos-los-post-de-una-categoria-wordpress/">Mostrar todos los post de una categoría en WordPress</a></li>
+	
+	<li><a href="/colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/">Colocar los botones sociales de jetpack al principio del artículo en WordPress</a></li>
+	
+	<li><a href="/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/">Incluir imágenes en una entrada de WordPress usando PHP</a></li>
 	
 </ul>
 
