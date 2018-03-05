@@ -505,7 +505,8 @@ linea 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt; linea 1
 &lt;span class=&#34;gi&#34;&gt;+modificaci&amp;lt;C3&amp;gt;&amp;lt;B3&amp;gt;n 1 (Por parche1.diff)
 &lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt; linea 2
-&lt;span class=&#34;err&#34;&gt; linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ linea 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;generar-el-parche&#34;&gt;Generar el parche&lt;/h1&gt;
 
 &lt;p&gt;Aún no hemos generado el parche, para crearlo ejecutamos:&lt;/p&gt;
@@ -564,7 +565,8 @@ $ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&g
 &lt;/span&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;--- /dev/null
 &lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt
 &lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+Nuevo Fichero creado por parche2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+Nuevo Fichero creado por parche2.diff
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ya solo resta aplicar los cambios al parche, con &lt;code&gt;quilt refresh&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ quilt refresh
 Refreshed patch patches/parche2.diff&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1632,7 +1634,8 @@ feh --bg-fill &lt;span class=&#34;nv&#34;&gt;$picsfolder$randomfile1&lt;/span&gt
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return $content;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
@@ -1916,7 +1919,8 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
@@ -1947,7 +1951,8 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function foo_demo( $atts ){
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return &amp;#34;Esto es una prueba.&amp;#34;;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 
 &lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
@@ -1982,7 +1987,8 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;//add our shortcode music
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -2750,8 +2756,8 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
 &lt;h1 id=&#34;fancyhdr&#34;&gt;Fancyhdr&lt;/h1&gt;
 
 &lt;p&gt;Para poder crear pies de página y cabeceras es necesario usar el paquete &lt;em&gt;fancyhdr&lt;/em&gt;, y establecer el estilo de página a &lt;em&gt;fancy&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\usepackage{fancyhdr}
-\pagestyle{fancy}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\pagestyle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancy&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora nuestros documentos tendrán una línea arriba y abajo, en la cabecera y pie de página respectivamente.&lt;/p&gt;
 
 &lt;h1 id=&#34;personalizar-el-estilo-del-pie-de-página&#34;&gt;Personalizar el estilo del pie de página&lt;/h1&gt;
@@ -2771,22 +2777,22 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
 &lt;/ul&gt;
 
 &lt;p&gt;Conocido el significado de las mismas, ahora es posible definir el estilo en el preámbulo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\fancyhead[CO,CE]{---Draft---}
-\fancyfoot[C]{Confidential}
-\fancyfoot[RO, LE] {\thepage}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\fancyhead&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[CO,CE]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;---Draft---&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[C]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Confidential&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[RO, LE]&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El grosor de las líneas decorativas puede cambiarse con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\renewcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\headrulewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;0.4pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\renewcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\footrulewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;0.4pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Como apunte personal, uso plantillas para distintos tipos de documentos, estas plantillas vienen con un fichero de estilo propio y para no modificar directamente el valor del pie de página podemos crear un comando que permita establecer el contenido del pie de página. Por ejemplo, en el fichero que define la estructura del documento creamos el comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\newcommand{\setFooterL}[1]{
-    \fancyfoot[L]{\small\textit{#1}}
-}
-\newcommand{\setFooterR}[1]{
-    \fancyfoot[R]{\small\textit{#1}}
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\setFooterL&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[L]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\small\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\newcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\setFooterR&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[R]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\small\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\setFooterL{\href{http://twitter.com/elbaulp}{Alejandro Alcalde}}
-\setFooterR{\href{https://elbauldelprogramador.com}{elbauldelprogramador.com}}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setFooterL&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;http://twitter.com/elbaulp&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;Alejandro Alcalde&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\setFooterR&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;https://elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Produciendo el siguiente resultado:&lt;/p&gt;
 
 &lt;figure&gt;
@@ -4066,7 +4072,7 @@ wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/img/
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
 wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/img/hd-media/boot.img.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez descargado, se extrae la imagen y se escribe en el usb:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &amp;gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Montamos el usb en el directorio /mnt:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este caso se va a usar la versión &lt;strong&gt;net-install&lt;/strong&gt; de debian testing, es posible usar cualquier otra imagen siempre que corresponda con la versión de la imagen descargada anteriormente.&lt;/p&gt;
@@ -4974,7 +4980,7 @@ php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));
 &lt;/figure&gt;
 
 &lt;p&gt;Linux provee un mecanismo de ajuste sencillo para ahorrar consumo de energía en nuestro procesador mediante la distribución de la carga de procesamiento entre los procesadores disponibles. Si tu laptop viene con multi-procesador, puedes tomar ventaja de la característica &amp;#8216;balance de procesadores&amp;#8217; de Linux para ahorrar consumo de energía, ejecutando este comando en una consola:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /sys/devices/system/cpu/sched_mc_power_savings&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /sys/devices/system/cpu/sched_mc_power_savings&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;discos-y-sistema-de-archivos&#34;&gt;Discos y Sistema de archivos&lt;/h1&gt;
 
 &lt;figure&gt;
@@ -5011,7 +5017,7 @@ php -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;print strrev(trim(fgets(STDIN)));
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hdparm -i /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Este es un ejemplo de hdparm:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FUJITSU, &lt;span class=&#34;nv&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000000A0, &lt;span class=&#34;nv&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NS9BT742705B
-&lt;span class=&#34;nv&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt; HardSect NotMFM HdSw&amp;gt;15uSec Fixed DTR&amp;gt;10Mbs &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt; HardSect NotMFM HdSw&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;15uSec Fixed DTR&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;10Mbs &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;/16/63, &lt;span class=&#34;nv&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DualPortCache, &lt;span class=&#34;nv&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;8192kB, &lt;span class=&#34;nv&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16383&lt;/span&gt;/16/63, &lt;span class=&#34;nv&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16514064&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;234441648&lt;/span&gt;
@@ -6012,7 +6018,8 @@ findpart /home/vivek/test.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdDetectedFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_enabled&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdNotDetectedFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_disabled&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://adblockdetector.com/script.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://adblockdetector.com/script.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;y&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 
@@ -6022,7 +6029,8 @@ findpart /home/vivek/test.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
   &lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_abdStatusFnc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;_status&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://adblockdetector.com/script.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;text/javascript&amp;#34;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http://adblockdetector.com/script.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Basta con modificar el contenido de las funciones &lt;strong&gt;_enabled()&lt;/strong&gt; y &lt;strong&gt;_disabled()&lt;/strong&gt; en el primer caso por el contenido que deseemos, o &lt;strong&gt;_status&lt;/strong&gt; en el segundo método y listo.&lt;/p&gt;
 
 &lt;p&gt;Y a vosotros, ¿qué os parece que se os sugieran este tipo de cosas?, ¿Lo desactivaríais? dejad vuestros comentarios.&lt;/p&gt;
@@ -6685,16 +6693,16 @@ adios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;colores-predefinidos&#34;&gt;Colores predefinidos&lt;/h1&gt;
 
 &lt;p&gt;El paquete &lt;a href=&#34;http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;xcolor&lt;/a&gt; trae definidos una gama amplia de colores, especificados en su &lt;a href=&#34;http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf&#34; target=&#34;_blank&#34; title=&#34;Documentación xcolor&#34;&gt;documentación&lt;/a&gt;. Es tan simple de usar como se muestra en este trozo de código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass[11pt]{article}
-\usepackage{blindtext}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\usepackage[x11names]{xcolor}
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[x11names]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{document}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\textcolor{RoyalBlue2}{\blindtext}
+&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;RoyalBlue2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
     &lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex1.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;154px&#34; /&gt;&lt;/a&gt;
     &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
@@ -6703,17 +6711,17 @@ adios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;mezclar-colores-usando-un-modelo-de-color&#34;&gt;Mezclar colores usando un modelo de color&lt;/h1&gt;
 
 &lt;p&gt;El paquete xcolor permite definir colores usando modelos de color (&lt;em&gt;gris, RGB, HTML, CMYK&lt;/em&gt; y otros ). Veamos un ejemplo de RGB, al que estamos más acostumbrados:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass[11pt]{article}
-\usepackage{blindtext}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\usepackage{xcolor}
-\definecolor{myOrange}{rgb}{1,0.5,0}
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\definecolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myOrange&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;rgb&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1,0.5,0&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{document}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\textcolor{myOrange}{\blindtext}
+&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myOrange&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
     &lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex2.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex2.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;142px&#34; /&gt;&lt;/a&gt;
     &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
@@ -6722,17 +6730,17 @@ adios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;mezclar-dos-colores&#34;&gt;Mezclar dos colores&lt;/h1&gt;
 
 &lt;p&gt;Para terminar, el paquete xcolor también permite definir un color mediante la mezcla de dos colores predefinidos. Por ejemplo, para definir un morado con 40% de azul y 60% de rojo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass[11pt]{article}
-\usepackage{blindtext}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\usepackage{xcolor}
-\colorlet{myPurple}{blue!40!red}
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\colorlet&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myPurple&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;blue!40!red&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{document}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\textcolor{myPurple}{\blindtext}
+&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myPurple&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;figure&gt;
 &lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex3.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex3.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;156px&#34; /&gt;&lt;/a&gt;
 &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
@@ -6748,27 +6756,27 @@ adios&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Aquí el código que genera la imagen de arriba:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass[border=10pt,varwidth]{standalone}
-\usepackage{pgffor}
-\usepackage[x11names]{xcolor}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=10pt,varwidth]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;pgffor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[x11names]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\newcommand\colorrulemix[1]{\textcolor{#1!40!gray}{\rule{1cm}{1cm}} }
-\newcommand\colorrule[1]{\textcolor{#1}{\rule{1cm}{1cm}} }
+&lt;span class=&#34;k&#34;&gt;\newcommand\colorrulemix&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[1]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1!40!gray&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\rule&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1cm&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1cm&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\newcommand\colorrule&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[1]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\rule&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1cm&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1cm&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{document}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{center}
-\foreach \name in { {red},{orange},{yellow},{green},{cyan},{blue},{purple}} {
-    \colorrule{\name}}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;center&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\foreach&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt; in &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;red&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;orange&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;yellow&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;green&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;cyan&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;purple&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\colorrule&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
 
-\rule{\linewidth}{1pt}
-\phantom{}\par
+&lt;span class=&#34;k&#34;&gt;\rule&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\linewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\phantom&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\par&lt;/span&gt;
 
 
-\foreach \name in { {red},{orange},{yellow},{green},{cyan},{blue},{purple}} {
-    \colorrulemix{\name}}
-\end{center}
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;k&#34;&gt;\foreach&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt; in &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;red&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;orange&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;yellow&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;green&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;cyan&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;purple&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\colorrulemix&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;center&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -7222,7 +7230,8 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;services:
   smsup.smsupapi.sender:
@@ -7234,23 +7243,28 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\Bundle\Bundle;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiBundle extends Bundle
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
@@ -7322,7 +7336,8 @@ Para esto debemos crear el archivo DependencyInjection/Configuration.php en el q
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        ;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        return $treeBuilder;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
@@ -7337,7 +7352,8 @@ Para esto debemos crear el archivo DependencyInjection/Configuration.php en el q
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;protected $apiId;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;protected $apiSecret;
@@ -7348,7 +7364,8 @@ Para esto debemos crear el archivo DependencyInjection/Configuration.php en el q
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApisecret($apiSecret)
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
@@ -7410,7 +7427,8 @@ SmsupSender.php quedaría así:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
 
 &lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
@@ -7431,7 +7449,8 @@ SmsupSender.php quedaría así:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
@@ -7450,7 +7469,8 @@ SmsupSender.php quedaría así:&lt;/p&gt;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
 &lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
+&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;
@@ -7478,18 +7498,18 @@ Hecho esto, ya está disponible una versión estable de nuestro bundle que puede
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Resulta que es bastante sencillo, el siguiente código conseguirá el efecto deseado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;\documentclass[border=5mm]{article}
-\usepackage[skins]{tcolorbox}
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=5mm]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[skins]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tcolorbox&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\begin{document}
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-  \resizebox{256pt}{256pt}{
-    \begin{tikzpicture}
-      \node[circle,draw,inner sep=1cm,fill overzoom image=./pictures/image.jpg] (A) {};
-    \end{tikzpicture}
-  }
+  &lt;span class=&#34;k&#34;&gt;\resizebox&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;256pt&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;256pt&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;\node&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[circle,draw,inner sep=1cm,fill overzoom image=./pictures/image.jpg]&lt;/span&gt; (A) &lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;;
+    &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-\end{document}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Donde:&lt;/p&gt;
 
 &lt;ul&gt;

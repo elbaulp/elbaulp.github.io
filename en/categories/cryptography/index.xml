@@ -63,8 +63,7 @@ Given p prime, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) then \(a^{p-1} \equiv 1\p
 &lt;li&gt;Output: \(a^k \pmod n\)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;
-  1. Set b = 1, If k = 0 return b.
+&lt;pre&gt;&lt;code&gt;  1. Set b = 1, If k = 0 return b.
   2. A = a
   3. If k_0 = 1 then b = a
   4. For each i from 1 to t:
@@ -83,8 +82,7 @@ Given p prime, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) then \(a^{p-1} \equiv 1\p
 
 &lt;p&gt;In order to let you understand this process better, imagine you want to compute \(2^5\pmod 5\). First step is representing the exponent in binary form, \(5 = 101_b\), follow the steps, where a = 2, k = 5 and n = 5.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-b = 1
+&lt;pre&gt;&lt;code&gt;b = 1
 A = 2
 is k_0 == 1? yes -&amp;gt; b = 2
 from k_1 to k_t:

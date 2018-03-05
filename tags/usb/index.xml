@@ -88,7 +88,7 @@ wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/img/
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
 wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/img/hd-media/boot.img.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez descargado, se extrae la imagen y se escribe en el usb:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &amp;gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Montamos el usb en el directorio /mnt:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En este caso se va a usar la versión &lt;strong&gt;net-install&lt;/strong&gt; de debian testing, es posible usar cualquier otra imagen siempre que corresponda con la versión de la imagen descargada anteriormente.&lt;/p&gt;

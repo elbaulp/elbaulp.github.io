@@ -63,8 +63,7 @@ Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1
 &lt;li&gt;Salida: \(a^k \pmod n\)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;
-  1. Fijar b = 1, Si k = 0 devolver b.
+&lt;pre&gt;&lt;code&gt;  1. Fijar b = 1, Si k = 0 devolver b.
   2. A = a
   3. Si k_0 = 1 entonces b = a
   4. Para cada i desde 1 a t repetir:
@@ -83,8 +82,7 @@ Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1
 
 &lt;p&gt;Para entenderlo mejor, imagina que quieres calcular \(2^5\pmod 5\). El primer paso es representar el exponente en binario, \(5 = 101_b\), sigue los pasos del algoritmo, donde a = 2, k = 5 y n = 5:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-b = 1
+&lt;pre&gt;&lt;code&gt;b = 1
 A = 2
 es k_0 == 1? sí -&amp;gt; b = 2
 Desde k_1 hasta k_t:
@@ -4631,8 +4629,8 @@ RelayBandwidthBurst &lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;&lt;/code
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Control listener on &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:0
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Control listener listening on port &lt;span class=&#34;m&#34;&gt;45896&lt;/span&gt;.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; OpenSSL OpenSSL &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.0.1c &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; May &lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt; looks like version &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.9.8m or later&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; I will try SSL_OP to &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; renegotiation
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Your Tor server’s identity key fingerprint is ‘test 0B01A29C23F7C70E52D28AD5A9E70237143B7D4C’
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; We now have enough directory information to build circuits.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Your Tor server&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#8217;s identity key fingerprint is &amp;amp;#8216;test 0B01A29C23F7C70E52D28AD5A9E70237143B7D4C&amp;amp;#8217;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; We now have enough directory information to build circuits.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;%: Connecting to the Tor network.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; New control connection opened.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Guessed our IP address as xxx.xxx.xxx.xxx &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;source: &lt;span class=&#34;m&#34;&gt;208&lt;/span&gt;.83.223.34&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
@@ -4640,8 +4638,8 @@ RelayBandwidthBurst &lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;&lt;/code
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;90&lt;/span&gt;%: Establishing a Tor circuit.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Tor has successfully opened a circuit. Looks like client functionality is working.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;%: Done.
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Now checking whether ORPort xxx.xxx.xxx.xxx:9001 and DirPort xxx.xxx.xxx.xxx:9030 are reachable… &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;this may take up to &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; minutes — look &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; log messages indicating success&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Now checking whether ORPort xxx.xxx.xxx.xxx:9001 and DirPort xxx.xxx.xxx.xxx:9030 are reachable&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#8230; (this may take up to 20 minutes &amp;amp;#8212; look for log messages indicating success)
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your DirPort is reachable from the outside. Excellent.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Las últimas líneas indican que Tor está verificando si los puertos ORPort y DirPort son accesibles desde afuera, y al mostrar &amp;#8220;Excellent&amp;#8221; significa que sí. Si esta verificación falla entonces necesitamos revisar nuestros firewalls y abrir los puertos 9001 y 9020. Podemos además ver que Tor publicó el &lt;em&gt;server descriptor&lt;/em&gt; en el directorio del servidor para permitir a los clientes saber que está abierto y pueden conectarse a través de él. El descriptor del servidor contiene información como por ejemplo la dirección, los puertos, las claves, etc.
 En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay están corriendo bien, lo aumenta nuestra seguridad de que todo está funcionando correctamente.&lt;/p&gt;
@@ -5250,15 +5248,23 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 
 &lt;p&gt;También probé con dos programas (sin éxito), uno en&lt;a href=&#34;https://elbauldelprogramador.com/c/&#34;&gt; C++&lt;/a&gt; y otro en &lt;a href=&#34;https://elbauldelprogramador.com/python&#34;&gt;python&lt;/a&gt; que encontré en stackoverflow:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netinet&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netdb&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;sys&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netinet&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;netdb&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-     &lt;span class=&#34;cp&#34;&gt;#define HELO &amp;#34;HELO xxxxxx@xxxx.xxxxrn&amp;#34;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#define DATA &amp;#34;DATArn&amp;#34;
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;cp&#34;&gt;#define QUIT &amp;#34;QUITrn&amp;#34;
+     
+&lt;span class=&#34;cp&#34;&gt;#define HELO &amp;#34;HELO xxxxxx@xxxx.xxxxrn&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#define DATA &amp;#34;DATArn&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;     
+&lt;span class=&#34;cp&#34;&gt;#define QUIT &amp;#34;QUITrn&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;//#define h_addr h_addr_list[0]
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;//FILE *fin;
@@ -5275,8 +5281,11 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 
     &lt;span class=&#34;cm&#34;&gt;/*=====Send a string to the socket=====*/&lt;/span&gt;
 
-    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; 
+&lt;span class=&#34;nf&#34;&gt;send_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
         &lt;span class=&#34;c1&#34;&gt;//printf(&amp;#34;Client:%sn&amp;#34;,s);
@@ -5284,16 +5293,22 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
 
     &lt;span class=&#34;c1&#34;&gt;//=====Read a string from the socket=====*/
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; 
+&lt;span class=&#34;nf&#34;&gt;read_socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+
+    
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;BUFSIZ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
       &lt;span class=&#34;c1&#34;&gt;//printf(&amp;#34;Server:%sn&amp;#34;,buf);
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
     &lt;span class=&#34;cm&#34;&gt;/*=====MAIN=====*/&lt;/span&gt;
-    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; 
+&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
+
+    
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;cm&#34;&gt;/*=====Create Socket=====*/&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AF_INET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
@@ -5352,7 +5367,8 @@ Connection closed by foreign host&lt;/em&gt;)&lt;/p&gt;
     &lt;span class=&#34;c1&#34;&gt;//=====Close socket and finish=====*/
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sock&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;La versión en python:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/python&lt;/span&gt;
 

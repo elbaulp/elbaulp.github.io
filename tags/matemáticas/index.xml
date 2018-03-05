@@ -63,8 +63,7 @@ Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1
 &lt;li&gt;Salida: \(a^k \pmod n\)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;
-  1. Fijar b = 1, Si k = 0 devolver b.
+&lt;pre&gt;&lt;code&gt;  1. Fijar b = 1, Si k = 0 devolver b.
   2. A = a
   3. Si k_0 = 1 entonces b = a
   4. Para cada i desde 1 a t repetir:
@@ -83,8 +82,7 @@ Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1
 
 &lt;p&gt;Para entenderlo mejor, imagina que quieres calcular \(2^5\pmod 5\). El primer paso es representar el exponente en binario, \(5 = 101_b\), sigue los pasos del algoritmo, donde a = 2, k = 5 y n = 5:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-b = 1
+&lt;pre&gt;&lt;code&gt;b = 1
 A = 2
 es k_0 == 1? sí -&amp;gt; b = 2
 Desde k_1 hasta k_t:

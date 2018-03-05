@@ -958,7 +958,8 @@ linea 3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt; linea 1
 &lt;span class=&#34;gi&#34;&gt;+edit 1 (by patch1.diff)
 &lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt; linea 2
-&lt;span class=&#34;err&#34;&gt; linea 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ linea 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;creating-the-patch&#34;&gt;Creating the patch&lt;/h1&gt;
 
 &lt;p&gt;The patch it is not created yet, for that we need to execute:&lt;/p&gt;
@@ -1017,7 +1018,8 @@ $ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&g
 &lt;/span&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;--- /dev/null
 &lt;/span&gt;&lt;span class=&#34;gd&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+++ _drafts/fichero2.txt
 &lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;@@ -0,0 +1 @@
-&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+New file created by patch2.diff&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;+New file created by patch2.diff
+&lt;/span&gt;&lt;span class=&#34;gi&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Finally, all that is left is apply the changes with &lt;code&gt;quilt refresh&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ quilt refresh
 Refreshed patch patches/patch2.diff&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;

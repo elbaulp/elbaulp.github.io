@@ -511,9 +511,9 @@ además tienen finalidades distintas en función de qué tipo de usuario las uti
 &lt;span class=&#34;k&#34;&gt;EXCEPTION&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;OTHERS&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;dbms_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Error en la transaccion:&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;||&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SQLERRM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;n&#34;&gt;dbms_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Se&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deshacen&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;las&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;modificaciones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;ROLLBACK&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&#34;n&#34;&gt;dbms_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;put_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Se deshacen las modificaciones);
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;  ROLLBACK;
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;END;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;siguiente-tema-fundamentos-de-pl-sql-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-de-plsql/&#34;&gt;Fundamentos de PL/SQL&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
@@ -1098,7 +1098,7 @@ procesada utilizando, para ello, dos pseudo-registros, &lt;strong&gt;&lt;code&gt
                     &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;THEN&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Divorciado/a&amp;#39;&lt;/span&gt;
                     &lt;span class=&#34;k&#34;&gt;ELSE&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Otros&amp;#39;&lt;/span&gt;
                &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt;
-               &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#34;Estado Civil&amp;#34;&lt;/span&gt;
+               &lt;span class=&#34;k&#34;&gt;AS&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Estado Civil&amp;#34;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Otra sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;CASE&lt;/span&gt;
@@ -1138,7 +1138,7 @@ incondicional.&lt;/p&gt;
     &lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- Incrementamos la variable contador
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;-- Salimos del bucle cuando la condición de cumpla
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;EXIT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;25000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;EXIT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;WHEN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;total&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;25000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;END&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LOOP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
   &lt;span class=&#34;n&#34;&gt;DBMS_OUTPUT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PUT_LINE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Counter: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TO_CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;counter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39; Total: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TO_CHAR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;total&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
