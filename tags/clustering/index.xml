@@ -32,7 +32,7 @@
 &lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;El aprendizaje automático se distingue en dos tipos. &lt;strong&gt;Supervisado&lt;/strong&gt;, donde se dispone de información sobre la clase a la que pertenece una instancia o &lt;strong&gt;no supervisado&lt;/strong&gt;, donde esta información no está disponible. Estos apuntes se centran en el último tipo. En la figura \ref{fig:classTree} se muestra un árbol de tipos de clasificaciones.&lt;/p&gt;
+&lt;p&gt;El aprendizaje automático se distingue en dos tipos. &lt;strong&gt;Supervisado&lt;/strong&gt;, donde se dispone de información sobre la clase a la que pertenece una instancia o &lt;strong&gt;no supervisado&lt;/strong&gt;, donde esta información no está disponible. Estos apuntes se centran en el último tipo. En la figura se muestra un árbol de tipos de clasificaciones.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/classTree.png&#34;&gt;
@@ -91,7 +91,7 @@
 &lt;li&gt;Desigualdad triangular: (d(x,y) \leq d(x,z) + d(z,y))&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;La desigualdad triangular puede comprenderse mejor visualmente en la figura \ref{fig:triangle}. Es decir, la suma de dos de los lados del triángulo siempre va a ser mayor o igual a la del lado restante. Como muestra la figura, conforme menos área tiene el triángulo, más cercana es la suma de dos lados al lado restante.&lt;/p&gt;
+&lt;p&gt;La desigualdad triangular puede comprenderse mejor visualmente en la figura. Es decir, la suma de dos de los lados del triángulo siempre va a ser mayor o igual a la del lado restante. Como muestra la figura, conforme menos área tiene el triángulo, más cercana es la suma de dos lados al lado restante.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/triangle.png&#34;&gt;
@@ -122,7 +122,7 @@
 &lt;li&gt;&lt;em&gt;Minkowski&lt;/em&gt; o Lr-norm: (d&lt;em&gt;p(x,y) = \left ( \sum&lt;/em&gt;{j=1}^J|x_j - y_j|^p\right )^\frac{1}{p}, p \geq 1)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;La distancia Euclídea es la línea recta entre dos puntos. En la distancia Manhattan la distancia entre dos puntos es la suma en valor absoluto de las diferencias de sus coordenadas cartesianas. La Figura \ref{fig:maneu} muestra cómo pueden existir varios caminos a dos puntos usando Manhattan, pero solo uno y el más corto por Euclídea.&lt;/p&gt;
+&lt;p&gt;La distancia Euclídea es la línea recta entre dos puntos. En la distancia Manhattan la distancia entre dos puntos es la suma en valor absoluto de las diferencias de sus coordenadas cartesianas. La Figura muestra cómo pueden existir varios caminos a dos puntos usando Manhattan, pero solo uno y el más corto por Euclídea.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/maneu.png&#34;&gt;
@@ -144,7 +144,7 @@
 
 &lt;p&gt;La distancia de Minkowski es una generalización de las dos anteriores&lt;/p&gt;
 
-&lt;p&gt;En la distancia de Chebyshev la distancia entre dos puntos es la mayor de sus diferencias a lo largo de cualquiera de sus dimensiones coordenadas. También conocida como la distancia del tablero de ajedrez, por coincidir con el número de movimientos que puede hacer el rey para moverse por el tablero, como muestra la figura \ref{fig:chess}.&lt;/p&gt;
+&lt;p&gt;En la distancia de Chebyshev la distancia entre dos puntos es la mayor de sus diferencias a lo largo de cualquiera de sus dimensiones coordenadas. También conocida como la distancia del tablero de ajedrez, por coincidir con el número de movimientos que puede hacer el rey para moverse por el tablero, como muestra la figura.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/chess.png&#34;&gt;
@@ -164,7 +164,7 @@
         &lt;figcaption&gt;Distancia de Chebyshev. *Créd. Wikipedia*&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando (p = 1) corresponde con la distancia de Manhattan, para (p = 2) distancia Euclídea, y cuando (p \to \infty) corresponde con la distancia de Chebyshev. En la figura \ref{fig:Minkowski} aparecen distintas distancias para varios valores de (p), en esta imagen se aprecia la distancia Manhattan para (p=1), Euclídea para (p=2) y Chebyshev para (p=\infty).&lt;/p&gt;
+&lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando (p = 1) corresponde con la distancia de Manhattan, para (p = 2) distancia Euclídea, y cuando (p \to \infty) corresponde con la distancia de Chebyshev. En la figura aparecen distintas distancias para varios valores de (p), en esta imagen se aprecia la distancia Manhattan para (p=1), Euclídea para (p=2) y Chebyshev para (p=\infty).&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/minkos.png&#34;&gt;
@@ -189,14 +189,14 @@
 &lt;p&gt;Dentro de la clasificación no supervisada se distinguen principalmente los siguientes tipos de &lt;em&gt;clustering&lt;/em&gt;:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Agrupamiento por particiones&lt;/strong&gt;: Una simple división del conjunto de datos en sub conjuntos disjuntos (No solapados) de tal forma que cada punto del conjunto pertenece a uno de dichos subconjuntos (o &lt;em&gt;clusters&lt;/em&gt;). La figura \ref{fig:clustPart} es un ejemplo de este tipo de agrupamiento.
+&lt;li&gt;&lt;strong&gt;Agrupamiento por particiones&lt;/strong&gt;: Una simple división del conjunto de datos en sub conjuntos disjuntos (No solapados) de tal forma que cada punto del conjunto pertenece a uno de dichos subconjuntos (o &lt;em&gt;clusters&lt;/em&gt;). La figura es un ejemplo de este tipo de agrupamiento.
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Basados en densidad&lt;/strong&gt;: En este tipo de &lt;em&gt;clustering&lt;/em&gt; un &lt;em&gt;cluster&lt;/em&gt; es una región densa de objetos rodeados por una región de baja densidad. Suele usarse cuando hay ruido y &lt;em&gt;outliers&lt;/em&gt; presentes en los datos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Basados en Grafos&lt;/strong&gt;: Los datos se representan como un gráfo, los nodos son los puntos y los enlaces representan una conexión entre ambos. Un grupo de objetos conectados los unos con los otros pero no conectados con el resto de puntos en el conjunto de datos forma un &lt;em&gt;cluster&lt;/em&gt;. Para definir los grupos es necesario que cada objeto de un &lt;em&gt;cluster&lt;/em&gt; esté más cerca de cualquier otro punto de su grupo que a un punto de otro &lt;em&gt;cluster&lt;/em&gt;. Esta técnica tiene problemas en presencia de ruido u &lt;em&gt;outliers&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mínimo error cuadrático&lt;/strong&gt;: En este algoritmo se usa la minimización del error cuadrático para determinar a qué &lt;em&gt;cluster&lt;/em&gt; pertenece el punto. Esta técnica la usa el algoritmo K-Medias.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Jerárquico&lt;/strong&gt;: Si en el agrupamiento por particiones se permite que cada &lt;em&gt;cluster&lt;/em&gt; tenga sub-clusters se obtiene un &lt;em&gt;clustering&lt;/em&gt; jerárquico. Consiste en permitir que los &lt;em&gt;clusters&lt;/em&gt; puedan anidarse, organizado en forma de árbol. Cada nodo del árbol, un &lt;em&gt;cluster&lt;/em&gt; en este caso a exepción de los nodos hoja, forman la unión de sus hijos (los &lt;em&gt;sub-clusters&lt;/em&gt;). La raíz del árbol es el &lt;em&gt;cluster&lt;/em&gt; conteniendo a todos los datos. Los nodos hoja suelen corresponder con un único dato, pero no es obligatorio. La figura \ref{fig:clustHie} muestra un ejemplo de este tipo de &lt;em&gt;clustering&lt;/em&gt;. La figura \ref{fig:clustHie}(d) es un ejemplo de &lt;em&gt;clustering&lt;/em&gt; jerárquico, el nodo raíz contendría todos los puntos, el nodo a la izquierda está formado por un &lt;em&gt;cluster&lt;/em&gt; de tres &lt;em&gt;sub-clusters&lt;/em&gt;. Los métodos jerárquicos se clasifican en &lt;strong&gt;aglomerativos&lt;/strong&gt; o &lt;strong&gt;divisivos&lt;/strong&gt;. El primero considera cada punto un &lt;em&gt;cluster&lt;/em&gt; y en cada paso fusiona los pares más cercanos como un &lt;em&gt;cluster&lt;/em&gt;. Esta técnica requiere de una forma de medir la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt;. El segundo comienza con todos los datos como un solo &lt;em&gt;cluster&lt;/em&gt; y subdivide hasta quedarse con puntos individuales como &lt;em&gt;clusters&lt;/em&gt;. Las técnicas aglomerativas son las más usadas, por esta razón se explican a continuación los distintos métodos. La figura \ref{fig:clustHieAgg} los ilustra.
+&lt;li&gt;&lt;strong&gt;Jerárquico&lt;/strong&gt;: Si en el agrupamiento por particiones se permite que cada &lt;em&gt;cluster&lt;/em&gt; tenga sub-clusters se obtiene un &lt;em&gt;clustering&lt;/em&gt; jerárquico. Consiste en permitir que los &lt;em&gt;clusters&lt;/em&gt; puedan anidarse, organizado en forma de árbol. Cada nodo del árbol, un &lt;em&gt;cluster&lt;/em&gt; en este caso a exepción de los nodos hoja, forman la unión de sus hijos (los &lt;em&gt;sub-clusters&lt;/em&gt;). La raíz del árbol es el &lt;em&gt;cluster&lt;/em&gt; conteniendo a todos los datos. Los nodos hoja suelen corresponder con un único dato, pero no es obligatorio. La figura muestra un ejemplo de este tipo de &lt;em&gt;clustering&lt;/em&gt;. La figura (d) es un ejemplo de &lt;em&gt;clustering&lt;/em&gt; jerárquico, el nodo raíz contendría todos los puntos, el nodo a la izquierda está formado por un &lt;em&gt;cluster&lt;/em&gt; de tres &lt;em&gt;sub-clusters&lt;/em&gt;. Los métodos jerárquicos se clasifican en &lt;strong&gt;aglomerativos&lt;/strong&gt; o &lt;strong&gt;divisivos&lt;/strong&gt;. El primero considera cada punto un &lt;em&gt;cluster&lt;/em&gt; y en cada paso fusiona los pares más cercanos como un &lt;em&gt;cluster&lt;/em&gt;. Esta técnica requiere de una forma de medir la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt;. El segundo comienza con todos los datos como un solo &lt;em&gt;cluster&lt;/em&gt; y subdivide hasta quedarse con puntos individuales como &lt;em&gt;clusters&lt;/em&gt;. Las técnicas aglomerativas son las más usadas, por esta razón se explican a continuación los distintos métodos. La figura los ilustra.
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Enlace Simple&lt;/strong&gt;: La proximidad entre dos &lt;em&gt;clusters&lt;/em&gt; viene dada por la distancia entre los dos puntos más cercanos de cada &lt;em&gt;cluster&lt;/em&gt;.&lt;/li&gt;
@@ -264,7 +264,7 @@
 
 &lt;h3 id=&#34;k-means-a-id-sec-1-3-1-name-sec-1-3-1-a&#34;&gt;K-Means&lt;a id=&#34;sec-1-3-1&#34; name=&#34;sec-1-3-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;K-Means es un un algoritmo de &lt;em&gt;clustering&lt;/em&gt; por particiones. Tiene un parámetro de entrada, &lt;code&gt;k&lt;/code&gt;, indicando el número de &lt;em&gt;clusters&lt;/em&gt; a generar, por tanto es necesario conocer a priori el número de grupos a encontrar. Cada &lt;em&gt;cluster&lt;/em&gt; está representado por su centroide (centro geométrico del &lt;em&gt;cluster&lt;/em&gt;). Los centroides pueden ser puntos reales o no, en caso de ser un punto real del conjunto de datos se denominan menoides.  En cada iteración del algoritmo dichos centroides se recalculan hasta llegar a un criterio de parada. La figura \ref{fig:kmeansEx} muestra ejemplos de varias iteraciones de K-Means, en él se ilustra el proceso de actualización de los centroides.&lt;/p&gt;
+&lt;p&gt;K-Means es un un algoritmo de &lt;em&gt;clustering&lt;/em&gt; por particiones. Tiene un parámetro de entrada, &lt;code&gt;k&lt;/code&gt;, indicando el número de &lt;em&gt;clusters&lt;/em&gt; a generar, por tanto es necesario conocer a priori el número de grupos a encontrar. Cada &lt;em&gt;cluster&lt;/em&gt; está representado por su centroide (centro geométrico del &lt;em&gt;cluster&lt;/em&gt;). Los centroides pueden ser puntos reales o no, en caso de ser un punto real del conjunto de datos se denominan menoides.  En cada iteración del algoritmo dichos centroides se recalculan hasta llegar a un criterio de parada. La figura muestra ejemplos de varias iteraciones de K-Means, en él se ilustra el proceso de actualización de los centroides.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/kmeansEx.png&#34;&gt;
@@ -288,7 +288,7 @@
 
 &lt;p&gt;K-Means se compone de dos fases principales:&lt;/p&gt;
 
-&lt;p&gt;El proceso de inicialización consta de dos pasos. Primeramente se escoge el número de centroides (k) y se asignan aleatoriamente, como muestra la figura \ref{fig:kmeansEx}(a). Una vez colocados los a cada punto se le asigna su correspondiente &lt;em&gt;cluster&lt;/em&gt; usando la media como medida de proximidad. Posteriormente se  recalculan los centroides con los puntos asignados y se actualizan.&lt;/p&gt;
+&lt;p&gt;El proceso de inicialización consta de dos pasos. Primeramente se escoge el número de centroides (k) y se asignan aleatoriamente, como muestra la figura (a). Una vez colocados los a cada punto se le asigna su correspondiente &lt;em&gt;cluster&lt;/em&gt; usando la media como medida de proximidad. Posteriormente se  recalculan los centroides con los puntos asignados y se actualizan.&lt;/p&gt;
 
 &lt;p&gt;El proceso iterativo actualiza los centroides en cada iteración mientras los centroides cambien. En cada iteración se calcula la distancia de todos los puntos a los k centroides, formando k grupos y asignando a cada punto su centroide más cercano.&lt;/p&gt;
 
@@ -308,7 +308,7 @@ donde (C_i) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, (c_i) es el centróide 
 
 &lt;h4 id=&#34;elección-del-k-óptimo-a-id-sec-1-3-1-4-name-sec-1-3-1-4-a&#34;&gt;&lt;strong&gt;Elección del k óptimo&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-4&#34; name=&#34;sec-1-3-1-4&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
 
-&lt;p&gt;No hay ninguna forma de obtener el &lt;code&gt;k&lt;/code&gt; óptimo salvo prueba y error. Sin embargo, se pueden usar algunas técnicas que suelen dar buenos resultados. Un ejemplo de ello es la técnica del codo. Se lanza el algoritmo para varios &lt;code&gt;k&lt;/code&gt; y se genera un gráfico de cada &lt;code&gt;k&lt;/code&gt; junto a su error. Un buen &lt;code&gt;k&lt;/code&gt; debería ser el que se corresponda con un &lt;a href=&#34;https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/&#34; title=&#34;Mostrar artículos similares usando Clustering con sklearn&#34;&gt;codo&lt;/a&gt; en el gráfico. La figura \ref{fig:kmeansElbow} muestra un ejemplo.&lt;/p&gt;
+&lt;p&gt;No hay ninguna forma de obtener el &lt;code&gt;k&lt;/code&gt; óptimo salvo prueba y error. Sin embargo, se pueden usar algunas técnicas que suelen dar buenos resultados. Un ejemplo de ello es la técnica del codo. Se lanza el algoritmo para varios &lt;code&gt;k&lt;/code&gt; y se genera un gráfico de cada &lt;code&gt;k&lt;/code&gt; junto a su error. Un buen &lt;code&gt;k&lt;/code&gt; debería ser el que se corresponda con un &lt;a href=&#34;https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/&#34; title=&#34;Mostrar artículos similares usando Clustering con sklearn&#34;&gt;codo&lt;/a&gt; en el gráfico. La figura muestra un ejemplo.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/kmeansElbow.png&#34;&gt;
@@ -344,7 +344,7 @@ donde (C_i) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, (c_i) es el centróide 
 
 &lt;p&gt;Este algoritmo es de la familia jerárquica del &lt;em&gt;clustering&lt;/em&gt;, concretamente &lt;strong&gt;basado en densidad&lt;/strong&gt;. Su principal característica es detectar regiones de puntos densas separadas de otras regiones poco densas. Al contrario que K-Means, detecta automáticamente el número de &lt;em&gt;clusters&lt;/em&gt;. Debido a que las regiones poco densas son descartadas, no produce un &lt;em&gt;clustering&lt;/em&gt; completo, es decir, habrá puntos sin clasificar.&lt;/p&gt;
 
-&lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura \ref{fig:dbscanPoints} muestra un ejemplo de cada uno de ellos.
+&lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura muestra un ejemplo de cada uno de ellos.
 -   &lt;strong&gt;Core Points&lt;/strong&gt;: Corresponden a los puntos dentro de la región densa. Para ser un punto &lt;em&gt;core&lt;/em&gt; debe haber un número mínimo de puntos definidos como parámetro en su vecindario, que viene dado por el radio.
 -   &lt;strong&gt;Border Points&lt;/strong&gt;: Aunque no es un &lt;em&gt;core point&lt;/em&gt;, cae en el entorno de un &lt;em&gt;core point&lt;/em&gt;.
 -   &lt;strong&gt;Noise Points&lt;/strong&gt;: Un punto que no es ni &lt;em&gt;core&lt;/em&gt; ni &lt;em&gt;border&lt;/em&gt;.&lt;/p&gt;
@@ -373,7 +373,7 @@ donde (C_i) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, (c_i) es el centróide 
 
 &lt;h4 id=&#34;selección-de-parámetros-a-id-sec-1-3-2-2-name-sec-1-3-2-2-a&#34;&gt;&lt;strong&gt;Selección de parámetros&lt;/strong&gt;.&lt;a id=&#34;sec-1-3-2-2&#34; name=&#34;sec-1-3-2-2&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
 
-&lt;p&gt;DBSCAN necesita de dos parámetros antes de ser ejecutado, &lt;em&gt;MinPts&lt;/em&gt; y &lt;em&gt;Eps&lt;/em&gt;, definiendo el número mínimo de puntos necesarios para considerar a un punto como &lt;em&gt;core&lt;/em&gt; y el radio, respectivamente. Lo más usual es observar cómo evoluciona la distancia de un punto a sus k-ésismos vecinos más cercanos (k-distancia). Para los puntos que forman parte de un &lt;em&gt;cluster&lt;/em&gt;, el valor k-distancia será pequeño si &lt;em&gt;k&lt;/em&gt; no es mayor que el tamaño del &lt;em&gt;cluster&lt;/em&gt;. Para los puntos que no pertenecen al &lt;em&gt;cluster&lt;/em&gt;, la k-distancia será elevada. Por tanto, de forma visual es posible determinar el valor del parámetro &lt;em&gt;Eps&lt;/em&gt;, como muestra la figura \ref{fig:dbscanEps}, y tomando el valor de &lt;code&gt;k&lt;/code&gt; como &lt;em&gt;MinPts&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DBSCAN necesita de dos parámetros antes de ser ejecutado, &lt;em&gt;MinPts&lt;/em&gt; y &lt;em&gt;Eps&lt;/em&gt;, definiendo el número mínimo de puntos necesarios para considerar a un punto como &lt;em&gt;core&lt;/em&gt; y el radio, respectivamente. Lo más usual es observar cómo evoluciona la distancia de un punto a sus k-ésismos vecinos más cercanos (k-distancia). Para los puntos que forman parte de un &lt;em&gt;cluster&lt;/em&gt;, el valor k-distancia será pequeño si &lt;em&gt;k&lt;/em&gt; no es mayor que el tamaño del &lt;em&gt;cluster&lt;/em&gt;. Para los puntos que no pertenecen al &lt;em&gt;cluster&lt;/em&gt;, la k-distancia será elevada. Por tanto, de forma visual es posible determinar el valor del parámetro &lt;em&gt;Eps&lt;/em&gt;, como muestra la figura, y tomando el valor de &lt;code&gt;k&lt;/code&gt; como &lt;em&gt;MinPts&lt;/em&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/dbscanEps.png&#34;&gt;
@@ -408,7 +408,7 @@ donde (C_i) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, (c_i) es el centróide 
 
 &lt;p&gt;Debido a que las técnicas 1,2 y 3 no usan información externa, son técnicas &lt;strong&gt;no supervisadas&lt;/strong&gt;, la cuarta sin embargo necesita información externa, y por tanto es &lt;strong&gt;supervisada&lt;/strong&gt;. La quita puede considerarse un híbrido, ya que puede realizarse de forma supervisada o no supervisada.&lt;/p&gt;
 
-&lt;p&gt;Las &lt;strong&gt;técnicas no supervisadas&lt;/strong&gt; tratan me medir si la estructura del &lt;em&gt;clustering&lt;/em&gt; es adecuada sin información externa. Un ejemplo de ello es mediante el uso de SSE. Usando esta medida es posible definir la &lt;strong&gt;cohesión&lt;/strong&gt; del &lt;em&gt;cluster&lt;/em&gt;, la cual determina cómo están de juntos los puntos del &lt;em&gt;cluster&lt;/em&gt; así como la &lt;strong&gt;separación&lt;/strong&gt;, que mide cómo de separado está un &lt;em&gt;cluster&lt;/em&gt; con respecto a otro. Para realizar estas mediciones pueden usarse o no los centroides, como muestra la figura \ref{fig:clustEvalUns}&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;técnicas no supervisadas&lt;/strong&gt; tratan me medir si la estructura del &lt;em&gt;clustering&lt;/em&gt; es adecuada sin información externa. Un ejemplo de ello es mediante el uso de SSE. Usando esta medida es posible definir la &lt;strong&gt;cohesión&lt;/strong&gt; del &lt;em&gt;cluster&lt;/em&gt;, la cual determina cómo están de juntos los puntos del &lt;em&gt;cluster&lt;/em&gt; así como la &lt;strong&gt;separación&lt;/strong&gt;, que mide cómo de separado está un &lt;em&gt;cluster&lt;/em&gt; con respecto a otro. Para realizar estas mediciones pueden usarse o no los centroides, como muestra la figura.&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/clustEvalUns.png&#34;&gt;
