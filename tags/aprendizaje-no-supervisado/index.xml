@@ -86,9 +86,9 @@
 
 &lt;ul&gt;
 &lt;li&gt;No negativa: \(d(x,y) \geq 0\)&lt;/li&gt;
-&lt;li&gt;Reflexiva: (d(x,y) = 0\text{ sii } x = y)&lt;/li&gt;
-&lt;li&gt;Simétrica: (d(x,y) = d(y,x))&lt;/li&gt;
-&lt;li&gt;Desigualdad triangular: (d(x,y) \leq d(x,z) + d(z,y))&lt;/li&gt;
+&lt;li&gt;Reflexiva: \(d(x,y) = 0\text{ sii } x = y\)&lt;/li&gt;
+&lt;li&gt;Simétrica: \(d(x,y) = d(y,x)\)&lt;/li&gt;
+&lt;li&gt;Desigualdad triangular: \(d(x,y) \leq d(x,z) + d(z,y)\)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La desigualdad triangular puede comprenderse mejor visualmente en la figura. Es decir, la suma de dos de los lados del triángulo siempre va a ser mayor o igual a la del lado restante. Como muestra la figura, conforme menos área tiene el triángulo, más cercana es la suma de dos lados al lado restante.&lt;/p&gt;
@@ -116,10 +116,10 @@
 &lt;p&gt;Las principales medidas de distancia son:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Euclídea&lt;/em&gt; o (L_2): (d&lt;em&gt;2(x,y) = \sqrt{\sum&lt;/em&gt;{j=1}^J(x_j - y_j)^2})&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Manhattan&lt;/em&gt; o (L_1): (d&lt;em&gt;1(x,y) = \sum&lt;/em&gt;{j=1}^J|x_j - y_j|)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Chebyshev&lt;/em&gt; o (L&lt;em&gt;{\infty}): (d&lt;/em&gt;\infty = \text{máx}_{j\dots J}|x_j - y_j|)&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Minkowski&lt;/em&gt; o Lr-norm: (d&lt;em&gt;p(x,y) = \left ( \sum&lt;/em&gt;{j=1}^J|x_j - y_j|^p\right )^\frac{1}{p}, p \geq 1)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Euclídea&lt;/em&gt; o \(L_2\): \(d&lt;em&gt;2(x,y) = \sqrt{\sum&lt;/em&gt;{j=1}^J(x_j - y_j)^2}\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Manhattan&lt;/em&gt; o \(L_1\): \(d&lt;em&gt;1(x,y) = \sum&lt;/em&gt;{j=1}^J|x_j - y_j|\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Chebyshev&lt;/em&gt; o \(L&lt;em&gt;{\infty}\): \(d&lt;/em&gt;\infty = \text{máx}_{j\dots J}|x_j - y_j|\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Minkowski&lt;/em&gt; o Lr-norm: \(d&lt;em&gt;p(x,y) = \left ( \sum&lt;/em&gt;{j=1}^J|x_j - y_j|^p\right )^\frac{1}{p}, p \geq 1\)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;La distancia Euclídea es la línea recta entre dos puntos. En la distancia Manhattan la distancia entre dos puntos es la suma en valor absoluto de las diferencias de sus coordenadas cartesianas. La Figura muestra cómo pueden existir varios caminos a dos puntos usando Manhattan, pero solo uno y el más corto por Euclídea.&lt;/p&gt;
@@ -164,7 +164,7 @@
         &lt;figcaption&gt;Distancia de Chebyshev. *Créd. Wikipedia*&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando (p = 1) corresponde con la distancia de Manhattan, para (p = 2) distancia Euclídea, y cuando (p \to \infty) corresponde con la distancia de Chebyshev. En la figura aparecen distintas distancias para varios valores de (p), en esta imagen se aprecia la distancia Manhattan para (p=1), Euclídea para (p=2) y Chebyshev para (p=\infty).&lt;/p&gt;
+&lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando \(p = 1\) corresponde con la distancia de Manhattan, para \(p = 2\) distancia Euclídea, y cuando \(p \to \infty\) corresponde con la distancia de Chebyshev. En la figura aparecen distintas distancias para varios valores de \(p\), en esta imagen se aprecia la distancia Manhattan para \(p=1\), Euclídea para \(p=2\) y Chebyshev para \(p=\infty\).&lt;/p&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/minkos.png&#34;&gt;
@@ -174,14 +174,14 @@
             tabindex=&#34;0&#34;
             layout=&#34;responsive&#34;
             src=&#34;https://elbauldelprogramador.com/img/minkos.png&#34;
-            alt=&#34;Distintos valores de \(p\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
-            title=&#34;Distintos valores de \(p\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
+            alt=&#34;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
+            title=&#34;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
             sizes=&#34;(min-width: 1387px) 1387px, 100vw&#34;
             width=&#34;1387&#34;
             height=&#34;300&#34;&gt;
           &lt;/img&gt;
         &lt;/a&gt;
-        &lt;figcaption&gt;Distintos valores de \(p\) para la distancia de Minkowski. *Créd. Wikipedia*&lt;/figcaption&gt;
+        &lt;figcaption&gt;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&lt;/figcaption&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&#34;tipos-de-clustering-a-id-sec-1-2-name-sec-1-2-a&#34;&gt;Tipos de Clustering&lt;a id=&#34;sec-1-2&#34; name=&#34;sec-1-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -294,9 +294,9 @@
 
 &lt;h4 id=&#34;asignación-de-clusters-a-los-puntos-a-id-sec-1-3-1-2-name-sec-1-3-1-2-a&#34;&gt;&lt;strong&gt;Asignación de clusters a los puntos&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-2&#34; name=&#34;sec-1-3-1-2&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
 
-&lt;p&gt;Para asignar a un punto el &lt;em&gt;cluster&lt;/em&gt; más cercano es necesario usar una medida de proximidad, la más común es la distancia Euclídea ((L&lt;em&gt;2)), aunque no es la única y la elección depende del tipo de datos. Al re-calcular los centroides de cada &lt;em&gt;cluster&lt;/em&gt; se optimiza una &lt;strong&gt;función objetivo&lt;/strong&gt;, por ejemplo minimizar la distancias al cuadrado de cada punto a su &lt;em&gt;cluster&lt;/em&gt; más cercano, como muestra la siguiente ecuación:
-[SSE = \sum^K&lt;/em&gt;{i=1}\sum_{\textbf{x}\in C_i} dist \left ( c_i, x \right )^2]
-donde (C_i) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, (c_i) es el centróide del &lt;em&gt;cluster&lt;/em&gt; (C_i) y (\textbf{x}) es un punto y (dist) es la distancia.&lt;/p&gt;
+&lt;p&gt;Para asignar a un punto el &lt;em&gt;cluster&lt;/em&gt; más cercano es necesario usar una medida de proximidad, la más común es la distancia Euclídea (\(L&lt;em&gt;2\)), aunque no es la única y la elección depende del tipo de datos. Al re-calcular los centroides de cada &lt;em&gt;cluster&lt;/em&gt; se optimiza una &lt;strong&gt;función objetivo&lt;/strong&gt;, por ejemplo minimizar la distancias al cuadrado de cada punto a su &lt;em&gt;cluster&lt;/em&gt; más cercano, como muestra la siguiente ecuación:
+\[SSE = \sum^K&lt;/em&gt;{i=1}\sum_{\textbf{x}\in C_i} dist \left ( c_i, x \right )^2\]
+donde \(C_i\) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, \(c_i\) es el centróide del &lt;em&gt;cluster&lt;/em&gt; \(C_i\) y \(\textbf{x}\) es un punto y \(dist\) es la distancia.&lt;/p&gt;
 
 &lt;p&gt;Con esta función objetivo, se calcula el error de cada punto, es decir, su distancia euclídea al &lt;em&gt;cluster&lt;/em&gt; más cercano, luego se calcula la suma total de los errores al cuadrado. Con este dato, y dados dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; distintos generados por el algoritmo, K-Means escoge aquel con menor error cuadrático.&lt;/p&gt;
 
