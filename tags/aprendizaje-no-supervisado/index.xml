@@ -344,10 +344,13 @@ donde \(C_i\) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, \(c_i\) es el centró
 
 &lt;p&gt;Este algoritmo es de la familia jerárquica del &lt;em&gt;clustering&lt;/em&gt;, concretamente &lt;strong&gt;basado en densidad&lt;/strong&gt;. Su principal característica es detectar regiones de puntos densas separadas de otras regiones poco densas. Al contrario que K-Means, detecta automáticamente el número de &lt;em&gt;clusters&lt;/em&gt;. Debido a que las regiones poco densas son descartadas, no produce un &lt;em&gt;clustering&lt;/em&gt; completo, es decir, habrá puntos sin clasificar.&lt;/p&gt;
 
-&lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura muestra un ejemplo de cada uno de ellos.
--   &lt;strong&gt;Core Points&lt;/strong&gt;: Corresponden a los puntos dentro de la región densa. Para ser un punto &lt;em&gt;core&lt;/em&gt; debe haber un número mínimo de puntos definidos como parámetro en su vecindario, que viene dado por el radio.
--   &lt;strong&gt;Border Points&lt;/strong&gt;: Aunque no es un &lt;em&gt;core point&lt;/em&gt;, cae en el entorno de un &lt;em&gt;core point&lt;/em&gt;.
--   &lt;strong&gt;Noise Points&lt;/strong&gt;: Un punto que no es ni &lt;em&gt;core&lt;/em&gt; ni &lt;em&gt;border&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura muestra un ejemplo de cada uno de ellos.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Core Points&lt;/strong&gt;: Corresponden a los puntos dentro de la región densa. Para ser un punto &lt;em&gt;core&lt;/em&gt; debe haber un número mínimo de puntos definidos como parámetro en su vecindario, que viene dado por el radio.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Border Points&lt;/strong&gt;: Aunque no es un &lt;em&gt;core point&lt;/em&gt;, cae en el entorno de un &lt;em&gt;core point&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Noise Points&lt;/strong&gt;: Un punto que no es ni &lt;em&gt;core&lt;/em&gt; ni &lt;em&gt;border&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/dbscanPoints.png&#34;&gt;
