@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Anomalías on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/anomal%C3%ADas/</link>
+        <description>Recent content in Anomalías on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 12 Mar 2018 09:39:48 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/anomal%C3%ADas/</link>
+            <title>Anomalías on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/anomal%C3%ADas/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Aprendizaje no Supervisado y Detección de Anomalías: ¿Qué es una Anomalía?</title>
+            <link>https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/</link>
+            <pubDate>Mon, 12 Mar 2018 09:39:48 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reglas de Asociación (Próximamente)&lt;/li&gt;
+&lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Antes de comenzar es necesario definir qué es una &lt;strong&gt;anomalía&lt;/strong&gt;: Una anomalía es un dato muy distinto del resto. Esto puede deberse a fallos en mediciones, o a la propia naturaleza del dato. Por ejemplo, una intrusión a un sistema informático puede considerarse una anomalía, ya que por norma general el resto de actividades en dicho sistema serán legítimas. Por lo general, un dato se considera anómalo si escapa a los rangos de normalidad del resto de los datos.&lt;/p&gt;
+
+&lt;p&gt;El tratamiento de los datos anómalos debe hacerse con cuidado, ya que en ocasiones se podrá descartar (cuando son errores de medición) y en otras será importante (Introsiones/ataques a un sistema).&lt;/p&gt;
+
+&lt;p&gt;Ciertas técnicas de aprendizaje son más robustas frente a datos anómalos que otras. Un ejemplo de ello es la &lt;strong&gt;regresión lineal&lt;/strong&gt;, la presencia de un dato anómalo afectará en gran medida al resultado del modelo, ya que este dato anómalo &lt;em&gt;“tirará”&lt;/em&gt; de la línea de regresión hacia él. Como muestra la &lt;a href=&#34;#fig:anoReg&#34;&gt;Figura 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a id=&#34;fig:anoReg&#34; href=&#34;https://elbauldelprogramador.com/img/anoReg.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/anoReg.png&#34;
+            alt=&#34;Cómo afecta un dato anómalo a una regresión&#34;
+            title=&#34;Cómo afecta un dato anómalo a una regresión&#34;
+            sizes=&#34;(min-width: 870px) 870px, 100vw&#34;
+            width=&#34;870&#34;
+            height=&#34;471&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Cómo afecta un dato anómalo a una regresión&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;También ocurre en &lt;em&gt;clustering&lt;/em&gt;, ya que los datos anómalos desplazan los centroides hacia ellos (&lt;a href=&#34;#fig:anoClust&#34;&gt;Figura 2&lt;/a&gt;).&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a id=&#34;fig:anoClust&#34; href=&#34;https://elbauldelprogramador.com/img/anoClust.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/anoClust.png&#34;
+            alt=&#34;Cómo afecta un dato anómalo al *clustering*&#34;
+            title=&#34;Cómo afecta un dato anómalo al *clustering*&#34;
+            sizes=&#34;(min-width: 562px) 562px, 100vw&#34;
+            width=&#34;562&#34;
+            height=&#34;179&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Cómo afecta un dato anómalo al *clustering*&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Una buena analogía en este campo es encontrar una aguja en un pajar. Esa sería la forma fácil de encontrar una anomalía, ya que al menos se sabe que hay que encontrar una aguja. Pero en muchas ocasiones no se sabe &lt;strong&gt;qué es lo que se debe encontrar.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;aplicaciones-a-id-sec-2-1-name-sec-2-1-a&#34;&gt;Aplicaciones&lt;a id=&#34;sec-2-1&#34; name=&#34;sec-2-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Algunas aplicaciones son los &lt;strong&gt;Sistemas de detección de intrusiones en red&lt;/strong&gt; (&lt;em&gt;Network Intrusion Detection Systems [NIDS]&lt;/em&gt; ). Cuando se conoce el tipo de anomalía los NIDS son basados en firmas, pero también existen sin conocer previamente el tipo de anomalía a detectar. Este documento se centrará en la última, NIDS basados en detección de anomalías. Ejemplos de este tipo de sistemas son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Detectar intrusiones de red.&lt;/li&gt;
+&lt;li&gt;Fraude en tarjetas de crédito.&lt;/li&gt;
+&lt;li&gt;Detectar brotes de epidemias.&lt;/li&gt;
+&lt;li&gt;Análisis de regiones sospechosas en imágenes (Como radiografías).&lt;/li&gt;
+&lt;li&gt;Video vigilancia.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;métodos-supervisados-a-id-sec-2-2-name-sec-2-2-a&#34;&gt;Métodos supervisados&lt;a id=&#34;sec-2-2&#34; name=&#34;sec-2-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Cuando se conoce la existencia de anomalías en los datos, y se sabe cuales son, las técnicas usadas son de clasifiación supervisada. En este tipo de problemas se tienen dos conjuntos de datos, uno de entrenamiento y otro de test. Como se dispone de toda la información, los datos están etiquetados en función de si son anomalía o no. Con estos datos se construye un modelo que aprenda a distinguir ente un dato anómalo y uno legítimo.&lt;/p&gt;
+
+&lt;p&gt;Una situación muy común en este tipo de datos es que están desbalanceados. Existen muchos más datos legítimos que anómalos, lo cual sesga el resultado del modelo. Este tipo de problemas se conoce como &lt;strong&gt;calsificación desbalanceada&lt;/strong&gt;. Principalmente existen dos métodos para lidiar con este problema. &lt;strong&gt;Métodos basados en Instancias&lt;/strong&gt; y &lt;strong&gt;basados en algoritmos.&lt;/strong&gt; El primero consiste en modificar los datos antes de pasarlos al algoritmo, mientras que el segundo usa los datos originales sobre un algoritmo modificado.&lt;/p&gt;
+
+&lt;h2 id=&#34;basados-en-instancias-a-id-sec-2-2-1-name-sec-2-2-1-a&#34;&gt;Basados en Instancias&lt;a id=&#34;sec-2-2-1&#34; name=&#34;sec-2-2-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;La forma de modificar los datos antes de pasarlos al algoritmo consiste en eliminar instancias de la clase mayoritaria (&lt;em&gt;undersampling&lt;/em&gt;) o crear instancias artificiales de la clase minoritaria (&lt;em&gt;oversampling&lt;/em&gt;). Algunos métodos de &lt;em&gt;underasmpling&lt;/em&gt; son &lt;em&gt;Tomek-links, CNN y NCL&lt;/em&gt;, de &lt;em&gt;oversampling&lt;/em&gt; SMOTE, aunque este último realiza un &lt;em&gt;undersampling&lt;/em&gt; a la clase mayoritaria a la vez de un &lt;em&gt;oversampling&lt;/em&gt; de la clase minoritaria.&lt;/p&gt;
+
+&lt;h2 id=&#34;basados-en-algoritmos-a-id-sec-2-2-2-name-sec-2-2-2-a&#34;&gt;Basados en Algoritmos&lt;a id=&#34;sec-2-2-2&#34; name=&#34;sec-2-2-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;En este caso no se alteran los datos, pero asignan distintos pesos a cada instancia mediante una &lt;strong&gt;función de coste, bagging oo boosting&lt;/strong&gt;. Los métodos que usan la función de coste asignan costes muy altos a las clases minoritarias. &lt;strong&gt;Bagging&lt;/strong&gt; incluye más instancias de la clase minoritaria en cada paso del algoritmos de &lt;em&gt;bagging&lt;/em&gt;. Por contra, &lt;strong&gt;Boosting&lt;/strong&gt; asigna más peso a las instancias de la clase minoritaria en cada paso. También existen alternativas híbridas, como &lt;strong&gt;SmoteBoosting, SmoteBagging&lt;/strong&gt;  etc.&lt;/p&gt;
+
+&lt;h2 id=&#34;métricas-de-evaluación-a-id-sec-2-2-3-name-sec-2-2-3-a&#34;&gt;Métricas de evaluación&lt;a id=&#34;sec-2-2-3&#34; name=&#34;sec-2-2-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;En este tipo de problemas la precisión del modelo no es importante, ya que un modelo sencillo que etiquete todas las instancias como legítimas podría tener un 99.9% de precisión en los casos en los que la anomalía esté presente el 0.1% del tiempo, y aún con este porcentaje de precisión no se estaría detectando ninguna anomalía. Esto es debido al desbalanceo entre las clases. Debido a ello es necesario usar otro tipo de métricas, como &lt;em&gt;Recall, Precisión, F-Measure, ROC etc&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;métodos-semi-supervisados-a-id-sec-2-3-name-sec-2-3-a&#34;&gt;Métodos semi-supervisados&lt;a id=&#34;sec-2-3&#34; name=&#34;sec-2-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Se conoce la existencia de anomalías, pero no se encuentran en el conjunto de datos. Con este conjunto de datos se define “*la normalidad*” del entorno. Por ejemplo, en datos de red, lo normal es que todo el tráfico sea legítimo, y sin saturaciones. El problema en esta situación es saber cómo modelar un “*comportamiento normal*”. Para ello hay varias técnicas, basadas en clasificación, en reglas de asociación, en máquinas de soporte vectorial.&lt;/p&gt;
+
+&lt;p&gt;Los &lt;strong&gt;modelos de clasificación&lt;/strong&gt; en el caso de conjuntos de datos correctamente balanceados sufre de cometer demasiados falsos positivos. Cuando un nuevo dato llega al modelo de clasificación, y éste lo clasifica incorrectamente, el dato se considera como una anomalía, lo cual no tiene por qué ser cierto. Para mejorar este modelo, se suelen usar clasificadores basados en reglas. Los clasificadores basados en reglas proporcionan más información cuando un dato se clasifica incorrectamente, informan en qué grado se considera al dato  anómalo, por ejemplo, en un 80%. Otra forma de abordar el problema es mediante la generación de &lt;strong&gt;máquinas de estados finitos&lt;/strong&gt;, cuando llega un nuevo dato se comprueba contra esa máquina de estados finitos para determinar la legitimidad o no legitimidad. Un ejemplo de este tipo de modelos se encuentra en la &lt;a href=&#34;#fig:anoSemi&#34;&gt;Figura 3&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a id=&#34;fig:anoSemi&#34; href=&#34;https://elbauldelprogramador.com/img/anoSemi.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/anoSemi.png&#34;
+            alt=&#34;Máquina de estados finitos para modelar tráfico FTP&#34;
+            title=&#34;Máquina de estados finitos para modelar tráfico FTP&#34;
+            sizes=&#34;(min-width: 428px) 428px, 100vw&#34;
+            width=&#34;428&#34;
+            height=&#34;390&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Máquina de estados finitos para modelar tráfico FTP&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Los métodos &lt;strong&gt;basados en reglas&lt;/strong&gt; buscan patrones frecuentes y reglas de asociación. Uno de estos métodos es &lt;strong&gt;LERAD&lt;/strong&gt;. &lt;strong&gt;LERAD&lt;/strong&gt; aprende reglas que encuentran eventos extraños en una serie temporal.&lt;/p&gt;
+
+&lt;p&gt;Los métodos basados en &lt;strong&gt;kernel&lt;/strong&gt; como Máquinas de Soporte Vectoriales asumen la existencia de una única clase definida como comportamiento normal. Este comportamiento normal se construye estableciendo una región en el espacio. Todo punto que caiga en ese espacio será considerado normal. Por contra, cuando un punto cae fuera de la región es considerado anómalo. Un ejemplo de la definición de este espacio se muestra en la &lt;a href=&#34;#fig:anoSVM&#34;&gt;Figura 4&lt;/a&gt;. Gracias a la potencia de los &lt;strong&gt;kernels&lt;/strong&gt; es posible definir distintos tipos de regiones en el espacio para realizar la detección.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a id=&#34;fig:anoSVM&#34; href=&#34;https://elbauldelprogramador.com/img/anoSVM.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/anoSVM.png&#34;
+            alt=&#34;SVMs para detección de Anomalías&#34;
+            title=&#34;SVMs para detección de Anomalías&#34;
+            sizes=&#34;(min-width: 404px) 404px, 100vw&#34;
+            width=&#34;404&#34;
+            height=&#34;342&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;SVMs para detección de Anomalías&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Es posible construir modelos basándose en &lt;strong&gt;los datos históricos&lt;/strong&gt;. En este tipo de métodos se asume como anomalía cualquier evento que no se haya producido en el pasado. Para ello se lleva un recuento de los eventos ocurridos y se comparan con los datos históricos para intentar detectar anomalías.&lt;/p&gt;
+
+&lt;h1 id=&#34;métodos-no-supervisados-a-id-sec-2-4-name-sec-2-4-a&#34;&gt;Métodos no supervisados&lt;a id=&#34;sec-2-4&#34; name=&#34;sec-2-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Se dispone de anomalías en el conjunto, pero no están etiquetadas, no se conoce a priori si un dato es una anomalía o no, es decir, tanto anomalías como comportamientos legítimos están mezclados. En este campo existen también varias alternativas, las cuales se pasan a describir a continuación.&lt;/p&gt;
+
+&lt;h2 id=&#34;aproximaciones-gráficas-a-id-sec-2-4-1-name-sec-2-4-1-a&#34;&gt;Aproximaciones gráficas&lt;a id=&#34;sec-2-4-1&#34; name=&#34;sec-2-4-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Como su nombre indica consiste en inspeccionar visualmente los datos para determinar cuales son los datos anómalos. Su principal desventaja es la cantidad de tiempo a invertir, y que es subjetivo. Para poder usar esta aproximación es necesario reducir/resumir la información a una dimensión que pueda ser visualizada (1D, 2D o 3D), y por tanto se está perdiendo información que puede resultar relevante. Una de las aproximaciones visuales más útiles es el &lt;em&gt;biplot&lt;/em&gt;, que muestra una proyección a dos dimensiones de la varianza que aporta cada atributo. La &lt;a href=&#34;#fig:anoBiplot&#34;&gt;figura 5&lt;/a&gt; muestra un &lt;em&gt;biplot&lt;/em&gt;, la longitud de los vectores para cada atributo muestra la dirección más fuerte de los datos. Si dos atributos son ortogonales significa que no están correlados, lo cual implica que ambos pueden usarse en la construcción del modelo para obtener mejores resultados. Por contra, si dos atributos van en la misma dirección y tienen similares longitudes, están correlados, o negativamente correlados si van en direcciones opuestas.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a id=&#34;fig:anoBiplot&#34; href=&#34;https://elbauldelprogramador.com/img/anoBiplot.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/anoBiplot.png&#34;
+            alt=&#34;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&gt;*&#34;
+            title=&#34;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&gt;*&#34;
+            sizes=&#34;(min-width: 1476px) 1476px, 100vw&#34;
+            width=&#34;1476&#34;
+            height=&#34;1024&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;a href=&#34;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&#34;&gt;sukhbinder&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;aproximaciones-paramétricas-a-id-sec-2-4-2-name-sec-2-4-2-a&#34;&gt;Aproximaciones paramétricas&lt;a id=&#34;sec-2-4-2&#34; name=&#34;sec-2-4-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Estas aproximaciones asumen un modelo paramétrico describiendo la distribución de los datos y usan tests estadísticos para determinar si un punto es  un &lt;em&gt;outlier&lt;/em&gt; con un nivel de significancia. Dichos tests dependen de la distribución inherente, sus parámetros y número de &lt;em&gt;outliers&lt;/em&gt; esperados. Entre los tests que consideran una sola variable se encuentran el &lt;strong&gt;test de Grubb&lt;/strong&gt;, que considera un solo &lt;em&gt;outlier&lt;/em&gt;, este test sufre de enmascaramiento (la media puede enmascarar &lt;em&gt;outliers&lt;/em&gt;) , los tests de &lt;strong&gt;Tietjen y Moore&lt;/strong&gt; consideran k &lt;em&gt;outliers&lt;/em&gt; y sufren de &lt;em&gt;swamping&lt;/em&gt; (de forma similar, la media oculta &lt;em&gt;outliers&lt;/em&gt;). Cuando hay varias dimensiones (p dimensiones) se considera la &lt;strong&gt;distancia de Mahalanobis&lt;/strong&gt;. En p dimensiones, un punto que sea considerado &lt;em&gt;outlier&lt;/em&gt; en uno de sus atributos seguirá siéndolo aunque en cualquiera de sus atributos restantes no sea considerado &lt;em&gt;outlier&lt;/em&gt;, o cuando sea &lt;em&gt;outlier&lt;/em&gt; en varios de sus atributos.&lt;/p&gt;
+
+&lt;p&gt;El problema de los tests del párrafo anterior es que necesitan de una medida de distancia multivariante. Además, para poder calcular una matriz de covarianza de forma correcta es necesario eliminar los &lt;em&gt;outliers&lt;/em&gt;, de lo contrario la matriz no será correcta y proporcionará información falsa.&lt;/p&gt;
+
+&lt;h2 id=&#34;aproximaciones-basadas-en-vecinos-cercanos-a-id-sec-2-4-3-name-sec-2-4-3-a&#34;&gt;Aproximaciones basadas en vecinos cercanos&lt;a id=&#34;sec-2-4-3&#34; name=&#34;sec-2-4-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Las aproximaciones anteriores asumen una distribución normal de los datos, pero en muchos casos la distribución no es normal, e incluso se desconoce. Si se añade el hecho de dimensiones muy altas, los datos no suelen seguir una distribución multivariante específica. Aquí hay dos formas de obtener los vecinos, mediante una &lt;strong&gt;función de distancia&lt;/strong&gt; que mide la cercanía entre dos puntos o asignando una puntuación de anomalía a un punto en función de su distancia frente al resto de puntos vecinos.&lt;/p&gt;
+
+&lt;h2 id=&#34;aproximaciones-basadas-en-clustering-a-id-sec-2-4-4-name-sec-2-4-4-a&#34;&gt;Aproximaciones basadas en &lt;em&gt;clustering&lt;/em&gt;&lt;a id=&#34;sec-2-4-4&#34; name=&#34;sec-2-4-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;En esta aproximación primero se construyen los &lt;em&gt;cluster&lt;/em&gt; mediante cualquier técnica de &lt;em&gt;clustering&lt;/em&gt;, posteriormente se mide la distancia de un punto a su centroide para determinar si se trata de una anomalía. Se debe elegir con cuidado la medida de distancia. La &lt;strong&gt;distancia Euclídea&lt;/strong&gt; no tiene en cuenta la densidad, por tanto es aconsejable usar la &lt;strong&gt;distancia relativa&lt;/strong&gt; (La distancia relativa es la relación entre la distancia del punto del centroide a la distancia mediana de todos los puntos del &lt;em&gt;cluster&lt;/em&gt;  desde el centroide).&lt;/p&gt;
+
+&lt;h1 id=&#34;evaluación-a-id-sec-2-5-name-sec-2-5-a&#34;&gt;Evaluación&lt;a id=&#34;sec-2-5&#34; name=&#34;sec-2-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;En detección de anomalías no basta obtener simplemente el porcentaje de acierto, es necesaria una matriz de confusión en la que se pueda observar la tasa de &lt;strong&gt;falsos positivos&lt;/strong&gt; y &lt;strong&gt;falsos negativos&lt;/strong&gt;. Dado que lo importante en este tipo de problema es detectar la anomalía es necesario observar el comportamiento de la precisión para detectar la anomalía. Para ello se usa la fórmula \(\frac{TP}{TP + FP}\), que indica qué porcentaje en la predicción de anomalías es correcto, siendo TP un acierto verdadero y FP un falso positivo, a más cercana de 1 esta medida mejor. Es interesante fijarse en el &lt;em&gt;Recall&lt;/em&gt; (\(\frac{TP}{TP + FN}\)) que mide el porcentaje de anomalías detectadas, ya sean bien clasificadas o no. La proporción de falsos positivos \(\frac{FP}{FP + TN}\) mide el porcentaje de clases normales que fueron clasificadas como anomalías. Por último, la especifidad (\(\frac{TN}{TN + FP}\)) indica el porcentaje de clases normales detectadas. No es posible mejorar todas las medidas anteriores simultáneamente (Cuando aumente la precisión, el &lt;em&gt;Recall&lt;/em&gt; va a decaer, ya que son inversos). Para atajar este problema se usa la medida \(F_1\) -Score, la cual intenta encontar un equilibrio entre &lt;em&gt;Recall&lt;/em&gt; y precisión. Para terminar de aclarar estos conceptos, obtener una fiabilidad del \(99\%\) en una enfermedad que ocurren en una de cada \(10000\) no es fiable, ya que se equivocará una vez de cada \(1000\). Cuando se habla de anomalías que aparecen muy poco el modelo va a cometer muchos falsos positivos, la solución a este problema es usar información adicional como la &lt;strong&gt;probabilidad a priori de la anomalía, porcentaje de acierto y tasa de falsos positivos.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Minkowski_distance&#34;&gt;https://en.wikipedia.org/wiki/Minkowski_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Euclidean_distance&#34;&gt;https://en.wikipedia.org/wiki/Euclidean_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Taxicab_geometry&#34;&gt;https://en.wikipedia.org/wiki/Taxicab_geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Chebyshev_distance&#34;&gt;https://en.wikipedia.org/wiki/Chebyshev_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apuntes de clase &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt; del &lt;strong&gt;Máster universitario en Ciencia de Datos e Ingeniería de Computadores de la Universidad de Granada&lt;/strong&gt;*&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
