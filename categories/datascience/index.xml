@@ -6,7 +6,7 @@
         <description>Recent content in Datascience on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Mon, 12 Mar 2018 09:39:48 +0100</lastBuildDate>
+        <lastBuildDate>Wed, 21 Mar 2018 12:15:14 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/datascience/</link>
@@ -15,6 +15,212 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/datascience/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Aprendizaje no Supervisado y Detección de Anomalías: Reglas de Asociación</title>
+            <link>https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/</link>
+            <pubDate>Wed, 21 Mar 2018 12:15:14 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de Anomalias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Las reglas de asociación se usan para aportar conocimiento que ayude a la toma de decisiones. Ejemplos en los que este tipo de métodos resulta útil es para conocer las tendencias de compra de los clientes. Otra aplicación es en tareas de predicción, como deducir los estudios de una persona en función de su salario. &lt;strong&gt;Minería de textos&lt;/strong&gt; para asociar la presencia de términos en documentos etc.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de modelos se usa cuando prima la interpretabilidad del modelo, y son modelos predictivos. Es habitual usarlo &lt;strong&gt;conjuntos difusos&lt;/strong&gt;. A diferencia de los árboles, que parten el espacio, las &lt;strong&gt;reglas cubren parte del espacio&lt;/strong&gt;, disponiendo de un grado de cubrimiento y un acierto. Disponer de un &lt;strong&gt;grado de cubrimiento&lt;/strong&gt; significa que las regiones de decisión pueden &lt;strong&gt;solaparse o dejar zonas sin cubrir&lt;/strong&gt;, de ahí que sean muy usadas en problemas difusos.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;definición-a-id-sec-3-1-name-sec-3-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-1&#34; name=&#34;sec-3-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Las reglas de asociación son una de las técnicas más usadas para extraer conocimiento a partir de bases de datos grandes. Identifican relaciones existentes entre los datos, llamados &lt;em&gt;items&lt;/em&gt;. Se trata de una técnica de &lt;strong&gt;aprendizaje no supervisado&lt;/strong&gt;. Una regla se define como \(X \rightarrow Y\), donde \(X\) e \(Y\) son conjuntos de &lt;em&gt;items&lt;/em&gt; disjuntos \(X\mathcal{\cap} Y = \emptyset\). Un ejemplo: \(\text{Pan} \rightarrow \text{Mantequilla}\) Cuando se compra pan, se compra mantequilla.&lt;/p&gt;
+
+&lt;p&gt;En sus inicios, las reglas de asociación se aplicaron a datos de supermercados, ya que a estos les interesa saber qué productos suelen comprar los clientes, para ponerlos unos junto a otros y así reducir el tiempo de compra del cliente. En el caso de un supermercado, &lt;strong&gt;los artículos&lt;/strong&gt; son los &lt;em&gt;items&lt;/em&gt; y el conjunto de &lt;strong&gt;cestas de la compra&lt;/strong&gt; son las transacciones. Cada transacción es un subconjunto de &lt;em&gt;items&lt;/em&gt;, llamado &lt;em&gt;itemset&lt;/em&gt;. Por ejemplo Leche y pan \(\rightarrow\) mantequilla.&lt;/p&gt;
+
+&lt;p&gt;Los pasos a seguir antes de aplicar reglas de asociación es determinar qué datos de la base da datos son los &lt;em&gt;items&lt;/em&gt; y cuales las &lt;strong&gt;transacciones&lt;/strong&gt;. Los &lt;em&gt;items&lt;/em&gt; son los elementos a asociar, &lt;em&gt;pan, mantequilla, aceite&amp;#x2026;&lt;/em&gt; mientras que las transacciones son particularidades de la relación entre &lt;em&gt;items&lt;/em&gt; (la lista de la compra concreta).&lt;/p&gt;
+
+&lt;p&gt;Los &lt;em&gt;items&lt;/em&gt; pueden ser de varios tipos. Cuando cada registro es un listado de elementos, como en el caso de productos de la compra, no existen variables, un &lt;em&gt;item&lt;/em&gt; se corresponde con un producto. Cuando existen variables con rangos, el &lt;em&gt;item&lt;/em&gt; es un par (atributo, valor), por ejemplo una variable &lt;strong&gt;puesto&lt;/strong&gt;, con valores &lt;em&gt;estudiante, jefe, trabajador&lt;/em&gt; tendría como &lt;em&gt;items&lt;/em&gt; (Puesto, estudiante), (Puesto, jefe) y (puesto, trabajador). Ejemplos de reglas usando &lt;em&gt;items&lt;/em&gt; de este tipo son: (Salario, alto) \(\rightarrow\) (Estudios, Superiores). De la regla anterior se pueden deducir dos cosas: Todo el que tiene un salario alto tiene estudios superiores, o un salario alto implica estudios superiores.&lt;/p&gt;
+
+&lt;h1 id=&#34;medidas-clásicas-soporte-y-confianza-a-id-sec-3-2-name-sec-3-2-a&#34;&gt;Medidas Clásicas: Soporte y Confianza&lt;a id=&#34;sec-3-2&#34; name=&#34;sec-3-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;El &lt;strong&gt;soporte&lt;/strong&gt; de un &lt;em&gt;itemset&lt;/em&gt; mide la frecuencia del &lt;em&gt;item&lt;/em&gt; o &lt;em&gt;itemset&lt;/em&gt; en la base de datos, es decir, la probabilidad de que el &lt;em&gt;itemset&lt;/em&gt; X esté en el conjunto de transacciones (\(p(X)\)). El &lt;strong&gt;soporte de una regla de asociación&lt;/strong&gt; (X \(\rightarrow\) Y ) es la frecuencia con la que ocurre el &lt;em&gt;itemset&lt;/em&gt; \(X \cup Y\). Es decir, la probabilidad de que el &lt;em&gt;itemset&lt;/em&gt; \(X \cup Y\) esté en el conjunto de transacciones (\(p(X\wedge Y)\)). La &lt;strong&gt;confianza&lt;/strong&gt; define cómo de fiable es la regla, es decir, cómo de seguro está el modelo de que cuando se da \(X\) va a ocurrir \(Y\). Es útil comprobar la confianza en ambos sentidos de la regla, es decir, dado X \(\rightarrow\) Y comprobar tanto \(Conf(X, Y)\), como \(Conf(Y, X)\). Como regla general, una confianza superior al 80% es buena, aunque esto es subjetivo y depende del problema y el experto.&lt;/p&gt;
+
+&lt;p&gt;Definidas las medidas clásicas, la extracción de las reglas se lleva a cabo a partir de un conjunto de transacciones T. Dado ese conjunto se desea encontrar todas las reglas que cumplan:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;minSup&lt;/code&gt;: Definido como Soporte \(\geq\) soporte mínimo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;minConf&lt;/code&gt;: Definida como Confianza \(\geq\) confianza mínima.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ambos valores los debe definir el experto del problema.&lt;/p&gt;
+
+&lt;p&gt;Lo más sencillo es resolver este problema mediante fuerza bruta (Generar todas la reglas posibles, calcular para cada una de ellas el soporte y confianza y descartar las que no superen los umbrales anteriores). Sin embargo es inviable para problemas grandes. El enfoque basado en dos pasos &lt;strong&gt;genera primero todos los &lt;em&gt;itemset&lt;/em&gt; frecuentes&lt;/strong&gt; (aquellos con un soporte mayor o igual al umbral &lt;code&gt;minSup&lt;/code&gt;), posteriormente &lt;strong&gt;genera las reglas con una confianza alta&lt;/strong&gt; basándose en los &lt;em&gt;itemset&lt;/em&gt; anteriores. El problema de esta aproximación es que el número de combinaciones posibles es de \(2^d\), siendo \(d\) el número de &lt;em&gt;items&lt;/em&gt;, y por tanto la generación de los &lt;em&gt;itemset&lt;/em&gt; es costosa.&lt;/p&gt;
+
+&lt;p&gt;Dado a la inviabilidad de resolver el problema mediante fuerza bruta, es necesario &lt;strong&gt;reducir el número de candidatos posibles&lt;/strong&gt; (de los \(2^d\) usar técnicas de poda para reducir el espacio), el &lt;strong&gt;número de transacciones&lt;/strong&gt; y el &lt;strong&gt;número de comparaciones&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;métodos-clásicos-de-extracción-de-reglas-a-id-sec-3-3-name-sec-3-3-a&#34;&gt;Métodos Clásicos de extracción de reglas&lt;a id=&#34;sec-3-3&#34; name=&#34;sec-3-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;h2 id=&#34;algoritmo-apriori-a-id-sec-3-3-1-name-sec-3-3-1-a&#34;&gt;Algoritmo Apriori&lt;a id=&#34;sec-3-3-1&#34; name=&#34;sec-3-3-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;definición-a-id-sec-3-3-1-1-name-sec-3-3-1-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-3-1-1&#34; name=&#34;sec-3-3-1-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;El primer método clásico se llama &lt;strong&gt;Apriori&lt;/strong&gt;, es el que peor funciona de todos, pero del que más versiones existen. Se basa en la propiedad de &lt;strong&gt;anti monotonía del soporte&lt;/strong&gt;, es decir, si un &lt;em&gt;itemset&lt;/em&gt; es frecuente, entonces todos sus subconjuntos deben serlo también:&lt;/p&gt;
+
+&lt;p&gt;$$X\subseteq Y \Rightarrow sop(X) \geq sop(Y)$$&lt;/p&gt;
+
+&lt;h2 id=&#34;algoritmo-a-id-sec-3-3-1-2-name-sec-3-3-1-2-a&#34;&gt;Algoritmo&lt;a id=&#34;sec-3-3-1-2&#34; name=&#34;sec-3-3-1-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;El algoritmo funciona del siguiente modo:
+En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemsets&lt;/em&gt; frecuentes, \(C_k\) almacena el conjunto de &lt;em&gt;k-itemsets&lt;/em&gt; candidatos a ser frecuentes. El algoritmo (Suponiendo &lt;code&gt;k=1&lt;/code&gt; ):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Generar \(L_1\) (&lt;em&gt;itemsets&lt;/em&gt; frecuentes de longitud 1)&lt;/li&gt;
+&lt;li&gt;Repetir hasta que no se encuentren más &lt;em&gt;itemsets&lt;/em&gt; nuevos:
+
+&lt;ol&gt;
+&lt;li&gt;Generar el conjunto C(k+1) de &lt;em&gt;itemsets&lt;/em&gt; candidatos a partir de \(L_k\), combinando solo aquellos que se diferencien en el último &lt;em&gt;item&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Calcular el soporte de cada candidato.&lt;/li&gt;
+&lt;li&gt;Eliminar los candidatos infrecuentes.&lt;/li&gt;
+&lt;li&gt;Incrementar k en 1.&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;La &lt;a href=&#34;#fig:rulesApriori&#34;&gt;figura 1&lt;/a&gt; muestra un ejemplo.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:rulesApriori&#34; href=&#34;https://elbauldelprogramador.com/img/rulesApriori.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/rulesApriori.png&#34;
+            alt=&#34;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&#34;
+            title=&#34;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&#34;
+            sizes=&#34;(min-width: 1357px) 1357px, 100vw&#34;
+            width=&#34;1357&#34;
+            height=&#34;830&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;eficiencia-a-id-sec-3-3-1-3-name-sec-3-3-1-3-a&#34;&gt;Eficiencia&lt;a id=&#34;sec-3-3-1-3&#34; name=&#34;sec-3-3-1-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;La &lt;strong&gt;elección del umbral&lt;/strong&gt; para el soporte mínimo debe ser adecuada, umbrales demasiado bajos dan lugar a muchos &lt;em&gt;itemsets&lt;/em&gt; e incrementará la complejidad. El &lt;strong&gt;número de &lt;em&gt;items&lt;/em&gt; en la base da datos&lt;/strong&gt; es un factor importante y afecta al rendimiento del algoritmo. De igual manera, el &lt;strong&gt;tamaño de la base de datos&lt;/strong&gt; puede hacer incrementar considerablemente el tiempo de ejecución, ya que &lt;strong&gt;apriori&lt;/strong&gt; realiza múltiples pasadas a toda la base de datos. Por último, la &lt;strong&gt;longitud de las transacciones&lt;/strong&gt; puede aumentar la longitud de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes, requiriendo de más espacio para almacenarlos.&lt;/p&gt;
+
+&lt;h2 id=&#34;algoritmo-eclat-a-id-sec-3-3-2-name-sec-3-3-2-a&#34;&gt;Algoritmo Eclat&lt;a id=&#34;sec-3-3-2&#34; name=&#34;sec-3-3-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Este algoritmo es igual que &lt;strong&gt;Apriori&lt;/strong&gt; pero mejora el cálculo del soporte obteniendo el mismo resultado. Para cada &lt;em&gt;item&lt;/em&gt; almacena en una lista en qué transacción aparece dicho &lt;em&gt;item&lt;/em&gt;, de esta forma se reduce el tiempo de cómputo sacrificando más memoria.&lt;/p&gt;
+
+&lt;h2 id=&#34;algoritmo-fp-growth-a-id-sec-3-3-3-name-sec-3-3-3-a&#34;&gt;Algoritmo FP-Growth&lt;a id=&#34;sec-3-3-3&#34; name=&#34;sec-3-3-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;definición-a-id-sec-3-3-3-1-name-sec-3-3-3-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-3-3-1&#34; name=&#34;sec-3-3-3-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Este algoritmo genera una representación comprimida de la base da datos mediante árboles. Mantiene una &lt;strong&gt;tabla cabecera&lt;/strong&gt; donde para cada &lt;em&gt;item&lt;/em&gt; hay una lista enlazando a todos los nodos del grafo en el cual aparece dicho &lt;em&gt;item&lt;/em&gt;. Además, el &lt;strong&gt;grafo de transacciones&lt;/strong&gt; resume las transacciones en la base de datos junto con el soporte del &lt;em&gt;itemset&lt;/em&gt; que se forma siguiendo el camino desde la raíz del grafo hasta el nodo en cuestión. Como &lt;strong&gt;requisito&lt;/strong&gt;, los &lt;em&gt;items&lt;/em&gt; deben estar ordenados. De todos los métodos vistos, &lt;strong&gt;FP-Growth&lt;/strong&gt; es el más eficiente.&lt;/p&gt;
+
+&lt;h2 id=&#34;extracción-de-itemsets-frecuentes-a-id-sec-3-3-3-2-name-sec-3-3-3-2-a&#34;&gt;Extracción de &lt;em&gt;itemsets&lt;/em&gt; frecuentes&lt;a id=&#34;sec-3-3-3-2&#34; name=&#34;sec-3-3-3-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;En este algoritmo se realiza en dos fases. Primero se calcula el soporte de los &lt;em&gt;items&lt;/em&gt; que aparecen en la &lt;strong&gt;tabla cabecera&lt;/strong&gt;, recorriendo la lista almacenada en la tabla. Posteriormente, para cada &lt;em&gt;item&lt;/em&gt; superando el umbral de soporte, se extraen las ramas del árbol donde aparece el &lt;em&gt;item&lt;/em&gt; y se reajusta el soporte de todos los &lt;em&gt;items&lt;/em&gt; que aparecen en las ramas. Se genera un nuevo árbol considerando las ramas extraidas y se extraen los &lt;em&gt;itemsets&lt;/em&gt; que superen el umbral de soporte mínimo.&lt;/p&gt;
+
+&lt;h1 id=&#34;conjuntos-maximales-y-cerrados-a-id-sec-3-4-name-sec-3-4-a&#34;&gt;Conjuntos maximales y cerrados&lt;a id=&#34;sec-3-4&#34; name=&#34;sec-3-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Los &lt;em&gt;itemsets Maximales&lt;/em&gt; son aquellos &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus &lt;strong&gt;superconjuntos&lt;/strong&gt; inmediatos son frecuentes. La &lt;a href=&#34;#fig:rulesMaximals&#34;&gt;Figura 2&lt;/a&gt; muestra un ejemplo. Las ventajas de usar conjuntos maximales es la reducción del espacio, ya que a partir de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes maximales se pueden deducir los &lt;em&gt;itemsets&lt;/em&gt; frecuentes. Como desventaja no se conoce el soporte de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes, hay que volver a calcularlo.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:rulesMaximals&#34; href=&#34;https://elbauldelprogramador.com/img/rulesMaximals.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/rulesMaximals.jpg&#34;
+            alt=&#34;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            title=&#34;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            sizes=&#34;(min-width: 612px) 612px, 100vw&#34;
+            width=&#34;612&#34;
+            height=&#34;454&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Los &lt;em&gt;itemsets cerrados&lt;/em&gt; son los &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus superconjuntos inmediatos tienen soporte igual al de ellos. Cabe destacar que todo &lt;em&gt;itemset maximal&lt;/em&gt; es también cerrado. La &lt;a href=&#34;#fig:rulesCerrados&#34;&gt;figura 3&lt;/a&gt; muestra un ejemplo. La ventaja de los &lt;em&gt;itemsets cerrados&lt;/em&gt; es que no es necesario volver a calcular el soporte, mientras que como desventaja necesitan más espacio, al haber más cerrados que maximales.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;a name=&#34;fig:rulesCerrados&#34; href=&#34;https://elbauldelprogramador.com/img/rulesCerrados.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/rulesCerrados.jpg&#34;
+            alt=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            title=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            sizes=&#34;(min-width: 677px) 677px, 100vw&#34;
+            width=&#34;677&#34;
+            height=&#34;509&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Para terminar, estos dos conjuntos están relacionados, como muestra la &lt;a href=&#34;#fig:rulesCerrMax&#34;&gt;Figura 4&lt;/a&gt;, los maximales son un subconjunto de los cerrados.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:rulesCerrMax&#34; href=&#34;https://elbauldelprogramador.com/img/rulesCerrMax.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/rulesCerrMax.png&#34;
+            alt=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            title=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
+            sizes=&#34;(min-width: 677px) 677px, 100vw&#34;
+            width=&#34;677&#34;
+            height=&#34;509&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;generación-de-reglas-a-id-sec-3-5-name-sec-3-5-a&#34;&gt;Generación de reglas&lt;a id=&#34;sec-3-5&#34; name=&#34;sec-3-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;A partir de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes se generan todas las reglas posibles y solo se quedan las que superen los umbrales de confianza mínimo. Por lo general es preferible general reglas con un solo elemento en el consecuente (ABC \(\rightarrow\) D), pero nada impide que exista más de un objeto en el consecuente, sin embargo, de este modo se generarán bastantes más reglas posibles. Como beneficio a generar reglas con un solo elemento en el consecuente se obtienen reglas más interpretables, ya que AB \(\rightarrow\) CD \(\equiv\) AB \(\rightarrow\) C y AB \(\rightarrow\) D.&lt;/p&gt;
+
+&lt;h1 id=&#34;problemas-abiertos-a-id-sec-3-6-name-sec-3-6-a&#34;&gt;Problemas abiertos&lt;a id=&#34;sec-3-6&#34; name=&#34;sec-3-6&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Todo el contenido anterior es para reglas de &lt;strong&gt;asociación binarias&lt;/strong&gt;, es decir, valores categóricos. Pero la mayoría de problemas reales contienen variables numéricas y las reglas no serán buenas. Para ello hay que dividir el domino de los atributos en intervalos, como se describió anteriormente (Puesto, Estudiante) etc y usar conjuntos difusos.&lt;/p&gt;
+
+&lt;p&gt;En cuanto a las &lt;strong&gt;medidas de calidad&lt;/strong&gt; para evaluar reglas de asociación se debe tener cuidado. Por lo general se deben usar varias medidas de calidad que se complementen a la hora de evaluar la calidad de una regla, estas medidas, entre otras son &lt;em&gt;lift, factor de certeza&amp;#x2026;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;consejos-a-id-sec-3-7-name-sec-3-7-a&#34;&gt;Consejos&lt;a id=&#34;sec-3-7&#34; name=&#34;sec-3-7&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Si al generar reglas hay &lt;em&gt;items&lt;/em&gt; con soporte demasiado altos es mejor no tener en cuanta dichos &lt;em&gt;items&lt;/em&gt;. Por ejemplo, si un producto se compra el 100% de las veces, no merece la pena añadirlo a los &lt;em&gt;itemsets&lt;/em&gt;, ya que no va a aportar información útil.&lt;/li&gt;
+&lt;li&gt;Antes de comenzar un problema de reglas de asociación, lo más importante es tener claro qué queremos encontrar en los datos y conocer el problema presente.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Minkowski_distance&#34;&gt;https://en.wikipedia.org/wiki/Minkowski_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Euclidean_distance&#34;&gt;https://en.wikipedia.org/wiki/Euclidean_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Taxicab_geometry&#34;&gt;https://en.wikipedia.org/wiki/Taxicab_geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Chebyshev_distance&#34;&gt;https://en.wikipedia.org/wiki/Chebyshev_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apuntes de clase &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt; del &lt;strong&gt;Máster universitario en Ciencia de Datos e Ingeniería de Computadores de la Universidad de Granada&lt;/strong&gt;*&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Aprendizaje no Supervisado y Detección de Anomalías: ¿Qué es una Anomalía?</title>
@@ -28,7 +234,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reglas de Asociación (Próximamente)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -227,7 +433,7 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de anomalías&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reglas de Asociación (Próximamente)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
 &lt;/ul&gt;
 
