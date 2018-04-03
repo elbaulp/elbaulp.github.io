@@ -6,7 +6,7 @@
         <description>Recent content in Aprendizaje No Supervisado on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Wed, 21 Mar 2018 12:15:14 +0100</lastBuildDate>
+        <lastBuildDate>Tue, 03 Apr 2018 12:50:58 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/aprendizaje-no-supervisado/</link>
@@ -15,6 +15,190 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/tags/aprendizaje-no-supervisado/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Aprendizaje no Supervisado y Detección de Anomalías: Reglas de Asociación Avanzadas</title>
+            <link>https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/</link>
+            <pubDate>Tue, 03 Apr 2018 12:50:58 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de Anomalias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Uno de los problemas de las reglas de asociación es la interpretabilidad, estos pueden venir derivados de los datos en sí, de los usuarios o de las propias medidas de evaluación.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Los problemas derivados de los datos&lt;/strong&gt; residen en que hay varias formas de interpretar que si A \(\rightarrow\) B en función de las medidas de calidad usadas. Al ser patrones en los datos, la calidad de la regla dependerá de igual modo de la calidad de los datos. Algunos problemas derivados de &lt;strong&gt;los datos&lt;/strong&gt; son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;falta de variabilidad&lt;/strong&gt;, &lt;em&gt;items&lt;/em&gt; muy frecuentes no aportan nada (Todos los clientes compran papel) o al contrario, &lt;em&gt;items&lt;/em&gt; poco frecuentes tampoco aportan nada.&lt;/li&gt;
+&lt;li&gt;La &lt;strong&gt;representabilidad&lt;/strong&gt; de los datos, es decir, que no haya suficientes datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sesgos muestrales&lt;/strong&gt;, es necesario escoger los &lt;em&gt;items&lt;/em&gt; de forma aleatoria, no sesgarlos seleccionado compras de un periodo determinado, como las compras de enero, por ejemplo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Por otra parte, &lt;strong&gt;los problemas derivados del usuario&lt;/strong&gt; pueden deberse a que no se dispone de un experto en el dominio del problema para interpretar y valorar las reglas. Aún cuando se dispone de un experto, pueden ocasionarse &lt;strong&gt;confusiones semánticas&lt;/strong&gt; en las que se interpretan mal las reglas o los valores de confianza etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;Los &lt;strong&gt;problemas derivados de las medidas&lt;/strong&gt;, las reglas con soportes muy altos tienden a ser dudosas, ya que su valor tan elevado puede deberse a una &lt;strong&gt;falta de variabilidad&lt;/strong&gt; en los datos. De igual modo, &lt;strong&gt;la confianza&lt;/strong&gt; no siempre es fiable, una regla con una confianza del 84% puede parece buena, pero aún teniendo una regla con máxima confianza (conf = 1) puede que los &lt;em&gt;items&lt;/em&gt; de A \(\rightarrow\) B sean independientes.&lt;/p&gt;
+
+&lt;p&gt;Para tratar de resolver estos problemas es necesario poder comparar la confianza de la regla con el soporte de su consecuente, dada A \(\rightarrow\) B, \(p(B|A)\) la confianza, \(p(B)\) el soporte de B, es necesario comprar ambas medidas, ya que \(p(B)\) es la probabilidad a priori, mientras que \(p(B|A)\) es solo la probabilidad de las reglas en las que aparece A. Si la $Conf(A \(\rightarrow\) B) = Sop(B)$ A y B son independientes y la regla no es representativa. Aunque la confianza por sí sola no vale para determinar si una regla es buena, sí que vale para descartar una regla mala.&lt;/p&gt;
+
+&lt;h1 id=&#34;medidas-de-calidad-a-id-sec-4-1-name-sec-4-1-a&#34;&gt;Medidas de calidad&lt;a id=&#34;sec-4-1&#34; name=&#34;sec-4-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Existen dos grupos de medidas de Interés, &lt;strong&gt;objetivas&lt;/strong&gt; y &lt;strong&gt;subjetivas&lt;/strong&gt;. Las primeras tienen fundamento estadístico, mientras que las subjetivas solo tienen en cuenta los datos.&lt;/p&gt;
+
+&lt;p&gt;Entre las &lt;strong&gt;medidas objetivas&lt;/strong&gt; se encuentran &lt;strong&gt;La Confianza Confirmada&lt;/strong&gt;, establece hasta qué punto es útil A para predecir la presencia de B, la medida se da en un rango [-1, 1], donde 0 significa que son independientes, 1 dependencia total y -1 dependencia inversa (A predice &amp;not; B). &lt;strong&gt;Lift&lt;/strong&gt; mide el nivel de interés, pero al ser simétrica mide asociaciones, no implicaciones, por lo cual no es buena para realizar comparaciones. &lt;strong&gt;Convicción&lt;/strong&gt; detecta la independencia estadística entre &lt;em&gt;items&lt;/em&gt;, al igual que &lt;strong&gt;lift&lt;/strong&gt; no está acotada en su salida, por lo que no es muy fiable. El &lt;strong&gt;factor de certeza&lt;/strong&gt; mide la incertidumbre del conocimiento, tiene su origen en los &lt;strong&gt;sitemas expertos&lt;/strong&gt;, la ventaja frente a las dos medidas anteriores es que está acotada en rangos [-1,1], donde 0 significa independencia estadística. Existen más medidas, estas son solo unas pocas. Por lo general, el análisis de la regla depende de la medida a usar. Es necesario usar medidas en función de la semántica que se quiere medir.&lt;/p&gt;
+
+&lt;p&gt;Las &lt;strong&gt;medidas subjetivas&lt;/strong&gt; miden el interés de las reglas, suele ser necesaria la presencia de un experto que valore el interés de las mismas. Una de ellas es la &lt;strong&gt;Utilidad&lt;/strong&gt;, en ella hay que tener en cuenta:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Restricciones&lt;/strong&gt;: ¿Qué condiciones o qué contexto es necesario para que el patrón se cumpla?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tiempo de vida&lt;/strong&gt;: ¿Durante cuánto tiempo será útil la información dada por el patrón?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Esfuerzo&lt;/strong&gt;: ¿Qué debemos hacer para actuar según nos muestre el patrón?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Efectos laterales&lt;/strong&gt;: ¿Se puede prever algún efecto lateral?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impacto&lt;/strong&gt;: Desde la obtención del patrón, ¿se han producido cambios en la actualidad?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Prontitud&lt;/strong&gt;: ¿Cuándo podemos actuar y utilizar la información que nos brinda el patrón?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Las &lt;strong&gt;reglas inesperadas&lt;/strong&gt; son otro tipo de medida subjetiva, son aquellas que contradicen las creencias del usuario, pueden ser interesantes o no.&lt;/p&gt;
+
+&lt;h1 id=&#34;interpretaciones-a-id-sec-4-2-name-sec-4-2-a&#34;&gt;Interpretaciones&lt;a id=&#34;sec-4-2&#34; name=&#34;sec-4-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Esta sección se corresponde con el &lt;strong&gt;marco formal&lt;/strong&gt; de las reglas de asociación, es decir, la definición teórica de las reglas, de forma abstracta. Para ello hay que asociar dicha abstracción con los datos, crear una asociación entre datos y reglas, es esto lo que genera una interpretación.&lt;/p&gt;
+
+&lt;p&gt;La forma más común es tabular los datos en una estructura, por ejemplo (salario, alto) \(\rightarrow\) (estudios, superiores), pero no es la única manera de representación. Se puede, por ejemplo, considerar la ausencia de datos con negaciones (&amp;not; A), esta representación es útil para el análisis de grupos de reglas.&lt;/p&gt;
+
+&lt;p&gt;Otra forma de representación son las &lt;strong&gt;reglas jerárquicas&lt;/strong&gt;, en esta representación se consideran grupos de &lt;em&gt;items&lt;/em&gt; a distintos niveles. Por ejemplo, si los &lt;em&gt;items&lt;/em&gt; son artículos de compra, un análisis a nivel de artículos individuales puede no dar información alguna. Sin embargo, a un nivel más alto se puedan extraer conclusiones útiles, un nivel más alto consiste en agrupar los distintos artículos según algún criterio (por marcas, por tipo de producto, tipos de pan, tipos de leche etc). De esta forma se establece una jerarquía en la que un &lt;em&gt;item&lt;/em&gt; está compuesto por los &lt;em&gt;items&lt;/em&gt; básicos y todas las categorias a las que pertenece, por ejemplo:
+$$\text{(zumo, naranja, marca, comida)}$$
+donde  &lt;em&gt;marca&lt;/em&gt; y &lt;em&gt;comida&lt;/em&gt; son categorías del &lt;em&gt;zumo&lt;/em&gt;. En la figura &lt;a href=&#34;#fig:rulesHier&#34;&gt;1&lt;/a&gt; muestra un ejemplo.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:rulesHier&#34; href=&#34;https://elbauldelprogramador.com/img/rulesHier.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/rulesHier.png&#34;
+            alt=&#34;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&#34;
+            title=&#34;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&#34;
+            sizes=&#34;(min-width: 736px) 736px, 100vw&#34;
+            width=&#34;736&#34;
+            height=&#34;411&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Las &lt;strong&gt;reglas secuenciales&lt;/strong&gt; se usan cuando &lt;strong&gt;existe un orden&lt;/strong&gt; prefijado en los &lt;em&gt;items&lt;/em&gt; de las transacciones. Ejemplos de reglas de este tipo son, si A,B y C aparecen en este &lt;strong&gt;orden específico&lt;/strong&gt; \(\rightarrow\) X. Este tipo de reglas son útiles para analizar textos, ya que se extraen reglas como {Minería}{de} \(\rightarrow\) {Datos}, es decir, si se encuentra la palabra &lt;strong&gt;Minería&lt;/strong&gt; seguida de &lt;strong&gt;De&lt;/strong&gt; es muy probable que la siguiente palabra sea &lt;strong&gt;datos&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Otro tipo de reglas son las &lt;strong&gt;Cuantitativas&lt;/strong&gt;, usadas con datos estructurados, con dominios numéricos, el problema de estos dominios es su valor semántico y soporte bajo. Para ello, se comentó que es útil dividir el dominio en intervalos y generar  pares (atributo, intervalo) en lugar de (atributo, valor), estos &lt;em&gt;items&lt;/em&gt; deben estar ordenados. Los intervalos pueden se definidos por el experto para que puedan ser correctamente interpretados, o generarlos automáticamente.&lt;/p&gt;
+
+&lt;p&gt;Las &lt;strong&gt;dependencias aproximadas&lt;/strong&gt;  definen patrones en  bases de datos relacionales, corresponden a dependencias funcionales con excepciones, es decir, si se sabe que V se encuentra en una fila se sabe que W está en la misma fila. En esta interpretación las reglas extraidas tienen la semántica de la dependencia funcional, es decir, los &lt;em&gt;items&lt;/em&gt; son del tipo: Igualdad de variables en un par de tuplas.&lt;/p&gt;
+
+&lt;p&gt;La última interpretación son las &lt;strong&gt;dependencias graduales&lt;/strong&gt;, representan asociaciones entre la variación (incrementos o decrementos) en los valores de los atributos, representando así correlaciones positivas o negativas. Se puede comparar con las &lt;strong&gt;dependencias aproximadas&lt;/strong&gt; en cuanto a que esta en lugar de determinar si los valores son iguales, determina si son mayores o menores.&lt;/p&gt;
+
+&lt;h1 id=&#34;reglas-de-asociación-difusas-a-id-sec-4-3-name-sec-4-3-a&#34;&gt;Reglas de Asociación difusas&lt;a id=&#34;sec-4-3&#34; name=&#34;sec-4-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Se usan para representar conceptos, por ejemplo, ¿cuando  es una persona alta?, si consideramos 180cm como alto, ¿una persona que mida 179,99 ya no es alta?, este es el problema que tratan los &lt;strong&gt;conjuntos difusos&lt;/strong&gt;, la pertenencia o no de un elemento a un conjunto viene dada por un grado de certeza. La figura &lt;a href=&#34;#fig:ruleFuzzy1&#34;&gt;2&lt;/a&gt; muestra un ejemplo en el que se define el rango en el que aumenta si una persona es alta o no, pero presenta el problema comentado anteriormente. Otra forma de representarlo es mediante una función discontinua, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy2&#34;&gt;3&lt;/a&gt;, pero tampoco es ideal, lo mejor es una función gradual, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy3&#34;&gt;4&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:ruleFuzzy1&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy1.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy1.jpg&#34;
+            alt=&#34;Rango en la que una persona se considera como alta&#34;
+            title=&#34;Rango en la que una persona se considera como alta&#34;
+            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
+            width=&#34;800&#34;
+            height=&#34;383&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Rango en la que una persona se considera como alta&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:ruleFuzzy2&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy2.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy2.jpg&#34;
+            alt=&#34;Rango en la que una persona se considera como alta&#34;
+            title=&#34;Rango en la que una persona se considera como alta&#34;
+            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
+            width=&#34;800&#34;
+            height=&#34;383&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Rango en la que una persona se considera como alta&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:ruleFuzzy3&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy3.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy3.jpg&#34;
+            alt=&#34;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&#34;
+            title=&#34;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&#34;
+            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
+            width=&#34;800&#34;
+            height=&#34;383&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Las reglas difusas aparecen solo cuando se consideran &lt;strong&gt;conjuntos difusos&lt;/strong&gt; para definir algún concepto con &lt;em&gt;items&lt;/em&gt;, transacciones etc, son conjuntos continuos. En este tipo de reglas el soporte depende mucho de dónde se establecen los cortes que definen los intervalos. &lt;strong&gt;Semánticamente&lt;/strong&gt; los intervalos no corresponden con el concepto (30 años es joven, pero 31 no). Para dar solución a este problema se usan conjuntos difusos con &lt;strong&gt;funciones de pertenencia&lt;/strong&gt;, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy4&#34;&gt;5&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a name=&#34;fig:ruleFuzzy4&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy4.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy4.jpg&#34;
+            alt=&#34;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&#34;
+            title=&#34;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&#34;
+            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
+            width=&#34;800&#34;
+            height=&#34;383&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&#34;evaluación-de-reglas-por-grupos-a-id-sec-4-4-name-sec-4-4-a&#34;&gt;Evaluación de reglas por grupos&lt;a id=&#34;sec-4-4&#34; name=&#34;sec-4-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;El análisis de las reglas de asociación suele realizarse de forma individual, estudiando su novedad y potencial utilidad en base a los itemsets que la componen, las medidas &lt;strong&gt;objetivas y subjetivas&lt;/strong&gt; realizadas sobre ellas, y el conocimiento previo del experto. Sin embargo, el análisis de conjuntos de reglas definidos según ciertos criterios puede proporcionar más información, con ciertas ventajas. Por ejemplo, ¿qué ocurre si aparecen ambas reglas A \(\rightarrow\) C y A \(\rightarrow\) &amp;not; C? o A \(\rightarrow\) C y &amp;not; C \(\rightarrow\) &amp;not; A (contra recíproca), la última es lógicamente equivalente. Sin embargo, la logica formal y el conocimento de datos no son lo mismo, al buscar reglas en un conjunto de datos se puede deducir A \(\rightarrow\) B, pero no se sabe nada sobre &amp;not; B \(\rightarrow\) A. El motivo es que &amp;not; B \(\rightarrow\) A no aparece en las transacciones, es decir, las transacciones de A \(\rightarrow\) B son distintas a &amp;not; B \(\rightarrow\) &amp;not; A, aunque sean lógicamente equivalentes, por ello es necesario mirarlas por separado. En el caso de que ambas aparezcan se proporciona más soporte empírico de que el patrón se cumple, lo cual ocurre siempre que existen reglas lógicamente equivalentes.&lt;/p&gt;
+
+&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Minkowski_distance&#34;&gt;https://en.wikipedia.org/wiki/Minkowski_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Euclidean_distance&#34;&gt;https://en.wikipedia.org/wiki/Euclidean_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Taxicab_geometry&#34;&gt;https://en.wikipedia.org/wiki/Taxicab_geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Chebyshev_distance&#34;&gt;https://en.wikipedia.org/wiki/Chebyshev_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apuntes de clase &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt; del &lt;strong&gt;Máster universitario en Ciencia de Datos e Ingeniería de Computadores de la Universidad de Granada&lt;/strong&gt;*&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Aprendizaje no Supervisado y Detección de Anomalías: Reglas de Asociación</title>
@@ -29,7 +213,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de Anomalias&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Las reglas de asociación se usan para aportar conocimiento que ayude a la toma de decisiones. Ejemplos en los que este tipo de métodos resulta útil es para conocer las tendencias de compra de los clientes. Otra aplicación es en tareas de predicción, como deducir los estudios de una persona en función de su salario. &lt;strong&gt;Minería de textos&lt;/strong&gt; para asociar la presencia de términos en documentos etc.&lt;/p&gt;
@@ -235,7 +419,7 @@ En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemse
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Antes de comenzar es necesario definir qué es una &lt;strong&gt;anomalía&lt;/strong&gt;: Una anomalía es un dato muy distinto del resto. Esto puede deberse a fallos en mediciones, o a la propia naturaleza del dato. Por ejemplo, una intrusión a un sistema informático puede considerarse una anomalía, ya que por norma general el resto de actividades en dicho sistema serán legítimas. Por lo general, un dato se considera anómalo si escapa a los rangos de normalidad del resto de los datos.&lt;/p&gt;
@@ -434,7 +618,7 @@ En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemse
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de anomalías&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Reglas de Asociación Avanzadas (Próximamente)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;El aprendizaje automático se distingue en dos tipos. &lt;strong&gt;Supervisado&lt;/strong&gt;, donde se dispone de información sobre la clase a la que pertenece una instancia o &lt;strong&gt;no supervisado&lt;/strong&gt;, donde esta información no está disponible. Estos apuntes se centran en el último tipo. En la figura se muestra un árbol de tipos de clasificaciones.&lt;/p&gt;
