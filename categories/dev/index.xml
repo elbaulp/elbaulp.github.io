@@ -2649,7 +2649,9 @@ Tanto en la versión extendida de C, como en ensamblador, el código asociado a 
 
 &lt;p&gt;ejecuta &lt;em&gt;make&lt;/em&gt; para compilar openCV con Java y crear un jar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cris@cris ~/opencv-3.2.0/build $ make -j8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;-j8 es por JDK8. Deberás poner aquí tu versión de JAVA.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;donde j8 indica el nivel de paralelismo deseado.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Asegúrate de que los ficheros &lt;strong&gt;opencv-320.jar&lt;/strong&gt; y &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so o .dll) han sido creados dentro de &lt;strong&gt;/build&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar

@@ -688,7 +688,9 @@ In mathematics, a category is an algebraic structure similar to a group but with
 
 &lt;p&gt;run &lt;em&gt;make&lt;/em&gt; to build openCV with Java and create a jar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cris@cris ~/opencv-3.2.0/build $ make -j8&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;-j8 is because JDK8. You should put here your JAVA version.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;where j8 denotes the desired parallelism level.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Make sure the files &lt;strong&gt;opencv-320.jar&lt;/strong&gt; and &lt;strong&gt;libopencv_java320.so&lt;/strong&gt; (.so or .dll) are created inside /build.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cris@cris ~/opencv-3.2.0/build $ ls -R &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep opencv-320.jar
