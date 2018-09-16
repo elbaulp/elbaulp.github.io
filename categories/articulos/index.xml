@@ -6,7 +6,7 @@
         <description>Recent content in Articulos on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Tue, 26 Dec 2017 13:25:14 +0100</lastBuildDate>
+        <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/articulos/</link>
@@ -15,6 +15,122 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/articulos/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Arduino Zumo Siguelineas Evita obstaculos</title>
+            <link>https://elbauldelprogramador.com/arduino-sigue-lineas-obstaculos/</link>
+            <pubDate>Sun, 16 Sep 2018 18:42:00 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/arduino-sigue-lineas-obstaculos/</guid>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Este proyecto forma parte de un trabajo para la asignatura &lt;em&gt;Robótica Móvil y
+Neurobótica&lt;/em&gt; del &lt;em&gt;Máster en Ciencia de Datos&lt;/em&gt; de la ETSIIT. Sus autores son
+&lt;a href=&#34;https://elbauldelprogramador.com/author/cristina/&#34;&gt;Cristina Heredia&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/author/alex/&#34;&gt;Alejandro Alcalde.&lt;/a&gt; El código está disponible en &lt;a href=&#34;https://github.com/HerAlc/LineFollowerObstacles&#34;&gt;&lt;em&gt;HerAlc/LineFollowerObstacles&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El proyecto se compone de &lt;strong&gt;dos partes&lt;/strong&gt;. La &lt;strong&gt;primera&lt;/strong&gt; consiste en crear un robot
+que siga un camino pre-establecido marcado con líneas, además, debe evitar
+cualquier obstáculo que se encuentre en el camino. En caso de encontrarse con un
+obstáculo, el robot se detiene unos segundos y avisa, si pasado un tiempo el
+obstáculo sigue presente, el robot da media vuelta y sigue en camino contrario.
+La &lt;strong&gt;segunda parte&lt;/strong&gt; se trata de implementar este funcionamiento en el entorno
+simulado Vrep.&lt;/p&gt;
+
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+
+&lt;p&gt;Para esta parte se ha implementado un Zumo capaz de conducir por sí mismo con las siguientes funcionalidades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sigue Líneas&lt;/li&gt;
+&lt;li&gt;Detección de obstáculos y toma de decisiones.&lt;/li&gt;
+&lt;li&gt;Avisos sonoros a los obstáculos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para el sigue líneas se usan tres &lt;strong&gt;sensores sigue  líneas&lt;/strong&gt; para detectar cambios de intensidad.&lt;/p&gt;
+
+&lt;p&gt;Antes de comenzar, el robot necesita calibrar el &lt;strong&gt;giroscopio&lt;/strong&gt; y los sensores sigue líneas. Para ello hay que pulsar el botón &lt;code&gt;A&lt;/code&gt; una vez, esto calibra el giroscopio. Pulsar el botón &lt;code&gt;A&lt;/code&gt; una segunda vez calibra los sensores sigue líneas.&lt;/p&gt;
+
+&lt;p&gt;Cabe mencionar que se parte del ejemplo Sigue Líneas de Arduino, disponible en el IDE de Arduino, las modificaciones realizadas han sido las siguientes:&lt;/p&gt;
+
+&lt;p&gt;Se integra código del ejemplo &lt;code&gt;MazeSolver&lt;/code&gt;, que hace uso del giroscopio, en concreto los ficheros &lt;code&gt;TurnSensor.h&lt;/code&gt; y &lt;code&gt;TurnSensor.cpp&lt;/code&gt;. Esto permite calibrar el giroscopio, el cual es necesario para conseguir que el robot de media vuelta e inicie el camino contrario si el obstáculo que encuentra en su camino no se retira en tres segundos.&lt;/p&gt;
+
+&lt;p&gt;Para la &lt;strong&gt;detección de obstáculos&lt;/strong&gt; se hace uso de un sensor de proximidad. La distancia a la que se para el robot se fija al valor 6. Cuando el robot se detiene al encontrar un obstáculo, avisa con una melodía simple compuesta por nosotros y similar al &lt;strong&gt;claxon&lt;/strong&gt; de un vehículo. Finalmente, cuando el robot espera más de tres segundos y el obstáculo sigue presente, avisa con otra melodía compuesta por nosotros e inicia al camino en sentido opuesto girando 180 grados.&lt;/p&gt;
+
+&lt;h3 id=&#34;vídeo&#34;&gt;Vídeo&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;&lt;https://www.youtube-nocookie.com/embed/UwPJgL0ix_8&gt;&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;vrep&#34;&gt;VREP&lt;/h2&gt;
+
+&lt;p&gt;Para el proyecto en VREP se ha implementado un robot &lt;strong&gt;Sigue Líneas&lt;/strong&gt; que se detiene ante la presencia de un obstáculo. Si el obstáculo se retira durante la simulación, el robot sigue su camino. Si el obstáculo no se retira, el robot permanece sin moverse para evitar chocar con él.&lt;/p&gt;
+
+&lt;p&gt;Para seguir las líneas se ha adaptado el ejemplo de VREP &lt;em&gt;LineFollowerBubbleRob&lt;/em&gt; para hacerlo funcionar con Zumo, usando el modelo proporcionado en clase. La adaptación ha consistido en modificar el código de &lt;em&gt;BubbleRob&lt;/em&gt;, que solo tiene dos motores, y hacerlo funcionar en el Zumo, con cuatro motores. Para ello se han tenido que ajustar parámetros de torque, peso etc de acuerdo al Zumo. También se desactivó el comportamiento cíclico de los motores.&lt;/p&gt;
+
+&lt;p&gt;Para evitar obstáculos se añade al robot un sensor de proximidad frontal, de forma similar al que se hizo en clase. Cuando el objeto se detecta a una distancia mínima pre-establecida, se detienen los motores del robot durante tres segundos. Transcurrido este tiempo, se vuelven a leer los datos del sensor de proximidad para comprobar si el objeto sigue presente o no. En caso de estar presente, el robot permanece parado, de lo contrario reanuda su marcha.&lt;/p&gt;
+
+&lt;p&gt;A continuación se muestra el código principal que controla el Zumo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sysCall_actuation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;.25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;--sim.addStatusbarMessage(tostring(timeOjectDetected))&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.addStatusbarMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tostring&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- After 3 seconds, check if continue foward or turn back&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;-- read the line detection sensors:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;do&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readVisionSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;floorSensorHandles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;-- data[11] is the average of intensity of the image&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- When in forward mode, we simply move forward at the desired speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En el código se lleva la cuenta del tiempo transcurrido desde la última vez que se detuvo el robot, para decidir cuando se debe hacer la siguiente lectura del sensor de proximidad. La distancia máxima de detección de objetos se fija a 0.25.&lt;/p&gt;
+
+&lt;p&gt;Para el funcionamiento del sigue líneas se emplean tres sensores sigue líneas (Izquierdo, central y derecho), ubicados en la parte delantera del Robot. Dichos sensores se colocan con el eje z hacia abajo. De todos los datos proporcionados por los sensores se usa la intensidad media de la imagen para ajustar la velocidad de los motores. Aunque se incorporó un sensor central, no ha sido necesario su uso, ya que el robot sigue las líneas bien con los otros dos.&lt;/p&gt;
+
+&lt;p&gt;En los ficheros adjuntos se proporcionan vídeos de ejemplo de ambas prácticas.&lt;/p&gt;
+
+&lt;h3 id=&#34;vídeo-vrep&#34;&gt;Vídeo VREP&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;&lt;https://www.youtube-nocookie.com/embed/dixjPmbJ1Ts&gt;&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+        </item>
         
         <item>
             <title>Por qué elimino el perfil de Facebook</title>
@@ -75,14 +191,14 @@
 &lt;p&gt;Para empezar, con &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.&lt;/p&gt;
 
 &lt;h1 id=&#34;secciones&#34;&gt;Secciones&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* Top level headline
-** Second level
-*** 3rd level
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Top level headline&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;**&lt;/span&gt; Second level
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
     some text
-*** 3rd level
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
     more text
 
-* Another top level headline&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Another top level headline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;ciclar&#34;&gt;Ciclar&lt;/h1&gt;
 
 &lt;p&gt;Para ciclar sobre las secciones:&lt;/p&gt;
@@ -150,17 +266,17 @@
 &lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie[fn:1].
+&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt;.
 
-[fn:1] Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt; Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
 
 &lt;p&gt;Sintáxis: &lt;code&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code&gt;C-c C-l&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Si no hay una URL, el enlace se considera interno al documento:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[#custom-id]]
-[[My Target][Find my target]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[&lt;span class=&#34;na&#34;&gt;#custom-id&lt;/span&gt;]]
+[[&lt;span class=&#34;na&#34;&gt;My Target&lt;/span&gt;][&lt;span class=&#34;nt&#34;&gt;Find my target&lt;/span&gt;]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El último ejemplo, busca en el documento actual &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -187,11 +303,11 @@
 &lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
 
 &lt;p&gt;Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* TODO Organize party [0/3]
-  - [ ] call people [0/2]
-    - [ ] Peter
-    - [ ] Sarah
-  - [ ] order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; TODO&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Organize party [0/3]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; call people [0/2]
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Peter
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Sarah
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
           &lt;img
@@ -223,9 +339,9 @@
 &lt;h1 id=&#34;imágenes-y-tablas&#34;&gt;Imágenes y tablas&lt;/h1&gt;
 
 &lt;p&gt;Sintáxis de las tablas:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;| HEADER1  | header2  |
-|----------+----------|
-| content1 | contend2 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;s&#34;&gt;| HEADER1  | header2  |&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;|----------+----------|&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;| content1 | contend2 |&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
           &lt;img
@@ -312,6 +428,225 @@
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Everything You NEED to Know About Software Copyright and Licensing-to-Share in 2 Minutes&lt;/em&gt; »» &lt;a href=&#34;http://www.outercurve.org/Blogs/EntryId/100/Everything-You-NEED-to-Know-About-Software-Copyright-and-Licensing-to-Share-in-2-Minutes&#34; target=&#34;_blank&#34;&gt;outercurve.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Pon a dieta a tus APKs</title>
+            <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
+            <pubDate>Sat, 07 Oct 2017 12:17:00 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
+            <description>&lt;figure&gt;
+    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;Pon a dieta a tus APKs&#34; alt=&#34;Pon a dieta a tus APKs&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;Crédito de la imagen: Cyril&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android &lt;a href=&#34;https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/&#34; title=&#34;Eliminar recursos sin usar en Android&#34;&gt;eliminando recursos sin usar&lt;/a&gt;. En el blog de &lt;strong&gt;&lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;&lt;/strong&gt; encontré un artículo muy interesante con varios consejos para reducir el tamaño del &lt;em&gt;APK&lt;/em&gt; y optimizar el código en &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/&#34; title=&#34;Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy&#34;&gt;producción&lt;/a&gt;. A continuación pasamos a traducir las partes importantes:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;No es ningún secreto que las aplicaciones cada vez ocupan más espacio. Las primeras aplicaciones solían ocupar unas &lt;strong&gt;2MB&lt;/strong&gt; en las versiones iniciales de &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso Android&#34;&gt;Android&lt;/a&gt;. Ahora es bastante común ver aplicaciones que pesan entre 10 y 20MB. Éste incremento en el tamaño es una consecuencia directa tanto de las expectativas del usuario como de la adquisición de experiencia por parte de los desarrolladores. Las principales razones del aumento en el tamaño de los &lt;strong&gt;APKs&lt;/strong&gt; son:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Más categorías &lt;em&gt;dpi&lt;/em&gt; (&lt;em&gt;[l|m|tv|h|x|xx|xxx]dpi&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;La evolución de la plataforma Android, herramientas de desarrollo y el ecosistema de librerías.&lt;/li&gt;
+&lt;li&gt;Las incesantes expectativas del usuario en cuanto a &lt;em&gt;Interfaces Gráficas&lt;/em&gt; (UI) de mayor calidad.&lt;/li&gt;
+&lt;li&gt;etc..etc..&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Publicar aplicaciones &lt;em&gt;ligeras&lt;/em&gt; en la &lt;strong&gt;Play Store&lt;/strong&gt; es una buena práctica a la que todo buen programador debería prestar atención al diseñar una aplicación. ¿Por qué?.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Primero, porque es sinónimo de un código base simple, mantenible y probado (&lt;em&gt;future-proof&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;Segundo, porque los programadores por norma general preferirán mantenerse por debajo del límite actual de la Play Store, 50MB por &lt;strong&gt;APK&lt;/strong&gt; si no quieren tener que usar descargas adicionales.&lt;/li&gt;
+&lt;li&gt;Por último, porque vivimos en un mundo de restricciones:
+
+&lt;ul&gt;
+&lt;li&gt;Ancho de banda limitado.&lt;/li&gt;
+&lt;li&gt;Espacio en disco limitado.&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A menor el tamaño del APK, mayor la velocidad de descarga, menor la frustración del usuario y, lo más importante, mejores valoraciones.&lt;/p&gt;
+
+&lt;p&gt;En muchos (si no todos) los casos, el crecimiento en tamaño es obligatorio para cumplir los &lt;em&gt;requerimientos y expectativas del usuario&lt;/em&gt;. Sin embargo, &lt;strong&gt;Cyril&lt;/strong&gt; está convencido de que el peso de un APK crece, en general, a mayor velocidad que las expectativas del usuario. De hecho, la mayoría de aplicaciones en &lt;strong&gt;Play Store&lt;/strong&gt; ocupan el doble o más de lo que deberían. A continuación se discutirán algunas técnicas/reglas que se pueden usar para reducir el tamaño final de la aplicación.&lt;/p&gt;
+
+&lt;h1 id=&#34;el-formato-apk&#34;&gt;EL formato APK&lt;/h1&gt;
+
+&lt;p&gt;Antes de realizar ninguna optimización, es importante entender el formato del APK. A grandes rasgos, un &lt;strong&gt;APK&lt;/strong&gt; es un fichero archivado compuesto de varios ficheros de forma comprimida. Como programador, se pueden ver fácilmente sus contenidos descomprimiéndolo con el comando &lt;code&gt;unzip&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Éste es el aspecto del &lt;strong&gt;APK&lt;/strong&gt; tras ejecutar &lt;code&gt;unzip &amp;lt;app.apk&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/assets
+/lib
+  /armeabi
+  /armeabi-v7a
+  /x86
+  /mips
+/META-INF
+  MANIFEST.MF
+  CERT.RSA
+  CERT.SF
+/res
+AndroidManifest.xml
+classes.dex
+resources.arsc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La mayor parte del contenido anterior debe resultar familiar a todo programador. Refleja la estructura del proyecto que se puede observar durante el desarrollo. &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/&#34; title=&#34;Trabajar con recursos Assets&#34;&gt;/assets&lt;/a&gt;, &lt;code&gt;/lib&lt;/code&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos/&#34; title=&#34;Introducción a los recursos Android&#34;&gt;/res&lt;/a&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34; title=&#34;Qué es el AndroidManifest.xml&#34;&gt;AndroidManifest.xml&lt;/a&gt;. &lt;code&gt;classes.dex&lt;/code&gt; contiene la versión compilada (dex) del código en Java y &lt;code&gt;resources.arsc&lt;/code&gt; los recursos precompilados, por ejemplo XML binarios (values, XML drawables etc).&lt;/p&gt;
+
+&lt;p&gt;Debido a que el &lt;strong&gt;APK&lt;/strong&gt; es un fichero archivado simple, significa que tiene dos tamaños, el tamaño comprimido y el descomprimido. Ambos son importantes, pero en éste artículo nos centraremos en el tamaño comprimido. A menor tamaño del APK, menor tamaño de la versión descomprimida.&lt;/p&gt;
+
+&lt;div class=&#34;clearfix&#34;&gt;
+&lt;/div&gt;
+&lt;div class=&#34;hr&#34;&gt;
+&lt;/div&gt;
+&lt;div class=&#34;clearfix&#34;&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;reducir-el-tamaño-del-apk&#34;&gt;Reducir el tamaño del APK&lt;/h1&gt;
+
+&lt;p&gt;Ésto puede llevarse a cabo con diversas técnicas. Ya que cada aplicación es distinta, no hay una regla absoluta para hacer “adelgazar” a un &lt;strong&gt;APK&lt;/strong&gt;. No obstante, el &lt;strong&gt;APK&lt;/strong&gt; se compone de 3 componentes sobre los que podemos actuar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Código fuente en Java.&lt;/li&gt;
+&lt;li&gt;Recursos/Assets&lt;/li&gt;
+&lt;li&gt;Código nativo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Los consejos que mostramos a continuación consisten en minimizar la cantidad de espacio usado por cada uno de éstos componentes. Minimizando así el tamaño del APK.&lt;/p&gt;
+
+&lt;h2 id=&#34;ten-un-código-con-buena-higiene&#34;&gt;Ten un código con buena higiene&lt;/h2&gt;
+
+&lt;p&gt;Probablemente sea muy obvio, pero el hábito de tener un código limpio es el primer paso para reducir el tamaño de la aplicación final. &lt;em&gt;“Conoce tu código como la palma de tu mano”&lt;/em&gt;. Deshazte de todas las librerías de dependencias sin usar. Haz el código mejor día tras día. Límpialo continuamente. Centrase en en mantener un código base limpio y actualizado es por lo general la mejor forma de producir &lt;strong&gt;APKs&lt;/strong&gt; más pequeños conteniendo únicamente lo estrictamente necesario para la aplicación.&lt;/p&gt;
+
+&lt;p&gt;Conseguir ésto es generalmente más fácil cuando se empieza un proyecto desde cero. Es más difícil contra más viejo es el proyecto. De hecho, proyectos con gran trasfondo histórico tienden a tratar con trozos de código &lt;em&gt;muertos&lt;/em&gt; y/o prácticamente inútiles. Afortunadamente, existen algunas herramientas para ayudarnos a hacer la colada&amp;#8230;&lt;/p&gt;
+
+&lt;h2 id=&#34;ejecutar-proguard&#34;&gt;Ejecutar Proguard&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; es una herramienta extremadamente útil que &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Ofuscamiento de código&#34;&gt;ofusca&lt;/a&gt;, optimiza y reduce el código en tiempo de compilación. Una de sus características principales para reducir el tamaño es el &lt;em&gt;Tree-Shaking&lt;/em&gt;. &lt;strong&gt;Proguard&lt;/strong&gt; básicamente recorre todos los directorios con código para detectar trozos que no se usan. Todos los que encuentre (es decir, los no usados) se eliminan del &lt;strong&gt;APK&lt;/strong&gt; final. &lt;strong&gt;Proguard&lt;/strong&gt; también renombra campos, &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Introducción a las Clases&#34;&gt;clases&lt;/a&gt; e interfaces para hacer el código lo más ligero posible.&lt;/p&gt;
+
+&lt;p&gt;Como habrás adivinado &lt;strong&gt;Proguard&lt;/strong&gt; es extremadamente útil y eficiente. Pero un gran poder conlleva una gran responsabilidad. Muchos desarrolladores consideran &lt;strong&gt;Proguard&lt;/strong&gt; una herramienta muy molesta porque, por defecto, rompe aplicaciones que se basan fuertemente en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reflection_(computer_programming)&#34; title=&#34;Definición de Reflexión&#34;&gt;reflexión&lt;/a&gt;. Depende de los desarrolladores el configurar &lt;strong&gt;Proguard&lt;/strong&gt; para especificar en qué clases, campos etc puede realizar las optimizaciones.&lt;/p&gt;
+
+&lt;h2 id=&#34;usar-lint-extensamente&#34;&gt;Usar Lint extensamente&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; trabaja en la lado Java. Desafortunadamente, no opera en el lado de los recursos. Como consecuencia, si una imagen &lt;code&gt;my_image&lt;/code&gt; en &lt;code&gt;res/drawable&lt;/code&gt; no se usa, &lt;strong&gt;Proguard&lt;/strong&gt; solo elimina su referencia en la clase &lt;code&gt;R&lt;/code&gt;, pero no la imagen.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; es un analizador de código estático que ayuda a detectar recursos sin usar con una simple llamada a &lt;code&gt;./gradlew lint&lt;/code&gt;. Genera un informe en HTML, en la sección &lt;em&gt;“UnusedResources”&lt;/em&gt; estarán listados todos los recursos. Es seguro borrar dichos recursos siempre que no se accedan a ellos mediante reflexión en el código.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; analiza recuros (ficheros en el directorio &lt;code&gt;/res&lt;/code&gt;) pero ignora los assets (Ficheros en &lt;code&gt;/assets&lt;/code&gt;). Debido a que los assets se acceden mediante su nombre en lugar de una referencia Java o XML (Ver &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-2/&#34; title=&#34;Recursos compilados y no compilados&#34;&gt;Recursos compilados y no compilados&lt;/a&gt;). Y por ello &lt;strong&gt;Lint&lt;/strong&gt; no puede determinar si un asset se usa en el proyecto. Ésto es tarea del programador.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota del traductor&lt;/strong&gt;: Existen otras herramientas para eliminar los recursos sin usar automáticamente, como la vista en el artículo “ELIMINAR RECURSOS SIN USAR EN ANDROID” mencionado al principio de éste artículo.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;ser-obstinado-con-los-recursos&#34;&gt;Ser obstinado con los recursos&lt;/h2&gt;
+
+&lt;p&gt;Android soporta un gran número de dispositivos. De hecho, ha sido diseñado para soportar dispositivos independientemente de su configuración: &lt;a href=&#34;http://sebastien-gabriel.com/designers-guide-to-dpi/home&#34; title=&#34;Designers guide to DPI&#34;&gt;Densidad de pantalla&lt;/a&gt;, forma de la pantalla, tamaño etc. En Android 4.4, el framework soporta nativamente varias densidades: &lt;strong&gt;ldpi, mdpi, tvdpi, hdpi, xhdpi, xxhdpi&lt;/strong&gt; y &lt;strong&gt;xxxhdpi&lt;/strong&gt;. Aunque que Android las soporte no quiere decir que haya que exportar todos los assets a cada una de ellas.&lt;/p&gt;
+
+&lt;p&gt;No tengas miedo a no soportar algunas densidades si sabes que será usada por un porcentaje muy pequeño de gente. &lt;strong&gt;Cyril&lt;/strong&gt; solo soporta &lt;strong&gt;hdpi, xhdpi&lt;/strong&gt; y &lt;strong&gt;xxhdpi&lt;/strong&gt; en sus aplicaciones. Ésto no es un problema para dispositivos con otras densidades porque Android calcula automáticamente los recursos escalando los existentes para otras densidades.&lt;/p&gt;
+
+&lt;p&gt;El punto principal detrás de la regla &lt;strong&gt;hdpi/xhdpi/xxhdpi&lt;/strong&gt; es simple. Primero, (Cyril) cubre el 80% de sus usuarios. Segundo, &lt;strong&gt;xxxhdpi&lt;/strong&gt; hasta el momento existe solamente como algo para el futuro. En densidades más bajas, como &lt;strong&gt;ldpi&lt;/strong&gt; o &lt;strong&gt;mdpi&lt;/strong&gt;, no importa cuanto esfuerzo se gaste en crear los recursos, el resultado será tan malo como dejar que sea Android el encargado de escalar hacia abajo desde &lt;strong&gt;hdpi&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;De igual manera, tener una única variante de una imagen en &lt;code&gt;drawable-nodpi&lt;/code&gt; puede conseguir reducir el espacio. Es posible permitirse ésto en raros casos, si la imagen se va a mostrar muy pocas veces, por ejemplo.&lt;/p&gt;
+
+&lt;h2 id=&#34;minimizar-configuraciones-de-recursos&#34;&gt;Minimizar configuraciones de recursos&lt;/h2&gt;
+
+&lt;p&gt;El desarrollo en Android a menudo recae en el uso de librerías externas como la &lt;em&gt;Android Support Library&lt;/em&gt;, &lt;em&gt;Google Play Services&lt;/em&gt;, &lt;em&gt;Facebook SDK&lt;/em&gt;, etc. Todas éstas librerías traen recursos que no son necesariamente útiles a nuestra aplicación. Por ejemplo, &lt;em&gt;Google Play Services&lt;/em&gt; viene con traducciones para idiomas que tu aplicación no soporta. También usa recursos &lt;strong&gt;mdpi&lt;/strong&gt;, por ejemplo, que pueden no ser de utilidad en nuestra aplicación.&lt;/p&gt;
+
+&lt;p&gt;Desde la versión &lt;strong&gt;0.7&lt;/strong&gt; del plugin &lt;strong&gt;Gradle&lt;/strong&gt;, es posible pasar información sobre qué configuraciones son necesarias para nuestra aplicación al &lt;em&gt;build system&lt;/em&gt;. Ésto es posible gracias a las configuraciones en &lt;code&gt;resConfig&lt;/code&gt; y &lt;code&gt;resConfigs&lt;/code&gt;. El archivo &lt;code&gt;build.gradle&lt;/code&gt; de abajo previene que &lt;code&gt;aapt&lt;/code&gt; empaquete recursos que no coincidan con los que usa la aplicación:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span class=&#34;n&#34;&gt;defaultConfig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;// ...
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;resConfigs&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;de&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;fr&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;it&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;resConfigs&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;nodpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xhdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxhdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxxhdpi&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;comprimir-imágenes&#34;&gt;Comprimir imágenes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Aapt&lt;/strong&gt; viene con un &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;compresor de imágenes lossless&lt;/a&gt;. Por ejemplo, una imagen PNG que no requiera de más de 256 colores puede convertirse en otra con una paleta de colores 8-bits (&lt;em&gt;8 bits = 1B = 256 valores&lt;/em&gt;). Aunque &lt;strong&gt;aapt&lt;/strong&gt; haga ésto por nosotros, sería buena idea optimizar además la imagen por nuestra cuenta, para ello hay varias herramientas, como &lt;em&gt;pngquant&lt;/em&gt;, &lt;em&gt;imageAlpha&lt;/em&gt;, &lt;em&gt;imageOptim&lt;/em&gt; o &lt;em&gt;optipng&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Android tiene un tipo especial de imágenes: &lt;a href=&#34;https://developer.android.com/tools/help/draw9patch.html&#34; title=&#34;Documentación Android&#34;&gt;&lt;em&gt;9-patches&lt;/em&gt;&lt;/a&gt;. Para optimizar éstas imágenes basta con decirle al diseñador que reduzca al mínimo las áreas “estirables” y el contenido.&lt;/p&gt;
+
+&lt;h2 id=&#34;limitar-el-número-de-arquitecturas&#34;&gt;Limitar el número de arquitecturas&lt;/h2&gt;
+
+&lt;p&gt;Android trata generalmente con Java, pero en ciertas ocasiones es necesario usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-al-ndk-de-android/&#34; title=&#34;Introducción al NDK de Android&#34;&gt;código nativo&lt;/a&gt;. En el ecosistema actual de Android bastará con desarrollar para las arquitecturas armabi y x86. En &lt;a href=&#34;http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/&#34; title=&#34;Android NDK How to reduce libs size&#34;&gt;éste artículo&lt;/a&gt; se puede encontrar más información sobre el tema.&lt;/p&gt;
+
+&lt;h2 id=&#34;re-usar-siempre-que-sea-posible&#34;&gt;Re-usar siempre que sea posible&lt;/h2&gt;
+
+&lt;p&gt;Ésta sea quizá una de las optimizaciones principales más importantes que se aprenden al empezar en el desarrollo móvil. En un &lt;code&gt;ListView&lt;/code&gt; o &lt;code&gt;RecyclerView&lt;/code&gt;, re-usar ayuda a mantener un &lt;em&gt;scrolling&lt;/em&gt; fluido (Más sobre el reciclaje de vistas en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/adapter-personalizado-en-android/&#34; title=&#34;Crear un adapter personalizado&#34;&gt;Crear un adapter personalizado&lt;/a&gt;). Re-usar puede además ayudar a reducir el tamaño final del &lt;strong&gt;APK&lt;/strong&gt;. Por ejemplo, Android provee de varias utilidades para colorear un asset ya sea usando &lt;code&gt;android:tint&lt;/code&gt; y &lt;code&gt;android:tintmode&lt;/code&gt; en Android L o &lt;code&gt;ColorFilter&lt;/code&gt; en todas las veriones.&lt;/p&gt;
+
+&lt;p&gt;También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas &lt;code&gt;ic_arrow_expand&lt;/code&gt; y &lt;code&gt;ic_arrow_collapse&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 512px) 512px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Podemos deshacernos fácilmente de &lt;code&gt;ic_arrow_collapse&lt;/code&gt; creando un &lt;code&gt;RotateDrawable&lt;/code&gt; basándonos en &lt;code&gt;ic_arrow_expand&lt;/code&gt;. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;rotate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/ic_arrow_expand&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:fromDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;180&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:pivotX=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:pivotY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:toDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;180&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;renderizar-en-código-cuando-sea-necesario&#34;&gt;Renderizar en código cuando sea necesario&lt;/h2&gt;
+
+&lt;p&gt;En ciertas ocasiones renderizar gráficos directamente desde código puede conllevar un gran beneficio. Uno de los mejores ejemplos de una ganancia colosal en peso son las animaciones &lt;em&gt;frame-by-frame&lt;/em&gt;. &lt;strong&gt;Cyril&lt;/strong&gt; ha estado trabajando recientemente con &lt;em&gt;Android Wear&lt;/em&gt; y ha echado un vistazo a la &lt;a href=&#34;https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary&#34;&gt;&lt;em&gt;Android Wearable support library&lt;/em&gt;&lt;/a&gt;. Como las otras librerías, contiene varias clases útiles cuando se trabaja con dispositivos &lt;em&gt;wearables&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el &lt;strong&gt;APK&lt;/strong&gt; resultante pesaba más de &lt;strong&gt;1.5MB&lt;/strong&gt;. Tras investigar en &lt;code&gt;wearable-support.aar&lt;/code&gt;, descubrió que se empaquetan dos animaciones &lt;em&gt;frame-by-frame&lt;/em&gt; en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 1596px) 1596px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;La animación para el “éxito” se construye con un &lt;code&gt;AnimationDrawable&lt;/code&gt; definido en un XML:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;animation-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:oneshot=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00163&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00164&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00165&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00166&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00167&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00168&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00169&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00170&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00171&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00172&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00173&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00174&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00175&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;333&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00185&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00186&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00187&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00188&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00189&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00190&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00191&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00192&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00193&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/animation-list&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Lo malo es, que cada &lt;em&gt;frame&lt;/em&gt; se muestra durante 33ms, lo que hace que la animación se ejecute a 30fps. Mostrar un &lt;em&gt;frame&lt;/em&gt; cada 16ms habría resultado en una librería dos veces más pesada. El &lt;em&gt;frame&lt;/em&gt; &lt;code&gt;generic_confirmation_00175&lt;/code&gt; (línea 15) se muestra durante 333ms, le sigue &lt;code&gt;generic_confirmation_00185&lt;/code&gt;. Ésta es una gran optimización que evita que 9 &lt;em&gt;frames&lt;/em&gt; (del 176 al 184 incluidos) se empaqueten en la aplicación. Desafortunadamente, &lt;code&gt;wearable-support.aar&lt;/code&gt; contiene estos 9 &lt;em&gt;frames&lt;/em&gt; que no son usados para 3 densidades.&lt;/p&gt;
+
+&lt;p&gt;Realizar la animación mediante código requiere de más tiempo de desarrollo. sin embargo, puede reducir notablemente la cantidad de assets del &lt;strong&gt;APK&lt;/strong&gt; y además mantener una animación fluida a 60fps. Al momento de traducir éste artículo, Android no proporciona una herramienta que permita renderizar éstas animaciones de forma sencilla. Esperemos que estén trabajando en ello.&lt;/p&gt;
+
+&lt;h2 id=&#34;ir-aún-más-lejos&#34;&gt;Ir aún más lejos&lt;/h2&gt;
+
+&lt;p&gt;Todas las técnicas descritas arriba están enfocadas principalmente en la aplicación/librería. ¿Se podría ir más lejos si tuviéramos control total sobre la cadena de distribución?. Seguramente se podría, pero implicaría algún trabajo en el lado del servidor, o más específicamente, en el lado de la &lt;em&gt;Play Store&lt;/em&gt;. Por ejemplo, la &lt;em&gt;Play Store&lt;/em&gt; podría tener un sistema de paquetes que empaquetara únicamente las librerías nativas necesarias para cada dispositivo.&lt;/p&gt;
+
+&lt;p&gt;Otra posibilidad sería empaquetar solamente la configuración necesaria para el dispositivo. Desafortunadamente, eso rompería por completo con una de las funcionalidades más importantes de Android: &lt;em&gt;Cambios de configuración en caliente&lt;/em&gt;. De hecho, Android se diseñó para tratar con cambios de configuración en tiempo de ejecución (Idioma, orientación etc). Por ejemplo, eliminar recursos no compatibles con la densidad de pantalla del dispositivo sería un gran benefício. Sin embargo, las aplicaciones en Android son capaces de tratar con cambios en la &lt;a href=&#34;http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY&#34; title=&#34;CONFIG_DENSITY&#34;&gt;densidad de pantalla&lt;/a&gt; sobre la marcha. Incluso si descartáramos esta capacidad, tendríamos que seguir tratando con los &lt;em&gt;drawables&lt;/em&gt; definidos para densidades distintas que las del dispositivo que instala la aplicación. Además de aquellos que tengan más de una cualificador de densidad (orientación, menor anchura etc.).&lt;/p&gt;
+
+&lt;p&gt;El empaquetado del &lt;strong&gt;APK&lt;/strong&gt; del lado del servidor parece extremadamente potente. Pero es muy arriesgado porque el &lt;strong&gt;APK&lt;/strong&gt; final entregado al usuario sería completamente distinto al enviado por el desarrollador a la &lt;em&gt;Play Store&lt;/em&gt;. Entregar un &lt;strong&gt;APK&lt;/strong&gt; con algunos recursos/assets eliminados simplemente rompería las aplicaciones.&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+
+&lt;p&gt;El diseño trata de obtener lo mejor posible a partir de un conjunto de restricciones. El peso/tamaño de un &lt;strong&gt;APK&lt;/strong&gt; es claramente una de esas restricciones. No hay que tener miedo de empeorar un aspecto de la aplicación para mejorar otros. Por ejemplo, no hay que dudar en reducir la calidad del renderizado de la UI si como consecuencia se logra reducir el tamaño del APK y la aplicación se hace más fluida. El 99% de los usuarios no notarán que la calidad ha bajado, pero sí notarán que la aplicación va más fluida. Al fin y al cabo, una aplicación se juzga por su totalidad, no por la suma de ciertos aspecto por separado.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Gracias al &lt;a href=&#34;https://twitter.com/cyrilmottier&#34; title=&#34;@cyrilmottier&#34;&gt;Cyril&lt;/a&gt; por permitirme traducir su artículo original &lt;em&gt;“Putting Your APKs on Diet”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -4805,12 +5140,9 @@ sh-4.1# /data/botbrew-basil/init -- apt-get install debianbotbrew-debian-minimal
 &lt;p&gt;Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, probemos con un hola Mundo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; 
-&lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hola mundo!&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Compilado y ejecutado desde Android&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hola mundo!&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Compilado y ejecutado desde Android&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -11856,225 +12188,6 @@ notify-send -u normal -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span c
 notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical sumary&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical body&amp;#34;&lt;/span&gt;
 notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical body&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Eso es todo, sencillo de configurar, y minimalista.&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>Pon a dieta a tus APKs</title>
-            <link>https://elbauldelprogramador.com/pon-dieta-tus-apks/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/pon-dieta-tus-apks/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-dieta-a-tus-APKs.png&#34; title=&#34;Pon a dieta a tus APKs&#34; alt=&#34;Pon a dieta a tus APKs&#34; width=&#34;1024px&#34; height=&#34;576px&#34; /&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Crédito de la imagen: Cyril&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En el anterior artículo hablamos de cómo reducir el tamaño de una aplicación Android &lt;a href=&#34;https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/&#34; title=&#34;Eliminar recursos sin usar en Android&#34;&gt;eliminando recursos sin usar&lt;/a&gt;. En el blog de &lt;strong&gt;&lt;a href=&#34;http://cyrilmottier.com/&#34; title=&#34;Blog de Cyril&#34;&gt;Cyril Mottier&lt;/a&gt;&lt;/strong&gt; encontré un artículo muy interesante con varios consejos para reducir el tamaño del &lt;em&gt;APK&lt;/em&gt; y optimizar el código en &lt;a href=&#34;https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/&#34; title=&#34;Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy&#34;&gt;producción&lt;/a&gt;. A continuación pasamos a traducir las partes importantes:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;No es ningún secreto que las aplicaciones cada vez ocupan más espacio. Las primeras aplicaciones solían ocupar unas &lt;strong&gt;2MB&lt;/strong&gt; en las versiones iniciales de &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34; title=&#34;Curso Android&#34;&gt;Android&lt;/a&gt;. Ahora es bastante común ver aplicaciones que pesan entre 10 y 20MB. Éste incremento en el tamaño es una consecuencia directa tanto de las expectativas del usuario como de la adquisición de experiencia por parte de los desarrolladores. Las principales razones del aumento en el tamaño de los &lt;strong&gt;APKs&lt;/strong&gt; son:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Más categorías &lt;em&gt;dpi&lt;/em&gt; (&lt;em&gt;[l|m|tv|h|x|xx|xxx]dpi&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;La evolución de la plataforma Android, herramientas de desarrollo y el ecosistema de librerías.&lt;/li&gt;
-&lt;li&gt;Las incesantes expectativas del usuario en cuanto a &lt;em&gt;Interfaces Gráficas&lt;/em&gt; (UI) de mayor calidad.&lt;/li&gt;
-&lt;li&gt;etc..etc..&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Publicar aplicaciones &lt;em&gt;ligeras&lt;/em&gt; en la &lt;strong&gt;Play Store&lt;/strong&gt; es una buena práctica a la que todo buen programador debería prestar atención al diseñar una aplicación. ¿Por qué?.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Primero, porque es sinónimo de un código base simple, mantenible y probado (&lt;em&gt;future-proof&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;Segundo, porque los programadores por norma general preferirán mantenerse por debajo del límite actual de la Play Store, 50MB por &lt;strong&gt;APK&lt;/strong&gt; si no quieren tener que usar descargas adicionales.&lt;/li&gt;
-&lt;li&gt;Por último, porque vivimos en un mundo de restricciones:
-
-&lt;ul&gt;
-&lt;li&gt;Ancho de banda limitado.&lt;/li&gt;
-&lt;li&gt;Espacio en disco limitado.&lt;/li&gt;
-&lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A menor el tamaño del APK, mayor la velocidad de descarga, menor la frustración del usuario y, lo más importante, mejores valoraciones.&lt;/p&gt;
-
-&lt;p&gt;En muchos (si no todos) los casos, el crecimiento en tamaño es obligatorio para cumplir los &lt;em&gt;requerimientos y expectativas del usuario&lt;/em&gt;. Sin embargo, &lt;strong&gt;Cyril&lt;/strong&gt; está convencido de que el peso de un APK crece, en general, a mayor velocidad que las expectativas del usuario. De hecho, la mayoría de aplicaciones en &lt;strong&gt;Play Store&lt;/strong&gt; ocupan el doble o más de lo que deberían. A continuación se discutirán algunas técnicas/reglas que se pueden usar para reducir el tamaño final de la aplicación.&lt;/p&gt;
-
-&lt;h1 id=&#34;el-formato-apk&#34;&gt;EL formato APK&lt;/h1&gt;
-
-&lt;p&gt;Antes de realizar ninguna optimización, es importante entender el formato del APK. A grandes rasgos, un &lt;strong&gt;APK&lt;/strong&gt; es un fichero archivado compuesto de varios ficheros de forma comprimida. Como programador, se pueden ver fácilmente sus contenidos descomprimiéndolo con el comando &lt;code&gt;unzip&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Éste es el aspecto del &lt;strong&gt;APK&lt;/strong&gt; tras ejecutar &lt;code&gt;unzip &amp;lt;app.apk&amp;gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/assets
-/lib
-  /armeabi
-  /armeabi-v7a
-  /x86
-  /mips
-/META-INF
-  MANIFEST.MF
-  CERT.RSA
-  CERT.SF
-/res
-AndroidManifest.xml
-classes.dex
-resources.arsc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La mayor parte del contenido anterior debe resultar familiar a todo programador. Refleja la estructura del proyecto que se puede observar durante el desarrollo. &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-trabajar_04/&#34; title=&#34;Trabajar con recursos Assets&#34;&gt;/assets&lt;/a&gt;, &lt;code&gt;/lib&lt;/code&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos/&#34; title=&#34;Introducción a los recursos Android&#34;&gt;/res&lt;/a&gt;, &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34; title=&#34;Qué es el AndroidManifest.xml&#34;&gt;AndroidManifest.xml&lt;/a&gt;. &lt;code&gt;classes.dex&lt;/code&gt; contiene la versión compilada (dex) del código en Java y &lt;code&gt;resources.arsc&lt;/code&gt; los recursos precompilados, por ejemplo XML binarios (values, XML drawables etc).&lt;/p&gt;
-
-&lt;p&gt;Debido a que el &lt;strong&gt;APK&lt;/strong&gt; es un fichero archivado simple, significa que tiene dos tamaños, el tamaño comprimido y el descomprimido. Ambos son importantes, pero en éste artículo nos centraremos en el tamaño comprimido. A menor tamaño del APK, menor tamaño de la versión descomprimida.&lt;/p&gt;
-
-&lt;div class=&#34;clearfix&#34;&gt;
-&lt;/div&gt;
-&lt;div class=&#34;hr&#34;&gt;
-&lt;/div&gt;
-&lt;div class=&#34;clearfix&#34;&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&#34;reducir-el-tamaño-del-apk&#34;&gt;Reducir el tamaño del APK&lt;/h1&gt;
-
-&lt;p&gt;Ésto puede llevarse a cabo con diversas técnicas. Ya que cada aplicación es distinta, no hay una regla absoluta para hacer “adelgazar” a un &lt;strong&gt;APK&lt;/strong&gt;. No obstante, el &lt;strong&gt;APK&lt;/strong&gt; se compone de 3 componentes sobre los que podemos actuar:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Código fuente en Java.&lt;/li&gt;
-&lt;li&gt;Recursos/Assets&lt;/li&gt;
-&lt;li&gt;Código nativo&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Los consejos que mostramos a continuación consisten en minimizar la cantidad de espacio usado por cada uno de éstos componentes. Minimizando así el tamaño del APK.&lt;/p&gt;
-
-&lt;h2 id=&#34;ten-un-código-con-buena-higiene&#34;&gt;Ten un código con buena higiene&lt;/h2&gt;
-
-&lt;p&gt;Probablemente sea muy obvio, pero el hábito de tener un código limpio es el primer paso para reducir el tamaño de la aplicación final. &lt;em&gt;“Conoce tu código como la palma de tu mano”&lt;/em&gt;. Deshazte de todas las librerías de dependencias sin usar. Haz el código mejor día tras día. Límpialo continuamente. Centrase en en mantener un código base limpio y actualizado es por lo general la mejor forma de producir &lt;strong&gt;APKs&lt;/strong&gt; más pequeños conteniendo únicamente lo estrictamente necesario para la aplicación.&lt;/p&gt;
-
-&lt;p&gt;Conseguir ésto es generalmente más fácil cuando se empieza un proyecto desde cero. Es más difícil contra más viejo es el proyecto. De hecho, proyectos con gran trasfondo histórico tienden a tratar con trozos de código &lt;em&gt;muertos&lt;/em&gt; y/o prácticamente inútiles. Afortunadamente, existen algunas herramientas para ayudarnos a hacer la colada&amp;#8230;&lt;/p&gt;
-
-&lt;h2 id=&#34;ejecutar-proguard&#34;&gt;Ejecutar Proguard&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; es una herramienta extremadamente útil que &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/&#34; title=&#34;Ofuscamiento de código&#34;&gt;ofusca&lt;/a&gt;, optimiza y reduce el código en tiempo de compilación. Una de sus características principales para reducir el tamaño es el &lt;em&gt;Tree-Shaking&lt;/em&gt;. &lt;strong&gt;Proguard&lt;/strong&gt; básicamente recorre todos los directorios con código para detectar trozos que no se usan. Todos los que encuentre (es decir, los no usados) se eliminan del &lt;strong&gt;APK&lt;/strong&gt; final. &lt;strong&gt;Proguard&lt;/strong&gt; también renombra campos, &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-introduccion/&#34; title=&#34;Introducción a las Clases&#34;&gt;clases&lt;/a&gt; e interfaces para hacer el código lo más ligero posible.&lt;/p&gt;
-
-&lt;p&gt;Como habrás adivinado &lt;strong&gt;Proguard&lt;/strong&gt; es extremadamente útil y eficiente. Pero un gran poder conlleva una gran responsabilidad. Muchos desarrolladores consideran &lt;strong&gt;Proguard&lt;/strong&gt; una herramienta muy molesta porque, por defecto, rompe aplicaciones que se basan fuertemente en &lt;a href=&#34;http://en.wikipedia.org/wiki/Reflection_(computer_programming)&#34; title=&#34;Definición de Reflexión&#34;&gt;reflexión&lt;/a&gt;. Depende de los desarrolladores el configurar &lt;strong&gt;Proguard&lt;/strong&gt; para especificar en qué clases, campos etc puede realizar las optimizaciones.&lt;/p&gt;
-
-&lt;h2 id=&#34;usar-lint-extensamente&#34;&gt;Usar Lint extensamente&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Proguard&lt;/strong&gt; trabaja en la lado Java. Desafortunadamente, no opera en el lado de los recursos. Como consecuencia, si una imagen &lt;code&gt;my_image&lt;/code&gt; en &lt;code&gt;res/drawable&lt;/code&gt; no se usa, &lt;strong&gt;Proguard&lt;/strong&gt; solo elimina su referencia en la clase &lt;code&gt;R&lt;/code&gt;, pero no la imagen.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; es un analizador de código estático que ayuda a detectar recursos sin usar con una simple llamada a &lt;code&gt;./gradlew lint&lt;/code&gt;. Genera un informe en HTML, en la sección &lt;em&gt;“UnusedResources”&lt;/em&gt; estarán listados todos los recursos. Es seguro borrar dichos recursos siempre que no se accedan a ellos mediante reflexión en el código.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Lint&lt;/strong&gt; analiza recuros (ficheros en el directorio &lt;code&gt;/res&lt;/code&gt;) pero ignora los assets (Ficheros en &lt;code&gt;/assets&lt;/code&gt;). Debido a que los assets se acceden mediante su nombre en lugar de una referencia Java o XML (Ver &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-2/&#34; title=&#34;Recursos compilados y no compilados&#34;&gt;Recursos compilados y no compilados&lt;/a&gt;). Y por ello &lt;strong&gt;Lint&lt;/strong&gt; no puede determinar si un asset se usa en el proyecto. Ésto es tarea del programador.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Nota del traductor&lt;/strong&gt;: Existen otras herramientas para eliminar los recursos sin usar automáticamente, como la vista en el artículo “ELIMINAR RECURSOS SIN USAR EN ANDROID” mencionado al principio de éste artículo.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;ser-obstinado-con-los-recursos&#34;&gt;Ser obstinado con los recursos&lt;/h2&gt;
-
-&lt;p&gt;Android soporta un gran número de dispositivos. De hecho, ha sido diseñado para soportar dispositivos independientemente de su configuración: &lt;a href=&#34;http://sebastien-gabriel.com/designers-guide-to-dpi/home&#34; title=&#34;Designers guide to DPI&#34;&gt;Densidad de pantalla&lt;/a&gt;, forma de la pantalla, tamaño etc. En Android 4.4, el framework soporta nativamente varias densidades: &lt;strong&gt;ldpi, mdpi, tvdpi, hdpi, xhdpi, xxhdpi&lt;/strong&gt; y &lt;strong&gt;xxxhdpi&lt;/strong&gt;. Aunque que Android las soporte no quiere decir que haya que exportar todos los assets a cada una de ellas.&lt;/p&gt;
-
-&lt;p&gt;No tengas miedo a no soportar algunas densidades si sabes que será usada por un porcentaje muy pequeño de gente. &lt;strong&gt;Cyril&lt;/strong&gt; solo soporta &lt;strong&gt;hdpi, xhdpi&lt;/strong&gt; y &lt;strong&gt;xxhdpi&lt;/strong&gt; en sus aplicaciones. Ésto no es un problema para dispositivos con otras densidades porque Android calcula automáticamente los recursos escalando los existentes para otras densidades.&lt;/p&gt;
-
-&lt;p&gt;El punto principal detrás de la regla &lt;strong&gt;hdpi/xhdpi/xxhdpi&lt;/strong&gt; es simple. Primero, (Cyril) cubre el 80% de sus usuarios. Segundo, &lt;strong&gt;xxxhdpi&lt;/strong&gt; hasta el momento existe solamente como algo para el futuro. En densidades más bajas, como &lt;strong&gt;ldpi&lt;/strong&gt; o &lt;strong&gt;mdpi&lt;/strong&gt;, no importa cuanto esfuerzo se gaste en crear los recursos, el resultado será tan malo como dejar que sea Android el encargado de escalar hacia abajo desde &lt;strong&gt;hdpi&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;De igual manera, tener una única variante de una imagen en &lt;code&gt;drawable-nodpi&lt;/code&gt; puede conseguir reducir el espacio. Es posible permitirse ésto en raros casos, si la imagen se va a mostrar muy pocas veces, por ejemplo.&lt;/p&gt;
-
-&lt;h2 id=&#34;minimizar-configuraciones-de-recursos&#34;&gt;Minimizar configuraciones de recursos&lt;/h2&gt;
-
-&lt;p&gt;El desarrollo en Android a menudo recae en el uso de librerías externas como la &lt;em&gt;Android Support Library&lt;/em&gt;, &lt;em&gt;Google Play Services&lt;/em&gt;, &lt;em&gt;Facebook SDK&lt;/em&gt;, etc. Todas éstas librerías traen recursos que no son necesariamente útiles a nuestra aplicación. Por ejemplo, &lt;em&gt;Google Play Services&lt;/em&gt; viene con traducciones para idiomas que tu aplicación no soporta. También usa recursos &lt;strong&gt;mdpi&lt;/strong&gt;, por ejemplo, que pueden no ser de utilidad en nuestra aplicación.&lt;/p&gt;
-
-&lt;p&gt;Desde la versión &lt;strong&gt;0.7&lt;/strong&gt; del plugin &lt;strong&gt;Gradle&lt;/strong&gt;, es posible pasar información sobre qué configuraciones son necesarias para nuestra aplicación al &lt;em&gt;build system&lt;/em&gt;. Ésto es posible gracias a las configuraciones en &lt;code&gt;resConfig&lt;/code&gt; y &lt;code&gt;resConfigs&lt;/code&gt;. El archivo &lt;code&gt;build.gradle&lt;/code&gt; de abajo previene que &lt;code&gt;aapt&lt;/code&gt; empaquete recursos que no coincidan con los que usa la aplicación:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;&lt;span class=&#34;n&#34;&gt;defaultConfig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;// ...
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;resConfigs&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;de&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;fr&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;it&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;resConfigs&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;nodpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;hdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xhdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxhdpi&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;xxxhdpi&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;comprimir-imágenes&#34;&gt;Comprimir imágenes&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Aapt&lt;/strong&gt; viene con un &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;compresor de imágenes lossless&lt;/a&gt;. Por ejemplo, una imagen PNG que no requiera de más de 256 colores puede convertirse en otra con una paleta de colores 8-bits (&lt;em&gt;8 bits = 1B = 256 valores&lt;/em&gt;). Aunque &lt;strong&gt;aapt&lt;/strong&gt; haga ésto por nosotros, sería buena idea optimizar además la imagen por nuestra cuenta, para ello hay varias herramientas, como &lt;em&gt;pngquant&lt;/em&gt;, &lt;em&gt;imageAlpha&lt;/em&gt;, &lt;em&gt;imageOptim&lt;/em&gt; o &lt;em&gt;optipng&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Android tiene un tipo especial de imágenes: &lt;a href=&#34;https://developer.android.com/tools/help/draw9patch.html&#34; title=&#34;Documentación Android&#34;&gt;&lt;em&gt;9-patches&lt;/em&gt;&lt;/a&gt;. Para optimizar éstas imágenes basta con decirle al diseñador que reduzca al mínimo las áreas “estirables” y el contenido.&lt;/p&gt;
-
-&lt;h2 id=&#34;limitar-el-número-de-arquitecturas&#34;&gt;Limitar el número de arquitecturas&lt;/h2&gt;
-
-&lt;p&gt;Android trata generalmente con Java, pero en ciertas ocasiones es necesario usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-al-ndk-de-android/&#34; title=&#34;Introducción al NDK de Android&#34;&gt;código nativo&lt;/a&gt;. En el ecosistema actual de Android bastará con desarrollar para las arquitecturas armabi y x86. En &lt;a href=&#34;http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/&#34; title=&#34;Android NDK How to reduce libs size&#34;&gt;éste artículo&lt;/a&gt; se puede encontrar más información sobre el tema.&lt;/p&gt;
-
-&lt;h2 id=&#34;re-usar-siempre-que-sea-posible&#34;&gt;Re-usar siempre que sea posible&lt;/h2&gt;
-
-&lt;p&gt;Ésta sea quizá una de las optimizaciones principales más importantes que se aprenden al empezar en el desarrollo móvil. En un &lt;code&gt;ListView&lt;/code&gt; o &lt;code&gt;RecyclerView&lt;/code&gt;, re-usar ayuda a mantener un &lt;em&gt;scrolling&lt;/em&gt; fluido (Más sobre el reciclaje de vistas en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/adapter-personalizado-en-android/&#34; title=&#34;Crear un adapter personalizado&#34;&gt;Crear un adapter personalizado&lt;/a&gt;). Re-usar puede además ayudar a reducir el tamaño final del &lt;strong&gt;APK&lt;/strong&gt;. Por ejemplo, Android provee de varias utilidades para colorear un asset ya sea usando &lt;code&gt;android:tint&lt;/code&gt; y &lt;code&gt;android:tintmode&lt;/code&gt; en Android L o &lt;code&gt;ColorFilter&lt;/code&gt; en todas las veriones.&lt;/p&gt;
-
-&lt;p&gt;También es posible evitar guardar recursos que solo sean rotaciones de otro. Digamos que tenemos dos imágenes llamadas &lt;code&gt;ic_arrow_expand&lt;/code&gt; y &lt;code&gt;ic_arrow_collapse&lt;/code&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 512px) 512px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/PON-A-DIETA-A-TUS-APKS-Rotaciones-de-recursos.png&#34; alt=&#34;PON A DIETA A TUS APKS - Rotaciones de recursos&#34; width=&#34;512px&#34; height=&#34;384px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Podemos deshacernos fácilmente de &lt;code&gt;ic_arrow_collapse&lt;/code&gt; creando un &lt;code&gt;RotateDrawable&lt;/code&gt; basándonos en &lt;code&gt;ic_arrow_expand&lt;/code&gt;. Ésta técnica también reduce la cantidad de tiempo necesaria por el diseñador, ya que solo tendrá que crear una única imagen, y crearemos las versiones rotadas con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;rotate&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/ic_arrow_expand&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:fromDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;180&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:pivotX=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:pivotY=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;50%&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;na&#34;&gt;android:toDegrees=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;180&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;renderizar-en-código-cuando-sea-necesario&#34;&gt;Renderizar en código cuando sea necesario&lt;/h2&gt;
-
-&lt;p&gt;En ciertas ocasiones renderizar gráficos directamente desde código puede conllevar un gran beneficio. Uno de los mejores ejemplos de una ganancia colosal en peso son las animaciones &lt;em&gt;frame-by-frame&lt;/em&gt;. &lt;strong&gt;Cyril&lt;/strong&gt; ha estado trabajando recientemente con &lt;em&gt;Android Wear&lt;/em&gt; y ha echado un vistazo a la &lt;a href=&#34;https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary&#34;&gt;&lt;em&gt;Android Wearable support library&lt;/em&gt;&lt;/a&gt;. Como las otras librerías, contiene varias clases útiles cuando se trabaja con dispositivos &lt;em&gt;wearables&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Desafortunadamente, después de crear un “Hola Mundo” básico, notó que el &lt;strong&gt;APK&lt;/strong&gt; resultante pesaba más de &lt;strong&gt;1.5MB&lt;/strong&gt;. Tras investigar en &lt;code&gt;wearable-support.aar&lt;/code&gt;, descubrió que se empaquetan dos animaciones &lt;em&gt;frame-by-frame&lt;/em&gt; en 3 densidades distintas: Una animación para notificar “Éxito” (31 frames) y otra “Abrir en teléfono” (54 frames).&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 1596px) 1596px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/08/Pon-a-Diata-a-tus-APKs-Renderizar-en-código-cuando-sea-necesario-wearable-support.png&#34; alt=&#34;Pon a Dieta a tus APKs Renderizar en código cuando sea necesario wearable support&#34; width=&#34;1596px&#34; height=&#34;1236px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;La animación para el “éxito” se construye con un &lt;code&gt;AnimationDrawable&lt;/code&gt; definido en un XML:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;animation-list&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:oneshot=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00163&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00164&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00165&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00166&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00167&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00168&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00169&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00170&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00171&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00172&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00173&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00174&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00175&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;333&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00185&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00186&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00187&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00188&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00189&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00190&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00191&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00192&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:drawable=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@drawable/generic_confirmation_00193&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:duration=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;33&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/animation-list&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo malo es, que cada &lt;em&gt;frame&lt;/em&gt; se muestra durante 33ms, lo que hace que la animación se ejecute a 30fps. Mostrar un &lt;em&gt;frame&lt;/em&gt; cada 16ms habría resultado en una librería dos veces más pesada. El &lt;em&gt;frame&lt;/em&gt; &lt;code&gt;generic_confirmation_00175&lt;/code&gt; (línea 15) se muestra durante 333ms, le sigue &lt;code&gt;generic_confirmation_00185&lt;/code&gt;. Ésta es una gran optimización que evita que 9 &lt;em&gt;frames&lt;/em&gt; (del 176 al 184 incluidos) se empaqueten en la aplicación. Desafortunadamente, &lt;code&gt;wearable-support.aar&lt;/code&gt; contiene estos 9 &lt;em&gt;frames&lt;/em&gt; que no son usados para 3 densidades.&lt;/p&gt;
-
-&lt;p&gt;Realizar la animación mediante código requiere de más tiempo de desarrollo. sin embargo, puede reducir notablemente la cantidad de assets del &lt;strong&gt;APK&lt;/strong&gt; y además mantener una animación fluida a 60fps. Al momento de traducir éste artículo, Android no proporciona una herramienta que permita renderizar éstas animaciones de forma sencilla. Esperemos que estén trabajando en ello.&lt;/p&gt;
-
-&lt;h2 id=&#34;ir-aún-más-lejos&#34;&gt;Ir aún más lejos&lt;/h2&gt;
-
-&lt;p&gt;Todas las técnicas descritas arriba están enfocadas principalmente en la aplicación/librería. ¿Se podría ir más lejos si tuviéramos control total sobre la cadena de distribución?. Seguramente se podría, pero implicaría algún trabajo en el lado del servidor, o más específicamente, en el lado de la &lt;em&gt;Play Store&lt;/em&gt;. Por ejemplo, la &lt;em&gt;Play Store&lt;/em&gt; podría tener un sistema de paquetes que empaquetara únicamente las librerías nativas necesarias para cada dispositivo.&lt;/p&gt;
-
-&lt;p&gt;Otra posibilidad sería empaquetar solamente la configuración necesaria para el dispositivo. Desafortunadamente, eso rompería por completo con una de las funcionalidades más importantes de Android: &lt;em&gt;Cambios de configuración en caliente&lt;/em&gt;. De hecho, Android se diseñó para tratar con cambios de configuración en tiempo de ejecución (Idioma, orientación etc). Por ejemplo, eliminar recursos no compatibles con la densidad de pantalla del dispositivo sería un gran benefício. Sin embargo, las aplicaciones en Android son capaces de tratar con cambios en la &lt;a href=&#34;http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY&#34; title=&#34;CONFIG_DENSITY&#34;&gt;densidad de pantalla&lt;/a&gt; sobre la marcha. Incluso si descartáramos esta capacidad, tendríamos que seguir tratando con los &lt;em&gt;drawables&lt;/em&gt; definidos para densidades distintas que las del dispositivo que instala la aplicación. Además de aquellos que tengan más de una cualificador de densidad (orientación, menor anchura etc.).&lt;/p&gt;
-
-&lt;p&gt;El empaquetado del &lt;strong&gt;APK&lt;/strong&gt; del lado del servidor parece extremadamente potente. Pero es muy arriesgado porque el &lt;strong&gt;APK&lt;/strong&gt; final entregado al usuario sería completamente distinto al enviado por el desarrollador a la &lt;em&gt;Play Store&lt;/em&gt;. Entregar un &lt;strong&gt;APK&lt;/strong&gt; con algunos recursos/assets eliminados simplemente rompería las aplicaciones.&lt;/p&gt;
-
-&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
-
-&lt;p&gt;El diseño trata de obtener lo mejor posible a partir de un conjunto de restricciones. El peso/tamaño de un &lt;strong&gt;APK&lt;/strong&gt; es claramente una de esas restricciones. No hay que tener miedo de empeorar un aspecto de la aplicación para mejorar otros. Por ejemplo, no hay que dudar en reducir la calidad del renderizado de la UI si como consecuencia se logra reducir el tamaño del APK y la aplicación se hace más fluida. El 99% de los usuarios no notarán que la calidad ha bajado, pero sí notarán que la aplicación va más fluida. Al fin y al cabo, una aplicación se juzga por su totalidad, no por la suma de ciertos aspecto por separado.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Gracias al &lt;a href=&#34;https://twitter.com/cyrilmottier&#34; title=&#34;@cyrilmottier&#34;&gt;Cyril&lt;/a&gt; por permitirme traducir su artículo original &lt;em&gt;“Putting Your APKs on Diet”&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Putting Your APKs on Diet por Cyril Mottier&lt;/em&gt; »» &lt;a href=&#34;http://cyrilmottier.com/2014/08/26/putting-your-apks-on-diet/&#34; target=&#34;_blank&#34;&gt;cyrilmottier.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
         </item>
         
     </channel>

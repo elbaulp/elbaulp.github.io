@@ -12,39 +12,39 @@
   <span class="c1">#Declara metodos gets y sets</span>
   <span class="kp">attr_accessor</span> <span class="ss">:nombre</span><span class="p">,</span> <span class="ss">:fechaNacimiento</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">initialize</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">fechaNacimiento</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">fechaNacimiento</span><span class="p">)</span>
     <span class="c1">#Inicializar atributos</span>
     <span class="vi">@nombre</span> <span class="o">=</span> <span class="n">nombre</span>
     <span class="vi">@fechaNacimiento</span> <span class="o">=</span> <span class="n">fechaNacimiento</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">edad</span>
+  <span class="k">def</span> <span class="nf">edad</span>
     <span class="n">dob</span> <span class="o">=</span> <span class="n">fechaNacimiento</span><span class="p">()</span> <span class="ow">or</span> <span class="k">return</span> <span class="kp">nil</span>
     <span class="n">now</span> <span class="o">=</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span>
     <span class="n">now</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">dob</span><span class="o">.</span><span class="n">year</span>
     <span class="c1">#now.year - dob.year - (dob.to_time.change(:year =&gt; now.year) &gt; now ? 1 : 0)</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">to_s</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
     <span class="s2">&#34;Persona [nombre=&#34;</span> <span class="o">+</span> <span class="n">nombre</span> <span class="o">+</span> <span class="s2">&#34;], fechaNacimiento=&#34;</span> <span class="o">+</span> <span class="n">fechaNacimiento</span><span class="o">.</span><span class="n">to_s</span> <span class="o">+</span> <span class="s2">&#34;]&#34;</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">cumple</span>
+  <span class="k">def</span> <span class="nf">cumple</span>
     <span class="s2">&#34;Su cumpleanos es el &#34;</span><span class="o">.</span><span class="n">concat</span> <span class="n">fechaNacimiento</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">concat</span> <span class="s2">&#34; del &#34;</span><span class="o">.</span><span class="n">concat</span> <span class="n">fechaNacimiento</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">to_s</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">esMenorQue</span> <span class="n">otro</span>
+  <span class="k">def</span> <span class="nf">esMenorQue</span> <span class="n">otro</span>
     <span class="k">return</span> <span class="n">fechaNacimiento</span> <span class="o">&lt;=&gt;</span> <span class="n">otro</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">&lt;=&gt;</span><span class="p">(</span><span class="n">otraPersona</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">&lt;=&gt;</span><span class="p">(</span><span class="n">otraPersona</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">fechaNacimiento</span> <span class="o">&lt;</span> <span class="n">otraPersona</span><span class="o">.</span><span class="n">fechaNacimiento</span>
       <span class="o">-</span><span class="mi">1</span>
-    <span class="o"></span><span class="k">elsif</span> <span class="nb">self</span><span class="o">.</span><span class="n">fechaNacimiento</span> <span class="o">&gt;</span> <span class="n">otraPersona</span><span class="o">.</span><span class="n">fechaNacimiento</span>
+    <span class="k">elsif</span> <span class="nb">self</span><span class="o">.</span><span class="n">fechaNacimiento</span> <span class="o">&gt;</span> <span class="n">otraPersona</span><span class="o">.</span><span class="n">fechaNacimiento</span>
       <span class="mi">1</span>
-    <span class="o"></span><span class="k">else</span>
+    <span class="k">else</span>
       <span class="mi">0</span>
-    <span class="o"></span><span class="k">end</span>
+    <span class="k">end</span>
   <span class="k">end</span>
 <span class="cm">=begin
 </span><span class="cm">    los metodos getdianac, getmes etc no se implementan porque pueden ser facilmente accesibles con fechanacimiento.year etc
@@ -53,13 +53,13 @@
 <span class="k">end</span></code></pre></div><p>Comentemos brevemente la sintaxis:</p><p>A diferencias de Java, en lugar de usar <strong>import</strong>, se usa <strong>require</strong> para incluir otras clases. Algo que me gustó bastante es la posibilidad de crear métodos de acceso, es decir, los típicos <strong>get</strong> y <strong>set</strong> con una simple instrución. Escribiendo <strong><em>attr_accessor :nombre, :fechaNacimiento</em></strong> estamos declarando los métodos de acceso a estos dos atributos de la clase. A los cuales podemos acceder con <code>instanciaObjetoPersona.fechaNacimiento()</code> para obtener el valor del atributo o <code>instanciaObjetoPersona.fechaNacimiento=(NuevaFecha)</code> para modificarlo. Es importante destacar que en Ruby los paréntess no son obligatorios.</p><p>Los constructores tienen siempre el nombre <code>initialize()</code>, en Java es el nombre de la clase.</p><p>Algo curioso, no existe <strong>null</strong> si no <strong>nil</strong>.</p><p>El método <code>toString</code> en java aquí se llama <code>to_s</code>.</p><p>Concretamente en esta clase se implementa la interfaz <strong>Comparable</strong>, usada para comprobar si un objeto es igual, menor o mayor que otro. En java es necesario redefinir el método <code>compareTo</code>, en Ruby se usa el método <code>&lt;=&gt;</code>, que hay que redefinir también, como se puede comprobar en el código.</p><p>Echemos un vistazo a la clase Asignatura:</p><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Asignatura</span>
   <span class="kp">attr_accessor</span> <span class="ss">:codigo</span><span class="p">,</span> <span class="ss">:titulo</span><span class="p">,</span> <span class="ss">:creditosECTS</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">initialize</span><span class="p">(</span><span class="n">codigo</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">creditos</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">codigo</span><span class="p">,</span> <span class="n">titulo</span><span class="p">,</span> <span class="n">creditos</span><span class="p">)</span>
     <span class="vi">@codigo</span> <span class="o">=</span> <span class="n">codigo</span>
     <span class="vi">@titulo</span> <span class="o">=</span> <span class="n">titulo</span>
     <span class="vi">@creditosECTS</span> <span class="o">=</span> <span class="n">creditos</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">to_s</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
     <span class="s2">&#34;La asignatura &#34;</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">titulo</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="s2">&#34; con codigo &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">codigo</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span><span class="o">.</span>
         <span class="n">concat</span><span class="p">(</span><span class="s2">&#34;, consta de &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">creditosECTS</span><span class="p">()</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="s2">&#34; creditos ECTS&#34;</span><span class="p">)</span>
   <span class="k">end</span>
@@ -72,9 +72,9 @@
   <span class="c1">#Variable estática</span>
   <span class="vc">@@NUM_MAX_CRED</span> <span class="o">=</span> <span class="mi">60</span>
 
-  <span class="o"></span><span class="c1">#Atributos</span>
+  <span class="c1">#Atributos</span>
   <span class="kp">attr_accessor</span> <span class="ss">:titulacion</span><span class="p">,</span> <span class="ss">:asignaturas</span>
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">initialize</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="n">fechaNacimiento</span><span class="p">,</span> <span class="n">titulacion</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="n">fechaNacimiento</span><span class="p">,</span> <span class="n">titulacion</span><span class="p">)</span>
     <span class="k">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span> <span class="n">fechaNacimiento</span><span class="p">)</span>
     <span class="vi">@titulacion</span> <span class="o">=</span> <span class="n">titulacion</span>
     <span class="vi">@asignaturas</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="kp">false</span><span class="p">)</span> <span class="c1">#Si no hay nada, devuelvo false</span>
@@ -88,23 +88,23 @@
     <span class="vc">@@NUM_MAX_CRED</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">to_s</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
     <span class="k">super</span><span class="o">.</span><span class="n">to_s</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span> <span class="s2">&#34;Esta estudiando &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">titulacion</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="s2">&#34;, creditos &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">getNumCreditos</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">getNumCreditos</span>
+  <span class="k">def</span> <span class="nf">getNumCreditos</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="o"></span><span class="n">asignaturas</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+    <span class="n">asignaturas</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
       <span class="n">total</span> <span class="o">+=</span> <span class="n">asignaturas</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="n">creditosECTS</span>
     <span class="k">end</span>
     <span class="n">total</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">estaMatriculado</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">estaMatriculado</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
     <span class="n">asignaturas</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">matricularAsignatura</span><span class="p">(</span><span class="n">asig</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">matricularAsignatura</span><span class="p">(</span><span class="n">asig</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">estaMatriculado</span><span class="p">(</span><span class="n">asig</span><span class="o">.</span><span class="n">codigo</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">getNumCreditos</span> <span class="o">+</span> <span class="n">asig</span><span class="o">.</span><span class="n">creditosECTS</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="no">Alumno</span><span class="o">.</span><span class="n">NUM_MAX_CRED</span>
       <span class="n">asignaturas</span><span class="o">[</span><span class="n">asig</span><span class="o">.</span><span class="n">codigo</span><span class="o">]</span> <span class="o">=</span> <span class="n">asig</span>
     <span class="k">else</span>
@@ -112,7 +112,7 @@
     <span class="k">end</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">desmatricularAsignatura</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">desmatricularAsignatura</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">estaMatriculado</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
       <span class="n">asignaturas</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
     <span class="k">else</span>
@@ -120,22 +120,22 @@
     <span class="k">end</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">mostrarMatricula</span>
+  <span class="k">def</span> <span class="nf">mostrarMatricula</span>
     <span class="nb">puts</span> <span class="s2">&#34;El alumno se encuentra matriculado de las siguientes asignaturas:</span><span class="se">\n</span><span class="s2">&#34;</span>
     <span class="n">asignaturas</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
       <span class="nb">puts</span> <span class="s2">&#34;</span><span class="se">\t</span><span class="s2">Codigo Asig: &#34;</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">k</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="s2">&#34;. Creditos &#34;</span><span class="p">)</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">asignaturas</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="n">creditosECTS</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
     <span class="k">end</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">buscarAsignatura</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
+  <span class="k">def</span> <span class="nf">buscarAsignatura</span><span class="p">(</span><span class="n">codAsig</span><span class="p">)</span>
     <span class="n">asignaturas</span><span class="o">[</span><span class="n">codAsig</span><span class="o">]</span>
   <span class="k">end</span>
 
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">anularMatricula</span>
+  <span class="k">def</span> <span class="nf">anularMatricula</span>
     <span class="n">asignaturas</span><span class="o">.</span><span class="n">clear</span>
   <span class="k">end</span>
 <span class="k">end</span></code></pre></div><p>Varias cosas a comentar. Para indicar la herencia de una clase sobre otra, se usa el operador &lt;, en este caso <strong>Alumno</strong> heredará de <strong>Persona</strong>. Las variables estáticas se definen anteponiendo dos @@ al nombre de la variable. (<code>@@NUM_MAX_CRED = 60</code>). <code>asignaturas</code> es un objeto HashMap sobre el que podemos iterar, un ejemplo es el método <code>getNumCreditos</code>:</p><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="o"></span><span class="n">asignaturas</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+    <span class="n">asignaturas</span><span class="o">.</span><span class="n">each_pair</span> <span class="k">do</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
       <span class="n">total</span> <span class="o">+=</span> <span class="n">asignaturas</span><span class="o">[</span><span class="n">k</span><span class="o">].</span><span class="n">creditosECTS</span>
     <span class="k">end</span>
 <span class="n">total</span></code></pre></div><p>Este método itera sobre el HashMap sumando los créditos de las asignaturas. <strong>k</strong> corresponde a la clave del HashMap, y <strong>v</strong> al valor. Cabe destacar la asuencia de la sentencia <code>return</code> en todos los métodos.</p><p>Por último, el manejo de excepciones. En esta clase, se lanzan varias. Por ejemplo, el método <code>matricularAsignatura</code> lanzará una excepción si el alumno ya está matriculado o supera el número máximo de créditos.</p><p>Para probar el funcionamiento del programa, usaremos esta pieza de código:</p><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env ruby</span>
@@ -148,10 +148,10 @@
   <span class="n">arrayPersonas</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
 
   <span class="c1">#Creando personas y Alumnos</span>
-  <span class="n">alex</span> <span class="o">=</span> <span class="no">Persona</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Alejandro Alcalde&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1991</span><span class="o"></span><span class="p">,</span><span class="mi">2</span><span class="o"></span><span class="p">,</span><span class="mi">10</span><span class="o"></span><span class="p">))</span>
-  <span class="n">pepe</span> <span class="o">=</span> <span class="no">Persona</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Pepe&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="o"></span><span class="p">,</span><span class="mi">2</span><span class="o"></span><span class="p">,</span><span class="mi">8</span><span class="o"></span><span class="p">))</span>
-  <span class="n">alumno1</span> <span class="o">=</span> <span class="no">Alumno</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Nombre del alum1&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="o"></span><span class="p">,</span><span class="mi">2</span><span class="o"></span><span class="p">,</span><span class="mi">8</span><span class="o"></span><span class="p">),</span><span class="s2">&#34;Ing. Informatica&#34;</span><span class="p">)</span>
-  <span class="n">alumno2</span> <span class="o">=</span> <span class="no">Alumno</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Nombre del alum2&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="o"></span><span class="p">,</span><span class="mi">2</span><span class="o"></span><span class="p">,</span><span class="mi">8</span><span class="o"></span><span class="p">),</span><span class="s2">&#34;Ing. Teleco&#34;</span><span class="p">)</span>
+  <span class="n">alex</span> <span class="o">=</span> <span class="no">Persona</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Alejandro Alcalde&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+  <span class="n">pepe</span> <span class="o">=</span> <span class="no">Persona</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Pepe&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+  <span class="n">alumno1</span> <span class="o">=</span> <span class="no">Alumno</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Nombre del alum1&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="s2">&#34;Ing. Informatica&#34;</span><span class="p">)</span>
+  <span class="n">alumno2</span> <span class="o">=</span> <span class="no">Alumno</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&#34;Nombre del alum2&#34;</span><span class="p">,</span><span class="no">Date</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1980</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span><span class="s2">&#34;Ing. Teleco&#34;</span><span class="p">)</span>
 
   <span class="c1">#Almacenarlas en un HashMap</span>
   <span class="n">arrayPersonas</span><span class="o">[</span><span class="n">alex</span><span class="o">.</span><span class="n">nombre</span><span class="o">]</span> <span class="o">=</span> <span class="n">alex</span>
@@ -160,13 +160,13 @@
   <span class="n">arrayPersonas</span><span class="o">[</span><span class="n">alumno1</span><span class="o">.</span><span class="n">nombre</span><span class="o">]</span> <span class="o">=</span> <span class="n">alumno2</span>
 
   <span class="c1">#Creacion de Asignaturas</span>
-  <span class="n">asig1</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1000</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig2</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1001</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig3</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1002</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig4</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1003</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig5</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1004</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig6</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1005</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
-  <span class="n">asig7</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1006</span><span class="o"></span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="o"></span><span class="p">)</span>
+  <span class="n">asig1</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig2</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1001</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig3</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1002</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig4</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1003</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig5</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1004</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig6</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1005</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+  <span class="n">asig7</span> <span class="o">=</span> <span class="no">Asignatura</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">1006</span><span class="p">,</span><span class="s2">&#34;Ing.Informatica&#34;</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
 
   <span class="c1">#Imprimir las personas</span>
   <span class="nb">puts</span> <span class="s2">&#34;Mostrando personas almacenadas en el sistema&#34;</span>
@@ -186,11 +186,11 @@
   <span class="n">alumno1</span><span class="o">.</span><span class="n">mostrarMatricula</span>
   <span class="nb">puts</span> <span class="s2">&#34;El numero total de creditos del alumno es &#34;</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">alumno1</span><span class="o">.</span><span class="n">getNumCreditos</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
   <span class="nb">puts</span> <span class="s2">&#34;Desmatriculando al almuno de una asignatura...&#34;</span>
-  <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="o"></span><span class="p">)</span>
+  <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
   <span class="n">alumno1</span><span class="o">.</span><span class="n">mostrarMatricula</span>
   <span class="nb">puts</span> <span class="s2">&#34;Intentando desmatricular de asignatura no matriculada...&#34;</span>
   <span class="k">begin</span>
-    <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="o"></span><span class="p">)</span>
+    <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
   <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
     <span class="nb">puts</span> <span class="n">e</span><span class="o">.</span><span class="n">message</span>
   <span class="k">end</span>
@@ -199,7 +199,7 @@
   <span class="nb">puts</span> <span class="n">alumno1</span><span class="o">.</span><span class="n">to_s</span>
 
 <span class="k">end</span></code></pre></div><p>En este fragmento de código se muestra un ejemplo del tratado de excepciones, en lugar del clásico <code>try{...}catch(){...}</code> en Ruby se usa la siguiente sintaxis:</p><div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">begin</span>
-    <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="o"></span><span class="p">)</span>
+    <span class="n">alumno1</span><span class="o">.</span><span class="n">desmatricularAsignatura</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
   <span class="k">rescue</span> <span class="no">Exception</span> <span class="o">=&gt;</span> <span class="n">e</span>
     <span class="nb">puts</span> <span class="n">e</span><span class="o">.</span><span class="n">message</span>
   <span class="k">end</span></code></pre></div><p>Debido a la ausencia de tipos en Ruby, el lenguaje proporciona un mecanismo para comprobar si el objeto responde a un método concreto, es decir, si lo tiene implementado. Esto se logra con <code>nombreObjeto.respond_to?(&quot;NombreMétodo&quot;)</code></p><p>Vamos a ejecutar el programa:</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">hkr-&gt; ruby Main.rb

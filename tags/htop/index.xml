@@ -6,7 +6,7 @@
         <description>Recent content in Htop on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 08 Oct 2017 19:27:49 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/htop/</link>
@@ -17,137 +17,9 @@
         <atom:link href="https://elbauldelprogramador.com/tags/htop/" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Liberada la versión 1.0 de htop</title>
-            <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
-            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
-            <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
-
-&lt;p&gt;Podéis &lt;strong&gt;consultar las mejoras&lt;/strong&gt; en la &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads&#34;&gt;página oficial del proyecto en SourceForge&lt;/a&gt;, y por supuesto tenéis a vuestra disposición tanto el &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads#sources&#34;&gt;código fuente&lt;/a&gt; como &lt;a href=&#34;http://htop.sourceforge.net/index.php?page=downloads#binaries&#34;&gt;binarios&lt;/a&gt; preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede &lt;a target=&#34;_blank&#34; href=&#34;http://sourceforge.net/donate/index.php?group_id=108839&#34;&gt;invitarle a una cervecita.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;El autor explica en la página del proyecto las mejoras de esta nueva versión:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;I am extremely happy to announce htop 1.0!&lt;/p&gt;
-
-&lt;p&gt;Time flies, I can&amp;#8217;t believe it&amp;#8217;s been eight years of development
-already. It seems like yesterday that I&amp;#8217;ve decided to stop writing PID
-numbers every time I wanted to kill a process and started this
-project. I am very happy to see this little project grow into a
-reality, see it being included in repositories for many distributions,
-reading nice reviews arond the web, receiving many contributions from
-coders from all over the world who helped making htop better and
-better over the years, and getting short &amp;#8220;thank you!&amp;#8221; emails that
-always make my day. Thanks to all distro packagers, reviewers, code
-contributors, users. The free software community is amazing; if it
-wasn&amp;#8217;t for all of you, htop wouldn&amp;#8217;t be what it is now. Version
-numbers are more symbolic than anything, but the stability of htop 0.9
-in the past year and the cool new features introduced in this release
-compelled me to call this version 1.0. We all deserve this little
-&amp;#8220;achievement&amp;#8221;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Performance improvements&lt;/li&gt;
-&lt;li&gt;Support for splitting CPU meters into two or four columns (thanks to Wim Heirman)&lt;/li&gt;
-&lt;li&gt;Switch from PLPA, which is now deprecated, to HWLOC.&lt;/li&gt;
-&lt;li&gt;Bring back support for native Linux sched_setaffinity, so we don’t have to use HWLOC where we don’t need to.&lt;/li&gt;
-&lt;li&gt;Support for typing in user names and column fields in selection panels.&lt;/li&gt;
-&lt;li&gt;Support for UTF-8 tree drawing (thanks to Bin Guo)&lt;/li&gt;
-&lt;li&gt;Option for counting CPUs from zero (thanks to Sean Noonan)&lt;/li&gt;
-&lt;li&gt;Meters update in every screen (no longer halting while on Setup, etc.)&lt;/li&gt;
-&lt;li&gt;Stricter checks for command-line options (thanks to Sebastian Pipping)&lt;/li&gt;
-&lt;li&gt;Incremental filtering (thanks to Seth Heeren for the idea and initial implementation)&lt;/li&gt;
-&lt;li&gt;Try harder to find the ncurses header (thanks to Moritz Barsnick)&lt;/li&gt;
-&lt;li&gt;Man page updates (thanks to Vincent Launchbury)&lt;/li&gt;
-&lt;li&gt;BUGFIX: Support larger numbers for process times.  (thanks to Tristan Nakagawa for the report.)&lt;/li&gt;
-&lt;li&gt;BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths (patch by Sebastian Pipping)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Que traduzco a continuación:&lt;/p&gt;
-
-&lt;p&gt;El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parece que fue ayer cuando decidí dejar de escribir números de PID cada vez que quería matar un proceso y empecé este proyecto. Estoy muy contento de ver este proyecto crecer hasta llegar a ser una realida, verlo incluido en los repositorios de muchas distribuciones, leer agradables revisiones por toda la web, recibir correos de muchos contribuidores de todo el mundo que han ayudado a htop a mejorar con los años, y recibir emails cortos que simplemente decían &amp;#8220;gracias!&amp;#8221; y me alegraban el día. Gracias a todos los empaquetadores de distros, revisores, contribuidores de código, usuarios. La comunidad del software libre es increible; si no fuera por todos ellos, htop no sería lo que es hoy. Los números de las versiones son méramente simbólicos, pero la estabilidad de htop 0.9 el los años pasados y las nuevas características introducidas en esta &amp;#8220;release&amp;#8221;, me obliga a llamar a esta versión la 1.0. Todos merecemos este pequeño logro.&lt;/p&gt;
-
-&lt;p&gt;Para instalarlo tan solo debéis escribir en el terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo aptitude install htop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Al ejecutarlo veremos algo parecido a lo siguiente:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;linux htop&#34; width=&#34;800&#34; height=&#34;640&#34; src=&#34;https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Vía &lt;a target=&#34;_blank&#34; href=&#34;http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/&#34;&gt;MuyLinux&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Fuente &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=main&#34;&gt;htop.sourceforge.net&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        
-        <item>
-            <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
-            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
-
-&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
-&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
-
-&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
-
-&lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
-
-&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
-
-&lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
-
-&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
-
-&lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
-
-&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
-
-&lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
-
-&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
-
-&lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
-
-&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
-
-&lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
-
-&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
-
-&lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
-
-&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
-
-&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
-
-&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
             <title>10 de las Mejores Herramientas en la Línea de Comandos II</title>
             <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            <pubDate>Sun, 08 Oct 2017 19:27:49 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</guid>
             <description>&lt;figure&gt;
@@ -370,6 +242,134 @@ jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1
 &lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;
 
 &lt;p&gt;¿Añadirías alguna a la lista? ¡Cuéntanos!&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
+            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
+            <pubDate>Sun, 08 Oct 2017 19:27:20 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
+
+&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
+&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
+
+&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
+
+&lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
+
+&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
+
+&lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
+
+&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
+
+&lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
+
+&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
+
+&lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
+
+&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
+
+&lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
+
+&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
+
+&lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
+
+&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
+
+&lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
+
+&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
+
+&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
+
+&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Liberada la versión 1.0 de htop</title>
+            <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
+            <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
+
+&lt;p&gt;Podéis &lt;strong&gt;consultar las mejoras&lt;/strong&gt; en la &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads&#34;&gt;página oficial del proyecto en SourceForge&lt;/a&gt;, y por supuesto tenéis a vuestra disposición tanto el &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=downloads#sources&#34;&gt;código fuente&lt;/a&gt; como &lt;a href=&#34;http://htop.sourceforge.net/index.php?page=downloads#binaries&#34;&gt;binarios&lt;/a&gt; preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede &lt;a target=&#34;_blank&#34; href=&#34;http://sourceforge.net/donate/index.php?group_id=108839&#34;&gt;invitarle a una cervecita.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El autor explica en la página del proyecto las mejoras de esta nueva versión:&lt;/p&gt;
+
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;I am extremely happy to announce htop 1.0!&lt;/p&gt;
+
+&lt;p&gt;Time flies, I can&amp;#8217;t believe it&amp;#8217;s been eight years of development
+already. It seems like yesterday that I&amp;#8217;ve decided to stop writing PID
+numbers every time I wanted to kill a process and started this
+project. I am very happy to see this little project grow into a
+reality, see it being included in repositories for many distributions,
+reading nice reviews arond the web, receiving many contributions from
+coders from all over the world who helped making htop better and
+better over the years, and getting short &amp;#8220;thank you!&amp;#8221; emails that
+always make my day. Thanks to all distro packagers, reviewers, code
+contributors, users. The free software community is amazing; if it
+wasn&amp;#8217;t for all of you, htop wouldn&amp;#8217;t be what it is now. Version
+numbers are more symbolic than anything, but the stability of htop 0.9
+in the past year and the cool new features introduced in this release
+compelled me to call this version 1.0. We all deserve this little
+&amp;#8220;achievement&amp;#8221;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Performance improvements&lt;/li&gt;
+&lt;li&gt;Support for splitting CPU meters into two or four columns (thanks to Wim Heirman)&lt;/li&gt;
+&lt;li&gt;Switch from PLPA, which is now deprecated, to HWLOC.&lt;/li&gt;
+&lt;li&gt;Bring back support for native Linux sched_setaffinity, so we don’t have to use HWLOC where we don’t need to.&lt;/li&gt;
+&lt;li&gt;Support for typing in user names and column fields in selection panels.&lt;/li&gt;
+&lt;li&gt;Support for UTF-8 tree drawing (thanks to Bin Guo)&lt;/li&gt;
+&lt;li&gt;Option for counting CPUs from zero (thanks to Sean Noonan)&lt;/li&gt;
+&lt;li&gt;Meters update in every screen (no longer halting while on Setup, etc.)&lt;/li&gt;
+&lt;li&gt;Stricter checks for command-line options (thanks to Sebastian Pipping)&lt;/li&gt;
+&lt;li&gt;Incremental filtering (thanks to Seth Heeren for the idea and initial implementation)&lt;/li&gt;
+&lt;li&gt;Try harder to find the ncurses header (thanks to Moritz Barsnick)&lt;/li&gt;
+&lt;li&gt;Man page updates (thanks to Vincent Launchbury)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Support larger numbers for process times.  (thanks to Tristan Nakagawa for the report.)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths (patch by Sebastian Pipping)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Que traduzco a continuación:&lt;/p&gt;
+
+&lt;p&gt;El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parece que fue ayer cuando decidí dejar de escribir números de PID cada vez que quería matar un proceso y empecé este proyecto. Estoy muy contento de ver este proyecto crecer hasta llegar a ser una realida, verlo incluido en los repositorios de muchas distribuciones, leer agradables revisiones por toda la web, recibir correos de muchos contribuidores de todo el mundo que han ayudado a htop a mejorar con los años, y recibir emails cortos que simplemente decían &amp;#8220;gracias!&amp;#8221; y me alegraban el día. Gracias a todos los empaquetadores de distros, revisores, contribuidores de código, usuarios. La comunidad del software libre es increible; si no fuera por todos ellos, htop no sería lo que es hoy. Los números de las versiones son méramente simbólicos, pero la estabilidad de htop 0.9 el los años pasados y las nuevas características introducidas en esta &amp;#8220;release&amp;#8221;, me obliga a llamar a esta versión la 1.0. Todos merecemos este pequeño logro.&lt;/p&gt;
+
+&lt;p&gt;Para instalarlo tan solo debéis escribir en el terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo aptitude install htop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Al ejecutarlo veremos algo parecido a lo siguiente:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;linux htop&#34; width=&#34;800&#34; height=&#34;640&#34; src=&#34;https://4.bp.blogspot.com/-ZCdSHEPwhvc/TswerYkwIZI/AAAAAAAAB1U/j909jru88cU/s800/Screenshot-Terminal.png&#34;&gt;&lt;/img&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Vía &lt;a target=&#34;_blank&#34; href=&#34;http://www.muylinux.com/2011/11/22/ocho-anos-despues-llega-htop-1-0/&#34;&gt;MuyLinux&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Fuente &lt;a target=&#34;_blank&#34; href=&#34;http://htop.sourceforge.net/index.php?page=main&#34;&gt;htop.sourceforge.net&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>

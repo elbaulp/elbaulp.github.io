@@ -6,7 +6,7 @@
         <description>Recent content in How To on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Mon, 02 Oct 2017 17:32:33 +0100</lastBuildDate>
+        <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/how-to/</link>
@@ -15,6 +15,122 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/categories/how-to/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Arduino Zumo Siguelineas Evita obstaculos</title>
+            <link>https://elbauldelprogramador.com/arduino-sigue-lineas-obstaculos/</link>
+            <pubDate>Sun, 16 Sep 2018 18:42:00 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/arduino-sigue-lineas-obstaculos/</guid>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Este proyecto forma parte de un trabajo para la asignatura &lt;em&gt;Robótica Móvil y
+Neurobótica&lt;/em&gt; del &lt;em&gt;Máster en Ciencia de Datos&lt;/em&gt; de la ETSIIT. Sus autores son
+&lt;a href=&#34;https://elbauldelprogramador.com/author/cristina/&#34;&gt;Cristina Heredia&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/author/alex/&#34;&gt;Alejandro Alcalde.&lt;/a&gt; El código está disponible en &lt;a href=&#34;https://github.com/HerAlc/LineFollowerObstacles&#34;&gt;&lt;em&gt;HerAlc/LineFollowerObstacles&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;El proyecto se compone de &lt;strong&gt;dos partes&lt;/strong&gt;. La &lt;strong&gt;primera&lt;/strong&gt; consiste en crear un robot
+que siga un camino pre-establecido marcado con líneas, además, debe evitar
+cualquier obstáculo que se encuentre en el camino. En caso de encontrarse con un
+obstáculo, el robot se detiene unos segundos y avisa, si pasado un tiempo el
+obstáculo sigue presente, el robot da media vuelta y sigue en camino contrario.
+La &lt;strong&gt;segunda parte&lt;/strong&gt; se trata de implementar este funcionamiento en el entorno
+simulado Vrep.&lt;/p&gt;
+
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+
+&lt;p&gt;Para esta parte se ha implementado un Zumo capaz de conducir por sí mismo con las siguientes funcionalidades:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sigue Líneas&lt;/li&gt;
+&lt;li&gt;Detección de obstáculos y toma de decisiones.&lt;/li&gt;
+&lt;li&gt;Avisos sonoros a los obstáculos.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para el sigue líneas se usan tres &lt;strong&gt;sensores sigue  líneas&lt;/strong&gt; para detectar cambios de intensidad.&lt;/p&gt;
+
+&lt;p&gt;Antes de comenzar, el robot necesita calibrar el &lt;strong&gt;giroscopio&lt;/strong&gt; y los sensores sigue líneas. Para ello hay que pulsar el botón &lt;code&gt;A&lt;/code&gt; una vez, esto calibra el giroscopio. Pulsar el botón &lt;code&gt;A&lt;/code&gt; una segunda vez calibra los sensores sigue líneas.&lt;/p&gt;
+
+&lt;p&gt;Cabe mencionar que se parte del ejemplo Sigue Líneas de Arduino, disponible en el IDE de Arduino, las modificaciones realizadas han sido las siguientes:&lt;/p&gt;
+
+&lt;p&gt;Se integra código del ejemplo &lt;code&gt;MazeSolver&lt;/code&gt;, que hace uso del giroscopio, en concreto los ficheros &lt;code&gt;TurnSensor.h&lt;/code&gt; y &lt;code&gt;TurnSensor.cpp&lt;/code&gt;. Esto permite calibrar el giroscopio, el cual es necesario para conseguir que el robot de media vuelta e inicie el camino contrario si el obstáculo que encuentra en su camino no se retira en tres segundos.&lt;/p&gt;
+
+&lt;p&gt;Para la &lt;strong&gt;detección de obstáculos&lt;/strong&gt; se hace uso de un sensor de proximidad. La distancia a la que se para el robot se fija al valor 6. Cuando el robot se detiene al encontrar un obstáculo, avisa con una melodía simple compuesta por nosotros y similar al &lt;strong&gt;claxon&lt;/strong&gt; de un vehículo. Finalmente, cuando el robot espera más de tres segundos y el obstáculo sigue presente, avisa con otra melodía compuesta por nosotros e inicia al camino en sentido opuesto girando 180 grados.&lt;/p&gt;
+
+&lt;h3 id=&#34;vídeo&#34;&gt;Vídeo&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;&lt;https://www.youtube-nocookie.com/embed/UwPJgL0ix_8&gt;&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;vrep&#34;&gt;VREP&lt;/h2&gt;
+
+&lt;p&gt;Para el proyecto en VREP se ha implementado un robot &lt;strong&gt;Sigue Líneas&lt;/strong&gt; que se detiene ante la presencia de un obstáculo. Si el obstáculo se retira durante la simulación, el robot sigue su camino. Si el obstáculo no se retira, el robot permanece sin moverse para evitar chocar con él.&lt;/p&gt;
+
+&lt;p&gt;Para seguir las líneas se ha adaptado el ejemplo de VREP &lt;em&gt;LineFollowerBubbleRob&lt;/em&gt; para hacerlo funcionar con Zumo, usando el modelo proporcionado en clase. La adaptación ha consistido en modificar el código de &lt;em&gt;BubbleRob&lt;/em&gt;, que solo tiene dos motores, y hacerlo funcionar en el Zumo, con cuatro motores. Para ello se han tenido que ajustar parámetros de torque, peso etc de acuerdo al Zumo. También se desactivó el comportamiento cíclico de los motores.&lt;/p&gt;
+
+&lt;p&gt;Para evitar obstáculos se añade al robot un sensor de proximidad frontal, de forma similar al que se hizo en clase. Cuando el objeto se detecta a una distancia mínima pre-establecida, se detienen los motores del robot durante tres segundos. Transcurrido este tiempo, se vuelven a leer los datos del sensor de proximidad para comprobar si el objeto sigue presente o no. En caso de estar presente, el robot permanece parado, de lo contrario reanuda su marcha.&lt;/p&gt;
+
+&lt;p&gt;A continuación se muestra el código principal que controla el Zumo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sysCall_actuation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;.25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;--sim.addStatusbarMessage(tostring(timeOjectDetected))&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.addStatusbarMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tostring&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- After 3 seconds, check if continue foward or turn back&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;-- read the line detection sensors:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;do&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readVisionSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;floorSensorHandles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;-- data[11] is the average of intensity of the image&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- When in forward mode, we simply move forward at the desired speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;En el código se lleva la cuenta del tiempo transcurrido desde la última vez que se detuvo el robot, para decidir cuando se debe hacer la siguiente lectura del sensor de proximidad. La distancia máxima de detección de objetos se fija a 0.25.&lt;/p&gt;
+
+&lt;p&gt;Para el funcionamiento del sigue líneas se emplean tres sensores sigue líneas (Izquierdo, central y derecho), ubicados en la parte delantera del Robot. Dichos sensores se colocan con el eje z hacia abajo. De todos los datos proporcionados por los sensores se usa la intensidad media de la imagen para ajustar la velocidad de los motores. Aunque se incorporó un sensor central, no ha sido necesario su uso, ya que el robot sigue las líneas bien con los otros dos.&lt;/p&gt;
+
+&lt;p&gt;En los ficheros adjuntos se proporcionan vídeos de ejemplo de ambas prácticas.&lt;/p&gt;
+
+&lt;h3 id=&#34;vídeo-vrep&#34;&gt;Vídeo VREP&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;&lt;https://www.youtube-nocookie.com/embed/dixjPmbJ1Ts&gt;&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+</description>
+        </item>
         
         <item>
             <title>Editar y crear archivos cifrados con GPG en Vim</title>
@@ -65,7 +181,7 @@
 
 &lt;p&gt;Uno de esos problemas triviales es iterar sobre dos colecciones al mismo tiempo. La forma más “&lt;a href=&#34;https://elbauldelprogramador.com/tags/python&#34; title=&#34;Artículos sobre python&#34;&gt;&lt;em&gt;pythonic&lt;/em&gt;&lt;/a&gt;” es simple:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
      &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -1632,12 +1748,11 @@ feh --bg-fill &lt;span class=&#34;nv&#34;&gt;$picsfolder$randomfile1&lt;/span&gt
 &lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return $content;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
+function my_default_content( $content ) {
+   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
+ return $content;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
@@ -1917,12 +2032,12 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 &lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;// Short code
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
@@ -1949,12 +2064,11 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 
 &lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
 &lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;//[foo]
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function foo_demo( $atts ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return &amp;#34;Esto es una prueba.&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;//[foo]
+function foo_demo( $atts ){
+ return &amp;#34;Esto es una prueba.&amp;#34;;
+}
+add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 
 &lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
@@ -1969,28 +2083,27 @@ $ cowsay -f rms -W &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; &lt;span class=
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rap&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Nach&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Rock&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Linkin Park&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añade lo siguiente a tu archivo&amp;nbsp;&lt;strong&gt;functions.php :&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;// shortcode [music]
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function show_music( $atts ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $music_details=&amp;#34;&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   // get attibutes and set defaults
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        extract(shortcode_atts(array(
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;date&amp;#39; =&amp;gt; 0
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;       ), $atts));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    // Display info
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details = &amp;#39;&amp;lt;div class=&amp;#34;info&amp;#34;&amp;gt;&amp;lt;ul&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Genero: &amp;#39; .$genero. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Autor: &amp;#39; .$autor. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Fecha: &amp;#39; .$date. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $music_details;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;//add our shortcode music
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// shortcode [music]
+function show_music( $atts ){
+   $music_details=&amp;#34;&amp;#34;;
+   // get attibutes and set defaults
+        extract(shortcode_atts(array(
+                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;date&amp;#39; =&amp;gt; 0
+       ), $atts));
+    // Display info
+    $music_details = &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;info&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Genero: &amp;#39; .$genero. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Autor: &amp;#39; .$autor. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Fecha: &amp;#39; .$date. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+
+    return $music_details;
+}
+//add our shortcode music
+add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
+add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -2828,17 +2941,17 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pdb&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;IndexView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;generic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ListView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;template_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;polls/index.html&amp;#39;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;context_object_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;latest_poll_list&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;template_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;polls/index.html&amp;#39;&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;context_object_name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;latest_poll_list&amp;#39;&lt;/span&gt;
 
         &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_queryset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-                &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Return the last five published polls (not including those set to be
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Return the last five published polls (not including those set to be
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;                published in the future)
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;                &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
                 &lt;span class=&#34;n&#34;&gt;pdb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;set_trace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;## Punto de ruptura&lt;/span&gt;
                 &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Poll&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
                                 &lt;span class=&#34;n&#34;&gt;pub_date__lte&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timezone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;now&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-                       &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+                       &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;order_by&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;-pub_date&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Una vez establecido el punto de ruptura, lanzamos la aplicación con&lt;/p&gt;
@@ -3529,8 +3642,8 @@ clamav: root&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
        &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ptrace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;enum&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;__ptrace_request&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;request&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pid_t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pid&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                    &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;The&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;ptrace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;system&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;call&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;provides&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;means&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;by&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;which&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;one&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tracer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;observe&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;execution&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;another&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tracee&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;examine&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;change&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tracees&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;The&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;ptrace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;system&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;call&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;provides&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;means&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;by&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;which&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;one&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;tracer&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;may&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;observe&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;control&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;execution&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;another&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;tracee&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;examine&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;change&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;the&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tracees&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;memory&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;registers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;It&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;primarily&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;used&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;to&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;implement&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;breakpoint&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;debugging&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;system&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;call&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;tracing&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Consite en un proceso observe el control de ejecución de otro. Se usa normalmente para implementar puntos de ruptura para depurar.&lt;/p&gt;
@@ -3551,13 +3664,13 @@ clamav: root&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     * If ptrace fails here, means someone already ptrace()&amp;#39;ed us.
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;     */&lt;/span&gt;
      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ptrace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PTRACE_TRACEME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-         &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;alguien está depurando&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;alguien está depurando&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
          &lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-     &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Hello World!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El código de arriba realiza un &lt;code&gt;ptrace&lt;/code&gt; a sí mismo. Si falla al intentar realizar un seguimiento a él mismo, quiere decir que otro proceso ya esté realizando el seguimiento (el depurador, por ejemplo). Veamos el ejemplo en práctica:&lt;/p&gt;
@@ -6271,7 +6384,7 @@ Este nivel será loggeado, incluso en las versiones definitivas de la aplicació
 &lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;#34;hacking.h&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#define PORT 7890  &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// the port users will be connecting to
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;SimpleServer.c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;SimpleServer.c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;command_log_pos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;
@@ -6291,93 +6404,93 @@ Este nivel será loggeado, incluso en las versiones definitivas de la aplicació
   &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16384&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;command_log_pos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-  &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Iniciando servidor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Iniciando servidor&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;socket&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PF_INET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SOCK_STREAM&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en socket&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en socket&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setsockopt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SOL_SOCKET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SO_REUSEADDR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;yes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en setsockopt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en setsockopt&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_family&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AF_INET&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;       &lt;span class=&#34;c1&#34;&gt;// host byte order
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;htons&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PORT&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;// short, network byte order
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s_addr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;INADDR_ANY&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// automatically fill with my IP
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_zero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// zero the rest of the struct
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_zero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// zero the rest of the struct
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
       &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en bind&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en bind&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;listen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fatal en listen&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fatal en listen&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;// Accept loop
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;sin_size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;sizeof&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr_in&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;accept&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sockaddr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_size&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-      &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en accpct&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_ERROR&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Fatal en accpct&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
     &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;server: conexión de %s en puerto %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                        &lt;span class=&#34;s&#34;&gt;&amp;#34;server: conexión de %s en puerto %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                         &lt;span class=&#34;n&#34;&gt;inet_ntoa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
                         &lt;span class=&#34;n&#34;&gt;ntohs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 
-    &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Bienvenido!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Bienvenido!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
     &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;addToLog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
-      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strncasecmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;adios&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Adios!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strncasecmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;adios&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Adios!&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                            &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Conexión finalizada con %s:%d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                            &lt;span class=&#34;s&#34;&gt;&amp;#34;Conexión finalizada con %s:%d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                             &lt;span class=&#34;n&#34;&gt;inet_ntoa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
                             &lt;span class=&#34;n&#34;&gt;ntohs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin_port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strncasecmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ip_de &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strncasecmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;ip_de &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hostent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_info&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in_addr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// quito ip_de
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// quito \r\n
+        &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// quito \r\n
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;host_info&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gethostbyname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
         &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_info&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-          &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_WARN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Couldn&amp;#39;t lookup %s&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_WARN&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Couldn&amp;#39;t lookup %s&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                               &lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-          &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;No se pudo resolver el nombre de dominio de &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+          &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;No se pudo resolver el nombre de dominio de &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
           &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ec_malloc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-          &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;memset&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 
           &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
           &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-          &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
           &lt;span class=&#34;n&#34;&gt;addToLog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
           &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;errorMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
           &lt;span class=&#34;c1&#34;&gt;//free(errorMessage);
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
           &lt;span class=&#34;n&#34;&gt;address&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;in_addr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host_info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-          &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%s has address %s &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;%s has address %s &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                               &lt;span class=&#34;n&#34;&gt;host_info&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;h_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inet_ntoa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-          &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34; has address &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+          &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34; has address &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
           &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inet_ntoa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;address&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-          &lt;span class=&#34;n&#34;&gt;addToLog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;addToLog&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command_log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strcat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
           &lt;span class=&#34;n&#34;&gt;send&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;strlen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;__android_log_print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                          &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Recibidos %d bytes mensaje: %s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                          &lt;span class=&#34;s&#34;&gt;&amp;#34;Recibidos %d bytes mensaje: %s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                           &lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;recv_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;recv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;new_sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sockfd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;closed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;__android_log_write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ANDROID_LOG_INFO&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TAG&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;closed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -7220,53 +7333,47 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use Symfony\Component\DependencyInjection\ContainerBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiExtension extends Extension
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+
+class SmsupapiExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;services:
   smsup.smsupapi.sender:
       class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function Send($mensaje)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class SmsupSender {
+  public function Send($mensaje)
+  {
+    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\Bundle\Bundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiBundle extends Bundle
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+class SmsupapiBundle extends Bundle
+{
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
@@ -7315,164 +7422,158 @@ Vamos a añadir la funcionalidad y luego veremos como crear la primera versión 
 
 &lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\ConfigurationInterface;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Configuration implements ConfigurationInterface
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function getConfigTreeBuilder()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $treeBuilder = new TreeBuilder();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode-&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          children()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        ;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        return $treeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+class Configuration implements ConfigurationInterface
+{
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
+        $rootNode-&amp;gt;
+          children()
+            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+          -&amp;gt;end()
+        ;
+        return $treeBuilder;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $processor = new Processor();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $configuration = new Configuration();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function load(array $configs, ContainerBuilder $container)
+{
+    $processor = new Processor();
+    $configuration = new Configuration();
+    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
+    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;protected $apiId;
+protected $apiSecret;
+public function setApiid($apiId)
+{
+  $this-&amp;gt;apiId = $apiId;
+}
+public function setApisecret($apiSecret)
+{
+  $this-&amp;gt;apiSecret = $apiSecret;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
 
 &lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use smsup\smsuplib;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getNewSms()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Sms;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function enviarSms(Sms $sms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function eliminarSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function estadoSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function creditosDisponibles()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;CreditosDisponibles();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function resultadoPeticion($referencia)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function getSmsapilib()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function setResult($respuesta)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
+  use smsup\smsuplib;
+class SmsupSender {
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this-&amp;gt;apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this-&amp;gt;apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;CreditosDisponibles();
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
 
 &lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;

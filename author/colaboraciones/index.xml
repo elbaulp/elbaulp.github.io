@@ -400,53 +400,47 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use Symfony\Component\DependencyInjection\ContainerBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiExtension extends Extension
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+
+class SmsupapiExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;services:
   smsup.smsupapi.sender:
       class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function Send($mensaje)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class SmsupSender {
+  public function Send($mensaje)
+  {
+    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\Bundle\Bundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiBundle extends Bundle
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+class SmsupapiBundle extends Bundle
+{
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
@@ -495,164 +489,158 @@ Vamos a añadir la funcionalidad y luego veremos como crear la primera versión 
 
 &lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\ConfigurationInterface;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Configuration implements ConfigurationInterface
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function getConfigTreeBuilder()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $treeBuilder = new TreeBuilder();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode-&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          children()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        ;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        return $treeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+class Configuration implements ConfigurationInterface
+{
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
+        $rootNode-&amp;gt;
+          children()
+            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+          -&amp;gt;end()
+        ;
+        return $treeBuilder;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $processor = new Processor();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $configuration = new Configuration();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function load(array $configs, ContainerBuilder $container)
+{
+    $processor = new Processor();
+    $configuration = new Configuration();
+    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
+    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;protected $apiId;
+protected $apiSecret;
+public function setApiid($apiId)
+{
+  $this-&amp;gt;apiId = $apiId;
+}
+public function setApisecret($apiSecret)
+{
+  $this-&amp;gt;apiSecret = $apiSecret;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
 
 &lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use smsup\smsuplib;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getNewSms()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Sms;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function enviarSms(Sms $sms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function eliminarSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function estadoSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function creditosDisponibles()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;CreditosDisponibles();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function resultadoPeticion($referencia)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function getSmsapilib()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function setResult($respuesta)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
+  use smsup\smsuplib;
+class SmsupSender {
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this-&amp;gt;apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this-&amp;gt;apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;CreditosDisponibles();
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
 
 &lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;

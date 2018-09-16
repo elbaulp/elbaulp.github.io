@@ -6,7 +6,7 @@
         <description>Recent content in Comandos on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 08 Oct 2017 19:27:49 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/comandos/</link>
@@ -15,6 +15,296 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/tags/comandos/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>10 de las Mejores Herramientas en la Línea de Comandos II</title>
+            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</link>
+            <pubDate>Sun, 08 Oct 2017 19:27:49 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; sizes=&#34;(min-width: 640px) 640px, 100vw&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;En esta segunda entrega revisaremos otras &lt;a href=&#34;https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/&#34;&gt;diez herramientas&lt;/a&gt; que podemos usar en nuestra &lt;strong&gt;terminal de Linux&lt;/strong&gt; y que nos ahorrarán tiempo y esfuerzo en muchas tareas cotidianas ampliando así nuestra lista de imprescindibles.&lt;/p&gt;
+
+&lt;h1 id=&#34;11-lshw-http-www-ezix-org-project-wiki-hardwarelister&#34;&gt;11. &lt;a href=&#34;http://www.ezix.org/project/wiki/HardwareLiSter&#34;&gt;lshw&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Se trata, como se puede deducir de su nombre, de un &lt;strong&gt;Hardware Lister&lt;/strong&gt;, que nos permitirá conocer cualquier detalle sobre el hardware de nuestra máquina.
+Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya instalado, de no ser así en su página oficial ofrecen todos los detalles.&lt;/p&gt;
+
+&lt;p&gt;Aunque la mayoría de la información se puede consular en  ficheros del sistema como &lt;code&gt;/proc/meminfo&lt;/code&gt; que es de dondel el propio programa extrae la información, a veces no está lo más legible posible y no en el mismo lugar, por eso esta es tan interesante.&lt;/p&gt;
+
+&lt;p&gt;Veamos por ejemplo un extracto del informe de memoria que hace:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ lshw -C memory
+...
+*-cache:0
+       descripción: L1 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+       ranura: L1-Cache
+       tamaño: 64KiB
+       capacidad: 64KiB
+       capacidades: internal write-back data
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+  *-cache:1
+       descripción: L2 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+       ranura: L2-Cache
+       tamaño: 4MiB
+       capacidad: 4MiB
+       capacidades: internal write-back instruction
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Una sencilla forma de conocer la caché de nuestro procesador (entre otras muchas cosas relacionadas con memoria).&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Para su ejecución solo necesitamos especificarle el tipo de información con la opcion `&lt;code&gt;-C&lt;/code&gt;, en este caso &lt;code&gt;memory&lt;/code&gt;. Se pueden consultar todas las opciones en la ayuda.&lt;/p&gt;
+
+&lt;p&gt;Además podemos hacer cosas como extraer la información en formato HTML (también XML), que aunque no tiene un diseño muy trabajado, nos puede ser útil.&lt;/p&gt;
+
+&lt;p&gt;Además también dispone de una interfaz para escritorio, llamada &lt;code&gt;lshw-gtk&lt;/code&gt; (aunque eso nos interesa menos).&lt;/p&gt;
+
+&lt;h1 id=&#34;12-htop-https-linux-die-net-man-1-htop&#34;&gt;12 &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Como un alternativa a &lt;code&gt;top&lt;/code&gt; de la anterior entrega (que se nos puede quedar corto en algunas ocasiones) tenemos &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;, que no es más que otro visor de procesos, pero &lt;strong&gt;interactivo&lt;/strong&gt;. Este tendremos que instalarlo, ya que no suele venir por defecto, pero merece la pena.&lt;/p&gt;
+
+&lt;p&gt;No solo ofrece una visión de la memoria de nuestros sistema en tiempo real sino también el número de tareas, hebras y carga del sistema, incluso el tiempo que lleva encendido el equipo.&lt;/p&gt;
+
+&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/htop.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/htop.png&#34;
+            alt=&#34;HTOP&#34;
+            title=&#34;HTOP&#34;
+            sizes=&#34;(min-width: 645px) 645px, 100vw&#34;
+            width=&#34;645&#34;
+            height=&#34;194&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Y lo mejor de todo es que podemos navegar por los procesos y realizar ciertas acciones sobre ellos, como matarlos con &lt;code&gt;kill&lt;/code&gt;, aquí &lt;code&gt;F9&lt;/code&gt;, directamente desde el propio programa.&lt;/p&gt;
+
+&lt;p&gt;Pero si quieres algo más rápido como para por ejemplo, ver la memoria que tienes libre y usada para &lt;em&gt;swap&lt;/em&gt; siempre puedes usar &lt;a href=&#34;https://linux.die.net/man/1/free&#34;&gt;free&lt;/a&gt;, instalada por defecto en la mayoría de las distros.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ free
+              total        used        free      shared  buff/cache   available
+Memoria:     &lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;
+Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;13-fdisk-http-man-cx-fdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Aunque es una herramienta completa (merecería un post aparte) para realizar particiones en nuestro disco también nos puede servir sólo para consultar información relacionada, muy útil a si tenemos varios discos, por ejemplo, para ver nomenclatura, tamaños, etc, y no podemos dejar de mencionarla.&lt;/p&gt;
+
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fdisk -l
+Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
+/dev/sdb1  *           &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;   100M  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;114&lt;/span&gt;,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;118&lt;/span&gt;,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
+/dev/sdb5         &lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;     2G &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; Linux swap / Solaris
+/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;116&lt;/span&gt;,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;14-df-https-linux-die-net-man-1-df-du-https-linux-die-net-man-1-du-y-ncdu-https-dev-yorhel-nl-ncdu-man&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;El espacio libre que tenemos en nuestro sistema siempre es algo a tener en cuenta y para comprobarlo no necesitamos ninguna herramienta gráfica, mucho más rápido y eficiente desde terminal, veamos algunas utilidades.&lt;/p&gt;
+
+&lt;p&gt;Con &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt; podemos ver información relevante sobre nuestro sistema de ficheros, como el porcentaje de ocupación, entre otros. Así podremos comprobar de un vistazo el estado de las particiones, por si tuviéramos que realizar una reasignación de espacio.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df
+S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
+udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
+tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /run
+/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;% /
+/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;% /home
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ du -h
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	./Tasks
+&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8M	./Books
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Que nos dice el tamaño del directorio y de todo
+lo contenido en su interior.&lt;/p&gt;
+
+&lt;p&gt;Pero existen otras herramientas con más características, como &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;. Si &lt;code&gt;du&lt;/code&gt; era el acrónimo de &lt;em&gt;&amp;ldquo;disk usage&amp;rdquo;&lt;/em&gt;, este podría significar &lt;em&gt;&amp;ldquo;nice disk usage&amp;rdquo;&lt;/em&gt; (aunque en realidad es NCurses Disk Usage).&lt;/p&gt;
+
+&lt;p&gt;Y lo bueno que tiene es que entramos en una interfaz (directamente en terminal) donde no solo vemos el tamaño de los ficheros o directorios sino también el tamaño relativo al fichero de mayor peso, para de forma muy rápida ver los que más espacio están ocupando en disco en relación al resto.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Microservices
+&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Talks
+&lt;span class=&#34;m&#34;&gt;539&lt;/span&gt;,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;343&lt;/span&gt;,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;342&lt;/span&gt;,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;314&lt;/span&gt;,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;#####     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  Principles Of Microservices by Sam Newman.mp4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;15-dd-https-linux-die-net-man-1-dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Potente y simple herramienta que entre otras cosas nos sirve para grabar imágenes &lt;code&gt;.iso&lt;/code&gt; en memorias externas, algo que seguramente hayamos necesitado hacer en más de una ocación. Mucho más sencillo desde &lt;em&gt;terminal&lt;/em&gt;, así de simple, por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;dd if=input.iso of=/dev/sdb&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Donde especificamos la iso que queremos quemar (estando en el mismo directorio) y el punto de montaje (para conocerlo podemos usar &lt;code&gt;df&lt;/code&gt;como hemos visto antes).&lt;/p&gt;
+
+&lt;h1 id=&#34;16-history-https-linux-die-net-man-3-history&#34;&gt;16 &lt;a href=&#34;https://linux.die.net/man/3/history&#34;&gt;history&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Herramienta muy simple para ver los últimos comandos usados (en realidad todos).&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$history&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;  locate linux
+&lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;  clear
+&lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;  apropos ls
+&lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;  apropos &lt;span class=&#34;s2&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;17-rsync-https-linux-die-net-man-1-rsync&#34;&gt;17 &lt;a href=&#34;https://linux.die.net/man/1/rsync&#34;&gt;rsync&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Útil para hacer cópias de forma eficiente, pero &lt;strong&gt;incrementales&lt;/strong&gt;, es decir, no se realizan copias completas
+sino una inicial y las posteriores sobre las modificaciones
+que el directorio en cuestión haya sufrido. Muy útil para copias de seguridad, entre otras muchas cosas.&lt;/p&gt;
+
+&lt;p&gt;Además el origen y el destino pueden ser tanto el mismo equipo como equipos en la misma o diferentes redes.&lt;/p&gt;
+
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;rsync -rtv origen/ destino/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Esta es otra herramienta que daría para otra entrada completa.&lt;/p&gt;
+
+&lt;h1 id=&#34;18-locate-https-linux-die-net-man-1-locate&#34;&gt;18. &lt;a href=&#34;https://linux.die.net/man/1/locate&#34;&gt;locate&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Ideal para buscar ficheros en todo nuestro sistema. Es algo bruto, ya que por defecto busca en todo el sistema pero usando alguna de las opciones podemos refinar un poco su comportamiento. Eso sí, necesitarás usar algún paginador como &lt;code&gt;less&lt;/code&gt;o &lt;code&gt;more&lt;/code&gt; para ver la salida poco a poco.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ locate password &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+/bin/systemd-ask-password
+/bin/systemd-tty-ask-password-agent
+/boot/grub/i386-pc/legacy_password_test.mod
+/boot/grub/i386-pc/password.mod
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;19-apropos-http-man7-org-linux-man-pages-man1-apropos-1-html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;rdquo;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
+Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a href=&#34;https://linux.die.net/man/&#34;&gt;man&lt;/a&gt; de los programas instalados en el sistema para ayudaros a encontrarlo.&lt;/p&gt;
+
+&lt;p&gt;Si por ejemplo buscamos un programa que hacía algo con Python, podemos usarla así:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;apropos python | less&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;(Usamos &lt;code&gt;less&lt;/code&gt; para ver progresivamente la salida del comando)&lt;/p&gt;
+
+&lt;p&gt;Y vemos que entre otras cosas tenemos instalados conversores entre versiones de Python, quizás ni lo sabías :) .&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
+2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
+jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
+:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;20-tree-https-linux-die-net-man-1-tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Si algún momento has necesitado conocer las subcarpetas y ficheros de un subdirectorio estando en terminal probablemente hayas acabando entrando y saliendo de ellas, bajando y subiendo de nivel, todo esto es mucho más sencillo si podemos ver el árbol de directorios y ficheros desde terminal, grácias a la orden &lt;code&gt;tree&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ tree .
+.
+├── css
+│   └── kit.css
+├── index.html
+└── js
+    ├── lib1.js
+    ├── lib2.js
+    └── lib3.js
+
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install tree&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;bonus-reverse-i-search-https-www-gnu-org-software-bash-manual-html-node-commands-for-history-html&#34;&gt;Bonus: &lt;a href=&#34;https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html&#34;&gt;reverse-i-search&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Y para acabar, ya que hemos hablado de &lt;code&gt;history&lt;/code&gt; y de &lt;code&gt;locate&lt;/code&gt; no podíamos dejar de lado reverse-i-search, por si lo que queremos es buscar comandos que previamente hemos usado. Es un poco especial porque no se ejecuta de forma común al resto, sino pulsando &lt;code&gt;Crtl + R&lt;/code&gt; en nuestra terminal, ya que en realidad es un comando para la manipulación del historial que consultamos con &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Un ejemplo, con solo poner &lt;code&gt;pyth&lt;/code&gt; nos sale una de las órdenes con python que hemos ejecutado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
+
+&lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;
+
+&lt;p&gt;¿Añadirías alguna a la lista? ¡Cuéntanos!&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
+            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
+            <pubDate>Sun, 08 Oct 2017 19:27:20 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
+            <description>&lt;figure&gt;
+    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
+
+&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
+&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
+
+&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
+
+&lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
+
+&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
+
+&lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
+
+&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
+
+&lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
+
+&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
+
+&lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
+
+&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
+
+&lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
+
+&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
+
+&lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
+
+&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
+
+&lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
+
+&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
+
+&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
+
+&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         
         <item>
             <title>Mini grep en C&#43;&#43;, busca palabras en archivos</title>
@@ -50,21 +340,14 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&g
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; 
-&lt;span class=&#34;nf&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; 
-&lt;span class=&#34;nf&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
-&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
 &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
-
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
-         &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Uso: grep &amp;lt;palabra a buscar&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;]&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Uso: grep &amp;lt;palabra a buscar&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;]&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
          &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
          &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -74,14 +357,13 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&g
 
 &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt;
-
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;temp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
 
    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;sc&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
          &lt;span class=&#34;n&#34;&gt;temp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indice&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
 
    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;temp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -89,7 +371,6 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&g
 
 &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;grep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;palabra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;ifstream&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fichero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cadena&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
@@ -101,7 +382,7 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&g
          &lt;span class=&#34;n&#34;&gt;nlinea&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
          &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fichero&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
             &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strstr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cadena&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;palabra&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-               &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;(&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlinea&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;) t&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cadena&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+               &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;(&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nlinea&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;) t&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;remove_left_white_spaces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cadena&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
@@ -710,296 +991,6 @@ cat date_test.txt
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        
-        <item>
-            <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
-            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
-
-&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
-&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
-
-&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
-
-&lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
-
-&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
-
-&lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
-
-&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
-
-&lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
-
-&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
-
-&lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
-
-&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
-
-&lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
-
-&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
-
-&lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
-
-&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
-
-&lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
-
-&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
-
-&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
-
-&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-        <item>
-            <title>10 de las Mejores Herramientas en la Línea de Comandos II</title>
-            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</link>
-            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-            
-            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; sizes=&#34;(min-width: 640px) 640px, 100vw&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En esta segunda entrega revisaremos otras &lt;a href=&#34;https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/&#34;&gt;diez herramientas&lt;/a&gt; que podemos usar en nuestra &lt;strong&gt;terminal de Linux&lt;/strong&gt; y que nos ahorrarán tiempo y esfuerzo en muchas tareas cotidianas ampliando así nuestra lista de imprescindibles.&lt;/p&gt;
-
-&lt;h1 id=&#34;11-lshw-http-www-ezix-org-project-wiki-hardwarelister&#34;&gt;11. &lt;a href=&#34;http://www.ezix.org/project/wiki/HardwareLiSter&#34;&gt;lshw&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Se trata, como se puede deducir de su nombre, de un &lt;strong&gt;Hardware Lister&lt;/strong&gt;, que nos permitirá conocer cualquier detalle sobre el hardware de nuestra máquina.
-Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya instalado, de no ser así en su página oficial ofrecen todos los detalles.&lt;/p&gt;
-
-&lt;p&gt;Aunque la mayoría de la información se puede consular en  ficheros del sistema como &lt;code&gt;/proc/meminfo&lt;/code&gt; que es de dondel el propio programa extrae la información, a veces no está lo más legible posible y no en el mismo lugar, por eso esta es tan interesante.&lt;/p&gt;
-
-&lt;p&gt;Veamos por ejemplo un extracto del informe de memoria que hace:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ lshw -C memory
-...
-*-cache:0
-       descripción: L1 caché
-       id físico: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
-       ranura: L1-Cache
-       tamaño: 64KiB
-       capacidad: 64KiB
-       capacidades: internal write-back data
-       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-  *-cache:1
-       descripción: L2 caché
-       id físico: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
-       ranura: L2-Cache
-       tamaño: 4MiB
-       capacidad: 4MiB
-       capacidades: internal write-back instruction
-       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Una sencilla forma de conocer la caché de nuestro procesador (entre otras muchas cosas relacionadas con memoria).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Para su ejecución solo necesitamos especificarle el tipo de información con la opcion `&lt;code&gt;-C&lt;/code&gt;, en este caso &lt;code&gt;memory&lt;/code&gt;. Se pueden consultar todas las opciones en la ayuda.&lt;/p&gt;
-
-&lt;p&gt;Además podemos hacer cosas como extraer la información en formato HTML (también XML), que aunque no tiene un diseño muy trabajado, nos puede ser útil.&lt;/p&gt;
-
-&lt;p&gt;Además también dispone de una interfaz para escritorio, llamada &lt;code&gt;lshw-gtk&lt;/code&gt; (aunque eso nos interesa menos).&lt;/p&gt;
-
-&lt;h1 id=&#34;12-htop-https-linux-die-net-man-1-htop&#34;&gt;12 &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Como un alternativa a &lt;code&gt;top&lt;/code&gt; de la anterior entrega (que se nos puede quedar corto en algunas ocasiones) tenemos &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;, que no es más que otro visor de procesos, pero &lt;strong&gt;interactivo&lt;/strong&gt;. Este tendremos que instalarlo, ya que no suele venir por defecto, pero merece la pena.&lt;/p&gt;
-
-&lt;p&gt;No solo ofrece una visión de la memoria de nuestros sistema en tiempo real sino también el número de tareas, hebras y carga del sistema, incluso el tiempo que lleva encendido el equipo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/htop.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/htop.png&#34;
-            alt=&#34;HTOP&#34;
-            title=&#34;HTOP&#34;
-            sizes=&#34;(min-width: 645px) 645px, 100vw&#34;
-            width=&#34;645&#34;
-            height=&#34;194&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Y lo mejor de todo es que podemos navegar por los procesos y realizar ciertas acciones sobre ellos, como matarlos con &lt;code&gt;kill&lt;/code&gt;, aquí &lt;code&gt;F9&lt;/code&gt;, directamente desde el propio programa.&lt;/p&gt;
-
-&lt;p&gt;Pero si quieres algo más rápido como para por ejemplo, ver la memoria que tienes libre y usada para &lt;em&gt;swap&lt;/em&gt; siempre puedes usar &lt;a href=&#34;https://linux.die.net/man/1/free&#34;&gt;free&lt;/a&gt;, instalada por defecto en la mayoría de las distros.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ free
-              total        used        free      shared  buff/cache   available
-Memoria:     &lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;
-Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;13-fdisk-http-man-cx-fdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Aunque es una herramienta completa (merecería un post aparte) para realizar particiones en nuestro disco también nos puede servir sólo para consultar información relacionada, muy útil a si tenemos varios discos, por ejemplo, para ver nomenclatura, tamaños, etc, y no podemos dejar de mencionarla.&lt;/p&gt;
-
-&lt;p&gt;Ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fdisk -l
-Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
-/dev/sdb1  *           &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;   100M  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
-/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;114&lt;/span&gt;,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
-/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;118&lt;/span&gt;,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
-/dev/sdb5         &lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;     2G &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; Linux swap / Solaris
-/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;116&lt;/span&gt;,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;14-df-https-linux-die-net-man-1-df-du-https-linux-die-net-man-1-du-y-ncdu-https-dev-yorhel-nl-ncdu-man&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;El espacio libre que tenemos en nuestro sistema siempre es algo a tener en cuenta y para comprobarlo no necesitamos ninguna herramienta gráfica, mucho más rápido y eficiente desde terminal, veamos algunas utilidades.&lt;/p&gt;
-
-&lt;p&gt;Con &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt; podemos ver información relevante sobre nuestro sistema de ficheros, como el porcentaje de ocupación, entre otros. Así podremos comprobar de un vistazo el estado de las particiones, por si tuviéramos que realizar una reasignación de espacio.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df
-S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
-udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
-tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /run
-/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;% /
-/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;% /home
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ du -h
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	./Tasks
-&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8M	./Books
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Que nos dice el tamaño del directorio y de todo
-lo contenido en su interior.&lt;/p&gt;
-
-&lt;p&gt;Pero existen otras herramientas con más características, como &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;. Si &lt;code&gt;du&lt;/code&gt; era el acrónimo de &lt;em&gt;&amp;ldquo;disk usage&amp;rdquo;&lt;/em&gt;, este podría significar &lt;em&gt;&amp;ldquo;nice disk usage&amp;rdquo;&lt;/em&gt; (aunque en realidad es NCurses Disk Usage).&lt;/p&gt;
-
-&lt;p&gt;Y lo bueno que tiene es que entramos en una interfaz (directamente en terminal) donde no solo vemos el tamaño de los ficheros o directorios sino también el tamaño relativo al fichero de mayor peso, para de forma muy rápida ver los que más espacio están ocupando en disco en relación al resto.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Microservices
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Talks
-&lt;span class=&#34;m&#34;&gt;539&lt;/span&gt;,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;343&lt;/span&gt;,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;342&lt;/span&gt;,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;314&lt;/span&gt;,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;#####     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  Principles Of Microservices by Sam Newman.mp4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;15-dd-https-linux-die-net-man-1-dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Potente y simple herramienta que entre otras cosas nos sirve para grabar imágenes &lt;code&gt;.iso&lt;/code&gt; en memorias externas, algo que seguramente hayamos necesitado hacer en más de una ocación. Mucho más sencillo desde &lt;em&gt;terminal&lt;/em&gt;, así de simple, por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;dd if=input.iso of=/dev/sdb&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Donde especificamos la iso que queremos quemar (estando en el mismo directorio) y el punto de montaje (para conocerlo podemos usar &lt;code&gt;df&lt;/code&gt;como hemos visto antes).&lt;/p&gt;
-
-&lt;h1 id=&#34;16-history-https-linux-die-net-man-3-history&#34;&gt;16 &lt;a href=&#34;https://linux.die.net/man/3/history&#34;&gt;history&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Herramienta muy simple para ver los últimos comandos usados (en realidad todos).&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$history&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;  locate linux
-&lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;  clear
-&lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;  apropos ls
-&lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;  apropos &lt;span class=&#34;s2&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;17-rsync-https-linux-die-net-man-1-rsync&#34;&gt;17 &lt;a href=&#34;https://linux.die.net/man/1/rsync&#34;&gt;rsync&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Útil para hacer cópias de forma eficiente, pero &lt;strong&gt;incrementales&lt;/strong&gt;, es decir, no se realizan copias completas
-sino una inicial y las posteriores sobre las modificaciones
-que el directorio en cuestión haya sufrido. Muy útil para copias de seguridad, entre otras muchas cosas.&lt;/p&gt;
-
-&lt;p&gt;Además el origen y el destino pueden ser tanto el mismo equipo como equipos en la misma o diferentes redes.&lt;/p&gt;
-
-&lt;p&gt;Por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;rsync -rtv origen/ destino/&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Esta es otra herramienta que daría para otra entrada completa.&lt;/p&gt;
-
-&lt;h1 id=&#34;18-locate-https-linux-die-net-man-1-locate&#34;&gt;18. &lt;a href=&#34;https://linux.die.net/man/1/locate&#34;&gt;locate&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Ideal para buscar ficheros en todo nuestro sistema. Es algo bruto, ya que por defecto busca en todo el sistema pero usando alguna de las opciones podemos refinar un poco su comportamiento. Eso sí, necesitarás usar algún paginador como &lt;code&gt;less&lt;/code&gt;o &lt;code&gt;more&lt;/code&gt; para ver la salida poco a poco.&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ locate password &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
-/bin/systemd-ask-password
-/bin/systemd-tty-ask-password-agent
-/boot/grub/i386-pc/legacy_password_test.mod
-/boot/grub/i386-pc/password.mod
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;19-apropos-http-man7-org-linux-man-pages-man1-apropos-1-html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;rdquo;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
-Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a href=&#34;https://linux.die.net/man/&#34;&gt;man&lt;/a&gt; de los programas instalados en el sistema para ayudaros a encontrarlo.&lt;/p&gt;
-
-&lt;p&gt;Si por ejemplo buscamos un programa que hacía algo con Python, podemos usarla así:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;apropos python | less&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;(Usamos &lt;code&gt;less&lt;/code&gt; para ver progresivamente la salida del comando)&lt;/p&gt;
-
-&lt;p&gt;Y vemos que entre otras cosas tenemos instalados conversores entre versiones de Python, quizás ni lo sabías :) .&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
-2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
-2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
-dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
-dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
-fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
-jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
-:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;20-tree-https-linux-die-net-man-1-tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Si algún momento has necesitado conocer las subcarpetas y ficheros de un subdirectorio estando en terminal probablemente hayas acabando entrando y saliendo de ellas, bajando y subiendo de nivel, todo esto es mucho más sencillo si podemos ver el árbol de directorios y ficheros desde terminal, grácias a la orden &lt;code&gt;tree&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ tree .
-.
-├── css
-│   └── kit.css
-├── index.html
-└── js
-    ├── lib1.js
-    ├── lib2.js
-    └── lib3.js
-
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sudo apt-get install tree&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;bonus-reverse-i-search-https-www-gnu-org-software-bash-manual-html-node-commands-for-history-html&#34;&gt;Bonus: &lt;a href=&#34;https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html&#34;&gt;reverse-i-search&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Y para acabar, ya que hemos hablado de &lt;code&gt;history&lt;/code&gt; y de &lt;code&gt;locate&lt;/code&gt; no podíamos dejar de lado reverse-i-search, por si lo que queremos es buscar comandos que previamente hemos usado. Es un poco especial porque no se ejecuta de forma común al resto, sino pulsando &lt;code&gt;Crtl + R&lt;/code&gt; en nuestra terminal, ya que en realidad es un comando para la manipulación del historial que consultamos con &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo, con solo poner &lt;code&gt;pyth&lt;/code&gt; nos sale una de las órdenes con python que hemos ejecutado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
-
-&lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;
-
-&lt;p&gt;¿Añadirías alguna a la lista? ¡Cuéntanos!&lt;/p&gt;</description>
         </item>
         
     </channel>

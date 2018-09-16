@@ -17,7 +17,7 @@
     <span class="k">struct</span> <span class="n">hostent</span> <span class="o">*</span><span class="n">host_info</span><span class="p">;</span>
     <span class="k">struct</span> <span class="n">in_addr</span> <span class="o">*</span><span class="n">address</span><span class="p">;</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;s&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">domainName</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="s">&#34;s&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">domainName</span><span class="p">))</span>
         <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
 
     <span class="kt">char</span> <span class="n">returnValue</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
@@ -27,17 +27,17 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">strlen</span><span class="p">(</span><span class="n">returnValue</span><span class="p">)</span> <span class="o">+</span> <span class="n">strlen</span><span class="p">(</span><span class="n">domainName</span><span class="p">)</span> <span class="o">+</span> <span class="mi">16</span> <span class="o">&gt;</span> <span class="mi">99</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
     <span class="k">if</span><span class="p">(</span><span class="n">host_info</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">sprintf</span><span class="p">(</span><span class="n">returnValue</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;No se pudo obtener la IP del dominio %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">domainName</span><span class="p">);</span>
+        <span class="n">sprintf</span><span class="p">(</span><span class="n">returnValue</span><span class="p">,</span> <span class="s">&#34;No se pudo obtener la IP del dominio %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">domainName</span><span class="p">);</span>
  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">address</span> <span class="o">=</span> <span class="p">(</span><span class="k">struct</span> <span class="n">in_addr</span> <span class="o">*</span><span class="p">)</span> <span class="p">(</span><span class="n">host_info</span><span class="o">-&gt;</span><span class="n">h_addr</span><span class="p">);</span>
-                <span class="n">sprintf</span><span class="p">(</span><span class="n">returnValue</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;%s tiene dirección IP %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">domainName</span><span class="p">,</span> <span class="n">inet_ntoa</span><span class="p">(</span><span class="o">*</span><span class="n">address</span><span class="p">));</span>
+                <span class="n">sprintf</span><span class="p">(</span><span class="n">returnValue</span><span class="p">,</span> <span class="s">&#34;%s tiene dirección IP %s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">domainName</span><span class="p">,</span> <span class="n">inet_ntoa</span><span class="p">(</span><span class="o">*</span><span class="n">address</span><span class="p">));</span>
   <span class="p">}</span>
-    <span class="k">return</span> <span class="n">Py_BuildValue</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;s&#34;</span><span class="p">,</span> <span class="n">returnValue</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">Py_BuildValue</span><span class="p">(</span><span class="s">&#34;s&#34;</span><span class="p">,</span> <span class="n">returnValue</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">static</span>
 <span class="n">PyMethodDef</span> <span class="n">herramientasRed_methods</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="p">{</span><span class="sa"></span><span class="s">&#34;imprimeIP&#34;</span><span class="p">,</span> <span class="n">herramientasRed_imprimeIP</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;Documentación del módulo ejemplo&#34;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&#34;imprimeIP&#34;</span><span class="p">,</span> <span class="n">herramientasRed_imprimeIP</span><span class="p">,</span> <span class="n">METH_VARARGS</span><span class="p">,</span> <span class="s">&#34;Documentación del módulo ejemplo&#34;</span><span class="p">},</span>
     <span class="p">{</span><span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">},</span> <span class="cm">/* Sentinel */</span>
 <span class="p">};</span>
 
@@ -46,19 +46,19 @@
 <span class="p">{</span>
     <span class="n">PyObject</span> <span class="o">*</span><span class="n">m</span><span class="p">;</span>
 
-    <span class="n">m</span> <span class="o">=</span> <span class="n">Py_InitModule</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;herramientasRed&#34;</span><span class="p">,</span> <span class="n">herramientasRed_methods</span><span class="p">);</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">Py_InitModule</span><span class="p">(</span><span class="s">&#34;herramientasRed&#34;</span><span class="p">,</span> <span class="n">herramientasRed_methods</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">m</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
         <span class="k">return</span><span class="p">;</span>
 <span class="p">}</span></code></pre></div><h1 id="compilación-y-uso">Compilación y uso</h1><p>Ahora que hemos visto cómo usar DistUtils, haremos uso de esta herramienta para compilar e instalar el módulo, el contenido del fichero <em>setup.py</em> es:</p><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span><span class="p">,</span> <span class="n">Extension</span>
 
-<span class="n">hRed</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;herramientasRed&#39;</span><span class="p">,</span>
-                    <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;herramientasRed.c&#39;</span><span class="p">])</span>
+<span class="n">hRed</span> <span class="o">=</span> <span class="n">Extension</span><span class="p">(</span><span class="s1">&#39;herramientasRed&#39;</span><span class="p">,</span>
+                    <span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;herramientasRed.c&#39;</span><span class="p">])</span>
 
-<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;HerramientasRed&#39;</span><span class="p">,</span>
-              <span class="n">version</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
-              <span class="n">author</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;Alejandro Alcalde&#39;</span><span class="p">,</span>
-              <span class="n">license</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;GPLv3&#39;</span><span class="p">,</span>
-              <span class="n">description</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;Un simple modulo para obtener la IP de un dominio&#39;</span><span class="p">,</span>
+<span class="n">setup</span> <span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;HerramientasRed&#39;</span><span class="p">,</span>
+              <span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">,</span>
+              <span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;Alejandro Alcalde&#39;</span><span class="p">,</span>
+              <span class="n">license</span> <span class="o">=</span> <span class="s1">&#39;GPLv3&#39;</span><span class="p">,</span>
+              <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;Un simple modulo para obtener la IP de un dominio&#39;</span><span class="p">,</span>
               <span class="n">ext_modules</span> <span class="o">=</span> <span class="p">[</span><span class="n">hRed</span><span class="p">])</span></code></pre></div><p>Lo ejecutamos:</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># python setup.py install
 </span><span class="c1"></span>running install
 running build
@@ -66,7 +66,7 @@ running build_ext
 running install_lib
 running install_egg_info
 Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info</code></pre></div><p>Y para usarlo:</p><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span> <span class="nn">herramientasRed</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="k">print</span> <span class="n">herramientasRed</span><span class="o">.</span><span class="n">imprimeIP</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;elbauldelprogramador.com&#39;</span><span class="p">)</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="k">print</span> <span class="n">herramientasRed</span><span class="o">.</span><span class="n">imprimeIP</span><span class="p">(</span><span class="s1">&#39;elbauldelprogramador.com&#39;</span><span class="p">)</span>
 <span class="n">elbauldelprogramador</span><span class="o">.</span><span class="n">com</span> <span class="n">tiene</span> <span class="n">dirección</span> <span class="n">IP</span> <span class="o">&lt;</span><span class="n">ip</span><span class="o">&gt;</span></code></pre></div><h1 id="depuración-de-módulos-python-c-api">Depuración de módulos Python C API</h1><p>Es probable que durante el desarrollo de un módulo para Python sea necesario depurar el código, para ello hay que realizar los siguiente pasos:</p><p><strong>Añadir la siguiente línea al fichero *.gdbinit</strong>*</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">br _PyImport_LoadDynamicModule</code></pre></div><p>Compilar el módulo mediante <a href="https://elbauldelprogramador.com/peso-hamming-y-optimizacion/" title="Optimizando código y evaluando el rendimiento">gcc sin optimizaciones</a>:</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"># <span class="nv">CFLAGS</span><span class="o">=</span><span class="s1">&#39;-Wall -O0 -g&#39;</span> python setup.py install</code></pre></div><p>Por último ejecutamos gdb de la siguiente forma:</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ gdb -ex r --args python test.py</code></pre></div><p>Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso <strong>herramientasRed_imprimeIP</strong> y ya podremos depurar el módulo:</p><div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>gdb<span class="o">)</span> b herramientasRed_imprimeIP
 Breakpoint <span class="m">1</span> at 0x7ffff695496a: file herramientasRed.c, line <span class="m">17</span>.
 <span class="o">(</span>gdb<span class="o">)</span> r

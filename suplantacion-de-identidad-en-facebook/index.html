@@ -24,23 +24,15 @@ This is an example
 .
 <span class="m">450</span> <span class="m">4</span>.3.2 INT-T14 http://postmaster.facebook.com/response_codes?ip<span class="o">=</span>xx.xxx.xx.x#int Server busy, try again later
 Connection closed by foreign host.</code></pre></div><p>Pero sigo recibiendo un error (<em>450 4.3.2 INT-T14 <a href="http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int">http://postmaster.facebook.com/response_codes?ip=xx.xxx.xx.x#int</a> Server busy, try again later Connection closed by foreign host</em>)</p><p>También probé con dos programas (sin éxito), uno en<a href="https://elbauldelprogramador.com/c/"> C++</a> y otro en <a href="https://elbauldelprogramador.com/python">python</a> que encontré en stackoverflow:</p><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
-</span><span class="cp"></span>     
-<span class="cp">#include</span> <span class="cpf">&lt;sys&gt;</span><span class="cp">
-</span><span class="cp"></span>     
-<span class="cp">#include</span> <span class="cpf">&lt;netinet&gt;</span><span class="cp">
-</span><span class="cp"></span>     
-<span class="cp">#include</span> <span class="cpf">&lt;netdb&gt;</span><span class="cp">
-</span><span class="cp"></span>     
-<span class="cp">#include</span> <span class="cpf">&lt;stdio&gt;</span><span class="cp">
-</span><span class="cp"></span>     
-<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span><span class="cp"></span>     <span class="cp">#include</span> <span class="cpf">&lt;sys&gt;</span><span class="cp">
+</span><span class="cp"></span>     <span class="cp">#include</span> <span class="cpf">&lt;netinet&gt;</span><span class="cp">
+</span><span class="cp"></span>     <span class="cp">#include</span> <span class="cpf">&lt;netdb&gt;</span><span class="cp">
+</span><span class="cp"></span>     <span class="cp">#include</span> <span class="cpf">&lt;stdio&gt;</span><span class="cp">
+</span><span class="cp"></span>     <span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
 </span><span class="cp"></span>     <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
-     
-<span class="cp">#define HELO &#34;HELO xxxxxx@xxxx.xxxxrn&#34;
-</span><span class="cp"></span>     
-<span class="cp">#define DATA &#34;DATArn&#34;
-</span><span class="cp"></span>     
-<span class="cp">#define QUIT &#34;QUITrn&#34;
+     <span class="cp">#define HELO &#34;HELO xxxxxx@xxxx.xxxxrn&#34;
+</span><span class="cp"></span>     <span class="cp">#define DATA &#34;DATArn&#34;
+</span><span class="cp"></span>     <span class="cp">#define QUIT &#34;QUITrn&#34;
 </span><span class="cp"></span>
     <span class="c1">//#define h_addr h_addr_list[0]
 </span><span class="c1"></span>    <span class="c1">//FILE *fin;
@@ -49,19 +41,16 @@ Connection closed by foreign host.</code></pre></div><p>Pero sigo recibiendo un 
     <span class="k">struct</span> <span class="n">hostent</span> <span class="o">*</span><span class="n">hp</span><span class="p">,</span> <span class="o">*</span><span class="n">gethostbyname</span><span class="p">();</span>
     <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">BUFSIZ</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
     <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">host_id</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;69.171.244.12&#34;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">from_id</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;********&#34;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">to_id</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;*******&#34;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="o">*</span><span class="n">sub</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;testmailrn&#34;</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">wkstr</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;hello how r urn&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">host_id</span><span class="o">=</span><span class="s">&#34;69.171.244.12&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">from_id</span><span class="o">=</span><span class="s">&#34;********&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">to_id</span><span class="o">=</span><span class="s">&#34;*******&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">sub</span><span class="o">=</span><span class="s">&#34;testmailrn&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">wkstr</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span><span class="o">=</span><span class="s">&#34;hello how r urn&#34;</span><span class="p">;</span>
 
     <span class="cm">/*=====Send a string to the socket=====*/</span>
 
-    <span class="kt">void</span> 
-<span class="nf">send_socket</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span>
-
-    
-<span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">send_socket</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">)</span>
+    <span class="p">{</span>
         <span class="n">write</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
         <span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
         <span class="c1">//printf(&#34;Client:%sn&#34;,s);
@@ -69,38 +58,32 @@ Connection closed by foreign host.</code></pre></div><p>Pero sigo recibiendo un 
 
     <span class="c1">//=====Read a string from the socket=====*/
 </span><span class="c1"></span>
-    <span class="kt">void</span> 
-<span class="nf">read_socket</span><span class="p">()</span>
-
-    
-<span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">read_socket</span><span class="p">()</span>
+    <span class="p">{</span>
         <span class="n">len</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="n">BUFSIZ</span><span class="p">);</span>
         <span class="n">write</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">buf</span><span class="p">,</span><span class="n">len</span><span class="p">);</span>
       <span class="c1">//printf(&#34;Server:%sn&#34;,buf);
 </span><span class="c1"></span>    <span class="p">}</span>
 
     <span class="cm">/*=====MAIN=====*/</span>
-    <span class="kt">int</span> 
-<span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-
-    
-<span class="p">{</span>
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+    <span class="p">{</span>
 
     <span class="cm">/*=====Create Socket=====*/</span>
     <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">sock</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
     <span class="p">{</span>
-     <span class="n">perror</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;opening stream socket&#34;</span><span class="p">);</span>
+     <span class="n">perror</span><span class="p">(</span><span class="s">&#34;opening stream socket&#34;</span><span class="p">);</span>
      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">else</span>
-      <span class="n">cout</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="sa"></span><span class="s">&#34;socket createdn&#34;</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="s">&#34;socket createdn&#34;</span><span class="p">;</span>
     <span class="cm">/*=====Verify host=====*/</span>
     <span class="n">server</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
     <span class="n">hp</span> <span class="o">=</span> <span class="n">gethostbyname</span><span class="p">(</span><span class="n">host_id</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">hp</span><span class="o">==</span><span class="p">(</span><span class="k">struct</span> <span class="n">hostent</span> <span class="o">*</span><span class="p">)</span> <span class="mi">0</span><span class="p">)</span>
     <span class="p">{</span>
-     <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="sa"></span><span class="s">&#34;%s: unknown hostn&#34;</span><span class="p">,</span> <span class="n">host_id</span><span class="p">);</span>
+     <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&#34;%s: unknown hostn&#34;</span><span class="p">,</span> <span class="n">host_id</span><span class="p">);</span>
      <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -109,33 +92,33 @@ Connection closed by foreign host.</code></pre></div><p>Pero sigo recibiendo un 
     <span class="n">server</span><span class="p">.</span><span class="n">sin_port</span><span class="o">=</span><span class="n">htons</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span> <span class="cm">/* SMTP PORT */</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="n">sockaddr</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">server</span><span class="p">;,</span> <span class="k">sizeof</span> <span class="n">server</span><span class="p">)</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
     <span class="p">{</span>
-     <span class="n">perror</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;connecting stream socket&#34;</span><span class="p">);</span>
+     <span class="n">perror</span><span class="p">(</span><span class="s">&#34;connecting stream socket&#34;</span><span class="p">);</span>
      <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="k">else</span>
-      <span class="n">cout</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="sa"></span><span class="s">&#34;Connectedn&#34;</span><span class="p">;</span>
+      <span class="n">cout</span> <span class="o">&lt;</span> <span class="o">&lt;</span> <span class="s">&#34;Connectedn&#34;</span><span class="p">;</span>
     <span class="cm">/*=====Write some data then read some =====*/</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="cm">/* SMTP Server logon string */</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">HELO</span><span class="p">);</span> <span class="cm">/* introduce ourselves */</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="cm">/*Read reply */</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;MAIL FROM: &#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;MAIL FROM: &#34;</span><span class="p">);</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">from_id</span><span class="p">);</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="cm">/* Sender OK */</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;VRFY &#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;VRFY &#34;</span><span class="p">);</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">from_id</span><span class="p">);</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="c1">// Sender OK */
-</span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;RCPT TO: &#34;</span><span class="p">);</span> <span class="cm">/*Mail to*/</span>
+</span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;RCPT TO: &#34;</span><span class="p">);</span> <span class="cm">/*Mail to*/</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">to_id</span><span class="p">);</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;rn&#34;</span><span class="p">);</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="c1">// Recipient OK*/
 </span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="n">DATA</span><span class="p">);</span><span class="c1">// body to follow*/
-</span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;Subject: &#34;</span><span class="p">);</span>
+</span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;Subject: &#34;</span><span class="p">);</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">sub</span><span class="p">);</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="c1">// Recipient OK*/
 </span><span class="c1"></span>    <span class="n">send_socket</span><span class="p">(</span><span class="n">wkstr</span><span class="p">);</span>
-    <span class="n">send_socket</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;.rn&#34;</span><span class="p">);</span>
+    <span class="n">send_socket</span><span class="p">(</span><span class="s">&#34;.rn&#34;</span><span class="p">);</span>
     <span class="n">read_socket</span><span class="p">();</span>
     <span class="n">send_socket</span><span class="p">(</span><span class="n">QUIT</span><span class="p">);</span> <span class="cm">/* quit */</span>
     <span class="n">read_socket</span><span class="p">();</span> <span class="c1">// log off */
@@ -150,18 +133,18 @@ Connection closed by foreign host.</code></pre></div><p>Pero sigo recibiendo un 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
-<span class="n">sender</span> <span class="o">=</span> <span class="sa"></span><span class="s1">&#39;xxxxx@xxxxx.com&#39;</span>
-<span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="sa"></span><span class="s1">&#39;xxxxx@facebook.com&#39;</span><span class="p">]</span>
+<span class="n">sender</span> <span class="o">=</span> <span class="s1">&#39;xxxxx@xxxxx.com&#39;</span>
+<span class="n">receivers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xxxxx@facebook.com&#39;</span><span class="p">]</span>
 
-<span class="n">message</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;&#34;&#34;From: From Person
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;From: From Person
 </span><span class="s2">To: To Person
 </span><span class="s2">Subject: SMTP e-mail test
 </span><span class="s2">This is a test e-mail message.
 </span><span class="s2">&#34;&#34;&#34;</span>
 
 <span class="k">try</span><span class="p">:</span>
-   <span class="n">smtpObj</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;69.171.244.12&#39;</span><span class="p">)</span>
+   <span class="n">smtpObj</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s1">&#39;69.171.244.12&#39;</span><span class="p">)</span>
    <span class="n">smtpObj</span><span class="o">.</span><span class="n">sendmail</span><span class="p">(</span><span class="n">sender</span><span class="p">,</span> <span class="n">receivers</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
-   <span class="k">print</span> <span class="sa"></span><span class="s2">&#34;Successfully sent email&#34;</span>
+   <span class="k">print</span> <span class="s2">&#34;Successfully sent email&#34;</span>
 <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">exc</span><span class="p">:</span>
-   <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span> <span class="sa"></span><span class="s2">&#34;mail failed; </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># give a error message</span></code></pre></div><p>Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.</p><h1 id="fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a">Fuente: <a href="http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html" target="_blank">Elladodelmal</a></h1><p></p><blockquote><strong>¿Has visto algún error?</strong>: Por favor, ayúdame a corregirlo <a href="/contacto/">contactando</a> conmigo o comentando abajo.</blockquote><p></p><section class="share"><section id="sharing"><h3>Compártelo</h3><a aria-label="En Twitter" href="https://twitter.com/intent/tweet?text=Suplantaci%c3%b3n%20de%20identidad%20en%20Facebook+https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f+V%c3%ada%20%40elbaulp" title="En Twitter"><svg class="icon icon-twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg> </a><a aria-label="En Facebook" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=Suplantaci%C3%B3n&#43;de&#43;identidad&#43;en&#43;Facebook&amp;link=https%3A%2F%2Felbauldelprogramador.com%2Fsuplantacion-de-identidad-en-facebook%2F" target="_blank" title="En Facebook"><svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg> </a><a aria-label="En G&#43;" href="https://plus.google.com/share?url=https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f" title="En G&#43;"><svg class="icon icon-google-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google-plus"></use></svg></a></section><section><h3>Suscríbete</h3><a aria-label="Suscribir al boletín de noticias" href="http://eepurl.com/IZ5sX" title="Suscribir al boletín de noticias"><svg class="icon icon-mail"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use></svg> </a><a aria-label="Suscribir al RSS" href="https://elbauldelprogramador.com/rssfeed" title="Suscribir al RSS"><svg class="icon icon-rss"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-rss"></use></svg> </a><a aria-label="Síguenos en Twitter" title="Síguenos en Twitter" href="http://twitter.com/elbaulp" target="_blank"><svg class="social icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a><a aria-label="Síguenos en G&#43;" title="Síguenos en G&#43;" href="http://plus.google.com/+ElBaulDelProgramador" target="_blank"><svg class="social icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg></a><a aria-label="Síguenos en Telegram" href="https://telegram.me/elbaulp" target="_blank"><svg class="social icon-telegram"><use xlink:href="#icon-telegram"></use></svg></a></section></section><div class="tags"><strong>Categorías:</strong><div id="taxo"><a id="cats" href="https://elbauldelprogramador.com/categories/seguridad">seguridad</a></div><strong>Etiquetas:</strong><div id="taxo"><a id="tags" href="https://elbauldelprogramador.com/tags/emails">emails</a></div></div><h1>Quizá también te interese leer...</h1><ul><li><a href="/como-cifrar-correos-con-gpg-con-mailvelope/">Cómo cifrar correos electrónicos con GPG usando Mailvelope</a></li><li><a href="/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/">Cómo enviar los emails de /var/mail/root a una cuenta de correo</a></li></ul><div class="near-posts"><a id="link-next" href="https://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/" class="post-item">«« Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma</a> <a id="link-prev" href="https://elbauldelprogramador.com/superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/" class="post-item">Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo »»</a></div></article><section class="comments"><amp-iframe height="300" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable frameborder="0" src="https://cdn.rawgit.com/elbaulp/algui91-hugo/c1c11891b012e22c2e6ea7c399d6b03f7cdda04e/static/disqus-amp.html?url=https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f&disqus_title=Suplantaci%c3%b3n%20de%20identidad%20en%20Facebook"><div overflow tabindex="0" role="button" aria-label="Read more">Read more!</div></amp-iframe></section></section><footer><p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>An adaptation for Hugo of Cards's <a href="http://willianjusten.com.br">Willian Justen</a> Theme for Jekyll</p></footer></body></html>
+   <span class="n">sys</span><span class="o">.</span><span class="nb">exit</span><span class="p">(</span> <span class="s2">&#34;mail failed; </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># give a error message</span></code></pre></div><p>Esto es todo, por más que lo he intentado no lo he logrado, si os animáis a probarlo y lo conseguís, agradecería que lo comentárais.</p><h1 id="fuente-a-href-http-www-elladodelmal-com-2012-05-suplantacion-de-identidad-en-facebook-html-target-blank-elladodelmal-a">Fuente: <a href="http://www.elladodelmal.com/2012/05/suplantacion-de-identidad-en-facebook.html" target="_blank">Elladodelmal</a></h1><p></p><blockquote><strong>¿Has visto algún error?</strong>: Por favor, ayúdame a corregirlo <a href="/contacto/">contactando</a> conmigo o comentando abajo.</blockquote><p></p><section class="share"><section id="sharing"><h3>Compártelo</h3><a aria-label="En Twitter" href="https://twitter.com/intent/tweet?text=Suplantaci%c3%b3n%20de%20identidad%20en%20Facebook+https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f+V%c3%ada%20%40elbaulp" title="En Twitter"><svg class="icon icon-twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use></svg> </a><a aria-label="En Facebook" href="https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&caption=Suplantaci%C3%B3n&#43;de&#43;identidad&#43;en&#43;Facebook&amp;link=https%3A%2F%2Felbauldelprogramador.com%2Fsuplantacion-de-identidad-en-facebook%2F" target="_blank" title="En Facebook"><svg class="icon icon-facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg> </a><a aria-label="En G&#43;" href="https://plus.google.com/share?url=https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f" title="En G&#43;"><svg class="icon icon-google-plus"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-google-plus"></use></svg></a></section><section><h3>Suscríbete</h3><a aria-label="Suscribir al boletín de noticias" href="http://eepurl.com/IZ5sX" title="Suscribir al boletín de noticias"><svg class="icon icon-mail"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use></svg> </a><a aria-label="Suscribir al RSS" href="https://elbauldelprogramador.com/rssfeed" title="Suscribir al RSS"><svg class="icon icon-rss"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-rss"></use></svg> </a><a aria-label="Síguenos en Twitter" title="Síguenos en Twitter" href="http://twitter.com/elbaulp" target="_blank"><svg class="social icon-twitter"><use xlink:href="#icon-twitter"></use></svg></a><a aria-label="Síguenos en G&#43;" title="Síguenos en G&#43;" href="http://plus.google.com/+ElBaulDelProgramador" target="_blank"><svg class="social icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg></a><a aria-label="Síguenos en Telegram" href="https://telegram.me/elbaulp" target="_blank"><svg class="social icon-telegram"><use xlink:href="#icon-telegram"></use></svg></a></section></section><div class="tags"><strong>Categorías:</strong><div id="taxo"><a id="cats" href="https://elbauldelprogramador.com/categories/seguridad">seguridad</a></div><strong>Etiquetas:</strong><div id="taxo"><a id="tags" href="https://elbauldelprogramador.com/tags/emails">emails</a></div></div><h1>Quizá también te interese leer...</h1><ul><li><a href="/como-cifrar-correos-con-gpg-con-mailvelope/">Cómo cifrar correos electrónicos con GPG usando Mailvelope</a></li><li><a href="/como-enviar-los-emails-de-varmailroot-una-cuenta-de-correo/">Cómo enviar los emails de /var/mail/root a una cuenta de correo</a></li></ul><div class="near-posts"><a id="link-next" href="https://elbauldelprogramador.com/sustituir-los-enlaces-de-blogger-por-los-de-wordpress-al-migrar-de-plataforma/" class="post-item">«« Sustituir los enlaces de blogger por los de WordPress al migrar de plataforma</a> <a id="link-prev" href="https://elbauldelprogramador.com/superordenador-de-barcelona-armandose-para-entrar-en-las-maquinas-mas-rapidas-del-mundo/" class="post-item">Superordenador de Barcelona ARMándose para entrar en las máquinas más rápidas del mundo »»</a></div></article><section class="comments"><amp-iframe height="300" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms" resizable frameborder="0" src="https://cdn.rawgit.com/elbaulp/algui91-hugo/c1c11891b012e22c2e6ea7c399d6b03f7cdda04e/static/disqus-amp.html?url=https%3a%2f%2felbauldelprogramador.com%2fsuplantacion-de-identidad-en-facebook%2f&disqus_title=Suplantaci%c3%b3n%20de%20identidad%20en%20Facebook"><div overflow tabindex="0" role="button" aria-label="Read more">Read more!</div></amp-iframe></section></section><footer><p>License: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></p><p>An adaptation for Hugo of Cards's <a href="http://willianjusten.com.br">Willian Justen</a> Theme for Jekyll</p></footer></body></html>

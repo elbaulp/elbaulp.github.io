@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Arduino on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/arduino/</link>
+        <description>Recent content in Arduino on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/tags/arduino/</link>
+            <title>Arduino on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/arduino/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Arduino Zumo Line Follower and Obstacle avoider</title>
+            <link>https://elbauldelprogramador.com/en/arduino-line-follower-obstacles/</link>
+            <pubDate>Sun, 16 Sep 2018 18:42:00 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/arduino-line-follower-obstacles/</guid>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This project is a job assignment for a course on Robotics and Neurobotics at the
+Master on Data Science of the University of Granada. Its authors are &lt;a href=&#34;https://elbauldelprogramador.com/en/author/cristina&#34;&gt;Cristina
+Heredia&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com/en/author/alex&#34;&gt;Alejandro Alcalde&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This project is composed of &lt;strong&gt;two parts&lt;/strong&gt;. &lt;strong&gt;First part&lt;/strong&gt; consist on program a robot
+(Zumo 32U4) that follows a determined path marked by black lines. In addition it
+must avoid any obstacle it encounters. In case of being in front of an obstacle,
+the robot stops a few seconds and beeps, if time passes and the obstacle is
+still on the path, the robots will turn around and will continue in the opposite
+direction. &lt;strong&gt;Second part&lt;/strong&gt; is about implementing this behavior in VREP simulator.
+Lets begin.&lt;/p&gt;
+
+&lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
+
+&lt;p&gt;In this section the Zumo 32U4 is capable of drive by itself with the following
+functionalities:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Line follower.&lt;/li&gt;
+&lt;li&gt;Object detection and avoidance.&lt;/li&gt;
+&lt;li&gt;Alert sounds to the obstacles.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the line follower three &lt;strong&gt;line sensors&lt;/strong&gt; are used to detect the path.&lt;/p&gt;
+
+&lt;p&gt;Before starting, the robot needs to calibrate its &lt;strong&gt;gyroscope&lt;/strong&gt; and line sensors.
+Pressing button &lt;code&gt;A&lt;/code&gt; once will calibrate the gyroscope, pressing it a second time
+will calibrate line sensors.&lt;/p&gt;
+
+&lt;p&gt;It is worth mentioning we have started with the Line follower example from
+Arduino IDE. The following code modifications has been made:&lt;/p&gt;
+
+&lt;p&gt;We have integrated code from &lt;code&gt;MazeSolver&lt;/code&gt;, which makes uses of the gyroscope, in
+particular, files &lt;code&gt;TurnSensor.h&lt;/code&gt; and &lt;code&gt;TurnSensor.cpp&lt;/code&gt;. This allow us to
+calibrate the gyroscope.&lt;/p&gt;
+
+&lt;p&gt;To &lt;strong&gt;detect obstacles&lt;/strong&gt; a proximity sensor is used. The distance between the robot
+and the obstacle is set to 6. When the robot sees and obstacle and stops, it
+plays a sound similar to a &lt;strong&gt;car&amp;rsquo;s horn&lt;/strong&gt;. Finally, when the robot waits for more
+than three seconds and the obstacle is still there, it plays another sound and
+turns around. Next we show a video:&lt;/p&gt;
+
+&lt;h3 id=&#34;video&#34;&gt;Video&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;&lt;https://www.youtube-nocookie.com/embed/UwPJgL0ix_8&gt;&#34; frameborder=&#34;0&#34; allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&#34;vrep&#34;&gt;VREP&lt;/h2&gt;
+
+&lt;p&gt;The VREP project has implemented a &lt;strong&gt;line follower&lt;/strong&gt; robot which stops in front of
+an obstacle. If the obstacle is removed during the simulation the robot will
+continue his path, otherwise it will stay still.&lt;/p&gt;
+
+&lt;p&gt;In this implementation, we have used the code from &lt;em&gt;LineFollowerBubbleRob&lt;/em&gt; from
+the VREP examples. The code is shown below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sysCall_actuation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;.25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;--sim.addStatusbarMessage(tostring(timeOjectDetected))&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.addStatusbarMessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tostring&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- After 3 seconds, check if continue foward or turn back&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timeWaitingDetectedObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distance&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readProximitySensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;noseSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;timeOjectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;objectDetected&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;-- read the line detection sensors:&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;do&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sim.readVisionSensor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;floorSensorHandles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;-- data[11] is the average of intensity of the image&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sensorReading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.03&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;speed&lt;/span&gt;
+    &lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;-- When in forward mode, we simply move forward at the desired speed&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;What this code does is keep track of the time passed since the robot first
+stops in order to know when to check the proximity sensor again.&lt;/p&gt;
+
+&lt;h3 id=&#34;vrep-video&#34;&gt;VREP Video&lt;/h3&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34;
+src=&#34;&lt;https://www.youtube-nocookie.com/embed/dixjPmbJ1Ts&gt;&#34; frameborder=&#34;0&#34;
+allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Hope you find it interesting!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

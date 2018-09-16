@@ -136,14 +136,14 @@ seguridad&lt;/a&gt;&lt;/li&gt;
 &lt;p&gt;First, you can cycle through your sections with &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, which &lt;strong&gt;expands/contract&lt;/strong&gt; sections in your document.&lt;/p&gt;
 
 &lt;h1 id=&#34;sections&#34;&gt;Sections&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* Top level headline
-** Second level
-*** 3rd level
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Top level headline&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;**&lt;/span&gt; Second level
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
     some text
-*** 3rd level
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
     more text
 
-* Another top level headline&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Another top level headline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;cycling&#34;&gt;Cycling&lt;/h1&gt;
 
 &lt;p&gt;You can cycle through sections with:&lt;/p&gt;
@@ -211,17 +211,17 @@ seguridad&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Jump between definition and reference.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Here is an example footnote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The code to generate it is:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Here is an example footnote [fn:1].
+&lt;p&gt;Here is an example footnote &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The code to generate it is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Here is an example footnote &lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt;.
 
-[fn:1] Click return to return to reference&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt; Click return to return to reference&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;hyperlinks&#34;&gt;Hyperlinks&lt;/h1&gt;
 
 &lt;p&gt;Syntax: &lt;code&gt;[[link][description]]&lt;/code&gt; or only &lt;code&gt;[[link]]&lt;/code&gt;, once a link is created, you can edit it with &lt;code&gt;C-c C-l&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;In case the link is not a URL, it is considered to be internal in the current file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[#custom-id]]
-[[My Target][Find my target]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[&lt;span class=&#34;na&#34;&gt;#custom-id&lt;/span&gt;]]
+[[&lt;span class=&#34;na&#34;&gt;My Target&lt;/span&gt;][&lt;span class=&#34;nt&#34;&gt;Find my target&lt;/span&gt;]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The last one will search for a target in the current file with syntax &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
@@ -248,11 +248,11 @@ seguridad&lt;/a&gt;&lt;/li&gt;
 &lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
 
 &lt;p&gt;You can have a composed list of &lt;em&gt;TODO&lt;/em&gt; items, and can toggle it with &lt;code&gt;C-c C-c&lt;/code&gt;, and create a new one with &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;* TODO Organize party [0/3]
-  - [ ] call people [0/2]
-    - [ ] Peter
-    - [ ] Sarah
-  - [ ] order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; TODO&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Organize party [0/3]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; call people [0/2]
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Peter
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Sarah
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
           &lt;img
@@ -284,9 +284,9 @@ seguridad&lt;/a&gt;&lt;/li&gt;
 &lt;h1 id=&#34;images-tables&#34;&gt;Images &amp; Tables&lt;/h1&gt;
 
 &lt;p&gt;Tables have this syntax:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;| HEADER1  | header2  |
-|----------+----------|
-| content1 | contend2 |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;s&#34;&gt;| HEADER1  | header2  |&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;|----------+----------|&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;| content1 | contend2 |&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure&gt;
         &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
           &lt;img

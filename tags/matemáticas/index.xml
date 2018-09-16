@@ -132,7 +132,7 @@ devuelve b, que es 2
 
 &lt;p&gt;Espero que con este ejemplo te haya quedado claro cómo funciona el algoritmo. Lo he implementado en python, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-  &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @output a to the power of k mod n ($a^k mod n$)
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
@@ -184,7 +184,7 @@ Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&gt; = \{ a^k:\ k\in N
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
-&lt;p&gt;
+
 &lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;ul&gt;
@@ -193,7 +193,7 @@ Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&gt; = \{ a^k:\ k\in N
 &lt;/ul&gt;
 
 
-&lt;/p&gt;
+
 </description>
         </item>
         
@@ -386,7 +386,7 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
 
 &lt;p&gt;Veamos ahora cómo calcular el inverso de un número en \(\mathbb Z_n\) mediante el algoritmo Extendido de Euclides implementado en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34; title=&#34;python&#34;&gt;python&lt;/a&gt;, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    Compute the Greatest Common Divisor d of a and b, and integers x and
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    y satisfying ax + by = d.
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
@@ -419,7 +419,7 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
 
 &lt;p&gt;Para facilitar la tarea de calcular el inverso de un número, definiremos el siguiente método, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;

@@ -7,20 +7,20 @@
 </span><span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;   // para strncmp()/strlen()</span><span class="cp">
 </span><span class="cp">#include</span> <span class="cpf">&lt;sys/time.h&gt; // para gettimeofday(), struct timeval</span><span class="cp">
 </span><span class="cp"></span>
-    <span class="kt">char</span> <span class="n">password</span><span class="p">[]</span><span class="o">=</span><span class="sa"></span><span class="s">&#34;abracadabran&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">password</span><span class="p">[]</span><span class="o">=</span><span class="s">&#34;abracadabran&#34;</span><span class="p">;</span>
 <span class="kt">int</span>  <span class="n">passcode</span>  <span class="o">=</span> <span class="mi">7777</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">boom</span><span class="p">(){</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;***************n&#34;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;*** BOOM!!! ***n&#34;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;***************n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;***************n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;*** BOOM!!! ***n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;***************n&#34;</span><span class="p">);</span>
     <span class="n">exit</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">defused</span><span class="p">(){</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;·························n&#34;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;··· bomba desactivada ···n&#34;</span><span class="p">);</span>
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;·························n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;·························n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;··· bomba desactivada ···n&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;·························n&#34;</span><span class="p">);</span>
     <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -33,7 +33,7 @@
 </span><span class="c1"></span>
     <span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tv1</span><span class="p">;,</span><span class="nb">NULL</span><span class="p">);</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;Introduce la contraseña: &#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Introduce la contraseña: &#34;</span><span class="p">);</span>
     <span class="n">fgets</span><span class="p">(</span><span class="n">pass</span><span class="p">,</span><span class="n">SIZE</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">strncmp</span><span class="p">(</span><span class="n">pass</span><span class="p">,</span><span class="n">password</span><span class="p">,</span><span class="n">strlen</span><span class="p">(</span><span class="n">password</span><span class="p">)))</span>
         <span class="n">boom</span><span class="p">();</span>
@@ -42,8 +42,8 @@
     <span class="k">if</span> <span class="p">(</span><span class="n">tv2</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">-</span> <span class="n">tv1</span><span class="p">.</span><span class="n">tv_sec</span> <span class="o">&gt;</span> <span class="n">TLIM</span><span class="p">)</span>
         <span class="n">boom</span><span class="p">();</span>
 
-    <span class="n">printf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;Introduce el código: &#34;</span><span class="p">);</span>
-    <span class="n">scanf</span><span class="p">(</span><span class="sa"></span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pasv</span><span class="p">;);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;Introduce el código: &#34;</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%i&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">pasv</span><span class="p">;);</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">pasv</span><span class="o">!=</span><span class="n">passcode</span><span class="p">)</span> <span class="n">boom</span><span class="p">();</span>
 
     <span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tv1</span><span class="p">;,</span><span class="nb">NULL</span><span class="p">);</span>

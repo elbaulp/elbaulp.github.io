@@ -31,28 +31,28 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;Desarrollando una página en &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34; title=&#34;Crear Shortcodes en Wordpress&#34;&gt;PHP&lt;/a&gt; para una asignatura de la facultad estuve buscando formas de ver el contenido de las Variables en una página php. En concreto quería mostrar todas las variables definidas, pero podríamos mostrar cualquier variable. El comando en cuestión es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;highlight_string(&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(get_defined_vars(), true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;highlight_string(&amp;#34;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(get_defined_vars(), true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
 
 &lt;p&gt;Podemos crear una función para reutilizar este comando con la variable que queramos, por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;function pretty_print($var)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    highlight_string(&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$var&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function pretty_print($var)
+{
+    highlight_string(&amp;#34;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$var&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El resultado es algo así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;pretty_print($_SESSION);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;// Salida
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;pretty_print($_SESSION);
+// Salida
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
-  &lt;span class=&#34;s1&#34;&gt;&amp;#39;logged_user&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;a&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;#39;logged_user_id&amp;#39; =&amp;gt; &amp;#39;1&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;#39;is_admin&amp;#39; =&amp;gt; true,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;?&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+  &lt;span class=&#34;s1&#34;&gt;&amp;#39;logged_user&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; &amp;#39;a&amp;#39;,
+  &amp;#39;logged_user_id&amp;#39; =&amp;gt; &amp;#39;1&amp;#39;,
+  &amp;#39;is_admin&amp;#39; =&amp;gt; true,
+);
+?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Espero que os sea de utilidad&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
@@ -75,25 +75,22 @@
 &lt;h1 id=&#34;colocar-los-botones-sociales-al-principio-de-los-artículos&#34;&gt;Colocar los botones sociales al principio de los artículos&lt;/h1&gt;
 
 &lt;p&gt;El primer paso es editar el archivo &lt;strong&gt;&lt;em&gt;modules/sharedaddy/sharing-service.php&lt;/em&gt;&lt;/strong&gt; del plugin y eliminar o comentar las últimas líneas, que deberían ser:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
+add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.&lt;/p&gt;
 
 &lt;p&gt;Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;sharing_display()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;sharing_display()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama &lt;strong&gt;&lt;em&gt;content-single.php&lt;/em&gt;&lt;/strong&gt;. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.&lt;/p&gt;
 
 &lt;h1 id=&#34;mostrar-los-botones-sociales-al-final-del-artículo-en-la-página-principal&#34;&gt;Mostrar los botones sociales al final del artículo en la página principal&lt;/h1&gt;
 
 &lt;p&gt;En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado &lt;strong&gt;&lt;em&gt;loop.php&lt;/em&gt;&lt;/strong&gt;, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace &lt;strong&gt;Seguir leyendo&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &amp;lt;span class=&amp;#34;meta-nav&amp;#34;&amp;gt;&amp;amp;rarr;&amp;lt;/span&amp;gt;&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;echo sharing_display();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;meta-nav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;&amp;amp;rarr;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;);
+echo sharing_display();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -129,12 +126,11 @@
 &lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
 
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function my_default_content( $content ) {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return $content;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
+function my_default_content( $content ) {
+   $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
+ return $content;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
 
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
@@ -156,12 +152,12 @@
 &lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;// Short code
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Código de nuestro shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
@@ -188,12 +184,11 @@
 
 &lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
 &lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;//[foo]
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function foo_demo( $atts ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; return &amp;#34;Esto es una prueba.&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;//[foo]
+function foo_demo( $atts ){
+ return &amp;#34;Esto es una prueba.&amp;#34;;
+}
+add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 
 &lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
@@ -208,28 +203,27 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rap&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Nach&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Rock&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Linkin Park&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añade lo siguiente a tu archivo&amp;nbsp;&lt;strong&gt;functions.php :&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;// shortcode [music]
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;function show_music( $atts ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $music_details=&amp;#34;&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   // get attibutes and set defaults
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        extract(shortcode_atts(array(
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                &amp;#39;date&amp;#39; =&amp;gt; 0
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;       ), $atts));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    // Display info
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details = &amp;#39;&amp;lt;div class=&amp;#34;info&amp;#34;&amp;gt;&amp;lt;ul&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Genero: &amp;#39; .$genero. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Autor: &amp;#39; .$autor. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;li&amp;gt;Fecha: &amp;#39; .$date. &amp;#39;&amp;lt;/li&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $music_details .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;lt;/div&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $music_details;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;//add our shortcode music
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// shortcode [music]
+function show_music( $atts ){
+   $music_details=&amp;#34;&amp;#34;;
+   // get attibutes and set defaults
+        extract(shortcode_atts(array(
+                &amp;#39;genero&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;autor&amp;#39; =&amp;gt; &amp;#39;No especificado&amp;#39;,
+                &amp;#39;date&amp;#39; =&amp;gt; 0
+       ), $atts));
+    // Display info
+    $music_details = &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;info&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Genero: &amp;#39; .$genero. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Autor: &amp;#39; .$autor. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;Fecha: &amp;#39; .$date. &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    $music_details .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+
+    return $music_details;
+}
+//add our shortcode music
+add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
+add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
@@ -577,18 +571,16 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
 &lt;h1 id=&#34;obtener-imágenes-subidas-por-año&#34;&gt;Obtener imágenes subidas por año&lt;/h1&gt;
 
 &lt;p&gt;Tenemos que encontrar el año en que fue subida la imagen. El código que vamos a escribir está fuera del &lt;strong&gt;WordPress loop&lt;/strong&gt;. Por eso utilizamos la función &lt;code&gt;get_the_time()&lt;/code&gt; para encontrar el año de la carga.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;incluir-imágenes-a-la-página&#34;&gt;Incluir imágenes a la página&lt;/h1&gt;
 
 &lt;p&gt;Ahora nuestro trabajo es comprobar si &lt;code&gt;$year&lt;/code&gt; es 2014. En caso afirmativo, añadimos la imagen. En WordPress como hemos mencionado, los detalles de cada archivo se almacenan en la tabla &lt;code&gt;wp_posts&lt;/code&gt; que contiene una columna llamada &lt;code&gt;post_parent&lt;/code&gt;. Esta columna es el punto de conexión para la imagen a una página o entrada. Para una imagen sin adjuntar, el valor &lt;code&gt;post_parent&lt;/code&gt; será 0.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;if(2014 == $year){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    wp_update_post( array(
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    ));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;if(2014 == $year){
+    wp_update_post( array(
+        &amp;#39;ID&amp;#39; =&amp;gt; $att_id,
+        &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id
+    ));
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
         </item>
         
@@ -601,31 +593,28 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
             <description>&lt;p&gt;Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en el blog. Antes de nada, necesitamos instalar un plugin que nos permite añadir widgets que contengan código PHP, se llama WP PHP Widget y podéis descargarlo de la página de &lt;a href=&#34;http://wordpress.org/extend/plugins/wp-php-widget/&#34; target=&#34;_blank&#34;&gt;plugins de WordPress&lt;/a&gt;. Una vez que tengamos instalado el plugin, agregamos el widget a nuestra plantilla y pegamos el siguiente código:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$response = file_get_contents ( $url );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$t_profile = new SimpleXMLElement ( $response );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$count = $t_profile-&amp;gt;followers_count;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;echo $count;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
+$response = file_get_contents ( $url );
+$t_profile = new SimpleXMLElement ( $response );
+$count = $t_profile-&amp;gt;followers_count;
+echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Listo, esto imprimirá el número de seguidores que tenemos en twitter.&lt;/p&gt;
 
 &lt;p&gt;Este código no es mío, lo encontré navegando por internet, y le hice algunas modificaciones, concretamente creé una función que añadí al archivo &lt;code&gt;&amp;lt;strong&amp;gt;functions.php&amp;lt;/strong&amp;gt;&lt;/code&gt; del tema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;function followers_count(){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $response = file_get_contents ( $url );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $t_profile = new SimpleXMLElement ( $response );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $count = $t_profile-&amp;gt;followers_count;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  return $count;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function followers_count(){
+  $url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
+  $response = file_get_contents ( $url );
+  $t_profile = new SimpleXMLElement ( $response );
+  $count = $t_profile-&amp;gt;followers_count;
+  return $count;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y en el widget tengo lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;p class=&amp;#34;twittercount&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;a href=&amp;#34;http://twitter.com/elbaulp&amp;#34; title=&amp;#34;Follow on Twitter&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        &amp;lt;img on=&amp;#34;tap:lightbox1&amp;#34; role=&amp;#34;button&amp;#34; tabindex=&amp;#34;0&amp;#34; layout=&amp;#34;responsive&amp;#34;  src=&amp;#34;twitter.png&amp;#34; alt=&amp;#34;Twitter&amp;#34; /&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;span&amp;gt;&amp;lt; ?php echo followers_count();?&amp;gt;&amp;lt;/span&amp;gt; Followers
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;twittercount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://twitter.com/elbaulp&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Follow on Twitter&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tap:lightbox1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;button&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;tabindex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;responsive&amp;#34;&lt;/span&gt;  &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;twitter.png&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Twitter&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt; ?php echo followers_count();?&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; Followers
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Y el estilo es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;twittercount&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kp&#34;&gt;-moz-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -662,23 +651,22 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
 &lt;h1 id=&#34;crear-el-shortcode&#34;&gt;Crear el shortcode&lt;/h1&gt;
 
 &lt;p&gt;Editamos el archivo &lt;em&gt;functions.php&lt;/em&gt; de nuestro tema y añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;function show_category_posts( $atts ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&amp;amp;orderby;=date&amp;amp;order;=ASC&amp;amp;posts;_per_page=-1&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    if ( have_posts() ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $content = &amp;#39;&amp;lt;ul&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        while ( have_posts() ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            the_post();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            $content .= the_title(&amp;#39;&amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#39;.get_permalink().&amp;#39;&amp;#34;&amp;gt;&amp;#39;, &amp;#39;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;#39;, true);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $content .= &amp;#39;&amp;lt;/ul&amp;gt;&amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    //Reset query
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    wp_reset_query();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $content;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function show_category_posts( $atts ){
+    extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
+    query_posts(&amp;#39;cat=&amp;#39;.$cat.&amp;#39;&lt;span class=&#34;ni&#34;&gt;&amp;amp;orderby;&lt;/span&gt;=date&lt;span class=&#34;ni&#34;&gt;&amp;amp;order;&lt;/span&gt;=ASC&lt;span class=&#34;ni&#34;&gt;&amp;amp;posts;&lt;/span&gt;_per_page=-1&amp;#39;);
+    if ( have_posts() ){
+        $content = &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+        while ( have_posts() ){
+            the_post();
+            $content .= the_title(&amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;.get_permalink().&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;, &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;, true);
+        }
+        $content .= &amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;;
+    }
+    //Reset query
+    wp_reset_query();
+    return $content;
+}
+add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
 
 &lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -724,9 +712,9 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
 &lt;p&gt;Con todo esto en mente busqué cómo crear &lt;strong&gt;errores 404 personalizados&lt;/strong&gt; y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:&lt;/p&gt;
 
 &lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;p&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  You
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  You
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#some variables for the script to use
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#the administrator email address, according to wordpress
@@ -750,59 +738,59 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;An administrator has been emailed
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;          about this problem, too.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#set a friendly message
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  and it doesn&amp;#39;t exist.
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  You can click back
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  and try again or search for what you&amp;#39;re looking for:
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+  and it doesn&amp;#39;t exist.
+
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;  You can click back
+  and try again or search for what you&amp;#39;re looking for:
+
+
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esta porción de código hay que pegarla en el archivo 404.php de la plantilla en uso. Con este código informamos al lector que la página no existe y se proporciona un formulario de búsqueda, además se envía un correo al administrador del blog informándo de este error 404. Aún podemos tratar el error de una manera más amigable y ofrecer más opciones. Por ejemplo las últimas publicaciones del blog:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Publicaciones recientes
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-         &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;publish&amp;#39;) );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;           foreach( $recent_posts as $recent ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;       echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;a href=&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34; id=&amp;#34;ID&amp;#34;&amp;gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/li&amp;gt; &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;           }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        ?&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  Publicaciones recientes
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+         &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; &amp;#39;publish&amp;#39;) );
+           foreach( $recent_posts as $recent ){
+       echo &amp;#39;
+
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ID&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &amp;#39;;
+           }
+        ?&amp;gt;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$query = new WP_Query( $query_args );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;if($query-&amp;gt;have_posts()){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   echo &amp;#34;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Quizá buscaba...
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   // The Loop
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;     while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    ?&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          &amp;lt;a href=&amp;#34;&amp;amp;lt;?php the_permalink() ?&amp;amp;gt;&amp;#34;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
+$query = new WP_Query( $query_args );
+
+if($query-&amp;gt;have_posts()){
+   echo &amp;#34;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  Quizá buscaba...
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#34;;
+
+   // The Loop
+   echo &amp;#39;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &amp;#39;;
+     while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
+        echo &amp;#39;
+
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &amp;#39;;
+    ?&amp;gt;
+          &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;amp;lt;?php the_permalink() ?&amp;amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
        &lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
        &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -810,12 +798,12 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
        &lt;span class=&#34;c1&#34;&gt;// Reset Post Data
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;       &lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Al juntarlo todo, la estructura del código queda así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;p&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Ha
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  Ha
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
    &lt;span class=&#34;c1&#34;&gt;#some variables for the script to use
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;#if you have some reason to change these, do.  but wordpress can handle it
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;nv&#34;&gt;$adminemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;get_option&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;admin_email&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#the administrator email address, according to wordpress
@@ -838,66 +826,66 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
       &lt;span class=&#34;nv&#34;&gt;$failuremess&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;From: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$websitename&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;noreply@&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;?&amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#email you about problem
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;El administrador ha sido informado sobre este error.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#set a friendly message
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-     &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;     y no existe.
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Puede volver atrás
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;     e intentarlo de nuevo o buscar lo que desee en el formulario:
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/p&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   $query = new WP_Query( $query_args );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;   if($query-&amp;gt;have_posts()){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      echo &amp;#34;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  Quizá buscaba...
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/h4&amp;gt;&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      // The Loop
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;           echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  &amp;lt;li&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    ?&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;             &amp;lt;a href=&amp;#34;&amp;amp;lt;?php the_permalink() ?&amp;amp;gt;&amp;#34;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;#34;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$website&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$_SERVER&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;REQUEST_URI&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+     y no existe.
+
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$casemessage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;  Puede volver atrás
+     e intentarlo de nuevo o buscar lo que desee en el formulario:
+
+
+  &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+   &lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
+   $query = new WP_Query( $query_args );
+
+   if($query-&amp;gt;have_posts()){
+      echo &amp;#34;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  Quizá buscaba...
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#34;;
+
+      // The Loop
+      echo &amp;#39;
+
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &amp;#39;;
+        while ( $query-&amp;gt;have_posts() ) : $query-&amp;gt;the_post();
+           echo &amp;#39;
+
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &amp;#39;;
+    ?&amp;gt;
+             &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;amp;lt;?php the_permalink() ?&amp;amp;gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_permalink&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34; title=&amp;#34;Permanent Link to &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title_attribute&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;&amp;gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;the_title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li?&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
           &lt;span class=&#34;k&#34;&gt;endwhile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
           &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
           &lt;span class=&#34;c1&#34;&gt;// Reset Post Data
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;          &lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;br /&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      Publicaciones recientes
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;/h4&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
-   &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&lt;span class=&#34;x&#34;&gt; &amp;#39;publish&amp;#39;) );
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;         foreach( $recent_posts as $recent ){
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            echo &amp;#39;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      &amp;lt;li&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;a href=&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34; id=&amp;#34;ID&amp;#34;&amp;gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&amp;lt;/a&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&amp;lt;/li&amp;gt; &amp;#39;;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;         }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;      ?&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    &amp;lt;/ul&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+    &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
+
+
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+      Publicaciones recientes
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
+   &lt;span class=&#34;nv&#34;&gt;$recent_posts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wp_get_recent_posts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;post_status&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; &amp;#39;publish&amp;#39;) );
+         foreach( $recent_posts as $recent ){
+            echo &amp;#39;
+
+      &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39; . get_permalink($recent[&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ID&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39; .   $recent[&amp;#34;post_title&amp;#34;].&amp;#39;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; &amp;#39;;
+         }
+      ?&amp;gt;
+
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Fuente | &lt;a href=&#34;http://codex.wordpress.org/Creating_an_Error_404_Page&#34; target=&#34;_blank&#34;&gt;Creating an Error 404 Page&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         
@@ -1005,53 +993,47 @@ Lo instalamos usando el comando siguiente:&lt;/p&gt;
 &lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use Symfony\Component\DependencyInjection\ContainerBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiExtension extends Extension
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+
+class SmsupapiExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;services:
   smsup.smsupapi.sender:
       class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function Send($mensaje)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class SmsupSender {
+  public function Send($mensaje)
+  {
+    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\HttpKernel\Bundle\Bundle;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupapiBundle extends Bundle
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+class SmsupapiBundle extends Bundle
+{
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
@@ -1100,164 +1082,158 @@ Vamos a añadir la funcionalidad y luego veremos como crear la primera versión 
 
 &lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\Builder\TreeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;use Symfony\Component\Config\Definition\ConfigurationInterface;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Configuration implements ConfigurationInterface
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    public function getConfigTreeBuilder()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $treeBuilder = new TreeBuilder();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        $rootNode-&amp;gt;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          children()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;isRequired()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;cannotBeEmpty()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;            -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;          -&amp;gt;end()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        ;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;        return $treeBuilder;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+class Configuration implements ConfigurationInterface
+{
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
+        $rootNode-&amp;gt;
+          children()
+            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+          -&amp;gt;end()
+        ;
+        return $treeBuilder;
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;public function load(array $configs, ContainerBuilder $container)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $processor = new Processor();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $configuration = new Configuration();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function load(array $configs, ContainerBuilder $container)
+{
+    $processor = new Processor();
+    $configuration = new Configuration();
+    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
+    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;{
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;protected $apiId;
+protected $apiSecret;
+public function setApiid($apiId)
+{
+  $this-&amp;gt;apiId = $apiId;
+}
+public function setApisecret($apiSecret)
+{
+  $this-&amp;gt;apiSecret = $apiSecret;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
 
 &lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  use smsup\smsuplib;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class SmsupSender {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApiid($apiId)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiId = $apiId;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function setApisecret($apiSecret)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;apiSecret = $apiSecret;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getNewSms()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Sms;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function enviarSms(Sms $sms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function eliminarSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function estadoSms($idsms)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function creditosDisponibles()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;CreditosDisponibles();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function resultadoPeticion($referencia)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $lib = $this-&amp;gt;getSmsapilib();
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;setResult($respuesta);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function getSmsapilib()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  private function setResult($respuesta)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
+  use smsup\smsuplib;
+class SmsupSender {
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this-&amp;gt;apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this-&amp;gt;apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;CreditosDisponibles();
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
 
 &lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;x&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;class Result {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  protected $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function __construct ($httpcode, $result)
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;httpcode = $httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    $this-&amp;gt;result = $result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getHttpcode()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;httpcode;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  public function getResult()
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  {
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;    return $this-&amp;gt;result;
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;  }
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;}
-&lt;/span&gt;&lt;span class=&#34;x&#34;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;

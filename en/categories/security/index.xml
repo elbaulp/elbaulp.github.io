@@ -132,7 +132,7 @@ return b, which is 2
 
 &lt;p&gt;I hope this examples have let you understand better how the algorithm works. I&#39;ve implemented it in python, source code is available on &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-  &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @output a to the power of k mod n ($a^k mod n$)
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
@@ -188,13 +188,13 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 
-&lt;p&gt;
+
 &lt;blockquote&gt;The code shown along this series is hosted on my &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;em&gt;Cryptography course notes by Professor &lt;strong&gt;Jesús García Miranda&lt;/strong&gt;, Higher Technical School of Information Technology and Telecommunications Engineering of the University of Granada.&lt;/em&gt;&lt;/p&gt;
 
 
-&lt;/p&gt;
+
 </description>
         </item>
         
@@ -265,7 +265,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 &lt;p&gt;The code below uses the &lt;em&gt;Euclidean algorithm&lt;/em&gt; to compute the inverse of a number in \(\mathbb Z_n\). This &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34; title=&#34;python code&#34;&gt;python code&lt;/a&gt; is &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;on my github&#34;&gt;on my github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-      &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      Compute the Greatest Common Divisor d of a and b, and integers x and
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      y satisfying ax + by = d.
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
@@ -298,7 +298,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 &lt;p&gt;In order to make the task of computing a number&#39;s inverse, I&#39;ve created the method bellow, the code is also available at my &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;sa&#34;&gt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
