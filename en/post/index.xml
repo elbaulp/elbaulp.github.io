@@ -6,7 +6,7 @@
         <description>Recent content in Posts on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
+        <lastBuildDate>Tue, 16 Oct 2018 18:54:00 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/post/</link>
@@ -15,6 +15,264 @@
             <height>144</height>
         </image>
         <atom:link href="https://elbauldelprogramador.com/en/post/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>An analysis and visualization of my twitter account with Gephi</title>
+            <link>https://elbauldelprogramador.com/en/social-mining-gephi/</link>
+            <pubDate>Tue, 16 Oct 2018 18:54:00 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/social-mining-gephi/</guid>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;This article is the result of an exercise for the subject &lt;em&gt;Mining of
+Social Media&lt;/em&gt; in the Master&amp;rsquo;s Degree in Data Science at the UGR&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;network-analysis&#34;&gt;Network analysis&lt;/h2&gt;
+
+&lt;p&gt;This network contains a subset of the followers of the Twitter account &lt;a href=&#34;https://twitter.com/ElBaulP&#34;&gt;@elbaulp&lt;/a&gt;, since due to API limitations the download of the network up to the second degree of connection took a long time.&lt;/p&gt;
+
+&lt;p&gt;The objective of this analysis is to identify the most influential actors, who
+act as a bridge between communities in order to expand the number of followers
+of @ElbaulP.&lt;/p&gt;
+
+&lt;h3 id=&#34;average-degree&#34;&gt;Average degree&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;N = 2132 nodes.&lt;/li&gt;
+&lt;li&gt;L = 6643 links&lt;/li&gt;
+&lt;li&gt;Density = 0.001&lt;/li&gt;
+&lt;li&gt;Average grade = 3.116, which means that each node of the network is connected to another 3 on average.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The density graphs of the degrees are shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/degree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/degree-distribution.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of total grades, there are four nodes that stand out, with a grade greater than 120. The node with the highest grade is 161. These nodes correspond to &lt;em&gt;hubs&lt;/em&gt;. The distribution of degrees indicates that the property is fulfilled free of scale. Very few with many connections, and many with few connections.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/indegree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/indegree-distribution.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The nodes with the highest degree of input (with the highest number of followers) have 120 and 160 followers, respectively.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/outdegree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/outdegree-distribution.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is absolutely the same for the degrees of entry and exit, in the case of
+Twitter this indicates followers and followers. The user with more friends has
+about 99 friends.&lt;/p&gt;
+
+&lt;h3 id=&#34;diameter&#34;&gt;Diameter&lt;/h3&gt;
+
+&lt;p&gt;The diameter of the network is 13. This value represents the maximum distance between two nodes in the entire network. The average distance is 4.5.&lt;/p&gt;
+
+&lt;p&gt;The distance histogram is as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/diameter/Closeness-Centrality-Distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/diameter/Closeness-Centrality-Distribution.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The closeness diagram shows that there are quite a few nodes very far from the
+centre (around 90). Others, on the other hand, are very located in the centre of
+the network (about 85). The rest of the nodes are located around the centre of
+the network.&lt;/p&gt;
+
+&lt;h3 id=&#34;connectivity&#34;&gt;Connectivity&lt;/h3&gt;
+
+&lt;p&gt;There are 845 related components, the giant component groups 1261 nodes. The average clustering coefficient is 0.068. In this case it is low, since the twitter account is a blog account, rather than a personal account. The CC histogram is as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/clustering.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/clustering.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This indicates that in sparsely populated regions the clustering coefficient is
+very high, as the nodes are more locally connected to each other. For this
+reason, a very high point stands out at the beginning of the graph.&lt;/p&gt;
+
+&lt;h3 id=&#34;betweeness-centrality&#34;&gt;Betweeness Centrality&lt;/h3&gt;
+
+&lt;p&gt;The first five actors for the following measures are:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Centralidad de Grado&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Intermediación&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Cercanía&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Vector propio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;nixcraft: 161&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rootjaeger: 0.048&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;programador4web: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 151&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;podcastlinux: 0.048&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;KevinhoMorales: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;psicobyte_: 0.966&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;cenatic: 132&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Linuxneitor: 0.043&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;elrne: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Terceranexus6: 0.908&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Terceranexus6: 129&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 0.039&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mrcoo16: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NuriaStatgirl: 0.796&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;LignuxSocial: 121&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Wdesarrollador: 0.038&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RodriKing14: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Inter_ferencias: 0.780&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;As for the &lt;strong&gt;grade centrality&lt;/strong&gt;, it is not very much taken into account, although it reflects the number of connections of an actor, it does not take into account the overall structure of the network.&lt;/p&gt;
+
+&lt;p&gt;An important measure is &lt;strong&gt;intermediation&lt;/strong&gt;, these actors act as a bridge between other regions of the network. So they can connect different communities to each other. In the case at hand (Twitter), if we get one of these actors to mention us or do RT, our tweet could reach other types of users who might be interested in our ideas.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;closeness&lt;/strong&gt; measures how close an actor is to the center of the network. In this case it doesn&amp;rsquo;t help us much, since all the nodes have the same measure.&lt;/p&gt;
+
+&lt;p&gt;Finally, the &lt;strong&gt;own vector core&lt;/strong&gt; is a recursive measure that assigns importance to
+a node according to the importance of its neighbors. That is, it takes into
+account the quality of connections, rather than quantity. The first actor has a
+value of this measure of 1, which indicates that it is the most important node
+and with the greatest number of important connections. It is then an actor to be
+taken into account in the network.&lt;/p&gt;
+
+&lt;h3 id=&#34;community-detection&#34;&gt;Community detection&lt;/h3&gt;
+
+&lt;p&gt;For the detection of communities, a resolution factor of 1.99 has been used to obtain a total of 5 communities. This resolution value was chosen because lower values resulted in a greater number of communities, but many of them formed by two nodes. The value for modularity is 0.436, which is a good value.&lt;/p&gt;
+
+&lt;p&gt;The proportion of nodes in each community is as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;40.85%&lt;/li&gt;
+&lt;li&gt;21.39%&lt;/li&gt;
+&lt;li&gt;17.5%&lt;/li&gt;
+&lt;li&gt;10.98%&lt;/li&gt;
+&lt;li&gt;9.15%&lt;/li&gt;
+&lt;li&gt;0.14%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The modularity distribution can be seen in the following image:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/mod/communities-size-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/mod/communities-size-distribution.png&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;All are reasonably sized except one, which is too small.&lt;/p&gt;
+
+&lt;p&gt;The following image shows the colored graph according to which community
+belongs to each node:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/comunities.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/comunities.png&#34; height=&#34;1116&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Analyzing the network, it can be seen that the community above (sky blue)
+belongs to nodes related to ETSIIT. Some members of this community act as a
+bridge (they are nodes with a lot of intermediation) with other communities. For
+example, Makova_ and Linuxneitor bridge with the purple community, this
+community is more related to Linux users and Linux blogs. NataliaDiazRodrz
+bridges the ETSIIT community with the green community, more related to the Data
+Science theme. This makes sense, since NataliaDiazRodrz studied at ETSIIT and
+works in Data Science, specifically in NLP topics. The Amarilla community is
+related to programming.&lt;/p&gt;
+
+&lt;h3 id=&#34;additional-plots&#34;&gt;Additional plots&lt;/h3&gt;
+
+&lt;p&gt;The following graph shows the network arranged with the colors according to the value of the vector itself, and the size of the nodes as the intermediation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/color-eige-size-betwenn.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/color-eige-size-betwenn.png&#34; height=&#34;792&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the following figure the inverse is shown, color the intermediation, size the own vector:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/color-betwenn-size-eigen.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/color-betwenn-size-eigen.png&#34; height=&#34;760&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I consider that the most important measures are the own vector value and the
+intermediation, the following graphic shows how they are related between
+them. The higher the value for both the better, the more important the node:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/eigenvsbt.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/eigenvsbt.png&#34; height=&#34;570&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
         
         <item>
             <title>Arduino Zumo Line Follower and Obstacle avoider</title>

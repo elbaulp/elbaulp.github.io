@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Data Mininig on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/data-mininig/</link>
+        <description>Recent content in Data Mininig on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 16 Oct 2018 18:54:00 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/data-mininig/</link>
+            <title>Data Mininig on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/data-mininig/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Análisis y Visualización Básica de una Red Social de Twitter con Gephi</title>
+            <link>https://elbauldelprogramador.com/social-mining-gephi/</link>
+            <pubDate>Tue, 16 Oct 2018 18:54:00 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/social-mining-gephi/</guid>
+            <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo es el resultado de un ejercicio para la asignatura &lt;em&gt;Minería de
+Medios Sociales&lt;/em&gt; en el máster en Ciencia de Datos de la UGR&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;análisis-de-la-red&#34;&gt;Análisis de la red&lt;/h2&gt;
+
+&lt;p&gt;Esta red contiene un subconjunto de los seguidores de la cuenta &lt;a href=&#34;https://twitter.com/ElBaulP&#34;&gt;@elbaulp&lt;/a&gt; de Twitter, ya que por limitaciones de la API la descarga de la red de hasta segundo grado de conexión tardaba mucho.&lt;/p&gt;
+
+&lt;p&gt;El objetivo de este análisis es identificar a los actores más influyentes, que hacen de puente entre comunidades para poder expandir el número de seguidores de @ElbaulP&lt;/p&gt;
+
+&lt;h3 id=&#34;grado-medio&#34;&gt;Grado medio&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;N = 2132 nodos.&lt;/li&gt;
+&lt;li&gt;L = 6643 enlaces&lt;/li&gt;
+&lt;li&gt;Densidad = 0.001&lt;/li&gt;
+&lt;li&gt;Grado medio = 3.116, lo cual quiere decir que cada nodo de la red está conectado con otros 3 en media.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A continuación se muestran las gráficas de densidades de los grados.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/degree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/degree-distribution.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En cuanto a grados totales, hay cuatro nodos que destacan, con un grado de mayor a 120. El nodo con mayor grado es de 161. Estos nodos se corresponden con &lt;em&gt;hubs&lt;/em&gt;. La distribución de grados indica que se cumple la propiedad libre de escala. Muy pocos con muchas conexiones, y muchos con pocas conexiones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/indegree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/indegree-distribution.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Los nodos con mayor grado de entrada (Con mayor número de seguidores) tienen 120 y 160 seguidores, respectivamente.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/avgdegree/outdegree-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/avgdegree/outdegree-distribution.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Pasa absolutamente lo mismo para los grados de entrada y salida, en el caso de Twitter esto indica seguidores y seguidos. El usuario con más amigos tiene unos 99 amigos.&lt;/p&gt;
+
+&lt;h3 id=&#34;diámetro&#34;&gt;Diámetro&lt;/h3&gt;
+
+&lt;p&gt;El diámetro de la red es de 13. Este valor representa la máxima distancia existente entre dos nodos en toda la red. La distancia media es de 4.5.&lt;/p&gt;
+
+&lt;p&gt;El histograma de distancias es el siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/diameter/Closeness-Centrality-Distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/diameter/Closeness-Centrality-Distribution.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;El diagrama de cercanía nos indica que hay bastantes nodos muy alejados del centro (entorno a unos 90). Otros, por contra, están muy situados en el centro de la red (unos 85). El resto de nodos se situan a los alrededores del centro de la red.&lt;/p&gt;
+
+&lt;h3 id=&#34;conectividad&#34;&gt;Conectividad&lt;/h3&gt;
+
+&lt;p&gt;Se tienen 845 componentes conexas, la componente gigante agrupa 1261 nodos. El coeficiente de clustering medio es 0.068. En este caso es bajo, ya que la cuenta de twitter es de un blog, en lugar de una cuenta personal. El histograma CC es el siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/clustering.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/clustering.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Lo cual indica que en regiones poco pobladas el coeficiente de clustering es muy alto, ya que los nodos están más conectados entre ellos localmente. Por ello destaca un punto muy alto al principio de la gráfica.&lt;/p&gt;
+
+&lt;h2 id=&#34;centralidad-de-los-actores&#34;&gt;Centralidad de los actores&lt;/h2&gt;
+
+&lt;p&gt;Los cinco primeros actores para las siguientes medidas son:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Centralidad de Grado&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Intermediación&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Cercanía&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Vector propio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;nixcraft: 161&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;rootjaeger: 0.048&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;programador4web: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 1&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 151&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;podcastlinux: 0.048&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;KevinhoMorales: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;psicobyte_: 0.966&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;cenatic: 132&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Linuxneitor: 0.043&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;elrne: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Terceranexus6: 0.908&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;Terceranexus6: 129&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Makova_: 0.039&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Mrcoo16: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;NuriaStatgirl: 0.796&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;LignuxSocial: 121&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Wdesarrollador: 0.038&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;RodriKing14: 1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Inter_ferencias: 0.780&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;En cuanto a la &lt;strong&gt;centralidad de grado&lt;/strong&gt;, no se tiene muy en cuenta, aunque refleja el número de conexiones de un actor, no tiene en cuenta la estructura global de la red.&lt;/p&gt;
+
+&lt;p&gt;Una medida bastante importante es la &lt;strong&gt;intermediación&lt;/strong&gt;, estos actores hacen de puente entre otras regiones de la red. Por lo cual pueden conectar distintas comunidades entre sí. En el caso que nos ocupa (Twitter), si conseguimos que uno de estos actores nos mencione o nos haga RT, nuestro tweet podrá llegar a otro tipo de usuarios que quizá estén interesados en nuestras ideas.&lt;/p&gt;
+
+&lt;p&gt;La &lt;strong&gt;cercanía&lt;/strong&gt; mide cómo de cerca está un actor del centro de la red. En este caso no nos sirve de mucho, ya que todos los nodos tienen la misma medida.&lt;/p&gt;
+
+&lt;p&gt;Por último, la &lt;strong&gt;centralidad de vector propio&lt;/strong&gt; es una medida recursiva que asigna importancia a un nodo en función de la importancia de sus vecinos. Es decir, tiene en cuenta la calidad de las conexiones, en lugar de la cantidad. El primer actor tiene un valor de esta medida de 1, lo cual indica que es el nodo más importante y con el mayor número de conexiones importantes. Luego es un actor a tener en cuenta en la red.&lt;/p&gt;
+
+&lt;h2 id=&#34;detección-de-comunidades&#34;&gt;Detección de comunidades&lt;/h2&gt;
+
+&lt;p&gt;Para la detección de comunidades se ha usado un factor de resolución de 1.99 para obtener un total de 5 comunidades. Se ha elegido este valor de resolución debido a que valores inferiores resultaban en un mayor número de comunidades, pero muchas de ellas formadas por dos nodos. El valor para la modularidad es de un 0.436, lo cual es un buen valor.&lt;/p&gt;
+
+&lt;p&gt;La proporción de nodos en cada comunidad es la siguiente:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;40.85%&lt;/li&gt;
+&lt;li&gt;21.39%&lt;/li&gt;
+&lt;li&gt;17.5%&lt;/li&gt;
+&lt;li&gt;10.98%&lt;/li&gt;
+&lt;li&gt;9.15%&lt;/li&gt;
+&lt;li&gt;0.14%&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La distribución de modularidad se observa en la siguiente imagen:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/mod/communities-size-distribution.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/mod/communities-size-distribution.png&#34; width=&#34;600&#34; height=&#34;400&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Todas tienen un tamaño razonable salvo una, demasiado pequeña.&lt;/p&gt;
+
+&lt;p&gt;La siguiente imagen muestra el grafo coloreado en función de a qué comunidad
+pertenece cada nodo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/comunities.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/comunities.png&#34; width=&#34;768&#34; height=&#34;1116&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Analizando la red, se puede apreciar que la comunidad de arriba (Azul celeste) pertenece a nodos relacionados con la ETSIIT. Algunos miembros de esta comunidad hacen de puente (Son nodos con mucha intermediación) con otras comunidades. Por ejemplo, Makova_ y Linuxneitor hacen de puente con la comunidad morada, esta comunidad está más relacionada con usuarios de Linux y blogs de Linux. NataliaDiazRodrz hace de puente de la comunidad de la ETSIIT con la comunidad verde, más relacionada con la temática de Ciencia de Datos. Esto tiene sentido, ya que NataliaDiazRodrz estudió en la ETSIIT y trabaja en Ciencia de Datos, concretamente en temas de NLP. La comunidad Amarilla está relacionada con programación.&lt;/p&gt;
+
+&lt;h2 id=&#34;gráficos-adicionales&#34;&gt;Gráficos adicionales&lt;/h2&gt;
+
+&lt;p&gt;En la siguiente gráfica se muestra la red dispuesta con los colores en función del valor del vector propio, y el tamaño de los nodos como la intermediación:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/color-eige-size-betwenn.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/color-eige-size-betwenn.png&#34; width=&#34;538&#34; height=&#34;792&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En la siguiente figura se muestra a la inversa, color la intermediación, tamaño el vector propio:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/color-betwenn-size-eigen.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/color-betwenn-size-eigen.png&#34; width=&#34;644&#34; height=&#34;760&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Considero que las medidas más importantes son el valor de vector propio y la
+intermediación, la siguiente gráfica muestra cómo están relacionadas entre
+ellas. A mayor valor para ambas mejor, más importante es el nodo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/img/gephi/eigenvsbt.png&#34;&gt;
+&lt;figure&gt;
+    
+        &lt;img src=&#34;https://elbauldelprogramador.com/img/gephi/eigenvsbt.png&#34; width=&#34;1024&#34; height=&#34;570&#34; /&gt;
+    
+    
+&lt;/figure&gt;
+&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
