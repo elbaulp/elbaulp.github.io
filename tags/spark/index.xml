@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Spark on El Baúl del programador</title>
+        <title>spark on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/spark/</link>
-        <description>Recent content in Spark on El Baúl del programador</description>
+        <description>Recent content in spark on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 06 Feb 2017 17:04:46 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/spark/</link>
-            <title>Spark on El Baúl del programador</title>
+            <title>spark on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,16 +21,12 @@
             <pubDate>Mon, 06 Feb 2017 17:04:46 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/how-to-convert-column-to-vectorudt-densevector-spark/</guid>
-            <description>&lt;p&gt;Estoy iniciándome en el mundo de &lt;code&gt;spark&lt;/code&gt;, ojeando su librería &lt;code&gt;MLlib&lt;/code&gt; decidí implementar una simple &lt;a href=&#34;https://spark.apache.org/docs/latest/ml-classification-regression.html#linear-regression&#34; target=&#34;_blank&#34; title=&#34;Regresión lineal&#34;&gt;Regresión lineal&lt;/a&gt;. Aunque el ejemplo de su documentación parece sencillo, cuando intentaba leer mi propio csv con datos obtenía el siguiente error:&lt;/p&gt;
-
+            <description>&lt;p&gt;Estoy iniciándome en el mundo de &lt;code&gt;spark&lt;/code&gt;, ojeando su librería &lt;code&gt;MLlib&lt;/code&gt; decidí implementar una simple &lt;!-- raw HTML omitted --&gt;Regresión lineal&lt;!-- raw HTML omitted --&gt;. Aunque el ejemplo de su documentación parece sencillo, cuando intentaba leer mi propio csv con datos obtenía el siguiente error:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Column features must be of type org.apache.spark.ml.linalg.VectorUDT&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Tras varias horas buscando sin encontrar ninguna solución, al fin conseguí convertir la columna &lt;code&gt;features&lt;/code&gt; a &lt;code&gt;VectorUDT&lt;/code&gt;, así es como lo hice:&lt;/p&gt;
-
 &lt;h1 id=&#34;convertir-una-columna-a-vectorudt-en-spark&#34;&gt;Convertir una columna a VectorUDT en Spark&lt;/h1&gt;
-
 &lt;p&gt;Primero preparamos el entorno:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;SparkSession&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;local&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -42,9 +37,8 @@
   &lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getResource&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/generated_data.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;span class=&#34;n&#34;&gt;df&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El código de arriba simplemente configura una sesión &lt;code&gt;Spark&lt;/code&gt; y lee el fichero &lt;code&gt;generated_data.csv&lt;/code&gt;. Por último muestra el &lt;code&gt;schema&lt;/code&gt; de los datos, el cual es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -55,8 +49,8 @@
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como puede verse, &lt;code&gt;dependent_var&lt;/code&gt; es de tipo &lt;code&gt;String&lt;/code&gt;, pero debería ser de tipo &lt;code&gt;VectorUDT&lt;/code&gt;, para convertirla se debe usar &lt;code&gt;VectorAssembler&lt;/code&gt;:&lt;/p&gt;
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como puede verse, &lt;code&gt;dependent_var&lt;/code&gt; es de tipo &lt;code&gt;String&lt;/code&gt;, pero debería ser de tipo &lt;code&gt;VectorUDT&lt;/code&gt;, para convertirla se debe usar &lt;code&gt;VectorAssembler&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;schema&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;StructType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;VectorUDT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;
 
@@ -70,8 +64,8 @@
 &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;out&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;assembler&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 
 &lt;span class=&#34;n&#34;&gt;df2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El código de arriba declara un &lt;code&gt;schema&lt;/code&gt; para la columna que vamos a convertir, luego creamos una &lt;code&gt;udf&lt;/code&gt; (&lt;em&gt;User Defined Function&lt;/em&gt;) para convertir los valores de la columna de &lt;code&gt;String&lt;/code&gt; a &lt;code&gt;Double&lt;/code&gt;. Por último, se crea un &lt;code&gt;VectorAssembler&lt;/code&gt; y se transforma el &lt;em&gt;dataset&lt;/em&gt; al nuevo esquema. Para comprobar que de hecho hemos convertido el tipo, se imprime el esquema del &lt;em&gt;dataset&lt;/em&gt; &lt;code&gt;out&lt;/code&gt;:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;printSchema&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El código de arriba declara un &lt;code&gt;schema&lt;/code&gt; para la columna que vamos a convertir, luego creamos una &lt;code&gt;udf&lt;/code&gt; (&lt;em&gt;User Defined Function&lt;/em&gt;) para convertir los valores de la columna de &lt;code&gt;String&lt;/code&gt; a &lt;code&gt;Double&lt;/code&gt;. Por último, se crea un &lt;code&gt;VectorAssembler&lt;/code&gt; y se transforma el &lt;em&gt;dataset&lt;/em&gt; al nuevo esquema. Para comprobar que de hecho hemos convertido el tipo, se imprime el esquema del &lt;em&gt;dataset&lt;/em&gt; &lt;code&gt;out&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_b&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -82,9 +76,8 @@
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ind_var_h&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dependent_var&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
- &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;vector&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;código-completo&#34;&gt;Código completo&lt;/h1&gt;
-
+ &lt;span class=&#34;o&#34;&gt;|--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;features&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;vector&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;nullable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;código-completo&#34;&gt;Código completo&lt;/h1&gt;
 &lt;p&gt;El código completo es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;elbauldelprogramador&lt;/span&gt;
 
@@ -134,9 +127,8 @@
 
     &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;otro-método&#34;&gt;Otro método&lt;/h1&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;otro-método&#34;&gt;Otro método&lt;/h1&gt;
 &lt;p&gt;Acabo de descubrir otra forma de conseguir el mismo objetivo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;df&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;option&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;header&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
@@ -147,18 +139,14 @@
   &lt;span class=&#34;n&#34;&gt;setFormula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dependent_var ~ ind_var_d&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;setFeaturesCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;features&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;setLabelCol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;label&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;train&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;formula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora &lt;code&gt;train&lt;/code&gt; tendrá dos columnas adicionales, &lt;code&gt;features&lt;/code&gt; y &lt;code&gt;label&lt;/code&gt;, siendo &lt;code&gt;features&lt;/code&gt; de tipo &lt;code&gt;Vector&lt;/code&gt;.&lt;/p&gt;
-
+&lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;train&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;formula&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;df1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora &lt;code&gt;train&lt;/code&gt; tendrá dos columnas adicionales, &lt;code&gt;features&lt;/code&gt; y &lt;code&gt;label&lt;/code&gt;, siendo &lt;code&gt;features&lt;/code&gt; de tipo &lt;code&gt;Vector&lt;/code&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
-
 &lt;p&gt;Estoy seguro de que existen formas mejores de lograr esta conversión, pero soy nuevo en &lt;code&gt;spark&lt;/code&gt; y esta fue la única que conseguí hacer funcionar. Si sabes de alguna mejor, escríbela en los comentarios!&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;VectorAssembler | &lt;a href=&#34;http://spark.apache.org/docs/latest/ml-features.html#vectorassembler&#34; target=&#34;_blank&#34; title=&#34;VectorAssembler Documentation&#34;&gt;spark.apache.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;El dataset es el sacado del libro &lt;a href=&#34;http://amzn.to/2kFpfde&#34; target=&#34;_blank&#34; title=&#34;Test Driven Machine Learning&#34;&gt;Test Driven Machine Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;VectorAssembler | &lt;!-- raw HTML omitted --&gt;spark.apache.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;El dataset es el sacado del libro &lt;!-- raw HTML omitted --&gt;Test Driven Machine Learning&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

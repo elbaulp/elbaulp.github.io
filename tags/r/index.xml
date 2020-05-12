@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>R on El Baúl del programador</title>
@@ -6,7 +5,7 @@
         <description>Recent content in R on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 04 Nov 2016 15:23:40 +0000</lastBuildDate>
+        <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/r/</link>
@@ -23,66 +22,36 @@
             
             <guid>https://elbauldelprogramador.com/de-excel-a-python-y-r/</guid>
             <description>&lt;p&gt;Cómo pasé de analizar resultados con Excel a analizarlos con R+Python&lt;/p&gt;
-
 &lt;h1 id=&#34;cómo-empezó-todo&#34;&gt;Cómo empezó todo&amp;hellip;&lt;/h1&gt;
-
 &lt;p&gt;Todo empezó cuando me mandaron hacer una práctica para la universidad en la que tenía que:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Desarrollar cuatro algoritmos diferentes.&lt;/li&gt;
-&lt;li&gt;Ejecutarlos en 20 casos diferentes, desde tamaño &lt;strong&gt;&lt;em&gt;n = 20&lt;/em&gt;&lt;/strong&gt; hasta tamaño &lt;strong&gt;&lt;em&gt;n = 256&lt;/em&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Ejecutarlos en 20 casos diferentes, desde tamaño &lt;em&gt;&lt;strong&gt;n = 20&lt;/strong&gt;&lt;/em&gt; hasta tamaño &lt;em&gt;&lt;strong&gt;n = 256&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Hacer una documentación explicando el problema a resolver, cada algoritmo desarrollado e incluyendo un pseudocódigo de los mismos.&lt;/li&gt;
-&lt;li&gt;Incluir en dicha documentación un estudio estadístico de los resultados, valorando cada algoritmo en función de cómo había trabajado con casos grandes (&lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; grande) o casos pequeños (&lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; pequeño) y sobre la eficacia del algoritmo en comparación con el mejor resultado conocido y con los resultados obtenidos por el resto de algoritmos. Además, incluir gráficas que apoyaran tus conclusiones estaba &amp;ldquo;muy bien visto&amp;rdquo; (codo, codo, guiño guiño).&lt;/li&gt;
+&lt;li&gt;Incluir en dicha documentación un estudio estadístico de los resultados, valorando cada algoritmo en función de cómo había trabajado con casos grandes (&lt;em&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;/em&gt; grande) o casos pequeños (&lt;em&gt;&lt;strong&gt;n&lt;/strong&gt;&lt;/em&gt; pequeño) y sobre la eficacia del algoritmo en comparación con el mejor resultado conocido y con los resultados obtenidos por el resto de algoritmos. Además, incluir gráficas que apoyaran tus conclusiones estaba &amp;ldquo;muy bien visto&amp;rdquo; (codo, codo, guiño guiño).&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;y todo esto en unas tres semanas aproximadamente.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Puedes ver una práctica del estilo en &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;Optimizando código y evaluando el rendimiento&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h2 id=&#34;dormida-en-los-laureles&#34;&gt;Dormida en los laureles&lt;/h2&gt;
-
 &lt;p&gt;Empecé con bastante tranquilidad pensando que en dos semanas tendría todo el trabajo hecho y me quedaría otra semana extra para documentar. A la hora de realizar los algoritmos me encontré con algunos fallos y varios quebraderos de cabeza, pero pude tenerlos todos terminados en esas dos semanas. Empecé a hacer mi documentación explicando con todo detalle todo lo que había hecho, centrándome en obtener tanto una buena presentación como una buena redacción y, finalmente, me quedaron dos días para hacer lo más importante: el análisis de los resultados.&lt;/p&gt;
-
 &lt;p&gt;Para hacer el análisis, el profesor nos había dejado preparada una hoja de cálculo &lt;em&gt;plantilla&lt;/em&gt; con todos los datos que teníamos que rellenar y calcular. En rellenar la maldita plantilla se me fue media mañana, por no decir la mañana entera, ya que en &lt;em&gt;Calc&lt;/em&gt; tienes que introducir los decimales con una coma y &lt;em&gt;Python&lt;/em&gt; los devolvía con un punto. A pesar de esto aún no cundía demasiado el pánico pues tenía otro día más.&lt;/p&gt;
-
 &lt;p&gt;Cuando ya calculé con &lt;em&gt;Calc&lt;/em&gt; todo lo que había que calcular vino &lt;strong&gt;el problema&lt;/strong&gt;: poner todos los datos que había calculado en mi documento de LaTeX. Un amigo me pasó un script que te permite exportar la tabla con sintaxis &lt;code&gt;tabular&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex/&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt; pero, en la hoja de cálculo tenía las tablas que había hecho para todos y cada uno de los algoritmos y en mi documento tenían que ir separadas en secciones. Al final después de pelearme con &lt;em&gt;Calc&lt;/em&gt; conseguí separar las tablas e incluirlas en mi documento, pero había perdido un precioso día para documentar y analizar los resultados que había estado &lt;strong&gt;todo el día&lt;/strong&gt; preparando.&lt;/p&gt;
-
 &lt;h2 id=&#34;último-día-kernel-panic&#34;&gt;Último día. Kernel panic.&lt;/h2&gt;
-
 &lt;p&gt;Llegó el último día que, como tenía clase por la tarde, era en realidad &lt;em&gt;la última mañana&lt;/em&gt;. Decidí que sería una buena idea poner gráficas en mi documentación, pues con las tablas no me había dado como para escribir &lt;em&gt;todo lo que me hubiese gustado&lt;/em&gt; y además, le darían a mi documento un extra de &amp;ldquo;profesionalidad&amp;rdquo;.&lt;/p&gt;
-
 &lt;p&gt;Así que me dispuse a intentar generar un gráfico en la hoja de cálculo que tenía. Intenté todas las combinaciones posibles de datos, tipos de gráficos, colores, leyendas y demás herramientas que proporciona &lt;em&gt;Calc&lt;/em&gt; para hacer gráficos y con ninguna obtenía un buen gráfico que realmente reflejase lo que quería. De hecho, lo más decente que pude obtener fueron dos gráficos que no decían absolutamente nada sobre los datos y que no supe ni siquiera etiquetar&amp;hellip; supongo que por los nervios de que la entrega se aproximaba y mi análisis daba pena.&lt;/p&gt;
-
 &lt;p&gt;Estos son los gráficos que finalmente incluí en la que iba a ser la chachi documentación extra profesional a 5 minutos de que la entrega se cerrase.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 605px) 605px, 100vw&#34;on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc1.png&#34; alt=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; title=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Primer gráfico horrible&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 605px) 605px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/calc2.png&#34; alt=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; title=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; width=&#34;605&#34; height=&#34;340&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Segundo gráfico horrible&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;¿Podéis sacar alguna conclusión de ellos? Yo no.&lt;/p&gt;
-
 &lt;h1 id=&#34;cuello-de-botella&#34;&gt;Cuello de botella&lt;/h1&gt;
-
 &lt;p&gt;Tras el gran desastre que hice en la primera práctica, me prometí que no me pasaría lo mismo en la segunda. Tras un rato de reflexión, me di cuenta de que mi principal problema fue el tiempo que &lt;strong&gt;gasté&lt;/strong&gt; metiendo datos en la hoja de cálculo a mano e intentando hacer una gráfica medio decente. Tareas tediosas y, sobre todo, que podría haber automatizado con un script.&lt;/p&gt;
-
 &lt;p&gt;Empecé a investigar cómo podría hacer un equivalente a mi hoja de cálculo, pero &lt;em&gt;exportable&lt;/em&gt; a LaTeX y sin tener que usar &lt;em&gt;Calc&lt;/em&gt;. Fue entonces cuando encontré el maravillo paquete de &lt;em&gt;Python&lt;/em&gt; llamado &lt;code&gt;tabulate&lt;/code&gt;. Este paquete, te permite generar a partir de una &lt;em&gt;lista de listas&lt;/em&gt; una preciosa tabla en varios formatos (podéis consultarlos en su &lt;a href=&#34;https://pypi.python.org/pypi/tabulate&#34;&gt;documentación&lt;/a&gt;) entre los que se encontraba &lt;code&gt;tabular&lt;/code&gt; de LaTeX.&lt;/p&gt;
-
 &lt;p&gt;Tuve la suerte de haber hecho mi práctica en &lt;em&gt;python&lt;/em&gt;, por lo que añadirle el script que voy a describir a continuación fue pan comido.&lt;/p&gt;
-
 &lt;h1 id=&#34;mi-script-con-tabulate&#34;&gt;Mi script con &lt;code&gt;tabulate&lt;/code&gt;&lt;/h1&gt;
-
 &lt;p&gt;Si habéis leído la documentación de &lt;code&gt;tabulate&lt;/code&gt; habréis visto que es bastante sencillo de usar: sólo hay que hacer una lista de listas, donde cada lista de la lista representa una fila de la tabla. En mi caso, la información que tenía que almacenar para cada algoritmo era:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -92,7 +61,6 @@
 &lt;th&gt;Desviación&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -102,15 +70,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;La última columna era una forma de reflejar la diferencia del coste obtenido por el algoritmo con el mejor coste obtenido para ese caso del problema.&lt;/p&gt;
-
 &lt;p&gt;Mi script consistió en ejecutar todos los casos del algoritmo y guardar dos medidas, en dos listas separadas: tiempo de ejecución y coste de la solución obtenida. De antemano tenía guardados los distintos casos que tenía que ejecutar y las mejores soluciones conocidas de cada algoritmo, que usé para calcular la desviación de cada solución con la siguiente fórmula:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 197px) 197px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/zzpvyzc.png&#34; alt=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; title=&#34;C\xF3mo Pas\xE9 De Usar Excel a Usar R Y Python&#34; width=&#34;197&#34; height=&#34;36&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Una vez tenía estos datos, generé la tabla en formato LaTeX consultando las diferentes listas que había creado.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;imprime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Calculamos la desviación de cada solución con respecto a la mejor&lt;/span&gt;
@@ -124,36 +86,17 @@
         &lt;span class=&#34;n&#34;&gt;tablefmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;latex&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Además, calculamos la desviación media y el tiempo medio de ejecución&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Desviación = &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Tiempo = &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tiempo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h1&gt;
-
+    &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Tiempo = &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tiempo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;y-los-gráficos-qué&#34;&gt;Y los gráficos, ¿qué?&lt;/h1&gt;
 &lt;p&gt;Una vez tuve mi script &amp;ldquo;hoja de cálculo&amp;rdquo; hecho, pasé a pensar cómo podría automatizar la creación de los gráficos que yo quería. Justo por esa época, @JJ dio una &lt;a href=&#34;http://jj.github.io/data-vis/#/&#34;&gt;charla&lt;/a&gt; sobre &lt;em&gt;Visualización de datos con R&lt;/em&gt; en la que describía el paquete &lt;code&gt;ggplot2&lt;/code&gt;. El funcionamiento de &lt;code&gt;ggplot2&lt;/code&gt; es muy sencillo, y permite obtener gráficos muy bonitos e ilustrativos a partir de un &lt;em&gt;Data frame&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Antes de describir el script en &lt;a href=&#34;https://elbauldelprogramador.com/tags/r&#34; title=&#34;Artículos sobre R&#34;&gt;R&lt;/a&gt; que hice, quiero enseñaros los gráficos que obtuve para que los comparéis con los que obtuve con &lt;em&gt;Calc&lt;/em&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/chrp1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; title=&#34;Gráfico que muestra el rendimiento en un caso pequeño&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso pequeño&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/taip1.png&#34; alt=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; title=&#34;Gráfico que muestra el rendimiento en un caso grande&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Gráfico que muestra el rendimiento en un caso grande&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;¿Qué algoritmo funciona mejor en casos pequeños? ¿Y en casos grandes?&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/converp2.png&#34; alt=&#34;Gráfico de convergencia&#34; title=&#34;Gráfico de convergencia&#34; width=&#34;800&#34; height=&#34;800&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Gráfico de convergencia&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Este último gráfico lo hice con los datos de la práctica 2, en vez de con los de la práctica 1. Representa la convergencia a una solución, al ser algoritmos multiarranque, pueden llegar a una buena solución y después dar con otra peor. ¿Qué algoritmo da con la mejor solución? ¿Qué algoritmo converge más rápido?&lt;/p&gt;
-
 &lt;h1 id=&#34;mi-script-con-ggplot2&#34;&gt;Mi script con &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h1&gt;
-
 &lt;h2 id=&#34;pasando-datos-de-python-a-r&#34;&gt;Pasando datos de Python a R&lt;/h2&gt;
-
 &lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; era ideal, pero tenía un problema: ¿cómo paso mis datos de python a R? La respuesta no fue muy difícil de encontrar. Lo que hice fue añadir una función más a mi script en python que guardaba los datos de la &amp;ldquo;hoja de cálculo&amp;rdquo; en un fichero &lt;code&gt;csv&lt;/code&gt;. Con el fichero &lt;code&gt;csv&lt;/code&gt; de cada algoritmo, creaba un &lt;em&gt;Data frame&lt;/em&gt; en R con los datos que me interesaban para mi gráfica.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Resultados/&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombre_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
@@ -163,8 +106,8 @@
         &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ficheros&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)):&lt;/span&gt;
             &lt;span class=&#34;n&#34;&gt;writer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writerow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Coste&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;valores&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]),&lt;/span&gt;
                 &lt;span class=&#34;s1&#34;&gt;&amp;#39;Tiempo&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tiempos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]),&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Desviacion&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;desviaciones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])})&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como también representaba en la gráfica los mejores resultados conocidos para cada caso, hice un &lt;code&gt;csv&lt;/code&gt; para almacenarlos y poder leerlos con R. Esta función sólo tuve que ejecutarla una vez pues la mejor solución de cada caso es la misma la compares con el algoritmo que la compares.&lt;/p&gt;
+    &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como también representaba en la gráfica los mejores resultados conocidos para cada caso, hice un &lt;code&gt;csv&lt;/code&gt; para almacenarlos y poder leerlos con R. Esta función sólo tuve que ejecutarla una vez pues la mejor solución de cada caso es la misma la compares con el algoritmo que la compares.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;mejor_csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;mejor_csv.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;fieldnames&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -173,31 +116,28 @@
         &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ficheros&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)):&lt;/span&gt;
             &lt;span class=&#34;n&#34;&gt;writer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;writerow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Caso&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ficheros&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
                 &lt;span class=&#34;s1&#34;&gt;&amp;#39;Coste&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mejores_sol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])})&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;representando-en-r-los-datos&#34;&gt;Representando en R los datos&lt;/h2&gt;
-
+    &lt;span class=&#34;n&#34;&gt;csvfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;representando-en-r-los-datos&#34;&gt;Representando en R los datos&lt;/h2&gt;
 &lt;p&gt;Una vez tenía los datos en ficheros &lt;code&gt;csv&lt;/code&gt; sólo tenía que usar la función &lt;code&gt;read.csv&lt;/code&gt; para convertirlos en un &lt;em&gt;Data frame&lt;/em&gt;. En mi caso, como habréis visto en las gráficas, sólo estaba interesada en el coste obtenido por cada algoritmo en casos pequeños y grandes, por lo que obivé los datos relacionados con el tiempo de ejecución.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Parámetros de la función:&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#   resultados: nombre de los ficheros csv de cada algoritmo&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#   nombres: nombres de las columnas en el data frame&lt;/span&gt;
-construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;resultados&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; nombres&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;construye_datos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# leemos los datos sobre los mejores costes obtenidos para cada caso&lt;/span&gt;
-    mejor &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Resultados/mejor_csv.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;mejor&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Resultados/mejor_csv.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# y los costes obtenidos por el algoritmo greedy, este algoritmo se compara&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# con todos los algoritmos desarrollados en todas las prácticas.&lt;/span&gt;
-    greedy &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; read.csv&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Resultados/resultados_greedy.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;greedy&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;Resultados/resultados_greedy.csv&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# leemos el resto de datos de los algoritmos de la práctica concreta&lt;/span&gt;
-    algoritmos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;resultados&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; FUN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;r&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; read.csv&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Resultados/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; r&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; sep&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;algoritmos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FUN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Resultados/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# hacemos un data frame guardando únicamente el coste obtenido por cada&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# algoritmo.&lt;/span&gt;
-    d &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;cbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;mejor&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; greedy&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; algoritmos&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;MejorCoste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;CosteGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; nombres&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    d
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez tenía un &lt;em&gt;Data frame&lt;/em&gt; con los datos que quería representar en la gráfica, pasaba a realizar la gráfica con otra función. Debido a que quería representar tres medidas diferentes en la gráfica (&lt;strong&gt;coste&lt;/strong&gt; obtenido por cada &lt;strong&gt;algoritmo&lt;/strong&gt; en algunos de los &lt;strong&gt;casos&lt;/strong&gt;), tuve que hacer un tratamiento previo al &lt;em&gt;Data frame&lt;/em&gt; para conseguirlo.&lt;/p&gt;
-
+    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;cbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mejor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;greedy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;algoritmos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;MejorCoste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;CosteGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvGreedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez tenía un &lt;em&gt;Data frame&lt;/em&gt; con los datos que quería representar en la gráfica, pasaba a realizar la gráfica con otra función. Debido a que quería representar tres medidas diferentes en la gráfica (&lt;strong&gt;coste&lt;/strong&gt; obtenido por cada &lt;strong&gt;algoritmo&lt;/strong&gt; en algunos de los &lt;strong&gt;casos&lt;/strong&gt;), tuve que hacer un tratamiento previo al &lt;em&gt;Data frame&lt;/em&gt; para conseguirlo.&lt;/p&gt;
 &lt;p&gt;La función &lt;code&gt;construye_datos&lt;/code&gt; aplicada sobre dos algoritmos &lt;em&gt;&amp;ldquo;Ejemplo 1&amp;rdquo;&lt;/em&gt; y &lt;em&gt;&amp;ldquo;Ejemplo 2&amp;rdquo;&lt;/em&gt; nos devuelve un &lt;em&gt;Data frame&lt;/em&gt; con la siguiente forma:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -214,7 +154,6 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;th&gt;DesvEj2&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -231,9 +170,7 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;De esos datos, como he dicho antes, sólo nos interesan los relativos al coste obtenido para cada caso. Por tanto, el primer &amp;ldquo;procesamiento&amp;rdquo; que debemos hacer al &lt;em&gt;Data frame&lt;/em&gt; es quedarnos sólo con las columnas que nos interesan:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -244,7 +181,6 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;th&gt;CosteEj2&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -255,9 +191,7 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;Una vez hecho esto, tenía que &amp;ldquo;reorganizar&amp;rdquo; el &lt;em&gt;Data frame&lt;/em&gt; de forma que pasase a tener únicamente 3 columnas, que son las que iba a representar en la gráfica:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -266,98 +200,82 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;th&gt;value&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;chr20a.dat&lt;/td&gt;
 &lt;td&gt;MejorCoste&lt;/td&gt;
 &lt;td&gt;2192&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20c.dat&lt;/td&gt;
 &lt;td&gt;MejorCoste&lt;/td&gt;
 &lt;td&gt;14142&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr22b.dat&lt;/td&gt;
 &lt;td&gt;MejorCoste&lt;/td&gt;
 &lt;td&gt;6194&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr25a.dat&lt;/td&gt;
 &lt;td&gt;MejorCoste&lt;/td&gt;
 &lt;td&gt;3796&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20a.dat&lt;/td&gt;
 &lt;td&gt;CosteGreedy&lt;/td&gt;
 &lt;td&gt;8100&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20c.dat&lt;/td&gt;
 &lt;td&gt;CosteGreedy&lt;/td&gt;
 &lt;td&gt;78718&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr22b.dat&lt;/td&gt;
 &lt;td&gt;CosteGreedy&lt;/td&gt;
 &lt;td&gt;11942&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr25a.dat&lt;/td&gt;
 &lt;td&gt;CosteGreedy&lt;/td&gt;
 &lt;td&gt;17556&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20a.dat&lt;/td&gt;
 &lt;td&gt;CosteEj1&lt;/td&gt;
 &lt;td&gt;2418&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20c.dat&lt;/td&gt;
 &lt;td&gt;CosteEj1&lt;/td&gt;
 &lt;td&gt;15672&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr22b.dat&lt;/td&gt;
 &lt;td&gt;CosteEj1&lt;/td&gt;
 &lt;td&gt;6530&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr25a.dat&lt;/td&gt;
 &lt;td&gt;CosteEj1&lt;/td&gt;
 &lt;td&gt;4762&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20a.dat&lt;/td&gt;
 &lt;td&gt;CosteEj2&lt;/td&gt;
 &lt;td&gt;2546&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr20c.dat&lt;/td&gt;
 &lt;td&gt;CosteEj2&lt;/td&gt;
 &lt;td&gt;16986&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr22b.dat&lt;/td&gt;
 &lt;td&gt;CosteEj2&lt;/td&gt;
 &lt;td&gt;6660&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;chr25a.dat&lt;/td&gt;
 &lt;td&gt;CosteEj2&lt;/td&gt;
@@ -365,9 +283,7 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;Como veis, usando la columna &lt;em&gt;Caso&lt;/em&gt; como &lt;strong&gt;identificador&lt;/strong&gt;, hemos reordenado la tabla de manera que, para cada algoritmo, tendremos un gráfico de barras representando el coste obtenido en cada caso.&lt;/p&gt;
-
 &lt;p&gt;Una vez explicado paso a paso el tratamiento que hice a los datos, paso a enseñar la función que hace la gráfica:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Parámetros de la función:&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#   datos: Data frame que devuelve la función constuye_datos&lt;/span&gt;
@@ -375,68 +291,64 @@ construye_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span cl
 &lt;span class=&#34;c1&#34;&gt;#         (en nuestro caso, el coste obtenido por cada algoritmo para cada caso)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#   nombres: nombres de cada columna del data frame que aparecerán en la gráfica&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#   file: nombre del archivo en el que guardaremos las gráficas finalmente&lt;/span&gt;
-representa_datos &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; cols&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; nombres&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;representa_datos&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cols&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# importación de librerías&lt;/span&gt;
-    &lt;span class=&#34;kn&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;ggplot2&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# para hacer gŕaficos&lt;/span&gt;
-    &lt;span class=&#34;kn&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;reshape2&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# para poder redistribuir el data frame&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ggplot2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# para hacer gŕaficos&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reshape2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;c1&#34;&gt;# para poder redistribuir el data frame&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# nos quedamos con las columnas del data frame que nos interesan&lt;/span&gt;
-    d_c &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;cbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=&#34;p&#34;&gt;[,&lt;/span&gt;cols&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_c&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Mejor Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Greedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; nombres&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    d_c&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;Caso &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; datos&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;Caso
+    &lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;cbind&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos[&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cols]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Mejor Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Greedy&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;datos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# filtramos los casos que empiezan por chr2, ya que estos son casos&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# bastante pequeños y redistribuimos el data frame&lt;/span&gt;
-    d_chr &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; melt&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_c&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;grepl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;chr2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;datos&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;Caso&lt;span class=&#34;p&#34;&gt;),])&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_chr&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d_chr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;melt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;[grepl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;chr2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_chr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# representamos la gráfica de barras&lt;/span&gt;
-    ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_chr&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Caso&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; Coste&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; geom_bar&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;fill&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Algoritmo&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; position&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dodge&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; stat&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_chr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Coste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;geom_bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fill&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Algoritmo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dodge&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# guardamos el archivo&lt;/span&gt;
-    ggsave&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;chr&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;sep&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;ggsave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;chr&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# repetimos para casos tai, que son casos grandes.&lt;/span&gt;
-    d_tai &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; melt&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_c&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;grepl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tai&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;datos&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;Caso&lt;span class=&#34;p&#34;&gt;),])&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_tai&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_tai&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Caso&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; Coste&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; geom_bar&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;fill&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Algoritmo&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; position&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dodge&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; stat&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    ggsave&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tai&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;sep&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por ejemplo, para obtener la gráfica de los algoritmos &lt;em&gt;&amp;ldquo;Ejemplo 1&amp;rdquo;&lt;/em&gt; y &lt;em&gt;&amp;ldquo;Ejemplo 2&amp;rdquo;&lt;/em&gt;, realizaríamos la siguiente llamada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;datos_prueba &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; construye_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;resultados &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;resultados_Ej1.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;resultados_Ej2.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
-    nombres &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CosteEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CosteEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;datos_prueba&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; cols&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; nombres&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Ej1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Ej2), file=&amp;#34;&lt;/span&gt;prueba&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Conseguí optimizar tanto el tiempo con estos scripts, que me sobró tiempo para implementar un gráfico de convergencia en R. Para ello, modifiqué mi práctica para que guardase en un &lt;code&gt;csv&lt;/code&gt; cada coste que iba encontrando, para después representarlo en una gráfica. Una vez comprendida la función anterior, esta no tiene apenas ninguna diferencia:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;representa_convergencia &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;resultados&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; nombres&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;kn&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;ggplot2&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;kn&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;reshape2&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d_tai&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;melt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;[grepl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tai&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_tai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Caso&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_tai&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Caso&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Coste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;geom_bar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fill&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Algoritmo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;dodge&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;identity&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;ggsave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tai&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por ejemplo, para obtener la gráfica de los algoritmos &lt;em&gt;&amp;ldquo;Ejemplo 1&amp;rdquo;&lt;/em&gt; y &lt;em&gt;&amp;ldquo;Ejemplo 2&amp;rdquo;&lt;/em&gt;, realizaríamos la siguiente llamada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;datos_prueba&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;construye_datos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;resultados_Ej1.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;resultados_Ej2.csv&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CosteEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvEj1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;CosteEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;TiempoEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;DesvEj2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;representa_datos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datos_prueba&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cols&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Ej1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste Ej2), file=&amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prueba&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Conseguí optimizar tanto el tiempo con estos scripts, que me sobró tiempo para implementar un gráfico de convergencia en R. Para ello, modifiqué mi práctica para que guardase en un &lt;code&gt;csv&lt;/code&gt; cada coste que iba encontrando, para después representarlo en una gráfica. Una vez comprendida la función anterior, esta no tiene apenas ninguna diferencia:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;representa_convergencia&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ggplot2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;reshape2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# leemos la convergencia de cada algoritmo&lt;/span&gt;
-    convergencias &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;resultados&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; FUN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;r&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; read.csv&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Resultados/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;r&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;sep&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;convergencias&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resultados&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FUN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;read.csv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Resultados/&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# El csv guarda tanto las iteraciones dadas por el algoritmo como el coste&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# obtenido en cada iteración. Como sólo nos interesa el coste, nos quedamos&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# con la segunda columna.&lt;/span&gt;
-    &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;X&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;convergencias&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; FUN&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;conv&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; conv&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]])&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convergencias&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FUN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;conv[[2]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# hacemos un nuevo data frame con la siguiente estructura:&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;#   Iteraciones    ConvergenciaAlgoritmo 1 ..... ConvergenciaAlgoritmo n&lt;/span&gt;
-    d_c &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;convergencias&lt;span class=&#34;p&#34;&gt;[[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]][,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_c&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; nombres
-    d_c
+    &lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;data.frame&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;convergencias[[1]][&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nombres&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# reorganizamos el data frame&lt;/span&gt;
-    d_cm &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; melt&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_c&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; id.vars&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;nombres&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_cm&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;nombres&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d_cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;melt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id.vars&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombres[1]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_cm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombres[1]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Algoritmo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Coste&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# lo representamos con ggplot. Hago la distinción de si los datos se han&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# obtenido por número de llamadas a la función de evaluación o por número de&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# iteraciones.&lt;/span&gt;
-    &lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;nombres&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Evaluaciones&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_cm&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Evaluaciones&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;Coste&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; geom_line&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;color&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Algoritmo&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-    &lt;span class=&#34;kp&#34;&gt;else&lt;/span&gt;
-        ggplot&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;d_cm&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;Iteraciones&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;Coste&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; geom_line&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;aes&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;color&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Algoritmo&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;if &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombres[1]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Evaluaciones&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_cm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Evaluaciones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Coste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;geom_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Algoritmo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;else&lt;/span&gt;
+        &lt;span class=&#34;nf&#34;&gt;ggplot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d_cm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Iteraciones&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Coste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;geom_line&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;aes&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Algoritmo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# y lo guardamos.&lt;/span&gt;
-    ggsave&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;conver&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; sep&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+    &lt;span class=&#34;nf&#34;&gt;ggsave&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;paste&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;conver&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.png&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;p&gt;El código de la práctica está disponible en el GitHub de Marta: &lt;a href=&#34;https://github.com/mgmacias95/Analisis-Resultados-R-Python&#34; title=&#34;Enlace al Repo&#34;&gt;github.com/mgmacias95/Analisis-Resultados-R-Python&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;más-sobre-r-y-python&#34;&gt;Más sobre R y Python&lt;/h1&gt;
-
 &lt;p&gt;Puedes consultar los siguientes atrículos sobre R y python:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34;&gt;Vectorizar El Acceso a Columnas en R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/&#34; title=&#34;Cómo modificar Una Variable Desde Dentro De Una Función en R&#34;&gt;Cómo modificar Una Variable Desde Dentro De Una Función en R&lt;/a&gt;&lt;/li&gt;
@@ -455,61 +367,55 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
             
             <guid>https://elbauldelprogramador.com/acceder-variable-dentro-funcion-r/</guid>
             <description>&lt;p&gt;Este artículo va a ser uno corto, pero creo que va a resolver el problema a muchas personas, igual que me lo resolvió a mi.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Haciendo una práctica de Aprendizaje Automático, en concreto implementando &lt;em&gt;Gradiente Descendente Estocástico&lt;/em&gt; (&lt;strong&gt;Stochastic Gradient Descent&lt;/strong&gt;) o &lt;em&gt;SGD&lt;/em&gt; para &lt;em&gt;Regresión Logística&lt;/em&gt; e intentando hacer el código lo más eficiente posible (Y eso en R significa evitar el uso de for a toda costa) me encontré con la siguiente situación:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;SGD &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;SGD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;# Stochastic gradient descent&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 
-  w &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 
   &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
 
-  update &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Aqui dentro se necesita modificar w, y modificarla&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-  &lt;span class=&#34;kr&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;above.tolerance&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    w.old &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; w
-    &lt;span class=&#34;kp&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;data&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; update&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nf&#34;&gt;while &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;above.tolerance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;w.old&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-  w
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Bien, tal y como está el código de arriba no funciona, ya que aunque la función &lt;code&gt;update&lt;/code&gt; puede ver el valor de &lt;code&gt;w&lt;/code&gt;, que está en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;, pero no puede modificar su valor, lo que modifica es una copia local, en el ámbito de &lt;code&gt;update&lt;/code&gt;. Para que Gradiente Descendente Estocástico funcione se necesita que para cada punto se actualice el vector de pesos &lt;code&gt;w&lt;/code&gt; y quede reflejado en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;.&lt;/p&gt;
-
+  &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Bien, tal y como está el código de arriba no funciona, ya que aunque la función &lt;code&gt;update&lt;/code&gt; puede ver el valor de &lt;code&gt;w&lt;/code&gt;, que está en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;, pero no puede modificar su valor, lo que modifica es una copia local, en el ámbito de &lt;code&gt;update&lt;/code&gt;. Para que Gradiente Descendente Estocástico funcione se necesita que para cada punto se actualice el vector de pesos &lt;code&gt;w&lt;/code&gt; y quede reflejado en el ámbito de la función &lt;code&gt;SGD&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Para lograr este comportamiento, al principio pensé en declarar &lt;code&gt;w&lt;/code&gt; como variable global con el operador &lt;code&gt;&amp;lt;&amp;lt;-&lt;/code&gt;, lo cual es una terrible idea, porque &lt;code&gt;w&lt;/code&gt; sería global a todo el programa. En este caso solo necesitamos que &lt;code&gt;w&lt;/code&gt; pueda modificarse desde &lt;code&gt;update&lt;/code&gt;. Así que buscando un poco encontré la forma de crear un entorno local a la función &lt;code&gt;SGD&lt;/code&gt;, y luego usarlo dentro de &lt;code&gt;update&lt;/code&gt;, aquí está el código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;SGD &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;SGD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;# Stochastic gradient descent&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
 
-  w.env &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;new.env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
-  w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;w.env&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;new.env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;w.env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;matrix&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;rep&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 
   &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
 
-  update &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Aqui dentro se necesita modificar w, y modificarla&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Se usa la variable w.env$w&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-  &lt;span class=&#34;kr&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;above.tolerance&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-    w.old &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w
-    &lt;span class=&#34;kp&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;data&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; update&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nf&#34;&gt;while &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;above.tolerance&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;w.old&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w.env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;
+    &lt;span class=&#34;nf&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;update&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-  w.env&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;w
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con este sencillo cambio, dentro de &lt;code&gt;update&lt;/code&gt; se está accediendo y modificando la variable &lt;code&gt;w&lt;/code&gt;, actualizándola correctamente en cada iteración de &lt;code&gt;apply&lt;/code&gt;.&lt;/p&gt;
-
+  &lt;span class=&#34;n&#34;&gt;w.env&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con este sencillo cambio, dentro de &lt;code&gt;update&lt;/code&gt; se está accediendo y modificando la variable &lt;code&gt;w&lt;/code&gt;, actualizándola correctamente en cada iteración de &lt;code&gt;apply&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Espero que os sea útil.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Entornos Avanzados en R | &lt;a href=&#34;http://adv-r.had.co.nz/Environments.html&#34; target=&#34;_blank&#34; title=&#34;Entornos avanzados en R&#34;&gt;adv-r.had.co.nz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Entornos Avanzados en R | &lt;!-- raw HTML omitted --&gt;adv-r.had.co.nz&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -519,30 +425,24 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
             <pubDate>Mon, 04 Apr 2016 18:56:12 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/vectorizar-acceso-columnas-r/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34;&gt;&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/vectorizar-acceso-columnas-r.png&#34; title=&#34;Vectorizar El Acceso a Columnas en R&#34; alt=&#34;Vectorizar El Acceso a Columnas en R&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
-&lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario &lt;a href=&#34;http://stackoverflow.com/users/1612432/algui91&#34; target=&#34;_blank&#34; title=&#34;Perfil de algui91&#34;&gt;algui91&lt;/a&gt;, que preguntaba &lt;a href=&#34;http://stackoverflow.com/questions/35914984/vectorize-access-to-columns-in-r&#34; target=&#34;_blank&#34; title=&#34;Vectorize access to columns in R&#34;&gt;Vectorize access to columns in R&lt;/a&gt;. La respuesta es del usuario &lt;a href=&#34;http://stackoverflow.com/users/3001626/david-arenburg&#34; target=&#34;_blank&#34; title=&#34;Perfil de David Arenburg&#34;&gt;David Arenburg&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario &lt;!-- raw HTML omitted --&gt;algui91&lt;!-- raw HTML omitted --&gt;, que preguntaba &lt;!-- raw HTML omitted --&gt;Vectorize access to columns in R&lt;!-- raw HTML omitted --&gt;. La respuesta es del usuario &lt;!-- raw HTML omitted --&gt;David Arenburg&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;En unas prácticas de &lt;a href=&#34;https://elbauldelprogramador.com/9-libros-que-debes-leer-para-ser-un-data-scientist-o-data-engineer/&#34; title=&#34;Libros sobre Aprendizaje Automático&#34;&gt;Aprendizaje automático&lt;/a&gt; para la facultad en las que usamos R. Me surgió un problema intentando vectorizar el acceso a un &lt;em&gt;Data set&lt;/em&gt; por columnas, así que pregunté en &lt;em&gt;StackOVerflow&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El objetivo era dado un &lt;em&gt;data set&lt;/em&gt; relleno de 1 y -1, cambiar el valor de un 10% de unos a -1, y de un 10% de -1 a 1. Los datos eran algo así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;          x         y f1 f2 f3 f4
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;          &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;         &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f4&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;76.71655&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;60.74299&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-85.73743&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-19.67202&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;75.95698&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-27.20154&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-82.57193&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;39.30717&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-45.32161&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;39.44898&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-46.76636&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-35.30635&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En un principio obtenía el 10% así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;indexPositive &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;which&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datafsign&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;result &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;nrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datafsign&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;obteniendo así un 10% de los índices a cambiar, pero solo de una columna. Yo quería generalizar al máximo posible y obtenerlo para las 4 columnas que se ven en el ejemplo anterior. Al final, con la ayuda de &lt;em&gt;David Arenburg&lt;/em&gt;, cree el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;getPercentageOfData &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; condition &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; percentage &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-46.76636&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-35.30635&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En un principio obtenía el 10% así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;indexPositive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;which&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datafsign&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;nrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datafsign&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;obteniendo así un 10% de los índices a cambiar, pero solo de una columna. Yo quería generalizar al máximo posible y obtenerlo para las 4 columnas que se ven en el ejemplo anterior. Al final, con la ayuda de &lt;em&gt;David Arenburg&lt;/em&gt;, cree el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;getPercentageOfData&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;percentage&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;){&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;# Get the percentage of samples that meet condition&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;# Args:&lt;/span&gt;
@@ -552,25 +452,23 @@ representa_datos&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datos&lt;span class=
   &lt;span class=&#34;c1&#34;&gt;#&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;# Returns:&lt;/span&gt;
   &lt;span class=&#34;c1&#34;&gt;#   Indexes of the percentage of the samples that meet the condition&lt;/span&gt;
-  meetCondition &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;which&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;x &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; condition&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;kp&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;meetCondition&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;meetCondition&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; percentage&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo cual me permitía pasarle como parámetro tantas columnas como quisiera cambiar:&lt;/p&gt;
+  &lt;span class=&#34;n&#34;&gt;meetCondition&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;which&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nf&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;meetCondition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;meetCondition&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;percentage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo cual me permitía pasarle como parámetro tantas columnas como quisiera cambiar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Get a 10% of samples labeled with a 1 in all 4 functions&lt;/span&gt;
-indexPositive &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datafunctions&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; getPercentageOfData&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;indexPositive&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datafunctions[3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getPercentageOfData&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;# Change 1 by -1&lt;/span&gt;
-datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f1&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;indexPositive&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f1&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
-datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f2&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;indexPositive&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f2&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
-datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f3&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;indexPositive&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f3&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
-datafunctions&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f4&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;indexPositive&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;f4&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y conseguir así lo que quería hacer.&lt;/p&gt;
-
+&lt;span class=&#34;n&#34;&gt;datafunctions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f1[indexPositive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f1]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;datafunctions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f2[indexPositive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f2]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;datafunctions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f3[indexPositive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f3]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;datafunctions&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f4[indexPositive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f4]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y conseguir así lo que quería hacer.&lt;/p&gt;
 &lt;p&gt;Para cambiar los -1  por 1 basta llamar al a función con un parámetro más, el de condición:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;indexNegative &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kp&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;datafunctions&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; getPercentageOfData&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; condition &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;n&#34;&gt;indexNegative&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;lapply&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datafunctions[3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getPercentageOfData&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;condition&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;-1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Vectorize access to columns in R | &lt;a href=&#34;http://stackoverflow.com/questions/35914984/vectorize-access-to-columns-in-r&#34; title=&#34;Vectorize access to columns in R&#34; target=&#34;_blank&#34;&gt;stackoverlow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vectorize access to columns in R | &lt;!-- raw HTML omitted --&gt;stackoverlow.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

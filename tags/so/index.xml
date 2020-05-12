@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>So on El Baúl del programador</title>
+        <title>so on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/so/</link>
-        <description>Recent content in So on El Baúl del programador</description>
+        <description>Recent content in so on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
-        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <lastBuildDate>Mon, 25 Sep 2017 14:28:01 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/so/</link>
-            <title>So on El Baúl del programador</title>
+            <title>so on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,167 +22,98 @@
             
             <guid>https://elbauldelprogramador.com/codificacion/</guid>
             <description>&lt;p&gt;Esta es la primera parte del temario que vamos a ver en Sistemas Operativos, vamos a verla toda en una sola entrada para que no se haga muy pesada, pero es importante comprenderla, ya que es el lenguaje de los ordenadores, y nos servirá tambien para el tema de redes.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Lo que vamos a ver en esta entrada es:&lt;/p&gt;
-
 &lt;h1 id=&#34;1-representación-numérica-en-una-base&#34;&gt;1. Representación numérica en una base&lt;/h1&gt;
-
 &lt;p&gt;Dado un número x, su representación en una dada base b consiste en escribirlo como&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 214px) 214px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;86&#34; width=&#34;214&#34; src=&#34;https://3.bp.blogspot.com/_IlK2pNFFgGM/TU76XWz13HI/AAAAAAAAAWA/3cmroTfSA_k/s320/ecu.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;donde el signo &lt;var&gt;s&lt;/var&gt; es igual a 0 o 1 y los coeficientes a&lt;sub&gt;j&lt;/sub&gt; son enteros positivos menores que &lt;em&gt;b&lt;/em&gt;. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;donde el signo &lt;!-- raw HTML omitted --&gt;s&lt;!-- raw HTML omitted --&gt; es igual a 0 o 1 y los coeficientes a&lt;!-- raw HTML omitted --&gt;j&lt;!-- raw HTML omitted --&gt; son enteros positivos menores que &lt;em&gt;b&lt;/em&gt;. En la vida real la suma tiene sólo un número finito de términos por lo que algunos números son sólo representados de forma aproximada. Usualmente, utilizamos el sistema decimal de numeración (b = 10) pero la representación numérica en sistemas digitales se realiza en general en base 2, denominado sistema de numeración binaria, y ocasionalmente en base 16 (sistema hexadecimal).&lt;/p&gt;
 &lt;p&gt;Los números se representan en memoria como una cadena de &lt;em&gt;bits&lt;/em&gt; que pueden tomar los valores 0 ó 1. Se denomina &lt;em&gt;byte&lt;/em&gt; a un grupo de 8 bits consecutivos.&lt;/p&gt;
-
 &lt;h2 id=&#34;2-representación-de-números-enteros&#34;&gt;2. Representación de números enteros&lt;/h2&gt;
-
 &lt;p&gt;En representación binaria un número entero &lt;em&gt;n&lt;/em&gt; se escribe como&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;n = a&lt;sub&gt;&lt;/sub&gt; 2&lt;sup&gt;&lt;/sup&gt; + a&lt;sub&gt;1&lt;/sub&gt; 2&lt;sup&gt;1&lt;/sup&gt; + a&lt;sub&gt;2&lt;/sub&gt; 2&lt;sup&gt;2&lt;/sup&gt; + a&lt;sub&gt;3&lt;/sub&gt; 2&lt;sup&gt;3&lt;/sup&gt; + &amp;#8230;&lt;/li&gt;
+&lt;li&gt;n = a&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; 2&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; + a&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; 2&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; + a&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; 2&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; + a&lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt; 2&lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt; + …&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;donde cada coeficiente &lt;em&gt;a&lt;sub&gt;j&lt;/sub&gt;&lt;/em&gt; es igual a 1 ó 0. Usualmente los números enteros ocupaban 4 bytes de memoria (32 bits), aunque en las computadoras modernas se pueden usar enteros de 64 bits.&lt;/p&gt;
-
+&lt;p&gt;donde cada coeficiente &lt;em&gt;a&lt;!-- raw HTML omitted --&gt;j&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; es igual a 1 ó 0. Usualmente los números enteros ocupaban 4 bytes de memoria (32 bits), aunque en las computadoras modernas se pueden usar enteros de 64 bits.&lt;/p&gt;
 &lt;p&gt;Los números que pueden almacenarse en la representación de 4 bytes están en el rango:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;n&lt;sub&gt;min&lt;/sub&gt; = (00000000000000000000000000000000)&lt;sub&gt;2&lt;/sub&gt; = (0)&lt;sub&gt;10&lt;/sub&gt;&lt;/li&gt;
-&lt;li&gt;n&lt;sub&gt;max&lt;/sub&gt; = (11111111111111111111111111111111)&lt;sub&gt;2&lt;/sub&gt; = 2&lt;sup&gt;32&lt;/sup&gt; - 1 = (4294967295)&lt;sub&gt;10&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;n&lt;!-- raw HTML omitted --&gt;min&lt;!-- raw HTML omitted --&gt; = (00000000000000000000000000000000)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; = (0)&lt;!-- raw HTML omitted --&gt;10&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;n&lt;!-- raw HTML omitted --&gt;max&lt;!-- raw HTML omitted --&gt; = (11111111111111111111111111111111)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; = 2&lt;!-- raw HTML omitted --&gt;32&lt;!-- raw HTML omitted --&gt; - 1 = (4294967295)&lt;!-- raw HTML omitted --&gt;10&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;para números enteros sin signo. Si se utiliza el primer bit de la izquierda como signo (0, positivo; 1, negativo) el rango se reduce a &lt;em&gt;n&lt;sub&gt;min&lt;/sub&gt;&lt;/em&gt; = −2147483648 y &lt;em&gt;n&lt;sub&gt;max&lt;/sub&gt; = 2147483647&lt;/em&gt; para enteros con signo.&lt;/p&gt;
-
+&lt;p&gt;para números enteros sin signo. Si se utiliza el primer bit de la izquierda como signo (0, positivo; 1, negativo) el rango se reduce a &lt;em&gt;n&lt;!-- raw HTML omitted --&gt;min&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; = −2147483648 y &lt;em&gt;n&lt;!-- raw HTML omitted --&gt;max&lt;!-- raw HTML omitted --&gt; = 2147483647&lt;/em&gt; para enteros con signo.&lt;/p&gt;
 &lt;h2 id=&#34;3-representación-de-números-reales&#34;&gt;3. Representación de números reales&lt;/h2&gt;
-
-&lt;p&gt;Las computadoras, con un número finito de bits, no pueden almacenar todos los números reales en forma exacta. Esto es similar a lo que ocurre con los números irracionales (como &amp;pi;, &amp;#8730;2, etc), o periódicos (&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt;, &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;11&lt;/sub&gt;,&amp;#8230;) en el sistema decimal. La forma convencional de almacenar números reales en la memoria de una computadora es mediante el método llamado punto flotante o &lt;em&gt;floating point&lt;/em&gt;. Uno de los sistemas más comunes es la representación de números reales en &lt;em&gt;simple precisión&lt;/em&gt; utilizada en la convención IEEE. En dicho sistema cada número de precisión simple ocupa 4 bytes (32 bits) que se destinan a: el signo (1 bit), un exponente (8 bits) y la parte fraccionaria de la mantisa (23 bits)&lt;sup&gt;1&lt;/sup&gt;. De esta manera un número está determinado por estas tres cantidades&lt;/p&gt;
-
+&lt;p&gt;Las computadoras, con un número finito de bits, no pueden almacenar todos los números reales en forma exacta. Esto es similar a lo que ocurre con los números irracionales (como π, √2, etc), o periódicos (1/3, 1/11,…) en el sistema decimal. La forma convencional de almacenar números reales en la memoria de una computadora es mediante el método llamado punto flotante o &lt;em&gt;floating point&lt;/em&gt;. Uno de los sistemas más comunes es la representación de números reales en &lt;em&gt;simple precisión&lt;/em&gt; utilizada en la convención IEEE. En dicho sistema cada número de precisión simple ocupa 4 bytes (32 bits) que se destinan a: el signo (1 bit), un exponente (8 bits) y la parte fraccionaria de la mantisa (23 bits)&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;. De esta manera un número está determinado por estas tres cantidades&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;x = (-1)&lt;sup&gt;s&lt;/sup&gt; x 2&lt;sup&gt;exp-E&lt;/sup&gt; x 1.mantisa&lt;/li&gt;
+&lt;li&gt;x = (-1)&lt;!-- raw HTML omitted --&gt;s&lt;!-- raw HTML omitted --&gt; x 2&lt;!-- raw HTML omitted --&gt;exp-E&lt;!-- raw HTML omitted --&gt; x 1.mantisa&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;En esta representación, los 8 bits utilizados permiten que el exponente se encuentre en el rango 0 &amp;lt; exp &amp;lt; 255. Se utiliza la constante &lt;em&gt;E&lt;/em&gt; = 127 para también obtener resultados negativos&lt;sup&gt;&lt;a href=&#34;#indices&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; Observe que para ganar un bit, se omite la parte entera de la mantisa que se supone igual a 1. Esta representación se llama normalizada y se utiliza para todos los número, exepto aquellos muy grandes o muy pequeños. En particular, esta convención no permite representar el número 0.&lt;/p&gt;
-
-&lt;h2 id=&#34;3-1-algunos-ejemplos&#34;&gt;3.1 Algunos ejemplos&lt;/h2&gt;
-
+&lt;p&gt;En esta representación, los 8 bits utilizados permiten que el exponente se encuentre en el rango 0 &amp;lt; exp &amp;lt; 255. Se utiliza la constante &lt;em&gt;E&lt;/em&gt; = 127 para también obtener resultados negativos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; Observe que para ganar un bit, se omite la parte entera de la mantisa que se supone igual a 1. Esta representación se llama normalizada y se utiliza para todos los número, exepto aquellos muy grandes o muy pequeños. En particular, esta convención no permite representar el número 0.&lt;/p&gt;
+&lt;h2 id=&#34;31-algunos-ejemplos&#34;&gt;3.1 Algunos ejemplos&lt;/h2&gt;
 &lt;p&gt;Para aclarar los conceptos, veamos algunos ejemplos de números normalizados en precisión simple:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 842px) 842px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;842&#34; height=&#34;118&#34; src=&#34;https://1.bp.blogspot.com/_IlK2pNFFgGM/TU8FDDy_ycI/AAAAAAAAAWI/YN4DF_BgVWo/s1600/ejem.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Entre paréntesis está representada la parte entera de la mantisa (que es igual a 1 siempre por convención.) Debe notarse que el número final se obtiene considerando que:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;El signo es positivo (bit de signo igual a 0)&lt;/li&gt;
-&lt;li&gt;El exponente se obtiene como 131 - 127 = 4, que en sistema decimal da 2&lt;sup&gt;4&lt;/sup&gt; = 16.&lt;/li&gt;
-&lt;li&gt;La mantisa 1 + &lt;sup&gt;241&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1024&lt;/sub&gt; = 1,2353515625 se obtiene sumando: 1 (implícito), &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt;, &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;, &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;32&lt;/sub&gt;, &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;64&lt;/sub&gt; y &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1024&lt;/sub&gt;.&lt;/li&gt;
+&lt;li&gt;El exponente se obtiene como 131 - 127 = 4, que en sistema decimal da 2&lt;!-- raw HTML omitted --&gt;4&lt;!-- raw HTML omitted --&gt; = 16.&lt;/li&gt;
+&lt;li&gt;La mantisa 1 + 241/1024 = 1,2353515625 se obtiene sumando: 1 (implícito), 1/8, 1/16, 1/32, 1/64 y 1/1024.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Como segundo ejemplo veamos la conversión inversa, del número (3,375)&lt;sub&gt;10&lt;/sub&gt; a sistema binario. El bit de signo es 0. El número puede expresarse como la fracción &lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt; y es mayor que 2 por lo que debemos sacar un exponente positivo; en este caso, factorizamos por 2&lt;sup&gt;1&lt;/sup&gt; y nos queda &lt;sup&gt;27&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt; que puede escribirse como&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 280px) 280px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; width=&#34;280&#34; height=&#34;63&#34;  src=&#34;https://4.bp.blogspot.com/_IlK2pNFFgGM/TU8HrCUensI/AAAAAAAAAWU/6PseQEVlK34/s1600/ejem2.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;p&gt;Como segundo ejemplo veamos la conversión inversa, del número (3,375)&lt;!-- raw HTML omitted --&gt;10&lt;!-- raw HTML omitted --&gt; a sistema binario. El bit de signo es 0. El número puede expresarse como la fracción 27/8 y es mayor que 2 por lo que debemos sacar un exponente positivo; en este caso, factorizamos por 2&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; y nos queda 27/16 que puede escribirse como&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;por lo que, después de eliminar la parte entera y agregando el signo y el exponente, el número es:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;(3,375)&lt;sub&gt;10&lt;/sub&gt; = (0 10000000 (1), 101100000000000000000000)&lt;sub&gt;2&lt;/sub&gt;&lt;/li&gt;
+&lt;li&gt;(3,375)&lt;!-- raw HTML omitted --&gt;10&lt;!-- raw HTML omitted --&gt; = (0 10000000 (1), 101100000000000000000000)&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;codificación-básica-binaria&#34;&gt;Codificación básica (binaria)&lt;/h1&gt;
-
 &lt;p&gt;Este sistema se caracteriza como hemos visto anteriormente por usar solo dos dígitos, 0 y 1. Es la forma más facil de operar para el ordenador.&lt;/p&gt;
-
 &lt;p&gt;Para pasar de decimal a binario hacemos lo siguiente: Dividir el número entre 2 hasta que el cociente sea menor o igual a 1, cuando terminemos, recogemos los resultados desde el último cociente hasta el primer resto.
-Por ejemplo, para pasar el número decimal 15 a binario: &lt;sup&gt;15&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; -&amp;gt; resto 1, &lt;sup&gt;7&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; -&amp;gt; resto 1, &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; -&amp;gt; resto 1, como el cociente de esta últmia división es menor o igual a 1, paramos. El número en binario sería desde el cociente de la división &lt;sup&gt;3&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; (Que es 1), y todos los demas restos. Es decir, el número en binario se recoge de derecha a izquierda en los resultados de las divisiones. (15 en binario es 1111).&lt;/p&gt;
-
+Por ejemplo, para pasar el número decimal 15 a binario: 15/2 -&amp;gt; resto 1, 7/2 -&amp;gt; resto 1, 3/2 -&amp;gt; resto 1, como el cociente de esta últmia división es menor o igual a 1, paramos. El número en binario sería desde el cociente de la división 3/2 (Que es 1), y todos los demas restos. Es decir, el número en binario se recoge de derecha a izquierda en los resultados de las divisiones. (15 en binario es 1111).&lt;/p&gt;
 &lt;p&gt;Para hacer el proceso contrario, pasar de binario a decimal, se han de numerar las posiciones (de derecha a izquierda y empezando por 0), se calcula de la forma base elevado a la posición por el bit (0 ó 1). Ejemplo:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;1&lt;sup&gt;3&lt;/sup&gt;&lt;sup&gt;2&lt;/sup&gt;1&lt;sup&gt;1&lt;/sup&gt;&lt;sup&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;1&lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Y el resultado:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;1010 -&amp;gt; (2&lt;sup&gt;&lt;/sup&gt;*0) + (2&lt;sup&gt;1&lt;/sup&gt;*1) + (2&lt;sup&gt;2&lt;/sup&gt;*0) + (2&lt;sup&gt;3&lt;/sup&gt;*1) = 2+8 = 10(decimal)&lt;/li&gt;
+&lt;li&gt;1010 -&amp;gt; (2&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;em&gt;0) + (2&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;1) + (2&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;em&gt;0) + (2&lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;1) = 2+8 = 10(decimal)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Nota: En binario los número que acaban en 0 son pares, y en 1 impares.&lt;/p&gt;
-
 &lt;h1 id=&#34;codificación-octal&#34;&gt;Codificación octal&lt;/h1&gt;
-
 &lt;p&gt;En este sistema se usan sígitos del 0 al 7.&lt;/p&gt;
-
 &lt;h3 id=&#34;paso-de-decimal-a-octal&#34;&gt;Paso de decimal a octal&lt;/h3&gt;
-
 &lt;p&gt;22 decimal a octal: Es un proceso similar al paso de decimal a binario, dividimos entre 8 y mientras el cociente sea mayor que 7.
-Ejemplo: &lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;8&lt;/sub&gt; = cociente 2, resto 6. Por lo tanto 22 en octal es 26.&lt;/p&gt;
-
+Ejemplo: 22/8 = cociente 2, resto 6. Por lo tanto 22 en octal es 26.&lt;/p&gt;
 &lt;p&gt;Para pasar de octal a decimal se sigue la misma regla, pero se multiplica por 8:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;2&lt;sup&gt;1&lt;/sup&gt;6&lt;sup&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;2&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;6&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;A decimal:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;(8&lt;sup&gt;&lt;/sup&gt;*6) + (8&lt;sup&gt;1&lt;/sup&gt;*2) = 6 + 16 = 22 (decimal)&lt;/li&gt;
+&lt;li&gt;(8&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;em&gt;6) + (8&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;2) = 6 + 16 = 22 (decimal)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;codificación-hexadecimal&#34;&gt;Codificación hexadecimal&lt;/h1&gt;
-
 &lt;p&gt;En este sistema se usan sígitos del 0 al 16.&lt;/p&gt;
-
 &lt;h3 id=&#34;paso-de-decimal-a-hexadecimal&#34;&gt;Paso de decimal a hexadecimal&lt;/h3&gt;
-
-&lt;p&gt;162 a hexadecimal. Dividimos &lt;sup&gt;162&lt;/sup&gt;&amp;frasl;&lt;sub&gt;16&lt;/sub&gt;, que da 10 y resto 2, como el 2 es menor que 15, se para aquí. La solución seria el 102, pero en hexadecimal pasa lo siguiente:&lt;/p&gt;
-
+&lt;p&gt;162 a hexadecimal. Dividimos 162/16, que da 10 y resto 2, como el 2 es menor que 15, se para aquí. La solución seria el 102, pero en hexadecimal pasa lo siguiente:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;10 -&amp;gt; A; 11 -&amp;gt; B; 12 -&amp;gt; C; 13 -&amp;gt; D; 14 -&amp;gt; E; 15 -&amp;gt; F;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Por lo que 162 en decimal sería el A2 en hexadecimal.&lt;/p&gt;
-
 &lt;p&gt;El paso contrario:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;A&lt;sup&gt;1&lt;/sup&gt;2&lt;sup&gt;&lt;/sup&gt; (Sustituimos la A por su valor A = 10)&lt;/li&gt;
+&lt;li&gt;A&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; (Sustituimos la A por su valor A = 10)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;A decimal:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;(16&lt;sup&gt;1&lt;/sup&gt;*10) + (16&lt;sup&gt;&lt;/sup&gt;*2) = 160 + 2 = 162 (decimal)&lt;/li&gt;
+&lt;li&gt;(16&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;em&gt;10) + (16&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;2) = 160 + 2 = 162 (decimal)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;binario-a-octal&#34;&gt;Binario a octal&lt;/h3&gt;
-
 &lt;p&gt;Una opción es pasar de binario a decimal y de decimal a octal.
 Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la secuencia de 3 bits de izquierda a derecha y escribimos el octal. Por ejemplo, 1100, agrupamos en 3 bits, 1 y 100, ahora escribimos los valores, para el primer grupo (En este caso de solo 1 bit), su valor es 1, para el segundo grupo (100) su valor es 4(En decimal), de forma que el 1100 en binario es el 14 en octal.&lt;/p&gt;
-
 &lt;h3 id=&#34;binario-a-hexadecimal&#34;&gt;Binario a Hexadecimal&lt;/h3&gt;
-
 &lt;p&gt;El mismo proceso que seguimos para pasar de binario a octal, pero agrupando en 4 bits. Por ejemplo 10100010 es el 162 en decimal, para pasarlo a hexadecimal hacemos grupos de 4 bits (empezando por la derecha) (0010) (1010), ahora escribimos sus valores en hexadecimal, el 1010 es el valor 10 en decimal, que en hexadecimal es el A, y el 0010 en decimal es el 2, que en hexadecimal es el 2. Por lo tanto: 10100010 en hexadecimal = A2&lt;/p&gt;
-
 &lt;h3 id=&#34;hexadecimal-a-octal&#34;&gt;Hexadecimal a Octal&lt;/h3&gt;
-
 &lt;p&gt;Para esta forma, es mejor pasar a binario, y de binario a octal (Agrupando de 3 en 3 bits.)&lt;/p&gt;
-
 &lt;h3 id=&#34;octal-a-hexadecimal&#34;&gt;Octal a Hexadecimal&lt;/h3&gt;
-
 &lt;p&gt;De octal a binario y de binario a hexadecimal (Agrupando de 4 en 4 bits.)&lt;/p&gt;
-
 &lt;h3 id=&#34;otros-sistemas-de-codificación&#34;&gt;Otros sistemas de codificación&lt;/h3&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -194,7 +124,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;th&gt;GRAY&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;0011&lt;/td&gt;
@@ -203,7 +132,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;1&lt;/td&gt;
 &lt;td&gt;0100&lt;/td&gt;
@@ -211,7 +139,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;0001&lt;/td&gt;
 &lt;td&gt;01&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;2&lt;/td&gt;
 &lt;td&gt;0101&lt;/td&gt;
@@ -219,7 +146,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;0010&lt;/td&gt;
 &lt;td&gt;11&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;3&lt;/td&gt;
 &lt;td&gt;0110&lt;/td&gt;
@@ -227,7 +153,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;0011&lt;/td&gt;
 &lt;td&gt;10&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;4&lt;/td&gt;
 &lt;td&gt;&lt;strong&gt;0111&lt;/strong&gt;&lt;/td&gt;
@@ -235,7 +160,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;&lt;strong&gt;0100&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;000&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;5&lt;/td&gt;
 &lt;td&gt;1000&lt;/td&gt;
@@ -243,7 +167,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;1011&lt;/td&gt;
 &lt;td&gt;001&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;6&lt;/td&gt;
 &lt;td&gt;1001&lt;/td&gt;
@@ -251,7 +174,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;1100&lt;/td&gt;
 &lt;td&gt;011&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;7&lt;/td&gt;
 &lt;td&gt;1010&lt;/td&gt;
@@ -259,7 +181,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;1101&lt;/td&gt;
 &lt;td&gt;010&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;8&lt;/td&gt;
 &lt;td&gt;1011&lt;/td&gt;
@@ -267,7 +188,6 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;td&gt;1110&lt;/td&gt;
 &lt;td&gt;110&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;9&lt;/td&gt;
 &lt;td&gt;1100&lt;/td&gt;
@@ -277,44 +197,32 @@ Otra forma es agrupar el binario en 3 bits (Empezando por la derecha), leemos la
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;El BCD es una forma directa asignada a un equivalente binario. Es posible asignar cargas a los bits binarios de acuerdo a sus posiciones. Las cargas en el código BCD son 8, 4, 2, 1. Es una codificación binaria en 4 bits para representarla empaquetada o desempaquetada. La mayor representación de bcd, es de 9, y a partir de hay, cada numero lo clasifica. El 10 decimal seria en bcd, empaquetado de 4 bits el 0001 0000.&lt;/p&gt;
-
-&lt;p&gt;El exceso-3 le suma 3 al BCD. Es la mas rápida, y se fijaron que si le sumaban tres al BCD, a partir del 4, todos los números son los contrarios, es decir, 5 es el contrario de 4, 6 el contrario de 3&amp;#8230;&lt;/p&gt;
-
+&lt;p&gt;El exceso-3 le suma 3 al BCD. Es la mas rápida, y se fijaron que si le sumaban tres al BCD, a partir del 4, todos los números son los contrarios, es decir, 5 es el contrario de 4, 6 el contrario de 3…&lt;/p&gt;
 &lt;p&gt;El AIKEN se baso en BCD pero en vez de codificar de la forma 8421 (al pasar de binario a decimal es lo que hacemos) dijo que seria 2421. La razón de que lo hiciera, es que pasa lo mismo que en Exceso-3 a partir del 4.&lt;/p&gt;
-
 &lt;p&gt;Gray es el cambio de un bit, o sea, que de un numero a otro solo cambiará un bit.&lt;/p&gt;
-
 &lt;h3 id=&#34;codificación-negativa&#34;&gt;Codificación negativa&lt;/h3&gt;
-
 &lt;p&gt;A nivel de signo, se puede considerar como Signo/magnitud, Complemento a 1 o Complemento a 2. (Uso de Codificación binaria).&lt;/p&gt;
-
-&lt;p&gt;En signo/magnitud, el bit de más a la izquierda esta reservado para el signo, y el resto para la longitud, entonces el valor máximo a representar sera (2&lt;sup&gt;(n-1)&lt;/sup&gt;)*2 Para positivos y negativos, con lo cual tenemos un 0 para positivo y otro negativo, que se controla de manera interna en la maquina. El -7 en 8bits seria el 10000111.&lt;/p&gt;
-
+&lt;p&gt;En signo/magnitud, el bit de más a la izquierda esta reservado para el signo, y el resto para la longitud, entonces el valor máximo a representar sera (2&lt;!-- raw HTML omitted --&gt;(n-1)&lt;!-- raw HTML omitted --&gt;)*2 Para positivos y negativos, con lo cual tenemos un 0 para positivo y otro negativo, que se controla de manera interna en la maquina. El -7 en 8bits seria el 10000111.&lt;/p&gt;
 &lt;p&gt;El complemento a 1 es cambiar ceros por unos, Osea, que el 7 binario (111) en negativo es el (000), el dos en binario es el 10, para pasar a -2 en complemento a 1, seria 01 (-2)&lt;/p&gt;
-
 &lt;p&gt;El complemento a 2 se ideo para el problema de que el cero tenga positivos y negativos. Este cambia los ceros por unos y le suma uno al resultado. Entonces en complemento a 2 el 7 es 111, se pasan los unos a ceros, 000 y se le suma 1, 001 (-7 en complemento a 2).&lt;/p&gt;
-
 &lt;h3 id=&#34;empaquetado-y-desempaquetado&#34;&gt;Empaquetado y desempaquetado&lt;/h3&gt;
-
 &lt;p&gt;DESEMPAQUETADO: (Se usa para transmitir)
 El uso de esto viene del manejo del BCD, ya que si metemos un 23 y un 71, al pasarlo a BDC, el pc recibe una cadena, al cogerlos de 4 en 4, el resultado es 2371, que no tiene nada que ver, para ello se empaqueta:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;0010&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0011&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0001&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;como en BCD el 1111 no existe, lo usa para marcar que va a empezar un numero, menos el que precede al ultimo.
+&lt;span class=&#34;m&#34;&gt;0010&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0011&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0001&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;como en BCD el 1111 no existe, lo usa para marcar que va a empezar un numero, menos el que precede al ultimo.
 También usa el 1100(que no existe en BCD) para indicar que el numero será positivo, y el 1101(Tampoco existe) para negativo, seria:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      +      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0010&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0011&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1100&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0001&lt;/span&gt; → &lt;span class=&#34;m&#34;&gt;2371&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0010&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0011&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1101&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0001&lt;/span&gt; → -2371
-         &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      -      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;empaquetado&#34;&gt;Empaquetado&lt;/h3&gt;
-
+         &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      -      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;empaquetado&#34;&gt;Empaquetado&lt;/h3&gt;
 &lt;p&gt;Se pone el numero y al final se añade el signo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0010&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0011&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0111&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0001&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1100&lt;/span&gt;
-  &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;      +&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;sup&gt;1&lt;/sup&gt; En doble precisión se utilizan 64 bits (8 bytes): 1 para el signo, 11 para el exponente y 52 para la mantisa.
-&lt;sup&gt;2&lt;/sup&gt; En la convención IEEE-754 el exponente varía en el rango [-126, 127] y se reservan los restantes valores para representar números muy pequeños y muy grandes.&lt;/p&gt;</description>
+  &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;      +
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; En doble precisión se utilizan 64 bits (8 bytes): 1 para el signo, 11 para el exponente y 52 para la mantisa.
+&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; En la convención IEEE-754 el exponente varía en el rango [-126, 127] y se reservan los restantes valores para representar números muy pequeños y muy grandes.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -323,29 +231,22 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/introduccion-los-procesos/</guid>
-            <description>&lt;h1 id=&#34;1-concepto&#34;&gt;1 . Concepto&lt;/h1&gt;
-
+            <description>&lt;h1 id=&#34;1--concepto&#34;&gt;1 . Concepto&lt;/h1&gt;
 &lt;p&gt;El proceso se puede definir como un programa en ejecución y, de una forma más precisa, como la unidad de procesamiento gestionada por el sistema operativo. Todos los programas cuya ejecución solicitan los usuarios lo hacen en forma de procesos, de ahí la importancia de conocerlos en detalle.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;1-2-composición-y-estructura&#34;&gt;1.2 . Composición y estructura&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;12--composición-y-estructura&#34;&gt;1.2 . Composición y estructura&lt;/h1&gt;
 &lt;p&gt;El sistema operativo mantiene una tabla de procesos, dentro de la que se alamacena un &lt;strong&gt;bloque de control de proceso (BCP)&lt;/strong&gt; por cada proceso. Por razones de eficiencia, la tabla de procesos se contruye normalmente como una estructura estática que tiene un determinado número de BCP, todos ellos del mismo tamaño.&lt;/p&gt;
-
 &lt;p&gt;El BCP contiene la información básica del proceso:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Información de indentificación:&lt;/strong&gt; Esta información indentifica al usuario y al proceso. Como ejemplo, se incluyen los siguientes datos:
-
 &lt;ul&gt;
 &lt;li&gt;Identificador del proceso.&lt;/li&gt;
 &lt;li&gt;Identificador del proceso padre en caso de existir relaciones padre-hijo como es el caso de UNIX.&lt;/li&gt;
 &lt;li&gt;Información sobre el usuario (identificador del usuario, identificador del grupo).&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Estado del procesador:&lt;/strong&gt; Contiene los valores iniciales del estado del procesador o su valor en el instante en que fue interrumpido el proceso.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Información de control del proceso:&lt;/strong&gt; En esta sección se incluye diversa información que permite gestionar el proceso. Destacaremos los siguientes datos:
-
 &lt;ul&gt;
 &lt;li&gt;Información de planificación y estado:&lt;/li&gt;
 &lt;li&gt;Estado del proceso.&lt;/li&gt;
@@ -356,38 +257,28 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
 &lt;li&gt;Recursos asignados, tales como:&lt;/li&gt;
 &lt;li&gt;Archivos abiertos (tablas de descriptores o manejadores de archivo).&lt;/li&gt;
 &lt;li&gt;Puertos de comunicación asignados&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Punteros&lt;/strong&gt; para estructurar los procesos en colas o anillos: Por ejemplo, los procesos que están en estado de listo pueden estar organizados en una cola, de forma que se facilite la labor del planificador.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Comunicación entre procesos:&lt;/strong&gt; El BCP puede contener espacio para almacenar las señales y para algún mensaje enviado al proceso.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;1-3-estados-y-transiciones&#34;&gt;1.3 . Estados y transiciones&lt;/h1&gt;
-
+&lt;h1 id=&#34;13--estados-y-transiciones&#34;&gt;1.3 . Estados y transiciones&lt;/h1&gt;
 &lt;p&gt;Un proceso puede encontrarse en tres estados diferentes:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;En ejecución:&lt;/strong&gt; En este estado se encuentra el proceso que está siendo ejecutado por el procesador. El estado del procesador residirá en los registros del procesador.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Bloqueado:&lt;/strong&gt; Un proceso bloqueado está esperando a que ocurra un evento y no puede seguir ejecutandose hasta que termine el eventol. Una situación típica de proceso bloqueado se produce cuando el proceso solicita una operación E/S (Entrada / Salida). Hasta que no termina esta operación, el proceso queda bloqueado. En este estado el proceso reside en BCP.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Listo:&lt;/strong&gt; Un proceso está listo para ejecutar cuando puede entrar en fase de procesamiento. Dado que puede haber varios procesos en este estado, una de las tareas del sistema operativo será seleccionar aquel que debe pasar a ejecución. El módulo del SO que toma esta decisión se denomina &lt;strong&gt;planificador.&lt;/strong&gt; En este estado el proceso reside en BCP.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 445px) 445px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Estado Procesos&#34; title=&#34;Estado de los procesos&#34;  height=&#34;267&#34; width=&#34;445&#34; src=&#34;https://4.bp.blogspot.com/-BOayf2Lle4g/TVg7VxeOZII/AAAAAAAAAW0/O6u9ZEGonWg/s800/estados.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;La &lt;strong&gt;transición&lt;/strong&gt; entre cada uno de los tres estados puede hacerse de la siguiente manera:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Transición 1.&lt;/strong&gt; Ocurre cuando el programa que está en ejecución necesita algún elemento, señal, datos etc, para poder continuar ejecutandose.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Transición 2.&lt;/strong&gt; Cuando un programa o proceso ha utilizado el tiempo asignado por la CPU (procesador) para su ejecución y tiene que dejar paso al siguiente proceso.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Transición 3.&lt;/strong&gt; Cuando el proceso que está listo pasa al estado de ejecución; es decir, cuando al proceso le llega una nueva disposición del tiempo de la CPU para poder ejecutarse.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Transición 4.&lt;/strong&gt; Cuando el proceso pasa de estar bloqueado a estar listo, es decir, cuando el proceso recibe una orden o señal que estaba esperando para pasar al estado de listo y posteriormente, tras la transición 3, pasar a ejecución.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;características&#34;&gt;Características&lt;/h1&gt;
-
 &lt;p&gt;Las características principales de los procesos son:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Una característica fundamental de los procesos concurrentes es la competencia que se establece entre ellos cuando han de compartir recursos.&lt;/li&gt;
 &lt;li&gt;Cooperación, cuando dos o más procesos se están llevando a cabo de manera que uno depende del otro es necesario que exista una cooperación entre ambos.&lt;/li&gt;
@@ -404,52 +295,33 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
             
             <guid>https://elbauldelprogramador.com/por-que-nuestro-pc-necesita-un-firewall/</guid>
             <description>&lt;p&gt;Hace poco os hablé de &lt;a href=&#34;https://elbauldelprogramador.com/por-que-gnulinux-no-es-solo-para-geeks&#34;&gt;por qué Linux no era solo para geeks&lt;/a&gt;, sacando el tema de la seguridad, en este post se habla sobre la seguridad en la red&lt;/p&gt;
-
 &lt;p&gt;¿Por qué es necesario convencer a todo el mundo que es necesario activar un cortafuegos (Firewall) en los ordenadores que tienen acceso a internet?, ya sean de escritorio o servidores. Se podría pensar que la tarea de un firewall es obvia para cualquier usuario que posea un ordenador. Sin embargo, circulan comentarios acerca de este tema que no lo hacen del todo cierto.&lt;/p&gt;
-
-&lt;p&gt;Podemos tomar como ejemplo el &lt;a target=&#34;_blank&#34; href=&#34;http://chakra-project.org/bbs/viewtopic.php?id=5185&#34;&gt;foro Chakra&lt;/a&gt;:&lt;/p&gt;
-
+&lt;p&gt;Podemos tomar como ejemplo el &lt;!-- raw HTML omitted --&gt;foro Chakra&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;También estoy en contra del uso del firewall (¿cuanta gente navega con un módem usb en linux, o desactiva el firewall del router?)&lt;/em&gt;&lt;/strong&gt;&lt;em&gt;, ¿Qué tipo de web porno o qué tipo de script hay que visitar/ejecutar para infectarte de malware en Linux? y puesto que tal vez 3 de cada mil personas por lo general descargan y ejecutan un script sin leerlo, ¿debo tener mi ordenador llenas de este software? En serio: ¿cuantas veces ejecutaste amarok o VLC y encontraste un exploit que hizo colgarse al pc?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;También estoy en contra del uso del firewall (¿cuanta gente navega con un módem usb en linux, o desactiva el firewall del router?)&lt;/strong&gt;&lt;/em&gt;&lt;em&gt;, ¿Qué tipo de web porno o qué tipo de script hay que visitar/ejecutar para infectarte de malware en Linux? y puesto que tal vez 3 de cada mil personas por lo general descargan y ejecutan un script sin leerlo, ¿debo tener mi ordenador llenas de este software? En serio: ¿cuantas veces ejecutaste amarok o VLC y encontraste un exploit que hizo colgarse al pc?&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;O &lt;a target=&#34;_blank&#34; href=&#34;http://www.linuxbsdos.com/2010/07/20/pclinuxos-2010-review/comment-page-2/#comments&#34;&gt;este&lt;/a&gt; otro de los fans de PCLinuxOS:&lt;/p&gt;
-
+&lt;p&gt;O &lt;!-- raw HTML omitted --&gt;este&lt;!-- raw HTML omitted --&gt; otro de los fans de PCLinuxOS:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Casi todas las distros incluyen un firewall, pero está desactivado por defecto. No creo en la teoría de &amp;#8220;una única configuración del firewall arregla todo&amp;#8221;. Mis necesidades son diferentes a las vuestras. Incluyan el firewall, coloquen un icono en un lugar fácil de encontrar y dejen que nosotros hagamos el resto.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Casi todas las distros incluyen un firewall, pero está desactivado por defecto. No creo en la teoría de “una única configuración del firewall arregla todo”. Mis necesidades son diferentes a las vuestras. Incluyan el firewall, coloquen un icono en un lugar fácil de encontrar y dejen que nosotros hagamos el resto.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&amp;#8230;&lt;/p&gt;
-
+&lt;p&gt;…&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Al principio el firewall venía habilitado, pero la mayoría de los usuarios se quejaban por ello y los desarrolladores lo desabilitaron. PErsonalmente cada usuario deberia elegir si quiere activarlo o no.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&amp;#8230;&lt;/p&gt;
-
+&lt;p&gt;…&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Prefieren el icono del firewall en el escritorio para que puedan configurarlo ellos mismos basandose en sus necesidades personales.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Lo que revelan estos comentarios es que muchos en nuestra comunidad no entienden las bases de la seguridad de red. Espero que este corto artículo pueda dejar un poco más claro este tema.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Lo fundamental en esta discusión es comprender el papel general que desempeña un firewall en un ordenador o sistema de ordenadores. En términos simples, un firewall protege un ordenador de ataques de red. Y hay firewalls basados en host y en red. Un firewall basado en host es aquel que se ejecuta y protege a un solo dispositivo. Ese sería el que se ejecuta en un ordenador personal, ya sea sobre un sistema Linux, BSD o cualquier otro sistema operativo.&lt;/p&gt;
-
 &lt;p&gt;Por otro lado, un firewall basado en red es aquel ejecutandose en un dispositivo al borde o en el perímetro de una red. Este dispositivo puede ser un router, un switch o un dispositivo VPN. Tu router por cable, DSL o fibra óptica está en esta categoría. El error que mucha gente comete es pensar que si tienen un firewall un uno de estos dispositvos, no necesitan otro en el ordenador personal situado detrás del router. Un mal pensamiento.&lt;/p&gt;
-
 &lt;p&gt;En una red de ordenadores, uno de ellos permite el acceso desde el exterior, la mejor practica de seguridad requiere que cada nodo de la red tenga por sí mismo seguridad, uno que trabaja en conjunto con el firewall perimetral (y también con otras medidas de seguridad). En la jerga profesional a esta practica se la conoce como &lt;strong&gt;seguridad en profundidad (Security in-depth)&lt;/strong&gt;. Se trata de un enfoque de seguridad por capas y este enfoque no es exclusivo del mundo de la informática. Se puede observar donde quiera que se mire. Por ejemplo, supón que vives en un complejo amurallado, ¿Dejarias las puertas y las ventanas de tu casa abiertas simplemente poque tienes una cerca alrededor?, por supuesto que no. O ¿dejarías tu coche abierto simplemente porque está en un parking? Probablemente tampoco. Las razones son obvias.&lt;/p&gt;
-
 &lt;p&gt;El mismo razonamiento y principio se debería aplicar a las redes locales. A parte del firewall perimetral, de otro ejecutandose en el dispositivo en el borde de la red (El router p.e), también deberías tener un firewall basado en host ejecutandose en tu ordenador de escritorio, servidor, netbook o notebook. Este enfoque por capas garantiza que si hay una brecha en tu defensa perimetral, si álguien &lt;em&gt;salta&lt;/em&gt; la &lt;em&gt;cerca&lt;/em&gt;, tu ordenador no estará &lt;em&gt;abierto&lt;/em&gt; para los intrusos.&lt;/p&gt;
-
 &lt;p&gt;Por lo tanto, solo porque tu equipo esté detrás de router por cable, DSL o fibra óptica con un firewall activado no implica que podamos desabilitar el firewall basado en host (En nuestro pc). &lt;strong&gt;Security in-depth.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Los mejores firewalls son capaces de realizar inspecciones de estado completas (&lt;strong&gt;stateful inspection&lt;/strong&gt;), también llamadas &lt;strong&gt;Stateful packet Filtering&lt;/strong&gt;, la cuales dictan que todas las conexiones salientes están permitidas mientras todas las conexiones entrantes que no están relacionadas con una conexión saliente esté bloqueada.&lt;/p&gt;
-
 &lt;p&gt;Algunas de las mejores distros linux, como Fedora, tienen un firewall habilitado fuera del nucleo. Así es como debe ser. El kernel linux tiene un firewall incorporado (Vale también par alos BSD), y hay varias interfaces gráficas para manejarlo. Lo menos que podemos esperar de los desarrolladores de las distros es que ser permita activarlo fuera del nucleo.&lt;/p&gt;
-
-&lt;p&gt;Tracucción de : &lt;a target=&#34;_blank&#34; href=&#34;http://www.linuxbsdos.com/2011/11/21/why-your-computer-needs-a-firewall-enabled/&#34;&gt;linuxbsdos.com&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Tracucción de : &lt;!-- raw HTML omitted --&gt;linuxbsdos.com&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -459,23 +331,17 @@ También usa el 1100(que no existe en BCD) para indicar que el numero será posi
             
             <guid>https://elbauldelprogramador.com/tipos-de-gobernadores-en-las-cpus/</guid>
             <description>&lt;p&gt;Para los que tengáis vuestro terminal &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003&#34;&gt;rooteado&lt;/a&gt; voy a hablar en estos días de dos aplicaciones que pueden ayudarnos a extender el tiempo de vida de la batería. Pero antes de escribir estos pequeños manuales de configuración de las aplicaciones (que son SetCPU y CPU Tunner), tengo que introducir un concepto de los microprocesadores llamado gobernadores (governors):&lt;/p&gt;
-
 &lt;p&gt;Lo que hacen los gobernadores es definir unas reglas de cambio de frecuencias en el micro, ya sea una velocidad de reloj mayor o menor, y cuando han de cambiarse estas frecuencias.&lt;/p&gt;
-
 &lt;p&gt;El gobernador define las características de energía de la CPU del sistema que a su vez afectan el rendimiento de la CPU. Cada gobernador tiene su propia conducta, propósito e idoneidad en términos de carga de trabajo.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;La frecuencia a la que una CPU puede operar viene limitada por su diseño. A menudo, una CPU solo puede funcionar en un número determinado de frecuencias discretas. Por ejemplo en mi Galaxy S son cuatro frecuencias (300mHz, 600mHz, 800mHz y 1000mHz). También, los valores de los parametros &lt;strong&gt;scaling_max_freq y scaling_min_freq&lt;/strong&gt; se fijan por defecto a las frecuencias máximas y mínimas disponibles en la CPU. Para elegir bien un gobernador, tenemos que tener en cuenta la carga de trabajo a la que se va a someter a la CPU. A continuación voy a explicar por encima la función de cada gobernador:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;Performance:&lt;/em&gt;&lt;/strong&gt; En este gobernanor solo se considera el rendimiento, fuerza a la CPU a ejecutarse en la frecuencia más alta (&lt;strong&gt;scaling_max_freq&lt;/strong&gt;).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;ondemand:&lt;/em&gt;&lt;/strong&gt; La principal consideración es la adaptación a la carga actual. Comprueba la carga regularmente, cuando ésta sobrepasa el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;) la CPU se ejecuta a la frecuencia máxima. Cuando la carga cae por debajo del umbral, se ajusta la frecuencia de la CPU a la siguiente más baja. Este gobernador causa menos latencia que el conservative.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;conservative:&lt;/em&gt;&lt;/strong&gt;La princpial consideración es la adaptación más cercana a la carga actual. Al igual que el gobernador Ondemand, el gobernador Conservative ajusta la frecuencia de reloj según el uso. Sin embargo, mientras el gobernador Ondemand lo hace de una manera agresiva (es decir, desde lo máximo a lo mínimo y viceversa), el gobernador Conservative cambia de frecuencias gradualmente. El gobernador Conservative se ajustará a una frecuencia de reloj que estime correcta para la carga, en lugar de elegir simplemente entre máxima y mínima, es decir, cuando la carga supera el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;), se ajusta la frecuencia de la CPU a la siguiente más alta. Cuando la carga cae por debajo del umbral (&lt;strong&gt;down_threshold&lt;/strong&gt;) se ajusta la frecuencia a la siguiente más baja. Aunque esto podría proporcionar un significativo ahorro en consumo de energía, lo hace siempre a una latencia mayor que la del gobernador Ondemand.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;userspace:&lt;/em&gt;&lt;/strong&gt; Se deja el control a los programas en el espacio del usuario. Se ajusta la frecuencia al valor especificado por el programa en el espacio de usuario (mediante el uso del parámetro &lt;strong&gt;scaling_setspeed&lt;/strong&gt;). De todos lo gobernadores, Userspace es el más adaptable; y dependiendo de cómo se configure, puede ofrecer el mejor balance entre rendimiento y consumo para su sistema.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Performance:&lt;/strong&gt;&lt;/em&gt; En este gobernanor solo se considera el rendimiento, fuerza a la CPU a ejecutarse en la frecuencia más alta (&lt;strong&gt;scaling_max_freq&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;ondemand:&lt;/strong&gt;&lt;/em&gt; La principal consideración es la adaptación a la carga actual. Comprueba la carga regularmente, cuando ésta sobrepasa el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;) la CPU se ejecuta a la frecuencia máxima. Cuando la carga cae por debajo del umbral, se ajusta la frecuencia de la CPU a la siguiente más baja. Este gobernador causa menos latencia que el conservative.&lt;/li&gt;
+&lt;li&gt;***conservative:***La princpial consideración es la adaptación más cercana a la carga actual. Al igual que el gobernador Ondemand, el gobernador Conservative ajusta la frecuencia de reloj según el uso. Sin embargo, mientras el gobernador Ondemand lo hace de una manera agresiva (es decir, desde lo máximo a lo mínimo y viceversa), el gobernador Conservative cambia de frecuencias gradualmente. El gobernador Conservative se ajustará a una frecuencia de reloj que estime correcta para la carga, en lugar de elegir simplemente entre máxima y mínima, es decir, cuando la carga supera el umbral máximo (&lt;strong&gt;up_threshold&lt;/strong&gt;), se ajusta la frecuencia de la CPU a la siguiente más alta. Cuando la carga cae por debajo del umbral (&lt;strong&gt;down_threshold&lt;/strong&gt;) se ajusta la frecuencia a la siguiente más baja. Aunque esto podría proporcionar un significativo ahorro en consumo de energía, lo hace siempre a una latencia mayor que la del gobernador Ondemand.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;userspace:&lt;/strong&gt;&lt;/em&gt; Se deja el control a los programas en el espacio del usuario. Se ajusta la frecuencia al valor especificado por el programa en el espacio de usuario (mediante el uso del parámetro &lt;strong&gt;scaling_setspeed&lt;/strong&gt;). De todos lo gobernadores, Userspace es el más adaptable; y dependiendo de cómo se configure, puede ofrecer el mejor balance entre rendimiento y consumo para su sistema.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Fuentes: &lt;a target=&#34;_blank&#34; href=&#34;http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaai%2Fcpufreq%2FUnderstandingCPUFreqSubsystem.htm&#34;&gt;publib.boulder.ibm.com&lt;/a&gt; y &lt;a target=&#34;_blank&#34; href=&#34;http://docs.fedoraproject.org/es-ES/Fedora/14/html/Power_Management_Guide/cpufreq_governors.html#governor_types&#34;&gt;docs.fedoraproject.org&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Fuentes: &lt;!-- raw HTML omitted --&gt;publib.boulder.ibm.com&lt;!-- raw HTML omitted --&gt; y &lt;!-- raw HTML omitted --&gt;docs.fedoraproject.org&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>

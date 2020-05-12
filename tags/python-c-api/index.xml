@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Python C Api on El Baúl del programador</title>
+        <title>python C API on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/python-c-api/</link>
-        <description>Recent content in Python C Api on El Baúl del programador</description>
+        <description>Recent content in python C API on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Sun, 08 Oct 2017 19:02:20 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/python-c-api/</link>
-            <title>Python C Api on El Baúl del programador</title>
+            <title>python C API on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,14 +21,9 @@
             <pubDate>Sun, 08 Oct 2017 19:02:20 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/python-c-api-como-pasar-un-array-de-structs-desde-c-python/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Python C API - Cómo pasar un array de structs desde C a Python&#34; alt=&#34;Python C API - Cómo pasar un array de structs desde C a Python&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema (&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/&#34; title=&#34;Crear un módulo para python con la Python C API (I) – Introducción&#34;&gt;Crear un módulo para python con la Python C API&lt;/a&gt;). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en &lt;a href=&#34;http://stackoverflow.com/users/1612432/algui91&#34; title=&#34;PErfil en SO&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt;. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hace algún tiempo estaba desarrollando un módulo para python, con el cual aprendí bastante y sirvió para crear una serie de artículos sobre el tema (&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-1/&#34; title=&#34;Crear un módulo para python con la Python C API (I) – Introducción&#34;&gt;Crear un módulo para python con la Python C API&lt;/a&gt;). Uno de los problemas encontrados fue cómo conseguir pasar un array de structs desde C a Python, para resolver la duda pregunté, cómo no, en &lt;!-- raw HTML omitted --&gt;stackoverflow&lt;!-- raw HTML omitted --&gt;. Al final terminé respondiéndome a mí mismo, pero aprendí bastante, veamos cómo hacerlo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El struct a pasar puede ser cualquiera, pero en el ejemplo concreto era este:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;struct&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tcpstat&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -48,8 +42,9 @@
     &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;refcnt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kt&#34;&gt;unsigned&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sk&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;rto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ato&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;qack&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cwnd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ssthresh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La solución consiste en crear un objeto &lt;a href=&#34;http://docs.python.org/3.2/c-api/list.html&#34; title=&#34;C API doc&#34; target=&#34;_blank&#34;&gt;PyListObject&lt;/a&gt; y un &lt;a href=&#34;http://docs.python.org/3.2/c-api/structures.html#PyObject&#34; target=&#34;_blank&#34;&gt;PyObject&lt;/a&gt;. Éste último lo usaremos como un diccionario y será donde iremos añadiendo los datos necesarios del struct. De esta forma estamos construyendo una lista cuyos elementos son diccionarios, algo así:&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La solución consiste en crear un objeto &lt;!-- raw HTML omitted --&gt;PyListObject&lt;!-- raw HTML omitted --&gt; y un &lt;!-- raw HTML omitted --&gt;PyObject&lt;!-- raw HTML omitted --&gt;. Éste último lo usaremos como un diccionario y será donde iremos añadiendo los datos necesarios del struct. De esta forma estamos construyendo una lista cuyos elementos son diccionarios, algo así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;clave1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;valor1&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# Diccionario 1, con dos elementos.&lt;/span&gt;
     &lt;span class=&#34;s1&#34;&gt;&amp;#39;clave1_2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;valor1_2&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
@@ -57,8 +52,9 @@
    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;clave3&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;valor3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;#........ : .......,&lt;/span&gt;
     &lt;span class=&#34;s1&#34;&gt;&amp;#39;claven&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;valorn&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Diccionario 3, con N elementos.&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El código es el siguiente:&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El código es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;PyObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dict&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PyListObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
@@ -70,20 +66,20 @@
     &lt;span class=&#34;n&#34;&gt;PyList_Append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dict&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PyObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el ejemplo sólo se está almacenando un campo del struct, para almacenar más, simplemente habría que modificar la línea por:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PyObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el ejemplo sólo se está almacenando un campo del struct, para almacenar más, simplemente habría que modificar la línea por:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;dict&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{&amp;#34;&lt;/span&gt;
                      &lt;span class=&#34;s&#34;&gt;&amp;#34;   s:i,&amp;#34;&lt;/span&gt;
                      &lt;span class=&#34;s&#34;&gt;&amp;#34;   s:i&amp;#34;&lt;/span&gt;
                      &lt;span class=&#34;s&#34;&gt;&amp;#34;}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                         &lt;span class=&#34;s&#34;&gt;&amp;#34;Dir Local.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-                        &lt;span class=&#34;s&#34;&gt;&amp;#34;Dir Remota.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y continuar rellenando el diccionario según nuestras necesidades.&lt;/p&gt;
+                        &lt;span class=&#34;s&#34;&gt;&amp;#34;Dir Remota.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stats&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rport&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y continuar rellenando el diccionario según nuestras necesidades.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Python C API How to pass array of structs from C to Python&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/15786525/python-c-api-how-to-pass-array-of-structs-from-c-to-python/15833209#15833209&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Python C API How to pass array of structs from C to Python&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;stackoverflow.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -100,17 +96,10 @@
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/&#34; title=&#34;Crear un módulo para python con la Python C API (IV)&#34;&gt;Crear un módulo para python con la Python C API (IV) – HerramientasRed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Crear un módulo para python con la Python C API (V) – Python 3&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Crear un módulo para python con la Python C API (V) – Python 3&#34; alt=&#34;Crear un módulo para python con la Python C API (V) – Python 3&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Este es el último artículo de esta serie de 5 sobre cómo crear un módulo con la Python C API. Para terminar, veremos la forma de hacer compatible un módulo con &lt;strong&gt;Python 3&lt;/strong&gt;. Nos basaremos en el módulo &lt;strong&gt;herramientasRed&lt;/strong&gt; que hemos creado en la parte 3.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El proceso de compatibilidad se realiza mediante varios &lt;em&gt;#define&lt;/em&gt; y macros en C para comprobar qué versión de Python se está usando, el código que se muestra a continuación hace del módulo &lt;strong&gt;herramientasRed&lt;/strong&gt; un módulo compatible tanto con Python 2 como Python 3. Es posible usar este código como plantilla para otros módulos.&lt;/p&gt;
-
 &lt;h1 id=&#34;código-fuente-compatible-con-python-3&#34;&gt;Código fuente compatible con Python 3&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;Python.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
@@ -225,8 +214,8 @@
 &lt;span class=&#34;cp&#34;&gt;#if PY_MAJOR_VERSION &amp;gt;= 3
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;#endif
-&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para comprobar que funciona, compilamos e instalamos el módulo con Python 3 de la siguiente forma:&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para comprobar que funciona, compilamos e instalamos el módulo con Python 3 de la siguiente forma:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python3 setup.py install
 running install
 running build
@@ -239,16 +228,18 @@ gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro build/temp.li
 running install_lib
 copying build/lib.linux-x86_64-3.2/herramientasRed.cpython-32mu.so -&amp;gt; /usr/local/lib/python3.2/dist-packages
 running install_egg_info
-Writing /usr/local/lib/python3.2/dist-packages/HerramientasRed-1.0.egg-info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:&lt;/p&gt;
+Writing /usr/local/lib/python3.2/dist-packages/HerramientasRed-1.0.egg-info
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Todo ha salido bien, abrimos el intérprete de Python 3 y probamos el módulo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;Python&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;May&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2013&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;55&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GCC&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;4.7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;on&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;linux2&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;copyright&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;credits&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;license&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;more&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;information&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;herramientasRed&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;herramientasRed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imprimeIP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;elbauldelprogramador.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;elbauldelprogramador&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tiene&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dirección&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para asegurarnos de que el módulo sigue funcionando con python 2, volvemos a compilar y ejecutar desde la versión 2 de pyton:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para asegurarnos de que el módulo sigue funcionando con python 2, volvemos a compilar y ejecutar desde la versión 2 de pyton:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo python2.7 setup.py install
 running install
 running build
@@ -261,21 +252,21 @@ running install_lib
 copying build/lib.linux-x86_64-2.7/herramientasRed.so -&amp;gt; /usr/local/lib/python2.7/dist-packages
 running install_egg_info
 Removing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
-Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y por último:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Python &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;.7.5+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default, Jun  &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2013&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;:26:34&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;GCC &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;.7.3&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; on linux2
+Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y por último:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Python 2.7.5+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;default, Jun  &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 2013, 13:26:34&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;GCC 4.7.3&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; on linux2
 Type &lt;span class=&#34;s2&#34;&gt;&amp;#34;help&amp;#34;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;#34;copyright&amp;#34;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;#34;credits&amp;#34;&lt;/span&gt; or &lt;span class=&#34;s2&#34;&gt;&amp;#34;license&amp;#34;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; more information.
 &amp;gt;&amp;gt;&amp;gt; import herramientasRed
 &amp;gt;&amp;gt;&amp;gt; print herramientasRed.imprimeIP&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;elbauldelprogramador.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-elbauldelprogramador.com tiene dirección IP &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44
-&amp;gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Eso es todo, espero que os hayan gustado estos cinco artículos sobre &lt;strong&gt;cómo crear un módulo para python con la Python C API.&lt;/strong&gt; Dejad vuestros comentarios!&lt;/p&gt;
+elbauldelprogramador.com tiene dirección IP 5.39.89.44
+&amp;gt;&amp;gt;&amp;gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Eso es todo, espero que os hayan gustado estos cinco artículos sobre &lt;strong&gt;cómo crear un módulo para python con la Python C API.&lt;/strong&gt; Dejad vuestros comentarios!&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Porting Extension Modules to Python 3&lt;/em&gt; »» &lt;a href=&#34;http://docs.python.org/3/howto/cporting.html&#34; target=&#34;_blank&#34;&gt;docs.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Porting Extension Modules to Python 3&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;docs.python.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -292,17 +283,10 @@ elbauldelprogramador.com tiene dirección IP &lt;span class=&#34;m&#34;&gt;5&lt;
 &lt;li&gt;Crear un módulo para python con la Python C API (IV) – HerramientasRed&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/&#34; title=&#34;Crear un módulo para python con la Python C API (V)&#34;&gt;Crear un módulo para python con la Python C API (V) – Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Crear un módulo para python con la Python C API (IV) – HerramientasRed&#34; alt=&#34;Crear un módulo para python con la Python C API (IV) – HerramientasRed&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Llegó el momento de crear un módulo con la Python C API algo más complejo, como dijimos en la primera parte, crearemos un módulo llamado &lt;strong&gt;herramientasRed&lt;/strong&gt; que permita obtener la dirección IP de un dominio, algo parecido a lo que hicimos en &lt;a href=&#34;https://elbauldelprogramador.com/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/&#34; title=&#34;NDK-gdb – Depurar aplicaciones en el NKD de Android&#34;&gt;NDK-gdb – Depurar aplicaciones en el NKD de Android.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;creación-del-módulo&#34;&gt;Creación del módulo&lt;/h1&gt;
-
 &lt;p&gt;Mostraremos el código completo, puesto que ya se ha explicado el significado de este trozo de código no nos extenderemos mucho:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;Python.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
@@ -351,9 +335,8 @@ elbauldelprogramador.com tiene dirección IP &lt;span class=&#34;m&#34;&gt;5&lt;
     &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_InitModule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;herramientasRed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;herramientasRed_methods&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;compilación-y-uso&#34;&gt;Compilación y uso&lt;/h1&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;compilación-y-uso&#34;&gt;Compilación y uso&lt;/h1&gt;
 &lt;p&gt;Ahora que hemos visto cómo usar DistUtils, haremos uso de esta herramienta para compilar e instalar el módulo, el contenido del fichero &lt;em&gt;setup.py&lt;/em&gt; es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;distutils.core&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Extension&lt;/span&gt;
 
@@ -365,58 +348,59 @@ elbauldelprogramador.com tiene dirección IP &lt;span class=&#34;m&#34;&gt;5&lt;
               &lt;span class=&#34;n&#34;&gt;author&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Alejandro Alcalde&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
               &lt;span class=&#34;n&#34;&gt;license&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;GPLv3&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
               &lt;span class=&#34;n&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Un simple modulo para obtener la IP de un dominio&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-              &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hRed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo ejecutamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# python setup.py install
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;running install
+              &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hRed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo ejecutamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# python setup.py install&lt;/span&gt;
+running install
 running build
 running build_ext
 running install_lib
 running install_egg_info
-Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y para usarlo:&lt;/p&gt;
+Writing /usr/local/lib/python2.7/dist-packages/HerramientasRed-1.0.egg-info
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y para usarlo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;In&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;herramientasRed&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;In&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;herramientasRed&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imprimeIP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;elbauldelprogramador.com&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;elbauldelprogramador&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tiene&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dirección&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;depuración-de-módulos-python-c-api&#34;&gt;Depuración de módulos Python C API&lt;/h1&gt;
+&lt;span class=&#34;n&#34;&gt;elbauldelprogramador&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;com&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tiene&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dirección&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;depuración-de-módulos-python-c-api&#34;&gt;Depuración de módulos Python C API&lt;/h1&gt;
 &lt;p&gt;Es probable que durante el desarrollo de un módulo para Python sea necesario depurar el código, para ello hay que realizar los siguiente pasos:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Añadir la siguiente línea al fichero &lt;em&gt;.gdbinit&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;br _PyImport_LoadDynamicModule
 
-&lt;p&gt;&lt;strong&gt;Añadir la siguiente línea al fichero *.gdbinit&lt;/strong&gt;*&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;br _PyImport_LoadDynamicModule&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Compilar el módulo mediante &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;gcc sin optimizaciones&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# &lt;span class=&#34;nv&#34;&gt;CFLAGS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;-Wall -O0 -g&amp;#39;&lt;/span&gt; python setup.py install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último ejecutamos gdb de la siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ gdb -ex r --args python test.py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso &lt;strong&gt;herramientasRed_imprimeIP&lt;/strong&gt; y ya podremos depurar el módulo:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Compilar el módulo mediante &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34; title=&#34;Optimizando código y evaluando el rendimiento&#34;&gt;gcc sin optimizaciones&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CFLAGS=&amp;#39;-Wall -O0 -g&amp;#39; python setup.py install&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último ejecutamos gdb de la siguiente forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ gdb -ex r --args python test.py
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras ejecutar la línea de arriba, establecemos un punto de ruptura en la función deseada, en este caso &lt;strong&gt;herramientasRed_imprimeIP&lt;/strong&gt; y ya podremos depurar el módulo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b herramientasRed_imprimeIP
-Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x7ffff695496a: file herramientasRed.c, line &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;.
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x7ffff695496a: file herramientasRed.c, line 17.
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; r
 Starting program: /usr/bin/python2.7 test.py
 
-Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;, herramientasRed_imprimeIP &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x0, &lt;span class=&#34;nv&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x965990&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; at herramientasRed.c:17
+Breakpoint 1, herramientasRed_imprimeIP &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x0, &lt;span class=&#34;nv&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x965990&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; at herramientasRed.c:17
 &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;!PyArg_ParseTuple&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;args, &lt;span class=&#34;s2&#34;&gt;&amp;#34;s&amp;#34;&lt;/span&gt;, &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;domainName&lt;span class=&#34;o&#34;&gt;)){&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; display /s domainName
-&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;: x/s domainName  0x7ffff7f5e454:   &lt;span class=&#34;s2&#34;&gt;&amp;#34;elbauldelprogramador.com&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;        memset&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;returnValue, &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+1: x/s domainName  0x7ffff7f5e454:   &lt;span class=&#34;s2&#34;&gt;&amp;#34;elbauldelprogramador.com&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;        memset&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;returnValue, 0, 100&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; p *args
 &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-  &lt;span class=&#34;nv&#34;&gt;ob_refcnt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;,
+  &lt;span class=&#34;nv&#34;&gt;ob_refcnt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 1,
   &lt;span class=&#34;nv&#34;&gt;ob_type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0x888280 &amp;lt;PyTuple_Type&amp;gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
 Continuing.
 elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Inferior &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;process &lt;span class=&#34;m&#34;&gt;28242&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; exited normally&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como se puede observar, si imprimimos en pantalla el argumento &lt;em&gt;args&lt;/em&gt;, que representa los parámetros que se pasan desde python, se aprecia el &lt;strong&gt;reference count&lt;/strong&gt; del que hablamos en la parte 1.&lt;/p&gt;
-
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Inferior &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;process 28242&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; exited normally&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como se puede observar, si imprimimos en pantalla el argumento &lt;em&gt;args&lt;/em&gt;, que representa los parámetros que se pasan desde python, se aprecia el &lt;strong&gt;reference count&lt;/strong&gt; del que hablamos en la parte 1.&lt;/p&gt;
 &lt;p&gt;Así concluye esta cuarta parte, en la quinta y última veremos cómo hacer compatibles nuestros módulos con la versión 3 de Python.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Python Extension Debugging&lt;/em&gt; »» &lt;a href=&#34;http://stackoverflow.com/questions/15253586/python-extension-debugging&#34; target=&#34;_blank&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Python Extension Debugging&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;stackoverflow.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -433,85 +417,57 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/&#34; title=&#34;Crear un módulo para python con la Python C API (IV)&#34;&gt;Crear un módulo para python con la Python C API (IV) – HerramientasRed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/&#34; title=&#34;Crear un módulo para python con la Python C API (V)&#34;&gt;Crear un módulo para python con la Python C API (V) – Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Crear un módulo para python con la Python C API (I) - Introducción&#34; alt=&#34;Crear un módulo para python con la Python C API (I) - Introducción&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En esta serie de 5 artículos, veremos cómo crear desde cero un módulo que podamos importar en nuestra aplicación &lt;em&gt;python&lt;/em&gt;. Al finalizar, tendremos creado un módulo llamado &lt;strong&gt;herramientasRed&lt;/strong&gt; con el que podremos obtener la dirección ip de un dominio, al igual que hicimos en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/ndk-gdb-depurar-aplicaciones-en-el-nkd-de-android/&#34; title=&#34;NDK-gdb – Depurar aplicaciones en el NKD de Android&#34;&gt;NDK-gdb – Depurar aplicaciones en el NKD de Android&lt;/a&gt;, para ello será necesario usar la Python C API.&lt;/p&gt;
-
 &lt;p&gt;Pero antes, debemos introducir algunos conceptos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;qué-es-la-python-c-api&#34;&gt;¿Qué es la Python C API?&lt;/h1&gt;
-
-&lt;p&gt;La &lt;em&gt;API (Application Programmer&amp;#8217;s Interface)&lt;/em&gt; para Python proporciona a los programadores de los lenguajes C/C++ la posibilidad de acceder al intérprete de &lt;em&gt;python&lt;/em&gt; a varios niveles. La API es igualmente válida para C++, pero se suele usar únicamente el término &lt;strong&gt;C-API&lt;/strong&gt;.&lt;/p&gt;
-
+&lt;p&gt;La &lt;em&gt;API (Application Programmer’s Interface)&lt;/em&gt; para Python proporciona a los programadores de los lenguajes C/C++ la posibilidad de acceder al intérprete de &lt;em&gt;python&lt;/em&gt; a varios niveles. La API es igualmente válida para C++, pero se suele usar únicamente el término &lt;strong&gt;C-API&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Hay dos razones principales para hacer uso de esta API. La primera es para &lt;strong&gt;escribir módulos&lt;/strong&gt; para propósitos específicos, estos módulos se escriben en C y extienden la funcionalidad del intérprete de &lt;em&gt;python&lt;/em&gt;, es el uso más común y en el que nos centraremos en los artículos siguientes. La segunda razón es para usar &lt;em&gt;python&lt;/em&gt; como un componente en una aplicación más compleja, esta técnica se conoce como “&lt;em&gt;Embeber Python en una aplicación&lt;/em&gt; (embedding Python)”.&lt;/p&gt;
-
 &lt;p&gt;Muchas de las funciones de la API son útiles independientemente de si estamos extendiendo o embebiendo Python, sin embargo, las mayoría de aplicaciones que embeben Python necesitarán proporcionar un módulo o extensión, así que probablemente la mejor idea es familiarizarse antes con el proceso de creación de módulos antes de embeber Python en otra aplicación.&lt;/p&gt;
-
 &lt;h1 id=&#34;requisitos-para-usar-la-python-c-api&#34;&gt;Requisitos para usar la Python C API&lt;/h1&gt;
-
 &lt;p&gt;Todas las definiciones de funciones, tipos y macros necesarias para usar la &lt;strong&gt;Python C API&lt;/strong&gt; se incluyen en nuestro código mediante la siguiente cabecera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;#34;Python.h&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esta línea implica la inclusión de las siguientes cabeceras estándares: &lt;code&gt;&amp;lt;stdio.h&amp;gt;, &amp;lt;string.h&amp;gt;, &amp;lt;errno.h&amp;gt;, &amp;lt;limits.h&amp;gt;, &amp;lt;assert.h&amp;gt;&lt;/code&gt; y &lt;code&gt;&amp;lt;stdlib.h&amp;gt;&lt;/code&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;#34;Python.h&amp;#34;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta línea implica la inclusión de las siguientes cabeceras estándares: &lt;code&gt;&amp;lt;stdio.h&amp;gt;, &amp;lt;string.h&amp;gt;, &amp;lt;errno.h&amp;gt;, &amp;lt;limits.h&amp;gt;, &amp;lt;assert.h&amp;gt;&lt;/code&gt; y &lt;code&gt;&amp;lt;stdlib.h&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Si en nuestro sistema no tenemos la cabecera &lt;em&gt;Python.h&lt;/em&gt; es necesario instalarla mediante:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# aptitude install python-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ya que Python puede definir algunas directivas para el &lt;a href=&#34;https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/&#34; title=&#34;Compilación de programas: makefile y g++&#34;&gt;pre-procesador&lt;/a&gt; que afectan a las cabeceras estandar, es necesario incluir &lt;em&gt;Python.h&lt;/em&gt; antes que cualquier cabecera estandar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install python-dev&lt;/span&gt;
 
-&lt;p&gt;&lt;a name=&#34;referencecounts&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ya que Python puede definir algunas directivas para el &lt;!-- raw HTML omitted --&gt;pre-procesador&lt;!-- raw HTML omitted --&gt; que afectan a las cabeceras estandar, es necesario incluir &lt;!-- raw HTML omitted --&gt;Python.h&lt;!-- raw HTML omitted --&gt; antes que cualquier cabecera estandar.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;objetos-tipos-y-reference-counts&#34;&gt;Objetos, Tipos y Reference Counts&lt;/h1&gt;
-
-&lt;p&gt;La mayoría de las funciones de la &lt;em&gt;Python C API&lt;/em&gt; tienen uno o más argumentos y devuelven un &lt;em&gt;&lt;a title=&#34;Python C API structure&#34; href=&#34;http://docs.python.org/3/c-api/structures.html#PyObject&#34; target=&#34;_blank&#34;&gt;PyObject&lt;/em&gt;&lt;/a&gt;*. Este objeto es un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/&#34; title=&#34;Clases y Objetos – Punteros a objetos&#34;&gt;puntero&lt;/a&gt; a un tipo de dato &lt;em&gt;opaco&lt;/em&gt; que representa un objeto Python arbitrario. Ya que todos los objetos son tratados de la misma forma en Python, es lógico que sean representados por un único tipo en C. Además, ya que casi todos los objetos residen en el montón (&lt;em&gt;heap&lt;/em&gt;), nunca se ha de declarar un &lt;em&gt;PyObject&lt;/em&gt; que no sea un puntero.&lt;/p&gt;
-
+&lt;p&gt;La mayoría de las funciones de la &lt;em&gt;Python C API&lt;/em&gt; tienen uno o más argumentos y devuelven un &lt;em&gt;&lt;!-- raw HTML omitted --&gt;PyObject&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;*. Este objeto es un &lt;a href=&#34;https://elbauldelprogramador.com/clases-y-objetos-punteros-objetos/&#34; title=&#34;Clases y Objetos – Punteros a objetos&#34;&gt;puntero&lt;/a&gt; a un tipo de dato *opaco* que representa un objeto Python arbitrario. Ya que todos los objetos son tratados de la misma forma en Python, es lógico que sean representados por un único tipo en C. Además, ya que casi todos los objetos residen en el montón (*heap*), nunca se ha de declarar un *PyObject* que no sea un puntero.&lt;/p&gt;
 &lt;p&gt;Todos los objetos Python tienen un &lt;em&gt;tipo&lt;/em&gt; y un &lt;em&gt;Reference Count&lt;/em&gt; (Conteo de referencias). El tipo determina de qué objeto se trata (Un entero, una lista, diccionario etc), Para cada uno de los tipos hay una macro que comprueba si un objeto es de dicho tipo, por ejemplo &lt;strong&gt;PyList_Check(a)&lt;/strong&gt; es verdadero sí y solo sí el objeto al que apunta &lt;em&gt;a&lt;/em&gt; es una lista.&lt;/p&gt;
-
 &lt;h2 id=&#34;reference-counts&#34;&gt;Reference Counts&lt;/h2&gt;
-
 &lt;p&gt;El &lt;em&gt;reference count&lt;/em&gt; es importante, ya que los ordenadores de hoy día tiene una memoria limitada; El &lt;em&gt;reference count&lt;/em&gt; lleva una cuenta de en cuantos sitios distintos hay una referencia a un determinado objeto. Tal sitio podría ser otro objeto, o una variable C global, o una variable local en una función C. Cuando el &lt;em&gt;reference count&lt;/em&gt; de un objeto es cero, se libera la memoria ocupada.&lt;/p&gt;
-
-&lt;p&gt;Los &lt;em&gt;Reference counts&lt;/em&gt; siempre se manipulan explícitamente, es decir, el programador debe llamar explícitamente a las macros &lt;em&gt;&lt;a href=&#34;http://docs.python.org/3/c-api/refcounting.html#Py_INCREF&#34; title=&#34;Python C API Py_INCREF&#34;&gt;Py_INCREF()&lt;/a&gt;&lt;/em&gt; y &lt;em&gt;&lt;a title=&#34;Python C API Py_INCREF&#34; href=&#34;http://docs.python.org/3/c-api/refcounting.html#Py_DECREF&#34; target=&#34;_blank&#34;&gt;Py_DECREF()&lt;/a&gt;&lt;/em&gt; para incrementar o decrementar por uno el &lt;em&gt;reference count&lt;/em&gt;, respectivamente.&lt;/p&gt;
-
+&lt;p&gt;Los &lt;em&gt;Reference counts&lt;/em&gt; siempre se manipulan explícitamente, es decir, el programador debe llamar explícitamente a las macros &lt;em&gt;&lt;a href=&#34;http://docs.python.org/3/c-api/refcounting.html#Py_INCREF&#34; title=&#34;Python C API Py_INCREF&#34;&gt;Py_INCREF()&lt;/a&gt;&lt;/em&gt; y &lt;em&gt;&lt;!-- raw HTML omitted --&gt;Py_DECREF()&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; para incrementar o decrementar por uno el &lt;em&gt;reference count&lt;/em&gt;, respectivamente.&lt;/p&gt;
 &lt;p&gt;No es necesario incrementar el &lt;em&gt;reference count&lt;/em&gt; de un objeto para cada variable local que contenga un puntero a un objeto. En teoría, se incrementa cuando se crea y se decrementa cuando sale del ámbito. Sin embargo estas dos operaciones se cancelan, por lo que el &lt;em&gt;reference count&lt;/em&gt; no cambia. El motivo real para usar el &lt;em&gt;reference count&lt;/em&gt; es prevenir que el objeto se elimine de memoria mientras nuestra variable apunta a dicho objeto. Si sabemos que al menos existe otra variable que apunta hacia él no hay necesidad de incrementar temporalmente el &lt;em&gt;reference count&lt;/em&gt;. Una situación importante en la que surge este problema es al pasar objetos como parámetros a funciones C en un módulo que ha sido llamado desde Python, el mecanismo de llamada garantiza mantener una referencia para cada uno de los argurmentos.&lt;/p&gt;
-
 &lt;p&gt;El uso de las macros &lt;em&gt;Py_INCREF()&lt;/em&gt; y &lt;em&gt;Py_DECREF()&lt;/em&gt; es algo complicado y recomiendo leer detenidamente la documentación disponible en las referencias.&lt;/p&gt;
-
-&lt;p&gt;Sin embargo, un enfoque seguro es usar siempre operaciones genéricas (Funciones cuyos nombres comienzan con &lt;strong&gt;PyObject_, PyNumber_, PySequence o PyMapping_&lt;/strong&gt;). Estas operaciones siempre incrementan el &lt;em&gt;reference count&lt;/em&gt; del objeto que devuelven. Esto deja al programador la responsabilidad de llamar a &lt;em&gt;Py_DECREF()&lt;/em&gt; cuando haya terminado con el resultado, lo cual es mucho más sencillo.&lt;/p&gt;
-
+&lt;p&gt;Sin embargo, un enfoque seguro es usar siempre operaciones genéricas (Funciones cuyos nombres comienzan con **PyObject_, PyNumber_, PySequence o PyMapping_**). Estas operaciones siempre incrementan el *reference count* del objeto que devuelven. Esto deja al programador la responsabilidad de llamar a *Py_DECREF()* cuando haya terminado con el resultado, lo cual es mucho más sencillo.&lt;/p&gt;
 &lt;h2 id=&#34;detalles-del-reference-count&#34;&gt;Detalles del Reference Count&lt;/h2&gt;
-
-&lt;p&gt;El comportamiento del &lt;em&gt;Reference Count&lt;/em&gt; en funciones la &lt;strong&gt;Python C API&lt;/strong&gt; se explica mejor en términos de &lt;em&gt;propiedad de referencias&lt;/em&gt;(&lt;em&gt;ownership of references&lt;/em&gt;). La propiedad pertenece a las referencias, nunca a objetos (Los objetos no pueden pertenecer a nadie, son siempre compartidos). &lt;em&gt;“Poseer una referencia”&lt;/em&gt; significa tener la responsabilidad de llamar a &lt;em&gt;Py_DECREF&lt;/em&gt; cuando la referencia no sea necesaria. La “*posesión*” también puede ser traspasada, lo que significa que el código que recibe la propiedad de la referencia se convierte responsable de llamar a &lt;em&gt;Py_DECREF&lt;/em&gt; o &lt;em&gt;&lt;a href=&#34;http://docs.python.org/3/c-api/refcounting.html#Py_XDECREF&#34; target=&#34;_blank&#34;&gt;Py_XDECREF()&lt;/a&gt;&lt;/em&gt; cuando ya no sea necesaria. &amp;#8212; O pasar dicha responsabilidad (normalmente al llamador). Cuando una función transpasa la propiedad de la referencia a su llamador (&lt;em&gt;The Caller&lt;/em&gt;), se dice que éste recibe una nueva referencia. Cuando la propiedad no se traspasa, se dice que el llamador toma prestada la referencia, para estas referencias no es necesario hacer nada.&lt;/p&gt;
-
+&lt;p&gt;El comportamiento del &lt;em&gt;Reference Count&lt;/em&gt; en funciones la &lt;strong&gt;Python C API&lt;/strong&gt; se explica mejor en términos de &lt;em&gt;propiedad de referencias&lt;/em&gt;(&lt;em&gt;ownership of references&lt;/em&gt;). La propiedad pertenece a las referencias, nunca a objetos (Los objetos no pueden pertenecer a nadie, son siempre compartidos). &lt;em&gt;“Poseer una referencia”&lt;/em&gt; significa tener la responsabilidad de llamar a &lt;em&gt;Py_DECREF&lt;/em&gt; cuando la referencia no sea necesaria. La “&lt;em&gt;posesión&lt;/em&gt;” también puede ser traspasada, lo que significa que el código que recibe la propiedad de la referencia se convierte responsable de llamar a &lt;em&gt;Py_DECREF&lt;/em&gt; o &lt;em&gt;&lt;!-- raw HTML omitted --&gt;Py_XDECREF()&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; cuando ya no sea necesaria. — O pasar dicha responsabilidad (normalmente al llamador). Cuando una función transpasa la propiedad de la referencia a su llamador (&lt;em&gt;The Caller&lt;/em&gt;), se dice que éste recibe una nueva referencia. Cuando la propiedad no se traspasa, se dice que el llamador toma prestada la referencia, para estas referencias no es necesario hacer nada.&lt;/p&gt;
 &lt;p&gt;Por otro lado, cuando una función pasa una referencia a un objeto hay dos posibilidades: La función &lt;em&gt;roba (steals)&lt;/em&gt; la referencia al objeto o no. *Robar la referencia * significa que cuando se pasa la referencia a una función, dicha función asume que posee la referencia, y no es necesario que nos ocupemos de ella.&lt;/p&gt;
-
-&lt;p&gt;Pocas funciones roban referencias; Las excepciones más notables son &lt;a href=&#34;http://docs.python.org/3/c-api/list.html#PyList_SetItem&#34; target=&#34;_blank&#34;&gt;PyList_SetItem()&lt;/a&gt; y &lt;a href=&#34;http://docs.python.org/3/c-api/tuple.html#PyTuple_SetItem&#34; target=&#34;_blank&#34;&gt;PyTuple_SetItem()&lt;/a&gt;, ambas roban una referencia al &lt;strong&gt;elemento&lt;/strong&gt; (pero no a la tupla o lista en la que se coloca el elemento). Por ejemplo, el código para crear una tupla &lt;strong&gt;(1, 2, &amp;#8220;three&amp;#8221;)&lt;/strong&gt; sería como esto (Sin manejar errores por ahora)&lt;/p&gt;
+&lt;p&gt;Pocas funciones roban referencias; Las excepciones más notables son &lt;!-- raw HTML omitted --&gt;PyList_SetItem()&lt;!-- raw HTML omitted --&gt; y &lt;!-- raw HTML omitted --&gt;PyTuple_SetItem()&lt;!-- raw HTML omitted --&gt;, ambas roban una referencia al &lt;strong&gt;elemento&lt;/strong&gt; (pero no a la tupla o lista en la que se coloca el elemento). Por ejemplo, el código para crear una tupla &lt;strong&gt;(1, 2, “three”)&lt;/strong&gt; sería como esto (Sin manejar errores por ahora)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;PyObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PyTuple_New&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PyTuple_SetItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PyLong_FromLong&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1L&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PyTuple_SetItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PyLong_FromLong&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2L&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;PyTuple_SetItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PyUnicode_FromString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el ejemplo, &lt;a href=&#34;http://docs.python.org/3/c-api/long.html#PyLong_FromLong&#34; target=&#34;_blank&#34;&gt;PyLong_FromLong()&lt;/a&gt; devuelve una nueva referencia que es robada inmediatamente por &lt;a href=&#34;http://docs.python.org/3/c-api/tuple.html#PyTuple_SetItem&#34; target=&#34;_blank&#34;&gt;PyTuple_SetItem()&lt;/a&gt;. Para seguir usando un objeto aunque su referencia haya sido robada, es necesario usar &lt;em&gt;Py_INCREF()&lt;/em&gt; para obtener otra referencia antes de llamar a la función roba-referencias.&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;PyTuple_SetItem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PyUnicode_FromString&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el ejemplo, &lt;!-- raw HTML omitted --&gt;PyLong_FromLong()&lt;!-- raw HTML omitted --&gt; devuelve una nueva referencia que es robada inmediatamente por &lt;!-- raw HTML omitted --&gt;PyTuple_SetItem()&lt;!-- raw HTML omitted --&gt;. Para seguir usando un objeto aunque su referencia haya sido robada, es necesario usar &lt;em&gt;Py_INCREF()&lt;/em&gt; para obtener otra referencia antes de llamar a la función roba-referencias.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;PyTuple_SetItem()&lt;/strong&gt; es la única forma añadir elementos a una tupla.&lt;/p&gt;
-
 &lt;p&gt;Equivalentemente para crear una lista podemos usar &lt;strong&gt;PyList_New()&lt;/strong&gt; y &lt;strong&gt;PyList_SetItem()&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Sin embargo la forma habitual de crear listas y tuplas es mediante &lt;strong&gt;Py_BuildValue()&lt;/strong&gt;, con la cual podemos crear los tipos de objetos más comunes a partir de una cadena de formato (&lt;em&gt;format string&lt;/em&gt;). El ejemplo anterior se puede reemplazar por esto otro, que además comprueba si se producen errores:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;PyObject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 &lt;span class=&#34;n&#34;&gt;tuple&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;(iis)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[iis]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto terminamos con la primera parte, en la segunda veremos cómo crear un módulo sencillo que imprima un mensaje por pantalla.&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[iis]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;three&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto terminamos con la primera parte, en la segunda veremos cómo crear un módulo sencillo que imprima un mensaje por pantalla.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Introducción a Python C API&lt;/em&gt; »» &lt;a href=&#34;http://docs.python.org/3/c-api/intro.html&#34; target=&#34;_blank&#34;&gt;docs.python.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Introducción a Python C API&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;docs.python.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -528,18 +484,14 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/&#34; title=&#34;Crear un módulo para python con la Python C API (IV)&#34;&gt;Crear un módulo para python con la Python C API (IV) – HerramientasRed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/&#34; title=&#34;Crear un módulo para python con la Python C API (V)&#34;&gt;Crear un módulo para python con la Python C API (V) – Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Crear un módulo para python con la Python C API (II) – Primer ejemplo&#34; alt=&#34;Crear un módulo para python con la Python C API (II) – Primer ejemplo&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Continuando con nuestro artículo sobre la Python C API, esta vez vamos a ver un ejemplo sencillo en el que crearemos un módulo que imprima por pantalla un mensaje, como &lt;em&gt;Hola &lt;strong&gt;nombre&lt;/strong&gt;, desde la python C API!&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;El módulo consistirá en una función llamada &lt;em&gt;saluda()&lt;/em&gt; que recibirá una cadena de texto usada como nombre para saludar. Una vez terminado podrá usarse así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ejemplo&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saluda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Alejandro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ejemplo&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saluda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Alejandro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Empecemos mostrando el código e iremos explicándolo a lo largo del artículo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;python.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -573,15 +525,12 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
     &lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Py_InitModule&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ejemplo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo_methods&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;m&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Empezaremos desglosando la función &lt;em&gt;ejemplo_saluda&lt;/em&gt;, la cual será llamada al ejecutar la línea &lt;em&gt;ejemplo.saluda(&amp;lsquo;Alejandro&amp;rsquo;)&lt;/em&gt; en Python.&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 
-&lt;h1 id=&#34;función-ejemplo-saluda&#34;&gt;Función ejemplo_saluda()&lt;/h1&gt;
-
-&lt;p&gt;El parámetro &lt;strong&gt;args&lt;/strong&gt; será un puntero a una tupla conteniendo los argumentos, en este caso &lt;em&gt;Alejandro&lt;/em&gt;. Cada elemento de la tupla representa un argumento de la función en python. Los argumentos son objetos Python, para poder usarlos en la función C, es necesario convertirlos a valores C. Para ello hay que usar la función &lt;a href=&#34;http://docs.python.org/2/c-api/arg.html#PyArg_ParseTuple&#34; target=&#34;_blank&#34;&gt;PyArg_ParseTuple()&lt;/a&gt;. Ésta función usa una plantilla para determinar el tipo de variables de los argumentos y las variables C en las que se almacenarán. La función devuelve verdadero si todos los argumentos tienen el tipo esperado y sus componentes han sido almacenados en las variables C.&lt;/p&gt;
-
-&lt;p&gt;Los principales valores que se pueden usar como plantilla son los siguientes (La lista completa &lt;a target=&#34;_blank&#34; href=&#34;http://docs.python.org/3/c-api/arg.html#strings-and-buffers&#34;&gt;aquí&lt;/a&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Empezaremos desglosando la función &lt;em&gt;ejemplo_saluda&lt;/em&gt;, la cual será llamada al ejecutar la línea &lt;em&gt;ejemplo.saluda(&amp;lsquo;Alejandro&amp;rsquo;)&lt;/em&gt; en Python.&lt;/p&gt;
+&lt;h1 id=&#34;función-ejemplo_saluda&#34;&gt;Función ejemplo_saluda()&lt;/h1&gt;
+&lt;p&gt;El parámetro &lt;strong&gt;args&lt;/strong&gt; será un puntero a una tupla conteniendo los argumentos, en este caso &lt;em&gt;Alejandro&lt;/em&gt;. Cada elemento de la tupla representa un argumento de la función en python. Los argumentos son objetos Python, para poder usarlos en la función C, es necesario convertirlos a valores C. Para ello hay que usar la función &lt;!-- raw HTML omitted --&gt;PyArg_ParseTuple()&lt;!-- raw HTML omitted --&gt;. Ésta función usa una plantilla para determinar el tipo de variables de los argumentos y las variables C en las que se almacenarán. La función devuelve verdadero si todos los argumentos tienen el tipo esperado y sus componentes han sido almacenados en las variables C.&lt;/p&gt;
+&lt;p&gt;Los principales valores que se pueden usar como plantilla son los siguientes (La lista completa &lt;!-- raw HTML omitted --&gt;aquí&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;s (string or Unicode) [const char *]&lt;/li&gt;
 &lt;li&gt;z (string, Unicode or None) [const char *]&lt;/li&gt;
@@ -594,10 +543,10 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 &lt;li&gt;f (float) [float]&lt;/li&gt;
 &lt;li&gt;O (object) [PyObject *]&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Es posible crear una función en python que disponga de parámetros opcionales, para ello en la plantilla de variables hay que colocar todos los argumentos que deseemos que sean opcionales tras el símbolo »», por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;PyArg_ParseTuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;|s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último la función debe devolver un objeto Python, es este caso una cadena de texto, lo cual se consigue con la función &lt;em&gt;Py_BuildValue()&lt;/em&gt;. También recibe como parámetro una plantilla de variables y las variables C a partir de las cuales se debe crear el objeto python. En nuestro ejemplo simplemente devolvemos una cadena de texto, pero podría devolverse cualquier objeto python. A continuación se muestra cómo se podrían crear una lista o un diccionario:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;PyArg_ParseTuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;|s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;nombre&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;);&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último la función debe devolver un objeto Python, es este caso una cadena de texto, lo cual se consigue con la función &lt;em&gt;Py_BuildValue()&lt;/em&gt;. También recibe como parámetro una plantilla de variables y las variables C a partir de las cuales se debe crear el objeto python. En nuestro ejemplo simplemente devolvemos una cadena de texto, pero podría devolverse cualquier objeto python. A continuación se muestra cómo se podrían crear una lista o un diccionario:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;[s, i, i]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variableC_char&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variableC_int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variableC_int2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;Py_BuildValue&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;{&amp;#34;&lt;/span&gt;
               &lt;span class=&#34;s&#34;&gt;&amp;#34;   s:i,&amp;#34;&lt;/span&gt;
@@ -605,27 +554,24 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
               &lt;span class=&#34;s&#34;&gt;&amp;#34;}&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
               &lt;span class=&#34;s&#34;&gt;&amp;#34;Valor para primer s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variableC_int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
               &lt;span class=&#34;s&#34;&gt;&amp;#34;Valor para segundo s&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;variableC_int2&lt;/span&gt;
-              &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;tabla-de-métodos-del-módulo&#34;&gt;Tabla de métodos del módulo&lt;/h1&gt;
+              &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;tabla-de-métodos-del-módulo&#34;&gt;Tabla de métodos del módulo&lt;/h1&gt;
 &lt;h1 id=&#34;función-de-inicialización&#34;&gt;Función de inicialización&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PyMethodDef&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo_methods&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;saluda&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo_saluda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;METH_VARARGS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Documentación del módulo ejemplo&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* Sentinel */&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El &lt;em&gt;array&lt;/em&gt; &lt;strong&gt;ejemplo_methods[]&lt;/strong&gt; se llama la &lt;em&gt;Tabla de métodos del módulo&lt;/em&gt; y guarda el nombre y la dirección del método que será llamado desde Python, en este caso &lt;strong&gt;ejemplo_salud&lt;/strong&gt;. &lt;strong&gt;METH_VARARGS&lt;/strong&gt; indica que el método acepta parámetros, los parámetros se parsean en forma de tuplas para poder obtener los parámetros mediante &lt;em&gt;PyArg_ParseTuple()&lt;/em&gt;. La última entrada del array es la documentación del método para Python.&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El &lt;em&gt;array&lt;/em&gt; &lt;strong&gt;ejemplo_methods[]&lt;/strong&gt; se llama la &lt;em&gt;Tabla de métodos del módulo&lt;/em&gt; y guarda el nombre y la dirección del método que será llamado desde Python, en este caso &lt;strong&gt;ejemplo_salud&lt;/strong&gt;. &lt;strong&gt;METH_VARARGS&lt;/strong&gt; indica que el método acepta parámetros, los parámetros se parsean en forma de tuplas para poder obtener los parámetros mediante &lt;em&gt;PyArg_ParseTuple()&lt;/em&gt;. La última entrada del array es la documentación del método para Python.&lt;/p&gt;
 &lt;p&gt;Ésta tabla debe pasarse al intérprete en la fase de inicialización del módulo llamando al método &lt;em&gt;Py_InitModule(&amp;ldquo;ejemplo&amp;rdquo;, ejemplo_methods);&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Cuando importamos el módulo por primera vez desde python, se llama al método &lt;strong&gt;initejemplo&lt;/strong&gt;, seguidamente se llama a &lt;strong&gt;Py_InitModule()&lt;/strong&gt;, el cual crea un “Objeto del módulo” e inserta los objetos de las funciones en el módulo creado basandose en la tabla de métodos que le hemos pasado como segundo parámetro. &lt;strong&gt;Py_InitModule()&lt;/strong&gt; devuelve un puntero al &lt;a href=&#34;https://elbauldelprogramador.com/compilacion-de-programas-makefile-y-g/&#34; title=&#34;Compilación de programas: makefile y g++&#34;&gt;objeto&lt;/a&gt; del módulo que acaba de crear, si no se pudo crear, devolverá &lt;em&gt;NULL&lt;/em&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;compilación-y-uso&#34;&gt;Compilación y uso&lt;/h1&gt;
-
 &lt;p&gt;De momento vamos a compilar el módulo a mano, en la siguiente parte veremos cómo usar &lt;em&gt;DistUtils&lt;/em&gt; para automatizar el proceso:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ gcc ejemplo.c -o ejemplo.so -fPIC -shared -I/usr/include/python2.7&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora es necesario mover el archivo &lt;strong&gt;ejemplo.so&lt;/strong&gt; a &lt;em&gt;/usr/lib/python2.7&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ gcc ejemplo.c -o ejemplo.so -fPIC -shared -I/usr/include/python2.7
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora es necesario mover el archivo &lt;strong&gt;ejemplo.so&lt;/strong&gt; a &lt;em&gt;/usr/lib/python2.7&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Hecho esto, a continuación se muestra un ejemplo de uso para el módulo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;In&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ejemplo&lt;/span&gt;
 
@@ -646,14 +592,13 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
     &lt;span class=&#34;n&#34;&gt;saluda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;Documentación&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;del&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;módulo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo&lt;/span&gt;
 
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el proceso de compilación.&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;END&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Eso es todo para la segunda parte, en la tercera veremos cómo automatizar el proceso de compilación.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Extending Python with C or C++&lt;/em&gt; »» &lt;a href=&#34;http://docs.python.org/2/extending/extending.html&#34; target=&#34;_blank&#34;&gt;docs.python.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Bindings python&lt;/em&gt; »» &lt;a href=&#34;http://www.menudoproblema.es/blog/entries/2012/03/26/bindings-python-para-bibliotecas-c-parte-2/&#34; target=&#34;_blank&#34;&gt;menudoproblema.es&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Extending Python with C or C++&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;docs.python.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Bindings python&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;menudoproblema.es&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -670,17 +615,10 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-4/&#34; title=&#34;Crear un módulo para python con la Python C API (IV)&#34;&gt;Crear un módulo para python con la Python C API (IV) – HerramientasRed&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-5-python3/&#34; title=&#34;Crear un módulo para python con la Python C API (V)&#34;&gt;Crear un módulo para python con la Python C API (V) – Python 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34;&gt;&lt;img sizes=&#34;(min-width: 201px) 201px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/Crear-un-módulo-para-python-con-la-Python-C-API-Parte-I.png&#34; title=&#34;Crear un módulo para python con la Python C API (III) – DistUtils&#34; alt=&#34;Crear un módulo para python con la Python C API (III) – DistUtils&#34; width=&#34;201px&#34; height=&#34;190px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como dijimos en la entrada&lt;a href=&#34;https://elbauldelprogramador.com/crear-modulo-python-con-python-c-api-2&#34;&gt; anterior&lt;/a&gt;, vamos a hablar de &lt;em&gt;DistUtils&lt;/em&gt;, una herramienta con la que seremos capaces de automatizar el proceso de compilación e instalación de nuestro módulo creado con la Python C API.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;compilar-el-módulo&#34;&gt;Compilar el módulo&lt;/h1&gt;
-
 &lt;p&gt;El esquema básico de un paquete &lt;strong&gt;distutils&lt;/strong&gt; contiene un fichero &lt;em&gt;setup.py&lt;/em&gt;, su versión más simple es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;distutils.core&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Extension&lt;/span&gt;
 
@@ -690,8 +628,8 @@ elbauldelprogramador.com tiene dirección IP &amp;lt;ip&amp;gt;
 &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;NombreDelPaquete&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
        &lt;span class=&#34;n&#34;&gt;version&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;1.0&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
        &lt;span class=&#34;n&#34;&gt;description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Descripción del paquete&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-       &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez definido el &lt;em&gt;setup.py&lt;/em&gt; ejecutando&lt;/p&gt;
+       &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez definido el &lt;em&gt;setup.py&lt;/em&gt; ejecutando&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ python setup.py build
 running build
 running build_ext
@@ -701,9 +639,8 @@ creating build/lib.linux-x86_64-2.7
 x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro -fno-strict-aliasing -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -D_FORTIFY_SOURCE&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; -g -fstack-protector --param&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ssp-buffer-size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; -Wformat -Werror&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format-security build/temp.linux-x86_64-2.7/ejemplo.o -o build/lib.linux-x86_64-2.7/ejemplo.so
 
 $ ll build/lib.linux-x86_64-2.7/ejemplo.so
--rwxr-xr-x &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr 18K Jul &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;:57 build/lib.linux-x86_64-2.7/ejemplo.so*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;compilaremos el fichero &lt;em&gt;ejemplo.c&lt;/em&gt; y se generará un módulo llamado &lt;em&gt;ejemplo&lt;/em&gt; en el directorio &lt;em&gt;build&lt;/em&gt;.&lt;/p&gt;
-
+-rwxr-xr-x &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; hkr hkr 18K Jul &lt;span class=&#34;m&#34;&gt;26&lt;/span&gt; 16:57 build/lib.linux-x86_64-2.7/ejemplo.so*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;compilaremos el fichero &lt;em&gt;ejemplo.c&lt;/em&gt; y se generará un módulo llamado &lt;em&gt;ejemplo&lt;/em&gt; en el directorio &lt;em&gt;build&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Normalmente los módulos son más complejos y es necesario usar librerías externas, indicar dónde se encuentran las cabeceras etc, para ello se usan estas reglas:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;distutils.core&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;setup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Extension&lt;/span&gt;
 
@@ -724,12 +661,11 @@ $ ll build/lib.linux-x86_64-2.7/ejemplo.so
        &lt;span class=&#34;n&#34;&gt;long_description&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;
 &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;This is really just a demo package.
 &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
-       &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;instalar-el-módulo&#34;&gt;Instalar el módulo&lt;/h1&gt;
-
+       &lt;span class=&#34;n&#34;&gt;ext_modules&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;module1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;instalar-el-módulo&#34;&gt;Instalar el módulo&lt;/h1&gt;
 &lt;p&gt;Sin embargo, con &lt;em&gt;python setup.py build&lt;/em&gt; no se está instalando el módulo en el lugar adecuado para que python sea capaz de utilizarlo, para ello es necesario usar &lt;em&gt;install&lt;/em&gt; de a siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# python setup.py install
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;running install
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# python setup.py install&lt;/span&gt;
+running install
 running build
 running build_ext
 building &lt;span class=&#34;s1&#34;&gt;&amp;#39;ejemplo&amp;#39;&lt;/span&gt; extension
@@ -742,18 +678,16 @@ running install_lib
 copying build/lib.linux-x86_64-2.7/ejemplo.so -&amp;gt; /usr/local/lib/python2.7/dist-packages
 running install_egg_info
 Removing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info
-Writing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y ahora sí que podremos usar el módulo como antes:&lt;/p&gt;
+Writing /usr/local/lib/python2.7/dist-packages/NombreDelPaquete-1.0.egg-info
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y ahora sí que podremos usar el módulo como antes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;In&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;ejemplo&lt;/span&gt;
 
 &lt;span class=&#34;n&#34;&gt;In&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ejemplo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;saluda&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Alejandro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Hola Alejandro desde la Python C API!&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de un dominio web.&lt;/p&gt;
-
+&lt;span class=&#34;n&#34;&gt;Out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Hola Alejandro desde la Python C API!&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En la siguiente parte, crearemos un módulo que sea capaz de devolver la ip de un dominio web.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Documentación de Distutils&lt;/em&gt; »» &lt;a href=&#34;http://docs.python.org/3/extending/building.html#building&#34; target=&#34;_blank&#34;&gt;docs.python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Documentación de Distutils&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;docs.python&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

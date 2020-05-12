@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Category Theory on The Programmer&#39;s Chest</title>
+        <title>category theory on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/tags/category-theory/</link>
-        <description>Recent content in Category Theory on The Programmer&#39;s Chest</description>
+        <description>Recent content in category theory on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 13 Nov 2017 10:00:22 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/tags/category-theory/</link>
-            <title>Category Theory on The Programmer&#39;s Chest</title>
+            <title>category theory on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,86 +21,148 @@
             <pubDate>Mon, 13 Nov 2017 10:00:22 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/scala-category-theory-types/</guid>
-            <description>
+            <description>&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;This post is part of a series on Category Theory for Scala I am writing based on &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;Bartosz Milewski Book on the same topic&lt;/a&gt;. As I read the book, I take notes, I try to solve the Challenges Bartosz proposes in Scala and make them public in this posts. You can find all the code in my github repo &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, you can also visit the &lt;a href=&#34;https://elbauldelprogramador.com/en/scala-category-theory/&#34;&gt;Table Of Contents&lt;/a&gt; of this series.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;p&gt;&lt;em&gt;In the previous post I wrote an introduction to&lt;/em&gt; &lt;a href=&#34;https://elbauldelprogramador.com/en/scala-category-theory-composition/&#34; title=&#34;Category Theory talking about composition&#34;&gt;Category Theory talking about composition&lt;/a&gt;, &lt;em&gt;in this post I am going to talk about &lt;strong&gt;Types and functions in Category Theory.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;types-and-functions&#34;&gt;Types and Functions&lt;/h1&gt;
-
-&lt;p&gt;You can compose arrows, but not &lt;em&gt;any two arrows&lt;/em&gt;, the target object of one arrow must match the source arrow. In terms of programming languages: &lt;strong&gt;a function&#39;s output type must match the input type of the next function.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;what-are-types&#34;&gt;What are Types?&lt;/h1&gt;
-
-&lt;p&gt;You can think of a &lt;strong&gt;Type&lt;/strong&gt; as &lt;strong&gt;Sets&lt;/strong&gt;, they can be &lt;em&gt;finite&lt;/em&gt; (Boolean, Char) or &lt;em&gt;infinite&lt;/em&gt; (String, Integer). In Category Theory there is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Category_of_sets&#34; title=&#34;Category of Sets&#34;&gt;Category of Sets&lt;/a&gt;, called &lt;strong&gt;Set&lt;/strong&gt;. In this category, objects are &lt;strong&gt;sets&lt;/strong&gt;, and arrows are &lt;strong&gt;functions from a Set to another.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The above is defined in the &lt;em&gt;mathematical world&lt;/em&gt;, in the real world you could think of &lt;strong&gt;sets as types&lt;/strong&gt; in a programming language and &lt;strong&gt;functions in the Set as functions&lt;/strong&gt; in a programming language. The problem is, a mathematical function just &lt;em&gt;knows the answer,&lt;/em&gt; but in a programming language you must write the code of that function, and that function may never return. To solve this, many programming languages declare a Type called &lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34; title=&#34;Bottom type&#34;&gt;Bottom type&lt;/a&gt;, all types extends the &lt;em&gt;bottom type.&lt;/em&gt; Haskell bottom type is denoted by &lt;code&gt;_|_&lt;/code&gt;, in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala/&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt; is denoted by &lt;code&gt;Nothing&lt;/code&gt; (See &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Nothing.html&#34; title=&#34;Nothing API documentation&#34;&gt;Nothing API documentation&lt;/a&gt;). A function that returns bottom is called a &lt;strong&gt;Partial Function&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;the-mathematical-model&#34;&gt;The Mathematical Model&lt;/h1&gt;
-
-&lt;p&gt;If you are a developer, I am sure you have found yourself running an interpreter in your mind while debugging. We Humans aren&#39;t very good at this, since it is difficult to keep track of all variables. There is an alternative to know if a program is correct, it&#39;s called &lt;a href=&#34;https://en.wikipedia.org/wiki/Denotational_semantics&#34; title=&#34;Denotational Semantics&#34;&gt;Denotational Semantics&lt;/a&gt;. In short, &lt;strong&gt;Denotational Semantics&lt;/strong&gt; is an approach of formalizing the &lt;em&gt;meanings&lt;/em&gt; of a programming language, it is concerned with finding mathematical objects called domains that represent what programs do.&lt;/p&gt;
-
-&lt;p&gt;Opposed to &lt;em&gt;Denotational Semantics&lt;/em&gt; is &lt;a href=&#34;https://en.wikipedia.org/wiki/Operational_semantics&#34; title=&#34;Operational Semantics&#34;&gt;Operational Semantics&lt;/a&gt;. &lt;em&gt;Operational Semantics&lt;/em&gt; tries to proof certain properties of a program (such as correctness) by constructing logical proofs, this is often too complex.&lt;/p&gt;
-
-&lt;p&gt;By having a mathematical model (&lt;em&gt;Denotational semantics&lt;/em&gt;) you can write formal proofs proving your software correctness.&lt;/p&gt;
-
-&lt;h1 id=&#34;pure-impure-functions&#34;&gt;Pure &amp; Impure functions&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Pure functions&lt;/em&gt; are those who always return the same result for the same input and without side effects. For example, mathematical functions are always pure. On the contrary, &lt;em&gt;impure functions&lt;/em&gt; have side effects.&lt;/p&gt;
-
-&lt;h1 id=&#34;examples-of-types&#34;&gt;Examples of types&lt;/h1&gt;
-
-&lt;p&gt;Lets see now a few types, starting from the &lt;strong&gt;Empty set&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Which type would define an &lt;a href=&#34;https://en.wikipedia.org/wiki/Empty_set&#34; title=&#34;Empty Set&#34;&gt;Empty Set&lt;/a&gt;? Think about it a moment, I&#39;ve mentioned it above. In haskell this type is &lt;code&gt;Void&lt;/code&gt;, in Scala &lt;code&gt;Nothing&lt;/code&gt;. This Set has no elements. Previously I said there is a Category called &lt;em&gt;Set&lt;/em&gt;, in which &lt;em&gt;Objects are sets&lt;/em&gt; and &lt;em&gt;Arrows are functions&lt;/em&gt;. I this context, if &lt;code&gt;A&lt;/code&gt; is a set, the empty set, only one function &lt;code&gt;f&lt;/code&gt; exists from &lt;code&gt;{}&lt;/code&gt; to &lt;code&gt;A&lt;/code&gt;, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Function_(mathematics)#Empty_function&#34; title=&#34;Empty Function&#34;&gt;Empty Function&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Could you ever define a function that takes as parameter an object of type &lt;code&gt;Void&lt;/code&gt; (&lt;em&gt;an empty set&lt;/em&gt;)?, yes, you can, but you won&#39;t be able to call it, since you can&#39;t pass it a parameter which type is &lt;code&gt;Void&lt;/code&gt;. However, the return type of this function could be any. This types of functions (Those who can return any type) are called &lt;strong&gt;polymorphic in the return type&lt;/strong&gt;, here are some examples:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cantCallMe&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Void&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A lower case letter in a function&#39;s declaration in haskell means &lt;code&gt;a&lt;/code&gt; can be of any type. Here are examples in scala:&lt;/p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;em&gt;In the previous post I wrote an introduction to&lt;/em&gt; &lt;a href=&#34;https://elbauldelprogramador.com/en/scala-category-theory-composition/&#34;&gt;Category Theory talking about composition&lt;/a&gt;, &lt;em&gt;in this post I am going to talk about &lt;strong&gt;Types and functions in Category Theory.&lt;/strong&gt;&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Types and Functions
+&lt;/h2&gt;
+&lt;p&gt;
+You can compose arrows, but not &lt;em&gt;any two arrows&lt;/em&gt;, the target object of one arrow must match the source arrow. In terms of programming languages: &lt;strong&gt;a function&amp;#39;s output type must match the input type of the next function.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+What are Types?
+&lt;/h2&gt;
+&lt;p&gt;
+You can think of a &lt;strong&gt;Type&lt;/strong&gt; as &lt;strong&gt;Sets&lt;/strong&gt;, they can be &lt;em&gt;finite&lt;/em&gt; (Boolean, Char) or &lt;em&gt;infinite&lt;/em&gt; (String, Integer). In Category Theory there is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Category_of_sets&#34;&gt;Category of Sets&lt;/a&gt;, called &lt;strong&gt;Set&lt;/strong&gt;. In this category, objects are &lt;strong&gt;sets&lt;/strong&gt;, and arrows are &lt;strong&gt;functions from a Set to another.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+The above is defined in the &lt;em&gt;mathematical world&lt;/em&gt;, in the real world you could think of &lt;strong&gt;sets as types&lt;/strong&gt; in a programming language and &lt;strong&gt;functions in the Set as functions&lt;/strong&gt; in a programming language. The problem is, a mathematical function just &lt;em&gt;knows the answer,&lt;/em&gt; but in a programming language you must write the code of that function, and that function may never return. To solve this, many programming languages declare a Type called &lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34;&gt;Bottom type&lt;/a&gt;, all types extends the &lt;em&gt;bottom type.&lt;/em&gt; Haskell bottom type is denoted by &lt;code class=&#34;verbatim&#34;&gt;_|_&lt;/code&gt;, in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala/&#34;&gt;scala&lt;/a&gt; is denoted by &lt;code class=&#34;verbatim&#34;&gt;Nothing&lt;/code&gt; (See &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Nothing.html&#34;&gt;Nothing API documentation&lt;/a&gt;). A function that returns bottom is called a &lt;strong&gt;Partial Function&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+The Mathematical Model
+&lt;/h2&gt;
+&lt;p&gt;
+If you are a developer, I am sure you have found yourself running an interpreter in your mind while debugging. We Humans aren&amp;#39;t very good at this, since it is difficult to keep track of all variables. There is an alternative to know if a program is correct, it&amp;#39;s called &lt;a href=&#34;https://en.wikipedia.org/wiki/Denotational_semantics&#34;&gt;Denotational Semantics&lt;/a&gt;. In short, &lt;strong&gt;Denotational Semantics&lt;/strong&gt; is an approach of formalizing the &lt;em&gt;meanings&lt;/em&gt; of a programming language, it is concerned with finding mathematical objects called domains that represent what programs do.
+&lt;/p&gt;
+&lt;p&gt;
+Opposed to &lt;em&gt;Denotational Semantics&lt;/em&gt; is &lt;a href=&#34;https://en.wikipedia.org/wiki/Operational_semantics&#34;&gt;Operational Semantics&lt;/a&gt;. &lt;em&gt;Operational Semantics&lt;/em&gt; tries to proof certain properties of a program (such as correctness) by constructing logical proofs, this is often too complex.
+&lt;/p&gt;
+&lt;p&gt;
+By having a mathematical model (&lt;em&gt;Denotational semantics&lt;/em&gt;) you can write formal proofs proving your software correctness.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Pure &amp;amp; Impure functions
+&lt;/h2&gt;
+&lt;p&gt;
+&lt;em&gt;Pure functions&lt;/em&gt; are those who always return the same result for the same input and without side effects. For example, mathematical functions are always pure. On the contrary, &lt;em&gt;impure functions&lt;/em&gt; have side effects.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Examples of types
+&lt;/h2&gt;
+&lt;p&gt;
+Lets see now a few types, starting from the &lt;strong&gt;Empty set&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Which type would define an &lt;a href=&#34;https://en.wikipedia.org/wiki/Empty_set&#34;&gt;Empty Set&lt;/a&gt;? Think about it a moment, I&amp;#39;ve mentioned it above. In haskell this type is &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt;, in Scala &lt;code class=&#34;verbatim&#34;&gt;Nothing&lt;/code&gt;. This Set has no elements. Previously I said there is a Category called &lt;em&gt;Set&lt;/em&gt;, in which &lt;em&gt;Objects are sets&lt;/em&gt; and &lt;em&gt;Arrows are functions&lt;/em&gt;. I this context, if &lt;code class=&#34;verbatim&#34;&gt;A&lt;/code&gt; is a set, the empty set, only one function &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt; exists from &lt;code class=&#34;verbatim&#34;&gt;{}&lt;/code&gt; to &lt;code class=&#34;verbatim&#34;&gt;A&lt;/code&gt;, the &lt;a href=&#34;https://en.wikipedia.org/wiki/Function_(mathematics)#Empty_function&#34;&gt;Empty Function&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Could you ever define a function that takes as parameter an object of type &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt; (&lt;em&gt;an empty set&lt;/em&gt;)?, yes, you can, but you won&amp;#39;t be able to call it, since you can&amp;#39;t pass it a parameter which type is &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt;. However, the return type of this function could be any. This types of functions (Those who can return any type) are called &lt;strong&gt;polymorphic in the return type&lt;/strong&gt;, here are some examples:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;cantCallMe&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Void&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+A lower case letter in a function&amp;#39;s declaration in haskell means &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; can be of any type. Here are examples in scala:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cantCallMe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cantCallMe&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;str&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Moving on, what Type would be the one corresponding to the &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Singleton_(mathematics)&#34; title=&#34;Singleton Set&#34;&gt;Singleton Set&lt;/a&gt;&lt;/strong&gt;?, that is, a type with only one element (one possible value). In C++ this type is &lt;code&gt;void&lt;/code&gt;, not to be confused with Haskell&#39;s &lt;code&gt;Void&lt;/code&gt;, &lt;code&gt;Void&lt;/code&gt; is the empty set, whereas &lt;code&gt;void&lt;/code&gt; in C++ is a singleton set, because its a set with only one element, in fact, you can call functions receiving &lt;code&gt;void&lt;/code&gt; arguments. An example of such functions is &lt;code&gt;int f314() { ret 314 }&lt;/code&gt;, you can call this function, and it will return always 314.&lt;/p&gt;
-
-&lt;p&gt;Although it may seems this function is not taking any arguments, it is. Because if you can&#39;t pass it an argument, you could not call it. So it is taking a dummy value with only one instance (a singleton set, in this case 314). Lets see the same example in Haskell and Scala:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Moving on, what Type would be the one corresponding to the &lt;strong&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Singleton_(mathematics)&#34;&gt;Singleton Set&lt;/a&gt;&lt;/strong&gt;?, that is, a type with only one element (one possible value). In C++ this type is &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt;, not to be confused with Haskell&amp;#39;s &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt; is the empty set, whereas &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; in C++ is a singleton set, because its a set with only one element, in fact, you can call functions receiving &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; arguments. An example of such functions is &lt;code class=&#34;verbatim&#34;&gt;int f314() { ret 314 }&lt;/code&gt;, you can call this function, and it will return always 314.
+&lt;/p&gt;
+&lt;p&gt;
+Although it may seems this function is not taking any arguments, it is. Because if you can&amp;#39;t pass it an argument, you could not call it. So it is taking a dummy value with only one instance (a singleton set, in this case 314). Lets see the same example in Haskell and Scala:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- from Unit to Integer&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Here it becomes clearer that &lt;code&gt;f314&lt;/code&gt; is taking a parameter, the &lt;code&gt;Unit&lt;/code&gt; type (allowing only one value). You call this function with &lt;code&gt;f314()&lt;/code&gt;, which denotes more explicitly this function is taking one parameter.&lt;/p&gt;
-
-&lt;p&gt;In Scala this type is also called &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Unit.html&#34; title=&#34;Unit&#34;&gt;Unit&lt;/a&gt;, and its unique value is denoted also by &lt;code&gt;()&lt;/code&gt;, as in Haskell:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Here it becomes clearer that &lt;code class=&#34;verbatim&#34;&gt;f314&lt;/code&gt; is taking a parameter, the &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt; type (allowing only one value). You call this function with &lt;code class=&#34;verbatim&#34;&gt;f314()&lt;/code&gt;, which denotes more explicitly this function is taking one parameter.
+&lt;/p&gt;
+&lt;p&gt;
+In Scala this type is also called &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Unit.html&#34;&gt;Unit&lt;/a&gt;, and its unique value is denoted also by &lt;code class=&#34;verbatim&#34;&gt;()&lt;/code&gt;, as in Haskell:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* from () =&amp;gt; Int */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;All this may be seems like nonsense, but we are building the concepts bottom up, as you delve more deeply into Category Theory, it will gain more and more sense. For example, with this knowledge you can avoid mentioning explicitly the elements in a set, now you can reference them with Arrows (Functions in this case, since we are in the Category of Sets). Functions going &lt;strong&gt;from Unit to any type A&lt;/strong&gt; are in one-to-one correspondence with elements in that set A.&lt;/p&gt;
-
-&lt;p&gt;What about functions &lt;strong&gt;returning &lt;code&gt;void&lt;/code&gt; (C++), or &lt;code&gt;Unit&lt;/code&gt; (Haskell, Scala)&lt;/strong&gt;? Usually this kind of functions have &lt;strong&gt;side effects&lt;/strong&gt;, but if they are &lt;strong&gt;pure&lt;/strong&gt; what they are doing is &lt;em&gt;mapping&lt;/em&gt; elements in a set A to a singleton, so, all elements in a set A will be mapped to the same value. Lets see a few examples:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+All this may be seems like nonsense, but we are building the concepts bottom up, as you delve more deeply into Category Theory, it will gain more and more sense. For example, with this knowledge you can avoid mentioning explicitly the elements in a set, now you can reference them with Arrows (Functions in this case, since we are in the Category of Sets). Functions going &lt;strong&gt;from Unit to any type A&lt;/strong&gt; are in one-to-one correspondence with elements in that set A.
+&lt;/p&gt;
+&lt;p&gt;
+What about functions &lt;strong&gt;returning &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; (C++), or &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt; (Haskell, Scala)&lt;/strong&gt;? Usually this kind of functions have &lt;strong&gt;side effects&lt;/strong&gt;, but if they are &lt;strong&gt;pure&lt;/strong&gt; what they are doing is &lt;em&gt;mapping&lt;/em&gt; elements in a set A to a singleton, so, all elements in a set A will be mapped to the same value. Lets see a few examples:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The special declaration using &lt;code&gt;_&lt;/code&gt; means it does not matter what argument you pass in to &lt;code&gt;f&lt;/code&gt;, as the argument type doesn&#39;t matter, you can define the function above in a more generic way:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+The special declaration using &lt;code class=&#34;verbatim&#34;&gt;_&lt;/code&gt; means it does not matter what argument you pass in to &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;, as the argument type doesn&amp;#39;t matter, you can define the function above in a more generic way:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;It won&#39;t matter what type you pass to this function, it will always be mapped to &lt;code&gt;Unit&lt;/code&gt;. Here is the scala equivalent:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+It won&amp;#39;t matter what type you pass to this function, it will always be mapped to &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt;. Here is the scala equivalent:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The next logical type to see is a &lt;strong&gt;set with 2 elements,&lt;/strong&gt; which corresponds with &lt;code&gt;bool&lt;/code&gt; in C++, &lt;code&gt;Bool&lt;/code&gt; in Haskell and &lt;code&gt;Boolean&lt;/code&gt; in Scala. Functions to booleans are called predicates, examples of this functions: &lt;code&gt;isDigit, isLower, isLetter&lt;/code&gt; and so on.&lt;/p&gt;
-
-&lt;h1 id=&#34;challenges&#34;&gt;Challenges&lt;/h1&gt;
-
-&lt;p&gt;Now I want to share with you two of the Challenges Bartosz proposes on his site that I solved. Please consider that they might be wrong or can be improved, I would like to hear your take on this challenges, so please comment below.
-You can see the complete list of challenges on Bartosz website (Linked in the refernces), I&#39;ve only solved #1 and #6.&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+The next logical type to see is a &lt;strong&gt;set with 2 elements,&lt;/strong&gt; which corresponds with &lt;code class=&#34;verbatim&#34;&gt;bool&lt;/code&gt; in C++, &lt;code class=&#34;verbatim&#34;&gt;Bool&lt;/code&gt; in Haskell and &lt;code class=&#34;verbatim&#34;&gt;Boolean&lt;/code&gt; in Scala. Functions to booleans are called predicates, examples of this functions: &lt;code class=&#34;verbatim&#34;&gt;isDigit, isLower, isLetter&lt;/code&gt; and so on.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Challenges
+&lt;/h2&gt;
+&lt;p&gt;
+Now I want to share with you two of the Challenges Bartosz proposes on his site that I solved. Please consider that they might be wrong or can be improved, I would like to hear your take on this challenges, so please comment below.
+You can see the complete list of challenges on Bartosz website (Linked in the refernces), I&amp;#39;ve only solved #1 and #6.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Challenge #1&lt;/li&gt;
-Here is what I&#39;ve done, I tried to do it with an immutable Map, but couldn&#39;t get it to work:
+&lt;li&gt;
+&lt;p&gt;
+Challenge #1
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;
+Here is what I&amp;#39;ve done, I tried to do it with an immutable Map, but couldn&amp;#39;t get it to work:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;mutable.Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;,&lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mutable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getOrElseUpdate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;you can test it with:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+you can test it with:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nc&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
@@ -109,33 +170,42 @@ Here is what I&#39;ve done, I tried to do it with an immutable Map, but couldn&#
 &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Takes 5 secs
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;immediate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Challenge #6&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Challenge #6
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;
-            alt=&#34;Scala Category Theory functions and types&#34;
-            title=&#34;Scala Category Theory functions and types&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;527&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/teoria-categorias-scala-tipos-funciones.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/teoria-categorias-scala-tipos-funciones.png&amp;#34;
+            alt=&amp;#34;Scala Category Theory functions and types&amp;#34;
+            title=&amp;#34;Scala Category Theory functions and types&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;527&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+References
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/24/types-and-functions/trackback/&#34; title=&#34;Types and Functions, by Bartosz Milewski&#34;&gt;Types and Functions, by Bartosz Milewski&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bartoszmilewski.com/2014/11/24/types-and-functions/trackback/&#34;&gt;Types and Functions, by Bartosz Milewski&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -144,108 +214,153 @@ Here is what I&#39;ve done, I tried to do it with an immutable Map, but couldn&#
             <pubDate>Tue, 24 Oct 2017 18:51:20 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/scala-category-theory-composition/</guid>
-            <description>
+            <description>&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;This post is part of a series on Category Theory for Scala I am writing based on &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;Bartosz Milewski Book on the same topic&lt;/a&gt;. As I read the book, I take notes, I try to solve the Challenges Bartosz proposes in Scala and make them public in this posts. You can find all the code in my github repo &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, you can also visit the &lt;a href=&#34;https://elbauldelprogramador.com/en/scala-category-theory/&#34;&gt;Table Of Contents&lt;/a&gt; of this series.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Thanks to &lt;strong&gt;Jesús López&lt;/strong&gt; for pointing out some errors&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;This is the first post I&#39;m going to write about &lt;strong&gt;Category Theory&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;I&#39;ve been wanting to learn Category Theory for a while, since it seems to have &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34; title=&#34;practical applications&#34;&gt;practical applications&lt;/a&gt; in software.&lt;/p&gt;
-
-&lt;p&gt;This series will be based on the great book &lt;strong&gt;Bartosz Milewski&lt;/strong&gt; wrote some time ago. To contribute to this cause, I&#39;ve implemented the exercises he proposed in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt;, and also wrote &lt;em&gt;Property Tests&lt;/em&gt; with &lt;code&gt;scalacheck&lt;/code&gt;. I hope you enjoy this series, and don&#39;t hesitate to comment or fixing/improving this content.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;category-the-essence-of-composition&#34;&gt;Category: The Essence of Composition&lt;/h1&gt;
-
-&lt;p&gt;What is a &lt;em&gt;category&lt;/em&gt;?, from &lt;a href=&#34;https://en.wikipedia.org/wiki/Category_(mathematics)&#34; title=&#34;Wikipedia&#34;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+CHANGELOG
+&lt;/h2&gt;
+&lt;p&gt;
+&lt;em&gt;Thanks to &lt;strong&gt;Jesús López&lt;/strong&gt; for pointing out some errors&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+Introduction
+&lt;/h2&gt;
+&lt;p&gt;
+This is the first post I&amp;#39;m going to write about &lt;strong&gt;Category Theory&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+I&amp;#39;ve been wanting to learn Category Theory for a while, since it seems to have &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34;&gt;practical applications&lt;/a&gt; in software.
+&lt;/p&gt;
+&lt;p&gt;
+This series will be based on the great book &lt;strong&gt;Bartosz Milewski&lt;/strong&gt; wrote some time ago. To contribute to this cause, I&amp;#39;ve implemented the exercises he proposed in &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34;&gt;scala&lt;/a&gt;, and also wrote &lt;em&gt;Property Tests&lt;/em&gt; with &lt;code class=&#34;verbatim&#34;&gt;scalacheck&lt;/code&gt;. I hope you enjoy this series, and don&amp;#39;t hesitate to comment or fixing/improving this content.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Category: The Essence of Composition
+&lt;/h2&gt;
+&lt;p&gt;
+What is a &lt;em&gt;category&lt;/em&gt;?, from &lt;a href=&#34;https://en.wikipedia.org/wiki/Category_(mathematics)&#34;&gt;Wikipedia&lt;/a&gt;:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-In mathematics, a category is an algebraic structure similar to a group but without requiring inverse or closure properties. It comprises &#34;objects&#34; that are linked by &#34;arrows&#34;. A category has two &lt;strong&gt;basic properties:&lt;/strong&gt; the ability to compose the arrows &lt;strong&gt;associatively&lt;/strong&gt; and the existence of an &lt;strong&gt;identity arrow&lt;/strong&gt; for each object. A simple example is the category of sets, whose objects are sets and whose arrows are functions.
+In mathematics, a category is an algebraic structure similar to a group but without requiring inverse or closure properties. It comprises &amp;#34;objects&amp;#34; that are linked by &amp;#34;arrows&amp;#34;. A category has two &lt;strong&gt;basic properties:&lt;/strong&gt; the ability to compose the arrows &lt;strong&gt;associatively&lt;/strong&gt; and the existence of an &lt;strong&gt;identity arrow&lt;/strong&gt; for each object. A simple example is the category of sets, whose objects are sets and whose arrows are functions.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;In short, a &lt;em&gt;category&lt;/em&gt; is form by &lt;strong&gt;objects and arrows&lt;/strong&gt;, and they can compose. This is best shown with an image:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;
-            alt=&#34;Arrows and objects category Theory&#34;
-            title=&#34;Arrows and objects category Theory&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Each arrow can be &lt;strong&gt;composed&lt;/strong&gt;, f.e: If &lt;code&gt;A -&amp;gt; B&lt;/code&gt; and &lt;code&gt;B -&amp;gt; D&lt;/code&gt; then there must be an arrow from &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Arrows can be called &lt;strong&gt;morphisms&lt;/strong&gt;, they can be composed. In the image above, you have:&lt;/p&gt;
-
+&lt;p&gt;
+In short, a &lt;em&gt;category&lt;/em&gt; is form by &lt;strong&gt;objects and arrows&lt;/strong&gt;, and they can compose. This is best shown with an image:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-composition.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-composition.jpg&amp;#34;
+            alt=&amp;#34;Arrows and objects category Theory&amp;#34;
+            title=&amp;#34;Arrows and objects category Theory&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Each arrow can be &lt;strong&gt;composed&lt;/strong&gt;, f.e: If &lt;code class=&#34;verbatim&#34;&gt;A -&amp;gt; B&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;B -&amp;gt; D&lt;/code&gt; then there must be an arrow from &lt;code class=&#34;verbatim&#34;&gt;A -&amp;gt; D&lt;/code&gt;. Arrows can be called &lt;strong&gt;morphisms&lt;/strong&gt;, they can be composed. In the image above, you have:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;f: A -&amp;gt; B&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g: B -&amp;gt; D&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;If you compose those two: you&#39;ll also have &lt;code&gt;h: A -&amp;gt; D&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;f: A -&amp;gt; B&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;g: B -&amp;gt; D&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+If you compose those two: you&amp;#39;ll also have &lt;code class=&#34;verbatim&#34;&gt;h: A -&amp;gt; D&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Composition reads from &lt;em&gt;right to left:&lt;/em&gt; &lt;code&gt;g∘f&lt;/code&gt; would be &lt;code&gt;g(f(x))&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;properties-of-composition&#34;&gt;Properties of Composition&lt;/h1&gt;
-
+&lt;p&gt;
+Composition reads from &lt;em&gt;right to left:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;g∘f&lt;/code&gt; would be &lt;code class=&#34;verbatim&#34;&gt;g(f(x))&lt;/code&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Properties of Composition
+&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Associativity:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;For every object exists an &lt;strong&gt;Identity Arrow&lt;/strong&gt;, it goes from the object to itself: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, as shown below:&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;strong&gt;Associativity:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+For every object exists an &lt;strong&gt;Identity Arrow&lt;/strong&gt;, it goes from the object to itself: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, as shown below:
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;
-            alt=&#34;Category Theory, object identity&#34;
-            title=&#34;Category Theory, object identity&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;examples-in-scala&#34;&gt;Examples in Scala&lt;/h1&gt;
-
-&lt;p&gt;Now that I&#39;ve shown you a bit of theory, lets implement it in &lt;strong&gt;scala&lt;/strong&gt;. As I said at the beginning of the post, I will be using &lt;em&gt;property based tests&lt;/em&gt; to check the implementation is correct and satisfy the &lt;em&gt;category properties&lt;/em&gt;, that is, &lt;strong&gt;Identity&lt;/strong&gt; and &lt;strong&gt;associativity&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is the definition of a simple &lt;em&gt;Category&lt;/em&gt; (Its actually an instance of a Category, the category &lt;strong&gt;Hask&lt;/strong&gt; in this case). A &lt;strong&gt;Hask&lt;/strong&gt; category has &lt;strong&gt;types as objects&lt;/strong&gt; and &lt;strong&gt;arrows as functions&lt;/strong&gt;. You can check the full code at &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;Category.scala in my github repo&#34;&gt;Category.scala in my github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-identity.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-identity.jpg&amp;#34;
+            alt=&amp;#34;Category Theory, object identity&amp;#34;
+            title=&amp;#34;Category Theory, object identity&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Examples in Scala
+&lt;/h2&gt;
+&lt;p&gt;
+Now that I&amp;#39;ve shown you a bit of theory, lets implement it in &lt;strong&gt;scala&lt;/strong&gt;. As I said at the beginning of the post, I will be using &lt;em&gt;property based tests&lt;/em&gt; to check the implementation is correct and satisfy the &lt;em&gt;category properties&lt;/em&gt;, that is, &lt;strong&gt;Identity&lt;/strong&gt; and &lt;strong&gt;associativity&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Here is the definition of a simple &lt;em&gt;Category&lt;/em&gt; (Its actually an instance of a Category, the category &lt;strong&gt;Hask&lt;/strong&gt; in this case). A &lt;strong&gt;Hask&lt;/strong&gt; category has &lt;strong&gt;types as objects&lt;/strong&gt; and &lt;strong&gt;arrows as functions&lt;/strong&gt;. You can check the full code at &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34;&gt;Category.scala in my github repo&lt;/a&gt;.
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;
      &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;andThen&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Simple enough, an &lt;em&gt;identity&lt;/em&gt; function and a function that compose two functions. Now lets try to prove this implementation is correct using &lt;em&gt;property based&lt;/em&gt; tests.&lt;/p&gt;
-
-&lt;h1 id=&#34;property-tests&#34;&gt;Property tests&lt;/h1&gt;
-
-&lt;h2 id=&#34;identity-property&#34;&gt;Identity Property&lt;/h2&gt;
-
-&lt;p&gt;To simplify the post, I&#39;m going to show only the important snippets of code, you can check &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;the entire code at github.&#34;&gt;the entire code at github.&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Simple enough, an &lt;em&gt;identity&lt;/em&gt; function and a function that compose two functions. Now lets try to prove this implementation is correct using &lt;em&gt;property based&lt;/em&gt; tests.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Property tests
+&lt;/h2&gt;
+&lt;p&gt;
+To simplify the post, I&amp;#39;m going to show only the important snippets of code, you can check &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34;&gt;the entire code at github.&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-7&#34;&gt;
+Identity Property
+&lt;/h3&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a == Id(a)&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
@@ -263,45 +378,60 @@ In mathematics, a category is an algebraic structure similar to a group but with
     &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The first property states that for all &lt;code&gt;Strings&lt;/code&gt; you can possibly pass to the &lt;code&gt;identity&lt;/code&gt; function, the &lt;code&gt;identity&lt;/code&gt; will always be the &lt;code&gt;String&lt;/code&gt; the function was passed to as argument.&lt;/p&gt;
-
-&lt;p&gt;The second and third properties states that it does not matter how you compose the &lt;code&gt;identity&lt;/code&gt; function with another function &lt;code&gt;f&lt;/code&gt;, it will always be that function &lt;code&gt;f&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;associativity-property&#34;&gt;Associativity Property&lt;/h2&gt;
+&lt;/div&gt;
+&lt;p&gt;
+The first property states that for all &lt;code class=&#34;verbatim&#34;&gt;Strings&lt;/code&gt; you can possibly pass to the &lt;code class=&#34;verbatim&#34;&gt;identity&lt;/code&gt; function, the &lt;code class=&#34;verbatim&#34;&gt;identity&lt;/code&gt; will always be the &lt;code class=&#34;verbatim&#34;&gt;String&lt;/code&gt; the function was passed to as argument.
+&lt;/p&gt;
+&lt;p&gt;
+The second and third properties states that it does not matter how you compose the &lt;code class=&#34;verbatim&#34;&gt;identity&lt;/code&gt; function with another function &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;, it will always be that function &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-8&#34;&gt;
+Associativity Property
+&lt;/h3&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Associativity: h∘(g∘f) = (h∘g)∘f = h∘g∘f&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;As you can see, this test states that the associative property holds.&lt;/p&gt;
-
-&lt;p&gt;If you execute this property tests, all pass:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;
-            alt=&#34;Category theory property tests&#34;
-            title=&#34;Category theory property tests&#34;
-            sizes=&#34;(min-width: 397px) 397px, 100vw&#34;
-            width=&#34;397&#34;
-            height=&#34;105&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;That&#39;s it for this first part, I hope you enjoy it, I would like to hear your opinion, &lt;em&gt;comment below!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+As you can see, this test states that the associative property holds.
+&lt;/p&gt;
+&lt;p&gt;
+If you execute this property tests, all pass:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-composition-test.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-composition-test.png&amp;#34;
+            alt=&amp;#34;Category theory property tests&amp;#34;
+            title=&amp;#34;Category theory property tests&amp;#34;
+            sizes=&amp;#34;(min-width: 397px) 397px, 100vw&amp;#34;
+            width=&amp;#34;397&amp;#34;
+            height=&amp;#34;105&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+That&amp;#39;s it for this first part, I hope you enjoy it, I would like to hear your opinion, &lt;em&gt;comment below!&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+Resources
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/trackback/&#34; title=&#34;Category: The Essence of Composition&#34;&gt;Category: The Essence of Composition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/trackback/&#34;&gt;Category: The Essence of Composition&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

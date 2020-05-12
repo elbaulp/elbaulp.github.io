@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Matemáticas on El Baúl del programador</title>
+        <title>matemáticas on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/matem%C3%A1ticas/</link>
-        <description>Recent content in Matemáticas on El Baúl del programador</description>
+        <description>Recent content in matemáticas on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 04 Dec 2017 12:12:52 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/matem%C3%A1ticas/</link>
-            <title>Matemáticas on El Baúl del programador</title>
+            <title>matemáticas on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,66 +22,87 @@
             
             <guid>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-ii/</guid>
             <description>
+&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;Este artículo es parte del curso de &lt;strong&gt;Introducción a la Criptografía&lt;/strong&gt;, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34;&gt;elbaulp/cripto&lt;/a&gt;, también hay una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-criptografia/&#34;&gt;tabla de contenidos.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;h1 id=&#34;cálculo-de-potencias&#34;&gt;Cálculo de potencias&lt;/h1&gt;
-
-&lt;p&gt;Queremos ahora, dados &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt; y &lt;code&gt;n&lt;/code&gt; calcular \(a^m\bmod n\), pero de forma eficiente, para ello definiremos el teorema de Fermat:&lt;/p&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Cálculo de potencias
+&lt;/h2&gt;
+&lt;p&gt;
+Queremos ahora, dados &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;m&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;n&lt;/code&gt; calcular \(a^m\bmod n\), pero de forma eficiente, para ello definiremos el teorema de Fermat:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Sean \(a,n \in \mathbb N\), si \(mcd(a,n) = 1\), \(a^{\phi(n)} \equiv 1\pmod n\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Veamos algunos ejemplos. En \(\mathbb Z_5,\ \phi(5) = 4\), luego, por el teorema de Fermat, tenemos que \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). En \(\mathbb Z_{53}, \phi(53) = 52\), para calcular \(7^{111}\), como \(mcd(7, 53) = 1\) entonces \( 7^{52} = 1\), luego \(7^{52\cdot 2} = 7^{104} = 1\) y por tanto \(7^{111} = 7^7 = 29\).&lt;/p&gt;
-
-&lt;p&gt;Un caso particular del teorema de Fermat, es el teorema Pequeño de Fermat:&lt;/p&gt;
-
+&lt;p&gt;
+Veamos algunos ejemplos. En \(\mathbb Z_5,\ \phi(5) = 4\), luego, por el teorema de Fermat, tenemos que \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). En \(\mathbb Z_{53}, \phi(53) = 52\), para calcular \(7^{111}\), como \(mcd(7, 53) = 1\) entonces \( 7^{52} = 1\), luego \(7^{52\cdot 2} = 7^{104} = 1\) y por tanto \(7^{111} = 7^7 = 29\).
+&lt;/p&gt;
+&lt;p&gt;
+Un caso particular del teorema de Fermat, es el teorema Pequeño de Fermat:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1\pmod p\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Como consecuencia a esto se tiene que \(a^{p} \equiv a\pmod p\). Veamos algunos ejemplos:&lt;/p&gt;
-
-&lt;p&gt;Calculemos las unidades de \(\mathbb Z_4\), que son \(\mathcal U(\mathbb Z_4) = \{1,3\}\), sabemos que únicamente tiene dos unidades, porque \(\phi(4) = \phi(2^2) = 2\), y particularmente son el 1 y el 3, porque cumplen que \(1^2 = 3^2 = 1\). Más arriba vimos que en \(\mathbb Z_5,\ \phi(5) = 4\) y por tanto todos sus elementos &lt;a href=&#34;https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/#c%C3%A1lculo-de-inversos&#34; title=&#34;tienen inverso&#34;&gt;tienen inverso&lt;/a&gt;, comprobemos que también se cumple una de las variantes del teorema Pequeño de Fermat en \(\mathbb Z_5\). El teorema dice \(a^{p} \equiv a\pmod p\), como vemos, en \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).&lt;/p&gt;
-
-&lt;h2 id=&#34;algoritmo-para-el-cálculo-de-potencias&#34;&gt;Algoritmo para el cálculo de potencias&lt;/h2&gt;
-
-&lt;p&gt;Uno de los algoritmos usados para el cálculo de potencias modulares es el siguiente:&lt;/p&gt;
-
+&lt;p&gt;
+Como consecuencia a esto se tiene que \(a^{p} \equiv a\pmod p\). Veamos algunos ejemplos:
+&lt;/p&gt;
+&lt;p&gt;
+Calculemos las unidades de \(\mathbb Z_4\), que son \(\mathcal U(\mathbb Z_4) = \{1,3\}\), sabemos que únicamente tiene dos unidades, porque \(\phi(4) = \phi(2^2) = 2\), y particularmente son el 1 y el 3, porque cumplen que \(1^2 = 3^2 = 1\). Más arriba vimos que en \(\mathbb Z_5,\ \phi(5) = 4\) y por tanto todos sus elementos &lt;a href=&#34;https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/#c%C3%A1lculo-de-inversos&#34;&gt;tienen inverso&lt;/a&gt;, comprobemos que también se cumple una de las variantes del teorema Pequeño de Fermat en \(\mathbb Z_5\). El teorema dice \(a^{p} \equiv a\pmod p\), como vemos, en \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Algoritmo para el cálculo de potencias
+&lt;/h3&gt;
+&lt;p&gt;
+Uno de los algoritmos usados para el cálculo de potencias modulares es el siguiente:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Entrada: \(a\in\mathbb Z_n\), un entero \(0 \leq k \lt n\) cuya representación binaria es \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
-&lt;li&gt;Salida: \(a^k \pmod n\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Entrada: \(a\in\mathbb Z_n\), un entero \(0 \leq k \lt n\) cuya representación binaria es \(\sum_{i=0}^t k_i 2^i\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Salida: \(a^k \pmod n\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;  1. Fijar b = 1, Si k = 0 devolver b.
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;  1. Fijar b = 1, Si k = 0 devolver b.
   2. A = a
   3. Si k_0 = 1 entonces b = a
   4. Para cada i desde 1 a t repetir:
      1. A = A * A modulo n.
      2. Si k_i = 1 entonces b = A * b modulo n
-  5. Devolver b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Este algoritmo se basa en el hecho de que se puede representar el exponente en representación binaria. La representación binaria de k viene dada por \(\sum_{i=0}^t k_i 2^i\), donde cada \(k_i\in \{0, 1\}\). Quizá con esta notación no te resulte familiar, pero no es más que la forma abreviada de la más conocida, por ejemplo, 5 en binario es \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Sabiendo esto, entonces&lt;/p&gt;
-
-&lt;p&gt;$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$&lt;/p&gt;
-
-&lt;p&gt;Si analizas un poco la expresión de arriba, cuando \(k_i = 0\) todo el término \((a^{2^i})^{k_i} = 1\), lo cual implica que ese cálculo no va a cambiar el resultado, porque estás multiplicando por 1.&lt;/p&gt;
-
-&lt;p&gt;Con este apunte, leer el algoritmo es sencillo. Recibe un número entero y otros dos números, k,n &gt; 0 y calcula \(a^{k} \pmod n\). Si k==0 no es necesario hacer ningún cálculo y simplemente devolvemos 1, ya que cualquier cosa elevada a cero es 1. En el paso 3, si \(k_0\) (el bit menos significativo de la representación binaria) es 1, luego \((a^{2^0})^{k_0} = a\), de lo contrario b = 1, ya que estás elevando a 0, y cualquier número elevado a 0 es 1. El siguiente paso es iterar sobre los bits restantes de k, es decir, desde \(k_1 \dots k_t\). Básicamente se repite el mismo proceso, se eleva al cuadrado A (corresponde con esta parte de la expresión \((a^2\)), y si el bit \(k_i = 1\) multiplicas \((a^{2^i})^{1}\) por &lt;code&gt;b&lt;/code&gt;, si \(k_i = 0\) no hace falta hacer nada, ya que toda la expresión \((a^{2^i})^{0} = 1\). Una vez recorrida la representación binaria de k, devolvemos b.&lt;/p&gt;
-
-&lt;p&gt;Para entenderlo mejor, imagina que quieres calcular \(2^5\pmod 5\). El primer paso es representar el exponente en binario, \(5 = 101_b\), sigue los pasos del algoritmo, donde a = 2, k = 5 y n = 5:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;b = 1
+  5. Devolver b&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Este algoritmo se basa en el hecho de que se puede representar el exponente en representación binaria. La representación binaria de k viene dada por \(\sum_{i=0}^t k_i 2^i\), donde cada \(k_i\in \{0, 1\}\). Quizá con esta notación no te resulte familiar, pero no es más que la forma abreviada de la más conocida, por ejemplo, 5 en binario es \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Sabiendo esto, entonces
+&lt;/p&gt;
+&lt;p&gt;
+$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$
+&lt;/p&gt;
+&lt;p&gt;
+Si analizas un poco la expresión de arriba, cuando \(k_i = 0\) todo el término \((a^{2^i})^{k_i} = 1\), lo cual implica que ese cálculo no va a cambiar el resultado, porque estás multiplicando por 1.
+&lt;/p&gt;
+&lt;p&gt;
+Con este apunte, leer el algoritmo es sencillo. Recibe un número entero y otros dos números, k,n &amp;gt; 0 y calcula \(a^{k} \pmod n\). Si k==0 no es necesario hacer ningún cálculo y simplemente devolvemos 1, ya que cualquier cosa elevada a cero es 1. En el paso 3, si \(k_0\) (el bit menos significativo de la representación binaria) es 1, luego \((a^{2^0})^{k_0} = a\), de lo contrario b = 1, ya que estás elevando a 0, y cualquier número elevado a 0 es 1. El siguiente paso es iterar sobre los bits restantes de k, es decir, desde \(k_1 \dots k_t\). Básicamente se repite el mismo proceso, se eleva al cuadrado A (corresponde con esta parte de la expresión \((a^2\)), y si el bit \(k_i = 1\) multiplicas \((a^{2^i})^{1}\) por &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;, si \(k_i = 0\) no hace falta hacer nada, ya que toda la expresión \((a^{2^i})^{0} = 1\). Una vez recorrida la representación binaria de k, devolvemos b.
+&lt;/p&gt;
+&lt;p&gt;
+Para entenderlo mejor, imagina que quieres calcular \(2^5\pmod 5\). El primer paso es representar el exponente en binario, \(5 = 101_b\), sigue los pasos del algoritmo, donde a = 2, k = 5 y n = 5:
+&lt;/p&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;b = 1
 A = 2
 es k_0 == 1? sí -&amp;gt; b = 2
 Desde k_1 hasta k_t:
@@ -90,47 +110,52 @@ Desde k_1 hasta k_t:
    es k_1 == 1? no
    A = A * A mod n -&amp;gt; 4 * 4 mod 5 = 1
    es k_2 == 1? sí -&amp;gt; b = A * b mod n -&amp;gt; b = 1 * 2 mod 5 = 2
-devuelve b, que es 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;He intentado hacer dos representaciones visuales de cómo funciona, supón que quieres calcular \(2^7 \pmod 5\) y \(2^{11} \pmod 5\):&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;
-            alt=&#34;Calcular potencias modulares criptografía&#34;
-            title=&#34;Calcular potencias modulares Criptografía&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;330&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Calcular potencias modulares criptografía&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;
-            alt=&#34;Calcular potencias modulares criptografía&#34;
-            title=&#34;Calcular potencias modulares criptografía&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;206&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Espero que con este ejemplo te haya quedado claro cómo funciona el algoritmo. Lo he implementado en python, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+devuelve b, que es 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+He intentado hacer dos representaciones visuales de cómo funciona, supón que quieres calcular \(2^7 \pmod 5\) y \(2^{11} \pmod 5\):
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;
+            alt=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            title=&amp;#34;Calcular potencias modulares Criptografía&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;330&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Calcular potencias modulares criptografía&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;
+            alt=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            title=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;206&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Espero que con este ejemplo te haya quedado claro cómo funciona el algoritmo. Lo he implementado en python, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
   &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
@@ -150,40 +175,77 @@ devuelve b, que es 2
           &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;orden&#34;&gt;Orden&lt;/h2&gt;
-
-&lt;p&gt;Definiremos el orden de un número como
+&lt;/div&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Orden
+&lt;/h3&gt;
+&lt;p&gt;
+Definiremos el orden de un número como
 \[ord(a) = min(k\ \in \mathbb N\backslash 0\:a^k=1)\]
-es decir, el número mínimo al que hay que elevar &lt;code&gt;a&lt;/code&gt; para que sea igual a 1. Así, por ejemplo, en \(\mathbb Z_5\), tenemos los siguientes órdenes para sus elementos:&lt;/p&gt;
-
+es decir, el número mínimo al que hay que elevar &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; para que sea igual a 1. Así, por ejemplo, en \(\mathbb Z_5\), tenemos los siguientes órdenes para sus elementos:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(1^1 = 1; ord(1) = 1\), ya que el número mínimo al que hay que elevar 1 para que de 1, es 1.&lt;/li&gt;
-&lt;li&gt;\(2^4 = 1; ord(2) = 4\)&lt;/li&gt;
-&lt;li&gt;\(3^4 = 1; ord(3) = 4\)&lt;/li&gt;
-&lt;li&gt;\(4^2 = 1; ord(4) = 2\), ya que el número mínimo al que hay que elevar 4 para que de 1, es 2.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(1^1 = 1; ord(1) = 1\), ya que el número mínimo al que hay que elevar 1 para que de 1, es 1.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(2^4 = 1; ord(2) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(3^4 = 1; ord(3) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(4^2 = 1; ord(4) = 2\), ya que el número mínimo al que hay que elevar 4 para que de 1, es 2.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;subgrupos-y-primitivos&#34;&gt;Subgrupos y primitivos&lt;/h2&gt;
-
+&lt;h3 id=&#34;headline-4&#34;&gt;
+Subgrupos y primitivos
+&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&gt; = \{ a^k:\ k\in N \}\) es un subgrupo generado por a.
+Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&amp;gt; = \{ a^k:\ k\in N \}\) es un subgrupo generado por a.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Por ejemplo, los subgrupos de las unidades de \(\mathbb Z_5\) son:&lt;/p&gt;
-
+&lt;p&gt;
+Por ejemplo, los subgrupos de las unidades de \(\mathbb Z_5\) son:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(\lt 1&gt; = \{ 1 \}\), ya que \(\forall k \in\mathbb Z, 1^k = 1\)&lt;/li&gt;
-&lt;li&gt;\(\lt 2&gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 3&gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 4&gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 1&amp;gt; = \{ 1 \}\), ya que \(\forall k \in\mathbb Z, 1^k = 1\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 2&amp;gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 3&amp;gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 4&amp;gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Si nos fijamos, tanto &amp;lt;2&gt; como &amp;lt;3&gt; generan por completo \(\mathbb Z_5\), estos elementos se llaman primitivos. Particularmente, &amp;lt;a&gt; será primitivo si su &lt;strong&gt;orden es máximo&lt;/strong&gt;, en el caso que nos ocupa, vemos que es cierto, puesto que \(\phi(5)=4, ord(2) = ord(3) = 4\), que es el máximo. Además, el orden de un número establece número de elementos que genera el subgrupo, como ord(2) = ord(3) = 4, sabemos que éstos subgrupos generan 4 elementos, que son el número de unidades de \(\mathbb Z_5\), y por tanto, lo generan completamente. De igual manera, vimos un poco más arriba que ord(4) = 2, y podemos comprobar 4 genera únicamente dos elementos.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;p&gt;
+Si nos fijamos, tanto &amp;amp;lt;2&amp;gt; como &amp;amp;lt;3&amp;gt; generan por completo \(\mathbb Z_5\), estos elementos se llaman primitivos. Particularmente, &amp;amp;lt;a&amp;gt; será primitivo si su &lt;strong&gt;orden es máximo&lt;/strong&gt;, en el caso que nos ocupa, vemos que es cierto, puesto que \(\phi(5)=4, ord(2) = ord(3) = 4\), que es el máximo. Además, el orden de un número establece número de elementos que genera el subgrupo, como ord(2) = ord(3) = 4, sabemos que éstos subgrupos generan 4 elementos, que son el número de unidades de \(\mathbb Z_5\), y por tanto, lo generan completamente. De igual manera, vimos un poco más arriba que ord(4) = 2, y podemos comprobar 4 genera únicamente dos elementos.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Referencias
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -194,6 +256,7 @@ Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&gt; = \{ a^k:\ k\in N
 
 
 
+&lt;/p&gt;
 </description>
         </item>
         
@@ -203,86 +266,148 @@ Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&gt; = \{ a^k:\ k\in N
             <pubDate>Mon, 13 Nov 2017 10:02:16 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/teoria-categorias-scala-tipos-funciones/</guid>
-            <description>
+            <description>&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;Este artículo forma parte de una serie sobre Teoría de Categorías en Scala que estoy escribiendo basándome en &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;el libro de Bartosz Milewski&lt;/a&gt;. Conforme voy leyendo, tomo notas y intento resolver los ejercicios propuestos por Bartosz, pero en Scala. El producto de ese trabajo son estos artículos que comparto en este blog. Todo el código está en &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, también puedes visitar la &lt;a href=&#34;https://elbauldelprogramador.com/scala-category-theory/&#34;&gt;tabla de contenidos&lt;/a&gt; de esta serie.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;p&gt;&lt;em&gt;En el artículo anterior escribí sobre&lt;/em&gt; &lt;a href=&#34;https://elbauldelprogramador.com/teoria-categorias-scala-composicion/&#34; title=&#34;composición en Teoría de Categorías&#34;&gt;composición en Teoría de Categorías&lt;/a&gt;, &lt;em&gt;hoy voy a hablar sobre &lt;strong&gt;tipos y funciones en Teoría de Categorías.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;tipos-y-funciones&#34;&gt;Tipos y Funciones&lt;/h1&gt;
-
-&lt;p&gt;Se pueden componer flechas, pero &lt;em&gt;no cualquier par de flechas&lt;/em&gt;, el destino de una flecha debe coincidir con el origen de la otra. En términos de programación: &lt;strong&gt;El tipo de retorno de una función debe coincidir con el tipo de entrada de la siguiente función.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;qué-son-los-tipos&#34;&gt;¿Qué son los tipos?&lt;/h1&gt;
-
-&lt;p&gt;Puedes pensar en un &lt;strong&gt;Tipo&lt;/strong&gt; como &lt;strong&gt;Conjuntos&lt;/strong&gt;, estos pueden ser &lt;em&gt;finitos&lt;/em&gt; (Booleanos, Chars) o &lt;em&gt;infinitos&lt;/em&gt; (Cadenas de texto, Enteros). En teoría de categorías existe una &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_de_conjuntos&#34; title=&#34;Categoría de Conjuntos&#34;&gt;Categoría de Conjuntos&lt;/a&gt;, llamada &lt;strong&gt;Set&lt;/strong&gt; (Conjunto). En esta categoría, los objetos son &lt;strong&gt;conjuntos&lt;/strong&gt;, y las flechas &lt;strong&gt;funciones de un conjunto a otro.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;La definición de arriba es en &lt;em&gt;el mundo matemático&lt;/em&gt;, en la realidad puedes pensar en los &lt;strong&gt;conjuntos como tipos&lt;/strong&gt; en un lenguaje de programación y en las &lt;strong&gt;funciones en el Set como funciones&lt;/strong&gt; en dicho lenguaje de programación. Pero hay un problema, en matemáticas una función simplemente &lt;em&gt;sabe la respuesta,&lt;/em&gt; pero en un lenguaje de programación eres tú quien debe implementar el código que calcule esa respuesta, y hay algunas funciones que nunca retornan. Como solución, muchos lenguajes de programación tienen un tipo llamado &lt;strong&gt;Tipo de fondo&lt;/strong&gt; (&lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34; title=&#34;Bottom type&#34;&gt;Bottom type&lt;/a&gt;), todos los tipos extienden de él. En Haskell este tipo se denota por &lt;code&gt;_|_&lt;/code&gt;, en &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt; por &lt;code&gt;Nothing&lt;/code&gt; (Puedes &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Nothing.html&#34; title=&#34;ver la documentación de este tipo&#34;&gt;ver la documentación de este tipo&lt;/a&gt;). Una función que devuelve el tipo fondo se llama &lt;strong&gt;Función Parcial&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;el-modelo-matemático&#34;&gt;El modelo matemático&lt;/h1&gt;
-
-&lt;p&gt;Si eres desarrollador, estoy seguro que como muchos, te has encontrado ejecutando un intérprete en tu cabeza, mientras depurabas algún programa. El ser humano no es muy bueno en esta tarea, ya que es muy complicado llevar cuenta de todas las variables. Existen alternativas para saber si un programa es correcto, la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_formal&#34; title=&#34;Semática Formal&#34;&gt;Semática Formal&lt;/a&gt;. En resumen, la &lt;strong&gt;Semántica Formal&lt;/strong&gt; es un método para formalizar el &lt;em&gt;significado&lt;/em&gt; de un lenguaje de programación, se ocupa de encontrar objetos matemáticos (llamados dominio) que representan lo que hace el programa.&lt;/p&gt;
-
-&lt;p&gt;Por contra a la &lt;em&gt;Semántica Formal&lt;/em&gt; está la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_operacional&#34; title=&#34;Semántica Operacional&#34;&gt;Semántica Operacional&lt;/a&gt;. Esta intenta demostrar ciertas propiedades de un programa (como su corrección), para ello construye demostraciones lógicas, aunque a menudo es complejo.&lt;/p&gt;
-
-&lt;p&gt;Teniendo un modelo matemático (&lt;em&gt;Semántica Formal&lt;/em&gt;) es posible escribir demostraciones formales que verifiquen la corrección de un programa.&lt;/p&gt;
-
-&lt;h1 id=&#34;funciones-puras-e-impuras&#34;&gt;Funciones Puras e Impuras&lt;/h1&gt;
-
-&lt;p&gt;Las &lt;em&gt;funciones puras&lt;/em&gt; son aquellas que devuelven siempre el mismo resultado para la misma entrada, sin efectos colaterales. Las funciones matemáticas son un buen ejemplo de funciones puras. Por el contrario, las &lt;em&gt;funciones impuras&lt;/em&gt; tienen efectos colaterales.&lt;/p&gt;
-
-&lt;h1 id=&#34;ejemplos-de-tipos&#34;&gt;Ejemplos de Tipos&lt;/h1&gt;
-
-&lt;p&gt;Al fin hemos llegado al asunto de este artículo, &lt;strong&gt;los tipos&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Voy a empezar desde abajo, es decir, con el &lt;strong&gt;Conjunto Vacío.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;¿Qué tipo definiría al &lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_vac%C3%ADo&#34; title=&#34;Conjunto Vacío&#34;&gt;Conjunto Vacío&lt;/a&gt;? Piensa un momento, lo mencioné un poco más arriba. En Haskell este tipo es &lt;code&gt;Void&lt;/code&gt;, en Scala &lt;code&gt;Nothing&lt;/code&gt;. Este conjunto no tiene ningún elemento. Anteriormente dije que hay una categoría llamada &lt;em&gt;Set&lt;/em&gt;, en la que los &lt;em&gt;objetos son conjuntos&lt;/em&gt; y las &lt;em&gt;flechas son funciones.&lt;/em&gt; En este contexto, si &lt;code&gt;A&lt;/code&gt; es un conjunto (El conjunto vacío), solo hay una función &lt;code&gt;f&lt;/code&gt; de &lt;code&gt;{}&lt;/code&gt; a &lt;code&gt;A&lt;/code&gt;, la &lt;a href=&#34;https://en.wikipedia.org/wiki/Function_(mathematics)#Empty_function&#34; title=&#34;Función Vacía&#34;&gt;Función Vacía&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;¿Podrías definir una función que tome como parámetro un objeto de tipo &lt;code&gt;Void&lt;/code&gt; (&lt;em&gt;un conjunto vacío&lt;/em&gt;)? sí, pero no podrías llamarla, ya que no puedes pasarle un parámetro de tipo &lt;code&gt;Void&lt;/code&gt;. Sin embargo, el tipo de retorno de esta función podría ser de cualquier tipo. Este tipo de funciones (las que devuelven cualquier tipo) se llaman &lt;strong&gt;polimórficas en el tipo de retorno&lt;/strong&gt;, ejemplos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;noPuedesLlamarme&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Void&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una letra en minúscula en la declaración de una función en Haskell significa que &lt;code&gt;a&lt;/code&gt; puede ser de cualquier tipo. En Scala:&lt;/p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;em&gt;En el artículo anterior escribí sobre&lt;/em&gt; &lt;a href=&#34;https://elbauldelprogramador.com/teoria-categorias-scala-composicion/&#34;&gt;composición en Teoría de Categorías&lt;/a&gt;, &lt;em&gt;hoy voy a hablar sobre &lt;strong&gt;tipos y funciones en Teoría de Categorías.&lt;/strong&gt;&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Tipos y Funciones
+&lt;/h2&gt;
+&lt;p&gt;
+Se pueden componer flechas, pero &lt;em&gt;no cualquier par de flechas&lt;/em&gt;, el destino de una flecha debe coincidir con el origen de la otra. En términos de programación: &lt;strong&gt;El tipo de retorno de una función debe coincidir con el tipo de entrada de la siguiente función.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+¿Qué son los tipos?
+&lt;/h2&gt;
+&lt;p&gt;
+Puedes pensar en un &lt;strong&gt;Tipo&lt;/strong&gt; como &lt;strong&gt;Conjuntos&lt;/strong&gt;, estos pueden ser &lt;em&gt;finitos&lt;/em&gt; (Booleanos, Chars) o &lt;em&gt;infinitos&lt;/em&gt; (Cadenas de texto, Enteros). En teoría de categorías existe una &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_de_conjuntos&#34;&gt;Categoría de Conjuntos&lt;/a&gt;, llamada &lt;strong&gt;Set&lt;/strong&gt; (Conjunto). En esta categoría, los objetos son &lt;strong&gt;conjuntos&lt;/strong&gt;, y las flechas &lt;strong&gt;funciones de un conjunto a otro.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+La definición de arriba es en &lt;em&gt;el mundo matemático&lt;/em&gt;, en la realidad puedes pensar en los &lt;strong&gt;conjuntos como tipos&lt;/strong&gt; en un lenguaje de programación y en las &lt;strong&gt;funciones en el Set como funciones&lt;/strong&gt; en dicho lenguaje de programación. Pero hay un problema, en matemáticas una función simplemente &lt;em&gt;sabe la respuesta,&lt;/em&gt; pero en un lenguaje de programación eres tú quien debe implementar el código que calcule esa respuesta, y hay algunas funciones que nunca retornan. Como solución, muchos lenguajes de programación tienen un tipo llamado &lt;strong&gt;Tipo de fondo&lt;/strong&gt; (&lt;a href=&#34;https://en.wikipedia.org/wiki/Bottom_type&#34;&gt;Bottom type&lt;/a&gt;), todos los tipos extienden de él. En Haskell este tipo se denota por &lt;code class=&#34;verbatim&#34;&gt;_|_&lt;/code&gt;, en &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34;&gt;scala&lt;/a&gt; por &lt;code class=&#34;verbatim&#34;&gt;Nothing&lt;/code&gt; (Puedes &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Nothing.html&#34;&gt;ver la documentación de este tipo&lt;/a&gt;). Una función que devuelve el tipo fondo se llama &lt;strong&gt;Función Parcial&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+El modelo matemático
+&lt;/h2&gt;
+&lt;p&gt;
+Si eres desarrollador, estoy seguro que como muchos, te has encontrado ejecutando un intérprete en tu cabeza, mientras depurabas algún programa. El ser humano no es muy bueno en esta tarea, ya que es muy complicado llevar cuenta de todas las variables. Existen alternativas para saber si un programa es correcto, la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_formal&#34;&gt;Semática Formal&lt;/a&gt;. En resumen, la &lt;strong&gt;Semántica Formal&lt;/strong&gt; es un método para formalizar el &lt;em&gt;significado&lt;/em&gt; de un lenguaje de programación, se ocupa de encontrar objetos matemáticos (llamados dominio) que representan lo que hace el programa.
+&lt;/p&gt;
+&lt;p&gt;
+Por contra a la &lt;em&gt;Semántica Formal&lt;/em&gt; está la &lt;a href=&#34;https://es.wikipedia.org/wiki/Sem%C3%A1ntica_operacional&#34;&gt;Semántica Operacional&lt;/a&gt;. Esta intenta demostrar ciertas propiedades de un programa (como su corrección), para ello construye demostraciones lógicas, aunque a menudo es complejo.
+&lt;/p&gt;
+&lt;p&gt;
+Teniendo un modelo matemático (&lt;em&gt;Semántica Formal&lt;/em&gt;) es posible escribir demostraciones formales que verifiquen la corrección de un programa.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Funciones Puras e Impuras
+&lt;/h2&gt;
+&lt;p&gt;
+Las &lt;em&gt;funciones puras&lt;/em&gt; son aquellas que devuelven siempre el mismo resultado para la misma entrada, sin efectos colaterales. Las funciones matemáticas son un buen ejemplo de funciones puras. Por el contrario, las &lt;em&gt;funciones impuras&lt;/em&gt; tienen efectos colaterales.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Ejemplos de Tipos
+&lt;/h2&gt;
+&lt;p&gt;
+Al fin hemos llegado al asunto de este artículo, &lt;strong&gt;los tipos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Voy a empezar desde abajo, es decir, con el &lt;strong&gt;Conjunto Vacío.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+¿Qué tipo definiría al &lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_vac%C3%ADo&#34;&gt;Conjunto Vacío&lt;/a&gt;? Piensa un momento, lo mencioné un poco más arriba. En Haskell este tipo es &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt;, en Scala &lt;code class=&#34;verbatim&#34;&gt;Nothing&lt;/code&gt;. Este conjunto no tiene ningún elemento. Anteriormente dije que hay una categoría llamada &lt;em&gt;Set&lt;/em&gt;, en la que los &lt;em&gt;objetos son conjuntos&lt;/em&gt; y las &lt;em&gt;flechas son funciones.&lt;/em&gt; En este contexto, si &lt;code class=&#34;verbatim&#34;&gt;A&lt;/code&gt; es un conjunto (El conjunto vacío), solo hay una función &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt; de &lt;code class=&#34;verbatim&#34;&gt;{}&lt;/code&gt; a &lt;code class=&#34;verbatim&#34;&gt;A&lt;/code&gt;, la &lt;a href=&#34;https://en.wikipedia.org/wiki/Function_(mathematics)#Empty_function&#34;&gt;Función Vacía&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+¿Podrías definir una función que tome como parámetro un objeto de tipo &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt; (&lt;em&gt;un conjunto vacío&lt;/em&gt;)? sí, pero no podrías llamarla, ya que no puedes pasarle un parámetro de tipo &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt;. Sin embargo, el tipo de retorno de esta función podría ser de cualquier tipo. Este tipo de funciones (las que devuelven cualquier tipo) se llaman &lt;strong&gt;polimórficas en el tipo de retorno&lt;/strong&gt;, ejemplos:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;noPuedesLlamarme&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Void&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Una letra en minúscula en la declaración de una función en Haskell significa que &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; puede ser de cualquier tipo. En Scala:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;noPuedesLlamarme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;noPuedesLlamarme&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Nothing&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;str&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;¿Cual sería el tipo asociado al &lt;strong&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_unitario&#34; title=&#34;Conjunto Unitario&#34;&gt;Conjunto Unitario&lt;/a&gt;&lt;/strong&gt;? es decir, un conjunto de un solo elemento (Un posible valor). En C++ ese tipo es &lt;code&gt;void&lt;/code&gt; (No lo confundas con el &lt;code&gt;Void&lt;/code&gt; de Haskell, que representa el conjunto vacío). &lt;code&gt;void&lt;/code&gt; en C++ es un conjunto unitario, ya que tiene un único elemento. De hecho, puedes llamar a funciones que reciben &lt;code&gt;void&lt;/code&gt; como argumento. Ejemplos de estas funciones son &lt;code&gt;int f314() { ret 314 }&lt;/code&gt;, si la llamas, siempre devolverá 314. Aunque parezca no estar recibiendo ningún argumento, no es así. Si no pudieras pasarle argumento alguno no podrías llamarla. Por tanto, toma como argumento un valor ficticio con una única instancia (El conjunto Unitario, en este caso 314). El mismo ejemplo en Haskell y Scala:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+¿Cual sería el tipo asociado al &lt;strong&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_unitario&#34;&gt;Conjunto Unitario&lt;/a&gt;&lt;/strong&gt;? es decir, un conjunto de un solo elemento (Un posible valor). En C++ ese tipo es &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; (No lo confundas con el &lt;code class=&#34;verbatim&#34;&gt;Void&lt;/code&gt; de Haskell, que representa el conjunto vacío). &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; en C++ es un conjunto unitario, ya que tiene un único elemento. De hecho, puedes llamar a funciones que reciben &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; como argumento. Ejemplos de estas funciones son &lt;code class=&#34;verbatim&#34;&gt;int f314() { ret 314 }&lt;/code&gt;, si la llamas, siempre devolverá 314. Aunque parezca no estar recibiendo ningún argumento, no es así. Si no pudieras pasarle argumento alguno no podrías llamarla. Por tanto, toma como argumento un valor ficticio con una única instancia (El conjunto Unitario, en este caso 314). El mismo ejemplo en Haskell y Scala:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;-- De Unit a Integer&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aquí es más evidente que &lt;code&gt;f314&lt;/code&gt; toma un parámetro, el tipo &lt;code&gt;Unit&lt;/code&gt; (El cual permite un solo valor). Puedes llamar a esta función con &lt;code&gt;f314()&lt;/code&gt;, lo cual denota más explícitamente que toma un solo parámetro.&lt;/p&gt;
-
-&lt;p&gt;En Scala, el tipo representando el &lt;strong&gt;Conjunto Unitario&lt;/strong&gt; también se llama &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Unit.html&#34; title=&#34;Unit&#34;&gt;Unit&lt;/a&gt;, su único valor se denota con &lt;code&gt;()&lt;/code&gt;, como en Haskell:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Aquí es más evidente que &lt;code class=&#34;verbatim&#34;&gt;f314&lt;/code&gt; toma un parámetro, el tipo &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt; (El cual permite un solo valor). Puedes llamar a esta función con &lt;code class=&#34;verbatim&#34;&gt;f314()&lt;/code&gt;, lo cual denota más explícitamente que toma un solo parámetro.
+&lt;/p&gt;
+&lt;p&gt;
+En Scala, el tipo representando el &lt;strong&gt;Conjunto Unitario&lt;/strong&gt; también se llama &lt;a href=&#34;http://www.scala-lang.org/api/current/scala/Unit.html&#34;&gt;Unit&lt;/a&gt;, su único valor se denota con &lt;code class=&#34;verbatim&#34;&gt;()&lt;/code&gt;, como en Haskell:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f314&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;314&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/* de () =&amp;gt; Int */&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aunque todo esto te parezca un sin sentido, o absurdo, el objetivo es construir los conceptos de abajo a arriba. Conforme profundices más en Teoría de Categorías, todo irá ganando sentido. Por ejemplo, con el conocimiento adquirido hasta el momento puedes evitar mencionar explícitamente elementos en un conjunto, ahora simplemente los referencias con flechas (Funciones en este caso, ya que estamos tratando con la categoría Set). Las funciones que van de &lt;strong&gt;Unit a cualquier tipo A&lt;/strong&gt; están en correspondencia una-a-una con los elementos de dicho conjunto A.&lt;/p&gt;
-
-&lt;p&gt;¿Qué pasa con las funciones que &lt;strong&gt;devuelven &lt;code&gt;void&lt;/code&gt; (en C++) o &lt;code&gt;Unit&lt;/code&gt; (en Scala, Haskell)&lt;/strong&gt;? Normalmente este tipo de funciones tienen &lt;strong&gt;efectos colaterales&lt;/strong&gt;, pero si son &lt;strong&gt;puras&lt;/strong&gt; simplemente hacen corresponder elementos de un conjunto A a un &lt;strong&gt;Conjunto Unitario&lt;/strong&gt;. Es decir, todos los elementos en un conjunto A irán a parar al mismo valor. Ejemplos:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Aunque todo esto te parezca un sin sentido, o absurdo, el objetivo es construir los conceptos de abajo a arriba. Conforme profundices más en Teoría de Categorías, todo irá ganando sentido. Por ejemplo, con el conocimiento adquirido hasta el momento puedes evitar mencionar explícitamente elementos en un conjunto, ahora simplemente los referencias con flechas (Funciones en este caso, ya que estamos tratando con la categoría Set). Las funciones que van de &lt;strong&gt;Unit a cualquier tipo A&lt;/strong&gt; están en correspondencia una-a-una con los elementos de dicho conjunto A.
+&lt;/p&gt;
+&lt;p&gt;
+¿Qué pasa con las funciones que &lt;strong&gt;devuelven &lt;code class=&#34;verbatim&#34;&gt;void&lt;/code&gt; (en C++) o &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt; (en Scala, Haskell)&lt;/strong&gt;? Normalmente este tipo de funciones tienen &lt;strong&gt;efectos colaterales&lt;/strong&gt;, pero si son &lt;strong&gt;puras&lt;/strong&gt; simplemente hacen corresponder elementos de un conjunto A a un &lt;strong&gt;Conjunto Unitario&lt;/strong&gt;. Es decir, todos los elementos en un conjunto A irán a parar al mismo valor. Ejemplos:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
-&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En Haskell &lt;code&gt;_&lt;/code&gt; significa que da igual el argumento que le pases a la función &lt;code&gt;f&lt;/code&gt;, ya que lo va a ignorar, puedes definir la función anterior de forma más genérica:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;fInt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+En Haskell &lt;code class=&#34;verbatim&#34;&gt;_&lt;/code&gt; significa que da igual el argumento que le pases a la función &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;, ya que lo va a ignorar, puedes definir la función anterior de forma más genérica:
+&lt;/p&gt;
+&lt;div class=&#34;src src-haskell&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-haskell&#34; data-lang=&#34;haskell&#34;&gt;&lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;::&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;unit&lt;/span&gt; &lt;span class=&#34;kr&#34;&gt;_&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;No importa qué tipo de argumento le pases a &lt;code&gt;unit&lt;/code&gt;, siempre va a hacer corresponder ese argumento a &lt;code&gt;Unit&lt;/code&gt;. Este es el equivalente en Scala:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+No importa qué tipo de argumento le pases a &lt;code class=&#34;verbatim&#34;&gt;unit&lt;/code&gt;, siempre va a hacer corresponder ese argumento a &lt;code class=&#34;verbatim&#34;&gt;Unit&lt;/code&gt;. Este es el equivalente en Scala:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;unit&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Unit&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El siguiente paso lógico en los tipos es el &lt;strong&gt;conjunto de dos elementos,&lt;/strong&gt; que corresponde con &lt;code&gt;bool&lt;/code&gt; en C++, &lt;code&gt;Bool&lt;/code&gt; en Haskell y &lt;code&gt;Boolean&lt;/code&gt; en Scala. Las funciones a booleanos se llaman predicados, seguro que estás familiarizado con nombre como &lt;code&gt;isDigit, isLower, isLetter&lt;/code&gt; etc.&lt;/p&gt;
-
-&lt;h1 id=&#34;ejercicios&#34;&gt;Ejercicios&lt;/h1&gt;
-
-&lt;p&gt;Quiero compartir contigo algunos de los ejercicios que he resuelto de los que propone Bartosz. Ten en cuenta que puedo estar equivocado, si detectas un error, o crees que algo puede mejorarse, &lt;strong&gt;deja un comentario&lt;/strong&gt;.
-Puedes ver la lista de ejercicios completa en el blog de Bartosz (Enlazado en las referencias), yo solo he resuelto el 1 y el 6.&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+El siguiente paso lógico en los tipos es el &lt;strong&gt;conjunto de dos elementos,&lt;/strong&gt; que corresponde con &lt;code class=&#34;verbatim&#34;&gt;bool&lt;/code&gt; en C++, &lt;code class=&#34;verbatim&#34;&gt;Bool&lt;/code&gt; en Haskell y &lt;code class=&#34;verbatim&#34;&gt;Boolean&lt;/code&gt; en Scala. Las funciones a booleanos se llaman predicados, seguro que estás familiarizado con nombre como &lt;code class=&#34;verbatim&#34;&gt;isDigit, isLower, isLetter&lt;/code&gt; etc.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Ejercicios
+&lt;/h2&gt;
+&lt;p&gt;
+Quiero compartir contigo algunos de los ejercicios que he resuelto de los que propone Bartosz. Ten en cuenta que puedo estar equivocado, si detectas un error, o crees que algo puede mejorarse, &lt;strong&gt;deja un comentario&lt;/strong&gt;.
+Puedes ver la lista de ejercicios completa en el blog de Bartosz (Enlazado en las referencias), yo solo he resuelto el 1 y el 6.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Ejercicio 1&lt;/li&gt;
-Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmutable, pero no supe hacerlo funcionar:
+&lt;li&gt;
+&lt;p&gt;
+Ejercicio 1
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;
+Esta es mi solución. Intenté hacerlo con un &lt;code class=&#34;verbatim&#34;&gt;Map&lt;/code&gt; inmutable, pero no supe hacerlo funcionar:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;mutable.Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;,&lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mutable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;empty&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apply&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;values&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getOrElseUpdate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Puedes probarlo con esta función:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Puedes probarlo con esta función:
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nc&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sleep&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
@@ -290,33 +415,42 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
 &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Memoize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Takes 5 secs
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;immediate&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;Ejercicio 6&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Ejercicio 6
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/teoria-categorias-scala-tipos-funciones.png&#34;
-            alt=&#34;Scala Category Theory functions and types&#34;
-            title=&#34;Scala Category Theory functions and types&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;527&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/teoria-categorias-scala-tipos-funciones.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/teoria-categorias-scala-tipos-funciones.png&amp;#34;
+            alt=&amp;#34;Scala Category Theory functions and types&amp;#34;
+            title=&amp;#34;Scala Category Theory functions and types&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;527&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Referencias
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/24/types-and-functions/trackback/&#34; title=&#34;Types and Functions, by Bartosz Milewski&#34;&gt;Types and Functions, by Bartosz Milewski&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bartoszmilewski.com/2014/11/24/types-and-functions/trackback/&#34;&gt;Types and Functions, by Bartosz Milewski&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -325,66 +459,99 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
             <pubDate>Sat, 28 Oct 2017 11:23:44 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/</guid>
-            <description>&lt;h1 id=&#34;aritmética-modular&#34;&gt;Aritmética modular&lt;/h1&gt;
-
-&lt;p&gt;Antes de profundizar en los temas sobre criptografía, es necesario tener una base matemática, ya que al fin y al cabo, la criptografía se basa en ellas.&lt;/p&gt;
-
-&lt;p&gt;Nos centraremos en la aritmética modular, y cómo operar con ella. La aritmética modular se define del siguiente modo:&lt;/p&gt;
-
-&lt;p&gt;\[a \equiv b\pmod n,\]&lt;/p&gt;
-
-&lt;p&gt;si \(b - a\) es múltiplo de \(n\) o, dicho de otro modo, \(a\) y \(b\) tienen el mismo resto cuando se dividen por \(n\).&lt;/p&gt;
-
-&lt;p&gt;Así, por ejemplo, \(3 \equiv 8 \pmod 5\), ya que \(8 - 3 = 5\), que es un multiplo de 5. También podemos comprobarlo sabiendo que el resto de dividir 3 entre 5 es 3 y el resto de 8 entre 5, también. A partir de ahora expresaremos el resto de dividir un número entre otro como sigue:&lt;/p&gt;
-
-&lt;p&gt;\[a\bmod n = r,\]&lt;/p&gt;
-
-&lt;p&gt;donde \(r\) es el resto de dividir \(a\) entre \(n\).&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;
-            alt=&#34;Modular Arithmetics&#34;
-            title=&#34;Modular Arithmetics&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;cálculo-de-inversos&#34;&gt;Cálculo de inversos&lt;/h2&gt;
-
-&lt;p&gt;Sea \(a \in \mathbb Z_n\), se dice que \(a\) tiene inverso, o que es una unidad, si \(\exists b \in \mathbb Z_n\ :\ ba = 1\), y se denota por \(a^{-1}\).&lt;/p&gt;
-
-&lt;p&gt;Al conjunto de todas las unidades de \(\mathbb Z_n\) lo llamaremos \(\mathcal{U}(\mathbb Z_n)\) y se define como:&lt;/p&gt;
-
-&lt;p&gt;\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : mcd(a, n) = 1\},\]&lt;/p&gt;
-
-&lt;p&gt;donde &lt;em&gt;mcd&lt;/em&gt; es el máximo común divisor.&lt;/p&gt;
-
-&lt;p&gt;Particularmente, si \(p\) es un número primo, todo elemento de \(\mathbb Z_p\), salvo el cero, tiene inverso, y por tanto \(\mathbb Z_p\) es un cuerpo. En criptografía, trabajaremos en cuerpos \(\mathbb Z_p\) con un \(p\) primo.&lt;/p&gt;
-
-&lt;p&gt;El número de unidades de \(\mathbb Z_n\), se puede calcular con la función de Euler \(\phi(n)\), y vale lo siguiente:&lt;/p&gt;
-
+            <description>&lt;h2 id=&#34;headline-1&#34;&gt;
+Aritmética modular
+&lt;/h2&gt;
+&lt;p&gt;
+Antes de profundizar en los temas sobre criptografía, es necesario tener una base matemática, ya que al fin y al cabo, la criptografía se basa en ellas.
+&lt;/p&gt;
+&lt;p&gt;
+Nos centraremos en la aritmética modular, y cómo operar con ella. La aritmética modular se define del siguiente modo:
+&lt;/p&gt;
+&lt;p&gt;
+\[a \equiv b\pmod n,\]
+&lt;/p&gt;
+&lt;p&gt;
+si \(b - a\) es múltiplo de \(n\) o, dicho de otro modo, \(a\) y \(b\) tienen el mismo resto cuando se dividen por \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+Así, por ejemplo, \(3 \equiv 8 \pmod 5\), ya que \(8 - 3 = 5\), que es un multiplo de 5. También podemos comprobarlo sabiendo que el resto de dividir 3 entre 5 es 3 y el resto de 8 entre 5, también. A partir de ahora expresaremos el resto de dividir un número entre otro como sigue:
+&lt;/p&gt;
+&lt;p&gt;
+\[a\bmod n = r,\]
+&lt;/p&gt;
+&lt;p&gt;
+donde \(r\) es el resto de dividir \(a\) entre \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/crypto-101.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/crypto-101.jpg&amp;#34;
+            alt=&amp;#34;Modular Arithmetics&amp;#34;
+            title=&amp;#34;Modular Arithmetics&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Cálculo de inversos
+&lt;/h3&gt;
+&lt;p&gt;
+Sea \(a \in \mathbb Z_n\), se dice que \(a\) tiene inverso, o que es una unidad, si \(\exists b \in \mathbb Z_n\ :\ ba = 1\), y se denota por \(a^{-1}\).
+&lt;/p&gt;
+&lt;p&gt;
+Al conjunto de todas las unidades de \(\mathbb Z_n\) lo llamaremos \(\mathcal{U}(\mathbb Z_n)\) y se define como:
+&lt;/p&gt;
+&lt;p&gt;
+\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : mcd(a, n) = 1\},\]
+&lt;/p&gt;
+&lt;p&gt;
+donde &lt;em&gt;mcd&lt;/em&gt; es el máximo común divisor.
+&lt;/p&gt;
+&lt;p&gt;
+Particularmente, si \(p\) es un número primo, todo elemento de \(\mathbb Z_p\), salvo el cero, tiene inverso, y por tanto \(\mathbb Z_p\) es un cuerpo. En criptografía, trabajaremos en cuerpos \(\mathbb Z_p\) con un \(p\) primo.
+&lt;/p&gt;
+&lt;p&gt;
+El número de unidades de \(\mathbb Z_n\), se puede calcular con la función de Euler \(\phi(n)\), y vale lo siguiente:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Si \(p\) es un número primo, \(\phi(p) = p - 1\), ya que todos los elementos salvo el 0, son unidades.&lt;/li&gt;
-&lt;li&gt;Sean a, b, dos números enteros \( \phi(ab) = \phi(a)\phi(b)\ sii\ mcd(a, b) = 1\).&lt;/li&gt;
-&lt;li&gt;Sea \(p\) un primo, \(\phi(p^n) = p^n - p^{n-1}\).&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Si \(p\) es un número primo, \(\phi(p) = p - 1\), ya que todos los elementos salvo el 0, son unidades.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Sean a, b, dos números enteros \( \phi(ab) = \phi(a)\phi(b)\ sii\ mcd(a, b) = 1\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Sea \(p\) un primo, \(\phi(p^n) = p^n - p^{n-1}\).
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Por ejemplo, \(\#\mathcal{U}(\mathbb Z_5) = 4\), ya que todos sus elementos tienen inverso (el 1,2,3,4), y \(\phi(5) = 4\), y por tanto, \(\mathbb Z_5\) es un cuerpo. Sin embargo, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), ya que \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). Las unidades de \(\mathbb Z_{15}\) son 1,2,4,7,8,11,13,14.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;un-ejemplo-práctico&#34;&gt;Un ejemplo práctico&lt;/h2&gt;
-
-&lt;p&gt;Veamos ahora cómo calcular el inverso de un número en \(\mathbb Z_n\) mediante el algoritmo Extendido de Euclides implementado en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34; title=&#34;python&#34;&gt;python&lt;/a&gt;, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;
+Por ejemplo, \(\#\mathcal{U}(\mathbb Z_5) = 4\), ya que todos sus elementos tienen inverso (el 1,2,3,4), y \(\phi(5) = 4\), y por tanto, \(\mathbb Z_5\) es un cuerpo. Sin embargo, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), ya que \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). Las unidades de \(\mathbb Z_{15}\) son 1,2,4,7,8,11,13,14.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Un ejemplo práctico
+&lt;/h3&gt;
+&lt;p&gt;
+Veamos ahora cómo calcular el inverso de un número en \(\mathbb Z_n\) mediante el algoritmo Extendido de Euclides implementado en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34;&gt;python&lt;/a&gt;, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    Compute the Greatest Common Divisor d of a and b, and integers x and
@@ -415,9 +582,14 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
     &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este algoritmo, devuelve una tupla &lt;code&gt;(d, x, y)&lt;/code&gt;, donde &lt;code&gt;d&lt;/code&gt; es el máximo común divisor de los números &lt;code&gt;a,b&lt;/code&gt; y &lt;code&gt;x&lt;/code&gt; es el inverso de &lt;code&gt;a&lt;/code&gt; mod &lt;code&gt;b&lt;/code&gt;.  Por ejemplo, si ejecutamos &lt;code&gt;mcd(2, 5)&lt;/code&gt;, nos devolverá &lt;code&gt;[1, -2, 1]&lt;/code&gt;, donde 1 es el &lt;code&gt;mcd(2, 5)&lt;/code&gt;, y \(-2\) su inverso, si lo queremos en positivo, basta con sumar 5 a \(-2\), que es 3, luego el inverso de 2 mod 5 es 3, ya que \(2 \cdot 3 = 6\), y 6 mod 5 = 1.&lt;/p&gt;
-
-&lt;p&gt;Para facilitar la tarea de calcular el inverso de un número, definiremos el siguiente método, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Este algoritmo, devuelve una tupla &lt;code class=&#34;verbatim&#34;&gt;(d, x, y)&lt;/code&gt;, donde &lt;code class=&#34;verbatim&#34;&gt;d&lt;/code&gt; es el máximo común divisor de los números &lt;code class=&#34;verbatim&#34;&gt;a,b&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;x&lt;/code&gt; es el inverso de &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; mod &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;.  Por ejemplo, si ejecutamos &lt;code class=&#34;verbatim&#34;&gt;mcd(2, 5)&lt;/code&gt;, nos devolverá &lt;code class=&#34;verbatim&#34;&gt;[1, -2, 1]&lt;/code&gt;, donde 1 es el &lt;code class=&#34;verbatim&#34;&gt;mcd(2, 5)&lt;/code&gt;, y \(-2\) su inverso, si lo queremos en positivo, basta con sumar 5 a \(-2\), que es 3, luego el inverso de 2 mod 5 es 3, ya que \(2 \cdot 3 = 6\), y 6 mod 5 = 1.
+&lt;/p&gt;
+&lt;p&gt;
+Para facilitar la tarea de calcular el inverso de un número, definiremos el siguiente método, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -426,14 +598,20 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; a inverse does not exist&amp;#39;&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si lo ejecutamos con los mismos números de antes, 2 y 5, nos devolverá \(2^{-1}\), es decir, 3.&lt;/p&gt;
-
-&lt;h1 id=&#34;agradecimientos&#34;&gt;Agradecimientos&lt;/h1&gt;
-
-&lt;p&gt;Gracias a &lt;a href=&#34;https://github.com/josealberto4444/&#34; title=&#34;josealberto4444&#34;&gt;josealberto4444&lt;/a&gt; por ayudarme con correcciones.&lt;/p&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Si lo ejecutamos con los mismos números de antes, 2 y 5, nos devolverá \(2^{-1}\), es decir, 3.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Agradecimientos
+&lt;/h2&gt;
+&lt;p&gt;
+Gracias a &lt;a href=&#34;https://github.com/josealberto4444/&#34;&gt;josealberto4444&lt;/a&gt; por ayudarme con correcciones.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Referencias
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -444,13 +622,17 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
 
 
 
-
-&lt;h1 id=&#34;más-información&#34;&gt;Más información&lt;/h1&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Más información
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Aritm%25C3%25A9tica_modular&#34; title=&#34;Aritmética modular | wikipedia.org&#34;&gt;Aritmética modular | wikipedia.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://es.wikipedia.org/wiki/Aritm%25C3%25A9tica_modular&#34;&gt;Aritmética modular | wikipedia.org&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -459,109 +641,154 @@ Esta es mi solución. Intenté hacerlo con un &lt;code&gt;Map&lt;/code&gt; inmut
             <pubDate>Tue, 24 Oct 2017 18:51:32 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</guid>
-            <description>
+            <description>&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;Este artículo forma parte de una serie sobre Teoría de Categorías en Scala que estoy escribiendo basándome en &lt;a target=&#34;_blank&#34; href=&#34;https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&#34;&gt;el libro de Bartosz Milewski&lt;/a&gt;. Conforme voy leyendo, tomo notas y intento resolver los ejercicios propuestos por Bartosz, pero en Scala. El producto de ese trabajo son estos artículos que comparto en este blog. Todo el código está en &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory&#34;&gt;elbaulp/Scala-Category-Theory&lt;/a&gt;, también puedes visitar la &lt;a href=&#34;https://elbauldelprogramador.com/scala-category-theory/&#34;&gt;tabla de contenidos&lt;/a&gt; de esta serie.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Gracias a Jesús López por comentar en este artículo y corregir unos cuantos errores.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
-
-&lt;p&gt;Este es el primer artículo de una serie que voy a escribir sobre &lt;strong&gt;teoría de categorías&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Llevaba un tiempo queriendo aprender &lt;strong&gt;teoría de categorías&lt;/strong&gt;, ya que he leido bastante sobre el tema y parece que tiene &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34; title=&#34;aplicaciones en el desarrollo de software&#34;&gt;aplicaciones en el desarrollo de software&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Esta serie de artículos se basan en gran libro que &lt;strong&gt;Bartosz Milewski&lt;/strong&gt; escribió hace un tiempo. Para aportar mi granito de arena, he decidido implementar los ejercicios que propone usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt; y &lt;em&gt;tests basados en propiedades&lt;/em&gt; con &lt;code&gt;scalacheck&lt;/code&gt;. Espero que te guste esta serie, y no dudes en comentar tu opinión o sugerir/corregir el contenido.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;categoría-la-esencia-de-la-composición&#34;&gt;Categoría: La esencia de la composición&lt;/h1&gt;
-
-&lt;p&gt;Antes de continuar, ¿Qué es una &lt;em&gt;categoría?&lt;/em&gt;, de &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_(matem%C3%A1ticas)&#34; title=&#34;Wikipedia&#34;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+CHANGELOG
+&lt;/h2&gt;
+&lt;p&gt;
+&lt;em&gt;Gracias a Jesús López por comentar en este artículo y corregir unos cuantos errores.&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+Introducción
+&lt;/h2&gt;
+&lt;p&gt;
+Este es el primer artículo de una serie que voy a escribir sobre &lt;strong&gt;teoría de categorías&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Llevaba un tiempo queriendo aprender &lt;strong&gt;teoría de categorías&lt;/strong&gt;, ya que he leido bastante sobre el tema y parece que tiene &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34;&gt;aplicaciones en el desarrollo de software&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Esta serie de artículos se basan en gran libro que &lt;strong&gt;Bartosz Milewski&lt;/strong&gt; escribió hace un tiempo. Para aportar mi granito de arena, he decidido implementar los ejercicios que propone usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34;&gt;scala&lt;/a&gt; y &lt;em&gt;tests basados en propiedades&lt;/em&gt; con &lt;code class=&#34;verbatim&#34;&gt;scalacheck&lt;/code&gt;. Espero que te guste esta serie, y no dudes en comentar tu opinión o sugerir/corregir el contenido.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Categoría: La esencia de la composición
+&lt;/h2&gt;
+&lt;p&gt;
+Antes de continuar, ¿Qué es una &lt;em&gt;categoría?&lt;/em&gt;, de &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_(matem%C3%A1ticas)&#34;&gt;Wikipedia&lt;/a&gt;:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 En teoría de categorías, una categoría es una estructura algebraica que consta de una &lt;strong&gt;colección de objetos&lt;/strong&gt;, &lt;strong&gt;conectados unos con otros mediante flechas&lt;/strong&gt; tales que se cumplen las siguientes propiedades básicas: las flechas se pueden componer unas con otras de manera &lt;strong&gt;asociativa&lt;/strong&gt;, y para cada objeto existe una flecha que se comporta como un &lt;strong&gt;elemento neutro bajo la composición&lt;/strong&gt;.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;En resumen, una &lt;em&gt;categoría&lt;/em&gt; está formada por &lt;strong&gt;objetos y flechas&lt;/strong&gt;, y pueden componerse. Esto se aprecia mejor con una imagen:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;
-            alt=&#34;Arrows and objects category Theory&#34;
-            title=&#34;Arrows and objects category Theory&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Ejemplo de Categoría&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Cada flecha puede &lt;strong&gt;componerse&lt;/strong&gt;, p.e: Si &lt;code&gt;A -&amp;gt; B&lt;/code&gt; y &lt;code&gt;B -&amp;gt; D&lt;/code&gt; entonces debe existir una flecha de &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Las flechas pueden llamarse &lt;strong&gt;morfismos&lt;/strong&gt;, y se pueden componer. En la imagen de arriba tienes:&lt;/p&gt;
-
+&lt;p&gt;
+En resumen, una &lt;em&gt;categoría&lt;/em&gt; está formada por &lt;strong&gt;objetos y flechas&lt;/strong&gt;, y pueden componerse. Esto se aprecia mejor con una imagen:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-composition.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-composition.jpg&amp;#34;
+            alt=&amp;#34;Arrows and objects category Theory&amp;#34;
+            title=&amp;#34;Arrows and objects category Theory&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Ejemplo de Categoría&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Cada flecha puede &lt;strong&gt;componerse&lt;/strong&gt;, p.e: Si &lt;code class=&#34;verbatim&#34;&gt;A -&amp;gt; B&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;B -&amp;gt; D&lt;/code&gt; entonces debe existir una flecha de &lt;code class=&#34;verbatim&#34;&gt;A -&amp;gt; D&lt;/code&gt;. Las flechas pueden llamarse &lt;strong&gt;morfismos&lt;/strong&gt;, y se pueden componer. En la imagen de arriba tienes:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;f: A -&amp;gt; B&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;g: B -&amp;gt; D&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Si componemos esas dos, también tienes &lt;code&gt;h: A -&amp;gt; D&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;f: A -&amp;gt; B&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;g: B -&amp;gt; D&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Si componemos esas dos, también tienes &lt;code class=&#34;verbatim&#34;&gt;h: A -&amp;gt; D&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;La composición se lee de &lt;em&gt;derecha a izquierda&lt;/em&gt;, por tanto &lt;code&gt;g∘f&lt;/code&gt; quiere decir &lt;code&gt;g(f(x))&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;propiedades-de-la-composición&#34;&gt;Propiedades de la composición&lt;/h1&gt;
-
+&lt;p&gt;
+La composición se lee de &lt;em&gt;derecha a izquierda&lt;/em&gt;, por tanto &lt;code class=&#34;verbatim&#34;&gt;g∘f&lt;/code&gt; quiere decir &lt;code class=&#34;verbatim&#34;&gt;g(f(x))&lt;/code&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Propiedades de la composición
+&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Asociatividad:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Para cada objeto existe una &lt;strong&gt;flecha Identidad, o morfismo Identidad&lt;/strong&gt;, que va del objeto a sí mismo: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, como muestro debajo:&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;strong&gt;Asociatividad:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Para cada objeto existe una &lt;strong&gt;flecha Identidad, o morfismo Identidad&lt;/strong&gt;, que va del objeto a sí mismo: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, como muestro debajo:
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;
-            alt=&#34;Category Theory, object identity&#34;
-            title=&#34;Category Theory, object identity&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;ejemplos-en-scala&#34;&gt;Ejemplos en Scala&lt;/h1&gt;
-
-&lt;p&gt;Ahora que ya he comentado un poco de la teoría, vamos a implementarlo en &lt;strong&gt;scala&lt;/strong&gt;. Como dije al principio, voy a usar &lt;em&gt;tests basados en propiedades&lt;/em&gt; para comprobar que el objeto creado cumple las &lt;strong&gt;propiedades algebraicas&lt;/strong&gt; de una categoría. Estas propiedades son la &lt;strong&gt;Identidad&lt;/strong&gt; y &lt;strong&gt;asociatividad&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;El código de abajo es la definición de una &lt;em&gt;categoría&lt;/em&gt; (Para ser más precisos, es una instancia de la categoría &lt;strong&gt;Hask&lt;/strong&gt;). En la categoría &lt;strong&gt;Hask&lt;/strong&gt;, los objetos son tipos y las flechas funciones. Puedes consultar el código en el fichero &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/main/scala/elbaulp/Category.scala&#34; title=&#34;Category.scala de mi respositorio.&#34;&gt;Category.scala de mi respositorio.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-identity.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-identity.jpg&amp;#34;
+            alt=&amp;#34;Category Theory, object identity&amp;#34;
+            title=&amp;#34;Category Theory, object identity&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Ejemplos en Scala
+&lt;/h2&gt;
+&lt;p&gt;
+Ahora que ya he comentado un poco de la teoría, vamos a implementarlo en &lt;strong&gt;scala&lt;/strong&gt;. Como dije al principio, voy a usar &lt;em&gt;tests basados en propiedades&lt;/em&gt; para comprobar que el objeto creado cumple las &lt;strong&gt;propiedades algebraicas&lt;/strong&gt; de una categoría. Estas propiedades son la &lt;strong&gt;Identidad&lt;/strong&gt; y &lt;strong&gt;asociatividad&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+El código de abajo es la definición de una &lt;em&gt;categoría&lt;/em&gt; (Para ser más precisos, es una instancia de la categoría &lt;strong&gt;Hask&lt;/strong&gt;). En la categoría &lt;strong&gt;Hask&lt;/strong&gt;, los objetos son tipos y las flechas funciones. Puedes consultar el código en el fichero &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/main/scala/elbaulp/Category.scala&#34;&gt;Category.scala de mi respositorio.&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;
      &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;andThen&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es bastante simple, una función &lt;em&gt;identidad&lt;/em&gt; y otra función que &lt;em&gt;compone&lt;/em&gt; dos funciones. Para comprobar que cumple las propiedades, he escrito los siguientes tests.&lt;/p&gt;
-
-&lt;h1 id=&#34;tests-basados-en-propiedades&#34;&gt;Tests basados en propiedades&lt;/h1&gt;
-
-&lt;p&gt;Para mantener el artículo limpio, muestro solo el código necesario, puedes consultar el &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;código completo de los tests en github.&#34;&gt;código completo de los tests en github.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;propiedad-identidad&#34;&gt;Propiedad Identidad&lt;/h2&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Es bastante simple, una función &lt;em&gt;identidad&lt;/em&gt; y otra función que &lt;em&gt;compone&lt;/em&gt; dos funciones. Para comprobar que cumple las propiedades, he escrito los siguientes tests.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Tests basados en propiedades
+&lt;/h2&gt;
+&lt;p&gt;
+Para mantener el artículo limpio, muestro solo el código necesario, puedes consultar el &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34;&gt;código completo de los tests en github.&lt;/a&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-7&#34;&gt;
+Propiedad Identidad
+&lt;/h3&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a == Id(a)&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
@@ -579,45 +806,60 @@ En teoría de categorías, una categoría es una estructura algebraica que const
     &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La primera propiedad manifiesta que para todo &lt;code&gt;String&lt;/code&gt; posible que se le pase a la función &lt;code&gt;identity&lt;/code&gt;, la &lt;code&gt;identidad&lt;/code&gt; siempre será la cadena de texto que se le pasó a la función.&lt;/p&gt;
-
-&lt;p&gt;La segunda y tercera propiedad indican que no importa cómo se componga la función &lt;code&gt;identidad&lt;/code&gt; con otra función &lt;code&gt;f&lt;/code&gt;, ya que el resultado siempre será esa función &lt;code&gt;f&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;propiedad-asociativa&#34;&gt;Propiedad asociativa&lt;/h2&gt;
+&lt;/div&gt;
+&lt;p&gt;
+La primera propiedad manifiesta que para todo &lt;code class=&#34;verbatim&#34;&gt;String&lt;/code&gt; posible que se le pase a la función &lt;code class=&#34;verbatim&#34;&gt;identity&lt;/code&gt;, la &lt;code class=&#34;verbatim&#34;&gt;identidad&lt;/code&gt; siempre será la cadena de texto que se le pasó a la función.
+&lt;/p&gt;
+&lt;p&gt;
+La segunda y tercera propiedad indican que no importa cómo se componga la función &lt;code class=&#34;verbatim&#34;&gt;identidad&lt;/code&gt; con otra función &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;, ya que el resultado siempre será esa función &lt;code class=&#34;verbatim&#34;&gt;f&lt;/code&gt;.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-8&#34;&gt;
+Propiedad asociativa
+&lt;/h3&gt;
+&lt;div class=&#34;src src-scala&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Associativity: h∘(g∘f) = (h∘g)∘f = h∘g∘f&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como puedes ver, este test comprueba que la propiedad asociativa es cierta.&lt;/p&gt;
-
-&lt;p&gt;Si ejecutas estos tests, verás que todos pasan:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;
-            alt=&#34;Category theory property tests&#34;
-            title=&#34;Category theory property tests&#34;
-            sizes=&#34;(min-width: 397px) 397px, 100vw&#34;
-            width=&#34;397&#34;
-            height=&#34;105&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Eso es todo para esta primera parte, espero que te haya gustado. Me gustaría saber tu opinión, &lt;em&gt;te animo a comentar abajo&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;recursos&#34;&gt;Recursos&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Como puedes ver, este test comprueba que la propiedad asociativa es cierta.
+&lt;/p&gt;
+&lt;p&gt;
+Si ejecutas estos tests, verás que todos pasan:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/category-theory-composition-test.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/category-theory-composition-test.png&amp;#34;
+            alt=&amp;#34;Category theory property tests&amp;#34;
+            title=&amp;#34;Category theory property tests&amp;#34;
+            sizes=&amp;#34;(min-width: 397px) 397px, 100vw&amp;#34;
+            width=&amp;#34;397&amp;#34;
+            height=&amp;#34;105&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Eso es todo para esta primera parte, espero que te haya gustado. Me gustaría saber tu opinión, &lt;em&gt;te animo a comentar abajo&lt;/em&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+Recursos
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/trackback/&#34; title=&#34;Category: The Essence of Composition&#34;&gt;Category: The Essence of Composition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/trackback/&#34;&gt;Category: The Essence of Composition&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -627,234 +869,140 @@ En teoría de categorías, una categoría es una estructura algebraica que const
             
             <guid>https://elbauldelprogramador.com/recursos-canales-podcast-sobre-matematicas/</guid>
             <description>&lt;h1 id=&#34;qué-es-esta-lista&#34;&gt;¿Qué es esta lista?&lt;/h1&gt;
-
 &lt;p&gt;A continuación se listan una serie de Podcast, Canales de Youtube y Blogs que sigo que hablan sobre matemáticas.&lt;/p&gt;
-
-&lt;p&gt;Si conoces de algún recurso digital que hable y enseñe matemáticas no listado abajo, contribuye dejándonos un comentario y lo añadiremos a la lista, o mejor aún, añádelo tú mismo haciendo un &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/resources-channels-podcast-to-learn-math.md&#34; target=&#34;_blank&#34; title=&#34;Pull Request!&#34;&gt;Pull Request!&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;Si conoces de algún recurso digital que hable y enseñe matemáticas no listado abajo, contribuye dejándonos un comentario y lo añadiremos a la lista, o mejor aún, añádelo tú mismo haciendo un &lt;!-- raw HTML omitted --&gt;Pull Request!&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Gracias a &lt;a href=&#34;https://twitter.com/sinclair_88&#34; target=&#34;_blank&#34; title=&#34;@sinclair_88&#34;&gt;@sinclair_88&lt;/a&gt; por proponer la idea de crear la lista.&lt;/p&gt;
+&lt;p&gt;Gracias a &lt;!-- raw HTML omitted --&gt;@sinclair_88&lt;!-- raw HTML omitted --&gt; por proponer la idea de crear la lista.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;otras-listas&#34;&gt;Otras listas&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/blogs-canales-podcast-aprender-informatica/&#34; title=&#34;55 Blogs / Canales / Podcast sobre informática, Data Science y Seguridad&#34;&gt;55 Blogs / Canales / Podcast sobre informática, Data Science y Seguridad&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/blogs-podcasts-canales-youtube-sobre-ciencia/&#34; title=&#34;22 Podcasts / Canales de Youtube / Blogs sobre Ciencia&#34;&gt;22 Podcasts / Canales de Youtube / Blogs sobre Ciencia&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;podcasts&#34;&gt;Podcasts&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;article class=&amp;quot;box-item animate&amp;quot;&amp;gt;
+   &amp;lt;h3&amp;gt;My Favorite Theorem&amp;lt;/h3&amp;gt;
+   &amp;lt;figure&amp;gt;
+     &amp;lt;img sizes=&amp;quot;(min-width: 100px) 100px, 100vw&amp;quot; on=&amp;quot;tap:lightbox1&amp;quot; role=&amp;quot;button&amp;quot; tabindex=&amp;quot;0&amp;quot; layout=&amp;quot;responsive&amp;quot; src=&amp;quot;/img/myfavtheo.jpg&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot; alt=&amp;quot;My Favorite Theorem Logo&amp;quot; title=&amp;quot;My Favorite Theorem&amp;quot;&amp;gt;&amp;lt;/img&amp;gt;
+   &amp;lt;/figure&amp;gt;
+   &amp;lt;p&amp;gt;Join us as we spend each episode talking with a mathematical professional about their favorite result. And since the best things in life come in pairs, find out what our guest thinks pairs best with their theorem.&amp;lt;/p&amp;gt;
+   &amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+   &amp;lt;a href=&amp;quot;https://kpknudson.com/my-favorite-theorem?format=rss/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;My Favorite Theorem&amp;quot;&amp;gt;RSS&amp;lt;/a&amp;gt; &amp;lt;a href=&amp;quot;https://kpknudson.com/my-favorite-theorem/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;My Favorite Theorem Blog&amp;quot;&amp;gt;Web&amp;lt;/a&amp;gt;
+   &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;   &amp;lt;p&amp;gt;A podcast by Grant Sanderson, Ben Eater and Ben Stenhaug about education, technology, and whatever else comes to mind.&amp;lt;/p&amp;gt;
 
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
-
-    &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;My Favorite Theorem&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/myfavtheo.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;My Favorite Theorem Logo&#34; title=&#34;My Favorite Theorem&#34;&gt;&lt;/img&gt;
-       &lt;/figure&gt;
-       &lt;p&gt;Join us as we spend each episode talking with a mathematical professional about their favorite result. And since the best things in life come in pairs, find out what our guest thinks pairs best with their theorem.&lt;/p&gt;
-       &lt;div class=&#34;tags&#34;&gt;
-       &lt;a href=&#34;https://kpknudson.com/my-favorite-theorem?format=rss/&#34; target=&#34;_blank&#34; title=&#34;My Favorite Theorem&#34;&gt;RSS&lt;/a&gt; &lt;a href=&#34;https://kpknudson.com/my-favorite-theorem/&#34; target=&#34;_blank&#34; title=&#34;My Favorite Theorem Blog&#34;&gt;Web&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-
-   &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;Math Mutation&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathmutation.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-       &lt;/figure&gt;
-       &lt;p&gt;Welcome to Math Mutation, a short podcast for people of all ages, where we explore fun, interesting, or just plain weird corners of mathematics that you probably didn&#39;t hear in school.&lt;/p&gt;
-       &lt;div class=&#34;tags&#34;&gt;
-         &lt;a href=&#34;http://mathmutation.blogspot.com.es/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;MathMutation&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-
-   &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;Ben Ben Blue&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/bbb.png&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34;&gt;&lt;/img&gt;
-       &lt;/figure&gt;
-
-       &lt;p&gt;A podcast by Grant Sanderson, Ben Eater and Ben Stenhaug about education, technology, and whatever else comes to mind.&lt;/p&gt;
-
-       &lt;div class=&#34;tags&#34;&gt;
-         &lt;a href=&#34;http://benbenandblue.libsyn.com/rss&#34; target=&#34;_blank&#34; title=&#34;Ben Ben Blue&#34;&gt;Ben Ben Blue&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-
-   &lt;article class=&#34;box-item animate&#34;&gt;
-       &lt;h3&gt;Rel Prime&lt;/h3&gt;
-       &lt;figure&gt;
-         &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/relprime.png&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-       &lt;/figure&gt;
-       &lt;p&gt;Relatively Prime is a mathematics podcast all about the stories behind the Queen of the Sciences that Samuel Hansen dreamt up in an extreme bout of egotism and delusions of grandeur where he spent too long listening to Radiolab, This American Life, and Snap Judgment and began to think, “Hey, I could do that.”&lt;/p&gt;
-       &lt;div class=&#34;tags&#34;&gt;
-         &lt;a href=&#34;http://relprime.com/&#34; target=&#34;_blank&#34; title=&#34;Math Mutation&#34;&gt;Rel Prime&lt;/a&gt;
-       &lt;/div&gt;
-   &lt;/article&gt;
-&lt;/div&gt;
-
+   &amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+     &amp;lt;a href=&amp;quot;http://benbenandblue.libsyn.com/rss&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;Ben Ben Blue&amp;quot;&amp;gt;Ben Ben Blue&amp;lt;/a&amp;gt;
+   &amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;youtube&#34;&gt;Youtube&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;figure&amp;gt;
+  &amp;lt;img sizes=&amp;quot;(min-width: 100px) 100px, 100vw&amp;quot; on=&amp;quot;tap:lightbox1&amp;quot; role=&amp;quot;button&amp;quot; tabindex=&amp;quot;0&amp;quot; layout=&amp;quot;responsive&amp;quot; src=&amp;quot;/img/3b1b.jpg&amp;quot; width=&amp;quot;100&amp;quot; height=&amp;quot;100&amp;quot; alt=&amp;quot;&amp;quot; title=&amp;quot;&amp;quot; &amp;gt;&amp;lt;/img&amp;gt;
+&amp;lt;/figure&amp;gt;
 
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
+&amp;lt;p&amp;gt;3Blue1Brow-postn is some combination of math and entertainment, depending on your disposition. The goal is for explanations to be driven by animations and for difficult problems to be made simple with changes in perspective.&amp;lt;/p&amp;gt;
 
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;3Blue1Brow&lt;/h3&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+&amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;3Blue1Brow-postn&amp;quot;&amp;gt;3Blue1Brow&amp;lt;/a&amp;gt;, también tiene un podcast: &amp;lt;a href=&amp;quot;https://www.benbenandblue.com/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;https://www.benbenandblue.com/&amp;quot;&amp;gt;benbenandblue.com&amp;lt;/a&amp;gt;.
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Enter the world of the Mathologer in which beautiful math(s) rules.&amp;lt;/p&amp;gt;
 
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/3b1b.jpg&#34; width=&#34;100&#34; height=&#34;100&#34; alt=&#34;&#34; title=&#34;&#34; &gt;&lt;/img&gt;
-    &lt;/figure&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;MathLoger&amp;quot;&amp;gt;MathLoger&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Simply put: cool physics and other sweet science.&amp;lt;/p&amp;gt;
 
-    &lt;p&gt;3Blue1Brow-postn is some combination of math and entertainment, depending on your disposition. The goal is for explanations to be driven by animations and for difficult problems to be made simple with changes in perspective.&lt;/p&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;MinutePhysics&amp;quot;&amp;gt;MinutePhysics&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;En pocas palabras: física genial y ciencia interesante&amp;lt;/p&amp;gt;
 
-    &lt;div class=&#34;tags&#34;&gt;
-    &lt;a href=&#34;https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw&#34; target=&#34;_blank&#34; title=&#34;3Blue1Brow-postn&#34;&gt;3Blue1Brow&lt;/a&gt;, también tiene un podcast: &lt;a href=&#34;https://www.benbenandblue.com/&#34; target=&#34;_blank&#34; title=&#34;https://www.benbenandblue.com/&#34;&gt;benbenandblue.com&lt;/a&gt;.
-    &lt;/div&gt;
-  &lt;/article&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCMnPZh6PyA5PSYoNt0cjuxg&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;MinutoDeFísica&amp;quot;&amp;gt;MinutoDeFísica&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Videos about numbers - it&#39;s that simple.&amp;lt;/p&amp;gt;
 
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MathoLoger&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/mathologer.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;NumberPhile&amp;quot;&amp;gt;NumberPhile&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;This is Numberphile&#39;s &amp;quot;second channel&amp;quot; for extra footage or stuff that didn&#39;t quite fit on the main channel&amp;lt;/p&amp;gt;
 
-    &lt;p&gt;Enter the world of the Mathologer in which beautiful math(s) rules.&lt;/p&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;NumberPhile2&amp;quot;&amp;gt;NumberPhile2&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Mathematician Kelsey Houston-Edwards offers ambitious content for viewers that are eager to attain a greater understanding of the world around them. Math is pervasive - a robust yet precise language - and with each episode you’ll begin to see the math that underpins everything in this puzzling, yet fascinating, universe.&amp;lt;/p&amp;gt;
 
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UC1_uAIS3r8Vu6JjXWvastJg&#34; target=&#34;_blank&#34; title=&#34;MathLoger&#34;&gt;MathLoger&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;PBS Infinite Series&amp;quot;&amp;gt;PBS Infinite Series&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;I do mathematics and stand-up. Sometimes simultaneously. Occasionally while being filmed. (It&#39;s quite the Venn diagram.)&amp;lt;/p&amp;gt;
 
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MinutePhysics&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/minutephysics.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Simply put: cool physics and other sweet science.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCUHW94eEFW7hkUMVaZz4eDg&#34; target=&#34;_blank&#34; title=&#34;MinutePhysics&#34;&gt;MinutePhysics&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;MinutoDeFísica&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/MinutoDeFisica.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;En pocas palabras: física genial y ciencia interesante&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCMnPZh6PyA5PSYoNt0cjuxg&#34; target=&#34;_blank&#34; title=&#34;MinutoDeFísica&#34;&gt;MinutoDeFísica&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;NumberPhile&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Videos about numbers - it&#39;s that simple.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A&#34; target=&#34;_blank&#34; title=&#34;NumberPhile&#34;&gt;NumberPhile&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;NumberPhile2&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/numberphile2.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;This is Numberphile&#39;s &#34;second channel&#34; for extra footage or stuff that didn&#39;t quite fit on the main channel&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCyp1gCHZJU_fGWFf2rtMkCg&#34; target=&#34;_blank&#34; title=&#34;NumberPhile2&#34;&gt;NumberPhile2&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;PBS Infinite Series&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/pbsinfiniteseries.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Mathematician Kelsey Houston-Edwards offers ambitious content for viewers that are eager to attain a greater understanding of the world around them. Math is pervasive - a robust yet precise language - and with each episode you’ll begin to see the math that underpins everything in this puzzling, yet fascinating, universe.&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCs4aHmggTfFrpkPcWSaBN9g&#34; target=&#34;_blank&#34; title=&#34;PBS Infinite Series&#34;&gt;PBS Infinite Series&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;StandUpMaths&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/standupmaths.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;I do mathematics and stand-up. Sometimes simultaneously. Occasionally while being filmed. (It&#39;s quite the Venn diagram.)&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A&#34; target=&#34;_blank&#34; title=&#34;StandUpMaths&#34;&gt;StandUpMaths&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;StandUpMaths&amp;quot;&amp;gt;StandUpMaths&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;blogs&#34;&gt;Blogs&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Mathematics section on Physics.org&amp;lt;/p&amp;gt;
 
-&lt;div class=&#34;row-post flex-grid&#34;&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://phys.org/science-news/mathematics/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;Physics.org Mathematics&amp;quot;&amp;gt;Physics.org Mathematics&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Physics.org Quantum Physics section&amp;lt;/p&amp;gt;
 
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics.org Mathematics section&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://phys.org/physics-news/quantum-physics/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;Quantum Physics section on physics.org&amp;quot;&amp;gt;Quantum Physics section on physics.org&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;Quanta Magazine is an editorially independent online publication launched by the Simons Foundation to enhance public understanding of science. Why Quanta? Albert Einstein called photons “quanta of light.” Our goal is to “illuminate science.”&amp;lt;/p&amp;gt;
 
-    &lt;p&gt;Mathematics section on Physics.org&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://phys.org/science-news/mathematics/&#34; target=&#34;_blank&#34; title=&#34;Physics.org Mathematics&#34;&gt;Physics.org Mathematics&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;Physics.org Quantum Physics section&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/physics_math.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Physics.org Quantum Physics section&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://phys.org/physics-news/quantum-physics/&#34; target=&#34;_blank&#34; title=&#34;Quantum Physics section on physics.org&#34;&gt;Quantum Physics section on physics.org&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-
-  &lt;article class=&#34;box-item animate&#34;&gt;
-    &lt;h3&gt;&lt;/h3&gt;
-    &lt;figure&gt;
-      &lt;img sizes=&#34;(min-width: 100px) 100px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Quanta.jpg&#34; width=&#34;100&#34; height=&#34;100&#34;&gt;&lt;/img&gt;
-    &lt;/figure&gt;
-
-    &lt;p&gt;Quanta Magazine is an editorially independent online publication launched by the Simons Foundation to enhance public understanding of science. Why Quanta? Albert Einstein called photons “quanta of light.” Our goal is to “illuminate science.”&lt;/p&gt;
-
-    &lt;div class=&#34;tags&#34;&gt;
-      &lt;a href=&#34;https://www.quantamagazine.org/&#34; target=&#34;_blank&#34; title=&#34;Quanta Magazine&#34;&gt;Quanta Magazine&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/article&gt;
-&lt;/div&gt;
-
+&amp;lt;div class=&amp;quot;tags&amp;quot;&amp;gt;
+  &amp;lt;a href=&amp;quot;https://www.quantamagazine.org/&amp;quot; target=&amp;quot;_blank&amp;quot; title=&amp;quot;Quanta Magazine&amp;quot;&amp;gt;Quanta Magazine&amp;lt;/a&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;List of interesting math podcasts? | &lt;a href=&#34;http://math.stackexchange.com/q/3/144541&#34; target=&#34;_blank&#34; title=&#34;List of interesting math podcasts?&#34;&gt;math.stackexchange.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;List of interesting math podcasts? | &lt;!-- raw HTML omitted --&gt;math.stackexchange.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

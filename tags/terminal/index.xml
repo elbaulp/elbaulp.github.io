@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Terminal on El Baúl del programador</title>
+        <title>terminal on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/terminal/</link>
-        <description>Recent content in Terminal on El Baúl del programador</description>
+        <description>Recent content in terminal on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/terminal/</link>
-            <title>Terminal on El Baúl del programador</title>
+            <title>terminal on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,17 +21,12 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-cambiar-la-resolucion-de-pantalla-en-las-ttys-de-gnulinux/</guid>
-            <description>&lt;p&gt;Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el &lt;a target=&#34;_blank&#34; href=&#34;https://elbauldelprogramador.com/grub-customizer-20-personaliza-tu-grub2/&#34; title=&#34;Grub Customizer 2.0, personaliza tu GRUB2&#34;&gt;GRUB&lt;/a&gt;. Por defecto el GRUB se muestra a una resolución de &lt;strong&gt;640&amp;#215;480&lt;/strong&gt;, la cual es bastante ‘fea’. Igual ocurre con las terminales &lt;strong&gt;ttys&lt;/strong&gt;, a las cuales se puede acceder con pulsando &lt;strong&gt;Ctrl + Alt + F[1-6]&lt;/strong&gt;. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;p&gt;Hace poco reinstalé debian en mi PC de sobremesa y he tenido que volver a configurar algunas cosas, como por ejemplo el &lt;!-- raw HTML omitted --&gt;GRUB&lt;!-- raw HTML omitted --&gt;. Por defecto el GRUB se muestra a una resolución de &lt;strong&gt;640×480&lt;/strong&gt;, la cual es bastante ‘fea’. Igual ocurre con las terminales &lt;strong&gt;ttys&lt;/strong&gt;, a las cuales se puede acceder con pulsando &lt;strong&gt;Ctrl + Alt + F[1-6]&lt;/strong&gt;. Hoy voy a explicar cómo cambiar esta resolución a vuestra preferida.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;cambiar-resolución-de-pantalla-del-grub&#34;&gt;Cambiar resolución de pantalla del GRUB&lt;/h1&gt;
-
-&lt;p&gt;La forma más fácil es editar el fichero &lt;strong&gt;&lt;em&gt;/etc/defaults/grub&lt;/em&gt;&lt;/strong&gt; y cambiar la resolución de la variable &lt;em&gt;GRUB_GFXMODEGRUB_GFXMODE&lt;/em&gt; por la resolución deseada, en mi caso 1280&amp;#215;1024.&lt;/p&gt;
-
+&lt;p&gt;La forma más fácil es editar el fichero &lt;em&gt;&lt;strong&gt;/etc/defaults/grub&lt;/strong&gt;&lt;/em&gt; y cambiar la resolución de la variable &lt;em&gt;GRUB_GFXMODEGRUB_GFXMODE&lt;/em&gt; por la resolución deseada, en mi caso 1280×1024.&lt;/p&gt;
 &lt;h1 id=&#34;cambiar-la-resolución-de-pantalla-de-la-tty&#34;&gt;Cambiar la resolución de pantalla de la tty&lt;/h1&gt;
-
-&lt;p&gt;Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio &lt;strong&gt;&lt;em&gt;/etc/grub.d/&lt;/em&gt;&lt;/strong&gt;. El fichero &lt;strong&gt;10_linux&lt;/strong&gt; se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, &lt;strong&gt;vga&lt;/strong&gt;, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:&lt;/p&gt;
+&lt;p&gt;Voy a explicar dos formas, la primera que apliqué y una segunda que es el método más recomendado y fácil, pero que descubrí posteriormente ojeando los archivos de configuración. La configuración del GRUB se encuentra dividida en ficheros en el directorio &lt;em&gt;&lt;strong&gt;/etc/grub.d/&lt;/strong&gt;&lt;/em&gt;. El fichero &lt;strong&gt;10_linux&lt;/strong&gt; se encarga de generar las entradas del GRUB para sistemas operativos linux, aquí se establecen los parámetros para iniciar el sistema, y nosotros le pasaremos un parámetro adicional, &lt;strong&gt;vga&lt;/strong&gt;, que establecerá el tipo de resolución deseada. Dicho tipo hay que elegirlo de entre los valores de la siguiente tabla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Colores   640x400 640x480 800x600 1024x768 1280x1024 1600x1200
 --------+-----------------------------------------------------
  &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                  0x302
@@ -40,26 +34,25 @@
 &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x310   0x313    0x316    0x319     0x31D
 &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x311   0x314    0x317    0x31A     0x31E
 &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;          0x312   0x315    0x318    0x31B     0x31F
-&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para mi caso concreto eligiré &lt;strong&gt;0x31B&lt;/strong&gt;. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de &lt;strong&gt;10_linux&lt;/strong&gt;:&lt;/p&gt;
+&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para mi caso concreto eligiré &lt;strong&gt;0x31B&lt;/strong&gt;. Una vez conocido el valor, hay que escribir el argumento en el arranque de linux, y eso se hace en la siguiente línea de &lt;strong&gt;10_linux&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;#34;Loading Linux %s ...&amp;#34;&lt;/span&gt; &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;version&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
     cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt; EOF
 &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;         echo    &amp;#39;$message&amp;#39;
 &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;         linux   ${rel_dirname}/${basename} root=${linux_root_device_thisversion} ro ${args} vga=0x31B
 &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; -n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;initrd&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;#34;Loading initial ramdisk ...&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este trozo del script es el encargado de pasar los parámetros a la secuencia de inicio.&lt;/p&gt;
-
-&lt;p&gt;La segunda forma es mucho más cómoda, al igual que en el apartado anterior con la variable &lt;strong&gt;GRUB_GFXMODE&lt;/strong&gt;, hay otra llamada &lt;strong&gt;GRUB_CMDLINE_LINUX&lt;/strong&gt;. Es a esta variable a la que le asignamos el parámetro anterior, quedando &lt;strong&gt;GRUB_CMDLINE_LINUX=&amp;ldquo;vga=0x31B&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
-
+    &lt;span class=&#34;nv&#34;&gt;message&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;gettext_printf &lt;span class=&#34;s2&#34;&gt;&amp;#34;Loading initial ramdisk ...&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este trozo del script es el encargado de pasar los parámetros a la secuencia de inicio.&lt;/p&gt;
+&lt;p&gt;La segunda forma es mucho más cómoda, al igual que en el apartado anterior con la variable &lt;strong&gt;GRUB_GFXMODE&lt;/strong&gt;, hay otra llamada &lt;strong&gt;GRUB_CMDLINE_LINUX&lt;/strong&gt;. Es a esta variable a la que le asignamos el parámetro anterior, quedando &lt;strong&gt;GRUB_CMDLINE_LINUX=&amp;quot;vga=0x31B&amp;rdquo;&lt;/strong&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;aplicar-los-cambios&#34;&gt;Aplicar los cambios&lt;/h1&gt;
-
 &lt;p&gt;Para aplicar los cambios es necesario regenerar el archivo &lt;strong&gt;/boot/grub/grub.cfg&lt;/strong&gt; con el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# update-grub2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### BEGIN /etc/grub.d/10_linux ###
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# update-grub2&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez terminado, el apartado de sistemas operativos Linux disponibles quedará así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;### BEGIN /etc/grub.d/10_linux ###&lt;/span&gt;
+menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3.2.0-4-amd64&amp;#39;&lt;/span&gt; --class debian --class gnu-linux --class gnu --class os &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
  load_video
   insmod gzio
  insmod part_msdos
@@ -83,8 +76,9 @@ menuentry &lt;span class=&#34;s1&#34;&gt;&amp;#39;Debian GNU/Linux, with Linux 3
   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt;    &lt;span class=&#34;s1&#34;&gt;&amp;#39;Loading initial ramdisk ...&amp;#39;&lt;/span&gt;
  initrd  /boot/initrd.img-3.2.0-4-amd64
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-### END /etc/grub.d/10_linux ###&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como se aprecia, aparece el parámetro &lt;strong&gt;vga&lt;/strong&gt;.&lt;/p&gt;</description>
+&lt;span class=&#34;c1&#34;&gt;### END /etc/grub.d/10_linux ###&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como se aprecia, aparece el parámetro &lt;strong&gt;vga&lt;/strong&gt;.&lt;/p&gt;</description>
         </item>
         
     </channel>

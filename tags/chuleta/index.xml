@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Chuleta on El Baúl del programador</title>
+        <title>chuleta on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/chuleta/</link>
-        <description>Recent content in Chuleta on El Baúl del programador</description>
+        <description>Recent content in chuleta on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Wed, 18 Oct 2017 19:04:01 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/chuleta/</link>
-            <title>Chuleta on El Baúl del programador</title>
+            <title>chuleta on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,29 +21,35 @@
             <pubDate>Wed, 18 Oct 2017 19:04:01 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/chuleta-org-mode/</guid>
-            <description>&lt;p&gt;Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;
-            alt=&#34;Org mode quick reference&#34;
-            title=&#34;Org mode quick reference&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;480&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Org mode quick reference&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Para empezar, con &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.&lt;/p&gt;
-
-&lt;h1 id=&#34;secciones&#34;&gt;Secciones&lt;/h1&gt;
+            <description>&lt;p&gt;
+Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;
+            alt=&amp;#34;Org mode quick reference&amp;#34;
+            title=&amp;#34;Org mode quick reference&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;480&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Org mode quick reference&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Para empezar, con &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Secciones
+&lt;/h2&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Top level headline&lt;/span&gt;
 &lt;span class=&#34;gu&#34;&gt;**&lt;/span&gt; Second level
 &lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
@@ -53,196 +58,436 @@
     more text
 
 &lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Another top level headline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;ciclar&#34;&gt;Ciclar&lt;/h1&gt;
-
-&lt;p&gt;Para ciclar sobre las secciones:&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+Ciclar
+&lt;/h2&gt;
+&lt;p&gt;
+Para ciclar sobre las secciones:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;moverse-entre-secciones&#34;&gt;Moverse entre secciones&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Moverse entre secciones
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-n&lt;/code&gt; Siguiente sección.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-p&lt;/code&gt; Sección anterior.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-n&lt;/code&gt; Siguiente sección.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-p&lt;/code&gt; Sección anterior.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;insertar-modificar-secciones&#34;&gt;Insertar/modificar secciones&lt;/h1&gt;
-
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Insertar/modificar secciones
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;árboles-dispersos&#34;&gt;Árboles dispersos&lt;/h1&gt;
-
-&lt;p&gt;Útil para ocultar partes del documento en las que no estamos trabajando actualmente.&lt;/p&gt;
-
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Árboles dispersos
+&lt;/h2&gt;
+&lt;p&gt;
+Útil para ocultar partes del documento en las que no estamos trabajando actualmente.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code&gt;C-c C-c&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;listas&#34;&gt;Listas&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Listas
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt; o &lt;code&gt;*&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code&gt;1.&lt;/code&gt; o &lt;code&gt;1)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;-&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;+&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;*&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;1.&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;1)&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code class=&#34;verbatim&#34;&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;notas-al-pie&#34;&gt;Notas al pie&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Notas al pie
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
+&lt;p&gt;
+Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt;.
 
 &lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt; Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
-
-&lt;p&gt;Sintáxis: &lt;code&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code&gt;C-c C-l&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Si no hay una URL, el enlace se considera interno al documento:&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+Enlaces
+&lt;/h2&gt;
+&lt;p&gt;
+Sintáxis: &lt;code class=&#34;verbatim&#34;&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code class=&#34;verbatim&#34;&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Si no hay una URL, el enlace se considera interno al documento:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[&lt;span class=&#34;na&#34;&gt;#custom-id&lt;/span&gt;]]
 [[&lt;span class=&#34;na&#34;&gt;My Target&lt;/span&gt;][&lt;span class=&#34;nt&#34;&gt;Find my target&lt;/span&gt;]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El último ejemplo, busca en el documento actual &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+El último ejemplo, busca en el documento actual &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code&gt;C-u&lt;/code&gt;, se usa autocompletado.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; o &lt;code&gt;mouse-1&lt;/code&gt; o &lt;code&gt;mouse-2&lt;/code&gt; abre el enlace.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code class=&#34;verbatim&#34;&gt;C-u&lt;/code&gt;, se usa autocompletado.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-o&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;mouse-1&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;mouse-2&lt;/code&gt; abre el enlace.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;items&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; items&lt;/h1&gt;
-
-&lt;p&gt;Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).&lt;/p&gt;
-
+&lt;h2 id=&#34;headline-9&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+items
+&lt;/h2&gt;
+&lt;p&gt;
+Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&gt; TODO -&gt; DONE -&gt; (unmarked)&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.&lt;/li&gt;
-&lt;li&gt;C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&amp;gt; TODO -&amp;gt; DONE -&amp;gt; (unmarked)&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-10&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+checkboxes
+&lt;/h3&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
-
-&lt;p&gt;Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; TODO&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Organize party [0/3]&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; call people [0/2]
     &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Peter
     &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Sarah
   &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;
-            alt=&#34;TODO Items checkboxes&#34;
-            title=&#34;TODO items checkboxes&#34;
-            sizes=&#34;(min-width: 244px) 244px, 100vw&#34;
-            width=&#34;244&#34;
-            height=&#34;100&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;TODO Items checkboxes&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;markup&#34;&gt;Markup&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;
+            alt=&amp;#34;TODO Items checkboxes&amp;#34;
+            title=&amp;#34;TODO items checkboxes&amp;#34;
+            sizes=&amp;#34;(min-width: 244px) 244px, 100vw&amp;#34;
+            width=&amp;#34;244&amp;#34;
+            height=&amp;#34;100&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;TODO Items checkboxes&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-11&#34;&gt;
+Markup
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;*negrita*&lt;/code&gt; =&gt; &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/Cursiva/&lt;/code&gt; =&gt; &lt;em&gt;Cursiva&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;=code=&lt;/code&gt; y &lt;code&gt;~verbatim~&lt;/code&gt; -&gt;  &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;+tachar+&lt;/code&gt; -&gt; &lt;del&gt;tachar&lt;/del&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_subrayar_&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;*negrita*&lt;/code&gt; =&amp;gt; &lt;strong&gt;negrita&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;/Cursiva/&lt;/code&gt; =&amp;gt; &lt;em&gt;Cursiva&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;=code=&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;~verbatim~&lt;/code&gt; -&amp;gt;  &lt;code class=&#34;verbatim&#34;&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;+tachar+&lt;/code&gt; -&amp;gt; &lt;del&gt;tachar&lt;/del&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;_subrayar_&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;imágenes-y-tablas&#34;&gt;Imágenes y tablas&lt;/h1&gt;
-
-&lt;p&gt;Sintáxis de las tablas:&lt;/p&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
+Imágenes y tablas
+&lt;/h2&gt;
+&lt;p&gt;
+Sintáxis de las tablas:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;s&#34;&gt;| HEADER1  | header2  |&lt;/span&gt;
 &lt;span class=&#34;s&#34;&gt;|----------+----------|&lt;/span&gt;
 &lt;span class=&#34;s&#34;&gt;| content1 | contend2 |&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;
-            alt=&#34;Creating tables in org-mode&#34;
-            title=&#34;Creating tables in org-mode&#34;
-            sizes=&#34;(min-width: 304px) 304px, 100vw&#34;
-            width=&#34;304&#34;
-            height=&#34;214&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Creating tables in org-mode&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Las imágenes son enlaces: &lt;code&gt;[[./img/a-image.jpg]]&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;código-fuente&#34;&gt;Código fuente&lt;/h1&gt;
-
-&lt;p&gt;Para incluir código fuente:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-table.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-table.gif&amp;#34;
+            alt=&amp;#34;Creating tables in org-mode&amp;#34;
+            title=&amp;#34;Creating tables in org-mode&amp;#34;
+            sizes=&amp;#34;(min-width: 304px) 304px, 100vw&amp;#34;
+            width=&amp;#34;304&amp;#34;
+            height=&amp;#34;214&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Creating tables in org-mode&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Las imágenes son enlaces: &lt;code class=&#34;verbatim&#34;&gt;[[./img/a-image.jpg]]&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-13&#34;&gt;
+Código fuente
+&lt;/h2&gt;
+&lt;p&gt;
+Para incluir código fuente:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt; #+BEGIN_SRC emacs-lisp
      (defun org-xor (a b)
         &amp;#34;Exclusive or.&amp;#34;
-        (if a (not b) b))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;generará lo siguiente:&lt;/p&gt;
+        (if a (not b) b))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+#+END_SRC
+&lt;/p&gt;
+&lt;p&gt;
+generará lo siguiente:
+&lt;/p&gt;
+&lt;div class=&#34;src src-emacs-lisp&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-xor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;s&#34;&gt;&amp;#34;Exclusive or.&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code&gt;C-c &#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code class=&#34;verbatim&#34;&gt;C-c &amp;#39;&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-14&#34;&gt;
+Fuente
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://orgmode.org/guide/&#34; title=&#34;Manual oficial de org-mode&#34;&gt;Manual oficial de org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://orgmode.org/guide/&#34;&gt;Manual oficial de org-mode&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;Click en return para volver a la referencia. &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;hr class=&#34;footnotes-separatator&#34;&gt;
+&lt;div class=&#34;footnote-definitions&#34;&gt;
+&lt;div class=&#34;footnote-definition&#34;&gt;
+&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;div class=&#34;footnote-body&#34;&gt;
+&lt;p&gt;
+Click en return para volver a la referencia.
+&lt;/p&gt;
 &lt;/div&gt;
-</description>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         
         <item>
@@ -252,7 +497,6 @@
             
             <guid>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</guid>
             <description>&lt;p&gt;No es la primera vez que se publica en el blog una &lt;a href=&#34;https://elbauldelprogramador.com/tags/chuleta&#34; title=&#34;Artículos sobre chuletas&#34;&gt;chuleta&lt;/a&gt; de algo:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Chuleta básica de comandos Dig&#34;&gt;Chuleta de comandos para dig&lt;/a&gt;&lt;/li&gt;
@@ -261,77 +505,57 @@
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/&#34; title=&#34;Chuleta de comandos de Markdown&#34;&gt;Chuleta de comandos MarkDown&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;La de hoy va sobre &lt;em&gt;Emacs&lt;/em&gt;. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la &lt;strong&gt;chuleta de atajos de teclado/comandos/paquetes para emacs definitiva&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;A lo largo del poco tiempo que llevo usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;Artículos sobre emacs&#34;&gt;emacs&lt;/a&gt;, ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:&lt;/p&gt;
-
 &lt;h1 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h1&gt;
-
 &lt;h2 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# name: Modified
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# key: mod
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Otro ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# key: code
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
-
-&lt;h1 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
-
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
+&lt;h1 id=&#34;miscelánica--taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
 &lt;h2 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Queremos buscar por una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresión regular&lt;/a&gt; o un texto simple en varios ficheros a la vez, o un directorio completo, y reemplazar el texto encontrado por otro.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Ejecutar &lt;code&gt;M-x find-name-dired&lt;/code&gt;: e introducir el directorio en el que están los ficheros.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt; para “marcar” todos los ficheros del directorio.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;Q&lt;/code&gt; para ejecutar el comando &lt;code&gt;query-replace&lt;/code&gt; para todos los ficheros marcados.&lt;/li&gt;
 &lt;li&gt;Una vez escrita la expresión regular, se nos pide confirmación para cada fichero, podemos pulsar &lt;code&gt;espacio&lt;/code&gt; para reemplazar la expresión en el fichero, &lt;code&gt;n&lt;/code&gt; para descartarla, o &lt;code&gt;A&lt;/code&gt; para reemplazar la expresión en todos los ficheros.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;A veces queremos seleccionar una región de texto y realizar una acción sobre ella, por ejemplo eliminar espacios en blanco, añadir algún texto delante de cada frase etc.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Supongamos que tenemos el siguiente texto:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
 línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
+línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;- línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 - línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
 - línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-- línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
-
+- línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C-x r k&lt;/code&gt;: &lt;em&gt;Kill&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-x r d&lt;/code&gt;: &lt;em&gt;Borra&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
@@ -342,88 +566,62 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
 &lt;li&gt;&lt;code&gt;C-x r t string RET&lt;/code&gt;: Reemplaza el contenido del rectángulo con &lt;em&gt;string&lt;/em&gt; en cada línea. (El ejemplo visto)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: Inserta &lt;em&gt;string&lt;/em&gt; en cada línea del rectángulo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Supongamos que tenemos un texto mal formateado, y queremos reemplazar un caracter en concreto por un salto de línea. Esto suele pasar por ejemplo al leer ficheros con codificaciones distintas. En los que el salto de línea se interpreta de otro modo. A modo de ejemplo, supongamos que vamos a reemplazar el caracter &lt;code&gt;^N&lt;/code&gt; por un salto de línea. Tenemos este texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Pulsar &lt;code&gt;M-x replace-string&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Introducimos el texto que queremos reemplazar, en este caso &lt;code&gt;^N&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Insertamos el salto de línea, para ello, pulsar:
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;C-q&lt;/code&gt;: Para decirle a emacs que vamos a insertar un caracter en crudo (&lt;em&gt;raw&lt;/em&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-j&lt;/code&gt;: Esta combinación se corresponde con el salto de línea&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;li&gt;Pulsamos &lt;code&gt;Enter&lt;/code&gt; y deberíamos tener el siguiente texto:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet
 , consectetur adipiscing elit.
- Fusce vestibulum.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
-
+ Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h2&gt;
-
 &lt;p&gt;Basta ejecutar &lt;code&gt;M-x delete-trailing-whitespace&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h2&gt;
-
 &lt;p&gt;Este tema se trató en más profundidad en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs&#34; title=&#34;Cómo crear comandos personalizados en Emacs&#34;&gt;&lt;em&gt;Cómo crear comandos personalizados en Emacs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;em&gt;Emacs&lt;/em&gt; por defecto guarda una copia de seguridad del fichero en un fichero del mismo nombre pero acabado en &lt;code&gt;~&lt;/code&gt;, aunque es bastánte útil, a veces molesta tener ficheros desperdigados a lo largo de las carpetas acabando en &lt;code&gt;~&lt;/code&gt;. Es posible almacenarlos todos en una carpeta. Veamos.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;En el fichero de configuración (&lt;code&gt;~/.emacs/init.el&lt;/code&gt;) añadimos&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Set a directory for backup files&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backup-directory-alist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/.saves&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delete-old-versions&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;kept-new-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;kept-old-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
-
+    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Algunos comandos que hemos visto aquí, como buscar y reemplazar texto en varios ficheros a la vez, realizan la acción pero no guardan los cambios en el fichero. Para guardarlos tenemos que seleccionarlos uno a uno en el &lt;em&gt;buffer&lt;/em&gt; y ejecutar la acción de guardar. Para hacernos la vida más fácil, podemos usar &lt;code&gt;ibuffer&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Para sustituir el modo &lt;em&gt;buffer&lt;/em&gt;, por &lt;em&gt;ibuffer&lt;/em&gt; debemos añadir a nuestra configuración:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; make ibuffer the default&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt;, para seleccionar todos los ficheros.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;S&lt;/code&gt;, para guardar los ficheros seleccionados&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
-
+&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo-&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x align-regex =&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;convertir-texto-a-mayúscula-minúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
-
+&lt;h2 id=&#34;convertir-texto-a-mayúsculaminúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C-x C-u&lt;/code&gt;: Convertir la región seleccionada a mayúsculas.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-x C-l&lt;/code&gt;: Convertir la región seleccionada a minúsculas.&lt;/li&gt;
@@ -431,38 +629,25 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
 &lt;li&gt;&lt;code&gt;M-u&lt;/code&gt;: Convertir la siguiente palabra a mayúscula.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-c&lt;/code&gt;: Convertir a mayúscula la primera letra de la palabra &amp;ndash; Capitalizar &amp;ndash;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x tabify&lt;/code&gt;: Sustituye en la región seleccionada espacios por tabuladores.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;
-
 &lt;p&gt;Tal y como dice la descripción de su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/tags/github/&#34; title=&#34;Github&#34;&gt;Github&lt;/a&gt;:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; is an enhanced Emacs 24 distribution that should make your experience with Emacs both more pleasant and more powerful.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;es decir:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; es una distribución mejorada de Emacs 24 que debería hacer tu experiencia con emacs más agradable y potente.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Aunque la descripción menciona la versión 24, personalmente yo estoy usando la versión 25 en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34; title=&#34;Gentoo&#34;&gt;Gentoo&lt;/a&gt; y funciona perfectamente.&lt;/p&gt;
-
-&lt;p&gt;La instalación de &lt;em&gt;Prelude&lt;/em&gt; es muy sencilla, toda la documentación necesaria se encuentra en su &lt;a href=&#34;https://github.com/bbatsov/prelude&#34; target=&#34;_blank&#34; title=&#34;repositorio de Github&#34;&gt;repositorio de Github&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;La instalación de &lt;em&gt;Prelude&lt;/em&gt; es muy sencilla, toda la documentación necesaria se encuentra en su &lt;!-- raw HTML omitted --&gt;repositorio de Github&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;tu-turno&#34;&gt;Tu Turno&lt;/h1&gt;
-
-&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/chuleta-atajos-teclado-emacs.markdown&#34; target=&#34;_blank&#34; title=&#34;Pull Request&#34;&gt;Pull Request&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;!-- raw HTML omitted --&gt;Pull Request&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Esperamos vuestras colaboraciones!&lt;/p&gt;</description>
         </item>
         
@@ -472,50 +657,25 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
             <pubDate>Fri, 29 Jul 2016 10:20:01 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</guid>
-            <description>&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34;
-            alt=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;
-            title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;
-            sizes=&#34;(min-width: 526px) 526px, 100vw&#34;
-            width=&#34;526&#34;
-            height=&#34;256&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Imagen tomada con &lt;em&gt;ScreenFetch&lt;/em&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hace unos meses me decidí a instalar &lt;em&gt;Gentoo&lt;/em&gt; en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda.&lt;/p&gt;
-
 &lt;p&gt;Una de las cosas que más me gusta es su gestor de paquetes, &lt;em&gt;emerge&lt;/em&gt; y sus programas auxiliares para administrar el sistema (&lt;em&gt;equery, eclean, euse y similares&lt;/em&gt;) es por ello que escribo este artículo, para recopilar una lista de las tareas más habituales en el día a día de usar &lt;em&gt;Gentoo&lt;/em&gt;. Cómo buscar paquetes a instalar, eliminar paquetes instalados, consultar qué paquetes queremos instalar, limpiar espacio en el sistema, actualizarlo etc. Empecemos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;comprobar-si-hay-actualizaciones-para-el-sistema&#34;&gt;Comprobar si hay actualizaciones para el sistema&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;comprobar-si-hay-actualizaciones-para-el-sistema-&#34;&gt;Comprobar si hay actualizaciones para el sistema&lt;/h1&gt;
 &lt;p&gt;Una de las primeras cosas que hago cuando enciendo el PC es comprobar si hay actualizaciones del sistema, en &lt;em&gt;Gentoo&lt;/em&gt; esto podemos hacerlo con el siguiente comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge-webrsync
 $ emerge --sync
-$ emaint -A sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los tres comandos llevan a cabo la misma tarea, pero difieren en varios aspectos:&lt;/p&gt;
-
+$ emaint -A sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los tres comandos llevan a cabo la misma tarea, pero difieren en varios aspectos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;emerge --sync&lt;/code&gt;: Solo existe para propósito de compatibilidad, ya que los otros dos comandos son más modernos&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;emaint -A sync&lt;/code&gt;: &lt;code&gt;emaint&lt;/code&gt; es una herramienta para realizar tareas de mantenimiento en el sistema relacionadas con los paquetes, también realiza comprobaciones de “salud”. Entre sus subcomandos está la opción &lt;code&gt;sync&lt;/code&gt;, que comprueba si hay actualizaciones para los paquetes instalados. La opción &lt;code&gt;-A&lt;/code&gt; es para que sincronice todos los repositorios.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;emerge-webrsync&lt;/code&gt;: Este es similar al anterior, pero descarga los datos en un &lt;em&gt;tarball&lt;/em&gt;, lo cual lo hará mucho más rápido que los dos anteriores, este es el comando que suelo usar.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;actualizar-el-sistema&#34;&gt;Actualizar el sistema&lt;/h1&gt;
-
+&lt;h1 id=&#34;actualizar-el-sistema-&#34;&gt;Actualizar el sistema&lt;/h1&gt;
 &lt;p&gt;Sincronizados con el servidor, deberemos realizar la actualización en sí, en caso de existir. Para esta tarea yo suelo usar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --deep --newuse -atv @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Desglosemos cada parámetro:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --deep --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Desglosemos cada parámetro:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--update&lt;/code&gt;: Actualiza el paquete a la mejor versión disponible.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--deep:&lt;/code&gt;: Obliga a que se consideren todas las dependencias de un paquete, en lugar de únicamente las dependencias directas. De este modo se actulizan librerías que no están listadas directamente en las dependencias de un paquete.&lt;/li&gt;
@@ -524,57 +684,47 @@ $ emaint -A sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;code&gt;-t&lt;/code&gt; (&lt;code&gt;--tree&lt;/code&gt;): Muestra los paquetes a actualizar e instalar en forma de árbol.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-v&lt;/code&gt; (&lt;code&gt;--verbose&lt;/code&gt;): Muestra más información.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;eliminar-un-paquete-con-todas-sus-dependencias&#34;&gt;Eliminar un paquete con todas sus dependencias&lt;/h1&gt;
-
+&lt;h1 id=&#34;eliminar-un-paquete-con-todas-sus-dependencias-&#34;&gt;Eliminar un paquete con todas sus dependencias&lt;/h1&gt;
 &lt;p&gt;Para eliminar por completo un paquete, con todas las dependencias:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean paquete&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras eliminar el paquete podemos ejecutar de nuevo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;para eliminar las dependencias que tuviera el paquete desistalado, pero &lt;code&gt;depclean&lt;/code&gt; no eliminará ningún paquete a no ser que todas las dependencias requeridas hayan sido resueltas, por tanto es necesario ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --newuse --deep @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el caso de no haber actualizado la variable &lt;code&gt;USE&lt;/code&gt; en nuestro sistema, podemos ahorrar tiempo con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --changed-use --deep @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;buscar-paquetes-a-instalar&#34;&gt;Buscar paquetes a instalar&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras eliminar el paquete podemos ejecutar de nuevo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;para eliminar las dependencias que tuviera el paquete desistalado, pero &lt;code&gt;depclean&lt;/code&gt; no eliminará ningún paquete a no ser que todas las dependencias requeridas hayan sido resueltas, por tanto es necesario ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --newuse --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el caso de no haber actualizado la variable &lt;code&gt;USE&lt;/code&gt; en nuestro sistema, podemos ahorrar tiempo con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --changed-use --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;buscar-paquetes-a-instalar-&#34;&gt;Buscar paquetes a instalar&lt;/h1&gt;
 &lt;p&gt;Hay varias formas, se puede buscar:&lt;/p&gt;
-
-&lt;h2 id=&#34;usando-expresiones-regulares&#34;&gt;Usando expresiones regulares&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;%^python&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto buscará paquetes que se llamen exáctamente &lt;em&gt;python&lt;/em&gt;, y por tanto solo hay uno:&lt;/p&gt;
+&lt;h2 id=&#34;usando-expresiones-regulares-&#34;&gt;Usando expresiones regulares&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;%^python&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto buscará paquetes que se llamen exáctamente &lt;em&gt;python&lt;/em&gt;, y por tanto solo hay uno:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Results &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; search key : %^python$ &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 Searching...
 
 *  dev-lang/python
-      Latest version available: &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;.4.3-r1
-      Latest version installed: &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;.4.3-r1
-      Size of files: &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;,096 KiB
+      Latest version available: 3.4.3-r1
+      Latest version installed: 3.4.3-r1
+      Size of files: 14,096 KiB
       Homepage:      http://www.python.org/
       Description:   An interpreted, interactive, object-oriented programming language
       License:       PSF-2
 
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Applications found : &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;buscar-paquetes-que-contengan-la-palabra-x&#34;&gt;Buscar paquetes que contengan la palabra x&lt;/h2&gt;
-
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Applications found : &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;buscar-paquetes-que-contengan-la-palabra-x-&#34;&gt;Buscar paquetes que contengan la palabra x&lt;/h2&gt;
 &lt;p&gt;Para buscar todos los paquetes que contengan la palabra &lt;em&gt;python&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras ejecutar este comando, en mi caso aparecen 200 paquetes.&lt;/p&gt;
-
-&lt;h2 id=&#34;buscar-paquetes-basándonos-en-su-descripción&#34;&gt;Buscar paquetes basándonos en su descripción&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras ejecutar este comando, en mi caso aparecen 200 paquetes.&lt;/p&gt;
+&lt;h2 id=&#34;buscar-paquetes-basándonos-en-su-descripción-&#34;&gt;Buscar paquetes basándonos en su descripción&lt;/h2&gt;
 &lt;p&gt;En lugar de buscar por el nombre del paquete, podemos buscar en su descripción:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --searchdesc python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;También se pueden usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalar-paquetes&#34;&gt;Instalar paquetes&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --searchdesc python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;También se pueden usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;instalar-paquetes-&#34;&gt;Instalar paquetes&lt;/h2&gt;
 &lt;p&gt;Una vez encontrado el paquete que deaseamos instalar, prodecemos del siguiente modo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv paquete&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;equery&#34;&gt;Equery&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;equery-&#34;&gt;Equery&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es parte del paquete &lt;code&gt;gentoolkit&lt;/code&gt;, el cual instala una serie de aplicaciones destinadas a la administración de &lt;em&gt;Gentoo&lt;/em&gt;, para instalarlo basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --ask app-portage/gentoolkit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es una aplicación creada con el propósito de hacer tareas comunes en &lt;em&gt;Portage&lt;/em&gt; más sencillas, veamos una lista de lo que puede hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --ask app-portage/gentoolkit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es una aplicación creada con el propósito de hacer tareas comunes en &lt;em&gt;Portage&lt;/em&gt; más sencillas, veamos una lista de lo que puede hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Gentoo package query tool
 Usage: equery &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; module-name &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;module-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 
@@ -595,48 +745,41 @@ modules &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;short name&lt;span class=&#3
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;m&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;eta                  display metadata about PKG
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ize                  display total size of all files owned by PKG
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ses                  display USE flags &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
- &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hich                 print full path to ebuild &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si quisieramos ver el árbol de dependencias de firefox:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery g firefox&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;eclean&#34;&gt;Eclean&lt;/h1&gt;
-
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hich                 print full path to ebuild &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si quisieramos ver el árbol de dependencias de firefox:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery g firefox
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;eclean-&#34;&gt;Eclean&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;eclean&lt;/em&gt; es otra herramienta parte del paquete &lt;em&gt;Gentoolkit&lt;/em&gt;, diseñada para limpiar el sistema del código fuente usado para compilar los paquetes y binarios creados durante el proceso de compilación.&lt;/p&gt;
-
-&lt;h2 id=&#34;limpiar-el-código-fuente-de-los-paquetes&#34;&gt;Limpiar el código fuente de los paquetes&lt;/h2&gt;
-
+&lt;h2 id=&#34;limpiar-el-código-fuente-de-los-paquetes-&#34;&gt;Limpiar el código fuente de los paquetes&lt;/h2&gt;
 &lt;p&gt;Tras instalar paquetes, el código fuente queda guardado junto con los objetos generados por si es necesario recompilar, si no los queremos mantener, es posible eliminarlos con estos comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ eclean --deep distfiles
-$ eclean-dist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;eclean-dist&lt;/code&gt; es un alias de &lt;code&gt;eclean distfiles&lt;/code&gt;, la opción &lt;code&gt;--deep&lt;/code&gt; deja únicamente el código fuente necesario para una reinstalación.&lt;/p&gt;
-
-&lt;h2 id=&#34;limpiar-paquetes-binarios&#34;&gt;Limpiar paquetes binarios&lt;/h2&gt;
-
+$ eclean-dist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;eclean-dist&lt;/code&gt; es un alias de &lt;code&gt;eclean distfiles&lt;/code&gt;, la opción &lt;code&gt;--deep&lt;/code&gt; deja únicamente el código fuente necesario para una reinstalación.&lt;/p&gt;
+&lt;h2 id=&#34;limpiar-paquetes-binarios-&#34;&gt;Limpiar paquetes binarios&lt;/h2&gt;
 &lt;p&gt;Los paquetes binarios son aquellos que no proporcionan código fuente, como por ejemplo el software privativo, o paquetes precompilados, para borrarlos basta ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ eclean --deep packages
-$ eclean-pkg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;apps-recomendadas&#34;&gt;Apps Recomendadas&lt;/h1&gt;
-
+$ eclean-pkg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;apps-recomendadas-&#34;&gt;Apps Recomendadas&lt;/h1&gt;
 &lt;p&gt;Antes de usar &lt;em&gt;Gentoo&lt;/em&gt;, utilizaba el comando &lt;code&gt;df&lt;/code&gt; para ver el estado de los discos duros, un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda4        20G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;.9G   11G  &lt;span class=&#34;m&#34;&gt;44&lt;/span&gt;% /
-tmpfs           &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.2G  952K  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.2G   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;% /run
-dev              10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
-shm             &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G   91M  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.8G   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /dev/shm
-cgroup_root      10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /sys/fs/cgroup
-/dev/sda2       128M   16M  113M  &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;% /boot
-/dev/sda5        87G   38G   45G  &lt;span class=&#34;m&#34;&gt;46&lt;/span&gt;% /home
-/dev/sdb1       110G   11G   94G  &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;% /home/hkr/ssd2
-none            &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /run/user/1000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras instalar &lt;em&gt;Gentoo&lt;/em&gt; descubrí el paquete &lt;code&gt;pydf&lt;/code&gt;, similar a &lt;code&gt;df&lt;/code&gt; pero visualmente más atractivo, colorea el resultado y muestra una representación gráfica del porcentaje ocupado:&lt;/p&gt;
+/dev/sda4        20G  7.9G   11G  44% /
+tmpfs           1.2G  952K  1.2G   1% /run
+dev              10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /dev
+shm             5.9G   91M  5.8G   2% /dev/shm
+cgroup_root      10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /sys/fs/cgroup
+/dev/sda2       128M   16M  113M  12% /boot
+/dev/sda5        87G   38G   45G  46% /home
+/dev/sdb1       110G   11G   94G  11% /home/hkr/ssd2
+none            5.9G     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  5.9G   0% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras instalar &lt;em&gt;Gentoo&lt;/em&gt; descubrí el paquete &lt;code&gt;pydf&lt;/code&gt;, similar a &lt;code&gt;df&lt;/code&gt; pero visualmente más atractivo, colorea el resultado y muestra una representación gráfica del porcentaje ocupado:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pydf  -h
 Filesystem Size  Used Avail Use%                                                                                       Mounted on
-/dev/sda4   19G 8043M   10G &lt;span class=&#34;m&#34;&gt;41&lt;/span&gt;.1 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##################################.................................................] /
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sda2  128M   15M  112M &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;.0 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########.........................................................................] /boot
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sda5   87G   38G   45G &lt;span class=&#34;m&#34;&gt;43&lt;/span&gt;.4 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;####################################...............................................] /home
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sdb1  110G   11G   94G  &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;.8 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;########...........................................................................&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /home/hkr/ssd2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+/dev/sda4   19G 8043M   10G 41.1 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##################################.................................................] /&lt;/span&gt;
+/dev/sda2  128M   15M  112M 12.0 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########.........................................................................] /boot&lt;/span&gt;
+/dev/sda5   87G   38G   45G 43.4 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;####################################...............................................] /home&lt;/span&gt;
+/dev/sdb1  110G   11G   94G  9.8 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;########...........................................................................] /home/hkr/ssd2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet&#34; title=&#34;CheatSheet de Gentoo&#34;&gt;Gentoo Cheat Sheet&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;
@@ -650,114 +793,88 @@ Filesystem Size  Used Avail Use%                                                
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;Chuleta de comandos para GPG&#34; alt=&#34;Chuleta de comandos para GPG&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
-
 &lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
-
 &lt;p&gt;Empecemos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;crear-una-clave&#34;&gt;Crear una clave&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
-
-&lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-public-key&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
+&lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-publickey&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
 &lt;p&gt;Es muy parecido a exportar una clave pública, pero tienes que pisar algunas protecciones que vienen por default. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
-
 &lt;h1 id=&#34;importar-una-clave-pública&#34;&gt;Importar una clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --import public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
-Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --import public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
+Esto agrega la clave pública en el archivo “&lt;em&gt;public.key&lt;/em&gt;” a tu anillo de claves públicas.&lt;/p&gt;
 &lt;h1 id=&#34;importar-una-clave-privada&#34;&gt;Importar una clave privada&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --allow-secret-key-import --import private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto agrega una clave privada en el archivo “*private.key&lt;em&gt;” a tu anillo de claves privadas. Hay una nota (&lt;/em&gt;) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --allow-secret-key-import --import private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto agrega una clave privada en el archivo “&lt;em&gt;private.key&lt;/em&gt;” a tu anillo de claves privadas. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
 &lt;h1 id=&#34;eliminar-una-clave-pública-de-tu-anillo-de-claves-públicas&#34;&gt;Eliminar una clave pública (de tu anillo de claves públicas):&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;¡ATENCIÓN! Si hay una clave privada en tu anillo de claves privadas asociada con esta clave pública, ¡tendrás un error! Debes primero eliminar tu clave privada para este par de claves de tu anillo de claves privadas.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;eliminar-una-clave-secreta-una-clave-de-tu-anillo-de-claves-secreta&#34;&gt;Eliminar una clave secreta (una clave de tu anillo de claves secreta)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
 &lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-públicas&#34;&gt;Listar las claves de tu anillo de claves públicas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-secret-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --fingerprint &amp;gt; fingerprint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-secret-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --fingerprint &amp;gt; fingerprint
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
 &lt;h1 id=&#34;encriptar-datos&#34;&gt;Encriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt; somefile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt; somefile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
 Como por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;#34; mydata.tar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;#34; mydata.tar
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto debería crear un archivo llamado “&lt;em&gt;mydata.tar.gpg&lt;/em&gt;” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: &lt;em&gt;mydata.tar&lt;/em&gt; no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar &lt;em&gt;mydata.tar&lt;/em&gt; tú mismo.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Un interesante comentario al margen, encripté el patch preventivo del kernel, un archivo de 55,247 bytes, y terminé con un archivo encriptado de 15,276 bytes.&lt;/p&gt;
-
 &lt;h1 id=&#34;desencriptar-datos&#34;&gt;Desencriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “&lt;em&gt;mydata.tar&lt;/em&gt;”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “&lt;code&gt;gpg -d mydata.tar.gpg&lt;/code&gt;” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
 &lt;p&gt;Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.&lt;/p&gt;
-
 &lt;p&gt;No he utilizado estos comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --edit-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-revoke&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --edit-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-revoke
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: los siguientes casos de uso indican porqué los comandos &lt;code&gt;secret-key import/export&lt;/code&gt; existen, o al menos un par de ideas de qué puedes hacer con ellos. SIN EMBARGO, hay un poco de logística necesaria para compartir la clave secreta. ¿Cómo la pasamos de una computadora a otra? Creo que encriptarla y enviarla por e-mail probablemente estaría bien, pero yo no la enviaría desencriptada con e-mail, esto sería PELIGROSO.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Caso de Uso 1: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente si quieres un par de claves para todas tus computadoras (asumiento que tienes múltiples computadoras), entonces esto te permitirá exportar ese par de claves de la computadora original e importarla en las otras computadoras.&lt;/li&gt;
 &lt;li&gt;Caso de Uso 2: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente, si perteneces a un grupo, y quisieras crear un par de clave simple para ese grupo, una persona debería crear el par de claves, luego exportar las claves pública y privada, darselas a los otros miembros del grupo y ellos deberían importar ese par. Luego un miembro del grupo o alguien afuera podría utilizar la clave pública del grupo, encriptando el mensaje y/o los datos, y enviándolo a los miembros del grupo, y todos ellos deberían poder tener acceso al mensaje y/o los datos. Basicamente, podrías crear un sistema simplificado donde sólo una clave pública es requerida para enviar cosas encriptadas a múltiples destinatarios.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Quick&amp;rsquo;n easy gpg cheatsheet&lt;/em&gt; »» &lt;a href=&#34;http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Quick&amp;rsquo;n easy gpg cheatsheet&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;Más artículos sobre GPG&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
@@ -768,39 +885,37 @@ Como por ejemplo:&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/</guid>
-            <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho &amp;#8212; entre otras cosas &amp;#8212; para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;p&gt;&lt;strong&gt;Dig (Domain Information Groper)&lt;/strong&gt; es un comando de gran utilidad para realizar consultas a registros DNS. Se usa mucho — entre otras cosas — para el diagnóstico de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Servidores DNS&lt;/a&gt;. Desde que administro yo mismo el servidor del blog lo he usado bastante, y hoy voy a dar unas nociones básicas de cómo usarlo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;actualización&#34;&gt;[Actualización]&lt;/h1&gt;
-
-&lt;p&gt;En un comentario hecho en la página de &lt;a href=&#34;https://plus.google.com/b/108003822606696308728/108003822606696308728/posts/idbcxhy5vzG&#34; target=&#34;_blank&#34;&gt;Google+ del blog&lt;/a&gt; un usuario indicó que es posible obtener una salida simplificada de todos los comandos de abajo con la opción &lt;em&gt;+short&lt;/em&gt;.&lt;/p&gt;
-
+&lt;p&gt;En un comentario hecho en la página de &lt;!-- raw HTML omitted --&gt;Google+ del blog&lt;!-- raw HTML omitted --&gt; un usuario indicó que es posible obtener una salida simplificada de todos los comandos de abajo con la opción &lt;em&gt;+short&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;El ejemplo más básico es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig ejemplo.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;obtener-distintos-tipos-de-registros-dns&#34;&gt;Obtener distintos tipos de registros DNS&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig ejemplo.com
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;obtener-distintos-tipos-de-registros-dns&#34;&gt;Obtener distintos tipos de registros DNS&lt;/h1&gt;
 &lt;p&gt;La sintaxis es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @servidor-dns ejemplo.com tipo-de-registro&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ejemplo de uso:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @servidor-dns ejemplo.com tipo-de-registro
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ejemplo de uso:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @208.67.222.222 google.com A
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
 &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.          IN  A
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
-google.com.      &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.231
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.226
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.230
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.228
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.238
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.229
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.227
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.225
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.232
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.224
-google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.233&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;obtener-los-servidores-de-nombres&#34;&gt;Obtener los servidores de nombres&lt;/h1&gt;
+google.com.      &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.231
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.226
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.230
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.228
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.238
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.229
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.227
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.225
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.232
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.224
+google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   173.194.34.233
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;obtener-los-servidores-de-nombres&#34;&gt;Obtener los servidores de nombres&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @208.67.222.222 google.com NS
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -810,8 +925,10 @@ google.com.       &lt;span class=&#34;m&#34;&gt;300&lt;/span&gt; IN  A   &lt;spa
 google.com.     &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns2.google.com.
 google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns1.google.com.
 google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns3.google.com.
-google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns4.google.com.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;obtener-registros-mx-de-correo&#34;&gt;Obtener registros MX (De correo)&lt;/h1&gt;
+google.com.      &lt;span class=&#34;m&#34;&gt;172749&lt;/span&gt;  IN  NS  ns4.google.com.
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;obtener-registros-mx-de-correo&#34;&gt;Obtener registros MX (De correo)&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @208.67.222.222 google.com MX
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -822,16 +939,19 @@ google.com.     &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span 
 google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; aspmx.l.google.com.
 google.com.       &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; alt3.aspmx.l.google.com.
 google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;50&lt;/span&gt; alt4.aspmx.l.google.com.
-google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; alt2.aspmx.l.google.com.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;obtener-registros-txt&#34;&gt;Obtener registros TXT&lt;/h1&gt;
+google.com.      &lt;span class=&#34;m&#34;&gt;469&lt;/span&gt; IN  MX  &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; alt2.aspmx.l.google.com.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;obtener-registros-txt&#34;&gt;Obtener registros TXT&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig @208.67.222.222 google.com TXT
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
 &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;google.com.          IN  TXT
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
-google.com.        &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;    IN  TXT &lt;span class=&#34;s2&#34;&gt;&amp;#34;v=spf1 include:_spf.google.com ip4:216.73.93.70/31 ip4:216.73.93.72/31 ~all&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;obtener-todos-los-tipos-de-registros-en-una-misma-consulta&#34;&gt;Obtener todos los tipos de registros en una misma consulta&lt;/h1&gt;
+google.com.        &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;    IN  TXT &lt;span class=&#34;s2&#34;&gt;&amp;#34;v=spf1 include:_spf.google.com ip4:216.73.93.70/31 ip4:216.73.93.72/31 ~all&amp;#34;&lt;/span&gt;
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;obtener-todos-los-tipos-de-registros-en-una-misma-consulta&#34;&gt;Obtener todos los tipos de registros en una misma consulta&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig any google.com
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
@@ -846,21 +966,21 @@ google.com.       &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; IN  MX  &lt;spa
 google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns2.google.com.
 google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns1.google.com.
 google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns3.google.com.
-google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.google.com.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;realizar-una-consulta-inversa&#34;&gt;Realizar una consulta inversa&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig -x &lt;span class=&#34;m&#34;&gt;173&lt;/span&gt;.194.34.233
+google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.google.com.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;realizar-una-consulta-inversa&#34;&gt;Realizar una consulta inversa&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dig -x 173.194.34.233
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
-&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;233&lt;/span&gt;.34.194.173.in-addr.arpa.  IN  PTR
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;233.34.194.173.in-addr.arpa.  IN  PTR
 
 &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
-&lt;span class=&#34;m&#34;&gt;233&lt;/span&gt;.34.194.173.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;83265&lt;/span&gt; IN  PTR mad01s09-in-f9.1e100.net.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
+233.34.194.173.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;83265&lt;/span&gt; IN  PTR mad01s09-in-f9.1e100.net.
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Puedes encontrar una descripción un poco más extensa sobre el funcionamiento de la consulta inversa en la &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34;&gt;tercera&lt;/a&gt; parte del artículo &lt;em&gt;Cómo configurar un servidor DNS&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;dig – Linux DNS Lookup utility cheat sheet&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/dig-linux-dns-lookup-utility-cheat-sheet&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;dig – Linux DNS Lookup utility cheat sheet&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;linuxaria&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -870,20 +990,13 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
             <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 910px) 910px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; alt=&#34;Tutorial git y comandos git&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos git&#34; alt=&#34;Git: Mini Tutorial y chuleta de comandos&#34; width=&#34;910px&#34; height=&#34;380px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java24&amp;ch=ocsoc&#34; id=&#34;revresponse-git-link&#34; title=&#34;Manual de git&#34; target=&#34;_blank&#34;&gt;manual para git&lt;/a&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;!-- raw HTML omitted --&gt;manual para git&lt;!-- raw HTML omitted --&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;a href=&#34;http://git-scm.com/book&#34; target=&#34;_blank&#34;&gt;Pro Git&lt;/a&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.en.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.epub&#34; target=&#34;_blank&#34;&gt;EPUB&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/pro-git.en.mobi&#34; target=&#34;_blank&#34;&gt;MOBI&lt;/a&gt; y &lt;a href=&#34;http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=1430218339&amp;linkCode=as2&amp;tag=elbaudelpro-21&#34; target=&#34;_blank&#34;&gt;versión en papel&lt;/a&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;!-- raw HTML omitted --&gt;Pro Git&lt;!-- raw HTML omitted --&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;!-- raw HTML omitted --&gt;PDF&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;EPUB&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;MOBI&lt;!-- raw HTML omitted --&gt; y &lt;!-- raw HTML omitted --&gt;versión en papel&lt;!-- raw HTML omitted --&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;chuleta-de-comandos-git&#34;&gt;Chuleta de comandos git&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git help &amp;lt;command&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git clone &amp;lt;uri&amp;gt; namedir&lt;/code&gt; # clona usando como nombre de directorio namedir.&lt;/li&gt;
@@ -900,25 +1013,19 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;   #  to unstage&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;   #  Descartar cambios en el directorio de trabajo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;añadir-archivos&#34;&gt;AÑADIR ARCHIVOS&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git add -i&lt;/code&gt;  # interactive staggin&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git add -p&lt;/code&gt;  # crea patch&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;stash&#34;&gt;STASH&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git stash&lt;/code&gt;  # guarda el estado en una pila y limpia el directorio para poder cambiar de rama&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash list&lt;/code&gt;  # muestra la pila&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash apply&lt;/code&gt;  #  vuelve al estado original del dir. Stash{n} especifica uno concreto Y &amp;ndash;index reaplica los cambios stagged&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash pop&lt;/code&gt;  #  elimina el primero en la pila. O drop&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;logs&#34;&gt;LOGS&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git log -p -2&lt;/code&gt;  #  Muestra 2 últimos commits con diff&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --stat&lt;/code&gt;&lt;/li&gt;
@@ -935,9 +1042,7 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git log refA refB --not refC&lt;/code&gt;  #  commits en refA y refB que no están en refC&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log master...experiment&lt;/code&gt;  # commits de master o experiment, pero sin ser comunes. Con &amp;ndash;left-right indica a qué rama pertenece cada uno&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;remotes-repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
-
+&lt;h2 id=&#34;remotes--repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git remote -v&lt;/code&gt;  #  lista los repos remotos&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote add [shortname] [url]&lt;/code&gt;  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master&lt;/li&gt;
@@ -947,25 +1052,21 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git remote rename &amp;lt;old-name&amp;gt; &amp;lt;new-name&amp;gt;&lt;/code&gt;   #  también renombra branches: quedaría &lt;code&gt;&amp;lt;new-name&amp;gt;/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote rm &amp;lt;remote-name&amp;gt;&lt;/code&gt;   #  p.e si el contribuidor ya no contribuye más&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;añadir-varios-repositorios-remotos&#34;&gt;Añadir varios repositorios remotos&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git remote add bitbucket &amp;lt;url repositorio&amp;gt;&lt;/code&gt;  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push -u bitbucket -all&lt;/code&gt;  #  Subir el proyecto a bitbucket. A partir de ahora se puede seleccionar a qué repo publicar con &lt;code&gt;git push nombre_repo_remoto&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;tagging-marcan-puntos-importantes-en-la-histtoria-del-repo-releases&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
-
+&lt;h2 id=&#34;tagging--marcan-puntos-importantes-en-la-histtoria-del-repo--releases-&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git tag&lt;/code&gt;  #  muestra las etiquetas actuales&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -l &#39;v1.4.2.*&#39;&lt;/code&gt;   #  acepta regex&lt;/li&gt;
 &lt;li&gt;Dos tipos de tag:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tagname&amp;gt; -m &#39;mensaje&#39;&lt;/code&gt;   #  annotated tag&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  muestra información asociada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -s &amp;lt;tag-name&amp;gt; -m &#39;message&#39;&lt;/code&gt;   #  la firma con gpg&lt;/li&gt;
@@ -973,13 +1074,12 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git tag -v &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  verifica tags firmadas&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tag-name&amp;gt; [commit-chksum]&lt;/code&gt;  #  crea tag para commit con dicho chksum&lt;/li&gt;
 &lt;li&gt;Por defecto no se transfieren los tags, para subirlos al servidor:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git push origin [tag-name]&lt;/code&gt;  #  una sola&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin --tags&lt;/code&gt;  #  Enviar todas&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;gpg --list-keys&lt;/code&gt;  # Coges la id pública&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gpg -a --export &amp;lt;id&amp;gt; | git hash-object -w --stdin&lt;/code&gt;  # Copia el SHA-1 devuelto&lt;/li&gt;
@@ -989,13 +1089,11 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git show &amp;lt;tag&amp;gt;&lt;/code&gt;   # Devuelve más información sobre la etiqueta&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -d nombre_tag&lt;/code&gt;  #  eliminar la etiqueta&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin :refs/tags/nombre_tag&lt;/code&gt;  #  Eliminar la etiqueta del repositorio remoto.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;branch&#34;&gt;BRANCH&lt;/h2&gt;
-
 &lt;p&gt;Las ramas simplememte son punteros a distintos snapshots&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git branch &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea rama. Puntero al commit actual&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # cambiar a la rama especificada.&lt;/li&gt;
@@ -1009,121 +1107,119 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git branch --merged&lt;/code&gt;  # lista ramas que han sido mezcladas con la actual. Si no tienen un *, pueden borrarse, ya que significa que se han incorporado los cambios en la rama actual.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git branch --no-merged&lt;/code&gt;  # lista ramas que no han sido incorporadas a la actual.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;remote-branches&#34;&gt;REMOTE BRANCHES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Descarga el contenido del servidor&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;   # Las ramas no se suben por defecto, has de subirlas explícitamente&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;:&amp;lt;nuevoNombre&amp;gt;&lt;/code&gt;   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch&lt;/li&gt;
 &lt;li&gt;Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b rama_nueva origin/rama_nueva&lt;/code&gt;  #  Crea una rama local a partir de la remota&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge origin/nueva_rama&lt;/code&gt;  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push [remotename] :[branch]&lt;/code&gt;  #  elimina una rama remota&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push [remotename] [localbranch]:[remotebranch]&lt;/code&gt;  # La rama en el servidor tiene distinto nombre a la local&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;tracking-branches&#34;&gt;TRACKING BRANCHES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git checkout --track origin/rama&lt;/code&gt;  # Equivalente a -b rama_nueva origin/rama_nueva&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git chekout -b &amp;lt;nuevo_nombre&amp;gt; origin/&amp;lt;rama&amp;gt;&lt;/code&gt;   #  Establece un nombre distinto para la rama local&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;rebase&#34;&gt;REBASE&lt;/h2&gt;
-
 &lt;p&gt;Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re-merges&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/li&gt;
-&lt;li&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
-
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git rebase --onto master server client&lt;/code&gt;  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge client&lt;/code&gt;  #  fast-forward. Client y master en el mismo snapshot&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git rebase master server&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge server&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git rebase [basebranch] [topicbranch]&lt;/code&gt;  #  sintaxis de rebase&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git rebase -i&lt;/code&gt;  #  Rebase interactivo&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase [basebranch] [topicbranch]&lt;/code&gt;  #  sintaxis de rebase&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase -i&lt;/code&gt;  #  Rebase interactivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;servidor&#34;&gt;SERVIDOR&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git instawew&lt;/code&gt;  #  Muestra una interfaz web con los commits&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;generar-un-número-de-compilación-build-number&#34;&gt;GENERAR UN NÚMERO DE COMPILACIÓN (BUILD NUMBER)&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git describe master&lt;/code&gt;  # Solo funciona para tags creadas con -s ó -a&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;preparar-una-release&#34;&gt;PREPARAR UNA RELEASE&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; | gzip &amp;gt; $(git describe master).tar.gz&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; --format=zip | $(git describe master).zip&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;test/ export-ignore  # Al crear el tarball no incluye el directorio test/&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;generar-un-changelog&#34;&gt;GENERAR UN CHANGELOG&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git shortlog --no-merges master --not &amp;lt;tag&amp;gt;&lt;/code&gt;   # Recopila todos los commits desde &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; y los agrupa por autor&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;recomendaciones&#34;&gt;RECOMENDACIONES&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User1 clona el repo y hace cambios, realiza un commit&lt;/li&gt;
 &lt;li&gt;User2 clona el repo, hace cambios, hace commit y sube los cambios con push&lt;/li&gt;
-&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &lt;u&gt;! [rejected] master -&amp;gt; master (non-fast forward)&lt;/u&gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:&lt;/li&gt;
+&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &lt;!-- raw HTML omitted --&gt;! [rejected] master -&amp;gt; master (non-fast forward)&lt;!-- raw HTML omitted --&gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:
+&lt;ul&gt;
 &lt;li&gt;git fetch origin&lt;/li&gt;
 &lt;li&gt;git merge origin/master&lt;/li&gt;
 &lt;li&gt;git push origin master&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;u&gt;issue54&lt;/u&gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;!-- raw HTML omitted --&gt;issue54&lt;!-- raw HTML omitted --&gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --no-merges origin/master ^issue54&lt;/code&gt;  # Observa qué cambios ha hecho User1&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge issue54 &amp;amp;&amp;amp; git merge origin/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git diff --check&lt;/code&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git add --patch&lt;/code&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git diff --check&lt;/code&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add --patch&lt;/code&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;pasos-a-seguir-para-contribuir-a-proyecyos-ajenos-mediante-fork&#34;&gt;PASOS A SEGUIR PARA CONTRIBUIR A PROYECYOS AJENOS, MEDIANTE FORK&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git clone &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b featureA&lt;/code&gt;&lt;/li&gt;
@@ -1140,7 +1236,6 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;(Contactar con el propietario del proyecto)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en &lt;strong&gt;featureB&lt;/strong&gt;, resuelves conflictos, y haces push:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b featureBv2 origin/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge --no-commit --squash featureB&lt;/code&gt;&lt;/li&gt;
@@ -1148,22 +1243,18 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push myFork featureBv2&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--squash&lt;/code&gt; coge todo el trabajo de la rama mezclada y la aplasta en un no-merge commit encima de la rama en la que estas. &amp;ndash;no-commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;reflog&#34;&gt;REFLOG&lt;/h2&gt;
-
 &lt;p&gt;En segundo plano, git crea un log de a donde han estado referenciando HEAD y el resto de ramas en los últimos meses.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show HEAD@{n}&lt;/code&gt;  # Muestra información sobre el reflog número n&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log -g master&lt;/code&gt;  # Muestra el log formateado como la salida de reflog&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show master@{yesterday}&lt;/code&gt;  # Muestra los commits de ayer.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;utilidades&#34;&gt;UTILIDADES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git show &amp;lt;short-SHA-1&amp;gt;&lt;/code&gt;   # Es posible ver un commit pasando la versión abreviada del SHA-1&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git rev-parse &amp;lt;branch&amp;gt;&lt;/code&gt;   # A qué SHA-1 apunta una rama&lt;/li&gt;
@@ -1172,48 +1263,45 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git show HEAD~2&lt;/code&gt;  #  El primer padre del primer padre&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git filter-branch --tree-filter &#39;rm -f &amp;lt;file&amp;gt;&#39; HEAD&lt;/code&gt;  # elimina el archivo de todos los commits&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;depuración&#34;&gt;DEPURACIÓN&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;File anotation&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;File anotation&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git blame -L 12,22 &amp;lt;archivo&amp;gt;&lt;/code&gt;   #  muestra cuando y por quién se modificaron de la linea 12 a la 22&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git blame -C -L 141,153 &amp;lt;file&amp;gt;&lt;/code&gt;   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git bisect start&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git bisect bad&lt;/code&gt;  #  marcas el commit actual como roto&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git bisect good [commit bueno]&lt;/code&gt;  #  último commit conocido que funcionaba&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git bisect reset&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;submodulos&#34;&gt;SUBMODULOS&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;url&amp;gt;&lt;/code&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;url&amp;gt;&lt;/code&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;git clone url&lt;/li&gt;
 &lt;li&gt;git submodule init&lt;/li&gt;
 &lt;li&gt;git submodule update&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;CONFIGURATION&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config --global &amp;lt;opcion&amp;gt; &amp;lt;valor&amp;gt;&lt;/code&gt;   # global para usuario, system todos y sin nada, especifico para el repo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config {key}&lt;/code&gt;  #  muestra el valor de key&lt;/li&gt;
@@ -1229,56 +1317,42 @@ google.com.      &lt;span class=&#34;m&#34;&gt;172781&lt;/span&gt;  IN  NS  ns4.
 &lt;li&gt;&lt;code&gt;git config --global core.whitespace trailing-space, space-before-tab, indent-with-non-tab, cr-at-eol&lt;/code&gt;  #  respectivamente: busca espacios al final de línea, busca espacios al inicio de tabulación, busca líneas con 8 o más espacios en lugar de tabulaciones, acepta retornos de carro&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git apply --whitespace=warn &amp;lt;patch&amp;gt;&lt;/code&gt;   #  advierte de errores de espacios antes de aplicar el patch. Con &amp;ndash;whitespace=fix intenta arreglarlos&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;git-attributes&#34;&gt;GIT ATTRIBUTES&lt;/h2&gt;
-
 &lt;p&gt;Archivo en .gitattributes en el directorio de trabajo o en .git/info/attributes para no committearlo&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Identificando archivos binarios&lt;/strong&gt;
 Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;nombre archivo o regexp&amp;gt; -crlf -diff&lt;/code&gt;  #  git no intentará corregir problemas de crlf ni mostrará los cambios con diff. En versiones &amp;gt;= 1.6 se pueden sustituir estos dos valores por la macro binary&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Diffing binary files&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:&lt;/p&gt;
-
 &lt;p&gt;*&lt;strong&gt;.doc diff=word&lt;/strong&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;tras-esto-hay-que-definir-el-filtro-word-para-que-git-convierta-archivos-word-a-texto&#34;&gt;tras esto hay que definir el filtro word para que git convierta archivos word a texto:&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config diff.word.textconv strings&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
-$ git config diff.exif.textconv exiftool&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
-
+$ git config diff.exif.textconv exiftool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config --global filter.indent.clean indent&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config --global filter.indent.smudge cat&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave &lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;#34;%ad&amp;#34; -1`&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
-
+&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config filter.dater.smudge expand_date&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config filter.dater.clean &#39;perl -pe &amp;quot;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&amp;quot;&#39;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
 &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
 
 git add date_test.txt .gitattributes
@@ -1286,21 +1360,19 @@ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Testing date expansion in 
 rm date_test.txt
 git checkout date_test.txt
 cat date_test.txt
-&lt;span class=&#34;nv&#34;&gt;$Date&lt;/span&gt;: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+&lt;span class=&#34;nv&#34;&gt;$Date&lt;/span&gt;: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ &amp;quot;Sincronización de proyectos en git con hooks (ganchos&#34;&gt;Hay dos tipos&lt;/a&gt;&amp;rdquo;), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34;&gt;Hay dos tipos&lt;/a&gt;, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
 &lt;h2 id=&#34;conceptos&#34;&gt;CONCEPTOS&lt;/h2&gt;
-
 &lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
-
 &lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
+*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
+/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
+build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
+doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>

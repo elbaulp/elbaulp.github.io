@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Openbox on El Baúl del programador</title>
+        <title>openbox on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/openbox/</link>
-        <description>Recent content in Openbox on El Baúl del programador</description>
+        <description>Recent content in openbox on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/openbox/</link>
-            <title>Openbox on El Baúl del programador</title>
+            <title>openbox on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,26 +21,19 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/configurar-dos-pantallas-en-openbox/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 128px) 128px, 100vw&#34; sizes=&#34;(min-width: 128px) 128px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;128&#34; width=&#34;128&#34; src=&#34;https://1.bp.blogspot.com/-iiunZ-gX5Y8/T0TbVE86pHI/AAAAAAAACGw/wmYeZWkIe-s/s400/1329912632_stock_connect.png&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Llevaba tiempo queriendo instalar en mi equipo la distribución &lt;a target=&#34;_blank&#34; href=&#34;http://crunchbanglinux.org/&#34;&gt;CrunchBang&lt;/a&gt;, que es una distro muy ligera basada en debian que viene con &lt;a target=&#34;_blank&#34; href=&#34;http://openbox.org/&#34;&gt;openbox&lt;/a&gt;, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Llevaba tiempo queriendo instalar en mi equipo la distribución &lt;!-- raw HTML omitted --&gt;CrunchBang&lt;!-- raw HTML omitted --&gt;, que es una distro muy ligera basada en debian que viene con &lt;!-- raw HTML omitted --&gt;openbox&lt;!-- raw HTML omitted --&gt;, este fin de semana finalmente me decidí a instalarla para probarla y la he dejado ya que me ha gustado bastante por si simpleza y capacidad de configuración.&lt;/p&gt;
 &lt;p&gt;Encontré un pequeño problema al instalarla, y era que al tener dos pantallas conectadas al pc, por defecto las clonaba, es decir, que aparecía lo mismo en las dos pantallas. Cuando cambiaba la configuración para mostrarlas como dos pantallas independientes todo iba bien, pero al reiniciar volvía a clonarlas.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Después de un poco de búsqueda por la red encontré solución al problema, usando el comando xrandr de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantalla DVI-I-2&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto estamos diciendo que la pantalla DVI-I-1 estará a la derecha la pantalla DVI-I-2&lt;/p&gt;
 &lt;p&gt;El siguiente paso es hacer que este comando se ejecute siempre al iniciar el pc, para ello tenemos que modificar el archivo de autoarranque de OpenBox, que se llama &lt;em&gt;autostart&lt;/em&gt; y suele estar en &lt;em&gt;~/.config/openbox&lt;/em&gt;. Añadimos la siguiente línea debajo de &lt;em&gt;lxsession &amp;amp;&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;De esta forma lo tenemos todo solucionado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrandr --output DVI-I-1 --mode 1280x1024 --right-of DVI-I-2 &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De esta forma lo tenemos todo solucionado.&lt;/p&gt;
 &lt;h1 id=&#34;fondos-de-pantalla-aleatorios&#34;&gt;Fondos de pantalla aleatorios&lt;/h1&gt;
-
 &lt;p&gt;Para lograr esto usé un script que encontré en la red hace tiempo y lo modifiqué para adaptarlo a openbox, con la particularidad de que aplico un fondo de pantalla distinto y seleccionado aleatoriamente para cada una de las pantallas. El script en cuestión es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;picsfolder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/Ruta/Imagenes/&amp;#34;&lt;/span&gt;
@@ -55,8 +47,8 @@
 
 &lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;randomfile1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#echo $randomfile
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#echo $randomfile&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;N&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;RANDOM%N&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;randomfile2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;files&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$N&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;
 
 
@@ -74,33 +66,16 @@ cat &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span 
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;[xin_1]
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;file=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$picsfolder$randomfile2&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;mode=4
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;bgcolor=#000000&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;nv&#34;&gt;$bgSaved&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La variable &lt;em&gt;picsfolder&lt;/em&gt; es el directorio donde residen las imágenes. &lt;em&gt;bsSaved&lt;/em&gt; es un archivo de configuración que almacena los datos del último fondo de pantalla que se estableció, y que modificaremos con los nuevos fondos.&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;bgcolor=#000000&amp;#34;&lt;/span&gt; &amp;gt; &lt;span class=&#34;nv&#34;&gt;$bgSaved&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La variable &lt;em&gt;picsfolder&lt;/em&gt; es el directorio donde residen las imágenes. &lt;em&gt;bsSaved&lt;/em&gt; es un archivo de configuración que almacena los datos del último fondo de pantalla que se estableció, y que modificaremos con los nuevos fondos.&lt;/p&gt;
 &lt;p&gt;Las siguientes líneas seleccionan dos imágenes aleatórias y una vez seleccionadas modificamos el archivo bg-saved.cfg para establecer nuestros fondos de pantalla aleatórios.&lt;/p&gt;
-
 &lt;p&gt;Para conseguir que esto funcione debemos volver a modificar el archivo &lt;em&gt;autostart&lt;/em&gt; de openbox, colocando las siguientes líneas (En este caso debajo del comando xrandr):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Set desktop wallpaper
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/home/hkr/Pictures/wall_aleatorio.sh
-nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Os dejo una captura, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/wall_aleatorio&#34; target=&#34;_blank&#34; title=&#34;GitHub&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s1600/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://1.bp.blogspot.com/-Babpz4m6FG4/T0T5AMLSbsI/AAAAAAAACHA/P7YObMPNGM4/s900/Screenshot%2B-%2B02222012%2B-%2B02%253A43%253A23%2BPM.png&#34;
-            alt=&#34;Captura de pantalla&#34;
-            title=&#34;Captura de pantalla&#34;
-            sizes=&#34;(min-width: 900px) 900px, 100vw&#34;
-            width=&#34;900&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Set desktop wallpaper&lt;/span&gt;
+/home/hkr/Pictures/wall_aleatorio.sh
+nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Os dejo una captura, el código está disponible en &lt;!-- raw HTML omitted --&gt;GitHub&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
         </item>
         
         <item>
@@ -110,29 +85,20 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code
             
             <guid>https://elbauldelprogramador.com/como-tener-un-terminal-transparente-como-wallpaper-que-muestre-informacion/</guid>
             <description>&lt;p&gt;Hoy traigo tres programas que me han resultado muy interesantes. Se trata de &lt;em&gt;xrootconsole&lt;/em&gt;, &lt;em&gt;tilda&lt;/em&gt; y &lt;em&gt;eterm&lt;/em&gt;. Programas que permiten tener un terminal transparente de fondo de pantalla que muestre información para casi cualquier cosa que queramos. Por ejemplo logs del sistema, &lt;a href=&#34;https://elbauldelprogramador.com/tags/htop&#34; title=&#34;htop&#34;&gt;htop&lt;/a&gt; dmesg etc. Empecemos con xrootconsole:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;xrootconsole&#34;&gt;xrootconsole&lt;/h1&gt;
-
 &lt;p&gt;&lt;code&gt;xrootconsole&lt;/code&gt; muestra en una ventana transparente el fichero que se le proporcione como entrada (o la entrada estándar stdin). Su objetivo es ser lo más simple posible y consumir pocos recursos. Este programa no es interactivo, por lo que solo servirá para mostrar información y nada más. Un ejemplo de uso:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrootconsole &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;archivo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Un ejemplo más completo sería el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrootconsole &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;archivo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Un ejemplo más completo sería el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;xrootconsole --wrap --bottomup -geometry 233x16+1+818 /var/log/syslog &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--wrap&lt;/code&gt; en lugar de cortar las líneas que no caben en pantalla, las muestra en la línea de abajo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--bottomup&lt;/code&gt; inserta líneas al final.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--geometry&lt;/code&gt; establece el tamaño y posición de la ventana, el formato es &lt;em&gt;ANCHOxALTO+MARGEN_IZQUIERDO+MARGEN_SUPERIOR&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Puedes obtener más información consultando la ayuda del programa o su manual.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/xroot-example.jpg&#34; alt=&#34;xroot example&#34; width=&#34;1024px&#34; height=&#34;817px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En este caso estoy mostrando salidas del comando &lt;a href=&#34;https://elbauldelprogramador.com/comandos-ss-iproute2-linux/&#34; title=&#34;Algunos comandos útiles con iproute2&#34;&gt;ss&lt;/a&gt; usando un &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; que he creado:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -143,28 +109,23 @@ nitrogen --restore &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;/code
         &lt;span class=&#34;nv&#34;&gt;XROOT_PID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$!&lt;/span&gt;
         sleep &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;
         &lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$XROOT_PID&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si decides usar este programa, es probable que quieras agregarlo al &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; de inicio de tu entorno de escritorio favorito, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/tags/xmonad&#34;&gt;xmonad&lt;/a&gt; u &lt;a href=&#34;https://elbauldelprogramador.com/tags/openbox&#34;&gt;openbox&lt;/a&gt;.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si decides usar este programa, es probable que quieras agregarlo al &lt;a href=&#34;https://elbauldelprogramador.com/tags/script&#34;&gt;script&lt;/a&gt; de inicio de tu entorno de escritorio favorito, como fluxbox, &lt;a href=&#34;https://elbauldelprogramador.com/tags/xmonad&#34;&gt;xmonad&lt;/a&gt; u &lt;a href=&#34;https://elbauldelprogramador.com/tags/openbox&#34;&gt;openbox&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Como he mencionado, xrootconsole no es interactivo, si quieres ejecutar algo como htop, necesitas Tilda.&lt;/p&gt;
-
 &lt;h1 id=&#34;tilda&#34;&gt;Tilda&lt;/h1&gt;
-
 &lt;p&gt;Tilda es una ventana de terminal muy configurable. No tiene bordes y permanece oculta al escritorio hasta que se pulsa una tecla. Lo primero que hay que hacer es instalarlo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo aptitude install tilda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez instalado, lo ejecutamos y haremos algunos cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo aptitude install tilda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez instalado, lo ejecutamos y haremos algunos cambios:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Pestaña General    » desabilita “Always on top”
-Pestaña Appearance » habilita la transparencia y fíjalo al &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;%
+Pestaña Appearance » habilita la transparencia y fíjalo al 100%
 Pestaña Colors     » Elige “Green on Black” o “Personalize”
-Pestaña Scrolling  » Desabilítalo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.&lt;/p&gt;
-
+Pestaña Scrolling  » Desabilítalo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, ya tienes configurado un terminal transparente. Puedes ver más información sobre cómo configurar Tilda en las referencias.&lt;/p&gt;
 &lt;h1 id=&#34;eterm&#34;&gt;Eterm&lt;/h1&gt;
-
 &lt;p&gt;La última opción es Eterm, otra terminal que podemos usar para tener de fondo de pantalla mostrando información. Por ejemplo mostrar la salida del &lt;strong&gt;dmesg&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Eterm --buttonbar &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --scrollbar off -f white -n dmesg -g &lt;span class=&#34;m&#34;&gt;211&lt;/span&gt;×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una breve explicación de los argumentos:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Eterm --buttonbar &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --scrollbar off -f white -n dmesg -g 211×10+0+0 -O -0 -e watch --no-title -n10 -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;dmesg | tail&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una breve explicación de los argumentos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;-buttonbar 0&lt;/strong&gt;: Elimina la barra de menú el botón superior.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;-scroll off&lt;/strong&gt;: Elimina la barra de scroll&lt;/li&gt;
@@ -173,18 +134,12 @@ Pestaña Scrolling  » Desabilítalo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;strong&gt;-0&lt;/strong&gt;: Habilita algunas optimizaciones para la transparencia&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;-e&lt;/strong&gt;: Ejecuta el programa que se le indique&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Basta con cambiar el comando que sigue a la opción -e por el desado. Naturalmente, es posible tener tantas terminales como se quiera.&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/5809765.png&#34; alt=&#34;Eterm&#34; width=&#34;640px&#34; height=&#34;375px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Terminal as a Transparent Wallpaper&lt;/em&gt; »» &lt;a href=&#34;https://wiki.archlinux.org/index.php/Terminal_as_a_Transparent_Wallpaper&#34; target=&#34;_blank&#34;&gt;wiki.archlinux.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;How to have a transparent terminal as wallpaper that displays information&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/how-to-have-a-transparent-terminal-as-wallpaper-that-displays-information&#34; target=&#34;_blank&#34;&gt;linuxaria.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Terminal as a Transparent Wallpaper&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;wiki.archlinux.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to have a transparent terminal as wallpaper that displays information&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;linuxaria.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

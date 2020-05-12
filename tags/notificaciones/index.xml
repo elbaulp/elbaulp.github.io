@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Notificaciones on El Baúl del programador</title>
+        <title>notificaciones on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/notificaciones/</link>
-        <description>Recent content in Notificaciones on El Baúl del programador</description>
+        <description>Recent content in notificaciones on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/notificaciones/</link>
-            <title>Notificaciones on El Baúl del programador</title>
+            <title>notificaciones on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,27 +22,20 @@
             
             <guid>https://elbauldelprogramador.com/programacion-android-interfaz-grafica_11/</guid>
             <description>&lt;p&gt;En ocasiones hay que mostrar mensajes al usuario para informarle del estado de la aplicación, o del estado de las operaciones que se estén llevando a cabo.&lt;/p&gt;
-
 &lt;p&gt;Android dispone de tres tipos de notificaciones:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;Notificaciones Toast.&lt;/li&gt;
 &lt;li&gt;Notificaciones en la barra de estado.&lt;/li&gt;
 &lt;li&gt;Ventanas de diálogo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;notificaciones-toast&#34;&gt;Notificaciones Toast&lt;/h1&gt;
-
 &lt;p&gt;Una notificación Toast es un mensaje que se muestra superpuesto en la pantalla. Solo ocupa el espacio necesario para mostrar la alerta, mientras tanto, la actividad que estaba visible puede seguir usándose. Este tipo de notificaciones se muestran durante un periodo de tiempo y desaparecen, no permiten interactuar con ellas. Debido a que un Toast se crea mediante un servicio en segundo plano, puede aparecer aunque la aplicación no esté visible.&lt;/p&gt;
-
 &lt;p&gt;A lo largo de todas las &lt;a href=&#34;https://elbauldelprogramador.com/guia-de-desarrollo-android&#34;&gt;entradas sobre Android&lt;/a&gt;, se ha usado mucho este típo de notificaciones:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;makeText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;duration&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para pasar el contexto, tenemos varias posibilidades, &lt;strong&gt;&lt;em&gt;NombreActividad.this&lt;/em&gt;&lt;/strong&gt;, o &lt;strong&gt;&lt;em&gt;getApplicationContext().&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;makeText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;duration&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 
-&lt;p&gt;Para fijar la duración del mensaje, usamos una de las dos constantes predefinidas, &lt;strong&gt;&lt;em&gt;Toast.LENGTH_SHORT ó Toast.LENGTH_LONG&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para pasar el contexto, tenemos varias posibilidades, &lt;em&gt;&lt;strong&gt;NombreActividad.this&lt;/strong&gt;&lt;/em&gt;, o &lt;em&gt;&lt;strong&gt;getApplicationContext().&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Para fijar la duración del mensaje, usamos una de las dos constantes predefinidas, &lt;em&gt;&lt;strong&gt;Toast.LENGTH_SHORT ó Toast.LENGTH_LONG&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;En este caso, vamos a crear un layout personalizado para mostrar el Toast:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;linearlayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;na&#34;&gt;android:id=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@+id/toastLayout&amp;#34;&lt;/span&gt;
@@ -66,9 +58,8 @@
     &lt;span class=&#34;na&#34;&gt;android:textColor=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;#fff&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:gravity=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;center_vertical|center_horizontal&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hemos creado un ImageView para mostrar un icono, y un TextView para mostrar el mensaje.&lt;/p&gt;
-
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/linearlayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hay que asignar un id al LinearLayout, que usaremos posteriormente. También hemos creado un ImageView para mostrar un icono, y un TextView para mostrar el mensaje.&lt;/p&gt;
 &lt;p&gt;El siguiente paso es inflar este layout desde el código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;LayoutInflater&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getLayoutInflater&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;layout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inflater&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;inflate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
@@ -79,19 +70,13 @@
 &lt;span class=&#34;n&#34;&gt;toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setGravity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Gravity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CENTER_VERTICAL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setDuration&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;LENGTH_LONG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, al ejecutar la aplicación tendremos un Toast como este:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;toast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 
-&lt;figure&gt;
-    &lt;a href=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s1600/toastPersonalizado.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 240px) 240px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;Toast notification Android &#34; title=&#34;Toast notification Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://2.bp.blogspot.com/-r66Zg6aP020/ThsyX24tuCI/AAAAAAAAArk/wWEypxjYmdo/s400/toastPersonalizado.png&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Para saber más acerca de los mensajes toast puede visitar: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, al ejecutar la aplicación tendremos un Toast como este:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Para saber más acerca de los mensajes toast puede visitar: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/toasts.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;notificaciones-en-la-barra-de-estado&#34;&gt;Notificaciones en la barra de estado&lt;/h1&gt;
-
 &lt;p&gt;Este tipo de notificaciones muestran un icono en la barra de estado, cuando desplegamos esta barra, veremos el icono acompañado de un texto descriptivo indicando que ha pasado algo (Como que hemos recibido un nuevo mensaje, o un correo electrónico).&lt;/p&gt;
-
 &lt;p&gt;Los pasos necesarios para crear este tipo de notificaciones son, usar el gestor de notificaciones del sistema (NotificationManager) y posteriormente crear un objeto Notification en el que configuraremos nuestra notificación. Vamos a ver como hacerlo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;NotificationManager&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mNotificationManager&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotificationManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getSystemService&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;NOTIFICATION_SERVICE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -116,38 +101,28 @@
 &lt;span class=&#34;n&#34;&gt;PendingIntent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contentIntent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PendingIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;notificationIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;notification&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setLatestEventInfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contentTitle&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contentText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contentIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
-&lt;span class=&#34;n&#34;&gt;mNotificationManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;notify&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HELLO_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;notification&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El resultado es el siguiente:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;mNotificationManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;notify&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;HELLO_ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;notification&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s1600/notificationBar.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 240px) 240px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;notification bar Android&#34; alt=&#34;notification bar Android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://3.bp.blogspot.com/-pCGwTzNQ89w/Ths04zdOqMI/AAAAAAAAArs/Y1tFR9TKe5I/s400/notificationBar.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Al igual que los Toast, se puede crear un layout personalizado, para más información visite: &lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34; target=&#34;_blank&#34; title=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El resultado es el siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Al igual que los Toast, se puede crear un layout personalizado, para más información visite: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&#34;&gt;https://web.archive.org/web/20151121170738/http://developer.android.com/guide/topics/ui/notifiers/notifications.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;diálogos&#34;&gt;Diálogos&lt;/h1&gt;
-
 &lt;p&gt;Por último, vamos a ver los diálogos, que son ventanas que se muestran delante de las actividades, y pueden recibir acciones del usuario, hay varios tipos:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;AlertDialog&lt;/li&gt;
 &lt;li&gt;ProgressDialog&lt;/li&gt;
 &lt;li&gt;DatePickerDialog&lt;/li&gt;
 &lt;li&gt;TimePickerDialog&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Si necesitamos un Diálogo que no sea uno de los de arriba, podemos extender de la clase &lt;strong&gt;&lt;em&gt;Dialog&lt;/em&gt;&lt;/strong&gt;, y crear el nuestro propio.&lt;/p&gt;
-
+&lt;p&gt;Si necesitamos un Diálogo que no sea uno de los de arriba, podemos extender de la clase &lt;em&gt;&lt;strong&gt;Dialog&lt;/strong&gt;&lt;/em&gt;, y crear el nuestro propio.&lt;/p&gt;
 &lt;p&gt;La clase Activity implementa métodos para gestionar los dialogos, son:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;onCreateDialog(int):&lt;/em&gt;&lt;/strong&gt; Encargado de crear el diálogo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;onPrepareDialog(int):&lt;/em&gt;&lt;/strong&gt; Llamado justo antes de mostrarlo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;showDialog(int):&lt;/em&gt;&lt;/strong&gt; Para mostrarlo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;dismissDialog(int):&lt;/em&gt;&lt;/strong&gt; cierra el diálogo, guardando su estado.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;removeDialog(int):&lt;/em&gt;&lt;/strong&gt; cierra el dialogo elminándolo por completo.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;onCreateDialog(int):&lt;/strong&gt;&lt;/em&gt; Encargado de crear el diálogo.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;onPrepareDialog(int):&lt;/strong&gt;&lt;/em&gt; Llamado justo antes de mostrarlo.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;showDialog(int):&lt;/strong&gt;&lt;/em&gt; Para mostrarlo.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;dismissDialog(int):&lt;/strong&gt;&lt;/em&gt; cierra el diálogo, guardando su estado.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;removeDialog(int):&lt;/strong&gt;&lt;/em&gt; cierra el dialogo elminándolo por completo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Vamos a ver un ejemplo de AlertDialog, que preguntará si queremos salir de la aplicación:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;AlertDialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Builder&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dialog&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AlertDialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;Builder&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
@@ -167,29 +142,22 @@
       &lt;span class=&#34;n&#34;&gt;dialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;cancel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;dialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&#34;separator&#34; &gt;
-&lt;a href=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s1600/alertDialog.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 240px) 240px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; alt=&#34;alertDialog Android&#34; title=&#34;AlertDialog android&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-GhH6GUJdti0/Ths8m7mMf6I/AAAAAAAAAr0/Ox9Cn6gaLTA/s400/alertDialog.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
+&lt;span class=&#34;n&#34;&gt;dialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;También vamos a ver un ProgressDialog, indefinido (Que nunca termina).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;ProgressDialog&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
              &lt;span class=&#34;n&#34;&gt;NotificacionesActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;this&lt;/span&gt;
             &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ProgressDialog&amp;#34;&lt;/span&gt;
             &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Ejemplo diálogo de progreso&amp;#34;&lt;/span&gt;
             &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;
-            &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de &amp;#8220;atrás&amp;#8221; del terminal.&lt;/p&gt;
+            &lt;span class=&#34;o&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
-&lt;div class=&#34;separator&#34; &gt;
-    &lt;a href=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s1600/progressDialog.png&#34;  &gt;&lt;img sizes=&#34;(min-width: 240px) 240px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  height=&#34;400&#34; width=&#34;240&#34; src=&#34;https://1.bp.blogspot.com/-uf-rVH41HfM/Ths-BUGmQ9I/AAAAAAAAAr8/7JsOXm7ScKs/s400/progressDialog.png&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los dos últimos parámetros son para que el diálogo sea indeterminado, y para que se pueda cerrar con la flecha de “atrás” del terminal.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Se puede descargar el proyecto de esta entrada aquí:&lt;/p&gt;
-
-&lt;p&gt;&lt;a class=&#34;aligncenter download-button&#34; href=&#34;https://elbauldelprogramador.com/&#34; rel=&#34;nofollow&#34;&gt; Download &amp;ldquo;Notificaciones&amp;rdquo; &lt;small&gt;Notificaciones.zip &amp;ndash; Downloaded 2066 times &amp;ndash; &lt;/small&gt; &lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica-estilos-y-temas-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h1&gt;</description>
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt; Download “Notificaciones” &lt;!-- raw HTML omitted --&gt;Notificaciones.zip – Downloaded 2066 times – &lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;siguiente-tema-programación-android-interfaz-gráfica---estilos-y-temas2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_18/&#34;&gt;Programación Android: Interfaz gráfica - Estilos y Temas&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -198,52 +166,34 @@
             <pubDate>Mon, 29 Jun 2015 16:43:06 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-configurar-dunst-un-daemon-de-notificaciones-altamente-configurable/</guid>
-            <description>&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/Como-Configurar-Dunst,-un-daemon-de-notificaciones-altamente-configurable.png&#34;
-            alt=&#34;Cómo configurar Dunst. Daemon de notificaciones&#34;
-            title=&#34;Cómo configurar Dunst. Daemon de notificaciones&#34;
-            sizes=&#34;(min-width: 329px) 329px, 100vw&#34;
-            width=&#34;329&#34;
-            height=&#34;212&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Si eres lector habitual del blog, sabrás que me gustan los entornos minimalistas y configurables, como puede comprobarse en los artículos &lt;a href=&#34;https://elbauldelprogramador.com/instalar-y-configurar-dwm-el-gestor-de-ventanas-mas-eficiente/&#34; title=&#34;Instalar y configurar DWM&#34;&gt;instalar y configurar dwm&lt;/a&gt;, y el patch para colorear la &lt;a href=&#34;https://elbauldelprogramador.com/statuscolor-dwm-6-1/&#34;&gt;barra de estado&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Hoy quiero hablaros de &lt;em&gt;dunst&lt;/em&gt;, un demonio de notificaciones que me instalé hace poco, y que se integra muy bien con &lt;em&gt;DWM&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;instalar-dunst&#34;&gt;Instalar dunst&lt;/h1&gt;
-
 &lt;p&gt;Tan simple como ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get install dunst&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;configurar-dunst&#34;&gt;Configurar dunst&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ sudo apt-get install dunst
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configurar-dunst&#34;&gt;Configurar dunst&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Dunst&lt;/em&gt; es áltamente configurable, mediante su fichero de configuración, situado en &lt;code&gt;~/.config/dunst/dunstrc&lt;/code&gt;, podemos cambiar su aspecto por completo. Aquí dejo un ejemplo de mi configuración actual:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Configuración global
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ubuntu Light 12&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;# Permitir etiquetas html
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;allow_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
-    &lt;span class=&#34;c1&#34;&gt;# El formato de las notificaciones,
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# %s - sumario
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# %p - progreso
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;c1&#34;&gt;# %b - cuerpo del mensaje
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;%s %p&amp;lt;/b&amp;gt;\n%b&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;# Ordenar mensajes por prioridad
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;sort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
-    &lt;span class=&#34;c1&#34;&gt;# Mostrar cuantas not. hay ocultas
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;indicate_hidden&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Configuración global&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;font&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ubuntu Light 12&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Permitir etiquetas html&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;allow_markup&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;c1&#34;&gt;# El formato de las notificaciones,&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %s - sumario&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %p - progreso&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# %b - cuerpo del mensaje&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;format&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;b&amp;gt;%s %p&amp;lt;/b&amp;gt;\n%b&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Ordenar mensajes por prioridad&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;sort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
+    &lt;span class=&#34;c1&#34;&gt;# Mostrar cuantas not. hay ocultas&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;indicate_hidden&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;idle_threshold&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;# Tamaño de  la notificación
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;geometry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;300x5-20+20&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# Tamaño de  la notificación&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;geometry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;300x5-20+20&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;alignment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; center
     &lt;span class=&#34;nv&#34;&gt;show_age_threshold&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;sticky_history&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
@@ -255,54 +205,56 @@
     &lt;span class=&#34;nv&#34;&gt;separator_color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; frame
     &lt;span class=&#34;nv&#34;&gt;startup_notification&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Diseño del borde de la notificación
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;frame&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Diseño del borde de la notificación&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;frame&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#6092BE&amp;#34;&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Atajos de teclado
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;shortcuts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Atajos de teclado&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;shortcuts&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;close&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+space
     &lt;span class=&#34;nv&#34;&gt;close_all&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+shift+space
     &lt;span class=&#34;nb&#34;&gt;history&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+grave
     &lt;span class=&#34;nv&#34;&gt;context&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ctrl+shift+period
 
-&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de baja prioridad
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_low&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de baja prioridad&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_low&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#ffffff&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#000000&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de prioridad normal
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_normal&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de prioridad normal&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_normal&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#94DBFF&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#000000&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de alta prioridad
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_critical&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Estilo para las notificaciones de alta prioridad&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;urgency_critical&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#ff9999&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;foreground&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#000000&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Se pueden personalizar notificciones en función de su texto
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;test&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Se pueden personalizar notificciones en función de su texto&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;test&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;summary&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*test*&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;#22dd22&amp;#34;&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Y también se personalizan por aplicación
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;signed_on&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Y también se personalizan por aplicación&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;signed_on&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;appname&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; Pidgin
     &lt;span class=&#34;nv&#34;&gt;summary&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*signed on*&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;urgency&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; low&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;probar-la-configuración&#34;&gt;Probar la configuración&lt;/h1&gt;
+    &lt;span class=&#34;nv&#34;&gt;urgency&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; low
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;probar-la-configuración&#34;&gt;Probar la configuración&lt;/h1&gt;
 &lt;p&gt;Para probar cómo queda nuestra configuración, podemos usar el comando &lt;code&gt;notify-send&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;notify-send -u low -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Low sumary&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Low body&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+notify-send -u low -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Low sumary&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Low body&amp;#34;&lt;/span&gt;
 notify-send -u normal -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Normal sumary&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Normal body&amp;#34;&lt;/span&gt;
 notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical sumary&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical body&amp;#34;&lt;/span&gt;
-notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical body&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Eso es todo, sencillo de configurar, y minimalista.&lt;/p&gt;</description>
+notify-send -u critical -t &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Critical body&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Eso es todo, sencillo de configurar, y minimalista.&lt;/p&gt;</description>
         </item>
         
     </channel>

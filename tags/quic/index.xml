@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Quic on El Baúl del programador</title>
+        <title>QUIC on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/quic/</link>
-        <description>Recent content in Quic on El Baúl del programador</description>
+        <description>Recent content in QUIC on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/quic/</link>
-            <title>Quic on El Baúl del programador</title>
+            <title>QUIC on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,99 +21,90 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/</guid>
-            <description>&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34;&gt;&lt;img sizes=&#34;(min-width: 468px) 468px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;468px&#34; height=&#34;239px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;strong&gt;QUIC&lt;/strong&gt; es un protocolo que está desarrollando Google y que pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña &lt;em&gt;FAQ&lt;/em&gt; (Frequently Asked Questions) en &lt;em&gt;Google Drive&lt;/em&gt;, al parecer dicha &lt;em&gt;FAQ&lt;/em&gt; es autoría del propio grupo de desarrollo de &lt;em&gt;QUIC&lt;/em&gt;, el nombre original del documento es QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that). Puedes consultar el artículo en &lt;a href=&#34;https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/&#34; title=&#34;Qué es QUIC, el nuevo protocolo desarrollado por Google&#34;&gt;Qué es QUIC, el nuevo protocolo desarrollado por Google&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;prueba-de-concepto&#34;&gt;Prueba de concepto&lt;/h1&gt;
-
 &lt;p&gt;Para hacer pruebas con éste protocolo, se ha descargado el código fuente de &lt;strong&gt;Chromium&lt;/strong&gt;, y se ha compilado con soporte para QUIC. En ésta sección se verá cómo realizar éstos pasos, y se procederá a realizar un análisis del protocolo mediante capturas de tráfico con WireShark.&lt;/p&gt;
-
 &lt;h2 id=&#34;descargar-el-código&#34;&gt;Descargar el código&lt;/h2&gt;
-
 &lt;p&gt;Los pasos se encuentran en (3), los seguidos para la prueba de concepto fueron:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Instalar depot_tools
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Instalar depot_tools&lt;/span&gt;
+
 $ git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 $ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;/depot_tools:&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Descargar el código de chromium
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ fetch --nohooks --no-history chromium
+&lt;span class=&#34;c1&#34;&gt;# Descargar el código de chromium&lt;/span&gt;
+$ fetch --nohooks --no-history chromium
 $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; src
 $ git checkout master
 
-&lt;span class=&#34;c1&#34;&gt;# Compilar para Linux
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ build/install-build-deps.sh --no-arm
-$ gclient sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;span class=&#34;c1&#34;&gt;# Compilar para Linux&lt;/span&gt;
+$ build/install-build-deps.sh --no-arm
+$ gclient sync
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Una vez hecho esto, y siguiendo los pasos de (4), se compila el cliente y servidor usados para QUIC:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ninja -C out/Debug quic_server quic_client&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Se procede a descargar una copia de una página web, por ejemplo, google.com, la cual se servirá localmente usando el programa &lt;strong&gt;quic_server&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ninja -C out/Debug quic_server quic_client
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se procede a descargar una copia de una página web, por ejemplo, google.com, la cual se servirá localmente usando el programa &lt;strong&gt;quic_server&lt;/strong&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mkdir /tmp/quic-data
 $ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /tmp/quic-data
-$ wget -p --save-headers http://google.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es necesario editar el fichero &lt;strong&gt;index.html&lt;/strong&gt; para eliminar la cabecera &lt;strong&gt;&amp;#8220;Transfer-Encoding: chunked&amp;#8221;&lt;/strong&gt; y añadir &lt;strong&gt;X-Original-Url: &lt;a href=&#34;http://www.google.com/&#34;&gt;http://www.google.com/&lt;/a&gt;&lt;/strong&gt;.Tras esto, se ejecuta el servidor QUIC apuntando al fichero descargado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./out/Debug/quic_server --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8081&lt;/span&gt; --quic_in_memory_cache_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/tmp/quic-data/google.com&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y debería ser posible realizar una petición al fichero sobre QUIC usando el cliente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./out/Debug/quic_client --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8081&lt;/span&gt; --address&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.16 http://www.google.com/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este caso, se ha configurado el servidor en una máquina distinta a la cliente. Pero podría hacerse en la misma máquina todo, y escuchar en la interfaz &lt;strong&gt;lop&lt;/strong&gt; con WireShark. Tras ejecutar el comando anterior, aparecerá por pantalla algo similar a:&lt;/p&gt;
+$ wget -p --save-headers http://google.com
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es necesario editar el fichero &lt;strong&gt;index.html&lt;/strong&gt; para eliminar la cabecera &lt;strong&gt;“Transfer-Encoding: chunked”&lt;/strong&gt; y añadir &lt;strong&gt;X-Original-Url: &lt;a href=&#34;http://www.google.com/&#34;&gt;http://www.google.com/&lt;/a&gt;&lt;/strong&gt;.Tras esto, se ejecuta el servidor QUIC apuntando al fichero descargado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./out/Debug/quic_server --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8081&lt;/span&gt; --quic_in_memory_cache_dir&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/tmp/quic-data/google.com
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y debería ser posible realizar una petición al fichero sobre QUIC usando el cliente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./out/Debug/quic_client --port&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8081&lt;/span&gt; --address&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;192.168.1.16 http://www.google.com/
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este caso, se ha configurado el servidor en una máquina distinta a la cliente. Pero podría hacerse en la misma máquina todo, y escuchar en la interfaz &lt;strong&gt;lop&lt;/strong&gt; con WireShark. Tras ejecutar el comando anterior, aparecerá por pantalla algo similar a:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;HTTP/1.1 &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; OK
-alternate-protocol: &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;:quic,p&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.01
+alternate-protocol: 80:quic,p&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0.01
 cache-control: private, max-age&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
 content-type: text/html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;ISO-8859-1
-date: Thu, &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; Oct &lt;span class=&#34;m&#34;&gt;2014&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;:18:06 GMT
+date: Thu, &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; Oct &lt;span class=&#34;m&#34;&gt;2014&lt;/span&gt; 12:18:06 GMT
 expires: -1
 p3p: &lt;span class=&#34;nv&#34;&gt;CP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&amp;amp;answer;=151657 for more info.&amp;#34;&lt;/span&gt;
 server: gws
-set-cookie: &lt;span class=&#34;nv&#34;&gt;PREF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0a30ac3a5dbcfef5:FF&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;:TM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1414671486&lt;/span&gt;:LM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1414671486&lt;/span&gt;:S&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;v_Z2N_ZyX1n_uoLc&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;expires&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Sat, &lt;span class=&#34;m&#34;&gt;29&lt;/span&gt;-Oct-2016 &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;:18:06 GMT&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;domain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.google.es
+set-cookie: &lt;span class=&#34;nv&#34;&gt;PREF&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0a30ac3a5dbcfef5:FF&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0:TM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1414671486:LM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1414671486:S&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;v_Z2N_ZyX1n_uoLc&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;expires&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Sat, 29-Oct-2016 12:18:06 GMT&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;domain&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;.google.es
 x-frame-options: SAMEORIGIN
-x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;block
+x-xss-protection: 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;block
 &amp;lt;!doctype html&amp;gt;
-# Resto de la página web&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;estructura-de-un-paquete-quic&#34;&gt;Estructura de un paquete QUIC&lt;/h2&gt;
+&lt;span class=&#34;c1&#34;&gt;# Resto de la página web&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;estructura-de-un-paquete-quic&#34;&gt;Estructura de un paquete QUIC&lt;/h2&gt;
 &lt;p&gt;Procedemos ahora a detallar la estructura de los paquetes QUIC tal y como se especifica en los documentos (6) y (7).&lt;/p&gt;
-
 &lt;p&gt;La unidad básica de transmisión será un paquete UDP estándar. Se asegurará que todas las transmisiones de datos se separarán en bloques que quepan en un solo paquete.&lt;/p&gt;
-
 &lt;p&gt;Todo paquete QUIC consiste en una sección de cabecera (&lt;strong&gt;Header&lt;/strong&gt; a partir de ahora), y una sección de carga (&lt;strong&gt;payload&lt;/strong&gt; a partir de ahora). El payload de un paquete contiene una secuencia de cuadros (&lt;strong&gt;frames&lt;/strong&gt; a partir de ahora). El payload de un paquete FEC (&lt;strong&gt;Forward Error Correction&lt;/strong&gt;) contiene información reduntante. El payload de cada paquete es un bloque encriptado AEAD (&lt;strong&gt;Authenticated Encryption with Associated Data&lt;/strong&gt;). Los datos asociados (Que son autenticados) incluyen la totalidad de la cabecera.Por tanto, hay dos tipos de paquetes, paquetes de datos y paquetes FEC. Los paquetes tienen una cabecera común de longitud variable entre 2 y 19 bytes, seguido de un bloque de autentificación encriptado. Cuando el bloque se descifra, el resultado mostrado abajo incluye una cabecera de 1 o 2 bytes, seguidos de datos adicionales. Los paquetes FEC contienen datos de paridad para permitir la recuperación de paquetes. Los paquetes de datos contienen los payloads, datos ACK y control de datos (flujos o finalización de sesiones).&lt;/p&gt;
-
 &lt;h2 id=&#34;cabecera&#34;&gt;Cabecera&lt;/h2&gt;
-
 &lt;p&gt;Como se mencionó arriba, todos los paquetes comienzan con una cabecera común:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Public &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    Connection ID &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                                    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   -&amp;gt;
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Flags&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Public &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    Connection ID &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0, 8, 32, or 64&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                                    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   -&amp;gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Flags&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
 
      &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;
 +--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      Quic Version &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;            &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  -&amp;gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;      Quic Version &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;32&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;            &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  -&amp;gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;optional&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+--------+--------+
 
     &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;15&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;17&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;18&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;19&lt;/span&gt;       &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Sequence Number &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Private &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; FEC &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                         &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Flags&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;opt&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-+--------+--------+--------+--------+--------+--------+--------+--------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La cabecera para cada paquete consiste en:&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Sequence Number &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8, 16, 32, or 48&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;          &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Private &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; FEC &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                         &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;           &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Flags&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;opt&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++--------+--------+--------+--------+--------+--------+--------+--------+
 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La cabecera para cada paquete consiste en:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Flags públicas - 1B, detallando la estructura del resto de la cabecera.&lt;/li&gt;
 &lt;li&gt;CID (&lt;strong&gt;Connection ID&lt;/strong&gt;).&lt;/li&gt;
 &lt;li&gt;Versión de QUIC.&lt;/li&gt;
 &lt;li&gt;El número de secuencia del paquete.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Header: Public Flags&lt;/strong&gt;. La cabecera puede ser de gran tamaño, y muchos de los campos son a veces innecesariamente grandes, o no se usan. Éstos flags codifican el tamaño de cada uno de los otros campos de cabecera, permitiendo una representación más compacta. Es decir, proporcionan especificaciones por paquete para el tamaño de otros campos en una conexión, en un paquete.&lt;/p&gt;
-
 &lt;p&gt;Hay 5 grupos de bits, consistentes en dos bits individuales, dos pares de bits usados y un par sin usar.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;LSB (Less Significant Bit). Tiene valor 1 sii el paquete contiene la versión de QUIC.&lt;/li&gt;
 &lt;li&gt;El bit situado en 0x2 indica si el paquete es un paquete público de reseteo.&lt;/li&gt;
@@ -122,63 +112,41 @@ x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#3
 &lt;li&gt;El par de bits en 0x30 indican la longitud del número de secuencia.&lt;/li&gt;
 &lt;li&gt;El par 0xC0 no se usan actualmente, y deberían estar a 0.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h3&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img sizes=&#34;(min-width: 370px) 370px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;Header: CID&lt;/strong&gt;. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga \(2^{32}\) conexiones concurrentes, habrá un 50\% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de \(2^{32}\) en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Header: CID&lt;/strong&gt;. Ocupa 64bits para que los clientes puedan seleccionar un CID aleatoriamente, y contactar con un servidor a un puerto fijo. Para cuando un servidor mantenga \(2^{32}\) conexiones concurrentes, habrá un 50% de probabilidad de que un intento de conexión colisione con otra conexión existente. En ese punto, habrá una conexión de \(2^{32}\) en conflicto, y obtendrá un mal rendimiento en la conexión (probablemente obtenga un Time-out). El usuario que obtenga temporalmente éste problema, en una buena implentación, realizaría automáticamente una conexión vía TCP.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Header: QUIC version&lt;/strong&gt;. A medida que QUIC evolucione, éste campo estará presente en el primer paquete para asegurar que el servidor y el cliente hablan en la misma versión del protocolo. Una vez establecida la conexión, ésta información es redundante y se omitirá usando los flags correspondientes para indicar que dicho campo se omitirá (longitud 0).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Header: Packet Sequence Number&lt;/strong&gt;. Además de secuenciar paquetes, mirar por duplicaciones y comunicar qué paquetes faltan, éste número es una parte crítica para el cifrado. Éste número es la base de las IV que se usan para descifrar cada paquete. Como resultado, conceptualmente debe ser grande, ya que no debe repetirse durante el periodo de una conexión. Por eso el tamaño conceptual del número de secuencia debe ser grande, unos \(2^{64}\) (Más paquetes de los que cualquier conexión enviará), sin embargo, normalmente no es necesario proporcionar los 8 bytes en cada paquete.&lt;/p&gt;
-
 &lt;p&gt;En cualquier momento dado, solo habrá un numero finito (pequeño) depaquetes de secuencia que no hayan sido admitidos. Ésta restricción es una consecuencia natural del hecho de que el emisor debe mantener un buffer con datos para los paquetes pendientes, y la memoria del emisor es finita. Además, se ha optado por no “retransmitir” los paquetes perdidos, en su lugar, se “reempaqueta” su contenido en paquetes posteriores. Como resultado, el receptor comunicará que no ha recibido un paquete, y el emisor notificará al receptor para que “deje de esperar” al paquete, y por tanto el margen de paquetes no admitidos estará siempre acotado. Basándonos en esta restricción, un emisor puede reducir significativamente el número de bytes necesarios para expresar el número de secuencia del paquete (usando los Flags públicos).&lt;/p&gt;
-
 &lt;p&gt;Por ejemplo, supongamos que los paquetes se transmiten mediante TCP con control de congestión, y el margen de congestión actual es de 20 paquetes. Si se pierde un paquete, dentro de 1 RTT, o unos 20 paquetes adicionales, el receptor será informado de que un paquete perdido ya no está pendiente. Como resultado, el emisor puede continuar enviando solo el byte de menor peso (8bits) del número de secuencia del paquete (64bits). El receptor puede deducir fácilmente basándose en esos bits, qué valor deberían tener los 56 bits restantes, y puede usarlos posteriormente para descifrar el paquete.&lt;/p&gt;
-
 &lt;h2 id=&#34;payload&#34;&gt;Payload&lt;/h2&gt;
-
 &lt;p&gt;Después de la cabecera, siempre hay un bloque payload de texto cifrado autentificado por un algoritmo AEAD. Dicho bloque consiste conceptualmente en un número de bits redundantes de autenticación, concatenados a una cadena de bytes de tamaño igual al texto plano del payload. Actualmente se estima que son necesarios unos 64 bits de autenticación.&lt;/p&gt;
-
 &lt;p&gt;Tras el descifrado, se obtiene el texto plano del bloque de payload que consiste en:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Flags privadas - 1 Byte. (Private Flags - 1 byte)&lt;/li&gt;
 &lt;li&gt;Número de grupo del FEC. (FEC Group number)&lt;/li&gt;
 &lt;li&gt;Serie de frames de auto-identificación. (Series of self-identifying Frames)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;A continuación se describe en detalle cada unos de los campos.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Payload: Private Flags&lt;/strong&gt;. Llamadas privadas porque están envueltas en el encriptado, y no son visibles a un espía. Como las flags públicas, uno de los valores codificados es el tamaño del número de grupo del FEC, e implícitamente el desplazamiento en el payload para situarse en el inicio de los frames.&lt;/p&gt;
-
 &lt;p&gt;Además tienen dos bits. El primer bit es un bit de entropía aleatoria, el segundo se usa para identificar el último paquete en un grupo FEC. El último paquete en un grupo FEC es un paquete FEC redundante (conteniendo el XOR del texto plano del payload en el grupo).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Private Flags: Entropy Bit&lt;/strong&gt;. Éste bit lo selecciona aleatoriamente el emisor, y se coloca en cada paquete. La información se usa para combatir cualquier ataque potencial de ACks optimistas. Cuando el receptor envía el reconocimiento (ACK) para un conjunto de paquetes, se requiere que demuestre que recibió el conjunto que afirma haber recibido proporcionando el hash de los bits de entropía que afirma haber visto.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Private Flags: FEC Final Bit&lt;/strong&gt;. Éste bit se usa para marcar que el último paquete es un grupo FEC.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Payload: Self Identifying Frames&lt;/strong&gt;. Se espera que la carga de cada paquete QUIC sea una lista concatenada de datos llamada Frames. Cada frame tiene bytes iniciales que identifican el frame, así como información sobre el formato del frame y su contenido. Por ejemplo, hay frames que transportan información de acuse (&lt;strong&gt;acknowledgement information&lt;/strong&gt;), y también hay frames que transportan datos de flujo individuales. Existen una amplia variedad de frames para miscelánica. A continuación se presentan los distintos tipos de frames y su estructura.&lt;/p&gt;
-
 &lt;h2 id=&#34;frames-dentro-del-payload&#34;&gt;Frames dentro del Payload&lt;/h2&gt;
-
 &lt;p&gt;Todos los frames comienzan con un byte que especifica su tipo, pero se espera poder empaquetar flags adicionales específicos para cada tipo de frame en ese byte. Como resultado, serán los primeros bits de un byte que especifique el tipo de frame los que identificarán el tipo de frame, y los bits restantes serán usados para codificar el formato dentro del frame (como ocurre con la cabecera).&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;STREAM_FRAME&lt;/strong&gt;. Cada conexión QUIC puede multiplexar una colección de flujos, y cada frame de flujo transmite datos de la aplicación para un único flujo. Un paquete es de éste tipo si el bit más significativo del Byte de tipo es 1. La composición de éste paquete es la siguiente:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;       …               SLEN
 +--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Stream id &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Stream id &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8, 16, 24, or &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Variable length SLEN bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+--------+--------+--------+
 
   SLEN+1  SLEN+2     …                                         SLEN+OLEN
 +--------+--------+--------+--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   Offset &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;56&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   Offset &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0, 16, 24, 32, 40, 48, 56, or &lt;span class=&#34;m&#34;&gt;64&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                    &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Variable length: OLEN  bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+
 
@@ -186,13 +154,14 @@ x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#3
 +-------------+-------------+
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Data length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; or &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  Optional&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;maybe &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; bytes&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-+------------+--------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
++------------+--------------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;ACK_FRAME&lt;/strong&gt;. Un frame ACK se usa para coordinar la recuperación de paquetes perdidos, y es parecido, pero no idéntico a los paquetes ACK de TCP. Un ACK en QUIC siempre es acumulativo, es decir, nuevos ACKs contienen suficiente información que es seguro descartar cualquier ACK previo. Como resultado, si un paquete con un frame ACK se pierde, no es necesario retransmitir el Frame ACK adjunto. Éste tipo de paquete se identifica con el valor &lt;strong&gt;01ntllmmB&lt;/strong&gt;, donde 01 indica que es de tipo ACK, y los 6 bits restantes son flags. Su estructura:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;                           N
 +--------+--------+-----------------------------------------------------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Received&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    Largest Observed &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Received&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;    Largest Observed &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8, 16, 32, or &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Entropy &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;               &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+-----------------------------------------------------+
 
@@ -200,8 +169,8 @@ x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#3
 
 +--------+--------+---------+--------+--------------------------------+
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Largest Observed &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   Num   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Delta  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  Time Since Largest Observed   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Delta Time &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Timestamp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Largest &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Observed&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Delta Time &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;16&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Timestamp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Largest &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Observed&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 +--------+--------+---------+--------+--------------------------------+
 
    N+9         N+11 - X
@@ -219,81 +188,60 @@ x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#3
 
     Y+2                       Y+3 - Z
 +--------+-----------------------------------------------------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Number &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;       Revived Packet  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;, &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;, or &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Number &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;       Revived Packet  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8, 16, 32, or &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Revived&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;       Sequence Number &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;opt&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;repeats Number Revied &lt;span class=&#34;nb&#34;&gt;times&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;               &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-+--------+-----------------------------------------------------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
++--------+-----------------------------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CONGESTION_CONTROL_FRAME&lt;/strong&gt;. El frame de control de congestión se usa para tramsmitir información relativa a un algoritmo específico de control de gestión. Al inicio de la conexión, la negociación de las credenciales criptográficas también incluyen la negociación del algoritmo de control de congestión.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RST_STREAM_FRAME&lt;/strong&gt;. El frame de reseteo del flujo se usa para terminar anormalmente un flujo. Puede usarse por ejemplo cuando un receptor desee que el emisor deje de enviar datos, o cuando la fuente de datos deja de proporcionar los datos a recibir. Para ayudar al depurado, en éstos frames se incluyen dos campos, &lt;strong&gt;Reason Phrase&lt;/strong&gt; y &lt;strong&gt;Error Code&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;CONNECTION_CLOSE_FRAME&lt;/strong&gt;. Se usa para terminar una conexión agresiva e inmediatamente, cerrando todos los flujos implícitos. Éste frame se identifica con valor 0x5. Su estructura:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;        X
 +--------+--------+--------+--------+--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Error code &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Reason phrase   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  Reason phrase  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Error code &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Reason phrase   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  Reason phrase  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;        &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;                                   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
-+--------+--------+--------+--------+--------+--------+--------+--------+--------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
++--------+--------+--------+--------+--------+--------+--------+--------+--------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;GOAWAY_STREAM_FRAME&lt;/strong&gt;. Es una petición para terminar una conexión de forma elegante, en la que no se crearán nuevos flujos, y se mantienen los ya existentes (los cuales se finalizarán rápido). Éste frame también incluye los campos &lt;strong&gt;Reason Phrase&lt;/strong&gt; y &lt;strong&gt;Error Code&lt;/strong&gt;. Se identifica con el valor 0x6. Su estructura:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+
-&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Error code &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Last Good Stream id &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -&amp;gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;Type&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;         Error code &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Last Good Stream id &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;32&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; -&amp;gt;
 +--------+--------+--------+--------+--------+--------+--------+--------+
 
      &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;        X
 +--------+--------+--------+--------+--------+
  stream  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Reason phrase   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;  Reason phrase    -&amp;gt;
    id    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; bits&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;variable length&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-+--------+--------+--------+--------+--------+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;análisis-del-tráfico-con-wireshark&#34;&gt;Análisis del tráfico con WireShark&lt;/h2&gt;
++--------+--------+--------+--------+--------+
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;análisis-del-tráfico-con-wireshark&#34;&gt;Análisis del tráfico con WireShark&lt;/h2&gt;
 &lt;p&gt;La captura realizada fue la siguiente:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1920px) 1920px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-CapturaQUIC.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;1920px&#34; height=&#34;1080px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Se procederá a mostrar algunas capturas más detalladas de la cabecera únicamente, ya que el resto del paquete está cifrado, sin embargo, a lo largo de éste documento se ha detallado cómo sería la estructura del payload una vez descifrado.&lt;/p&gt;
-
 &lt;p&gt;Como se mostró más arriba, la cabecera del primer paquete indica que el paquete contiene información que especificará la versión de QUIC a usar:&lt;/p&gt;
-
 &lt;h3 id=&#34;ejemplo-de-un-primer-paquete-iniciando-la-conexión-en-el-que-está-activado-el-bit-de-versión-1&#34;&gt;ejemplo de un primer paquete iniciando la conexión, en el que está activado el bit de versión&lt;/h3&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34;&gt;&lt;img sizes=&#34;(min-width: 370px) 370px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-primerPaquete.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;370px&#34; height=&#34;118px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Dicha información se encuentra aquí:&lt;/p&gt;
-
 &lt;h3 id=&#34;información-sobre-la-versión-a-usar&#34;&gt;Información sobre la versión a usar&lt;/h3&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34;&gt;&lt;img sizes=&#34;(min-width: 594px) 594px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicVersion.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;594px&#34; height=&#34;244px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;También se puede apreciar en la captura el número de secuencia y el identificador de conexión. Si escogemos cualquier otro paquete que no sea el primero, se comprobará que el bit que especifica si existe la versión está desactivado:&lt;/p&gt;
-
 &lt;h3 id=&#34;paquetes-distintos-al-primero&#34;&gt;Paquetes distintos al primero&lt;/h3&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34;&gt;&lt;img sizes=&#34;(min-width: 596px) 596px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/10/Análisis-práctico-del-protocolo-de-Google-QUIC-quicOtrosPaquetes.png&#34; title=&#34;QUIC: Análisis práctico del protocolo de Google&#34; alt=&#34;QUIC: Análisis práctico del protocolo de Google&#34; width=&#34;596px&#34; height=&#34;246px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Y por tanto no aparece información relevante respecto a qué versión se usa.&lt;/p&gt;
-
 &lt;p&gt;Los siguientes datos del paquete correspondientes al payload no se pueden analizar por estar cifrados. Sin embargo, una vez descifrados, el contenido del payload variará dependiendo del tipo de frame que haya sido enviado.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;(1) Chromium. Código de la parte cliente&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8j7I2&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(2) Chromium. Código de la parte servidor&lt;/em&gt; »» &lt;a href=&#34;http://j.mp/1p8iUF1&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(3) Chromium. Obtener el código fuente&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/developers/how-tos/get-the-code&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(4) Chromium. Playing with QUIC&lt;/em&gt; »» &lt;a href=&#34;http://www.chromium.org/quic/playing-with-quic&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(5) Google. QUIC Crypto&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(6) Google. QUIC: Design Document and Specification Rationale&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;(7) Google. QUIC Wire Layout Specification&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(1) Chromium. Código de la parte cliente&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(2) Chromium. Código de la parte servidor&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(3) Chromium. Obtener el código fuente&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(4) Chromium. Playing with QUIC&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(5) Google. QUIC Crypto&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(6) Google. QUIC: Design Document and Specification Rationale&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(7) Google. QUIC Wire Layout Specification&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -303,74 +251,40 @@ x-xss-protection: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#3
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 468px) 468px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/Que-es-QUIC-el-nuevo-protocolo-desarrollado-por-Google.png&#34; alt=&#34;Qué es QUIC, el nuevo protocolo desarrollado por Google&#34; width=&#34;468px&#34; height=&#34;239px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Escuchando el podcast &lt;a href=&#34;http://twit.tv/show/security-now/411&#34; target=&#34;_blank&#34;&gt;#411&lt;/a&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;security now!&lt;/a&gt; Steve habló del protocolo &lt;em&gt;QUIC&lt;/em&gt;, que está desarrollando Google y pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña &lt;strong&gt;FAQ (Frequently Asked Questions)&lt;/strong&gt; en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de &lt;em&gt;QUIC&lt;/em&gt;, el nombre original del documento es &lt;strong&gt;QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that)&lt;/strong&gt;, aquí dejo la tabla de contenidos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Escuchando el podcast &lt;!-- raw HTML omitted --&gt;#411&lt;!-- raw HTML omitted --&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;security now!&lt;/a&gt; Steve habló del protocolo &lt;em&gt;QUIC&lt;/em&gt;, que está desarrollando Google y pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña &lt;strong&gt;FAQ (Frequently Asked Questions)&lt;/strong&gt; en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de &lt;em&gt;QUIC&lt;/em&gt;, el nombre original del documento es &lt;strong&gt;QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that)&lt;/strong&gt;, aquí dejo la tabla de contenidos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;qué-es-quic&#34;&gt;¿Qué es QUIC?&lt;/h1&gt;
-
-&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de &lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;a href=&#34;https://en.wikipedia.org/wiki/Transport_Layer_Security&#34; target=&#34;_blank&#34;&gt;TLS/SSL&lt;/a&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
-
+&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de &lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;!-- raw HTML omitted --&gt;TLS/SSL&lt;!-- raw HTML omitted --&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
 &lt;h1 id=&#34;cuales-son-algunas-de-las-técnicas-empleadas-en-quic&#34;&gt;¿Cuales son algunas de las técnicas empleadas en QUIC?&lt;/h1&gt;
-
 &lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; empleará una estimación del ancho de banda en cada dirección para prevenir congestiones, para luego establecer la transmisión de los paquetes a un ritmo uniforme para reducir la pérdida de paquetes. También usará códigos de corrección de errores a nivel del paquete para reducir la necesidad de retransmitir los datos perdidos. &lt;em&gt;QUIC&lt;/em&gt; alinea los límites de bloque &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;criptográficos&lt;/a&gt; con los límites del paquete, de manera que el impacto de la pérdida del paquete sea mucho menor.&lt;/p&gt;
-
 &lt;h1 id=&#34;no-proporciona-ya-spdy-conexiones-multiplexadas-sobre-ssl&#34;&gt;¿No proporciona ya SPDY conexiones multiplexadas sobre SSL?&lt;/h1&gt;
-
-&lt;p&gt;Sí, pero &lt;a href=&#34;http://es.wikipedia.org/wiki/SPDY&#34; target=&#34;_blank&#34;&gt;SPDY&lt;/a&gt; hasta el momento se ejecuta a través de TCP, lo cual provoca algunos costes de latencia (Aunque SPDY mejora la latencia de HTTP a través de TCP).&lt;/p&gt;
-
+&lt;p&gt;Sí, pero &lt;!-- raw HTML omitted --&gt;SPDY&lt;!-- raw HTML omitted --&gt; hasta el momento se ejecuta a través de TCP, lo cual provoca algunos costes de latencia (Aunque SPDY mejora la latencia de HTTP a través de TCP).&lt;/p&gt;
 &lt;h1 id=&#34;por-qué-no-es-spdy-sobre-tcp-lo-suficientemente-bueno&#34;&gt;¿Por qué no es SPDY sobre TCP lo suficientemente bueno?&lt;/h1&gt;
-
-&lt;p&gt;Un único paquete perdido en una conexión TCP subyacente paraliza todos los flujos SPDY multiplexados de esa conexión. En comparación, un único paquete perdido para X conexiones paralelas en HTTP &lt;strong&gt;paralizará solo 1 de X conexiones&lt;/strong&gt;. Con &lt;em&gt;UDP, QUIC&lt;/em&gt; puede soportar entregas desajustadas, de modo que un paquete perdido paralizará como mucho un flujo (stream). El evitar la congestión a través de una sola &lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Window_scaling&#34; target=&#34;_blank&#34;&gt;ventana&lt;/a&gt; de congestión coloca a SPDY en una posición desfavorable a través de TCP en comparación con varias conexiones HTTP, cada una con una ventana de congestión separada. Las ventanas de congestión separadas no se ven afectadas tanto por la pérdida de paquetes, y &lt;em&gt;QUIC&lt;/em&gt; será capaz de manejar de manera más equitativa la congestión de un conjunto de conexiones multiplexadas.&lt;/p&gt;
-
+&lt;p&gt;Un único paquete perdido en una conexión TCP subyacente paraliza todos los flujos SPDY multiplexados de esa conexión. En comparación, un único paquete perdido para X conexiones paralelas en HTTP &lt;strong&gt;paralizará solo 1 de X conexiones&lt;/strong&gt;. Con &lt;em&gt;UDP, QUIC&lt;/em&gt; puede soportar entregas desajustadas, de modo que un paquete perdido paralizará como mucho un flujo (stream). El evitar la congestión a través de una sola &lt;!-- raw HTML omitted --&gt;ventana&lt;!-- raw HTML omitted --&gt; de congestión coloca a SPDY en una posición desfavorable a través de TCP en comparación con varias conexiones HTTP, cada una con una ventana de congestión separada. Las ventanas de congestión separadas no se ven afectadas tanto por la pérdida de paquetes, y &lt;em&gt;QUIC&lt;/em&gt; será capaz de manejar de manera más equitativa la congestión de un conjunto de conexiones multiplexadas.&lt;/p&gt;
 &lt;h1 id=&#34;hay-alguna-otra-razón-por-la-que-tcp-no-sea-lo-suficientemente-bueno&#34;&gt;¿Hay alguna otra razón por la que TCP no sea lo suficientemente bueno?&lt;/h1&gt;
-
 &lt;p&gt;TCP, y TSL/SSL, requieren habitualmente una o más veces de idas y vueltas (&lt;strong&gt;round trip times, RTTs&lt;/strong&gt;) durante el establecimiento de la conexión. Se espera que &lt;em&gt;QUIC&lt;/em&gt; pueda reducir los costos de conexión a practicamente cero &lt;em&gt;RTTs&lt;/em&gt;, por ejemplo mandar &lt;em&gt;hola&lt;/em&gt;, y luego enviar la solicitud de datos sin tener que esperar.&lt;/p&gt;
-
 &lt;h1 id=&#34;por-qué-no-mejorar-tcp-a-través-de-spdy&#34;&gt;¿Por qué no mejorar TCP a través de SPDY?&lt;/h1&gt;
-
 &lt;p&gt;Ese es nuestro objetivo. El soporte TCP está integrado en el &lt;strong&gt;kernel&lt;/strong&gt; de los sistemas operativos. Teniendo en cuenta la lentitud de los usuarios a la hora de actualizar su Sistema Operativo, &lt;strong&gt;es poco probable que se vea una adopción significativa de los cambios en TCP del lado del cliente en menos de 5-15 años&lt;/strong&gt;. &lt;em&gt;QUIC&lt;/em&gt; permite probar y experimentar con ideas nuevas para obtener resultado más rápidamente. Tenemos la esperanza de que las características de &lt;em&gt;QUIC&lt;/em&gt; migrarán a TCP y TLS si resultan eficaces.&lt;/p&gt;
-
 &lt;h1 id=&#34;por-qué-no-construir-un-protocolo-totalmente-nuevo-en-vez-de-usar-udp&#34;&gt;¿Por qué no construir un protocolo totalmente nuevo, en vez de usar UDP?&lt;/h1&gt;
-
 &lt;p&gt;Hoy día, las &lt;strong&gt;Middle boxes&lt;/strong&gt; en internet, por lo general bloquean el tráfico a menos que sea TCP o UDP. Ya que no se pudo modificar significativamente TCP, fue necesario usar UDP. UDP se usa en la actualidad por muchos sistemas de juego, así como VoIP y videos en streaming, por lo que su uso parece plausible.&lt;/p&gt;
-
 &lt;h1 id=&#34;por-qué-quic-siempre-requiere-cifrado-en-todo-el-canal&#34;&gt;¿Por qué QUIC siempre requiere cifrado en todo el canal?&lt;/h1&gt;
-
 &lt;p&gt;Como hemos aprendido con SPDY y otros protocolos, si no ciframos el tráfico, entonces las &lt;strong&gt;Middle boxes&lt;/strong&gt; se garantizan (a sabiendas, o sin saberlo) a corromper las transmisiones cuando tratan de &lt;em&gt;amablemente&lt;/em&gt; filtrar o &lt;em&gt;mejorar&lt;/em&gt; el tráfico.&lt;/p&gt;
-
 &lt;h1 id=&#34;udp-no-tiene-controles-de-congestión-no-causará-quic-un-colapso-en-internet-si-es-ampliamente-adoptado&#34;&gt;UDP no tiene controles de congestión, ¿No causará QUIC un colapso en internet si es ampliamente adoptado?&lt;/h1&gt;
-
 &lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar \(\mathcal{Q}\) flujos multiplexados, y compartir un ancho de banda con \(\mathcal{T}\) flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de \(\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}\) de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos \(\mathcal{Q}\) adicionales).&lt;/p&gt;
-
 &lt;h1 id=&#34;por-qué-no-utilizar-estándares-existentes-como-sctp-sobre-dtls&#34;&gt;¿Por qué no utilizar estándares existentes como SCTP sobre DTLS?&lt;/h1&gt;
-
 &lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; incorpora muchas técnicas en un esfuerzo para reducir la latencia. SCTP y DTLS no fueron diseñados con este propósito, y esto se hace significativamente evidente incluso durante las fases de establecimiento de la conexión. Varias de las técnicas con las que &lt;em&gt;QUIC&lt;/em&gt; está experimentando serían técnicamente difíciles de incorporar a los estándares existentes. Como ejemplo, cada uno de estos protocolos requeiren varios &lt;strong&gt;RTTs&lt;/strong&gt; para establecer una conexión, lo cual no concuerda con nuestros objetivos de conseguir 0 &lt;em&gt;RTTs&lt;/em&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;cuanto-reducen-las-técnicas-de-quic-la-latencia&#34;&gt;¿Cuanto reducen las técnicas de QUIC la latencia?&lt;/h1&gt;
-
 &lt;p&gt;Esta es exáctamente la pregunta que estamos investigando en este momento, estamos experimentando con varias características y técnicas en Chromium. Aún es demasiado pronto para compartir resultados preliminares - Estad atentos.&lt;/p&gt;
-
 &lt;h1 id=&#34;hay-alguna-forma-de-deshabilitar-quic-si-no-quiero-ejecutarlo-en-mi-chromium&#34;&gt;¿Hay alguna forma de deshabilitar QUIC si no quiero ejecutarlo en mi Chromium?&lt;/h1&gt;
-
 &lt;p&gt;Sí, visitando &lt;em&gt;about:flags&lt;/em&gt; y luego desactivar &lt;em&gt;Experimental QUIC protocol&lt;/em&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;dónde-puedo-aprender-más-sobre-quic&#34;&gt;¿Dónde puedo aprender más sobre QUIC?&lt;/h1&gt;
-
-&lt;p&gt;Si quieres saber más, y necesitas material que te ayude a dormir, puedes mirar en &lt;a href=&#34;https://docs.google.com/a/chromium.org/document/d/1RNHkx_VvKWyWg6Lr8SZ-saqsQx7rFV-ev2jRFUoVD34/edit&#34; target=&#34;_blank&#34;&gt;QUIC Design Document and Specification Rationale&lt;/a&gt;. Para criptógrafos que se pregunten cómo de bien están los puntos sobre las ies, y las tes cruzadas, pueden echar un vistazo a las especificaciones criptográficas (&lt;a href=&#34;https://docs.google.com/a/chromium.org/document/d/1g5nIXAIkN_Y-7XJW5K45IblHd_L2f5LTaDUDwvZ5L6g/edit&#34; target=&#34;_blank&#34;&gt;QUIC Crypto Specification&lt;/a&gt;). Si prefieres ver el código cliente, puedes echar un vistazo al &lt;a href=&#34;https://code.google.com/p/chromium/codesearch#chromium/src/net/quic/&amp;ct=rc&amp;cd=1&amp;q=quic&amp;sq=package:chromium&#34; target=&#34;_blank&#34;&gt;código fuente de Chromium&lt;/a&gt;. Si te preguntas qué papel puede desempaña un servidor, échale un vistazo al &lt;a href=&#34;https://code.google.com/p/chromium/codesearch#chromium/src/net/tools/quic/&amp;ct=rc&amp;cd=2&amp;q=quic&amp;sq=package:chromium&#34; target=&#34;_blank&#34;&gt;código del servidor prototipo&lt;/a&gt;. Finalmente, si lo que deseas es pensar en los bits en el cable, también hay una &lt;a href=&#34;https://docs.google.com/a/chromium.org/document/d/1WJvyZflAO2pq77yOLbp9NsGjC1CHetAXV8I0fQe-B_U/edit#&#34; target=&#34;_blank&#34;&gt;especificación para los cables&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Si quieres saber más, y necesitas material que te ayude a dormir, puedes mirar en &lt;!-- raw HTML omitted --&gt;QUIC Design Document and Specification Rationale&lt;!-- raw HTML omitted --&gt;. Para criptógrafos que se pregunten cómo de bien están los puntos sobre las ies, y las tes cruzadas, pueden echar un vistazo a las especificaciones criptográficas (&lt;!-- raw HTML omitted --&gt;QUIC Crypto Specification&lt;!-- raw HTML omitted --&gt;). Si prefieres ver el código cliente, puedes echar un vistazo al &lt;!-- raw HTML omitted --&gt;código fuente de Chromium&lt;!-- raw HTML omitted --&gt;. Si te preguntas qué papel puede desempaña un servidor, échale un vistazo al &lt;!-- raw HTML omitted --&gt;código del servidor prototipo&lt;!-- raw HTML omitted --&gt;. Finalmente, si lo que deseas es pensar en los bits en el cable, también hay una &lt;!-- raw HTML omitted --&gt;especificación para los cables&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;hay-algún-grupo-de-discusión-para-quic&#34;&gt;¿Hay algún grupo de discusión para QUIC?&lt;/h1&gt;
-
-&lt;p&gt;Sí, proto-quic@chromium.org | &lt;a href=&#34;https://groups.google.com/a/chromium.org/d/forum/proto-quic&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://groups.google.com/a/chromium.org/d/forum/proto-quic&#34;&gt;https://groups.google.com/a/chromium.org/d/forum/proto-quic&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;Sí, &lt;a href=&#34;mailto:proto-quic@chromium.org&#34;&gt;proto-quic@chromium.org&lt;/a&gt; | &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://groups.google.com/a/chromium.org/d/forum/proto-quic&#34;&gt;https://groups.google.com/a/chromium.org/d/forum/proto-quic&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;QUIC FAQ for Geeks&lt;/em&gt; »» &lt;a href=&#34;https://docs.google.com/document/d/1lmL9EF6qKrk7gbazY8bIdvq3Pno2Xj_l_YShP40GLQE/edit#heading=h.h3jsxme7rovm&#34; target=&#34;_blank&#34;&gt;Visitar Documento en Drive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;QUIC FAQ for Geeks&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar Documento en Drive&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

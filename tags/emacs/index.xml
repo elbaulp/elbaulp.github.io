@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Emacs on El Baúl del programador</title>
+        <title>emacs on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/emacs/</link>
-        <description>Recent content in Emacs on El Baúl del programador</description>
+        <description>Recent content in emacs on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Wed, 18 Oct 2017 19:04:01 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/emacs/</link>
-            <title>Emacs on El Baúl del programador</title>
+            <title>emacs on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,29 +21,35 @@
             <pubDate>Wed, 18 Oct 2017 19:04:01 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/chuleta-org-mode/</guid>
-            <description>&lt;p&gt;Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/orgmodequickreference.jpg&#34;
-            alt=&#34;Org mode quick reference&#34;
-            title=&#34;Org mode quick reference&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;480&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Org mode quick reference&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Para empezar, con &lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.&lt;/p&gt;
-
-&lt;h1 id=&#34;secciones&#34;&gt;Secciones&lt;/h1&gt;
+            <description>&lt;p&gt;
+Este artículo es una referencia rápida de los comandos más útiles de &lt;strong&gt;org-mode&lt;/strong&gt;, es una versión de una página del manual oficial, pero ya que lo visitaba una y otra vez, decidí crear este post que recopile los comandos que más uso.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;
+            alt=&amp;#34;Org mode quick reference&amp;#34;
+            title=&amp;#34;Org mode quick reference&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;480&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Org mode quick reference&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Para empezar, con &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, ciclas sobre las distintas secciones, expandiendo/contrayendo.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Secciones
+&lt;/h2&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Top level headline&lt;/span&gt;
 &lt;span class=&#34;gu&#34;&gt;**&lt;/span&gt; Second level
 &lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
@@ -53,196 +58,436 @@
     more text
 
 &lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Another top level headline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;ciclar&#34;&gt;Ciclar&lt;/h1&gt;
-
-&lt;p&gt;Para ciclar sobre las secciones:&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+Ciclar
+&lt;/h2&gt;
+&lt;p&gt;
+Para ciclar sobre las secciones:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cicla el &lt;strong&gt;sub-árbol&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Cicla &lt;strong&gt;globalmente&lt;/strong&gt; todas las secciones.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Expande todas las secciones.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;moverse-entre-secciones&#34;&gt;Moverse entre secciones&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Moverse entre secciones
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-n&lt;/code&gt; Siguiente sección.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-p&lt;/code&gt; Sección anterior.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-n&lt;/code&gt; Siguiente sección.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-p&lt;/code&gt; Sección anterior.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-f&lt;/code&gt; Siguiente sección del mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-b&lt;/code&gt; Sección anterior del mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-u&lt;/code&gt; Ir subiendo a secciones superiores.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;insertar-modificar-secciones&#34;&gt;Insertar/modificar secciones&lt;/h1&gt;
-
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Insertar/modificar secciones
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar una nueva sección, del mismo nivel que el actual. Si el cursor está a mitad del párrafo, divide el párrafo en dos secciones.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta un elemento &lt;strong&gt;TODO&lt;/strong&gt; en el mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; En una sección vacía, ciclar sobre los niveles.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar un nivel el &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Mover el &lt;strong&gt;sub-árbol&lt;/strong&gt; arriba o abajo.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-w&lt;/code&gt; Mover la &lt;strong&gt;sección o región&lt;/strong&gt; a otro lugar.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-x n s/w&lt;/code&gt;  Reducir/ampliar el &lt;em&gt;bufer&lt;/em&gt; al &lt;strong&gt;sub-árbol&lt;/strong&gt; actual.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;árboles-dispersos&#34;&gt;Árboles dispersos&lt;/h1&gt;
-
-&lt;p&gt;Útil para ocultar partes del documento en las que no estamos trabajando actualmente.&lt;/p&gt;
-
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Árboles dispersos
+&lt;/h2&gt;
+&lt;p&gt;
+Útil para ocultar partes del documento en las que no estamos trabajando actualmente.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code&gt;C-c C-c&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;barra inclinada&amp;gt;&lt;/code&gt; Pregunta cómo crear el árbol.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;barra inclinada&amp;gt; r&lt;/code&gt; Crea el árbol disperso en base a una expresión regular, para desmarcar el resaltado pulsar &lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;listas&#34;&gt;Listas&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Listas
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;+&lt;/code&gt; o &lt;code&gt;*&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code&gt;1.&lt;/code&gt; o &lt;code&gt;1)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;No ordenadas:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;-&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;+&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;*&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Ordenadas:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;1.&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;1)&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Descripción:&lt;/em&gt; Usa &lt;code class=&#34;verbatim&#34;&gt;::&lt;/code&gt; para separar el &lt;em&gt;término&lt;/em&gt; de la &lt;em&gt;descripción&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Ocultar los &lt;strong&gt;elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar nuevo elemento al mismo nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insertar elemento con &lt;em&gt;checkbox&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Mover elementos arriba/abajo, &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Incrementar/decrementar nivel &lt;strong&gt;incluyendo sub elementos&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; Si hay un &lt;em&gt;checkbox&lt;/em&gt;, cambiar el estado.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c -&lt;/code&gt; Ciclar sobre los distintos tipos de listas.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;notas-al-pie&#34;&gt;Notas al pie&lt;/h1&gt;
-
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Notas al pie
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-x f&lt;/code&gt; Cuando el cursor está en una referencia, ir a la definición (o vice versa), de lo contrario crea una nueva nota al pie.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; Saltar entre definición y referencia.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:&lt;/p&gt;
+&lt;p&gt;
+Un ejemplo de una nota al pie &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. El código que la genera es:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Un ejemplo de una nota al pie&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt;.
 
 &lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt; Click en return para volver a la referencia&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
-
-&lt;p&gt;Sintáxis: &lt;code&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code&gt;C-c C-l&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Si no hay una URL, el enlace se considera interno al documento:&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+Enlaces
+&lt;/h2&gt;
+&lt;p&gt;
+Sintáxis: &lt;code class=&#34;verbatim&#34;&gt;[[enlace][descripción]]&lt;/code&gt; o solo &lt;code class=&#34;verbatim&#34;&gt;[[enlace]]&lt;/code&gt;, una vez creado, se puede editar con &lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Si no hay una URL, el enlace se considera interno al documento:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[&lt;span class=&#34;na&#34;&gt;#custom-id&lt;/span&gt;]]
 [[&lt;span class=&#34;na&#34;&gt;My Target&lt;/span&gt;][&lt;span class=&#34;nt&#34;&gt;Find my target&lt;/span&gt;]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El último ejemplo, busca en el documento actual &lt;code&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+El último ejemplo, busca en el documento actual &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt; y enlaza a él.
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code&gt;C-u&lt;/code&gt;, se usa autocompletado.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c C-o&lt;/code&gt; o &lt;code&gt;mouse-1&lt;/code&gt; o &lt;code&gt;mouse-2&lt;/code&gt; abre el enlace.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c l&lt;/code&gt; Almacena un enlace a la posición actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; Inserta el enlace, pregunta por la &lt;em&gt;url&lt;/em&gt; y &lt;em&gt;descipción&lt;/em&gt;, si se llama con el prefijo &lt;code class=&#34;verbatim&#34;&gt;C-u&lt;/code&gt;, se usa autocompletado.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; Con el &lt;strong&gt;cursor en un enlace&lt;/strong&gt;, lo edita.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-o&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;mouse-1&lt;/code&gt; o &lt;code class=&#34;verbatim&#34;&gt;mouse-2&lt;/code&gt; abre el enlace.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;items&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; items&lt;/h1&gt;
-
-&lt;p&gt;Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).&lt;/p&gt;
-
+&lt;h2 id=&#34;headline-9&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+items
+&lt;/h2&gt;
+&lt;p&gt;
+Toda sección comenzando con &lt;em&gt;TODO&lt;/em&gt; es un elemento &lt;em&gt;TODO&lt;/em&gt; (lista de tareas).
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&gt; TODO -&gt; DONE -&gt; (unmarked)&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.&lt;/li&gt;
-&lt;li&gt;C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-t&lt;/code&gt; Cicla entre los distintos estados &lt;em&gt;(unmarked) -&amp;gt; TODO -&amp;gt; DONE -&amp;gt; (unmarked)&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; Igual que arriba, pero solo para el elemento actual.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c / t&lt;/code&gt; Ver la lista como un &lt;em&gt;árbol disperso&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c a t&lt;/code&gt; Muestra la lista de tareas global.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Inserta una nueva tarea.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+C-c , Establecer prioridad de la tarea (Entre &lt;em&gt;A,B,C&lt;/em&gt;).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Ciclar entre prioridades.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-10&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+checkboxes
+&lt;/h3&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;checkboxes&#34;&gt;&lt;span class=&#34;todo TODO&#34;&gt;TODO&lt;/span&gt; checkboxes&lt;/h2&gt;
-
-&lt;p&gt;Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+Se pueden crear listas de tareas compuestas de &lt;strong&gt;varios elementos&lt;/strong&gt;, y con &lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; se marcan como completadas, para crear una tarea nueva &lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; TODO&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Organize party [0/3]&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; call people [0/2]
     &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Peter
     &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Sarah
   &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/org-mode-todo-checkboxs.gif&#34;
-            alt=&#34;TODO Items checkboxes&#34;
-            title=&#34;TODO items checkboxes&#34;
-            sizes=&#34;(min-width: 244px) 244px, 100vw&#34;
-            width=&#34;244&#34;
-            height=&#34;100&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;TODO Items checkboxes&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;markup&#34;&gt;Markup&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;
+            alt=&amp;#34;TODO Items checkboxes&amp;#34;
+            title=&amp;#34;TODO items checkboxes&amp;#34;
+            sizes=&amp;#34;(min-width: 244px) 244px, 100vw&amp;#34;
+            width=&amp;#34;244&amp;#34;
+            height=&amp;#34;100&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;TODO Items checkboxes&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-11&#34;&gt;
+Markup
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;*negrita*&lt;/code&gt; =&gt; &lt;strong&gt;negrita&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;/Cursiva/&lt;/code&gt; =&gt; &lt;em&gt;Cursiva&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;=code=&lt;/code&gt; y &lt;code&gt;~verbatim~&lt;/code&gt; -&gt;  &lt;code&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;+tachar+&lt;/code&gt; -&gt; &lt;del&gt;tachar&lt;/del&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;_subrayar_&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;*negrita*&lt;/code&gt; =&amp;gt; &lt;strong&gt;negrita&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;/Cursiva/&lt;/code&gt; =&amp;gt; &lt;em&gt;Cursiva&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;=code=&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;~verbatim~&lt;/code&gt; -&amp;gt;  &lt;code class=&#34;verbatim&#34;&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;+tachar+&lt;/code&gt; -&amp;gt; &lt;del&gt;tachar&lt;/del&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;_subrayar_&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;imágenes-y-tablas&#34;&gt;Imágenes y tablas&lt;/h1&gt;
-
-&lt;p&gt;Sintáxis de las tablas:&lt;/p&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
+Imágenes y tablas
+&lt;/h2&gt;
+&lt;p&gt;
+Sintáxis de las tablas:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;s&#34;&gt;| HEADER1  | header2  |&lt;/span&gt;
 &lt;span class=&#34;s&#34;&gt;|----------+----------|&lt;/span&gt;
 &lt;span class=&#34;s&#34;&gt;| content1 | contend2 |&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/org-mode-table.gif&#34;
-            alt=&#34;Creating tables in org-mode&#34;
-            title=&#34;Creating tables in org-mode&#34;
-            sizes=&#34;(min-width: 304px) 304px, 100vw&#34;
-            width=&#34;304&#34;
-            height=&#34;214&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Creating tables in org-mode&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;Las imágenes son enlaces: &lt;code&gt;[[./img/a-image.jpg]]&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;código-fuente&#34;&gt;Código fuente&lt;/h1&gt;
-
-&lt;p&gt;Para incluir código fuente:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-table.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-table.gif&amp;#34;
+            alt=&amp;#34;Creating tables in org-mode&amp;#34;
+            title=&amp;#34;Creating tables in org-mode&amp;#34;
+            sizes=&amp;#34;(min-width: 304px) 304px, 100vw&amp;#34;
+            width=&amp;#34;304&amp;#34;
+            height=&amp;#34;214&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Creating tables in org-mode&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Las imágenes son enlaces: &lt;code class=&#34;verbatim&#34;&gt;[[./img/a-image.jpg]]&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-13&#34;&gt;
+Código fuente
+&lt;/h2&gt;
+&lt;p&gt;
+Para incluir código fuente:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt; #+BEGIN_SRC emacs-lisp
      (defun org-xor (a b)
         &amp;#34;Exclusive or.&amp;#34;
-        (if a (not b) b))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;generará lo siguiente:&lt;/p&gt;
+        (if a (not b) b))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+#+END_SRC
+&lt;/p&gt;
+&lt;p&gt;
+generará lo siguiente:
+&lt;/p&gt;
+&lt;div class=&#34;src src-emacs-lisp&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-xor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;s&#34;&gt;&amp;#34;Exclusive or.&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code&gt;C-c &#39;&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Para editar el código en un &lt;em&gt;buffer&lt;/em&gt; que soporte dicho lenguaje, &lt;code class=&#34;verbatim&#34;&gt;C-c &amp;#39;&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-14&#34;&gt;
+Fuente
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://orgmode.org/guide/&#34; title=&#34;Manual oficial de org-mode&#34;&gt;Manual oficial de org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://orgmode.org/guide/&#34;&gt;Manual oficial de org-mode&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
-
-&lt;hr /&gt;
-
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;Click en return para volver a la referencia. &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;[return]&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;hr class=&#34;footnotes-separatator&#34;&gt;
+&lt;div class=&#34;footnote-definitions&#34;&gt;
+&lt;div class=&#34;footnote-definition&#34;&gt;
+&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;div class=&#34;footnote-body&#34;&gt;
+&lt;p&gt;
+Click en return para volver a la referencia.
+&lt;/p&gt;
 &lt;/div&gt;
-</description>
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
         </item>
         
         <item>
@@ -252,7 +497,6 @@
             
             <guid>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</guid>
             <description>&lt;p&gt;No es la primera vez que se publica en el blog una &lt;a href=&#34;https://elbauldelprogramador.com/tags/chuleta&#34; title=&#34;Artículos sobre chuletas&#34;&gt;chuleta&lt;/a&gt; de algo:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Chuleta básica de comandos Dig&#34;&gt;Chuleta de comandos para dig&lt;/a&gt;&lt;/li&gt;
@@ -261,77 +505,57 @@
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/&#34; title=&#34;Chuleta de comandos de Markdown&#34;&gt;Chuleta de comandos MarkDown&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;La de hoy va sobre &lt;em&gt;Emacs&lt;/em&gt;. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la &lt;strong&gt;chuleta de atajos de teclado/comandos/paquetes para emacs definitiva&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;A lo largo del poco tiempo que llevo usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;Artículos sobre emacs&#34;&gt;emacs&lt;/a&gt;, ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:&lt;/p&gt;
-
 &lt;h1 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h1&gt;
-
 &lt;h2 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h2&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# name: Modified
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# key: mod
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Otro ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# key: code
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# --
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
-&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
-
-&lt;h1 id=&#34;miscelánica-taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
-
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
+&lt;h1 id=&#34;miscelánica--taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
 &lt;h2 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Queremos buscar por una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresión regular&lt;/a&gt; o un texto simple en varios ficheros a la vez, o un directorio completo, y reemplazar el texto encontrado por otro.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Ejecutar &lt;code&gt;M-x find-name-dired&lt;/code&gt;: e introducir el directorio en el que están los ficheros.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt; para “marcar” todos los ficheros del directorio.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;Q&lt;/code&gt; para ejecutar el comando &lt;code&gt;query-replace&lt;/code&gt; para todos los ficheros marcados.&lt;/li&gt;
 &lt;li&gt;Una vez escrita la expresión regular, se nos pide confirmación para cada fichero, podemos pulsar &lt;code&gt;espacio&lt;/code&gt; para reemplazar la expresión en el fichero, &lt;code&gt;n&lt;/code&gt; para descartarla, o &lt;code&gt;A&lt;/code&gt; para reemplazar la expresión en todos los ficheros.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;A veces queremos seleccionar una región de texto y realizar una acción sobre ella, por ejemplo eliminar espacios en blanco, añadir algún texto delante de cada frase etc.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Supongamos que tenemos el siguiente texto:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
 línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
+línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;- línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 - línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
 - línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-- línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
-
+- línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C-x r k&lt;/code&gt;: &lt;em&gt;Kill&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-x r d&lt;/code&gt;: &lt;em&gt;Borra&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
@@ -342,88 +566,62 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
 &lt;li&gt;&lt;code&gt;C-x r t string RET&lt;/code&gt;: Reemplaza el contenido del rectángulo con &lt;em&gt;string&lt;/em&gt; en cada línea. (El ejemplo visto)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: Inserta &lt;em&gt;string&lt;/em&gt; en cada línea del rectángulo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Supongamos que tenemos un texto mal formateado, y queremos reemplazar un caracter en concreto por un salto de línea. Esto suele pasar por ejemplo al leer ficheros con codificaciones distintas. En los que el salto de línea se interpreta de otro modo. A modo de ejemplo, supongamos que vamos a reemplazar el caracter &lt;code&gt;^N&lt;/code&gt; por un salto de línea. Tenemos este texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Pulsar &lt;code&gt;M-x replace-string&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Introducimos el texto que queremos reemplazar, en este caso &lt;code&gt;^N&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Insertamos el salto de línea, para ello, pulsar:
-
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;C-q&lt;/code&gt;: Para decirle a emacs que vamos a insertar un caracter en crudo (&lt;em&gt;raw&lt;/em&gt;).&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-j&lt;/code&gt;: Esta combinación se corresponde con el salto de línea&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;li&gt;Pulsamos &lt;code&gt;Enter&lt;/code&gt; y deberíamos tener el siguiente texto:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet
 , consectetur adipiscing elit.
- Fusce vestibulum.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
-
+ Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h2&gt;
-
 &lt;p&gt;Basta ejecutar &lt;code&gt;M-x delete-trailing-whitespace&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h2&gt;
-
 &lt;p&gt;Este tema se trató en más profundidad en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs&#34; title=&#34;Cómo crear comandos personalizados en Emacs&#34;&gt;&lt;em&gt;Cómo crear comandos personalizados en Emacs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h2 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;em&gt;Emacs&lt;/em&gt; por defecto guarda una copia de seguridad del fichero en un fichero del mismo nombre pero acabado en &lt;code&gt;~&lt;/code&gt;, aunque es bastánte útil, a veces molesta tener ficheros desperdigados a lo largo de las carpetas acabando en &lt;code&gt;~&lt;/code&gt;. Es posible almacenarlos todos en una carpeta. Veamos.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;En el fichero de configuración (&lt;code&gt;~/.emacs/init.el&lt;/code&gt;) añadimos&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Set a directory for backup files&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backup-directory-alist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/.saves&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delete-old-versions&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;kept-new-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;kept-old-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
-
+    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
-
 &lt;h2 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h2&gt;
-
 &lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Algunos comandos que hemos visto aquí, como buscar y reemplazar texto en varios ficheros a la vez, realizan la acción pero no guardan los cambios en el fichero. Para guardarlos tenemos que seleccionarlos uno a uno en el &lt;em&gt;buffer&lt;/em&gt; y ejecutar la acción de guardar. Para hacernos la vida más fácil, podemos usar &lt;code&gt;ibuffer&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Para sustituir el modo &lt;em&gt;buffer&lt;/em&gt;, por &lt;em&gt;ibuffer&lt;/em&gt; debemos añadir a nuestra configuración:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; make ibuffer the default&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt;, para seleccionar todos los ficheros.&lt;/li&gt;
 &lt;li&gt;Pulsar &lt;code&gt;S&lt;/code&gt;, para guardar los ficheros seleccionados&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
-
+&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo-&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x align-regex =&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;convertir-texto-a-mayúscula-minúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
-
+&lt;h2 id=&#34;convertir-texto-a-mayúsculaminúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;C-x C-u&lt;/code&gt;: Convertir la región seleccionada a mayúsculas.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;C-x C-l&lt;/code&gt;: Convertir la región seleccionada a minúsculas.&lt;/li&gt;
@@ -431,38 +629,25 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
 &lt;li&gt;&lt;code&gt;M-u&lt;/code&gt;: Convertir la siguiente palabra a mayúscula.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-c&lt;/code&gt;: Convertir a mayúscula la primera letra de la palabra &amp;ndash; Capitalizar &amp;ndash;.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;M-x tabify&lt;/code&gt;: Sustituye en la región seleccionada espacios por tabuladores.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;
-
 &lt;p&gt;Tal y como dice la descripción de su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/tags/github/&#34; title=&#34;Github&#34;&gt;Github&lt;/a&gt;:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; is an enhanced Emacs 24 distribution that should make your experience with Emacs both more pleasant and more powerful.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;es decir:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; es una distribución mejorada de Emacs 24 que debería hacer tu experiencia con emacs más agradable y potente.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Aunque la descripción menciona la versión 24, personalmente yo estoy usando la versión 25 en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34; title=&#34;Gentoo&#34;&gt;Gentoo&lt;/a&gt; y funciona perfectamente.&lt;/p&gt;
-
-&lt;p&gt;La instalación de &lt;em&gt;Prelude&lt;/em&gt; es muy sencilla, toda la documentación necesaria se encuentra en su &lt;a href=&#34;https://github.com/bbatsov/prelude&#34; target=&#34;_blank&#34; title=&#34;repositorio de Github&#34;&gt;repositorio de Github&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;La instalación de &lt;em&gt;Prelude&lt;/em&gt; es muy sencilla, toda la documentación necesaria se encuentra en su &lt;!-- raw HTML omitted --&gt;repositorio de Github&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;tu-turno&#34;&gt;Tu Turno&lt;/h1&gt;
-
-&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;a href=&#34;https://github.com/elbaulp/algui91-hugo/edit/master/content/post/chuleta-atajos-teclado-emacs.markdown&#34; target=&#34;_blank&#34; title=&#34;Pull Request&#34;&gt;Pull Request&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;!-- raw HTML omitted --&gt;Pull Request&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Esperamos vuestras colaboraciones!&lt;/p&gt;</description>
         </item>
         
@@ -473,55 +658,37 @@ línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;
             
             <guid>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</guid>
             <description>&lt;p&gt;Hace unos meses que comencé a usar &lt;em&gt;emacs&lt;/em&gt; como editor predeterminado, y la verdad es que una vez me acostumbré a él es bastante cómodo. Sin embargo, editando artículos del blog, me encontraba ejecutando una y otra vez el mismo comando, o comandos similares. Así que busqué la forma de asociarlos a una función para no tener que andar escribiendolos cada dos por trés. Veamos cómo crear estas funciones.&lt;/p&gt;
-
 &lt;h1 id=&#34;la-función-query-replace-regexp&#34;&gt;La función (query-replace-regexp)&lt;/h1&gt;
-
 &lt;p&gt;Una función que uso mucho en &lt;em&gt;emacs&lt;/em&gt; es &lt;code&gt;(query-replace-regexp)&lt;/code&gt;, la cual permite buscar y reemplazar un texto en base a una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Posts etiquetados con regex&#34;&gt;expresión regular&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;En este blog ya hemos tratado este tema en varias ocasiones (&lt;em&gt;Véase &lt;a href=&#34;https://elbauldelprogramador.com/expresiones-regulares-multilinea/&#34; title=&#34;Crear expresiones regulares multilínea&#34;&gt;Expresiones regulares multilínea&lt;/a&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Expresiones regulares en python&#34;&gt;una introducción a las expresiones regulares en Python&lt;/a&gt;&lt;/em&gt;).&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Si como yo, te encuentras repitiendo este comando una y otra vez, con los mismos argumentos, es posible guardarlo en una función y simplemente ejecutarla escribiendo su nombre.&lt;/p&gt;
-
 &lt;p&gt;Supongamos que queremos guardar la siguiente acción:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La cual he estado usando mucho para pasar palabras en mayúsculas a código en línea en &lt;em&gt;markdown&lt;/em&gt;. Esto lo he estado haciendo para todos los comandos que aparecen en los artículos del &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Curso base de datos&#34;&gt;curso de base de datos&lt;/a&gt;. Bien, para guardar el comando basta con añadir lo siguiente al fichero &lt;code&gt;init.el&lt;/code&gt; de emacs:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La cual he estado usando mucho para pasar palabras en mayúsculas a código en línea en &lt;em&gt;markdown&lt;/em&gt;. Esto lo he estado haciendo para todos los comandos que aparecen en los artículos del &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Curso base de datos&#34;&gt;curso de base de datos&lt;/a&gt;. Bien, para guardar el comando basta con añadir lo siguiente al fichero &lt;code&gt;init.el&lt;/code&gt; de emacs:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Hay que escapar la &lt;code&gt;\&lt;/code&gt; en la expresión regular, por eso aparecen dobles &lt;code&gt;\\&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Hacer inline codigo en markdown&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to-inline-code&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, para ejecutar &lt;code&gt;(query-replace-regexp)&lt;/code&gt; con esos parámetros, solo hay que llamar a la función &lt;code&gt;to-inline-code()&lt;/code&gt;. Esto se puede hacer con la combinación de teclas &lt;code&gt;M-x &amp;lt;función&amp;gt;&lt;/code&gt;, en este caso &lt;code&gt;M-x to-inline-code&lt;/code&gt;.&lt;/p&gt;
-
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, para ejecutar &lt;code&gt;(query-replace-regexp)&lt;/code&gt; con esos parámetros, solo hay que llamar a la función &lt;code&gt;to-inline-code()&lt;/code&gt;. Esto se puede hacer con la combinación de teclas &lt;code&gt;M-x &amp;lt;función&amp;gt;&lt;/code&gt;, en este caso &lt;code&gt;M-x to-inline-code&lt;/code&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;la-función-query-replace&#34;&gt;La función (query-replace)&lt;/h1&gt;
-
 &lt;p&gt;Esta función es similar a la de arriba, pero más simple. No acepta &lt;em&gt;expresiones regulares&lt;/em&gt;. Concretamente, para lo que más uso esta función es para eliminar el dominio del blog (&lt;code&gt;http://elbauldelprogramador.com/&lt;/code&gt;) de los enlaces en los artículos, de forma que un enlace:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;[Enlace](http://elbauldelprogramador.com/algun-post/ )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pase a ser&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pase a ser&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Enlace](/algun-post/ )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;De igual forma, para asociarla a una función, añadimos lo siguiente al &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;De igual forma, para asociarla a una función, añadimos lo siguiente al &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Borra uri&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delbaul&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
-
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
 &lt;p&gt;Eso es todo, espero que os sea de ayuda. ¿Qué otras funciones te resulta útiles en &lt;em&gt;emacs&lt;/em&gt;? Déjanos un comentario.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;How to define an Emacs command to &lt;code&gt;query-replace-regexp&lt;/code&gt; using a specific regexp | &lt;a href=&#34;http://stackoverflow.com/questions/39040092/how-to-define-an-emacs-command-to-query-replace-regexp-using-a-specific-regexp&#34; title=&#34;How to define an Emacs command to `query-replace-regexp` using a specific regexp&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>

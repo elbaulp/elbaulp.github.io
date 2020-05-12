@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Regex on El Baúl del programador</title>
+        <title>regex on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/regex/</link>
-        <description>Recent content in Regex on El Baúl del programador</description>
+        <description>Recent content in regex on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Thu, 25 Aug 2016 15:01:15 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/regex/</link>
-            <title>Regex on El Baúl del programador</title>
+            <title>regex on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,55 +22,37 @@
             
             <guid>https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs/</guid>
             <description>&lt;p&gt;Hace unos meses que comencé a usar &lt;em&gt;emacs&lt;/em&gt; como editor predeterminado, y la verdad es que una vez me acostumbré a él es bastante cómodo. Sin embargo, editando artículos del blog, me encontraba ejecutando una y otra vez el mismo comando, o comandos similares. Así que busqué la forma de asociarlos a una función para no tener que andar escribiendolos cada dos por trés. Veamos cómo crear estas funciones.&lt;/p&gt;
-
 &lt;h1 id=&#34;la-función-query-replace-regexp&#34;&gt;La función (query-replace-regexp)&lt;/h1&gt;
-
 &lt;p&gt;Una función que uso mucho en &lt;em&gt;emacs&lt;/em&gt; es &lt;code&gt;(query-replace-regexp)&lt;/code&gt;, la cual permite buscar y reemplazar un texto en base a una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Posts etiquetados con regex&#34;&gt;expresión regular&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;En este blog ya hemos tratado este tema en varias ocasiones (&lt;em&gt;Véase &lt;a href=&#34;https://elbauldelprogramador.com/expresiones-regulares-multilinea/&#34; title=&#34;Crear expresiones regulares multilínea&#34;&gt;Expresiones regulares multilínea&lt;/a&gt; o &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Expresiones regulares en python&#34;&gt;una introducción a las expresiones regulares en Python&lt;/a&gt;&lt;/em&gt;).&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Si como yo, te encuentras repitiendo este comando una y otra vez, con los mismos argumentos, es posible guardarlo en una función y simplemente ejecutarla escribiendo su nombre.&lt;/p&gt;
-
 &lt;p&gt;Supongamos que queremos guardar la siguiente acción:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La cual he estado usando mucho para pasar palabras en mayúsculas a código en línea en &lt;em&gt;markdown&lt;/em&gt;. Esto lo he estado haciendo para todos los comandos que aparecen en los artículos del &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Curso base de datos&#34;&gt;curso de base de datos&lt;/a&gt;. Bien, para guardar el comando basta con añadir lo siguiente al fichero &lt;code&gt;init.el&lt;/code&gt; de emacs:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La cual he estado usando mucho para pasar palabras en mayúsculas a código en línea en &lt;em&gt;markdown&lt;/em&gt;. Esto lo he estado haciendo para todos los comandos que aparecen en los artículos del &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Curso base de datos&#34;&gt;curso de base de datos&lt;/a&gt;. Bien, para guardar el comando basta con añadir lo siguiente al fichero &lt;code&gt;init.el&lt;/code&gt; de emacs:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Hay que escapar la &lt;code&gt;\&lt;/code&gt; en la expresión regular, por eso aparecen dobles &lt;code&gt;\\&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Hacer inline codigo en markdown&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;to-inline-code&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, para ejecutar &lt;code&gt;(query-replace-regexp)&lt;/code&gt; con esos parámetros, solo hay que llamar a la función &lt;code&gt;to-inline-code()&lt;/code&gt;. Esto se puede hacer con la combinación de teclas &lt;code&gt;M-x &amp;lt;función&amp;gt;&lt;/code&gt;, en este caso &lt;code&gt;M-x to-inline-code&lt;/code&gt;.&lt;/p&gt;
-
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace-regexp&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\\([A-Z]\\{3,\\} ?[A-Z]+\\)&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;`\\1`&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, para ejecutar &lt;code&gt;(query-replace-regexp)&lt;/code&gt; con esos parámetros, solo hay que llamar a la función &lt;code&gt;to-inline-code()&lt;/code&gt;. Esto se puede hacer con la combinación de teclas &lt;code&gt;M-x &amp;lt;función&amp;gt;&lt;/code&gt;, en este caso &lt;code&gt;M-x to-inline-code&lt;/code&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;la-función-query-replace&#34;&gt;La función (query-replace)&lt;/h1&gt;
-
 &lt;p&gt;Esta función es similar a la de arriba, pero más simple. No acepta &lt;em&gt;expresiones regulares&lt;/em&gt;. Concretamente, para lo que más uso esta función es para eliminar el dominio del blog (&lt;code&gt;http://elbauldelprogramador.com/&lt;/code&gt;) de los enlaces en los artículos, de forma que un enlace:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;[Enlace](http://elbauldelprogramador.com/algun-post/ )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;pase a ser&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;pase a ser&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[Enlace](/algun-post/ )
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;De igual forma, para asociarla a una función, añadimos lo siguiente al &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;De igual forma, para asociarla a una función, añadimos lo siguiente al &lt;code&gt;init.el&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Borra uri&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delbaul&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
-
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;query-replace&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;https://elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
 &lt;p&gt;Eso es todo, espero que os sea de ayuda. ¿Qué otras funciones te resulta útiles en &lt;em&gt;emacs&lt;/em&gt;? Déjanos un comentario.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;How to define an Emacs command to &lt;code&gt;query-replace-regexp&lt;/code&gt; using a specific regexp | &lt;a href=&#34;http://stackoverflow.com/questions/39040092/how-to-define-an-emacs-command-to-query-replace-regexp-using-a-specific-regexp&#34; title=&#34;How to define an Emacs command to `query-replace-regexp` using a specific regexp&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -85,61 +66,48 @@
             <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
             <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;---&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param1&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor1&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param2&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor2&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param3&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor3&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param4&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor4&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;categories&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Articulos&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Android&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;-&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;Java&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param5&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor5&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param6&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor6&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param7&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor7&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;param8&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor8&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor2&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor3&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor4&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Articulos&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Android&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Java&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor5&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor6&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor7&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor8&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Necesitaba dejarla tal cual, pero añadir un último parámetro llamado &lt;code&gt;mainclass: Artículos&lt;/code&gt;, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso &lt;em&gt;Artículos&lt;/em&gt;. Para ello decidí usar &lt;code&gt;perl&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;n&#34;&gt;perl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p0e&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;s/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: &amp;#34;$2&amp;#34;\n---/s&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;n&#34;&gt;perl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p0e&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;s/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: &amp;#34;$2&amp;#34;\n---/s&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-0&lt;/code&gt; especifica que el separador de línea sea nulo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-p&lt;/code&gt; Que se aplique la expresión especificada por &lt;code&gt;-e&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;s/&lt;/code&gt; cambia el comportamiento de &lt;code&gt;.&lt;/code&gt; para que acepte cualquier caracter, incluso saltos de línea, por tanto se trata el fichero como si se tratara de una única línea.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;La expresión regular en sí se define:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;(categories:\s+-\s+)&lt;/code&gt;: Capturamos&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;pre&gt;&lt;code&gt;categories:
   -
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;([a-zA-Z ]+)&lt;/code&gt;: nos captura la primera categoría especificada, junto a la expresión anterior, tenemos:&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;pre&gt;&lt;code&gt;categories:
   - Articulos
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;(\s+-[a-zA-Z ]*)?&lt;/code&gt; captura el resto de categorías restantes, por lo que ahora tenemos:&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;pre&gt;&lt;code&gt;categories:
   - Articulos
   - Android
   - Java
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;(.*?)-{3}&lt;/code&gt; por último capturamos el resto de texto que queda hasta encontrar el fin del &lt;em&gt;Front Matter&lt;/em&gt;, los &lt;code&gt;---&lt;/code&gt;. Así que esta expresión nos ha capturado lo siguiente:&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;pre&gt;&lt;code&gt;categories:
   - Articulos
   - Android
@@ -149,10 +117,7 @@ param6: valor6
 param7: valor7
 param8: valor8
 ---
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ahora queda reescribirla, de eso se ocupa la segunda parte, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt;. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con &lt;code&gt;$1&lt;/code&gt;. De este modo, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt; nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ahora queda reescribirla, de eso se ocupa la segunda parte, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt;. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con &lt;code&gt;$1&lt;/code&gt;. De este modo, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt; nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
 param1: valor1
 param2: valor2
@@ -169,12 +134,9 @@ param8: valor8
 mainclass: &amp;quot;articulos&amp;quot;
 color: &amp;quot;#F57C00&amp;quot;
 ---
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace &amp;quot;How do I replace multiple lines with single word in file(inplace replace&#34;&gt;askubuntu.com&lt;/a&gt;?&amp;ldquo;)&lt;/li&gt;
+&lt;li&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace&#34; title=&#34;How do I replace multiple lines with single word in file(inplace replace)?&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -185,40 +147,24 @@ color: &amp;quot;#F57C00&amp;quot;
             
             <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
             <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
-
+&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;!-- raw HTML omitted --&gt;canciones preferidas&lt;!-- raw HTML omitted --&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
 &lt;h1 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;El problema básicamente es el siguiente. A partir de un texto con los nombres &lt;em&gt;parciales&lt;/em&gt; de un fichero obtener la ruta completa a dicho archivo. Lo de parciales quiere decir que si el nombre es &lt;strong&gt;Autor - Nombre Canción&lt;/strong&gt;, en el texto solo se guarda &lt;strong&gt;Nombre Canción&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Hace un tiempo creé este script en python para &lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;generar listas de reproducción de una determinada duración&#34;&gt;generar listas de reproducción de una determinada duración&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;crear-la-expresión-regular&#34;&gt;Crear la expresión regular&lt;/h1&gt;
-
 &lt;p&gt;Empezaré mostrando la expresión regular y luego la explicaré:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Siempre que necesito crear una expresión regular uso una herramienta llamada &lt;strong&gt;regex tester&lt;/strong&gt; que permite visualizar qué cadenas de texto coincidirían con el patrón:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 627px) 627px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;Buscar archivos con locate mediante expresiones regulares&#34; alt=&#34;Buscar archivos con locate mediante expresiones regulares&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;script-completo&#34;&gt;Script completo&lt;/h1&gt;
-
 &lt;p&gt;Con la expresión regular construida, solo resta crear un script que procese el texto con el nombre de las canciones y cree la lista de reproducción:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -234,9 +180,8 @@ color: &amp;quot;#F57C00&amp;quot;
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
     locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
 &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; se establece al salto de línea para que el &lt;code&gt;for&lt;/code&gt; tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de &lt;code&gt;IFS&lt;/code&gt;). De esta forma, si una línea del fichero contiene &lt;strong&gt;Nombre canción&lt;/strong&gt;, en el &lt;code&gt;for&lt;/code&gt; el contenido de &lt;code&gt;$i&lt;/code&gt; valdrá &lt;strong&gt;Nombre canción&lt;/strong&gt; y no &lt;strong&gt;Nombre&lt;/strong&gt; y en la siguiente iteración &lt;strong&gt;canción&lt;/strong&gt;. &lt;code&gt;&amp;gt; /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u&lt;/code&gt; borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con &lt;code&gt;tee&lt;/code&gt; permite escribir tanto a la salida estándar como a la lista.&lt;/p&gt;
-
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; se establece al salto de línea para que el &lt;code&gt;for&lt;/code&gt; tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de &lt;code&gt;IFS&lt;/code&gt;). De esta forma, si una línea del fichero contiene &lt;strong&gt;Nombre canción&lt;/strong&gt;, en el &lt;code&gt;for&lt;/code&gt; el contenido de &lt;code&gt;$i&lt;/code&gt; valdrá &lt;strong&gt;Nombre canción&lt;/strong&gt; y no &lt;strong&gt;Nombre&lt;/strong&gt; y en la siguiente iteración &lt;strong&gt;canción&lt;/strong&gt;. &lt;code&gt;&amp;gt; /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u&lt;/code&gt; borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con &lt;code&gt;tee&lt;/code&gt; permite escribir tanto a la salida estándar como a la lista.&lt;/p&gt;
 &lt;p&gt;Otra opción, sugerida en Twitter por &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt;, es usar un &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -248,11 +193,10 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
 &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
     locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;regexpal.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -263,17 +207,12 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
             
             <guid>https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/</guid>
             <description>&lt;p&gt;En esta entrada voy a intentar introducir brevemente cómo crear expresiones regulares en python (dentro de la complejidad de las mismas).&lt;/p&gt;
-
 &lt;p&gt;Son recopilaciones que he hecho durante el curso de *Programming languages &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/nuevos-cursos-disponibles-en-udacity-la-universidad-online-gratuita/&#34; title=&#34;Nuevos Cursos disponibles en Udacity, la universidad online gratuita&#34;&gt;en udacity&lt;/a&gt;&lt;/em&gt; y voy a intentar explicarlos lo más claramente posible.&lt;/p&gt;
-
-&lt;p&gt;Lo primero que hay que hacer para usar expresiones regulares es importar el módulo &lt;strong&gt;re&lt;/strong&gt; de python con &lt;strong&gt;&lt;em&gt;import re&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;Lo primero que hay que hacer para usar expresiones regulares es importar el módulo &lt;strong&gt;re&lt;/strong&gt; de python con &lt;em&gt;&lt;strong&gt;import re&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Una vez hecho esto, podemos empezar a usar expresiones, como por ejemplo esta:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]+-?[a-z]+&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (&lt;em&gt;-?&lt;/em&gt;) seguido nuevamente de uno o más caracteres de la &lt;strong&gt;a&lt;/strong&gt; a la &lt;strong&gt;z&lt;/strong&gt;, en minúsculas.&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]+-?[a-z]+&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La expresión de arriba considerará válida cualquier cadena que empieze con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), seguido de un guión, que es opcional, es decir, puede aparecer o no en la cadena (&lt;em&gt;-?&lt;/em&gt;) seguido nuevamente de uno o más caracteres de la &lt;strong&gt;a&lt;/strong&gt; a la &lt;strong&gt;z&lt;/strong&gt;, en minúsculas.&lt;/p&gt;
 &lt;p&gt;Algunos casos de ejemplo son los siguientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Ejemplos válidos:&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;well-liked&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;well-liked&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -284,13 +223,11 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a-b-c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a-b-c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a--b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a--b&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.&lt;/p&gt;
-
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La primera expresión de los ejemplos no válidos no es correcta ya que el segundo guión no es esperado por la expresión regular, en el segundo ejemplo, ocurre lo mismo.&lt;/p&gt;
 &lt;p&gt;El siguiente ejemplo servirá para coincidir con cadenas que representen funciones matemáticas de un solo parámetro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[a-z]+( *[0-9]+ *)&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto encontrará cadenas que empiecen con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con \, despues buscamos por cero o más espácios ( *) seguidos de números (&lt;em&gt;[0-9]+&lt;/em&gt;) y nuevamente cero o más espacios.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;[a-z]+( *[0-9]+ *)&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto encontrará cadenas que empiecen con una o más letras (&lt;em&gt;[a-z]+&lt;/em&gt;), tenemos que escapar los paréntesis para que los tome como algo que queremos que forme parte de la cadena, ya que los paréntesis tienen un significado especial en la expresiones regulares, los escapamos con \, despues buscamos por cero o más espácios ( *) seguidos de números (&lt;em&gt;[0-9]+&lt;/em&gt;) y nuevamente cero o más espacios.&lt;/p&gt;
 &lt;p&gt;Ejemplos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Ejemplos válidos&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cos(0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cos(0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -301,14 +238,14 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cos     (0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;cos     (0)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sqrt(x)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sqrt(x)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.&lt;/p&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vemos, el primer ejemplo no válido precisamente no es válido porque no permitimos espacios entre el nombre de la función y los paréntesis. El segundo es erróneo porque el parámetro es una letra en lugar de un número.&lt;/p&gt;
 &lt;p&gt;Veamos otro más, esta vez queremos encontrar cadenas que contengan caracteres de escape () y comillas&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;]|(?:\.))*&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (&lt;em&gt;r&amp;#8217;&amp;rdquo;&amp;rdquo;&amp;#8217;&lt;/em&gt;), lo que encontremos, lo vamos a encontrar cero o más veces (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:)&lt;/em&gt;&amp;#8221;&amp;#8216;*), &lt;strong&gt;(?:)&lt;/strong&gt; coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que &lt;strong&gt;no&lt;/strong&gt; sea un \, y nótese que debemos escaparlo (&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^])&lt;/em&gt;&amp;#8221;&amp;#8216;*) &lt;strong&gt;ó (&lt;em&gt;|&lt;/em&gt;)&lt;/strong&gt; un &lt;code&gt;.&lt;/code&gt; seguido de cualquier caracter
-(&lt;em&gt;r&amp;rsquo;&amp;#8221;(?:[^\]|(?:.))&lt;/em&gt;&amp;#8221;&amp;#8216;*)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;]|(?:\.))*&amp;#34;&amp;#39;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este caso voy a ir explicando de fuera hacia adentro, en primer lugar vamos a buscar cadenas que estén entrecomilladas (&lt;em&gt;r’&amp;quot;&amp;quot;’&lt;/em&gt;), lo que encontremos, lo vamos a encontrar cero o más veces (&lt;em&gt;r&amp;rsquo;”(?:)&lt;/em&gt;”‘&lt;em&gt;), &lt;strong&gt;(?:)&lt;/strong&gt; coincide con la expresión regular que contenga entre los paréntesis. A continuación queremos cualquier cosa que &lt;strong&gt;no&lt;/strong&gt; sea un \, y nótese que debemos escaparlo (&lt;em&gt;r&amp;rsquo;”(?:[^])&lt;/em&gt;”‘&lt;/em&gt;) &lt;strong&gt;ó (&lt;em&gt;|&lt;/em&gt;)&lt;/strong&gt; un &lt;code&gt;.&lt;/code&gt; seguido de cualquier caracter
+(&lt;em&gt;r&amp;rsquo;”(?:[^\]|(?:.))&lt;/em&gt;”‘*)&lt;/p&gt;
 &lt;p&gt;Ejemplos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;(?:[^&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;]|(?:\.))*&amp;#34;&amp;#39;&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#  Ejemplos válidos:&lt;/span&gt;
@@ -316,18 +253,21 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
 &lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#  Ejemplos no válidos:&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;[^&amp;#34;]*&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con (&lt;em&gt;r&amp;rsquo;&amp;ldquo;&amp;rsquo;&lt;/em&gt;), no pueden contener ningún caracter &lt;strong&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt; entre la cadena (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]&#39;&lt;/code&gt;&lt;/strong&gt;), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]*&amp;quot;&#39;&lt;/code&gt;&lt;/strong&gt;).&lt;/p&gt;
+&lt;span class=&#34;c1&#34;&gt;#&amp;gt;&amp;gt;&amp;gt; True&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último una expresión regular que coincidirá con todas las cadenas que estén entre dobles comillas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;[^&amp;#34;]*&amp;#34;&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esta expresión buscamos cadenas que empiecen y acaben obligatóriamente con (&lt;em&gt;r&amp;rsquo;&amp;quot;&#39;&lt;/em&gt;), no pueden contener ningún caracter &lt;strong&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt; entre la cadena (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]&#39;&lt;/code&gt;&lt;/strong&gt;), finalmente, daremos por buena la cadena que cumpla esto con cualquier caracter cero o más veces (&lt;strong&gt;&lt;code&gt;r&#39;&amp;quot;[^&amp;quot;]*&amp;quot;&#39;&lt;/code&gt;&lt;/strong&gt;).&lt;/p&gt;
 &lt;p&gt;Ejemplos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#  Ejemplos  válidos:&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;cuneiform&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;sumerian writing&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;#  Ejemplos no válidos&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;esc &amp;#34; ape&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;findall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;regexp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;esc &amp;#34; ape&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>

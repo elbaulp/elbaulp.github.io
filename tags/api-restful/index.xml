@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Api Restful on El Baúl del programador</title>
+        <title>API restful on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/api-restful/</link>
-        <description>Recent content in Api Restful on El Baúl del programador</description>
+        <description>Recent content in API restful on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/api-restful/</link>
-            <title>Api Restful on El Baúl del programador</title>
+            <title>API restful on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -25,15 +24,10 @@
             <description>&lt;blockquote&gt;
 &lt;p&gt;Esta es una traducción lo más literal posible del artículo original, ya que quería preservar la opinión personal del autor así como también el destacable trabajo de investigación y análisis que realizó.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Tu modelo de datos ha empezado a estabilizarse y es el momento de crear una API pública para tu aplicación web. Te das cuenta de que es difícil hacer cambios significativos a tu API una vez que fue liberada, quieres lo mejor y lo antes posible. Ahora, en internet no escasean opiniones sobre diseño de APIs. Pero, debido a que no hay un standard adoptado popularmente que funcione en todos los casos, te quedas con un manojo de opciones: ¿Qué formatos deberías aceptar? ¿Cómo deberías autenticar? ¿Debería tu API ser versionada?&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Diseñando una API para &lt;a href=&#34;http://www.supportfu.com/&#34;&gt;SupportFu&lt;/a&gt; (una alternativa para &lt;a href=&#34;http://www.supportfu.com/zendesk-alternative&#34;&gt;Zendesk&lt;/a&gt;), intenté encontrar respuestas pragmáticas a estas preguntas. Mi objetivo para la &lt;a href=&#34;http://dev.supportfu.com/api/v1&#34;&gt;API de SupportFu&lt;/a&gt; es que sea fácil de usar, facil de adoptar y lo suficientemente flexible para implementarla en nuestras propias interfaces de usuario.&lt;/p&gt;
-
-&lt;h1 id=&#34;tl-dr&#34;&gt;TL,DR&lt;/h1&gt;
-
+&lt;h1 id=&#34;tldr&#34;&gt;TL,DR&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Usa SSL en todos lados, sin excepciones&lt;/li&gt;
 &lt;li&gt;Una API es tan buena como lo es su documentación – por lo tanto realiza una buena documentación&lt;/li&gt;
@@ -56,11 +50,8 @@
 &lt;li&gt;Define un error de carga útil (payload) que sea consumible&lt;/li&gt;
 &lt;li&gt;Utilizar efectivamente los códigos de error HTTP&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h1 id=&#34;1-requisitos-fundamentales-para-la-api&#34;&gt;1. Requisitos fundamentales para la API&lt;/h1&gt;
-
 &lt;p&gt;Muchas de las opiniones sobre diseño de API que aparecen en la web son discusiones académicas en torno a interpretaciones subjetivas de las normas difusas en lugar de lo que tiene sentido en el mundo real. Mi objetivo con este artículo es describir las mejores prácticas para una API pragmática diseñada para aplicaciones web de hoy en día. No hago ningún intento de satisfacer un standard si no parece viable. Para ayudar a guiar el proceso de toma de decisiones, he escrito algunos de los requisitos que la API debe cubrir:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Debería utilizar estándares web donde tengan sentido&lt;/li&gt;
 &lt;li&gt;Debería ser amigable para el desarrollador y ser explorable mediante una barra de direcciones del navegador&lt;/li&gt;
@@ -68,19 +59,12 @@
 &lt;li&gt;Debería proporcionar suficiente flexibilidad para potenciar mayoritariamente la UI &lt;a href=&#34;http://www.supportfu.com/&#34;&gt;SupportFu&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Debería ser eficiente, manteniendo el equilibrio con los demás requisitos&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Una API es una interfaz de usuario (UI) para un desarrollador – al igual que cualquier UI, es importante asegurar que la experiencia del usuario esté pensada cuidadosamente!&lt;/p&gt;
-
 &lt;h1 id=&#34;2-usa-acciones-y-urls-restful&#34;&gt;2. Usa acciones y URLs RESTful&lt;/h1&gt;
-
 &lt;p&gt;Si hay una cosa que ha ganado amplia adopción, son los principios REST. Estos fueron presentados por primera vez por &lt;a href=&#34;http://roy.gbiv.com/&#34;&gt;Roy Felding&lt;/a&gt; en el &lt;a href=&#34;http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm&#34;&gt;Capítulo 5&lt;/a&gt; de su disertación sobre &lt;a href=&#34;http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm&#34;&gt;arquitecturas de software ubicadas en redes de trabajo&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Los fundamentales principios de &lt;a href=&#34;https://en.wikipedia.org/wiki/Representational_state_transfer&#34;&gt;REST&lt;/a&gt; se basan en separar tu API en recursos lógicos. Estos recursos son manipulados usando peticiones HTTP donde el método (GET, POST, PUT, PATCH, DELETE) tienen un significado específico.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Pero qué puede hacer un recurso?&lt;/strong&gt; Bueno, estos deberían ser &lt;a href=&#34;https://blog.apigee.com/detail/restful_api_design_nouns_are_good_verbs_are_bad&#34;&gt;sustantivos (¡no verbos!)&lt;/a&gt; que tengan sentido desde una perspectiva del consumidor de la API. Aunque tus modelos internos pueden mapear cuidadosamente con los recursos, no es necesario que sea un mapeo uno-a-uno. La clave es no filtrarse ningún detalle irrelevante de implementación. Por ejemplo, algunos de los sustantivos de SupportFu podrían ser &lt;em&gt;ticket&lt;/em&gt;, &lt;em&gt;usuario&lt;/em&gt; y &lt;em&gt;grupo&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Una vez que tienes tus recursos definidos, necesitas identificar qué acciones aplican a ellos y cómo deberían relacionarse con tu API. Los principios REST proveen estrategias para manejar acciones &lt;a href=&#34;http://en.wikipedia.org/wiki/Create,_read,_update_and_delete&#34;&gt;CRUD&lt;/a&gt; usando métodos HTTP relacionados de la siguiente forma:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets&lt;/em&gt;- Devuelve una lista de tickets&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets/12&lt;/em&gt;- Devuelve un ticket específico&lt;/li&gt;
@@ -89,13 +73,9 @@
 &lt;li&gt;&lt;em&gt;PATCH /tickets/12&lt;/em&gt;- Actualiza parcialmente el ticket #12&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;DELETE /tickets/12&lt;/em&gt;- Elimina el ticket #12&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;La grandeza de REST es que estas impulsando métodos HTTP existentes a implementar funcionalidades importantes en sólo un simple endpoint &lt;em&gt;/tickets&lt;/em&gt;. No hay convención de nombres de métodos para seguir y la estructura URL es limpia y clara.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿El nombre del Endpoint debería ser singular o plural?&lt;/strong&gt; La regla mantenlo-simple (keep-it-simple) aplica aquí. Si bien tu gramática interna te dirá que está mal describir una instancia única de un recurso utilizando el plural, la respuesta pragmática es mantener el formato de la URL consistente y siempre usar plural. No tener que lidiar con plurales irregulares (person/people, goose/geese) hace más simple la vida del consumidor de la API y es más sencillo para el proveedor de la API implementarla (como los más modernos frameworks manejarán nativamente &lt;em&gt;/tickets&lt;/em&gt; y &lt;em&gt;/tickets/12&lt;/em&gt; bajo un controlador comun).&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Pero cómo lidiar con las relaciones?&lt;/strong&gt; Si una relación puede existir con un sólo recurso, los principios REST proveen una guía útil. Veamos esto con un ejemplo. Un ticket en &lt;a href=&#34;http://www.supportfu.com/&#34;&gt;SupportFu&lt;/a&gt; consiste en un número de mensajes. Estos mensajes pueden ser lógicamente mapeados al endpoint /tickets de la siguiente forma:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets/12/messages&lt;/em&gt; - Devuelve una lista de mensajes para el ticket #12&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets/12/messages/5&lt;/em&gt; - Devuelve el mensaje #5 para el ticket #12&lt;/li&gt;
@@ -104,167 +84,101 @@
 &lt;li&gt;&lt;em&gt;PATCH /tickets/12/messages/5 -&lt;/em&gt; Actualiza parcialmente el mensaje #5 para el ticket #12&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;DELETE /tickets/12/messages/5&lt;/em&gt; - Borra el mensaje #5 para el ticket #12&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Alternativamente, si una relación puede existir independientemente del recurso, tiene sentido incluir sólo un identificador en la representación de la salida del recurso. El consumidor de la API debería entonces tener que acertar al endpoint de la relación. Sin embargo, si la relación es comunmente requerida junto con el recurso, la API podría ofrecer funcionalidad para automáticamente incluir la representación de la relación y evitar el segundo impacto en la API.
 &lt;strong&gt;¿Qué ocurre con las acciones que no corresponden a las operaciones CRUD?&lt;/strong&gt;
 Aquí es donde las cosas pueden confundirse. Hay un número de enfoques:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Reestructura la acción para que aparezca como un campo de un recurso. Esto funciona si la acción no toma parámetros. Por ejemplo, un acción “activate” puede ser asignada a un campo booleano &lt;em&gt;activated&lt;/em&gt; y actualizado vía PATCH al recurso.&lt;/li&gt;
 &lt;li&gt;Tratalo como un sub-recurso con principios REST. Por ejemplo, la API de GitHub te permite “&lt;a href=&#34;http://developer.github.com/v3/gists/#star-a-gist&#34;&gt;star a gist&lt;/a&gt;“(marcar como importante) con &lt;em&gt;PUT /gists/:id/star&lt;/em&gt; y “&lt;a href=&#34;http://developer.github.com/v3/gists/#unstar-a-gist&#34;&gt;unstar&lt;/a&gt;” (desmarcar) con DELETE /gists/:id/star.&lt;/li&gt;
 &lt;li&gt;A veces realmente no tienes forma de mapear la acción a una estructura REST apropiada. Por ejemplo, una búsqueda multi-recurso no tiene sentido ser asignada a un endpoint de un recurso específico. En este caso, &lt;em&gt;/search&lt;/em&gt; podría tener más sentido incluso si no es un sustantivo. Esto está BIEN – sólo realiza lo que sea correcto desde la perspectiva del consumidor de la API y asegúrate de que esté claramente documentado para evitar confusiones.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h1 id=&#34;3-ssl-en-todos-lados-todo-el-tiempo&#34;&gt;3. SSL en todos lados – todo el tiempo&lt;/h1&gt;
-
+&lt;h1 id=&#34;3-ssl-en-todos-lados--todo-el-tiempo&#34;&gt;3. SSL en todos lados – todo el tiempo&lt;/h1&gt;
 &lt;p&gt;Usa siempre SSL. Sin excepciones. Hoy, tus APIs web pueden ser accedidas desde cualquier lado donde haya internet (como librerías, cafeterías, aeropuertos, entre otros). No todos son seguros. Muchos no encriptan las comunicaciones, permitiendo facilmente ser espiados o falsificados si son interceptadas las credenciales de autenticación.&lt;/p&gt;
-
 &lt;p&gt;Otra ventaja de usar siempre SSL es que garantiza que las comunicaciones encriptadas simplifiquen los esfuerzos de autenticación – puedes salir simplemente con los tokens de acceso en vez de tener que firmar cada petición a la API.&lt;/p&gt;
-
 &lt;p&gt;Hay que tener cuidado con los accesos no-SSL a las URLs de la API. &lt;strong&gt;NO&lt;/strong&gt; las redirecciones a sus homólogas SSL. Es recomendable que lances un error. La última cosa que quieres para tus clientes pobremente configurados es enviar peticiones a un endpoint sin encriptar, sólo para ser redireccionados silenciosamente al verdadero endpoint encriptado.&lt;/p&gt;
-
 &lt;h1 id=&#34;4-documentación&#34;&gt;4. Documentación&lt;/h1&gt;
-
 &lt;p&gt;Una API es buena tanto como lo sea su documentación. Los docs deberían ser fáciles de encontrar y de acceso público. Muchos desarrolladores revisarán la documentación antes de realizar cualquier esfuerzo para integrarla. Cuando los docs están escondidos dentro de un archivo PDF o están permitido sólo para usuarios identificados, no son entonces sólo difíciles de encontrar sino que también dificultan la búsqueda.&lt;/p&gt;
-
 &lt;p&gt;Los documentos deberían mostrar ejemplos de ciclos completos de petición/respuesta. Preferentemente, las peticiones deberían poder ser “pegadas” – tanto los hipervínculos deberían poder ser pegados en un navegador como los ejemplos de código deberían poder ser pegados en una consola. &lt;a href=&#34;http://developer.github.com/v3/gists/#list-gists&#34;&gt;GitHub&lt;/a&gt; y &lt;a href=&#34;https://stripe.com/docs/api&#34;&gt;Strip&lt;/a&gt; hacen un muy buen trabajo en este aspecto.&lt;/p&gt;
-
 &lt;p&gt;Una vez que liberes una API pública, te comprometes a no romper cosas sin previo aviso. La documentación debe incluir información y detalles sobre futuras actualizaciones a la API que sean visibles al exterior. Las actualizaciones deben ser entregadas a través de un blog (es decir, una lista de cambios) o una lista de correo (preferiblemente ambos).&lt;/p&gt;
-
 &lt;h1 id=&#34;5-versionado&#34;&gt;5. Versionado&lt;/h1&gt;
-
 &lt;p&gt;Siempre versiona tu API. El versionado te ayuda a iterar más rápido y evitar peticiones inválidas desde endpoints actualizados. Además te ayuda a resolver cualquier transición importante de versión de la API mientras continúas ofreciendo viejas versiones de la API por un período de tiempo.&lt;/p&gt;
-
 &lt;p&gt;Hay opiniones cruzadas respecto si &lt;a href=&#34;http://stackoverflow.com/questions/389169/best-practices-for-api-versioning&#34;&gt;la versión de la API debería ser incluida en la URL o en el encabezado&lt;/a&gt;. Académicamente hablando, debería probablemente estar en el encabezado. Sin embargo, la versión necesita estar en la URL para asegurar la posibilidad de explorar en el navegador los recursos a través de las versiones (recuerda los requerimientos de la API especificados al inicio del artículo).&lt;/p&gt;
-
 &lt;p&gt;Soy un gran fanático del &lt;a href=&#34;https://stripe.com/docs/api#versioning&#34;&gt;alcance que Stripe ha tomado respecto al versionado de la API&lt;/a&gt; - la URL tiene un número de versión principal (v1), pero la API tiene las sub-versiones basadas en fechas que pueden ser elegidas mediante un encabezado de petición HTTP personalizado. En este caso, la versión principal proporciona la estabilidad estructural de la API en su conjunto, mientras que las sub-versiones representan cambios más pequeños (campos inhabilitados, cambios en el endpoint, etc).&lt;/p&gt;
-
 &lt;p&gt;Una API nunca va a ser completamente estable. El cambio es inevitable. Lo importante es cómo se gestiona el cambio. Anuncios de fechas y planificaciones bien documentados puede ser una buena práctica para muchas APIs. Todo se reduce a lo que es razonable teniendo en cuenta la industria y los posibles consumidores de la API.&lt;/p&gt;
-
 &lt;h1 id=&#34;6-filtrado-ordenación-y-búsqueda-en-los-resultados&#34;&gt;6. Filtrado, ordenación y búsqueda en los resultados&lt;/h1&gt;
-
 &lt;p&gt;Lo mejor es mantener la URL base de recursos tan simple como sea posible. Filtros de resultados complejos, requisitos de ordenamiento y búsqueda avanzada (cuando se limita a un solo tipo de recurso) pueden ser implementados fácilmente como parámetros de consulta en la parte superior de la URL base. Veamos esto en más detalle:&lt;/p&gt;
-
 &lt;h2 id=&#34;filtrado&#34;&gt;&lt;strong&gt;Filtrado:&lt;/strong&gt;&lt;/h2&gt;
-
 &lt;p&gt;Usa un único parámetro de consulta por cada campo que implemente el filtro. Por ejemplo, cuando se pide una lista de tickets del endpoint &lt;em&gt;/tickets&lt;/em&gt;, podrías querer limitarla a sólo los que están en estado abierto. Esto puede ser logrado con una petición como &lt;em&gt;GET /tickets?state=open&lt;/em&gt;. En este caso, state es el parámetro de la consulta que implementa el filtro.&lt;/p&gt;
-
 &lt;h2 id=&#34;ordenación&#34;&gt;&lt;strong&gt;Ordenación:&lt;/strong&gt;&lt;/h2&gt;
-
 &lt;p&gt;Similar al filtrado, un parámetro genérico &lt;em&gt;sort&lt;/em&gt; puede ser usado para describir las reglas de ordenamiento. Organiza los requerimientos de ordenamiento complejos permitiendo que el parámetro de ordenación sea tomado de una lista de campos separados por coma, cada uno con un posible negativo unario para implicar orden descendiente. Veamos algunos ejemplos:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets?sort=-priority&lt;/em&gt; – Devuelve una lista de tickets en orden de prioridad descendiente&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets?sort=-priority,created_at&lt;/em&gt;- Devuelve una lista de tickets en orden de prioridad descendiente. Con una prioridad específica, los tickets más viejos son ordenados primero.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;búsqueda&#34;&gt;&lt;strong&gt;Búsqueda:&lt;/strong&gt;&lt;/h2&gt;
-
 &lt;p&gt;A veces los filtros básicos no son suficientes y se necesita la posibilidad de realizar una búsqueda completa sobre el texto. Tal vez ya estés usando &lt;a href=&#34;http://www.elasticsearch.org/&#34;&gt;ElasticSearch&lt;/a&gt; u otra búsqueda basada en la tecnología &lt;a href=&#34;http://lucene.apache.org/&#34;&gt;Lucene&lt;/a&gt;. Cuando una búsqueda completa sobre el texto es usada como un mecanismo de devolución de instancias de recurso para un tipo de recurso específico, puede ser expuesto en la API como un parámetro de consulta al endpoint del recurso. Digamos &lt;em&gt;q&lt;/em&gt;. Las consultas de búsqueda deberían ser pasadas directamente al motor de búsqueda y la salida de la API deberían estar en el mismo formato que un lista de resultado normal.&lt;/p&gt;
-
 &lt;p&gt;Combinando todo esto, podemos construir consultas como:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;GET /tickets?sort=-updated_at&lt;/em&gt; – Devuelve los tickets recientemente actualizados&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;GET /tickets?state=closed&amp;sort;=-updated_at&lt;/em&gt; &amp;ndash; Devuelve los tickets recientemente cerrados&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;GET /tickets?q=return&amp;state;=open&amp;sort;=-priority,created_at&lt;/em&gt; – Devuelve el ticket abierto de mayor prioridad que menciona la palabra ‘return’&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;GET /tickets?state=closed&amp;amp;sort;=-updated_at&lt;/em&gt; &amp;ndash; Devuelve los tickets recientemente cerrados&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;GET /tickets?q=return&amp;amp;state;=open&amp;amp;sort;=-priority,created_at&lt;/em&gt; – Devuelve el ticket abierto de mayor prioridad que menciona la palabra ‘return’&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;alias-para-las-consultas-comunes&#34;&gt;&lt;strong&gt;Alias para las consultas comunes&lt;/strong&gt;&lt;/h2&gt;
-
-&lt;p&gt;Para hacer que la experiencia con la API sea más agradable para el consumidor promedio, considera empaquetar sets de condiciones dentro de una ruta REST facilmente accesible. Por ejemplo, la consulta de tickets cerrados recientemente puede ser empaquetada como _GET /tickets/recently&lt;em&gt;closed.&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;Para hacer que la experiencia con la API sea más agradable para el consumidor promedio, considera empaquetar sets de condiciones dentro de una ruta REST facilmente accesible. Por ejemplo, la consulta de tickets cerrados recientemente puede ser empaquetada como &lt;em&gt;GET /tickets/recently_closed.&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;7-limitando-los-campos-que-son-devueltos-por-la-api&#34;&gt;7. Limitando los campos que son devueltos por la API&lt;/h1&gt;
-
 &lt;p&gt;El consumidor de la API no siempre necesita la representación completa de un recurso. La habilidad de seleccionar y elegir los campos devueltos permite el doble beneficio de dejar que el consumidor de la API minimice el tráfico de red y acelere su propio uso de la API.&lt;/p&gt;
-
 &lt;p&gt;Usa el parámetro de consulta &lt;em&gt;fields&lt;/em&gt; que tome una lista de campos separados con coma. Por ejemplo, la siguiente petición debería traer sólo la información suficiente para mostrar una lista ordenada de tickets abiertos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;GET /tickets?fields&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;id,subject,customer_name,updated_at&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;state&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;open&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;sort&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-updated_at&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;8-update-creation-deberían-devolver-una-representación-de-un-recurso&#34;&gt;8. Update &amp;amp; Creation deberían devolver una representación de un recurso&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;GET /tickets?fields&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;id,subject,customer_name,updated_at&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;state&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;open&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;sort&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-updated_at
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;8-update--creation-deberían-devolver-una-representación-de-un-recurso&#34;&gt;8. Update &amp;amp; Creation deberían devolver una representación de un recurso&lt;/h1&gt;
 &lt;p&gt;Una llamada PUT, POST o PATCH puede hacer modificaciones a los campos del recurso subyacente que no fueron parte de los parámetros provistos (por ejemplo: los campos timestamp created_at o updated_at ). Para evitarle al consumidor de la API tener que consultar nuevamente a la API por un recurso actualizado, agrega el retorno de la actualización (o creación) como parte de la respuesta.&lt;/p&gt;
-
 &lt;p&gt;En el caso de un POST que sea un resultado de una creación, usa el &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5&#34;&gt;código de status HTTP 201&lt;/a&gt; e incluye un encabezado &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30&#34;&gt;Location&lt;/a&gt; que apunte a la URL del nuevo recurso.&lt;/p&gt;
-
 &lt;h1 id=&#34;9-deberías-hateoas&#34;&gt;9. ¿Deberías HATEOAS?&lt;/h1&gt;
-
 &lt;p&gt;Hay muchas opiniones variadas sobre si el consumidor de la API debería crear hipervínculos o si los hipervínculos deberían ser provistos por la API. Los principios de diseño RESTful especifican &lt;a href=&#34;https://blog.apigee.com/detail/hateoas_101_introduction_to_a_rest_api_style_video_slides&#34;&gt;HATEOAS&lt;/a&gt;, el cual aproximadamente declara que esa interacción con un &lt;em&gt;endpoit&lt;/em&gt; debería definirse en la metadata que viene con la respuesta, y no basada en información que va por fuera de la banda (&lt;em&gt;out-of-band&lt;/em&gt;).&lt;/p&gt;
-
 &lt;p&gt;A pesar de que la web generalmente trabaja con los principios HATEOAS (ej, cuando vamos a una portada y seguimos hipervínculos basados en lo que vemos en la página), no creo que estemos listos para HATEOAS en la API todavía. Cuando navegamos en un sitio, las decisiones sobre qué hipervínculos van a ser clickeados se hacen durante la ejecución. Sin embargo, con una API, las decisiones como qué peticiones van a ser enviadas son tomadas cuando el código de integración de la API es escrito, no en tiempo de ejecución. ¿Podrían las decisiones ser aplazadas al tiempo de ejecución? Seguro, de todas maneras, no hay mucho que ganar bajando esa ruta al código ya que el código no estaría disponible para manejar cambios significantes en la API sin romperse. Esto significa que HATEOAS es prometedor pero no está listo para ser protagonista todavía. Algún esfuerzo más tiene que ser realizado para definir los estándars y herramientas al rededor de estos principios para que su potencial sea completamente aprovechado.&lt;/p&gt;
-
 &lt;p&gt;Por ahora es mejor asumir que el usuario tiene acceso a la documentación e incluir los identificadores de recursos en la respuesta, la cual el consumidor de la API usará cuando crea hipervínculos. Hay un par de ventajas en utilizar los identificadores – los datos que viajan sobre la red son minimizados y los datos almacenados por los consumidores de la API también son minimizados (ya que son guardados los identificadores cortos, en vez de las URLs que contienen los identificadores).&lt;/p&gt;
-
 &lt;p&gt;Además, dado que este post es partidario de incluir los números de versión en la URL, tiene más sentido a largo plazo para el consumidor de la API almacenar los identificadores y no las URLs. Después de todo, el identificador es estable versión por versión pero la URL que representa no lo es!&lt;/p&gt;
-
 &lt;h1 id=&#34;10-sólo-respuestas-json&#34;&gt;10. Sólo respuestas JSON&lt;/h1&gt;
-
 &lt;p&gt;Es tiempo de dejar XML atras en las APIs. Es verborrágico, es difícil de parsear, dificil de leer, su modelo de datos es incompatible con la mayoría de los modelos de datos de los lenguajes de programación y sus ventajas son irrelevantes cuando tus necesidades primarias de respuesta son serializaciones de una representación de datos interna.&lt;/p&gt;
-
 &lt;p&gt;No voy a poner mucho esfuerzo en explicar las razones de lo dicho arriba si se puede ver cómo otros (&lt;a href=&#34;http://apiblog.youtube.com/2012/12/the-simpler-yet-more-powerful-new.html&#34;&gt;Youtube&lt;/a&gt;, &lt;a href=&#34;https://dev.twitter.com/docs/api/1.1/overview#JSON_support_only&#34;&gt;Twitter&lt;/a&gt; &amp;amp; &lt;a href=&#34;http://developers.blog.box.com/2012/12/14/v2_api/&#34;&gt;Box&lt;/a&gt;) ya han comenzado el éxodo XML.&lt;/p&gt;
-
 &lt;p&gt;Simplemente te dejaré que veas las gráficas de Google Trends (&lt;a href=&#34;http://www.google.com/trends/explore?q=xml+api#q=xml%20api%2C%20json%20api&amp;amp;cmpt=q&#34;&gt;XML API vs JSON API&lt;/a&gt;) para que medites:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 817px) 817px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/01/201305-xml-vs-json-api.png&#34; title=&#34;Buenas prácticas para el Diseño de una API RESTful Pragmática&#34; alt=&#34;Buenas prácticas para el Diseño de una API RESTful Pragmática&#34; width=&#34;817px&#34; height=&#34;237px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;No obstante, si tu base de clientes consiste en un gran número de clientes empresariales, puedes tener que dar soporte XML de todas maneras. Si debes hacerlo, te surgirá una nueva pregunta:&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Debería cambiar el tipo del contenido basado en encabezados Accept o basado en la URL?&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Para garantizar la explorabilidad del navegador, debería basarse en la URL. La opción más razonable debería ser agregar una extensión &lt;em&gt;.xml&lt;/em&gt; o &lt;em&gt;.json&lt;/em&gt; al endpoint de la URL .&lt;/p&gt;
-
-&lt;h1 id=&#34;11-snake-case-vs-camelcase-para-el-nombre-de-los-campos&#34;&gt;11. snake_case vs camelCase para el nombre de los campos&lt;/h1&gt;
-
+&lt;h1 id=&#34;11-snake_case-vs-camelcase-para-el-nombre-de-los-campos&#34;&gt;11. snake_case vs camelCase para el nombre de los campos&lt;/h1&gt;
 &lt;p&gt;Si estás usando JSON (JavaScript Object Notation) como tu principal formato de representación, la forma “correcta” de hacer las cosas es seguir la convención de nombres de JavaScript – y esto sinifica camelCase para el nombre de los campos! Si entonces optas por el camino de construir librerias cliente en varios lenguajes, lo mejor es usar la convención de nombres correspondiente al idioma – camelCase para C# y Java, snake_case para python y ruby.&lt;/p&gt;
-
 &lt;p&gt;Para pensar: Siempre sentí que &lt;a href=&#34;http://en.wikipedia.org/wiki/Snake_case&#34;&gt;snake_case&lt;/a&gt; es más fácil para leer que la convención &lt;a href=&#34;http://en.wikipedia.org/wiki/CamelCase&#34;&gt;camelCase&lt;/a&gt; de JavaScript. Pero no tenía ninguna evidencia para respaldar esta “sensación”, hasta ahora. Basado en un &lt;a href=&#34;http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;amp;arnumber=5521745&#34;&gt;estudio visual sobre camelCase y snake_case&lt;/a&gt; (&lt;a href=&#34;http://www.cs.kent.edu/~jmaletic/papers/ICPC2010-CamelCaseUnderScoreClouds.pdf&#34;&gt;PDF&lt;/a&gt;) del 2010, &lt;strong&gt;snake_case es un 20% más facil de leer que camelCase&lt;/strong&gt;! Este impacto en legibilidad puede afectar la explorabilidad de la API y los ejemplos de la documentación.&lt;/p&gt;
-
 &lt;p&gt;Muchas JSON APIs populares usan snake_case. Sospecho que esto se debe a la serialización de librerías que siguen las convenciones de nombres de los lenguajes subyacentes que utilizan. Tal vez necesitamos tener librerías de serialización JSON que manejen las transformaciones de convenciones de nombres.&lt;/p&gt;
-
 &lt;h1 id=&#34;12-pretty-print-por-default-y-asegura-que-gzip-sea-soportado&#34;&gt;12. Pretty print por default y asegura que gzip sea soportado&lt;/h1&gt;
-
 &lt;p&gt;Una API que provee salida con compresión de espacios en blanco no es muy divertida de ver desde un navegador. Aunque algún tipo de parámetro de consulta (como &lt;em&gt;?pretty=true&lt;/em&gt;) puede ser provisto para activar pretty printing, una API que utiliza pretty print por default es mucho más accesible. El costo de transferencia de datos extra es insignificante, especialmente cuando lo comparas con el costo de no implementar gzip.&lt;/p&gt;
-
 &lt;p&gt;Considera algunos casos de uso: ¿Qué pasa si un consumidor de la API está debuggeando y en su código imprime los datos recibidos de la API? – Serán legibles por default. O si el consumidor graba en la URL el código que fue generando y lo interpreta directamente desde el navegador – Será legible por default. Éstos son pequeños detalles. Pequeños detalles que hacen a una API agradable de usar!&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Pero, ¿qué pasa con toda la transferencia extra de datos?&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Veamos esto con un ejemplo del mundo real. He bajado un poco de datos de la &lt;a href=&#34;https://api.github.com/users/veesahni&#34;&gt;API de GitHub&lt;/a&gt;, la cual usa pretty print por default. También estuve haciendo algunas comparaciones con gzip:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl https://api.github.com/users/veesahni &amp;gt; with-whitespace.txt
 $ ruby -r json -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;puts JSON JSON.parse(STDIN.read)&amp;#39;&lt;/span&gt; &amp;lt; with-whitespace.txt &amp;gt; without-whitespace.txt
 $ gzip -c with-whitespace.txt &amp;gt; with-whitespace.txt.gz
-$ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los archivos de salida tienen los siguientes tamaños:&lt;/p&gt;
-
+$ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los archivos de salida tienen los siguientes tamaños:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;without-whitespace.txt&lt;/em&gt; – 1252 bytes&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;with-whitespace.txt&lt;/em&gt; – 1369 bytes&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;without-whitespace.txt.gz&lt;/em&gt; – 496 bytes&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;with-whitespace.txt.gz&lt;/em&gt; – 509 bytes&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;En este ejemplo, el caracter en blanco incrementó el tamaño de la salida en un 8.5% cuando gzip no entró en juego y un 2.6% cuando utilizamos gzip. Por otro lado, el acto de comprimir con &lt;strong&gt;gzip en sí mismo provee un 60% de ahorro de ancho de banda&lt;/strong&gt;. Debido a que el costo del pretty print es relativamente pequeño, es mejor utilizar pretty print por default y asegurar que la compresión con gzip esté soportada.&lt;/p&gt;
-
 &lt;p&gt;Para enfatizar este punto, Twitter descubrió que hay un &lt;a href=&#34;https://dev.twitter.com/blog/announcing-gzip-compression-streaming-apis&#34;&gt;80% de ahorro (en algunos casos)&lt;/a&gt; cuando habilita la compresión gzip en su API Streaming. Stack Exchange fue más lejos, nunca devuelve una respuesta que no esté comprimida!&lt;/p&gt;
-
 &lt;h1 id=&#34;13-no-uses-un-envoltorio-por-default-pero-posibilitalo-cuando-sea-necesario&#34;&gt;13. No uses un envoltorio por default, pero posibilitalo cuando sea necesario&lt;/h1&gt;
-
 &lt;p&gt;Muchas APIs empaquetan sus respuestas en envoltorios como este:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;data&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;John&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hay un par de justificaciones para hacer esto – facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones &lt;a href=&#34;http://en.wikipedia.org/wiki/JSONP&#34;&gt;JSONP&lt;/a&gt; no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como &lt;a href=&#34;http://www.w3.org/TR/cors/&#34;&gt;CORS&lt;/a&gt; y &lt;a href=&#34;http://tools.ietf.org/html/rfc5988#page-6&#34;&gt;Link header from RFC5988&lt;/a&gt;, empaquetar se está volviendo innecesario.&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hay un par de justificaciones para hacer esto – facilita incluir metadata adicional o información de paginación, algunos clientes REST no permiten fácil acceso a los encabezados HTTP y las peticiones &lt;a href=&#34;http://en.wikipedia.org/wiki/JSONP&#34;&gt;JSONP&lt;/a&gt; no tienen acceso a sus encabezados. Sin embargo con standards que están siendo rápidamente adoptados como &lt;a href=&#34;http://www.w3.org/TR/cors/&#34;&gt;CORS&lt;/a&gt; y &lt;a href=&#34;http://tools.ietf.org/html/rfc5988#page-6&#34;&gt;Link header from RFC5988&lt;/a&gt;, empaquetar se está volviendo innecesario.&lt;/p&gt;
 &lt;p&gt;Podemos profundizar a futuro la API manteniéndola sin empaquetamiento por default y empaquetando sólo en casos excepcionales.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Cómo debería usarse un envoltorio en casos excepcionales?&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Hay 2 situaciones donde un envoltorio es realmente necesario – si la API necesita soportar peticiones cross domain sobre JSONP o si el cliente es incapaz de trabajar con encabezados HTTP.&lt;/p&gt;
-
 &lt;p&gt;Las peticiones JSONP vienen con un parámetro adicional de consulta (usualmente llamado &lt;em&gt;callback&lt;/em&gt; o &lt;em&gt;jsonp&lt;/em&gt;) representando el nombre de la función callback. Si este parámetro está presente, la API debería cambiarse a un modo completo de empaquetamiento donde siempre responda con un código de status HTTP 200 y pase el código de status real dentro de la respuesta JSON. Cualquier encabezado HTTP adicional que debería pasar a través de la respuesta debería ser mapeado a los campos JSON, como se ve a continuación:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;callback_function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;status_code&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -273,40 +187,25 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
     &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;actual&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;JSON&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;body&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;...&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;De forma similar, para soportar clientes con HTTP limitado, habilita un parámetro especial de consulta ?envelope=true, el cual debería disparar un empaquetamiento full (sin la función callback JSONP).&lt;/p&gt;
-
-&lt;h1 id=&#34;14-cuerpos-html-post-put-patch-codificados-en-json&#34;&gt;14. Cuerpos HTML POST, PUT &amp;amp; PATCH codificados en JSON&lt;/h1&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De forma similar, para soportar clientes con HTTP limitado, habilita un parámetro especial de consulta ?envelope=true, el cual debería disparar un empaquetamiento full (sin la función callback JSONP).&lt;/p&gt;
+&lt;h1 id=&#34;14-cuerpos-html-post-put--patch-codificados-en-json&#34;&gt;14. Cuerpos HTML POST, PUT &amp;amp; PATCH codificados en JSON&lt;/h1&gt;
 &lt;p&gt;Si estás siguiendo el objetivo de este artículo, entonces has adoptado JSON para todas las salidas de la API. Ahora consideremos JSON para la entrada de la API.&lt;/p&gt;
-
 &lt;p&gt;Muchas APIs usan URL cifradas en sus cuerpos de las peticiones de la API. El cifrado de URL es exactamente lo que suena – los cuerpos de la petición donde los pares clave-valor están cifrados usando las mismas convenciones que uno usaría para cifrar datos en los parámetros de consulta de URL. Esto es simple, ampliamente soportado y deja el trabajo hecho.&lt;/p&gt;
-
 &lt;p&gt;Sin embargo, el cifrado de URL tiene algunos inconvenientes que lo hacen problemático. No tiene el concepto de tipos de dato. Esto obliga a la API a interpretar cadenas de caracteres y transformarlas en tipos numéricos (por ej integer) o booleanos. Además, no tiene un concepto real de estructura jerárquica.&lt;/p&gt;
-
 &lt;p&gt;Aunque hay algunas convenciones que pueden construir estructuras que no siguen el par clave-valor (como agregar [] a una clave para representar un arreglo), esto no tiene comparación con la estructura nativa jerárquica de JSON.&lt;/p&gt;
-
 &lt;p&gt;Si la API es simple, cifrar la URL puede ser suficiente. Sin embargo, APIs complejas deberían apegarse a JSON para sus entradas a la API. De cualquier manera, elige una y se consistente en toda la API.&lt;/p&gt;
-
 &lt;p&gt;Una API que acepta peticiones POST, PUT y PATCH con cifrado JSON debería también requerir en el encabezado &lt;em&gt;Content-Type&lt;/em&gt; seteado con &lt;em&gt;application/json&lt;/em&gt; o lanzar un código de status HTTP: 415 Unsopported Media Type.&lt;/p&gt;
-
 &lt;h1 id=&#34;15-paginación&#34;&gt;15. Paginación&lt;/h1&gt;
-
 &lt;p&gt;Las APIs con preferencia “envelope” (envoltorio) típicamente incluyen los datos de paginación dentro del mismo envoltorio. Y no los culpo – hasta hace poco, no había mejores opciones. La forma correcta de incluir los detalles de paginación hoy en día es utilizando el &lt;a href=&#34;http://tools.ietf.org/html/rfc5988#page-6&#34;&gt;encabezado Link introducido por RFC 5988&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Una API que usa el encabezado Link puede devolver un set de hipervínculos listos para que el consumidor de la API no tenga que construir los hipervínculos por su propia cuenta. Esto es especialmente importante cuando la paginación está &lt;a href=&#34;https://developers.facebook.com/docs/reference/api/pagination/&#34;&gt;basada en el cursor&lt;/a&gt;. Aquí hay un ejemplo de un encabezado Link utilizado correctamente, obtenido de la documentación de &lt;a href=&#34;http://developer.github.com/v3/#pagination&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Link: &amp;lt;https://api.github.com/user/repos?page&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;per_page&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&amp;gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;next&amp;#34;&lt;/span&gt;, &amp;lt;https://api.github.com/user/repos?page&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;per_page&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;&amp;gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;last&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como &lt;em&gt;X-Total-Count&lt;/em&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Link: &amp;lt;https://api.github.com/user/repos?page&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;per_page&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;100&amp;gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;next&amp;#34;&lt;/span&gt;, &amp;lt;https://api.github.com/user/repos?page&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;50&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;per_page&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;100&amp;gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;rel&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;last&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero esto no es una solución completa para muchas APIs que quieren devolver información adicional de paginación, por ejemplo el conteo del total de resultados disponibles. Una API que requiere enviar un contador puede usar un encabezado HTTP personalizado como &lt;em&gt;X-Total-Count&lt;/em&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;16-representaciones-de-recursos-relacionados-a-los-datos-solicitados-mediante-carga-automática&#34;&gt;&lt;strong&gt;16. Representaciones de recursos relacionados a los datos solicitados mediante carga automática&lt;/strong&gt;&lt;/h1&gt;
-
 &lt;p&gt;Hay muchos casos donde un consumidor de la API necesita cargar datos relacionados (o referenciados) con el recurso que se está solicitando. En vez de pedir que el consumidor haga una solicitud a la API reiteradas veces por esta información, sería mucho más eficiente permitir que los datos relacionados sean devueltos y cargados a través del recurso original en demanda.&lt;/p&gt;
-
 &lt;p&gt;De todos modos, como &lt;a href=&#34;http://idbentley.com/blog/2013/03/14/should-restful-apis-include-relationships/&#34;&gt;esto va contra algunos principios RESTful&lt;/a&gt;, podemos minimizar nuestras desviaciones haciendo entonces el parámetro de consulta &lt;em&gt;embed&lt;/em&gt; (o &lt;em&gt;expand&lt;/em&gt;).&lt;/p&gt;
-
 &lt;p&gt;En este caso, &lt;em&gt;embed&lt;/em&gt; podría ser una lista separada por comas de campos a ser embebidos. La notación con punto puede ser usada para referir sub-campos. Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;GET /tickets/12?embed&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;customer.name,assigned_user&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto debería devolver un ticket con detalles adicionales embebidos, como:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;GET /tickets/12?embed&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;customer.name,assigned_user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto debería devolver un ticket con detalles adicionales embebidos, como:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;subject&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;I have a question!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -318,80 +217,49 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
    &lt;span class=&#34;nt&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;42&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
    &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Jim&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por supuesto, la habilidad de implementar algo así realmente depende de la complejidad interna. Este tipo de embebido puede facilmente resultar en un problema de &lt;a href=&#34;http://stackoverflow.com/questions/97197/what-is-the-n1-selects-issue&#34;&gt;N+1 select&lt;/a&gt;.&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por supuesto, la habilidad de implementar algo así realmente depende de la complejidad interna. Este tipo de embebido puede facilmente resultar en un problema de &lt;a href=&#34;http://stackoverflow.com/questions/97197/what-is-the-n1-selects-issue&#34;&gt;N+1 select&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;17-sobreescribiendo-el-método-http&#34;&gt;17. Sobreescribiendo el método HTTP&lt;/h1&gt;
-
 &lt;p&gt;Algunos clientes HTTP pueden trabajar solo con peticiones simples GET y POST. Para mejorar la accesibilidad a estos clientes limitados, la API necesita proveer una forma de sobreescribir el método HTTP.&lt;/p&gt;
-
 &lt;p&gt;Aunque no hay ningún estandard fuerte aquí, la convención popular es aceptar un encabezado de petición &lt;em&gt;X-HTTP-Method-Override&lt;/em&gt; con un valor de cadena que contenga PUT, PATCH o DELETE.&lt;/p&gt;
-
 &lt;p&gt;Nota que sobreescribir el encabezado debería ser aceptado en peticiones POST. Las peticiones GET nunca deberían &lt;a href=&#34;http://programmers.stackexchange.com/questions/188860/why-shouldnt-a-get-request-change-data-on-the-server&#34;&gt;cambiar datos en el servidor&lt;/a&gt;!&lt;/p&gt;
-
 &lt;h1 id=&#34;18-limitación-de-tráfico-por-ratio-rate-limiting&#34;&gt;18. Limitación de tráfico por ratio (Rate limiting)&lt;/h1&gt;
-
 &lt;p&gt;Para prevenir abusos, una práctica estandard es agregar algún tipo de límite de tráfico a la API. &lt;a href=&#34;http://tools.ietf.org/html/rfc6585&#34;&gt;RFC 6585&lt;/a&gt; introduce el código de status HTTP &lt;a href=&#34;http://tools.ietf.org/html/rfc6585#section-4&#34;&gt;429 Too Many Requests&lt;/a&gt; para controlar esto.&lt;/p&gt;
-
 &lt;p&gt;Sin embargo, puede ser muy útil notificar al consumidor de sus límites antes de que se encuentre con ellos. Este es un área en la que actualmente faltan los standards pero existe una cantidad de &lt;a href=&#34;http://stackoverflow.com/questions/16022624/examples-of-http-api-rate-limiting-http-response-headers&#34;&gt;convenciones populares usando encabezados de respuesta HTTP.&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;Minimamente, incluye los siguientes encabezados (usando las &lt;a href=&#34;https://dev.twitter.com/docs/rate-limiting/1.1&#34;&gt;convenciones de nombres&lt;/a&gt; de Twitter ya que los encabezados tipicamente no tienen capitalizacion de las palabras del medio):&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;X-Rate-Limit-Limit&lt;/em&gt; – El numero de peticiones permitidas en el período actual&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;X-Rate-Limit-Remaining&lt;/em&gt; – El número de peticiones que faltan en el período actual&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;X-Rate-Limit-Reset&lt;/em&gt; – El número de segundos restantes en el período actual&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Por qué se usa el número de segundos restantes en vez de un time stamp para X-Rate-Limit-Reset?&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Un timestamp contiene una cantidad de información útil pero innecesaria como la fecha y probablemente el time-zone. Un consumidor de la API realmente quiere saber cuándo puede enviar la petición nuevamente, y el número de segundos responde a esta pregunta con el mínimo procesamiento adicional al final. Además escapa a problemas relacionados con &lt;a href=&#34;http://en.wikipedia.org/wiki/Clock_skew&#34;&gt;desvíos de reloj&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Algunas APIs usan un timestamp de UNIX (segundos desde la fecha standard 1/1/1970) para X-Rate-Limit-Reset. ¡No hagas lo mismo!&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;¿Por qué es una mala práctica usar el timestamp UNIX para X-Rate-Limit-Reset?&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;La &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616.txt&#34;&gt;spec de HTTP&lt;/a&gt; ya &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3&#34;&gt;especifica&lt;/a&gt; el uso del &lt;a href=&#34;http://www.ietf.org/rfc/rfc1123.txt&#34;&gt;formato de fecha RFC 1123&lt;/a&gt; (actualmente usado en los encabezados HTTP &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.18&#34;&gt;Date&lt;/a&gt;, &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25&#34;&gt;If-Modified-Since&lt;/a&gt; y &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29&#34;&gt;Last-Modified&lt;/a&gt;). Si fuéramos a especificar un nuevo encabezado HTTP que tome un timestamp de algún tipo, debería seguir las convenciones RFC 1123 en vez de usar timestamps UNIX.&lt;/p&gt;
-
 &lt;h1 id=&#34;19-autenticación&#34;&gt;19. Autenticación&lt;/h1&gt;
-
 &lt;p&gt;Una API RESTful debería ser stateless (sin estado). Esto significa que la petición de autenticación no debería depender de cookies o sesiones. En lugar de ello, cada petición debería venir con algún tipo de credencial de autorización.&lt;/p&gt;
-
 &lt;p&gt;Siempre que se use SSL, las credenciales de autenticación pueden ser simplificadas a un token de acceso generado de forma aleatoria, que es entregado en el campo de nombre de usuario de HTTP Basic Auth.&lt;/p&gt;
-
 &lt;p&gt;Lo grandioso de esto es que es completamente navegable con un explorador – éste simplemente abriría un popup pidiéndote que ingreses las credenciales si recibe un código de status &lt;em&gt;401 Unauthorized&lt;/em&gt; desde el servidor.&lt;/p&gt;
-
 &lt;p&gt;De todos modos, este método de autenticación token-over-basic-auth (token sobre autenticación basica) es sólo aceptable en los casos en que sea práctico tener la posibilidad de que el usuario copie un token de una interface de administración del entorno del consumidor de la API.&lt;/p&gt;
-
 &lt;p&gt;En los casos donde no sea posible, &lt;a href=&#34;http://oauth.net/2/&#34;&gt;OAuth 2&lt;/a&gt; debería ser usado para facilitar la transferencia del token seguro a terceros. OAuth 2 usa &lt;a href=&#34;http://tools.ietf.org/html/rfc6750&#34;&gt;tokens Bearer&lt;/a&gt; y además depende de SSL para su encriptación de transporte subyacente.&lt;/p&gt;
-
 &lt;p&gt;Una API que necesita soporte JSONP necesitará un tercer método de autenticación, ya que las peticiones JSONP no pueden enviar credenciales HTTP Basic Auth ni Bearer tokens. En este caso, puede utilizarse un parámetro especial de consulta “access_token”. Nota: hay un problema de seguridad inherente si se usa un parametro de consulta para el token ya que la mayoría de los servidores web almacenan los parámetros de consulta en sus logs.&lt;/p&gt;
-
 &lt;p&gt;Para lo que nos interesa, los tres métodos de arriba son sólo formas de transportar el token a través de la frontera de la API. El verdadero token subyacente mismo podría ser idéntico.&lt;/p&gt;
-
 &lt;h1 id=&#34;20-cacheo&#34;&gt;20. Cacheo&lt;/h1&gt;
-
 &lt;p&gt;HTTP provee un framework de cacheo incluido! Todo lo que tienes que hacer es incluir algunos encabezados adicionales en la respuesta de salida y hacer una pequeña validación cuando recibes algún encabezado de petición de entrada.&lt;/p&gt;
-
 &lt;p&gt;Hay 2 alcances: &lt;a href=&#34;http://en.wikipedia.org/wiki/HTTP_ETag&#34;&gt;ETag&lt;/a&gt; y &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29&#34;&gt;Last-Modified&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;ETag&lt;/strong&gt;: Cuando generas una petición, incluye un encabezado HTTP ETag conteniendo un hash o checksum de la representación. Este valor debería cambiar cada vez que la salida cambia. Ahora, si una petición de entrada HTTP contiene un encabezado &lt;em&gt;If-None-Match&lt;/em&gt; con un valor ETag, la API debería devolver un código de status &lt;em&gt;304 Not Modified&lt;/em&gt; en lugar de la salida del recurso.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Last-Modified&lt;/strong&gt; (Último modificado): Básicamente funciona como ETag, excepto en que usa timestamps. El encabezado de respuesta &lt;em&gt;Last-Modified&lt;/em&gt; contiene un timestamp en formato &lt;a href=&#34;http://www.ietf.org/rfc/rfc1123.txt&#34;&gt;RFC 1123&lt;/a&gt; el cual es validado contra &lt;em&gt;If-Modified-Since.&lt;/em&gt; Nótese que la especificación de HTTP ha tenido &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3&#34;&gt;3 formatos de fecha diferentes aceptables&lt;/a&gt; y el servidor debería estar preparado para aceptar cualquiera de ellos.&lt;/p&gt;
-
 &lt;h1 id=&#34;21-errores&#34;&gt;21. Errores&lt;/h1&gt;
-
 &lt;p&gt;Sencillamente como una página HTML de error muestra un mensaje de error útil a un visitante, una API debería proveer un mensaje de error útil en un formato conocido. La representación de un error debería no ser diferente a la representación de cualquier recurso, con su propio set de campos.&lt;/p&gt;
-
 &lt;p&gt;La API debería devolver siempre códigos de status HTTP prácticos. Los errores de la API generalmente caen dentro de 2 tipos: la serie 400 de códigos de status para problemas en el cliente y la serie 500 de códigos de status para problemas en el servidor. Como mínimo, la API debería estandarizar que todos los errores de la serie 400 vengan en formato de error JSON. Si es posible (por ejemplo si los balanceadores de carga y proxies reversos pueden crear cuerpos de error personalizables), este debería extender la serie de códigos de error 500.&lt;/p&gt;
-
 &lt;p&gt;El cuerpo de un error JSON debería proveer algunas cosas para el desarrollador – un mensaje de error útil, un código de error único (que pueda ser buscado para más detalles en la documentación) y una descripción detallada. Una representación de salida JSON de esta forma podría ser:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1234&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Something bad happened :(&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;More details about the error here&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los errores de validación para peticiones PUT, PATCH y POST necesitarán un breakdown en el campo. Esto se modela mejor utilizando un código de error de alto nivel arreglado para fallas de validación que proveen detalles del error en el campo adicional &lt;em&gt;error&lt;/em&gt;, como por ejemplo:&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los errores de validación para peticiones PUT, PATCH y POST necesitarán un breakdown en el campo. Esto se modela mejor utilizando un código de error de alto nivel arreglado para fallas de validación que proveen detalles del error en el campo adicional &lt;em&gt;error&lt;/em&gt;, como por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;code&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Validation Failed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -407,11 +275,9 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
        &lt;span class=&#34;nt&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Password cannot be blank&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;22-códigos-de-estado-http&#34;&gt;22. Códigos de estado HTTP&lt;/h1&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;22-códigos-de-estado-http&#34;&gt;22. Códigos de estado HTTP&lt;/h1&gt;
 &lt;p&gt;HTTP define un &lt;a href=&#34;http://en.wikipedia.org/wiki/List_of_HTTP_status_codes&#34;&gt;set de significativos códigos de status&lt;/a&gt; que pueden ser devueltos por la API. Éstos pueden ser nivelados para ayudar a los consumidores de la API dirigir sus respuestas apropiadamente. A continuación les dejo una lista de los que definitivamente deberías utilizar:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;200 OK -&lt;/em&gt; Respuesta a un exitoso GET, PUT, PATCH o DELETE. Puede ser usado también para un POST que no resulta en una creación.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;201 Created&lt;/em&gt; – [Creada] Respuesta a un POST que resulta en una creación. Debería ser combinado con un &lt;a href=&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.30&#34;&gt;encabezado Location&lt;/a&gt;, apuntando a la ubicación del nuevo recurso.&lt;/li&gt;
@@ -427,13 +293,9 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
 &lt;li&gt;&lt;em&gt;422 Unprocessable Entity&lt;/em&gt; – [Entidad improcesable] Utilizada para errores de validación&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;429 Too Many Requests&lt;/em&gt; – [Demasiadas peticiones] Cuando una petición es rechazada debido a la tasa límite .&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;en-conclusión&#34;&gt;En conclusión&lt;/h1&gt;
-
 &lt;p&gt;Una API es una interfaz de usuario para desarrolladores. Enfoca tu esfuerzo en asegurar que no sea sólo usable a nivel funcional sino también amigable.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Vinay Sahni&lt;/em&gt; | &lt;a href=&#34;http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api&#34;&gt;Best Practices for Designing a Pragmatic RESTful API&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -446,67 +308,40 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
             
             <guid>https://elbauldelprogramador.com/como-configurar-entornos-de-desarrollo-para-aplicaciones-moviles-en-un-servidor-cloud/</guid>
             <description>&lt;p&gt;En un &lt;a href=&#34;https://elbauldelprogramador.com/como-desarrollar-aplicaciones-en-un-servidor-cloud-2/&#34; title=&#34;Cómo desarrollar aplicaciones en un servidor Cloud&#34;&gt;artículo anterior&lt;/a&gt; se vió cómo crear una aplicación cliente/servidor que consistía en el desarrollo de un juego básico donde adivinar el número pensado por el oponente. Hoy veremos cómo crear una API RESTFul, la cual podrá ser consumida por una aplicación móvil, por ejemplo.&lt;/p&gt;
-
 &lt;p&gt;Para conseguir nuestro objetivo necesitaremos &lt;strong&gt;Node.js&lt;/strong&gt;, &lt;strong&gt;Express&lt;/strong&gt; y &lt;strong&gt;mongodb&lt;/strong&gt;. Usaremos el servicio &lt;a href=&#34;http://www.arsys.es/cloud/cloudbuilder/?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=appmovil&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34; title=&#34;Arsys cloudbuilder&#34;&gt;cloudbuilder de Arsys&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;La razón de usar un servicio cloud es muy sencilla, éstos entornos ofrecen la flexibilidad necesaria para escalar nuestra plataforma en cualquier momento, sin tener que embarcarnos nosotros mismos en instalar y configurar más servidores dedicados, y se paga en función de las horas de uso. A medida que los requisitos de nuestro sistema aumentan, es posible incrementar las capacidades de nuestros servidores únicamente desplazando una barrita que diga cuanta RAM más necesitamos, cuantos cores, cuantos servidores&amp;#8230; Así de sencillo.&lt;/p&gt;
-
+&lt;p&gt;La razón de usar un servicio cloud es muy sencilla, éstos entornos ofrecen la flexibilidad necesaria para escalar nuestra plataforma en cualquier momento, sin tener que embarcarnos nosotros mismos en instalar y configurar más servidores dedicados, y se paga en función de las horas de uso. A medida que los requisitos de nuestro sistema aumentan, es posible incrementar las capacidades de nuestros servidores únicamente desplazando una barrita que diga cuanta RAM más necesitamos, cuantos cores, cuantos servidores… Así de sencillo.&lt;/p&gt;
 &lt;p&gt;Otra ventaja viene dada a la hora de hacer pruebas, ya que se puede crear un entorno de prueba en minutos, sin necesidad de afectar al entorno estable.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;crear-el-servidor&#34;&gt;Crear el servidor&lt;/h1&gt;
-
 &lt;h2 id=&#34;crear-el-tipo-de-servidor&#34;&gt;Crear el tipo de servidor&lt;/h2&gt;
-
 &lt;p&gt;En éste caso, elegiremos un servidor con Debian 6, y una instalación base.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 817px) 817px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/1.-Creación-de-un-servidor-Cloud.png&#34; alt=&#34;1. Creación de un servidor Cloud&#34; width=&#34;817px&#34; height=&#34;448px&#34; /&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;configurar-la-capacidad-del-servidor&#34;&gt;Configurar la capacidad del servidor&lt;/h2&gt;
-
 &lt;p&gt;Para el ejemplo concreto, no necestiamos grandes recursos, así que fijaremos todo al mínimo.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 817px) 817px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/2.-Configuración-capacidad-servidor-Cloud.png&#34; alt=&#34;2. Configuración capacidad servidor Cloud&#34; width=&#34;817px&#34; height=&#34;575px&#34; /&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;establecer-la-contraseña-de-usuario&#34;&gt;Establecer la contraseña de usuario&lt;/h2&gt;
-
 &lt;p&gt;Por último, solo resta proporcionar una contraseña al usuario &lt;strong&gt;root&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 815px) 815px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2015/01/3.-Finalización-de-la-puesta-en-marcha-del-servidor-cloud.png&#34; alt=&#34;3. Finalización de la puesta en marcha del servidor cloud&#34; width=&#34;815px&#34; height=&#34;581px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;instalar-node-js&#34;&gt;Instalar Node.js&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-nodejs&#34;&gt;Instalar Node.js&lt;/h1&gt;
 &lt;p&gt;Descargamos el binario de su &lt;a href=&#34;http://nodejs.org/download/&#34;&gt;página web&lt;/a&gt;, descomprimimos el fichero y listo. En linux estaría bien añadir la carpeta &lt;code&gt;bin&lt;/code&gt; al &lt;code&gt;PATH&lt;/code&gt; para que sea accesible desde cualquier lugar en la terminal.&lt;/p&gt;
-
 &lt;h1 id=&#34;descripción-de-la-api&#34;&gt;Descripción de la API&lt;/h1&gt;
-
 &lt;p&gt;Para éste ejemplo, la API que vamos a crear será muy sencilla, consistirá en:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Manejo de operaciones CRUD para elementos en la base de datos&lt;/li&gt;
 &lt;li&gt;Dos URLs &lt;code&gt;http://example.com/api/articles&lt;/code&gt; y &lt;code&gt;http://example.com/api/articles/:id_articulo&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Se usarán los nombres convencionales HTTP (&lt;code&gt;GET&lt;/code&gt; &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt; y &lt;code&gt;DELETE&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;Los datos se devolverán en formato JSON.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;estructura-del-directorio-de-trabajo&#34;&gt;Estructura del directorio de trabajo&lt;/h1&gt;
-
 &lt;p&gt;Debido a la simplicidad de la API, gran parte del código, incluídas las rutas estarán en el fichero &lt;code&gt;server.js&lt;/code&gt;. A medida que incrementa el tamaño del código, lo ideal es crear un fichero propio para las rutas. La estructura será la siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;- app/
 ----- models/
 ---------- article.js  // Modelo para el artículo
 - node_modules/        // Lo crea npm, mantiene las dependencias/paquetes
 - package.json         // Dependencias de la aplicación
-- server.js            // Configuración de la app y definición de rutas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;definir-los-paquetes-necesarios&#34;&gt;Definir los paquetes necesarios&lt;/h1&gt;
+- server.js            // Configuración de la app y definición de rutas
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;definir-los-paquetes-necesarios&#34;&gt;Definir los paquetes necesarios&lt;/h1&gt;
 &lt;p&gt;En Node.js es necesario especificar los paquetes necesarios en el fichero &lt;code&gt;package.json&lt;/code&gt;, los necesarios en éste caso son:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;node-api&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -516,21 +351,19 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;#34;mongoose&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~3.6.13&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;#34;body-parser&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~1.0.1&amp;#34;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;express&lt;/code&gt; es el framework de Node.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;mongoose&lt;/code&gt; el ORM que usaremos para comunicarnos con la base de datos MongoDB.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;body-parser&lt;/code&gt; permitirá extraer el contenido de las peticiones HTTP POST para poder hacer cosas como crear nuevos artículos.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;instalar-los-paquetes-node&#34;&gt;Instalar los paquetes Node&lt;/h1&gt;
-
 &lt;p&gt;Tan simple como&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ npm install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;en el directorio donde está &lt;code&gt;package.json&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ npm install
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;en el directorio donde está &lt;code&gt;package.json&lt;/code&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;configurar-el-servidor&#34;&gt;Configurar el servidor&lt;/h1&gt;
-
 &lt;p&gt;Para ello editaremos el fichero &lt;code&gt;server.js&lt;/code&gt; con lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// CONFIGURACIÓN BÁSICA
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// =============================================================================
@@ -565,40 +398,36 @@ $ gzip -c without-whitespace.txt &amp;gt; without-whitespace.txt.gz&lt;/code&gt;
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// =============================================================================
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;La magia ocurre en el puerto &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;iniciar-el-servidor&#34;&gt;Iniciar el servidor&lt;/h1&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;iniciar-el-servidor&#34;&gt;Iniciar el servidor&lt;/h1&gt;
 &lt;p&gt;Basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ node server.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Deberá aparecer: &lt;code&gt;La magia ocurre en el puerto 8080&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ node server.js
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Deberá aparecer: &lt;code&gt;La magia ocurre en el puerto 8080&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;probar-la-api&#34;&gt;Probar la API&lt;/h2&gt;
-
 &lt;p&gt;Para comprobar que la API está funcionando correctamente, podemos usar &lt;code&gt;curl&lt;/code&gt; y realizar una petición al servidor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -X GET http://ip-servidor/api&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Debería devolvernos &lt;code&gt;{ message: &amp;quot;Hola desde la API!!&amp;quot; }&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -X GET http://ip-servidor/api
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debería devolvernos &lt;code&gt;{ message: &amp;quot;Hola desde la API!!&amp;quot; }&lt;/code&gt;&lt;/p&gt;
 &lt;h1 id=&#34;segundo-ejemplo-con-base-de-datos-mongodb&#34;&gt;Segundo ejemplo con base de datos MongoDB&lt;/h1&gt;
-
 &lt;p&gt;Ahora que tenemos una aplicación sencilla, crearemos un modelo para la base de datos, que almacenará el nombre de un artículo y su precio. Pero antes de ello, suponiendo que ya tenemos instalado &lt;em&gt;MongoDB&lt;/em&gt;, creamos la base de datos con los siguientes comandos (Dentro del shell de Mongo):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;use articulosDB
 switched to db articulosDB
 &lt;span class=&#34;nv&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; name : &lt;span class=&#34;s2&#34;&gt;&amp;#34;Lampara&amp;#34;&lt;/span&gt;, price: &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt; : &lt;span class=&#34;s2&#34;&gt;&amp;#34;Lampara&amp;#34;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;#34;price&amp;#34;&lt;/span&gt; : &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
- db.articulos.insert&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;j&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras esto, tenemos la base de datos creada con un elemento. Pasemos a crear la conexión entre la base de datos y Node.&lt;/p&gt;
+ db.articulos.insert&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;j&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 
-&lt;h1 id=&#34;conectar-mongodb-con-node-js&#34;&gt;Conectar MongoDB con Node.js&lt;/h1&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, tenemos la base de datos creada con un elemento. Pasemos a crear la conexión entre la base de datos y Node.&lt;/p&gt;
+&lt;h1 id=&#34;conectar-mongodb-con-nodejs&#34;&gt;Conectar MongoDB con Node.js&lt;/h1&gt;
 &lt;p&gt;Al tener creada la base de datos, podemos conectarnos a ella mediante una URI, con el siguiente formato&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mongodb://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;username:password@&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;host1&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:port1&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;,host2&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:port2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,...&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;,hostN&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:portN&lt;span class=&#34;o&#34;&gt;]]][&lt;/span&gt;/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;database&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;?options&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;en nuestro caso, el código a añadir en el fichero &lt;code&gt;server.js&lt;/code&gt; sería:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mongodb://&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;username:password@&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;host1&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:port1&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;,host2&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:port2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,...&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;,hostN&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;:portN&lt;span class=&#34;o&#34;&gt;]]][&lt;/span&gt;/&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;database&lt;span class=&#34;o&#34;&gt;][&lt;/span&gt;?options&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;en nuestro caso, el código a añadir en el fichero &lt;code&gt;server.js&lt;/code&gt; sería:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;// ..
 var &lt;span class=&#34;nv&#34;&gt;mongoose&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; require&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mongoose&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mongodb://127.0.0.1:27017//articulosDB&amp;#39;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-// ..&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;crear-el-modelo-para-la-base-de-datos&#34;&gt;Crear el modelo para la base de datos&lt;/h1&gt;
+// ..
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;crear-el-modelo-para-la-base-de-datos&#34;&gt;Crear el modelo para la base de datos&lt;/h1&gt;
 &lt;p&gt;Consiste en representar los datos almacenados en la base de datos, para nuestro caso, será:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// app/models/article.js
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
@@ -611,16 +440,12 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 
 &lt;span class=&#34;nx&#34;&gt;module&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;exports&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;mongoose&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Article&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;ArticleSchema&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Solo resta añadir el modelo al fichero &lt;code&gt;server.js&lt;/code&gt; con&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solo resta añadir el modelo al fichero &lt;code&gt;server.js&lt;/code&gt; con&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Article&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;requiere&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;./app/models/article&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, la aplicación está lista para interactuar con la base de datos. Pasemos a escribir el resto de rutas para la API.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, la aplicación está lista para interactuar con la base de datos. Pasemos a escribir el resto de rutas para la API.&lt;/p&gt;
 &lt;h1 id=&#34;router-express-y-rutas&#34;&gt;Router Express y rutas&lt;/h1&gt;
-
 &lt;p&gt;Una breve descripción de lo que se usará:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -629,32 +454,27 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 &lt;th align=&#34;center&#34;&gt;Descripción&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;/api/articles&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;Devolver todos los artículos&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;/api/articles&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;code&gt;POST&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;Crear un artículo&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;/api/articles/:article_id&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;code&gt;GET&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;Obtener artículo con ID especificado&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;/api/articles/:article_id&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;code&gt;PUT&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;Modificar artículo con ID especificado&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td align=&#34;center&#34;&gt;/api/articles/:article_id&lt;/td&gt;
 &lt;td align=&#34;center&#34;&gt;&lt;code&gt;DELETE&lt;/code&gt;&lt;/td&gt;
@@ -662,21 +482,16 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;h1 id=&#34;middleware-para-las-rutas&#34;&gt;Middleware para las rutas&lt;/h1&gt;
-
 &lt;p&gt;Para registrar todo lo que pasa en la API, estableceremos un &lt;em&gt;Middleware&lt;/em&gt; por el que pasarán todas las peticiones antes de ser procesadas.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;router&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Recibida peticion de &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;  &lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// make sure we go to the next routes and don&amp;#39;t stop here
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;next()&lt;/code&gt; es necesario para indicar que la aplicación deberá continuar procesando otras rutas, de no añadirlo, la aplicación se dentendría ahí.&lt;/p&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;next()&lt;/code&gt; es necesario para indicar que la aplicación deberá continuar procesando otras rutas, de no añadirlo, la aplicación se dentendría ahí.&lt;/p&gt;
 &lt;p&gt;Empezaremos creando las rutas que para devolver todos los artículos de la base de datos y para crear un artículo nuevo. Ambas se realizarán sobre la ruta &lt;code&gt;/api/articles&lt;/code&gt;. Empezaremos con crear artículos.&lt;/p&gt;
-
 &lt;h2 id=&#34;crear-un-artículo&#34;&gt;Crear un artículo&lt;/h2&gt;
-
 &lt;p&gt;Para ello, necesitamos poder gestionar peticiones &lt;code&gt;POST&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;router&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;route&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/articles&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
@@ -696,13 +511,13 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
         &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
       &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para probrala, basta con enviar una petición &lt;code&gt;POST&lt;/code&gt;, con &lt;code&gt;curl&lt;/code&gt; por ejemplo:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para probrala, basta con enviar una petición &lt;code&gt;POST&lt;/code&gt;, con &lt;code&gt;curl&lt;/code&gt; por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ curl -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;:&amp;#34;Articulo1&amp;#34;,  &amp;#34;cost&amp;#34;:100}&amp;#39;&lt;/span&gt; -X POST http://ip.servidor:8080/api/articles
 
-&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;:&lt;span class=&#34;s2&#34;&gt;&amp;#34;Article created!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;obtener-todos-los-artículos&#34;&gt;Obtener todos los artículos&lt;/h2&gt;
+&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;:&lt;span class=&#34;s2&#34;&gt;&amp;#34;Article created!&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;obtener-todos-los-artículos&#34;&gt;Obtener todos los artículos&lt;/h2&gt;
 &lt;p&gt;En la misma ruta que antes, pero ahora usando el método &lt;code&gt;GET&lt;/code&gt;, devolveremos al cliente todos los artículos existentes en la base de datos.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;nx&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;err&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;articles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -717,8 +532,8 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
       &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;articles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para probarla, enviamos una petición &lt;code&gt;GET&lt;/code&gt; a la misma ruta (&lt;code&gt;/api/articles&lt;/code&gt;):&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para probarla, enviamos una petición &lt;code&gt;GET&lt;/code&gt; a la misma ruta (&lt;code&gt;/api/articles&lt;/code&gt;):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;err&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;-X&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;GET&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;http://ip.servidor:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8080&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/api/articles/&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;python&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;-mjson.tool&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -733,19 +548,16 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
         &lt;span class=&#34;nt&#34;&gt;&amp;#34;cost&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
         &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Articulo1&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;crear-rutas-para-elementos-individuales&#34;&gt;Crear rutas para elementos individuales&lt;/h1&gt;
+&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;crear-rutas-para-elementos-individuales&#34;&gt;Crear rutas para elementos individuales&lt;/h1&gt;
 &lt;p&gt;Hasta ahora, se han manejado el grupo de rutas acabado en &lt;code&gt;/articles&lt;/code&gt;. A continuación crearemos las rutas para manejar peticiones que contengan parámetros, como el identificador de artículo. Serán de la forma &lt;code&gt;/articles/:article_id&lt;/code&gt; y harán cosas como:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Obtener un artículo por ID.&lt;/li&gt;
 &lt;li&gt;Actualizar los datos de un artículo.&lt;/li&gt;
 &lt;li&gt;Eliminar un artículo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;obtener-un-único-artículo&#34;&gt;Obtener un único artículo&lt;/h2&gt;
-
 &lt;p&gt;Se añadirá otra ruta que maneje las peticiones con el parámetro &lt;code&gt;:article_id&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;router&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;route&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/articles/:article_id&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -755,17 +567,17 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
       &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;json&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y para probralo, podemos escoger alguno de los ids devueltos en la consulta anterior, por ejemplo &lt;code&gt;54aa901312bf8f4207000001&lt;/code&gt;:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y para probralo, podemos escoger alguno de los ids devueltos en la consulta anterior, por ejemplo &lt;code&gt;54aa901312bf8f4207000001&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -X GET http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; python -mjson.tool
 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    &lt;span class=&#34;s2&#34;&gt;&amp;#34;__v&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;,
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;__v&amp;#34;&lt;/span&gt;: 0,
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;_id&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;54aa901312bf8f4207000001&amp;#34;&lt;/span&gt;,
-    &lt;span class=&#34;s2&#34;&gt;&amp;#34;cost&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;,
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;cost&amp;#34;&lt;/span&gt;: 100,
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;Articulo1&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;actualizar-datos-de-un-artículo&#34;&gt;Actualizar datos de un artículo&lt;/h2&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;actualizar-datos-de-un-artículo&#34;&gt;Actualizar datos de un artículo&lt;/h2&gt;
 &lt;p&gt;Para ello, necesitamos añadir el método &lt;code&gt;PUT&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
 
@@ -790,14 +602,14 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 
   &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez ejecutando, es posible actualizar los datos de un artículo proporcionando su ID, usaremos el mismo de antes:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez ejecutando, es posible actualizar los datos de un artículo proporcionando su ID, usaremos el mismo de antes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -H &lt;span class=&#34;s2&#34;&gt;&amp;#34;Content-Type: application/json&amp;#34;&lt;/span&gt; -d &lt;span class=&#34;s1&#34;&gt;&amp;#39;{&amp;#34;name&amp;#34;:&amp;#34;Articulo Modificado&amp;#34;,  &amp;#34;cost&amp;#34;:5.90}&amp;#39;&lt;/span&gt; -X PUT http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; python -mjson.tool
 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;Article updated!&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;eliminar-un-artículo&#34;&gt;Eliminar un artículo&lt;/h2&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;eliminar-un-artículo&#34;&gt;Eliminar un artículo&lt;/h2&gt;
 &lt;p&gt;Por último, falta crear el método &lt;code&gt;DELETE&lt;/code&gt; para eliminar artículos de la base de datos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;req&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nx&#34;&gt;Article&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;({&lt;/span&gt;
@@ -811,16 +623,16 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
     &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Borremos el elemento con el ID usado hasta ahora:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Borremos el elemento con el ID usado hasta ahora:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;curl -X DELETE http://ip.servidor:8080/api/articles/54aa901312bf8f4207000001 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; python -mjson.tool
 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;message&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;Successfully deleted&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
 &lt;p&gt;Queda bastante claro lo sencillo que es crear una API RESTful con &lt;em&gt;Node.js&lt;/em&gt; y espero que el lector haya disfrutado del artículo. A continuación dejo el código completo del fichero &lt;code&gt;server.js&lt;/code&gt;:&lt;/p&gt;
-
 &lt;h1 id=&#34;código-completo&#34;&gt;Código completo&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// Thanks to https://scotch.io/tutorials/build-a-restful-api-using-node-and-expre
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
@@ -955,11 +767,10 @@ mongoose.connect&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// =============================================================================
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;app&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;listen&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Magic happens on port &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;scotch.io&lt;/em&gt; »» &lt;a href=&#34;https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4&#34; target=&#34;_blank&#34;&gt;Build a RESTful API Using Node and Express 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;scotch.io&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Build a RESTful API Using Node and Express 4&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

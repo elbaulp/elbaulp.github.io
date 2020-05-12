@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Intents on El Baúl del programador</title>
+        <title>intents on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/intents/</link>
-        <description>Recent content in Intents on El Baúl del programador</description>
+        <description>Recent content in intents on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/intents/</link>
-            <title>Intents on El Baúl del programador</title>
+            <title>intents on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,19 +22,14 @@
             
             <guid>https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/</guid>
             <description>&lt;p&gt;La idea de ACTION_PICK es lanzar una actividad que muestre una liste de objetos a seleccionar para que el usuario elija uno de ellos. Una vez elegido, la actividad devuelve la URI del elemento elegido. Así se permite reusar la interfaz gráfica.&lt;/p&gt;
-
 &lt;p&gt;Se debe indicar usando MIME types la colección de datos que vamos a usar, el cual apuntará a un cursor parecido a este:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vnd.android.cursor.dir/vnd.favsites.site&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vnd.android.cursor.dir/vnd.favsites.site
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;LA actividad es la encargada de recuperar los datos desde el &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-implementando-un&#34;&gt;CV&lt;/a&gt; basandose en la URI.&lt;/p&gt;
-
 &lt;p&gt;Para este tipo de &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven&#34;&gt;acción&lt;/a&gt;&lt;strong&gt;(ACTION_PICK)&lt;/strong&gt;, no podemos usar &lt;strong&gt;startActivity()&lt;/strong&gt;, ya que no devuelve resultado alguno debido a que abre la nueva actividad en un hilo separado. Es decir, &lt;strong&gt;startActivity()&lt;/strong&gt; es una llamada asíncrona que no usa callbacks para indicar qué ha pasado en la actividad invocada.&lt;/p&gt;
-
 &lt;p&gt;Por lo tanto debemos usar &lt;strong&gt;startActivityForResult()&lt;/strong&gt;, que sí que tiene callback. Este método acepta dos parámetros, el primero es el intent que queremos lanzar, y el segundo es un requestCode. Cuando la actividad que hemos lanzado finalize, se llamará en la actividad desde la que se lanzó el intent a &lt;strong&gt;onActivityResult()&lt;/strong&gt; con el requestCode que le proporcionamos. La cabecera de este método de callback es la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onActivityResult&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requestCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resultCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde el primer argumento es el código que le hemos pasado a &lt;strong&gt;startActivityForResult()&lt;/strong&gt;, el segundo argumento (resultcode), puede ser &lt;em&gt;RESULT_OK, RESULT_CANCELED&lt;/em&gt; o un código propio. Si decidimos usar un código propio, debe empezar en &lt;em&gt;RESULT_FIRST_USER&lt;/em&gt;. El tercer parámetro contiene cualquier dato adicional que la actividad invocada devuelva. Para &lt;em&gt;ACTION_PICK&lt;/em&gt; tendremos una URI apuntando a un elemento.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onActivityResult&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;requestCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resultCode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde el primer argumento es el código que le hemos pasado a &lt;strong&gt;startActivityForResult()&lt;/strong&gt;, el segundo argumento (resultcode), puede ser &lt;em&gt;RESULT_OK, RESULT_CANCELED&lt;/em&gt; o un código propio. Si decidimos usar un código propio, debe empezar en &lt;em&gt;RESULT_FIRST_USER&lt;/em&gt;. El tercer parámetro contiene cualquier dato adicional que la actividad invocada devuelva. Para &lt;em&gt;ACTION_PICK&lt;/em&gt; tendremos una URI apuntando a un elemento.&lt;/p&gt;
 &lt;p&gt;Para este ejemplo de uso de ACTION_PICK, es necesario tener instalada la aplicación &lt;strong&gt;NotePad&lt;/strong&gt;, que está disponible para instalar en los ejemplos que vienen al instalar el SDK:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;invokePick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -76,12 +70,12 @@
    &lt;span class=&#34;c1&#34;&gt;//Mostramos la nota
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;outputIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setAction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;outputIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Las constantes &lt;strong&gt;RESTULT_OK, RESULT_CANCEL Y RESULT_FIRST_USER&lt;/strong&gt; están definidas en la clase de la Actividad y sus respectivos valores son:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Las constantes &lt;strong&gt;RESTULT_OK, RESULT_CANCEL Y RESULT_FIRST_USER&lt;/strong&gt; están definidas en la clase de la Actividad y sus respectivos valores son:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;RESTULT_OK&lt;/span&gt;         &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;RESULT_CANCEL&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;RESULT_FIRST_USER&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por otro lado, en la aplicación &lt;strong&gt;notePad&lt;/strong&gt;, debe haber un código devuelva un valor en el caso de que se haya llamado a la actividad desde un intent con ACTION_PICK como acción:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;RESULT_FIRST_USER&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por otro lado, en la aplicación &lt;strong&gt;notePad&lt;/strong&gt;, debe haber un código devuelva un valor en el caso de que se haya llamado a la actividad desde un intent con ACTION_PICK como acción:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
 &lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onListItemClick&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ListView&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ContentUris&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;withAppendedId&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -93,7 +87,8 @@
    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
       &lt;span class=&#34;c1&#34;&gt;//Lanzamos una actividad para ver, editar la nota
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;n&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_EDIT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
         <item>
@@ -103,46 +98,26 @@
             
             <guid>https://elbauldelprogramador.com/programacion-android-como-se-resuelven/</guid>
             <description>&lt;p&gt;Vamos a ver que estratégias usa Android para encontrar la actividad que corresponde a un intent basándose en los intent-filter. Para resolver este problema, se establece una jerarquía. En el primer lugar de dicha jerarquía se encuentra el nombre del componente que se adjunta al intent. Este tipo de intent son explícitos, y dado que ya se sabe el nombre del componente, el resto de datos asociados al intent se ignoran. Por el contrario, cuando el intent no disponga de nombre de componente asociado, será un intent implícito, para este tipo de intents hay diversas formas de encontrar la actividad correspondiente.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;La regla básica es que la acción, categoría o datos característicos de un intent deben coincidir, o estar presentes, en los intent-filter de la actividad. De forma análoga a los íntents, un intent-filter puede establecer varias acciones, categorías y atributos. Lo que quiere decir que una misma actividad (con varios intent-filters), puede ser válida y por lo tanto responder a intents de distinto tipo. Vamos a ver los distintos critérios que se siguen para considerar si el intent coincide con el intent-filter:&lt;/p&gt;
-
 &lt;h1 id=&#34;action&#34;&gt;Action&lt;/h1&gt;
-
 &lt;p&gt;Si un intent tiene una acción establecida, el intent-filter debe tener esa acción declarada o no tener ninguna acción definida. Es decir, si una actividad no tiene declarado ningún intent filter, se considera una opción para cualquier intent con una acción.&lt;/p&gt;
-
 &lt;h1 id=&#34;data&#34;&gt;Data&lt;/h1&gt;
-
 &lt;p&gt;Si no se especifica ningún tipo de dato en un intent-filter, éste no coincidirá con ningún intent que sí que tenga establecido cualquier tipo de dato adicional. Es decir, esa actividad solo se considerará una opción para los intent que no tengan especificado ningún dato.&lt;/p&gt;
-
 &lt;h1 id=&#34;data-type&#34;&gt;Data type&lt;/h1&gt;
-
-&lt;p&gt;Para que se considere como coincidencia un tipo de dato, el intent debe ser uno de los tipos de datos declarados en el intent-filter. Para determinar el tipo de dato android tiene dos formas. La primera es determinar el tipo de dato a partir de la URI (si la URI es una content URI) o si la URI es un fichero (file://&amp;#8230;). La segunda es mirar en el tipo de dato explícito del intent. Para que esto funcione correctamente el intent no debe tener una URI de datos adjunta, ya que se toma automáticamente cuando llamamos al método &lt;em&gt;setType()&lt;/em&gt; en el intent. Es posible cubrir multitud de subtipos con *.&lt;/p&gt;
-
+&lt;p&gt;Para que se considere como coincidencia un tipo de dato, el intent debe ser uno de los tipos de datos declarados en el intent-filter. Para determinar el tipo de dato android tiene dos formas. La primera es determinar el tipo de dato a partir de la URI (si la URI es una content URI) o si la URI es un fichero (file://…). La segunda es mirar en el tipo de dato explícito del intent. Para que esto funcione correctamente el intent no debe tener una URI de datos adjunta, ya que se toma automáticamente cuando llamamos al método &lt;em&gt;setType()&lt;/em&gt; en el intent. Es posible cubrir multitud de subtipos con *.&lt;/p&gt;
 &lt;h1 id=&#34;data-scheme&#34;&gt;Data scheme&lt;/h1&gt;
-
 &lt;p&gt;Para que un esquema de datos coincida (data scheme), el esquema de datos ha de estar presente tanto en el intent como en el intent-filter de la actividad. Un esquema de datos es la primera parte de una URI, por ejemplo, &lt;em&gt;http://, file://, content://, ftp://&lt;/em&gt; etc. Los intent no tienen definido ningún método para establecer el esquema de datos, ya que viene dado por la URI del intent.&lt;/p&gt;
-
 &lt;p&gt;En el caso de que el esquema sea del tipo &lt;em&gt;content: ó file:&lt;/em&gt;, se considera una coincidencia independientemente de lo que se especifique en el intent-filter. Se aplica esta regla porque cada componente debe saber como leer datos desde urls del tipo &lt;em&gt;content&lt;/em&gt; o &lt;em&gt;file&lt;/em&gt;, ya que son locales al dispositivo.&lt;/p&gt;
-
 &lt;h1 id=&#34;data-authority&#34;&gt;Data Authority&lt;/h1&gt;
-
-&lt;p&gt;En el caso de que no se especifique authority alguno en el intent-filter, se obtendrá una coincidéncia para cualquier data URI authority. Si por el contrario se especifica en el intent-filter, como ejemplo pongamos &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, entonces se considerará una coincidencia un esquema de datos y una authority.&lt;/p&gt;
-
-&lt;p&gt;Un ejemplo fácil para comprender esto podría ser que tengamos esto declarado como authority en el intent-filter &lt;em&gt;www.elbauldelprogramador.org&lt;/em&gt;, y como esquema de datos &lt;em&gt;https&lt;/em&gt;, todo intent fallará si usamos lo siguiente, &lt;em&gt;/path&lt;/em&gt;, ya que el esquema de datos &lt;em&gt;http&lt;/em&gt; no está declarado.&lt;/p&gt;
-
+&lt;p&gt;En el caso de que no se especifique authority alguno en el intent-filter, se obtendrá una coincidéncia para cualquier data URI authority. Si por el contrario se especifica en el intent-filter, como ejemplo pongamos &lt;em&gt;&lt;a href=&#34;http://www.elbauldelprogramador.org&#34;&gt;www.elbauldelprogramador.org&lt;/a&gt;&lt;/em&gt;, entonces se considerará una coincidencia un esquema de datos y una authority.&lt;/p&gt;
+&lt;p&gt;Un ejemplo fácil para comprender esto podría ser que tengamos esto declarado como authority en el intent-filter &lt;em&gt;&lt;a href=&#34;http://www.elbauldelprogramador.org&#34;&gt;www.elbauldelprogramador.org&lt;/a&gt;&lt;/em&gt;, y como esquema de datos &lt;em&gt;https&lt;/em&gt;, todo intent fallará si usamos lo siguiente, &lt;em&gt;/path&lt;/em&gt;, ya que el esquema de datos &lt;em&gt;http&lt;/em&gt; no está declarado.&lt;/p&gt;
 &lt;h1 id=&#34;data-path&#34;&gt;Data Path&lt;/h1&gt;
-
 &lt;p&gt;Ningún path (ruta) especificado en el intent-filter resultará ser una coincidencia para cualquier path entrante. Para validar un intent, el esquema de datos, el authority y el path trabajan juntos. Es decir en &lt;em&gt;&lt;a href=&#34;http://elbauldelprogramador.org/path&#34;&gt;http://elbauldelprogramador.org/path&lt;/a&gt;&lt;/em&gt; los tres trabajan juntos para validar el intent.&lt;/p&gt;
-
 &lt;h1 id=&#34;intent-categories&#34;&gt;Intent Categories&lt;/h1&gt;
-
 &lt;p&gt;Cada &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias&#34;&gt;categoría&lt;/a&gt; debe estar presente en el intent-filter. En el caso de que en el intent-filter no exista ninguna categoría especificada, esa actividad solo será una coincidencia para los intent que no tengan ninguna categoría especificada. Sin embargo, hay que tener en cuenta que los &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intent implícitos&lt;/a&gt; que se pasan &lt;strong&gt;startActivity()&lt;/strong&gt; contienen al menos una categoría que es &lt;em&gt;android.intent-category.DEFAULT&lt;/em&gt;. Por lo tanto, hemos de tener en cuenta que si queremos llamar a una actividad mediante un intent implícito debemos registrar dicha categoría en el intent-filter.&lt;/p&gt;
-
 &lt;p&gt;Si una actividad no tiene declarada la categoría por defecto, pero conocemos su nombre de componente, podémos llamarle mediante un intent explícito.&lt;/p&gt;
-
-&lt;h1 id=&#34;siguiente-tema-ejemplo-de-uso-de-action-pick-3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h1&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-ejemplo-de-uso-de-action_pick3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-ejemplos-de-uso-de/&#34;&gt;Ejemplo de uso de ACTION_PICK&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -152,34 +127,30 @@
             
             <guid>https://elbauldelprogramador.com/programacion-android-intents-categorias/</guid>
             <description>&lt;p&gt;Las actividades se pueden clasificar en categorías para así poder buscarlas basándonos en el nombre de dicha categoría. Por ejemplo, mientras el sistema se está iniciando, busca en las actividades las que estén bajo la categoría &lt;em&gt;CATEGORY_LAUNCHER&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;La convención usada para nombrar a las categorías es (para el caso de CATEGORY_LAUNCHER):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;android.intent.category.LAUNCHER&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La forma de declarar las categorías en el AndroidManifest es la siguiente:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;android.intent.category.LAUNCHER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La forma de declarar las categorías en el AndroidManifest es la siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.PrincipalActivity&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/app_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
    &lt;span class=&#34;nt&#34;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
       &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android.intent.action.MAIN&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
       &lt;span class=&#34;nt&#34;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android.intent.category.LAUNCHER&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Vamos a ver algunas categorías predefinidas, podéis encontrar la lista de todas ellas en &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE&#34;&gt;developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE&lt;/a&gt;:&lt;/p&gt;
-
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vamos a ver algunas categorías predefinidas, podéis encontrar la lista de todas ellas en &lt;!-- raw HTML omitted --&gt;developer.android.com/reference/android/content/Intent.html#CATEGORY_ALTERNATIVE&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;CATEGORY_DEFAULT:&lt;/em&gt;&lt;/strong&gt; Si declaramos una actividad bajo la categoría DEFAULT, podrá ser invocada mediante &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intents implícitos&lt;/a&gt;, de lo contrario, habrá que llamarla con intents explícitos.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;CATEGORY_BROWSABLE:&lt;/em&gt;&lt;/strong&gt; Si la actividad es de este tipo, podrá ser invocada con seguridad por el navegador para mostrar los datos referenciados por un link, como una imagen o un email.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;CATEGORY_GADGET:&lt;/em&gt;&lt;/strong&gt; La actividad se puede embeber dentro de otra actividad que pueda albergar gadgets.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;em&gt;CATEGORY_HOME:&lt;/em&gt;&lt;/strong&gt; Suele existir solo una actividad de este tipo, que es la pantalla principal, esta actividad se muestra al iniciar el teléfono o pulsar el botón home. Si existe más de una se le pregunta al usuario cual elegir.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;CATEGORY_DEFAULT:&lt;/strong&gt;&lt;/em&gt; Si declaramos una actividad bajo la categoría DEFAULT, podrá ser invocada mediante &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-conceptos&#34;&gt;intents implícitos&lt;/a&gt;, de lo contrario, habrá que llamarla con intents explícitos.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;CATEGORY_BROWSABLE:&lt;/strong&gt;&lt;/em&gt; Si la actividad es de este tipo, podrá ser invocada con seguridad por el navegador para mostrar los datos referenciados por un link, como una imagen o un email.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;CATEGORY_GADGET:&lt;/strong&gt;&lt;/em&gt; La actividad se puede embeber dentro de otra actividad que pueda albergar gadgets.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;CATEGORY_HOME:&lt;/strong&gt;&lt;/em&gt; Suele existir solo una actividad de este tipo, que es la pantalla principal, esta actividad se muestra al iniciar el teléfono o pulsar el botón home. Si existe más de una se le pregunta al usuario cual elegir.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Cuando usamos un intent para iniciar una actividad podemos especificar qué tipo de actividad queremos especificando la categoría. Otra opción es buscar las actividades que coincidan con una determinada categoría, por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_MAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addCategory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CATEGORY_LAUNCHER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;PackageManager&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;getPackageManager&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolveinfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;queryIntentActivities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;PackageManager permite encontrar actividades que coincidan con un intent sin llegar a invocarlas. Una vez ejecutado lo de arriba, podemos iterar sobre la lista e invocar a la actividad que coincida con el nombre que deseemos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ResolveInfo&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;ri:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolveinfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;queryIntentActivities&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PackageManager permite encontrar actividades que coincidan con un intent sin llegar a invocarlas. Una vez ejecutado lo de arriba, podemos iterar sobre la lista e invocar a la actividad que coincida con el nombre que deseemos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ResolveInfo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Info&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pkgName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;activityInfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;packageName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;className&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;activityInfo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -188,16 +159,14 @@
       &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setClassName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pkgName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;className&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es posible lanzar una actividad basándonos en el nombre de la categoría:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es posible lanzar una actividad basándonos en el nombre de la categoría:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_MAIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addCategory&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;CATEGORY_LAUNCHER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como mencioné anteriormente, en el caso de que exista más de una actividad que satisfaga las condiciones que impone el intent, se mostrará un diálogo al usuario para que elija cual lanzar.&lt;/p&gt;
-
+&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como mencioné anteriormente, en el caso de que exista más de una actividad que satisfaga las condiciones que impone el intent, se mostrará un diálogo al usuario para que elija cual lanzar.&lt;/p&gt;
 &lt;p&gt;Si quisiéramos invocar un intent para volver a la pantalla principal, basta con cambiar la categoría del código de arriba de &lt;em&gt;Intent.CATEGORY_LAUNCHER&lt;/em&gt; a &lt;em&gt;Intent.CATEGORY_HOME&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;siguiente-tema-cómo-se-resuelven-los-intents-2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven/&#34;&gt;Cómo se resuelven los Intents&lt;/a&gt;&lt;/h1&gt;</description>
+&lt;h1 id=&#34;siguiente-tema-cómo-se-resuelven-los-intents2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-como-se-resuelven/&#34;&gt;Cómo se resuelven los Intents&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
         <item>
@@ -207,13 +176,9 @@
             
             <guid>https://elbauldelprogramador.com/programacion-android-intents-conceptos/</guid>
             <description>&lt;p&gt;Un intent sirve para invocar componentes, en android entendemos por componentes las &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-trabajar-con/&#34;&gt;activities,&lt;/a&gt; Que son componentes de UI [Interfaz gráfica], services, Código ejecutándose en segundo plano, broadcast receivers, Código que responde a un mensaje de transmisión [Broadcast messages] y &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-proveedores-de&#34;&gt;proveedores de contenido&lt;/a&gt;, código que abstráe los datos.&lt;/p&gt;
-
 &lt;h1 id=&#34;introducción-a-los-intents&#34;&gt;Introducción a los Intents&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como mecanismo para invocar componentes, los intents son bastante fáciles de comprender. Básicamente nos permiten llamar a aplicaciones externas a la nuestra, lanzar eventos a los que otras aplicaciones puedan responder, lanzar alarmas etc.&lt;/p&gt;
-
 &lt;p&gt;Vamos a mostrar un ejemplo, supongamos que tenemos la siguiente activity:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MiActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
@@ -221,8 +186,8 @@
         &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;MiActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El layout &lt;em&gt;R.Layout.MiActivity&lt;/em&gt; debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;AndroidManifest&lt;/a&gt;, que será algo así:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El layout &lt;em&gt;R.Layout.MiActivity&lt;/em&gt; debe estar declarado y ser un archivo de layout valido. Una vez creado este archivo de layout, es necesario registrarlo en el &lt;a href=&#34;https://elbauldelprogramador.com/fundamentos-programacion-android_16/&#34;&gt;AndroidManifest&lt;/a&gt;, que será algo así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.MiActivity&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Mi Activity&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -230,29 +195,25 @@
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nuestra.accion.nombreAccion&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android.intent.category.DEFAULT&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;/intent&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:&lt;/p&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al registrar la activity en el AndroidManifest, registramos también una acción que podremos usar para invocar a dicha actividad. El diseñador de la actividad puede asignar el nombre que crea conveniente a la acción. Ahora que ya está todo listo, podemos lanzar un intent para llamar a esta actividad:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;invokeMiActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;actionName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;nuestra.accion.nombreAccion&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;actionName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;La convención que se usa para nombrar una acción suele ser &lt;code&gt;&amp;lt;nombredenuestropaquete&amp;gt;.intent.action.NOMBRE_ACCION&amp;lt;/nombredenuestropaquete&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Una vez que se invoca a la actividad, ésta tiene la posibilidad de recuperar el intent que la llamó. Y podemos recuperarlo del siguiente modo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Este código se inserta en el método onCreate() de la actividad.
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;Log&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Tag&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;La actividad no se ha llamado mediante un intent.&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;intents-disponibles-en-android&#34;&gt;Intents disponibles en Android&lt;/h1&gt;
-
-&lt;p&gt;En &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/guide/appendix/g-app-intents.html&#34;&gt;developer.android.com/guide/appendix/g-app-intents.html&lt;/a&gt; se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y &lt;strong&gt;WEB_SEARCH&lt;/strong&gt;, que abren el navegador en una url específica o realizan una búsqueda.&lt;/p&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;intents-disponibles-en-android&#34;&gt;Intents disponibles en Android&lt;/h1&gt;
+&lt;p&gt;En &lt;!-- raw HTML omitted --&gt;developer.android.com/guide/appendix/g-app-intents.html&lt;!-- raw HTML omitted --&gt; se puede encontrar una lista con las aplicaciones disponibles en Android junto con los intents que las invocan. Por ejemplo, para el navegador web, tenemos dos acciones, **VIEW ** y &lt;strong&gt;WEB_SEARCH&lt;/strong&gt;, que abren el navegador en una url específica o realizan una búsqueda.&lt;/p&gt;
 &lt;p&gt;En el caso del dialer (marcador), tenemos las acciones CALL y DIAL, que vienen dadas por la URI &lt;em&gt;tel:numero_de_teléfono&lt;/em&gt;, la diferencia entre estas dos acciones, es que CALL realiza la llamada al número de la URI, y DIAL solo lo marca, pero no realiza la llamada.&lt;/p&gt;
-
 &lt;p&gt;Vamos a ver ejemplos de intents que invocan a las aplicaciones mencionadas en la documentación de Android:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;invokeWebBrowser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
@@ -281,41 +242,32 @@
    &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;geo:0,0?z=4&amp;amp;q;=restaurantes&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
    &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;composición-de-los-intents&#34;&gt;Composición de los intents&lt;/h1&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;composición-de-los-intents&#34;&gt;Composición de los intents&lt;/h1&gt;
 &lt;p&gt;Un intent está formado por una acción, datos (que se representan mediante URIs), datos extra en pares clave/valor y un nombre de clase explícito, llamado nombre del componente.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Es necesario aclarar algo, cuando un intent trae consigo un nombre de componente, se le llama intent explícito. Cuando no lo lleva y depende de la acción y los datos se llama intent implícito.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;intents-y-data-uris&#34;&gt;Intents y Data URIs&lt;/h1&gt;
-
 &lt;p&gt;Como vimos un poco más arriba los URIs para las acciones ACTION_DIAL y ACTION_CALL tienen la estructura &lt;em&gt;tel:número&lt;/em&gt;, y la manera de usar esta URI en el intent para pasarla como dato es la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tel:555-555-555&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El nombre de las acciones normalmente suele ser un String o un String constante con el nombre del paquete como prefijo.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tel:555-555-555&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El nombre de las acciones normalmente suele ser un String o un String constante con el nombre del paquete como prefijo.&lt;/p&gt;
 &lt;p&gt;La sección de &lt;em&gt;datos&lt;/em&gt; de un intent no son datos realmente, se trata de punteros a datos. Está representado por un string que representa una URI. Una Uri de un intent puede contener argumentos, como las urls de las web.&lt;/p&gt;
-
 &lt;h1 id=&#34;acciones-genéricas&#34;&gt;Acciones genéricas&lt;/h1&gt;
-
 &lt;p&gt;Vamos a volver a ver el código que invoca al navegador web para analizarlo más en profundidad:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;ACTION_VIEW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setData&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Uri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;parse&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://www.google.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;));&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este caso, ACTION_VEW parece una accíon muy genérica, Android se las ingenia para averiguar a qué actividad llamar en base a esta acción haciendo uso de la composición de la URI. Para ello, mira el esquema que posee la URI, que en este caso es http y pregunta a todas las actividades para saber cual de ellas comprende este esquema. Por lo tanto, la actividad del navegador deberá tener registrada la acción VIEW junto con el esquema de datos de http:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android.intent.action.VIEW&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;data&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:scheme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;data&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:scheme=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;https&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;/intent&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;SE puede obtener más informacion del elemento &lt;em&gt;data&lt;/em&gt; en &lt;a target=&#34;_blank&#34; href=&#34;http://developer.android.com/guide/topics/manifest/data-element.html&#34;&gt;developer.android.com/guide/topics/manifest/data-element.html&lt;/a&gt;&lt;/p&gt;
-
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SE puede obtener más informacion del elemento &lt;em&gt;data&lt;/em&gt; en &lt;!-- raw HTML omitted --&gt;developer.android.com/guide/topics/manifest/data-element.html&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h1 id=&#34;infomación-extra&#34;&gt;Infomación extra&lt;/h1&gt;
-
 &lt;p&gt;Los intents admiten además de las acciones y datos, un atributo adicional llamado &lt;em&gt;extras&lt;/em&gt;. Este tipo de dato viene dado por la forma clave/valor, en la cual el nombre de la clave normalmente suele empezar con el nombre del paquete y el valor puede ser de cualqueira de los tipos fundamentales u objetos arbitrários, siempre que se implemente la inrefaz android.os.Parcelable. Esta información extra se representa mediante la clase &lt;em&gt;android.os.Bundle&lt;/em&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//Obtener un bundle
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getExtras&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
@@ -340,34 +292,30 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;otroIntent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 
 &lt;span class=&#34;c1&#34;&gt;//Añadir el bundle al intent
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putExtras&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.&lt;/p&gt;
-
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;putExtras&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;getExtras devuelve el bundle que contenga el intent. Si el intent ya tiene un bundle, putExtras transfiere los pares clave/valor adicionales del bundle nuevo al que ya existía. Si no existe ningun bundle asociado, putExtras creará uno y copiará todos los valores.&lt;/p&gt;
 &lt;p&gt;La clase intent tiene declarados unas claves extras que acompañan a ciertas acciones, pueden verse en &lt;a href=&#34;http://developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&#34;&gt;developer.android.com/reference/android/content/Intent.html#EXTRA_ALARM_COUNT&lt;/a&gt;. Por ejemplo EXTRA_SUBJECT nos permite almacenar el asunto de un email. El valor de esta clave es &lt;em&gt;android.intent.extra.SUBJECT&lt;/em&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;usar-componentes-para-invocar-directamente-una-activity&#34;&gt;Usar componentes para invocar directamente una activity&lt;/h1&gt;
-
 &lt;p&gt;Una forma más directa de iniciar una actividad es mediante el su ComponentName, que es una abstracción del nombre del paquete y de la clase. Existen varios métodos para realizar esta acción en la clase Intent:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;setComponent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ComponentName&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;SeClassName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;packName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;className&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;setClassName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ClassName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;setClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Class&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Se puede usar el nombre de una clase directamente sin necesidad de construir un ComponentName. Por ejemplo, si tenemos la siguiente actividad:&lt;/p&gt;
+&lt;span class=&#34;n&#34;&gt;setClass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Class&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;classObject&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se puede usar el nombre de una clase directamente sin necesidad de construir un ComponentName. Por ejemplo, si tenemos la siguiente actividad:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;MiActivity&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Activity&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;MiActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Podemos usar el siguiente código para llamarla:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos usar el siguiente código para llamarla:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MiActivity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
-&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.MiActivity&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Mi Activity&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.&lt;/p&gt;
-
-&lt;h1 id=&#34;siguiente-tema-intents-categorías-5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h1&gt;</description>
+&lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;start&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así, cualquier intent podrá iniciar la actividad, pero para ello, debemos registrar dicha actividad en el AndroidManifest así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;activity&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.MiActivity&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:label=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Mi Activity&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sin ningún tipo de intent-filter, ya que estos no son necesarios cuando se invoca a una actividad directamente mediante el nombre de su clase. Recordad que este intent es de tipo explícito.&lt;/p&gt;
+&lt;h1 id=&#34;siguiente-tema-intents---categorías5&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-intents-categorias/&#34;&gt;Intents - Categorías&lt;/a&gt;&lt;/h1&gt;</description>
         </item>
         
     </channel>

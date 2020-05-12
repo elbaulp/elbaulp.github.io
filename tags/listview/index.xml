@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Listview on El Baúl del programador</title>
+        <title>ListView on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/listview/</link>
-        <description>Recent content in Listview on El Baúl del programador</description>
+        <description>Recent content in ListView on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Tue, 30 Jun 2015 16:48:42 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/listview/</link>
-            <title>Listview on El Baúl del programador</title>
+            <title>ListView on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,32 +22,32 @@
             
             <guid>https://elbauldelprogramador.com/como-hacer-scroll-en-un-listview-que-est-dentro-de-un-scrollview-en-android/</guid>
             <description>&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android&#34;&gt;Android&lt;/a&gt;, cuando se tiene un &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_28/&#34;&gt;&lt;code&gt;ListView&lt;/code&gt;&lt;/a&gt;, dentro de un &lt;code&gt;ScrollView&lt;/code&gt;, es posible que el último capture todos los eventos &lt;code&gt;onTouch&lt;/code&gt;, y no sea posible utilizar el &lt;code&gt;ListView&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Para solucionar el problema, bastaría con deshabilitar la captura del evento &lt;code&gt;onTouch&lt;/code&gt; para el &lt;code&gt;ScrollView&lt;/code&gt;, si lo que estamos pulsando es el &lt;code&gt;ListView&lt;/code&gt;, es decir:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Al &lt;code&gt;ScrollView&lt;/code&gt;, le añadimos un evento &lt;code&gt;onTouch&lt;/code&gt;. Dentro, recuperaremos el &lt;code&gt;ListView&lt;/code&gt;, para deshabilitar en su padre la intercepción de eventos &lt;code&gt;onTouch&lt;/code&gt;. En éste caso, el padre del &lt;code&gt;ListView&lt;/code&gt; es el &lt;code&gt;ScrollView&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;miScrollView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;OnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span class=&#34;n&#34;&gt;miScrollView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;OnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onTouch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MotionEvent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;findViewById&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;miListView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;).&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getParent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
                 &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;requestDisallowInterceptTouchEvent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Al &lt;code&gt;ListView&lt;/code&gt;, le añadimos también un &lt;code&gt;onTouch&lt;/code&gt;, y haremos el proceso inverso.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;miListView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;OnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al &lt;code&gt;ListView&lt;/code&gt;, le añadimos también un &lt;code&gt;onTouch&lt;/code&gt;, y haremos el proceso inverso.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span class=&#34;n&#34;&gt;miListView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;setOnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;View&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;OnTouchListener&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;boolean&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onTouch&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;View&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MotionEvent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;event&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getParent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;requestDisallowInterceptTouchEvent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La documentación oficial del método es:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La documentación oficial del método es:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Called when a child does not want this parent and its ancestors to intercept touch events with onInterceptTouchEvent(MotionEvent). This parent should pass this call onto its parents. This parent must obey this request for the duration of the touch (that is, only clear the flag after this parent has received an up or a cancel. Parameters disallowIntercept   True if the child does not want the parent to intercept touch events. Es decir, le pasaremos &lt;code&gt;true&lt;/code&gt; cuando la vista hija no quiera que el padre intercepte eventos &lt;code&gt;onTouch&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Called when a child does not want this parent and its ancestors to intercept touch events with onInterceptTouchEvent(MotionEvent). This parent should pass this call onto its parents. This parent must obey this request for the duration of the touch (that is, only clear the flag after this parent has received an up or a cancel. Parameters disallowIntercept 	True if the child does not want the parent to intercept touch events. Es decir, le pasaremos &lt;code&gt;true&lt;/code&gt; cuando la vista hija no quiera que el padre intercepte eventos &lt;code&gt;onTouch&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
         </item>
         

@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Robótica on El Baúl del programador</title>
+        <title>robótica on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/rob%C3%B3tica/</link>
-        <description>Recent content in Robótica on El Baúl del programador</description>
+        <description>Recent content in robótica on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Sun, 16 Sep 2018 18:42:00 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/rob%C3%B3tica/</link>
-            <title>Robótica on El Baúl del programador</title>
+            <title>robótica on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,14 +21,11 @@
             <pubDate>Sun, 16 Sep 2018 18:42:00 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/arduino-sigue-lineas-obstaculos/</guid>
-            <description>
-
-&lt;blockquote&gt;
+            <description>&lt;blockquote&gt;
 &lt;p&gt;Este proyecto forma parte de un trabajo para la asignatura &lt;em&gt;Robótica Móvil y
 Neurobótica&lt;/em&gt; del &lt;em&gt;Máster en Ciencia de Datos&lt;/em&gt; de la ETSIIT. Sus autores son
 &lt;a href=&#34;https://elbauldelprogramador.com/author/cristina/&#34;&gt;Cristina Heredia&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com/author/alex/&#34;&gt;Alejandro Alcalde.&lt;/a&gt; El código está disponible en &lt;a href=&#34;https://github.com/HerAlc/LineFollowerObstacles&#34;&gt;&lt;em&gt;HerAlc/LineFollowerObstacles&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;El proyecto se compone de &lt;strong&gt;dos partes&lt;/strong&gt;. La &lt;strong&gt;primera&lt;/strong&gt; consiste en crear un robot
 que siga un camino pre-establecido marcado con líneas, además, debe evitar
 cualquier obstáculo que se encuentre en el camino. En caso de encontrarse con un
@@ -37,41 +33,24 @@ obstáculo, el robot se detiene unos segundos y avisa, si pasado un tiempo el
 obstáculo sigue presente, el robot da media vuelta y sigue en camino contrario.
 La &lt;strong&gt;segunda parte&lt;/strong&gt; se trata de implementar este funcionamiento en el entorno
 simulado Vrep.&lt;/p&gt;
-
 &lt;h2 id=&#34;arduino&#34;&gt;Arduino&lt;/h2&gt;
-
 &lt;p&gt;Para esta parte se ha implementado un Zumo capaz de conducir por sí mismo con las siguientes funcionalidades:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Sigue Líneas&lt;/li&gt;
 &lt;li&gt;Detección de obstáculos y toma de decisiones.&lt;/li&gt;
 &lt;li&gt;Avisos sonoros a los obstáculos.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Para el sigue líneas se usan tres &lt;strong&gt;sensores sigue  líneas&lt;/strong&gt; para detectar cambios de intensidad.&lt;/p&gt;
-
 &lt;p&gt;Antes de comenzar, el robot necesita calibrar el &lt;strong&gt;giroscopio&lt;/strong&gt; y los sensores sigue líneas. Para ello hay que pulsar el botón &lt;code&gt;A&lt;/code&gt; una vez, esto calibra el giroscopio. Pulsar el botón &lt;code&gt;A&lt;/code&gt; una segunda vez calibra los sensores sigue líneas.&lt;/p&gt;
-
 &lt;p&gt;Cabe mencionar que se parte del ejemplo Sigue Líneas de Arduino, disponible en el IDE de Arduino, las modificaciones realizadas han sido las siguientes:&lt;/p&gt;
-
 &lt;p&gt;Se integra código del ejemplo &lt;code&gt;MazeSolver&lt;/code&gt;, que hace uso del giroscopio, en concreto los ficheros &lt;code&gt;TurnSensor.h&lt;/code&gt; y &lt;code&gt;TurnSensor.cpp&lt;/code&gt;. Esto permite calibrar el giroscopio, el cual es necesario para conseguir que el robot de media vuelta e inicie el camino contrario si el obstáculo que encuentra en su camino no se retira en tres segundos.&lt;/p&gt;
-
 &lt;p&gt;Para la &lt;strong&gt;detección de obstáculos&lt;/strong&gt; se hace uso de un sensor de proximidad. La distancia a la que se para el robot se fija al valor 6. Cuando el robot se detiene al encontrar un obstáculo, avisa con una melodía simple compuesta por nosotros y similar al &lt;strong&gt;claxon&lt;/strong&gt; de un vehículo. Finalmente, cuando el robot espera más de tres segundos y el obstáculo sigue presente, avisa con otra melodía compuesta por nosotros e inicia al camino en sentido opuesto girando 180 grados.&lt;/p&gt;
-
 &lt;h3 id=&#34;vídeo&#34;&gt;Vídeo&lt;/h3&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34;
-src=&#34;https://www.youtube-nocookie.com/embed/UwPJgL0ix_8&#34; frameborder=&#34;0&#34;
-allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;vrep&#34;&gt;VREP&lt;/h2&gt;
-
 &lt;p&gt;Para el proyecto en VREP se ha implementado un robot &lt;strong&gt;Sigue Líneas&lt;/strong&gt; que se detiene ante la presencia de un obstáculo. Si el obstáculo se retira durante la simulación, el robot sigue su camino. Si el obstáculo no se retira, el robot permanece sin moverse para evitar chocar con él.&lt;/p&gt;
-
 &lt;p&gt;Para seguir las líneas se ha adaptado el ejemplo de VREP &lt;em&gt;LineFollowerBubbleRob&lt;/em&gt; para hacerlo funcionar con Zumo, usando el modelo proporcionado en clase. La adaptación ha consistido en modificar el código de &lt;em&gt;BubbleRob&lt;/em&gt;, que solo tiene dos motores, y hacerlo funcionar en el Zumo, con cuatro motores. Para ello se han tenido que ajustar parámetros de torque, peso etc de acuerdo al Zumo. También se desactivó el comportamiento cíclico de los motores.&lt;/p&gt;
-
 &lt;p&gt;Para evitar obstáculos se añade al robot un sensor de proximidad frontal, de forma similar al que se hizo en clase. Cuando el objeto se detecta a una distancia mínima pre-establecida, se detienen los motores del robot durante tres segundos. Transcurrido este tiempo, se vuelven a leer los datos del sensor de proximidad para comprobar si el objeto sigue presente o no. En caso de estar presente, el robot permanece parado, de lo contrario reanuda su marcha.&lt;/p&gt;
-
 &lt;p&gt;A continuación se muestra el código principal que controla el Zumo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;kr&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sysCall_actuation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;currTime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sim.getSimulationTime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -121,18 +100,12 @@ allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
     &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;frontRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearLeftMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;leftV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;sim.setJointTargetVelocity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rearRightMotor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rightV&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el código se lleva la cuenta del tiempo transcurrido desde la última vez que se detuvo el robot, para decidir cuando se debe hacer la siguiente lectura del sensor de proximidad. La distancia máxima de detección de objetos se fija a 0.25.&lt;/p&gt;
-
+&lt;span class=&#34;kr&#34;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el código se lleva la cuenta del tiempo transcurrido desde la última vez que se detuvo el robot, para decidir cuando se debe hacer la siguiente lectura del sensor de proximidad. La distancia máxima de detección de objetos se fija a 0.25.&lt;/p&gt;
 &lt;p&gt;Para el funcionamiento del sigue líneas se emplean tres sensores sigue líneas (Izquierdo, central y derecho), ubicados en la parte delantera del Robot. Dichos sensores se colocan con el eje z hacia abajo. De todos los datos proporcionados por los sensores se usa la intensidad media de la imagen para ajustar la velocidad de los motores. Aunque se incorporó un sensor central, no ha sido necesario su uso, ya que el robot sigue las líneas bien con los otros dos.&lt;/p&gt;
-
 &lt;p&gt;En los ficheros adjuntos se proporcionan vídeos de ejemplo de ambas prácticas.&lt;/p&gt;
-
 &lt;h3 id=&#34;vídeo-vrep&#34;&gt;Vídeo VREP&lt;/h3&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34;
-src=&#34;https://www.youtube-nocookie.com/embed/dixjPmbJ1Ts&#34; frameborder=&#34;0&#34;
-allow=&#34;autoplay; encrypted-media&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;!-- raw HTML omitted --&gt;
 </description>
         </item>
         

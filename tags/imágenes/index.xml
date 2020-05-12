@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Imágenes on El Baúl del programador</title>
+        <title>imágenes on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/im%C3%A1genes/</link>
-        <description>Recent content in Imágenes on El Baúl del programador</description>
+        <description>Recent content in imágenes on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Sat, 01 Oct 2016 16:32:13 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/im%C3%A1genes/</link>
-            <title>Imágenes on El Baúl del programador</title>
+            <title>imágenes on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,30 +22,24 @@
             
             <guid>https://elbauldelprogramador.com/obtener-dimension-imagen-internet-url/</guid>
             <description>&lt;h1 id=&#34;problema-dada-la-url-de-una-imagen-extraer-sus-dimensiones-ancho-y-alto&#34;&gt;Problema: Dada la url de una imagen extraer sus dimensiones (Ancho y alto)&lt;/h1&gt;
-
 &lt;p&gt;Queremos obtener las dimensiones de una imagen desde línea de comandos. La imagen puede ser local o estar en internet.  En anteriores artículos vimos algo parecido (&lt;a href=&#34;https://elbauldelprogramador.com/como-anadir-automaticamente-el-tamao-de-una-imagen-en-html-con-python/&#34; title=&#34;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&#34;&gt;Cómo Añadir Automáticamente El Tamaño De Una Imagen en HTML Con Python&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;solución-el-comando-identify-de-imagemagick&#34;&gt;Solución: el comando Identify de ImageMagick&lt;/h1&gt;
-
 &lt;p&gt;El comando &lt;code&gt;identify&lt;/code&gt; es un programa perteneciente a la suite &lt;em&gt;ImageMagick&lt;/em&gt;, citamos su página &lt;code&gt;man&lt;/code&gt;:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Identify describe el formato y características de una o más imágenes. Así como informar si una imagen está incompleta o dañada. La información dada incluye: Número de imagen, nombre, dimensiones, si es a color, número de colores, tamaño en bytes, formato y el tiempo que se tardó en procesarla. Se pueden acceder a más datos con la opción &lt;code&gt;--verbose&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;De todos esos datos, en este caso solo nos interesa la dimensión. Si ejecutamos el programa y le pasamos la url de una imagen, por ejemplo una del artículo &lt;a href=&#34;https://elbauldelprogramador.com/las-medallas-de-oro-en-las-olimpiadas-desde-1896-visualizadas/&#34; title=&#34;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&#34;&gt;Plumas Olímpicas, Visualización de las medallas Olímpicas desde 1896 hasta 2016&lt;/a&gt;, veremos lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ identify https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
 https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;gt;&lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;//elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png PNG 750x750&lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;750x750+0+0 &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;-bit sRGB 149KB &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.000u &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;:00.000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;750x750+0+0 8-bit sRGB 149KB 0.000u 0:00.000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto es útil, pero ¿qué pasa si queremos un formato en concreto? en mi caso necesitaba que me devolviera las dimensiones formateadas para insertarlas en una etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para ello usamos la opción &lt;code&gt;format&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ identify -format &lt;span class=&#34;s2&#34;&gt;&amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&lt;/span&gt; https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png
-&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
+&lt;span class=&#34;nv&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;750&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vemos nos devuelve las dimensiones listas para pegarlas en la etiqueta &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt;. Para evitar tener que escribir todo ese comando, basta con crear un &lt;code&gt;alias&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;imgsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;identify -format &amp;#34;width=\&amp;#34;%[fx:w]\&amp;#34; height=\&amp;#34;%[fx:h]\&amp;#34;\n&amp;#34;&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y a partir de ahora usaremos el comando con &lt;code&gt;imgsize&lt;/code&gt;.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -56,125 +49,91 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
             
             <guid>https://elbauldelprogramador.com/imagen-terminal-color-texto-a-juego-linux/</guid>
             <description>&lt;p&gt;Seguramente seas una de esas personas que pasan mucho tiempo delante del ordenador con una o varias shells abiertas. De hecho, seguramente tengas más que visto el fondo negro con letras blancas, o el estilo de terminal que pusiste hace tiempo,  porque cambiarlo todos los días no es el hobbie de nadie. Pero ¿y si se cambiara sólo?¿ y si pudieras poner tus imágenes favoritas de fondo del terminal, con un color de texto que no desentone con tu imágen  y tú no tuvieras que hacer nada?&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Aquí os quiero contar como se me ocurrió hacerlo a mí, con un script en bash  y así escapar de la rutina de estilo de las shells.&lt;/p&gt;
-
 &lt;h2 id=&#34;antes-de-comenzar&#34;&gt;Antes de comenzar&amp;hellip;&lt;/h2&gt;
-
 &lt;h1 id=&#34;comprobar-versión-de-gnome-shell&#34;&gt;Comprobar versión de gnome-shell&lt;/h1&gt;
-
 &lt;p&gt;El script es válido para &lt;strong&gt;versiones de gnome &amp;lt; 3.8&lt;/strong&gt;. Lo he probado en Linux Mint Debian Edition y en Ubuntu 14.04. En este último tuve que instalar gnome-shell.&lt;/p&gt;
-
 &lt;p&gt;Para instalar gnome-shell:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ sudo apt-get install gnome-shell&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para comprobar la versión de gnome:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ gnome-shell --version&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;instalar-imagemagick-y-gawk&#34;&gt;instalar ImageMagick y gawk&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ sudo apt-get install gnome-shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para comprobar la versión de gnome:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ gnome-shell --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;instalar-imagemagick-y-gawk&#34;&gt;instalar ImageMagick y gawk&lt;/h1&gt;
 &lt;p&gt;Usaremos funciones de ImageMagick para convertir las imágenes, y gawk para filtrar por expresiones. Para instalarlos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ sudo apt-get install gawk
-    cris@cris ~ $ sudo apt-get install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;hr /&gt;
-
+    cris@cris ~ $ sudo apt-get install imagemagick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h2 id=&#34;explicación-del-script&#34;&gt;Explicación del script&lt;/h2&gt;
-
 &lt;p&gt;La idea del script es modificar directamente los valores de configuración de terminal que se establecen en el fichero &lt;strong&gt;%gconf.xml&lt;/strong&gt; que se ubica en &lt;code&gt;home/user/.gconf/apps/gnome-terminal/profiles/Default/&lt;/code&gt;, para versiones de shell gnome &amp;lt; 3.8.&lt;/p&gt;
-
 &lt;h1 id=&#34;declaración-de-variables&#34;&gt;Declaración de variables&lt;/h1&gt;
-
 &lt;p&gt;Inicialmente declaramos las variables con la ruta de los comandos que vamos a utilizar frecuentemente. No es obligatorio, pero es recomendable. La variable &lt;strong&gt;ROUTE&lt;/strong&gt; contiene la ruta del directorio donde guardamos las imágenes que queremos poner de fondo.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/gconftool-2&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/sort&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/gawk&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/convert&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/miRuta/*&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt;&lt;/p&gt;
-
+    &lt;span class=&#34;nv&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/miRuta/*&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;gconftool-2&lt;/strong&gt; : herramienta de configuración gnome. La usaremos con la opción set para modificar el archivo de configuración.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt; : comando que ordena líneas de texto.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : escaneador de patrones. Lo usaremos para filtrar patrón hexadecimal.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;convert&lt;/strong&gt; : lo usaremos para redimensionar la imágen y convertirla en hibstograma.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;tomar-imágenes&#34;&gt;Tomar imágenes&lt;/h1&gt;
-
 &lt;p&gt;tomamos aleatoriamente una imágen de &lt;strong&gt;miRuta&lt;/strong&gt; para la terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Limpiamos la ruta, quedándonos solo con el nombre de la imágen:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Redimensionamos la imágen (sólo si es necesario, por ejemplo, si las imágenes que queremos usar son tamaño fondo de escritorio). Para no modificar la imágen original ni guardar muchas copias innecesarias, la guardamos en /tmp.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    convert &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -resize %50 &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como mis imágenes son tamaño fondo de escritorio, las redimensiono a la mitad de su tamaño para que se aprecien mejor en el terminal.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Limpiamos la ruta, quedándonos solo con el nombre de la imágen:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Redimensionamos la imágen (sólo si es necesario, por ejemplo, si las imágenes que queremos usar son tamaño fondo de escritorio). Para no modificar la imágen original ni guardar muchas copias innecesarias, la guardamos en /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    convert &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -resize %50 &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como mis imágenes son tamaño fondo de escritorio, las redimensiono a la mitad de su tamaño para que se aprecien mejor en el terminal.&lt;/p&gt;
 &lt;p&gt;Opcional: tomamos otra imágen aleatoriamente de la carpeta para fondo de escritorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;ponemos-la-imágen-de-fondo-en-el-terminal&#34;&gt;Ponemos la imágen de fondo en el terminal&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ponemos-la-imágen-de-fondo-en-el-terminal&#34;&gt;Ponemos la imágen de fondo en el terminal&lt;/h1&gt;
 &lt;p&gt;modificamos algunas configuraciones que vienen por defecto antes de aplicar los cambios, para que tengan efecto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#solido por defecto
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#solido por defecto&lt;/span&gt;
+
     &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;
 
     &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;
 
-    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora, ya podemos tomar la imágen redimensionada y ponerla como imágen de fondo del terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último, ponemos un color oscuro de fondo del terminal y un nivel de opacidad alto, para que se vea mejor el texto:&lt;/p&gt;
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora, ya podemos tomar la imágen redimensionada y ponerla como imágen de fondo del terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último, ponemos un color oscuro de fondo del terminal y un nivel de opacidad alto, para que se vea mejor el texto:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;#181824243131&amp;#34;&lt;/span&gt;
 
-    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.78&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;ponemos-color-del-texto-a-juego&#34;&gt;Ponemos color del texto a juego&lt;/h1&gt;
-
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.78&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ponemos-color-del-texto-a-juego&#34;&gt;Ponemos color del texto a juego&lt;/h1&gt;
 &lt;p&gt;Para ello, sacamos el hibstograma de colores de la imágen, y tomamos un tono de esos colores. Con &lt;strong&gt;convert&lt;/strong&gt; podemos indicar el número de colores que deseamos sacar y la profundidad. Luego los ordenamos según su orden numérico y filtramos solo el código hexadecimal de los colores con &lt;strong&gt;gawk&lt;/strong&gt;. Lo guardamos en un fichero de texto llamado paleta.txt que se creara en /tmp.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$CNVRT&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -colors &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -depth &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; -format &lt;span class=&#34;s1&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt; histogram:info:- &lt;span class=&#34;se&#34;&gt;\
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SORT&lt;/span&gt; --general-numeric-sort &lt;span class=&#34;se&#34;&gt;\
-&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$GAWK&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para finalizar, abrimos el fichero temporal &lt;strong&gt;paleta.txt&lt;/strong&gt; y leemos  6 primeras líneas, es decir, los 6 primeros colores:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#abrir fichero
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&amp;lt; /tmp/paleta.txt
-    &lt;span class=&#34;c1&#34;&gt;#leer 6 lineas
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color1 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$GAWK&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para finalizar, abrimos el fichero temporal &lt;strong&gt;paleta.txt&lt;/strong&gt; y leemos  6 primeras líneas, es decir, los 6 primeros colores:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#abrir fichero&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt; /tmp/paleta.txt
+    &lt;span class=&#34;c1&#34;&gt;#leer 6 lineas&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color1 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color2 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color3 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color4 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color5 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color6 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;#cerrar
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;y ponemos el último color leído como color de texto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$color6&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo de tomar el 6º color es porque como están ordenados de más claro a más oscuro, los colores claros &amp;ldquo; centrales&amp;rdquo; son los que mejor resultados dan. No obstante, puedes modificarlo dependiendo de tus fotos. El script no es infalible, la carpeta que yo uso tiene 700 imagenes y siempre hay  imágenes con las que falla eligiendo el color de texto más adecuado para su lectura, sobre todo en las  imágenes muy oscuras  donde no hay ningún color claro. Si se te ocurre alguna mejora, ¡comentala!&lt;/p&gt;
-
+    &lt;span class=&#34;c1&#34;&gt;#cerrar&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y ponemos el último color leído como color de texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$color6&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo de tomar el 6º color es porque como están ordenados de más claro a más oscuro, los colores claros &amp;quot; centrales&amp;rdquo; son los que mejor resultados dan. No obstante, puedes modificarlo dependiendo de tus fotos. El script no es infalible, la carpeta que yo uso tiene 700 imagenes y siempre hay  imágenes con las que falla eligiendo el color de texto más adecuado para su lectura, sobre todo en las  imágenes muy oscuras  donde no hay ningún color claro. Si se te ocurre alguna mejora, ¡comentala!&lt;/p&gt;
 &lt;p&gt;Opcional: si tambien quieres cambiar la imágen del escritorio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background picture-uri &lt;span class=&#34;s2&#34;&gt;&amp;#34;file:///&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILED&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;disfruta-y-luce-tus-terminales&#34;&gt;Disfruta y luce tus terminales&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background picture-uri &lt;span class=&#34;s2&#34;&gt;&amp;#34;file:///&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILED&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;disfruta-y-luce-tus-terminales&#34;&gt;Disfruta y luce tus terminales&lt;/h1&gt;
 &lt;h1 id=&#34;planifica-la-ejecución&#34;&gt;Planifica la ejecución&lt;/h1&gt;
-
 &lt;p&gt;Para no tener que andar lanzando el script, puedes planificarlo con &lt;strong&gt;crontab&lt;/strong&gt; para que se ejecute, por ejemplo cada vez que inicias el sistema:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ crontab -e &lt;span class=&#34;c1&#34;&gt;#para abrir contab
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    @reboot /miRuta_al_script/CambiaTerminales.sh # añadir tarea&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h1&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 656px) 656px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux2.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;386px&#34; /&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 650px) 650px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux3.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;650px&#34; height=&#34;386px&#34; /&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 656px) 656px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux4.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;656px&#34; height=&#34;385px&#34; /&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 1003px) 1003px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/imagen-terminal-color-texto-a-juego-linux5.png&#34; alt=&#34;imagen-terminal-color-texto-a-juego-linux2&#34; title=&#34;Ejemplo 1&#34; width=&#34;1003px&#34; height=&#34;581px&#34; /&gt;
-&lt;/figure&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ crontab -e &lt;span class=&#34;c1&#34;&gt;#para abrir contab&lt;/span&gt;
+    @reboot /miRuta_al_script/CambiaTerminales.sh &lt;span class=&#34;c1&#34;&gt;# añadir tarea&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;enlace-al-código&#34;&gt;Enlace al código&lt;/h1&gt;
-
 &lt;p&gt;Puedes bajarte el script en &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;Repositorio My Terminals Background Setter&#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         
@@ -184,14 +143,9 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-ordenar-imagenes-por-resolucion/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 128px) 128px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/07/sh.png&#34; title=&#34;Cómo ordenar imágenes por resolución&#34; alt=&#34;Cómo ordenar imágenes por resolución&#34; width=&#34;128px&#34; height=&#34;128px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hace poco me encontré queriendo ordenar una carpeta de fondos de pantalla por resolución, en lugar de otros métodos de ordenación más típicos como por nombre o tamaño. Así que buscando un poco encontré la respuesta en &lt;em&gt;superuser&lt;/em&gt;. El usuario &lt;em&gt;&lt;a href=&#34;http://superuser.com/users/4421/flammable&#34;&gt;flammable&lt;/a&gt;&lt;/em&gt; preguntaba cómo ordenar imágenes por resolución. La respuesta es la siguiente:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;el-script&#34;&gt;El script&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -200,8 +154,8 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
    &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    mkdir -p &lt;span class=&#34;nv&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    mv &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Yo lo modifiqué un poco acorde a mis necesidades:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Yo lo modifiqué un poco acorde a mis necesidades:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /ruta/mis/fondos
@@ -211,32 +165,30 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
    &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    mkdir -p /tmp/fondos/&lt;span class=&#34;nv&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
    cp &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; /tmp/fondos/&lt;span class=&#34;nv&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para no modificar las imágenes originales, ya que están en &lt;em&gt;Drive&lt;/em&gt;, y así poder seleccionar las que eliminar posteriormente.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para no modificar las imágenes originales, ya que están en &lt;em&gt;Drive&lt;/em&gt;, y así poder seleccionar las que eliminar posteriormente.&lt;/p&gt;
 &lt;h1 id=&#34;qué-hace-el-script&#34;&gt;Qué hace el script&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Recorrer todas las imágenes de una carpeta.
-
 &lt;ul&gt;
 &lt;li&gt;El comando &lt;strong&gt;identify&lt;/strong&gt; describe el formato y características de una o más imágenes, en concreto:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-format %wx%h\\n &amp;quot;$image&amp;quot;&lt;/code&gt;: muestra la resolución de la imagen &lt;code&gt;$image&lt;/code&gt; en formato &lt;em&gt;width x height&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Se crea una carpeta nombrándola con la resolución de la imágen.&lt;/li&gt;
 &lt;li&gt;Se copia la imagen a la carpeta.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Tras ésto, tenemos organizadas todas las imágenes en carpetas por resolución. Mi objetivo era eliminar las de menor resolución, así que fui apuntando dichas imágenes para luego borrarlas en la carpeta original (La de Drive), donde están todas juntas. Tras almacenar en un archivo los nombres de las imágenes a borrar, ejecuté el siguiente comando en la carpeta original:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;cat ../ABorrar&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
    find /Carpeta/original/ -iname &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt; -exec rm &lt;span class=&#34;s1&#34;&gt;&amp;#39;{}&amp;#39;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;renombrar-las-imágenes-para-que-contengan-su-resolución&#34;&gt;Renombrar las imágenes para que contengan su resolución&lt;/h1&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;renombrar-las-imágenes-para-que-contengan-su-resolución&#34;&gt;Renombrar las imágenes para que contengan su resolución&lt;/h1&gt;
 &lt;p&gt;Como menciona Juanjo en el comentario, otra opción más adecuada es &lt;a href=&#34;https://elbauldelprogramador.com/renombrar-archivos-masivamente-en/&#34; title=&#34;Renombrar archivos masívamente&#34;&gt;renombrar&lt;/a&gt; cada imagen con su resolución, para ello el siguiente script podría servir:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -246,13 +198,12 @@ https://elbauldelprogramador.com/img/Olympic-Feathers-Detail-7.png&lt;span class
 &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;identify -format %wx%h&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;n &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     rename &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^/[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$res&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;] - /&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$image&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así, las imágenes quedarán, por ejemplo, &lt;code&gt;[1280x1024] - nombre original.jpg&lt;/code&gt;.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así, las imágenes quedarán, por ejemplo, &lt;code&gt;[1280x1024] - nombre original.jpg&lt;/code&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;How to sort images into folders, based on resolution?&lt;/em&gt; »» &lt;a href=&#34;http://superuser.com/questions/17562/how-to-sort-images-into-folders-based-on-resolution&#34; target=&#34;_blank&#34;&gt;superuser.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to sort images into folders, based on resolution?&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;superuser.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

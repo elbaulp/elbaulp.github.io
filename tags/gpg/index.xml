@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Gpg on El Baúl del programador</title>
+        <title>gpg on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/gpg/</link>
-        <description>Recent content in Gpg on El Baúl del programador</description>
+        <description>Recent content in gpg on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 02 Oct 2017 17:32:33 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/gpg/</link>
-            <title>Gpg on El Baúl del programador</title>
+            <title>gpg on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,34 +21,24 @@
             <pubDate>Mon, 02 Oct 2017 17:32:33 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/04/GnuPG-Logo.png&#34; alt=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;gpg&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;GNU Privacy Guard&lt;/em&gt;).&lt;/p&gt;
-
 &lt;h1 id=&#34;qué-es-gpg&#34;&gt;¿Qué es &lt;strong&gt;gpg&lt;/strong&gt;?&lt;/h1&gt;
-
 &lt;p&gt;Me permito extraer el la definición de genbeta::Dev. Para una explicación más profunda del funcionamiento de &lt;strong&gt;gpg&lt;/strong&gt;, puedes dirigirte al artículo en GenBeta::Dev que cito en las referencias.&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;a href=&#34;http://www.gnupg.org/download/index.en.html&#34; target=&#34;_blank&#34;&gt;podéis descargarlo desde la página oficial&lt;/a&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
+&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;!-- raw HTML omitted --&gt;podéis descargarlo desde la página oficial&lt;!-- raw HTML omitted --&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
-
-&lt;p&gt;Descarga el plugin &lt;a href=&#34;http://www.vim.org/scripts/download_script.php?src_id=18070&#34; target=&#34;_blank&#34;&gt;gnupg.vim&lt;/a&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
+&lt;p&gt;Descarga el plugin &lt;!-- raw HTML omitted --&gt;gnupg.vim&lt;!-- raw HTML omitted --&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat ~/.vimrc
-:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;a href=&#34;http://www.vim.org/scripts/script.php?script_id=3645&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Introducción a &lt;strong&gt;gpg&lt;/strong&gt;&lt;/em&gt; »» &lt;a href=&#34;http://www.genbetadev.com/seguridad-informatica/manual-de-gpg-cifra-y-envia-datos-de-forma-segura&#34; target=&#34;_blank&#34;&gt;genbeta::dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Introducción a &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;genbeta::dev&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -59,114 +48,88 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 400px) 400px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2014/04/Chuleta-de-comandos-GPG.png&#34; title=&#34;Chuleta de comandos para GPG&#34; alt=&#34;Chuleta de comandos para GPG&#34; width=&#34;400px&#34; height=&#34;175px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando, una pequeña chuleta de comandos para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. Si encuentras algún error, no dudes en comentarlo.&lt;/p&gt;
-
 &lt;p&gt;He usado el “&lt;strong&gt;Nombre de Usuario&lt;/strong&gt;” como el nombre asociado a la clave. Perdón si no es muy imaginativo. Creo que GPG es bastante amplio en sus asignaciones de usuario, por ejemplo el nombre para mi clave privada es &lt;em&gt;Charles Lockhart&lt;/em&gt;, pero puedo referenciarlo simplemente poniendo Lockhart.&lt;/p&gt;
-
 &lt;p&gt;Empecemos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;crear-una-clave&#34;&gt;Crear una clave&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
-
-&lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-public-key&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Generalmente puedes seleccionar las que vienen por defecto.&lt;/p&gt;
+&lt;h1 id=&#34;exportar-una-clave-pública-dentro-del-archivo-publickey&#34;&gt;Exportar una clave pública dentro del archivo &lt;em&gt;public.key&lt;/em&gt;&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;public.key&lt;/em&gt; con la representación ascii de la clave pública para Nombre de Usuario. Esto es una variación de:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;el cual por sí mismo básicamente va a imprimir un montón de porquerías en tu pantalla. Recomiendo no hacerlo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export -a “Nombre de Usuario&lt;span class=&#34;s2&#34;&gt;&amp;#34;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;imprime la clave pública para el ‘Nombre de Usuario’ en la línea de comandos, lo cual es medio útil para exportar una clave privada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --export-secret-key -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt; &amp;gt; private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto creará un archivo llamado &lt;em&gt;private.key&lt;/em&gt; con la representación ascii de la clave privada para ‘Nombre de Usuario’.&lt;/p&gt;
 &lt;p&gt;Es muy parecido a exportar una clave pública, pero tienes que pisar algunas protecciones que vienen por default. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
-
 &lt;h1 id=&#34;importar-una-clave-pública&#34;&gt;Importar una clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --import public.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
-Esto agrega la clave pública en el archivo “*public.key*” a tu anillo de claves públicas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --import public.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si encontraste esta página, por suerte es lo que estabas buscando
+Esto agrega la clave pública en el archivo “&lt;em&gt;public.key&lt;/em&gt;” a tu anillo de claves públicas.&lt;/p&gt;
 &lt;h1 id=&#34;importar-una-clave-privada&#34;&gt;Importar una clave privada&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --allow-secret-key-import --import private.key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto agrega una clave privada en el archivo “*private.key&lt;em&gt;” a tu anillo de claves privadas. Hay una nota (&lt;/em&gt;) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --allow-secret-key-import --import private.key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto agrega una clave privada en el archivo “&lt;em&gt;private.key&lt;/em&gt;” a tu anillo de claves privadas. Hay una nota (*) al pie explicando porqué desearías hacer esto.&lt;/p&gt;
 &lt;h1 id=&#34;eliminar-una-clave-pública-de-tu-anillo-de-claves-públicas&#34;&gt;Eliminar una clave pública (de tu anillo de claves públicas):&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto elimina la clave pública de tu anillo de claves públicas.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;¡ATENCIÓN! Si hay una clave privada en tu anillo de claves privadas asociada con esta clave pública, ¡tendrás un error! Debes primero eliminar tu clave privada para este par de claves de tu anillo de claves privadas.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;eliminar-una-clave-secreta-una-clave-de-tu-anillo-de-claves-secreta&#34;&gt;Eliminar una clave secreta (una clave de tu anillo de claves secreta)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --delete-secret-key &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto elimina la clave secreta de tu anillo de claves secretas.&lt;/p&gt;
 &lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-públicas&#34;&gt;Listar las claves de tu anillo de claves públicas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-secret-keys&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --fingerprint &amp;gt; fingerprint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-las-claves-de-tu-anillo-de-claves-secretas&#34;&gt;Listar las claves de tu anillo de claves secretas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --list-secret-keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;generar-una-lista-corta-de-números-que-puedes-usar-a-través-de-un-método-alternativo-para-verificar-la-clave-pública&#34;&gt;Generar una lista corta de números que puedes usar a través de un método alternativo para verificar la clave pública&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --fingerprint &amp;gt; fingerprint
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto crea el archivo fingerprint con la información de la firma digital.&lt;/p&gt;
 &lt;h1 id=&#34;encriptar-datos&#34;&gt;Encriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt; somefile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Emisor&amp;#34;&lt;/span&gt; -r &lt;span class=&#34;s2&#34;&gt;&amp;#34;Nombre de Usuario del Destinatario&amp;#34;&lt;/span&gt; somefile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí hay algunas opciones útiles, como por ejemplo -u para especificar la clave secreta que será utilizada, y -r para especificar la clave pública del destinatario.
 Como por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;#34; mydata.tar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto debería crear un archivo llamado “*mydata.tar.gpg*” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -e -u &lt;span class=&#34;s2&#34;&gt;&amp;#34;Manuel Ginobili&amp;#34;&lt;/span&gt; -r “Un amigo&lt;span class=&#34;s2&#34;&gt;&amp;#34; mydata.tar
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto debería crear un archivo llamado “&lt;em&gt;mydata.tar.gpg&lt;/em&gt;” que contiene la información encriptada. Pienso que se debe especificar el nombre de usuario del emisor para que el destinatario pueda verificar que el contenido proviene de esa persona (¿Utilizando su firma digital?)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: &lt;em&gt;mydata.tar&lt;/em&gt; no se elimina, terminas teniendo dos archivos, por lo tanto si quieres tener sólo el archivo encriptado, deberás eliminar &lt;em&gt;mydata.tar&lt;/em&gt; tú mismo.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Un interesante comentario al margen, encripté el patch preventivo del kernel, un archivo de 55,247 bytes, y terminé con un archivo encriptado de 15,276 bytes.&lt;/p&gt;
-
 &lt;h1 id=&#34;desencriptar-datos&#34;&gt;Desencriptar datos&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “*mydata.tar*”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si tienes múltiples claves secretas, el comando elegirá la correcta, o mostrará un error si la correcta no existe. Se te pedirá que ingreses tu passphrase. Luego de ello existirá el archivo “&lt;em&gt;mydata.tar&lt;/em&gt;”, y el “original” encriptado, &lt;em&gt;mydata.tar.gpg&lt;/em&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: cuando originalmente escribí este borrador, era como funcionaba en mi sistema, sin embargo parece que ahora “&lt;code&gt;gpg -d mydata.tar.gpg&lt;/code&gt;” vuelca el contenido del archivo a la salida standard. La forma alternativa (que funciona en mi sistema, de todos modos) sería utilizar&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --o archivodesalida -d archivoencriptado.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;o utilizar &lt;em&gt;mydata.tar.gpg&lt;/em&gt; como por ejemplo,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -o mydata.tar -d mydata.tar.gpg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otra alternativa es ejecutar algo como&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg -d mydata.tar.gpg &amp;gt; mydata.tar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y simplemente enviar la salida dentro de un archivo. Pareciera funcionar de la misma manera.&lt;/p&gt;
 &lt;p&gt;Ok, entonces si eres un paranoico y quieres encriptar alguno de tus propios archivos, para que nadie pueda entrar en tu computadora y obtenerlos, simplemente encríptalos usandote a tí mismo como el contenedor.&lt;/p&gt;
-
 &lt;p&gt;No he utilizado estos comandos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --edit-key&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-revoke&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --edit-key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gpg --gen-revoke
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--gen-revoke&lt;/code&gt; crea un certificado de revocación, el cual es distribuido a los usuarios y los servidores de claves te dicen que tu clave ya no es más válida. Mira: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r721.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r721.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--edit-key&lt;/code&gt; te permite hacer una colección de operaciones con las claves. Mira: &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://www.gnupg.org/gph/en/manual/r899.html&#34;&gt;http://www.gnupg.org/gph/en/manual/r899.html&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;compartir-claves-secretas&#34;&gt;Compartir Claves Secretas&lt;/h1&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;NOTA: los siguientes casos de uso indican porqué los comandos &lt;code&gt;secret-key import/export&lt;/code&gt; existen, o al menos un par de ideas de qué puedes hacer con ellos. SIN EMBARGO, hay un poco de logística necesaria para compartir la clave secreta. ¿Cómo la pasamos de una computadora a otra? Creo que encriptarla y enviarla por e-mail probablemente estaría bien, pero yo no la enviaría desencriptada con e-mail, esto sería PELIGROSO.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Caso de Uso 1: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente si quieres un par de claves para todas tus computadoras (asumiento que tienes múltiples computadoras), entonces esto te permitirá exportar ese par de claves de la computadora original e importarla en las otras computadoras.&lt;/li&gt;
 &lt;li&gt;Caso de Uso 2: Arriba están mencionados los comandos para exportar e importar las claves secretas, y quiero explicar una razón por la cual probablemente quieras hacer esto. Básicamente, si perteneces a un grupo, y quisieras crear un par de clave simple para ese grupo, una persona debería crear el par de claves, luego exportar las claves pública y privada, darselas a los otros miembros del grupo y ellos deberían importar ese par. Luego un miembro del grupo o alguien afuera podría utilizar la clave pública del grupo, encriptando el mensaje y/o los datos, y enviándolo a los miembros del grupo, y todos ellos deberían poder tener acceso al mensaje y/o los datos. Basicamente, podrías crear un sistema simplificado donde sólo una clave pública es requerida para enviar cosas encriptadas a múltiples destinatarios.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Quick&amp;rsquo;n easy gpg cheatsheet&lt;/em&gt; »» &lt;a href=&#34;http://irtfweb.ifa.hawaii.edu/~lockhart/gpg/gpg-cs.html&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Quick&amp;rsquo;n easy gpg cheatsheet&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;Más artículos sobre GPG&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
@@ -177,39 +140,16 @@ Como por ejemplo:&lt;/p&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/</guid>
-            <description>&lt;figure&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/04/GnuPG-Logo.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 400px) 400px, 100vw&#34;
-            width=&#34;400&#34;
-            height=&#34;175&#34;&gt;
-          &lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante &lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;GPG&lt;/a&gt;, &lt;strong&gt;Mailvelope&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
-
 &lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
-
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-chrome&#34;&gt;Descargar e instalar Mailvelope en Chrome&lt;/h1&gt;
-
-&lt;p&gt;Los usuarios de este navegador simplemente deben instalar Mailvelope como cualquier otro plugin en la siguiente &lt;a href=&#34;https://chrome.google.com/webstore/detail/mailvelope/kajibbejlbohfaggdiogboambcijhkke?hl=en-US&#34; title=&#34;Instalar Mailvelope en Chrome&#34; target=&#34;_blank&#34;&gt;dirección&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Los usuarios de este navegador simplemente deben instalar Mailvelope como cualquier otro plugin en la siguiente &lt;!-- raw HTML omitted --&gt;dirección&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-firefox&#34;&gt;Descargar e instalar Mailvelope en Firefox&lt;/h1&gt;
-
-&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;a href=&#34;https://github.com/mailvelope/mailvelope&#34; title=&#34;Compilar Mailvelope&#34; target=&#34;_blank&#34;&gt;documentación oficial&lt;/a&gt;:&lt;/p&gt;
-
+&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;!-- raw HTML omitted --&gt;documentación oficial&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -223,116 +163,25 @@ git checkout -t origin/firefox
 git submodule init
 git submodule update
 make build
-make dist-ff&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
-
+make dist-ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
 &lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;
-
 &lt;p&gt;Una vez instalado mailvelope en el navegador correspondiente, hacemos &lt;strong&gt;click en el icono del plugin » opciones&lt;/strong&gt;. Aparecerá un formulario que rellenaremos con un nombre, el correo a usar y un &lt;strong&gt;passphrase&lt;/strong&gt;, en las opciones avanzadas podemos elegir el algoritmo de cifrado, la longitud y la fecha de expiración:&lt;/p&gt;
-
-&lt;figure&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 610px) 610px, 100vw&#34;
-            width=&#34;610&#34;
-            height=&#34;619&#34;&gt;
-          &lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;enviar-la-clave-pública-a-un-servidor-de-llaves&#34;&gt;Enviar la clave pública a un servidor de llaves&lt;/h1&gt;
-
-&lt;p&gt;El par de claves pública/privada que acabamos de generar debe aparecer en &lt;em&gt;Display keys&lt;/em&gt;. La seleccionamos y hacemos click en &lt;strong&gt;Export » Display public key&lt;/strong&gt;, copiamos la llave y la pegamos en la sección &lt;strong&gt;Submission And Publication&lt;/strong&gt; del servidor de llaves &lt;a href=&#34;http://keyserver.borgnet.us/&#34; target=&#34;_blank&#34;&gt;keyserver.borgnet.us&lt;/a&gt;. A partir de ahora, cualquiera que tenga a su disposición la clave pública que acabamos de subir al servidor podrá enviarnos un correo cifrado.&lt;/p&gt;
-
+&lt;p&gt;El par de claves pública/privada que acabamos de generar debe aparecer en &lt;em&gt;Display keys&lt;/em&gt;. La seleccionamos y hacemos click en &lt;strong&gt;Export » Display public key&lt;/strong&gt;, copiamos la llave y la pegamos en la sección &lt;strong&gt;Submission And Publication&lt;/strong&gt; del servidor de llaves &lt;!-- raw HTML omitted --&gt;keyserver.borgnet.us&lt;!-- raw HTML omitted --&gt;. A partir de ahora, cualquiera que tenga a su disposición la clave pública que acabamos de subir al servidor podrá enviarnos un correo cifrado.&lt;/p&gt;
 &lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
-
-&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;a href=&#34;http://keyserver.borgnet.us:11371/pks/lookup?op=get&amp;search=0x083EDE12BE101B2B&#34; target=&#34;_blank&#34;&gt;enlace&lt;/a&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
-
+&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;!-- raw HTML omitted --&gt;enlace&lt;!-- raw HTML omitted --&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
 &lt;p&gt;Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope1.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope1.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 597px) 597px, 100vw&#34;
-            width=&#34;597&#34;
-            height=&#34;592&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como vemos en la imagen, aparece un simbolo a la derecha, tenemos que pulsarlo y escribir en mensaje ahí:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope2.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-            width=&#34;1255&#34;
-            height=&#34;978&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como aparece en la imagen, si es la primera vez que ambos correos se ponen en contacto, hay que enviar la clave pública para que la otra persona pueda reponder con un mensaje cifrado. Luego hacemos click en el candado y seleccionamos a clave pública con la que cifrar el mensaje, en este caso con la del correo de este blog, que hemos importado más arriba. Ya solo queda hacer click en &lt;strong&gt;Transfer&lt;/strong&gt; y obtendremos esto:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope3.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope3.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 590px) 590px, 100vw&#34;
-            width=&#34;590&#34;
-            height=&#34;587&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Pulsamos enviar y listo.&lt;/p&gt;
-
 &lt;p&gt;El proceso contrario, es decir, cuando nos envíen un email cifrado es bastante intuitivo, abrimos el correo y nos encontramos con esto:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope4.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/08/Cómo-cifrar-correos-con-GPG-usando-Mailvelope4.png&#34;
-            alt=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;
-            sizes=&#34;(min-width: 795px) 795px, 100vw&#34;
-            width=&#34;795&#34;
-            height=&#34;380&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro &lt;strong&gt;passphrase&lt;/strong&gt; y descifraremos el mensaje.&lt;/p&gt;
-
 &lt;p&gt;Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.&lt;/p&gt;</description>
         </item>
         

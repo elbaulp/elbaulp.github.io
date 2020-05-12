@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Python on The Programmer&#39;s Chest</title>
+        <title>python on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/tags/python/</link>
-        <description>Recent content in Python on The Programmer&#39;s Chest</description>
+        <description>Recent content in python on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 04 Dec 2017 12:12:41 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/tags/python/</link>
-            <title>Python on The Programmer&#39;s Chest</title>
+            <title>python on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,66 +22,87 @@
             
             <guid>https://elbauldelprogramador.com/en/cryptography-101-modular-exponentiation/</guid>
             <description>
+&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;This post is part of a series on &lt;strong&gt;Cryptography 101&lt;/strong&gt;, source code is available at &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34;&gt;elbaulp/cripto&lt;/a&gt;, there is also a &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101/&#34;&gt;Table of Contents.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;h1 id=&#34;modular-exponentiation&#34;&gt;Modular Exponentiation&lt;/h1&gt;
-
-&lt;p&gt;Given &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem&#34; title=&#34;Fermat-Euler Theorem&#34;&gt;Fermat-Euler Theorem&lt;/a&gt;:&lt;/p&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Modular Exponentiation
+&lt;/h2&gt;
+&lt;p&gt;
+Given &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;m&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&amp;#39;s_little_theorem&#34;&gt;Fermat-Euler Theorem&lt;/a&gt;:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Given \(a,n \in \mathbb N\), if \(gcd(a,n) = 1\), \(a^{\phi(n)} \equiv 1\pmod n\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat-Euler theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).&lt;/p&gt;
-
-&lt;p&gt;A particular case of Fermat-Euler Theorem is &lt;em&gt;Fermat&#39;s Little Theorem:&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;
+Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat-Euler theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).
+&lt;/p&gt;
+&lt;p&gt;
+A particular case of Fermat-Euler Theorem is &lt;em&gt;Fermat&amp;#39;s Little Theorem:&lt;/em&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Given p prime, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) then \(a^{p-1} \equiv 1\pmod p\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;As consequence, now you have \(a^{p} \equiv a\pmod p\). Let see it with more examples:&lt;/p&gt;
-
-&lt;p&gt;\(\mathbb Z_4\) units are \(\mathcal U(\mathbb Z_4) = \{1,3\}\), it has only two units because \(\phi(4) = \phi(2^2) = 2\), particularly those units are 1 and 3, because they satisfy \(1^2 = 3^2 = 1\). Above you saw that in \(\mathbb Z_5,\ \phi(5) = 4\), and therefore all its elements &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/#computing-modular-inverses&#34; title=&#34;have inverse&#34;&gt;have inverse&lt;/a&gt;. Lets check one of Fermat&#39;s Little theorem variants also holds in \(\mathbb Z_5\). The theorem states \(a^{p} \equiv a\pmod p\), and as you can see, in \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).&lt;/p&gt;
-
-&lt;h2 id=&#34;an-algorithm-to-compute-modular-exponentiation&#34;&gt;An algorithm to compute modular exponentiation&lt;/h2&gt;
-
-&lt;p&gt;There is more than one algorithm to compute modular exponentiation, here is one:&lt;/p&gt;
-
+&lt;p&gt;
+As consequence, now you have \(a^{p} \equiv a\pmod p\). Let see it with more examples:
+&lt;/p&gt;
+&lt;p&gt;
+\(\mathbb Z_4\) units are \(\mathcal U(\mathbb Z_4) = \{1,3\}\), it has only two units because \(\phi(4) = \phi(2^2) = 2\), particularly those units are 1 and 3, because they satisfy \(1^2 = 3^2 = 1\). Above you saw that in \(\mathbb Z_5,\ \phi(5) = 4\), and therefore all its elements &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/#computing-modular-inverses&#34;&gt;have inverse&lt;/a&gt;. Lets check one of Fermat&amp;#39;s Little theorem variants also holds in \(\mathbb Z_5\). The theorem states \(a^{p} \equiv a\pmod p\), and as you can see, in \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+An algorithm to compute modular exponentiation
+&lt;/h3&gt;
+&lt;p&gt;
+There is more than one algorithm to compute modular exponentiation, here is one:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k \lt n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
-&lt;li&gt;Output: \(a^k \pmod n\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k \lt n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Output: \(a^k \pmod n\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;  1. Set b = 1, If k = 0 return b.
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;  1. Set b = 1, If k = 0 return b.
   2. A = a
   3. If k_0 = 1 then b = a
   4. For each i from 1 to t:
      1. A = A * A modulo n.
      2. If k_i = 1 then b = A * b modulo n
-  5. return b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This algorithm is based in the fact that the exponent can be represented in binary. The binary representation of k is given by \(\sum_{i=0}^t k_i 2^i\), in which each \(k_i\in \{0, 1\}\). It is possible this representation does not sound familiar to you, but is nothing more that an abbreviated form of the more common one, for example, lets represent 5 in binary, which is \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Knowing this, then:&lt;/p&gt;
-
-&lt;p&gt;$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$&lt;/p&gt;
-
-&lt;p&gt;If you analyze the expression above, when \(k_i = 0\), the term \((a^{2^i})^{k_i} = 1\), which implies this term is not going to change the final result, because is multiplying by 1.&lt;/p&gt;
-
-&lt;p&gt;Now reading the algorithm becomes easier. It takes an integer and other two numbers, k,n &gt; 0 and computes \(a^{k} \pmod n\). If k==0 is not necessary compute anything and it returns 1, because any number to the power of 0 is 1. In step 3, if \(k_0\) (the least significant bit) is 1, therefore \((a^{2^0})^{k_0} = a\), conversely b = 1 as you are raising to 0, and any number to the power of 0 is 1. Next step iterates over the remaining bits of k, that is \(k_1 \dots k_t\). Basically this loop do the same process described above. Compute A squared (corresponding to this part of the expression \((a^2\)), if the bit \(k_i = 1\) multiply \((a^{2^i})^{1}\) by &lt;code&gt;b&lt;/code&gt;, if \(k_i = 0\) nothing is done, because the whole expression \((a^{2^i})^{0} = 1\). When the loops ends, b is returned.&lt;/p&gt;
-
-&lt;p&gt;In order to let you understand this process better, imagine you want to compute \(2^5\pmod 5\). First step is representing the exponent in binary form, \(5 = 101_b\), follow the steps, where a = 2, k = 5 and n = 5.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;b = 1
+  5. return b&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+This algorithm is based in the fact that the exponent can be represented in binary. The binary representation of k is given by \(\sum_{i=0}^t k_i 2^i\), in which each \(k_i\in \{0, 1\}\). It is possible this representation does not sound familiar to you, but is nothing more that an abbreviated form of the more common one, for example, lets represent 5 in binary, which is \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Knowing this, then:
+&lt;/p&gt;
+&lt;p&gt;
+$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$
+&lt;/p&gt;
+&lt;p&gt;
+If you analyze the expression above, when \(k_i = 0\), the term \((a^{2^i})^{k_i} = 1\), which implies this term is not going to change the final result, because is multiplying by 1.
+&lt;/p&gt;
+&lt;p&gt;
+Now reading the algorithm becomes easier. It takes an integer and other two numbers, k,n &amp;gt; 0 and computes \(a^{k} \pmod n\). If k==0 is not necessary compute anything and it returns 1, because any number to the power of 0 is 1. In step 3, if \(k_0\) (the least significant bit) is 1, therefore \((a^{2^0})^{k_0} = a\), conversely b = 1 as you are raising to 0, and any number to the power of 0 is 1. Next step iterates over the remaining bits of k, that is \(k_1 \dots k_t\). Basically this loop do the same process described above. Compute A squared (corresponding to this part of the expression \((a^2\)), if the bit \(k_i = 1\) multiply \((a^{2^i})^{1}\) by &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;, if \(k_i = 0\) nothing is done, because the whole expression \((a^{2^i})^{0} = 1\). When the loops ends, b is returned.
+&lt;/p&gt;
+&lt;p&gt;
+In order to let you understand this process better, imagine you want to compute \(2^5\pmod 5\). First step is representing the exponent in binary form, \(5 = 101_b\), follow the steps, where a = 2, k = 5 and n = 5.
+&lt;/p&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;b = 1
 A = 2
 is k_0 == 1? yes -&amp;gt; b = 2
 from k_1 to k_t:
@@ -90,47 +110,52 @@ from k_1 to k_t:
    is k_1 == 1? no
    A = A * A mod n -&amp;gt; 4 * 4 mod 5 = 1
    is k_2 == 1? yes -&amp;gt; b = A * b mod n -&amp;gt; b = 1 * 2 mod 5 = 2
-return b, which is 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&#39;ve tried to draw two graphics representations to help you visualize the process, lets say you want to compute \(2^7 \pmod 5\) and \(2^{11} \pmod 5\):&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;
-            alt=&#34;Computing Modular Exponentiation&#34;
-            title=&#34;Computing Modular Exponentiation&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;330&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Computing modular exponentiation&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;
-            alt=&#34;&#34;
-            title=&#34;&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;206&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;I hope this examples have let you understand better how the algorithm works. I&#39;ve implemented it in python, source code is available on &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+return b, which is 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+I&amp;#39;ve tried to draw two graphics representations to help you visualize the process, lets say you want to compute \(2^7 \pmod 5\) and \(2^{11} \pmod 5\):
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;
+            alt=&amp;#34;Computing Modular Exponentiation&amp;#34;
+            title=&amp;#34;Computing Modular Exponentiation&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;330&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Computing modular exponentiation&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;
+            alt=&amp;#34;&amp;#34;
+            title=&amp;#34;&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;206&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+I hope this examples have let you understand better how the algorithm works. I&amp;#39;ve implemented it in python, source code is available on &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
   &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
@@ -150,44 +175,83 @@ return b, which is 2
           &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;order&#34;&gt;Order&lt;/h2&gt;
-
-&lt;p&gt;The definition of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Multiplicative_order&#34; title=&#34;number&#39;s order is&#34;&gt;number&#39;s order is&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Order
+&lt;/h3&gt;
+&lt;p&gt;
+The definition of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Multiplicative_order&#34;&gt;number&amp;#39;s order is&lt;/a&gt;
 \[ord(a) = min(k\ \in \mathbb N\backslash 0\:a^k=1)\]
-that is to say, the smallest number to which you have to raise &lt;code&gt;a&lt;/code&gt; to give you 1. For example, in \(\mathbb Z_5\) you have the following orders for its elements:&lt;/p&gt;
-
+that is to say, the smallest number to which you have to raise &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; to give you 1. For example, in \(\mathbb Z_5\) you have the following orders for its elements:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(1^1 = 1; ord(1) = 1\), The smallest number to which you have to raise 1 to give you 1 is 1.&lt;/li&gt;
-&lt;li&gt;\(2^4 = 1; ord(2) = 4\)&lt;/li&gt;
-&lt;li&gt;\(3^4 = 1; ord(3) = 4\)&lt;/li&gt;
-&lt;li&gt;\(4^2 = 1; ord(4) = 2\), The smallest number to which you have to raise 4 to give you 1 is 2.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(1^1 = 1; ord(1) = 1\), The smallest number to which you have to raise 1 to give you 1 is 1.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(2^4 = 1; ord(2) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(3^4 = 1; ord(3) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(4^2 = 1; ord(4) = 2\), The smallest number to which you have to raise 4 to give you 1 is 2.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;You can read more on Order on &lt;a href=&#34;https://en.wikipedia.org/wiki/Order_(group_theory)&#34; title=&#34;Wikipedia Order (Group Theory) page&#34;&gt;Wikipedia Order (Group Theory) page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;subgroups-and-primitives&#34;&gt;Subgroups and primitives&lt;/h2&gt;
-
+&lt;p&gt;
+You can read more on Order on &lt;a href=&#34;https://en.wikipedia.org/wiki/Order_(group_theory)&#34;&gt;Wikipedia Order (Group Theory) page&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+Subgroups and primitives
+&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N \}\) is a subgroup generated by a.
+Given an element of \(\mathbb Z_p\), for example, \(\lt a&amp;gt; = \{ a^k:\ k\in N \}\) is a subgroup generated by a.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Generating_set_of_a_group&#34; title=&#34;Generating a set of a group&#34;&gt;Generating a set of a group&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For example, the subgroups of the units of \(\mathbb Z_5\) are:&lt;/p&gt;
-
+&lt;p&gt;
+This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Generating_set_of_a_group&#34;&gt;Generating a set of a group&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+For example, the subgroups of the units of \(\mathbb Z_5\) are:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(\lt 1&gt; = \{ 1 \}\), because \(\forall k \in\mathbb Z, 1^k = 1\)&lt;/li&gt;
-&lt;li&gt;\(\lt 2&gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 3&gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 4&gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 1&amp;gt; = \{ 1 \}\), because \(\forall k \in\mathbb Z, 1^k = 1\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 2&amp;gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 3&amp;gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 4&amp;gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;If you look closely, &amp;lt;2&gt; and &amp;lt;3&gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;lt;a&gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;p&gt;
+If you look closely, &amp;amp;lt;2&amp;gt; and &amp;amp;lt;3&amp;gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;amp;lt;a&amp;gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+References
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;The code shown along this series is hosted on my &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -195,6 +259,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 
 
+&lt;/p&gt;
 </description>
         </item>
         
@@ -205,7 +270,6 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
             
             <guid>https://elbauldelprogramador.com/en/automatically-add-width-and-height-attributes-to-image-tag/</guid>
             <description>&lt;p&gt;Some time ago I needed to add &lt;code&gt;height&lt;/code&gt; and &lt;code&gt;width&lt;/code&gt; attributes to all images on this blog. So I wrote a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34;&gt;python script&lt;/a&gt;, here is the main idea:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Iterate over all blog posts.&lt;/li&gt;
 &lt;li&gt;Find all &lt;code&gt;img&lt;/code&gt; tags in each post.&lt;/li&gt;
@@ -213,9 +277,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 &lt;li&gt;Open the image and extract its size.&lt;/li&gt;
 &lt;li&gt;Write image size in the &lt;code&gt;img&lt;/code&gt; attribues &lt;code&gt;width&lt;/code&gt; and &lt;code&gt;height&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;To &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/parser&#34;&gt;parse&lt;/a&gt; the data, I&amp;rsquo;ve used &lt;code&gt;BeautifulSoup&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/python&lt;/span&gt;
 
@@ -240,7 +302,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
             &lt;span class=&#34;k&#34;&gt;try&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
                 &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startswith&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/assets&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
                     &lt;span class=&#34;c1&#34;&gt;# Open the image&lt;/span&gt;
-                    &lt;span class=&#34;n&#34;&gt;pil&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/ruta/carpeta/imagenes&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+                    &lt;span class=&#34;n&#34;&gt;pil&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Image&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/ruta/carpeta/imagenes&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;img&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;src&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
                     &lt;span class=&#34;c1&#34;&gt;# Get its size&lt;/span&gt;
                     &lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;height&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pil&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;
                     &lt;span class=&#34;c1&#34;&gt;# Modify img tag with image size&lt;/span&gt;
@@ -250,11 +312,9 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
                 &lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;
     &lt;span class=&#34;c1&#34;&gt;# Save the updated post&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;wb&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hope you find it useful, you can visit the script at &lt;a href=&#34;https://gist.github.com/elbaulp/188a7f9d24e586cb16d9ed9188aa5823&#34; title=&#34;Gist en github&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
+        &lt;span class=&#34;nb&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;write&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;soup&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hope you find it useful, you can visit the script at &lt;a href=&#34;https://gist.github.com/elbaulp/188a7f9d24e586cb16d9ed9188aa5823&#34; title=&#34;Gist en github&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;How to save back changes made to a HTML file using BeautifulSoup in Python? | &lt;a href=&#34;http://stackoverflow.com/a/14369600/1612432&#34; title=&#34;How to save back changes made to a HTML file using BeautifulSoup in Python?&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Replace SRC of all IMG elements using Parser | &lt;a href=&#34;http://stackoverflow.com/a/1579733/1612432&#34; title=&#34;Replace SRC of all IMG elements using Parser&#34;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
@@ -267,134 +327,189 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
             <pubDate>Tue, 31 Oct 2017 19:57:49 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/related-posts-hugo-sklearn/</guid>
-            <description>&lt;p&gt;A long time ago I wanted to show &lt;strong&gt;similar/related posts&lt;/strong&gt; at the end of each post on this blog. At the time, &lt;a href=&#34;https://gohugo.io/&#34; title=&#34;Hugo&#34;&gt;Hugo&lt;/a&gt; didn&#39;t have built in support to show related posts (nowadays it has). So I decided to implement my own using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34; title=&#34;python&#34;&gt;python&lt;/a&gt;, &lt;em&gt;sklearn&lt;/em&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Cluster_analysis&#34; title=&#34;Clustering&#34;&gt;Clustering&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustering-similar-posts-sklearn-python.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustering-similar-posts-sklearn-python.jpg&#34;
-            alt=&#34;Clustereing similar posts with sklearn&#34;
-            title=&#34;Clustereing similar posts with sklearn&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;437&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;program-design&#34;&gt;Program design&lt;/h1&gt;
-
-&lt;h2 id=&#34;reading-parsing-posts&#34;&gt;Reading &amp; Parsing posts&lt;/h2&gt;
-
-&lt;p&gt;Since I write in &lt;a href=&#34;https://elbauldelprogramador.com/en/&#34; title=&#34;English&#34;&gt;English&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com&#34; title=&#34;Spanish&#34;&gt;Spanish&lt;/a&gt;, I needed to train the model twice, in order to only show English related post to English readers and Spanish ones to Spanish readers. To achieve it, I created a &lt;code&gt;readPosts&lt;/code&gt; function that takes in as parameters a &lt;em&gt;path&lt;/em&gt; where the post are, and a &lt;code&gt;boolean&lt;/code&gt; value indicating whether I want &lt;em&gt;related posts&lt;/em&gt; for English or Spanish.&lt;/p&gt;
+            <description>&lt;p&gt;
+A long time ago I wanted to show &lt;strong&gt;similar/related posts&lt;/strong&gt; at the end of each post on this blog. At the time, &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; didn&amp;#39;t have built in support to show related posts (nowadays it has). So I decided to implement my own using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34;&gt;python&lt;/a&gt;, &lt;em&gt;sklearn&lt;/em&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Cluster_analysis&#34;&gt;Clustering&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;
+            alt=&amp;#34;Clustereing similar posts with sklearn&amp;#34;
+            title=&amp;#34;Clustereing similar posts with sklearn&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;437&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Program design
+&lt;/h2&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Reading &amp;amp; Parsing posts
+&lt;/h3&gt;
+&lt;p&gt;
+Since I write in &lt;a href=&#34;https://elbauldelprogramador.com/en/&#34;&gt;English&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com&#34;&gt;Spanish&lt;/a&gt;, I needed to train the model twice, in order to only show English related post to English readers and Spanish ones to Spanish readers. To achieve it, I created a &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; function that takes in as parameters a &lt;em&gt;path&lt;/em&gt; where the post are, and a &lt;code class=&#34;verbatim&#34;&gt;boolean&lt;/code&gt; value indicating whether I want &lt;em&gt;related posts&lt;/em&gt; for English or Spanish.
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dfEng&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                   &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;dfEs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                  &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Inside this function (&lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L63&#34; title=&#34;you can check it on my github&#34;&gt;you can check it on my github&lt;/a&gt;), I read all the English/Spanish posts and return a &lt;a href=&#34;http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html&#34; title=&#34;Pandas Data Frame&#34;&gt;Pandas Data Frame&lt;/a&gt;. The most important thing this function does is select the correct &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/parser/&#34; title=&#34;parser&#34;&gt;parser&lt;/a&gt;, to open files using &lt;a href=&#34;https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/&#34; title=&#34;a yaml parser&#34;&gt;a yaml parser&lt;/a&gt; or a &lt;em&gt;TOML parser&lt;/em&gt;. Once the &lt;em&gt;frontmatter&lt;/em&gt; is read, &lt;code&gt;readPosts&lt;/code&gt; makes a &lt;strong&gt;DataFrame&lt;/strong&gt; using that &lt;em&gt;metadata&lt;/em&gt;. It only takes into account the following metadata:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Inside this function (&lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L63&#34;&gt;you can check it on my github&lt;/a&gt;), I read all the English/Spanish posts and return a &lt;a href=&#34;http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html&#34;&gt;Pandas Data Frame&lt;/a&gt;. The most important thing this function does is select the correct &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/parser/&#34;&gt;parser&lt;/a&gt;, to open files using &lt;a href=&#34;https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/&#34;&gt;a yaml parser&lt;/a&gt; or a &lt;em&gt;TOML parser&lt;/em&gt;. Once the &lt;em&gt;frontmatter&lt;/em&gt; is read, &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; makes a &lt;strong&gt;DataFrame&lt;/strong&gt; using that &lt;em&gt;metadata&lt;/em&gt;. It only takes into account the following metadata:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;introduction&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is the information that will be used for classifying.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;model-selection&#34;&gt;Model Selection&lt;/h1&gt;
-
-&lt;p&gt;As I said at the beginning of the post, I decided to use the Clustering technique. As I am treating with text data, I need a way to convert all this data to numeric form, as clustering only works with numeric data. To achieve it, I have to use a technique called &lt;a href=&#34;https://en.wikipedia.org/wiki/Tf-idf&#34; title=&#34;TF-IDF&#34;&gt;TF-IDF&lt;/a&gt;. I won&#39;t delve into the details of this technique, but give you a short introduction to it.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-tf-idf-term-frequency-inverse-document-frequency&#34;&gt;What is TF-IDF (Term Frequency - Inverse Document Frequency)&lt;/h2&gt;
-
-&lt;p&gt;When working with &lt;strong&gt;text data&lt;/strong&gt;, many words will appear for &lt;em&gt;multiple documents of multiple classes&lt;/em&gt;, this words typically don&#39;t contain &lt;em&gt;discriminatory information.&lt;/em&gt; &lt;strong&gt;TF-IDF&lt;/strong&gt; aims to downweight those frequently appearing words in the data (In this case, the Pandas Data Frame).&lt;/p&gt;
-
-&lt;p&gt;The &lt;em&gt;tf-idf&lt;/em&gt; is defined as the product of:&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+This is the information that will be used for classifying.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Model Selection
+&lt;/h2&gt;
+&lt;p&gt;
+As I said at the beginning of the post, I decided to use the Clustering technique. As I am treating with text data, I need a way to convert all this data to numeric form, as clustering only works with numeric data. To achieve it, I have to use a technique called &lt;a href=&#34;https://en.wikipedia.org/wiki/Tf-idf&#34;&gt;TF-IDF&lt;/a&gt;. I won&amp;#39;t delve into the details of this technique, but give you a short introduction to it.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+What is TF-IDF (Term Frequency - Inverse Document Frequency)
+&lt;/h3&gt;
+&lt;p&gt;
+When working with &lt;strong&gt;text data&lt;/strong&gt;, many words will appear for &lt;em&gt;multiple documents of multiple classes&lt;/em&gt;, this words typically don&amp;#39;t contain &lt;em&gt;discriminatory information.&lt;/em&gt; &lt;strong&gt;TF-IDF&lt;/strong&gt; aims to downweight those frequently appearing words in the data (In this case, the Pandas Data Frame).
+&lt;/p&gt;
+&lt;p&gt;
+The &lt;em&gt;tf-idf&lt;/em&gt; is defined as the product of:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;term frequency&lt;/strong&gt;. Number of times a term appears in a document.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;Inverse document frequency&lt;/strong&gt;. How much information the word provides taking into account all documents, that is, if the term is common or rare across all documents.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+The &lt;strong&gt;term frequency&lt;/strong&gt;. Number of times a term appears in a document.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+The &lt;strong&gt;Inverse document frequency&lt;/strong&gt;. How much information the word provides taking into account all documents, that is, if the term is common or rare across all documents.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Multiplying the above values gives the &lt;em&gt;tf-idf&lt;/em&gt;, quoting Wikipedia:&lt;/p&gt;
-
+&lt;p&gt;
+Multiplying the above values gives the &lt;em&gt;tf-idf&lt;/em&gt;, quoting Wikipedia:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-A high weight in tf–idf is reached by a high term frequency (in the given document) and a low document frequency of the term in the whole collection of documents; the weights hence tend to filter out common terms. Since the ratio inside the idf&#39;s log function is always greater than or equal to 1, the value of idf (and tf-idf) is greater than or equal to 0. As a term appears in more documents, the ratio inside the logarithm approaches 1, bringing the idf and tf-idf closer to 0.
+A high weight in tf–idf is reached by a high term frequency (in the given document) and a low document frequency of the term in the whole collection of documents; the weights hence tend to filter out common terms. Since the ratio inside the idf&amp;#39;s log function is always greater than or equal to 1, the value of idf (and tf-idf) is greater than or equal to 0. As a term appears in more documents, the ratio inside the logarithm approaches 1, bringing the idf and tf-idf closer to 0.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;In short, as &lt;strong&gt;more common a term is across all documents&lt;/strong&gt;, less &lt;em&gt;tf-idf&lt;/em&gt; score it will have, signaling that this word is not important for classifying.&lt;/p&gt;
-
-&lt;h2 id=&#34;hyper-parameter-tunning&#34;&gt;Hyper-Parameter Tunning&lt;/h2&gt;
-
-&lt;p&gt;To select the appropriate parameters for the model I&#39;ve used &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34; title=&#34;sklearn&#39;s GridSearchCV method&#34;&gt;sklearn&#39;s GridSearchCV method&lt;/a&gt;, you can check it on &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L425&#34; title=&#34;line 425 of my code&#34;&gt;line 425 of my code&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h1&gt;
-
-&lt;p&gt;Now that I have decided what method use (&lt;em&gt;clustering&lt;/em&gt;) and how convert the text data to a vector format (&lt;em&gt;TF-IDF&lt;/em&gt;), I have to clean the data. Usually, when dealing with text data you have to remove words that are used often, but doesn&#39;t add meaning, those words are called &lt;strong&gt;stop words&lt;/strong&gt; (&lt;em&gt;the, that, a etc&lt;/em&gt;). This work is done in &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L155&#34; title=&#34;generateTfIdfVectorizer&#34;&gt;generateTfIdfVectorizer&lt;/a&gt;. In this process I also perform a &lt;em&gt;stemmization&lt;/em&gt; of the words. From &lt;em&gt;Wikipedia&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Stemming&#34; title=&#34;Stemming is the process of:&#34;&gt;Stemming is the process of:&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;
+In short, as &lt;strong&gt;more common a term is across all documents&lt;/strong&gt;, less &lt;em&gt;tf-idf&lt;/em&gt; score it will have, signaling that this word is not important for classifying.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-5&#34;&gt;
+Hyper-Parameter Tunning
+&lt;/h3&gt;
+&lt;p&gt;
+To select the appropriate parameters for the model I&amp;#39;ve used &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;sklearn&amp;#39;s GridSearchCV method&lt;/a&gt;, you can check it on &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L425&#34;&gt;line 425 of my code&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Cleaning the Data
+&lt;/h2&gt;
+&lt;p&gt;
+Now that I have decided what method use (&lt;em&gt;clustering&lt;/em&gt;) and how convert the text data to a vector format (&lt;em&gt;TF-IDF&lt;/em&gt;), I have to clean the data. Usually, when dealing with text data you have to remove words that are used often, but doesn&amp;#39;t add meaning, those words are called &lt;strong&gt;stop words&lt;/strong&gt; (&lt;em&gt;the, that, a etc&lt;/em&gt;). This work is done in &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L155&#34;&gt;generateTfIdfVectorizer&lt;/a&gt;. In this process I also perform a &lt;em&gt;stemmization&lt;/em&gt; of the words. From &lt;em&gt;Wikipedia&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Stemming&#34;&gt;Stemming is the process of:&lt;/a&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Depending on which language I am generating the &lt;strong&gt;related posts&lt;/strong&gt; for (English or Spanish) I use&lt;/p&gt;
+&lt;p&gt;
+Depending on which language I am generating the &lt;strong&gt;related posts&lt;/strong&gt; for (English or Spanish) I use
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_snowball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SnowballStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;spanish&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
             &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for Spanish or&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+for Spanish or
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_porter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PorterStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
             &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for English.&lt;/p&gt;
-
-&lt;p&gt;After this process, finally I have all the data ready to perform &lt;em&gt;clustering&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;clustering&#34;&gt;Clustering&lt;/h1&gt;
-
-&lt;p&gt;I&#39;ve used &lt;em&gt;KMeans&lt;/em&gt; to do the clustering. The most time consuming task of all this process was, as usual, &lt;strong&gt;clean the data&lt;/strong&gt;, so this step is simple. I just need a way of know how many &lt;em&gt;clusters&lt;/em&gt; I should have. For this, I&#39;ve used the &lt;strong&gt;Elbow Method&lt;/strong&gt;. This method is an easy way to identify the value of &lt;code&gt;k&lt;/code&gt; (How many clusters there are.) for which the &lt;strong&gt;distortion&lt;/strong&gt; begins to increase rapidly. This is best shown with an image:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/Elbow method for clustering.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/Elbow method for clustering.jpg&#34;
-            alt=&#34;Elbow method&#34;
-            title=&#34;Elbow method&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;546&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;In this example, you can slightly appreciate an elbow on k=12&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;After executing the model, using &lt;em&gt;16 features&lt;/em&gt;, this are the ones selected for Spanish:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+for English.
+&lt;/p&gt;
+&lt;p&gt;
+After this process, finally I have all the data ready to perform &lt;em&gt;clustering&lt;/em&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Clustering
+&lt;/h2&gt;
+&lt;p&gt;
+I&amp;#39;ve used &lt;em&gt;KMeans&lt;/em&gt; to do the clustering. The most time consuming task of all this process was, as usual, &lt;strong&gt;clean the data&lt;/strong&gt;, so this step is simple. I just need a way of know how many &lt;em&gt;clusters&lt;/em&gt; I should have. For this, I&amp;#39;ve used the &lt;strong&gt;Elbow Method&lt;/strong&gt;. This method is an easy way to identify the value of &lt;code class=&#34;verbatim&#34;&gt;k&lt;/code&gt; (How many clusters there are.) for which the &lt;strong&gt;distortion&lt;/strong&gt; begins to increase rapidly. This is best shown with an image:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;
+            alt=&amp;#34;Elbow method&amp;#34;
+            title=&amp;#34;Elbow method&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;546&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;In this example, you can slightly appreciate an elbow on k=12&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+After executing the model, using &lt;em&gt;16 features&lt;/em&gt;, this are the ones selected for Spanish:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;andro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;comand&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;dat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;desarroll&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;funcion&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;googl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;jav&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;libr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;linux&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;program&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;recurs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;segur&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;wordpress&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and the ones used for English:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+and the ones used for English:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blogs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;chang&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;channels&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fil&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;gento&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;howt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lists&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;podcasts&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scal&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scienc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;youtub&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;how-i-integrated-it-with-hugo&#34;&gt;How I integrated it with Hugo&lt;/h1&gt;
-
-&lt;p&gt;This was a tedious task, since I had to read the output of the model (in CSV format) into hugo and pick 10 random post from the same cluster. Although is no longer required to use this, I want to share how I integrated this approach with Hugo to show related posts:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;delimit&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;labels.&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+How I integrated it with Hugo
+&lt;/h2&gt;
+&lt;p&gt;
+This was a tedious task, since I had to read the output of the model (in CSV format) into hugo and pick 10 random post from the same cluster. Although is no longer required to use this, I want to share how I integrated this approach with Hugo to show related posts:
+&lt;/p&gt;
+&lt;div class=&#34;src src-go&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;delimit&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;labels.&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;LogicalName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* First iterate thought csv to get post cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
        &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Set&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cluster&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
@@ -403,7 +518,7 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* loop csv again to store post in the same cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Add&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
@@ -411,23 +526,33 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Get&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Finally, show 5 randomly related posts */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;gt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;gt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;related&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;shuffle&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;related-post&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;href=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;title=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;related-post&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;href=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;title=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;If you have any comments, or want to improve something, comment below.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+&lt;em&gt;If you have any comments, or want to improve something, comment below.&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+References
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sebastianraschka.com/books.html&#34; title=&#34;Sebastian Raschka&#39;s book Python Machine Learning&#34;&gt;Sebastian Raschka&#39;s book Python Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34; title=&#34;Sklearn Documentation&#34;&gt;Sklearn Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sebastianraschka.com/books.html&#34;&gt;Sebastian Raschka&amp;#39;s book Python Machine Learning&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;Sklearn Documentation&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -436,66 +561,99 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
             <pubDate>Sat, 28 Oct 2017 11:23:55 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/</guid>
-            <description>&lt;h1 id=&#34;modular-arithmetic&#34;&gt;Modular Arithmetic&lt;/h1&gt;
-
-&lt;p&gt;Before going straight to cryptography, it is necessary to have clear a few mathematical concepts, as cryptography in based on them.&lt;/p&gt;
-
-&lt;p&gt;First, I am going to talk about &lt;strong&gt;modular arithmetic&lt;/strong&gt;, also known as &lt;strong&gt;clock arithmetic&lt;/strong&gt;, which is defined as:&lt;/p&gt;
-
-&lt;p&gt;\[a \equiv b\pmod n,\]&lt;/p&gt;
-
-&lt;p&gt;if \(b - a\) is multiple of \(n\), in other words, \(a\) and \(b\) have the same remainder when divided by \(n\).&lt;/p&gt;
-
-&lt;p&gt;For example, \(3\equiv 8\pmod 5\), because \(8 - 3 = 5\), which is a 5 multiple. Another way would be knowing that both remainders of 3 divided by 5 and 8 divided by 5 are 3. From now on, I&#39;ll write the remainder of a number like this:&lt;/p&gt;
-
-&lt;p&gt;\[a\bmod n = r,\]&lt;/p&gt;
-
-&lt;p&gt;where \(r\) is the remainder of \(a\) divided by \(n\).&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;
-            alt=&#34;Modular Arithmetics&#34;
-            title=&#34;Modular Arithmetics&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;computing-modular-inverses&#34;&gt;Computing modular inverses&lt;/h2&gt;
-
-&lt;p&gt;Given \(a \in \mathbb Z_n\), \(a\) has inverse (also called unit) if \(\exists b \in \mathbb Z_n\ :\ ba = 1\), and its written \(a^{-1}\).&lt;/p&gt;
-
-&lt;p&gt;The set of all \(\mathbb Z_n\) units is called \(\mathcal{U}(\mathbb Z_n)\) and is defined as:&lt;/p&gt;
-
-&lt;p&gt;\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : gcd(a, n) = 1\},\]&lt;/p&gt;
-
-&lt;p&gt;where &lt;strong&gt;gcd&lt;/strong&gt; is &lt;em&gt;Greatest Common Divisor&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;If \(p\) &lt;strong&gt;is prime&lt;/strong&gt;, every element in \(\mathbb Z_p\) but zero has inverse, therefore, \(\mathbb Z_p\) is a &lt;strong&gt;field&lt;/strong&gt;. Cryptography works with fields \(\mathbb Z_p\) where \(p\) is prime.&lt;/p&gt;
-
-&lt;p&gt;The number of units in \(\mathbb Z_n\) can be computed with &lt;strong&gt;Euler&#39;s function&lt;/strong&gt; \(\phi(n)\):&lt;/p&gt;
-
+            <description>&lt;h2 id=&#34;headline-1&#34;&gt;
+Modular Arithmetic
+&lt;/h2&gt;
+&lt;p&gt;
+Before going straight to cryptography, it is necessary to have clear a few mathematical concepts, as cryptography in based on them.
+&lt;/p&gt;
+&lt;p&gt;
+First, I am going to talk about &lt;strong&gt;modular arithmetic&lt;/strong&gt;, also known as &lt;strong&gt;clock arithmetic&lt;/strong&gt;, which is defined as:
+&lt;/p&gt;
+&lt;p&gt;
+\[a \equiv b\pmod n,\]
+&lt;/p&gt;
+&lt;p&gt;
+if \(b - a\) is multiple of \(n\), in other words, \(a\) and \(b\) have the same remainder when divided by \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+For example, \(3\equiv 8\pmod 5\), because \(8 - 3 = 5\), which is a 5 multiple. Another way would be knowing that both remainders of 3 divided by 5 and 8 divided by 5 are 3. From now on, I&amp;#39;ll write the remainder of a number like this:
+&lt;/p&gt;
+&lt;p&gt;
+\[a\bmod n = r,\]
+&lt;/p&gt;
+&lt;p&gt;
+where \(r\) is the remainder of \(a\) divided by \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/crypto-101.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/crypto-101.jpg&amp;#34;
+            alt=&amp;#34;Modular Arithmetics&amp;#34;
+            title=&amp;#34;Modular Arithmetics&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Computing modular inverses
+&lt;/h3&gt;
+&lt;p&gt;
+Given \(a \in \mathbb Z_n\), \(a\) has inverse (also called unit) if \(\exists b \in \mathbb Z_n\ :\ ba = 1\), and its written \(a^{-1}\).
+&lt;/p&gt;
+&lt;p&gt;
+The set of all \(\mathbb Z_n\) units is called \(\mathcal{U}(\mathbb Z_n)\) and is defined as:
+&lt;/p&gt;
+&lt;p&gt;
+\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : gcd(a, n) = 1\},\]
+&lt;/p&gt;
+&lt;p&gt;
+where &lt;strong&gt;gcd&lt;/strong&gt; is &lt;em&gt;Greatest Common Divisor&lt;/em&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+If \(p\) &lt;strong&gt;is prime&lt;/strong&gt;, every element in \(\mathbb Z_p\) but zero has inverse, therefore, \(\mathbb Z_p\) is a &lt;strong&gt;field&lt;/strong&gt;. Cryptography works with fields \(\mathbb Z_p\) where \(p\) is prime.
+&lt;/p&gt;
+&lt;p&gt;
+The number of units in \(\mathbb Z_n\) can be computed with &lt;strong&gt;Euler&amp;#39;s function&lt;/strong&gt; \(\phi(n)\):
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If \(p\) &lt;strong&gt;is prime&lt;/strong&gt; \(\phi(p) = p - 1\), because all its elements but zero are units.&lt;/li&gt;
-&lt;li&gt;Given two integers a,b: \( \phi(ab) = \phi(a)\phi(b)\ \text{iff}\ gcd(a, b) = 1\).&lt;/li&gt;
-&lt;li&gt;Given \(p\) prime: \(\phi(p^n) = p^n - p^{n-1}\).&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+If \(p\) &lt;strong&gt;is prime&lt;/strong&gt; \(\phi(p) = p - 1\), because all its elements but zero are units.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Given two integers a,b: \( \phi(ab) = \phi(a)\phi(b)\ \text{iff}\ gcd(a, b) = 1\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Given \(p\) prime: \(\phi(p^n) = p^n - p^{n-1}\).
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;practical-example&#34;&gt;Practical example&lt;/h2&gt;
-
-&lt;p&gt;Lets see &lt;strong&gt;an example&lt;/strong&gt;. \(\#\mathcal{U}(\mathbb Z_5) = 4\), because all its elements have inverse (1,2,3,4), and \(\phi(5) = 4\), therefore \(\mathbb Z_5\) &lt;strong&gt;is a field&lt;/strong&gt;. However, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), because \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). The units of \(\mathbb Z_{15}\) are 1,2,4,7,8,11,13,14.&lt;/p&gt;
-
-&lt;p&gt;The code below uses the &lt;em&gt;Euclidean algorithm&lt;/em&gt; to compute the inverse of a number in \(\mathbb Z_n\). This &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34; title=&#34;python code&#34;&gt;python code&lt;/a&gt; is &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;on my github&#34;&gt;on my github&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Practical example
+&lt;/h3&gt;
+&lt;p&gt;
+Lets see &lt;strong&gt;an example&lt;/strong&gt;. \(\#\mathcal{U}(\mathbb Z_5) = 4\), because all its elements have inverse (1,2,3,4), and \(\phi(5) = 4\), therefore \(\mathbb Z_5\) &lt;strong&gt;is a field&lt;/strong&gt;. However, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), because \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). The units of \(\mathbb Z_{15}\) are 1,2,4,7,8,11,13,14.
+&lt;/p&gt;
+&lt;p&gt;
+The code below uses the &lt;em&gt;Euclidean algorithm&lt;/em&gt; to compute the inverse of a number in \(\mathbb Z_n\). This &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34;&gt;python code&lt;/a&gt; is &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34;&gt;on my github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
       &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      Compute the Greatest Common Divisor d of a and b, and integers x and
@@ -526,9 +684,14 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
           &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This algorithm returns a tuple &lt;code&gt;(d, x, y)&lt;/code&gt;, where &lt;code&gt;d&lt;/code&gt; is &lt;code&gt;gcd(a,b)&lt;/code&gt; and &lt;code&gt;x&lt;/code&gt; is &lt;code&gt;a mod b&lt;/code&gt; inverse. For example, &lt;code&gt;gcd(2, 5)&lt;/code&gt;, will return &lt;code&gt;[1, -2, 1]&lt;/code&gt;, where 1 is &lt;code&gt;gcd(2, 5)&lt;/code&gt;, and \(-2\) its inverse, if you want a positive number, just sum 5 to \(-2\), which is 3, therefore 2 mod 5 inverse is 3, because \(2 \cdot 3 = 6\), and 6 mod 5 = 1.&lt;/p&gt;
-
-&lt;p&gt;In order to make the task of computing a number&#39;s inverse, I&#39;ve created the method bellow, the code is also available at my &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+This algorithm returns a tuple &lt;code class=&#34;verbatim&#34;&gt;(d, x, y)&lt;/code&gt;, where &lt;code class=&#34;verbatim&#34;&gt;d&lt;/code&gt; is &lt;code class=&#34;verbatim&#34;&gt;gcd(a,b)&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;x&lt;/code&gt; is &lt;code class=&#34;verbatim&#34;&gt;a mod b&lt;/code&gt; inverse. For example, &lt;code class=&#34;verbatim&#34;&gt;gcd(2, 5)&lt;/code&gt;, will return &lt;code class=&#34;verbatim&#34;&gt;[1, -2, 1]&lt;/code&gt;, where 1 is &lt;code class=&#34;verbatim&#34;&gt;gcd(2, 5)&lt;/code&gt;, and \(-2\) its inverse, if you want a positive number, just sum 5 to \(-2\), which is 3, therefore 2 mod 5 inverse is 3, because \(2 \cdot 3 = 6\), and 6 mod 5 = 1.
+&lt;/p&gt;
+&lt;p&gt;
+In order to make the task of computing a number&amp;#39;s inverse, I&amp;#39;ve created the method bellow, the code is also available at my &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -537,14 +700,20 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; a inverse does not exist&amp;#39;&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Execute it with the same numbers as before, 2 and 5, and it&#39;ll return \(2^{-1},\) that is, 3.&lt;/p&gt;
-
-&lt;h1 id=&#34;aknowledgements&#34;&gt;Aknowledgements&lt;/h1&gt;
-
-&lt;p&gt;I&#39;d like to thank &lt;a href=&#34;https://github.com/josealberto4444/&#34; title=&#34;josealberto4444&#34;&gt;josealberto4444&lt;/a&gt; for helping me with some corrections.&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Execute it with the same numbers as before, 2 and 5, and it&amp;#39;ll return \(2^{-1},\) that is, 3.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Aknowledgements
+&lt;/h2&gt;
+&lt;p&gt;
+I&amp;#39;d like to thank &lt;a href=&#34;https://github.com/josealberto4444/&#34;&gt;josealberto4444&lt;/a&gt; for helping me with some corrections.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+References
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;The code shown along this series is hosted on my &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -552,13 +721,17 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
 
 
 
-
-&lt;h1 id=&#34;more-resources&#34;&gt;More resources&lt;/h1&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+More resources
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Modular_arithmetic&#34; title=&#34;Modular Arithmetic | wikipedia.org&#34;&gt;Modular Arithmetic | wikipedia.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Modular_arithmetic&#34;&gt;Modular Arithmetic | wikipedia.org&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -568,25 +741,21 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
             
             <guid>https://elbauldelprogramador.com/en/iterate-multiple-collections-scala/</guid>
             <description>&lt;p&gt;When I first started working with &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/scala&#34; title=&#34;post about scala scala&#34;&gt;scala&lt;/a&gt; I&amp;rsquo;ve found myself unable to do trivial things I have being doing in other languages I already known. That is the most frustrating part of learning a new programming language, in my opinion.&lt;/p&gt;
-
 &lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-python&#34;&gt;Iterate through multiple collections at once in python&lt;/h1&gt;
-
 &lt;p&gt;One common thing to do is iterate through two collections at a time. The &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;post about python&#34;&gt;pythonic&lt;/a&gt; way of doing this is simple:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;zip&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;collection1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;collection2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;which result is:&lt;/p&gt;
+     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which result is:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;
 &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
-&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;iterate-through-multiple-collections-at-once-in-scala&#34;&gt;Iterate through multiple collections at once in scala&lt;/h1&gt;
-
 &lt;p&gt;Now, what is the &lt;em&gt;idiomatic&lt;/em&gt; way of doing it in &lt;em&gt;scala&lt;/em&gt;?. In my case I needed to iterate through the collection and also have the index of the current item being iterated, this can be achieved with the method &lt;code&gt;zipWithIndex&lt;/code&gt;, then call &lt;code&gt;zipped&lt;/code&gt; along with any collection you want to iterate at the same time:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indexedWords&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zipWithIndex&lt;/span&gt;
@@ -595,23 +764,20 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;_2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;In the example above I am &lt;strong&gt;zipping&lt;/strong&gt; together three collections &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, which correspond with types &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In the example above I am &lt;strong&gt;zipping&lt;/strong&gt; together three collections &lt;code&gt;(indexedWords, tags, dep)&lt;/code&gt;, which correspond with types &lt;code&gt;((String, Int), String, Int)&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Before I knew about the &lt;em&gt;idiomatic&lt;/em&gt; way I was iterating trough the collection in a ugly way:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/** Constituent tree of this sentence; includes head words */&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tree&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Vector&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;words&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indexOf&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
    &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Node&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This code is part of my final project in Computer Engineering, it was about creating a &lt;a href=&#34;https://en.wikipedia.org/wiki/Dependency_grammar&#34; target=&#34;_blank&#34; title=&#34;Dependency Parsing&#34;&gt;Dependency Parser&lt;/a&gt;, you can check it on &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/github&#34; title=&#34;Posts about github&#34;&gt;GitHub&lt;/a&gt;: &lt;a href=&#34;https://github.com/elbaulp/NLP_Dependency_Parsing&#34; target=&#34;_blank&#34; title=&#34;NLP_Dependency_Parsing&#34;&gt;NLP_Dependency_Parsing&lt;/a&gt;&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;This code is part of my final project in Computer Engineering, it was about creating a &lt;!-- raw HTML omitted --&gt;Dependency Parser&lt;!-- raw HTML omitted --&gt;, you can check it on &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/github&#34; title=&#34;Posts about github&#34;&gt;GitHub&lt;/a&gt;: &lt;!-- raw HTML omitted --&gt;NLP_Dependency_Parsing&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/17199534/scala-for-loop-over-two-lists-simultaneously&#34; target=&#34;_blank&#34; title=&#34;Scala for loop over two lists simultaneously&#34;&gt;Scala for loop over two lists simultaneously&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Scala for loop over two lists simultaneously&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -622,22 +788,16 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
             
             <guid>https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/</guid>
             <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;10/25/2017&lt;/strong&gt;: Thanks to &lt;a href=&#34;https://github.com/elbaulp/genPlaylistByName/pull/4&#34;&gt;leotok&lt;/a&gt; the program is now able to inspect folders recursively.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Many of us like to listen to music while programming. Today I thought that it would be nice if I could create a playlist with a fixed length I can choose.&lt;/p&gt;
-
 &lt;p&gt;After a little thinking I decided to write a little &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;posts about python&#34;&gt;python&lt;/a&gt; script that do the work for me. It accepts as params a directory where the music is, and the duration for the playlist.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;requirements&#34;&gt;Requirements&lt;/h1&gt;
-
-&lt;p&gt;In order to read the length of each file I&amp;rsquo;ve used &lt;a href=&#34;https://github.com/quodlibet/mutagen&#34; title=&#34;Mutagen Homepage&#34; target=&#34;_blank&#34;&gt;Mutagen&lt;/a&gt;. It is easy to install:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pip install mutagen&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Once installed, we can execute the script, here is the code:&lt;/p&gt;
+&lt;p&gt;In order to read the length of each file I&amp;rsquo;ve used &lt;!-- raw HTML omitted --&gt;Mutagen&lt;!-- raw HTML omitted --&gt;. It is easy to install:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pip install mutagen
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once installed, we can execute the script, here is the code:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/usr/bin/env python&lt;/span&gt;
 
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;argparse&lt;/span&gt;
@@ -731,9 +891,8 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
     &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;           &lt;span class=&#34;c1&#34;&gt;# __str__ allows args to printed directly&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;vm&#34;&gt;__name__&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;creating-playlists&#34;&gt;Creating playlists&lt;/h1&gt;
-
+    &lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;creating-playlists&#34;&gt;Creating playlists&lt;/h1&gt;
 &lt;p&gt;Its use is simple:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ./genPlayListByLength.py -h
 usage: genPlayListByLength.py &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;-h&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -d DIRECTORY -l LENGTH
@@ -750,41 +909,39 @@ optional arguments:
 
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;~/Desarrollo/WorkSpaces/Py_WorkSpace/GenPlayListByLenght/src&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 $ ./genPlayListByLength.py -d /media/RAID_External/Music/EPIC/Nueva/ -l &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_1.m3u  length  &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.0001451247 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_2.m3u  length  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;.7172426304 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_3.m3u  length  &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.2311836735 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_4.m3u  length  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;.2354164777 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_5.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.8601359014 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_6.m3u  length  &lt;span class=&#34;m&#34;&gt;28&lt;/span&gt;.3070597128 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_7.m3u  length  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;.7946424792 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_8.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.2017535903 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_9.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.7807044596 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_10.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.1862736206 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_11.m3u  length  &lt;span class=&#34;m&#34;&gt;23&lt;/span&gt;.5667059713 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_12.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.3402993197 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_13.m3u  length  &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;.1046409675 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_15.m3u  length  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;.4145971277 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_16.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.0794618292 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_17.m3u  length  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;.2702464097 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_18.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.2315525321 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_19.m3u  length  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;.798403305 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_20.m3u  length  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;.1189417989 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_21.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.7013696145 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_22.m3u  length  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;.971888133 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_23.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.8250628874 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_25.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.3321723356 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_26.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.5465699169 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_27.m3u  length  &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.9339743008 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_28.m3u  length  &lt;span class=&#34;m&#34;&gt;32&lt;/span&gt;.0853333333 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_29.m3u  length  &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;.4854482237 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_30.m3u  length  &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;.7996613757 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_31.m3u  length  &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt;.3372033258 min
-Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;.5926288738 min&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The script will create as many playlists of the given length as it can, 32 above.&lt;/p&gt;
-
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_1.m3u  length  24.0001451247 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_2.m3u  length  22.7172426304 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_3.m3u  length  24.2311836735 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_4.m3u  length  20.2354164777 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_5.m3u  length  21.8601359014 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_6.m3u  length  28.3070597128 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_7.m3u  length  22.7946424792 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_8.m3u  length  21.2017535903 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_9.m3u  length  21.7807044596 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_10.m3u  length  21.1862736206 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_11.m3u  length  23.5667059713 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_12.m3u  length  21.3402993197 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_13.m3u  length  25.1046409675 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_15.m3u  length  20.4145971277 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_16.m3u  length  21.0794618292 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_17.m3u  length  20.2702464097 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_18.m3u  length  21.2315525321 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_19.m3u  length  20.798403305 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_20.m3u  length  22.1189417989 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_21.m3u  length  21.7013696145 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_22.m3u  length  22.971888133 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_23.m3u  length  21.8250628874 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_25.m3u  length  21.3321723356 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_26.m3u  length  21.5465699169 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_27.m3u  length  24.9339743008 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_28.m3u  length  32.0853333333 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_29.m3u  length  25.4854482237 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_30.m3u  length  20.7996613757 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_31.m3u  length  21.3372033258 min
+Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  22.5926288738 min
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The script will create as many playlists of the given length as it can, 32 above.&lt;/p&gt;
 &lt;h1 id=&#34;contribute&#34;&gt;Contribute&lt;/h1&gt;
-
-&lt;p&gt;If you want to improve it yourself, it hosted at &lt;a href=&#34;https://github.com/elbaulp/genPlaylistByName&#34; title=&#34;Repositorio&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;If you want to improve it yourself, it hosted at &lt;!-- raw HTML omitted --&gt;GitHub&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -794,19 +951,13 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
             
             <guid>https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/</guid>
             <description>&lt;p&gt;Recently I&amp;rsquo;ve updated my blog from &lt;em&gt;jekyll&lt;/em&gt; to &lt;em&gt;Hugo&lt;/em&gt;. The process was easy enough, but I did have to change some things in the &lt;em&gt;frontmatter&lt;/em&gt; of the content.&lt;/p&gt;
-
 &lt;p&gt;A simple Google search was all I needed to find a &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python&#34; title=&#34;Posts about python&#34;&gt;python&lt;/a&gt; parser for YAML frontmatter. Here is how I did it:&lt;/p&gt;
-
 &lt;h1 id=&#34;install-python-frontmatter&#34;&gt;Install Python-Frontmatter&lt;/h1&gt;
-
 &lt;p&gt;Simply run&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pip install python-frontmatter&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pip install python-frontmatter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;using-python-frontmatter&#34;&gt;Using Python-Frontmatter&lt;/h1&gt;
-
 &lt;h2 id=&#34;example-1-add-new-values-to-frontmatter&#34;&gt;Example 1: Add new values to frontmatter&lt;/h2&gt;
-
 &lt;p&gt;Once installed, it is easy to use. Let&amp;rsquo;s see as an example one of the problems I faced. In &lt;em&gt;Jekyll&lt;/em&gt; I was the fall back author for all posts that did not have one defined in its frontmatter, but in &lt;em&gt;Hugo&lt;/em&gt; I need to specify the author for every post written. To accomplish this, I wrote the following script:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;frontmatter&lt;/span&gt;
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;io&lt;/span&gt;
@@ -818,22 +969,20 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
 
 &lt;span class=&#34;c1&#34;&gt;# Loop through all files&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;c1&#34;&gt;# Parse file&amp;#39;s front matter&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
             &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;author&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;alex&amp;#34;&lt;/span&gt;
             &lt;span class=&#34;c1&#34;&gt;# Save the modified file&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
             &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That&amp;rsquo;s it!, so simple. Let&amp;rsquo;s see another example&lt;/p&gt;
-
+            &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That&amp;rsquo;s it!, so simple. Let&amp;rsquo;s see another example&lt;/p&gt;
 &lt;h2 id=&#34;example-2-modify-existing-values-in-frontmatter&#34;&gt;Example 2: Modify existing values in frontmatter&lt;/h2&gt;
-
 &lt;p&gt;In this case, I had two frontmatter variables, &lt;code&gt;mainclass&lt;/code&gt; and &lt;code&gt;categories&lt;/code&gt;. I wanted to include the value of &lt;code&gt;mainclass&lt;/code&gt; into &lt;code&gt;categories&lt;/code&gt;, and keep all the current categories of &lt;code&gt;categories&lt;/code&gt;. Here is the script:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;glob&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;load&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 
         &lt;span class=&#34;c1&#34;&gt;# If no categories exists, create one with the value of mainclass&lt;/span&gt;
@@ -856,13 +1005,12 @@ Playlist generated, name:  ./playlists/genPlayListByLength.py20_32.m3u  length  
             &lt;span class=&#34;k&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;%s&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;categories&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
 
         &lt;span class=&#34;c1&#34;&gt;# Save the file.&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;io&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fname&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;encoding&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;utf8&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
         &lt;span class=&#34;n&#34;&gt;frontmatter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dump&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+        &lt;span class=&#34;n&#34;&gt;newfile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/eyeseast/python-frontmatter&#34; target=&#34;_blank&#34; title=&#34;Python fronmatter repo&#34;&gt;Python-Frontmatter&amp;rsquo;s Githup repo&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Python-Frontmatter&amp;rsquo;s Githup repo&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

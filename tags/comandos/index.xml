@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Comandos on El Baúl del programador</title>
+        <title>comandos on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/comandos/</link>
-        <description>Recent content in Comandos on El Baúl del programador</description>
+        <description>Recent content in comandos on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Sun, 08 Oct 2017 19:27:49 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/comandos/</link>
-            <title>Comandos on El Baúl del programador</title>
+            <title>comandos on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,19 +21,12 @@
             <pubDate>Sun, 08 Oct 2017 19:27:49 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; sizes=&#34;(min-width: 640px) 640px, 100vw&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En esta segunda entrega revisaremos otras &lt;a href=&#34;https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/&#34;&gt;diez herramientas&lt;/a&gt; que podemos usar en nuestra &lt;strong&gt;terminal de Linux&lt;/strong&gt; y que nos ahorrarán tiempo y esfuerzo en muchas tareas cotidianas ampliando así nuestra lista de imprescindibles.&lt;/p&gt;
-
-&lt;h1 id=&#34;11-lshw-http-www-ezix-org-project-wiki-hardwarelister&#34;&gt;11. &lt;a href=&#34;http://www.ezix.org/project/wiki/HardwareLiSter&#34;&gt;lshw&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;11-lshwhttpwwwezixorgprojectwikihardwarelister&#34;&gt;11. &lt;a href=&#34;http://www.ezix.org/project/wiki/HardwareLiSter&#34;&gt;lshw&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Se trata, como se puede deducir de su nombre, de un &lt;strong&gt;Hardware Lister&lt;/strong&gt;, que nos permitirá conocer cualquier detalle sobre el hardware de nuestra máquina.
 Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya instalado, de no ser así en su página oficial ofrecen todos los detalles.&lt;/p&gt;
-
 &lt;p&gt;Aunque la mayoría de la información se puede consular en  ficheros del sistema como &lt;code&gt;/proc/meminfo&lt;/code&gt; que es de dondel el propio programa extrae la información, a veces no está lo más legible posible y no en el mismo lugar, por eso esta es tan interesante.&lt;/p&gt;
-
 &lt;p&gt;Veamos por ejemplo un extracto del informe de memoria que hace:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ lshw -C memory
 ...
@@ -54,167 +46,111 @@ Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya 
        capacidad: 4MiB
        capacidades: internal write-back instruction
        configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;em&gt;Una sencilla forma de conocer la caché de nuestro procesador (entre otras muchas cosas relacionadas con memoria).&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Para su ejecución solo necesitamos especificarle el tipo de información con la opcion `&lt;code&gt;-C&lt;/code&gt;, en este caso &lt;code&gt;memory&lt;/code&gt;. Se pueden consultar todas las opciones en la ayuda.&lt;/p&gt;
-
+&lt;p&gt;Para su ejecución solo necesitamos especificarle el tipo de información con la opcion ``-C&lt;code&gt;, en este caso &lt;/code&gt;memory`. Se pueden consultar todas las opciones en la ayuda.&lt;/p&gt;
 &lt;p&gt;Además podemos hacer cosas como extraer la información en formato HTML (también XML), que aunque no tiene un diseño muy trabajado, nos puede ser útil.&lt;/p&gt;
-
 &lt;p&gt;Además también dispone de una interfaz para escritorio, llamada &lt;code&gt;lshw-gtk&lt;/code&gt; (aunque eso nos interesa menos).&lt;/p&gt;
-
-&lt;h1 id=&#34;12-htop-https-linux-die-net-man-1-htop&#34;&gt;12 &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;12-htophttpslinuxdienetman1htop&#34;&gt;12 &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Como un alternativa a &lt;code&gt;top&lt;/code&gt; de la anterior entrega (que se nos puede quedar corto en algunas ocasiones) tenemos &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;, que no es más que otro visor de procesos, pero &lt;strong&gt;interactivo&lt;/strong&gt;. Este tendremos que instalarlo, ya que no suele venir por defecto, pero merece la pena.&lt;/p&gt;
-
 &lt;p&gt;No solo ofrece una visión de la memoria de nuestros sistema en tiempo real sino también el número de tareas, hebras y carga del sistema, incluso el tiempo que lleva encendido el equipo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/htop.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/htop.png&#34;
-            alt=&#34;HTOP&#34;
-            title=&#34;HTOP&#34;
-            sizes=&#34;(min-width: 645px) 645px, 100vw&#34;
-            width=&#34;645&#34;
-            height=&#34;194&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Y lo mejor de todo es que podemos navegar por los procesos y realizar ciertas acciones sobre ellos, como matarlos con &lt;code&gt;kill&lt;/code&gt;, aquí &lt;code&gt;F9&lt;/code&gt;, directamente desde el propio programa.&lt;/p&gt;
-
 &lt;p&gt;Pero si quieres algo más rápido como para por ejemplo, ver la memoria que tienes libre y usada para &lt;em&gt;swap&lt;/em&gt; siempre puedes usar &lt;a href=&#34;https://linux.die.net/man/1/free&#34;&gt;free&lt;/a&gt;, instalada por defecto en la mayoría de las distros.&lt;/p&gt;
-
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ free
               total        used        free      shared  buff/cache   available
 Memoria:     &lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;
-Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;13-fdisk-http-man-cx-fdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
-
+Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;13-fdiskhttpmancxfdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Aunque es una herramienta completa (merecería un post aparte) para realizar particiones en nuestro disco también nos puede servir sólo para consultar información relacionada, muy útil a si tenemos varios discos, por ejemplo, para ver nomenclatura, tamaños, etc, y no podemos dejar de mencionarla.&lt;/p&gt;
-
 &lt;p&gt;Ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fdisk -l
 Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
 /dev/sdb1  *           &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;   100M  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
-/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;114&lt;/span&gt;,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
-/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;118&lt;/span&gt;,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
+/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; 114,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; 118,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
 /dev/sdb5         &lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;     2G &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; Linux swap / Solaris
-/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;116&lt;/span&gt;,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;14-df-https-linux-die-net-man-1-df-du-https-linux-die-net-man-1-du-y-ncdu-https-dev-yorhel-nl-ncdu-man&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
-
+/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; 116,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;14-dfhttpslinuxdienetman1df-duhttpslinuxdienetman1du-y-ncduhttpsdevyorhelnlncduman&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;El espacio libre que tenemos en nuestro sistema siempre es algo a tener en cuenta y para comprobarlo no necesitamos ninguna herramienta gráfica, mucho más rápido y eficiente desde terminal, veamos algunas utilidades.&lt;/p&gt;
-
 &lt;p&gt;Con &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt; podemos ver información relevante sobre nuestro sistema de ficheros, como el porcentaje de ocupación, entre otros. Así podremos comprobar de un vistazo el estado de las particiones, por si tuviéramos que realizar una reasignación de espacio.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df
 S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
-udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
-tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /run
-/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;% /
-/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;% /home
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
-
+udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   0% /dev
+tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   2% /run
+/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  10% /
+/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  13% /home
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ du -h
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	./Tasks
-&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8M	./Books
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3G	.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Que nos dice el tamaño del directorio y de todo
+3,3G	./Tasks
+5,8M	./Books
+3,3G	.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Que nos dice el tamaño del directorio y de todo
 lo contenido en su interior.&lt;/p&gt;
-
 &lt;p&gt;Pero existen otras herramientas con más características, como &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;. Si &lt;code&gt;du&lt;/code&gt; era el acrónimo de &lt;em&gt;&amp;ldquo;disk usage&amp;rdquo;&lt;/em&gt;, este podría significar &lt;em&gt;&amp;ldquo;nice disk usage&amp;rdquo;&lt;/em&gt; (aunque en realidad es NCurses Disk Usage).&lt;/p&gt;
-
 &lt;p&gt;Y lo bueno que tiene es que entramos en una interfaz (directamente en terminal) donde no solo vemos el tamaño de los ficheros o directorios sino también el tamaño relativo al fichero de mayor peso, para de forma muy rápida ver los que más espacio están ocupando en disco en relación al resto.&lt;/p&gt;
-
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Microservices
-&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
+3,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks&lt;/span&gt;
+5,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Talks
-&lt;span class=&#34;m&#34;&gt;539&lt;/span&gt;,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;343&lt;/span&gt;,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;342&lt;/span&gt;,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;314&lt;/span&gt;,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;#####     &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;  Principles Of Microservices by Sam Newman.mp4&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;15-dd-https-linux-die-net-man-1-dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
-
+539,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4&lt;/span&gt;
+343,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4&lt;/span&gt;
+342,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4&lt;/span&gt;
+314,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#####     ]  Principles Of Microservices by Sam Newman.mp4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;15-ddhttpslinuxdienetman1dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Potente y simple herramienta que entre otras cosas nos sirve para grabar imágenes &lt;code&gt;.iso&lt;/code&gt; en memorias externas, algo que seguramente hayamos necesitado hacer en más de una ocación. Mucho más sencillo desde &lt;em&gt;terminal&lt;/em&gt;, así de simple, por ejemplo:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;dd if=input.iso of=/dev/sdb&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;Donde especificamos la iso que queremos quemar (estando en el mismo directorio) y el punto de montaje (para conocerlo podemos usar &lt;code&gt;df&lt;/code&gt;como hemos visto antes).&lt;/p&gt;
-
-&lt;h1 id=&#34;16-history-https-linux-die-net-man-3-history&#34;&gt;16 &lt;a href=&#34;https://linux.die.net/man/3/history&#34;&gt;history&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;16-historyhttpslinuxdienetman3history&#34;&gt;16 &lt;a href=&#34;https://linux.die.net/man/3/history&#34;&gt;history&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Herramienta muy simple para ver los últimos comandos usados (en realidad todos).&lt;/p&gt;
-
 &lt;p&gt;Un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$history&lt;/span&gt;
 &lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;  locate linux
 &lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;  clear
 &lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;  apropos ls
 &lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;  apropos &lt;span class=&#34;s2&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;17-rsync-https-linux-die-net-man-1-rsync&#34;&gt;17 &lt;a href=&#34;https://linux.die.net/man/1/rsync&#34;&gt;rsync&lt;/a&gt;&lt;/h1&gt;
-
+&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10 &lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;17-rsynchttpslinuxdienetman1rsync&#34;&gt;17 &lt;a href=&#34;https://linux.die.net/man/1/rsync&#34;&gt;rsync&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Útil para hacer cópias de forma eficiente, pero &lt;strong&gt;incrementales&lt;/strong&gt;, es decir, no se realizan copias completas
 sino una inicial y las posteriores sobre las modificaciones
 que el directorio en cuestión haya sufrido. Muy útil para copias de seguridad, entre otras muchas cosas.&lt;/p&gt;
-
 &lt;p&gt;Además el origen y el destino pueden ser tanto el mismo equipo como equipos en la misma o diferentes redes.&lt;/p&gt;
-
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;rsync -rtv origen/ destino/&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;Esta es otra herramienta que daría para otra entrada completa.&lt;/p&gt;
-
-&lt;h1 id=&#34;18-locate-https-linux-die-net-man-1-locate&#34;&gt;18. &lt;a href=&#34;https://linux.die.net/man/1/locate&#34;&gt;locate&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;18-locatehttpslinuxdienetman1locate&#34;&gt;18. &lt;a href=&#34;https://linux.die.net/man/1/locate&#34;&gt;locate&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Ideal para buscar ficheros en todo nuestro sistema. Es algo bruto, ya que por defecto busca en todo el sistema pero usando alguna de las opciones podemos refinar un poco su comportamiento. Eso sí, necesitarás usar algún paginador como &lt;code&gt;less&lt;/code&gt;o &lt;code&gt;more&lt;/code&gt; para ver la salida poco a poco.&lt;/p&gt;
-
 &lt;p&gt;Un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ locate password &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
 /bin/systemd-ask-password
 /bin/systemd-tty-ask-password-agent
 /boot/grub/i386-pc/legacy_password_test.mod
 /boot/grub/i386-pc/password.mod
-...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;19-apropos-http-man7-org-linux-man-pages-man1-apropos-1-html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;rdquo;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;19-aproposhttpman7orglinuxman-pagesman1apropos1html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;quot;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
 Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a href=&#34;https://linux.die.net/man/&#34;&gt;man&lt;/a&gt; de los programas instalados en el sistema para ayudaros a encontrarlo.&lt;/p&gt;
-
 &lt;p&gt;Si por ejemplo buscamos un programa que hacía algo con Python, podemos usarla así:&lt;/p&gt;
-
 &lt;p&gt;&lt;code&gt;apropos python | less&lt;/code&gt;&lt;/p&gt;
-
 &lt;p&gt;(Usamos &lt;code&gt;less&lt;/code&gt; para ver progresivamente la salida del comando)&lt;/p&gt;
-
 &lt;p&gt;Y vemos que entre otras cosas tenemos instalados conversores entre versiones de Python, quizás ni lo sabías :) .&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
-2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
-2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
-dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
-dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
-fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
-jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
-:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;20-tree-https-linux-die-net-man-1-tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
+2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
+jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
+:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;20-treehttpslinuxdienetman1tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Si algún momento has necesitado conocer las subcarpetas y ficheros de un subdirectorio estando en terminal probablemente hayas acabando entrando y saliendo de ellas, bajando y subiendo de nivel, todo esto es mucho más sencillo si podemos ver el árbol de directorios y ficheros desde terminal, grácias a la orden &lt;code&gt;tree&lt;/code&gt;.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ tree .
 .
@@ -226,21 +162,15 @@ jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1
     ├── lib2.js
     └── lib3.js
 
-&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
-
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sudo apt-get install tree&lt;/code&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;bonus-reverse-i-search-https-www-gnu-org-software-bash-manual-html-node-commands-for-history-html&#34;&gt;Bonus: &lt;a href=&#34;https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html&#34;&gt;reverse-i-search&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;bonus-reverse-i-searchhttpswwwgnuorgsoftwarebashmanualhtml_nodecommands-for-historyhtml&#34;&gt;Bonus: &lt;a href=&#34;https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html&#34;&gt;reverse-i-search&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Y para acabar, ya que hemos hablado de &lt;code&gt;history&lt;/code&gt; y de &lt;code&gt;locate&lt;/code&gt; no podíamos dejar de lado reverse-i-search, por si lo que queremos es buscar comandos que previamente hemos usado. Es un poco especial porque no se ejecuta de forma común al resto, sino pulsando &lt;code&gt;Crtl + R&lt;/code&gt; en nuestra terminal, ya que en realidad es un comando para la manipulación del historial que consultamos con &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;Un ejemplo, con solo poner &lt;code&gt;pyth&lt;/code&gt; nos sale una de las órdenes con python que hemos ejecutado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
 &lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;
-
 &lt;p&gt;¿Añadirías alguna a la lista? ¡Cuéntanos!&lt;/p&gt;</description>
         </item>
         
@@ -250,59 +180,33 @@ jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1
             <pubDate>Sun, 08 Oct 2017 19:27:20 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; class=&#34; wp-image-938 alignleft&#34; title=&#34;Top 10 de las Mejores Herramientas en la Línea de Comandos&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/original1.jpg&#34; alt=&#34;Comandos&#34; width=&#34;640px&#34; height=&#34;360px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
-
-&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;a href=&#34;http://lifehacker.com/179514/geek-to-live--introduction-to-cygwin-part-i&#34; target=&#34;_blank&#34;&gt;chequear Cygwin&lt;/a&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.
-&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;!-- raw HTML omitted --&gt;chequear Cygwin&lt;!-- raw HTML omitted --&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
-
-&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;a href=&#34;http://lifehacker.com/5445302/control-your-system-with-the-top-command&#34; target=&#34;_blank&#34;&gt;esta rápida introducción a top&lt;/a&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
-
+&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;!-- raw HTML omitted --&gt;esta rápida introducción a top&lt;!-- raw HTML omitted --&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
 &lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
-
-&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5935151/the-remote-control-conundrum-how-to-choose-the-right-remote-for-your-home-theater-pc&#34; target=&#34;_blank&#34;&gt;controlar tu HTPC&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5867786/how-to-monitor-your-bittorrent-downloads-from-any-computer-or-mobile-device&#34; target=&#34;_blank&#34;&gt;monitorear tus descargas de BitTorrent&lt;/a&gt;, o &lt;a href=&#34;http://lifehacker.com/5822590/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-freenas&#34; target=&#34;_blank&#34;&gt;compartir archivos entre computadoras&lt;/a&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;a href=&#34;http://www.techrepublic.com/article/linux-101-use-ifconfig-in-linux-to-configure-your-network/6040932&#34; target=&#34;_blank&#34;&gt;esta introducción a ifconfig&lt;/a&gt; para ver cómo se usa.&lt;/p&gt;
-
+&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;!-- raw HTML omitted --&gt;controlar tu HTPC&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;monitorear tus descargas de BitTorrent&lt;!-- raw HTML omitted --&gt;, o &lt;!-- raw HTML omitted --&gt;compartir archivos entre computadoras&lt;!-- raw HTML omitted --&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;!-- raw HTML omitted --&gt;esta introducción a ifconfig&lt;!-- raw HTML omitted --&gt; para ver cómo se usa.&lt;/p&gt;
 &lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
-
-&lt;p&gt;De vez en cuando, te encuentras con un error de &amp;#8220;permiso denegado&amp;#8221; al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod&lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;a href=&#34;http://www.ghacks.net/2011/02/18/linux-101-using-chmod-and-chown/&#34; target=&#34;_blank&#34;&gt;esta guía de chmod y su hermano chown&lt;/a&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
-
+&lt;p&gt;De vez en cuando, te encuentras con un error de “permiso denegado” al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod &lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;!-- raw HTML omitted --&gt;esta guía de chmod y su hermano chown&lt;!-- raw HTML omitted --&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
 &lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
-
-&lt;p&gt;Para qué configurar un &lt;a href=&#34;http://lifehacker.com/5902654/use-your-home-computer-from-anywhere-a-comprehensive-guide-to-remote-controlling-your-pc&#34; target=&#34;_blank&#34;&gt;sistema de pantalla completa compartida&lt;/a&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;a href=&#34;http://lifehacker.com/5919558/turn-an-old-computer-into-a-networked-backup-streaming-or-torrenting-machine-with-ubuntu&#34; target=&#34;_blank&#34;&gt; un servidor sin monitor&lt;/a&gt; hasta &lt;a href=&#34;http://lifehacker.com/237227/geek-to-live--encrypt-your-web-browsing-session-with-an-ssh-socks-proxy&#34; target=&#34;_blank&#34;&gt;encriptar tu navegador web&lt;/a&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;a href=&#34;http://lifehacker.com/5760626/how-to-install-and-set-up-ssh-on-your-jailbroken-ios-device&#34; target=&#34;_blank&#34;&gt;controlar tu dispositivo iOS&lt;/a&gt; .&lt;/p&gt;
-
+&lt;p&gt;Para qué configurar un &lt;!-- raw HTML omitted --&gt;sistema de pantalla completa compartida&lt;!-- raw HTML omitted --&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;!-- raw HTML omitted --&gt; un servidor sin monitor&lt;!-- raw HTML omitted --&gt; hasta &lt;!-- raw HTML omitted --&gt;encriptar tu navegador web&lt;!-- raw HTML omitted --&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;!-- raw HTML omitted --&gt;controlar tu dispositivo iOS&lt;!-- raw HTML omitted --&gt; .&lt;/p&gt;
 &lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
-
-&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;a href=&#34;http://lifehacker.com/5774707/download-the-entire-archive-of-nasas-astronomy-picture-of-the-day-with-one-command&#34; target=&#34;_blank&#34;&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;/a&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;a href=&#34;http://lifehacker.com/161202/geek-to-live--mastering-wget&#34; target=&#34;_blank&#34;&gt;guía de capacitación en wget&lt;/a&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
-
+&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;!-- raw HTML omitted --&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;!-- raw HTML omitted --&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;!-- raw HTML omitted --&gt;guía de capacitación en wget&lt;!-- raw HTML omitted --&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
 &lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
-
-&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;a href=&#34;http://lifehacker.com/5859642/why-you-should-set-up-your-to+do-list-in-a-plain-text-file-and-how-to-do-it&#34; target=&#34;_blank&#34;&gt;extremadamente versátil lista de tareas&lt;/a&gt;, &lt;a href=&#34;http://lifehacker.com/5828789/how-to-create-an-attractive-customized-desktop-hud-with-rainmeter&#34; target=&#34;_blank&#34;&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;/a&gt;, o incluso permitirte&lt;a href=&#34;http://lifehacker.com/5790955/how-to-make-a-web-site-the-complete-guide&#34; target=&#34;_blank&#34;&gt; construir un sitio web completo&lt;/a&gt;. Y si bien hay &lt;a href=&#34;http://lifehacker.com/5706475/five-best-text-editors&#34; target=&#34;_blank&#34;&gt;una gran cantidad de editores de texto excelentes&lt;/a&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;a href=&#34;http://lifehacker.com/5844890/the-interactive-vim-tutorial-teaches-you-how-to-use-the-super+efficient-vim-text-editor&#34; target=&#34;_blank&#34;&gt; la web está llena de tutoriales&lt;/a&gt; sobre cómo usarlos.&lt;/p&gt;
-
+&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;!-- raw HTML omitted --&gt;extremadamente versátil lista de tareas&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;!-- raw HTML omitted --&gt;, o incluso permitirte&lt;!-- raw HTML omitted --&gt; construir un sitio web completo&lt;!-- raw HTML omitted --&gt;. Y si bien hay &lt;!-- raw HTML omitted --&gt;una gran cantidad de editores de texto excelentes&lt;!-- raw HTML omitted --&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;!-- raw HTML omitted --&gt; la web está llena de tutoriales&lt;!-- raw HTML omitted --&gt; sobre cómo usarlos.&lt;/p&gt;
 &lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
-
-&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;a href=&#34;http://eriwen.com/tools/grep-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este tutorial&lt;/a&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender &amp;#8230;&lt;/p&gt;
-
+&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;!-- raw HTML omitted --&gt; este tutorial&lt;!-- raw HTML omitted --&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender …&lt;/p&gt;
 &lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
-
-&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar *pip*es, visita nuestro &lt;a href=&#34;http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;manual de línea de comandos para principiantes&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar &lt;em&gt;pip&lt;/em&gt;es, visita nuestro &lt;!-- raw HTML omitted --&gt;manual de línea de comandos para principiantes&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
-
-&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;a href=&#34;http://eriwen.com/productivity/find-is-a-beautiful-tool/&#34; target=&#34;_blank&#34;&gt; este gran tutorial&lt;/a&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
-
+&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;!-- raw HTML omitted --&gt; este gran tutorial&lt;!-- raw HTML omitted --&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
-
-&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;a href=&#34;http://mxcl.github.com/homebrew/&#34; target=&#34;_blank&#34;&gt;brebaje casero&lt;/a&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
-
-&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;a href=&#34;http://lifehacker.com/5622340/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything&#34; target=&#34;_blank&#34;&gt;lista de aplicaciones de línea de comandos no convencionales&lt;/a&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;a href=&#34;http://lifehacker.com/5743814/become-a-command-line-ninja-with-these-time+saving-shortcuts&#34; target=&#34;_blank&#34;&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;!-- raw HTML omitted --&gt;brebaje casero&lt;!-- raw HTML omitted --&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
+&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;!-- raw HTML omitted --&gt;lista de aplicaciones de línea de comandos no convencionales&lt;!-- raw HTML omitted --&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;!-- raw HTML omitted --&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fuente | &lt;a href=&#34;http://lifehacker.com/5935869/top-10-tools-that-are-better-in-the-command-line&#34; target=&#34;_blank&#34;&gt;lifehacker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fuente | &lt;!-- raw HTML omitted --&gt;lifehacker&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -313,19 +217,17 @@ jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1
             
             <guid>https://elbauldelprogramador.com/mini-grep-en-c-busca-palabras-en-archivos/</guid>
             <description>&lt;p&gt;Aquí os dejo un pequeño ejercício en C++, se trata de crear un programa que actue básicamente como el comando grep de linux, pero mucho más simple. Se usa de la siguiente forma:&lt;/p&gt;
-
 &lt;p&gt;Para buscar una palabra:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep palabra fichero1 &amp;lt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ficheros2...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para buscar frases:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;palabra1 palabra2...&amp;#34;&lt;/span&gt; fichero1 &amp;lt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ficheros2...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Un ejemplo de ejecución:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep palabra fichero1 &amp;lt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ficheros2...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para buscar frases:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;palabra1 palabra2...&amp;#34;&lt;/span&gt; fichero1 &amp;lt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ficheros2...&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Un ejemplo de ejecución:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr-&amp;gt; ./grep cout max.php grep.cpp smtp.cpp
-grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     cout &amp;lt;&amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Uso: grep &amp;lt;palabra a buscar&amp;#34;&lt;/span&gt;&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;lt;&amp;lt; endl;
+grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;22&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;     cout &amp;lt;&amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Uso: grep &amp;lt;palabra a buscar&amp;#34;&lt;/span&gt;&amp;gt; &amp;lt;firchero1&amp;gt;&amp;lt;ficheros...&amp;gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&amp;gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;lt;&amp;lt; endl;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;grep.cpp(56)     cout &amp;lt;&amp;lt; nombre &amp;lt;&amp;lt; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;lt;&amp;lt; nlinea &amp;lt;&amp;lt; &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; t&lt;span class=&#34;s2&#34;&gt;&amp;#34; &amp;lt;&amp;lt; remove_left_white_spaces(cadena) &amp;lt;&amp;lt; endl;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;smtp.cpp(56)     cout &amp;lt;&amp;lt; &amp;#34;&lt;/span&gt;socket created&lt;span class=&#34;s2&#34;&gt;&amp;#34;;
-&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;smtp.cpp(75)     cout &amp;lt;&amp;lt; &amp;#34;&lt;/span&gt;Connectedn&lt;span class=&#34;s2&#34;&gt;&amp;#34;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.&lt;/p&gt;
-
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;smtp.cpp(75)     cout &amp;lt;&amp;lt; &amp;#34;&lt;/span&gt;Connectedn&lt;span class=&#34;s2&#34;&gt;&amp;#34;;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El programa nos indica el fichero en el que se encontró la palabra, el número de línea y la linea en sí.&lt;/p&gt;
 &lt;p&gt;Código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//============================================================================
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Name        : grep.cpp
@@ -394,71 +296,63 @@ grep.cpp&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&g
             
             <guid>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</guid>
             <description>&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;netstat-es-un-paquete-de-herramienas-de-red&#34;&gt;Netstat es un paquete de herramienas de red&lt;/h1&gt;
-
 &lt;p&gt;El comando &lt;em&gt;netstat&lt;/em&gt; sirve para varias cosas, como mostrar estadísticas de la red, imprimir la tabla de rutas, mostrar conexiones activas y mucho más. Para cada una de las opciones de uso menciondas existe un comando específico que realiza la misma tarea. Pero netstat los abarca todos bajo un mismo comando, y además es multiplataforma. Lo cual quiere decir que podremos usarlo tanto en Windows, Linux o Mac.&lt;/p&gt;
-
 &lt;p&gt;Tras esta pequeña introducción, veamos algunas salidas de este comando:&lt;/p&gt;
-
 &lt;h1 id=&#34;mostrar-las-conexiones-de-red&#34;&gt;Mostrar las conexiones de red&lt;/h1&gt;
-
 &lt;p&gt;Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apA inet
 Active Internet connections &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;servers and established&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:38768                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:smtp          *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2861&lt;/span&gt;/exim4
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60706      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60684      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44415      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43597      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35340      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36162      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.120:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44472      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:http      TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35336      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43599      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                     LISTEN      1775/rpcbind
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:38768                 *:*                     LISTEN      1808/rpc.statd
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:smtp          *:*                     LISTEN      2861/exim4
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                     LISTEN      2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60706      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60684      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44415      216.151.210.122:http    TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43597      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35340      178-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36162      76.74.254.120:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44472      76.74.254.123:http      TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35336      178-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43599      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED 2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED 3451/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60689      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60687      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60685      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60689      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60687      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60685      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED 3451/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44416      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
-tcp       &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43601      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60704      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:41758      &lt;span class=&#34;m&#34;&gt;199&lt;/span&gt;.119.233.72.sta:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60710      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36232      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60688      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60686      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43600      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:bootpc                *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:678                   *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:712           *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                                 &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:mdns                  *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:44290                 *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:53066                 *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:1900                  *:*                                 &lt;span class=&#34;m&#34;&gt;2905&lt;/span&gt;/minissdpd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:45008                 *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Las parámetros pasados a netstat son; &lt;em&gt;-a&lt;/em&gt; para mostrar todos los sockets, &lt;em&gt;-p&lt;/em&gt; muestra la columna PID/Program, &lt;em&gt;-A inet&lt;/em&gt; muestra solo sockets TCP/UDP. En Windows la opción &lt;em&gt;-A inet&lt;/em&gt; puede omitirse y &lt;em&gt;-p&lt;/em&gt; debe reemplazarse por &lt;em&gt;-o&lt;/em&gt;. En Mac, no hay equivalente a &lt;em&gt;-p&lt;/em&gt; y &lt;em&gt;-A inet&lt;/em&gt; debe reemplzarse por &lt;em&gt;-f inet&lt;/em&gt;. Para conocer los nombres de los programas en Mac usa &lt;em&gt;lsof -i&lt;/em&gt;&lt;/p&gt;
-
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44416      216.151.210.122:http    TIME_WAIT   -
+tcp       &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43601      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60704      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:41758      199.119.233.72.sta:http ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60710      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36232      76.74.254.123:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60688      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED 2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60686      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43600      72.21.91.121:http       TIME_WAIT   -
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:bootpc                *:*                                 2405/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                                 1775/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:678                   *:*                                 1775/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:712           *:*                                 1808/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                                 2477/dropbox
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:mdns                  *:*                                 2298/avahi-daemon:
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:44290                 *:*                                 1808/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:53066                 *:*                                 2405/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:1900                  *:*                                 2905/minissdpd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:45008                 *:*                                 2298/avahi-daemon:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Las parámetros pasados a netstat son; &lt;em&gt;-a&lt;/em&gt; para mostrar todos los sockets, &lt;em&gt;-p&lt;/em&gt; muestra la columna PID/Program, &lt;em&gt;-A inet&lt;/em&gt; muestra solo sockets TCP/UDP. En Windows la opción &lt;em&gt;-A inet&lt;/em&gt; puede omitirse y &lt;em&gt;-p&lt;/em&gt; debe reemplazarse por &lt;em&gt;-o&lt;/em&gt;. En Mac, no hay equivalente a &lt;em&gt;-p&lt;/em&gt; y &lt;em&gt;-A inet&lt;/em&gt; debe reemplzarse por &lt;em&gt;-f inet&lt;/em&gt;. Para conocer los nombres de los programas en Mac usa &lt;em&gt;lsof -i&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;El singnificado de cada columna es el siguiente:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Proto&lt;/strong&gt;: Indica el protocolo usado por el socket, puede ser TCP o UDP (Son protocolos de red). TCP se usa para obtener conexiones en las que se asegura que todos los paquetes llegan a su destino, en el orden correcto. El problema es que se vuelve muy lento si la conexión es mala. UDP es mucho más rápido, pero puede perder paquetes o entregarlos en un orden incorrecto. En resumen, TCP se usa para navegar por internet y descargar ficheros y UDP se usa en videos streaming y juegos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Recv-Q y Send-Q&lt;/strong&gt;: Indican la cantidad de bytes que hay en cola para dicho socket. En Recv-Q datos esperando a ser leidos y en Send-Q a ser enviados. Normalmente ambas columnas han de estar a 0. De lo contrario puede que exista algún problema. En el ejemplo hay dos sockets con valores distintos a cero, los miraremos más adelante.&lt;/li&gt;
@@ -466,91 +360,73 @@ udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 &lt;li&gt;&lt;strong&gt;State&lt;/strong&gt;: Muestra el estado del socket. TCP dispone de una serie de estados, algunos de ellos son &lt;em&gt;LISTEN&lt;/em&gt; (Esperando a que otra máquina establezca conexión),&lt;em&gt;ESTABLISHED&lt;/em&gt; (Listo para comunicarse). En la lista aparecen varios más, como &lt;em&gt;CLOSE WAIT&lt;/em&gt;, este estado indica que la máquina remota cerró la conexión, pero el programa local no ha seguido la petición y permanece abierto. Normalmente, un estado como este y cantidades distintas a cero en las columnas &lt;strong&gt;Recv-Q&lt;/strong&gt; y &lt;strong&gt;Send-Q&lt;/strong&gt; suelen ir de la mano. Otro estado que aparece en el ejemplo es &lt;em&gt;TIME WAIT&lt;/em&gt;, puedes consultar una lista completa de los estados TCP en la referencias.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;PID/Program name&lt;/strong&gt;: El indicador de proceso del socket en ejecución y el nombre del programa ejecutando dicho proceso.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Procedamos a interpretar los resultados de netstat. En el ejemplo de arriba las direcciones de la columna &lt;strong&gt;Foreign adress&lt;/strong&gt; aparecen cortadas. Para verlas completas es necesario ejecutar netstat con el parámetro &lt;strong&gt;-W&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apWA inet &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep https
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con el comando de arriba estoy mostrando únicamente las conexiones &lt;em&gt;https&lt;/em&gt; establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección &lt;a href=&#34; http://ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&#34; target=&#34;_blank&#34;&gt;ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&lt;/a&gt; podrás comprobar que dicha dirección pertenece al buscador &lt;strong&gt;duckduckgo&lt;/strong&gt;. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.&lt;/p&gt;
-
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el comando de arriba estoy mostrando únicamente las conexiones &lt;em&gt;https&lt;/em&gt; establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección &lt;!-- raw HTML omitted --&gt;ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&lt;!-- raw HTML omitted --&gt; podrás comprobar que dicha dirección pertenece al buscador &lt;strong&gt;duckduckgo&lt;/strong&gt;. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.&lt;/p&gt;
 &lt;p&gt;Veamos ahora la razón de que existan dos conexiones con datos pendientes en la cola de entrada y salida.&lt;/p&gt;
-
 &lt;p&gt;Ambas conexiones son de &lt;strong&gt;dropbox&lt;/strong&gt;, una de ellas tiene el estado TCP en &lt;em&gt;ESTABLISHED&lt;/em&gt;, así que de esa no hay que preocuparse, ya que está transmitiendo datos. La otra sin embargo tiene datos pendientes en la cola de entrada y estado TCP &lt;em&gt;CLOSE WAIT&lt;/em&gt;, es decir, la máquina conectada a la nuestra ha cerrado la conexión, pero nuestro proceso local de dropbox no lo ha hecho. Lo cual quiere decir que aunque haya finalizado la tarea que se estaba llevando a cabo, no se han liberando los recursos que el socket había reservado. Estos escenários no deberían producirse, pero mientras no haya demasiados casos como este no debes preocuparte.&lt;/p&gt;
-
 &lt;p&gt;He comentado que en ocasiones es posible que tanto en la columna &lt;strong&gt;Local Address&lt;/strong&gt; como en &lt;strong&gt;Foreign Address&lt;/strong&gt; aparezca la dirección local de nuestra máquina. Este comportamiento lo usan algunos programas para conseguir que la aplicación sea multiplataforma, ya que la comunicación a través de la red no varía de plataforma a plataforma (Linux, Windows, mac ect.)&lt;/p&gt;
-
 &lt;p&gt;Otro de los posibles valores que puede aparecer en la columna &lt;strong&gt;Foreign Address&lt;/strong&gt; es *:*, y si el tipo de conexión es TCP tendrá el estado &lt;em&gt;LISTEN&lt;/em&gt;. Esto quiere decir que la máquina local está esperando a que otra máquina remota envíe datos. Ejemplos típicos pueden ser &lt;strong&gt;sshd&lt;/strong&gt; (esperando a que alguien abra una conexión ssh), &lt;strong&gt;apache&lt;/strong&gt; o &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/nginx&#34;&gt;nginx&lt;/a&gt;&lt;/strong&gt; (Esperando a que alguien solicite una página web) etc.&lt;/p&gt;
-
 &lt;p&gt;Cuando se realiza una conexión externa, el programa local no suele preocuparse por el puerto local usado para la conexión. Esa es la razón por la que el puerto en el lado local no suele reconocerse y se traduce al nombre del protocolo como &lt;em&gt;https&lt;/em&gt;, &lt;em&gt;www&lt;/em&gt; etc.&lt;/p&gt;
-
 &lt;p&gt;Netstat también sirve para mostrar la tabla de rutas (&lt;strong&gt;Routing Table&lt;/strong&gt;)&lt;/p&gt;
-
 &lt;h1 id=&#34;imprimiendo-la-tabla-de-rutas-routing-table&#34;&gt;Imprimiendo la tabla de rutas (Routing Table)&lt;/h1&gt;
-
 &lt;p&gt;La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -r
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-default         &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0         UG        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
-&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.255 UH        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
-&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.32    *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.248 U         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una breve explicación del significado de las columnas:&lt;/p&gt;
-
+default         10.61.29.89     0.0.0.0         UG        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+10.61.29.89     *               255.255.255.255 UH        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+192.168.1.32    *               255.255.255.248 U         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una breve explicación del significado de las columnas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Destination&lt;/strong&gt;: Patrón con el que se compara la dirección de destino del paquete. Cuando se envia un paquete a internet, se comprueba esta tabla de arriba a abajo hasta que se cumpla el patrón, luego se envía. El valor 0 se usa como comodín, si usamos este patrón 192.168.1.0, las direcciones desde 192.168.1.1 hasta 192.168.1.255 serán valores válidos para dicho patrón.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Gateway&lt;/strong&gt;: Indica dónde mandar el paquete que coincide con el patrón de la columna anterior. El * en esta columna significa &lt;em&gt;“enviar localmente”&lt;/em&gt; (El destino estará en la misma red.)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Genmask&lt;/strong&gt;: La máscara de subred. Se usa para determinar cuantos bits desde el principio de la ip se usan para identificar una subred.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flags&lt;/strong&gt;: Muestra qué flags se aplican a cada línea de la tabla. &lt;strong&gt;U&lt;/strong&gt; viene de &lt;strong&gt;Up&lt;/strong&gt;, indicando que dicha línea está activa. &lt;strong&gt;G&lt;/strong&gt; significa que la línea usa un Gateway. &lt;strong&gt;H&lt;/strong&gt;, indica que el enrutamiento se hace a una dirección de host completa.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MSS&lt;/strong&gt;: &lt;em&gt;Maximum Segment Size&lt;/em&gt;, parámetro TCP usado para dividir paquetes en partes más pequeñas cuando el destinatario indica que es capaz de trabajar con tamaños muy grandes. A dia de hoy, la mayoría de ordenadores no tienen problemas con esto, por lo que está fijado a 0.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Window&lt;/strong&gt;: Igual que MSS, permite alterar un parámetro TCP. En este caso el &lt;em&gt;default Window size&lt;/em&gt;, que indica cuantos paquetes TCP pueden mandarse antes de que uno de ellos sea de *ACK*nowledged. Suele estar a 0.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Window&lt;/strong&gt;: Igual que MSS, permite alterar un parámetro TCP. En este caso el &lt;em&gt;default Window size&lt;/em&gt;, que indica cuantos paquetes TCP pueden mandarse antes de que uno de ellos sea de &lt;em&gt;ACK&lt;/em&gt;nowledged. Suele estar a 0.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;irtt&lt;/strong&gt;: &lt;em&gt;Initial Round Trip Time&lt;/em&gt;, puede ser usado por el Kernel para intentar adivinar la mejor configuración de parámetros para TCP. No suele usarse.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;iface&lt;/strong&gt;: Establece la interfaz de red a usar para enviar los paquetes.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;mostrar-estadísticas-e-interfaces&#34;&gt;Mostrar estadísticas e interfaces&lt;/h1&gt;
-
 &lt;p&gt;También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -i
 Kernel Interface table
 Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMU
 eth1       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;253744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;153622&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMRU
-lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; LRU&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El significado de cada columna es el siguiente:&lt;/p&gt;
-
+lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; LRU
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El significado de cada columna es el siguiente:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Iface&lt;/strong&gt;: Interfaces disponibles para las que se muestran las estadísticas. &lt;em&gt;lo&lt;/em&gt; es la interfaz de &lt;em&gt;loopback&lt;/em&gt;, una interfaz privada usada por la máquina para comunicarse consigo misma, como se vió arriba, este comportamiento es frecuente y proporciona mayor rendimiento.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MTU&lt;/strong&gt;: &lt;em&gt;Maximum Transmission Unit&lt;/em&gt; (&lt;em&gt;Unidad Máxima de Transmisión&lt;/em&gt;) que la interfaz puede enviar de una sola vez.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RX-OK/ERR/DRP/OVR&lt;/strong&gt;: Estadísticas sobre los paquetes que se han recibido. &lt;em&gt;OK&lt;/em&gt; significa “*Correctemente recibido*”, “*ERR*” recibido pero con &lt;a href=&#34;http://es.wikipedia.org/wiki/Checksum&#34; target=&#34;_blank&#34;&gt;CheckSum&lt;/a&gt; incorrecto (ocurre cuando la conexión es mala), “*DRP*” eliminado porque el buffer está lleno (Ocurre cuando se reciben muchos paquetes en un periodo muy corto de tiempo), “*OVR*”, eliminado porque el kernel no pudo manejarlo a tiempo (Si esto ocurre, la máquina estaba muy ocupada).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RX-OK/ERR/DRP/OVR&lt;/strong&gt;: Estadísticas sobre los paquetes que se han recibido. &lt;em&gt;OK&lt;/em&gt; significa “&lt;em&gt;Correctemente recibido&lt;/em&gt;”, “&lt;em&gt;ERR&lt;/em&gt;” recibido pero con &lt;!-- raw HTML omitted --&gt;CheckSum&lt;!-- raw HTML omitted --&gt; incorrecto (ocurre cuando la conexión es mala), “&lt;em&gt;DRP&lt;/em&gt;” eliminado porque el buffer está lleno (Ocurre cuando se reciben muchos paquetes en un periodo muy corto de tiempo), “&lt;em&gt;OVR&lt;/em&gt;”, eliminado porque el kernel no pudo manejarlo a tiempo (Si esto ocurre, la máquina estaba muy ocupada).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TX-OK/ERR/DRP/OVR&lt;/strong&gt;: Significan lo mismo que sus homólogos en la columna RX, pero para paquetes enviados por la interfaz.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FLG&lt;/strong&gt;: Flags activas para la interfaz. “*B*” de “*Capacidad de broadcast*”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “*M*” de “*capacidad de Multicast*”, la interfaz puede enviar paquetes con múltiples destinos. “*L*” de “*interfaz loopback*”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “*U*” y “*R*” significan “*Up*”(Activa) y “*running*”(ejecutandose) respectivamente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FLG&lt;/strong&gt;: Flags activas para la interfaz. “&lt;em&gt;B&lt;/em&gt;” de “&lt;em&gt;Capacidad de broadcast&lt;/em&gt;”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “&lt;em&gt;M&lt;/em&gt;” de “&lt;em&gt;capacidad de Multicast&lt;/em&gt;”, la interfaz puede enviar paquetes con múltiples destinos. “&lt;em&gt;L&lt;/em&gt;” de “&lt;em&gt;interfaz loopback&lt;/em&gt;”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “&lt;em&gt;U&lt;/em&gt;” y “&lt;em&gt;R&lt;/em&gt;” significan “&lt;em&gt;Up&lt;/em&gt;”(Activa) y “&lt;em&gt;running&lt;/em&gt;”(ejecutandose) respectivamente.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;El motivo por el que el valor del “*MTU*” es mayor en la interfaz de loopback se debe a motivos de rendimiento, ya que no tendrá que partir los paquetes en trozos más pequeños.&lt;/p&gt;
-
-&lt;p&gt;Como se aprecia en el ejemplo, todo parece estar correcto, ya que las columnas de errores están a 0. Una opción interesante de este comando es añadirle la opción &lt;em&gt;-c&lt;/em&gt;, es decir “*netstat -ci*”, para ver la tabla cada segundo, y comprobar así si hay algún error.&lt;/p&gt;
-
-&lt;p&gt;Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la &lt;a href=&#34;http://linuxacademy.com&#34; target=&#34;_blank&#34;&gt;Linux Academy&lt;/a&gt;, perteneciente al autor cuyo artículo he traducido.&lt;/p&gt;
-
+&lt;p&gt;El motivo por el que el valor del “&lt;em&gt;MTU&lt;/em&gt;” es mayor en la interfaz de loopback se debe a motivos de rendimiento, ya que no tendrá que partir los paquetes en trozos más pequeños.&lt;/p&gt;
+&lt;p&gt;Como se aprecia en el ejemplo, todo parece estar correcto, ya que las columnas de errores están a 0. Una opción interesante de este comando es añadirle la opción &lt;em&gt;-c&lt;/em&gt;, es decir “&lt;em&gt;netstat -ci&lt;/em&gt;”, para ver la tabla cada segundo, y comprobar así si hay algún error.&lt;/p&gt;
+&lt;p&gt;Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la &lt;!-- raw HTML omitted --&gt;Linux Academy&lt;!-- raw HTML omitted --&gt;, perteneciente al autor cuyo artículo he traducido.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;a href=&#34;http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/&#34; target=&#34;_blank&#34;&gt;pinehead.tv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Lista posibles estados TCP&lt;/em&gt; »» &lt;a href=&#34;http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm&#34; target=&#34;_blank&#34;&gt;tcpipguide.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;pinehead.tv&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lista posibles estados TCP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;tcpipguide.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -560,20 +436,13 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
             <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 910px) 910px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/03/git-logo.png&#34; alt=&#34;Tutorial git y comandos git&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos git&#34; alt=&#34;Git: Mini Tutorial y chuleta de comandos&#34; width=&#34;910px&#34; height=&#34;380px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;a href=&#34;http://bashyc-blogspot.tradepub.com/c/pubRD.mpl?sr=oc&amp;_t=oc:&amp;qf=w_java24&amp;ch=ocsoc&#34; id=&#34;revresponse-git-link&#34; title=&#34;Manual de git&#34; target=&#34;_blank&#34;&gt;manual para git&lt;/a&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;!-- raw HTML omitted --&gt;manual para git&lt;!-- raw HTML omitted --&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;a href=&#34;http://git-scm.com/book&#34; target=&#34;_blank&#34;&gt;Pro Git&lt;/a&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.en.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/progit.epub&#34; target=&#34;_blank&#34;&gt;EPUB&lt;/a&gt;, &lt;a href=&#34;https://github.s3.amazonaws.com/media/pro-git.en.mobi&#34; target=&#34;_blank&#34;&gt;MOBI&lt;/a&gt; y &lt;a href=&#34;http://www.amazon.es/gp/product/1430218339/ref=as_li_ss_tl?ie=UTF8&amp;camp=3626&amp;creative=24822&amp;creativeASIN=1430218339&amp;linkCode=as2&amp;tag=elbaudelpro-21&#34; target=&#34;_blank&#34;&gt;versión en papel&lt;/a&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;!-- raw HTML omitted --&gt;Pro Git&lt;!-- raw HTML omitted --&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;!-- raw HTML omitted --&gt;PDF&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;EPUB&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;MOBI&lt;!-- raw HTML omitted --&gt; y &lt;!-- raw HTML omitted --&gt;versión en papel&lt;!-- raw HTML omitted --&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;chuleta-de-comandos-git&#34;&gt;Chuleta de comandos git&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git help &amp;lt;command&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git clone &amp;lt;uri&amp;gt; namedir&lt;/code&gt; # clona usando como nombre de directorio namedir.&lt;/li&gt;
@@ -590,25 +459,19 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;   #  to unstage&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;   #  Descartar cambios en el directorio de trabajo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;añadir-archivos&#34;&gt;AÑADIR ARCHIVOS&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git add -i&lt;/code&gt;  # interactive staggin&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git add -p&lt;/code&gt;  # crea patch&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;stash&#34;&gt;STASH&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git stash&lt;/code&gt;  # guarda el estado en una pila y limpia el directorio para poder cambiar de rama&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash list&lt;/code&gt;  # muestra la pila&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash apply&lt;/code&gt;  #  vuelve al estado original del dir. Stash{n} especifica uno concreto Y &amp;ndash;index reaplica los cambios stagged&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git stash pop&lt;/code&gt;  #  elimina el primero en la pila. O drop&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;logs&#34;&gt;LOGS&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git log -p -2&lt;/code&gt;  #  Muestra 2 últimos commits con diff&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --stat&lt;/code&gt;&lt;/li&gt;
@@ -625,9 +488,7 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git log refA refB --not refC&lt;/code&gt;  #  commits en refA y refB que no están en refC&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log master...experiment&lt;/code&gt;  # commits de master o experiment, pero sin ser comunes. Con &amp;ndash;left-right indica a qué rama pertenece cada uno&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;remotes-repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
-
+&lt;h2 id=&#34;remotes--repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git remote -v&lt;/code&gt;  #  lista los repos remotos&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote add [shortname] [url]&lt;/code&gt;  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master&lt;/li&gt;
@@ -637,25 +498,21 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git remote rename &amp;lt;old-name&amp;gt; &amp;lt;new-name&amp;gt;&lt;/code&gt;   #  también renombra branches: quedaría &lt;code&gt;&amp;lt;new-name&amp;gt;/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote rm &amp;lt;remote-name&amp;gt;&lt;/code&gt;   #  p.e si el contribuidor ya no contribuye más&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;añadir-varios-repositorios-remotos&#34;&gt;Añadir varios repositorios remotos&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git remote add bitbucket &amp;lt;url repositorio&amp;gt;&lt;/code&gt;  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push -u bitbucket -all&lt;/code&gt;  #  Subir el proyecto a bitbucket. A partir de ahora se puede seleccionar a qué repo publicar con &lt;code&gt;git push nombre_repo_remoto&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;tagging-marcan-puntos-importantes-en-la-histtoria-del-repo-releases&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
-
+&lt;h2 id=&#34;tagging--marcan-puntos-importantes-en-la-histtoria-del-repo--releases-&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git tag&lt;/code&gt;  #  muestra las etiquetas actuales&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -l &#39;v1.4.2.*&#39;&lt;/code&gt;   #  acepta regex&lt;/li&gt;
 &lt;li&gt;Dos tipos de tag:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tagname&amp;gt; -m &#39;mensaje&#39;&lt;/code&gt;   #  annotated tag&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  muestra información asociada.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -s &amp;lt;tag-name&amp;gt; -m &#39;message&#39;&lt;/code&gt;   #  la firma con gpg&lt;/li&gt;
@@ -663,13 +520,12 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git tag -v &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  verifica tags firmadas&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tag-name&amp;gt; [commit-chksum]&lt;/code&gt;  #  crea tag para commit con dicho chksum&lt;/li&gt;
 &lt;li&gt;Por defecto no se transfieren los tags, para subirlos al servidor:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git push origin [tag-name]&lt;/code&gt;  #  una sola&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin --tags&lt;/code&gt;  #  Enviar todas&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;gpg --list-keys&lt;/code&gt;  # Coges la id pública&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gpg -a --export &amp;lt;id&amp;gt; | git hash-object -w --stdin&lt;/code&gt;  # Copia el SHA-1 devuelto&lt;/li&gt;
@@ -679,13 +535,11 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git show &amp;lt;tag&amp;gt;&lt;/code&gt;   # Devuelve más información sobre la etiqueta&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git tag -d nombre_tag&lt;/code&gt;  #  eliminar la etiqueta&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin :refs/tags/nombre_tag&lt;/code&gt;  #  Eliminar la etiqueta del repositorio remoto.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;branch&#34;&gt;BRANCH&lt;/h2&gt;
-
 &lt;p&gt;Las ramas simplememte son punteros a distintos snapshots&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git branch &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea rama. Puntero al commit actual&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # cambiar a la rama especificada.&lt;/li&gt;
@@ -699,121 +553,119 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git branch --merged&lt;/code&gt;  # lista ramas que han sido mezcladas con la actual. Si no tienen un *, pueden borrarse, ya que significa que se han incorporado los cambios en la rama actual.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git branch --no-merged&lt;/code&gt;  # lista ramas que no han sido incorporadas a la actual.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;remote-branches&#34;&gt;REMOTE BRANCHES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Descarga el contenido del servidor&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;   # Las ramas no se suben por defecto, has de subirlas explícitamente&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;:&amp;lt;nuevoNombre&amp;gt;&lt;/code&gt;   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch&lt;/li&gt;
 &lt;li&gt;Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b rama_nueva origin/rama_nueva&lt;/code&gt;  #  Crea una rama local a partir de la remota&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge origin/nueva_rama&lt;/code&gt;  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push [remotename] :[branch]&lt;/code&gt;  #  elimina una rama remota&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push [remotename] [localbranch]:[remotebranch]&lt;/code&gt;  # La rama en el servidor tiene distinto nombre a la local&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;tracking-branches&#34;&gt;TRACKING BRANCHES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git checkout --track origin/rama&lt;/code&gt;  # Equivalente a -b rama_nueva origin/rama_nueva&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git chekout -b &amp;lt;nuevo_nombre&amp;gt; origin/&amp;lt;rama&amp;gt;&lt;/code&gt;   #  Establece un nombre distinto para la rama local&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;rebase&#34;&gt;REBASE&lt;/h2&gt;
-
 &lt;p&gt;Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re-merges&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/li&gt;
-&lt;li&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:
-
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git rebase --onto master server client&lt;/code&gt;  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge client&lt;/code&gt;  #  fast-forward. Client y master en el mismo snapshot&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git rebase master server&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge server&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git rebase [basebranch] [topicbranch]&lt;/code&gt;  #  sintaxis de rebase&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git rebase -i&lt;/code&gt;  #  Rebase interactivo&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase [basebranch] [topicbranch]&lt;/code&gt;  #  sintaxis de rebase&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase -i&lt;/code&gt;  #  Rebase interactivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;servidor&#34;&gt;SERVIDOR&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git instawew&lt;/code&gt;  #  Muestra una interfaz web con los commits&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;generar-un-número-de-compilación-build-number&#34;&gt;GENERAR UN NÚMERO DE COMPILACIÓN (BUILD NUMBER)&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git describe master&lt;/code&gt;  # Solo funciona para tags creadas con -s ó -a&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;preparar-una-release&#34;&gt;PREPARAR UNA RELEASE&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; | gzip &amp;gt; $(git describe master).tar.gz&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; --format=zip | $(git describe master).zip&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;test/ export-ignore  # Al crear el tarball no incluye el directorio test/&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;generar-un-changelog&#34;&gt;GENERAR UN CHANGELOG&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git shortlog --no-merges master --not &amp;lt;tag&amp;gt;&lt;/code&gt;   # Recopila todos los commits desde &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; y los agrupa por autor&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;recomendaciones&#34;&gt;RECOMENDACIONES&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User1 clona el repo y hace cambios, realiza un commit&lt;/li&gt;
 &lt;li&gt;User2 clona el repo, hace cambios, hace commit y sube los cambios con push&lt;/li&gt;
-&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &lt;u&gt;! [rejected] master -&amp;gt; master (non-fast forward)&lt;/u&gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:&lt;/li&gt;
+&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &lt;!-- raw HTML omitted --&gt;! [rejected] master -&amp;gt; master (non-fast forward)&lt;!-- raw HTML omitted --&gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:
+&lt;ul&gt;
 &lt;li&gt;git fetch origin&lt;/li&gt;
 &lt;li&gt;git merge origin/master&lt;/li&gt;
 &lt;li&gt;git push origin master&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;u&gt;issue54&lt;/u&gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;!-- raw HTML omitted --&gt;issue54&lt;!-- raw HTML omitted --&gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log --no-merges origin/master ^issue54&lt;/code&gt;  # Observa qué cambios ha hecho User1&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge issue54 &amp;amp;&amp;amp; git merge origin/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git diff --check&lt;/code&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git add --patch&lt;/code&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git diff --check&lt;/code&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add --patch&lt;/code&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;pasos-a-seguir-para-contribuir-a-proyecyos-ajenos-mediante-fork&#34;&gt;PASOS A SEGUIR PARA CONTRIBUIR A PROYECYOS AJENOS, MEDIANTE FORK&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git clone &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b featureA&lt;/code&gt;&lt;/li&gt;
@@ -830,7 +682,6 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;(Contactar con el propietario del proyecto)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en &lt;strong&gt;featureB&lt;/strong&gt;, resuelves conflictos, y haces push:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git checkout -b featureBv2 origin/master&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git merge --no-commit --squash featureB&lt;/code&gt;&lt;/li&gt;
@@ -838,22 +689,18 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git push myFork featureBv2&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--squash&lt;/code&gt; coge todo el trabajo de la rama mezclada y la aplasta en un no-merge commit encima de la rama en la que estas. &amp;ndash;no-commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;reflog&#34;&gt;REFLOG&lt;/h2&gt;
-
 &lt;p&gt;En segundo plano, git crea un log de a donde han estado referenciando HEAD y el resto de ramas en los últimos meses.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show HEAD@{n}&lt;/code&gt;  # Muestra información sobre el reflog número n&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git log -g master&lt;/code&gt;  # Muestra el log formateado como la salida de reflog&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git show master@{yesterday}&lt;/code&gt;  # Muestra los commits de ayer.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;utilidades&#34;&gt;UTILIDADES&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git show &amp;lt;short-SHA-1&amp;gt;&lt;/code&gt;   # Es posible ver un commit pasando la versión abreviada del SHA-1&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git rev-parse &amp;lt;branch&amp;gt;&lt;/code&gt;   # A qué SHA-1 apunta una rama&lt;/li&gt;
@@ -862,48 +709,45 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git show HEAD~2&lt;/code&gt;  #  El primer padre del primer padre&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git filter-branch --tree-filter &#39;rm -f &amp;lt;file&amp;gt;&#39; HEAD&lt;/code&gt;  # elimina el archivo de todos los commits&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;depuración&#34;&gt;DEPURACIÓN&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;File anotation&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;File anotation&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git blame -L 12,22 &amp;lt;archivo&amp;gt;&lt;/code&gt;   #  muestra cuando y por quién se modificaron de la linea 12 a la 22&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git blame -C -L 141,153 &amp;lt;file&amp;gt;&lt;/code&gt;   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git bisect start&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git bisect bad&lt;/code&gt;  #  marcas el commit actual como roto&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git bisect good [commit bueno]&lt;/code&gt;  #  último commit conocido que funcionaba&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
-
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git bisect reset&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;submodulos&#34;&gt;SUBMODULOS&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;url&amp;gt;&lt;/code&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
-
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;url&amp;gt;&lt;/code&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;git clone url&lt;/li&gt;
 &lt;li&gt;git submodule init&lt;/li&gt;
 &lt;li&gt;git submodule update&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;configuration&#34;&gt;CONFIGURATION&lt;/h2&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config --global &amp;lt;opcion&amp;gt; &amp;lt;valor&amp;gt;&lt;/code&gt;   # global para usuario, system todos y sin nada, especifico para el repo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config {key}&lt;/code&gt;  #  muestra el valor de key&lt;/li&gt;
@@ -919,56 +763,42 @@ lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m
 &lt;li&gt;&lt;code&gt;git config --global core.whitespace trailing-space, space-before-tab, indent-with-non-tab, cr-at-eol&lt;/code&gt;  #  respectivamente: busca espacios al final de línea, busca espacios al inicio de tabulación, busca líneas con 8 o más espacios en lugar de tabulaciones, acepta retornos de carro&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git apply --whitespace=warn &amp;lt;patch&amp;gt;&lt;/code&gt;   #  advierte de errores de espacios antes de aplicar el patch. Con &amp;ndash;whitespace=fix intenta arreglarlos&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;git-attributes&#34;&gt;GIT ATTRIBUTES&lt;/h2&gt;
-
 &lt;p&gt;Archivo en .gitattributes en el directorio de trabajo o en .git/info/attributes para no committearlo&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Identificando archivos binarios&lt;/strong&gt;
 Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;nombre archivo o regexp&amp;gt; -crlf -diff&lt;/code&gt;  #  git no intentará corregir problemas de crlf ni mostrará los cambios con diff. En versiones &amp;gt;= 1.6 se pueden sustituir estos dos valores por la macro binary&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Diffing binary files&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:&lt;/p&gt;
-
 &lt;p&gt;*&lt;strong&gt;.doc diff=word&lt;/strong&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;tras-esto-hay-que-definir-el-filtro-word-para-que-git-convierta-archivos-word-a-texto&#34;&gt;tras esto hay que definir el filtro word para que git convierta archivos word a texto:&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config diff.word.textconv strings&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
-$ git config diff.exif.textconv exiftool&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
-
+$ git config diff.exif.textconv exiftool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config --global filter.indent.clean indent&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config --global filter.indent.smudge cat&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave &lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;#34;%ad&amp;#34; -1`&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
-
+&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;git config filter.dater.smudge expand_date&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git config filter.dater.clean &#39;perl -pe &amp;quot;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&amp;quot;&#39;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
 &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
 
 git add date_test.txt .gitattributes
@@ -976,21 +806,19 @@ git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Testing date expansion in 
 rm date_test.txt
 git checkout date_test.txt
 cat date_test.txt
-&lt;span class=&#34;nv&#34;&gt;$Date&lt;/span&gt;: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;07&lt;/span&gt;:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+&lt;span class=&#34;nv&#34;&gt;$Date&lt;/span&gt;: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
 
-&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/ &amp;quot;Sincronización de proyectos en git con hooks (ganchos&#34;&gt;Hay dos tipos&lt;/a&gt;&amp;rdquo;), de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34;&gt;Hay dos tipos&lt;/a&gt;, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
 &lt;h2 id=&#34;conceptos&#34;&gt;CONCEPTOS&lt;/h2&gt;
-
 &lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
-
 &lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;doc/*.txt # ignore doc/notes.txt, but not doc/server/arch.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
+*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
+/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
+build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
+doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
     </channel>

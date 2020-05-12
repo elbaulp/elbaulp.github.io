@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Netstat on El Baúl del programador</title>
+        <title>netstat on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/netstat/</link>
-        <description>Recent content in Netstat on El Baúl del programador</description>
+        <description>Recent content in netstat on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/netstat/</link>
-            <title>Netstat on El Baúl del programador</title>
+            <title>netstat on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,21 +22,13 @@
             
             <guid>https://elbauldelprogramador.com/comandos-ss-iproute2-linux/</guid>
             <description>&lt;p&gt;El propósito de &lt;strong&gt;iproute2&lt;/strong&gt; es reemplazar el conjunto de herramientas que componen las &lt;em&gt;net-tools&lt;/em&gt; y pasar a ser él quien se encargue de configurar las interfaces de red, la &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;tabla de rutas&lt;/a&gt; y gestionar la tabla ARP.&lt;/p&gt;
-
 &lt;p&gt;Hace poco he &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;escrito sobre el comando &lt;strong&gt;netstat&lt;/strong&gt;&lt;/a&gt;. El artículo trataba de cómo es posible usar netstat para mostrar dintintos tipos de información sobre el estado de la red. Hoy voy a hablar de su sustituto &lt;strong&gt;ss&lt;/strong&gt;, ya que netstat se dejó de desarrollar en 2001.&lt;/p&gt;
-
 &lt;p&gt;Para situarnos en contexto, &lt;strong&gt;netstat&lt;/strong&gt; forma parte de las comúnmente llamadas &lt;em&gt;net-tools&lt;/em&gt; o herramientas de red. Este conjunto de herramientas lo forman los comandos &lt;em&gt;ifconfig&lt;/em&gt;, &lt;em&gt;netstat&lt;/em&gt; y &lt;em&gt;route&lt;/em&gt;. Dichas herramientas han quedado obsoletas en favor de &lt;strong&gt;iproute2&lt;/strong&gt; desde hace algunos años.&lt;/p&gt;
-
 &lt;p&gt;A día de hoy la mayoría de distribuciones traen &lt;strong&gt;iproute&lt;/strong&gt; instalado por defecto.&lt;/p&gt;
-
 &lt;p&gt;Veamos algunos de los comandos más útiles que nos ofrece este relativamente “nuevo” conjunto de comandos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;obtener-información-sobre-tcp-udp-y-sockets&#34;&gt;Obtener información sobre TCP/UDP y Sockets&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;obtener-información-sobre-tcpudp-y-sockets&#34;&gt;Obtener información sobre TCP/UDP y Sockets&lt;/h1&gt;
 &lt;p&gt;Aquí entra en acción el comando &lt;strong&gt;ss&lt;/strong&gt;, sustituto de &lt;strong&gt;netstat&lt;/strong&gt;. Este comando está incluido en el paquete &lt;strong&gt;iproute2&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;La función de &lt;strong&gt;ss&lt;/strong&gt; es mostrar estadísticas de los sockets, mostrar información similar a netstat. Además, revela más información sobre TCP que otras herramientas. Las opciones más usadas son:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;-n, --numeric
               Do now try to resolve service names.
@@ -70,37 +61,38 @@
               Print  summary  statistics.  This  option  does not parse socket
               lists obtaining summary from various sources. It is useful  when
               amount  of  sockets  is  so  huge  that parsing /proc/net/tcp is
-              painful.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ver la lista completa de opciones escribe &lt;code&gt;ss --help&lt;/code&gt;.&lt;/p&gt;
+              painful.
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ver la lista completa de opciones escribe &lt;code&gt;ss --help&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Algunos ejemplos prácticos:&lt;/p&gt;
-
 &lt;h1 id=&#34;mostrar-todos-los-sockects-a-la-escucha&#34;&gt;Mostrar todos los sockects a la escucha&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ ss -l
 State      Recv-Q Send-Q                                             Local Address:Port                                                 Peer Address:Port
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::sunrpc                                                         :::*
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:sunrpc                                                          *:*
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                           ::1:smtp                                                           :::*
-LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                     &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:smtp                                                            *:*
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt;                                                     127.0.0.1:smtp                                                            *:*
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:17500                                                           *:*
 LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                            *:43076                                                           *:*
-LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
+LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;128&lt;/span&gt;                                                           :::50925                                                          :::*
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para entender el significado de las columnas, puedes dirigirte al artículo de &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34; title=&#34;Netstat: Analizando la red y detectando problemas&#34;&gt;netstat&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;mostrar-conexiones-ssh-establecidas&#34;&gt;Mostrar conexiones ssh establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
-&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;                                                       &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.36:60240                                                  &lt;span class=&#34;m&#34;&gt;207&lt;/span&gt;.97.227.239:ssh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El parámetro &lt;strong&gt;-o&lt;/strong&gt; permite establecer qué opciones mostrar, varios ejemplos son:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state stablished &amp;#39;( dport = :ssh or sport = :ssh)&amp;#39;&lt;/span&gt;
+Recv-Q Send-Q                                                 Local Address:Port                                                     Peer Address:Port
+&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;                                                       192.168.1.36:60240                                                  207.97.227.239:ssh
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El parámetro &lt;strong&gt;-o&lt;/strong&gt; permite establecer qué opciones mostrar, varios ejemplos son:&lt;/p&gt;
 &lt;h1 id=&#34;mostrar-conexiones-smtp-establecidas&#34;&gt;Mostrar conexiones SMTP establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -o state established &lt;span class=&#34;s1&#34;&gt;&amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -o state established &lt;span class=&#34;s1&#34;&gt;&amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado &lt;em&gt;established&lt;/em&gt;. Para mostrar otros estados puedes escribir:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -4 state NOMBRE-DEL-FILTRO&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde &lt;strong&gt;-4&lt;/strong&gt; indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :smtp or sport = :smtp )&amp;#39;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mostrar-conexiones-http-establecidas&#34;&gt;Mostrar conexiones HTTP establecidas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -o state established &amp;#39;( dport = :http or sport = :http )&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En los casos anteriores se ha filtrado únicamente los paquetes TCP con estado &lt;em&gt;established&lt;/em&gt;. Para mostrar otros estados puedes escribir:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -4 state NOMBRE-DEL-FILTRO&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde &lt;strong&gt;-4&lt;/strong&gt; indica paquetes TCP IPv4 y NOMBRE-DEL-FILTRO puede tomar los siguientes valores:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;established&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;syn-sent&lt;/strong&gt;&lt;/li&gt;
@@ -119,86 +111,92 @@ LISTEN     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 &lt;li&gt;&lt;strong&gt;bucket&lt;/strong&gt; : Mostrar estados mantenidos como minisockets, como time-wait and syn-recv.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;big&lt;/strong&gt; : Lo contrario al estado bucket.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -4 state time-wait&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -4 state time-wait&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;encontrar-procesos-locales-conectados-al-servidor-x-servidor-gráfico&#34;&gt;Encontrar procesos locales conectados al servidor X (Servidor Gráfico)&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -x src /tmp/.X11-unix/*&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hacer-coincidir-direcciones-remotas-y-puertos&#34;&gt;Hacer coincidir direcciones remotas y puertos&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss dst ADDRESS_PATTERN
 
-&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5##&lt;/span&gt;
+ss dst 192.168.1.5
 
-&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:http
-ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:smtp
-ss dst &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.5:443&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss dst &lt;span class=&#34;m&#34;&gt;123&lt;/span&gt;.1.2.100:http&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss dst *:http&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h1&gt;
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados de forma remota desde 192.168.1.5:http##&lt;/span&gt;
+ss dst 192.168.1.5:http
+ss dst 192.168.1.5:smtp
+ss dst 192.168.1.5:443
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mostrar conexiones realizadas por una ip en el puerto http hacia nuestra máquina&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss dst 123.1.2.100:http
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es posible mostrar todas las conexiones realizadas por cualquier máquina, por el puerto http por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss dst *:http&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;hacer-coincidir-direcciones-locales-y-puertos&#34;&gt;Hacer coincidir direcciones locales y puertos&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss src ADDRESS_PATTERN
-&lt;span class=&#34;c1&#34;&gt;# Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44
+&lt;span class=&#34;c1&#34;&gt;# Encontrar todas las ips conectadas a elbauldelprogramador.com (5.39.89.44) ###&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## Mostrar todos los puertos conectados a la dirección local 5.39.89.44 ##&lt;/span&gt;
+ss src 5.39.89.44
 
-&lt;span class=&#34;c1&#34;&gt;## http (80) port only ##
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:http
-ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:80
+&lt;span class=&#34;c1&#34;&gt;## http (80) port only ##&lt;/span&gt;
+ss src 5.39.89.44:http
+ss src 5.39.89.44:80
 
-&lt;span class=&#34;c1&#34;&gt;## smtp (25) port only ##
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:smtp
-ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:25&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -ant &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ss -s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -tlnp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h1&gt;
+&lt;span class=&#34;c1&#34;&gt;## smtp (25) port only ##&lt;/span&gt;
+ss src 5.39.89.44:smtp
+ss src 5.39.89.44:25
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mostrar-el-número-y-el-tipo-de-conexiones-activas&#34;&gt;Mostrar el número y el tipo de conexiones activas&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -ant &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $NF}&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v &lt;span class=&#34;s1&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mostrar-un-resumen-del-estado-de-los-sockets&#34;&gt;Mostrar un resumen del estado de los sockets&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ss -s&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-todos-los-puertos-a-la-escucha-junto-con-el-pid-del-programa&#34;&gt;Listar todos los puertos a la escucha junto con el PID del programa&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ss -tlnp
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configuración-de-la-interfaz-de-red&#34;&gt;Configuración de la interfaz de red&lt;/h1&gt;
 &lt;p&gt;Antiguamente se usaba el comando ifconfig:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 up
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ifconfig eth0 &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.1 netmask &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En &lt;strong&gt;iproute2&lt;/strong&gt; la configuración de interfaces de red se lleva a cabo con el subcomando &lt;strong&gt;link&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 up&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ifconfig eth0 192.168.1.1 netmask 255.255.255.0&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;strong&gt;iproute2&lt;/strong&gt; la configuración de interfaces de red se lleva a cabo con el subcomando &lt;strong&gt;link&lt;/strong&gt;:&lt;/p&gt;
 &lt;h1 id=&#34;activar-interfaz&#34;&gt;Activar interfaz&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip link &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; eth0 up&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde eth0 debe ser la interfaz de red a activar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip link set eth0 up&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde eth0 debe ser la interfaz de red a activar.&lt;/p&gt;
 &lt;h1 id=&#34;establecer-dirección-ip-a-la-interfaz&#34;&gt;Establecer dirección ip a la interfaz&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip addr add &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.33/24 dev eth0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr ls
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr show
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ip addr ls eth0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr add 192.168.1.33/24 dev eth0&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para comprobar la correcta configuración de la interfaz, muestra la información de dicha interfaz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip addr ls&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip addr show&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip addr ls eth0&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;enrutamiento&#34;&gt;Enrutamiento&lt;/h1&gt;
 &lt;p&gt;La versión moderna del comando &lt;code&gt;route -n&lt;/code&gt; o &lt;code&gt;netstat -r&lt;/code&gt; es:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# ip ro&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para añádir o eliminar reglas de enrutamiento se usa &lt;code&gt;ip ro add|del destino via gateway&lt;/code&gt;. Para añadir una nueva ruta a 10.0.0.0/16:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro add 10.0.0.0/16 via 192.168.0.1
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;# ip ro del &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.0.0.0/16 via &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.0.1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para añádir o eliminar reglas de enrutamiento se usa &lt;code&gt;ip ro add|del destino via gateway&lt;/code&gt;. Para añadir una nueva ruta a 10.0.0.0/16:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip ro add 10.0.0.0/16 via 192.168.0.1&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ip ro del 10.0.0.0/16 via 192.168.0.1&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;encontrar-la-ruta-hacia-una-dirección-ip&#34;&gt;Encontrar la ruta hacia una dirección IP&lt;/h1&gt;
 &lt;p&gt;Para averiguar qué interfaz está usando tu pc, puedes usar el comando &lt;em&gt;ip route get IP&lt;/em&gt;. Así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip route get 5.39.89.44
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44 via &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89 dev eth1  src &lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.36&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip route get 5.39.89.44&lt;/span&gt;
+5.39.89.44 via 10.61.29.89 dev eth1  src 192.168.1.36
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;está usando la interfaz eth1, gateway 10.61.29.89 y la interfaz tiene la ip privada 192.168.1.36&lt;/p&gt;
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
-
 &lt;p&gt;Aunque este artículo ha sido una remezcla de comandos, espero que haya quedado claro para qué sirve cada uno, y a partir de ahora podrás sacarle partido.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Socket Statistics on Linux&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/pills/ss-iproute2-linux&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Some useful command with iproute2&lt;/em&gt; »» &lt;a href=&#34;http://linuxaria.com/howto/useful-command-of-iproute2&#34; target=&#34;_blank&#34;&gt;linuxaria&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/tips/linux-investigate-sockets-network-connections.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/files/ss.html&#34; target=&#34;_blank&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Socket Statistics on Linux&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;linuxaria&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Some useful command with iproute2&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;linuxaria&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ss: Display Linux TCP / UDP Network and Socket Information&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;cyberciti.biz&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;SS Utility: Quick Intro&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;cyberciti.biz&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -209,71 +207,63 @@ ss src &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.39.89.44:25&lt;/code&gt;&lt;
             
             <guid>https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/</guid>
             <description>&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; es una herramienta que proporciona un conjunto de comandos que permitirá saber qué está pasando en nuestra red. A lo largo de este artículo se explicarán algunas opciones básicas que permitirán entender mejor nuestra red y conocer qué programa puede estar causando problemas.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;netstat-es-un-paquete-de-herramienas-de-red&#34;&gt;Netstat es un paquete de herramienas de red&lt;/h1&gt;
-
 &lt;p&gt;El comando &lt;em&gt;netstat&lt;/em&gt; sirve para varias cosas, como mostrar estadísticas de la red, imprimir la tabla de rutas, mostrar conexiones activas y mucho más. Para cada una de las opciones de uso menciondas existe un comando específico que realiza la misma tarea. Pero netstat los abarca todos bajo un mismo comando, y además es multiplataforma. Lo cual quiere decir que podremos usarlo tanto en Windows, Linux o Mac.&lt;/p&gt;
-
 &lt;p&gt;Tras esta pequeña introducción, veamos algunas salidas de este comando:&lt;/p&gt;
-
 &lt;h1 id=&#34;mostrar-las-conexiones-de-red&#34;&gt;Mostrar las conexiones de red&lt;/h1&gt;
-
 &lt;p&gt;Es posible mostrar las conexiones que existen actualmente entre tu máquina y otras máquinas, así como sockets escuchando en un puerto para que otra máquina se conecte. También muestra qué programas están activos en la red:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apA inet
 Active Internet connections &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;servers and established&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:38768                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:smtp          *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2861&lt;/span&gt;/exim4
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                     LISTEN      &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60706      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60684      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44415      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43597      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35340      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36162      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.120:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44472      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:http      TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35336      &lt;span class=&#34;m&#34;&gt;178&lt;/span&gt;-33-113-45.ovh.:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43599      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                     LISTEN      1775/rpcbind
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:38768                 *:*                     LISTEN      1808/rpc.statd
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:smtp          *:*                     LISTEN      2861/exim4
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                     LISTEN      2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48985      wordpress.com:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60706      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60684      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44415      216.151.210.122:http    TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43597      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35340      178-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36162      76.74.254.120:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44472      76.74.254.123:http      TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:35336      178-33-113-45.ovh.:http TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43599      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:37806      amung.us:http           ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;13352&lt;/span&gt; hkr-pc.local:34422      ec2-23-21-220-38.:https ESTABLISHED 2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43260      fa-in-f154.1e100.n:http ESTABLISHED 3451/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52897      wg-in-f95.1e100.ne:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60689      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60687      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60685      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60689      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60687      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60685      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43335      wordpress.com:https     ESTABLISHED 3451/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52902      wg-in-f95.1e100.ne:http TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44416      &lt;span class=&#34;m&#34;&gt;216&lt;/span&gt;.151.210.122:http    TIME_WAIT   -
-tcp       &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43601      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60704      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:41758      &lt;span class=&#34;m&#34;&gt;199&lt;/span&gt;.119.233.72.sta:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60710      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36232      &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;.74.254.123:https     ESTABLISHED &lt;span class=&#34;m&#34;&gt;3451&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60688      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60686      &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt;.184.220.111:http     TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43600      &lt;span class=&#34;m&#34;&gt;72&lt;/span&gt;.21.91.121:http       TIME_WAIT   -
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:bootpc                *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:678                   *:*                                 &lt;span class=&#34;m&#34;&gt;1775&lt;/span&gt;/rpcbind
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:712           *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                                 &lt;span class=&#34;m&#34;&gt;2477&lt;/span&gt;/dropbox
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:mdns                  *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:44290                 *:*                                 &lt;span class=&#34;m&#34;&gt;1808&lt;/span&gt;/rpc.statd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:53066                 *:*                                 &lt;span class=&#34;m&#34;&gt;2405&lt;/span&gt;/dhclient
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:1900                  *:*                                 &lt;span class=&#34;m&#34;&gt;2905&lt;/span&gt;/minissdpd
-udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:45008                 *:*                                 &lt;span class=&#34;m&#34;&gt;2298&lt;/span&gt;/avahi-daemon:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Las parámetros pasados a netstat son; &lt;em&gt;-a&lt;/em&gt; para mostrar todos los sockets, &lt;em&gt;-p&lt;/em&gt; muestra la columna PID/Program, &lt;em&gt;-A inet&lt;/em&gt; muestra solo sockets TCP/UDP. En Windows la opción &lt;em&gt;-A inet&lt;/em&gt; puede omitirse y &lt;em&gt;-p&lt;/em&gt; debe reemplazarse por &lt;em&gt;-o&lt;/em&gt;. En Mac, no hay equivalente a &lt;em&gt;-p&lt;/em&gt; y &lt;em&gt;-A inet&lt;/em&gt; debe reemplzarse por &lt;em&gt;-f inet&lt;/em&gt;. Para conocer los nombres de los programas en Mac usa &lt;em&gt;lsof -i&lt;/em&gt;&lt;/p&gt;
-
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:44416      216.151.210.122:http    TIME_WAIT   -
+tcp       &lt;span class=&#34;m&#34;&gt;38&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:58802      v-client-1a.sjc.d:https CLOSE_WAIT  2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:57347      ec2-23-21-114-122.:http ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43601      72.21.91.121:http       TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60704      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:41758      199.119.233.72.sta:http ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60710      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:52920      wordpress.com:http      ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:36232      76.74.254.123:https     ESTABLISHED 3451/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60688      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:40181      sjc-not20.sjc.drop:http ESTABLISHED 2477/dropbox
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:60686      93.184.220.111:http     TIME_WAIT   -
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:43600      72.21.91.121:http       TIME_WAIT   -
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:bootpc                *:*                                 2405/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:sunrpc                *:*                                 1775/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:678                   *:*                                 1775/rpcbind
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; localhost:712           *:*                                 1808/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:17500                 *:*                                 2477/dropbox
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:mdns                  *:*                                 2298/avahi-daemon:
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:44290                 *:*                                 1808/rpc.statd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:53066                 *:*                                 2405/dhclient
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:1900                  *:*                                 2905/minissdpd
+udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; *:45008                 *:*                                 2298/avahi-daemon:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Las parámetros pasados a netstat son; &lt;em&gt;-a&lt;/em&gt; para mostrar todos los sockets, &lt;em&gt;-p&lt;/em&gt; muestra la columna PID/Program, &lt;em&gt;-A inet&lt;/em&gt; muestra solo sockets TCP/UDP. En Windows la opción &lt;em&gt;-A inet&lt;/em&gt; puede omitirse y &lt;em&gt;-p&lt;/em&gt; debe reemplazarse por &lt;em&gt;-o&lt;/em&gt;. En Mac, no hay equivalente a &lt;em&gt;-p&lt;/em&gt; y &lt;em&gt;-A inet&lt;/em&gt; debe reemplzarse por &lt;em&gt;-f inet&lt;/em&gt;. Para conocer los nombres de los programas en Mac usa &lt;em&gt;lsof -i&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;El singnificado de cada columna es el siguiente:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Proto&lt;/strong&gt;: Indica el protocolo usado por el socket, puede ser TCP o UDP (Son protocolos de red). TCP se usa para obtener conexiones en las que se asegura que todos los paquetes llegan a su destino, en el orden correcto. El problema es que se vuelve muy lento si la conexión es mala. UDP es mucho más rápido, pero puede perder paquetes o entregarlos en un orden incorrecto. En resumen, TCP se usa para navegar por internet y descargar ficheros y UDP se usa en videos streaming y juegos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Recv-Q y Send-Q&lt;/strong&gt;: Indican la cantidad de bytes que hay en cola para dicho socket. En Recv-Q datos esperando a ser leidos y en Send-Q a ser enviados. Normalmente ambas columnas han de estar a 0. De lo contrario puede que exista algún problema. En el ejemplo hay dos sockets con valores distintos a cero, los miraremos más adelante.&lt;/li&gt;
@@ -281,91 +271,73 @@ udp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34
 &lt;li&gt;&lt;strong&gt;State&lt;/strong&gt;: Muestra el estado del socket. TCP dispone de una serie de estados, algunos de ellos son &lt;em&gt;LISTEN&lt;/em&gt; (Esperando a que otra máquina establezca conexión),&lt;em&gt;ESTABLISHED&lt;/em&gt; (Listo para comunicarse). En la lista aparecen varios más, como &lt;em&gt;CLOSE WAIT&lt;/em&gt;, este estado indica que la máquina remota cerró la conexión, pero el programa local no ha seguido la petición y permanece abierto. Normalmente, un estado como este y cantidades distintas a cero en las columnas &lt;strong&gt;Recv-Q&lt;/strong&gt; y &lt;strong&gt;Send-Q&lt;/strong&gt; suelen ir de la mano. Otro estado que aparece en el ejemplo es &lt;em&gt;TIME WAIT&lt;/em&gt;, puedes consultar una lista completa de los estados TCP en la referencias.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;PID/Program name&lt;/strong&gt;: El indicador de proceso del socket en ejecución y el nombre del programa ejecutando dicho proceso.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Procedamos a interpretar los resultados de netstat. En el ejemplo de arriba las direcciones de la columna &lt;strong&gt;Foreign adress&lt;/strong&gt; aparecen cortadas. Para verlas completas es necesario ejecutar netstat con el parámetro &lt;strong&gt;-W&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo netstat -apWA inet &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep https
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50974      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48162      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50145      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50149      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:49490      fa-in-f113.1e100.net:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48158      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:59060      mad01s08-in-f31.1e100.net:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50147      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50976      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50972      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50973      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50977      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50144      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
 tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50148      ec2-46-51-197-88.eu-west-1.compute.amazonaws.com:https TIME_WAIT   -
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real
-tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED &lt;span class=&#34;m&#34;&gt;3619&lt;/span&gt;/firefox.real&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con el comando de arriba estoy mostrando únicamente las conexiones &lt;em&gt;https&lt;/em&gt; establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección &lt;a href=&#34; http://ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&#34; target=&#34;_blank&#34;&gt;ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&lt;/a&gt; podrás comprobar que dicha dirección pertenece al buscador &lt;strong&gt;duckduckgo&lt;/strong&gt;. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.&lt;/p&gt;
-
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:50975      ec2-176-34-135-167.eu-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+tcp        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; hkr-pc.local:48163      ec2-50-18-192-251.us-west-1.compute.amazonaws.com:https ESTABLISHED 3619/firefox.real
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el comando de arriba estoy mostrando únicamente las conexiones &lt;em&gt;https&lt;/em&gt; establecidas con mi máquina. Ahora, sí que se ven las direcciones completas. Si te diriges a la dirección &lt;!-- raw HTML omitted --&gt;ec2-176-34-135-167.eu-west-1.compute.amazonaws.com&lt;!-- raw HTML omitted --&gt; podrás comprobar que dicha dirección pertenece al buscador &lt;strong&gt;duckduckgo&lt;/strong&gt;. Y ha sido listada por netstat porque al momento de ejecutarlo tenía una pestaña del navegador abierta con el buscador del pato.&lt;/p&gt;
 &lt;p&gt;Veamos ahora la razón de que existan dos conexiones con datos pendientes en la cola de entrada y salida.&lt;/p&gt;
-
 &lt;p&gt;Ambas conexiones son de &lt;strong&gt;dropbox&lt;/strong&gt;, una de ellas tiene el estado TCP en &lt;em&gt;ESTABLISHED&lt;/em&gt;, así que de esa no hay que preocuparse, ya que está transmitiendo datos. La otra sin embargo tiene datos pendientes en la cola de entrada y estado TCP &lt;em&gt;CLOSE WAIT&lt;/em&gt;, es decir, la máquina conectada a la nuestra ha cerrado la conexión, pero nuestro proceso local de dropbox no lo ha hecho. Lo cual quiere decir que aunque haya finalizado la tarea que se estaba llevando a cabo, no se han liberando los recursos que el socket había reservado. Estos escenários no deberían producirse, pero mientras no haya demasiados casos como este no debes preocuparte.&lt;/p&gt;
-
 &lt;p&gt;He comentado que en ocasiones es posible que tanto en la columna &lt;strong&gt;Local Address&lt;/strong&gt; como en &lt;strong&gt;Foreign Address&lt;/strong&gt; aparezca la dirección local de nuestra máquina. Este comportamiento lo usan algunos programas para conseguir que la aplicación sea multiplataforma, ya que la comunicación a través de la red no varía de plataforma a plataforma (Linux, Windows, mac ect.)&lt;/p&gt;
-
 &lt;p&gt;Otro de los posibles valores que puede aparecer en la columna &lt;strong&gt;Foreign Address&lt;/strong&gt; es *:*, y si el tipo de conexión es TCP tendrá el estado &lt;em&gt;LISTEN&lt;/em&gt;. Esto quiere decir que la máquina local está esperando a que otra máquina remota envíe datos. Ejemplos típicos pueden ser &lt;strong&gt;sshd&lt;/strong&gt; (esperando a que alguien abra una conexión ssh), &lt;strong&gt;apache&lt;/strong&gt; o &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/nginx&#34;&gt;nginx&lt;/a&gt;&lt;/strong&gt; (Esperando a que alguien solicite una página web) etc.&lt;/p&gt;
-
 &lt;p&gt;Cuando se realiza una conexión externa, el programa local no suele preocuparse por el puerto local usado para la conexión. Esa es la razón por la que el puerto en el lado local no suele reconocerse y se traduce al nombre del protocolo como &lt;em&gt;https&lt;/em&gt;, &lt;em&gt;www&lt;/em&gt; etc.&lt;/p&gt;
-
 &lt;p&gt;Netstat también sirve para mostrar la tabla de rutas (&lt;strong&gt;Routing Table&lt;/strong&gt;)&lt;/p&gt;
-
 &lt;h1 id=&#34;imprimiendo-la-tabla-de-rutas-routing-table&#34;&gt;Imprimiendo la tabla de rutas (Routing Table)&lt;/h1&gt;
-
 &lt;p&gt;La tabla de rutas significa dedidir dónde mandar un paquete en base a su destino. Un ejemplo de estas tablas es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -r
 Kernel IP routing table
 Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
-default         &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;.0.0.0         UG        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
-&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;.61.29.89     *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.255 UH        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
-&lt;span class=&#34;m&#34;&gt;192&lt;/span&gt;.168.1.32    *               &lt;span class=&#34;m&#34;&gt;255&lt;/span&gt;.255.255.248 U         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una breve explicación del significado de las columnas:&lt;/p&gt;
-
+default         10.61.29.89     0.0.0.0         UG        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+10.61.29.89     *               255.255.255.255 UH        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+192.168.1.32    *               255.255.255.248 U         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;          &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; eth1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una breve explicación del significado de las columnas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Destination&lt;/strong&gt;: Patrón con el que se compara la dirección de destino del paquete. Cuando se envia un paquete a internet, se comprueba esta tabla de arriba a abajo hasta que se cumpla el patrón, luego se envía. El valor 0 se usa como comodín, si usamos este patrón 192.168.1.0, las direcciones desde 192.168.1.1 hasta 192.168.1.255 serán valores válidos para dicho patrón.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Gateway&lt;/strong&gt;: Indica dónde mandar el paquete que coincide con el patrón de la columna anterior. El * en esta columna significa &lt;em&gt;“enviar localmente”&lt;/em&gt; (El destino estará en la misma red.)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Genmask&lt;/strong&gt;: La máscara de subred. Se usa para determinar cuantos bits desde el principio de la ip se usan para identificar una subred.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Flags&lt;/strong&gt;: Muestra qué flags se aplican a cada línea de la tabla. &lt;strong&gt;U&lt;/strong&gt; viene de &lt;strong&gt;Up&lt;/strong&gt;, indicando que dicha línea está activa. &lt;strong&gt;G&lt;/strong&gt; significa que la línea usa un Gateway. &lt;strong&gt;H&lt;/strong&gt;, indica que el enrutamiento se hace a una dirección de host completa.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MSS&lt;/strong&gt;: &lt;em&gt;Maximum Segment Size&lt;/em&gt;, parámetro TCP usado para dividir paquetes en partes más pequeñas cuando el destinatario indica que es capaz de trabajar con tamaños muy grandes. A dia de hoy, la mayoría de ordenadores no tienen problemas con esto, por lo que está fijado a 0.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Window&lt;/strong&gt;: Igual que MSS, permite alterar un parámetro TCP. En este caso el &lt;em&gt;default Window size&lt;/em&gt;, que indica cuantos paquetes TCP pueden mandarse antes de que uno de ellos sea de *ACK*nowledged. Suele estar a 0.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Window&lt;/strong&gt;: Igual que MSS, permite alterar un parámetro TCP. En este caso el &lt;em&gt;default Window size&lt;/em&gt;, que indica cuantos paquetes TCP pueden mandarse antes de que uno de ellos sea de &lt;em&gt;ACK&lt;/em&gt;nowledged. Suele estar a 0.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;irtt&lt;/strong&gt;: &lt;em&gt;Initial Round Trip Time&lt;/em&gt;, puede ser usado por el Kernel para intentar adivinar la mejor configuración de parámetros para TCP. No suele usarse.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;iface&lt;/strong&gt;: Establece la interfaz de red a usar para enviar los paquetes.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;mostrar-estadísticas-e-interfaces&#34;&gt;Mostrar estadísticas e interfaces&lt;/h1&gt;
-
 &lt;p&gt;También es posible, con netstat, mostrar las interfaces disponibles y listar algunas estadísticas de cómo se están comportando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -i
 Kernel Interface table
 Iface       MTU Met   RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
 eth0       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMU
 eth1       &lt;span class=&#34;m&#34;&gt;1500&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;253744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;153622&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; BMRU
-lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; LRU&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El significado de cada columna es el siguiente:&lt;/p&gt;
-
+lo        &lt;span class=&#34;m&#34;&gt;16436&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;         &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; LRU
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El significado de cada columna es el siguiente:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Iface&lt;/strong&gt;: Interfaces disponibles para las que se muestran las estadísticas. &lt;em&gt;lo&lt;/em&gt; es la interfaz de &lt;em&gt;loopback&lt;/em&gt;, una interfaz privada usada por la máquina para comunicarse consigo misma, como se vió arriba, este comportamiento es frecuente y proporciona mayor rendimiento.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;MTU&lt;/strong&gt;: &lt;em&gt;Maximum Transmission Unit&lt;/em&gt; (&lt;em&gt;Unidad Máxima de Transmisión&lt;/em&gt;) que la interfaz puede enviar de una sola vez.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;RX-OK/ERR/DRP/OVR&lt;/strong&gt;: Estadísticas sobre los paquetes que se han recibido. &lt;em&gt;OK&lt;/em&gt; significa “*Correctemente recibido*”, “*ERR*” recibido pero con &lt;a href=&#34;http://es.wikipedia.org/wiki/Checksum&#34; target=&#34;_blank&#34;&gt;CheckSum&lt;/a&gt; incorrecto (ocurre cuando la conexión es mala), “*DRP*” eliminado porque el buffer está lleno (Ocurre cuando se reciben muchos paquetes en un periodo muy corto de tiempo), “*OVR*”, eliminado porque el kernel no pudo manejarlo a tiempo (Si esto ocurre, la máquina estaba muy ocupada).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RX-OK/ERR/DRP/OVR&lt;/strong&gt;: Estadísticas sobre los paquetes que se han recibido. &lt;em&gt;OK&lt;/em&gt; significa “&lt;em&gt;Correctemente recibido&lt;/em&gt;”, “&lt;em&gt;ERR&lt;/em&gt;” recibido pero con &lt;!-- raw HTML omitted --&gt;CheckSum&lt;!-- raw HTML omitted --&gt; incorrecto (ocurre cuando la conexión es mala), “&lt;em&gt;DRP&lt;/em&gt;” eliminado porque el buffer está lleno (Ocurre cuando se reciben muchos paquetes en un periodo muy corto de tiempo), “&lt;em&gt;OVR&lt;/em&gt;”, eliminado porque el kernel no pudo manejarlo a tiempo (Si esto ocurre, la máquina estaba muy ocupada).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;TX-OK/ERR/DRP/OVR&lt;/strong&gt;: Significan lo mismo que sus homólogos en la columna RX, pero para paquetes enviados por la interfaz.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FLG&lt;/strong&gt;: Flags activas para la interfaz. “*B*” de “*Capacidad de broadcast*”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “*M*” de “*capacidad de Multicast*”, la interfaz puede enviar paquetes con múltiples destinos. “*L*” de “*interfaz loopback*”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “*U*” y “*R*” significan “*Up*”(Activa) y “*running*”(ejecutandose) respectivamente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FLG&lt;/strong&gt;: Flags activas para la interfaz. “&lt;em&gt;B&lt;/em&gt;” de “&lt;em&gt;Capacidad de broadcast&lt;/em&gt;”, es decir, la interfaz es capaz de transmitir un paquete a todos los equipos de su misma subred. “&lt;em&gt;M&lt;/em&gt;” de “&lt;em&gt;capacidad de Multicast&lt;/em&gt;”, la interfaz puede enviar paquetes con múltiples destinos. “&lt;em&gt;L&lt;/em&gt;” de “&lt;em&gt;interfaz loopback&lt;/em&gt;”, la interfaz con dicho flag activa coloca todo que envía inmediatamente en su cola de recibido. “&lt;em&gt;U&lt;/em&gt;” y “&lt;em&gt;R&lt;/em&gt;” significan “&lt;em&gt;Up&lt;/em&gt;”(Activa) y “&lt;em&gt;running&lt;/em&gt;”(ejecutandose) respectivamente.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;El motivo por el que el valor del “*MTU*” es mayor en la interfaz de loopback se debe a motivos de rendimiento, ya que no tendrá que partir los paquetes en trozos más pequeños.&lt;/p&gt;
-
-&lt;p&gt;Como se aprecia en el ejemplo, todo parece estar correcto, ya que las columnas de errores están a 0. Una opción interesante de este comando es añadirle la opción &lt;em&gt;-c&lt;/em&gt;, es decir “*netstat -ci*”, para ver la tabla cada segundo, y comprobar así si hay algún error.&lt;/p&gt;
-
-&lt;p&gt;Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la &lt;a href=&#34;http://linuxacademy.com&#34; target=&#34;_blank&#34;&gt;Linux Academy&lt;/a&gt;, perteneciente al autor cuyo artículo he traducido.&lt;/p&gt;
-
+&lt;p&gt;El motivo por el que el valor del “&lt;em&gt;MTU&lt;/em&gt;” es mayor en la interfaz de loopback se debe a motivos de rendimiento, ya que no tendrá que partir los paquetes en trozos más pequeños.&lt;/p&gt;
+&lt;p&gt;Como se aprecia en el ejemplo, todo parece estar correcto, ya que las columnas de errores están a 0. Una opción interesante de este comando es añadirle la opción &lt;em&gt;-c&lt;/em&gt;, es decir “&lt;em&gt;netstat -ci&lt;/em&gt;”, para ver la tabla cada segundo, y comprobar así si hay algún error.&lt;/p&gt;
+&lt;p&gt;Como nota final, y aunque este no es un artículo patrocinado, considero que debo proporcionar un enlace a la &lt;!-- raw HTML omitted --&gt;Linux Academy&lt;!-- raw HTML omitted --&gt;, perteneciente al autor cuyo artículo he traducido.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;a href=&#34;http://pinehead.tv/linux/netstat-network-analysis-and-troubleshooting-explained/&#34; target=&#34;_blank&#34;&gt;pinehead.tv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Lista posibles estados TCP&lt;/em&gt; »» &lt;a href=&#34;http://www.tcpipguide.com/free/t_TCPOperationalOverviewandtheTCPFiniteStateMachineF-2.htm&#34; target=&#34;_blank&#34;&gt;tcpipguide.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Netstat: network analysis and troubleshooting, explained&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;pinehead.tv&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Lista posibles estados TCP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;tcpipguide.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

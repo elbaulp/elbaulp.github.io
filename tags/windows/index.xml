@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Windows on El Baúl del programador</title>
+        <title>windows on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/windows/</link>
-        <description>Recent content in Windows on El Baúl del programador</description>
+        <description>Recent content in windows on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/windows/</link>
-            <title>Windows on El Baúl del programador</title>
+            <title>windows on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,96 +21,48 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-mejorar-el-rendimiento-de-windows-8/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Windows8problem.jpg&#34; alt=&#34;Windows8problem&#34; width=&#34;640px&#34; height=&#34;360px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Aunque llevo años sin usar Windows, hace poco una amiga me comentó que había comprado un portatil con Windows 8 e iba fatal, cada dos por tres se colgaba y ni siquiera se apabaga.&lt;/p&gt;
-
 &lt;p&gt;Tras un poco de investigación por la red, comprobé que no era la única, Windows 8 está dando muchos problemas a los usuarios.&lt;/p&gt;
-
 &lt;p&gt;Una vez con el portatil en mi posesión confirmé el mal rendimiento que tenía. Se quedaba bloqueado hasta tal punto que era necesario apagarlo directamente cortando el suministro de corriente.&lt;/p&gt;
-
 &lt;p&gt;Tras aplicarle una serie de cambios, he conseguido que vaya fluido y sin ningún problema. Si tienes problemas similares con tu windows 8, puedes probar a realizar lo siguientes cambios:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;windows-8-no-se-apaga&#34;&gt;Windows 8 no se apaga&lt;/h1&gt;
-
 &lt;p&gt;Este problema es consecuencia de una nueva característica introducida por Microsoft, que pretende acelerar el proceso de arranque del sistema, sin embargo provoca muchos problemas en la mayoría de PCs. Basta con desactivar esta opción y el ordenador se apagará correctamente. Procedemos con los siguientes pasos:&lt;/p&gt;
-
 &lt;ol&gt;
-&lt;li&gt;En la pantalla de inicio, teclea &lt;strong&gt;power&lt;/strong&gt;, seleciona &lt;strong&gt;Configuración » Cambiar las acciones de los botones de inicio/apagado&lt;/strong&gt;.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 591px) 591px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Change_Power_Settings_Windows_8.png&#34; alt=&#34;Change_Power_Settings_Windows_8&#34; width=&#34;591px&#34; height=&#34;250px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Se abrirá una ventana con varias opciones, haz click en &lt;strong&gt;Cambiar la configuración actualmente no disponible&lt;/strong&gt; en caso de que las opciones bajo &lt;strong&gt;Configuración de apagado estén deshabilitadas&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Desactiva la opción &lt;strong&gt;Activar inicio rápido&lt;/strong&gt;.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 540px) 540px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/Disable_Hybrid_Shutdown_Fast_Startup_Windows_8.png&#34; alt=&#34;Disable_Hybrid_Shutdown_Fast_Startup_Windows_8&#34; width=&#34;540px&#34; height=&#34;307px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Haz click en guardar cambios.&lt;/li&gt;
+&lt;li&gt;En la pantalla de inicio, teclea &lt;strong&gt;power&lt;/strong&gt;, seleciona &lt;strong&gt;Configuración » Cambiar las acciones de los botones de inicio/apagado&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Reinicia el equipo y el problema debería haber desaparecido. En caso contrario, abre un terminal pulsando &lt;strong&gt;Win+X&lt;/strong&gt; y selecciona &lt;strong&gt;Símbolo del sistema (Administrador)&lt;/strong&gt;. Introduce lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bcdedit /set disabledynamictick yes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;desactivar-programas-de-inicio-innecesarios&#34;&gt;Desactivar programas de inicio innecesarios&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;bcdedit /set disabledynamictick yes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;desactivar-programas-de-inicio-innecesarios&#34;&gt;Desactivar programas de inicio innecesarios&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;Abre el administrador de tareas con &lt;strong&gt;Win+X&lt;/strong&gt; » &lt;strong&gt;Administrador de tareas&lt;/strong&gt;.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 446px) 446px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/open-task-manager.jpg&#34; alt=&#34;open-task-manager&#34; width=&#34;446px&#34; height=&#34;395px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Ve a inicio y desactiva todos los programas que no quieras que se ejecuten al inicio del sistema.&lt;/li&gt;
+&lt;li&gt;Abre el administrador de tareas con &lt;strong&gt;Win+X&lt;/strong&gt; » &lt;strong&gt;Administrador de tareas&lt;/strong&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;limpiar-el-buffer-de-memoria-y-archivos-temporales-innecesarios&#34;&gt;Limpiar el buffer de memoria y archivos temporales innecesarios&lt;/h1&gt;
-
 &lt;ol&gt;
-&lt;li&gt;Pulsa las teclas &lt;strong&gt;Windows + R&lt;/strong&gt;, escribe “&lt;strong&gt;%temp%&lt;/strong&gt;” y pulsa enter.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 408px) 408px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/run-temppercent.jpg&#34; alt=&#34;run-temppercent&#34; width=&#34;408px&#34; height=&#34;210px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Selecciona todos los archivos y bórralos.&lt;/li&gt;
-&lt;li&gt;De forma similar, repite el paso 1, pero esta vez escribe “&lt;strong&gt;temp&lt;/strong&gt;” y borra todos los archivos.&lt;/li&gt;
-&lt;li&gt;Por último, vuelve a repetir el paso uno, escribiendo “&lt;strong&gt;prefetch&lt;/strong&gt;” y borra todos los archívos.&lt;/li&gt;
+&lt;li&gt;Pulsa las teclas &lt;strong&gt;Windows + R&lt;/strong&gt;, escribe “&lt;strong&gt;%temp%&lt;/strong&gt;” y pulsa enter.&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;disminuir-los-servicios-en-ejecución&#34;&gt;Disminuir los servicios en ejecución&lt;/h1&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Pulsa &lt;strong&gt;Windows + R&lt;/strong&gt;, teclea “&lt;strong&gt;msconfig&lt;/strong&gt;” y pulsa enter.&lt;/li&gt;
-&lt;li&gt;Oculta los servicios de Microsoft y deshabilita los que creas convenientes.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 560px) 560px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/stop-services.jpg&#34; alt=&#34;stop-services&#34; width=&#34;560px&#34; height=&#34;373px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;Oculta los servicios de Microsoft y deshabilita los que creas convenientes.&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;modifica-el-registro-del-sistema&#34;&gt;Modifica el registro del sistema&lt;/h1&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Pulsa &lt;strong&gt;Windows + R&lt;/strong&gt;, teclea “&lt;strong&gt;regedit&lt;/strong&gt;” y pulsa enter.&lt;/li&gt;
-&lt;li&gt;Dirígiete hacia &lt;strong&gt;&lt;em&gt;HKEY_CURRENT_USER\Control Panel\Mouse&lt;/em&gt;&lt;/strong&gt;. Haz doble click en &lt;strong&gt;MouseHoverTime&lt;/strong&gt; y cambia el valor a 100.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 339px) 339px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/edit-mousehovertime.jpg&#34; alt=&#34;edit-mousehovertime&#34; width=&#34;339px&#34; height=&#34;58px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 388px) 388px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/edit-value.jpg&#34; alt=&#34;edit-value&#34; width=&#34;388px&#34; height=&#34;171px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;Dirígete ahora a &lt;strong&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\Current Control Set\Control&lt;/em&gt;&lt;/strong&gt;. Doble click en &lt;strong&gt;WaitToKillServiceTimeout&lt;/strong&gt; y cambia el valor a 1000.
-&lt;figure&gt;
-&lt;img sizes=&#34;(min-width: 389px) 389px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/edit-value-wait.jpg&#34; alt=&#34;edit-value-wait&#34; width=&#34;389px&#34; height=&#34;172px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;Dirígiete hacia &lt;em&gt;&lt;strong&gt;HKEY_CURRENT_USER\Control Panel\Mouse&lt;/strong&gt;&lt;/em&gt;. Haz doble click en &lt;strong&gt;MouseHoverTime&lt;/strong&gt; y cambia el valor a 100.&lt;/li&gt;
 &lt;/ol&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Estos cambios deberías ser suficientes para notar una mejoría en el rendimiento del sistema. Puedes encontrar más información en las referencias,.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;How to speed up Windows 8 PC?&lt;/em&gt; »» &lt;a href=&#34;http://mywindows8.org/speed-up-windows-8/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Fix Windows 8 Restart and Shutdown Problems by Disabling “Hybrid Shutdown” Feature&lt;/em&gt; »» &lt;a href=&#34;http://www.askvg.com/fix-windows-8-restart-and-shutdown-problems-by-disabling-hybrid-shutdown-feature/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Imagen: kotaku&lt;/em&gt; »» &lt;a href=&#34;http://kotaku.com/5897763/three-killer-problems-that-threaten-windows-8&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to speed up Windows 8 PC?&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fix Windows 8 Restart and Shutdown Problems by Disabling “Hybrid Shutdown” Feature&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Imagen: kotaku&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

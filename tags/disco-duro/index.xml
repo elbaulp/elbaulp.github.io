@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Disco Duro on El Baúl del programador</title>
+        <title>disco duro on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/disco-duro/</link>
-        <description>Recent content in Disco Duro on El Baúl del programador</description>
+        <description>Recent content in disco duro on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Thu, 21 Jan 2016 22:26:14 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/disco-duro/</link>
-            <title>Disco Duro on El Baúl del programador</title>
+            <title>disco duro on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,114 +21,76 @@
             <pubDate>Thu, 21 Jan 2016 22:26:14 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-recuperar-datos-borrados-de-un-disco/</guid>
-            <description>&lt;figure&gt;
-  &lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;img sizes=&#34;(min-width: 556px) 556px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Todos sabemos que cuando borramos algo de nuestro disco duro, en realidad no lo estamos borrando físicamente. Realmente se libera el espacio que tenía ese fichero ocupado para que se rellene con otros ficheros. Hasta que no se guarde otro archivo en ese espacio, el fichero borrado es susceptible de ser recuperado. Hoy veremos cómo es posible recuperar datos borrados de un disco duro.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Esta técnica puede ser usada en el análisis forense de un sistema informático. No ya con el objetivo de recuperar un fichero, si no de demostrar que alguna vez existió cierto fichero con un contenido ilegal, amenazador etc. Para probar éste método vamos a simular una carta de amenaza que posteriormente borraremos del disco. Tras borrarlo, intentaremos buscar en dicho disco la evidencia de la amenaza, válida como prueba judicial. Más adelante mostraremos cómo recuperar una imagen borrada con autopsy.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;El contenido de este artículo es fruto de una práctica de Seguridad en Sistemas Operativos de la facultad de Ingeniería Informática de Granada.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;buscando-evidencias-de-delitos&#34;&gt;Buscando evidencias de delitos&lt;/h1&gt;
-
 &lt;h2 id=&#34;crear-una-carta-amenazadora&#34;&gt;Crear una carta amenazadora&lt;/h2&gt;
-
 &lt;p&gt;Para el primer ejemplo crearemos un fichero de texto con una amenaza (En un USB de poco tamaño, a ser posible), el texto es el siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Esto es una amenaza&amp;#34;&lt;/span&gt; &amp;gt; carta.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras esto, borraremos el fichero que acabamos de crear.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ rm carta.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;crear-una-imagen-del-disco-a-analizar&#34;&gt;Crear una imagen del disco a analizar&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Esto es una amenaza&amp;#34;&lt;/span&gt; &amp;gt; carta.txt
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, borraremos el fichero que acabamos de crear.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ rm carta.txt
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;crear-una-imagen-del-disco-a-analizar&#34;&gt;Crear una imagen del disco a analizar&lt;/h2&gt;
 &lt;p&gt;En informática forense, lo ideal es crear una imagen del disco a analizar, para evitar modificarlo. Usaremos un pendrive por ser de menor capacidad:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;análisis-de-la-imagen&#34;&gt;Análisis de la imagen&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive&lt;/span&gt;
+$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas&lt;/span&gt;
+$ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;&gt;# Montamos la imagen para analizarla&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;análisis-de-la-imagen&#34;&gt;Análisis de la imagen&lt;/h2&gt;
 &lt;p&gt;Una vez montada la imagen, crearemos un fichero que contendrá las palabras más frecuentes usadas en una amenaza. En este caso se usarán dos únicamente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat busquedaEvidencias.txt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ cat busquedaEvidencias.txt
 esto
-amenaza&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;buscando-evidencias-en-la-imagen&#34;&gt;Buscando evidencias en la imagen&lt;/h2&gt;
+amenaza
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;buscando-evidencias-en-la-imagen&#34;&gt;Buscando evidencias en la imagen&lt;/h2&gt;
 &lt;p&gt;Ahora solo resta buscar en la imagen creada del pendrive por palabras contenidas en el fichero creado arriba:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;grep -aibf busquedaEvidencias.txt imagen.disco&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+grep -aibf busquedaEvidencias.txt imagen.disco
 
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34;&gt;&lt;img sizes=&#34;(min-width: 433px) 433px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco-grep.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;433px&#34; height=&#34;676px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La opción -b nos dice el desplazamiento en bytes en la imagen. El resultado es:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como vemos, aunque se ha borrado el fichero, quedan pruebas de que se realizó una amenaza, y por tanto podrían usarse en contra de alguien en un juicio.&lt;/p&gt;
-
 &lt;p&gt;En la imagen anterior se muestra el desplazamiento en bytes donde se encontró una coincidencia de la lista de evidencias, para ver el contenido del fichero basta con usar el comando &lt;em&gt;xxd&lt;/em&gt; con el desplazamiento dado por grep, en este caso 40566354:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34;&gt;&lt;img sizes=&#34;(min-width: 556px) 556px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Como-Recuperar-Datos-Borrados-De-Un-Disco.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;556px&#34; height=&#34;65px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;recuperar-una-imagen-borrada&#34;&gt;Recuperar una imagen borrada&lt;/h1&gt;
-
 &lt;p&gt;Para realizar este proceso vamos a usar una herramienta llamada &lt;em&gt;autopsy&lt;/em&gt; una plataforma forense digital de código libre (Ver en &lt;a href=&#34;https://github.com/sleuthkit/autopsy&#34; title=&#34;Repositorio autopsy&#34;&gt;GitHub&lt;/a&gt;).&lt;/p&gt;
-
 &lt;h2 id=&#34;crear-la-imagen-del-disco&#34;&gt;Crear la imagen del disco&lt;/h2&gt;
-
 &lt;p&gt;Lo primero es copiar cualquier imagen, luego la borramos. Volvemos a crear una imagen del disco como en el paso anterior, con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ mount -t vfat -ro,noexec image.disco /mnt/analisis # Montamos la imagen para analizarla&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;instalar-autopsy&#34;&gt;Instalar autopsy&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdc &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;image.disco &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# /dev/sdc es el pendrive&lt;/span&gt;
+$ chmod &lt;span class=&#34;m&#34;&gt;444&lt;/span&gt; image.disco &lt;span class=&#34;c1&#34;&gt;# Asignamos permisos de solo lectura para evitar contaminar las pruebas&lt;/span&gt;
+$ mount -t vfat -ro,noexec image.disco /mnt/analisis &lt;span class=&#34;c1&#34;&gt;# Montamos la imagen para analizarla&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;instalar-autopsy&#34;&gt;Instalar autopsy&lt;/h2&gt;
 &lt;p&gt;Tras esto, instalamos &lt;em&gt;autopsy&lt;/em&gt; (Está disponible en los repositorios de linux). La pantalla principal es esta:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34;&gt;&lt;img sizes=&#34;(min-width: 606px) 606px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyTutorial.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;606px&#34; height=&#34;362px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;buscar-ficheros-borrados&#34;&gt;Buscar ficheros borrados&lt;/h2&gt;
-
 &lt;p&gt;Pinchamos en el botón de crear un nuevo caso. Nos pedirá rellenar unos datos, y luego indicar la ruta a la imagen del disco. Una vez hecho esto, podemos comenzar a analizarlo. Seleccionada la imagen con la que trabajar, pinchamos en el botón de analizar:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34;&gt;&lt;img sizes=&#34;(min-width: 609px) 609px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyAnalyce.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;609px&#34; height=&#34;224px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Y luego en file Analysis:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1166px) 1166px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyfileAnalysis.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;1166px&#34; height=&#34;360px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como vemos, al final de la lista aparece un fichero borrado, que es una imagen. Debemos de fijarnos en la la columna &lt;em&gt;Meta&lt;/em&gt;, en ella aparece un número en el que podemos pinchar, en este caso es el 7. Tras pinchar, aparecerá la siguiente pantalla:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34;&gt;&lt;img sizes=&#34;(min-width: 442px) 442px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyMeta.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;442px&#34; height=&#34;565px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Aquí se muestra la información del fichero borrado, los sectores que ocupa etc. Ya que el contenido de la imagen está en los sectores que aparecen en esta página, necesitamos alguna forma de guardarlos, para ellos calcularemos cuantos sectores ocupa la imagen.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Sabemos que la imagen comienza en el sector 15690.&lt;/li&gt;
 &lt;li&gt;El último sector ocupado por la imagen borrada es el 16871&lt;/li&gt;
 &lt;li&gt;Luego la imagen ocupa 16871 - 15690 = 1181 sectores&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;seleccionar-el-rango-de-sectores-que-ocupa-la-imagen&#34;&gt;Seleccionar el rango de sectores que ocupa la imagen&lt;/h2&gt;
-
 &lt;p&gt;Ya solo resta pinchar en el enlace al primer sector de la imagen, y poner que queremos a partir de ese sector 1181 más, como se muestra en la imagen:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34;&gt;&lt;img sizes=&#34;(min-width: 925px) 925px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/autopsyDataUnit.png&#34; title=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; alt=&#34;Cómo Recuperar Datos Borrados De Un Disco&#34; width=&#34;925px&#34; height=&#34;386px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En estos momentos tenemos seleccionado el rango de sectores correcto, le damos a &lt;em&gt;Export Contents&lt;/em&gt; y nos descargaremos un fichero con extensión &lt;em&gt;raw&lt;/em&gt;. Lo renombramos a &lt;em&gt;.jpg&lt;/em&gt;  y lo guardamos. ¡Acabamos de recuperar nuestra imagen borrada!&lt;/p&gt;
-
 &lt;p&gt;Espero que os haya gustado el artículo. No dudeis en comentar!&lt;/p&gt;</description>
         </item>
         
@@ -140,38 +101,33 @@ amenaza&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             
             <guid>https://elbauldelprogramador.com/como-saber-que-particion-pertenece-un/</guid>
             <description>&lt;p&gt;¿Cómo podemos saber que el archivo &lt;em&gt;/home/hkr/Desktop/combinaciones.cpp&lt;/em&gt; pertenece a una partición específica?¿O cómo podemos saber en qué partición existe un archivo?&lt;/p&gt;
-
 &lt;p&gt;Para eso podemos usar el comando df, que informa del uso del espacio en disco del sistema incluyendo nombres de archivos y directorios. La sintaxis es así:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df
 df /ruta/a un/directorio
-df /ruta/a un/archivo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado &lt;em&gt;/home/hkr/Desktop/combinaciones.cpp&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df -T /home/hkr/Desktop/combinaciones.cpp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Que tiene como salida:&lt;/p&gt;
+df /ruta/a un/archivo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el siguiente ejemplo se busca el nombre de la partición donde se encuentra el fichero llamado &lt;em&gt;/home/hkr/Desktop/combinaciones.cpp&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df -T /home/hkr/Desktop/combinaciones.cpp
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Que tiene como salida:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Filesystem    Type   1K-blocks      Used Available Use% Mounted on
-/dev/sda6     ext4   &lt;span class=&#34;m&#34;&gt;186362292&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;140452228&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;36443368&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;% /home&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como vemos, el resultado es que el archivo &lt;em&gt;combinaciones.cpp&lt;/em&gt; pertenece a la partición &lt;em&gt;/dev/sda6&lt;/em&gt;. Con el siguiente comando mostramos solo el nombre de la partición:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df /home/hkr/Desktop/combinaciones.cpp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;O con este otro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;df /home/hkr/Desktop/combinaciones.cpp&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La salida para los dos comandos anteriores es la misma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/dev/sda6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es recomendable colocar la siguiente función bash en nuestro archivo &lt;em&gt;~/.bashrc&lt;/em&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# find partition name for a given filename
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;findpart&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+/dev/sda6     ext4   &lt;span class=&#34;m&#34;&gt;186362292&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;140452228&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;36443368&lt;/span&gt;  80% /home
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vemos, el resultado es que el archivo &lt;em&gt;combinaciones.cpp&lt;/em&gt; pertenece a la partición &lt;em&gt;/dev/sda6&lt;/em&gt;. Con el siguiente comando mostramos solo el nombre de la partición:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;df /home/hkr/Desktop/combinaciones.cpp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O con este otro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;df /home/hkr/Desktop/combinaciones.cpp&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La salida para los dos comandos anteriores es la misma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/dev/sda6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es recomendable colocar la siguiente función bash en nuestro archivo &lt;em&gt;~/.bashrc&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# find partition name for a given filename&lt;/span&gt;
+findpart&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; df -P &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;/^/dev/ {print $1}&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; not found&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ejemplos de uso:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ejemplos de uso:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;findpart /foo/bar
 findpart /etc
-findpart /home/vivek/test.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34;  width=&#34;640&#34; height=&#34;108&#34;  src=&#34;https://1.bp.blogspot.com/-F2sPR477GsI/TvsYjhPFVgI/AAAAAAAAB_8/olid11qqdXw/s800/Screenshot.png&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Vía &lt;a target=&#34;_blank&#34; href=&#34;http://www.cyberciti.biz/faq/linux-unix-command-findout-on-which-partition-file-directory-exits/&#34;&gt;cyberciti&lt;/a&gt;&lt;/p&gt;</description>
+findpart /home/vivek/test.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Vía &lt;!-- raw HTML omitted --&gt;cyberciti&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
         </item>
         
     </channel>

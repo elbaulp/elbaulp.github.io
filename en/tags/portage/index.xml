@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Portage on The Programmer&#39;s Chest</title>
+        <title>portage on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/tags/portage/</link>
-        <description>Recent content in Portage on The Programmer&#39;s Chest</description>
+        <description>Recent content in portage on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Sat, 04 Feb 2017 12:53:37 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/tags/portage/</link>
-            <title>Portage on The Programmer&#39;s Chest</title>
+            <title>portage on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,16 +21,13 @@
             <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/how-to-remove-slotted-packages-in-gentoo/</guid>
-            <description>
-
-&lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
-
+            <description>&lt;p&gt;Recently I had a problem trying to remove slotted packages in Gentoo, here is how I did it.&lt;/p&gt;
 &lt;p&gt;First use &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; to list package matching PKG:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery list emacs
  * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;There are two &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; packages, slotted in &lt;code&gt;:24&lt;/code&gt; and &lt;code&gt;:25&lt;/code&gt;, respectively. In order to remove the older version, execute:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are two &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; packages, slotted in &lt;code&gt;:24&lt;/code&gt; and &lt;code&gt;:25&lt;/code&gt;, respectively. In order to remove the older version, execute:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo emerge -C emacs-24.5-r3:24
 Password:
  * This action can remove important packages! In order to be safer, use
@@ -39,9 +35,9 @@ Password:
  * removing packages.
 
  app-editors/emacs
-    selected: &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.5-r3
+    selected: 24.5-r3
    protected: none
-     omitted: &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;.1
+     omitted: 25.1
 
 All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
 
@@ -51,14 +47,14 @@ All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/e
 &amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
 &amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
 &amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
  * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
  * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
 
  * Regenerating GNU info directory index...
- * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After removing the package, check what packages depended on it:&lt;/p&gt;
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After removing the package, check what packages depended on it:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ equery depends emacs-24.5-r3:24
  * These packages depend on emacs-24.5-r3:24:
 app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -73,13 +69,12 @@ dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual
 dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The last step:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The last step:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gentoo Forums | &lt;!-- raw HTML omitted --&gt;Remove Slotted Packages&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -91,39 +86,28 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
             
             <guid>https://elbauldelprogramador.com/en/how-to-change-portage-folders-to-other-location/</guid>
             <description>&lt;p&gt;Recently I had a problem with &lt;code&gt;portage&lt;/code&gt; and its &lt;code&gt;tmp&lt;/code&gt; directory in &lt;code&gt;/var/tmp/portage&lt;/code&gt; in &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt;. I had no space left in the disk, the error message was:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/tmp/portage&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;So first I decided to change all the &lt;code&gt;portage&lt;/code&gt; files to my secondary hard disk drive, here is how to change &lt;code&gt;portage&lt;/code&gt; folders to a new location.&lt;/p&gt;
-
-&lt;h1 id=&#34;changing-etc-portage-make-conf-file&#34;&gt;Changing /etc/portage/make.conf file&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/tmp/portage
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So first I decided to change all the &lt;code&gt;portage&lt;/code&gt; files to my secondary hard disk drive, here is how to change &lt;code&gt;portage&lt;/code&gt; folders to a new location.&lt;/p&gt;
+&lt;h1 id=&#34;changing-etcportagemakeconf-file&#34;&gt;Changing /etc/portage/make.conf file&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Suppose the new directory is &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;The first thing to to is update the environment variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; and &lt;code&gt;PKGDIR&lt;/code&gt; to point to the new location, so in the file &lt;code&gt;make.conf&lt;/code&gt; we need to write:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/portage&amp;#34;&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;syncing-portage-tree&#34;&gt;Syncing portage tree&lt;/h1&gt;
-
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;syncing-portage-tree&#34;&gt;Syncing portage tree&lt;/h1&gt;
 &lt;p&gt;Now that we had updated the variables, we need to &lt;code&gt;sync&lt;/code&gt; portage:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;emerge --sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;After that, &lt;code&gt;portage&lt;/code&gt; now knows about the new location, but there is one more thing to do.&lt;/p&gt;
-
-&lt;h1 id=&#34;symlinking-make-profile-to-the-new-location&#34;&gt;Symlinking make.profile to the new location&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After that, &lt;code&gt;portage&lt;/code&gt; now knows about the new location, but there is one more thing to do.&lt;/p&gt;
+&lt;h1 id=&#34;symlinking-makeprofile-to-the-new-location&#34;&gt;Symlinking make.profile to the new location&lt;/h1&gt;
 &lt;p&gt;After syncing &lt;code&gt;portage&lt;/code&gt;, one last thing to do is symlinking &lt;code&gt;make.profile&lt;/code&gt; to the new location, previously it was a symlink to &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, but we need to update it to the new location. Here is how:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Now everything is right and we have changed the &lt;code&gt;portage&lt;/code&gt; location and get rid of the space problems.&lt;/p&gt;
-
-&lt;h1 id=&#34;changing-only-the-tmp-directory-var-tmp-portage&#34;&gt;Changing only the tmp directory (/var/tmp/portage)&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now everything is right and we have changed the &lt;code&gt;portage&lt;/code&gt; location and get rid of the space problems.&lt;/p&gt;
+&lt;h1 id=&#34;changing-only-the-tmp-directory-vartmpportage&#34;&gt;Changing only the tmp directory (/var/tmp/portage)&lt;/h1&gt;
 &lt;p&gt;After doing the previous steps, I realized that it would be a better option to only change the location of the &lt;code&gt;tmp&lt;/code&gt; portage directory (by default &lt;code&gt;/var/tmp/portage&lt;/code&gt;), that was the original problem, because I did not had enough space left there. So a better option would be leave &lt;code&gt;make.conf&lt;/code&gt; as we had it previously, and only add a new variable:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hope it helps!.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hope it helps!.&lt;/p&gt;
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;

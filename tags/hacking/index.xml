@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Hacking on El Baúl del programador</title>
+        <title>hacking on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/hacking/</link>
-        <description>Recent content in Hacking on El Baúl del programador</description>
+        <description>Recent content in hacking on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/hacking/</link>
-            <title>Hacking on El Baúl del programador</title>
+            <title>hacking on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,118 +21,76 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 536px) 536px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;rainbow&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/rainbow1.png&#34; width=&#34;536px&#34; height=&#34;303px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;En la esfera social de bookmark (&amp;#8220;socialbookmarkosphere&amp;#8221;) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las &amp;#8220;&lt;a href=&#34;http://www.codinghorror.com/blog/2007/09/rainbow-hash-cracking.html&#34; target=&#34;_blank&#34;&gt;Tablas Arcoiris&lt;/a&gt;&amp;#8220;, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de &lt;em&gt;Windows for Workgroups&lt;/em&gt; hace 15 años. Esto realmente me enloquece. Si el eje soporte &amp;#8220;avanzado&amp;#8221; de tu modelo de amenazas es &amp;#8220;Tablas Arcoiris&amp;#8221;, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;a title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34; href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; target=&#34;_blank&#34;&gt;no suelen almacenar las contraseñas reales&lt;/a&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En la esfera social de bookmark (“socialbookmarkosphere”) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las “&lt;!-- raw HTML omitted --&gt;Tablas Arcoiris&lt;!-- raw HTML omitted --&gt;“, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de &lt;em&gt;Windows for Workgroups&lt;/em&gt; hace 15 años. Esto realmente me enloquece. Si el eje soporte “avanzado” de tu modelo de amenazas es “Tablas Arcoiris”, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;!-- raw HTML omitted --&gt;no suelen almacenar las contraseñas reales&lt;!-- raw HTML omitted --&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
 &lt;p&gt;Ahora re-expliquemos las Tablas Arcoiris:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;ol&gt;
-&lt;li&gt;Toma un &amp;#8220;diccionario&amp;#8221; - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.&lt;/li&gt;
+&lt;li&gt;Toma un “diccionario” - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.&lt;/li&gt;
 &lt;li&gt;Encríptalas a todas.&lt;/li&gt;
 &lt;li&gt;Graba los resultados en un DVD.&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original - una &amp;#8220;tabla arcoiris&amp;#8221;. Para usarla,&lt;/p&gt;
-
+&lt;p&gt;Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original - una “tabla arcoiris”. Para usarla,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Toma tu tabla de hashes robada&lt;/li&gt;
 &lt;li&gt;por cada hash&lt;/li&gt;
 &lt;li&gt;búscala en la tabla arcoiris&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Si está allí, lo resolviste.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Lo que necesitas saber sobre Tablas Arcoiris: ningún esquema moderno de &lt;strong&gt;contraseñas&lt;/strong&gt; es vulnerable a ellos.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Las Tablas Arcoiris son de fácil acierto. Para cada clave, genera un número aleatorio (un &amp;#8216;&lt;em&gt;nonce&amp;#8217;&lt;/em&gt;). Genera el hash de la contraseña con el nonce, y almacena ambos valores. El servidor dispone de información suficiente para verificar contraseñas (el nonce se guarda descubierto). Pero incluso con un pequeño valor aleatorio, digamos, 16 bits, las tablas arcoiris son inviables: en la actualidad hay 65.536 &amp;#8220;variantes&amp;#8221; de cada hash, y en vez de 300 billones de entradas en la tabla arcoiris, necesitas cuatrillones. El nonce en este esquema se llama &amp;#8220;salt&amp;#8221; (sal).&lt;/p&gt;
-
-&lt;p&gt;Genial, ¿no? Sí, y la &lt;a href=&#34;http://en.wikipedia.org/wiki/Crypt_%28Unix%29&#34; target=&#34;_blank&#34;&gt;criptografía Unix&lt;/a&gt; - casi el &lt;em&gt;mínimo común denominador&lt;/em&gt; en sistemas de seguridad - ha tenido esta característica &lt;a href=&#34;http://static.usenix.org/events/usenix99/provos/provos_html/node9.html&#34; target=&#34;_blank&#34;&gt;desde 1976&lt;/a&gt;. Si esto son novedades para tí, no deberías estar diseñando sistemas de contraseñas. Usa alguna buena de otro.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;No, en serio. &lt;a href=&#34;http://www.openwall.com/john/interviews/SF-20060222-p3&#34; target=&#34;_blank&#34;&gt;Usa algún sistema de contraseñas de otro&lt;/a&gt;. No construyas uno propio.&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;Las Tablas Arcoiris son de fácil acierto. Para cada clave, genera un número aleatorio (un ‘&lt;em&gt;nonce’&lt;/em&gt;). Genera el hash de la contraseña con el nonce, y almacena ambos valores. El servidor dispone de información suficiente para verificar contraseñas (el nonce se guarda descubierto). Pero incluso con un pequeño valor aleatorio, digamos, 16 bits, las tablas arcoiris son inviables: en la actualidad hay 65.536 “variantes” de cada hash, y en vez de 300 billones de entradas en la tabla arcoiris, necesitas cuatrillones. El nonce en este esquema se llama “salt” (sal).&lt;/p&gt;
+&lt;p&gt;Genial, ¿no? Sí, y la &lt;!-- raw HTML omitted --&gt;criptografía Unix&lt;!-- raw HTML omitted --&gt; - casi el &lt;em&gt;mínimo común denominador&lt;/em&gt; en sistemas de seguridad - ha tenido esta característica &lt;!-- raw HTML omitted --&gt;desde 1976&lt;!-- raw HTML omitted --&gt;. Si esto son novedades para tí, no deberías estar diseñando sistemas de contraseñas. Usa alguna buena de otro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No, en serio. &lt;!-- raw HTML omitted --&gt;Usa algún sistema de contraseñas de otro&lt;!-- raw HTML omitted --&gt;. No construyas uno propio.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;La mayoría de los peores problemas de seguridad de la industria (como el famoso y deficiente hash LANMAN) sucedieron porque inteligentes desarrolladores enfocaron el código de seguridad de la misma forma que hicieron el resto del código. La diferencia entre el código de seguridad y el código de la aplicación es que cuando el de la aplicación falla, lo descubres en el momento, pero cuando falla el de seguridad, te enteras 4 años más tarde, cuando un DVD con todos los códigos de tarjetas de crédito de tus clientes y la información CVV2 comienza a circular en Estonia.&lt;/p&gt;
-
 &lt;p&gt;Aquí hay un esquema de vanguardia de un post reciente de un blog sobre Tablas Arcoiris y Salts:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;hash = md5(&#39;deliciously-salty-&#39; + password)
 &lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Hay al menos dos problemas con este código. Sí, el autor no sabe que es un salt; &amp;#8220;deliciously-salty-&amp;#8221; is not a nonce (además, Jeff, a tu computadora realmente no le interesa si separas la contraseña de el nonce con un guión; es una computadora, no una maestra de 2do grado).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Pero hay un problema mucho mayor con este código: las letras &amp;#8220;md5&amp;#8243;.&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;Hay al menos dos problemas con este código. Sí, el autor no sabe que es un salt; “deliciously-salty-” is not a nonce (además, Jeff, a tu computadora realmente no le interesa si separas la contraseña de el nonce con un guión; es una computadora, no una maestra de 2do grado).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pero hay un problema mucho mayor con este código: las letras “md5″.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;**Dos razones.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Estás esperando que haga una crítica severa acerca de cómo no hay &lt;a href=&#34;http://www.reddit.com/r/programming/comments/2fu8q/we_worship_md5_the_god_of_hash/c2fwf2&#34; target=&#34;_blank&#34;&gt;ninguna cualidad redentora&lt;/a&gt; para justificar &lt;a href=&#34;http://www.skrenta.com/2007/08/md5_tutorial.html&#34; target=&#34;_blank&#34;&gt;el uso de MD5 en 2007&lt;/a&gt;. Eso es cierto (MD5 está roto, es demasiado lento para usarlo como un hash de propósito general, etc.) Pero ese no es el problema.&lt;/li&gt;
-&lt;li&gt;El problema es que MD5 es rápido. Entonces lo son sus competidores modernos, como SHA1 y SHA256. &lt;a href=&#34;http://cr.yp.to/hash127/faq.html&#34; target=&#34;_blank&#34;&gt;La velocidad es un propósito de diseño&lt;/a&gt; de un hash seguro moderno, debido a que los hashes son bloques de construcción de casi todos los sistemas criptográficos, y usualmente tienen &amp;#8216;demanda de ejecución&amp;#8217; de nivel &amp;#8216;por paquete&amp;#8217; o &amp;#8216;por mensaje&amp;#8217;.&lt;/li&gt;
+&lt;li&gt;Estás esperando que haga una crítica severa acerca de cómo no hay &lt;!-- raw HTML omitted --&gt;ninguna cualidad redentora&lt;!-- raw HTML omitted --&gt; para justificar &lt;!-- raw HTML omitted --&gt;el uso de MD5 en 2007&lt;!-- raw HTML omitted --&gt;. Eso es cierto (MD5 está roto, es demasiado lento para usarlo como un hash de propósito general, etc.) Pero ese no es el problema.&lt;/li&gt;
+&lt;li&gt;El problema es que MD5 es rápido. Entonces lo son sus competidores modernos, como SHA1 y SHA256. &lt;!-- raw HTML omitted --&gt;La velocidad es un propósito de diseño&lt;!-- raw HTML omitted --&gt; de un hash seguro moderno, debido a que los hashes son bloques de construcción de casi todos los sistemas criptográficos, y usualmente tienen ‘demanda de ejecución’ de nivel ‘por paquete’ o ‘por mensaje’.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;La velocidad es exactamente lo que no quieres en una función de hash de contraseñas.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Los esquemas modernos de contraseñas son atacados con cracker de contraseñas incrementales. Crackers incrementales no precalculan todas las posibles contraseñas crackeadas. Consideran cada hash de contraseña individualmente, y alimentan su diccionario a través de la función de hash de contraseña de la misma manera que tu página de login de PHP lo haría. A los crackers de Tablas Arcoiris les gusta que Ophcrack use espacio para atacar contraseñas; los crackers incrementales como John the Ripper, Crack y LC5 trabajan con tiempo: estadísticas y cómputo.&lt;/li&gt;
 &lt;li&gt;En el juego de atacar contraseñas se gana puntos según el tiempo consumido para crackear una contraseña X. Con las tablas arcoiris, ese tiempo depende de qué tan grande tu tabla necesita ser y que tan rápido puedes buscarla. Con crackers incrementales, el tiempo depende de qué tan rápido puedes hacer correr tu función de hash de contraseñas.&lt;/li&gt;
-&lt;li&gt;Cuanto más puedas optimizar tu función, más rápida se vuelva, más debil tu esquema es. MD5 y SHA1, incluso cifradores de bloque convencionales como DES, son diseñados para ser rápidos. MD5, SHA1 y DES son hasheadores de contraseña débiles. En las CPU modernas, crudos bloques de construcción encriptada como DES y MD5 pueden ser&lt;a href=&#34;http://citeseer.ist.psu.edu/cache/papers/cs/5811/http:zSzzSzwww.dmi.ens.frzSz~porninzSzbitslice.pdf/pornin99automatic.pdf&#34; target=&#34;_blank&#34;&gt; separados en bits&lt;/a&gt;, &lt;a href=&#34;http://www.openwall.com/john/doc/CHANGES.shtml&#34; target=&#34;_blank&#34;&gt;vectorizados y paralelizados&lt;/a&gt; para hacer búsquedas de contraseña rápidas como un rayo. Dejar &lt;a href=&#34;http://www.east.isi.edu/~bschott/pubs/grembowski02comparative.pdf&#34; target=&#34;_blank&#34;&gt;fuera de juego a las implementaciones FPGA&lt;/a&gt; costó sólo cientos de dólares.&lt;/li&gt;
+&lt;li&gt;Cuanto más puedas optimizar tu función, más rápida se vuelva, más debil tu esquema es. MD5 y SHA1, incluso cifradores de bloque convencionales como DES, son diseñados para ser rápidos. MD5, SHA1 y DES son hasheadores de contraseña débiles. En las CPU modernas, crudos bloques de construcción encriptada como DES y MD5 pueden ser&lt;!-- raw HTML omitted --&gt; separados en bits&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;vectorizados y paralelizados&lt;!-- raw HTML omitted --&gt; para hacer búsquedas de contraseña rápidas como un rayo. Dejar &lt;!-- raw HTML omitted --&gt;fuera de juego a las implementaciones FPGA&lt;!-- raw HTML omitted --&gt; costó sólo cientos de dólares.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;&lt;strong&gt;Usar funciones hash caseras para autenticar las contraseñas es tan ingenuo como usar funciones hash salt. No lo hagas.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;¿Qué es lo nuevo aquí?&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Primero, lo que tu sistema operativo ya te da&lt;/strong&gt;: un esquema de contraseñas &amp;#8220;optimizado&amp;#8221; para ser computacionalmente caro. El más famoso de estos es el esquema FreeBSD MD5 de &lt;a href=&#34;http://en.wikipedia.org/wiki/Poul-Henning_Kamp&#34; target=&#34;_blank&#34;&gt;PHK&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;La diferencia entre el esquema de PHK y el que estabas por usar para tu carrito de compras 2.0 es simple. Estabas por aplicar MD5 en un salt y la contraseña y luego guardar el hash. PHK aplica MD5 por miles de iteraciones. Ésto es lo que llamamos &amp;#8220;&lt;em&gt;stretching&lt;/em&gt;&amp;#8221; (extenderse).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Primero, lo que tu sistema operativo ya te da&lt;/strong&gt;: un esquema de contraseñas “optimizado” para ser computacionalmente caro. El más famoso de estos es el esquema FreeBSD MD5 de &lt;!-- raw HTML omitted --&gt;PHK&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;La diferencia entre el esquema de PHK y el que estabas por usar para tu carrito de compras 2.0 es simple. Estabas por aplicar MD5 en un salt y la contraseña y luego guardar el hash. PHK aplica MD5 por miles de iteraciones. Ésto es lo que llamamos “&lt;em&gt;stretching&lt;/em&gt;” (extenderse).&lt;/li&gt;
 &lt;li&gt;El esquema MD5 de PHK es sencillo de codificar y está incluido en los sistemas operativos Linux y BSD. Si tienes que elegir entre el código PHP que tienes y el esquema de PHK, elige el de PHK o fallarás la auditoría PCI. [*]&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;La respuesta más simple es &amp;#8220;hashing adaptativo&amp;#8221;&lt;/strong&gt;(adaptive hashing), el cual Neils Provos y David Mazieres inventaron para OpenBSD en 1999. Su esquema original&lt;a href=&#34;http://www.usenix.org/events/usenix99/provos/provos_html/node1.html&#34; target=&#34;_blank&#34;&gt; es llamado &amp;#8220;bcrypt&lt;/a&gt;&amp;#8220;, pero la idea es más importante que el algoritmo.&lt;/p&gt;
-
+&lt;p&gt;&lt;strong&gt;La respuesta más simple es “hashing adaptativo”&lt;/strong&gt;(adaptive hashing), el cual Neils Provos y David Mazieres inventaron para OpenBSD en 1999. Su esquema original&lt;!-- raw HTML omitted --&gt; es llamado “bcrypt&lt;!-- raw HTML omitted --&gt;“, pero la idea es más importante que el algoritmo.&lt;/p&gt;
 &lt;p&gt;Hay tres grandes diferencias entre Provos-Mazieres y el esquema de PHK:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Bcrypt fue inventado por dos hombres inteligentes y el de PHK fue&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;inventado sólo por un hombre inteligente. Eso es literalmente el doble de inteligente.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;Bcrypt usa Blowfish en lugar de MD5. Blowfish es un cifrador en bloque con un notoriamente caro tiempo de configuración. Optimizar Blowfish para que sea más rápido, tendrías que contribuir con un importante avance en la criptografía. Nuestros practicantes de seguridad son todos &amp;#8220;apostadores&amp;#8221;, y usualmente nos gusta apostar a lo que nos &amp;#8220;demande importantes avances en criptografía&amp;#8221;.&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;inventado sólo por un hombre inteligente. Eso es literalmente el doble de inteligente.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Bcrypt usa Blowfish en lugar de MD5. Blowfish es un cifrador en bloque con un notoriamente caro tiempo de configuración. Optimizar Blowfish para que sea más rápido, tendrías que contribuir con un importante avance en la criptografía. Nuestros practicantes de seguridad son todos “apostadores”, y usualmente nos gusta apostar a lo que nos “demande importantes avances en criptografía”.&lt;/li&gt;
 &lt;li&gt;Provos y Mazieres extendieron Blowfish. Se llaman los suyos: &amp;ldquo;Eksblowfish&amp;rdquo;. Eksblowfish es más deplorable: el tiempo de configuración tarda más que Blowfish. ¿Cuánto más? &lt;em&gt;Tu llamado.&lt;/em&gt; Puedes hacer que un intento con contraseña simple lleve milisegundos, o puedes hacer que tarde horas.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;¿Por qué bcrypt es como un gran acierto? Piensa en el problema desde dos perspectivas: el servidor, y el atacante.&lt;/p&gt;
-
-&lt;p&gt;Primero, el servidor: tienes decenas de miles de logins por hora, o decenas por segundo. Comparado con los impactos en la base de datos y los refrescos de página y E/S, el checkeo de contraseña es despreciable. No te preocupes si tu testeo de contraseña tarda el doble de tiempo, o incluso diez veces más, porque los hash no caen dentro del rango &lt;sup&gt;80&lt;/sup&gt;&amp;frasl;&lt;sub&gt;20&lt;/sub&gt;.&lt;/p&gt;
-
+&lt;p&gt;Primero, el servidor: tienes decenas de miles de logins por hora, o decenas por segundo. Comparado con los impactos en la base de datos y los refrescos de página y E/S, el checkeo de contraseña es despreciable. No te preocupes si tu testeo de contraseña tarda el doble de tiempo, o incluso diez veces más, porque los hash no caen dentro del rango 80/20.&lt;/p&gt;
 &lt;p&gt;Ahora, el atacante. Esto es fácil. El atacante se preocupa mucho si los tests de contraseña toman el doble de tiempo. Si un testeo de contraseña tarda el doble, el tiempo total de crackeo de contraseña tarda también el doble.&lt;/p&gt;
-
 &lt;p&gt;¿Comprendes?&lt;/p&gt;
-
 &lt;p&gt;La mayor ventaja del hashing adaptativo es que puedes ajustarlo. De la misma forma que las computadoras son cada vez más rápidas, el mismo bloque de código continúa produciendo contraseñas que son difíciles de crackear.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Finalmente, como tu abogado en este asunto, me veo obligado a informarte sobre SRP.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;SRP es el protocolo de Contraseña Remota Segura de Stanford (&lt;a href=&#34;http://srp.stanford.edu/design.html&#34; target=&#34;_blank&#34;&gt;Stanford Secure Remote Password&lt;/a&gt; protocol). Es un sistema de criptografía de clave pública diseñado para almacenar y validar contraseñas de forma segura sin guardarlas o transmitirlas sin cifrar.&lt;/p&gt;
-
+&lt;p&gt;SRP es el protocolo de Contraseña Remota Segura de Stanford (&lt;!-- raw HTML omitted --&gt;Stanford Secure Remote Password&lt;!-- raw HTML omitted --&gt; protocol). Es un sistema de criptografía de clave pública diseñado para almacenar y validar contraseñas de forma segura sin guardarlas o transmitirlas sin cifrar.&lt;/p&gt;
 &lt;p&gt;Este objetivo de diseño es mucho mejor de lo que suena, ya que hay usualmente algunas cuestiones inevitables en el diseño de sistemas de contraseñas:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Puedes guardar el hash de la contraseña. Ahora si pierdes la base de datos de contraseñas, no expones las contraseñas efectivas. No obstante, tampoco tú sabes el valor real de las contraseñas, lo que significa que para validarlas, tus clientes necesitan enviártelas sin encriptar.&lt;/li&gt;
 &lt;li&gt;Puedes usar un esquema de desafío-respuesta (&lt;em&gt;challenge-response)&lt;/em&gt;, donde ambos lados usan un problema matemático para demostrarse entre sí que conocen la contraseña, pero ninguno de los dos lados envía la contraseña sobre la red. Estos esquemas son buenos, pero no funcionan si ambos lados no tienen acceso al valor real de la contraseña – en otras palabras, el servidor tiene que almacenarla sin encriptar.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;La mayoría de los practicantes elegirán el esquema de hashing. Ambos ataques – robo de bases de datos y contraseñas robadas por &lt;em&gt;phishing –&lt;/em&gt; ocurren todo el tiempo. Pero las bases de datos robadas comprometen más contraseñas.&lt;/p&gt;
-
 &lt;p&gt;SRP resuelve las compensaciones. Es una extensión de Diffie-Hellman. El detalle destacado de esta publicación: en lugar de almacenar un hash de la contraseña con &lt;em&gt;salt&lt;/em&gt;, almacenas un “verificador”, el cual es un número elevado a la (obviamente muy grande) potencia del módulo N del hash de la contraseña.&lt;/p&gt;
-
-&lt;p&gt;Si entiendes DH, SRP simplemente va a tener sentido para ti. Si no, &lt;a href=&#34;http://en.wikipedia.org/wiki/Diffie-Hellman&#34; target=&#34;_blank&#34;&gt;Wikipedia te explicará mejor que yo&lt;/a&gt;. Para la prueba del próximo miércoles, necesitas saber:&lt;/p&gt;
-
+&lt;p&gt;Si entiendes DH, SRP simplemente va a tener sentido para ti. Si no, &lt;!-- raw HTML omitted --&gt;Wikipedia te explicará mejor que yo&lt;!-- raw HTML omitted --&gt;. Para la prueba del próximo miércoles, necesitas saber:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SRP está relacionado con Diffie-Hellman.&lt;/li&gt;
 &lt;li&gt;SRP es un protocol &lt;em&gt;desafío-respuesta&lt;/em&gt; que permite al servidor que demuestre que sabes la contraseña sin que la misma se inserte en la red.&lt;/li&gt;
@@ -141,28 +98,19 @@
 &lt;li&gt;Los verificadores SRP “Cracking” rápidamente podrían involucrar un avance singificativo a la criptografía.&lt;/li&gt;
 &lt;li&gt;SRP es lo suficientemente simple para correr sin Javascript.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;¡Increíble! ¿Por qué no estás usando SRP en este preciso momento? Te dare tres razones:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;SRP está patentado&lt;/li&gt;
-&lt;li&gt;Para hacerlo funcionar de forma segura en un navegador, tienes que cubrir la página de login sobre SSL; de otra forma, &lt;a href=&#34;http://www.matasano.com/log/251/oh-meebo/&#34; target=&#34;_blank&#34;&gt;como Meebo&lt;/a&gt;, te enredarás en un esquema que puede ser mordido por cualquiera que pueda hacer *phishing *una página web.&lt;/li&gt;
+&lt;li&gt;Para hacerlo funcionar de forma segura en un navegador, tienes que cubrir la página de login sobre SSL; de otra forma, &lt;!-- raw HTML omitted --&gt;como Meebo&lt;!-- raw HTML omitted --&gt;, te enredarás en un esquema que puede ser mordido por cualquiera que pueda hacer *phishing *una página web.&lt;/li&gt;
 &lt;li&gt;SRP es fácil de estropear, por lo que los primeros N mainstreams de Rails o PHP o las implementaciones Pylons SRP serán trivialmente bypassables por al menos el primer año hasta que sean implementadas.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;¿Qué hemos aprendido?&lt;/p&gt;
-
 &lt;p&gt;Aprendimos que si es 1975, puedes incendiar ARPANet con un ataque de Tabla arcoiris. Si es 2007, un ataque de ese tipo te incendia a tí, aprendimos que deberías volver a 1975 y esperar 30 años antes de intentar diseñar un esquema de hashing de contraseñas.&lt;/p&gt;
-
 &lt;p&gt;Aprendimos que si hemos aprendido algo de este post, deberíamos consultar a nuestros amigos y vecinos en el campo de seguridad pidiendo ayuda con nuestros esquemas de contraseñas, porque nadie va a encontrar el error que termine el juego de nuestros esquemas MD5 hasta el momento después de que el número de tarjeta de crédito de mi madre sea vendido en un puesto de ruta en Tallinn, Estonia.&lt;/p&gt;
-
 &lt;p&gt;Aprendimos que en un esquema de hashing de contraseñas, la velocidad es el enemigo. Aprendimos que MD5 fue diseñado para velocidad. Entonces, aprendimos que MD5 es el enemigo. También Jeff Atwood y Richard Skrenta.&lt;/p&gt;
-
 &lt;p&gt;Finalmente, aprendimos que si queremos almacenar contraseñas en forma segura tenemos tres opciones razonables: el esquema MD5 de PHK, el esquema Bcrypt de Provos-Maziere y SRP. Aprendimos que la opción correcta es Bcrypt.&lt;/p&gt;
-
 &lt;p&gt;[∗] &lt;em&gt;Disclaimer: I cannot actually flunk your PCI audit.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Fuente | &lt;a href=&#34;http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html&#34; target=&#34;_blank&#34;&gt;Matasano Security&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;Fuente | &lt;!-- raw HTML omitted --&gt;Matasano Security&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -171,14 +119,9 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c-soluciones/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 532px) 532px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; title=&#34;Bomba&#34; alt=&#34;&#34; src=&#34;https://elbauldelprogramador.com/img/2012/12/logicbomb.png&#34; width=&#34;532px&#34; height=&#34;449px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hace unas semanas &lt;a href=&#34;https://elbauldelprogramador.com/desafio-de-ingenieria-inversa-en-c/&#34;&gt;hablé de un desafío&lt;/a&gt; propuesto por los profesores de Estructura de computadores de mi facultad. Ahora que ha finalizado el plazo de entrega de la práctica, escribo este artículo con los resultados que obtuve.&lt;/p&gt;
-
 &lt;p&gt;Como comenté, la practica consiste en averiguar dos contraseñas de un programa escrito en C compilado para 32 bits y sin opciones de depuración. El guión está escrito por los profesores Javier Fernandez y Mancia anguita bajo licencia &lt;strong&gt;creative commons BY-NC-SA&lt;/strong&gt; y disponible para descargar más abajo en las referencias.&lt;/p&gt;
-
 &lt;p&gt;Todos los programas escritos por los alumnos estan basados en este:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;    // para printf()&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;   // para exit()&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
@@ -229,17 +172,12 @@
         &lt;span class=&#34;n&#34;&gt;boom&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 
     &lt;span class=&#34;n&#34;&gt;defused&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Al cual se le aplican los métodos deseados por el alumno para cifrar la contraseña que elija.&lt;/p&gt;
-
 &lt;p&gt;Conseguí descifrar 2 programas en total, aunque de unos de ellos solo la contraseña alfanumérica, luego veremos la razón. Empecemos con el primer programa:&lt;/p&gt;
-
 &lt;h1 id=&#34;primera-bomba&#34;&gt;Primera Bomba&lt;/h1&gt;
-
-&lt;p&gt;Puedes descargar el programa desde &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba1&#34; target=&#34;_blank&#34;&gt;este enlace&lt;/a&gt;:&lt;/p&gt;
-
+&lt;p&gt;Puedes descargar el programa desde &lt;!-- raw HTML omitted --&gt;este enlace&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;p&gt;Lo primero que hay que hacer es un estudio del comportamiento del programa usando &lt;strong&gt;gdb&lt;/strong&gt; y &lt;strong&gt;objdump -d&lt;/strong&gt;. Tras ejecutar el programa paso a paso con gdb y predecir cuales son los puntos críticos creé un archivo de configuración para gdb que me ayudara a facilitar el depurado:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;b main
 b *0x804a034
@@ -256,57 +194,48 @@ display /32xw &lt;span class=&#34;nv&#34;&gt;$esp&lt;/span&gt;
 display /s &lt;span class=&#34;nv&#34;&gt;$eax&lt;/span&gt;
 display /w &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;char*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$eax&lt;/span&gt;
 display &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;char*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;0x804a034
-display /wx 0x804a03&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Mediante el proceso de depurado, me dí cuenta que las instrucciones clave eran las siguientes; para la contraseña alfanumérica:&lt;/p&gt;
-
-&lt;p&gt;La dirección &lt;code&gt;0x804a034&lt;/code&gt; es un puntero a la cadena de texto &amp;ldquo;&lt;strong&gt;aeiouuuu&lt;/strong&gt;&amp;rdquo;, con un espacio al final, esta es la contraseña codificada.&lt;/p&gt;
-
+display /wx 0x804a03
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mediante el proceso de depurado, me dí cuenta que las instrucciones clave eran las siguientes; para la contraseña alfanumérica:&lt;/p&gt;
+&lt;p&gt;La dirección &lt;code&gt;0x804a034&lt;/code&gt; es un puntero a la cadena de texto &amp;ldquo;&lt;strong&gt;aeiouuuu&lt;/strong&gt;&amp;quot;, con un espacio al final, esta es la contraseña codificada.&lt;/p&gt;
 &lt;p&gt;En algún punto del programa, se deben comparar la contraseña elegida con la introducida por el usuario con &lt;code&gt;strncmp&lt;/code&gt;, en dicho punto, la contraseña debe estar decodificada. A base de depurar se observa que ese proceso comienza aquí:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;c9:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;34&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0x804a034&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d0:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d3:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;34&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804a034&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Estas tres instrucciones extraen la primera letra de la contraseña; la &lt;strong&gt;a&lt;/strong&gt;, le suman 1 y la vuelven a colocar en la cadena de texto, quedando &amp;ldquo;&lt;strong&gt;beiouuuu&lt;/strong&gt;&amp;rdquo;.&lt;/p&gt;
-
+&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d3:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;34&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804a034&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Estas tres instrucciones extraen la primera letra de la contraseña; la &lt;strong&gt;a&lt;/strong&gt;, le suman 1 y la vuelven a colocar en la cadena de texto, quedando &amp;ldquo;&lt;strong&gt;beiouuuu&lt;/strong&gt;&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Luego en este fragmento:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d8:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;36&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0x804a036&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;df:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;e8&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;02&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;sub&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;e2:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;36&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804a036&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Se extrae la &lt;strong&gt;i&lt;/strong&gt; y resta dos, quedando &lt;strong&gt;g&lt;/strong&gt;, la tercera instrucción sustituye la &lt;strong&gt;i&lt;/strong&gt; en la cadena, obteniendo como resultado &amp;ldquo;&lt;strong&gt;begouuuu&lt;/strong&gt;&amp;rdquo;.&lt;/p&gt;
-
+&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;e2:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;36&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804a036&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se extrae la &lt;strong&gt;i&lt;/strong&gt; y resta dos, quedando &lt;strong&gt;g&lt;/strong&gt;, la tercera instrucción sustituye la &lt;strong&gt;i&lt;/strong&gt; en la cadena, obteniendo como resultado &amp;ldquo;&lt;strong&gt;begouuuu&lt;/strong&gt;&amp;quot;.&lt;/p&gt;
 &lt;p&gt;No se realizan más modificaciones a la contraseña almacenada en el programa. Ahora toca averiguar qué operaciones se realizan sobre la contraseña introducida por el usuario:&lt;/p&gt;
-
 &lt;p&gt;La contraseña introducida por el usuario se encuentra en &lt;code&gt;0x28(%esp)&lt;/code&gt;, el programa resta uno al segundo caracter de la contraseña introducida y lo sustituye:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;e7:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;29&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0x29&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;; con 0x29(%esp) obtiene el segundo caracter
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ec&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;e8&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;sub&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ef:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;88&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;29&lt;/span&gt;             &lt;span class=&#34;nf&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x29&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Luego, hace algo parecido con la cuarta letra de la contraseña introducida por el usuario:&lt;/p&gt;
+&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;ef:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;88&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;29&lt;/span&gt;             &lt;span class=&#34;nf&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x29&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Luego, hace algo parecido con la cuarta letra de la contraseña introducida por el usuario:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;f3:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;b&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0x2b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;f8:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;fb:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;88&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt;             &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x2b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La diferencia es que esta vez suma uno, en lugar de restar.&lt;/p&gt;
-
+&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;fb:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;88&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt;             &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x2b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La diferencia es que esta vez suma uno, en lugar de restar.&lt;/p&gt;
 &lt;p&gt;Llegados al punto donde se llama a strncmp, vemos claramente en la pila qué parámetros se le están pasando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;2:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;32&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;xw&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;$esp&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;xffffd2f0:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;xffffd318&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0x0804a034&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0x0000000a&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0xffffd3a4&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;1:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;xw&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;$eip&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x804871e&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;strncmp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0xfffe01e8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;%esp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0xffffd318&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -&amp;gt; puntero a la contraseña introducida por el usuario
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x804871e&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;strncmp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0xfffe01e8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;%esp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0xffffd318&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -&amp;gt; puntero a la contraseña introducida por el usuario
 0x4&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;%esp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0x0804a034&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -&amp;gt; puntero a la contraseña del programa
-0x8&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;%esp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0x0000000a&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -&amp;gt; longitud que se quiere comparar &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Teniendo en cuenta las transformaciones hechas, la contraseña a introducir es &lt;strong&gt;bfgnuuuu&lt;/strong&gt; . ya que &amp;#8216;f&amp;#8217;-1 = &amp;#8216;e&amp;#8217; y &amp;#8216;n&amp;#8217;+1=&amp;#8217;o&amp;#8217;, resultando &lt;strong&gt;begouuuu&lt;/strong&gt;&lt;/p&gt;
-
+0x8&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;%esp&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;0x0000000a&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; -&amp;gt; longitud que se quiere comparar &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;10&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Teniendo en cuenta las transformaciones hechas, la contraseña a introducir es &lt;strong&gt;bfgnuuuu&lt;/strong&gt; . ya que ‘f’-1 = ‘e’ y ‘n’+1=’o’, resultando &lt;strong&gt;begouuuu&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Una vez descubierta la contraseña alfanumérica, pasé a la numérica, que resultó ser bastante sencilla. Esta vez la clave de todo está en estas instrucciones:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;804877&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;a:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a1&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x804a040&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;804877&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;f:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1f4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;8048784:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;a3&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;a0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804a040&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;8048789:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;44&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;24&lt;/span&gt;             &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x24&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;804878&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c8&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0xc8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Se suma 500 &lt;code&gt;(0x1f4)&lt;/code&gt; a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.
+&lt;span class=&#34;err&#34;&gt;804878&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;05&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c8&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0xc8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Se suma 500 &lt;code&gt;(0x1f4)&lt;/code&gt; a la contraseña original, resultando 1500, y 200 (0xc8) a la contraseña que introduzca el usuario.
 Haciendo la comparación de 1000+500 con PASSINTRODUCIDA+200, se deduce que la contraseña que se debe introducir es 1300.&lt;/p&gt;
-
 &lt;h1 id=&#34;segunda-bomba&#34;&gt;Segunda Bomba&lt;/h1&gt;
-
-&lt;p&gt;Puedes descargar el programa desde &lt;a href=&#34;https://dl.dropbox.com/u/54765219/Bomba2&#34; target=&#34;_blank&#34;&gt;este enlace&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Puedes descargar el programa desde &lt;!-- raw HTML omitted --&gt;este enlace&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Como en la bomba anterior, despues de investigar un poco, creé un archivo de sesión para gdb con los puntos críticos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;b main
 b cambio
@@ -324,25 +253,24 @@ display /32xw &lt;span class=&#34;nv&#34;&gt;$esp&lt;/span&gt;
 display /s &lt;span class=&#34;nv&#34;&gt;$eax&lt;/span&gt;
 display /w &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;char*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$eax&lt;/span&gt;
 display &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;char*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;0x804a034
-display /wx 0x804a034&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Llegué a la siguiente conclusión:&lt;/p&gt;
-
+display /wx 0x804a034
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Llegué a la siguiente conclusión:&lt;/p&gt;
 &lt;p&gt;La contraseña codificada es &lt;strong&gt;C4b3Z0n&lt;/strong&gt;, pero únicamente se comprueba la primera letra.
 Si el usuario introduce como contraseña &lt;strong&gt;C4b3Z0n&lt;/strong&gt;, la bomba explota, ya que en la función &lt;code&gt;cambio&lt;/code&gt;, se comprueba que la primera letra de la contraseña no sea igual a &lt;strong&gt;C&lt;/strong&gt;, de ser igual, se llama a la bomba:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;nf&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;cmp&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;
 &lt;span class=&#34;nf&#34;&gt;jne&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;80486a1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;cambio&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;804860c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;boomb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Llegados a este punto, si no ha explotado, se compara la primera letra con &amp;ldquo;Q&amp;rdquo;, si la primera letra de la contraseña introducida es &lt;strong&gt;&amp;ldquo;Q&amp;rdquo;&lt;/strong&gt; también, se cambia por &lt;strong&gt;&amp;ldquo;c&amp;rdquo;&lt;/strong&gt;.
+&lt;span class=&#34;nf&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;804860c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;boomb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Llegados a este punto, si no ha explotado, se compara la primera letra con &amp;ldquo;Q&amp;rdquo;, si la primera letra de la contraseña introducida es &lt;strong&gt;&amp;ldquo;Q&amp;rdquo;&lt;/strong&gt; también, se cambia por &lt;strong&gt;&amp;ldquo;c&amp;rdquo;&lt;/strong&gt;.
 Todo lo mencionado anteriormente se hace dentro de la función cambio.
 En resumen, la función cambio comprueba que la primera letra no sea &lt;strong&gt;&amp;ldquo;C&amp;rdquo;&lt;/strong&gt;, si no es &lt;strong&gt;&amp;ldquo;C&amp;rdquo;&lt;/strong&gt;, compara con &lt;strong&gt;&amp;ldquo;Q&amp;rdquo;&lt;/strong&gt;, de ser &lt;strong&gt;&amp;ldquo;Q&amp;rdquo;&lt;/strong&gt;, la cambia por una &lt;strong&gt;&amp;ldquo;c&amp;rdquo;&lt;/strong&gt;, dicha &lt;strong&gt;&amp;ldquo;c&amp;rdquo;&lt;/strong&gt;, la cambiará la función &lt;code&gt;change&lt;/code&gt; por una &lt;strong&gt;&amp;ldquo;C&amp;rdquo;&lt;/strong&gt;, concretamente aquí:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;be:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;          &lt;span class=&#34;c&#34;&gt;; Extrae la primera letra
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;63&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;cmp&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x63&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%al&lt;/span&gt;            &lt;span class=&#34;c&#34;&gt;; La compara con &amp;#39;C&amp;#39;
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;06&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;jne&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;80486cb&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;     &lt;span class=&#34;c&#34;&gt;; Si no son iguales sale de la funcion
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%ebp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;       &lt;span class=&#34;c&#34;&gt;; si son iguales carga la contraseña entera en eax
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;c6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;43&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;movb&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;$0x43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;         &lt;span class=&#34;err&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;sustituye&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;primera&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;letra&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;por&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por tanto, la contraseña que el usuario debe introducir es &lt;strong&gt;c4b3Z0n&lt;/strong&gt;, para que al realizar el cambio quede como C4b3Z0n. Si se introduce por contraseña &lt;strong&gt;Q4b3Z0n&lt;/strong&gt;, se reemplaza por &lt;strong&gt;c4b3Z0n&lt;/strong&gt; que es distinto de &lt;strong&gt;C4b3Z0n&lt;/strong&gt;, detonando la bomba.&lt;/p&gt;
-
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;c6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;43&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;movb&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;$0x43&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;         &lt;span class=&#34;c&#34;&gt;; y sustituye la primera letra por &amp;#39;C&amp;#39;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por tanto, la contraseña que el usuario debe introducir es &lt;strong&gt;c4b3Z0n&lt;/strong&gt;, para que al realizar el cambio quede como C4b3Z0n. Si se introduce por contraseña &lt;strong&gt;Q4b3Z0n&lt;/strong&gt;, se reemplaza por &lt;strong&gt;c4b3Z0n&lt;/strong&gt; que es distinto de &lt;strong&gt;C4b3Z0n&lt;/strong&gt;, detonando la bomba.&lt;/p&gt;
 &lt;p&gt;En este ejecutable no conseguí descubrir la contraseña numérica por la siguiente razón, el código que realiza las operaciones es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;080486&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;code&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;cd:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;55&lt;/span&gt;                      &lt;span class=&#34;nf&#34;&gt;push&lt;/span&gt;   &lt;span class=&#34;nv&#34;&gt;%ebp&lt;/span&gt;
@@ -396,11 +324,9 @@ En resumen, la función cambio comprueba que la primera letra no sea &lt;strong&
 &lt;span class=&#34;err&#34;&gt;8048764:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;e8&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;d9&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;fe&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;ff&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;ff&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;8048642&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;bomb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;8048769:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;45&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%ebp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;804876&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;c:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c9&lt;/span&gt;                      &lt;span class=&#34;no&#34;&gt;leave&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;804876&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c3&lt;/span&gt;                      &lt;span class=&#34;no&#34;&gt;ret&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción &lt;code&gt;div&lt;/code&gt; a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.&lt;/p&gt;
-
+&lt;span class=&#34;err&#34;&gt;804876&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c3&lt;/span&gt;                      &lt;span class=&#34;no&#34;&gt;ret&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Gran parte de este código se usa para calcular un simple módulo, la razón; gcc realiza esta optimización porque la instrucción &lt;code&gt;div&lt;/code&gt; a pesar de ser una sola, es más lenta que todo este código. Si quieres profundizar más en este tema, en las referencias hay un enlace a stackoverflow que explica qué método se sigue para calcular el módulo.&lt;/p&gt;
 &lt;h1 id=&#34;el-código-de-mi-programa-bomba&#34;&gt;El código de mi programa Bomba&lt;/h1&gt;
-
 &lt;p&gt;Para escribir mi programa me basé en técnicas de ofuscación que encontré por internet, con un poco de imaginación se puede hacer muy dificil la lectura de un programa:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/*
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;  ============================================================================
@@ -508,12 +434,10 @@ En resumen, la función cambio comprueba que la primera letra no sea &lt;strong&
     &lt;span class=&#34;n&#34;&gt;defused&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
 
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Explicaré por encima su funcionamiento. En la función &lt;code&gt;main&lt;/code&gt; se evalua el primer argumento, que contiene el número de parámetros pasados a la función, contanto también con el nombre del programa, como no pasamos ningún argumento el valor por defecto será 1, y como este valor no se encuentra en el &lt;code&gt;switch&lt;/code&gt;, entra en el &lt;code&gt;default&lt;/code&gt;, Los números tan largos que ves son la contraseña representada en formato &lt;strong&gt;double&lt;/strong&gt;, en concreto esta cadena &lt;strong&gt;@M?eg \PoiRlLldo!�&lt;/strong&gt;. Tras asignar la contraseña a un array de doubles, llamo recursivamente a la función &lt;code&gt;main&lt;/code&gt;, pasando como argumento el número 65381 y el array con la contraseña. De modo que esta vez el &lt;code&gt;switch&lt;/code&gt; entra en la segunda sentencia (&lt;code&gt;case 45681:&lt;/code&gt;), en la que se copia el array con la contraseña en double a una cadena de caracteres.&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explicaré por encima su funcionamiento. En la función &lt;code&gt;main&lt;/code&gt; se evalua el primer argumento, que contiene el número de parámetros pasados a la función, contanto también con el nombre del programa, como no pasamos ningún argumento el valor por defecto será 1, y como este valor no se encuentra en el &lt;!-- raw HTML omitted --&gt;switch&lt;!-- raw HTML omitted --&gt;, entra en el &lt;!-- raw HTML omitted --&gt;default&lt;!-- raw HTML omitted --&gt;, Los números tan largos que ves son la contraseña representada en formato &lt;!-- raw HTML omitted --&gt;double&lt;!-- raw HTML omitted --&gt;, en concreto esta cadena &lt;!-- raw HTML omitted --&gt;@M?eg \PoiRlLldo!�&lt;!-- raw HTML omitted --&gt;. Tras asignar la contraseña a un array de doubles, llamo recursivamente a la función &lt;!-- raw HTML omitted --&gt;main&lt;!-- raw HTML omitted --&gt;, pasando como argumento el número 65381 y el array con la contraseña. De modo que esta vez el &lt;!-- raw HTML omitted --&gt;switch&lt;!-- raw HTML omitted --&gt; entra en la segunda sentencia (&lt;!-- raw HTML omitted --&gt;case 45681:&lt;!-- raw HTML omitted --&gt;), en la que se copia el array con la contraseña en double a una cadena de caracteres.&lt;/p&gt;
 &lt;p&gt;Por muy complicado que parezca, el código ensamblador solo tiene un punto clave para descubrir la contraseña:&lt;/p&gt;
-
-&lt;p&gt;En cualquier optimización, ya sea &lt;a href=&#34;https://elbauldelprogramador.com/peso-hamming-y-optimizacion/&#34;&gt;0, 1 o 2&lt;/a&gt;, para averiguar la contraseña basta con poner un punto de ruptura en la función &lt;code&gt;decode&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;En cualquier optimización, ya sea &lt;!-- raw HTML omitted --&gt;0, 1 o 2&lt;!-- raw HTML omitted --&gt;, para averiguar la contraseña basta con poner un punto de ruptura en la función &lt;!-- raw HTML omitted --&gt;decode&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;08048870&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;8048870:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;53&lt;/span&gt;                      &lt;span class=&#34;nf&#34;&gt;push&lt;/span&gt;   &lt;span class=&#34;nv&#34;&gt;%ebx&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;8048871:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ec&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;sub&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;
@@ -530,36 +454,31 @@ En resumen, la función cambio comprueba que la primera letra no sea &lt;strong&
 &lt;span class=&#34;err&#34;&gt;8048898:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c4&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;18&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x18&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;804889&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;b:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;b&lt;/span&gt;                      &lt;span class=&#34;no&#34;&gt;pop&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%ebx&lt;/span&gt;
 &lt;span class=&#34;err&#34;&gt;804889&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;c:&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c3&lt;/span&gt;                      &lt;span class=&#34;no&#34;&gt;ret&lt;/span&gt;
-&lt;span class=&#34;err&#34;&gt;804889&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;76&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;lea&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En la que se va extrayendo de la cadena &lt;strong&gt;@M?eg \PoiRlLldo!�&lt;/strong&gt; los caracteres impares, mediante un for:&lt;/p&gt;
+&lt;span class=&#34;err&#34;&gt;804889&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;76&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;lea&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0x0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esi&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En la que se va extrayendo de la cadena &lt;!-- raw HTML omitted --&gt;@M?eg \PoiRlLldo!�&lt;!-- raw HTML omitted --&gt; los caracteres impares, mediante un for:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt; &lt;span class=&#34;err&#34;&gt;8048888:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;b6&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;53&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;movzbl&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%ebx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%ecx&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;804888&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;88&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%cl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;8048890:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;8048893:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;fa&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;a&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;cmp&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0xa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;
- &lt;span class=&#34;err&#34;&gt;8048896:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f0&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;jne&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;8048888&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con lo cual, antes de retornar de la función, si miramos el valor de EBX encontramos la contraseña a usar para desactivar la bomba.&lt;/p&gt;
-
+ &lt;span class=&#34;err&#34;&gt;8048896:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f0&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;jne&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;8048888&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;decode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con lo cual, antes de retornar de la función, si miramos el valor de EBX encontramos la contraseña a usar para desactivar la bomba.&lt;/p&gt;
 &lt;p&gt;La clave está en cómo interpretar en el main, concretamente en la línea&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d5:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;89&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;54&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;04&lt;/span&gt;             &lt;span class=&#34;nf&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;el valor de EDX, pues es un double, que oculta la cadena cifrada &lt;strong&gt;@M?eg \PoiRlLldo!�&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Valor que veremos si examinamos en gdb con &lt;code&gt;x /gs $edx&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;También podemos deducir el tamaño de la contraseña mirando la pila antes de llamar a &lt;code&gt;strncmp&lt;/code&gt;, pues el tercer valor de la pila &lt;strong&gt;0x8(%esp)&lt;/strong&gt;, es la longitud. En cuanto al pin, la clave está en mirar este trozo de código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;d5:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;89&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;54&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;24&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;04&lt;/span&gt;             &lt;span class=&#34;nf&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;el valor de EDX, pues es un double, que oculta la cadena cifrada &lt;strong&gt;@M?eg \PoiRlLldo!�&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Valor que veremos si examinamos en gdb con &lt;!-- raw HTML omitted --&gt;x /gs $edx&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;También podemos deducir el tamaño de la contraseña mirando la pila antes de llamar a &lt;!-- raw HTML omitted --&gt;strncmp&lt;!-- raw HTML omitted --&gt;, pues el tercer valor de la pila &lt;!-- raw HTML omitted --&gt;0x8(%esp)&lt;!-- raw HTML omitted --&gt;, es la longitud. En cuanto al pin, la clave está en mirar este trozo de código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt; &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;b0:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;be&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;movsbl&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%ecx&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;b3:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;83&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c0&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;01&lt;/span&gt;                &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;b6:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;31&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;ca&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;xor&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;%ecx&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;b8:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;90&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;89&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;04&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;08&lt;/span&gt;          &lt;span class=&#34;no&#34;&gt;cmp&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x8048990&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%eax&lt;/span&gt;
  &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;bd:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;75&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;f1&lt;/span&gt;                   &lt;span class=&#34;no&#34;&gt;jne&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;80486b0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
- &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;bf:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;81&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;61&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;       &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1e61&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Que va sumando al pin el resultado de hacer un XOR de su valor con el valor de una letra almacenada en %ecx y al resultado le suma 7777.
+ &lt;span class=&#34;err&#34;&gt;80486&lt;/span&gt;&lt;span class=&#34;nl&#34;&gt;bf:&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;81&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;c2&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;61&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;       &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;$0x1e61&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;%edx&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Que va sumando al pin el resultado de hacer un XOR de su valor con el valor de una letra almacenada en %ecx y al resultado le suma 7777.
 Con lo cual tenemos que conseguir un número al que al hacerle todas estas operaciones de 8305, que resulta ser 555.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Calculating modulo in assembly&lt;/strong&gt; | &lt;a href=&#34;http://stackoverflow.com/questions/4361979/calculating-modulo-in-assembly&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Obfuscation&lt;/strong&gt; | &lt;a href=&#34;http://www.brandonparker.net/code_obf.php&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Calculating modulo in assembly&lt;/strong&gt; | &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Obfuscation&lt;/strong&gt; | &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -570,18 +489,13 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
             
             <guid>https://elbauldelprogramador.com/hacking-y-seguridad-en-comunicaciones/</guid>
             <description>&lt;p&gt;Os dejo un vídeo que demuestra como se puede suplantar la identidad de una red GSM / GPRS / UMTS / LTE.&lt;/p&gt;
-
-&lt;p&gt;El vídeo es de la &lt;strong&gt;&lt;em&gt;RootedCON 2011&lt;/em&gt;&lt;/strong&gt; de este año.&lt;/p&gt;
-
-&lt;p&gt;Visitar el vídeo en Vimeo: &lt;a href=&#34;https://vimeo.com/27258284 &amp;quot;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011&#34;&gt;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)&lt;/a&gt;&amp;rdquo;)&lt;/p&gt;
-
+&lt;p&gt;El vídeo es de la &lt;em&gt;&lt;strong&gt;RootedCON 2011&lt;/strong&gt;&lt;/em&gt; de este año.&lt;/p&gt;
+&lt;p&gt;Visitar el vídeo en Vimeo: &lt;a href=&#34;https://vimeo.com/27258284&#34; title=&#34;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)&#34;&gt;David Pérez y José Picó - Un ataque práctico contra comunicaciones móviles (Rooted CON 2011)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Una de las características que se conocen desde hace mucho tiempo es la posibilidad de falsificar, es decir, suplantar, a un operador de telefonía al que se conectan los teléfonos móviles. Normalmente, todos los usuarios que cuentan con un teléfono de última generación, como un iPhone o un Smartphone, lo tienen configurado para conectarse automáticamente a las redes.&lt;/p&gt;
-
 &lt;p&gt;Esta suplantación, que se puede hacer a las redes GSM, se puede extender, como enseñan desde hace más de un año los investigadores españoles José Picó y David Perez a las redes UMTS, es decir, a las tecnologías GPRS y EDGE. Si el dispositivo no tiene configurada la opción de conectarse solo a redes 3G o 3.5G, un atacante podrá simular ser cualquier operador ya que en las tecnologías GPRS y EDGE no se autentica la red, es decir, basta con suplantar el nombre de la red y engañar al usuario.&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Fuente: &lt;a target=&#34;_blank&#34; href=&#34;http://www.elladodelmal.com/2011/11/nuevo-libro-de-hacking-y-seguridad-en.html&#34;&gt;elladodelmal&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Más info: &lt;a target=&#34;_blank&#34; href=&#34;http://www.seguridadapple.com/2011/01/atacando-iphone-e-ipad-con-redes-falsas.html&#34;&gt;seguridadApple&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fuente: &lt;!-- raw HTML omitted --&gt;elladodelmal&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Más info: &lt;!-- raw HTML omitted --&gt;seguridadApple&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -592,29 +506,17 @@ Con lo cual tenemos que conseguir un número al que al hacerle todas estas opera
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 200px) 200px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/ghostbuster.jpg&#34; alt=&#34;Unhide Forensic Tool&#34; width=&#34;200px&#34; height=&#34;176px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Unhide Forensic Tool o simplemente &lt;strong&gt;&lt;em&gt;Unhide&lt;/em&gt;&lt;/strong&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;a href=&#34;https://es.wikipedia.org/wiki/Rootkit&#34; target=&#34;_blank&#34;&gt;RootKits&lt;/a&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Compara las salidas /proc frente a /bin/ps&lt;/li&gt;
-&lt;li&gt;Compara la información adquirida a partir de /bin/ps con la información recopilada de procfs. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Compara la información recopilada de /bin/ps con la información de las llamadas al sistema (syscall scannig).&lt;/li&gt;
-&lt;li&gt;PIDs bruteforce. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Está disponible tanto para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/latest/download?source=files&#34; target=&#34;_blank&#34;&gt;Windows&lt;/a&gt; como para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/&#34; target=&#34;_blank&#34;&gt;Linux&lt;/a&gt;.&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Unhide Forensic Tool o simplemente &lt;em&gt;&lt;strong&gt;Unhide&lt;/strong&gt;&lt;/em&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;!-- raw HTML omitted --&gt;RootKits&lt;!-- raw HTML omitted --&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Está disponible tanto para &lt;!-- raw HTML omitted --&gt;Windows&lt;!-- raw HTML omitted --&gt; como para &lt;!-- raw HTML omitted --&gt;Linux&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
 gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
-gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-tcp --help
 Unhide-tcp &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
@@ -633,9 +535,9 @@ Options :
    -l          show lsof output &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; hidden ports
    -o          log result into unhide-tcp.log file
    -s          use very quick version &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; server with lot of opened ports
-   -n          use netstat instead of ss&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;a href=&#34;http://www.securitybydefault.com/2013/01/unhide-20121229-is-out.html&#34; target=&#34;_blank&#34;&gt;securitybydefault&lt;/a&gt;.&lt;/p&gt;
+   -n          use netstat instead of ss
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;!-- raw HTML omitted --&gt;securitybydefault&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Las opciones de &lt;strong&gt;unhide-linux&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-linux --help
 Unhide &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
@@ -644,7 +546,7 @@ License GPLv3+ : GNU GPL version &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; o
 
 http://www.unhide-forensics.info
 
-NOTE : This version of unhide is &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; systems using Linux &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;.6
+NOTE : This version of unhide is &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; systems using Linux &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2.6
 
 Usage: ./unhide-linux &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; test_list
 
@@ -686,11 +588,11 @@ Test_list :
       checkreverse
       checksysinfo
       checksysinfo2
-      checksysinfo3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+      checksysinfo3
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;a href=&#34;http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html&#34; target=&#34;_blank&#34;&gt;toolsyard.thehackernews.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;toolsyard.thehackernews.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

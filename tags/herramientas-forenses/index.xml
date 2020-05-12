@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Herramientas Forenses on El Baúl del programador</title>
+        <title>herramientas forenses on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/herramientas-forenses/</link>
-        <description>Recent content in Herramientas Forenses on El Baúl del programador</description>
+        <description>Recent content in herramientas forenses on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/herramientas-forenses/</link>
-            <title>Herramientas Forenses on El Baúl del programador</title>
+            <title>herramientas forenses on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,29 +21,17 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 200px) 200px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/ghostbuster.jpg&#34; alt=&#34;Unhide Forensic Tool&#34; width=&#34;200px&#34; height=&#34;176px&#34; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Unhide Forensic Tool o simplemente &lt;strong&gt;&lt;em&gt;Unhide&lt;/em&gt;&lt;/strong&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;a href=&#34;https://es.wikipedia.org/wiki/Rootkit&#34; target=&#34;_blank&#34;&gt;RootKits&lt;/a&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Compara las salidas /proc frente a /bin/ps&lt;/li&gt;
-&lt;li&gt;Compara la información adquirida a partir de /bin/ps con la información recopilada de procfs. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;Compara la información recopilada de /bin/ps con la información de las llamadas al sistema (syscall scannig).&lt;/li&gt;
-&lt;li&gt;PIDs bruteforce. &lt;strong&gt;Solo para versiones Linux 2.6&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Está disponible tanto para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/latest/download?source=files&#34; target=&#34;_blank&#34;&gt;Windows&lt;/a&gt; como para &lt;a href=&#34;http://sourceforge.net/projects/unhide/files/&#34; target=&#34;_blank&#34;&gt;Linux&lt;/a&gt;.&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Unhide Forensic Tool o simplemente &lt;em&gt;&lt;strong&gt;Unhide&lt;/strong&gt;&lt;/em&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;!-- raw HTML omitted --&gt;RootKits&lt;!-- raw HTML omitted --&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Está disponible tanto para &lt;!-- raw HTML omitted --&gt;Windows&lt;!-- raw HTML omitted --&gt; como para &lt;!-- raw HTML omitted --&gt;Linux&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
 gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
-gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-tcp --help
 Unhide-tcp &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
@@ -63,9 +50,9 @@ Options :
    -l          show lsof output &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; hidden ports
    -o          log result into unhide-tcp.log file
    -s          use very quick version &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; server with lot of opened ports
-   -n          use netstat instead of ss&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;a href=&#34;http://www.securitybydefault.com/2013/01/unhide-20121229-is-out.html&#34; target=&#34;_blank&#34;&gt;securitybydefault&lt;/a&gt;.&lt;/p&gt;
+   -n          use netstat instead of ss
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;!-- raw HTML omitted --&gt;securitybydefault&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;p&gt;Las opciones de &lt;strong&gt;unhide-linux&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-linux --help
 Unhide &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
@@ -74,7 +61,7 @@ License GPLv3+ : GNU GPL version &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; o
 
 http://www.unhide-forensics.info
 
-NOTE : This version of unhide is &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; systems using Linux &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;.6
+NOTE : This version of unhide is &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; systems using Linux &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2.6
 
 Usage: ./unhide-linux &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; test_list
 
@@ -116,11 +103,11 @@ Test_list :
       checkreverse
       checksysinfo
       checksysinfo2
-      checksysinfo3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+      checksysinfo3
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;a href=&#34;http://toolsyard.thehackernews.com/2013/02/unhide-forensic-tool-find-hidden.html&#34; target=&#34;_blank&#34;&gt;toolsyard.thehackernews.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;toolsyard.thehackernews.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

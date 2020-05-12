@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Aprendizaje No Supervisado on El Baúl del programador</title>
+        <title>aprendizaje no supervisado on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/aprendizaje-no-supervisado/</link>
-        <description>Recent content in Aprendizaje No Supervisado on El Baúl del programador</description>
+        <description>Recent content in aprendizaje no supervisado on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Tue, 03 Apr 2018 12:50:58 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/aprendizaje-no-supervisado/</link>
-            <title>Aprendizaje No Supervisado on El Baúl del programador</title>
+            <title>aprendizaje no supervisado on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -25,39 +24,26 @@
             <description>&lt;blockquote&gt;
 &lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de Anomalias&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Uno de los problemas de las reglas de asociación es la interpretabilidad, estos pueden venir derivados de los datos en sí, de los usuarios o de las propias medidas de evaluación.&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;Los problemas derivados de los datos&lt;/strong&gt; residen en que hay varias formas de interpretar que si A \(\rightarrow\) B en función de las medidas de calidad usadas. Al ser patrones en los datos, la calidad de la regla dependerá de igual modo de la calidad de los datos. Algunos problemas derivados de &lt;strong&gt;los datos&lt;/strong&gt; son:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;falta de variabilidad&lt;/strong&gt;, &lt;em&gt;items&lt;/em&gt; muy frecuentes no aportan nada (Todos los clientes compran papel) o al contrario, &lt;em&gt;items&lt;/em&gt; poco frecuentes tampoco aportan nada.&lt;/li&gt;
 &lt;li&gt;La &lt;strong&gt;representabilidad&lt;/strong&gt; de los datos, es decir, que no haya suficientes datos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Sesgos muestrales&lt;/strong&gt;, es necesario escoger los &lt;em&gt;items&lt;/em&gt; de forma aleatoria, no sesgarlos seleccionado compras de un periodo determinado, como las compras de enero, por ejemplo.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Por otra parte, &lt;strong&gt;los problemas derivados del usuario&lt;/strong&gt; pueden deberse a que no se dispone de un experto en el dominio del problema para interpretar y valorar las reglas. Aún cuando se dispone de un experto, pueden ocasionarse &lt;strong&gt;confusiones semánticas&lt;/strong&gt; en las que se interpretan mal las reglas o los valores de confianza etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Los &lt;strong&gt;problemas derivados de las medidas&lt;/strong&gt;, las reglas con soportes muy altos tienden a ser dudosas, ya que su valor tan elevado puede deberse a una &lt;strong&gt;falta de variabilidad&lt;/strong&gt; en los datos. De igual modo, &lt;strong&gt;la confianza&lt;/strong&gt; no siempre es fiable, una regla con una confianza del 84% puede parece buena, pero aún teniendo una regla con máxima confianza (conf = 1) puede que los &lt;em&gt;items&lt;/em&gt; de A \(\rightarrow\) B sean independientes.&lt;/p&gt;
-
 &lt;p&gt;Para tratar de resolver estos problemas es necesario poder comparar la confianza de la regla con el soporte de su consecuente, dada A \(\rightarrow\) B, \(p(B|A)\) la confianza, \(p(B)\) el soporte de B, es necesario comprar ambas medidas, ya que \(p(B)\) es la probabilidad a priori, mientras que \(p(B|A)\) es solo la probabilidad de las reglas en las que aparece A. Si la $Conf(A \(\rightarrow\) B) = Sop(B)$ A y B son independientes y la regla no es representativa. Aunque la confianza por sí sola no vale para determinar si una regla es buena, sí que vale para descartar una regla mala.&lt;/p&gt;
-
-&lt;h1 id=&#34;medidas-de-calidad-a-id-sec-4-1-name-sec-4-1-a&#34;&gt;Medidas de calidad&lt;a id=&#34;sec-4-1&#34; name=&#34;sec-4-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;medidas-de-calidada-idsec-4-1-namesec-4-1a&#34;&gt;Medidas de calidad&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Existen dos grupos de medidas de Interés, &lt;strong&gt;objetivas&lt;/strong&gt; y &lt;strong&gt;subjetivas&lt;/strong&gt;. Las primeras tienen fundamento estadístico, mientras que las subjetivas solo tienen en cuenta los datos.&lt;/p&gt;
-
-&lt;p&gt;Entre las &lt;strong&gt;medidas objetivas&lt;/strong&gt; se encuentran &lt;strong&gt;La Confianza Confirmada&lt;/strong&gt;, establece hasta qué punto es útil A para predecir la presencia de B, la medida se da en un rango [-1, 1], donde 0 significa que son independientes, 1 dependencia total y -1 dependencia inversa (A predice &amp;not; B). &lt;strong&gt;Lift&lt;/strong&gt; mide el nivel de interés, pero al ser simétrica mide asociaciones, no implicaciones, por lo cual no es buena para realizar comparaciones. &lt;strong&gt;Convicción&lt;/strong&gt; detecta la independencia estadística entre &lt;em&gt;items&lt;/em&gt;, al igual que &lt;strong&gt;lift&lt;/strong&gt; no está acotada en su salida, por lo que no es muy fiable. El &lt;strong&gt;factor de certeza&lt;/strong&gt; mide la incertidumbre del conocimiento, tiene su origen en los &lt;strong&gt;sitemas expertos&lt;/strong&gt;, la ventaja frente a las dos medidas anteriores es que está acotada en rangos [-1,1], donde 0 significa independencia estadística. Existen más medidas, estas son solo unas pocas. Por lo general, el análisis de la regla depende de la medida a usar. Es necesario usar medidas en función de la semántica que se quiere medir.&lt;/p&gt;
-
+&lt;p&gt;Entre las &lt;strong&gt;medidas objetivas&lt;/strong&gt; se encuentran &lt;strong&gt;La Confianza Confirmada&lt;/strong&gt;, establece hasta qué punto es útil A para predecir la presencia de B, la medida se da en un rango [-1, 1], donde 0 significa que son independientes, 1 dependencia total y -1 dependencia inversa (A predice ¬ B). &lt;strong&gt;Lift&lt;/strong&gt; mide el nivel de interés, pero al ser simétrica mide asociaciones, no implicaciones, por lo cual no es buena para realizar comparaciones. &lt;strong&gt;Convicción&lt;/strong&gt; detecta la independencia estadística entre &lt;em&gt;items&lt;/em&gt;, al igual que &lt;strong&gt;lift&lt;/strong&gt; no está acotada en su salida, por lo que no es muy fiable. El &lt;strong&gt;factor de certeza&lt;/strong&gt; mide la incertidumbre del conocimiento, tiene su origen en los &lt;strong&gt;sitemas expertos&lt;/strong&gt;, la ventaja frente a las dos medidas anteriores es que está acotada en rangos [-1,1], donde 0 significa independencia estadística. Existen más medidas, estas son solo unas pocas. Por lo general, el análisis de la regla depende de la medida a usar. Es necesario usar medidas en función de la semántica que se quiere medir.&lt;/p&gt;
 &lt;p&gt;Las &lt;strong&gt;medidas subjetivas&lt;/strong&gt; miden el interés de las reglas, suele ser necesaria la presencia de un experto que valore el interés de las mismas. Una de ellas es la &lt;strong&gt;Utilidad&lt;/strong&gt;, en ella hay que tener en cuenta:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Restricciones&lt;/strong&gt;: ¿Qué condiciones o qué contexto es necesario para que el patrón se cumpla?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Tiempo de vida&lt;/strong&gt;: ¿Durante cuánto tiempo será útil la información dada por el patrón?&lt;/li&gt;
@@ -66,129 +52,28 @@
 &lt;li&gt;&lt;strong&gt;Impacto&lt;/strong&gt;: Desde la obtención del patrón, ¿se han producido cambios en la actualidad?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Prontitud&lt;/strong&gt;: ¿Cuándo podemos actuar y utilizar la información que nos brinda el patrón?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Las &lt;strong&gt;reglas inesperadas&lt;/strong&gt; son otro tipo de medida subjetiva, son aquellas que contradicen las creencias del usuario, pueden ser interesantes o no.&lt;/p&gt;
-
-&lt;h1 id=&#34;interpretaciones-a-id-sec-4-2-name-sec-4-2-a&#34;&gt;Interpretaciones&lt;a id=&#34;sec-4-2&#34; name=&#34;sec-4-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;interpretacionesa-idsec-4-2-namesec-4-2a&#34;&gt;Interpretaciones&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Esta sección se corresponde con el &lt;strong&gt;marco formal&lt;/strong&gt; de las reglas de asociación, es decir, la definición teórica de las reglas, de forma abstracta. Para ello hay que asociar dicha abstracción con los datos, crear una asociación entre datos y reglas, es esto lo que genera una interpretación.&lt;/p&gt;
-
-&lt;p&gt;La forma más común es tabular los datos en una estructura, por ejemplo (salario, alto) \(\rightarrow\) (estudios, superiores), pero no es la única manera de representación. Se puede, por ejemplo, considerar la ausencia de datos con negaciones (&amp;not; A), esta representación es útil para el análisis de grupos de reglas.&lt;/p&gt;
-
+&lt;p&gt;La forma más común es tabular los datos en una estructura, por ejemplo (salario, alto) \(\rightarrow\) (estudios, superiores), pero no es la única manera de representación. Se puede, por ejemplo, considerar la ausencia de datos con negaciones (¬ A), esta representación es útil para el análisis de grupos de reglas.&lt;/p&gt;
 &lt;p&gt;Otra forma de representación son las &lt;strong&gt;reglas jerárquicas&lt;/strong&gt;, en esta representación se consideran grupos de &lt;em&gt;items&lt;/em&gt; a distintos niveles. Por ejemplo, si los &lt;em&gt;items&lt;/em&gt; son artículos de compra, un análisis a nivel de artículos individuales puede no dar información alguna. Sin embargo, a un nivel más alto se puedan extraer conclusiones útiles, un nivel más alto consiste en agrupar los distintos artículos según algún criterio (por marcas, por tipo de producto, tipos de pan, tipos de leche etc). De esta forma se establece una jerarquía en la que un &lt;em&gt;item&lt;/em&gt; está compuesto por los &lt;em&gt;items&lt;/em&gt; básicos y todas las categorias a las que pertenece, por ejemplo:
 $$\text{(zumo, naranja, marca, comida)}$$
-donde  &lt;em&gt;marca&lt;/em&gt; y &lt;em&gt;comida&lt;/em&gt; son categorías del &lt;em&gt;zumo&lt;/em&gt;. En la figura &lt;a href=&#34;#fig:rulesHier&#34;&gt;1&lt;/a&gt; muestra un ejemplo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:rulesHier&#34; href=&#34;https://elbauldelprogramador.com/img/rulesHier.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/rulesHier.png&#34;
-            alt=&#34;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&#34;
-            title=&#34;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&#34;
-            sizes=&#34;(min-width: 736px) 736px, 100vw&#34;
-            width=&#34;736&#34;
-            height=&#34;411&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Ejemplo de reglas jerárquicas. *Créd. Apuntes de clase*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+donde  &lt;em&gt;marca&lt;/em&gt; y &lt;em&gt;comida&lt;/em&gt; son categorías del &lt;em&gt;zumo&lt;/em&gt;. En la figura &lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt; muestra un ejemplo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Las &lt;strong&gt;reglas secuenciales&lt;/strong&gt; se usan cuando &lt;strong&gt;existe un orden&lt;/strong&gt; prefijado en los &lt;em&gt;items&lt;/em&gt; de las transacciones. Ejemplos de reglas de este tipo son, si A,B y C aparecen en este &lt;strong&gt;orden específico&lt;/strong&gt; \(\rightarrow\) X. Este tipo de reglas son útiles para analizar textos, ya que se extraen reglas como {Minería}{de} \(\rightarrow\) {Datos}, es decir, si se encuentra la palabra &lt;strong&gt;Minería&lt;/strong&gt; seguida de &lt;strong&gt;De&lt;/strong&gt; es muy probable que la siguiente palabra sea &lt;strong&gt;datos&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Otro tipo de reglas son las &lt;strong&gt;Cuantitativas&lt;/strong&gt;, usadas con datos estructurados, con dominios numéricos, el problema de estos dominios es su valor semántico y soporte bajo. Para ello, se comentó que es útil dividir el dominio en intervalos y generar  pares (atributo, intervalo) en lugar de (atributo, valor), estos &lt;em&gt;items&lt;/em&gt; deben estar ordenados. Los intervalos pueden se definidos por el experto para que puedan ser correctamente interpretados, o generarlos automáticamente.&lt;/p&gt;
-
 &lt;p&gt;Las &lt;strong&gt;dependencias aproximadas&lt;/strong&gt;  definen patrones en  bases de datos relacionales, corresponden a dependencias funcionales con excepciones, es decir, si se sabe que V se encuentra en una fila se sabe que W está en la misma fila. En esta interpretación las reglas extraidas tienen la semántica de la dependencia funcional, es decir, los &lt;em&gt;items&lt;/em&gt; son del tipo: Igualdad de variables en un par de tuplas.&lt;/p&gt;
-
 &lt;p&gt;La última interpretación son las &lt;strong&gt;dependencias graduales&lt;/strong&gt;, representan asociaciones entre la variación (incrementos o decrementos) en los valores de los atributos, representando así correlaciones positivas o negativas. Se puede comparar con las &lt;strong&gt;dependencias aproximadas&lt;/strong&gt; en cuanto a que esta en lugar de determinar si los valores son iguales, determina si son mayores o menores.&lt;/p&gt;
-
-&lt;h1 id=&#34;reglas-de-asociación-difusas-a-id-sec-4-3-name-sec-4-3-a&#34;&gt;Reglas de Asociación difusas&lt;a id=&#34;sec-4-3&#34; name=&#34;sec-4-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Se usan para representar conceptos, por ejemplo, ¿cuando  es una persona alta?, si consideramos 180cm como alto, ¿una persona que mida 179,99 ya no es alta?, este es el problema que tratan los &lt;strong&gt;conjuntos difusos&lt;/strong&gt;, la pertenencia o no de un elemento a un conjunto viene dada por un grado de certeza. La figura &lt;a href=&#34;#fig:ruleFuzzy1&#34;&gt;2&lt;/a&gt; muestra un ejemplo en el que se define el rango en el que aumenta si una persona es alta o no, pero presenta el problema comentado anteriormente. Otra forma de representarlo es mediante una función discontinua, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy2&#34;&gt;3&lt;/a&gt;, pero tampoco es ideal, lo mejor es una función gradual, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy3&#34;&gt;4&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:ruleFuzzy1&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy1.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy1.jpg&#34;
-            alt=&#34;Rango en la que una persona se considera como alta&#34;
-            title=&#34;Rango en la que una persona se considera como alta&#34;
-            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-            width=&#34;800&#34;
-            height=&#34;383&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Rango en la que una persona se considera como alta&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:ruleFuzzy2&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy2.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy2.jpg&#34;
-            alt=&#34;Rango en la que una persona se considera como alta&#34;
-            title=&#34;Rango en la que una persona se considera como alta&#34;
-            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-            width=&#34;800&#34;
-            height=&#34;383&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Rango en la que una persona se considera como alta&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:ruleFuzzy3&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy3.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy3.jpg&#34;
-            alt=&#34;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&#34;
-            title=&#34;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&#34;
-            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-            width=&#34;800&#34;
-            height=&#34;383&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Rango en la que una persona se considera como alta. Cuando la línea empieza a subir, aumenta el grado en el que se considera a una persona alta.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Las reglas difusas aparecen solo cuando se consideran &lt;strong&gt;conjuntos difusos&lt;/strong&gt; para definir algún concepto con &lt;em&gt;items&lt;/em&gt;, transacciones etc, son conjuntos continuos. En este tipo de reglas el soporte depende mucho de dónde se establecen los cortes que definen los intervalos. &lt;strong&gt;Semánticamente&lt;/strong&gt; los intervalos no corresponden con el concepto (30 años es joven, pero 31 no). Para dar solución a este problema se usan conjuntos difusos con &lt;strong&gt;funciones de pertenencia&lt;/strong&gt;, como muestra la figura &lt;a href=&#34;#fig:ruleFuzzy4&#34;&gt;5&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:ruleFuzzy4&#34; href=&#34;https://elbauldelprogramador.com/img/ruleFuzzy4.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/ruleFuzzy4.jpg&#34;
-            alt=&#34;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&#34;
-            title=&#34;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&#34;
-            sizes=&#34;(min-width: 800px) 800px, 100vw&#34;
-            width=&#34;800&#34;
-            height=&#34;383&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Particiones difusas con función de pertenencia. Cabe destacar que pueden existir solapamientos (Región roja)&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;evaluación-de-reglas-por-grupos-a-id-sec-4-4-name-sec-4-4-a&#34;&gt;Evaluación de reglas por grupos&lt;a id=&#34;sec-4-4&#34; name=&#34;sec-4-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;El análisis de las reglas de asociación suele realizarse de forma individual, estudiando su novedad y potencial utilidad en base a los itemsets que la componen, las medidas &lt;strong&gt;objetivas y subjetivas&lt;/strong&gt; realizadas sobre ellas, y el conocimiento previo del experto. Sin embargo, el análisis de conjuntos de reglas definidos según ciertos criterios puede proporcionar más información, con ciertas ventajas. Por ejemplo, ¿qué ocurre si aparecen ambas reglas A \(\rightarrow\) C y A \(\rightarrow\) &amp;not; C? o A \(\rightarrow\) C y &amp;not; C \(\rightarrow\) &amp;not; A (contra recíproca), la última es lógicamente equivalente. Sin embargo, la logica formal y el conocimento de datos no son lo mismo, al buscar reglas en un conjunto de datos se puede deducir A \(\rightarrow\) B, pero no se sabe nada sobre &amp;not; B \(\rightarrow\) A. El motivo es que &amp;not; B \(\rightarrow\) A no aparece en las transacciones, es decir, las transacciones de A \(\rightarrow\) B son distintas a &amp;not; B \(\rightarrow\) &amp;not; A, aunque sean lógicamente equivalentes, por ello es necesario mirarlas por separado. En el caso de que ambas aparezcan se proporciona más soporte empírico de que el patrón se cumple, lo cual ocurre siempre que existen reglas lógicamente equivalentes.&lt;/p&gt;
-
-&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;reglas-de-asociación-difusasa-idsec-4-3-namesec-4-3a&#34;&gt;Reglas de Asociación difusas&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;p&gt;Se usan para representar conceptos, por ejemplo, ¿cuando  es una persona alta?, si consideramos 180cm como alto, ¿una persona que mida 179,99 ya no es alta?, este es el problema que tratan los &lt;strong&gt;conjuntos difusos&lt;/strong&gt;, la pertenencia o no de un elemento a un conjunto viene dada por un grado de certeza. La figura &lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt; muestra un ejemplo en el que se define el rango en el que aumenta si una persona es alta o no, pero presenta el problema comentado anteriormente. Otra forma de representarlo es mediante una función discontinua, como muestra la figura &lt;!-- raw HTML omitted --&gt;3&lt;!-- raw HTML omitted --&gt;, pero tampoco es ideal, lo mejor es una función gradual, como muestra la figura &lt;!-- raw HTML omitted --&gt;4&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Las reglas difusas aparecen solo cuando se consideran &lt;strong&gt;conjuntos difusos&lt;/strong&gt; para definir algún concepto con &lt;em&gt;items&lt;/em&gt;, transacciones etc, son conjuntos continuos. En este tipo de reglas el soporte depende mucho de dónde se establecen los cortes que definen los intervalos. &lt;strong&gt;Semánticamente&lt;/strong&gt; los intervalos no corresponden con el concepto (30 años es joven, pero 31 no). Para dar solución a este problema se usan conjuntos difusos con &lt;strong&gt;funciones de pertenencia&lt;/strong&gt;, como muestra la figura &lt;!-- raw HTML omitted --&gt;5&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;evaluación-de-reglas-por-gruposa-idsec-4-4-namesec-4-4a&#34;&gt;Evaluación de reglas por grupos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;p&gt;El análisis de las reglas de asociación suele realizarse de forma individual, estudiando su novedad y potencial utilidad en base a los itemsets que la componen, las medidas &lt;strong&gt;objetivas y subjetivas&lt;/strong&gt; realizadas sobre ellas, y el conocimiento previo del experto. Sin embargo, el análisis de conjuntos de reglas definidos según ciertos criterios puede proporcionar más información, con ciertas ventajas. Por ejemplo, ¿qué ocurre si aparecen ambas reglas A \(\rightarrow\) C y A \(\rightarrow\) ¬ C? o A \(\rightarrow\) C y ¬ C \(\rightarrow\) ¬ A (contra recíproca), la última es lógicamente equivalente. Sin embargo, la logica formal y el conocimento de datos no son lo mismo, al buscar reglas en un conjunto de datos se puede deducir A \(\rightarrow\) B, pero no se sabe nada sobre ¬ B \(\rightarrow\) A. El motivo es que ¬ B \(\rightarrow\) A no aparece en las transacciones, es decir, las transacciones de A \(\rightarrow\) B son distintas a ¬ B \(\rightarrow\) ¬ A, aunque sean lógicamente equivalentes, por ello es necesario mirarlas por separado. En el caso de que ambas aparezcan se proporciona más soporte empírico de que el patrón se cumple, lo cual ocurre siempre que existen reglas lógicamente equivalentes.&lt;/p&gt;
+&lt;h1 id=&#34;bibliografía-a-idsec-5-namesec-5a&#34;&gt;Bibliografía &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
@@ -209,192 +94,77 @@ donde  &lt;em&gt;marca&lt;/em&gt; y &lt;em&gt;comida&lt;/em&gt; son categorías 
             <description>&lt;blockquote&gt;
 &lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de Anomalias&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Las reglas de asociación se usan para aportar conocimiento que ayude a la toma de decisiones. Ejemplos en los que este tipo de métodos resulta útil es para conocer las tendencias de compra de los clientes. Otra aplicación es en tareas de predicción, como deducir los estudios de una persona en función de su salario. &lt;strong&gt;Minería de textos&lt;/strong&gt; para asociar la presencia de términos en documentos etc.&lt;/p&gt;
-
 &lt;p&gt;Este tipo de modelos se usa cuando prima la interpretabilidad del modelo, y son modelos predictivos. Es habitual usarlo &lt;strong&gt;conjuntos difusos&lt;/strong&gt;. A diferencia de los árboles, que parten el espacio, las &lt;strong&gt;reglas cubren parte del espacio&lt;/strong&gt;, disponiendo de un grado de cubrimiento y un acierto. Disponer de un &lt;strong&gt;grado de cubrimiento&lt;/strong&gt; significa que las regiones de decisión pueden &lt;strong&gt;solaparse o dejar zonas sin cubrir&lt;/strong&gt;, de ahí que sean muy usadas en problemas difusos.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;definición-a-id-sec-3-1-name-sec-3-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-1&#34; name=&#34;sec-3-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;definicióna-idsec-3-1-namesec-3-1a&#34;&gt;Definición&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Las reglas de asociación son una de las técnicas más usadas para extraer conocimiento a partir de bases de datos grandes. Identifican relaciones existentes entre los datos, llamados &lt;em&gt;items&lt;/em&gt;. Se trata de una técnica de &lt;strong&gt;aprendizaje no supervisado&lt;/strong&gt;. Una regla se define como \(X \rightarrow Y\), donde \(X\) e \(Y\) son conjuntos de &lt;em&gt;items&lt;/em&gt; disjuntos \(X\mathcal{\cap} Y = \emptyset\). Un ejemplo: \(\text{Pan} \rightarrow \text{Mantequilla}\) Cuando se compra pan, se compra mantequilla.&lt;/p&gt;
-
 &lt;p&gt;En sus inicios, las reglas de asociación se aplicaron a datos de supermercados, ya que a estos les interesa saber qué productos suelen comprar los clientes, para ponerlos unos junto a otros y así reducir el tiempo de compra del cliente. En el caso de un supermercado, &lt;strong&gt;los artículos&lt;/strong&gt; son los &lt;em&gt;items&lt;/em&gt; y el conjunto de &lt;strong&gt;cestas de la compra&lt;/strong&gt; son las transacciones. Cada transacción es un subconjunto de &lt;em&gt;items&lt;/em&gt;, llamado &lt;em&gt;itemset&lt;/em&gt;. Por ejemplo Leche y pan \(\rightarrow\) mantequilla.&lt;/p&gt;
-
-&lt;p&gt;Los pasos a seguir antes de aplicar reglas de asociación es determinar qué datos de la base da datos son los &lt;em&gt;items&lt;/em&gt; y cuales las &lt;strong&gt;transacciones&lt;/strong&gt;. Los &lt;em&gt;items&lt;/em&gt; son los elementos a asociar, &lt;em&gt;pan, mantequilla, aceite&amp;#x2026;&lt;/em&gt; mientras que las transacciones son particularidades de la relación entre &lt;em&gt;items&lt;/em&gt; (la lista de la compra concreta).&lt;/p&gt;
-
+&lt;p&gt;Los pasos a seguir antes de aplicar reglas de asociación es determinar qué datos de la base da datos son los &lt;em&gt;items&lt;/em&gt; y cuales las &lt;strong&gt;transacciones&lt;/strong&gt;. Los &lt;em&gt;items&lt;/em&gt; son los elementos a asociar, &lt;em&gt;pan, mantequilla, aceite…&lt;/em&gt; mientras que las transacciones son particularidades de la relación entre &lt;em&gt;items&lt;/em&gt; (la lista de la compra concreta).&lt;/p&gt;
 &lt;p&gt;Los &lt;em&gt;items&lt;/em&gt; pueden ser de varios tipos. Cuando cada registro es un listado de elementos, como en el caso de productos de la compra, no existen variables, un &lt;em&gt;item&lt;/em&gt; se corresponde con un producto. Cuando existen variables con rangos, el &lt;em&gt;item&lt;/em&gt; es un par (atributo, valor), por ejemplo una variable &lt;strong&gt;puesto&lt;/strong&gt;, con valores &lt;em&gt;estudiante, jefe, trabajador&lt;/em&gt; tendría como &lt;em&gt;items&lt;/em&gt; (Puesto, estudiante), (Puesto, jefe) y (puesto, trabajador). Ejemplos de reglas usando &lt;em&gt;items&lt;/em&gt; de este tipo son: (Salario, alto) \(\rightarrow\) (Estudios, Superiores). De la regla anterior se pueden deducir dos cosas: Todo el que tiene un salario alto tiene estudios superiores, o un salario alto implica estudios superiores.&lt;/p&gt;
-
-&lt;h1 id=&#34;medidas-clásicas-soporte-y-confianza-a-id-sec-3-2-name-sec-3-2-a&#34;&gt;Medidas Clásicas: Soporte y Confianza&lt;a id=&#34;sec-3-2&#34; name=&#34;sec-3-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;medidas-clásicas-soporte-y-confianzaa-idsec-3-2-namesec-3-2a&#34;&gt;Medidas Clásicas: Soporte y Confianza&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;El &lt;strong&gt;soporte&lt;/strong&gt; de un &lt;em&gt;itemset&lt;/em&gt; mide la frecuencia del &lt;em&gt;item&lt;/em&gt; o &lt;em&gt;itemset&lt;/em&gt; en la base de datos, es decir, la probabilidad de que el &lt;em&gt;itemset&lt;/em&gt; X esté en el conjunto de transacciones (\(p(X)\)). El &lt;strong&gt;soporte de una regla de asociación&lt;/strong&gt; (X \(\rightarrow\) Y ) es la frecuencia con la que ocurre el &lt;em&gt;itemset&lt;/em&gt; \(X \cup Y\). Es decir, la probabilidad de que el &lt;em&gt;itemset&lt;/em&gt; \(X \cup Y\) esté en el conjunto de transacciones (\(p(X\wedge Y)\)). La &lt;strong&gt;confianza&lt;/strong&gt; define cómo de fiable es la regla, es decir, cómo de seguro está el modelo de que cuando se da \(X\) va a ocurrir \(Y\). Es útil comprobar la confianza en ambos sentidos de la regla, es decir, dado X \(\rightarrow\) Y comprobar tanto \(Conf(X, Y)\), como \(Conf(Y, X)\). Como regla general, una confianza superior al 80% es buena, aunque esto es subjetivo y depende del problema y el experto.&lt;/p&gt;
-
 &lt;p&gt;Definidas las medidas clásicas, la extracción de las reglas se lleva a cabo a partir de un conjunto de transacciones T. Dado ese conjunto se desea encontrar todas las reglas que cumplan:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;minSup&lt;/code&gt;: Definido como Soporte \(\geq\) soporte mínimo.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;minConf&lt;/code&gt;: Definida como Confianza \(\geq\) confianza mínima.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Ambos valores los debe definir el experto del problema.&lt;/p&gt;
-
 &lt;p&gt;Lo más sencillo es resolver este problema mediante fuerza bruta (Generar todas la reglas posibles, calcular para cada una de ellas el soporte y confianza y descartar las que no superen los umbrales anteriores). Sin embargo es inviable para problemas grandes. El enfoque basado en dos pasos &lt;strong&gt;genera primero todos los &lt;em&gt;itemset&lt;/em&gt; frecuentes&lt;/strong&gt; (aquellos con un soporte mayor o igual al umbral &lt;code&gt;minSup&lt;/code&gt;), posteriormente &lt;strong&gt;genera las reglas con una confianza alta&lt;/strong&gt; basándose en los &lt;em&gt;itemset&lt;/em&gt; anteriores. El problema de esta aproximación es que el número de combinaciones posibles es de \(2^d\), siendo \(d\) el número de &lt;em&gt;items&lt;/em&gt;, y por tanto la generación de los &lt;em&gt;itemset&lt;/em&gt; es costosa.&lt;/p&gt;
-
 &lt;p&gt;Dado a la inviabilidad de resolver el problema mediante fuerza bruta, es necesario &lt;strong&gt;reducir el número de candidatos posibles&lt;/strong&gt; (de los \(2^d\) usar técnicas de poda para reducir el espacio), el &lt;strong&gt;número de transacciones&lt;/strong&gt; y el &lt;strong&gt;número de comparaciones&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;métodos-clásicos-de-extracción-de-reglas-a-id-sec-3-3-name-sec-3-3-a&#34;&gt;Métodos Clásicos de extracción de reglas&lt;a id=&#34;sec-3-3&#34; name=&#34;sec-3-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2 id=&#34;algoritmo-apriori-a-id-sec-3-3-1-name-sec-3-3-1-a&#34;&gt;Algoritmo Apriori&lt;a id=&#34;sec-3-3-1&#34; name=&#34;sec-3-3-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;definición-a-id-sec-3-3-1-1-name-sec-3-3-1-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-3-1-1&#34; name=&#34;sec-3-3-1-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h1 id=&#34;métodos-clásicos-de-extracción-de-reglasa-idsec-3-3-namesec-3-3a&#34;&gt;Métodos Clásicos de extracción de reglas&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;algoritmo-aprioria-idsec-3-3-1-namesec-3-3-1a&#34;&gt;Algoritmo Apriori&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;definicióna-idsec-3-3-1-1-namesec-3-3-1-1a&#34;&gt;Definición&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;El primer método clásico se llama &lt;strong&gt;Apriori&lt;/strong&gt;, es el que peor funciona de todos, pero del que más versiones existen. Se basa en la propiedad de &lt;strong&gt;anti monotonía del soporte&lt;/strong&gt;, es decir, si un &lt;em&gt;itemset&lt;/em&gt; es frecuente, entonces todos sus subconjuntos deben serlo también:&lt;/p&gt;
-
 &lt;p&gt;$$X\subseteq Y \Rightarrow sop(X) \geq sop(Y)$$&lt;/p&gt;
-
-&lt;h2 id=&#34;algoritmo-a-id-sec-3-3-1-2-name-sec-3-3-1-2-a&#34;&gt;Algoritmo&lt;a id=&#34;sec-3-3-1-2&#34; name=&#34;sec-3-3-1-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;algoritmoa-idsec-3-3-1-2-namesec-3-3-1-2a&#34;&gt;Algoritmo&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;El algoritmo funciona del siguiente modo:
 En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemsets&lt;/em&gt; frecuentes, \(C_k\) almacena el conjunto de &lt;em&gt;k-itemsets&lt;/em&gt; candidatos a ser frecuentes. El algoritmo (Suponiendo &lt;code&gt;k=1&lt;/code&gt; ):&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Generar \(L_1\) (&lt;em&gt;itemsets&lt;/em&gt; frecuentes de longitud 1)&lt;/li&gt;
 &lt;li&gt;Repetir hasta que no se encuentren más &lt;em&gt;itemsets&lt;/em&gt; nuevos:
-
 &lt;ol&gt;
 &lt;li&gt;Generar el conjunto C(k+1) de &lt;em&gt;itemsets&lt;/em&gt; candidatos a partir de \(L_k\), combinando solo aquellos que se diferencien en el último &lt;em&gt;item&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Calcular el soporte de cada candidato.&lt;/li&gt;
 &lt;li&gt;Eliminar los candidatos infrecuentes.&lt;/li&gt;
 &lt;li&gt;Incrementar k en 1.&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;La &lt;a href=&#34;#fig:rulesApriori&#34;&gt;figura 1&lt;/a&gt; muestra un ejemplo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:rulesApriori&#34; href=&#34;https://elbauldelprogramador.com/img/rulesApriori.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/rulesApriori.png&#34;
-            alt=&#34;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&#34;
-            title=&#34;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&#34;
-            sizes=&#34;(min-width: 1357px) 1357px, 100vw&#34;
-            width=&#34;1357&#34;
-            height=&#34;830&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Ejemplo algoritmo Apriori. *Créd. Rafa Alcalá, Profesor Reglas de Asociación*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;eficiencia-a-id-sec-3-3-1-3-name-sec-3-3-1-3-a&#34;&gt;Eficiencia&lt;a id=&#34;sec-3-3-1-3&#34; name=&#34;sec-3-3-1-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;La &lt;!-- raw HTML omitted --&gt;figura 1&lt;!-- raw HTML omitted --&gt; muestra un ejemplo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;eficienciaa-idsec-3-3-1-3-namesec-3-3-1-3a&#34;&gt;Eficiencia&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;La &lt;strong&gt;elección del umbral&lt;/strong&gt; para el soporte mínimo debe ser adecuada, umbrales demasiado bajos dan lugar a muchos &lt;em&gt;itemsets&lt;/em&gt; e incrementará la complejidad. El &lt;strong&gt;número de &lt;em&gt;items&lt;/em&gt; en la base da datos&lt;/strong&gt; es un factor importante y afecta al rendimiento del algoritmo. De igual manera, el &lt;strong&gt;tamaño de la base de datos&lt;/strong&gt; puede hacer incrementar considerablemente el tiempo de ejecución, ya que &lt;strong&gt;apriori&lt;/strong&gt; realiza múltiples pasadas a toda la base de datos. Por último, la &lt;strong&gt;longitud de las transacciones&lt;/strong&gt; puede aumentar la longitud de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes, requiriendo de más espacio para almacenarlos.&lt;/p&gt;
-
-&lt;h2 id=&#34;algoritmo-eclat-a-id-sec-3-3-2-name-sec-3-3-2-a&#34;&gt;Algoritmo Eclat&lt;a id=&#34;sec-3-3-2&#34; name=&#34;sec-3-3-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;algoritmo-eclata-idsec-3-3-2-namesec-3-3-2a&#34;&gt;Algoritmo Eclat&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Este algoritmo es igual que &lt;strong&gt;Apriori&lt;/strong&gt; pero mejora el cálculo del soporte obteniendo el mismo resultado. Para cada &lt;em&gt;item&lt;/em&gt; almacena en una lista en qué transacción aparece dicho &lt;em&gt;item&lt;/em&gt;, de esta forma se reduce el tiempo de cómputo sacrificando más memoria.&lt;/p&gt;
-
-&lt;h2 id=&#34;algoritmo-fp-growth-a-id-sec-3-3-3-name-sec-3-3-3-a&#34;&gt;Algoritmo FP-Growth&lt;a id=&#34;sec-3-3-3&#34; name=&#34;sec-3-3-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;definición-a-id-sec-3-3-3-1-name-sec-3-3-3-1-a&#34;&gt;Definición&lt;a id=&#34;sec-3-3-3-1&#34; name=&#34;sec-3-3-3-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;algoritmo-fp-growtha-idsec-3-3-3-namesec-3-3-3a&#34;&gt;Algoritmo FP-Growth&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;definicióna-idsec-3-3-3-1-namesec-3-3-3-1a&#34;&gt;Definición&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Este algoritmo genera una representación comprimida de la base da datos mediante árboles. Mantiene una &lt;strong&gt;tabla cabecera&lt;/strong&gt; donde para cada &lt;em&gt;item&lt;/em&gt; hay una lista enlazando a todos los nodos del grafo en el cual aparece dicho &lt;em&gt;item&lt;/em&gt;. Además, el &lt;strong&gt;grafo de transacciones&lt;/strong&gt; resume las transacciones en la base de datos junto con el soporte del &lt;em&gt;itemset&lt;/em&gt; que se forma siguiendo el camino desde la raíz del grafo hasta el nodo en cuestión. Como &lt;strong&gt;requisito&lt;/strong&gt;, los &lt;em&gt;items&lt;/em&gt; deben estar ordenados. De todos los métodos vistos, &lt;strong&gt;FP-Growth&lt;/strong&gt; es el más eficiente.&lt;/p&gt;
-
-&lt;h2 id=&#34;extracción-de-itemsets-frecuentes-a-id-sec-3-3-3-2-name-sec-3-3-3-2-a&#34;&gt;Extracción de &lt;em&gt;itemsets&lt;/em&gt; frecuentes&lt;a id=&#34;sec-3-3-3-2&#34; name=&#34;sec-3-3-3-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;extracción-de-itemsets-frecuentesa-idsec-3-3-3-2-namesec-3-3-3-2a&#34;&gt;Extracción de &lt;em&gt;itemsets&lt;/em&gt; frecuentes&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;En este algoritmo se realiza en dos fases. Primero se calcula el soporte de los &lt;em&gt;items&lt;/em&gt; que aparecen en la &lt;strong&gt;tabla cabecera&lt;/strong&gt;, recorriendo la lista almacenada en la tabla. Posteriormente, para cada &lt;em&gt;item&lt;/em&gt; superando el umbral de soporte, se extraen las ramas del árbol donde aparece el &lt;em&gt;item&lt;/em&gt; y se reajusta el soporte de todos los &lt;em&gt;items&lt;/em&gt; que aparecen en las ramas. Se genera un nuevo árbol considerando las ramas extraidas y se extraen los &lt;em&gt;itemsets&lt;/em&gt; que superen el umbral de soporte mínimo.&lt;/p&gt;
-
-&lt;h1 id=&#34;conjuntos-maximales-y-cerrados-a-id-sec-3-4-name-sec-3-4-a&#34;&gt;Conjuntos maximales y cerrados&lt;a id=&#34;sec-3-4&#34; name=&#34;sec-3-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Los &lt;em&gt;itemsets Maximales&lt;/em&gt; son aquellos &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus &lt;strong&gt;superconjuntos&lt;/strong&gt; inmediatos son frecuentes. La &lt;a href=&#34;#fig:rulesMaximals&#34;&gt;Figura 2&lt;/a&gt; muestra un ejemplo. Las ventajas de usar conjuntos maximales es la reducción del espacio, ya que a partir de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes maximales se pueden deducir los &lt;em&gt;itemsets&lt;/em&gt; frecuentes. Como desventaja no se conoce el soporte de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes, hay que volver a calcularlo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:rulesMaximals&#34; href=&#34;https://elbauldelprogramador.com/img/rulesMaximals.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/rulesMaximals.jpg&#34;
-            alt=&#34;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            title=&#34;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            sizes=&#34;(min-width: 612px) 612px, 100vw&#34;
-            width=&#34;612&#34;
-            height=&#34;454&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;En azul: *itemsets* frecuentes, en amarillo: *Itemsets Maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Los &lt;em&gt;itemsets cerrados&lt;/em&gt; son los &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus superconjuntos inmediatos tienen soporte igual al de ellos. Cabe destacar que todo &lt;em&gt;itemset maximal&lt;/em&gt; es también cerrado. La &lt;a href=&#34;#fig:rulesCerrados&#34;&gt;figura 3&lt;/a&gt; muestra un ejemplo. La ventaja de los &lt;em&gt;itemsets cerrados&lt;/em&gt; es que no es necesario volver a calcular el soporte, mientras que como desventaja necesitan más espacio, al haber más cerrados que maximales.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a name=&#34;fig:rulesCerrados&#34; href=&#34;https://elbauldelprogramador.com/img/rulesCerrados.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/rulesCerrados.jpg&#34;
-            alt=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            title=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            sizes=&#34;(min-width: 677px) 677px, 100vw&#34;
-            width=&#34;677&#34;
-            height=&#34;509&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Para terminar, estos dos conjuntos están relacionados, como muestra la &lt;a href=&#34;#fig:rulesCerrMax&#34;&gt;Figura 4&lt;/a&gt;, los maximales son un subconjunto de los cerrados.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a name=&#34;fig:rulesCerrMax&#34; href=&#34;https://elbauldelprogramador.com/img/rulesCerrMax.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/rulesCerrMax.png&#34;
-            alt=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            title=&#34;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: [hypertextbookshop](http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html)&#34;
-            sizes=&#34;(min-width: 677px) 677px, 100vw&#34;
-            width=&#34;677&#34;
-            height=&#34;509&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;En azul: *itemsets cerrados*, en amarillo: *Itemsets maximales*. *Créd: &lt;a href=&#34;http://www.hypertextbookshop.com/dataminingbook/public_version/contents/chapters/chapter002/section004/blue/page001.html&#34;&gt;hypertextbookshop&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;generación-de-reglas-a-id-sec-3-5-name-sec-3-5-a&#34;&gt;Generación de reglas&lt;a id=&#34;sec-3-5&#34; name=&#34;sec-3-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;conjuntos-maximales-y-cerradosa-idsec-3-4-namesec-3-4a&#34;&gt;Conjuntos maximales y cerrados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;p&gt;Los &lt;em&gt;itemsets Maximales&lt;/em&gt; son aquellos &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus &lt;strong&gt;superconjuntos&lt;/strong&gt; inmediatos son frecuentes. La &lt;!-- raw HTML omitted --&gt;Figura 2&lt;!-- raw HTML omitted --&gt; muestra un ejemplo. Las ventajas de usar conjuntos maximales es la reducción del espacio, ya que a partir de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes maximales se pueden deducir los &lt;em&gt;itemsets&lt;/em&gt; frecuentes. Como desventaja no se conoce el soporte de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes, hay que volver a calcularlo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Los &lt;em&gt;itemsets cerrados&lt;/em&gt; son los &lt;em&gt;itemsets&lt;/em&gt; frecuentes para los que ninguno de sus superconjuntos inmediatos tienen soporte igual al de ellos. Cabe destacar que todo &lt;em&gt;itemset maximal&lt;/em&gt; es también cerrado. La &lt;!-- raw HTML omitted --&gt;figura 3&lt;!-- raw HTML omitted --&gt; muestra un ejemplo. La ventaja de los &lt;em&gt;itemsets cerrados&lt;/em&gt; es que no es necesario volver a calcular el soporte, mientras que como desventaja necesitan más espacio, al haber más cerrados que maximales.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Para terminar, estos dos conjuntos están relacionados, como muestra la &lt;!-- raw HTML omitted --&gt;Figura 4&lt;!-- raw HTML omitted --&gt;, los maximales son un subconjunto de los cerrados.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;generación-de-reglasa-idsec-3-5-namesec-3-5a&#34;&gt;Generación de reglas&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;A partir de los &lt;em&gt;itemsets&lt;/em&gt; frecuentes se generan todas las reglas posibles y solo se quedan las que superen los umbrales de confianza mínimo. Por lo general es preferible general reglas con un solo elemento en el consecuente (ABC \(\rightarrow\) D), pero nada impide que exista más de un objeto en el consecuente, sin embargo, de este modo se generarán bastantes más reglas posibles. Como beneficio a generar reglas con un solo elemento en el consecuente se obtienen reglas más interpretables, ya que AB \(\rightarrow\) CD \(\equiv\) AB \(\rightarrow\) C y AB \(\rightarrow\) D.&lt;/p&gt;
-
-&lt;h1 id=&#34;problemas-abiertos-a-id-sec-3-6-name-sec-3-6-a&#34;&gt;Problemas abiertos&lt;a id=&#34;sec-3-6&#34; name=&#34;sec-3-6&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;problemas-abiertosa-idsec-3-6-namesec-3-6a&#34;&gt;Problemas abiertos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Todo el contenido anterior es para reglas de &lt;strong&gt;asociación binarias&lt;/strong&gt;, es decir, valores categóricos. Pero la mayoría de problemas reales contienen variables numéricas y las reglas no serán buenas. Para ello hay que dividir el domino de los atributos en intervalos, como se describió anteriormente (Puesto, Estudiante) etc y usar conjuntos difusos.&lt;/p&gt;
-
-&lt;p&gt;En cuanto a las &lt;strong&gt;medidas de calidad&lt;/strong&gt; para evaluar reglas de asociación se debe tener cuidado. Por lo general se deben usar varias medidas de calidad que se complementen a la hora de evaluar la calidad de una regla, estas medidas, entre otras son &lt;em&gt;lift, factor de certeza&amp;#x2026;&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;consejos-a-id-sec-3-7-name-sec-3-7-a&#34;&gt;Consejos&lt;a id=&#34;sec-3-7&#34; name=&#34;sec-3-7&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;p&gt;En cuanto a las &lt;strong&gt;medidas de calidad&lt;/strong&gt; para evaluar reglas de asociación se debe tener cuidado. Por lo general se deben usar varias medidas de calidad que se complementen a la hora de evaluar la calidad de una regla, estas medidas, entre otras son &lt;em&gt;lift, factor de certeza…&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;consejosa-idsec-3-7-namesec-3-7a&#34;&gt;Consejos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Si al generar reglas hay &lt;em&gt;items&lt;/em&gt; con soporte demasiado altos es mejor no tener en cuanta dichos &lt;em&gt;items&lt;/em&gt;. Por ejemplo, si un producto se compra el 100% de las veces, no merece la pena añadirlo a los &lt;em&gt;itemsets&lt;/em&gt;, ya que no va a aportar información útil.&lt;/li&gt;
 &lt;li&gt;Antes de comenzar un problema de reglas de asociación, lo más importante es tener claro qué queremos encontrar en los datos y conocer el problema presente.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;bibliografía-a-idsec-5-namesec-5a&#34;&gt;Bibliografía &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
@@ -415,65 +185,21 @@ En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemse
             <description>&lt;blockquote&gt;
 &lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/&#34;&gt;Clustering&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Antes de comenzar es necesario definir qué es una &lt;strong&gt;anomalía&lt;/strong&gt;: Una anomalía es un dato muy distinto del resto. Esto puede deberse a fallos en mediciones, o a la propia naturaleza del dato. Por ejemplo, una intrusión a un sistema informático puede considerarse una anomalía, ya que por norma general el resto de actividades en dicho sistema serán legítimas. Por lo general, un dato se considera anómalo si escapa a los rangos de normalidad del resto de los datos.&lt;/p&gt;
-
 &lt;p&gt;El tratamiento de los datos anómalos debe hacerse con cuidado, ya que en ocasiones se podrá descartar (cuando son errores de medición) y en otras será importante (Introsiones/ataques a un sistema).&lt;/p&gt;
-
-&lt;p&gt;Ciertas técnicas de aprendizaje son más robustas frente a datos anómalos que otras. Un ejemplo de ello es la &lt;strong&gt;regresión lineal&lt;/strong&gt;, la presencia de un dato anómalo afectará en gran medida al resultado del modelo, ya que este dato anómalo &lt;em&gt;“tirará”&lt;/em&gt; de la línea de regresión hacia él. Como muestra la &lt;a href=&#34;#fig:anoReg&#34;&gt;Figura 1&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a id=&#34;fig:anoReg&#34; href=&#34;https://elbauldelprogramador.com/img/anoReg.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/anoReg.png&#34;
-            alt=&#34;Cómo afecta un dato anómalo a una regresión&#34;
-            title=&#34;Cómo afecta un dato anómalo a una regresión&#34;
-            sizes=&#34;(min-width: 870px) 870px, 100vw&#34;
-            width=&#34;870&#34;
-            height=&#34;471&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Cómo afecta un dato anómalo a una regresión&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;También ocurre en &lt;em&gt;clustering&lt;/em&gt;, ya que los datos anómalos desplazan los centroides hacia ellos (&lt;a href=&#34;#fig:anoClust&#34;&gt;Figura 2&lt;/a&gt;).&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a id=&#34;fig:anoClust&#34; href=&#34;https://elbauldelprogramador.com/img/anoClust.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/anoClust.png&#34;
-            alt=&#34;Cómo afecta un dato anómalo al *clustering*&#34;
-            title=&#34;Cómo afecta un dato anómalo al *clustering*&#34;
-            sizes=&#34;(min-width: 562px) 562px, 100vw&#34;
-            width=&#34;562&#34;
-            height=&#34;179&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Cómo afecta un dato anómalo al *clustering*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;p&gt;Ciertas técnicas de aprendizaje son más robustas frente a datos anómalos que otras. Un ejemplo de ello es la &lt;strong&gt;regresión lineal&lt;/strong&gt;, la presencia de un dato anómalo afectará en gran medida al resultado del modelo, ya que este dato anómalo &lt;em&gt;“tirará”&lt;/em&gt; de la línea de regresión hacia él. Como muestra la &lt;!-- raw HTML omitted --&gt;Figura 1&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;También ocurre en &lt;em&gt;clustering&lt;/em&gt;, ya que los datos anómalos desplazan los centroides hacia ellos (&lt;!-- raw HTML omitted --&gt;Figura 2&lt;!-- raw HTML omitted --&gt;).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Una buena analogía en este campo es encontrar una aguja en un pajar. Esa sería la forma fácil de encontrar una anomalía, ya que al menos se sabe que hay que encontrar una aguja. Pero en muchas ocasiones no se sabe &lt;strong&gt;qué es lo que se debe encontrar.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;aplicaciones-a-id-sec-2-1-name-sec-2-1-a&#34;&gt;Aplicaciones&lt;a id=&#34;sec-2-1&#34; name=&#34;sec-2-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;aplicacionesa-idsec-2-1-namesec-2-1a&#34;&gt;Aplicaciones&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Algunas aplicaciones son los &lt;strong&gt;Sistemas de detección de intrusiones en red&lt;/strong&gt; (&lt;em&gt;Network Intrusion Detection Systems [NIDS]&lt;/em&gt; ). Cuando se conoce el tipo de anomalía los NIDS son basados en firmas, pero también existen sin conocer previamente el tipo de anomalía a detectar. Este documento se centrará en la última, NIDS basados en detección de anomalías. Ejemplos de este tipo de sistemas son:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Detectar intrusiones de red.&lt;/li&gt;
 &lt;li&gt;Fraude en tarjetas de crédito.&lt;/li&gt;
@@ -481,119 +207,38 @@ En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemse
 &lt;li&gt;Análisis de regiones sospechosas en imágenes (Como radiografías).&lt;/li&gt;
 &lt;li&gt;Video vigilancia.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;métodos-supervisados-a-id-sec-2-2-name-sec-2-2-a&#34;&gt;Métodos supervisados&lt;a id=&#34;sec-2-2&#34; name=&#34;sec-2-2&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;métodos-supervisadosa-idsec-2-2-namesec-2-2a&#34;&gt;Métodos supervisados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Cuando se conoce la existencia de anomalías en los datos, y se sabe cuales son, las técnicas usadas son de clasifiación supervisada. En este tipo de problemas se tienen dos conjuntos de datos, uno de entrenamiento y otro de test. Como se dispone de toda la información, los datos están etiquetados en función de si son anomalía o no. Con estos datos se construye un modelo que aprenda a distinguir ente un dato anómalo y uno legítimo.&lt;/p&gt;
-
 &lt;p&gt;Una situación muy común en este tipo de datos es que están desbalanceados. Existen muchos más datos legítimos que anómalos, lo cual sesga el resultado del modelo. Este tipo de problemas se conoce como &lt;strong&gt;calsificación desbalanceada&lt;/strong&gt;. Principalmente existen dos métodos para lidiar con este problema. &lt;strong&gt;Métodos basados en Instancias&lt;/strong&gt; y &lt;strong&gt;basados en algoritmos.&lt;/strong&gt; El primero consiste en modificar los datos antes de pasarlos al algoritmo, mientras que el segundo usa los datos originales sobre un algoritmo modificado.&lt;/p&gt;
-
-&lt;h2 id=&#34;basados-en-instancias-a-id-sec-2-2-1-name-sec-2-2-1-a&#34;&gt;Basados en Instancias&lt;a id=&#34;sec-2-2-1&#34; name=&#34;sec-2-2-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;basados-en-instanciasa-idsec-2-2-1-namesec-2-2-1a&#34;&gt;Basados en Instancias&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;La forma de modificar los datos antes de pasarlos al algoritmo consiste en eliminar instancias de la clase mayoritaria (&lt;em&gt;undersampling&lt;/em&gt;) o crear instancias artificiales de la clase minoritaria (&lt;em&gt;oversampling&lt;/em&gt;). Algunos métodos de &lt;em&gt;underasmpling&lt;/em&gt; son &lt;em&gt;Tomek-links, CNN y NCL&lt;/em&gt;, de &lt;em&gt;oversampling&lt;/em&gt; SMOTE, aunque este último realiza un &lt;em&gt;undersampling&lt;/em&gt; a la clase mayoritaria a la vez de un &lt;em&gt;oversampling&lt;/em&gt; de la clase minoritaria.&lt;/p&gt;
-
-&lt;h2 id=&#34;basados-en-algoritmos-a-id-sec-2-2-2-name-sec-2-2-2-a&#34;&gt;Basados en Algoritmos&lt;a id=&#34;sec-2-2-2&#34; name=&#34;sec-2-2-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;basados-en-algoritmosa-idsec-2-2-2-namesec-2-2-2a&#34;&gt;Basados en Algoritmos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;En este caso no se alteran los datos, pero asignan distintos pesos a cada instancia mediante una &lt;strong&gt;función de coste, bagging oo boosting&lt;/strong&gt;. Los métodos que usan la función de coste asignan costes muy altos a las clases minoritarias. &lt;strong&gt;Bagging&lt;/strong&gt; incluye más instancias de la clase minoritaria en cada paso del algoritmos de &lt;em&gt;bagging&lt;/em&gt;. Por contra, &lt;strong&gt;Boosting&lt;/strong&gt; asigna más peso a las instancias de la clase minoritaria en cada paso. También existen alternativas híbridas, como &lt;strong&gt;SmoteBoosting, SmoteBagging&lt;/strong&gt;  etc.&lt;/p&gt;
-
-&lt;h2 id=&#34;métricas-de-evaluación-a-id-sec-2-2-3-name-sec-2-2-3-a&#34;&gt;Métricas de evaluación&lt;a id=&#34;sec-2-2-3&#34; name=&#34;sec-2-2-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;métricas-de-evaluacióna-idsec-2-2-3-namesec-2-2-3a&#34;&gt;Métricas de evaluación&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;En este tipo de problemas la precisión del modelo no es importante, ya que un modelo sencillo que etiquete todas las instancias como legítimas podría tener un 99.9% de precisión en los casos en los que la anomalía esté presente el 0.1% del tiempo, y aún con este porcentaje de precisión no se estaría detectando ninguna anomalía. Esto es debido al desbalanceo entre las clases. Debido a ello es necesario usar otro tipo de métricas, como &lt;em&gt;Recall, Precisión, F-Measure, ROC etc&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;métodos-semi-supervisados-a-id-sec-2-3-name-sec-2-3-a&#34;&gt;Métodos semi-supervisados&lt;a id=&#34;sec-2-3&#34; name=&#34;sec-2-3&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;métodos-semi-supervisadosa-idsec-2-3-namesec-2-3a&#34;&gt;Métodos semi-supervisados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Se conoce la existencia de anomalías, pero no se encuentran en el conjunto de datos. Con este conjunto de datos se define “*la normalidad*” del entorno. Por ejemplo, en datos de red, lo normal es que todo el tráfico sea legítimo, y sin saturaciones. El problema en esta situación es saber cómo modelar un “*comportamiento normal*”. Para ello hay varias técnicas, basadas en clasificación, en reglas de asociación, en máquinas de soporte vectorial.&lt;/p&gt;
-
-&lt;p&gt;Los &lt;strong&gt;modelos de clasificación&lt;/strong&gt; en el caso de conjuntos de datos correctamente balanceados sufre de cometer demasiados falsos positivos. Cuando un nuevo dato llega al modelo de clasificación, y éste lo clasifica incorrectamente, el dato se considera como una anomalía, lo cual no tiene por qué ser cierto. Para mejorar este modelo, se suelen usar clasificadores basados en reglas. Los clasificadores basados en reglas proporcionan más información cuando un dato se clasifica incorrectamente, informan en qué grado se considera al dato  anómalo, por ejemplo, en un 80%. Otra forma de abordar el problema es mediante la generación de &lt;strong&gt;máquinas de estados finitos&lt;/strong&gt;, cuando llega un nuevo dato se comprueba contra esa máquina de estados finitos para determinar la legitimidad o no legitimidad. Un ejemplo de este tipo de modelos se encuentra en la &lt;a href=&#34;#fig:anoSemi&#34;&gt;Figura 3&lt;/a&gt;&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a id=&#34;fig:anoSemi&#34; href=&#34;https://elbauldelprogramador.com/img/anoSemi.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/anoSemi.png&#34;
-            alt=&#34;Máquina de estados finitos para modelar tráfico FTP&#34;
-            title=&#34;Máquina de estados finitos para modelar tráfico FTP&#34;
-            sizes=&#34;(min-width: 428px) 428px, 100vw&#34;
-            width=&#34;428&#34;
-            height=&#34;390&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Máquina de estados finitos para modelar tráfico FTP&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;p&gt;Los &lt;strong&gt;modelos de clasificación&lt;/strong&gt; en el caso de conjuntos de datos correctamente balanceados sufre de cometer demasiados falsos positivos. Cuando un nuevo dato llega al modelo de clasificación, y éste lo clasifica incorrectamente, el dato se considera como una anomalía, lo cual no tiene por qué ser cierto. Para mejorar este modelo, se suelen usar clasificadores basados en reglas. Los clasificadores basados en reglas proporcionan más información cuando un dato se clasifica incorrectamente, informan en qué grado se considera al dato  anómalo, por ejemplo, en un 80%. Otra forma de abordar el problema es mediante la generación de &lt;strong&gt;máquinas de estados finitos&lt;/strong&gt;, cuando llega un nuevo dato se comprueba contra esa máquina de estados finitos para determinar la legitimidad o no legitimidad. Un ejemplo de este tipo de modelos se encuentra en la &lt;!-- raw HTML omitted --&gt;Figura 3&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Los métodos &lt;strong&gt;basados en reglas&lt;/strong&gt; buscan patrones frecuentes y reglas de asociación. Uno de estos métodos es &lt;strong&gt;LERAD&lt;/strong&gt;. &lt;strong&gt;LERAD&lt;/strong&gt; aprende reglas que encuentran eventos extraños en una serie temporal.&lt;/p&gt;
-
-&lt;p&gt;Los métodos basados en &lt;strong&gt;kernel&lt;/strong&gt; como Máquinas de Soporte Vectoriales asumen la existencia de una única clase definida como comportamiento normal. Este comportamiento normal se construye estableciendo una región en el espacio. Todo punto que caiga en ese espacio será considerado normal. Por contra, cuando un punto cae fuera de la región es considerado anómalo. Un ejemplo de la definición de este espacio se muestra en la &lt;a href=&#34;#fig:anoSVM&#34;&gt;Figura 4&lt;/a&gt;. Gracias a la potencia de los &lt;strong&gt;kernels&lt;/strong&gt; es posible definir distintos tipos de regiones en el espacio para realizar la detección.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a id=&#34;fig:anoSVM&#34; href=&#34;https://elbauldelprogramador.com/img/anoSVM.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/anoSVM.png&#34;
-            alt=&#34;SVMs para detección de Anomalías&#34;
-            title=&#34;SVMs para detección de Anomalías&#34;
-            sizes=&#34;(min-width: 404px) 404px, 100vw&#34;
-            width=&#34;404&#34;
-            height=&#34;342&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;SVMs para detección de Anomalías&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;p&gt;Los métodos basados en &lt;strong&gt;kernel&lt;/strong&gt; como Máquinas de Soporte Vectoriales asumen la existencia de una única clase definida como comportamiento normal. Este comportamiento normal se construye estableciendo una región en el espacio. Todo punto que caiga en ese espacio será considerado normal. Por contra, cuando un punto cae fuera de la región es considerado anómalo. Un ejemplo de la definición de este espacio se muestra en la &lt;!-- raw HTML omitted --&gt;Figura 4&lt;!-- raw HTML omitted --&gt;. Gracias a la potencia de los &lt;strong&gt;kernels&lt;/strong&gt; es posible definir distintos tipos de regiones en el espacio para realizar la detección.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Es posible construir modelos basándose en &lt;strong&gt;los datos históricos&lt;/strong&gt;. En este tipo de métodos se asume como anomalía cualquier evento que no se haya producido en el pasado. Para ello se lleva un recuento de los eventos ocurridos y se comparan con los datos históricos para intentar detectar anomalías.&lt;/p&gt;
-
-&lt;h1 id=&#34;métodos-no-supervisados-a-id-sec-2-4-name-sec-2-4-a&#34;&gt;Métodos no supervisados&lt;a id=&#34;sec-2-4&#34; name=&#34;sec-2-4&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;métodos-no-supervisadosa-idsec-2-4-namesec-2-4a&#34;&gt;Métodos no supervisados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;Se dispone de anomalías en el conjunto, pero no están etiquetadas, no se conoce a priori si un dato es una anomalía o no, es decir, tanto anomalías como comportamientos legítimos están mezclados. En este campo existen también varias alternativas, las cuales se pasan a describir a continuación.&lt;/p&gt;
-
-&lt;h2 id=&#34;aproximaciones-gráficas-a-id-sec-2-4-1-name-sec-2-4-1-a&#34;&gt;Aproximaciones gráficas&lt;a id=&#34;sec-2-4-1&#34; name=&#34;sec-2-4-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Como su nombre indica consiste en inspeccionar visualmente los datos para determinar cuales son los datos anómalos. Su principal desventaja es la cantidad de tiempo a invertir, y que es subjetivo. Para poder usar esta aproximación es necesario reducir/resumir la información a una dimensión que pueda ser visualizada (1D, 2D o 3D), y por tanto se está perdiendo información que puede resultar relevante. Una de las aproximaciones visuales más útiles es el &lt;em&gt;biplot&lt;/em&gt;, que muestra una proyección a dos dimensiones de la varianza que aporta cada atributo. La &lt;a href=&#34;#fig:anoBiplot&#34;&gt;figura 5&lt;/a&gt; muestra un &lt;em&gt;biplot&lt;/em&gt;, la longitud de los vectores para cada atributo muestra la dirección más fuerte de los datos. Si dos atributos son ortogonales significa que no están correlados, lo cual implica que ambos pueden usarse en la construcción del modelo para obtener mejores resultados. Por contra, si dos atributos van en la misma dirección y tienen similares longitudes, están correlados, o negativamente correlados si van en direcciones opuestas.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a id=&#34;fig:anoBiplot&#34; href=&#34;https://elbauldelprogramador.com/img/anoBiplot.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/anoBiplot.png&#34;
-            alt=&#34;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&gt;*&#34;
-            title=&#34;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&gt;*&#34;
-            sizes=&#34;(min-width: 1476px) 1476px, 100vw&#34;
-            width=&#34;1476&#34;
-            height=&#34;1024&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Biplot. **Var1** y **Var6** están muy poco correlacionadas, mientras que **Var1** y **Var10** sí lo están    *Créd. &lt;a href=&#34;https://sukhbinder.wordpress.com/2016/03/02/biplot-in-python-revisited/&#34;&gt;sukhbinder&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;aproximaciones-paramétricas-a-id-sec-2-4-2-name-sec-2-4-2-a&#34;&gt;Aproximaciones paramétricas&lt;a id=&#34;sec-2-4-2&#34; name=&#34;sec-2-4-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;aproximaciones-gráficasa-idsec-2-4-1-namesec-2-4-1a&#34;&gt;Aproximaciones gráficas&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Como su nombre indica consiste en inspeccionar visualmente los datos para determinar cuales son los datos anómalos. Su principal desventaja es la cantidad de tiempo a invertir, y que es subjetivo. Para poder usar esta aproximación es necesario reducir/resumir la información a una dimensión que pueda ser visualizada (1D, 2D o 3D), y por tanto se está perdiendo información que puede resultar relevante. Una de las aproximaciones visuales más útiles es el &lt;em&gt;biplot&lt;/em&gt;, que muestra una proyección a dos dimensiones de la varianza que aporta cada atributo. La &lt;!-- raw HTML omitted --&gt;figura 5&lt;!-- raw HTML omitted --&gt; muestra un &lt;em&gt;biplot&lt;/em&gt;, la longitud de los vectores para cada atributo muestra la dirección más fuerte de los datos. Si dos atributos son ortogonales significa que no están correlados, lo cual implica que ambos pueden usarse en la construcción del modelo para obtener mejores resultados. Por contra, si dos atributos van en la misma dirección y tienen similares longitudes, están correlados, o negativamente correlados si van en direcciones opuestas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aproximaciones-paramétricasa-idsec-2-4-2-namesec-2-4-2a&#34;&gt;Aproximaciones paramétricas&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Estas aproximaciones asumen un modelo paramétrico describiendo la distribución de los datos y usan tests estadísticos para determinar si un punto es  un &lt;em&gt;outlier&lt;/em&gt; con un nivel de significancia. Dichos tests dependen de la distribución inherente, sus parámetros y número de &lt;em&gt;outliers&lt;/em&gt; esperados. Entre los tests que consideran una sola variable se encuentran el &lt;strong&gt;test de Grubb&lt;/strong&gt;, que considera un solo &lt;em&gt;outlier&lt;/em&gt;, este test sufre de enmascaramiento (la media puede enmascarar &lt;em&gt;outliers&lt;/em&gt;) , los tests de &lt;strong&gt;Tietjen y Moore&lt;/strong&gt; consideran k &lt;em&gt;outliers&lt;/em&gt; y sufren de &lt;em&gt;swamping&lt;/em&gt; (de forma similar, la media oculta &lt;em&gt;outliers&lt;/em&gt;). Cuando hay varias dimensiones (p dimensiones) se considera la &lt;strong&gt;distancia de Mahalanobis&lt;/strong&gt;. En p dimensiones, un punto que sea considerado &lt;em&gt;outlier&lt;/em&gt; en uno de sus atributos seguirá siéndolo aunque en cualquiera de sus atributos restantes no sea considerado &lt;em&gt;outlier&lt;/em&gt;, o cuando sea &lt;em&gt;outlier&lt;/em&gt; en varios de sus atributos.&lt;/p&gt;
-
 &lt;p&gt;El problema de los tests del párrafo anterior es que necesitan de una medida de distancia multivariante. Además, para poder calcular una matriz de covarianza de forma correcta es necesario eliminar los &lt;em&gt;outliers&lt;/em&gt;, de lo contrario la matriz no será correcta y proporcionará información falsa.&lt;/p&gt;
-
-&lt;h2 id=&#34;aproximaciones-basadas-en-vecinos-cercanos-a-id-sec-2-4-3-name-sec-2-4-3-a&#34;&gt;Aproximaciones basadas en vecinos cercanos&lt;a id=&#34;sec-2-4-3&#34; name=&#34;sec-2-4-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;aproximaciones-basadas-en-vecinos-cercanosa-idsec-2-4-3-namesec-2-4-3a&#34;&gt;Aproximaciones basadas en vecinos cercanos&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Las aproximaciones anteriores asumen una distribución normal de los datos, pero en muchos casos la distribución no es normal, e incluso se desconoce. Si se añade el hecho de dimensiones muy altas, los datos no suelen seguir una distribución multivariante específica. Aquí hay dos formas de obtener los vecinos, mediante una &lt;strong&gt;función de distancia&lt;/strong&gt; que mide la cercanía entre dos puntos o asignando una puntuación de anomalía a un punto en función de su distancia frente al resto de puntos vecinos.&lt;/p&gt;
-
-&lt;h2 id=&#34;aproximaciones-basadas-en-clustering-a-id-sec-2-4-4-name-sec-2-4-4-a&#34;&gt;Aproximaciones basadas en &lt;em&gt;clustering&lt;/em&gt;&lt;a id=&#34;sec-2-4-4&#34; name=&#34;sec-2-4-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;h2 id=&#34;aproximaciones-basadas-en-clusteringa-idsec-2-4-4-namesec-2-4-4a&#34;&gt;Aproximaciones basadas en &lt;em&gt;clustering&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;En esta aproximación primero se construyen los &lt;em&gt;cluster&lt;/em&gt; mediante cualquier técnica de &lt;em&gt;clustering&lt;/em&gt;, posteriormente se mide la distancia de un punto a su centroide para determinar si se trata de una anomalía. Se debe elegir con cuidado la medida de distancia. La &lt;strong&gt;distancia Euclídea&lt;/strong&gt; no tiene en cuenta la densidad, por tanto es aconsejable usar la &lt;strong&gt;distancia relativa&lt;/strong&gt; (La distancia relativa es la relación entre la distancia del punto del centroide a la distancia mediana de todos los puntos del &lt;em&gt;cluster&lt;/em&gt;  desde el centroide).&lt;/p&gt;
-
-&lt;h1 id=&#34;evaluación-a-id-sec-2-5-name-sec-2-5-a&#34;&gt;Evaluación&lt;a id=&#34;sec-2-5&#34; name=&#34;sec-2-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;En detección de anomalías no basta obtener simplemente el porcentaje de acierto, es necesaria una matriz de confusión en la que se pueda observar la tasa de &lt;strong&gt;falsos positivos&lt;/strong&gt; y &lt;strong&gt;falsos negativos&lt;/strong&gt;. Dado que lo importante en este tipo de problema es detectar la anomalía es necesario observar el comportamiento de la precisión para detectar la anomalía. Para ello se usa la fórmula \(\frac{TP}{TP + FP}\), que indica qué porcentaje en la predicción de anomalías es correcto, siendo TP un acierto verdadero y FP un falso positivo, a más cercana de 1 esta medida mejor. Es interesante fijarse en el &lt;em&gt;Recall&lt;/em&gt; (\(\frac{TP}{TP + FN}\)) que mide el porcentaje de anomalías detectadas, ya sean bien clasificadas o no. La proporción de falsos positivos \(\frac{FP}{FP + TN}\) mide el porcentaje de clases normales que fueron clasificadas como anomalías. Por último, la especifidad (\(\frac{TN}{TN + FP}\)) indica el porcentaje de clases normales detectadas. No es posible mejorar todas las medidas anteriores simultáneamente (Cuando aumente la precisión, el &lt;em&gt;Recall&lt;/em&gt; va a decaer, ya que son inversos). Para atajar este problema se usa la medida \(F_1\) -Score, la cual intenta encontar un equilibrio entre &lt;em&gt;Recall&lt;/em&gt; y precisión. Para terminar de aclarar estos conceptos, obtener una fiabilidad del \(99\%\) en una enfermedad que ocurren en una de cada \(10000\) no es fiable, ya que se equivocará una vez de cada \(1000\). Cuando se habla de anomalías que aparecen muy poco el modelo va a cometer muchos falsos positivos, la solución a este problema es usar información adicional como la &lt;strong&gt;probabilidad a priori de la anomalía, porcentaje de acierto y tasa de falsos positivos.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;evaluacióna-idsec-2-5-namesec-2-5a&#34;&gt;Evaluación&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;p&gt;En detección de anomalías no basta obtener simplemente el porcentaje de acierto, es necesaria una matriz de confusión en la que se pueda observar la tasa de &lt;strong&gt;falsos positivos&lt;/strong&gt; y &lt;strong&gt;falsos negativos&lt;/strong&gt;. Dado que lo importante en este tipo de problema es detectar la anomalía es necesario observar el comportamiento de la precisión para detectar la anomalía. Para ello se usa la fórmula \(\frac{TP}{TP + FP}\), que indica qué porcentaje en la predicción de anomalías es correcto, siendo TP un acierto verdadero y FP un falso positivo, a más cercana de 1 esta medida mejor. Es interesante fijarse en el &lt;em&gt;Recall&lt;/em&gt; (\(\frac{TP}{TP + FN}\)) que mide el porcentaje de anomalías detectadas, ya sean bien clasificadas o no. La proporción de falsos positivos \(\frac{FP}{FP + TN}\) mide el porcentaje de clases normales que fueron clasificadas como anomalías. Por último, la especifidad (\(\frac{TN}{TN + FP}\)) indica el porcentaje de clases normales detectadas. No es posible mejorar todas las medidas anteriores simultáneamente (Cuando aumente la precisión, el &lt;em&gt;Recall&lt;/em&gt; va a decaer, ya que son inversos). Para atajar este problema se usa la medida \(F_1\) -Score, la cual intenta encontar un equilibrio entre &lt;em&gt;Recall&lt;/em&gt; y precisión. Para terminar de aclarar estos conceptos, obtener una fiabilidad del \(99%\) en una enfermedad que ocurren en una de cada \(10000\) no es fiable, ya que se equivocará una vez de cada \(1000\). Cuando se habla de anomalías que aparecen muy poco el modelo va a cometer muchos falsos positivos, la solución a este problema es usar información adicional como la &lt;strong&gt;probabilidad a priori de la anomalía, porcentaje de acierto y tasa de falsos positivos.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bibliografía-a-idsec-5-namesec-5a&#34;&gt;Bibliografía &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
@@ -614,424 +259,126 @@ En memoria mantiene dos tablas, \(L_k\) guarda el conjunto de &lt;em&gt;k-itemse
             <description>&lt;blockquote&gt;
 &lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de anomalías&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;El aprendizaje automático se distingue en dos tipos. &lt;strong&gt;Supervisado&lt;/strong&gt;, donde se dispone de información sobre la clase a la que pertenece una instancia o &lt;strong&gt;no supervisado&lt;/strong&gt;, donde esta información no está disponible. Estos apuntes se centran en el último tipo. En la figura se muestra un árbol de tipos de clasificaciones.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/classTree.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/classTree.png&#34;
-            alt=&#34;Árbol de tipos de clasificaciones&#34;
-            title=&#34;Árbol de tipos de clasificaciones&#34;
-            sizes=&#34;(min-width: 910px) 910px, 100vw&#34;
-            width=&#34;910&#34;
-            height=&#34;715&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Árbol de tipos de clasificaciones&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h1 id=&#34;clustering-a-id-sec-1-name-sec-1-a&#34;&gt;Clustering&lt;a id=&#34;sec-1&#34; name=&#34;sec-1&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;clusteringa-idsec-1-namesec-1a&#34;&gt;Clustering&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Clustering&lt;/em&gt; intenta encontrar patrones en los datos que formen grupos claramente separados. Encontrar estos grupos tiene varias aplicaciones. Por ejemplo si los datos tratan sobre clientes, cada grupo encontrado podría usarse para realizar una segmentación de clientes en marketing, y ofrecer así distintos productos a cada grupo. Otra posible aplicación es agrupar documentos por temática, donde cada &lt;em&gt;cluster&lt;/em&gt; o grupo pertenece a un tipo de documento. En este tipo de aplicaciones &lt;em&gt;clustering&lt;/em&gt; se usa como aplicación final, sin embargo puede usarse como paso previo a otras técnicas de aprendizaje. Algunos ejemplos son exploración de datos y preprocesamiento de datos.&lt;/p&gt;
-
 &lt;p&gt;Uno de los problemas del &lt;em&gt;clustering&lt;/em&gt; es su subjetividad. En la Figura de abajo aparece un conjunto de datos, pero bajo este mismo conjunto se pueden hacer agrupamientos diferentes.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustering-agrupamientos.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustering-agrupamientos.png&#34;
-            alt=&#34;Agrupar es subjetivo. Créd. Prof. Juan Carlos Cubero&#34;
-            title=&#34;Agrupar es subjetivo. Créd. Prof. Juan Carlos Cubero&#34;
-            sizes=&#34;(min-width: 1034px) 1034px, 100vw&#34;
-            width=&#34;1034&#34;
-            height=&#34;628&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Agrupar es subjetivo. Créd. Prof. Juan Carlos Cubero&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;medidas-de-similitud-a-id-sec-1-1-name-sec-1-1-a&#34;&gt;Medidas de similitud&lt;a id=&#34;sec-1-1&#34; name=&#34;sec-1-1&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;medidas-de-similituda-idsec-1-1-namesec-1-1a&#34;&gt;Medidas de similitud&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Una solución al problema descrito en la sección anterior es definir una buena medida de similitud. Para ello es necesario usar únicamente los atributos adecuados, no es necesario usar todos los atributos para calcular la similitud de una instancia frente a otra. También es importante tener en cuenta las magnitudes de cada atributo como paso previo a calcular la similitud, y por tanto es necesario normalizar. Principalmente hay dos formas de normalizar un conjunto de datos para atributos continuos. El método &lt;em&gt;Min-Max&lt;/em&gt; y &lt;em&gt;z-score&lt;/em&gt;. Estas normalizaciones se deben llevar a cabo para cada atributo del conjunto de datos. Es recomendable eliminar cualquier &lt;strong&gt;outlier&lt;/strong&gt;, ya que puede afectar mucho al proceso de normalización. De los dos anteriores, es recomendable usar &lt;em&gt;z-score&lt;/em&gt;, ya que preserva el rango de los datos.&lt;/p&gt;
-
 &lt;p&gt;Para crear medidas de similitud se consideran la semejanzas o distancias. A mayor valor de semejanza, más se parecen los dos puntos en comparación, sin embargo, a mayor distancia, menor parecido. Es común usar medidas de distancia para descubrir cómo de semejantes son dos puntos. Toda medida de distancia debe cumplir una serie de propiedades, listadas a continuación.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;No negativa: \(d(x,y) \geq 0\)&lt;/li&gt;
 &lt;li&gt;Reflexiva: \(d(x,y) = 0\text{ sii } x = y\)&lt;/li&gt;
 &lt;li&gt;Simétrica: \(d(x,y) = d(y,x)\)&lt;/li&gt;
 &lt;li&gt;Desigualdad triangular: \(d(x,y) \leq d(x,z) + d(z,y)\)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;La desigualdad triangular puede comprenderse mejor visualmente en la figura. Es decir, la suma de dos de los lados del triángulo siempre va a ser mayor o igual a la del lado restante. Como muestra la figura, conforme menos área tiene el triángulo, más cercana es la suma de dos lados al lado restante.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/triangle.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/triangle.png&#34;
-            alt=&#34;Desigualdad triangular explicada visualmente. Créd. Wikipedia&#34;
-            title=&#34;Desigualdad triangular explicada visualmente. Créd. Wikipedia&#34;
-            sizes=&#34;(min-width: 497px) 497px, 100vw&#34;
-            width=&#34;497&#34;
-            height=&#34;480&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Desigualdad triangular explicada visualmente. Créd. Wikipedia&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h3 id=&#34;medidas-de-distancia-a-id-sec-1-1-1-name-sec-1-1-1-a&#34;&gt;Medidas de distancia&lt;a id=&#34;sec-1-1-1&#34; name=&#34;sec-1-1-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;medidas-de-distanciaa-idsec-1-1-1-namesec-1-1-1a&#34;&gt;Medidas de distancia&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;p&gt;Las principales medidas de distancia son:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Euclídea&lt;/em&gt; o \(L_2 \) : \(d_2 (x,y) = \sqrt{\sum_{j=1}^J(x_j - y_j)^2}\)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Manhattan&lt;/em&gt; o \(L_1\): \(d_1 (x,y) = \sum_{j=1}^J|x_j - y_j|\)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Chebyshev&lt;/em&gt; o \(L_{\infty}\): \(d_\infty = \text{máx}_{j\dots J}|x_j - y_j|\)&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;Minkowski&lt;/em&gt; o Lr-norm: \(d_p(x,y) = \left ( \sum_{j=1}^J|x_j - y_j|^p\right )^\frac{1}{p}, p \geq 1\)&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;La distancia Euclídea es la línea recta entre dos puntos. En la distancia Manhattan la distancia entre dos puntos es la suma en valor absoluto de las diferencias de sus coordenadas cartesianas. La Figura muestra cómo pueden existir varios caminos a dos puntos usando Manhattan, pero solo uno y el más corto por Euclídea.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/maneu.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/maneu.png&#34;
-            alt=&#34;Distancias Manhattan y Euclidea. Las líneas roja, azul y amarilla tienen distancia Manhattan 12, la menor posible. La verde tiene distancia Euclídea 8.49. *Créd. [Wikipedia]&#34;
-            title=&#34;Distancias Manhattan y Euclidea. Las líneas roja, azul y amarilla tienen distancia Manhattan 12, la menor posible. La verde tiene distancia Euclídea 8.49. *Créd. [Wikipedia]&#34;
-            sizes=&#34;(min-width: 480px) 480px, 100vw&#34;
-            width=&#34;480&#34;
-            height=&#34;480&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Distancias Manhattan y Euclidea. Las líneas roja, azul y amarilla tienen distancia Manhattan 12, la menor posible. La verde tiene distancia Euclídea 8.49. *Créd. [Wikipedia]&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;La distancia de Minkowski es una generalización de las dos anteriores&lt;/p&gt;
-
 &lt;p&gt;En la distancia de Chebyshev la distancia entre dos puntos es la mayor de sus diferencias a lo largo de cualquiera de sus dimensiones coordenadas. También conocida como la distancia del tablero de ajedrez, por coincidir con el número de movimientos que puede hacer el rey para moverse por el tablero, como muestra la figura.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/chess.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/chess.png&#34;
-            alt=&#34;Distancia de Chebyshev. *Créd. Wikipedia*&#34;
-            title=&#34;Distancia de Chebyshev. *Créd. Wikipedia*&#34;
-            sizes=&#34;(min-width: 647px) 647px, 100vw&#34;
-            width=&#34;647&#34;
-            height=&#34;651&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Distancia de Chebyshev. *Créd. Wikipedia*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando \(p = 1\) corresponde con la distancia de Manhattan, para \(p = 2\) distancia Euclídea, y cuando \(p \to \infty\) corresponde con la distancia de Chebyshev. En la figura aparecen distintas distancias para varios valores de \(p\), en esta imagen se aprecia la distancia Manhattan para \(p=1\), Euclídea para \(p=2\) y Chebyshev para \(p=\infty\).&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/minkos.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/minkos.png&#34;
-            alt=&#34;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
-            title=&#34;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&#34;
-            sizes=&#34;(min-width: 1387px) 1387px, 100vw&#34;
-            width=&#34;1387&#34;
-            height=&#34;300&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Distintos valores de \\(p\\) para la distancia de Minkowski. *Créd. Wikipedia*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;tipos-de-clustering-a-id-sec-1-2-name-sec-1-2-a&#34;&gt;Tipos de Clustering&lt;a id=&#34;sec-1-2&#34; name=&#34;sec-1-2&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;tipos-de-clusteringa-idsec-1-2-namesec-1-2a&#34;&gt;Tipos de Clustering&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
 &lt;p&gt;Dentro de la clasificación no supervisada se distinguen principalmente los siguientes tipos de &lt;em&gt;clustering&lt;/em&gt;:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Agrupamiento por particiones&lt;/strong&gt;: Una simple división del conjunto de datos en sub conjuntos disjuntos (No solapados) de tal forma que cada punto del conjunto pertenece a uno de dichos subconjuntos (o &lt;em&gt;clusters&lt;/em&gt;). La figura es un ejemplo de este tipo de agrupamiento.
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Basados en densidad&lt;/strong&gt;: En este tipo de &lt;em&gt;clustering&lt;/em&gt; un &lt;em&gt;cluster&lt;/em&gt; es una región densa de objetos rodeados por una región de baja densidad. Suele usarse cuando hay ruido y &lt;em&gt;outliers&lt;/em&gt; presentes en los datos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Basados en Grafos&lt;/strong&gt;: Los datos se representan como un gráfo, los nodos son los puntos y los enlaces representan una conexión entre ambos. Un grupo de objetos conectados los unos con los otros pero no conectados con el resto de puntos en el conjunto de datos forma un &lt;em&gt;cluster&lt;/em&gt;. Para definir los grupos es necesario que cada objeto de un &lt;em&gt;cluster&lt;/em&gt; esté más cerca de cualquier otro punto de su grupo que a un punto de otro &lt;em&gt;cluster&lt;/em&gt;. Esta técnica tiene problemas en presencia de ruido u &lt;em&gt;outliers&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mínimo error cuadrático&lt;/strong&gt;: En este algoritmo se usa la minimización del error cuadrático para determinar a qué &lt;em&gt;cluster&lt;/em&gt; pertenece el punto. Esta técnica la usa el algoritmo K-Medias.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Jerárquico&lt;/strong&gt;: Si en el agrupamiento por particiones se permite que cada &lt;em&gt;cluster&lt;/em&gt; tenga sub-clusters se obtiene un &lt;em&gt;clustering&lt;/em&gt; jerárquico. Consiste en permitir que los &lt;em&gt;clusters&lt;/em&gt; puedan anidarse, organizado en forma de árbol. Cada nodo del árbol, un &lt;em&gt;cluster&lt;/em&gt; en este caso a exepción de los nodos hoja, forman la unión de sus hijos (los &lt;em&gt;sub-clusters&lt;/em&gt;). La raíz del árbol es el &lt;em&gt;cluster&lt;/em&gt; conteniendo a todos los datos. Los nodos hoja suelen corresponder con un único dato, pero no es obligatorio. La figura muestra un ejemplo de este tipo de &lt;em&gt;clustering&lt;/em&gt;. La figura (d) es un ejemplo de &lt;em&gt;clustering&lt;/em&gt; jerárquico, el nodo raíz contendría todos los puntos, el nodo a la izquierda está formado por un &lt;em&gt;cluster&lt;/em&gt; de tres &lt;em&gt;sub-clusters&lt;/em&gt;. Los métodos jerárquicos se clasifican en &lt;strong&gt;aglomerativos&lt;/strong&gt; o &lt;strong&gt;divisivos&lt;/strong&gt;. El primero considera cada punto un &lt;em&gt;cluster&lt;/em&gt; y en cada paso fusiona los pares más cercanos como un &lt;em&gt;cluster&lt;/em&gt;. Esta técnica requiere de una forma de medir la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt;. El segundo comienza con todos los datos como un solo &lt;em&gt;cluster&lt;/em&gt; y subdivide hasta quedarse con puntos individuales como &lt;em&gt;clusters&lt;/em&gt;. Las técnicas aglomerativas son las más usadas, por esta razón se explican a continuación los distintos métodos. La figura los ilustra.
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Enlace Simple&lt;/strong&gt;: La proximidad entre dos &lt;em&gt;clusters&lt;/em&gt; viene dada por la distancia entre los dos puntos más cercanos de cada &lt;em&gt;cluster&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Enlace Completo&lt;/strong&gt;: Análogo al anterior, pero usa la distancia de los dos puntos más lejanos de cada &lt;em&gt;cluster.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Enlace Ponderado&lt;/strong&gt;: Usa las distancias pares a pares de todos los puntos en cada &lt;em&gt;cluster&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Método de Ward&lt;/strong&gt;: Mide la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt; usando el incremento del error cuadrático medio producido al unir dos &lt;em&gt;clusters&lt;/em&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustHieAgg.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustHieAgg.png&#34;
-            alt=&#34;Tipos de medidas de proximidad para clustering aglomerativo&#34;
-            title=&#34;Tipos de medidas de proximidad para clustering aglomerativo&#34;
-            sizes=&#34;(min-width: 1181px) 1181px, 100vw&#34;
-            width=&#34;1181&#34;
-            height=&#34;238&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Tipos de medidas de proximidad para clustering aglomerativo&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustPart.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustPart.png&#34;
-            alt=&#34;Agrupamiento por particiones. Cred. Transparencias de clase.&#34;
-            title=&#34;Agrupamiento por particiones. Cred. Transparencias de clase.&#34;
-            sizes=&#34;(min-width: 1022px) 1022px, 100vw&#34;
-            width=&#34;1022&#34;
-            height=&#34;142&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Agrupamiento por particiones. Cred. Transparencias de clase.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustHie.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustHie.png&#34;
-            alt=&#34;Distintos tipos de clustering para los mismos datos&#34;
-            title=&#34;Distintos tipos de clustering para los mismos datos&#34;
-            sizes=&#34;(min-width: 843px) 843px, 100vw&#34;
-            width=&#34;843&#34;
-            height=&#34;419&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Distintos tipos de clustering para los mismos datos&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h2 id=&#34;algoritmos-de-clustering-a-id-sec-1-3-name-sec-1-3-a&#34;&gt;Algoritmos de &lt;em&gt;clustering&lt;/em&gt;&lt;a id=&#34;sec-1-3&#34; name=&#34;sec-1-3&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&#34;k-means-a-id-sec-1-3-1-name-sec-1-3-1-a&#34;&gt;K-Means&lt;a id=&#34;sec-1-3-1&#34; name=&#34;sec-1-3-1&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;algoritmos-de-clusteringa-idsec-1-3-namesec-1-3a&#34;&gt;Algoritmos de &lt;em&gt;clustering&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;k-meansa-idsec-1-3-1-namesec-1-3-1a&#34;&gt;K-Means&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;p&gt;K-Means es un un algoritmo de &lt;em&gt;clustering&lt;/em&gt; por particiones. Tiene un parámetro de entrada, &lt;code&gt;k&lt;/code&gt;, indicando el número de &lt;em&gt;clusters&lt;/em&gt; a generar, por tanto es necesario conocer a priori el número de grupos a encontrar. Cada &lt;em&gt;cluster&lt;/em&gt; está representado por su centroide (centro geométrico del &lt;em&gt;cluster&lt;/em&gt;). Los centroides pueden ser puntos reales o no, en caso de ser un punto real del conjunto de datos se denominan menoides.  En cada iteración del algoritmo dichos centroides se recalculan hasta llegar a un criterio de parada. La figura muestra ejemplos de varias iteraciones de K-Means, en él se ilustra el proceso de actualización de los centroides.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/kmeansEx.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/kmeansEx.png&#34;
-            alt=&#34;Ejemplo ejecución de k-means&#34;
-            title=&#34;Ejemplo ejecución de k-means&#34;
-            sizes=&#34;(min-width: 1120px) 1120px, 100vw&#34;
-            width=&#34;1120&#34;
-            height=&#34;411&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Ejemplo ejecución de k-means&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&#34;descripción-del-algoritmo-a-id-sec-1-3-1-1-name-sec-1-3-1-1-a&#34;&gt;&lt;strong&gt;Descripción del algoritmo&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-1&#34; name=&#34;sec-1-3-1-1&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;descripción-del-algoritmoa-idsec-1-3-1-1-namesec-1-3-1-1a&#34;&gt;&lt;strong&gt;Descripción del algoritmo&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;K-Means se compone de dos fases principales:&lt;/p&gt;
-
 &lt;p&gt;El proceso de inicialización consta de dos pasos. Primeramente se escoge el número de centroides (k) y se asignan aleatoriamente, como muestra la figura (a). Una vez colocados los a cada punto se le asigna su correspondiente &lt;em&gt;cluster&lt;/em&gt; usando la media como medida de proximidad. Posteriormente se  recalculan los centroides con los puntos asignados y se actualizan.&lt;/p&gt;
-
 &lt;p&gt;El proceso iterativo actualiza los centroides en cada iteración mientras los centroides cambien. En cada iteración se calcula la distancia de todos los puntos a los k centroides, formando k grupos y asignando a cada punto su centroide más cercano.&lt;/p&gt;
-
-&lt;h4 id=&#34;asignación-de-clusters-a-los-puntos-a-id-sec-1-3-1-2-name-sec-1-3-1-2-a&#34;&gt;&lt;strong&gt;Asignación de clusters a los puntos&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-2&#34; name=&#34;sec-1-3-1-2&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;h4 id=&#34;asignación-de-clusters-a-los-puntosa-idsec-1-3-1-2-namesec-1-3-1-2a&#34;&gt;&lt;strong&gt;Asignación de clusters a los puntos&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;Para asignar a un punto el &lt;em&gt;cluster&lt;/em&gt; más cercano es necesario usar una medida de proximidad, la más común es la distancia Euclídea (\(L_2\)), aunque no es la única y la elección depende del tipo de datos. Al re-calcular los centroides de cada &lt;em&gt;cluster&lt;/em&gt; se optimiza una &lt;strong&gt;función objetivo&lt;/strong&gt;, por ejemplo minimizar la distancias al cuadrado de cada punto a su &lt;em&gt;cluster&lt;/em&gt; más cercano, como muestra la siguiente ecuación:
 \[SSE = \sum^K_{i=1}\sum_{\textbf{x}\in C_i} dist \left ( c_i, x \right )^2\]
 donde \(C_i\) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, \(c_i\) es el centróide del &lt;em&gt;cluster&lt;/em&gt; \(C_i\) y \(\textbf{x}\) es un punto y \(dist\) es la distancia.&lt;/p&gt;
-
 &lt;p&gt;Con esta función objetivo, se calcula el error de cada punto, es decir, su distancia euclídea al &lt;em&gt;cluster&lt;/em&gt; más cercano, luego se calcula la suma total de los errores al cuadrado. Con este dato, y dados dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; distintos generados por el algoritmo, K-Means escoge aquel con menor error cuadrático.&lt;/p&gt;
-
 &lt;p&gt;Dada esta función objetivo, lo ideal es resolver el problema de optimización y encontrar el óptimo global, sin embargo es computacionalmente imposible de realizar. Por ello se realizan aproximaciones, como &lt;strong&gt;gradiente descendente&lt;/strong&gt;. Esta técnica consiste en escoger una solución inicial y repetir estos dos pasos: Calcular el cambio en la solución que mejor optimizar la función objetivo (Mediante derivadas) y actualizar la solución.&lt;/p&gt;
-
-&lt;h4 id=&#34;elección-de-los-centroides-iniciales-a-id-sec-1-3-1-3-name-sec-1-3-1-3-a&#34;&gt;&lt;strong&gt;Elección de los centroides iniciales&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-3&#34; name=&#34;sec-1-3-1-3&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;h4 id=&#34;elección-de-los-centroides-inicialesa-idsec-1-3-1-3-namesec-1-3-1-3a&#34;&gt;&lt;strong&gt;Elección de los centroides iniciales&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;Elegir los centroides iniciales al azar usualmente no da buenos resultados, ya que el SSE variará notablemente en función de qué centroides iniciales se escojan. Una posible solución consiste en lanzar el algoritmo varias veces con distintos centroides iniciales y escoger los mejores, pero el problema sigue existiendo debido a la naturaleza aleatoria de este proceso. Otra alternativa es estimar seleccionar el primero punto de forma aleatoria, o calcular el centroide usando todos los puntos. Posteriormente, para cada centroide inicial, seleccionar el punto más alejado de cualquiera de los centroides iniciales ya seleccionados. De esta forma está garantizado elegir un conjunto de centroides iniciales aleatorios y separados entre sí.&lt;/p&gt;
-
-&lt;h4 id=&#34;elección-del-k-óptimo-a-id-sec-1-3-1-4-name-sec-1-3-1-4-a&#34;&gt;&lt;strong&gt;Elección del k óptimo&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-4&#34; name=&#34;sec-1-3-1-4&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;h4 id=&#34;elección-del-k-óptimoa-idsec-1-3-1-4-namesec-1-3-1-4a&#34;&gt;&lt;strong&gt;Elección del k óptimo&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;No hay ninguna forma de obtener el &lt;code&gt;k&lt;/code&gt; óptimo salvo prueba y error. Sin embargo, se pueden usar algunas técnicas que suelen dar buenos resultados. Un ejemplo de ello es la técnica del codo. Se lanza el algoritmo para varios &lt;code&gt;k&lt;/code&gt; y se genera un gráfico de cada &lt;code&gt;k&lt;/code&gt; junto a su error. Un buen &lt;code&gt;k&lt;/code&gt; debería ser el que se corresponda con un &lt;a href=&#34;https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/&#34; title=&#34;Mostrar artículos similares usando Clustering con sklearn&#34;&gt;codo&lt;/a&gt; en el gráfico. La figura muestra un ejemplo.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/kmeansElbow.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/kmeansElbow.png&#34;
-            alt=&#34;Método del codo para elección de k&#34;
-            title=&#34;Método del codo para elección de k&#34;
-            sizes=&#34;(min-width: 1039px) 1039px, 100vw&#34;
-            width=&#34;1039&#34;
-            height=&#34;510&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Método del codo para elección de k&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&#34;problemas-de-k-means-a-id-sec-1-3-1-5-name-sec-1-3-1-5-a&#34;&gt;&lt;strong&gt;Problemas de K-Means&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-5&#34; name=&#34;sec-1-3-1-5&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;problemas-de-k-meansa-idsec-1-3-1-5-namesec-1-3-1-5a&#34;&gt;&lt;strong&gt;Problemas de K-Means&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;Los principales problemas de este algoritmo son los &lt;em&gt;outliers&lt;/em&gt;, ya que alteran las media de la distancia bastante. Una posible solución es usar la mediana como medida de proximidad en lugar de la media, en dicho caso es necesario usar la distancia de Manhattan. Una posible solución es eliminar dichos &lt;em&gt;outliers&lt;/em&gt;, pero dependiendo del tipo de datos esto puede ser otro problema en sí mismo. Otra forma es usar menoides en lugar de centroides. Al usar un dato existente como centroide se minimiza el error introducido por los &lt;em&gt;outliers&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Cuando se tratan datos no numéricos, es posible usar k-modes. Esta variación del algoritmo escoge como centroide el valor de moda en el conjunto. El punto fuerte de esta técnica es que es muy robusto a &lt;em&gt;outliers&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h4 id=&#34;pre-y-post-procesamiento-requerido-a-id-sec-1-3-1-6-name-sec-1-3-1-6-a&#34;&gt;&lt;strong&gt;Pre y Post procesamiento requerido&lt;/strong&gt;&lt;a id=&#34;sec-1-3-1-6&#34; name=&#34;sec-1-3-1-6&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;h4 id=&#34;pre-y-post-procesamiento-requeridoa-idsec-1-3-1-6-namesec-1-3-1-6a&#34;&gt;&lt;strong&gt;Pre y Post procesamiento requerido&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;Debido a que K-Means usa distancias, es necesario normalizar los datos para que todas contribuyan en igual medida, de lo contrario los atributos con mayores magnitudes tienen a dominar las decisiones del algoritmo.&lt;/p&gt;
-
 &lt;p&gt;En cuanto al post procesamiento, es posible eliminar &lt;em&gt;clusters&lt;/em&gt; demasiado pequeños, y tratarlos como &lt;em&gt;clusters outliers&lt;/em&gt;, dividir &lt;em&gt;clusters&lt;/em&gt; con un elevado SSE en varios o combinar aquellos con un SSE bajo.&lt;/p&gt;
-
-&lt;h3 id=&#34;dbscan-a-id-sec-1-3-2-name-sec-1-3-2-a&#34;&gt;DBSCAN&lt;a id=&#34;sec-1-3-2&#34; name=&#34;sec-1-3-2&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
-
+&lt;h3 id=&#34;dbscana-idsec-1-3-2-namesec-1-3-2a&#34;&gt;DBSCAN&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
 &lt;p&gt;Este algoritmo es de la familia jerárquica del &lt;em&gt;clustering&lt;/em&gt;, concretamente &lt;strong&gt;basado en densidad&lt;/strong&gt;. Su principal característica es detectar regiones de puntos densas separadas de otras regiones poco densas. Al contrario que K-Means, detecta automáticamente el número de &lt;em&gt;clusters&lt;/em&gt;. Debido a que las regiones poco densas son descartadas, no produce un &lt;em&gt;clustering&lt;/em&gt; completo, es decir, habrá puntos sin clasificar.&lt;/p&gt;
-
 &lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura muestra un ejemplo de cada uno de ellos.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Core Points&lt;/strong&gt;: Corresponden a los puntos dentro de la región densa. Para ser un punto &lt;em&gt;core&lt;/em&gt; debe haber un número mínimo de puntos definidos como parámetro en su vecindario, que viene dado por el radio.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Border Points&lt;/strong&gt;: Aunque no es un &lt;em&gt;core point&lt;/em&gt;, cae en el entorno de un &lt;em&gt;core point&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Noise Points&lt;/strong&gt;: Un punto que no es ni &lt;em&gt;core&lt;/em&gt; ni &lt;em&gt;border&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/dbscanPoints.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/dbscanPoints.png&#34;
-            alt=&#34;Tipos de puntos en DBSCAN&#34;
-            title=&#34;Tipos de puntos en DBSCAN&#34;
-            sizes=&#34;(min-width: 990px) 990px, 100vw&#34;
-            width=&#34;990&#34;
-            height=&#34;770&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Tipos de puntos en DBSCAN&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&#34;descipción-del-algoritmo-a-id-sec-1-3-2-1-name-sec-1-3-2-1-a&#34;&gt;&lt;strong&gt;Descipción del algoritmo&lt;/strong&gt;.&lt;a id=&#34;sec-1-3-2-1&#34; name=&#34;sec-1-3-2-1&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Para cualquier par de puntos &lt;em&gt;core&lt;/em&gt; lo suficientemente cercanos entre sí &amp;#x2013; dentro de un radio definido &amp;#x2013; se colocan en el mismo &lt;em&gt;cluster&lt;/em&gt;. Análogamente, cualquier punto &lt;em&gt;border&lt;/em&gt; cercano a un &lt;em&gt;core&lt;/em&gt; se asigna al mismo &lt;em&gt;cluster&lt;/em&gt; del &lt;em&gt;core&lt;/em&gt;. Los puntos de ruido, se descartan, por ello se indicó en el párrafo anterior que DBSCAN no es un &lt;em&gt;clustering&lt;/em&gt; completo.&lt;/p&gt;
-
-&lt;h4 id=&#34;selección-de-parámetros-a-id-sec-1-3-2-2-name-sec-1-3-2-2-a&#34;&gt;&lt;strong&gt;Selección de parámetros&lt;/strong&gt;.&lt;a id=&#34;sec-1-3-2-2&#34; name=&#34;sec-1-3-2-2&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;descipción-del-algoritmoa-idsec-1-3-2-1-namesec-1-3-2-1a&#34;&gt;&lt;strong&gt;Descipción del algoritmo&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Para cualquier par de puntos &lt;em&gt;core&lt;/em&gt; lo suficientemente cercanos entre sí – dentro de un radio definido – se colocan en el mismo &lt;em&gt;cluster&lt;/em&gt;. Análogamente, cualquier punto &lt;em&gt;border&lt;/em&gt; cercano a un &lt;em&gt;core&lt;/em&gt; se asigna al mismo &lt;em&gt;cluster&lt;/em&gt; del &lt;em&gt;core&lt;/em&gt;. Los puntos de ruido, se descartan, por ello se indicó en el párrafo anterior que DBSCAN no es un &lt;em&gt;clustering&lt;/em&gt; completo.&lt;/p&gt;
+&lt;h4 id=&#34;selección-de-parámetrosa-idsec-1-3-2-2-namesec-1-3-2-2a&#34;&gt;&lt;strong&gt;Selección de parámetros&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;DBSCAN necesita de dos parámetros antes de ser ejecutado, &lt;em&gt;MinPts&lt;/em&gt; y &lt;em&gt;Eps&lt;/em&gt;, definiendo el número mínimo de puntos necesarios para considerar a un punto como &lt;em&gt;core&lt;/em&gt; y el radio, respectivamente. Lo más usual es observar cómo evoluciona la distancia de un punto a sus k-ésismos vecinos más cercanos (k-distancia). Para los puntos que forman parte de un &lt;em&gt;cluster&lt;/em&gt;, el valor k-distancia será pequeño si &lt;em&gt;k&lt;/em&gt; no es mayor que el tamaño del &lt;em&gt;cluster&lt;/em&gt;. Para los puntos que no pertenecen al &lt;em&gt;cluster&lt;/em&gt;, la k-distancia será elevada. Por tanto, de forma visual es posible determinar el valor del parámetro &lt;em&gt;Eps&lt;/em&gt;, como muestra la figura, y tomando el valor de &lt;code&gt;k&lt;/code&gt; como &lt;em&gt;MinPts&lt;/em&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/dbscanEps.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/dbscanEps.png&#34;
-            alt=&#34;Elección de Eps y MinPts&#34;
-            title=&#34;Elección de Eps y MinPts&#34;
-            sizes=&#34;(min-width: 453px) 453px, 100vw&#34;
-            width=&#34;453&#34;
-            height=&#34;364&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Elección de Eps y MinPts&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&#34;pros-y-contras-de-dbscan-a-id-sec-1-3-2-3-name-sec-1-3-2-3-a&#34;&gt;&lt;strong&gt;Pros y Contras de DBSCAN&lt;/strong&gt;.&lt;a id=&#34;sec-1-3-2-3&#34; name=&#34;sec-1-3-2-3&#34;&gt;&lt;/a&gt;&lt;/h4&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;pros-y-contras-de-dbscana-idsec-1-3-2-3-namesec-1-3-2-3a&#34;&gt;&lt;strong&gt;Pros y Contras de DBSCAN&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
 &lt;p&gt;Que DBSCAN al use una aproximación basada en densidad le proporciona resistencia al ruido y es capaz de trabajar con &lt;em&gt;clusters&lt;/em&gt; de tamaños y formas arbitrarias, por tanto puede encontrar &lt;em&gt;clusters&lt;/em&gt; que K-Means no podría. Sin embargo, DBSCAN encuentra dificultades al trabajar con &lt;em&gt;clusters&lt;/em&gt; de distintas densidades. De igual manera, no funciona bien cuando los datos son de gran dimensionalidad, ya que medir la densidad en espacios de gran dimensión es difícil.&lt;/p&gt;
-
-&lt;h2 id=&#34;evaluación-de-resultados-a-id-sec-1-4-name-sec-1-4-a&#34;&gt;Evaluación de resultados&lt;a id=&#34;sec-1-4&#34; name=&#34;sec-1-4&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Para la evaluación del resultado de un &lt;em&gt;clustering&lt;/em&gt; es necesario tener en cuenta varios aspectos, entre ellos:
-1.  Determinar la &lt;strong&gt;tendencia del *clustering&lt;/strong&gt;*, es decir, distinguir si realmente existe una estructura no aleatoria en los datos.
-2.  Determinar el número correcto de &lt;em&gt;clusters&lt;/em&gt;.
-3.  Evaluar si realmente el resultado del &lt;em&gt;clustering&lt;/em&gt; corresponde con los patrones de los datos, sin referenciar a información externa (&lt;strong&gt;Criterios internos&lt;/strong&gt;).
-4.  Comparar los resultados del &lt;em&gt;clustering&lt;/em&gt; usando información externa, como etiquetas de las clases (&lt;strong&gt;criterios externos&lt;/strong&gt;).
-5.  Comprar dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; y determinar cual es mejor.&lt;/p&gt;
-
+&lt;h2 id=&#34;evaluación-de-resultadosa-idsec-1-4-namesec-1-4a&#34;&gt;Evaluación de resultados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Para la evaluación del resultado de un &lt;em&gt;clustering&lt;/em&gt; es necesario tener en cuenta varios aspectos, entre ellos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Determinar la &lt;strong&gt;tendencia del &lt;em&gt;clustering&lt;/em&gt;&lt;/strong&gt;, es decir, distinguir si realmente existe una estructura no aleatoria en los datos.&lt;/li&gt;
+&lt;li&gt;Determinar el número correcto de &lt;em&gt;clusters&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Evaluar si realmente el resultado del &lt;em&gt;clustering&lt;/em&gt; corresponde con los patrones de los datos, sin referenciar a información externa (&lt;strong&gt;Criterios internos&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Comparar los resultados del &lt;em&gt;clustering&lt;/em&gt; usando información externa, como etiquetas de las clases (&lt;strong&gt;criterios externos&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Comprar dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; y determinar cual es mejor.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;Debido a que las técnicas 1,2 y 3 no usan información externa, son técnicas &lt;strong&gt;no supervisadas&lt;/strong&gt;, la cuarta sin embargo necesita información externa, y por tanto es &lt;strong&gt;supervisada&lt;/strong&gt;. La quita puede considerarse un híbrido, ya que puede realizarse de forma supervisada o no supervisada.&lt;/p&gt;
-
 &lt;p&gt;Las &lt;strong&gt;técnicas no supervisadas&lt;/strong&gt; tratan me medir si la estructura del &lt;em&gt;clustering&lt;/em&gt; es adecuada sin información externa. Un ejemplo de ello es mediante el uso de SSE. Usando esta medida es posible definir la &lt;strong&gt;cohesión&lt;/strong&gt; del &lt;em&gt;cluster&lt;/em&gt;, la cual determina cómo están de juntos los puntos del &lt;em&gt;cluster&lt;/em&gt; así como la &lt;strong&gt;separación&lt;/strong&gt;, que mide cómo de separado está un &lt;em&gt;cluster&lt;/em&gt; con respecto a otro. Para realizar estas mediciones pueden usarse o no los centroides, como muestra la figura.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustEvalUns.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustEvalUns.png&#34;
-            alt=&#34;Formas de medir la cohesión y separación. *Créd. J.C Cubero*&#34;
-            title=&#34;Formas de medir la cohesión y separación. *Créd. J.C Cubero*&#34;
-            sizes=&#34;(min-width: 993px) 993px, 100vw&#34;
-            width=&#34;993&#34;
-            height=&#34;603&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Formas de medir la cohesión y separación. *Créd. J.C Cubero*&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En cuanto a las &lt;strong&gt;técnicas supervisadas&lt;/strong&gt;, usando información externa, como por ejemplo datos etiquetados, mide hasta qué punto el &lt;em&gt;clustering&lt;/em&gt; consiguió descubrir la estructura de los datos. Un ejemplo de este tipo de técnica es la &lt;strong&gt;entropía&lt;/strong&gt;, la cual mide cómo de bien coinciden las etiquetas de los &lt;em&gt;clusters&lt;/em&gt; con unos datos etiquetados previamente.&lt;/p&gt;
-
 &lt;p&gt;Por último, comparar dos conjuntos de &lt;em&gt;clusterings&lt;/em&gt; puede hacerse de forma supervisada o no supervisada. Por ejemplo, lanzar dos veces K-Means y compararlos usando SSE o entropía.&lt;/p&gt;
-
 &lt;h1 id=&#34;erratas&#34;&gt;Erratas&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Gracias a &lt;a href=&#34;https://gitlab.com/josealberto4444&#34; title=&#34;Enlace al gitlab de JoseAlberto4444&#34;&gt;@josealberto4444&lt;/a&gt; por resaltar que faltaba la propiedad de no negatividad en las distancias.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;bibliografía-a-id-sec-5-name-sec-5-a&#34;&gt;Bibliografía &lt;a id=&#34;sec-5&#34; name=&#34;sec-5&#34;&gt;&lt;/a&gt;&lt;/h1&gt;
-
+&lt;h1 id=&#34;bibliografía-a-idsec-5-namesec-5a&#34;&gt;Bibliografía &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;

@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Php on El Baúl del programador</title>
+        <title>php on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/php/</link>
-        <description>Recent content in Php on El Baúl del programador</description>
+        <description>Recent content in php on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Thu, 02 Jun 2016 14:52:24 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/php/</link>
-            <title>Php on El Baúl del programador</title>
+            <title>php on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,26 +21,19 @@
             <pubDate>Thu, 02 Jun 2016 14:52:24 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/variables-php-depurar-print_r-var_dump/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/como-mostrar-variables-php-depurar-print_r-var_dump.png&#34;&gt;&lt;img sizes=&#34;(min-width: 702px) 702px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/como-mostrar-variables-php-depurar-print_r-var_dump.png&#34; title=&#34;Cómo Mostrar Información De Variables PHP Depurando&#34; alt=&#34;Cómo Mostrar Información De Variables PHP Depurando&#34; width=&#34;702px&#34; height=&#34;355px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
-&lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario Plummer, que preguntaba &lt;a href=&#34;http://stackoverflow.com/questions/19816438/make-var-dump-look-pretty&#34; target=&#34;_blank&#34; title=&#34;Make var_dump look pretty&#34;&gt;Make var_dump look pretty&lt;/a&gt;. La respuesta es del usuario AbraCadaver&lt;/p&gt;
+&lt;p&gt;El siguiente artículo es una traducción de una pregunta en &lt;strong&gt;StackOverflow&lt;/strong&gt; del usuario Plummer, que preguntaba &lt;!-- raw HTML omitted --&gt;Make var_dump look pretty&lt;!-- raw HTML omitted --&gt;. La respuesta es del usuario AbraCadaver&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Desarrollando una página en &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34; title=&#34;Crear Shortcodes en Wordpress&#34;&gt;PHP&lt;/a&gt; para una asignatura de la facultad estuve buscando formas de ver el contenido de las Variables en una página php. En concreto quería mostrar todas las variables definidas, pero podríamos mostrar cualquier variable. El comando en cuestión es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;highlight_string(&amp;#34;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(get_defined_vars(), true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Podemos crear una función para reutilizar este comando con la variable que queramos, por ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function pretty_print($var)
 {
     highlight_string(&amp;#34;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n\&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$debug&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; . var_export(&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;$var&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;, true) . &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;&amp;#34;);
 }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El resultado es algo así:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El resultado es algo así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;pretty_print($_SESSION);
 // Salida
 &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
@@ -52,13 +44,10 @@
   &amp;#39;is_admin&amp;#39; =&amp;gt; true,
 );
 ?&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Espero que os sea de utilidad&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Espero que os sea de utilidad&lt;/p&gt;
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Make var_dump look pretty | &lt;a href=&#34;http://stackoverflow.com/a/19816742/1612432&#34; title=&#34;Make var_dump look pretty&#34; target=&#34;_blank&#34;&gt;stackoverlow.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make var_dump look pretty | &lt;!-- raw HTML omitted --&gt;stackoverlow.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -68,35 +57,30 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/colocar-los-botones-sociales-de-jetpack-al-principio-del-articulo-en-wordpress/</guid>
-            <description>&lt;p&gt;A día de hoy, el famoso plugin para wordpress &lt;strong&gt;&lt;em&gt;jetpack&lt;/em&gt;&lt;/strong&gt; no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;p&gt;A día de hoy, el famoso plugin para wordpress &lt;em&gt;&lt;strong&gt;jetpack&lt;/strong&gt;&lt;/em&gt; no soporta colocar de una forma fácil los botones sociales al principio del artículo. Así que buscando un poco por la red encontré una forma de hacerlo en el foro de WordPress que menciono en las referencias y que veremos a continuación.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;colocar-los-botones-sociales-al-principio-de-los-artículos&#34;&gt;Colocar los botones sociales al principio de los artículos&lt;/h1&gt;
-
-&lt;p&gt;El primer paso es editar el archivo &lt;strong&gt;&lt;em&gt;modules/sharedaddy/sharing-service.php&lt;/em&gt;&lt;/strong&gt; del plugin y eliminar o comentar las últimas líneas, que deberían ser:&lt;/p&gt;
+&lt;p&gt;El primer paso es editar el archivo &lt;em&gt;&lt;strong&gt;modules/sharedaddy/sharing-service.php&lt;/strong&gt;&lt;/em&gt; del plugin y eliminar o comentar las últimas líneas, que deberían ser:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;the_content&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
-add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.&lt;/p&gt;
+add_filter( &amp;#39;the_excerpt&amp;#39;, &amp;#39;sharing_display&amp;#39;, 19 );
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto evitamos que el plugin muestre los botones en el contenido del artículo y en la página principal.&lt;/p&gt;
 &lt;p&gt;Ahora depende de nosotros colocar los botones en el lugar que deseemos, llamando a la función&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;sharing_display()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama &lt;strong&gt;&lt;em&gt;content-single.php&lt;/em&gt;&lt;/strong&gt;. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;sharing_display()
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el caso de quererlos al principio del artículo, hay que buscar el fichero que se encargue de generar el contenido del artículo en nuestra plantilla. Esto varia según el tema que estemos usando, pero normalmente el nombre del archivo suele ser descriptivo. En mi caso el fichero se llama &lt;em&gt;&lt;strong&gt;content-single.php&lt;/strong&gt;&lt;/em&gt;. Para colocar los botones sociales al lado del botón bitácoras por ejemplo, el código es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;agregador_bitacoras_com&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;mini&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  &lt;span class=&#34;k&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;sharing_display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.&lt;/p&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hay que jugar con el contenido del archivo para colocarlo en el lugar deseado.&lt;/p&gt;
 &lt;h1 id=&#34;mostrar-los-botones-sociales-al-final-del-artículo-en-la-página-principal&#34;&gt;Mostrar los botones sociales al final del artículo en la página principal&lt;/h1&gt;
-
-&lt;p&gt;En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado &lt;strong&gt;&lt;em&gt;loop.php&lt;/em&gt;&lt;/strong&gt;, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace &lt;strong&gt;Seguir leyendo&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;En esta ocasión debemos buscar el archivo que se encarge de iterar sobre todos los artículos, ya que es aquí donde se genera la página principal. Como antes, por lo general suele existir un archivo llamado &lt;em&gt;&lt;strong&gt;loop.php&lt;/strong&gt;&lt;/em&gt;, pero este no era mi caso. Sea cual sea el nombre del archivo, en el interior hemos de encontrar el código encargado de generar el contenido del artículo para la página principal (Que suele estar resumido). Yo he decidido colocar los botones sociales debajo del enlace &lt;strong&gt;Seguir leyendo&lt;/strong&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;the_content( __( &amp;#39;Seguir leyendo &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;meta-nav&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;ni&#34;&gt;&amp;amp;rarr;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&amp;#39;);
-echo sharing_display();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.&lt;/p&gt;
+echo sharing_display();
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si fuera necesario usamos estilos CSS para colocar los botones donde deseemos y listo.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Foro WordPress&lt;/em&gt; »» &lt;a href=&#34;http://wordpress.org/support/topic/plugin-sharedaddy-adding-this-manually?replies=26#post-2293386&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Foro WordPress&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -106,37 +90,18 @@ echo sharing_display();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-anadir-contenido-por-defecto-a-los-articulos-en-wordpress/</guid>
-            <description>
-
-&lt;figure&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2012/05/Screenshot-05302012-111511-AM1.png&#34;
-            alt=&#34;Como añádir contenido por defecto en wordpress&#34;
-            title=&#34;Como añádir contenido por defecto en wordpress&#34;
-            sizes=&#34;(min-width: 123px) 123px, 100vw&#34;
-            width=&#34;123&#34;
-            height=&#34;116&#34;&gt;
-          &lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Si escribes en un blog, seguramente en cada artículo repites algunos textos, como añadir shortcodes que usas habitualmente, pedir a los lectores que se suscriban al &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;feed del blog&lt;/a&gt;, que te sigan en las redes sociales etcétera. En esos casos es útil que para cada nuevo artículo creado, se inserte un texto por defecto.&lt;/p&gt;
-
 &lt;p&gt;Es bastante sencillo lograr esta funcionalidad, en el archivo &lt;em&gt;functions.php&lt;/em&gt; de tu tema añade:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;add_filter( &amp;#39;default_content&amp;#39;, &amp;#39;my_default_content&amp;#39; );
 function my_default_content( $content ) {
    $content = &amp;#34;AQUI TU CONTENIDO POR DEFECTO&amp;#34;;
  return $content;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
-
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así de simple, ahora cada vez que crees un nuevo artículo, tendrá un contenido por defecto asignado.&lt;/p&gt;
 &lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;How to Add Default Content in Your WordPress Post Editor&lt;/em&gt; »» &lt;a href=&#34;http://www.wpbeginner.com/wp-tutorials/how-to-add-default-content-in-your-wordpress-post-editor/&#34; target=&#34;_blank&#34;&gt;wpbeginner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to Add Default Content in Your WordPress Post Editor&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;wpbeginner&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -148,8 +113,7 @@ function my_default_content( $content ) {
             
             <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/</guid>
             <description>&lt;p&gt;Es bastante simple:&lt;/p&gt;
-
-&lt;p&gt;Buscamos el archivo &lt;strong&gt;&lt;em&gt;function.php&lt;/em&gt;&lt;/strong&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
+&lt;p&gt;Buscamos el archivo &lt;em&gt;&lt;strong&gt;function.php&lt;/strong&gt;&lt;/em&gt; de nuestro tema instalado y pegamos el siguiente código php.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;c1&#34;&gt;// Short code
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;Nombre_de_nuestro_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$atts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$content&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
@@ -157,12 +121,10 @@ function my_default_content( $content ) {
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;nx&#34;&gt;add_shortcode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;Nombre_de_nuestro_shortcode&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
 &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
-
-&lt;p&gt;Fuente: &lt;a href=&#34;http://www.wpyag.com/wordpress-tips-and-tricks/how-to-create-wordpress-shortcode-for-adsense/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;wpyag&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, podemos agregar todo el código que hemos escrito dentro de la función en las entradas que queramos escribiendo el siguiente shortcode:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nombre_de_nuestro_shortcode&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así de sencillo es crear shortcodes en WordPress.&lt;/p&gt;
+&lt;p&gt;Fuente: &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;wpyag&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 </description>
         </item>
         
@@ -172,37 +134,28 @@ function my_default_content( $content ) {
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/</guid>
-            <description>&lt;p&gt;Ya se vió cómo añadir &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress-2/&#34; target=&#34;_blank&#34;&gt;shortcodes simples&lt;/a&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
-
-&lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo&amp;nbsp;&lt;strong&gt;functions.php .&amp;nbsp;&lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado &lt;em&gt;[foo]&lt;/em&gt; que añadirá al artículo el texto&amp;nbsp;&lt;strong&gt;&amp;#8220;Esto es una prueba&amp;#8221;.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;functions-php&#34;&gt;functions.php&lt;/h1&gt;
-
+            <description>&lt;p&gt;Ya se vió cómo añadir &lt;!-- raw HTML omitted --&gt;shortcodes simples&lt;!-- raw HTML omitted --&gt;, esta vez se explicará con un poco más de profundidad.&lt;/p&gt;
+&lt;p&gt;Primero, un shortcode no es más que un conjunto de funciones que crean un código macro para usar dentro del contenido de un artículo. Es necesario añadir dicho shortcode al archivo &lt;strong&gt;functions.php . &lt;/strong&gt; Como primer ejemplo sencillo, se creará un shortcode llamado &lt;em&gt;[foo]&lt;/em&gt; que añadirá al artículo el texto &lt;strong&gt;“Esto es una prueba”.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;functionsphp&#34;&gt;functions.php&lt;/h1&gt;
 &lt;p&gt;Este archivo está en el directorio del tema. Actua como un plugin, y, si existe en el directorio del tema, se carga automáticamente durante la inicialización de WordPress. Los pasos a seguir para crear el shortcode son los siguientes:&lt;/p&gt;
-
 &lt;h2 id=&#34;crea-la-función-en-wordpress&#34;&gt;Crea la función en wordpress&lt;/h2&gt;
-
-&lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:
-&lt;!--ad--&gt;&lt;/p&gt;
+&lt;p&gt;Abre el fichero con tu editor favorito y añade lo siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;//[foo]
 function foo_demo( $atts ){
  return &amp;#34;Esto es una prueba.&amp;#34;;
 }
-add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
-
+add_shortcode( &amp;#39;foo&amp;#39;, &amp;#39;foo_demo&amp;#39; );
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Guarda el fichero y ciérralo.&lt;/p&gt;
 &lt;h2 id=&#34;pruébalo&#34;&gt;Pruébalo&lt;/h2&gt;
-
 &lt;p&gt;Edita o crea un artículo y añade el shortcode:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;foo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Guárdalo y haz clic en publicar o vista previa.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;foo&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Guárdalo y haz clic en publicar o vista previa.&lt;/p&gt;
 &lt;h1 id=&#34;cómo-pasar-parámetros-o-atributos-a-un-shortcode&#34;&gt;Cómo pasar parámetros o atributos a un shortcode&lt;/h1&gt;
-
 &lt;p&gt;La API del shortcode facilita mucho la tarea para poder añadirle parámetros como estos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;rap&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Nach&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Rock&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Linkin Park&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Añade lo siguiente a tu archivo&amp;nbsp;&lt;strong&gt;functions.php :&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;music &lt;span class=&#34;nv&#34;&gt;genero&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Rock&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;autor&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Linkin Park&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Añade lo siguiente a tu archivo &lt;strong&gt;functions.php : &lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;// shortcode [music]
 function show_music( $atts ){
    $music_details=&amp;#34;&amp;#34;;
@@ -223,13 +176,11 @@ function show_music( $atts ){
 }
 //add our shortcode music
 add_shortcode(&amp;#39;music&amp;#39;, &amp;#39;show_music&amp;#39;);
-add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
-
+add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, ya puedes usar este shortcode.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;a href=&#34;http://www.cyberciti.biz/faq/wordpress-add-a-shortcode-to-theme-template/&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;cyberciti&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -242,65 +193,37 @@ add_action( &amp;#39;init&amp;#39;, &amp;#39;register_shortcodes&amp;#39;);&lt;/
             <description>&lt;blockquote&gt;
 &lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
-
-&lt;figure&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://img.youtube.com/vi/eYoDqz29qSA/0.jpg&#34;
-            alt=&#34;Como crear un frontcontroller PHP&#34;
-            title=&#34;Como crear un frontcontroller PHP&#34;
-            sizes=&#34;(min-width: 480px) 480px, 100vw&#34;
-            width=&#34;480&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Seguro que a algunos os habrá gustado esta decisión porque pensáis que &lt;strong&gt;a veces es mejor no usar ningún framework&lt;/strong&gt;, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como &lt;a href=&#34;http://www.slimframework.com/&#34; title=&#34;Slim Framework&#34;&gt;Slim&lt;/a&gt; más de uno comenzará a plantearse esta cuestión, ¿verdad?&lt;/p&gt;
-
 &lt;p&gt;En todo caso, nosotros levantamos nuestra app desde cero con estas ideas:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Definimos la estructura de carpetas &lt;strong&gt;pensando en CRUD&lt;/strong&gt;, de acuerdo a los objetos que tenemos que gestionar, y a las operaciones que se llevan a cabo sobre dichos objetos.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Separamos la lógica&lt;/strong&gt; PHP de la lógica de presentación (HTML, CSS y JS).&lt;/li&gt;
 &lt;li&gt;Implementamos el patrón de diseño &lt;strong&gt;Singleton&lt;/strong&gt; en la clase &lt;code&gt;People&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Por cierto, te recuerdo que el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; está disponible &lt;a href=&#34;https://github.com/programarivm/phpguay/tree/master/agenda&#34; title=&#34;AgendaPHPGuay disponible en GitHub&#34;&gt;en este repositorio de GitHub&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Finalmente &lt;strong&gt;propusimos a los alumnos que mejoraran la seguridad de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; implementando el patrón de diseño de software &lt;a href=&#34;http://en.wikipedia.org/wiki/Front_Controller_pattern&#34; title=&#34;Front Controller&#34;&gt;Front Controller&lt;/a&gt;&lt;/strong&gt;. Y los que teníais un nivel de programación intermedio comentabais que esta propuesta empezaba a complicarse bastante. Pues bien amig@s, que no cunda el pánico, hoy voy a explicar qué pasos hay que seguir exactamente para poner un Front Controller en la app.&lt;/p&gt;
-
 &lt;h1 id=&#34;qué-es-front-controller&#34;&gt;¿Qué es Front Controller?&lt;/h1&gt;
-
 &lt;p&gt;Front Controller es un patrón de diseño de software muy utilizado en aplicaciones web que consiste en &lt;strong&gt;definir un único punto de acceso para todas las peticiones HTTP&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;A diferencia de las aplicaciones web clásicas, por así decir, donde el usuario podía ejecutar directamente cualquier script referenciándolo directamente en la barra de direcciones de su navegador, &lt;strong&gt;con Front Controller solo se accede a un punto central único: el famoso archivo index.php&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;El resto de archivos permanece inaccesible a los usuarios, a excepción de los assets, por supuesto, es decir, las imágenes, los archivos CSS y los archivos JavaScript.&lt;/p&gt;
-
 &lt;p&gt;Front Controller aporta por tanto una capa de seguridad, y mejora también el mantenimiento de la aplicación porque permite definir en un solo punto toda aquella lógica que de otro modo estaría esparcida en varios archivos diferentes. Esta es la lógica de inicialización o arranque de la app (bootstrap logic).&lt;/p&gt;
-
 &lt;h1 id=&#34;cómo-se-implementa-front-controller&#34;&gt;¿Cómo se implementa Front Controller?&lt;/h1&gt;
-
 &lt;p&gt;Implementar Front Controller es sencillo. Por un lado, primero &lt;strong&gt;tenemos que crear una carpeta llamada &lt;code&gt;public&lt;/code&gt; en la carpeta raíz de nuestra aplicación&lt;/strong&gt;. Aquí ponemos los archivos que pueden ver los usuarios de Internet, por así decirlo. O dicho de otra forma, los archivos que están en &lt;code&gt;public&lt;/code&gt; son los únicos accesibles por los usuarios desde su navegador web. Estos archivos son los assets y el mismo &lt;code&gt;index.php&lt;/code&gt;. A modo de ejemplo &lt;strong&gt;puedes echar un vistazo a &lt;a href=&#34;http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application&#34; title=&#34;Estructura de directorios de una app MVC&#34;&gt;esta estructura de directorios&lt;/a&gt; recomendada por Slim&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Luego, por otro lado, tienes que asegurarte que &lt;strong&gt;tu servidor web canaliza todas las peticiones hacia tu archivo &lt;code&gt;index.php&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;En Apache:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;RewriteEngine On
 RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-f
-RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
+RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
    try_files   &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt;/ /index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -309,43 +232,23 @@ RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;spa
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/</guid>
-            <description>&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/02/nginx-logo.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/2013/02/nginx-logo.png&#34;
-            alt=&#34;instalar y configurar nginx&#34;
-            title=&#34;instalar y configurar nginx&#34;
-            sizes=&#34;(min-width: 350px) 350px, 100vw&#34;
-            width=&#34;350&#34;
-            height=&#34;90&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Nginx (Pronunciado engine-x) es un servidor &lt;a href=&#34;https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/&#34;&gt;HTTP&lt;/a&gt; de alto rendimiento, gratuito, software libre y &lt;a href=&#34;https://es.wikipedia.org/wiki/Proxy#Reverse_Proxy_.2F_Proxy_inverso&#34; target=&#34;_blank&#34;&gt;proxy inverso&lt;/a&gt;, así como un servidor proxy &lt;a href=&#34;https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol&#34; target=&#34;_blank&#34;&gt;IMAP&lt;/a&gt;/&lt;a href=&#34;https://es.wikipedia.org/wiki/Post_Office_Protocol&#34; target=&#34;_blank&#34;&gt;POP3&lt;/a&gt;. Desarrollado por Igor Sysoev. Acualmente el &lt;a href=&#34;http://news.netcraft.com/archives/2012/01/03/january-2012-web-server-survey.html&#34; target=&#34;_blank&#34;&gt;12.18%&lt;/a&gt; de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Nginx (Pronunciado engine-x) es un servidor &lt;a href=&#34;https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/&#34;&gt;HTTP&lt;/a&gt; de alto rendimiento, gratuito, software libre y &lt;!-- raw HTML omitted --&gt;proxy inverso&lt;!-- raw HTML omitted --&gt;, así como un servidor proxy &lt;!-- raw HTML omitted --&gt;IMAP&lt;!-- raw HTML omitted --&gt;/&lt;!-- raw HTML omitted --&gt;POP3&lt;!-- raw HTML omitted --&gt;. Desarrollado por Igor Sysoev. Acualmente el &lt;!-- raw HTML omitted --&gt;12.18%&lt;!-- raw HTML omitted --&gt; de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h1&gt;
-
 &lt;p&gt;Antes de poder compilar nginx, es necesario instalar unos cuantos paquetes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# apt-get install build-essential libssl-dev libpcre3-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El paquete &lt;code&gt;build-essential&lt;/code&gt; contiene las herramientas básicas para compilar programas desde código fuente, las otras dos librerías son necesarias para nginx durante el proceso de compilación.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install build-essential libssl-dev libpcre3-dev&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El paquete &lt;code&gt;build-essential&lt;/code&gt; contiene las herramientas básicas para compilar programas desde código fuente, las otras dos librerías son necesarias para nginx durante el proceso de compilación.&lt;/p&gt;
 &lt;h1 id=&#34;descargar-y-compilar-nginx&#34;&gt;Descargar y compilar Nginx&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget http://nginx.org/download/nginx-1.2.6.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Descomprimimos el fichero:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ tar zxvf nginx-1.2.6.tar.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez descomprimido, entramos en el directorio y compilamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget http://nginx.org/download/nginx-1.2.6.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Descomprimimos el fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ tar zxvf nginx-1.2.6.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez descomprimido, entramos en el directorio y compilamos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; nginx-1.2.6
 ~/nginx-1.2.6$ ./configure --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module
 ~/nginx-1.2.6$ make
-~/nginx-1.2.6$ sudo make install&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para consultar qué modulos hay disponibles hay que visitar la &lt;a href=&#34;http://wiki.nginx.org/Modules&#34; target=&#34;_blank&#34;&gt;pagina oficial de Nginx&lt;/a&gt; y decidir cuales queremos habilitar. Con la opción &lt;code&gt;--sbin-path=/usr/local/sbin&lt;/code&gt; establecemos la ruta en la que se instalará el ejecutable. Tras compilar se mostrará información de la localización de los distintos ficheros:&lt;/p&gt;
+~/nginx-1.2.6$ sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para consultar qué modulos hay disponibles hay que visitar la &lt;!-- raw HTML omitted --&gt;pagina oficial de Nginx&lt;!-- raw HTML omitted --&gt; y decidir cuales queremos habilitar. Con la opción &lt;code&gt;--sbin-path=/usr/local/sbin&lt;/code&gt; establecemos la ruta en la que se instalará el ejecutable. Tras compilar se mostrará información de la localización de los distintos ficheros:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nginx path prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx&amp;#34;&lt;/span&gt;
 nginx binary file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/sbin&amp;#34;&lt;/span&gt;
 nginx configuration prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/conf&amp;#34;&lt;/span&gt;
@@ -357,43 +260,33 @@ nginx http client request body temporary files: &lt;span class=&#34;s2&#34;&gt;&
 nginx http proxy temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;proxy_temp&amp;#34;&lt;/span&gt;
 nginx http fastcgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;fastcgi_temp&amp;#34;&lt;/span&gt;
 nginx http uwsgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;uwsgi_temp&amp;#34;&lt;/span&gt;
-nginx http scgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es necesario descargar un script que permita detener, reiniciar e iniciar nginx, podemos descargar el siguiente:&lt;/p&gt;
+nginx http scgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es necesario descargar un script que permita detener, reiniciar e iniciar nginx, podemos descargar el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
 $ sudo mv nginx /etc/init.d/nginx
 $ sudo chmod +x /etc/init.d/nginx
-$ sudo chown root:root /etc/init.d/nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
-
+$ sudo chown root:root /etc/init.d/nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
 &lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# update-rc.d nginx defaults&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora estamos en condiciones de ejecutar nginx:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/nginx start
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Starting Nginx Server...:.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones &lt;strong&gt;localhost&lt;/strong&gt;. Si todo ha ido bien deberíamos ver esta pantalla:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/instalar-nginx-en-debian-1024x818.png&#34; alt=&#34;instalar nginx en debian&#34; width=&#34;1024px&#34; height=&#34;818px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# update-rc.d nginx defaults&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora estamos en condiciones de ejecutar nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/nginx start&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Starting Nginx Server...:.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones &lt;strong&gt;localhost&lt;/strong&gt;. Si todo ha ido bien deberíamos ver esta pantalla:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Usando firebug se puede comprobar que efectivamente se está corriendo un servidor nginx:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 641px) 641px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/02/instalar-nginx-en-debian2.png&#34; alt=&#34;instalar nginx en debian2&#34; width=&#34;641px&#34; height=&#34;150px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;modificando-la-configuración-por-defecto&#34;&gt;Modificando la configuración por defecto&lt;/h1&gt;
-
 &lt;p&gt;Sustituimos la configuración por defecto por esta:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-worker_processes  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    worker_connections  &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
 http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -413,64 +306,60 @@ http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
     sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    keepalive_timeout  &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     index              index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
     server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        listen       &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
  access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
+        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
                 deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
                 access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
                 log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Se ha cambiado el usuario del servidor de “*nobody*” a “*www-data*”, éste último es el usuario por defecto para servidores webs.&lt;/li&gt;
+&lt;li&gt;Se ha cambiado el usuario del servidor de “&lt;em&gt;nobody&lt;/em&gt;” a “&lt;em&gt;www-data&lt;/em&gt;”, éste último es el usuario por defecto para servidores webs.&lt;/li&gt;
 &lt;li&gt;Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.&lt;/li&gt;
 &lt;li&gt;Se habilita la compresión gzip para reducir el ancho de banda consumido.&lt;/li&gt;
 &lt;li&gt;Se define el formato que tendrán los ficheros de log.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Cambiamos los permisos de los ficheros que contienen la web y reiniciamos nginx para aplicar los cambios:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo chown -R www-data:www-data html/
-$ sudo service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo service nginx start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;instalar-php5-fpm&#34;&gt;Instalar php5-fpm&lt;/h1&gt;
-
+$ sudo service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo service nginx start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;instalar-php5-fpm&#34;&gt;Instalar php5-fpm&lt;/h1&gt;
 &lt;p&gt;En lugar de instalar php5, instalaremos php5-fpm (&lt;em&gt;FastCGI Process Manager&lt;/em&gt;), una implementación alternativa con algunas características adicionales.&lt;/p&gt;
-
 &lt;p&gt;En ubuntu, ejecutamamos el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# apt-get install php5-fpm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En debian agregamos el repositorio al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install php5-fpm&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En debian agregamos el repositorio al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;deb http://packages.dotdeb.org stable all
-deb-src http://packages.dotdeb.org stable all&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
+deb-src http://packages.dotdeb.org stable all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get update
 wget http://www.dotdeb.org/dotdeb.gpg
-cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Instalamos php:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo iniciamos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# /etc/init.d/php5-fpm start&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la configuración:&lt;/p&gt;
+cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instalamos php:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo iniciamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/php5-fpm start&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la configuración:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-worker_processes  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
 events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-    worker_connections  &lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
 http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
@@ -490,22 +379,22 @@ http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
     access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
     sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-    keepalive_timeout  &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     index              index.php index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
     upstream php &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        server &lt;span class=&#34;m&#34;&gt;127&lt;/span&gt;.0.0.1:9000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server 127.0.0.1:9000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
     server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-        listen       &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
   access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 
-        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
+        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
                 deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
                 access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
                 log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -518,33 +407,29 @@ http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
                 fastcgi_pass php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los principales cambios realizados son los siguientes:&lt;/p&gt;
-
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los principales cambios realizados son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Se ha añadido &lt;code&gt;index.php&lt;/code&gt; antes de &lt;code&gt;index.html index.htm&lt;/code&gt; para dar prioridad a los archivos php.&lt;/li&gt;
 &lt;li&gt;El bloque &lt;code&gt;upstream php&lt;/code&gt; que apunta a &lt;code&gt;PHP-FPM&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Un manejador para archivos php &lt;code&gt;location ~ \.php$&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Para terminar, añadimos los siguientes parámetros al final del archivo &lt;em&gt;/usr/local/nginx/fastcgi_params&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fastcgi_connect_timeout &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-fastcgi_send_timeout &lt;span class=&#34;m&#34;&gt;180&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-fastcgi_read_timeout &lt;span class=&#34;m&#34;&gt;180&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fastcgi_connect_timeout 60&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_send_timeout 180&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_read_timeout 180&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 fastcgi_buffer_size 128k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 fastcgi_buffers &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 fastcgi_busy_buffers_size 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
 fastcgi_temp_file_write_size 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para aplicar los cambios, reiniciamos nginx:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# service nginx restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutando archivos php.&lt;/p&gt;
-
+fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para aplicar los cambios, reiniciamos nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# service nginx restart&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutando archivos php.&lt;/p&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Learn how to setup a web server pt2: Installing Nginx and PHP&lt;/em&gt; »» &lt;a href=&#34;http://blog.bryanbibat.net/2011/12/19/learn-how-to-setup-a-web-server-pt2-installing-nginx-and-php/&#34; target=&#34;_blank&#34;&gt;blog.bryanbibat.net&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;HOWTO install php5-fpm on Debian Squeeze&lt;/em&gt; »» &lt;a href=&#34;http://fak3r.com/2011/09/27/howto-install-php5-fpm-on-debian-squeeze/&#34; target=&#34;_blank&#34;&gt;fak3r.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Learn how to setup a web server pt2: Installing Nginx and PHP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;blog.bryanbibat.net&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HOWTO install php5-fpm on Debian Squeeze&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;fak3r.com&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -555,33 +440,24 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
             
             <guid>https://elbauldelprogramador.com/incluir-imagenes-en-una-entrada-de-wordpress-usando-php/</guid>
             <description>&lt;blockquote&gt;
-&lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://reinspirit.com/blog/&#34; target=&#34;_blank&#34;&gt;Pedro Mendez&lt;/a&gt; en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla&lt;/p&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;!-- raw HTML omitted --&gt;Pedro Mendez&lt;!-- raw HTML omitted --&gt; en el que se verá cómo insertar imágenes en una entrada de WordPress. Desarrollador y diseñador de sitios web en Sevilla&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34;&gt;&lt;img sizes=&#34;(min-width: 231px) 231px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; title=&#34;Incluir imágenes en una entrada de WordPress usando PHP&#34; alt=&#34;Incluir imágenes en una entrada de WordPress usando PHP&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página &amp;#8220;2014 Galery&amp;#8221;, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Esto es lo que tenemos que hacer. Tenemos una imagen sin adjuntar en nuestra biblioteca multimedia de WordPress. También hay una página “2014 Galery”, que muestra las imágenes adjuntas de la página dentro de la galería de WordPress. Tenemos que encontrar la fecha de carga de la imagen sin adjuntar. Si el año que se subió la imagen fué 2014, tenemos que adjuntar la imagen a nuestra página.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Antes de pasar al fragmento de código, tenemos que asumir algunas cosas. El &lt;code&gt;ID&lt;/code&gt; de la entrada de imagen sin adjuntar es &lt;code&gt;$att_id&lt;/code&gt;. El &lt;code&gt;ID&lt;/code&gt; de la entrada de nuestra página es &lt;code&gt;$page_id&lt;/code&gt;. He mencionado &lt;code&gt;ID&lt;/code&gt; de la entrada, tanto para la imagen y la página porque WordPress almacena las entradas, páginas y archivos en una misma tabla &lt;code&gt;wp_posts&lt;/code&gt; en la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;base de datos&lt;/a&gt;. Así que todas las entradas tendrán un &lt;code&gt;ID&lt;/code&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;obtener-imágenes-subidas-por-año&#34;&gt;Obtener imágenes subidas por año&lt;/h1&gt;
-
 &lt;p&gt;Tenemos que encontrar el año en que fue subida la imagen. El código que vamos a escribir está fuera del &lt;strong&gt;WordPress loop&lt;/strong&gt;. Por eso utilizamos la función &lt;code&gt;get_the_time()&lt;/code&gt; para encontrar el año de la carga.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;incluir-imágenes-a-la-página&#34;&gt;Incluir imágenes a la página&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$year = get_the_time(&amp;#39;Y&amp;#39;, $att_id);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;incluir-imágenes-a-la-página&#34;&gt;Incluir imágenes a la página&lt;/h1&gt;
 &lt;p&gt;Ahora nuestro trabajo es comprobar si &lt;code&gt;$year&lt;/code&gt; es 2014. En caso afirmativo, añadimos la imagen. En WordPress como hemos mencionado, los detalles de cada archivo se almacenan en la tabla &lt;code&gt;wp_posts&lt;/code&gt; que contiene una columna llamada &lt;code&gt;post_parent&lt;/code&gt;. Esta columna es el punto de conexión para la imagen a una página o entrada. Para una imagen sin adjuntar, el valor &lt;code&gt;post_parent&lt;/code&gt; será 0.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;if(2014 == $year){
     wp_update_post( array(
         &amp;#39;ID&amp;#39; =&amp;gt; $att_id,
         &amp;#39;post_parent&amp;#39; =&amp;gt; $page_id
     ));
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El código anterior se explica por sí mismo. &lt;code&gt;wp_update_post&lt;/code&gt; es una función de WordPress que actualiza los detalles de la publicación. Aquí estamos actualizando la columna del &lt;code&gt;post_parent&lt;/code&gt; a &lt;code&gt;$page_id&lt;/code&gt;. Esto concede la imagen a la página.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -590,16 +466,14 @@ fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;/code
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mostrar-el-numero-de-seguidores-en-twitter-en-wordpress/</guid>
-            <description>&lt;p&gt;Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en el blog. Antes de nada, necesitamos instalar un plugin que nos permite añadir widgets que contengan código PHP, se llama WP PHP Widget y podéis descargarlo de la página de &lt;a href=&#34;http://wordpress.org/extend/plugins/wp-php-widget/&#34; target=&#34;_blank&#34;&gt;plugins de WordPress&lt;/a&gt;. Una vez que tengamos instalado el plugin, agregamos el widget a nuestra plantilla y pegamos el siguiente código:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+            <description>&lt;p&gt;Hoy voy a explicar cómo mostrar los seguidores de nuestra cuenta de Twitter en el blog. Antes de nada, necesitamos instalar un plugin que nos permite añadir widgets que contengan código PHP, se llama WP PHP Widget y podéis descargarlo de la página de &lt;!-- raw HTML omitted --&gt;plugins de WordPress&lt;!-- raw HTML omitted --&gt;. Una vez que tengamos instalado el plugin, agregamos el widget a nuestra plantilla y pegamos el siguiente código:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
 $response = file_get_contents ( $url );
 $t_profile = new SimpleXMLElement ( $response );
 $count = $t_profile-&amp;gt;followers_count;
-echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, esto imprimirá el número de seguidores que tenemos en twitter.&lt;/p&gt;
-
+echo $count;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, esto imprimirá el número de seguidores que tenemos en twitter.&lt;/p&gt;
 &lt;p&gt;Este código no es mío, lo encontré navegando por internet, y le hice algunas modificaciones, concretamente creé una función que añadí al archivo &lt;code&gt;&amp;lt;strong&amp;gt;functions.php&amp;lt;/strong&amp;gt;&lt;/code&gt; del tema:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function followers_count(){
   $url = &amp;#34;http://twitter.com/users/show/elbaulp&amp;#34;;
@@ -607,15 +481,15 @@ echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   $t_profile = new SimpleXMLElement ( $response );
   $count = $t_profile-&amp;gt;followers_count;
   return $count;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y en el widget tengo lo siguiente:&lt;/p&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y en el widget tengo lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;twittercount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;href&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://twitter.com/elbaulp&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Follow on Twitter&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;_blank&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;img&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;tap:lightbox1&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;role&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;button&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;tabindex&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;responsive&amp;#34;&lt;/span&gt;  &lt;span class=&#34;na&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;twitter.png&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;alt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Twitter&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;/&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt; ?php echo followers_count();?&amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;span&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; Followers
-&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y el estilo es el siguiente:&lt;/p&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y el estilo es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;twittercount&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kp&#34;&gt;-moz-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;kp&#34;&gt;-webkit-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;box-shadow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#222&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -630,8 +504,8 @@ echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &lt;span class=&#34;k&#34;&gt;background-color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#EEE&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;margin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;inline&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;block&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Eso es todo.&lt;/p&gt;</description>
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Eso es todo.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -640,16 +514,10 @@ echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mostrar-todos-los-post-de-una-categoria-wordpress/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 231px) 231px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/07/wordpress.png&#34; alt=&#34;mostrar todos los post de una categoría wordpress&#34; width=&#34;231px&#34; height=&#34;228px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;En otros artículos mostré cómo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-shortcodes-en-wordpress/&#34;&gt;crear shortcodes&lt;/a&gt; en WordPress, hoy veremos cómo mostrar todos los post de una categoría wordpress dada como parámetro al shortcode.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;crear-el-shortcode&#34;&gt;Crear el shortcode&lt;/h1&gt;
-
 &lt;p&gt;Editamos el archivo &lt;em&gt;functions.php&lt;/em&gt; de nuestro tema y añadimos el siguiente código:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;function show_category_posts( $atts ){
     extract(shortcode_atts(array(&amp;#39;cat&amp;#39;=&amp;gt; &amp;#39;&amp;#39;), $atts));
@@ -666,32 +534,25 @@ echo $count;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     wp_reset_query();
     return $content;
 }
-add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
-
+add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;entendiendo-el-código&#34;&gt;Entendiendo el código&lt;/h1&gt;
 &lt;p&gt;La encargada de realizar todo el trabajo es la función &lt;em&gt;query_posts()&lt;/em&gt;, es posible pasarle varios parámetros, como &lt;strong&gt;orderby=date&lt;/strong&gt; para ordernar por fecha en orden ascendente (&lt;strong&gt;order=ASC&lt;/strong&gt;). Para mostrar todos los artículos de la categoría es necesario el parámetro &lt;strong&gt;posts_per_page=-1&lt;/strong&gt;. La lista de parámetros completa la podemos encontrar en la documentación de la clase &lt;em&gt;&lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34;&gt;WP_Query&lt;/a&gt;&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Lo siguiente que hace este trozo de código es iterar sobre todos los artículos y crear una lista.&lt;/p&gt;
-
 &lt;p&gt;Por último añadimos la función como un &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/?s=shortcode&#34;&gt;shortcode&lt;/a&gt;&lt;/em&gt; y ya está lista para usar.&lt;/p&gt;
-
 &lt;p&gt;Para usar el shortcode debemos conocer el &lt;strong&gt;id&lt;/strong&gt; de la categoría a mostrar, o reemplazar el parámetro &lt;strong&gt;cat=&lt;/strong&gt; por cualquiera de los siguientes:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;tt&gt;cat&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;int&lt;/em&gt;) - El usado por este código, requiere el ID.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category_name&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;string&lt;/em&gt;) - Usar el slug de la categoría.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__and&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__in&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;tt&gt;category__not_in&lt;/tt&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;cat&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; (&lt;em&gt;int&lt;/em&gt;) - El usado por este código, requiere el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;category_name&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; (&lt;em&gt;string&lt;/em&gt;) - Usar el slug de la categoría.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;category__and&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;category__in&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;!-- raw HTML omitted --&gt;category__not_in&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; (&lt;em&gt;array&lt;/em&gt;) - Usa el ID.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;ejemplo-de-uso&#34;&gt;Ejemplo de uso&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mostrar_cat &lt;span class=&#34;nv&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;mostrar_cat &lt;span class=&#34;nv&#34;&gt;cat&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Documentación función query_posts&lt;/em&gt; »» &lt;a href=&#34;http://codex.wordpress.org/Function_Reference/query_posts&#34; target=&#34;_blank&#34;&gt;codex.wordpress.org&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Parámetros de query_posts&lt;/em&gt; »» &lt;a href=&#34;http://codex.wordpress.org/Class_Reference/WP_Query#Parameters&#34; target=&#34;_blank&#34;&gt;codex.wordpress.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Documentación función query_posts&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;codex.wordpress.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Parámetros de query_posts&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;codex.wordpress.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -701,17 +562,11 @@ add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#3
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/personalizar-el-error-404-en-wordpress/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 256px) 256px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/08/4041.jpg&#34; alt=&#34;&#34; title=&#34;404&#34; width=&#34;256px&#34; height=&#34;197px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;El error 404 debe tratarse adecuadamente en las webs para no asustar al usuario y provocar que salga de nuestro sitio.&lt;/p&gt;
-
 &lt;p&gt;Es una buena práctica sugerir enlaces que puedan estar relacionados con lo que estaba buscando, poner un enlace a la página principal o al mapa de la web.&lt;/p&gt;
-
 &lt;p&gt;Con todo esto en mente busqué cómo crear &lt;strong&gt;errores 404 personalizados&lt;/strong&gt; y modificarlos a mi gusto. La solución la encontré en la misma página del proyecto wordpress:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
   You
   &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
@@ -747,8 +602,8 @@ add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#3
 
   &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;TEMPLATEPATH&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/searchform.php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esta porción de código hay que pegarla en el archivo 404.php de la plantilla en uso. Con este código informamos al lector que la página no existe y se proporciona un formulario de búsqueda, además se envía un correo al administrador del blog informándo de este error 404. Aún podemos tratar el error de una manera más amigable y ofrecer más opciones. Por ejemplo las últimas publicaciones del blog:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta porción de código hay que pegarla en el archivo 404.php de la plantilla en uso. Con este código informamos al lector que la página no existe y se proporciona un formulario de búsqueda, además se envía un correo al administrador del blog informándo de este error 404. Aún podemos tratar el error de una manera más amigable y ofrecer más opciones. Por ejemplo las últimas publicaciones del blog:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
   Publicaciones recientes
 &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -765,8 +620,8 @@ add_shortcode(&amp;#39;mostrar_cat&amp;#39;, &amp;#39;show_category_posts&amp;#3
         ?&amp;gt;
 
 &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Incluso es posible sugerir entradas relacionadas en base a la url que devolvió el 404:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;$query_args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;array&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt; basename($_SERVER[&amp;#39;REQUEST_URI&amp;#39;]) );
 $query = new WP_Query( $query_args );
@@ -799,8 +654,8 @@ if($query-&amp;gt;have_posts()){
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;       &lt;span class=&#34;nx&#34;&gt;wp_reset_postdata&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;cp&#34;&gt;?&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Al juntarlo todo, la estructura del código queda así:&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al juntarlo todo, la estructura del código queda así:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
   Ha
   &lt;span class=&#34;cp&#34;&gt;&amp;lt;?php&lt;/span&gt;
@@ -885,8 +740,7 @@ if($query-&amp;gt;have_posts()){
       ?&amp;gt;
 
     &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Fuente | &lt;a href=&#34;http://codex.wordpress.org/Creating_an_Error_404_Page&#34; target=&#34;_blank&#34;&gt;Creating an Error 404 Page&lt;/a&gt;&lt;/p&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Fuente | &lt;!-- raw HTML omitted --&gt;Creating an Error 404 Page&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -896,70 +750,52 @@ if($query-&amp;gt;have_posts()){
             
             <guid>https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/</guid>
             <description>&lt;p&gt;Hace algún tiempo, el blog se caía de forma aleatoria y dejaba de funcionar. Tras investigar un poco descubrí que era PHP el que estaba causando el problema. En concreto ocurría un fallo de segmentación en PHP que no conseguía averiguar de dónde procedían. Buscando y buscando al final dí con el problema, en realidad lo que provocaba el problema no era PHP, si no una consecuencia de usar APC y el parámetro &lt;code&gt;apc.shm_size&lt;/code&gt; junto con el parámetro del kernel &lt;code&gt;kernel.shmmax&lt;/code&gt;. El propósito de este artículo es dejar constancia de cómo se solucionó el problema por si alguien se encontrara en la misma situación.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;para-qué-sirve-el-parámetro-proc-sys-kernel-shmmax&#34;&gt;Para qué sirve el parámetro /proc/sys/kernel/shmmax&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;para-qué-sirve-el-parámetro-procsyskernelshmmax&#34;&gt;Para qué sirve el parámetro /proc/sys/kernel/shmmax&lt;/h1&gt;
 &lt;p&gt;Según la documentación del kernel:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;shmmax:&lt;/p&gt;
-
 &lt;p&gt;This value can be used to query and set the run time limit
 on the maximum shared memory segment size that can be created.
 Shared memory segments up to 1Gb are now supported in the
 kernel. This value defaults to SHMMAX.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Traducido:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;shmmax:&lt;/p&gt;
-
 &lt;p&gt;Este valor puede usarse para consultar y establecer el límite máximo del segmento de memoria compartida que puede crearse. Se soportan segmentos de memoria compartida de hasta 1Gb. Su valor por defecto está definido por la constante SHMMAX.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;h1 id=&#34;para-qué-sirve-el-parámetro-apc-shm-size&#34;&gt;Para qué sirve el parámetro apc.shm_size&lt;/h1&gt;
-
+&lt;h1 id=&#34;para-qué-sirve-el-parámetro-apcshm_size&#34;&gt;Para qué sirve el parámetro apc.shm_size&lt;/h1&gt;
 &lt;p&gt;Según la documentación de APC:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;El tamaño de cada segmento de memoria compartida en MB. Por defecto, algunos sistemas (incluidos la mayoría de variantes de BSD) tienen límites muy bajos del tamaño de un segmento de memoria compartida.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Sabiendo para qué sirve cada parámetro, en un foro encontré la respuesta a la solución:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;From my Linux experience, this bug is caused only by one thing:&lt;/p&gt;
-
 &lt;p&gt;Wrongly set SHM size in kernel and/or APC settings. With standard apc.shm_size = 30, i get segfault (11) every time i try to spawn php-cgi processes. But once i do the following:&lt;/p&gt;
-
-&lt;p&gt;echo &amp;#8220;512000000&amp;#8221; &amp;gt; /proc/sys/kernel/shmmax
+&lt;p&gt;echo “512000000” &amp;gt; /proc/sys/kernel/shmmax
 set apc.shm_size = 64M&lt;/p&gt;
-
-&lt;p&gt;Then the problem completely disappears. PHP with APC becomes ROCK-solid, and NEVER segfaults running &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt;.&lt;/p&gt;
+&lt;p&gt;Then the problem completely disappears. PHP with APC becomes ROCK-solid, and NEVER segfaults running 24/7.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;Por tanto, incrementando el valor del parámetro &lt;code&gt;/proc/sys/kernel/shmmax&lt;/code&gt; a un valor igual o mayor que el del parámetro &lt;code&gt;apc.shm_size&lt;/code&gt; de APC soluciona el problema. Desde que apliqué este cambio no he vuelto a tener caídas en los procesos de PHP.&lt;/p&gt;
-
 &lt;h1 id=&#34;algunas-notas-a-tener-en-cuenta&#34;&gt;Algunas notas a tener en cuenta&lt;/h1&gt;
-
 &lt;p&gt;El parámetro del kernel se puede cambiar de varias formas, tal y como mencionaba el usuario del foro se cambia únicamente durante la sesión activa del Sistema Operativo, tras reiniciar el servidor se establecerá su valor por defecto (30Mb). Para hacer los cambios permanentes, debemos escribir el valor del parámetro en el fichero &lt;em&gt;/etc/sysctl.conf&lt;/em&gt; o en &lt;em&gt;/etc/sysctl.d/99-sysctl.conf&lt;/em&gt;.&lt;/p&gt;
-
 &lt;p&gt;Por ejemplo, para establecer el valor a 256 Mb escribiríamos al final de uno de estos archivos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kernel.shmmax&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y luego cargamos el fichero para aplicar los cambios:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sysctl -p&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para comprobar que se actualizó el valor:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cat /proc/sys/kernel/shmmax
-&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;kernel.shmmax&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y luego cargamos el fichero para aplicar los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sysctl -p
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para comprobar que se actualizó el valor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cat /proc/sys/kernel/shmmax
+&lt;span class=&#34;m&#34;&gt;268435456&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Créditos de la imagen&lt;/em&gt; »» &lt;a href=&#34;http://icons8.com/&#34; target=&#34;_blank&#34;&gt;icons8&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;APC causes PHP fast-cgi to segfault&lt;/em&gt; »» &lt;a href=&#34;https://bugs.php.net/bug.php?id=56894&#34; target=&#34;_blank&#34;&gt;bugs.php.net&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Documentación Sysctl&lt;/em&gt; »» &lt;a href=&#34;https://www.kernel.org/doc/Documentation/sysctl/kernel.txt&#34; target=&#34;_blank&#34;&gt;kernel.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Créditos de la imagen&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;icons8&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;APC causes PHP fast-cgi to segfault&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;bugs.php.net&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Documentación Sysctl&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;kernel.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -972,28 +808,21 @@ set apc.shm_size = 64M&lt;/p&gt;
             <description>&lt;blockquote&gt;
 &lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Voy a describir paso a paso como lo he creado, habrá otras formas igualmente válidas y seguramente mejores, esto es solo como yo lo he hecho.&lt;/p&gt;
-
 &lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
-
 &lt;h1 id=&#34;instalar-symfony2&#34;&gt;Instalar symfony2&lt;/h1&gt;
-
 &lt;p&gt;Lo primero es instalar symfony, en este caso voy a instalar la versión 2.3, que es la versión menor con soporte ahora mismo, ya que quiero que sea compatible con el máximo de versiones posible y para ello lo mejor es crearlo sobre la menor versión.
 Lo instalamos usando el comando siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;.3.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;creamos-la-base-del-bundle&#34;&gt;Creamos la base del bundle&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony 2.3.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;creamos-la-base-del-bundle&#34;&gt;Creamos la base del bundle&lt;/h1&gt;
 &lt;p&gt;Una vez instalado, creamos dentro de vendors el directorio del bundle siguiendo la estructura en la que queramos que luego se instale. En este caso voy a usar la estructura smsup\smsup-api-bundle.&lt;/p&gt;
-
 &lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
-
 &lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\DependencyInjection;
   use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -1005,41 +834,45 @@ class SmsupapiExtension extends Extension
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
         $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
     }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;services:
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+services:
   smsup.smsupapi.sender:
-      class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+      class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
 class SmsupSender {
   public function Send($mensaje)
   {
     echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
   }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 class SmsupapiBundle extends Bundle
 {
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
-
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
 &lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;new smsup\SmsupapiBundle\SmsupapiBundle(),&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
-$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+new smsup\SmsupapiBundle\SmsupapiBundle(),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
 &lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
-
 &lt;p&gt;Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada útil aun, vamos a subirlo a nuestro repositorio git y a añadirlo a packagist para que pueda ser descargado usando composer. Para esto debemos añadir el archivo composer.json, en el que vamos a definir nuestro bundle. En nuestro caso quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;smsup/smsup-api-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;symfony-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Bundle Symfony2 para el uso de la api de smsup.es para el envio de sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -1053,36 +886,31 @@ $sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);&lt;/code&gt;&lt;/pre&
   &lt;span class=&#34;nt&#34;&gt;&amp;#34;autoload&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
       &lt;span class=&#34;nt&#34;&gt;&amp;#34;psr-4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;smsup\\SmsupapiBundle\\&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los parámetros importantes aquí son los siguientes:&lt;/p&gt;
-
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los parámetros importantes aquí son los siguientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;name:&lt;/strong&gt; es el nombre que le damos y deber ser único&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;type:&lt;/strong&gt; indicamos el tipo que es, en este caso un bundle de symfony&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;require:&lt;/strong&gt; indicamos las dependencias de nuestro bundle, en este caso la librería &amp;ldquo;smsup/smsuplib&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;autoload:&lt;/strong&gt; indicamos que el namespace smsup\SmsupapiBundle hace referencia a la raíz de nuestro bundle.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
-
 &lt;p&gt;Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que todo es correcto. Antes vamos a eliminar el directorio que creamos en vendor, para que se instale limpiamente.&lt;/p&gt;
-
 &lt;p&gt;Como no hemos definido ninguna versión en nuestro repositorio, para que composer descargue el paquete, debemos cambiar en el archivo composer.json de symonfy, la estabilidad mínima de los paquetes a descargar, ya que la rama master se considera de desarrollo. Esto se hace cambiando &amp;ldquo;stable&amp;rdquo; por &amp;ldquo;dev&amp;rdquo; en:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;minimum-stability&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;stable&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para instalarlo ejecutamos la siguiente instruccion:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;composer require smsup/smsup-api-bundle master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hemos incluido &amp;ldquo;master&amp;rdquo; para indicar que se descargue la rama master, ya que aún no definimos ninguna versión estable.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;minimum-stability&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;stable&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para instalarlo ejecutamos la siguiente instruccion:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer require smsup/smsup-api-bundle master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hemos incluido &amp;ldquo;master&amp;rdquo; para indicar que se descargue la rama master, ya que aún no definimos ninguna versión estable.&lt;/p&gt;
 &lt;p&gt;Tras esto ya tenemos nuestro bundle instalado correctamente en vendors y si ejecutamos el código que teníamos de prueba veremos de nuevo el mensaje &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;.&lt;/p&gt;
-
 &lt;p&gt;Ahora ya solo debemos incluir las funcionalidades que queramos que tenga e ir actualizando el repositorio.
 Vamos a añadir la funcionalidad y luego veremos como crear la primera versión estable.&lt;/p&gt;
-
 &lt;h1 id=&#34;añadimos-parámetros-obligatorios-de-configuración&#34;&gt;Añadimos parámetros obligatorios de configuración&lt;/h1&gt;
-
 &lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
 Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\DependencyInjection;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
@@ -1105,11 +933,11 @@ class Configuration implements ConfigurationInterface
         ;
         return $treeBuilder;
     }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
-
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
 &lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;public function load(array $configs, ContainerBuilder $container)
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+public function load(array $configs, ContainerBuilder $container)
 {
     $processor = new Processor();
     $configuration = new Configuration();
@@ -1120,9 +948,10 @@ class Configuration implements ConfigurationInterface
                 -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
     $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
                 -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;protected $apiId;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+protected $apiId;
 protected $apiSecret;
 public function setApiid($apiId)
 {
@@ -1131,14 +960,13 @@ public function setApiid($apiId)
 public function setApisecret($apiSecret)
 {
   $this-&amp;gt;apiSecret = $apiSecret;
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
-
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
 &lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
-
 &lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
 SmsupSender.php quedaría así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;  namespace smsup\SmsupapiBundle\Clases;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+  namespace smsup\SmsupapiBundle\Clases;
   use smsup\smsuplib;
 class SmsupSender {
   protected $apiId;
@@ -1193,11 +1021,11 @@ class SmsupSender {
   {
     return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
   }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
-
-&lt;h1 id=&#34;sms-php&#34;&gt;Sms.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
+&lt;h1 id=&#34;smsphp&#34;&gt;Sms.php&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
 class Result {
   protected $httpcode;
   protected $result;
@@ -1214,9 +1042,11 @@ class Result {
   {
     return $this-&amp;gt;result;
   }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;result-php&#34;&gt;Result.php&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;namespace smsup\SmsupapiBundle\Clases;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;resultphp&#34;&gt;Result.php&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
 class Result {
   protected $httpcode;
   protected $result;
@@ -1233,16 +1063,14 @@ class Result {
   {
     return $this-&amp;gt;result;
   }
-}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
-
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
 &lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;
-
 &lt;p&gt;Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato &amp;lsquo;X.Y.Z&amp;rsquo; o &amp;lsquo;vX.Y.Z&amp;rsquo; (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta &amp;ldquo;v1.0.0&amp;rdquo;.
 Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;composer require smsup/smsup-api-bundle&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer require smsup/smsup-api-bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>
         </item>
         

@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Eficiencia on El Baúl del programador</title>
+        <title>eficiencia on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/eficiencia/</link>
-        <description>Recent content in Eficiencia on El Baúl del programador</description>
+        <description>Recent content in eficiencia on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/eficiencia/</link>
-            <title>Eficiencia on El Baúl del programador</title>
+            <title>eficiencia on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,18 +22,14 @@
             
             <guid>https://elbauldelprogramador.com/algoritmos-de-ordenacion/</guid>
             <description>&lt;p&gt;Bueno, como dice el título de la entrada, voy a hablar sobre los algoritmos de ordenación, vamos a distinguir entre lentos y rápidos. La diferencia mas grande es la eficiencia, es decir, como se comportan al ordenar una gran entrada de datos, los lentos se comportan en un orden cuadrático, es decir, O(n²), mientras que los algoritmos rápidos se comportan, en un caso promedio en un orden logarítmico, osea, O (n log n).&lt;/p&gt;
-
 &lt;p&gt;Siempre que nos enseñan a ordenar un vector, o una lista, nos enseñan los algoritmos mas triviales y lógicos que cualquiera podría implementar. Estos algoritmos son:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Ordenamiento burbuja (Bubblesort) .&lt;/li&gt;
 &lt;li&gt;Ordenamiento por selección.&lt;/li&gt;
 &lt;li&gt;Ordenamiento por inserción.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;El ordenamiento por &lt;strong&gt;burbuja&lt;/strong&gt; es el algoritmo más sencillo probablemente. Ideal para empezar. Consiste en ciclar repetidamente a través de la lista, comparando elementos adyacentes de dos en dos. Si un elemento es mayor que el que está en la siguiente posición se intercambian. Es un algoritmo estable. El inconveniente es que es muy lento.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;burbuja_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -47,10 +42,8 @@
       &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aux&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El ordenamiento por &lt;strong&gt;inserción&lt;/strong&gt; técnicamente es la forma mas lógica de ordenar cualquier cosa para un humano, por ejemplo, una baraja de cartas. Requiere O(n²).&lt;/p&gt;
-
-&lt;p&gt;Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay &lt;em&gt;&lt;strong&gt;k&lt;/strong&gt; &lt;/em&gt;elementos ordenados de menor a mayor, se toma el elemento &lt;strong&gt;&lt;em&gt;k+1&lt;/em&gt;&lt;/strong&gt; y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se &lt;em&gt;inserta&lt;/em&gt; el elemento &lt;em&gt;k+1&lt;/em&gt; debiendo desplazarse los demás elementos.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El ordenamiento por &lt;strong&gt;inserción&lt;/strong&gt; técnicamente es la forma mas lógica de ordenar cualquier cosa para un humano, por ejemplo, una baraja de cartas. Requiere O(n²).&lt;/p&gt;
+&lt;p&gt;Inicialmente se tiene un solo elemento, que obviamente es un conjunto ordenado. Después, cuando hay &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;k&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;elementos ordenados de menor a mayor, se toma el elemento &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;k+1&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; y se compara con todos los elementos ya ordenados, deteniéndose cuando se encuentra un elemento menor (todos los elementos mayores han sido desplazados una posición a la derecha). En este punto se &lt;!-- raw HTML omitted --&gt;inserta&lt;!-- raw HTML omitted --&gt; el elemento &lt;!-- raw HTML omitted --&gt;k+1&lt;!-- raw HTML omitted --&gt; debiendo desplazarse los demás elementos.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;insercion_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -65,8 +58,7 @@
     &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último,&lt;strong&gt; el ordenamiento por selección&lt;/strong&gt;: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último,&lt;!-- raw HTML omitted --&gt; el ordenamiento por selección&lt;!-- raw HTML omitted --&gt;: Al igual que el algoritmo de inserción es muy trivial, puesto que recorre el vector o la lista, buscando el elemento mas pequeño y colocandolo en la posición 0 del vector, y así sucesivamente n-1 veces, tanto de grande como sea el vector. Al igual que los algoritmos anteriores, requiere O(n²) .&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;seleccion_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;indice_menor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
@@ -84,37 +76,8 @@
     &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;indice_menor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;aux&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora vamos a hablar de los rápidos que son los mas interesantes:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;
-      Algoritmo mergesort ( ordenación por mezcla).
-    &lt;/li&gt;
-&lt;li&gt;
-      Algoritmo Quicksort (ordenación rápida).
-    &lt;/li&gt;
-&lt;li&gt;
-      Algoritmo Heapsort (ordenación por montículo).
-    &lt;/li&gt;
-&lt;li&gt;
-      Algoritmo Shellsort.
-    &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-    Todos estos muy interesantes en cuanto la implementación y a la idea de organizar un vector, pero me voy a centrar en el algoritmo &lt;strong&gt;mergesort&lt;/strong&gt; y en el &lt;strong&gt;quicksort&lt;/strong&gt;, que se basan en la técnica divide y vencerás, para quien lo sepa, esta técnica es de las mas famosas en cuanto a multiplicación de matrices puesto que la reduce de un n^3 a un n^2,78. Se basa en coger un problema &lt;strong&gt;P&lt;/strong&gt; y dividirlo en subproblemas y resolver estos sin solapamientos, y luego recursivamente unirlos para formar la solución del problema original.
-  &lt;/p&gt;
-&lt;p&gt;
-    El algoritmo&lt;strong&gt; mergesort&lt;/strong&gt; se basa en esta técnica, con lo cual si n=1, ya esta ordenado, pero si n&gt;1, partimos el vector de elementos en dos o mas subcolecciones, ordenamos cada uno de ellaos y luego la unimos en un solo vector ordenado, es de orden O(n log n) . Pero, ¿ cómo hacemos la partición?
-  &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-      Método 1: Primeros n-1 elementos en un conjunto A, y último en B, ordenar A utilizando el esquema de división recursivamente, y B ya esta ordenado, combinar A y B con un método inserta().
-    &lt;/li&gt;
-&lt;li&gt;
-      Método 2: Intentamos repartir los elementos de forma equitativa entre los dos conjuntos, A toma &lt;strong&gt;n/k &lt;/strong&gt;y B las sobrantes , ordenamos A y B recursivamente, y por último combinamos A y B utilizando el proceso de mezcla que combina dos listas en una.
-    &lt;/li&gt;
-&lt;/ol&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora vamos a hablar de los rápidos que son los mas interesantes:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;mergesort_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UMBRAL_MS&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -143,21 +106,8 @@
       &lt;span class=&#34;k&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;V&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;p&gt;
-    El algoritmo &lt;strong&gt;quicksort &lt;/strong&gt;ordena un vector &lt;strong&gt;V&lt;/strong&gt; eligiendo entre sus elementos un valor clave &lt;strong&gt;P &lt;/strong&gt;que actúa como pivote, organiza tres secciones, izquierda-P-derecha, todos los elementos a la izquierda deberán ser menores a P, y los de la derecha mayores, los ordena sin tener que hacer ningún tipo de mezcla para combinarlos, ¿cómo elegimos el pivote?.
-  &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-      Método 1: Lo ideal sería que el pivote fuera la mediana del vector para que las partes izquierda y derecha tuvieran el mismo tamaño.
-    &lt;/li&gt;
-&lt;li&gt;
-      Método 2: recorremos el vector con un indice &lt;strong&gt;i&lt;/strong&gt; desde 0 a n-1, y otro indice &lt;strong&gt;j&lt;/strong&gt; inversamente y cuando se crucen, es decir, tenga el mismo valor, ese se seleccionara como pivote.
-    &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-    &amp;nbsp;
-  &lt;/p&gt;&lt;/p&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;quicksort_lims&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[],&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;inicial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;

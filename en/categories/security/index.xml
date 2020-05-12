@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Security on The Programmer&#39;s Chest</title>
+        <title>security on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/categories/security/</link>
-        <description>Recent content in Security on The Programmer&#39;s Chest</description>
+        <description>Recent content in security on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 04 Dec 2017 12:12:41 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/categories/security/</link>
-            <title>Security on The Programmer&#39;s Chest</title>
+            <title>security on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,66 +22,87 @@
             
             <guid>https://elbauldelprogramador.com/en/cryptography-101-modular-exponentiation/</guid>
             <description>
+&lt;p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;This post is part of a series on &lt;strong&gt;Cryptography 101&lt;/strong&gt;, source code is available at &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34;&gt;elbaulp/cripto&lt;/a&gt;, there is also a &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101/&#34;&gt;Table of Contents.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 
 
-
-&lt;h1 id=&#34;modular-exponentiation&#34;&gt;Modular Exponentiation&lt;/h1&gt;
-
-&lt;p&gt;Given &lt;code&gt;a&lt;/code&gt;, &lt;code&gt;m&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&#39;s_little_theorem&#34; title=&#34;Fermat-Euler Theorem&#34;&gt;Fermat-Euler Theorem&lt;/a&gt;:&lt;/p&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Modular Exponentiation
+&lt;/h2&gt;
+&lt;p&gt;
+Given &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;m&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;n&lt;/code&gt; now you want to compute \(a^m\bmod n\) in a efficient way, to do it, let first define &lt;a href=&#34;https://en.wikipedia.org/wiki/Fermat&amp;#39;s_little_theorem&#34;&gt;Fermat-Euler Theorem&lt;/a&gt;:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Given \(a,n \in \mathbb N\), if \(gcd(a,n) = 1\), \(a^{\phi(n)} \equiv 1\pmod n\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat-Euler theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).&lt;/p&gt;
-
-&lt;p&gt;A particular case of Fermat-Euler Theorem is &lt;em&gt;Fermat&#39;s Little Theorem:&lt;/em&gt;&lt;/p&gt;
-
+&lt;p&gt;
+Here are some examples. In \(\mathbb Z_5,\ \phi(5) = 4\), Fermat-Euler theorem says then that \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). In \(\mathbb Z_{53}, \phi(53) = 52\), in order to compute \(7^{111}\), as \(gcd(7, 53) = 1\) then \( 7^{52} = 1\), so \(7^{52\cdot 2} = 7^{104} = 1\) and therefore \(7^{111} = 7^7 = 29\).
+&lt;/p&gt;
+&lt;p&gt;
+A particular case of Fermat-Euler Theorem is &lt;em&gt;Fermat&amp;#39;s Little Theorem:&lt;/em&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Given p prime, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) then \(a^{p-1} \equiv 1\pmod p\)
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;As consequence, now you have \(a^{p} \equiv a\pmod p\). Let see it with more examples:&lt;/p&gt;
-
-&lt;p&gt;\(\mathbb Z_4\) units are \(\mathcal U(\mathbb Z_4) = \{1,3\}\), it has only two units because \(\phi(4) = \phi(2^2) = 2\), particularly those units are 1 and 3, because they satisfy \(1^2 = 3^2 = 1\). Above you saw that in \(\mathbb Z_5,\ \phi(5) = 4\), and therefore all its elements &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/#computing-modular-inverses&#34; title=&#34;have inverse&#34;&gt;have inverse&lt;/a&gt;. Lets check one of Fermat&#39;s Little theorem variants also holds in \(\mathbb Z_5\). The theorem states \(a^{p} \equiv a\pmod p\), and as you can see, in \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).&lt;/p&gt;
-
-&lt;h2 id=&#34;an-algorithm-to-compute-modular-exponentiation&#34;&gt;An algorithm to compute modular exponentiation&lt;/h2&gt;
-
-&lt;p&gt;There is more than one algorithm to compute modular exponentiation, here is one:&lt;/p&gt;
-
+&lt;p&gt;
+As consequence, now you have \(a^{p} \equiv a\pmod p\). Let see it with more examples:
+&lt;/p&gt;
+&lt;p&gt;
+\(\mathbb Z_4\) units are \(\mathcal U(\mathbb Z_4) = \{1,3\}\), it has only two units because \(\phi(4) = \phi(2^2) = 2\), particularly those units are 1 and 3, because they satisfy \(1^2 = 3^2 = 1\). Above you saw that in \(\mathbb Z_5,\ \phi(5) = 4\), and therefore all its elements &lt;a href=&#34;https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/#computing-modular-inverses&#34;&gt;have inverse&lt;/a&gt;. Lets check one of Fermat&amp;#39;s Little theorem variants also holds in \(\mathbb Z_5\). The theorem states \(a^{p} \equiv a\pmod p\), and as you can see, in \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+An algorithm to compute modular exponentiation
+&lt;/h3&gt;
+&lt;p&gt;
+There is more than one algorithm to compute modular exponentiation, here is one:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k \lt n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).&lt;/li&gt;
-&lt;li&gt;Output: \(a^k \pmod n\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Input: \(a\in\mathbb Z_n\), an integer \(0 \leq k \lt n\) which binary representation is \(\sum_{i=0}^t k_i 2^i\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Output: \(a^k \pmod n\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;  1. Set b = 1, If k = 0 return b.
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;  1. Set b = 1, If k = 0 return b.
   2. A = a
   3. If k_0 = 1 then b = a
   4. For each i from 1 to t:
      1. A = A * A modulo n.
      2. If k_i = 1 then b = A * b modulo n
-  5. return b
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This algorithm is based in the fact that the exponent can be represented in binary. The binary representation of k is given by \(\sum_{i=0}^t k_i 2^i\), in which each \(k_i\in \{0, 1\}\). It is possible this representation does not sound familiar to you, but is nothing more that an abbreviated form of the more common one, for example, lets represent 5 in binary, which is \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Knowing this, then:&lt;/p&gt;
-
-&lt;p&gt;$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$&lt;/p&gt;
-
-&lt;p&gt;If you analyze the expression above, when \(k_i = 0\), the term \((a^{2^i})^{k_i} = 1\), which implies this term is not going to change the final result, because is multiplying by 1.&lt;/p&gt;
-
-&lt;p&gt;Now reading the algorithm becomes easier. It takes an integer and other two numbers, k,n &gt; 0 and computes \(a^{k} \pmod n\). If k==0 is not necessary compute anything and it returns 1, because any number to the power of 0 is 1. In step 3, if \(k_0\) (the least significant bit) is 1, therefore \((a^{2^0})^{k_0} = a\), conversely b = 1 as you are raising to 0, and any number to the power of 0 is 1. Next step iterates over the remaining bits of k, that is \(k_1 \dots k_t\). Basically this loop do the same process described above. Compute A squared (corresponding to this part of the expression \((a^2\)), if the bit \(k_i = 1\) multiply \((a^{2^i})^{1}\) by &lt;code&gt;b&lt;/code&gt;, if \(k_i = 0\) nothing is done, because the whole expression \((a^{2^i})^{0} = 1\). When the loops ends, b is returned.&lt;/p&gt;
-
-&lt;p&gt;In order to let you understand this process better, imagine you want to compute \(2^5\pmod 5\). First step is representing the exponent in binary form, \(5 = 101_b\), follow the steps, where a = 2, k = 5 and n = 5.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;b = 1
+  5. return b&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+This algorithm is based in the fact that the exponent can be represented in binary. The binary representation of k is given by \(\sum_{i=0}^t k_i 2^i\), in which each \(k_i\in \{0, 1\}\). It is possible this representation does not sound familiar to you, but is nothing more that an abbreviated form of the more common one, for example, lets represent 5 in binary, which is \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Knowing this, then:
+&lt;/p&gt;
+&lt;p&gt;
+$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$
+&lt;/p&gt;
+&lt;p&gt;
+If you analyze the expression above, when \(k_i = 0\), the term \((a^{2^i})^{k_i} = 1\), which implies this term is not going to change the final result, because is multiplying by 1.
+&lt;/p&gt;
+&lt;p&gt;
+Now reading the algorithm becomes easier. It takes an integer and other two numbers, k,n &amp;gt; 0 and computes \(a^{k} \pmod n\). If k==0 is not necessary compute anything and it returns 1, because any number to the power of 0 is 1. In step 3, if \(k_0\) (the least significant bit) is 1, therefore \((a^{2^0})^{k_0} = a\), conversely b = 1 as you are raising to 0, and any number to the power of 0 is 1. Next step iterates over the remaining bits of k, that is \(k_1 \dots k_t\). Basically this loop do the same process described above. Compute A squared (corresponding to this part of the expression \((a^2\)), if the bit \(k_i = 1\) multiply \((a^{2^i})^{1}\) by &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;, if \(k_i = 0\) nothing is done, because the whole expression \((a^{2^i})^{0} = 1\). When the loops ends, b is returned.
+&lt;/p&gt;
+&lt;p&gt;
+In order to let you understand this process better, imagine you want to compute \(2^5\pmod 5\). First step is representing the exponent in binary form, \(5 = 101_b\), follow the steps, where a = 2, k = 5 and n = 5.
+&lt;/p&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;b = 1
 A = 2
 is k_0 == 1? yes -&amp;gt; b = 2
 from k_1 to k_t:
@@ -90,47 +110,52 @@ from k_1 to k_t:
    is k_1 == 1? no
    A = A * A mod n -&amp;gt; 4 * 4 mod 5 = 1
    is k_2 == 1? yes -&amp;gt; b = A * b mod n -&amp;gt; b = 1 * 2 mod 5 = 2
-return b, which is 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I&#39;ve tried to draw two graphics representations to help you visualize the process, lets say you want to compute \(2^7 \pmod 5\) and \(2^{11} \pmod 5\):&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&#34;
-            alt=&#34;Computing Modular Exponentiation&#34;
-            title=&#34;Computing Modular Exponentiation&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;330&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Computing modular exponentiation&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&#34;
-            alt=&#34;&#34;
-            title=&#34;&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;206&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;I hope this examples have let you understand better how the algorithm works. I&#39;ve implemented it in python, source code is available on &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+return b, which is 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+I&amp;#39;ve tried to draw two graphics representations to help you visualize the process, lets say you want to compute \(2^7 \pmod 5\) and \(2^{11} \pmod 5\):
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;
+            alt=&amp;#34;Computing Modular Exponentiation&amp;#34;
+            title=&amp;#34;Computing Modular Exponentiation&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;330&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Computing modular exponentiation&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;
+            alt=&amp;#34;&amp;#34;
+            title=&amp;#34;&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;206&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+I hope this examples have let you understand better how the algorithm works. I&amp;#39;ve implemented it in python, source code is available on &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
   &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
@@ -150,44 +175,83 @@ return b, which is 2
           &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
       &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;order&#34;&gt;Order&lt;/h2&gt;
-
-&lt;p&gt;The definition of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Multiplicative_order&#34; title=&#34;number&#39;s order is&#34;&gt;number&#39;s order is&lt;/a&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Order
+&lt;/h3&gt;
+&lt;p&gt;
+The definition of a &lt;a href=&#34;https://en.wikipedia.org/wiki/Multiplicative_order&#34;&gt;number&amp;#39;s order is&lt;/a&gt;
 \[ord(a) = min(k\ \in \mathbb N\backslash 0\:a^k=1)\]
-that is to say, the smallest number to which you have to raise &lt;code&gt;a&lt;/code&gt; to give you 1. For example, in \(\mathbb Z_5\) you have the following orders for its elements:&lt;/p&gt;
-
+that is to say, the smallest number to which you have to raise &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; to give you 1. For example, in \(\mathbb Z_5\) you have the following orders for its elements:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(1^1 = 1; ord(1) = 1\), The smallest number to which you have to raise 1 to give you 1 is 1.&lt;/li&gt;
-&lt;li&gt;\(2^4 = 1; ord(2) = 4\)&lt;/li&gt;
-&lt;li&gt;\(3^4 = 1; ord(3) = 4\)&lt;/li&gt;
-&lt;li&gt;\(4^2 = 1; ord(4) = 2\), The smallest number to which you have to raise 4 to give you 1 is 2.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(1^1 = 1; ord(1) = 1\), The smallest number to which you have to raise 1 to give you 1 is 1.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(2^4 = 1; ord(2) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(3^4 = 1; ord(3) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(4^2 = 1; ord(4) = 2\), The smallest number to which you have to raise 4 to give you 1 is 2.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;You can read more on Order on &lt;a href=&#34;https://en.wikipedia.org/wiki/Order_(group_theory)&#34; title=&#34;Wikipedia Order (Group Theory) page&#34;&gt;Wikipedia Order (Group Theory) page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;subgroups-and-primitives&#34;&gt;Subgroups and primitives&lt;/h2&gt;
-
+&lt;p&gt;
+You can read more on Order on &lt;a href=&#34;https://en.wikipedia.org/wiki/Order_(group_theory)&#34;&gt;Wikipedia Order (Group Theory) page&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+Subgroups and primitives
+&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N \}\) is a subgroup generated by a.
+Given an element of \(\mathbb Z_p\), for example, \(\lt a&amp;gt; = \{ a^k:\ k\in N \}\) is a subgroup generated by a.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Generating_set_of_a_group&#34; title=&#34;Generating a set of a group&#34;&gt;Generating a set of a group&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;For example, the subgroups of the units of \(\mathbb Z_5\) are:&lt;/p&gt;
-
+&lt;p&gt;
+This is called &lt;a href=&#34;https://en.wikipedia.org/wiki/Generating_set_of_a_group&#34;&gt;Generating a set of a group&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+For example, the subgroups of the units of \(\mathbb Z_5\) are:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;\(\lt 1&gt; = \{ 1 \}\), because \(\forall k \in\mathbb Z, 1^k = 1\)&lt;/li&gt;
-&lt;li&gt;\(\lt 2&gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 3&gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)&lt;/li&gt;
-&lt;li&gt;\(\lt 4&gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 1&amp;gt; = \{ 1 \}\), because \(\forall k \in\mathbb Z, 1^k = 1\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 2&amp;gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 3&amp;gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 4&amp;gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;If you look closely, &amp;lt;2&gt; and &amp;lt;3&gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;lt;a&gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;p&gt;
+If you look closely, &amp;amp;lt;2&amp;gt; and &amp;amp;lt;3&amp;gt; generate \(\mathbb Z_5\) completely, this elements are called primitives. Particuraly, &amp;amp;lt;a&amp;gt; will be primitive if its &lt;strong&gt;order is maximum&lt;/strong&gt;, in this case it is so, because \(\phi(5)=4, ord(2) = ord(3) = 4\), which is the maximum. Furthermore, the order of a number sets the number of elements that generate the subgroup, as ord(2) = ord(3) = 4, this means this subgroups generate 4 elements, which are the number of units of \(\mathbb Z_5\), they generate \(\mathbb Z_5\) completely.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+References
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;The code shown along this series is hosted on my &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -195,6 +259,7 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 
 
+&lt;/p&gt;
 </description>
         </item>
         
@@ -204,66 +269,99 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
             <pubDate>Sat, 28 Oct 2017 11:23:55 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/cryptography-101-math-basis-i/</guid>
-            <description>&lt;h1 id=&#34;modular-arithmetic&#34;&gt;Modular Arithmetic&lt;/h1&gt;
-
-&lt;p&gt;Before going straight to cryptography, it is necessary to have clear a few mathematical concepts, as cryptography in based on them.&lt;/p&gt;
-
-&lt;p&gt;First, I am going to talk about &lt;strong&gt;modular arithmetic&lt;/strong&gt;, also known as &lt;strong&gt;clock arithmetic&lt;/strong&gt;, which is defined as:&lt;/p&gt;
-
-&lt;p&gt;\[a \equiv b\pmod n,\]&lt;/p&gt;
-
-&lt;p&gt;if \(b - a\) is multiple of \(n\), in other words, \(a\) and \(b\) have the same remainder when divided by \(n\).&lt;/p&gt;
-
-&lt;p&gt;For example, \(3\equiv 8\pmod 5\), because \(8 - 3 = 5\), which is a 5 multiple. Another way would be knowing that both remainders of 3 divided by 5 and 8 divided by 5 are 3. From now on, I&#39;ll write the remainder of a number like this:&lt;/p&gt;
-
-&lt;p&gt;\[a\bmod n = r,\]&lt;/p&gt;
-
-&lt;p&gt;where \(r\) is the remainder of \(a\) divided by \(n\).&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/crypto-101.jpg&#34;
-            alt=&#34;Modular Arithmetics&#34;
-            title=&#34;Modular Arithmetics&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;360&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;computing-modular-inverses&#34;&gt;Computing modular inverses&lt;/h2&gt;
-
-&lt;p&gt;Given \(a \in \mathbb Z_n\), \(a\) has inverse (also called unit) if \(\exists b \in \mathbb Z_n\ :\ ba = 1\), and its written \(a^{-1}\).&lt;/p&gt;
-
-&lt;p&gt;The set of all \(\mathbb Z_n\) units is called \(\mathcal{U}(\mathbb Z_n)\) and is defined as:&lt;/p&gt;
-
-&lt;p&gt;\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : gcd(a, n) = 1\},\]&lt;/p&gt;
-
-&lt;p&gt;where &lt;strong&gt;gcd&lt;/strong&gt; is &lt;em&gt;Greatest Common Divisor&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;If \(p\) &lt;strong&gt;is prime&lt;/strong&gt;, every element in \(\mathbb Z_p\) but zero has inverse, therefore, \(\mathbb Z_p\) is a &lt;strong&gt;field&lt;/strong&gt;. Cryptography works with fields \(\mathbb Z_p\) where \(p\) is prime.&lt;/p&gt;
-
-&lt;p&gt;The number of units in \(\mathbb Z_n\) can be computed with &lt;strong&gt;Euler&#39;s function&lt;/strong&gt; \(\phi(n)\):&lt;/p&gt;
-
+            <description>&lt;h2 id=&#34;headline-1&#34;&gt;
+Modular Arithmetic
+&lt;/h2&gt;
+&lt;p&gt;
+Before going straight to cryptography, it is necessary to have clear a few mathematical concepts, as cryptography in based on them.
+&lt;/p&gt;
+&lt;p&gt;
+First, I am going to talk about &lt;strong&gt;modular arithmetic&lt;/strong&gt;, also known as &lt;strong&gt;clock arithmetic&lt;/strong&gt;, which is defined as:
+&lt;/p&gt;
+&lt;p&gt;
+\[a \equiv b\pmod n,\]
+&lt;/p&gt;
+&lt;p&gt;
+if \(b - a\) is multiple of \(n\), in other words, \(a\) and \(b\) have the same remainder when divided by \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+For example, \(3\equiv 8\pmod 5\), because \(8 - 3 = 5\), which is a 5 multiple. Another way would be knowing that both remainders of 3 divided by 5 and 8 divided by 5 are 3. From now on, I&amp;#39;ll write the remainder of a number like this:
+&lt;/p&gt;
+&lt;p&gt;
+\[a\bmod n = r,\]
+&lt;/p&gt;
+&lt;p&gt;
+where \(r\) is the remainder of \(a\) divided by \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/crypto-101.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/crypto-101.jpg&amp;#34;
+            alt=&amp;#34;Modular Arithmetics&amp;#34;
+            title=&amp;#34;Modular Arithmetics&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Computing modular inverses
+&lt;/h3&gt;
+&lt;p&gt;
+Given \(a \in \mathbb Z_n\), \(a\) has inverse (also called unit) if \(\exists b \in \mathbb Z_n\ :\ ba = 1\), and its written \(a^{-1}\).
+&lt;/p&gt;
+&lt;p&gt;
+The set of all \(\mathbb Z_n\) units is called \(\mathcal{U}(\mathbb Z_n)\) and is defined as:
+&lt;/p&gt;
+&lt;p&gt;
+\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : gcd(a, n) = 1\},\]
+&lt;/p&gt;
+&lt;p&gt;
+where &lt;strong&gt;gcd&lt;/strong&gt; is &lt;em&gt;Greatest Common Divisor&lt;/em&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+If \(p\) &lt;strong&gt;is prime&lt;/strong&gt;, every element in \(\mathbb Z_p\) but zero has inverse, therefore, \(\mathbb Z_p\) is a &lt;strong&gt;field&lt;/strong&gt;. Cryptography works with fields \(\mathbb Z_p\) where \(p\) is prime.
+&lt;/p&gt;
+&lt;p&gt;
+The number of units in \(\mathbb Z_n\) can be computed with &lt;strong&gt;Euler&amp;#39;s function&lt;/strong&gt; \(\phi(n)\):
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If \(p\) &lt;strong&gt;is prime&lt;/strong&gt; \(\phi(p) = p - 1\), because all its elements but zero are units.&lt;/li&gt;
-&lt;li&gt;Given two integers a,b: \( \phi(ab) = \phi(a)\phi(b)\ \text{iff}\ gcd(a, b) = 1\).&lt;/li&gt;
-&lt;li&gt;Given \(p\) prime: \(\phi(p^n) = p^n - p^{n-1}\).&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+If \(p\) &lt;strong&gt;is prime&lt;/strong&gt; \(\phi(p) = p - 1\), because all its elements but zero are units.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Given two integers a,b: \( \phi(ab) = \phi(a)\phi(b)\ \text{iff}\ gcd(a, b) = 1\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Given \(p\) prime: \(\phi(p^n) = p^n - p^{n-1}\).
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;practical-example&#34;&gt;Practical example&lt;/h2&gt;
-
-&lt;p&gt;Lets see &lt;strong&gt;an example&lt;/strong&gt;. \(\#\mathcal{U}(\mathbb Z_5) = 4\), because all its elements have inverse (1,2,3,4), and \(\phi(5) = 4\), therefore \(\mathbb Z_5\) &lt;strong&gt;is a field&lt;/strong&gt;. However, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), because \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). The units of \(\mathbb Z_{15}\) are 1,2,4,7,8,11,13,14.&lt;/p&gt;
-
-&lt;p&gt;The code below uses the &lt;em&gt;Euclidean algorithm&lt;/em&gt; to compute the inverse of a number in \(\mathbb Z_n\). This &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34; title=&#34;python code&#34;&gt;python code&lt;/a&gt; is &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34; title=&#34;on my github&#34;&gt;on my github&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Practical example
+&lt;/h3&gt;
+&lt;p&gt;
+Lets see &lt;strong&gt;an example&lt;/strong&gt;. \(\#\mathcal{U}(\mathbb Z_5) = 4\), because all its elements have inverse (1,2,3,4), and \(\phi(5) = 4\), therefore \(\mathbb Z_5\) &lt;strong&gt;is a field&lt;/strong&gt;. However, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), because \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). The units of \(\mathbb Z_{15}\) are 1,2,4,7,8,11,13,14.
+&lt;/p&gt;
+&lt;p&gt;
+The code below uses the &lt;em&gt;Euclidean algorithm&lt;/em&gt; to compute the inverse of a number in \(\mathbb Z_n\). This &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34;&gt;python code&lt;/a&gt; is &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34;&gt;on my github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
       &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
 &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      Compute the Greatest Common Divisor d of a and b, and integers x and
@@ -294,9 +392,14 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
       &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
           &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
       &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This algorithm returns a tuple &lt;code&gt;(d, x, y)&lt;/code&gt;, where &lt;code&gt;d&lt;/code&gt; is &lt;code&gt;gcd(a,b)&lt;/code&gt; and &lt;code&gt;x&lt;/code&gt; is &lt;code&gt;a mod b&lt;/code&gt; inverse. For example, &lt;code&gt;gcd(2, 5)&lt;/code&gt;, will return &lt;code&gt;[1, -2, 1]&lt;/code&gt;, where 1 is &lt;code&gt;gcd(2, 5)&lt;/code&gt;, and \(-2\) its inverse, if you want a positive number, just sum 5 to \(-2\), which is 3, therefore 2 mod 5 inverse is 3, because \(2 \cdot 3 = 6\), and 6 mod 5 = 1.&lt;/p&gt;
-
-&lt;p&gt;In order to make the task of computing a number&#39;s inverse, I&#39;ve created the method bellow, the code is also available at my &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34; title=&#34;github&#34;&gt;github&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+This algorithm returns a tuple &lt;code class=&#34;verbatim&#34;&gt;(d, x, y)&lt;/code&gt;, where &lt;code class=&#34;verbatim&#34;&gt;d&lt;/code&gt; is &lt;code class=&#34;verbatim&#34;&gt;gcd(a,b)&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;x&lt;/code&gt; is &lt;code class=&#34;verbatim&#34;&gt;a mod b&lt;/code&gt; inverse. For example, &lt;code class=&#34;verbatim&#34;&gt;gcd(2, 5)&lt;/code&gt;, will return &lt;code class=&#34;verbatim&#34;&gt;[1, -2, 1]&lt;/code&gt;, where 1 is &lt;code class=&#34;verbatim&#34;&gt;gcd(2, 5)&lt;/code&gt;, and \(-2\) its inverse, if you want a positive number, just sum 5 to \(-2\), which is 3, therefore 2 mod 5 inverse is 3, because \(2 \cdot 3 = 6\), and 6 mod 5 = 1.
+&lt;/p&gt;
+&lt;p&gt;
+In order to make the task of computing a number&amp;#39;s inverse, I&amp;#39;ve created the method bellow, the code is also available at my &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extGcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -305,14 +408,20 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; a inverse does not exist&amp;#39;&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Execute it with the same numbers as before, 2 and 5, and it&#39;ll return \(2^{-1},\) that is, 3.&lt;/p&gt;
-
-&lt;h1 id=&#34;aknowledgements&#34;&gt;Aknowledgements&lt;/h1&gt;
-
-&lt;p&gt;I&#39;d like to thank &lt;a href=&#34;https://github.com/josealberto4444/&#34; title=&#34;josealberto4444&#34;&gt;josealberto4444&lt;/a&gt; for helping me with some corrections.&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+Execute it with the same numbers as before, 2 and 5, and it&amp;#39;ll return \(2^{-1},\) that is, 3.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Aknowledgements
+&lt;/h2&gt;
+&lt;p&gt;
+I&amp;#39;d like to thank &lt;a href=&#34;https://github.com/josealberto4444/&#34;&gt;josealberto4444&lt;/a&gt; for helping me with some corrections.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+References
+&lt;/h2&gt;
+&lt;p&gt;
 
 &lt;blockquote&gt;The code shown along this series is hosted on my &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
 
@@ -320,13 +429,17 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
 
 
 
-
-&lt;h1 id=&#34;more-resources&#34;&gt;More resources&lt;/h1&gt;
-
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+More resources
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Modular_arithmetic&#34; title=&#34;Modular Arithmetic | wikipedia.org&#34;&gt;Modular Arithmetic | wikipedia.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Modular_arithmetic&#34;&gt;Modular Arithmetic | wikipedia.org&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
         <item>
@@ -335,80 +448,46 @@ Given an element of \(\mathbb Z_p\), for example, \(\lt a&gt; = \{ a^k:\ k\in N 
             <pubDate>Fri, 20 Oct 2017 11:50:46 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/biometrics-pattern-recognition/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34;&gt;&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34; title=&#34;Biometría Aplicada a La Seguridad - Reconocimiento De Patrones&#34; alt=&#34;Biometría Aplicada a La Seguridad - Reconocimiento De Patrones&#34; width=&#34;640px&#34; height=&#34;405px&#34; /&gt;&lt;/a&gt;
-    &lt;span class=&#34;image-credit&#34;&gt;image credits: pixabay&lt;a href=&#34;https://pixabay.com/en/biometrics-eye-security-154660/&#34;&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;The next article takes part of a team work done for the subject &lt;em&gt;Security in operating systems&lt;/em&gt; from the Granada computer engineering school (ETSIIT UGR). The group was composed by &lt;a href=&#34;http://twitter.com/MPV_Prod&#34;&gt;@MPV_Prod&lt;/a&gt; , &lt;a href=&#34;http://twitter.com/_musicalnote&#34;&gt;@_musicalnote&lt;/a&gt; and &lt;a href=&#34;http://twitter.com/elbaulp&#34;&gt;@ElBaulP&lt;/a&gt;. This post is authored by @_musicalnote.&lt;/p&gt;
-
 &lt;h1 id=&#34;index&#34;&gt;Index&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion&#34; title=&#34;Biometrics applied to security - Introduction&#34;&gt;Biometrics applied to security - Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Biometrics applied to security - Pattern recognition&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometrics applied to security - Biometrics systems&#34;&gt;Biometrics applied to security - Biometrics systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;pattern-recognition&#34;&gt;Pattern recognition&lt;/h2&gt;
-
 &lt;p&gt;Previously, we have talk about the different techniques that exist to perform the identification of an individual. Now we will get into &lt;strong&gt;how&lt;/strong&gt; it is possible to recognise a face, an iris or a signature with pattern matching.&lt;/p&gt;
-
 &lt;h3 id=&#34;what-is-pattern-recognition&#34;&gt;What is pattern recognition?&lt;/h3&gt;
-
 &lt;p&gt;Is the science that describes and classifies objects, people, signals, representations, etc. Pattern recognition has multiple application fields, however the most related with &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;security articles&#34;&gt;security&lt;/a&gt; is, definitely the biometric recognition of people. It is about assigning an identity to a person, or verify that it is what it says, by meassuring certain own characteristics. Characteristics as voice, face, fingerprints, iris, signature, etc.&lt;/p&gt;
-
 &lt;h3 id=&#34;the-problem-of-pattern-recognition&#34;&gt;The problem of pattern recognition&lt;/h3&gt;
-
 &lt;p&gt;We humans are so good recognising patterns. Our brain has some kind of algorithms, still unknown, that are much faster than any computer when recognising faces or voices, for explample.&lt;/p&gt;
-
 &lt;h3 id=&#34;approaches-to-pattern-recognition&#34;&gt;Approaches to Pattern Recognition&lt;/h3&gt;
-
 &lt;p&gt;There are many type of aproaches, although they are used to be combined between them resulting in hybrid systems. All of them have two steps in common:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Training or learning step&lt;/li&gt;
 &lt;li&gt;Classification or test step&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;First of all, for building a pattern recognition system that can identify an individual through any of its personal characteristics we must have in our hands an ammount of data of such characteristic, so that the probability of creating a model that succeeds recognizing by this characteristic increase. However, a common mistake is to not have in consideration if those data are or not free from variability (noise introduced by sensors, scale changes, distortions, rotations&amp;hellip;)  so that before training and testing the system, it is very important to clean that data or take a decision about the affected data (like not using them to train the classifier, for example). Finally, after training the system, we proceed to test it. For that purpose we give the system another dataset of the characteristic that we are analyzing, evaluating that way the ability of the recognizer to hit in its decisions.&lt;/p&gt;
-
 &lt;h3 id=&#34;feature-extraction&#34;&gt;Feature extraction&lt;/h3&gt;
-
 &lt;p&gt;In a recognizer, it is so important to consider the feature extraction (parametrization) to perform on the input, that is, selecting which characteristic vectors are we using. For example, in images we can use the bitmap. Is undoubtedly that parametrization will ease the problem, as through it the ammount of data to process decreases and we get the feature space turned, being easier to discriminate on it (see which samples are meaningful and which are not).&lt;/p&gt;
-
 &lt;h3 id=&#34;class-separability&#34;&gt;Class separability&lt;/h3&gt;
-
 &lt;p&gt;If we want to minimize the error of our biometrics system, we must try to make the data classification as accurate as possible, and for that we must select the classifier that best fits our data (distinct classifiers, distinct results&amp;hellip;), by choosing correctly the classification criteria.&lt;/p&gt;
-
 &lt;p&gt;In the next figure we can see how both two classes are perfectly separable when using both vector components (2 dimensions), but if we reduce it to just one dimension, we can see that both classes are no longer separable, as they overlap.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/separability.png&#34;&gt;&lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/separability.png&#34; title=&#34;class separability using two-dimensional vectors&#34; alt=&#34;class separability using two-dimensional vectors&#34; width=&#34;320px&#34; height=&#34;316px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;It is easy to ilustrate it in an image when the number of classes is low, as in this example, as we got just two classes. But the difficulty increases with the number of classes. How can we know if our classifier is doing well or not? How can we know if a characteristic is discriminating or not? In that case proceed to calculate the discriminating mean of the characteristic, from the mean distance between classes and normalizing by its variance.&lt;/p&gt;
-
 &lt;h3 id=&#34;introduction-to-intrusion-detection&#34;&gt;Introduction to intrusion detection&lt;/h3&gt;
-
 &lt;p&gt;Applying biometrics techniques in &lt;a href=&#34;https://elbauldelprogramador.com/6-formas-usadas-por-los-cibercriminales-para-robar-o-vulnerar-credenciales-de-login/&#34; title=&#34;6 ways used by cybercriminals to steal or infringe login credentials&#34;&gt;intrusion&lt;/a&gt; detection systems allow us to intensify the security of our system, for example, during the authentication, as we could establish a more detailed profile for each user, without having to worry about certain problems like for example if the user is writting the password so others can see it, or if the user share its password or if it is stolen&amp;hellip; thus avoiding a possibility of attack that affects the IDS performance.&lt;/p&gt;
-
 &lt;p&gt;As is evident, the use of biometrics is not making impossible any security attack to the system, but at least it will ask every user to identify previously, through the authentication and validation mechanisms, so that any bad use or attack caused by an user and detected by an IDS will point to a concrete user.&lt;/p&gt;
-
 &lt;p&gt;Intrusion detection systems are still getting better, but it is already spoken that in the future advanced techniques of biometry could be developed, as for example, DNA recognition.&lt;/p&gt;
-
 &lt;h1 id=&#34;index-1&#34;&gt;Index&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion&#34; title=&#34;Biometrics applied to security - Introduction&#34;&gt;Biometrics applied to security - Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Biometrics applied to security - Pattern recognition&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometrics applied to security - Biometrics systems&#34;&gt;Biometrics applied to security - Biometrics systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=8478976361&amp;amp;linkCode;=as2&amp;amp;tag;=bmacoc-21&#34; title=&#34;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la seguridad&#34;&gt;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
 seguridad&lt;/a&gt;&lt;/li&gt;
@@ -425,140 +504,42 @@ seguridad&lt;/a&gt;&lt;/li&gt;
             
             <guid>https://elbauldelprogramador.com/en/good-passwords/</guid>
             <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;07.27.2017: &lt;strong&gt;Added&lt;/strong&gt; &lt;em&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/em&gt; to useful links.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-
 &lt;p&gt;Recently there has been a lot of noise in the &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/security/&#34; title=&#34;posts about security&#34;&gt;security&lt;/a&gt; field with &lt;strong&gt;wannaCry&lt;/strong&gt; and a &lt;strong&gt;breach with more than 230M accounts stolen&lt;/strong&gt;. Today more than ever it is necessary to have &lt;em&gt;good habits creating passwords&lt;/em&gt; when creating new accounts in any new service you sign up. This post shows some good practices I&amp;rsquo;ve been using since I became more security conscious.&lt;/p&gt;
-
 &lt;h1 id=&#34;create-good-passwords&#34;&gt;Create Good Passwords&lt;/h1&gt;
-
-&lt;p&gt;The first thing is to create a &lt;em&gt;strong and random enough password&lt;/em&gt;. There are many websites and tools for this purpose, such as &lt;a href=&#34;https://www.grc.com/passwords.htm&#34; target=&#34;_blank&#34; title=&#34;Perfect Passwords&#34;&gt;Steve Gibson&amp;rsquo;s page&lt;/a&gt; or the built-in tool in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
-
+&lt;p&gt;The first thing is to create a &lt;em&gt;strong and random enough password&lt;/em&gt;. There are many websites and tools for this purpose, such as &lt;!-- raw HTML omitted --&gt;Steve Gibson&amp;rsquo;s page&lt;!-- raw HTML omitted --&gt; or the built-in tool in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;For example, for every new account you create in any service make a long password containing characters, numbers and symbols (see LastPass generator). A good choice for the &lt;strong&gt;password length would be anything above 50 character&lt;/strong&gt;, below is an example of the tool integrated in &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/lastpassgenerator.png&#34;
-            alt=&#34;LastPass password generator&#34;
-            title=&#34;LastPass password generator&#34;
-            sizes=&#34;(min-width: 420px) 420px, 100vw&#34;
-            width=&#34;420&#34;
-            height=&#34;521&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;LastPass password generator&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;If you do not want to use &lt;strong&gt;LastPass&lt;/strong&gt; you can use &lt;strong&gt;Steve&amp;rsquo;s generator&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png&#34;
-            srcset=&#34;https://elbauldelprogramador.com/img/steveperfectpasswords.png 1000w, https://elbauldelprogramador.com/img/steveperfectpasswords-800.png 800w&#34;
-            alt=&#34;Steve&#39;s Perfect Passwords&#34;
-            title=&#34;Steve&#39;s Perfect Passwords&#34;
-            sizes=&#34;(min-width: 1152px) 1152px, 100vw&#34;
-            width=&#34;1152&#34;
-            height=&#34;277&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Steve&#39;s Perfect Passwords&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;p&gt;Lets see how much time would it take to &lt;strong&gt;crack this 50-length&lt;/strong&gt; randomly generated password: 8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/howsecure.png&#34;
-            alt=&#34;How long would it take to crack the password?&#34;
-            title=&#34;How long would it take to crack the password?&#34;
-            sizes=&#34;(min-width: 803px) 803px, 100vw&#34;
-            width=&#34;803&#34;
-            height=&#34;227&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;How long would it take to crack the password? | source: &lt;a href=&#34;https://howsecureismypassword.net/&#34; target=&#34;_blank&#34; title=&#34;howsecure&#34;&gt;howsecureismypassword.net&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Lets see how much time would it take to &lt;strong&gt;crack this 50-length&lt;/strong&gt; randomly generated password: 8e8f6$AB9^YgOJ4x$JqHknK&lt;em&gt;FXp&lt;/em&gt;uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;and what does it says &lt;strong&gt;Steve&amp;rsquo;s version?&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/haystackpassword.png&#34;
-            alt=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
-            title=&#34;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator&#34;
-            sizes=&#34;(min-width: 842px) 842px, 100vw&#34;
-            width=&#34;842&#34;
-            height=&#34;753&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;GRC&#39;s Interactive Brute Force Password “Search Space” Calculator | source: &lt;a href=&#34;https://www.grc.com/haystack.htm&#34; target=&#34;_blank&#34; title=&#34;haystack&#34;&gt;grc.com/haystack.htm&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;use-a-password-manager&#34;&gt;Use a password manager&lt;/h1&gt;
-
 &lt;p&gt;Of course using such passwords you &lt;strong&gt;can&amp;rsquo;t expect to memorize them&lt;/strong&gt;, and that is a sign of a strong and good password.&lt;/p&gt;
-
-&lt;p&gt;In order to manage your passwords you should use a password manager, I am using LastPass as these guys have demonstrated they know how to store your passwords in a secure way. ( I am basing this opinion on Steve Gibson&amp;rsquo;s knowledge on security, here are some talks about it: &lt;a href=&#34;https://www.youtube.com/watch?v=z4-h5gWpvAc&#34; target=&#34;_blank&#34; title=&#34;I&#34;&gt;I&lt;/a&gt;, &lt;a href=&#34;https://blog.lastpass.com/2010/07/lastpass-gets-green-light-from-security.html/&#34; target=&#34;_blank&#34; title=&#34;II&#34;&gt;II&lt;/a&gt;).&lt;/p&gt;
-
+&lt;p&gt;In order to manage your passwords you should use a password manager, I am using LastPass as these guys have demonstrated they know how to store your passwords in a secure way. ( I am basing this opinion on Steve Gibson&amp;rsquo;s knowledge on security, here are some talks about it: &lt;!-- raw HTML omitted --&gt;I&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;II&lt;!-- raw HTML omitted --&gt;).&lt;/p&gt;
 &lt;p&gt;Even if you&amp;rsquo;re​ using LastPass to generate and store your passwords securely, there is an extra layer you could put on top of that: &lt;strong&gt;“use LastPass intelligently”&lt;/strong&gt;, as I explain in the next section.&lt;/p&gt;
-
-&lt;h2 id=&#34;best-practices-to-use-a-password-manager&#34;&gt;Best Practices To Use A Password  Manager&lt;/h2&gt;
-
+&lt;h2 id=&#34;best-practices-to-use-a-password--manager&#34;&gt;Best Practices To Use A Password  Manager&lt;/h2&gt;
 &lt;p&gt;So far you have a password stored in your password manager that&amp;rsquo;s​ impossible to memorize, that&amp;rsquo;s what a password manager is for. But the possibility that someone attack you and get all your LastPass information still could exists. Let&amp;rsquo;s suppose &lt;strong&gt;someone stole&lt;/strong&gt; all your data in LastPass, and to put us in the worst case scenario, &lt;strong&gt;ALL THE STOLEN DATA IS decrypted&lt;/strong&gt;. Well, one way to solve that is to only store &lt;em&gt;part of the password&lt;/em&gt; in LastPass, let me explain:&lt;/p&gt;
-
 &lt;p&gt;When you generate your password, you store that randomly generated password in your LastPass vault, but In the service itself, let&amp;rsquo;s say your Google account you set your password to:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK*FXp*uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;APASSWORDYOUCANMEMORIZE&lt;/strong&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK&lt;em&gt;FXp&lt;/em&gt;uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;APASSWORDYOUCANMEMORIZE&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;That way, even if all your LastPass data is stolen, the thief wouldn&amp;rsquo;t be able to log in into your accounts, as &lt;strong&gt;they only know part of your password.&lt;/strong&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;hardering-online-presence&#34;&gt;Hardering online presence&lt;/h1&gt;
-
 &lt;p&gt;These days more and more services offer a Two factor authentication option, you should enable it in all services you use.&lt;/p&gt;
-
 &lt;h2 id=&#34;tfa&#34;&gt;TFA&lt;/h2&gt;
-
 &lt;p&gt;When you enable TFA, the service will show your backup&amp;rsquo;s codes in the case you lose your phone or can&amp;rsquo;t generate a TFA code.&lt;/p&gt;
-
-&lt;h2 id=&#34;securing-your-tfa-backup-s&#34;&gt;Securing your TFA backup&amp;rsquo;s&lt;/h2&gt;
-
+&lt;h2 id=&#34;securing-your-tfa-backups&#34;&gt;Securing your TFA backup&amp;rsquo;s&lt;/h2&gt;
 &lt;p&gt;It is important that you save this backup&amp;rsquo;s codes, but In a secure place. The best thing would be to print it in paper and store them in a banks box. But for most of us stored them in a external HDD or print them would do the trick.&lt;/p&gt;
-
 &lt;p&gt;That&amp;rsquo;s it, In this days I think applying this tips and bests practices should have your password pretty secure, but &lt;strong&gt;remember, nothing is complete secure&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;em&gt;What tips do you use to secure your passwords? Let me know in the comments!&lt;/em&gt;&lt;/p&gt;
-
 &lt;h1 id=&#34;useful-links&#34;&gt;Useful links&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.troyhunt.com/passwords-evolved-authentication-guidance-for-the-modern-era/&#34; target=&#34;_blank&#34; title=&#34;Passwords Evolved: Authentication Guidance for the Modern Era&#34;&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

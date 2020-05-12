@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Locate on El Baúl del programador</title>
+        <title>locate on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/locate/</link>
-        <description>Recent content in Locate on El Baúl del programador</description>
+        <description>Recent content in locate on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/locate/</link>
-            <title>Locate on El Baúl del programador</title>
+            <title>locate on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,40 +22,24 @@
             
             <guid>https://elbauldelprogramador.com/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
             <description>&lt;p&gt;En linux, existe un comando llamado &lt;strong&gt;locate&lt;/strong&gt; que busca archivos en nuestro sistema de ficheros haciendo consultas a una base de datos, la descripción según su &lt;em&gt;man&lt;/em&gt; es:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;Locate lee una o más &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;bases de datos&lt;/a&gt; preparadas por updatedb y escribe a la salida estandar los nombres de los archivos que coincidan con al menos uno de los patrones, uno por línea.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;a href=&#34;http://www.youtube.com/playlist?list=PLINUjqv9_oyrI4SXWqf-sBhoUnxHe2bRh&#34; title=&#34;Lista de reproducción EPIC3&#34; target=&#34;_blank&#34;&gt;canciones preferidas&lt;/a&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
-
+&lt;p&gt;El motivo de este artículo viene dado por un problema que me planteé hace unos días. Resulta que tengo en un archivo los nombres de algunas de mis &lt;!-- raw HTML omitted --&gt;canciones preferidas&lt;!-- raw HTML omitted --&gt;. Este archivo lo voy actualizando regularmente y quería generar una lista de reproducción en base a dicho fichero. Así que he creado un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; que recorre todos los elementos del archivo y busca dónde se encuentra el fichero en mi disco duro.&lt;/p&gt;
 &lt;h1 id=&#34;expresiones-regulares-en-locate&#34;&gt;Expresiones regulares en Locate&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; acepta &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresiones regulares&lt;/a&gt; complejas, para ello hay que llamarlo con la opción &lt;code&gt;-regex&lt;/code&gt;.&lt;/p&gt;
-
 &lt;p&gt;El problema básicamente es el siguiente. A partir de un texto con los nombres &lt;em&gt;parciales&lt;/em&gt; de un fichero obtener la ruta completa a dicho archivo. Lo de parciales quiere decir que si el nombre es &lt;strong&gt;Autor - Nombre Canción&lt;/strong&gt;, en el texto solo se guarda &lt;strong&gt;Nombre Canción&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Actualización&lt;/strong&gt;: Hace un tiempo creé este script en python para &lt;a href=&#34;https://elbauldelprogramador.com/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;generar listas de reproducción de una determinada duración&#34;&gt;generar listas de reproducción de una determinada duración&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;crear-la-expresión-regular&#34;&gt;Crear la expresión regular&lt;/h1&gt;
-
 &lt;p&gt;Empezaré mostrando la expresión regular y luego la explicaré:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;code&gt;$i&lt;/code&gt; está el nombre de la canción, &lt;code&gt;.*&lt;/code&gt; permite que haya cero o más caracteres tras el nombre de la canción y finalmente &lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; obliga a que la extensión del fichero sea &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;strong&gt;mp3&lt;/strong&gt; o &lt;strong&gt;mp4&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Siempre que necesito crear una expresión regular uso una herramienta llamada &lt;strong&gt;regex tester&lt;/strong&gt; que permite visualizar qué cadenas de texto coincidirían con el patrón:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 627px) 627px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/11/Buscar-archivos-con-locate-mediante-expresiones-regulares-complejas.png&#34; title=&#34;Buscar archivos con locate mediante expresiones regulares&#34; alt=&#34;Buscar archivos con locate mediante expresiones regulares&#34; width=&#34;627px&#34; height=&#34;285px&#34;&gt;&lt;/img&gt;
-    &lt;figcaption&gt;Créditos: &lt;a href=&#34;https://www.iconfinder.com/icons/33644/terminal_icon&#34; target=&#34;_blank&#34;&gt;inconfinder&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;script-completo&#34;&gt;Script completo&lt;/h1&gt;
-
 &lt;p&gt;Con la expresión regular construida, solo resta crear un script que procese el texto con el nombre de las canciones y cree la lista de reproducción:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -72,9 +55,8 @@
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
     locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
 &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; se establece al salto de línea para que el &lt;code&gt;for&lt;/code&gt; tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de &lt;code&gt;IFS&lt;/code&gt;). De esta forma, si una línea del fichero contiene &lt;strong&gt;Nombre canción&lt;/strong&gt;, en el &lt;code&gt;for&lt;/code&gt; el contenido de &lt;code&gt;$i&lt;/code&gt; valdrá &lt;strong&gt;Nombre canción&lt;/strong&gt; y no &lt;strong&gt;Nombre&lt;/strong&gt; y en la siguiente iteración &lt;strong&gt;canción&lt;/strong&gt;. &lt;code&gt;&amp;gt; /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u&lt;/code&gt; borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con &lt;code&gt;tee&lt;/code&gt; permite escribir tanto a la salida estándar como a la lista.&lt;/p&gt;
-
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; se establece al salto de línea para que el &lt;code&gt;for&lt;/code&gt; tome como separación cada línea del archivo, en lugar de un espacio (valor por defecto de &lt;code&gt;IFS&lt;/code&gt;). De esta forma, si una línea del fichero contiene &lt;strong&gt;Nombre canción&lt;/strong&gt;, en el &lt;code&gt;for&lt;/code&gt; el contenido de &lt;code&gt;$i&lt;/code&gt; valdrá &lt;strong&gt;Nombre canción&lt;/strong&gt; y no &lt;strong&gt;Nombre&lt;/strong&gt; y en la siguiente iteración &lt;strong&gt;canción&lt;/strong&gt;. &lt;code&gt;&amp;gt; /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u&lt;/code&gt; borra el contenido de lo que tuviera la lista anteriormente para generarla de nuevo. Por último, la tubería con &lt;code&gt;tee&lt;/code&gt; permite escribir tanto a la salida estándar como a la lista.&lt;/p&gt;
 &lt;p&gt;Otra opción, sugerida en Twitter por &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt;, es usar un &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
@@ -86,11 +68,10 @@ cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#
 &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
     locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /RUTA/A/LISTA/DE/REPRODUCCION/LISTA.m3u
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;a href=&#34;http://regexpal.com/&#34; target=&#34;_blank&#34;&gt;regexpal.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;regexpal.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         

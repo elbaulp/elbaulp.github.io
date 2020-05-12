@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Gentoo on El Baúl del programador</title>
+        <title>gentoo on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/gentoo/</link>
-        <description>Recent content in Gentoo on El Baúl del programador</description>
+        <description>Recent content in gentoo on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 15 Sep 2017 17:44:41 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/gentoo/</link>
-            <title>Gentoo on El Baúl del programador</title>
+            <title>gentoo on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,21 +21,20 @@
             <pubDate>Fri, 15 Sep 2017 17:44:41 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/actualizar-kernel-gentoo-automaticamente/</guid>
-            <description>&lt;p&gt;Llevo unos cuantos años usando &lt;a href=&#34;https://elbauldelprogramador.com/categories/gentoo/&#34; title=&#34;post sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;, y cada vez que salía una actualización del &lt;a href=&#34;https://elbauldelprogramador.com/tags/kernel/&#34; title=&#34;posts sobre kernel&#34;&gt;kernel&lt;/a&gt; terminaba visitando la página &lt;a href=&#34;https://wiki.gentoo.org/wiki/Kernel/Upgrade&#34; target=&#34;_blank&#34; title=&#34;Kernel/Upgrade&#34;&gt;Kernel/Upgrade&lt;/a&gt; de la Wiki de Gentoo. Tras casi aprenderme los pasos de memoria, decidí que iba siendo hora de escribir un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash/&#34; title=&#34;post sobre bash&#34;&gt;script&lt;/a&gt; que automatizara el proceso.&lt;/p&gt;
-
+            <description>&lt;p&gt;Llevo unos cuantos años usando &lt;a href=&#34;https://elbauldelprogramador.com/categories/gentoo/&#34; title=&#34;post sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;, y cada vez que salía una actualización del &lt;a href=&#34;https://elbauldelprogramador.com/tags/kernel/&#34; title=&#34;posts sobre kernel&#34;&gt;kernel&lt;/a&gt; terminaba visitando la página &lt;!-- raw HTML omitted --&gt;Kernel/Upgrade&lt;!-- raw HTML omitted --&gt; de la Wiki de Gentoo. Tras casi aprenderme los pasos de memoria, decidí que iba siendo hora de escribir un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash/&#34; title=&#34;post sobre bash&#34;&gt;script&lt;/a&gt; que automatizara el proceso.&lt;/p&gt;
 &lt;p&gt;El script es bastante simple, lo publico por si a alguien le resulta útil:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;## Upgrade gentoo kernel
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# The first and only argument must be the folder name of the new kernel.
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Stop script when an error occurs
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o errexit
+&lt;span class=&#34;c1&#34;&gt;## Upgrade gentoo kernel&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# The first and only argument must be the folder name of the new kernel.&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Stop script when an error occurs&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o errexit
 &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o pipefail
 &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o nounset
-&lt;span class=&#34;c1&#34;&gt;# For debugging purposes
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o xtrace
+&lt;span class=&#34;c1&#34;&gt;# For debugging purposes&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o xtrace
 
 &lt;span class=&#34;nb&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/src/&amp;#39;&lt;/span&gt;
 
@@ -52,8 +50,8 @@ _main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&g
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Copying old configuration...&amp;#34;&lt;/span&gt;
     cp /usr/src/linux/.config /tmp/.config
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Setting new kernel as default...&amp;#34;&lt;/span&gt;
-    &lt;span class=&#34;c1&#34;&gt;#ln -sf /usr/src/&amp;#34;$1&amp;#34; /usr/src/linux
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    cp /tmp/.config /usr/src/linux/
+    &lt;span class=&#34;c1&#34;&gt;#ln -sf /usr/src/&amp;#34;$1&amp;#34; /usr/src/linux&lt;/span&gt;
+    cp /tmp/.config /usr/src/linux/
     eselect kernel &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
     &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/src/linux/
     &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Building...&amp;#34;&lt;/span&gt;
@@ -72,17 +70,14 @@ _main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&g
     _main &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
     _usage
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para usarlo basta con ejecutar:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para usarlo basta con ejecutar:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo ./updatekernel.sh &amp;lt;nombre-carpeta-kernel&amp;gt;
-&lt;span class=&#34;c1&#34;&gt;## por ejemplo
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ sudo ./updatekernel.sh linux-4.12.12-gentoo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El script se puede mejorar aún bastante, si te apetece &lt;strong&gt;contribuir&lt;/strong&gt;, está alojado en mi repositorio de &lt;a href=&#34;https://github.com/elbaulp/dotfiles/blob/master/home/bin/updatekernel.sh&#34; target=&#34;_blank&#34; title=&#34;elbaulp/dotfiles&#34;&gt;Dotfiles.&lt;/a&gt;&lt;/p&gt;
-
+&lt;span class=&#34;c1&#34;&gt;## por ejemplo&lt;/span&gt;
+$ sudo ./updatekernel.sh linux-4.12.12-gentoo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El script se puede mejorar aún bastante, si te apetece &lt;strong&gt;contribuir&lt;/strong&gt;, está alojado en mi repositorio de &lt;!-- raw HTML omitted --&gt;Dotfiles.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;Tras escribir el script, me dí cuenta que portage tiene una opción para añadir hooks a los paquetes, concretamente hay uno para que el kernel se compile e instale automáticamente. Al probarlo me dí cuenta de que no usa el &lt;code&gt;.config&lt;/code&gt; del kernel anterior. Seguramente se pueda configurar para que lo haga,  pero ya que escribí el script, decidí usarlo.&lt;/p&gt;
-
 &lt;p&gt;Espero que te sea útil!&lt;/p&gt;</description>
         </item>
         
@@ -92,16 +87,13 @@ _main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&g
             <pubDate>Sat, 04 Feb 2017 12:53:37 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/how-to-remove-slotted-packages-in-gentoo/</guid>
-            <description>
-
-&lt;p&gt;Hace poco tuve un problema intentando eliminar un paquete de los llamados &lt;em&gt;slotted&lt;/em&gt; en Gentoo, a continuación muestro cómo lo resolví.&lt;/p&gt;
-
+            <description>&lt;p&gt;Hace poco tuve un problema intentando eliminar un paquete de los llamados &lt;em&gt;slotted&lt;/em&gt; en Gentoo, a continuación muestro cómo lo resolví.&lt;/p&gt;
 &lt;p&gt;Primero debemos usar &lt;code&gt;equery list &amp;lt;pkg&amp;gt;&lt;/code&gt; para listar los paquetes que coinciden con el nombre del paquete a eliminar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery list emacs
  * Searching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; emacs ...
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-24.5-r3:24
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hay dos paquetes de &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; instalados, cada uno en un &lt;em&gt;slot&lt;/em&gt; distinto, &lt;code&gt;:24&lt;/code&gt; y &lt;code&gt;:25&lt;/code&gt;. Para borrar el más antiguo, ejecutamos:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;IP-&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; app-editors/emacs-25.1:25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hay dos paquetes de &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;emacs&#34;&gt;emacs&lt;/a&gt; instalados, cada uno en un &lt;em&gt;slot&lt;/em&gt; distinto, &lt;code&gt;:24&lt;/code&gt; y &lt;code&gt;:25&lt;/code&gt;. Para borrar el más antiguo, ejecutamos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo emerge -C emacs-24.5-r3:24
 Password:
  * This action can remove important packages! In order to be safer, use
@@ -109,9 +101,9 @@ Password:
  * removing packages.
 
  app-editors/emacs
-    selected: &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;.5-r3
+    selected: 24.5-r3
    protected: none
-     omitted: &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt;.1
+     omitted: 25.1
 
 All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/emacs-24.5-r3
 
@@ -121,14 +113,14 @@ All selected packages: &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;app-editors/e
 &amp;gt;&amp;gt;&amp;gt; Waiting &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; seconds before starting...
 &amp;gt;&amp;gt;&amp;gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Control-C to abort&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;...
 &amp;gt;&amp;gt;&amp;gt; Unmerging in: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
-&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
+&amp;gt;&amp;gt;&amp;gt; Unmerging &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; of 1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; app-editors/emacs-24.5-r3...
  * Regenerating site-gentoo.el &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; GNU Emacs &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;postrm&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
  * ... &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; site initialisation files included.
 
  * Regenerating GNU info directory index...
- * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras eliminar el paquete, comprobamos qué otros paquetes dependían de él&lt;/p&gt;
+ * Processed &lt;span class=&#34;m&#34;&gt;140&lt;/span&gt; info files.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras eliminar el paquete, comprobamos qué otros paquetes dependían de él&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ equery depends emacs-24.5-r3:24
  * These packages depend on emacs-24.5-r3:24:
 app-emacs/emacs-common-gentoo-1.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
@@ -143,13 +135,12 @@ dev-util/ninja-1.6.0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual
 dev-vcs/git-2.10.2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 net-dns/libidn-1.33 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;emacs ? virtual/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
 virtual/editor-0 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
-virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Por último:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por último:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo emerge --update --deep --with-bdeps&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;y --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;Gentoo Forums | &lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-845023-view-previous.html?sid=ef04c0fc53b4e635179ee854aaed2fbd&#34; target=&#34;_blank&#34; title=&#34;Remove Slotted Packages&#34;&gt;Remove Slotted Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Gentoo Forums | &lt;!-- raw HTML omitted --&gt;Remove Slotted Packages&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -161,37 +152,27 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
             
             <guid>https://elbauldelprogramador.com/how-to-change-portage-folders-to-other-location/</guid>
             <description>&lt;p&gt;Hace poco tuve problemas con &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;portage&lt;/a&gt; y su directorio de trabajo temporal en &lt;code&gt;/var/tmp/portage&lt;/code&gt; en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34;&gt;Gentoo&lt;/a&gt; porque me quedé sin las 10GB mínimas que necesita:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/tmp/portage&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así que la primera solución que se me ocurrió fue hacer que &lt;code&gt;portage&lt;/code&gt; trabaje en otro directorio, concretamente en otro disco duro auxiliar en el que dispongo de más espacio. Veamos cómo conseguirlo:&lt;/p&gt;
-
-&lt;h1 id=&#34;cambiar-el-fichero-etc-portage-make-conf&#34;&gt;Cambiar el fichero /etc/portage/make.conf&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;There is NOT at least &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; GiB disk space at &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/tmp/portage
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así que la primera solución que se me ocurrió fue hacer que &lt;code&gt;portage&lt;/code&gt; trabaje en otro directorio, concretamente en otro disco duro auxiliar en el que dispongo de más espacio. Veamos cómo conseguirlo:&lt;/p&gt;
+&lt;h1 id=&#34;cambiar-el-fichero-etcportagemakeconf&#34;&gt;Cambiar el fichero /etc/portage/make.conf&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Para ello necesitamos decirle a &lt;code&gt;portage&lt;/code&gt; que queremos cambiar el directorio por defecto, para ello editamos el fichero &lt;code&gt;/etc/portage/make.conf&lt;/code&gt; y añadimos las variables &lt;code&gt;PORTDIR, DISTDIR&lt;/code&gt; y &lt;code&gt;PKGDIR&lt;/code&gt; apuntando al directorio deseado, en mi caso &lt;code&gt;/home/hkr/ssd2/portage&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/portage&amp;#34;&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;DISTDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/distfiles&amp;#34;&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;sincronizar-el-árbol-de-portage&#34;&gt;Sincronizar el árbol de portage&lt;/h1&gt;
-
+&lt;span class=&#34;nv&#34;&gt;PKGDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;PORTDIR&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/packages&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;sincronizar-el-árbol-de-portage&#34;&gt;Sincronizar el árbol de portage&lt;/h1&gt;
 &lt;p&gt;El siguiente paso es sincronizar &lt;code&gt;portage&lt;/code&gt; para que se de cuenta del cambio, para ello:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;emerge --sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras esto, &lt;code&gt;portage&lt;/code&gt; ya conocerá la nueva localización de directorios, pero resta una cosa más por hacer.&lt;/p&gt;
-
-&lt;h1 id=&#34;crear-enlace-simbólico-para-make-profile&#34;&gt;Crear enlace simbólico para make.profile&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;emerge --sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, &lt;code&gt;portage&lt;/code&gt; ya conocerá la nueva localización de directorios, pero resta una cosa más por hacer.&lt;/p&gt;
+&lt;h1 id=&#34;crear-enlace-simbólico-para-makeprofile&#34;&gt;Crear enlace simbólico para make.profile&lt;/h1&gt;
 &lt;p&gt;Ahora mismo &lt;code&gt;make.conf&lt;/code&gt; es un enlace a &lt;code&gt;/usr/portage/profiles/default/linux/amd64/13.0/desktop/&lt;/code&gt;, el directorio antiguo, debemos enlazarlo con el directorio nuevo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras esto, tendremos &lt;code&gt;portage&lt;/code&gt; en un nuevo directorio.&lt;/p&gt;
-
-&lt;h1 id=&#34;cambiar-solo-el-directorio-temporal-var-tmp-portage&#34;&gt;Cambiar solo el directorio temporal /var/tmp/portage&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s /home/hkr/ssd2/portage/profiles/default/linux/amd64/13.0/desktop /etc/portage/make.profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, tendremos &lt;code&gt;portage&lt;/code&gt; en un nuevo directorio.&lt;/p&gt;
+&lt;h1 id=&#34;cambiar-solo-el-directorio-temporal-vartmpportage&#34;&gt;Cambiar solo el directorio temporal /var/tmp/portage&lt;/h1&gt;
 &lt;p&gt;Mi problema orignal era no tener espacio en &lt;code&gt;/var/tmp/portage&lt;/code&gt;, resulta que este directorio también se puede cambiar, sin necesidad de mover de sitio lo ficheros de &lt;code&gt;portage&lt;/code&gt;, para ello basta con añadir al &lt;code&gt;make.conf&lt;/code&gt; la siguiente variable:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Sincronizamos y listo.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;PORTAGE_TMPDIR&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/hkr/ssd2/&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sincronizamos y listo.&lt;/p&gt;
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic-t-774539.html&#34; title=&#34;/var/tmp/portage: not enough space&#34;&gt;&lt;code&gt;/var/tmp/portage: not enough space&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forums.gentoo.org/viewtopic.php?t=120770&#34; title=&#34;moving portage folders [SOLVED]&#34;&gt;&lt;code&gt;moving portage folders&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
@@ -205,17 +186,14 @@ virtual/emacs-24 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;app-editors/emacs:2
             
             <guid>https://elbauldelprogramador.com/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
             <description>&lt;p&gt;Hoy ha salido la versión 48 de Firefox para &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Instalar y actualizar Gentoo&#34;&gt;Gentoo&lt;/a&gt;, pero cuando realicé la actualización obtenía el siguiente error:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Así que pregunté en los foros de &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo&lt;/a&gt; y parece que se trata de un &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
-
 &lt;p&gt;Para salir del paso, en el foro me comentaron que existe un &lt;em&gt;Workaround&lt;/em&gt;, se trata de obligar a instalar una versión concreta de &lt;em&gt;NSS&lt;/em&gt;, en concreto la 3.24. Para ello basta con ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;=dev-libs/nss-3.24 ~amd64&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
 emerge -u nss
-&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
-
+&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Gracias a &lt;em&gt;fedeliallalinea&lt;/em&gt; por la respuesta en el foro.&lt;/p&gt;</description>
         </item>
         
@@ -225,50 +203,25 @@ emerge -u nss
             <pubDate>Fri, 29 Jul 2016 10:20:01 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/</guid>
-            <description>&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/como-instalar-actualizar-elminar-paquetes-gentoo.png&#34;
-            alt=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;
-            title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;
-            sizes=&#34;(min-width: 526px) 526px, 100vw&#34;
-            width=&#34;526&#34;
-            height=&#34;256&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;Imagen tomada con &lt;em&gt;ScreenFetch&lt;/em&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hace unos meses me decidí a instalar &lt;em&gt;Gentoo&lt;/em&gt; en mi portátil por probar cómo iba, y la verdad es que me está gustando bastante. La capacidad de personalización que tiene es tremenda.&lt;/p&gt;
-
 &lt;p&gt;Una de las cosas que más me gusta es su gestor de paquetes, &lt;em&gt;emerge&lt;/em&gt; y sus programas auxiliares para administrar el sistema (&lt;em&gt;equery, eclean, euse y similares&lt;/em&gt;) es por ello que escribo este artículo, para recopilar una lista de las tareas más habituales en el día a día de usar &lt;em&gt;Gentoo&lt;/em&gt;. Cómo buscar paquetes a instalar, eliminar paquetes instalados, consultar qué paquetes queremos instalar, limpiar espacio en el sistema, actualizarlo etc. Empecemos:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;comprobar-si-hay-actualizaciones-para-el-sistema&#34;&gt;Comprobar si hay actualizaciones para el sistema&lt;/h1&gt;
-
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;comprobar-si-hay-actualizaciones-para-el-sistema-&#34;&gt;Comprobar si hay actualizaciones para el sistema&lt;/h1&gt;
 &lt;p&gt;Una de las primeras cosas que hago cuando enciendo el PC es comprobar si hay actualizaciones del sistema, en &lt;em&gt;Gentoo&lt;/em&gt; esto podemos hacerlo con el siguiente comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge-webrsync
 $ emerge --sync
-$ emaint -A sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los tres comandos llevan a cabo la misma tarea, pero difieren en varios aspectos:&lt;/p&gt;
-
+$ emaint -A sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los tres comandos llevan a cabo la misma tarea, pero difieren en varios aspectos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;emerge --sync&lt;/code&gt;: Solo existe para propósito de compatibilidad, ya que los otros dos comandos son más modernos&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;emaint -A sync&lt;/code&gt;: &lt;code&gt;emaint&lt;/code&gt; es una herramienta para realizar tareas de mantenimiento en el sistema relacionadas con los paquetes, también realiza comprobaciones de “salud”. Entre sus subcomandos está la opción &lt;code&gt;sync&lt;/code&gt;, que comprueba si hay actualizaciones para los paquetes instalados. La opción &lt;code&gt;-A&lt;/code&gt; es para que sincronice todos los repositorios.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;emerge-webrsync&lt;/code&gt;: Este es similar al anterior, pero descarga los datos en un &lt;em&gt;tarball&lt;/em&gt;, lo cual lo hará mucho más rápido que los dos anteriores, este es el comando que suelo usar.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;actualizar-el-sistema&#34;&gt;Actualizar el sistema&lt;/h1&gt;
-
+&lt;h1 id=&#34;actualizar-el-sistema-&#34;&gt;Actualizar el sistema&lt;/h1&gt;
 &lt;p&gt;Sincronizados con el servidor, deberemos realizar la actualización en sí, en caso de existir. Para esta tarea yo suelo usar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --deep --newuse -atv @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Desglosemos cada parámetro:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --deep --newuse -atv @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Desglosemos cada parámetro:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;--update&lt;/code&gt;: Actualiza el paquete a la mejor versión disponible.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;--deep:&lt;/code&gt;: Obliga a que se consideren todas las dependencias de un paquete, en lugar de únicamente las dependencias directas. De este modo se actulizan librerías que no están listadas directamente en las dependencias de un paquete.&lt;/li&gt;
@@ -277,57 +230,47 @@ $ emaint -A sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;code&gt;-t&lt;/code&gt; (&lt;code&gt;--tree&lt;/code&gt;): Muestra los paquetes a actualizar e instalar en forma de árbol.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-v&lt;/code&gt; (&lt;code&gt;--verbose&lt;/code&gt;): Muestra más información.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h1 id=&#34;eliminar-un-paquete-con-todas-sus-dependencias&#34;&gt;Eliminar un paquete con todas sus dependencias&lt;/h1&gt;
-
+&lt;h1 id=&#34;eliminar-un-paquete-con-todas-sus-dependencias-&#34;&gt;Eliminar un paquete con todas sus dependencias&lt;/h1&gt;
 &lt;p&gt;Para eliminar por completo un paquete, con todas las dependencias:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean paquete&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras eliminar el paquete podemos ejecutar de nuevo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;para eliminar las dependencias que tuviera el paquete desistalado, pero &lt;code&gt;depclean&lt;/code&gt; no eliminará ningún paquete a no ser que todas las dependencias requeridas hayan sido resueltas, por tanto es necesario ejecutar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --newuse --deep @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En el caso de no haber actualizado la variable &lt;code&gt;USE&lt;/code&gt; en nuestro sistema, podemos ahorrar tiempo con:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --changed-use --deep @world&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;buscar-paquetes-a-instalar&#34;&gt;Buscar paquetes a instalar&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras eliminar el paquete podemos ejecutar de nuevo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv --depclean
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;para eliminar las dependencias que tuviera el paquete desistalado, pero &lt;code&gt;depclean&lt;/code&gt; no eliminará ningún paquete a no ser que todas las dependencias requeridas hayan sido resueltas, por tanto es necesario ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --newuse --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el caso de no haber actualizado la variable &lt;code&gt;USE&lt;/code&gt; en nuestro sistema, podemos ahorrar tiempo con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --update --changed-use --deep @world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;buscar-paquetes-a-instalar-&#34;&gt;Buscar paquetes a instalar&lt;/h1&gt;
 &lt;p&gt;Hay varias formas, se puede buscar:&lt;/p&gt;
-
-&lt;h2 id=&#34;usando-expresiones-regulares&#34;&gt;Usando expresiones regulares&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;%^python&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto buscará paquetes que se llamen exáctamente &lt;em&gt;python&lt;/em&gt;, y por tanto solo hay uno:&lt;/p&gt;
+&lt;h2 id=&#34;usando-expresiones-regulares-&#34;&gt;Usando expresiones regulares&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s &lt;span class=&#34;s2&#34;&gt;&amp;#34;%^python&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto buscará paquetes que se llamen exáctamente &lt;em&gt;python&lt;/em&gt;, y por tanto solo hay uno:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Results &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; search key : %^python$ &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 Searching...
 
 *  dev-lang/python
-      Latest version available: &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;.4.3-r1
-      Latest version installed: &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;.4.3-r1
-      Size of files: &lt;span class=&#34;m&#34;&gt;14&lt;/span&gt;,096 KiB
+      Latest version available: 3.4.3-r1
+      Latest version installed: 3.4.3-r1
+      Size of files: 14,096 KiB
       Homepage:      http://www.python.org/
       Description:   An interpreted, interactive, object-oriented programming language
       License:       PSF-2
 
-&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Applications found : &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;buscar-paquetes-que-contengan-la-palabra-x&#34;&gt;Buscar paquetes que contengan la palabra x&lt;/h2&gt;
-
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; Applications found : &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;buscar-paquetes-que-contengan-la-palabra-x-&#34;&gt;Buscar paquetes que contengan la palabra x&lt;/h2&gt;
 &lt;p&gt;Para buscar todos los paquetes que contengan la palabra &lt;em&gt;python&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras ejecutar este comando, en mi caso aparecen 200 paquetes.&lt;/p&gt;
-
-&lt;h2 id=&#34;buscar-paquetes-basándonos-en-su-descripción&#34;&gt;Buscar paquetes basándonos en su descripción&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -s python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras ejecutar este comando, en mi caso aparecen 200 paquetes.&lt;/p&gt;
+&lt;h2 id=&#34;buscar-paquetes-basándonos-en-su-descripción-&#34;&gt;Buscar paquetes basándonos en su descripción&lt;/h2&gt;
 &lt;p&gt;En lugar de buscar por el nombre del paquete, podemos buscar en su descripción:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --searchdesc python&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;También se pueden usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;instalar-paquetes&#34;&gt;Instalar paquetes&lt;/h2&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --searchdesc python
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;También se pueden usar &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;instalar-paquetes-&#34;&gt;Instalar paquetes&lt;/h2&gt;
 &lt;p&gt;Una vez encontrado el paquete que deaseamos instalar, prodecemos del siguiente modo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv paquete&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;equery&#34;&gt;Equery&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge -atv paquete
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;equery-&#34;&gt;Equery&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es parte del paquete &lt;code&gt;gentoolkit&lt;/code&gt;, el cual instala una serie de aplicaciones destinadas a la administración de &lt;em&gt;Gentoo&lt;/em&gt;, para instalarlo basta con ejecutar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --ask app-portage/gentoolkit&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es una aplicación creada con el propósito de hacer tareas comunes en &lt;em&gt;Portage&lt;/em&gt; más sencillas, veamos una lista de lo que puede hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ emerge --ask app-portage/gentoolkit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Equery&lt;/em&gt; es una aplicación creada con el propósito de hacer tareas comunes en &lt;em&gt;Portage&lt;/em&gt; más sencillas, veamos una lista de lo que puede hacer:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Gentoo package query tool
 Usage: equery &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;global-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; module-name &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;module-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 
@@ -348,48 +291,41 @@ modules &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;short name&lt;span class=&#3
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;m&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;eta                  display metadata about PKG
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ize                  display total size of all files owned by PKG
  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;u&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;ses                  display USE flags &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
- &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hich                 print full path to ebuild &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si quisieramos ver el árbol de dependencias de firefox:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery g firefox&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;eclean&#34;&gt;Eclean&lt;/h1&gt;
-
+ &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;w&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;hich                 print full path to ebuild &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; PKG
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si quisieramos ver el árbol de dependencias de firefox:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ equery g firefox
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;eclean-&#34;&gt;Eclean&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;eclean&lt;/em&gt; es otra herramienta parte del paquete &lt;em&gt;Gentoolkit&lt;/em&gt;, diseñada para limpiar el sistema del código fuente usado para compilar los paquetes y binarios creados durante el proceso de compilación.&lt;/p&gt;
-
-&lt;h2 id=&#34;limpiar-el-código-fuente-de-los-paquetes&#34;&gt;Limpiar el código fuente de los paquetes&lt;/h2&gt;
-
+&lt;h2 id=&#34;limpiar-el-código-fuente-de-los-paquetes-&#34;&gt;Limpiar el código fuente de los paquetes&lt;/h2&gt;
 &lt;p&gt;Tras instalar paquetes, el código fuente queda guardado junto con los objetos generados por si es necesario recompilar, si no los queremos mantener, es posible eliminarlos con estos comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ eclean --deep distfiles
-$ eclean-dist&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;eclean-dist&lt;/code&gt; es un alias de &lt;code&gt;eclean distfiles&lt;/code&gt;, la opción &lt;code&gt;--deep&lt;/code&gt; deja únicamente el código fuente necesario para una reinstalación.&lt;/p&gt;
-
-&lt;h2 id=&#34;limpiar-paquetes-binarios&#34;&gt;Limpiar paquetes binarios&lt;/h2&gt;
-
+$ eclean-dist
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;eclean-dist&lt;/code&gt; es un alias de &lt;code&gt;eclean distfiles&lt;/code&gt;, la opción &lt;code&gt;--deep&lt;/code&gt; deja únicamente el código fuente necesario para una reinstalación.&lt;/p&gt;
+&lt;h2 id=&#34;limpiar-paquetes-binarios-&#34;&gt;Limpiar paquetes binarios&lt;/h2&gt;
 &lt;p&gt;Los paquetes binarios son aquellos que no proporcionan código fuente, como por ejemplo el software privativo, o paquetes precompilados, para borrarlos basta ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ eclean --deep packages
-$ eclean-pkg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;apps-recomendadas&#34;&gt;Apps Recomendadas&lt;/h1&gt;
-
+$ eclean-pkg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;apps-recomendadas-&#34;&gt;Apps Recomendadas&lt;/h1&gt;
 &lt;p&gt;Antes de usar &lt;em&gt;Gentoo&lt;/em&gt;, utilizaba el comando &lt;code&gt;df&lt;/code&gt; para ver el estado de los discos duros, un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df -h
 Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda4        20G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt;.9G   11G  &lt;span class=&#34;m&#34;&gt;44&lt;/span&gt;% /
-tmpfs           &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.2G  952K  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;.2G   &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;% /run
-dev              10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /dev
-shm             &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G   91M  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.8G   &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;% /dev/shm
-cgroup_root      10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /sys/fs/cgroup
-/dev/sda2       128M   16M  113M  &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;% /boot
-/dev/sda5        87G   38G   45G  &lt;span class=&#34;m&#34;&gt;46&lt;/span&gt;% /home
-/dev/sdb1       110G   11G   94G  &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;% /home/hkr/ssd2
-none            &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;.9G   &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;% /run/user/1000&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Tras instalar &lt;em&gt;Gentoo&lt;/em&gt; descubrí el paquete &lt;code&gt;pydf&lt;/code&gt;, similar a &lt;code&gt;df&lt;/code&gt; pero visualmente más atractivo, colorea el resultado y muestra una representación gráfica del porcentaje ocupado:&lt;/p&gt;
+/dev/sda4        20G  7.9G   11G  44% /
+tmpfs           1.2G  952K  1.2G   1% /run
+dev              10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /dev
+shm             5.9G   91M  5.8G   2% /dev/shm
+cgroup_root      10M     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   10M   0% /sys/fs/cgroup
+/dev/sda2       128M   16M  113M  12% /boot
+/dev/sda5        87G   38G   45G  46% /home
+/dev/sdb1       110G   11G   94G  11% /home/hkr/ssd2
+none            5.9G     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  5.9G   0% /run/user/1000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras instalar &lt;em&gt;Gentoo&lt;/em&gt; descubrí el paquete &lt;code&gt;pydf&lt;/code&gt;, similar a &lt;code&gt;df&lt;/code&gt; pero visualmente más atractivo, colorea el resultado y muestra una representación gráfica del porcentaje ocupado:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ pydf  -h
 Filesystem Size  Used Avail Use%                                                                                       Mounted on
-/dev/sda4   19G 8043M   10G &lt;span class=&#34;m&#34;&gt;41&lt;/span&gt;.1 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##################################.................................................] /
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sda2  128M   15M  112M &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt;.0 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########.........................................................................] /boot
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sda5   87G   38G   45G &lt;span class=&#34;m&#34;&gt;43&lt;/span&gt;.4 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;####################################...............................................] /home
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;/dev/sdb1  110G   11G   94G  &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;.8 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;########...........................................................................&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /home/hkr/ssd2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+/dev/sda4   19G 8043M   10G 41.1 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##################################.................................................] /&lt;/span&gt;
+/dev/sda2  128M   15M  112M 12.0 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########.........................................................................] /boot&lt;/span&gt;
+/dev/sda5   87G   38G   45G 43.4 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;####################################...............................................] /home&lt;/span&gt;
+/dev/sdb1  110G   11G   94G  9.8 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;########...........................................................................] /home/hkr/ssd2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Gentoo_Cheat_Sheet&#34; title=&#34;CheatSheet de Gentoo&#34;&gt;Gentoo Cheat Sheet&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://wiki.gentoo.org/wiki/Equery&#34; title=&#34;Página de Equery&#34;&gt;Equery&lt;/a&gt;&lt;/li&gt;

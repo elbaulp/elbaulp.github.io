@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Biometrics on The Programmer&#39;s Chest</title>
+        <title>biometrics on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/tags/biometrics/</link>
-        <description>Recent content in Biometrics on The Programmer&#39;s Chest</description>
+        <description>Recent content in biometrics on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 20 Oct 2017 11:50:46 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/tags/biometrics/</link>
-            <title>Biometrics on The Programmer&#39;s Chest</title>
+            <title>biometrics on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,80 +21,46 @@
             <pubDate>Fri, 20 Oct 2017 11:50:46 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/biometrics-pattern-recognition/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34;&gt;&lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Sistemas-biometricos-aplicados-a-la-seguridad.png&#34; title=&#34;Biometría Aplicada a La Seguridad - Reconocimiento De Patrones&#34; alt=&#34;Biometría Aplicada a La Seguridad - Reconocimiento De Patrones&#34; width=&#34;640px&#34; height=&#34;405px&#34; /&gt;&lt;/a&gt;
-    &lt;span class=&#34;image-credit&#34;&gt;image credits: pixabay&lt;a href=&#34;https://pixabay.com/en/biometrics-eye-security-154660/&#34;&gt;&lt;/a&gt;&lt;/span&gt;&lt;br /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;The next article takes part of a team work done for the subject &lt;em&gt;Security in operating systems&lt;/em&gt; from the Granada computer engineering school (ETSIIT UGR). The group was composed by &lt;a href=&#34;http://twitter.com/MPV_Prod&#34;&gt;@MPV_Prod&lt;/a&gt; , &lt;a href=&#34;http://twitter.com/_musicalnote&#34;&gt;@_musicalnote&lt;/a&gt; and &lt;a href=&#34;http://twitter.com/elbaulp&#34;&gt;@ElBaulP&lt;/a&gt;. This post is authored by @_musicalnote.&lt;/p&gt;
-
 &lt;h1 id=&#34;index&#34;&gt;Index&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion&#34; title=&#34;Biometrics applied to security - Introduction&#34;&gt;Biometrics applied to security - Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Biometrics applied to security - Pattern recognition&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometrics applied to security - Biometrics systems&#34;&gt;Biometrics applied to security - Biometrics systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;pattern-recognition&#34;&gt;Pattern recognition&lt;/h2&gt;
-
 &lt;p&gt;Previously, we have talk about the different techniques that exist to perform the identification of an individual. Now we will get into &lt;strong&gt;how&lt;/strong&gt; it is possible to recognise a face, an iris or a signature with pattern matching.&lt;/p&gt;
-
 &lt;h3 id=&#34;what-is-pattern-recognition&#34;&gt;What is pattern recognition?&lt;/h3&gt;
-
 &lt;p&gt;Is the science that describes and classifies objects, people, signals, representations, etc. Pattern recognition has multiple application fields, however the most related with &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;security articles&#34;&gt;security&lt;/a&gt; is, definitely the biometric recognition of people. It is about assigning an identity to a person, or verify that it is what it says, by meassuring certain own characteristics. Characteristics as voice, face, fingerprints, iris, signature, etc.&lt;/p&gt;
-
 &lt;h3 id=&#34;the-problem-of-pattern-recognition&#34;&gt;The problem of pattern recognition&lt;/h3&gt;
-
 &lt;p&gt;We humans are so good recognising patterns. Our brain has some kind of algorithms, still unknown, that are much faster than any computer when recognising faces or voices, for explample.&lt;/p&gt;
-
 &lt;h3 id=&#34;approaches-to-pattern-recognition&#34;&gt;Approaches to Pattern Recognition&lt;/h3&gt;
-
 &lt;p&gt;There are many type of aproaches, although they are used to be combined between them resulting in hybrid systems. All of them have two steps in common:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Training or learning step&lt;/li&gt;
 &lt;li&gt;Classification or test step&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;First of all, for building a pattern recognition system that can identify an individual through any of its personal characteristics we must have in our hands an ammount of data of such characteristic, so that the probability of creating a model that succeeds recognizing by this characteristic increase. However, a common mistake is to not have in consideration if those data are or not free from variability (noise introduced by sensors, scale changes, distortions, rotations&amp;hellip;)  so that before training and testing the system, it is very important to clean that data or take a decision about the affected data (like not using them to train the classifier, for example). Finally, after training the system, we proceed to test it. For that purpose we give the system another dataset of the characteristic that we are analyzing, evaluating that way the ability of the recognizer to hit in its decisions.&lt;/p&gt;
-
 &lt;h3 id=&#34;feature-extraction&#34;&gt;Feature extraction&lt;/h3&gt;
-
 &lt;p&gt;In a recognizer, it is so important to consider the feature extraction (parametrization) to perform on the input, that is, selecting which characteristic vectors are we using. For example, in images we can use the bitmap. Is undoubtedly that parametrization will ease the problem, as through it the ammount of data to process decreases and we get the feature space turned, being easier to discriminate on it (see which samples are meaningful and which are not).&lt;/p&gt;
-
 &lt;h3 id=&#34;class-separability&#34;&gt;Class separability&lt;/h3&gt;
-
 &lt;p&gt;If we want to minimize the error of our biometrics system, we must try to make the data classification as accurate as possible, and for that we must select the classifier that best fits our data (distinct classifiers, distinct results&amp;hellip;), by choosing correctly the classification criteria.&lt;/p&gt;
-
 &lt;p&gt;In the next figure we can see how both two classes are perfectly separable when using both vector components (2 dimensions), but if we reduce it to just one dimension, we can see that both classes are no longer separable, as they overlap.&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/separability.png&#34;&gt;&lt;img sizes=&#34;(min-width: 320px) 320px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/separability.png&#34; title=&#34;class separability using two-dimensional vectors&#34; alt=&#34;class separability using two-dimensional vectors&#34; width=&#34;320px&#34; height=&#34;316px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;It is easy to ilustrate it in an image when the number of classes is low, as in this example, as we got just two classes. But the difficulty increases with the number of classes. How can we know if our classifier is doing well or not? How can we know if a characteristic is discriminating or not? In that case proceed to calculate the discriminating mean of the characteristic, from the mean distance between classes and normalizing by its variance.&lt;/p&gt;
-
 &lt;h3 id=&#34;introduction-to-intrusion-detection&#34;&gt;Introduction to intrusion detection&lt;/h3&gt;
-
 &lt;p&gt;Applying biometrics techniques in &lt;a href=&#34;https://elbauldelprogramador.com/6-formas-usadas-por-los-cibercriminales-para-robar-o-vulnerar-credenciales-de-login/&#34; title=&#34;6 ways used by cybercriminals to steal or infringe login credentials&#34;&gt;intrusion&lt;/a&gt; detection systems allow us to intensify the security of our system, for example, during the authentication, as we could establish a more detailed profile for each user, without having to worry about certain problems like for example if the user is writting the password so others can see it, or if the user share its password or if it is stolen&amp;hellip; thus avoiding a possibility of attack that affects the IDS performance.&lt;/p&gt;
-
 &lt;p&gt;As is evident, the use of biometrics is not making impossible any security attack to the system, but at least it will ask every user to identify previously, through the authentication and validation mechanisms, so that any bad use or attack caused by an user and detected by an IDS will point to a concrete user.&lt;/p&gt;
-
 &lt;p&gt;Intrusion detection systems are still getting better, but it is already spoken that in the future advanced techniques of biometry could be developed, as for example, DNA recognition.&lt;/p&gt;
-
 &lt;h1 id=&#34;index-1&#34;&gt;Index&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/biometria-seguridad-introduccion&#34; title=&#34;Biometrics applied to security - Introduction&#34;&gt;Biometrics applied to security - Introduction&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Biometrics applied to security - Pattern recognition&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sistemas-biometricos&#34; title=&#34;Biometrics applied to security - Biometrics systems&#34;&gt;Biometrics applied to security - Biometrics systems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/8478976361/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=8478976361&amp;amp;linkCode;=as2&amp;amp;tag;=bmacoc-21&#34; title=&#34;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la seguridad&#34;&gt;M. Tapiador Mateos and J. A. Sigüenza Pizarro, Tecnologías biométricas aplicadas a la
 seguridad&lt;/a&gt;&lt;/li&gt;

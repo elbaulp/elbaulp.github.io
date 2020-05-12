@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Hola Mundo Android on El Baúl del programador</title>
+        <title>hola mundo Android on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/hola-mundo-android/</link>
-        <description>Recent content in Hola Mundo Android on El Baúl del programador</description>
+        <description>Recent content in hola mundo Android on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Mon, 11 Jan 2016 07:16:24 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/hola-mundo-android/</link>
-            <title>Hola Mundo Android on El Baúl del programador</title>
+            <title>hola mundo Android on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,20 +22,13 @@
             
             <guid>https://elbauldelprogramador.com/tutorial-android-hola-mundo-a-fondo/</guid>
             <description>&lt;p&gt;En el &lt;a href=&#34;https://elbauldelprogramador.com/android/conceptos-basicos/&#34;&gt;artículo anterior&lt;/a&gt; se dieron unas nociones básicas de Android, sus componentes principales etc. En este artículo examinaremos a fondo una aplicación muy simple. Se componone de dos pantallas, en una de ellas se pide al usuario que introduzca un texto, dicho texto se enviará a otra pantalla. He aquí el resultado:&lt;/p&gt;
-
-&lt;p&gt;&lt;amp-youtube
-    data-videoid=&#34;WZLHJ9kuYQE&#34;
-    layout=&#34;responsive&#34;
-    width=&#34;480&#34; height=&#34;270&#34;&gt;&lt;/amp-youtube&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;creación-de-las-pantallas-en-android&#34;&gt;Creación de las pantallas en Android&lt;/h1&gt;
-
 &lt;h2 id=&#34;pantalla-principal&#34;&gt;Pantalla principal&lt;/h2&gt;
-
 &lt;p&gt;Empezaremos creando la primera pantalla que verá el usuario al acceder a la aplicación. En este caso consiste en una caja de texto (&lt;em&gt;EditText&lt;/em&gt;) y un botón:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ./layout/activity_hello_world_main --&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;
+&lt;span class=&#34;c&#34;&gt;&amp;lt;!-- ./layout/activity_hello_world_main --&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;nt&#34;&gt;&amp;lt;LinearLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
               &lt;span class=&#34;na&#34;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span&gt;
               &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;
@@ -58,27 +50,19 @@
           &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;
           &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;
           &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/button_send&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Un &lt;code&gt;LinearLayout&lt;/code&gt; especifica cómo se ordenarán las vistas que hay dentro de él. Hay dos tipos, vertical u horizontal. Si no se especifica nada por defecto es horizontal, lo cual significa que se irán colocando las vistas una debajo de otra. En nuestro caso, el &lt;em&gt;EditText&lt;/em&gt; estará colocado encima del botón.&lt;/p&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/LinearLayout&amp;gt;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Un &lt;code&gt;LinearLayout&lt;/code&gt; especifica cómo se ordenarán las vistas que hay dentro de él. Hay dos tipos, vertical u horizontal. Si no se especifica nada por defecto es horizontal, lo cual significa que se irán colocando las vistas una debajo de otra. En nuestro caso, el &lt;em&gt;EditText&lt;/em&gt; estará colocado encima del botón.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;android:layout_weight=&amp;quot;1&amp;quot;&lt;/code&gt; especifica el peso que tiene esta vista (La cantidad de espacio que debería ocupar).&lt;/p&gt;
-
-&lt;p&gt;El valor es relativo al espacio ocupado por las vistas hermanas. Por ejemplo, una vista con un peso de 2 y otra de 1. La suma es 3, la primera vista ocupará &lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; del espacio libre y la segunda el resto. Si añadimos otra vista con peso 1, ahora la suma es 4 y la primera estará ocupando &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; (&lt;sup&gt;2&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;) del espacio restante, y las otras dos &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt;.&lt;/p&gt;
-
+&lt;p&gt;El valor es relativo al espacio ocupado por las vistas hermanas. Por ejemplo, una vista con un peso de 2 y otra de 1. La suma es 3, la primera vista ocupará 2/3 del espacio libre y la segunda el resto. Si añadimos otra vista con peso 1, ahora la suma es 4 y la primera estará ocupando 1/2 (2/4) del espacio restante, y las otras dos 1/4.&lt;/p&gt;
 &lt;p&gt;Si dejamos todos los valores por defecto y especificamos un valor != 0 en una vista, dicha vista ocupará todo el espacio restante.&lt;/p&gt;
-
 &lt;p&gt;Si usamos &lt;code&gt;weight&lt;/code&gt;, hay que poner un &lt;code&gt;width&lt;/code&gt; de 0dip para mejorar el rendimiento, ya que no es necesario calcular éste valor.&lt;/p&gt;
-
 &lt;p&gt;El resultado de este &lt;code&gt;layout&lt;/code&gt; es:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/android/layouthelloworldandroid.png&#34;&gt;&lt;img layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/android/layouthelloworldandroid.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;segunda-pantalla&#34;&gt;Segunda pantalla&lt;/h2&gt;
-
 &lt;p&gt;A esta pantalla se enviará el mensaje escrito en la anterior. Se define con el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
                 &lt;span class=&#34;na&#34;&gt;xmlns:tools=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span&gt;
                 &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;
                 &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;
@@ -93,15 +77,14 @@
             &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;
             &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello_world&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
 
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Es más simple que la anterior, simplemente tiene un &lt;code&gt;TextView&lt;/code&gt; que será usado para mostrar el texto recibido. Para saber más sobre cómo trabajar con &lt;code&gt;layouts&lt;/code&gt; puedes visitar el artículo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34;&gt;interfaz gráfica - layouts&lt;/a&gt;.&lt;/p&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es más simple que la anterior, simplemente tiene un &lt;code&gt;TextView&lt;/code&gt; que será usado para mostrar el texto recibido. Para saber más sobre cómo trabajar con &lt;code&gt;layouts&lt;/code&gt; puedes visitar el artículo &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-interfaz-grafica_23/&#34; title=&#34;Programación Android: Interfaz gráfica – Layouts&#34;&gt;interfaz gráfica - layouts&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;implementación-de-la-lógica-de-las-pantallas&#34;&gt;Implementación de la lógica de las pantallas&lt;/h1&gt;
-
 &lt;h2 id=&#34;código-fuente-para-la-pantalla-principal&#34;&gt;Código fuente para la pantalla principal&lt;/h2&gt;
-
 &lt;p&gt;Veamos ahora cómo implementar el funcionamiento de la pantalla principal. Al crear el proyecto también se crea un fichero .java de nombre &lt;em&gt;MainActivity&lt;/em&gt; en la mayoría de los casos. Aquí se ha cambiado el nombre por &lt;em&gt;HelloWorldMain&lt;/em&gt;, con el siguiente código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HelloWorldMain&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Fragment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;HelloWorldMain&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Fragment&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
 
     &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EXTRA_MESSAGE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;com.tutorial.holamundo.MESSAGE&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
@@ -166,15 +149,14 @@
 
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;root&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Lo que vemos en la declaración de una clase, que hereda de &lt;em&gt;Fragment&lt;/em&gt;. Los &lt;em&gt;Fragments&lt;/em&gt; son un concepto introducido en Android 3 que pretendía modularizar aún más una pantalla (&lt;em&gt;Activity&lt;/em&gt;). El obetivo es poder reutilzar más código. Si en una pantalla, supongamos, disponemos de dos botones abajo (Aceptar, Cancelar) y dichos botones queremos reutilzarlos a lo largo de muchas pantallas, bastaría con crearlos en un &lt;em&gt;Fragment&lt;/em&gt;. De usar una &lt;em&gt;Activity&lt;/em&gt;  sería necesario copiar y pegar el código de ambos botones en todas y cada una de las pantallas en las que quisieremos los botones.&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo que vemos en la declaración de una clase, que hereda de &lt;em&gt;Fragment&lt;/em&gt;. Los &lt;em&gt;Fragments&lt;/em&gt; son un concepto introducido en Android 3 que pretendía modularizar aún más una pantalla (&lt;em&gt;Activity&lt;/em&gt;). El obetivo es poder reutilzar más código. Si en una pantalla, supongamos, disponemos de dos botones abajo (Aceptar, Cancelar) y dichos botones queremos reutilzarlos a lo largo de muchas pantallas, bastaría con crearlos en un &lt;em&gt;Fragment&lt;/em&gt;. De usar una &lt;em&gt;Activity&lt;/em&gt;  sería necesario copiar y pegar el código de ambos botones en todas y cada una de las pantallas en las que quisieremos los botones.&lt;/p&gt;
 &lt;p&gt;Se definen unos cuantos atributos de la clase, (Un botón, un &lt;code&gt;onClickListener&lt;/code&gt; y un identificador para el mensaje a enviar). El único método obligatorio de implementar en un &lt;em&gt;Fragment&lt;/em&gt; es &lt;code&gt;onCreateView&lt;/code&gt;, en él se define la interfaz gráfica del &lt;em&gt;Fragment&lt;/em&gt; y se inicializan los componenetes. El funcionamiento está explicado en los comentarios del código.&lt;/p&gt;
-
 &lt;p&gt;Una vez se pulse el botón, se lanzará la segunda pantalla, veamos qué hace.&lt;/p&gt;
-
 &lt;h2 id=&#34;código-fuente-de-la-segunda-pantalla&#34;&gt;Código fuente de la segunda pantalla&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;cm&#34;&gt;/**
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span class=&#34;cm&#34;&gt;/**
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * Clase que hereda de la clase Activity, por lo cual dispondrá de
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * interfaz de usuario. Al crear una Activity, Android invoca a una serie de
 &lt;/span&gt;&lt;span class=&#34;cm&#34;&gt; * métodos, entre ellos &amp;lt;i&amp;gt;oncreate()&amp;lt;/i&amp;gt;. El ciclo de vida de una activity se
@@ -210,13 +192,13 @@
         &lt;span class=&#34;c1&#34;&gt;// Establecer el TextView como interfaz de la actividad
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;        &lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;textView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este caso, en lugar de un &lt;em&gt;Fragment&lt;/em&gt; tenemos una &lt;em&gt;Activity&lt;/em&gt;. Como vemos, se recupera la información enviada desde la primera pantalla usando el identificador que le asociamos (&lt;em&gt;EXTRA_MESSAGE&lt;/em&gt;. Luego, en vez de establecer la interfaz gráfica mediante un fichero XML, se realiza mediante programación, por lo tanto, el XML de la segunda pantalla que vimos arriba no se usa. Aunque es posible implementar la interfaz desde código se recomienda hacerlo desde XML siempre que sea posible.&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este caso, en lugar de un &lt;em&gt;Fragment&lt;/em&gt; tenemos una &lt;em&gt;Activity&lt;/em&gt;. Como vemos, se recupera la información enviada desde la primera pantalla usando el identificador que le asociamos (&lt;em&gt;EXTRA_MESSAGE&lt;/em&gt;. Luego, en vez de establecer la interfaz gráfica mediante un fichero XML, se realiza mediante programación, por lo tanto, el XML de la segunda pantalla que vimos arriba no se usa. Aunque es posible implementar la interfaz desde código se recomienda hacerlo desde XML siempre que sea posible.&lt;/p&gt;
 &lt;p&gt;Esto es todo, solo resta ver el &lt;em&gt;AndroidManifest&lt;/em&gt;, el fichero que recoge todas las propiedades de una apliación en android:&lt;/p&gt;
-
 &lt;h1 id=&#34;el-androidmanifest&#34;&gt;El AndroidManifest&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;manifest&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;manifest&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
           &lt;span class=&#34;na&#34;&gt;package=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;es.tformacion.helloworld&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
 
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;application&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;android:allowBackup=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
@@ -240,9 +222,9 @@
         &lt;span class=&#34;nt&#34;&gt;&amp;lt;/activity&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;nt&#34;&gt;&amp;lt;/application&amp;gt;&lt;/span&gt;
 
-&lt;span class=&#34;nt&#34;&gt;&amp;lt;/manifest&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este fichero se definen las pantallas que la aplicación va a usar, así como los permisos que necesita (En este caso ninguno).&lt;/p&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/manifest&amp;gt;&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este fichero se definen las pantallas que la aplicación va a usar, así como los permisos que necesita (En este caso ninguno).&lt;/p&gt;
 &lt;p&gt;El código de este artículo podéis encontrarlo en el repositorio de &lt;a href=&#34;https://github.com/elbaulp/CursoAndroid/tree/master/Ejemplos/MainApp/helloworld&#34; title=&#34;Curso de  Android repositorio&#34;&gt;Github Curso de Android&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         

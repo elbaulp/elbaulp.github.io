@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Clustering on The Programmer&#39;s Chest</title>
+        <title>clustering on The Programmer&#39;s Chest</title>
         <link>https://elbauldelprogramador.com/en/tags/clustering/</link>
-        <description>Recent content in Clustering on The Programmer&#39;s Chest</description>
+        <description>Recent content in clustering on The Programmer&#39;s Chest</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Tue, 31 Oct 2017 19:57:49 +0200</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/en/tags/clustering/</link>
-            <title>Clustering on The Programmer&#39;s Chest</title>
+            <title>clustering on The Programmer&#39;s Chest</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,134 +21,189 @@
             <pubDate>Tue, 31 Oct 2017 19:57:49 +0200</pubDate>
             
             <guid>https://elbauldelprogramador.com/en/related-posts-hugo-sklearn/</guid>
-            <description>&lt;p&gt;A long time ago I wanted to show &lt;strong&gt;similar/related posts&lt;/strong&gt; at the end of each post on this blog. At the time, &lt;a href=&#34;https://gohugo.io/&#34; title=&#34;Hugo&#34;&gt;Hugo&lt;/a&gt; didn&#39;t have built in support to show related posts (nowadays it has). So I decided to implement my own using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34; title=&#34;python&#34;&gt;python&lt;/a&gt;, &lt;em&gt;sklearn&lt;/em&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Cluster_analysis&#34; title=&#34;Clustering&#34;&gt;Clustering&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/clustering-similar-posts-sklearn-python.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/clustering-similar-posts-sklearn-python.jpg&#34;
-            alt=&#34;Clustereing similar posts with sklearn&#34;
-            title=&#34;Clustereing similar posts with sklearn&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;437&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;program-design&#34;&gt;Program design&lt;/h1&gt;
-
-&lt;h2 id=&#34;reading-parsing-posts&#34;&gt;Reading &amp; Parsing posts&lt;/h2&gt;
-
-&lt;p&gt;Since I write in &lt;a href=&#34;https://elbauldelprogramador.com/en/&#34; title=&#34;English&#34;&gt;English&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com&#34; title=&#34;Spanish&#34;&gt;Spanish&lt;/a&gt;, I needed to train the model twice, in order to only show English related post to English readers and Spanish ones to Spanish readers. To achieve it, I created a &lt;code&gt;readPosts&lt;/code&gt; function that takes in as parameters a &lt;em&gt;path&lt;/em&gt; where the post are, and a &lt;code&gt;boolean&lt;/code&gt; value indicating whether I want &lt;em&gt;related posts&lt;/em&gt; for English or Spanish.&lt;/p&gt;
+            <description>&lt;p&gt;
+A long time ago I wanted to show &lt;strong&gt;similar/related posts&lt;/strong&gt; at the end of each post on this blog. At the time, &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; didn&amp;#39;t have built in support to show related posts (nowadays it has). So I decided to implement my own using &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/python/&#34;&gt;python&lt;/a&gt;, &lt;em&gt;sklearn&lt;/em&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Cluster_analysis&#34;&gt;Clustering&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;
+            alt=&amp;#34;Clustereing similar posts with sklearn&amp;#34;
+            title=&amp;#34;Clustereing similar posts with sklearn&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;437&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Program design
+&lt;/h2&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Reading &amp;amp; Parsing posts
+&lt;/h3&gt;
+&lt;p&gt;
+Since I write in &lt;a href=&#34;https://elbauldelprogramador.com/en/&#34;&gt;English&lt;/a&gt; and &lt;a href=&#34;https://elbauldelprogramador.com&#34;&gt;Spanish&lt;/a&gt;, I needed to train the model twice, in order to only show English related post to English readers and Spanish ones to Spanish readers. To achieve it, I created a &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; function that takes in as parameters a &lt;em&gt;path&lt;/em&gt; where the post are, and a &lt;code class=&#34;verbatim&#34;&gt;boolean&lt;/code&gt; value indicating whether I want &lt;em&gt;related posts&lt;/em&gt; for English or Spanish.
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dfEng&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                   &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;span class=&#34;n&#34;&gt;dfEs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
                  &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Inside this function (&lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L63&#34; title=&#34;you can check it on my github&#34;&gt;you can check it on my github&lt;/a&gt;), I read all the English/Spanish posts and return a &lt;a href=&#34;http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html&#34; title=&#34;Pandas Data Frame&#34;&gt;Pandas Data Frame&lt;/a&gt;. The most important thing this function does is select the correct &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/parser/&#34; title=&#34;parser&#34;&gt;parser&lt;/a&gt;, to open files using &lt;a href=&#34;https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/&#34; title=&#34;a yaml parser&#34;&gt;a yaml parser&lt;/a&gt; or a &lt;em&gt;TOML parser&lt;/em&gt;. Once the &lt;em&gt;frontmatter&lt;/em&gt; is read, &lt;code&gt;readPosts&lt;/code&gt; makes a &lt;strong&gt;DataFrame&lt;/strong&gt; using that &lt;em&gt;metadata&lt;/em&gt;. It only takes into account the following metadata:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Inside this function (&lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L63&#34;&gt;you can check it on my github&lt;/a&gt;), I read all the English/Spanish posts and return a &lt;a href=&#34;http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html&#34;&gt;Pandas Data Frame&lt;/a&gt;. The most important thing this function does is select the correct &lt;a href=&#34;https://elbauldelprogramador.com/en/tags/parser/&#34;&gt;parser&lt;/a&gt;, to open files using &lt;a href=&#34;https://elbauldelprogramador.com/en/how-to-parse-frontmatter-with-python/&#34;&gt;a yaml parser&lt;/a&gt; or a &lt;em&gt;TOML parser&lt;/em&gt;. Once the &lt;em&gt;frontmatter&lt;/em&gt; is read, &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; makes a &lt;strong&gt;DataFrame&lt;/strong&gt; using that &lt;em&gt;metadata&lt;/em&gt;. It only takes into account the following metadata:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;introduction&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is the information that will be used for classifying.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;model-selection&#34;&gt;Model Selection&lt;/h1&gt;
-
-&lt;p&gt;As I said at the beginning of the post, I decided to use the Clustering technique. As I am treating with text data, I need a way to convert all this data to numeric form, as clustering only works with numeric data. To achieve it, I have to use a technique called &lt;a href=&#34;https://en.wikipedia.org/wiki/Tf-idf&#34; title=&#34;TF-IDF&#34;&gt;TF-IDF&lt;/a&gt;. I won&#39;t delve into the details of this technique, but give you a short introduction to it.&lt;/p&gt;
-
-&lt;h2 id=&#34;what-is-tf-idf-term-frequency-inverse-document-frequency&#34;&gt;What is TF-IDF (Term Frequency - Inverse Document Frequency)&lt;/h2&gt;
-
-&lt;p&gt;When working with &lt;strong&gt;text data&lt;/strong&gt;, many words will appear for &lt;em&gt;multiple documents of multiple classes&lt;/em&gt;, this words typically don&#39;t contain &lt;em&gt;discriminatory information.&lt;/em&gt; &lt;strong&gt;TF-IDF&lt;/strong&gt; aims to downweight those frequently appearing words in the data (In this case, the Pandas Data Frame).&lt;/p&gt;
-
-&lt;p&gt;The &lt;em&gt;tf-idf&lt;/em&gt; is defined as the product of:&lt;/p&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+This is the information that will be used for classifying.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Model Selection
+&lt;/h2&gt;
+&lt;p&gt;
+As I said at the beginning of the post, I decided to use the Clustering technique. As I am treating with text data, I need a way to convert all this data to numeric form, as clustering only works with numeric data. To achieve it, I have to use a technique called &lt;a href=&#34;https://en.wikipedia.org/wiki/Tf-idf&#34;&gt;TF-IDF&lt;/a&gt;. I won&amp;#39;t delve into the details of this technique, but give you a short introduction to it.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+What is TF-IDF (Term Frequency - Inverse Document Frequency)
+&lt;/h3&gt;
+&lt;p&gt;
+When working with &lt;strong&gt;text data&lt;/strong&gt;, many words will appear for &lt;em&gt;multiple documents of multiple classes&lt;/em&gt;, this words typically don&amp;#39;t contain &lt;em&gt;discriminatory information.&lt;/em&gt; &lt;strong&gt;TF-IDF&lt;/strong&gt; aims to downweight those frequently appearing words in the data (In this case, the Pandas Data Frame).
+&lt;/p&gt;
+&lt;p&gt;
+The &lt;em&gt;tf-idf&lt;/em&gt; is defined as the product of:
+&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;term frequency&lt;/strong&gt;. Number of times a term appears in a document.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;Inverse document frequency&lt;/strong&gt;. How much information the word provides taking into account all documents, that is, if the term is common or rare across all documents.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+The &lt;strong&gt;term frequency&lt;/strong&gt;. Number of times a term appears in a document.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+The &lt;strong&gt;Inverse document frequency&lt;/strong&gt;. How much information the word provides taking into account all documents, that is, if the term is common or rare across all documents.
+&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Multiplying the above values gives the &lt;em&gt;tf-idf&lt;/em&gt;, quoting Wikipedia:&lt;/p&gt;
-
+&lt;p&gt;
+Multiplying the above values gives the &lt;em&gt;tf-idf&lt;/em&gt;, quoting Wikipedia:
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
-A high weight in tf–idf is reached by a high term frequency (in the given document) and a low document frequency of the term in the whole collection of documents; the weights hence tend to filter out common terms. Since the ratio inside the idf&#39;s log function is always greater than or equal to 1, the value of idf (and tf-idf) is greater than or equal to 0. As a term appears in more documents, the ratio inside the logarithm approaches 1, bringing the idf and tf-idf closer to 0.
+A high weight in tf–idf is reached by a high term frequency (in the given document) and a low document frequency of the term in the whole collection of documents; the weights hence tend to filter out common terms. Since the ratio inside the idf&amp;#39;s log function is always greater than or equal to 1, the value of idf (and tf-idf) is greater than or equal to 0. As a term appears in more documents, the ratio inside the logarithm approaches 1, bringing the idf and tf-idf closer to 0.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;In short, as &lt;strong&gt;more common a term is across all documents&lt;/strong&gt;, less &lt;em&gt;tf-idf&lt;/em&gt; score it will have, signaling that this word is not important for classifying.&lt;/p&gt;
-
-&lt;h2 id=&#34;hyper-parameter-tunning&#34;&gt;Hyper-Parameter Tunning&lt;/h2&gt;
-
-&lt;p&gt;To select the appropriate parameters for the model I&#39;ve used &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34; title=&#34;sklearn&#39;s GridSearchCV method&#34;&gt;sklearn&#39;s GridSearchCV method&lt;/a&gt;, you can check it on &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L425&#34; title=&#34;line 425 of my code&#34;&gt;line 425 of my code&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h1&gt;
-
-&lt;p&gt;Now that I have decided what method use (&lt;em&gt;clustering&lt;/em&gt;) and how convert the text data to a vector format (&lt;em&gt;TF-IDF&lt;/em&gt;), I have to clean the data. Usually, when dealing with text data you have to remove words that are used often, but doesn&#39;t add meaning, those words are called &lt;strong&gt;stop words&lt;/strong&gt; (&lt;em&gt;the, that, a etc&lt;/em&gt;). This work is done in &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L155&#34; title=&#34;generateTfIdfVectorizer&#34;&gt;generateTfIdfVectorizer&lt;/a&gt;. In this process I also perform a &lt;em&gt;stemmization&lt;/em&gt; of the words. From &lt;em&gt;Wikipedia&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Stemming&#34; title=&#34;Stemming is the process of:&#34;&gt;Stemming is the process of:&lt;/a&gt;&lt;/p&gt;
-
+&lt;p&gt;
+In short, as &lt;strong&gt;more common a term is across all documents&lt;/strong&gt;, less &lt;em&gt;tf-idf&lt;/em&gt; score it will have, signaling that this word is not important for classifying.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-5&#34;&gt;
+Hyper-Parameter Tunning
+&lt;/h3&gt;
+&lt;p&gt;
+To select the appropriate parameters for the model I&amp;#39;ve used &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;sklearn&amp;#39;s GridSearchCV method&lt;/a&gt;, you can check it on &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L425&#34;&gt;line 425 of my code&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Cleaning the Data
+&lt;/h2&gt;
+&lt;p&gt;
+Now that I have decided what method use (&lt;em&gt;clustering&lt;/em&gt;) and how convert the text data to a vector format (&lt;em&gt;TF-IDF&lt;/em&gt;), I have to clean the data. Usually, when dealing with text data you have to remove words that are used often, but doesn&amp;#39;t add meaning, those words are called &lt;strong&gt;stop words&lt;/strong&gt; (&lt;em&gt;the, that, a etc&lt;/em&gt;). This work is done in &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L155&#34;&gt;generateTfIdfVectorizer&lt;/a&gt;. In this process I also perform a &lt;em&gt;stemmization&lt;/em&gt; of the words. From &lt;em&gt;Wikipedia&lt;/em&gt;, &lt;a href=&#34;https://en.wikipedia.org/wiki/Stemming&#34;&gt;Stemming is the process of:&lt;/a&gt;
+&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;
 Reducing inflected (or sometimes derived) words to their word stem, base or root form—generally a written word form.
 &lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;Depending on which language I am generating the &lt;strong&gt;related posts&lt;/strong&gt; for (English or Spanish) I use&lt;/p&gt;
+&lt;p&gt;
+Depending on which language I am generating the &lt;strong&gt;related posts&lt;/strong&gt; for (English or Spanish) I use
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_snowball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SnowballStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;spanish&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
             &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for Spanish or&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+for Spanish or
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_porter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PorterStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
             &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;for English.&lt;/p&gt;
-
-&lt;p&gt;After this process, finally I have all the data ready to perform &lt;em&gt;clustering&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;clustering&#34;&gt;Clustering&lt;/h1&gt;
-
-&lt;p&gt;I&#39;ve used &lt;em&gt;KMeans&lt;/em&gt; to do the clustering. The most time consuming task of all this process was, as usual, &lt;strong&gt;clean the data&lt;/strong&gt;, so this step is simple. I just need a way of know how many &lt;em&gt;clusters&lt;/em&gt; I should have. For this, I&#39;ve used the &lt;strong&gt;Elbow Method&lt;/strong&gt;. This method is an easy way to identify the value of &lt;code&gt;k&lt;/code&gt; (How many clusters there are.) for which the &lt;strong&gt;distortion&lt;/strong&gt; begins to increase rapidly. This is best shown with an image:&lt;/p&gt;
-
-&lt;p&gt;&lt;figure&gt;
-        &lt;a href=&#34;https://elbauldelprogramador.com/img/Elbow method for clustering.jpg&#34;&gt;
-          &lt;img
-            on=&#34;tap:lightbox1&#34;
-            role=&#34;button&#34;
-            tabindex=&#34;0&#34;
-            layout=&#34;responsive&#34;
-            src=&#34;https://elbauldelprogramador.com/img/Elbow method for clustering.jpg&#34;
-            alt=&#34;Elbow method&#34;
-            title=&#34;Elbow method&#34;
-            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
-            width=&#34;640&#34;
-            height=&#34;546&#34;&gt;
-          &lt;/img&gt;
-        &lt;/a&gt;
-        &lt;figcaption&gt;In this example, you can slightly appreciate an elbow on k=12&lt;/figcaption&gt;
-&lt;/figure&gt;&lt;/p&gt;
-
-&lt;p&gt;After executing the model, using &lt;em&gt;16 features&lt;/em&gt;, this are the ones selected for Spanish:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+for English.
+&lt;/p&gt;
+&lt;p&gt;
+After this process, finally I have all the data ready to perform &lt;em&gt;clustering&lt;/em&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Clustering
+&lt;/h2&gt;
+&lt;p&gt;
+I&amp;#39;ve used &lt;em&gt;KMeans&lt;/em&gt; to do the clustering. The most time consuming task of all this process was, as usual, &lt;strong&gt;clean the data&lt;/strong&gt;, so this step is simple. I just need a way of know how many &lt;em&gt;clusters&lt;/em&gt; I should have. For this, I&amp;#39;ve used the &lt;strong&gt;Elbow Method&lt;/strong&gt;. This method is an easy way to identify the value of &lt;code class=&#34;verbatim&#34;&gt;k&lt;/code&gt; (How many clusters there are.) for which the &lt;strong&gt;distortion&lt;/strong&gt; begins to increase rapidly. This is best shown with an image:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;
+            alt=&amp;#34;Elbow method&amp;#34;
+            title=&amp;#34;Elbow method&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;546&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;In this example, you can slightly appreciate an elbow on k=12&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+After executing the model, using &lt;em&gt;16 features&lt;/em&gt;, this are the ones selected for Spanish:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;andro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;comand&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;dat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;desarroll&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;funcion&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;googl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;jav&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;libr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;linux&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;program&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;recurs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;segur&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;wordpress&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;and the ones used for English:&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;
+and the ones used for English:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blogs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;chang&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;channels&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fil&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;gento&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;howt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lists&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;podcasts&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scal&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scienc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;youtub&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;how-i-integrated-it-with-hugo&#34;&gt;How I integrated it with Hugo&lt;/h1&gt;
-
-&lt;p&gt;This was a tedious task, since I had to read the output of the model (in CSV format) into hugo and pick 10 random post from the same cluster. Although is no longer required to use this, I want to share how I integrated this approach with Hugo to show related posts:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;delimit&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;labels.&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+How I integrated it with Hugo
+&lt;/h2&gt;
+&lt;p&gt;
+This was a tedious task, since I had to read the output of the model (in CSV format) into hugo and pick 10 random post from the same cluster. Although is no longer required to use this, I want to share how I integrated this approach with Hugo to show related posts:
+&lt;/p&gt;
+&lt;div class=&#34;src src-go&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;delimit&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;labels.&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;LogicalName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* First iterate thought csv to get post cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
        &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Set&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cluster&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
@@ -158,7 +212,7 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* loop csv again to store post in the same cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
         &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Add&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
@@ -166,23 +220,33 @@ Reducing inflected (or sometimes derived) words to their word stem, base or root
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Get&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
 
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Finally, show 5 randomly related posts */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;gt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;gt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;related&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;shuffle&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
-        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;related-post&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;href=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;title=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;related-post&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;href=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;title=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
     &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;If you have any comments, or want to improve something, comment below.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-
+&lt;/div&gt;
+&lt;p&gt;
+&lt;em&gt;If you have any comments, or want to improve something, comment below.&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+References
+&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://sebastianraschka.com/books.html&#34; title=&#34;Sebastian Raschka&#39;s book Python Machine Learning&#34;&gt;Sebastian Raschka&#39;s book Python Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34; title=&#34;Sklearn Documentation&#34;&gt;Sklearn Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sebastianraschka.com/books.html&#34;&gt;Sebastian Raschka&amp;#39;s book Python Machine Learning&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;Sklearn Documentation&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

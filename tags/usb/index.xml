@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Usb on El Baúl del programador</title>
+        <title>usb on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/usb/</link>
-        <description>Recent content in Usb on El Baúl del programador</description>
+        <description>Recent content in usb on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 11 Aug 2017 12:05:27 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/usb/</link>
-            <title>Usb on El Baúl del programador</title>
+            <title>usb on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,46 +21,32 @@
             <pubDate>Fri, 11 Aug 2017 12:05:27 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/por-que-se-cuelga-linux-al-copiar-ficheros-a-un-usb/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 640px) 640px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/hotlink-ok/Por-Que-Se-Cuelga-Linux-Al-Copiar-Ficheros-a-un-Usb.png&#34; title=&#34;{{ page.title }}&#34; alt=&#34;{{ page.title }}&#34; width=&#34;640px&#34; height=&#34;320px&#34; /&gt;
-    &lt;figcaption&gt;Crédito de la imagen: &lt;a href=&#34;https://pixabay.com/en/usb-drive-storage-plug-flash-38264/&#34;&gt;pixabay.com&lt;/a&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Es posible que a vosotros también os haya ocurrido. Al realizar una operación de copiar un fichero grande a un usb en linux, o simplemente muchos ficheros que requieran tiempo para copiar, el sistema operativo se cuelga y va muy lento. Buscando un poco encontré una posible solución al problema. Veámosla:&lt;/p&gt;
-
 &lt;blockquote&gt;
-&lt;p&gt;La respuesta la encontré en &lt;a href=&#34;http://unix.stackexchange.com&#34; target=&#34;_blank&#34; title=&#34;stackexchange&#34;&gt;unix.stackexchange&lt;/a&gt;, en una pregunta que realizó el usuario &lt;a href=&#34;http://unix.stackexchange.com/users/52763/mikhail-morfikov&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;Mikhail Morfikov&lt;/a&gt;. Y la respuesta la dió el usuario &lt;a href=&#34;http://unix.stackexchange.com/users/52205/rmano&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;Rmano&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La respuesta la encontré en &lt;!-- raw HTML omitted --&gt;unix.stackexchange&lt;!-- raw HTML omitted --&gt;, en una pregunta que realizó el usuario &lt;!-- raw HTML omitted --&gt;Mikhail Morfikov&lt;!-- raw HTML omitted --&gt;. Y la respuesta la dió el usuario &lt;!-- raw HTML omitted --&gt;Rmano&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;descripción-del-problema&#34;&gt;Descripción del problema&lt;/h1&gt;
-
-&lt;p&gt;Este problema ocurre en sistemas de 64bits con bastante memoria, es un bug del &lt;a href=&#34;http://lwn.net/Articles/572911/&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;kernel&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
-
+&lt;p&gt;Este problema ocurre en sistemas de 64bits con bastante memoria, es un bug del &lt;!-- raw HTML omitted --&gt;kernel&lt;!-- raw HTML omitted --&gt; pendiente de resolver.&lt;/p&gt;
 &lt;h1 id=&#34;cómo-solucionar-el-cuelgue-del-sistema-al-copiar-ficheros-a-un-usb&#34;&gt;Cómo solucionar el cuelgue del sistema al copiar ficheros a un usb&lt;/h1&gt;
-
 &lt;p&gt;Una posible solución consiste en ejecutar los siguientes comandos como &lt;em&gt;root&lt;/em&gt; :&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_background_bytes
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_bytes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si queremos que se conserven entre reinicios, debemos añadirlos al fichero &lt;code&gt;/etc/rc.local&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_background_bytes
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;$((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;))&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_bytes
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si queremos que se conserven entre reinicios, debemos añadirlos al fichero &lt;code&gt;/etc/rc.local&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Sin embargo, cambiar dichos valores afectará a la tasa de transferencia entre el usb y el disco duro, así que los ficheros tardarán más tiempo en copiarse, pero al menos el sistema no se colgará y podremos seguir usándolo.&lt;/p&gt;
-
 &lt;h1 id=&#34;restaurar-los-valores-por-defecto&#34;&gt;Restaurar los valores por defecto&lt;/h1&gt;
-
 &lt;p&gt;Para volver a los valores normales, hay que fijar los valores a&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_background_bytes
-&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_bytes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El significado de estos parámetros es:&lt;/p&gt;
-
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &amp;gt; /proc/sys/vm/dirty_bytes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El significado de estos parámetros es:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;/proc/sys/vm/dirty_background_bytes&lt;/code&gt;: Contains the amount of dirty memory at which the background kernel flusher threads will start writeback.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/proc/sys/vm/dirty_bytes&lt;/code&gt;: Contains the amount of dirty memory at which a process generating disk writes will itself start writeback.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;p&gt;Why is my PC freezing while I&amp;rsquo;m copying a file to a pendrive? | &lt;a href=&#34;http://unix.stackexchange.com/questions/107703/why-is-my-pc-freezing-while-im-copying-a-file-to-a-pendrive&#34; title=&#34;Why is my PC freezing while I&#39;m copying a file to a pendrive?&#34;&gt;unix.stackexchange.com&lt;/a&gt;&lt;/p&gt;</description>
         </item>
         
@@ -71,46 +56,38 @@
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/iniciar-debian-desde-usb/</guid>
-            <description>
-
-&lt;p&gt;Recientemente formateé mi pc de sobremesa y el portatil para pasar de &lt;a href=&#34;http://crunchbanglinux.org/&#34; target=&#34;_blank&#34;&gt;crunchbang&lt;/a&gt; a debian testing y buscando formas de instalarlas desde un usb encontré la solución que comparto:&lt;/p&gt;
-
+            <description>&lt;p&gt;Recientemente formateé mi pc de sobremesa y el portatil para pasar de &lt;!-- raw HTML omitted --&gt;crunchbang&lt;!-- raw HTML omitted --&gt; a debian testing y buscando formas de instalarlas desde un usb encontré la solución que comparto:&lt;/p&gt;
 &lt;p&gt;A lo largo del tutorial, se asumirá que el dispositivo usb está en &lt;strong&gt;/dev/sda&lt;/strong&gt; y que la distribución a instalar es debian testing.&lt;/p&gt;
-
 &lt;h1 id=&#34;método-1&#34;&gt;Método 1&lt;/h1&gt;
-
 &lt;p&gt;El primer paso es desmontar el usb:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo umount /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Descargar el &lt;strong&gt;boot.img.gz&lt;/strong&gt;, necesario para hacer el usb &amp;#8220;&lt;em&gt;bootable&lt;/em&gt;&amp;#8221; (que sea capaz el pc de arrancar desde él).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo umount /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Descargar el &lt;strong&gt;boot.img.gz&lt;/strong&gt;, necesario para hacer el usb “&lt;em&gt;bootable&lt;/em&gt;” (que sea capaz el pc de arrancar desde él).&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
-wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/img/hd-media/boot.img.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este archivo es para procesadores de 64-bits, para procesadores de 32 hay que descargar el siguiente:&lt;/p&gt;
+wget ftp://ftp.debian.org/debian/dists/testing/main/installer-amd64/current/img/hd-media/boot.img.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este archivo es para procesadores de 64-bits, para procesadores de 32 hay que descargar el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
-wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/img/hd-media/boot.img.gz&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Una vez descargado, se extrae la imagen y se escribe en el usb:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Montamos el usb en el directorio /mnt:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda /mnt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En este caso se va a usar la versión &lt;strong&gt;net-install&lt;/strong&gt; de debian testing, es posible usar cualquier otra imagen siempre que corresponda con la versión de la imagen descargada anteriormente.&lt;/p&gt;
+wget ftp://ftp.debian.org/debian/dists/testing/main/installer-i386/current/img/hd-media/boot.img.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez descargado, se extrae la imagen y se escribe en el usb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo zcat ~/boot.img.gz &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Montamos el usb en el directorio /mnt:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda /mnt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este caso se va a usar la versión &lt;strong&gt;net-install&lt;/strong&gt; de debian testing, es posible usar cualquier otra imagen siempre que corresponda con la versión de la imagen descargada anteriormente.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt/
-sudo wget http://cdimage.debian.org/cdimage/wheezy_di_beta2/amd64/iso-cd/debian-wheezy-DI-b2-amd64-netinst.iso&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Listo, desmontamos el dispositivo usb:&lt;/p&gt;
+sudo wget http://cdimage.debian.org/cdimage/wheezy_di_beta2/amd64/iso-cd/debian-wheezy-DI-b2-amd64-netinst.iso
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, desmontamos el dispositivo usb:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
-sudo umount /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora es posible iniciar debian desde USB e instalar debian testing.&lt;/p&gt;
-
+sudo umount /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora es posible iniciar debian desde USB e instalar debian testing.&lt;/p&gt;
 &lt;h1 id=&#34;método-2&#34;&gt;Método 2&lt;/h1&gt;
-
 &lt;p&gt;Descargar la ISO deseada de debian y ejecutar lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cat debian.versión.iso &amp;gt; /dev/sdX &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde &lt;strong&gt;/dev/sdX&lt;/strong&gt; ha de ser el dispositivo USB&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cat debian.versión.iso &amp;gt; /dev/sdX &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde &lt;strong&gt;/dev/sdX&lt;/strong&gt; ha de ser el dispositivo USB&lt;/p&gt;
 &lt;h1 id=&#34;método-3-sugerido-en-los-comentarios-por-cioran&#34;&gt;Método 3 (Sugerido en los comentarios por cioran)&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/ruta/debian.iso &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1M&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;dd &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/ruta/debian.iso &lt;span class=&#34;nv&#34;&gt;of&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/dev/sdb &lt;span class=&#34;nv&#34;&gt;bs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1M&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Boot Debian from an USB device&lt;/em&gt; »» &lt;a href=&#34;http://www.debian-administration.org/article/Boot_Debian_from_an_USB_device&#34; target=&#34;_blank&#34;&gt;Visitar sitio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Boot Debian from an USB device&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
@@ -121,50 +98,27 @@ sudo umount /dev/sda&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/se-puede-realmente-secuenciar-adn-con-un-dispositivo-usb/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 600px) 600px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2012/05/Oxford-Nanopore-MinION1.jpeg&#34; alt=&#34;&#34; title=&#34;Oxford-Nanopore-MinION&#34; width=&#34;660px&#34; height=&#34;440px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;¿Qué pasaría si pudieras poner algunas células bacterianas en un dispositivo USB, conectarlo a su laptop, y obtener una secuencia completa de ADN en cuestión de minutos?&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Oxford Nanopore ha construido un dispositivo USB que hará precisamente eso. Al menos eso es lo que dice la compañía. Conocido como MinION, el dispositivo recibió una considerable cantidad de prensa cuando fue anunciado en Febrero, y está previsto para ser lanzado al mundo en general en la segunda mitad del año. Sin embargo muchos siguen siendo escépticos de que este pequeño dispositivo cumplirá realmente la función para lo que fue diseñado.&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;Si [las declaraciones] son ciertas, deberíamos comprarlo mañana&amp;#8221;, dijo Jonathan Eisen, profesor de microbiología en la Universidad de California en Davis. &amp;#8220;Pero me reservo la opinión. Hemos escuchado muchas presentaciones de empresas, donde estas cosas no son como se esperaban&amp;#8221;.&lt;/p&gt;
-
+&lt;p&gt;“Si [las declaraciones] son ciertas, deberíamos comprarlo mañana”, dijo Jonathan Eisen, profesor de microbiología en la Universidad de California en Davis. “Pero me reservo la opinión. Hemos escuchado muchas presentaciones de empresas, donde estas cosas no son como se esperaban”.&lt;/p&gt;
 &lt;p&gt;Clive Brown, director de tecnología de Oxford, comenta a Wired que el Minion funciona como se anuncia. Se pone un puñado de células lisadas - células cuyas membranas han sido disueltas - en un recipiente pequeño integrado en el disco USB. Luego se enchufa la unidad a una PC normal. Y dependiendo de la longitud del ADN en esas células, se obtendrá una secuencia completa entre pocos minutos o unas horas. El dispositivo - que se utiliza una vez y se desecha - es el resultado de siete años de investigación, dice Brown, y se vende por $ 900.&lt;/p&gt;
-
-&lt;p&gt;Por Eisen, el costo por sí solo haría del MinION una clave estratégica para el cambio . Pero también es atractivo porque es portátil. Eisen dice que con un dispositivo como el MinION, los investigadores de campo tendrían la posibilidad de secuenciar a su alcance en todo momento, tanto si están en una remota montaña en algún lugar o en el mar mirando a la proliferación de algas. &amp;#8220;Esto realmente sería la democratización de la secuenciación&amp;#8221;, dice. &amp;#8220;Cualquier persona en cualquier entorno de investigación podría considerar hacer una secuenciación a gran escala en su proyecto&amp;#8221;.&lt;/p&gt;
-
+&lt;p&gt;Por Eisen, el costo por sí solo haría del MinION una clave estratégica para el cambio . Pero también es atractivo porque es portátil. Eisen dice que con un dispositivo como el MinION, los investigadores de campo tendrían la posibilidad de secuenciar a su alcance en todo momento, tanto si están en una remota montaña en algún lugar o en el mar mirando a la proliferación de algas. “Esto realmente sería la democratización de la secuenciación”, dice. “Cualquier persona en cualquier entorno de investigación podría considerar hacer una secuenciación a gran escala en su proyecto”.&lt;/p&gt;
 &lt;p&gt;Pero todavía quiere verlo en acción antes de decir algo más.&lt;/p&gt;
-
 &lt;p&gt;En la investigación biológica, el orden de los bloques de construcción de ADN de cuatro pares - llamados* pares base* - es esencial para entender los mecanismos subyacentes de la existencia de un organismo. La abreviatura de ácido desoxirribonucleico, el ADN - junto con un conjunto de moléculas soporte - dicta las estructuras de las proteínas y el desarrollo de cada criatura en el planeta. La longitud de la cadena de ADN varía según el organismo - en un rango determinado entre miles de pares de bases para las bacterias y miles de millones para los mamíferos - por lo tanto las herramientas que leen rápidamente este manual de instrucciones moleculares son imprescindibles para la investigación biológica.&lt;/p&gt;
-
 &lt;p&gt;El mercado de la secuenciación del ADN está superpoblado. Empresas como Sequetech externalizan el servicio, Illumina construye máquinas de gran tamaño que se ubican al lado de una mesa de laboratorio, e Ion Torrent, una filial de Life Technologies, pronto lanzará un secuenciador de mesa que leerá (según anuncian) todo el genoma humano - aproximadamente tres billones de pares base - en un día. Pero de todos modos Oxford es el primero en poner este tipo de dispositivos en una laptop común y corriente.&lt;/p&gt;
-
-&lt;p&gt;La empresa hace uso de &amp;#8220;&lt;em&gt;nanoporos&lt;/em&gt;&amp;#8221; - es decir, agujeros muy pequeños. Los investigadores toman una muestra biológica y la inyectan en una memoria USB. El ADN de la muestra pasa a través de cientos de esos pequeños agujeros, y a medida que pasan, sensores eléctricos van leyendo los pares base de ADN.&lt;/p&gt;
-
-&lt;p&gt;Cada par base tiene una forma ligeramente diferente y una carga, y genera una señal diferente para el sensor. Estas señales ingresan a un procesador especializado- conocido como ASIC (&amp;#8220;application specific integrated circuit&amp;#8221;: circuito integrado de aplicación específica) - que se encuentra en los nanoporos. Oxford se asoció con un contratista del Departamento de Defensa en San Diego para construir este chip, pero nunca sabemos quién fue este socio. El truco es que el chip puede procesar información de los nanoporos en paralelo. Hay un circuito para cada nanoporo.&lt;/p&gt;
-
+&lt;p&gt;La empresa hace uso de “&lt;em&gt;nanoporos&lt;/em&gt;” - es decir, agujeros muy pequeños. Los investigadores toman una muestra biológica y la inyectan en una memoria USB. El ADN de la muestra pasa a través de cientos de esos pequeños agujeros, y a medida que pasan, sensores eléctricos van leyendo los pares base de ADN.&lt;/p&gt;
+&lt;p&gt;Cada par base tiene una forma ligeramente diferente y una carga, y genera una señal diferente para el sensor. Estas señales ingresan a un procesador especializado- conocido como ASIC (“application specific integrated circuit”: circuito integrado de aplicación específica) - que se encuentra en los nanoporos. Oxford se asoció con un contratista del Departamento de Defensa en San Diego para construir este chip, pero nunca sabemos quién fue este socio. El truco es que el chip puede procesar información de los nanoporos en paralelo. Hay un circuito para cada nanoporo.&lt;/p&gt;
 &lt;p&gt;De acuerdo con Clive Brown, director de tecnología de Oxford, el proceso es como una especie de juego de Hungry Hippo. Después de que un investigador inserta unamuestra de ADN, cada nanoporo lo engulle tan rápido como les sea posible, independientemente del nanoporo que le sigue. Brown dice que hoy en día cada nanoporo envía cerca de 33.000 mediciones por segundo. La primera versión de minION tendrá un solo chip ASIC con 512 circuitos y 512 nanoporos, pero comenta además que es probable que se agregue un segundo chip a la siguiente iteración.&lt;/p&gt;
-
 &lt;p&gt;La ventaja de este proceso en paralelo de ADN es que la bioinformática - el análisis real del orden y la concentración del ADN - puede realizarse en tiempo real. Otros secuenciadores de ADN funcionan de forma ligeramente diferente, identificando cada base de a una, pero el MinION mide largos fragmentos en simultáneo, de modo que una imagen completa de franjas enteras de ADN se pueden formar de una vez. Si se está buscando un gen en particular, se puede detener la ejecución del análisis cuando se presenta, en lugar de esperar a que termine toda la secuencia.&lt;/p&gt;
-
-&lt;p&gt;En muchos casos, los investigadores toman muestras de ADN que tienen una gran cantidad de &amp;#8220;ruido&amp;#8221; o ADN contaminante. Ya sea que se estén tomando muestras de agua del estanque o la barandilla del metro, siempre hay ADN extra flotando alrededor que difumina la secuencia que en realidad se está buscando. El ruido es un factor contaminante para tener en cuenta, pero un segundo factor relevante viene directamente desde el propio sensor, ya que la medición de la cinta registradora de las bases que pasan no es una ciencia exacta todavía. Pero de acuerdo con Brown, un pequeño arreglo de compuertas programables atenúa un poco de ruido, logrando un factor de reducción aproximado de 100.&lt;/p&gt;
-
+&lt;p&gt;En muchos casos, los investigadores toman muestras de ADN que tienen una gran cantidad de “ruido” o ADN contaminante. Ya sea que se estén tomando muestras de agua del estanque o la barandilla del metro, siempre hay ADN extra flotando alrededor que difumina la secuencia que en realidad se está buscando. El ruido es un factor contaminante para tener en cuenta, pero un segundo factor relevante viene directamente desde el propio sensor, ya que la medición de la cinta registradora de las bases que pasan no es una ciencia exacta todavía. Pero de acuerdo con Brown, un pequeño arreglo de compuertas programables atenúa un poco de ruido, logrando un factor de reducción aproximado de 100.&lt;/p&gt;
 &lt;p&gt;Los datos luego fluyen a través de USB hacia una computadora, donde la aplicación personalizada de Oxford toma los fragmentos digitales de ADN y reensambla las piezas para obtener nuevamente una secuencia útil. Oxford se asoció con una compañía de software llamada Accelrys para volver a trabajar el constructor de flujo de trabajo visual de la compañía, Pipeline Pilot, para usar con la secuenciación del ADN. En Pipeline Pilot los datos conforman la entrada de una serie de algoritmos programables que devuelven el resultado de su análisis. Oxford y Accelrys tomaron miles de bibliotecas de algoritmos bioinformáticos que existen en el dominio público y las conectaron a Pipeline Pilot.&lt;/p&gt;
-
 &lt;p&gt;Diferentes laboratorios usan diferentes principios bioinformáticos, por lo tanto la capacidad de reordenar las diferentes herramientas es muy necesario. Esto además permite que otros investigadores repliquen otros trabajos, para que puedan ver &lt;em&gt;exactamente&lt;/em&gt; lo que otros hicieron - cada ejecución es exportable a un archivo XML - y luego hacerlo ellos mismos.&lt;/p&gt;
-
-&lt;p&gt;Oxford percibe al dispositivo utilizado simplemente como un simple investigador, eliminando la necesidad de comprar equipamiento grande o contratar personal que entienda el meollo de la bioinformática. &amp;#8220;Optimiza la infraestructura IT existente&amp;#8221;, afirma Gordon Sanghera, director general de Oxford Nanopore. &amp;#8220;No es necesario gastar medio millón de dólares en un instrumento.&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;Greg Lucier - el CEO de Life Technologies, un competidor en el juego de secuenciación de ADN - cuenta a Wired que si bien su empresa investiga la tecnología de nanoporos, no cree que se trate de una forma práctica para manejar la secuenciación del ADN, ya que no puede proporcionar la clase de precisión que se obtiene de sistemas mayores. &amp;#8220;No hay manera de que un ordenador standard pueda hacer ese tipo de procesamiento&amp;#8221;, dice.&lt;/p&gt;
-
+&lt;p&gt;Oxford percibe al dispositivo utilizado simplemente como un simple investigador, eliminando la necesidad de comprar equipamiento grande o contratar personal que entienda el meollo de la bioinformática. “Optimiza la infraestructura IT existente”, afirma Gordon Sanghera, director general de Oxford Nanopore. “No es necesario gastar medio millón de dólares en un instrumento.”&lt;/p&gt;
+&lt;p&gt;Greg Lucier - el CEO de Life Technologies, un competidor en el juego de secuenciación de ADN - cuenta a Wired que si bien su empresa investiga la tecnología de nanoporos, no cree que se trate de una forma práctica para manejar la secuenciación del ADN, ya que no puede proporcionar la clase de precisión que se obtiene de sistemas mayores. “No hay manera de que un ordenador standard pueda hacer ese tipo de procesamiento”, dice.&lt;/p&gt;
 &lt;p&gt;Lo sabremos con seguridad a fines de este año.&lt;/p&gt;
-
-&lt;p&gt;[Actualizaciones: Se ha actualizado esta historia para aclarar lo relativo al sensor y los mecanismos de reducción de ruido del dispositivo nanoporos. El modelo de negocio de Sequetech se mejoró. &amp;#8220;Pipeline&amp;#8221; fue cambiado a &amp;#8220;&lt;em&gt;Pipeline Pilot&lt;/em&gt;&amp;#8220;.]&lt;/p&gt;
-
+&lt;p&gt;[Actualizaciones: Se ha actualizado esta historia para aclarar lo relativo al sensor y los mecanismos de reducción de ruido del dispositivo nanoporos. El modelo de negocio de Sequetech se mejoró. “Pipeline” fue cambiado a “&lt;em&gt;Pipeline Pilot&lt;/em&gt;“.]&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fuente: &lt;a href=&#34;http://www.wired.com/wiredenterprise/2012/03/oxford-nanopore-sequencing-usb/&#34; title=&#34;Wired&#34;&gt;Wired&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>

@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Firefox on El Baúl del programador</title>
+        <title>firefox on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/tags/firefox/</link>
-        <description>Recent content in Firefox on El Baúl del programador</description>
+        <description>Recent content in firefox on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Thu, 04 Aug 2016 08:55:12 +0000</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/tags/firefox/</link>
-            <title>Firefox on El Baúl del programador</title>
+            <title>firefox on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -23,17 +22,14 @@
             
             <guid>https://elbauldelprogramador.com/cant-update-to-firefox-48-in-gentoo-nss-version-too-old/</guid>
             <description>&lt;p&gt;Hoy ha salido la versión 48 de Firefox para &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Instalar y actualizar Gentoo&#34;&gt;Gentoo&lt;/a&gt;, pero cuando realicé la actualización obtenía el siguiente error:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;configure: error: you don&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;t have NSS installed or your version is too old
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Así que pregunté en los foros de &lt;a href=&#34;https://forums.gentoo.org/viewtopic-p-7951120.html#7951120&#34; title=&#34;Can&#39;t update to firefox 48&#34;&gt;Gentoo&lt;/a&gt; y parece que se trata de un &lt;a href=&#34;https://bugs.gentoo.org/show_bug.cgi?id=590424&#34;&gt;bug&lt;/a&gt; pendiente de resolver.&lt;/p&gt;
-
 &lt;p&gt;Para salir del paso, en el foro me comentaron que existe un &lt;em&gt;Workaround&lt;/em&gt;, se trata de obligar a instalar una versión concreta de &lt;em&gt;NSS&lt;/em&gt;, en concreto la 3.24. Para ello basta con ejecutar:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;=dev-libs/nss-3.24 ~amd64&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.accept_keywords
 emerge -u nss
-&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
-
+&lt;span class=&#34;nv&#34;&gt;emerge&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;www-client/firefox-48.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y con esto deberíamos tener firefox 48 listo, y con ello el &lt;a href=&#34;http://www.genbeta.com/navegadores/el-nuevo-firefox-48-incluye-por-fin-soporte-para-multiples-procesos&#34; title=&#34;El nuevo Firefox 48 incluye por fin soporte para múltiples procesos&#34;&gt;soporte para múltiples procesos&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Gracias a &lt;em&gt;fedeliallalinea&lt;/em&gt; por la respuesta en el foro.&lt;/p&gt;</description>
         </item>
         

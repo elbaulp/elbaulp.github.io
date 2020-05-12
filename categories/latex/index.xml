@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Latex on El Baúl del programador</title>
+        <title>latex on El Baúl del programador</title>
         <link>https://elbauldelprogramador.com/categories/latex/</link>
-        <description>Recent content in Latex on El Baúl del programador</description>
+        <description>Recent content in latex on El Baúl del programador</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>es-ES</language>
         <lastBuildDate>Fri, 29 Sep 2017 13:26:02 +0100</lastBuildDate>
         <image>
             <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
             <link>https://elbauldelprogramador.com/categories/latex/</link>
-            <title>Latex on El Baúl del programador</title>
+            <title>latex on El Baúl del programador</title>
             <width>144</width>
             <height>144</height>
         </image>
@@ -22,68 +21,54 @@
             <pubDate>Fri, 29 Sep 2017 13:26:02 +0100</pubDate>
             
             <guid>https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&#34; alt=&#34;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini Curso de LaTeX – Introducción&#34;&gt;Mini Curso de LaTeX - Introducción&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Mini Curso de LaTeX – Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
-
 &lt;p&gt;Tras haber terminado nuestra sección del análisis de la eficiencia, ahora nos piden que pongamos un pantallazo con la salida del programa en terminal. Para ello, vamos a usar dos herramientas:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Los &lt;strong&gt;enlaces&lt;/strong&gt;: con esta herramienta podemos referenciar cualquier parte de nuestro documento con un sólo click, es decir, como si fuera un enlace en una página web. Lo vamos a usar para referenciar a nuestro código.&lt;/li&gt;
 &lt;li&gt;La orden &lt;strong&gt;figure&lt;/strong&gt;: para insertar nuestra imagen.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Para colocar un enlace en nuestro documento, debemos hacer dos cosas:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Poner una &lt;strong&gt;etiqueta&lt;/strong&gt; en el lugar que queramos referenciar.&lt;/li&gt;
 &lt;li&gt;Poner un &lt;strong&gt;enlace&lt;/strong&gt; a esa etiqueta donde queramos referenciarla.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;h1 id=&#34;enlaces&#34;&gt;Enlaces&lt;/h1&gt;
-
 &lt;p&gt;Para ello, ponemos justo al inicio de la sección &lt;em&gt;Código del programa&lt;/em&gt; lo siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;codigo&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y justo al inicio de la sección Salida del programa esto otro:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\hyperref&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[codigo_programa]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;texto del enlace&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este sería el resultado final:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\label&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;codigo&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y justo al inicio de la sección Salida del programa esto otro:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\hyperref&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[codigo_programa]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;texto del enlace&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este sería el resultado final:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newpage&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Salida del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
-La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;\hyperref&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[codigo_programa]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; es la siguiente:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Debemos compilar dos veces para que LaTeX establezca bien los enlaces, y tras compilar dos veces, si hacemos click sobre programa nos llevará al código de nuestro programa.&lt;/p&gt;
+La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;\hyperref&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[codigo_programa]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; es la siguiente:
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debemos compilar dos veces para que LaTeX establezca bien los enlaces, y tras compilar dos veces, si hacemos click sobre programa nos llevará al código de nuestro programa.&lt;/p&gt;
 &lt;h1 id=&#34;incluir-imágenes-en-el-documento&#34;&gt;Incluir imágenes en el documento&lt;/h1&gt;
-
 &lt;p&gt;Ahora vamos a ver como introducir una imagen en nuestro documento. Debemos tenerla en la misma carpeta que nuestro arhivo .tex, y para insertarla usamos la orden figure e includegraphics, cuya sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[opciones donde insertar la imagen]
 &lt;span class=&#34;k&#34;&gt;\centering&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% si queremos la imagen centrada
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\includegraphics&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones de tamaño]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;imagen&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;texto a poner debajo de la imagen&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para usar includegraphics debemos incluir el siguiente paquete en la cabecera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;graphicx&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para incluir imágenes en nuestro código&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Respecto a las opciones de tamaño, son las siguientes:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para usar includegraphics debemos incluir el siguiente paquete en la cabecera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;graphicx&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para incluir imágenes en nuestro código
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Respecto a las opciones de tamaño, son las siguientes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;width&lt;/strong&gt; : para escalar las imágenes un determinado ancho&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;height&lt;/strong&gt; : para escalar las imágenes un determinado alto&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;angle&lt;/strong&gt; : para rotar las imagenes según las agujas del reloj&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;scale&lt;/strong&gt; : para escalar imágenes&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Respecto a las opciones sobre donde insertar la imagen, pueedn ser las siguientes:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;h&lt;/strong&gt;: Insertar la imagen justo aquí (&lt;em&gt;here&lt;/em&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;b&lt;/strong&gt;: Insertar la imagen al final de la página (&lt;em&gt;bottom&lt;/em&gt;)&lt;/li&gt;
@@ -91,31 +76,27 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;li&gt;&lt;strong&gt;p&lt;/strong&gt;: Insertar la imagen en una página especial que contenga otras figuras o imágenes (&lt;em&gt;p&lt;/em&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;!&lt;/strong&gt;: Insertar la imagen sin considerar las opciones de LaTeX (como por ejemplo, el número máximo de figuras por página) que podrían hacer que no se insertara la imagen donde queremos.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Estos parámetros también nos valen para las tablas. También podemos combinarlos o establecer una jerarquía. Por ejemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;table&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[!hbp]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así, permitimos a LaTeX poner la tabla justo aquí (&lt;code&gt;h&lt;/code&gt;), o al final de la página (&lt;code&gt;b&lt;/code&gt;) o en una página especial para tablas, incluso si no queda bien (!). Si no se da ninguna opción, por defecto se asume &lt;code&gt;[tbp]&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sobre la orden &lt;code&gt;\caption{texto}&lt;/code&gt;, nos sirve para describir un poco la imagen, o la tabla en cuestión. LaTeX añadirá por su cuenta el &amp;#8220;Figure&amp;#8221; o &amp;#8220;Table&amp;#8221; más un número para identificarla. También podemos hacer un índice de figuras o tablas con los comandos &lt;code&gt;\listoffigures&lt;/code&gt; y &lt;code&gt;\listoftables&lt;/code&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;table&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[!hbp]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así, permitimos a LaTeX poner la tabla justo aquí (&lt;code&gt;h&lt;/code&gt;), o al final de la página (&lt;code&gt;b&lt;/code&gt;) o en una página especial para tablas, incluso si no queda bien (!). Si no se da ninguna opción, por defecto se asume &lt;code&gt;[tbp]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Sobre la orden &lt;code&gt;\caption{texto}&lt;/code&gt;, nos sirve para describir un poco la imagen, o la tabla en cuestión. LaTeX añadirá por su cuenta el “Figure” o “Table” más un número para identificarla. También podemos hacer un índice de figuras o tablas con los comandos &lt;code&gt;\listoffigures&lt;/code&gt; y &lt;code&gt;\listoftables&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Después de este pequeño repaso de teoría, vamos a insertar nuestra imagen en el documento, en mi caso, la imagen se llama 1:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[!h]
 &lt;span class=&#34;k&#34;&gt;\centering&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\includegraphics&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[width=1\textwidth]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Salida por terminal del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h1&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;figure&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;cabeceras-de-los-documentos&#34;&gt;Cabeceras de los documentos&lt;/h1&gt;
 &lt;p&gt;Y por último, vamos a personalizar un poco nuestro documento, aunque ya hay un &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/&#34; title=&#34;Pie de página con FancyHdr&#34;&gt;post&lt;/a&gt; sobre esto en El baúl del programador, para poner una cabecera y un pie de página a nuestro gusto. Para ello, usamos el paquete &lt;strong&gt;fancyhdr&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para personalizar la cabecera y el pie de pagina&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;También debemos establecer el estilo de página a &lt;strong&gt;fancy&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\pagestyle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancy&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;También, para ver el uso de dos paquetes muy útiles, vamos a darle color a nuestra cabecera y además, vamos a numerar las páginas con el estilo: &amp;#8220;página x de n&amp;#8221;, para ello incluimos también el paquete &lt;strong&gt;color&lt;/strong&gt; (que habíamos incluido al principio) y el paquete &lt;strong&gt;lastpage&lt;/strong&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;lastpage&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para saber el numero de pagina del documento&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Vamos a empezar personalizando la cabecera, para ello usamos el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\fancyhead&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones de localizacion]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;la salida que quieras&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde las opciones de localización son E, O, L, C y R.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para personalizar la cabecera y el pie de pagina
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;También debemos establecer el estilo de página a &lt;strong&gt;fancy&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\pagestyle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancy&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;También, para ver el uso de dos paquetes muy útiles, vamos a darle color a nuestra cabecera y además, vamos a numerar las páginas con el estilo: “página x de n”, para ello incluimos también el paquete &lt;strong&gt;color&lt;/strong&gt; (que habíamos incluido al principio) y el paquete &lt;strong&gt;lastpage&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;lastpage&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para saber el numero de pagina del documento
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vamos a empezar personalizando la cabecera, para ello usamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\fancyhead&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones de localizacion]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;la salida que quieras&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde las opciones de localización son E, O, L, C y R.&lt;/p&gt;
 &lt;p&gt;En nuestro código, vamos a hacer lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;c&#34;&gt;% CABECERA
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;% el nombre del autor en la izquierda de las paginas pares y a la derecha de las paginas impares
@@ -124,26 +105,22 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;% PIE DE PAGINA
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;% en la parte central del pie de pagina el numero de pagina actual y un enlace a la ultima pagina
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[C]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[rgb]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;0.2,0.4,0.5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt; de&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\pageref&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;LastPage&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete &lt;code&gt;hyperref&lt;/code&gt; que incluímos antes, en concreto estas dos:&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[C]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[rgb]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;0.2,0.4,0.5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt; de&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\pageref&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;LastPage&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Un último detale: si os habéis dado cuenta, los links tal y como tenemos el documento actualmente quedan muy feos, ¿verdad?. Para cambiar eso, debemos modificar algunas opciones del paquete &lt;code&gt;hyperref&lt;/code&gt; que incluímos antes, en concreto estas dos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;colorlinks=true&lt;/strong&gt;: con esta opción establecemos que queremos cambiar el color de los links, al activarla, por defecto nuestros links se quedan de color rojo.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;linkcolor&lt;/strong&gt;: y con esta, establecemos el color. Podemos ponerle valores como red, blue, green&amp;#8230;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;linkcolor&lt;/strong&gt;: y con esta, establecemos el color. Podemos ponerle valores como red, blue, green…&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;Así, nuestro paquete &lt;code&gt;hyperref&lt;/code&gt; quedaría de la siguiente forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[colorlinks=true,linkcolor=magenta]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hyperref&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para poder poner &amp;#34;enlaces&amp;#34; en nuestro codigo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;compilar-el-documento-y-generar-el-pdf&#34;&gt;Compilar el documento y generar el PDF&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[colorlinks=true,linkcolor=magenta]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hyperref&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para poder poner &amp;#34;enlaces&amp;#34; en nuestro codigo
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;compilar-el-documento-y-generar-el-pdf&#34;&gt;Compilar el documento y generar el PDF&lt;/h1&gt;
 &lt;p&gt;Ahora que ya tenemos nuestro fichero escrito, ¿cómo lo convertimos a PDF?. Si usas Linux, tienes que bajarte el paquete &lt;code&gt;texlive&lt;/code&gt; y ejecutar en terminal el siguiente comando en el directorio donde tengas tu fichero .tex:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;pdflatex nombrefichero.tex&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y si usas el paquete &lt;code&gt;minted&lt;/code&gt; deberás incluir también:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;pdflatex -shell-escape nombrefichero.tex&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;editores-de-texto&#34;&gt;Editores de Texto&lt;/h1&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;pdflatex nombrefichero.tex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y si usas el paquete &lt;code&gt;minted&lt;/code&gt; deberás incluir también:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;pdflatex -shell-escape nombrefichero.tex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;editores-de-texto&#34;&gt;Editores de Texto&lt;/h1&gt;
 &lt;p&gt;También tienes la opción de configurar tu editor de texto favorito con un plugin para compilar LaTeX directamente desde ahí. Para hacerlo en Sublime Text tienes que seguir los siguientes pasos:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;Ve a Tools &amp;gt; build system &amp;gt; new build system&lt;/li&gt;
 &lt;li&gt;Pega el siguiente código y guarda el archivo con el nombre que quieras:&lt;/li&gt;
@@ -151,25 +128,17 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &amp;#34;cmd&amp;#34;: [&amp;#34;pdflatex&amp;#34;,&amp;#34;-shell-escape&amp;#34;,&amp;#34;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;file_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;,
 &lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;    &amp;#34;selector&amp;#34;: &amp;#34;text.tex.latex&amp;#34;
-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ol&gt;
+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
 &lt;li&gt;Cada vez que quieras compilar, presiona control+b, teniendo elegido el build system de LaTeX que has creado.&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar ATOM&#34;&gt;Atom&lt;/a&gt; hay un paquete para compilar LaTeX pulsando control+alt+b.&lt;/p&gt;
-
 &lt;p&gt;Si trabajáis en Windows, probad a trabajar con un programa llamado &lt;a href=&#34;http://miktex.org/&#34; title=&#34;MikTeX&#34;&gt;MikTeX&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;Y para Mac OS X, si no tengo mal entendido, podéis usar cualquiera de las dos alternativas.&lt;/p&gt;
-
 &lt;p&gt;Y con esto, ya tenemos un portafolios de prácticas bonito, bien presentado y estructurado. Por supuesto, con LaTeX se pueden hacer muchas más cosas, pero no me he querido meter muy a fondo en un curso introductorio.&lt;/p&gt;
-
 &lt;p&gt;Espero que os haya gustado este curso y os haya servido como base para aprender LaTeX, podéis consultar el fichero fuente que he utilizado yo en &lt;a href=&#34;https://github.com/mgmacias95/CursoLaTex/&#34; title=&#34;github&#34;&gt;github&lt;/a&gt; (también os he incluido en el repositorio el fichero .h y la imagen para que lo podáis compilar y trastear con él todo lo que queráis).&lt;/p&gt;
-
 &lt;p&gt;Quiero despedirme no sin antes dedicar todo esto a mi profesor, Francisco Miguel García, ya que sin su ayuda seguramente aún seguiría haciendo mis documentos con el Microsoft Word y a mi amigo, Alejandro Alcalde, por dejarme publicarlo en su blog y llegar así a más gente.&lt;/p&gt;
-
 &lt;p&gt;¡Nos vemos en próximas entradas!&lt;/p&gt;
-
 &lt;p&gt;Marta.&lt;/p&gt;</description>
         </item>
         
@@ -184,34 +153,24 @@ La salida por terminal que obtener al ejecutar el &lt;span class=&#34;k&#34;&gt;
 &lt;li&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
-
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34; alt=&#34;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Continuando por donde lo dejamos en el último artículo, hoy veremos cómo incluir código fuente en el documento.&lt;/p&gt;
-
 &lt;p&gt;Nuestra nueva sección se va a llamar:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Código del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Código del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora, tras haber descrito brevemente lo que hace nuestro programa, vamos a proceder a enseñar el código. Hay varias alternativas para esto, mi favorita? El paquete &lt;strong&gt;minted&lt;/strong&gt;. En El baúl del programador ya hay una &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Intro a Minted&#34;&gt;pequeña guía&lt;/a&gt; sobre el uso de este paquete, así que no voy a explicarlo de manera muy extensa:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h2&gt;
-
 &lt;p&gt;Incluimos el paquete &lt;code&gt;minted&lt;/code&gt; en nuestra cabecera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;minted&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para resaltar código fuente&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y ahora:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;minted&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para resaltar código fuente
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y ahora:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Si no tenemos nuestro código en un fichero aparte o si vamos a escribir muy poco código, podemos usar directamente el paquete con la siguiente sintaxis:&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;cout &amp;lt;&amp;lt; &amp;#34;Hola mundo&amp;#34; &amp;lt;&amp;lt; endl;
-return 0;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;añadir-ficheros&#34;&gt;Añadir ficheros&lt;/h1&gt;
+return 0;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;añadir-ficheros&#34;&gt;Añadir ficheros&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Si, como en nuestro caso, tenemos el fichero en un fichero a parte podemos exportarlo directamente a nuestro documento, Copiando lo siguiente en nuestra cabecera:&lt;/li&gt;
 &lt;/ol&gt;
@@ -222,10 +181,12 @@ return 0;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
     frame=lines,
     framesep=2mm,
     tabsize=3,
-&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y esto justo en el sitio en el que quieras insertar tu código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\micodigofuente&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=&amp;#34;nombredemifichero.extension&amp;#34;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;nombredemifichero.extension&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;En nuestro caso sería, insertar lo siguiente en la cabecera (porque estamos haciéndolo en c++):&lt;/p&gt;
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y esto justo en el sitio en el que quieras insertar tu código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\micodigofuente&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=&amp;#34;nombredemifichero.extension&amp;#34;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;nombredemifichero.extension&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En nuestro caso sería, insertar lo siguiente en la cabecera (porque estamos haciéndolo en c++):&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newmintedfile&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[mycplusplus]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;c++&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
     linenos, &lt;span class=&#34;c&#34;&gt;% muestra el número de línea
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;    numbersep=5pt, &lt;span class=&#34;c&#34;&gt;% separación entre el código y el número de línea
@@ -233,20 +194,19 @@ return 0;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;    frame=lines, &lt;span class=&#34;c&#34;&gt;% dibuja las líneas enmarcando el código
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;    framesep=2mm, &lt;span class=&#34;c&#34;&gt;% separación entre la línea y el código
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;    tabsize=3, &lt;span class=&#34;c&#34;&gt;% tamaño de la tabulación
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;y esto en nuestro código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\mycplusplus&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=&amp;#34;postfija.h&amp;#34;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;postfija.h&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Debéis tener cuidado con el paquete minted pues no hace saltos de línea si vuestro código es muy extenso, y además, no reconoce los carácteres acentuados ni la ñ.&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y esto en nuestro código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\mycplusplus&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=&amp;#34;postfija.h&amp;#34;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;postfija.h&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Debéis tener cuidado con el paquete minted pues no hace saltos de línea si vuestro código es muy extenso, y además, no reconoce los carácteres acentuados ni la ñ.&lt;/p&gt;
 &lt;p&gt;Tras esto, empezamos una nueva sección, en la que usaremos los paquetes y entornos matemáticos. No hace falta incluir ningún paquete, pues ya lo hemos incluido antes.&lt;/p&gt;
-
 &lt;p&gt;Empezamos nueva sección, para ello:&lt;/p&gt;
-
 &lt;h2 id=&#34;símbolos-matemáticos&#34;&gt;Símbolos matemáticos&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newpage&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Análisis de la eficiencia del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así es, alguna vez tendremos que analizar la eficiencia de algún programa que hagamos, y para ello vamos a tener que hacer uso de las matemáticas. En este caso, vamos a imaginar que nos piden la eficiencia del algoritmo usado para pasar de notación infija a postfija, es decir, la función infija2postfija.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Análisis de la eficiencia del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así es, alguna vez tendremos que analizar la eficiencia de algún programa que hagamos, y para ello vamos a tener que hacer uso de las matemáticas. En este caso, vamos a imaginar que nos piden la eficiencia del algoritmo usado para pasar de notación infija a postfija, es decir, la función infija2postfija.&lt;/p&gt;
 &lt;p&gt;Para analizar la eficiencia del algoritmo, tendremos que combinar matemáticas y texto. Para las matemáticas utilizaremos la orden &lt;code&gt;displaymath&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 En primer lugar, nos encontramos un for que va desde &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; hasta &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;,
@@ -257,11 +217,9 @@ en cuenta que todos las operaciones dentro del for tienen eficiencia &lt;span cl
 &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{&lt;/span&gt;i=0&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;s.size()&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; = s.size(), &lt;span class=&#34;k&#34;&gt;\qquad\ \textrm&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;siendo &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;
     el tamaño del string que contiene la operación aritmética&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para representar la sumatoria dentro del entorno matemático utilizamos la opción &lt;code&gt;\sum&lt;/code&gt;, después, utilizamos &lt;code&gt;_&lt;/code&gt; y &lt;code&gt;^&lt;/code&gt; para establecer los límites de la sumatoria. &lt;code&gt;\qquad\&lt;/code&gt; lo usamos para dejar un pequeño espacio (podemos usar &lt;code&gt;\quad&lt;/code&gt; o &lt;code&gt;\qquad\&lt;/code&gt;). Así, el texto de arriba quedaría \(\sum_{i=0}^{s.size()} = s.size()\)&lt;/p&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para representar la sumatoria dentro del entorno matemático utilizamos la opción &lt;code&gt;\sum&lt;/code&gt;, después, utilizamos &lt;code&gt;_&lt;/code&gt; y &lt;code&gt;^&lt;/code&gt; para establecer los límites de la sumatoria. &lt;code&gt;\qquad\&lt;/code&gt; lo usamos para dejar un pequeño espacio (podemos usar &lt;code&gt;\quad&lt;/code&gt; o &lt;code&gt;\qquad\&lt;/code&gt;). Así, el texto de arriba quedaría \(\sum_{i=0}^{s.size()} = s.size()\)&lt;/p&gt;
 &lt;p&gt;Otro detalle a destacar, es que en el párrafo de introducción, cuando menciono variables matemáticas, las menciono entre signos de dólar. Esto es para que salgan en cursiva y se puedan diferenciar del resto del texto.&lt;/p&gt;
-
 &lt;p&gt;Seguimos analizando la eficiencia, y ahora recurrimos a la estructura &lt;code&gt;enumerate&lt;/code&gt; que vimos antes, pero con un &amp;ldquo;contador&amp;rdquo; un tanto especial:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
@@ -276,9 +234,9 @@ Ahora, vamos a proceder a analizar las operaciones dentro de dicho for:
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
-Por tanto, tal y como dijimos antes, la eficiencia del bucle es de &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
+Por tanto, tal y como dijimos antes, la eficiencia del bucle es de &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;s.size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;())&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si os fijáis, la lista estará enumerada con corazones. Y si os fijáis un poco más, veréis que esos corazones son interpretados por LaTeX como símbolo matemático, pues están entre signos de dólar. Así, podemos usar cualquier signo matemático de los que LaTeX nos da para hacer nuestras listas más originales. Aquí os dejo una &lt;a href=&#34;http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html&#34; title=&#34;lista&#34;&gt;lista&lt;/a&gt; de algunos símbolos que podéis usar.&lt;/p&gt;
 &lt;p&gt;Ahora seguiríamos con nuestro análisis de la eficiencia:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 Después, tenemos un pequeño bucle, en el que insertamos en la cola de la
@@ -288,9 +246,9 @@ Y se traduciría en la siguiente sumatoria:
 
 &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_&lt;/span&gt;0&lt;span class=&#34;nb&#34;&gt;^&lt;/span&gt;t 1 = t
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esta vez, los límites de la sumatoria estaban formados por un único carácter, por eso podemos poner &lt;code&gt;\sum_0^t&lt;/code&gt; en vez de &lt;code&gt;\sum_{0}^{t}&lt;/code&gt;.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta vez, los límites de la sumatoria estaban formados por un único carácter, por eso podemos poner &lt;code&gt;\sum_0^t&lt;/code&gt; en vez de &lt;code&gt;\sum_{0}^{t}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Terminamos de analizar la eficiencia del último bucle que nos queda:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 Por último,  tenemos otro bucle más en el que metemos en un string la
@@ -301,8 +259,9 @@ siguiente sumatoria:
 
 &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\sum&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;_{&lt;/span&gt;i=0&lt;span class=&#34;nb&#34;&gt;}^{&lt;/span&gt;c.size()&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; 1 = c.size();
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y ahora vamos a hacer una subsección a modo de conclusión. Para ello, usamos la orden &lt;code&gt;\subsection{Conclusión}&lt;/code&gt;:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y ahora vamos a hacer una subsección a modo de conclusión. Para ello, usamos la orden &lt;code&gt;\subsection{Conclusión}&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\subsection&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Conclusión&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 Tenemos tres bucles, al ser independientes, la eficiencia de todo el
 código es la suma de la eficiencia de cada bucle por separado, es decir:
@@ -312,9 +271,9 @@ eficiencia = &lt;span class=&#34;k&#34;&gt;\underbrace&lt;/span&gt;&lt;span clas
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;displaymath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
-Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto ha sido un pequeño ejemplo del uso de las matemáticas en LaTeX, los demás símbolos matemáticos que hay se usan exactamente igual a como hemos visto aquí.&lt;/p&gt;
+Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;O&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;.
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto ha sido un pequeño ejemplo del uso de las matemáticas en LaTeX, los demás símbolos matemáticos que hay se usan exactamente igual a como hemos visto aquí.&lt;/p&gt;
 &lt;p&gt;En el proximo artículo veremos cómo añadir figuras, enlaces y tablas al documento.&lt;/p&gt;</description>
         </item>
         
@@ -325,15 +284,11 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
             
             <guid>https://elbauldelprogramador.com/mantener-proyecto-latex-limpio-script/</guid>
             <description>&lt;blockquote&gt;
-&lt;p&gt;Este artículo es una colaboración de &lt;a href=&#34;http://Github.com/lulivi&#34; target=&#34;_blank&#34; title=&#34;Luis Liñan&#34;&gt;Luis Liñan&lt;/a&gt;, &lt;a href=&#34;https://t.me/lulivi&#34; target=&#34;_blank&#34; title=&#34;@lulivi&#34;&gt;@lulivi&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;!-- raw HTML omitted --&gt;Luis Liñan&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;@lulivi&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;p&gt;En esta entrada del blog utilizaremos un script simple que nos permitirá actualizar automáticamente nuestro documento pdf (a partir del fichero tex) y devolverlo al directorio de trabajo manteniendolo totalmente limpio.&lt;/p&gt;
-
 &lt;h1 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h1&gt;
-
 &lt;p&gt;Siguiendo la estructura ya comentada en &lt;a href=&#34;https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/&#34;&gt;otro artículo del blog&lt;/a&gt; tendremos lo siguiente en nuestro directorio de trabajo:&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;.
 |-- figures
 |   |-- figure_1.pdf
@@ -354,29 +309,27 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
     |-- main.out
     |-- main.pdf
     `-- main.toc
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;ejecución-del-script&#34;&gt;Ejecución del script&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;ejecución-del-script&#34;&gt;Ejecución del script&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Help function
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Help function&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;#34;&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
   &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
   &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
   mkdir &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;nv&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
     &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
@@ -389,28 +342,25 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
   &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
 &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file&lt;/span&gt;
+listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory&lt;/span&gt;
+latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Lo único que hay que hacer es ejecutar el script desde el directorio de trabajo pasando como argumento el directorio donde irán los outputs de la compilación:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;Para más información sobre el script, vea el &lt;a href=&#34;https://github.com/lulivi/Latex-PDF-auto-updater&#34;&gt;repositorio del script&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos&#34; target=&#34;_blank&#34; title=&#34;Compilar automáticamente ficheros en latex mientras los modificamos&#34;&gt;Compilar automáticamente ficheros en latex mientras los modificamos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/ejecutar-un-script-al-modificar-un-fichero-con-inotify&#34; target=&#34;_blank&#34; title=&#34;Ejecutar un script al modificar un fichero con inotify&#34;&gt;Ejecutar un script al modificar un fichero con inotify&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.mankier.com/1/latexmk&#34; target=&#34;_blank&#34; title=&#34;Latexmk man page&#34;&gt;Latexmk man page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Compilar automáticamente ficheros en latex mientras los modificamos&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Ejecutar un script al modificar un fichero con inotify&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Latexmk man page&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -421,13 +371,9 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
             
             <guid>https://elbauldelprogramador.com/creating-trees-dependency-graphs-svms-in-tikz/</guid>
             <description>&lt;p&gt;Como he comentado, para dibujar los árboles y la SVM usé el paquete &lt;code&gt;tikz&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/tags/latex&#34; title=&#34;LaTeX&#34;&gt;LaTeX&lt;/a&gt;, a continuación muestro el código que usé:&lt;/p&gt;
-
 &lt;h1 id=&#34;dibujando-un-árbol-de-dependencias-con-tikz&#34;&gt;Dibujando un árbol de dependencias con Tikz&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ejemplo-1&#34;&gt;Ejemplo 1&lt;/h2&gt;
-
 &lt;p&gt;El código es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -452,14 +398,9 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
   &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[edge start x offset=-4pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;ADVMOD&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;dependency&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El resultado:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34;&gt;&lt;img sizes=&#34;(min-width: 799px) 799px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree.png&#34; alt=&#34;Dependenty tree in tikz&#34; title=&#34;Dependenty tree in tikz&#34; width=&#34;799&#34; height=&#34;194&#34;&gt;&lt;/img&gt;&lt;/a&gt;
-&lt;figcaption&gt;Dependenty tree in tikz&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El resultado:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ejemplo-2&#34;&gt;Ejemplo 2&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -505,16 +446,10 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
              ]
          ]
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Resultado:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34;&gt;&lt;img sizes=&#34;(min-width: 926px) 926px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-2.png&#34; alt=&#34;Other Dependency Tree in tikz&#34; title=&#34;Other Dependency Tree in tikz&#34; width=&#34;926&#34; height=&#34;485&#34;&gt;&lt;/img&gt;&lt;/a&gt;
-&lt;figcaption&gt;Other Dependency Tree in tikz&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Resultado:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h2 id=&#34;ejemplo-3&#34;&gt;Ejemplo 3&lt;/h2&gt;
-
 &lt;p&gt;El último ejemplo de árbol:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -535,14 +470,9 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
              ]
            ]
    &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34;&gt;&lt;img sizes=&#34;(min-width: 795px) 795px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/dependency-tree-3.png&#34; alt=&#34;Yet another example of a Dependency tree in tikz&#34; title=&#34;Yet another example of a Dependency tree in tikz&#34; width=&#34;795&#34; height=&#34;513&#34;&gt;&lt;/img&gt;&lt;/a&gt;
-&lt;figcaption&gt;Yet another example of a Dependency tree in tikz&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;dibujando-una-máquina-de-soporte-vectorial-svm-en-tikz&#34;&gt;Dibujando una máquina de soporte vectorial (SVM) en Tikz&lt;/h1&gt;
-
 &lt;p&gt;Para la explicación gráfica de lo que es una SVM:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -592,19 +522,13 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
       &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\Point&lt;/span&gt; node[rightNode]&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;;
     &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
   &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34;&gt;&lt;img sizes=&#34;(min-width: 811px) 811px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/support-vector-machine-tikz-latex.png&#34; alt=&#34;Support Vector Machine in Latex with Tikz&#34; title=&#34;Support Vector Machine in Latex with Tikz&#34; width=&#34;811&#34; height=&#34;652&#34;&gt;&lt;/img&gt;&lt;/a&gt;
-&lt;figcaption&gt;Support Vector Machine in Latex with Tikz&lt;/figcaption&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;p&gt;Cuando empecé a dibujar estas figuras en &lt;code&gt;tikz&lt;/code&gt; se me presentaron algunas dudas que pregunté en tex.stackexchange.com. Estas fueron dichas preguntas:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Align all leaf nodes in tikz-qtree | &lt;a href=&#34;http://tex.stackexchange.com/questions/340929/align-all-leaf-nodes-in-tikz-qtree&#34; target=&#34;_blank&#34; title=&#34;Align all leaf nodes in tikz-qtree&#34;&gt;tex.stackexchange.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Align independent tikzpictures | &lt;a href=&#34;http://tex.stackexchange.com/questions/342978/align-independent-tikzpictures&#34; target=&#34;_blank&#34; title=&#34;Align independent tikzpictures&#34;&gt;tex.stackexchange.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Align all leaf nodes in tikz-qtree | &lt;!-- raw HTML omitted --&gt;tex.stackexchange.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Align independent tikzpictures | &lt;!-- raw HTML omitted --&gt;tex.stackexchange.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -614,26 +538,17 @@ Podemos concluir diciendo que la eficiencia de nuestra función es &lt;span clas
             <pubDate>Fri, 16 Sep 2016 13:48:53 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/crear-diagrama-de-gantt-en-latex/</guid>
-            <description>&lt;figure&gt;
-  &lt;img sizes=&#34;(min-width: 800px) 800px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/crear-diagrama-de-gantt-en-latex.png&#34; alt=&#34;Cómo Crear Diagramas De Gantt en LaTeX&#34; title=&#34;Cómo Crear Diagramas De Gantt en LaTeX&#34; width=&#34;800&#34; height=&#34;335&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Consulta el resto de &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex&#34; title=&#34;Artículos sobre LaTeX&#34;&gt;artículos sobre LaTeX escritos en el blog&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-
 &lt;h1 id=&#34;qué-es-un-diagrama-de-gantt&#34;&gt;Qué es un Diagrama de Gantt&lt;/h1&gt;
-
 &lt;p&gt;La definición de WikiPedia:&lt;/p&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;El diagrama de Gantt es una útil herramienta gráfica cuyo objetivo es exponer el tiempo de dedicación previsto para diferentes tareas o actividades a lo largo de un tiempo total determinado.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;diagramas-de-gantt-en-latex&#34;&gt;Diagramas de Gantt en Latex&lt;/h1&gt;
-
 &lt;p&gt;Para crear estos diagramas en LaTeX, existe un paquete llamado &lt;a href=&#34;http://bay.uchicago.edu/CTAN/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf&#34; title=&#34;Documentación de pgfgantt&#34;&gt;Pgfgantt&lt;/a&gt; que nos permite crear estos diagramas de forma sencilla. Explicaré por encima un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
 canvas/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fill=none, draw=black!5, line width=.75pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
@@ -718,11 +633,9 @@ progress=0,
 
 &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar2&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\ganttlink&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[link type=f-s]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;bar4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;bar5&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;comandos-básicos-del-diagrama-de-gantt&#34;&gt;Comandos básicos del diagrama de Gantt&lt;/h1&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;ganttchart&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;comandos-básicos-del-diagrama-de-gantt&#34;&gt;Comandos básicos del diagrama de Gantt&lt;/h1&gt;
 &lt;p&gt;Veamos algunos de los comandos más útiles:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;\begin{ganttchart}[opciones]{1}{24}&lt;/code&gt;: Con este comando iniciamos el diagrama, en las opciones se especifican comandos para el estilo del gráfico, luego se especifica cuantos cuadros de tiempo queremos, en este caso del 1 a 24.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;gantttitle{titulo}{n}&lt;/code&gt;: Con este comando se especifica un título para el diagrama, seguido de cuantos cuadros de tiempo queremos que ocupe dicho título. Podemos tener varios títulos, como en este ejemplo.&lt;/li&gt;
@@ -730,9 +643,7 @@ progress=0,
 &lt;li&gt;&lt;code&gt;\ganttbar[opciones]{tarea}{inicio cuadro}{fin cuadro}&lt;/code&gt;: Especifica una tarea, similar al anterior, los parámetros son el nombre de la tarea y la franja de tiempo que ocupa.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;ganttlink[opciones]{nombre tarea 1}{nombre tarea 2}&lt;/code&gt;: Con este comando podemos establecer un enlace entre dos tareas, a las tareas involucradas se les ha dado un nombre con la opción &lt;code&gt;name=nombre&lt;/code&gt; en sus opciones.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
-
 &lt;p&gt;Eso es todo, para crear un simple diagrama de Gantt no es necesario saber mucho más sobre este paquete. Recomiendo echar un vistazo a la documentación del paquete para cosas más específicas.&lt;/p&gt;</description>
         </item>
         
@@ -742,27 +653,17 @@ progress=0,
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-crear-un-pie-de-pagina-en-latex-con-fancyhdr/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; alt=&#34;latex_logo&#34; width=&#34;300px&#34; height=&#34;114px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Como he mencionado en algún &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Resaltar sintaxis del código fuente en LaTeX con minted&#34;&gt;artículo anterior&lt;/a&gt;, he aprendido bastante a programar en LaTeX reescribiendo el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34; title=&#34;Disponible la primera parte del curso Android en PDF&#34;&gt;curso de Android&lt;/a&gt;. Hoy vamos a ver cómo crear un pie de página en LaTeX.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;fancyhdr&#34;&gt;Fancyhdr&lt;/h1&gt;
-
 &lt;p&gt;Para poder crear pies de página y cabeceras es necesario usar el paquete &lt;em&gt;fancyhdr&lt;/em&gt;, y establecer el estilo de página a &lt;em&gt;fancy&lt;/em&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancyhdr&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\pagestyle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancy&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora nuestros documentos tendrán una línea arriba y abajo, en la cabecera y pie de página respectivamente.&lt;/p&gt;
-
+&lt;span class=&#34;k&#34;&gt;\pagestyle&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;fancy&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora nuestros documentos tendrán una línea arriba y abajo, en la cabecera y pie de página respectivamente.&lt;/p&gt;
 &lt;h1 id=&#34;personalizar-el-estilo-del-pie-de-página&#34;&gt;Personalizar el estilo del pie de página&lt;/h1&gt;
-
 &lt;p&gt;Para cambiar el aspecto por defecto que ofrece el paquete fancyhdr, hemos de usar los comandos &lt;code&gt;fancyhead&lt;/code&gt; y &lt;code&gt;fancyfoot&lt;/code&gt;, correspondientes a la cabecera y pie de página, respectivamente. Nosotros nos centraremos en el pie, aunque para personalizar la cabecera bastará con sustituir &lt;code&gt;fancyfoot&lt;/code&gt; por &lt;code&gt;fancyhead&lt;/code&gt; en el código.&lt;/p&gt;
-
 &lt;p&gt;Es necesario conocer el significado de las siguientes letras:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;E: Página par&lt;/li&gt;
 &lt;li&gt;O: Página impar&lt;/li&gt;
@@ -772,34 +673,28 @@ progress=0,
 &lt;li&gt;H: Cabecera&lt;/li&gt;
 &lt;li&gt;F: Pie de página&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Conocido el significado de las mismas, ahora es posible definir el estilo en el preámbulo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\fancyhead&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[CO,CE]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;---Draft---&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[C]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Confidential&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[RO, LE]&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El grosor de las líneas decorativas puede cambiarse con:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[RO, LE]&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\thepage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El grosor de las líneas decorativas puede cambiarse con:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\renewcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\headrulewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;0.4pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\renewcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\footrulewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;0.4pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como apunte personal, uso plantillas para distintos tipos de documentos, estas plantillas vienen con un fichero de estilo propio y para no modificar directamente el valor del pie de página podemos crear un comando que permita establecer el contenido del pie de página. Por ejemplo, en el fichero que define la estructura del documento creamos el comando:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\renewcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\footrulewidth&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;0.4pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como apunte personal, uso plantillas para distintos tipos de documentos, estas plantillas vienen con un fichero de estilo propio y para no modificar directamente el valor del pie de página podemos crear un comando que permita establecer el contenido del pie de página. Por ejemplo, en el fichero que define la estructura del documento creamos el comando:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\setFooterL&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[L]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\small\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\newcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\setFooterR&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\fancyfoot&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[R]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\small\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:&lt;/p&gt;
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora desde el fichero principal, resulta muy fácil reusar la plantilla y cambiar el texto del pie de página de la siguiente manera:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setFooterL&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;http://twitter.com/elbaulp&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;Alejandro Alcalde&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\setFooterR&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;https://elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Produciendo el siguiente resultado:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 887px) 887px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/footerFancyHdrLatex.png&#34; alt=&#34;Cómo crear un pie de página en LaTeX con fancyhdr&#34; title=&#34;Cómo crear un pie de página en LaTeX con fancyhdr&#34; width=&#34;887px&#34; height=&#34;53px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\setFooterR&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\href&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;https://elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;elbauldelprogramador.com&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Produciendo el siguiente resultado:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Header/Footer in Latex with Fancyhdr&lt;/em&gt; »» &lt;a href=&#34;http://texblog.org/2007/11/07/headerfooter-in-latex-with-fancyhdr/&#34; target=&#34;_blank&#34;&gt;texblog.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Header/Footer in Latex with Fancyhdr&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;texblog.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -809,105 +704,95 @@ progress=0,
             <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/</guid>
-            <description>&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Mini Curso de LaTeX - Introducción&#34; alt=&#34;Mini Curso de LaTeX - Introducción&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;&lt;/a&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;ul&gt;
 &lt;li&gt;Mini Curso de LaTeX - Introducción&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-incluir-codigo-fuente-y-simbolos-matematicos/&#34; title=&#34;Curso de LaTeX - Incluir código fuente y símbolos matemáticos&#34;&gt;Mini Curso de LaTeX - Incluir código fuente y símbolos matemáticos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/curso-de-latex-figuras-enlaces-y-cabeceras/&#34;&gt;Mini Curso de LaTeX - Figuras, Enlaces y cabeceras&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h1 id=&#34;mini-curso-de-latex&#34;&gt;Mini curso de Latex&lt;/h1&gt;
-
 &lt;p&gt;¡Hola &lt;em&gt;internet&lt;/em&gt;!&lt;/p&gt;
-
 &lt;p&gt;En este tutorial, curso o como queráis llamarlo os voy a enseñar lo básico que debéis saber para hacer vuestros documentos en &lt;strong&gt;LaTeX&lt;/strong&gt;! Como estamos en un blog sobre informática vamos a orientarlo un poco hacia la informática.&lt;/p&gt;
-
 &lt;p&gt;Bueno, podría empezar contándote qué significa LaTeX o quién lo creó pero me gusta ser directa, así que abre tu editor de texto preferido que vamos a empezar a escribir ya!&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Vamos a imaginar que tenemos que hacer una pequeña documentación que acompañe a un programa muy simple que hemos hecho para unas prácticas.&lt;/p&gt;
-
 &lt;h1 id=&#34;cabecera-de-un-documento&#34;&gt;Cabecera de un documento&lt;/h1&gt;
-
 &lt;p&gt;Lo primero que debemos hacer en un documento de LaTeX es poner una cabecera, esto es, establecer la configuración del documento. La primera línea de cualquier documento LaTeX sería la siguiente:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;clase&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;La parte de clase podemos rellenarla con varias opciones, dependiendo del tipo de archivo que queramos hacer. Los más populares son:
-1. &lt;code&gt;article&lt;/code&gt;: para documentos cortos tales como artículos, presentaciones&amp;#8230;
-2. &lt;code&gt;report&lt;/code&gt;: ideal para documentos más largos que contengan varios capítulos, libros pequeños, etc
-3. &lt;code&gt;book&lt;/code&gt;: para libros&lt;/p&gt;
-
-&lt;p&gt;Y la parte de opciones, con algunas opciones que queramos añadirle a nuestro documento tales como:
-1. &lt;strong&gt;El tamaño de la letra&lt;/strong&gt;: 10pt, 11pt y 12pt. El tamaño por defecto es 10pt
-2. &lt;strong&gt;El tamaño del papel&lt;/strong&gt;: &lt;code&gt;a4paper&lt;/code&gt;, &lt;code&gt;letterpaper&lt;/code&gt;, &lt;code&gt;a5paper&lt;/code&gt;, &lt;code&gt;b5paper&lt;/code&gt;, &lt;code&gt;executivepaper&lt;/code&gt;, &lt;code&gt;legalpaper&lt;/code&gt;. El tamaño por defecto es &lt;code&gt;letterpaper&lt;/code&gt;.
-3. &lt;strong&gt;Página de titulo&lt;/strong&gt;: &lt;code&gt;titlepage&lt;/code&gt;, &lt;code&gt;notitlepage&lt;/code&gt;. Por defecto, el artículo no tiene página de título mientras que el &lt;code&gt;book&lt;/code&gt; y el &lt;code&gt;report&lt;/code&gt; sí.
-4. &lt;strong&gt;El número de columnas del documento&lt;/strong&gt;: &lt;code&gt;twoside&lt;/code&gt;, &lt;code&gt;oneside&lt;/code&gt;. Las clases artículo y report son de una columna por defecto mientras que la clase libro es de dos columnas por defecto.
-5. &lt;strong&gt;Apaisar documento&lt;/strong&gt;: con la opción &lt;code&gt;landscape&lt;/code&gt;.
-6. &lt;strong&gt;Establecer donde empieza el nuevo capítulo&lt;/strong&gt;: con &lt;code&gt;openright&lt;/code&gt; empezaría en las páginas alineadas a la derecha (por defecto en &lt;code&gt;book&lt;/code&gt;) y con openany en la siguiente página disponible (por defecto en &lt;code&gt;report&lt;/code&gt;).&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;clase&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La parte de clase podemos rellenarla con varias opciones, dependiendo del tipo de archivo que queramos hacer. Los más populares son:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;article&lt;/code&gt;: para documentos cortos tales como artículos, presentaciones…&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;report&lt;/code&gt;: ideal para documentos más largos que contengan varios capítulos, libros pequeños, etc&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;book&lt;/code&gt;: para libros&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Y la parte de opciones, con algunas opciones que queramos añadirle a nuestro documento tales como:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;El tamaño de la letra&lt;/strong&gt;: 10pt, 11pt y 12pt. El tamaño por defecto es 10pt&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;El tamaño del papel&lt;/strong&gt;: &lt;code&gt;a4paper&lt;/code&gt;, &lt;code&gt;letterpaper&lt;/code&gt;, &lt;code&gt;a5paper&lt;/code&gt;, &lt;code&gt;b5paper&lt;/code&gt;, &lt;code&gt;executivepaper&lt;/code&gt;, &lt;code&gt;legalpaper&lt;/code&gt;. El tamaño por defecto es &lt;code&gt;letterpaper&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Página de titulo&lt;/strong&gt;: &lt;code&gt;titlepage&lt;/code&gt;, &lt;code&gt;notitlepage&lt;/code&gt;. Por defecto, el artículo no tiene página de título mientras que el &lt;code&gt;book&lt;/code&gt; y el &lt;code&gt;report&lt;/code&gt; sí.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;El número de columnas del documento&lt;/strong&gt;: &lt;code&gt;twoside&lt;/code&gt;, &lt;code&gt;oneside&lt;/code&gt;. Las clases artículo y report son de una columna por defecto mientras que la clase libro es de dos columnas por defecto.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Apaisar documento&lt;/strong&gt;: con la opción &lt;code&gt;landscape&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Establecer donde empieza el nuevo capítulo&lt;/strong&gt;: con &lt;code&gt;openright&lt;/code&gt; empezaría en las páginas alineadas a la derecha (por defecto en &lt;code&gt;book&lt;/code&gt;) y con openany en la siguiente página disponible (por defecto en &lt;code&gt;report&lt;/code&gt;).&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;Sabiendo esto ya podemos poner la primera línea de nuestro documento, que en nuestro caso será:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt,a4paper]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El siguiente paso, es especificarle a LaTeX los paquetes que necesitaremos usar en nuestro documento, podemos ir añadiéndolos conforme los vayamos necesitando a la hora de hacer el documento, pero vamos a añadir de primeras los más básicos. La sintáxis de uso de paquetes es:&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt,a4paper]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El siguiente paso, es especificarle a LaTeX los paquetes que necesitaremos usar en nuestro documento, podemos ir añadiéndolos conforme los vayamos necesitando a la hora de hacer el documento, pero vamos a añadir de primeras los más básicos. La sintáxis de uso de paquetes es:&lt;/p&gt;
 &lt;h2 id=&#34;paquetes&#34;&gt;Paquetes&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;paquete&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Los paquetes que añadiremos de primeras son:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[opciones]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;paquete&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los paquetes que añadiremos de primeras son:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[utf8]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;inputenc&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para que nos acepte la codificación UTF-8
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[spanish]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;babel&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% establecemos el idioma del documento al español
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;hyperref&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para poder poner &amp;#34;enlaces&amp;#34; en nuestro codigo
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;color&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para darle color a nuestros documentos
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; para poder añadirle a enumerate un argumento con el tipo de &amp;#34;contador&amp;#34; que queremos&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;comienzo-del-documento&#34;&gt;Comienzo del documento&lt;/h1&gt;
-
-&lt;p&gt;Tras añadir los paquetes podríamos añadir otras opciones al documento tales como el encabezado, el pie de página&amp;#8230; Pero no nos vamos a entretener ahora en eso. Vamos a empezar nuestro documento con el comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y para acabarlo escribiremos un&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Como truco os diré que debajo del &lt;em&gt;end document&lt;/em&gt; podéis escribir lo que queráis, que el compilador no lo va a leer. Yo apunto ahí los comandos que más uso, o de los que no recuerdo su sintaxis para poder tenerlos a mano.&lt;/p&gt;
-
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para poder añadirle a enumerate un argumento con el tipo de &amp;#34;contador&amp;#34; que queremos
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;comienzo-del-documento&#34;&gt;Comienzo del documento&lt;/h1&gt;
+&lt;p&gt;Tras añadir los paquetes podríamos añadir otras opciones al documento tales como el encabezado, el pie de página… Pero no nos vamos a entretener ahora en eso. Vamos a empezar nuestro documento con el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y para acabarlo escribiremos un&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como truco os diré que debajo del &lt;em&gt;end document&lt;/em&gt; podéis escribir lo que queráis, que el compilador no lo va a leer. Yo apunto ahí los comandos que más uso, o de los que no recuerdo su sintaxis para poder tenerlos a mano.&lt;/p&gt;
 &lt;p&gt;Y ahora vamos a empezar a escribir. Lo primero que debemos hacer es especificarle a LaTeX el título de nuestro artículo, y nuestro nombre como autores, para ello:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;c&#34;&gt;% especificamos el titulo del documento y le ponemos un tamaño de letra grande
 &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\title&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\huge&lt;/span&gt; Portafolios de prácticas&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;c&#34;&gt;% Y ahora, el autor
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\author&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Marta Gómez&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;También, si queremos, podemos añadirle la fecha actual:&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\author&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Marta Gómez&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;También, si queremos, podemos añadirle la fecha actual:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;c&#34;&gt;% le añadimos la fecha actual
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\date&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\today&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Y por último, le añadimos el título a nuestro documento y un pequeño índice:&lt;/p&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\date&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\today&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y por último, le añadimos el título a nuestro documento y un pequeño índice:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\maketitle&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% nos crea el titulo, el autor y la fecha en el inicio del documento
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tableofcontents&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; nos crea un indice con enlaces a las diferentes secciones y subsecciones&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;secciones&#34;&gt;Secciones&lt;/h2&gt;
-
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\tableofcontents&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% nos crea un indice con enlaces a las diferentes secciones y subsecciones
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;secciones&#34;&gt;Secciones&lt;/h2&gt;
 &lt;p&gt;Y ahora vamos a empezar en la primera sección, para indicarle a LaTeX que vamos a empezar una sección lo hacemos de la siguiente manera:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Descripción del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Así crearíamos una sección llamada &amp;#8220;Descripción del programa&amp;#8221;. Que se correspondería con la primera sección del artículo. Si por casualidad quisieramos que empezara por otro número tendríamos que usar el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setcounter&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;section&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;y así empezaríamos a contar desde la sección 5.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\section&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Descripción del programa&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así crearíamos una sección llamada “Descripción del programa”. Que se correspondería con la primera sección del artículo. Si por casualidad quisieramos que empezara por otro número tendríamos que usar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\setcounter&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;section&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y así empezaríamos a contar desde la sección 5.&lt;/p&gt;
 &lt;p&gt;Y sí ahora queremos hacer una subsección lo haríamos con el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\subsection&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Funcionamiento general&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con este comando tendríamos una subsección en Descripción del programa llamada Funcionamiento general.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\subsection&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Funcionamiento general&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con este comando tendríamos una subsección en Descripción del programa llamada Funcionamiento general.&lt;/p&gt;
 &lt;h2 id=&#34;formateo-del-texto&#34;&gt;Formateo del texto&lt;/h2&gt;
-
 &lt;p&gt;Ahora tenemos que empezar a escribir normalmente, cuando queramos cambiar de párrafo hacemos un doble salto de línea, si queremos hacer un salto de línea lo hacemos con una doble barra y, si queremos poner nuestro texto en negrita, en cursiva o con subrayado lo haríamos con los siguientes comandos:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Esto es un texto en negrita&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Esto es un texto en cursiva&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\underline&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Este texto está subrayado&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Otro dato importante es, que si no nos gusta el indentado que hace LaTeX al principio del párrafo podemos eliminarlo con el siguiente comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora que sabemos esto, podemos empezar a escribir:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\underline&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Este texto está subrayado&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otro dato importante es, que si no nos gusta el indentado que hace LaTeX al principio del párrafo podemos eliminarlo con el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora que sabemos esto, podemos empezar a escribir:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 El programa da al usuario a elegir entre escribir en la &lt;span class=&#34;k&#34;&gt;\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;entrada estándar&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; una operación aritmética
-en &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;notación postfija&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; o &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;notación infija&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; y después, devuelve el resultado de dicha operación por la &lt;span class=&#34;k&#34;&gt;\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;salida estándar&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora vamos a hacer una pequeña tabla, para ello, tenemos que añadir el paquete &lt;code&gt;multirow&lt;/code&gt; para poder hacer tablas con más de una celda. También tendríamos que añadir los paquetes de matemáticas pues vamos a usar expresiones matemáticas en la tabla:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;multirow&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para hacer tablas con mas de una columna
-&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;amsmath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;%&lt;/span&gt; paquete basico de matematicas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;tablas-en-latex&#34;&gt;Tablas en Latex&lt;/h2&gt;
+en &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;notación postfija&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; o &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;notación infija&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; y después, devuelve el resultado de dicha operación por la &lt;span class=&#34;k&#34;&gt;\textit&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;salida estándar&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;.
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora vamos a hacer una pequeña tabla, para ello, tenemos que añadir el paquete &lt;code&gt;multirow&lt;/code&gt; para poder hacer tablas con más de una celda. También tendríamos que añadir los paquetes de matemáticas pues vamos a usar expresiones matemáticas en la tabla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;multirow&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% para hacer tablas con mas de una columna
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;amsmath&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% paquete basico de matematicas
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;tablas-en-latex&#34;&gt;Tablas en Latex&lt;/h2&gt;
 &lt;p&gt;Y para hacer una tabla usamos la orden &lt;code&gt;tabular&lt;/code&gt; (si escribimos &lt;code&gt;tab&lt;/code&gt; en Sublime Text y le damos a tabulación nos completa la sintaxis) cuya sintaxis es:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\noindent&lt;/span&gt;
 La siguiente tabla refleja la diferencia entre notación postfija y notación infija:
@@ -919,14 +804,16 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
 &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
 &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;&amp;amp;&lt;/span&gt;  &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\hline&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tabular&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Hay varios puntos a tener en cuenta:
-1. Entre las llaves que hay después del &lt;code&gt;tabular&lt;/code&gt; podemos poner c, l, r para especificar la alineación del texto, esto mejor hacerlo si no tenemos mucho texto en la celda ya que no pone saltos de línea. Y una p con una medida entre llaves que especifica el ancho de la celda y pone saltos de línea al texto de dentro.
-2. El comando &lt;code&gt;\hline&lt;/code&gt; se usa para poner una línea horizontal que actúa a modo de separador.
-3. Cuando tenemos varias columnas, las separamos con el &amp;amp;
-4. Cuando queremos indicar que hemos terminado una fila ponemos &amp;#92;\ al final de dicha fila
-5. Los $ que pongo se usan en LaTeX para representar signos u operaciones matemáticas &amp;#8220;inline&amp;#8221;. El entorno matemático no respeta espacios en blanco, por eso he tenido que poner varios dólares en la segunda columna para obtener 1 espacio 2 en vez de 12 o 5 1 2 en vez de 512.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tabular&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hay varios puntos a tener en cuenta:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Entre las llaves que hay después del &lt;code&gt;tabular&lt;/code&gt; podemos poner c, l, r para especificar la alineación del texto, esto mejor hacerlo si no tenemos mucho texto en la celda ya que no pone saltos de línea. Y una p con una medida entre llaves que especifica el ancho de la celda y pone saltos de línea al texto de dentro.&lt;/li&gt;
+&lt;li&gt;El comando &lt;code&gt;\hline&lt;/code&gt; se usa para poner una línea horizontal que actúa a modo de separador.&lt;/li&gt;
+&lt;li&gt;Cuando tenemos varias columnas, las separamos con el &amp;amp;&lt;/li&gt;
+&lt;li&gt;Cuando queremos indicar que hemos terminado una fila ponemos \\ al final de dicha fila&lt;/li&gt;
+&lt;li&gt;Los $ que pongo se usan en LaTeX para representar signos u operaciones matemáticas “inline”. El entorno matemático no respeta espacios en blanco, por eso he tenido que poner varios dólares en la segunda columna para obtener 1 espacio 2 en vez de 12 o 5 1 2 en vez de 512.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;Si queremos hacer un listado, podemos hacerlo con la orden &lt;code&gt;enumerate&lt;/code&gt; (si escribimos &lt;code&gt;enum&lt;/code&gt; en Sublime Text y le damos a tabulador nos autocompleta la sintaxis) o la orden &lt;code&gt;itemize&lt;/code&gt; (y lo mismo si escribimos &lt;code&gt;item&lt;/code&gt;) o, incluso, combinando las dos haciendo listas con sublistas:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;Las distintas estructuras que hay en el fichero son:
 &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[1.]
@@ -936,12 +823,12 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
         &lt;span class=&#34;k&#34;&gt;\item&lt;/span&gt; Método que calcula el resultado de la operación.
     &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;itemize&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\item&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\textbf&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;función infija2postfija&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;: función que pasa de infija a postfija.
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con el 1. que le pasamos a enumerate hacemos que nuestra lista sea 1. 2. 3. etc.&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el 1. que le pasamos a enumerate hacemos que nuestra lista sea 1. 2. 3. etc.&lt;/p&gt;
 &lt;p&gt;Vamos a cambiar de sección, para ello usamos la orden &lt;code&gt;section&lt;/code&gt;, como hemos visto antes, si además queremos que nuestra nueva secci��n empiece en una nueva página usamos el siguiente comando&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newpage&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con esto completamos una pequeña introducción a LaTeX, en el siguiente artículo veremos cómo incluir código fuente en nuestro documento.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newpage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto completamos una pequeña introducción a LaTeX, en el siguiente artículo veremos cómo incluir código fuente en nuestro documento.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -951,23 +838,16 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
             
             <guid>https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/</guid>
             <description>&lt;p&gt;Hace unas semanas que aprendí a usar &lt;a href=&#34;https://elbauldelprogramador.com/categories/latex&#34; title=&#34;Post sobre latex&#34;&gt;LaTeX&lt;/a&gt; , y cada vez me gusta más, proporciona una calidad a los documentos impecable. De hecho, estoy entregando las prácticas de la facultad en que he reescrito el &lt;a href=&#34;https://elbauldelprogramador.com/disponible-la-primera-parte-del-curso/&#34;&gt;Curso de programación Android&lt;/a&gt; por completo.&lt;/p&gt;
-
 &lt;p&gt;Sin embargo, una de las cosas que más me ha costado conseguir es encontrar alguna forma que me gustase de resaltar la sintaxis en latex del código fuente. Tras mucho buscar por internet encontré un paquete que concluyó con mi búsqueda, se llama &lt;strong&gt;minted&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h1&gt;
-
 &lt;p&gt;Para instalarlo, es necesaria una versión de python igual o superior a la 2.6, y &lt;em&gt;Pygments&lt;/em&gt;. Para instalar el último ejecuta:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# easy_install Pygments&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Si no tienes instalado el programa &lt;em&gt;easy_install&lt;/em&gt;, ejecuta:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;# aptitude install python-setuptools&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;instalar-minted&#34;&gt;Instalar minted&lt;/h1&gt;
-
-&lt;p&gt;Descarga el paquete desde su &lt;a href=&#34;http://code.google.com/p/minted/downloads/list&#34; target=&#34;_blank&#34;&gt;repositorio&lt;/a&gt;. Extráelo y sitúate en su directorio. Luego ejecuta la instrucción &lt;em&gt;make&lt;/em&gt;.&lt;/p&gt;
-
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# easy_install Pygments&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no tienes instalado el programa &lt;em&gt;easy_install&lt;/em&gt;, ejecuta:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install python-setuptools&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;instalar-minted&#34;&gt;Instalar minted&lt;/h1&gt;
+&lt;p&gt;Descarga el paquete desde su &lt;!-- raw HTML omitted --&gt;repositorio&lt;!-- raw HTML omitted --&gt;. Extráelo y sitúate en su directorio. Luego ejecuta la instrucción &lt;em&gt;make&lt;/em&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;algunos-ejemplos&#34;&gt;Algunos ejemplos&lt;/h1&gt;
-
 &lt;p&gt;Ya está todo listo para usar, empecemos con un ejemplo básico extraido del manual, disponible para descargar en las referencias:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
@@ -984,15 +864,10 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
         return 0;
     &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;minted&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Este trozo de código dará como resultado lo siguiente:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 599px) 599px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/mintedEjemploC.png&#34; alt=&#34;Ejemplo minted C&#34; width=&#34;599px&#34; height=&#34;246px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este trozo de código dará como resultado lo siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;insertar-código-desde-un-archivo-de-código-fuente&#34;&gt;Insertar código desde un archivo de código fuente&lt;/h1&gt;
-
 &lt;p&gt;Normalmente, si tenemos un código fuente con muchas líneas es más cómodo incluirlo directamente en lugar de copiar todas esas líneas. &lt;strong&gt;Minted&lt;/strong&gt; proporciona un comando para tal fin. &lt;code&gt;\newmintedfile[]{}&lt;/code&gt;. Veamos un ejemplo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newmintedfile&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[myJava]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;java&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
     linenos,
@@ -1000,8 +875,8 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
     gobble=0,
     frame=lines,
     framesep=2mm,
-&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Con este comando, hemos definido una nueva función (&lt;em&gt;myJava&lt;/em&gt;), que permitirá incluir el código fuente de un archivo al documento pdf. Por ejemplo. Supongamos que el contenido del fichero &lt;em&gt;miCodigo.java&lt;/em&gt; es el siguiente:&lt;/p&gt;
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con este comando, hemos definido una nueva función (&lt;em&gt;myJava&lt;/em&gt;), que permitirá incluir el código fuente de un archivo al documento pdf. Por ejemplo. Supongamos que el contenido del fichero &lt;em&gt;miCodigo.java&lt;/em&gt; es el siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;com.elbauldelprogramador.actividades&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
 
 &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;android.app.Activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
@@ -1036,8 +911,8 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
          &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
       &lt;span class=&#34;o&#34;&gt;});&lt;/span&gt;
    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Para incluirlo en el documento, haremos lo siguiente:&lt;/p&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para incluirlo en el documento, haremos lo siguiente:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;minted&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1054,18 +929,12 @@ La siguiente tabla refleja la diferencia entre notación postfija y notación in
 
 Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfile:
 &lt;span class=&#34;k&#34;&gt;\myJava&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=&amp;#34;miCodigo.java&amp;#34;]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;miCodigo.java&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.&lt;/p&gt;
-
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;linenos muestra el número de línea, numbersep es la separación entre el código y el número de línea, gobble es la columna desde la que empezar a mostrar código, frame dibuja las líneas enmarcando el código y framsep es la separación entre la línea y el código.&lt;/p&gt;
 &lt;p&gt;El resultado será:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 733px) 733px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/newmintedfileEjemplo.png&#34; alt=&#34;newmintedfileEjemplo&#34; width=&#34;733px&#34; height=&#34;940px&#34;&gt;&lt;/img&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;creando-un-comando&#34;&gt;Creando un comando&lt;/h1&gt;
-
-&lt;p&gt;Puede resultar incómodo y pesado tener que escribir una y otra vez &lt;em&gt;\myJava[label=&amp;#8221;&lt;/em&gt;&amp;#8221;]{*.java}*. Así que creamos un comando para facilitar las cosas:&lt;/p&gt;
+&lt;p&gt;Puede resultar incómodo y pesado tener que escribir una y otra vez &lt;em&gt;\myJava[label=”*”]{*.java}&lt;/em&gt;. Así que creamos un comando para facilitar las cosas:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\newmintedfile&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[myJava]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;java&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
     linenos,
     numbersep=5pt,
@@ -1075,20 +944,16 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\newcommand&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\myJavaCode&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[2]&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\myJava&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[label=#2.java]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;#1.java&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Ahora en lugar de usar &lt;em&gt;myJava&lt;/em&gt; para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea &lt;code&gt;\myJava[label=&amp;quot;miCodigo.java&amp;quot;]{miCodigo.java}&lt;/code&gt; del ejemplo anterior por&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\myJavaCode&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;src/miCodigo&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;miCodigo&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.&lt;/p&gt;
-
+&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora en lugar de usar &lt;em&gt;myJava&lt;/em&gt; para incluir ficheros fuente en el documento, usamos un comando definido por nosotros (myJavaCode). Sustituyendo la línea &lt;code&gt;\myJava[label=&amp;quot;miCodigo.java&amp;quot;]{miCodigo.java}&lt;/code&gt; del ejemplo anterior por&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\myJavaCode&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;src/miCodigo&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;miCodigo&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Obtenemos el mismo resultado, el primer argumento es la ruta al fichero y el segundo la etiqueta a mostrar en el documento.&lt;/p&gt;
 &lt;h1 id=&#34;conclusiones&#34;&gt;Conclusiones&lt;/h1&gt;
-
 &lt;p&gt;Para mi, minted es el mejor paquete que hay para resaltar código en &lt;strong&gt;LaTeX&lt;/strong&gt;. Y recomiendo a todo el mundo que aprenda a programar en él.&lt;/p&gt;
-
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Manual de referencia Minted&lt;/em&gt; »» &lt;a href=&#34;http://mirror.unl.edu/ctan/macros/latex/contrib/minted/minted.pdf&#34; target=&#34;_blank&#34;&gt;Descargar&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Repositorio del paquete&lt;/em&gt; »» &lt;a href=&#34;http://code.google.com/p/minted/downloads/list&#34; target=&#34;_blank&#34;&gt;Visitar repositorio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Manual de referencia Minted&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Descargar&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio del paquete&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar repositorio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
         </item>
         
@@ -1098,22 +963,16 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
             <pubDate>Wed, 09 Dec 2015 15:55:32 +0000</pubDate>
             
             <guid>https://elbauldelprogramador.com/como-definir-colores-personalizados-en-latex/</guid>
-            <description>&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/2013/05/latex_logo.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;114px&#34; /&gt;
-&lt;/figure&gt;
-
+            <description>&lt;!-- raw HTML omitted --&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Os traigo hoy otro artículo interesante que he encontrado en el blog de &lt;a href=&#34;http://texblog.org&#34; target=&#34;_blank&#34; title=&#34;http://texblog.org&#34;&gt;blog de Tom&lt;/a&gt;. Veremos cómo es posible definir colores personalizados en LaTeX con el paquete &lt;code&gt;xcolor&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Os traigo hoy otro artículo interesante que he encontrado en el blog de &lt;!-- raw HTML omitted --&gt;blog de Tom&lt;!-- raw HTML omitted --&gt;. Veremos cómo es posible definir colores personalizados en LaTeX con el paquete &lt;code&gt;xcolor&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Hay distintas formas de definir un color específico en LaTeX. Normalmente lo más fácil es elegir un color predefinido del paquete &lt;code&gt;xcolor&lt;/code&gt; o definirlo a mano usando el modelo RGB. Otra notación existente es &lt;code&gt;red!40!blue&lt;/code&gt;. Esta notación crea un morado con 40% rojo y 60% azul. Veamos en este artículo los distintos métodos disponibles para la especificación de colores.&lt;/p&gt;
-
 &lt;h1 id=&#34;colores-predefinidos&#34;&gt;Colores predefinidos&lt;/h1&gt;
-
-&lt;p&gt;El paquete &lt;a href=&#34;http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf&#34; target=&#34;_blank&#34; title=&#34;&#34;&gt;xcolor&lt;/a&gt; trae definidos una gama amplia de colores, especificados en su &lt;a href=&#34;http://mirrors.ctan.org/macros/latex/contrib/xcolor/xcolor.pdf&#34; target=&#34;_blank&#34; title=&#34;Documentación xcolor&#34;&gt;documentación&lt;/a&gt;. Es tan simple de usar como se muestra en este trozo de código:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;p&gt;El paquete &lt;!-- raw HTML omitted --&gt;xcolor&lt;!-- raw HTML omitted --&gt; trae definidos una gama amplia de colores, especificados en su &lt;!-- raw HTML omitted --&gt;documentación&lt;!-- raw HTML omitted --&gt;. Es tan simple de usar como se muestra en este trozo de código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[x11names]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1122,16 +981,13 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 
 &lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;RoyalBlue2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex1.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex1.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;154px&#34; /&gt;&lt;/a&gt;
-    &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
-&lt;/figure&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;mezclar-colores-usando-un-modelo-de-color&#34;&gt;Mezclar colores usando un modelo de color&lt;/h1&gt;
-
 &lt;p&gt;El paquete xcolor permite definir colores usando modelos de color (&lt;em&gt;gris, RGB, HTML, CMYK&lt;/em&gt; y otros ). Veamos un ejemplo de RGB, al que estamos más acostumbrados:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1141,16 +997,13 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 
 &lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myOrange&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-    &lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex2.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex2.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;142px&#34; /&gt;&lt;/a&gt;
-    &lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
-&lt;/figure&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;mezclar-dos-colores&#34;&gt;Mezclar dos colores&lt;/h1&gt;
-
 &lt;p&gt;Para terminar, el paquete xcolor también permite definir un color mediante la mezcla de dos colores predefinidos. Por ejemplo, para definir un morado con 40% de azul y 60% de rojo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[11pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blindtext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1160,23 +1013,15 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 
 &lt;span class=&#34;k&#34;&gt;\textcolor&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;myPurple&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\blindtext&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/xcolorlatex3.png&#34;&gt;&lt;img sizes=&#34;(min-width: 300px) 300px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/xcolorlatex3.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;300px&#34; height=&#34;156px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
-&lt;/figure&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;ejemplo-colores-brillantes&#34;&gt;Ejemplo: Colores brillantes&lt;/h1&gt;
-
 &lt;p&gt;Los colores básicos como el rojo, verde o amarillo son demasiado chillones a la vista. Para atenuar su intensidad, es posible usar el modo de definir colores de arriba y luego mezclarlos con gris. Por ejemplo, combinar el 40% del color chillón con 60% de gris atenua la intensidad del color, haciendolo más agradable a la vista, compruébalo tú mismo:&lt;/p&gt;
-
-&lt;figure&gt;
-&lt;a href=&#34;https://elbauldelprogramador.com/img/latexxcolorbrillantes.png&#34;&gt;&lt;img sizes=&#34;(min-width: 1024px) 1024px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/latexxcolorbrillantes.png&#34; title=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; alt=&#34;Cómo Definir Colores Personalizados en LaTeX&#34; width=&#34;1024px&#34; height=&#34;291px&#34; /&gt;&lt;/a&gt;
-&lt;span class=&#34;image-credit&#34;&gt;Crédito de la imagen: texblog.org&lt;/span&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Aquí el código que genera la imagen de arriba:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=10pt,varwidth]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=10pt,varwidth]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;pgffor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[x11names]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;xcolor&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
@@ -1196,9 +1041,9 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 &lt;span class=&#34;k&#34;&gt;\foreach&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt; in &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;red&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;orange&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;yellow&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;green&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;cyan&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;blue&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;purple&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;k&#34;&gt;\colorrulemix&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\name&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;center&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Custom Colors in LaTeX | &lt;a href=&#34;http://texblog.org/2015/12/08/custom-colors-in-latex/&#34;&gt;texblog.org&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
@@ -1211,11 +1056,8 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
             
             <guid>https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/</guid>
             <description>&lt;p&gt;Si trabajas habitualmente con &lt;a href=&#34;https://elbauldelprogramador.com/category/latex/&#34; title=&#34;Tutoriales sobre LaTeX&#34;&gt;LaTeX&lt;/a&gt;, estás acostumbrado a ver múltiples ficheros generados automáticamente al compilar el proyecto. Pueden llegar a molestar bastante, ya que ensucian el directorio de trabajo. Hoy explicaré dos alternativas para mover todos esos ficheros a un directorio separado para mantener un directorio de trabajo limpio.&lt;/p&gt;
-
 &lt;h1 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h1&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;La idea sería tener el directorio de trabajo organizado del siguiente modo:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Directorio del proyecto/
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ main.tex
@@ -1235,34 +1077,33 @@ Ejemplo de &lt;span class=&#34;k&#34;&gt;\textbackslash&lt;/span&gt; newmintedfi
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ …
 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ figures/
      &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ figure1.pdf
-     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;mediante-un-script&#34;&gt;Mediante un script&lt;/h1&gt;
+     &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;__ …
 
-&lt;p&gt;Este script lo encontré en el blog de &lt;a href=&#34;http://texblog.org&#34; target=&#34;_blank&#34; title=&#34;TexBlog&#34;&gt;Tom&lt;/a&gt;, en su artículo &lt;a href=&#34;http://texblog.org/2015/08/20/hiding-latex-metafiles-from-project-directory/&#34; target=&#34;_blank&#34; title=&#34;Hiding LaTeX metafiles from project directory&#34;&gt;Hiding LaTeX metafiles from project directory&lt;/a&gt;:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mediante-un-script&#34;&gt;Mediante un script&lt;/h1&gt;
+&lt;p&gt;Este script lo encontré en el blog de &lt;!-- raw HTML omitted --&gt;Tom&lt;!-- raw HTML omitted --&gt;, en su artículo &lt;!-- raw HTML omitted --&gt;Hiding LaTeX metafiles from project directory&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
 &lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
-&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;metafiles&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;s2&#34;&gt;&amp;#34;metafiles&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
   mkdir metafiles
 &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
 
-&lt;span class=&#34;c1&#34;&gt;# Run pdflatex and biber with metafiles as in-/output directories
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
+&lt;span class=&#34;c1&#34;&gt;# Run pdflatex and biber with metafiles as in-/output directories&lt;/span&gt;
+pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
 biber --input-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles --output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
 pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
 pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
 makeglossaries -d metafiles main
 pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main
 
-&lt;span class=&#34;c1&#34;&gt;# Create a softlink to the output PDF
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;ln -s metafiles/main.pdf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h1&gt;
-
+&lt;span class=&#34;c1&#34;&gt;# Create a softlink to the output PDF&lt;/span&gt;
+ln -s metafiles/main.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;usando-latexmk&#34;&gt;Usando latexmk&lt;/h1&gt;
 &lt;p&gt;Para aportar algo al artículo de &lt;em&gt;Tom&lt;/em&gt;, miré la documentación de LatexMK, &lt;a href=&#34;https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/&#34; title=&#34;Compilar Automáticamente Ficheros en LaTeX Mientras Los Modificamos&#34;&gt;comando que ya hemos visto en este blog&lt;/a&gt;, y tiene la opción &lt;code&gt;-output-directory&lt;/code&gt; que permite especificar donde se guardaran todos los metaficheros, su uso es simple:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;latexmk -shell-escape -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main.tex&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Esto tendrá un efecto parecido al script de &lt;em&gt;Tom&lt;/em&gt;, sin embargo el pdf también queda generado dentro de esta carpeta, podemos solucionarlo con un &lt;em&gt;soft link&lt;/em&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s metafiles/main.pdf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Espero que os haya sido de utilidad, yo ya lo uso de forma habitual.&lt;/p&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;latexmk -shell-escape -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles main.tex
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto tendrá un efecto parecido al script de &lt;em&gt;Tom&lt;/em&gt;, sin embargo el pdf también queda generado dentro de esta carpeta, podemos solucionarlo con un &lt;em&gt;soft link&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ln -s metafiles/main.pdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Espero que os haya sido de utilidad, yo ya lo uso de forma habitual.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -1272,33 +1113,36 @@ pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles 
             
             <guid>https://elbauldelprogramador.com/compilar-automaticamente-ficheros-en-latex-mientras-los-modificamos/</guid>
             <description>&lt;p&gt;Para los que estéis acostumbrados a escribir vuestros documentos en LaTeX, sin ningún editor específico, sabréis que llega a ser un poco tedioso compilar cada vez que queremos ver el resultado. Hace poco, descubrí un comando, &lt;code&gt;latexmk&lt;/code&gt;, que nos facilitará bastante la vida.&lt;/p&gt;
-
 &lt;p&gt;Si estás interesado en aprender a usar LaTeX echa un vistazo al &lt;a href=&#34;https://elbauldelprogramador.com/mini-curso-de-latex-introduccion/&#34; title=&#34;Mini curso de Latex - introducción&#34;&gt;mini curso que tenemos&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;cómo-usar-latexmk&#34;&gt;Cómo usar latexmk&lt;/h1&gt;
-
 &lt;p&gt;El comando &lt;code&gt;latexmk&lt;/code&gt; tiene muchas opciones, pero  en mi caso particular, no he necesitado más que estas (La opción &lt;code&gt;-shell-escape&lt;/code&gt; la uso porque normalmente utilizo el paquete &lt;a href=&#34;https://elbauldelprogramador.com/resaltar-sintaxis-del-codigo-fuente-en-latex-con-minted/&#34; title=&#34;Resaltar sintaxis del código fuente en LaTeX con minted&#34;&gt;minted&lt;/a&gt; para colorear la sintáxis del código):&lt;/p&gt;
-
 &lt;h2 id=&#34;para-pdflatex&#34;&gt;Para pdflatex&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ latexmk -shell-escape -pdf -pvc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&#34;para-xelatex&#34;&gt;Para xelatex&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ latexmk -shell-escape -xelatex -pdf -pvc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;El comando asume que en el directorio donde se ejecuta solo exite un fichero &lt;code&gt;.tex&lt;/code&gt;, de no ser así, deberemos pasarle el nombre del fichero que debe observar para detectar cambios.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ latexmk -shell-escape -pdf -pvc
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;para-xelatex&#34;&gt;Para xelatex&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ latexmk -shell-escape -xelatex -pdf -pvc
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El comando asume que en el directorio donde se ejecuta solo exite un fichero &lt;code&gt;.tex&lt;/code&gt;, de no ser así, deberemos pasarle el nombre del fichero que debe observar para detectar cambios.&lt;/p&gt;
 &lt;p&gt;Una vez en ejecución, veremos en la consola algo así:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; Watching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; updated files. Use ctrl/C to stop ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;A partir de ahora, cada vez que se modifique el fichero, se compilará y podremos ver el resultado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; Watching &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; updated files. Use ctrl/C to stop ...
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, cada vez que se modifique el fichero, se compilará y podremos ver el resultado.&lt;/p&gt;
 &lt;h1 id=&#34;creando-alias-para-los-comandos&#34;&gt;Creando alias para los comandos&lt;/h1&gt;
-
 &lt;p&gt;Ya que el comando es un poco largo, es recomendable crearse un alias para poder ejecutar &lt;code&gt;latexmk&lt;/code&gt; escribiendo únicamente una palabra:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mlatexmk&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;latexmk -shell-escape -pdf -pvc ; latexmk -C&amp;#39;&lt;/span&gt;
-&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mlatexmkx&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;latexmk -shell-escape -xelatex -pdf -pvc ; latexmk -C&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;latexmk -C&lt;/code&gt; eliminará todos los ficheros intermedios. Ahora, para ejecutar basta con escribir:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ mlatexmk &lt;span class=&#34;c1&#34;&gt;# Para compilar con pdflatex
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;$ mlatexmkx # Para compilar con xelatex&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mlatexmk&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;latexmk -shell-escape -pdf -pvc ; latexmk -C&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mlatexmkx&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;latexmk -shell-escape -xelatex -pdf -pvc ; latexmk -C&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;latexmk -C&lt;/code&gt; eliminará todos los ficheros intermedios. Ahora, para ejecutar basta con escribir:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ mlatexmk &lt;span class=&#34;c1&#34;&gt;# Para compilar con pdflatex&lt;/span&gt;
+$ mlatexmkx &lt;span class=&#34;c1&#34;&gt;# Para compilar con xelatex&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         </item>
         
         <item>
@@ -1308,15 +1152,12 @@ pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles 
             
             <guid>https://elbauldelprogramador.com/como-crear-imagenes-con-un-marco-circular-al-estilo-g-en-latex/</guid>
             <description>&lt;p&gt;En éste artículo vamos a ver algo curioso que aprendí hace poco. Con el paquete &lt;code&gt;tikz&lt;/code&gt; de LaTeX.&lt;/p&gt;
-
 &lt;p&gt;Los que uséis G+ sabréis que las fotos de perfil aparecen encuadradas en un círculo, en lugar de un cuadrado. Rellenando mi Currículum se me ocurrió que podría insertar mi foto con ese mismo estilo.&lt;/p&gt;
-
 &lt;p&gt;Por supuesto, podría haber creado la imagen directamente con forma circular, pero ya que estoy usando una plantilla LaTeX para el Curriculum, me propuse buscar la manera de implementarlo.&lt;/p&gt;
-
-&lt;p&gt;&lt;!--ad--&gt;&lt;/p&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Resulta que es bastante sencillo, el siguiente código conseguirá el efecto deseado:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=5mm]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;
+&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[border=5mm]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;article&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[skins]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tcolorbox&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
 &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
@@ -1327,23 +1168,17 @@ pdflatex -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;metafiles 
     &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
   &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
-&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Donde:&lt;/p&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;image=./pictures/image.jpg&lt;/code&gt; es la ruta a la imagen.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\resizebox{256pt}{256pt}&lt;/code&gt; es el tamaño que queremos.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;sep=1cm&lt;/code&gt; El borde de la imagen.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Tras compilar el código, el resultado es el siguiente:&lt;/p&gt;
-
-&lt;figure&gt;
-    &lt;img sizes=&#34;(min-width: 558px) 558px, 100vw&#34; on=&#34;tap:lightbox1&#34; role=&#34;button&#34; tabindex=&#34;0&#34; layout=&#34;responsive&#34; src=&#34;https://elbauldelprogramador.com/img/Cómo-Crear-Imagenes-Con-Un-Marco-Circular-Al-Estilo-G+-en-LaTeX.jpg&#34; title=&#34;Cómo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX&#34; alt=&#34;Cómo Crear Imagenes Con Un Marco Circular Al Estilo G+ en LaTeX&#34; width=&#34;558px&#34; height=&#34;559px&#34; /&gt;
-&lt;/figure&gt;
-
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://tex.stackexchange.com/questions/193555/crop-jpeg-into-circular-tikz-node&#34; title=&#34;Crop jpeg into circular tikz node&#34;&gt;Crop jpeg into circular tikz node&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description>
