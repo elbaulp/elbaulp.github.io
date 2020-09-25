@@ -28,6 +28,7 @@
         ("org-notes"
          :base-directory "."
          :base-extension "org"
+         :exclude "static/.*"
          :publishing-directory "public/"
          :recursive t
          :publishing-function org-html-publish-to-html
@@ -47,8 +48,9 @@
 
         ("org-static"
          :base-directory "."
+         :exclude "static/.*"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "~/public_html/"
+         :publishing-directory "public/"
          :recursive t
          :publishing-function org-publish-attachment
          )
@@ -56,5 +58,5 @@
         ("org" :components ("org-notes" "org-static"))
         ))
 
-;;(org-publish-remove-all-timestamps)
+(org-publish-remove-all-timestamps)
 (org-publish "org" t )

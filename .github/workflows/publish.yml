@@ -1,22 +1,18 @@
-name: Build and publish to pages
 on:
   push:
     branches:
     - master
-    - dev
 
 jobs:
-  build:
+  build_blog_job:
     runs-on: ubuntu-latest
+    name: Copy contents of hugo, builds org-project
     steps:
-    - uses: actions/checkout@master
-      with:
-        fetch-depth: 1
-    - name: build
-      uses: docker://iquiw/alpine-emacs
-      if: github.event.deleted == false
-      with:
-        args: ./build.sh
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build
+      id: build
+      uses: ./
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
