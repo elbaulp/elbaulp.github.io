@@ -61,5 +61,5 @@
         ("org" :components ("org-notes" "org-static"))
         ))
 
-;; (org-publish-remove-all-timestamps)
+(org-publish-remove-all-timestamps)
 (org-publish "org" t )
