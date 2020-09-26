@@ -1,4 +1,6 @@
 (require 'ox-publish)
+(add-to-list 'load-path ".")
+(load "ox-rss.el")
 
 (setq org-html-preamble-format '(("en"
 "<a aria-label='Twitter' title='Twitter' href='https://twitter.com/elbaulp' target='_blank'><svg class='icon' id='icon-twitter' viewBox='0 0 951 1024'><path class='path1' d='M925.714 233.143q-38.286 56-92.571 95.429 0.571 8 0.571 24 0 74.286-21.714 148.286t-66 142-105.429 120.286-147.429 83.429-184.571 31.143q-154.857 0-283.429-82.857 20 2.286 44.571 2.286 128.571 0 229.143-78.857-60-1.143-107.429-36.857t-65.143-91.143q18.857 2.857 34.857 2.857 24.571 0 48.571-6.286-64-13.143-106-63.714t-42-117.429v-2.286q38.857 21.714 83.429 23.429-37.714-25.143-60-65.714t-22.286-88q0-50.286 25.143-93.143 69.143 85.143 168.286 136.286t212.286 56.857q-4.571-21.714-4.571-42.286 0-76.571 54-130.571t130.571-54q80 0 134.857 58.286 62.286-12 117.143-44.571-21.143 65.714-81.143 101.714 53.143-5.714 106.286-28.571z'></path></svg></a>
@@ -58,7 +60,21 @@
          :publishing-function org-publish-attachment
          )
 
-        ("org" :components ("org-notes" "org-static"))
+        ("org-rss"
+         :base-directory "."
+         :base-extension "org"
+         :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
+         :html-link-home "https://elbauldelprogramador.com"
+         :html-link-use-abs-url t
+         :rss-extension "xml"
+         :publishing-directory "public/"
+         :publishing-function (org-rss-publish-to-rss)
+         :section-numbers nil
+         :exclude ".*"            ;; To exclude all files...
+         :include ("org-posts/index.org")   ;; ... except index.org.
+         )
+
+        ("org" :components ("org-notes" "org-static" "org-rss"))
         ))
 
 (org-publish-remove-all-timestamps)
