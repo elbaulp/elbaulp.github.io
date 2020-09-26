@@ -23,6 +23,9 @@
 "
 )))
 
+(setq org-html-head-include-default-style nil)
+(setq org-html-htmlize-output-type 'css)
+
 (setq org-publish-project-alist
       '(
         ("org-notes"
@@ -58,5 +61,5 @@
         ("org" :components ("org-notes" "org-static"))
         ))
 
-(org-publish-remove-all-timestamps)
+;; (org-publish-remove-all-timestamps)
 (org-publish "org" t )
