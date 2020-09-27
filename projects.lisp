@@ -72,6 +72,7 @@
          ;; :html-use-infojs t
          :html-preamble t
          :html-postamble t
+         :html-link-use-abs-url t
          )
 
         ("org-static"
