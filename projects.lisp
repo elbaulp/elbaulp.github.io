@@ -38,17 +38,32 @@
                                    )))
 
 
-;; (setq debug-on-error t)
-;; (toggle-debug-on-error t)
+(toggle-debug-on-error t)
+
+;; Functions
+(defun duncan/org-publish-sitemap--valid-entries (entries)
+  "Filter ENTRIES that are not valid or skipped by the sitemap entry function."
+  (-filter (lambda (x) (car x)) entries))
+
+(defun elbaulp/sitemap-function (title sitemap)
+  "Generate the full list of posts"
+  (let* ((title "Blog") (subtitle "Archive")
+         (posts (cdr sitemap))
+         (posts (duncan/org-publish-sitemap--valid-entries posts)))
+    (concat (format "#+TITLE: %s\n\n* %s\n" title subtitle)
+            (org-list-to-org (cons (car sitemap) posts))
+            )))
+
+
 
 (setq org-html-head-include-default-style nil)
 (setq org-html-htmlize-output-type 'css)
 (setq org-export-global-macros
-   '(
-     ("ghuser" . "[[https://github.com/$1][/$1/]]")
-     ("ghrepo" . "/[[https://github.com/$1/$2][$1/$2]]/")
-    )
-)
+      '(
+	("ghuser" . "[[https://github.com/$1][/$1/]]")
+	("ghrepo" . "/[[https://github.com/$1/$2][$1/$2]]/")
+	)
+      )
 
 (setq org-publish-project-alist
       '(
@@ -66,8 +81,8 @@
          :with-toc t
          :with-tags nil
          :sitemap-filename "sitemap.org"
-         :sitemap-title ""
          :sitemap-sort-files anti-chronologically
+         :sitemap-function elbaulp/sitemap-function
          :makeindex t
          ;; :html-use-infojs t
          :html-preamble t
@@ -92,7 +107,7 @@
          :publishing-directory "public/"
          :publishing-function 'ignore
          :auto-sitemap t
-;;         :Sitemap-style 'list
+	 ;;         :Sitemap-style 'list
          :sitemap-filename "rss.org"
          :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
          :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
