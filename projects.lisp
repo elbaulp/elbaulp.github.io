@@ -37,6 +37,34 @@
 "
                                    )))
 
+;; (toggle-debug-on-error t)
+
+
+;; Functions
+(defun elbaul/filter-path (path list)
+  "Return sublist containing path as parent"
+  (cdr
+   (elt
+    (car
+     (seq-drop-while
+      (lambda (x)
+        (not (string-match path (car x)))) list)) 1))
+)
+
+(defun duncan/org-publish-sitemap--valid-entries (entries)
+  "Filter ENTRIES that are not valid or skipped by the sitemap entry function."
+  (-filter (lambda (x) (car x)) entries))
+
+(defun elbaulp/sitemap-function (title sitemap)
+  "Generate the full list of posts"
+  (let* ((title "Blog") (subtitle "All blog posts")
+         (posts (cdr sitemap))
+         (posts (duncan/org-publish-sitemap--valid-entries posts))
+         (posts (elbaul/filter-path "org-posts" posts)))
+    (concat (format "#+TITLE: %s\n\n* %s\n" title subtitle)
+            (org-list-to-org (cons (car sitemap) posts))
+            )))
+
 
 (setq org-html-head-include-default-style nil)
 (setq org-html-htmlize-output-type 'css)
@@ -64,7 +92,7 @@
          :with-tags nil
          :sitemap-filename "sitemap.org"
          :sitemap-sort-files anti-chronologically
-         ;; :sitemap-function elbaulp/sitemap-function
+         :sitemap-function elbaulp/sitemap-function
          :makeindex t
          ;; :html-use-infojs t
          :html-preamble t
