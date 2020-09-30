@@ -5,11 +5,12 @@
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
   (package-refresh-contents))
-(dolist (pkg '(htmlize))
+(dolist (pkg '(htmlize dash))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
 (require 'ox-publish)
+(require 'dash)
 (add-to-list 'load-path ".")
 (load "ox-rss.el")
 (require 'htmlize)
@@ -57,11 +58,12 @@
 
 (defun elbaulp/sitemap-function (title sitemap)
   "Generate the full list of posts"
-  (let* ((title "Blog") (subtitle "All blog posts")
+  (let* ((header "#+title:%s\n#+setupfile:~/.emacs.d/org-templates/level-0.org\n#+options: toc:nil\n* %s\n")
+         (title "Blog Sitemap") (subtitle "All list of all blog posts")
          (posts (cdr sitemap))
          (posts (duncan/org-publish-sitemap--valid-entries posts))
          (posts (elbaul/filter-path "org-posts" posts)))
-    (concat (format "#+TITLE: %s\n\n* %s\n" title subtitle)
+    (concat (format header title subtitle)
             (org-list-to-org (cons (car sitemap) posts))
             )))
 
@@ -81,7 +83,7 @@
          :base-directory "."
          :base-extension "org"
          :exclude "static/.*"
-         :publishing-directory "public/"
+         :publishing-directory "../public_html/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6
@@ -104,7 +106,7 @@
          :base-directory "."
          :exclude "static/.*"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "public/"
+         :publishing-directory "../public_html/"
          :recursive t
          :publishing-function org-publish-attachment
          )
