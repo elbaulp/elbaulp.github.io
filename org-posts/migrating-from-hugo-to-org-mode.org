@@ -105,7 +105,13 @@ not want it to be handled by it. I will elaborate more on this [[hugo-content][l
    particular is very simple, since it only specify that it will
    execute docker using a Dokerfile:
 
-#+INCLUDE: ../action.yml src yaml
+#+begin_src yaml
+name: 'Build Blog'
+description: 'Build an org-mode project and publish also old hugo blog content'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+#+end_src
 
 ** Write a Dockerfile                                                                    :dokerfile:
 
@@ -118,9 +124,10 @@ very simple:
 - Execute the following script:
 #+INCLUDE: ../build.sh src bash -n 1
 
-Line 4 runs emacs on =batch= mode to execute the =project.lisp=
-file and generate the blog, then it copies the old version of the blog
-in Hugo and minimize the contents.
+=emacs --batch --no-init-file --load ./projects.lisp --funcall
+toggle-debug-on-error= runs emacs on =batch= mode to execute the
+=project.lisp= file and generate the blog, then it copies the old
+version of the blog in Hugo and minimize the contents.
 
 * Conclusion
 
