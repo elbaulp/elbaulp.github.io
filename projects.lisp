@@ -5,11 +5,12 @@
   (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
   (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
   (package-refresh-contents))
-(dolist (pkg '(htmlize))
+(dolist (pkg '(htmlize dash))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
 (require 'ox-publish)
+(require 'dash)
 (add-to-list 'load-path ".")
 (load "ox-rss.el")
 (require 'htmlize)
@@ -37,6 +38,35 @@
 "
                                    )))
 
+;; (toggle-debug-on-error t)
+
+
+;; Functions
+(defun elbaul/filter-path (path list)
+  "Return sublist containing path as parent"
+  (cdr
+   (elt
+    (car
+     (seq-drop-while
+      (lambda (x)
+        (not (string-match path (car x)))) list)) 1))
+)
+
+(defun duncan/org-publish-sitemap--valid-entries (entries)
+  "Filter ENTRIES that are not valid or skipped by the sitemap entry function."
+  (-filter (lambda (x) (car x)) entries))
+
+(defun elbaulp/sitemap-function (title sitemap)
+  "Generate the full list of posts"
+  (let* ((header "#+title:%s\n#+setupfile:~/.emacs.d/org-templates/level-0.org\n#+options: toc:nil\n* %s\n")
+         (title "Blog Sitemap") (subtitle "All list of all blog posts")
+         (posts (cdr sitemap))
+         (posts (duncan/org-publish-sitemap--valid-entries posts))
+         (posts (elbaul/filter-path "org-posts" posts)))
+    (concat (format header title subtitle)
+            (org-list-to-org (cons (car sitemap) posts))
+            )))
+
 
 (setq org-html-head-include-default-style nil)
 (setq org-html-htmlize-output-type 'css)
@@ -53,7 +83,7 @@
          :base-directory "."
          :base-extension "org"
          :exclude "static/.*"
-         :publishing-directory "public/"
+         :publishing-directory "./public/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6
@@ -64,7 +94,7 @@
          :with-tags nil
          :sitemap-filename "sitemap.org"
          :sitemap-sort-files anti-chronologically
-         ;; :sitemap-function elbaulp/sitemap-function
+         :sitemap-function elbaulp/sitemap-function
          :makeindex t
          ;; :html-use-infojs t
          :html-preamble t
@@ -75,36 +105,36 @@
         ("org-static"
          :base-directory "."
          :exclude "static/.*"
-         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
-         :publishing-directory "public/"
+         :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|yml"
+         :publishing-directory "./public/"
          :recursive t
          :publishing-function org-publish-attachment
          )
 
-        ("sitemap-for-rss"
-         :base-directory "./org-post"
-         :recursive t
-         ;; :exclude (regexp-opt '("posts.org" "archive.org" "rss.org"))
-         :base-extension "org"
-         :publishing-directory "public/"
-         :publishing-function 'ignore
-         :auto-sitemap t
-         :sitemap-filename "rss.org"
-         :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
-         :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
+        ;; ("sitemap-for-rss"
+        ;;  :base-directory "./org-post"
+        ;;  :recursive t
+        ;;  ;; :exclude (regexp-opt '("posts.org" "archive.org" "rss.org"))
+        ;;  :base-extension "org"
+        ;;  :publishing-directory "public/"
+        ;;  :publishing-function 'ignore
+        ;;  :auto-sitemap t
+        ;;  :sitemap-filename "rss.org"
+        ;;  :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
+        ;;  :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
 
 
-        ("org-rss"
-         :base-directory "./org-posts"
-         :base-extension "org"
-         :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
-         :publishing-directory "public/"
-         :publishing-function (org-rss-publish-to-rss)
-         :html-link-home "https://elbauldelprogramador.com"
-         :html-link-use-abs-url t)
+        ;; ("org-rss"
+        ;;  :base-directory "./org-posts"
+        ;;  :base-extension "org"
+        ;;  :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
+        ;;  :publishing-directory "public/"
+        ;;  :publishing-function (org-rss-publish-to-rss)
+        ;;  :html-link-home "https://elbauldelprogramador.com"
+        ;;  :html-link-use-abs-url t)
 
         ("org" :components ("org-notes" "org-static"))
         ))
 
-;;(org-publish-remove-all-timestamps)
+(org-publish-remove-all-timestamps)
 (org-publish "org" t )

@@ -1,0 +1,12 @@
+on: pull_request
+
+jobs:
+  test_build:
+    runs-on: ubuntu-latest
+    name: Test the build
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build
+      id: build
+      uses: ./
