@@ -12,5 +12,5 @@ COPY static/hugo static/hugo
 RUN mkdir -p ~/.emacs.d/org-templates && \
     mv ./static/org-templates/* ~/.emacs.d/org-templates/ && \
     emacs --batch --no-init-file --load ./projects.lisp --funcall toggle-debug-on-error
-
+RUN cd ./public && pwd
 ENTRYPOINT ["./build.sh"]
