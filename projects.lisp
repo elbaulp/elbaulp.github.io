@@ -83,7 +83,7 @@
          :base-directory "."
          :base-extension "org"
          :exclude "static/.*"
-         :publishing-directory "../public/"
+         :publishing-directory "./public/"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6
@@ -106,33 +106,32 @@
          :base-directory "."
          :exclude "static/.*"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|yml"
-         :publishing-directory "../public/
-/"
+         :publishing-directory "./public/"
          :recursive t
          :publishing-function org-publish-attachment
          )
 
-        ("sitemap-for-rss"
-         :base-directory "./org-post"
-         :recursive t
-         ;; :exclude (regexp-opt '("posts.org" "archive.org" "rss.org"))
-         :base-extension "org"
-         :publishing-directory "public/"
-         :publishing-function 'ignore
-         :auto-sitemap t
-         :sitemap-filename "rss.org"
-         :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
-         :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
+        ;; ("sitemap-for-rss"
+        ;;  :base-directory "./org-post"
+        ;;  :recursive t
+        ;;  ;; :exclude (regexp-opt '("posts.org" "archive.org" "rss.org"))
+        ;;  :base-extension "org"
+        ;;  :publishing-directory "public/"
+        ;;  :publishing-function 'ignore
+        ;;  :auto-sitemap t
+        ;;  :sitemap-filename "rss.org"
+        ;;  :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
+        ;;  :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
 
 
-        ("org-rss"
-         :base-directory "./org-posts"
-         :base-extension "org"
-         :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
-         :publishing-directory "public/"
-         :publishing-function (org-rss-publish-to-rss)
-         :html-link-home "https://elbauldelprogramador.com"
-         :html-link-use-abs-url t)
+        ;; ("org-rss"
+        ;;  :base-directory "./org-posts"
+        ;;  :base-extension "org"
+        ;;  :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
+        ;;  :publishing-directory "public/"
+        ;;  :publishing-function (org-rss-publish-to-rss)
+        ;;  :html-link-home "https://elbauldelprogramador.com"
+        ;;  :html-link-use-abs-url t)
 
         ("org" :components ("org-notes" "org-static"))
         ))
