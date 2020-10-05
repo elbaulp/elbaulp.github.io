@@ -40,7 +40,6 @@
 
 ;; (toggle-debug-on-error t)
 
-
 ;; Functions
 (defun elbaul/filter-path (path list)
   "Return sublist containing path as parent"
@@ -58,7 +57,7 @@
 
 (defun elbaulp/sitemap-function (title sitemap)
   "Generate the full list of posts"
-  (let* ((header "#+title:%s\n#+setupfile:~/.emacs.d/org-templates/level-0.org\n#+options: toc:nil\n* %s\n")
+  (let* ((header "#+title:%s\n#+options: toc:nil\n* %s\n")
          (title "Blog Sitemap") (subtitle "All list of all blog posts")
          (posts (cdr sitemap))
          (posts (duncan/org-publish-sitemap--valid-entries posts))
@@ -83,7 +82,7 @@
          :base-directory "."
          :base-extension "org"
          :exclude "static/.*"
-         :publishing-directory "./public/"
+         :publishing-directory "public"
          :recursive t
          :publishing-function org-html-publish-to-html
          :headline-levels 6
@@ -106,7 +105,7 @@
          :base-directory "."
          :exclude "static/.*"
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|yml"
-         :publishing-directory "./public/"
+         :publishing-directory "public"
          :recursive t
          :publishing-function org-publish-attachment
          )
