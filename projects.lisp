@@ -40,6 +40,7 @@
 
 ;; (toggle-debug-on-error t)
 
+
 ;; Functions
 (defun elbaul/filter-path (path list)
   "Return sublist containing path as parent"
@@ -51,21 +52,37 @@
         (not (string-match path (car x)))) list)) 1))
 )
 
+(defun s-replace (old new s)
+  "Replaces OLD with NEW in S."
+  (declare (pure t) (side-effect-free t))
+  (replace-regexp-in-string (regexp-quote old) new s t t))
+
+(defun duncan/latest-posts-sitemap-function (title sitemap)
+  "posts.org generation. Only publish the latest 5 posts from SITEMAP (https://orgmode.org/manual/Sitemap.html).  Skips TITLE."
+  (let* ((posts (cdr sitemap))
+         (posts (duncan/org-publish-sitemap--valid-entries posts))
+         (posts (elbaul/filter-path "org-posts" posts))
+         (last-five (seq-subseq posts 0 (min (length posts) 5)))
+         )
+    (org-list-to-org (cons (car sitemap) last-five))
+    )
+  )
+
 (defun duncan/org-publish-sitemap--valid-entries (entries)
   "Filter ENTRIES that are not valid or skipped by the sitemap entry function."
   (-filter (lambda (x) (car x)) entries))
 
 (defun elbaulp/sitemap-function (title sitemap)
   "Generate the full list of posts"
-  (let* ((header "#+title:%s\n#+options: toc:nil\n* %s\n")
+  (let* ((header "#+setupfile: ./static/org-templates/level-0.org\n#+title:%s\n#+options: toc:nil\n* %s\n")
          (title "Blog Sitemap") (subtitle "All list of all blog posts")
          (posts (cdr sitemap))
          (posts (duncan/org-publish-sitemap--valid-entries posts))
-         (posts (elbaul/filter-path "org-posts" posts)))
+         (posts (elbaul/filter-path "org-posts" posts))
+         )
     (concat (format header title subtitle)
             (org-list-to-org (cons (car sitemap) posts))
             )))
-
 
 (setq org-html-head-include-default-style nil)
 (setq org-html-htmlize-output-type 'css)
@@ -81,7 +98,7 @@
         ("org-notes"
          :base-directory "."
          :base-extension "org"
-         :exclude "static/.*"
+         :exclude "static/.*\\|latests.org"
          :publishing-directory "public"
          :recursive t
          :publishing-function org-html-publish-to-html
@@ -91,15 +108,30 @@
          :auto-sitemap t
          :with-toc t
          :with-tags nil
-         :sitemap-filename "sitemap.org"
+         :sitemap-filename "latests.org"
          :sitemap-sort-files anti-chronologically
-         :sitemap-function elbaulp/sitemap-function
+         :sitemap-function duncan/latest-posts-sitemap-function
          :makeindex t
          ;; :html-use-infojs t
          :html-preamble t
          :html-postamble t
          :html-link-use-abs-url t
          )
+
+        ("org-archive"
+         :base-directory "."
+         :recursive t
+         :base-extension "org"
+         :exclude "latests.org"
+         :publishing-directory "public"
+         :publishing-function ignore
+         :html-link-home "https://elbauldelprogramador.com/"
+         :html-link-use-abs-url t
+         :auto-sitemap t
+         :sitemap-filename "archive.org"
+         :sitemap-sort-files anti-chronologically
+         :sitemap-function elbaulp/sitemap-function
+        )
 
         ("org-static"
          :base-directory "."
@@ -132,7 +164,7 @@
         ;;  :html-link-home "https://elbauldelprogramador.com"
         ;;  :html-link-use-abs-url t)
 
-        ("org" :components ("org-notes" "org-static"))
+        ("org" :components ("org-archive" "org-notes" "org-static"))
         ))
 
 (org-publish-remove-all-timestamps)
