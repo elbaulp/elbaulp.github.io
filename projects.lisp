@@ -27,6 +27,7 @@
 <p class=\"date\">Date: %d</p>
 <p class=\"creator\">%c</p>
 <p class=\"validation\">%v</p>
+<p><a href=\"/theindex.html\">Index</a></p>
 <p><script src='https://utteranc.es/client.js'
           repo='elbaulp/elbaulp.github.io'
           issue-term='title'
