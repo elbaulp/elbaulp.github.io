@@ -85,7 +85,17 @@
             (org-list-to-org (cons (car sitemap) posts))
             )))
 
+(defun get-string-from-file (filePath)
+  "Return filePath's file content.
+  (http://ergoemacs.org/emacs/elisp_read_file_content.html)"
+  (with-temp-buffer
+    (insert-file-contents filePath)
+    (buffer-string)))
+
+(setq css-styles (concat "<style>" (get-string-from-file "./css/org.css")  (get-string-from-file "./css/social.css") "</style>"))
+
 (setq org-html-head-include-default-style nil)
+(setq org-html-head css-styles)
 (setq org-html-htmlize-output-type 'css)
 (setq org-export-global-macros
       '(
