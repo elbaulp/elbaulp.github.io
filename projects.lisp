@@ -37,7 +37,7 @@
          :sitemap-sort-files anti-chronologically
          :sitemap-function duncan/latest-posts-sitemap-function
          :makeindex t
-         ;; :html-use-infojs t
+         :html-use-infojs t
          :html-preamble t
          :html-postamble t
          :html-link-use-abs-url t
@@ -67,25 +67,28 @@
          :publishing-function org-publish-attachment
          )
 
+
         ;; ("sitemap-for-rss"
-        ;;  :base-directory "./org-post"
+        ;;  :base-directory "."
         ;;  :recursive t
-        ;;  ;; :exclude (regexp-opt '("posts.org" "archive.org" "rss.org"))
+        ;;  ;; :exclude (regexp-opt '("latests.org" "archive.org" "rss.org"))
         ;;  :base-extension "org"
         ;;  :publishing-directory "public/"
         ;;  :publishing-function 'ignore
         ;;  :auto-sitemap t
         ;;  :sitemap-filename "rss.org"
-        ;;  :sitemap-function 'duncan/sitemap-for-rss-sitemap-function
-        ;;  :sitemap-format-entry 'duncan/sitemap-for-rss-sitemap-format-entry)
-
+        ;;  :sitemap-function duncan/sitemap-for-rss-sitemap-function
+        ;;  :sitemap-format-entry duncan/sitemap-for-rss-sitemap-format-entry)
 
         ;; ("org-rss"
-        ;;  :base-directory "./org-posts"
+        ;;  :base-directory "."
+        ;;  :recursive t
         ;;  :base-extension "org"
+        ;;  :include '("rss.org")
+        ;;  :exclude (regexp-opt '("latests.org" "archive.org" "rss.org"))
         ;;  :rss-image-url "https://elbauldelprogramador.com/img/bio-photo-rss.png"
         ;;  :publishing-directory "public/"
-        ;;  :publishing-function (org-rss-publish-to-rss)
+        ;;  :publishing-function org-rss-publish-to-rss
         ;;  :html-link-home "https://elbauldelprogramador.com"
         ;;  :html-link-use-abs-url t)
 
