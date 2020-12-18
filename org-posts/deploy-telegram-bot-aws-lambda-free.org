@@ -1,0 +1,57 @@
+#+setupfile: ../static/org-templates/level-1.org
+#+title: How to deploy a telegram bot on AWS Lambda for free
+#+date: <2020-12-18 Fri>
+#+category: aws telegram
+
+Some years ago I developed a little telegram bot called [[https://github.com/elbaulp/comptrain-bot][comptrain-individuals]] that parses WODs from [[https://comptrain.co/wod/][Comptrain]] and post them on a telegram Channel called [[https://t.me/CompTrainIndividuals][@CompTrainIndividuals]]. The problem was, in order to deploy it and have it online 24/7 I was using a free account on OpenRedshift, which forced me to recreate an account every 60 days and re-deploy everything again.
+
+Recently I came out across a solution using AWS Lambda and its free tier products and since then I have had no problems at all. I only needed to deploy it once and it has been working since then. Today I want to tell you how you can do the same for your telegram bots.
+
+* Set up a AWS account using AWS free tier
+
+  In order to do that, just go to https://aws.amazon.com/free/ and create an account. You are going to use an AWS Lambda to deploy the bot there.
+
+* Create and set up a lambda function
+
+  I will not go over the details on how to create a lambda function, since there are plenty of resources for that, as I am using serverless, you can read their [[https://www.serverless.com/framework/docs/providers/aws/guide/functions/][documentation on AWS Lambda]].
+
+* Serverless configuration
+
+  For my telegram bot, I am using a configuration that just execute the bot every day at 4AM:
+
+  #+begin_src yaml
+service: comptrain-bot
+
+provider:
+  name: aws
+  runtime: python3.7
+  region: eu-central-1
+
+functions:
+  comptrain:
+    handler: handler.main
+    events:
+      - schedule: cron(0 4 * * ? *)
+  #+end_src
+
+* Deploy the code to AWS lambda
+
+  Last step, in order to deploy our function to AWS, you need to use either [[https://github.com/99designs/aws-vault][aws-vault]] or [[https://aws.amazon.com/cli/][awscli]] and set it up to use your credentials.
+  Once you have done this, you can upload your function code using this steps:
+
+  #+begin_src bash
+        #!/bin/bash
+
+        sls deploy
+    # if you are using python with poetry, this is the way of package dependencies
+        cd .venv/lib/python3.7/site-packages
+        zip -r9 ${OLDPWD}/function.zip .
+        cd $OLDPWD
+        zip -g function.zip handler.py
+        aws lambda update-function-code --function-name comptrain-bot-dev-comptrain --zip-file fileb://function.zip
+        rm function.zip
+  #+end_src
+
+  In order to package a python virtual environment you need to follow the steps specified in [[https://docs.aws.amazon.com/lambda/latest/dg/python-package.html#python-package-venv][Deploy Python Lambda functions with .zip file archives]]
+
+  And that's it! hope it helps.
