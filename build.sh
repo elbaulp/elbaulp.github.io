@@ -13,3 +13,4 @@ html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-t
 html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ${PUBLIC_DIR} --output-dir ${PUBLIC_DIR} --file-ext css
 
 mv ${GITHUB_WORKSPACE}/static/hugo/* ${PUBLIC_DIR}/
+mv ${GITHUB_WORKSPACE}/static/googlee20ada3c6370fb77.html ${PUBLIC_DIR}/
