@@ -1,0 +1,42 @@
+#+setupfile: ../static/org-templates/level-1.org
+#+title: How to efficiently read large amounts data from athena with AWS Wrangler
+#+date: <2021-02-26 Fri>
+#+category: aws awswrangler
+
+Recently I needed to write a job that read a huge quantity of data from *AWS Athena*, perform some transformations on it and write it back to *S3*. The problem was even using the parameter =chunksize= from [[https://aws-data-wrangler.readthedocs.io/en/stable/stubs/awswrangler.athena.read_sql_query.html][=awswrangler.athena.read_sql_query=]] was not being executed successfuly due to running out of memory.
+
+After thinking for a while how I could do it, I came across a function called =zip_longets= from =itertools= that would ultimatelly help me achieve the task.
+
+So, lets start.
+
+* Reading data from athena
+
+First, I needed to read data from two tables that should be merged together after performing some transformations on them.
+
+#+begin_src python
+  table1 = wr.athena.read_sql_query(
+      sql=sql_query,
+      database=database,
+      chunksize=True,
+      params=params,
+      categories=categories
+  )
+
+  table2 = wr.athena.read_sql_query(
+      sql=sql_query,
+      database=database,
+      chunksize=True,
+      params=params,
+      categories=categories
+  )
+#+end_src
+
+* Working with generators
+
+This returns two =generators=, one of them, or both, could be empty, that's where [[https://docs.python.org/3/library/itertools.html#itertools.zip_longest][=zip_longest=]] comes into play:
+
+#+begin_src python
+zip_longest(table1, table2, fillvalue=pd.DataFrame())
+#+end_src
+
+Doing this, I was able to iterate over each chunk of data, even if one of the generators is empty, and perform some tasks on them. Since now I am working chunk by chunk, I was able to operate on those huge tables without problems.
