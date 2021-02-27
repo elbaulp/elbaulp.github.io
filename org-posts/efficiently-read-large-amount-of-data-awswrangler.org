@@ -1,7 +1,8 @@
 #+setupfile: ../static/org-templates/level-1.org
 #+title: How to efficiently read large amounts data from athena with AWS Wrangler
-#+date: <2021-02-26 Fri>
+#+date: <2021-02-27 Sat>
 #+category: aws awswrangler
+#+DESCRIPTION: Recently I needed to write a job that read a huge quantity of data from AWS Athena, perform some transformations on it and write it back to S3. The problem was even using the parameter chunksize from awswrangler.athena.read_sql_query was not being executed successfuly due to running out of memory.
 
 Recently I needed to write a job that read a huge quantity of data from *AWS Athena*, perform some transformations on it and write it back to *S3*. The problem was even using the parameter =chunksize= from [[https://aws-data-wrangler.readthedocs.io/en/stable/stubs/awswrangler.athena.read_sql_query.html][=awswrangler.athena.read_sql_query=]] was not being executed successfuly due to running out of memory.
 

@@ -1,7 +1,8 @@
 #+setupfile: ../static/org-templates/level-1.org
 #+title: How to deploy a telegram bot on AWS Lambda for free
-#+date: <2020-12-18 Fri>
+#+date: <2021-02-27 Sat>
 #+category: aws telegram
+#+description: Some years ago I developed a little telegram bot called comptrain-individuals that parses WODs from Comptrain and post them on a telegram Channel called @CompTrainIndividuals. The problem was, in order to deploy it and have it online 24/7 I was using a free account on OpenRedshift, which forced me to recreate an account every 60 days and re-deploy everything again.
 
 Some years ago I developed a little telegram bot called [[https://github.com/elbaulp/comptrain-bot][comptrain-individuals]] that parses WODs from [[https://comptrain.co/wod/][Comptrain]] and post them on a telegram Channel called [[https://t.me/CompTrainIndividuals][@CompTrainIndividuals]]. The problem was, in order to deploy it and have it online 24/7 I was using a free account on OpenRedshift, which forced me to recreate an account every 60 days and re-deploy everything again.
 
