@@ -1,0 +1,73 @@
+#+setupfile: ../static/org-templates/level-1.org
+#+title: Update python poetry packages from a private artifacts repository with github actions
+#+date: <2021-03-16 Tue>
+#+category: github github-actions
+#+DESCRIPTION: Dependabot does not support yet updating packages from private artifacts repositories, in this post you will learn an approach on how to do it using a custom github action
+
+As Depandabot does not support upgrading dependencies from private packages registries yet, I needed to came up with a solution to do it on my own. Lets start right with the code:
+
+#+begin_src yaml -n
+    on:
+      schedule:
+        - cron: '0 7 * * *'
+
+    name: Update poetry
+    jobs:
+      update-poetry-dependencies:
+        strategy:
+          matrix:
+            project:
+              - "project1"
+              - "project2"
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+            with:
+              token: ${{secrets.PAT}}
+              submodules: recursive
+              fetch-depth: 0
+
+          - name: Setup python
+            uses: actions/setup-python@v2
+
+          - name: Install Poetry
+            uses: snok/install-poetry@v1.1.2
+
+          - name: Set up Poetry
+            run: |
+              poetry config repositories.package-upload "repourl"
+              poetry config http-basic.package-upload "${user}" "${password}"
+              poetry config http-basic.package-download "${user}" "${passw}"
+            env:
+              user: ${{ secrets.USER }}
+              passw: ${{ secrets.PASS }}
+
+          - name: Updating ${{matrix.project}}
+            run: |
+              pushd ${{matrix.project}}
+              poetry install --no-interaction
+              poetry update --no-interaction > /tmp/poetry.update
+              cat /tmp/poetry.update | sed 's/\"/\\"/g' | perl -pe 's/\n/<br>/g'  > /tmp/poetry.formated
+              echo "\{\"body\": \"$(< /tmp/poetry.formated)\", \"head\":\"update/${{matrix.project}}/action\",\
+              \"base\":\"master\", \"title\":\"[${{matrix.project}}] Bump dependencies\"}" > /tmp/json
+              git config --global user.name 'Github Action'
+              git config --global user.email 'gh-action@example.com'
+              git checkout -b update/${{matrix.project}}/action
+              git add -u
+              git commit -m "[${{matrix.project}}] Update poetry" && git push || echo "No new versions found"
+              git push --set-upstream origin update/${{matrix.project}}/action
+              curl -X POST -H "Accept: application/vnd.github.v3+json" \
+              https://api.github.com/repos/org/repo/pulls \
+              -u user:${{ secrets.PAT }} \
+              --data-binary @/tmp/json
+#+end_src
+
+- This github action would trigger each week, and it assumes that it will run on a monorepo, on lines 10-12 the repositories to upgrade are listed.
+- On lines 28-31 poetry is configured to use the private repository.
+- The magic happens on lines 37 till the end. Basically, for each project:
+  - =cd= into the project, install the dependencies and upgrade the packages
+  - Now, the output of =poetry update= is saved into a file to add it as a description on the pull request.
+  - I needed to do a little bit of =regex= to correctly format the output of =poetry update= to be a valid json when permforming the API call.
+  - Finally, a new branch is created, a commit with the changes and a call to the Github API to open a PR.
+
+That's it!, hope it helps.
