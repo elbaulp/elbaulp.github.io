@@ -1,10 +1,10 @@
 #+setupfile: ../static/org-templates/level-1.org
 #+title: Update python poetry packages from a private artifacts repository with github actions
-#+date: <2021-03-16 Tue>
+#+date: <2021-05-03 Wed>
 #+category: github github-actions
 #+DESCRIPTION: Dependabot does not support yet updating packages from private artifacts repositories, in this post you will learn an approach on how to do it using a custom github action
 
-As Depandabot does not support upgrading dependencies from private packages registries yet, I needed to came up with a solution to do it on my own. Lets start right with the code:
+As Depandabot does not support upgrading dependencies from private packages registries yet (It doest now, but it opens one PR for each dependency), I needed to came up with a solution to do it on my own. Lets start right with the code:
 
 #+begin_src yaml -n
     on:
