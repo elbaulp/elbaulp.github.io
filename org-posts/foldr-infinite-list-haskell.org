@@ -1,0 +1,81 @@
+#+setupfile: ../static/org-templates/level-1.org
+#+title: Understanding why foldr works on infinite list on Haskell
+#+date: <2021-05-28 Fri>
+#+category: haskell
+#+DESCRIPTION: Foldr can work on infinite list, whereas foldl don't, lets dive into why that's the case
+
+I started learning Haskell this year, and I started reading a well known book, [[http://learnyouahaskell.com][learnyouahaskell.com]]. But while reading through the [[http://learnyouahaskell.com/higher-order-functions#folds][High order functions chapter]] I came across a snipped of code that could not fully understand.
+
+* Implement head function using foldr1
+
+#+begin_src haskell :exports both :results output verbatim code
+head' :: [a] -> a
+head' = foldr1 (\x _ -> x)
+#+end_src
+
+For those who don't know, =foldr1= is just a short hand of =foldr= that already take the last element as accumulator or starting point for the =fold=. So, this snipped =foldr1 (\_ acc -> acc) [1..10]= would return =10=
+
+After struggling a while trying to understand why the above =head'= function will work on infinite lists like this one:
+
+#+begin_src haskell :exports both :results output verbatim code
+head' [1..]
+#+end_src
+
+#+RESULTS:
+#+begin_src haskell
+1
+#+end_src
+
+but its =foldl= equivalent won't, it will run for ever:
+
+#+begin_src haskell :exports both :results output verbatim code
+head' = foldl1 (\_ x -> x)
+#+end_src
+
+I decided to [[https://stackoverflow.com/questions/67558977/foldr1-and-infinite-list-on-haskell][ask on stack overflow]] and that actually helped me understand why it was working, but I wanted to go a little bit deeper and continued to search. After reading through all the answers in [[https://stackoverflow.com/q/1757740/1612432][this question]] that mentioned /infinite list/, I found the one that [[https://stackoverflow.com/a/63177677/1612432][enlightened me]]. I will try to explain what I understood in order to help others with the same question, but also to exercise my understanding and why not, for my future me.
+
+*NOTE*: I'm not a Haskell expert, so if I say something wrong, feel free to correct me in the comments below.
+
+* How foldr works from the inside
+
+foldr implementation can be seen [[https://hackage.haskell.org/package/base-4.10.0.0/docs/src/GHC.Base.html#foldr][here]]:
+
+#+begin_src haskell :exports both :results output verbatim code
+foldr k z = go
+          where
+            go []     = z
+            go (y:ys) = y `k` go ys
+#+end_src
+
+A common misunderstanding with =foldr= and =foldl=, which I also had, is that one may think the former start from the end of the list, and the latter from the begining. What really happens is that =foldl= is left associative, and =foldr= right associative, and *both of them start from the left most side* of the list.
+
+With this knowledge, and the implementation of =foldr=, we can finally understand what is going under the hood in our =head'= function. Lets write our lambda function as a regular function to make it easier:
+
+#+begin_src haskell :exports both :results output verbatim code
+myL x _ = x
+#+end_src
+
+Simple enough, a function that takes two arguments and just returns the first one. Now, lets see how this piece of code would evaluate:
+
+#+begin_src haskell :exports both :results output verbatim code
+foldr1 myL [1..]
+#+end_src
+
+#+RESULTS:
+#+begin_src haskell
+1
+#+end_src
+
+As we are providing a non-empty list, the pattern match would go to the second pattern, evaluating to
+
+#+begin_src haskell :exports both :results output verbatim code
+1 `myL` go ys
+#+end_src
+
+Since Haskell is lazy, and our =myL= function already have all it needs (the first element of the list) there is no need to evaluate the second side of the statement, namely =go ys=, so we have short-circuited =foldr= and it returns with the correct result, the head of the infinite list.
+
+* Conclusion
+
+This may be a simple thing to understand, but it wasn't entirely clear to me why it was working until I dived enough into the code to finally understand it correctly. Hope it was helpful for you also!
+
+Feel free to comment if you feel something can be improved.
