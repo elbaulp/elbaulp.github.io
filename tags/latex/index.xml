@@ -1,0 +1,187 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>latex on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/latex/</link>
+        <description>Recent content in latex on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Thu, 16 Feb 2017 16:50:27 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/latex/</link>
+            <title>latex on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/latex/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Dibujar árboles de dependencias y Máquinas de soporte Vectoriales usando LaTeX y Tikz</title>
+            <link>https://elbauldelprogramador.com/creating-trees-dependency-graphs-svms-in-tikz/</link>
+            <pubDate>Thu, 16 Feb 2017 16:50:27 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/creating-trees-dependency-graphs-svms-in-tikz/</guid>
+            <description>&lt;p&gt;Como he comentado, para dibujar los árboles y la SVM usé el paquete &lt;code&gt;tikz&lt;/code&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/tags/latex&#34; title=&#34;LaTeX&#34;&gt;LaTeX&lt;/a&gt;, a continuación muestro el código que usé:&lt;/p&gt;
+&lt;h1 id=&#34;dibujando-un-árbol-de-dependencias-con-tikz&#34;&gt;Dibujando un árbol de dependencias con Tikz&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;ejemplo-1&#34;&gt;Ejemplo 1&lt;/h2&gt;
+&lt;p&gt;El código es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz-dependency&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;dependency&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[edge slant=15pt,label theme = simple, edge theme = iron]
+  &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;deptext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[column sep=1em]
+    This &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; time &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; around &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; , &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; they &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; &amp;#39;re &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; moving &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; even &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt; faster &lt;span class=&#34;k&#34;&gt;\&amp;amp;&lt;/span&gt;
+    . &lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;deptext&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\deproot&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;ROOT&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;1&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;DET&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[edge height=1.9cm]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;TMOD&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;2&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;3&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;ADVMOD&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;6&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;AUX&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;5&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;NSUBJ&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;4&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;PUNCT&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;10&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;PUNCT&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;7&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;ADVMOD&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\depedge&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[edge start x offset=-4pt]&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;9&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;8&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;ADVMOD&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;dependency&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El resultado:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;ejemplo-2&#34;&gt;Ejemplo 2&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz-qtree,tikz-qtree-compat&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\tiny&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[every node/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;align=center&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,scale=.9]
+  &lt;span class=&#34;k&#34;&gt;\tikzset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    edge from parent/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+      draw,edge from parent
+      path=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;(&lt;span class=&#34;k&#34;&gt;\tikzparentnode&lt;/span&gt;.south)-- +(0,-8pt)-| (&lt;span class=&#34;k&#34;&gt;\tikzchildnode&lt;/span&gt;)&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    frontier/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;distance from root=208pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;, &lt;span class=&#34;c&#34;&gt;% Align leaf nodes
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;    level 1+/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;level distance=18pt&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;% Distance between levels
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+   &lt;span class=&#34;k&#34;&gt;\Tree&lt;/span&gt; [.S
+             [.NP Rolls-Royce&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP Motor&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP Cars&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNPS Inc&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP ]
+             [.VP said&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VBD
+                [.SBAR [.none ]
+                   [.S
+                      [.NP it&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;PRP ]
+                      [. VP expects&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VBZ
+                         [.S
+                            [.NP its&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;PRP&lt;span class=&#34;k&#34;&gt;\$&lt;/span&gt; U.S&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP sales&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNS ]
+                            [.VP to&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;TO
+                               [.VP remain&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VB
+                                  [.ADJP steady&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;JJ ]
+                                  [.PP at&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;IN
+                                     [.NP
+                                        [.QP about&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;IN 1200&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;CD ]
+                                        cars&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNS
+                                     ]
+                                  ]
+                               ]
+                            ]
+                         ]
+                      ]
+                   ]
+                ]
+             ]
+         ]
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Resultado:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;ejemplo-3&#34;&gt;Ejemplo 3&lt;/h2&gt;
+&lt;p&gt;El último ejemplo de árbol:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz-qtree,tikz-qtree-compat&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[every node/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;align=center&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,level distance=30pt]
+    &lt;span class=&#34;k&#34;&gt;\tikzset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;edge from parent/.append style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&amp;lt;-, &amp;gt;=latex,thick&lt;span class=&#34;nb&#34;&gt;}}&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;\Tree&lt;/span&gt; [.said&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VBD
+             [.Inc.&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP Rolls-Royce&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP Motor&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP Cars&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNPS ]
+             [.expects&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VBZ it&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;PRP
+                [.remain&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;VB
+                   [.sales&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNS its&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;PRP&lt;span class=&#34;k&#34;&gt;\$&lt;/span&gt; U.S&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNP ]
+                   to&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;TO
+                   steady&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;JJ
+                   [.at&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;IN [.cars&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;NNS [.about&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;IN 1200&lt;span class=&#34;k&#34;&gt;\\&lt;/span&gt;CD ] ] ]
+                ]
+             ]
+           ]
+   &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;dibujando-una-máquina-de-soporte-vectorial-svm-en-tikz&#34;&gt;Dibujando una máquina de soporte vectorial (SVM) en Tikz&lt;/h1&gt;
+&lt;p&gt;Para la explicación gráfica de lo que es una SVM:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-latex&#34; data-lang=&#34;latex&#34;&gt;&lt;span class=&#34;k&#34;&gt;\documentclass&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;standalone&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usepackage&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikz-qtree,tikz-qtree-compat&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\usetikzlibrary&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;calc&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+
+  &lt;span class=&#34;k&#34;&gt;\tikzset&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;
+    leftNode/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;circle,minimum width=.5ex, fill=none,draw&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    rightNode/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;circle,minimum width=.5ex, fill=black,thick,draw&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    rightNodeInLine/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;solid,circle,minimum width=.7ex, fill=black,thick,draw=white&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    leftNodeInLine/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;solid,circle,minimum width=.7ex, fill=none,thick,draw&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+  &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;[
+        scale=2,
+        important line/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;thick&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;, dashed line/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;dashed, thin&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+        every node/.style=&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;color=black&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;,
+    ]
+    &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[dashed line, yshift=.7cm]&lt;/span&gt;
+       (.2,.2) coordinate (sls) -- (2.5,2.5) coordinate (sle)
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (2,2)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node[leftNodeInLine] (name) at (2,2)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.5,1.5)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node[leftNodeInLine] (name) at (1.5,1.5)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node [above right] &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\cdot&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; b &amp;gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;
+
+    &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[important line]&lt;/span&gt;
+       (.7,.7) coordinate (lines) -- (3,3) coordinate (linee)
+       node [above right] &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\cdot&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; b &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;
+
+    &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[dashed line, xshift=.7cm]&lt;/span&gt;
+       (.2,.2) coordinate (ils) -- (2.5,2.5) coordinate (ile)
+       node[solid,circle,minimum width=2.8ex,fill=none,thick,draw] (name) at (1.8,1.8)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node[rightNodeInLine] (name) at (1.8,1.8)&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;
+       node [above right] &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;\cdot&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; x &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt; b &amp;lt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;
+
+    &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;[very thick,&amp;lt;-&amp;gt;]&lt;/span&gt; (&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;sls&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)+(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;,.&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;) -- (&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;ils&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)+(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;,.&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;$&lt;/span&gt;)
+       node[sloped,above, near end] &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;Margen&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;;
+
+    &lt;span class=&#34;k&#34;&gt;\foreach&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\Point&lt;/span&gt; in &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;(.9,2.4), (1.3,2.5), (1.3,2.1), (2,3), (1,2.9)&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\Point&lt;/span&gt; node[leftNode]&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;;
+    &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;\foreach&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\Point&lt;/span&gt; in &lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;(2.9,1.4), (2.3,.5), (3.3,.1), (2,0.9), (2.5,1)&lt;span class=&#34;nb&#34;&gt;}{&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;\draw&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;\Point&lt;/span&gt; node[rightNode]&lt;span class=&#34;nb&#34;&gt;{}&lt;/span&gt;;
+    &lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;tikzpicture&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;{&lt;/span&gt;document&lt;span class=&#34;nb&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;p&gt;Cuando empecé a dibujar estas figuras en &lt;code&gt;tikz&lt;/code&gt; se me presentaron algunas dudas que pregunté en tex.stackexchange.com. Estas fueron dichas preguntas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Align all leaf nodes in tikz-qtree | &lt;!-- raw HTML omitted --&gt;tex.stackexchange.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Align independent tikzpictures | &lt;!-- raw HTML omitted --&gt;tex.stackexchange.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

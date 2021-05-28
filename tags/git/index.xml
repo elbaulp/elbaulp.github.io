@@ -1,0 +1,992 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>git on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/git/</link>
+        <description>Recent content in git on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 08 Sep 2017 12:15:30 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/git/</link>
+            <title>git on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/git/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Sincronización de proyectos en git con hooks (ganchos)</title>
+            <link>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</link>
+            <pubDate>Fri, 08 Sep 2017 12:15:30 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;repositorio-espejo-mirror-repo&#34;&gt;Repositorio espejo (Mirror repo)&lt;/h1&gt;
+&lt;h2 id=&#34;problema&#34;&gt;Problema&lt;/h2&gt;
+&lt;p&gt;Hace unos días me encontré con un problema a resolver. Supongamos que tenemos dos repositorios en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos en git&#34;&gt;git&lt;/a&gt;, y queremos que todo lo que publicamos en uno se publique automáticamente en el otro, para mantenerlos sincronizados. Ésto es lo que se llama un repo espejo (&lt;em&gt;mirror repos&lt;/em&gt;)&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;repositorios-a-sincronizar&#34;&gt;Repositorios a sincronizar&lt;/h2&gt;
+&lt;p&gt;Supongamos que los repositorios se llaman &lt;em&gt;repo1&lt;/em&gt; y &lt;em&gt;repo2&lt;/em&gt;. Pretendemos que &lt;em&gt;repo2&lt;/em&gt; esté sincronizado (sea un espejo) del &lt;em&gt;repo1&lt;/em&gt;. Ésto significa que no tendremos que clonar en ningún momento el &lt;em&gt;repo2&lt;/em&gt;. En local únicamente tendremos el &lt;em&gt;repo1&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;solución&#34;&gt;Solución&lt;/h2&gt;
+&lt;p&gt;La respuesta, como es habitual, la encontré tras buscar un poco en &lt;em&gt;stackoverflow&lt;/em&gt;. Gracias a &lt;a href=&#34;http://stackoverflow.com/users/140185/manoj-govindan&#34; title=&#34;Perfil en stackoverflow&#34;&gt;Manoj Govindan&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;añadir-repo2-como-remote&#34;&gt;Añadir repo2 como remote&lt;/h2&gt;
+&lt;p&gt;Dentro de &lt;em&gt;repo1&lt;/em&gt; añadiremos un nuevo &lt;em&gt;remote&lt;/em&gt; que sea el &lt;em&gt;repo2&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+git remote add repo2 &amp;lt;url-repo2&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;configurar-el-hook-gancho-post-commit&#34;&gt;Configurar el hook (gancho) post-commit&lt;/h2&gt;
+&lt;p&gt;Dentro del repositorio, crearemos un nuevo &lt;em&gt;hook&lt;/em&gt; que se ejecute cada vez que hagamos un &lt;em&gt;commit&lt;/em&gt; en &lt;em&gt;repo1&lt;/em&gt;. Por cada &lt;em&gt;commit&lt;/em&gt;, ejecutaremos un &lt;em&gt;git push repo2&lt;/em&gt;, lo cual enviará los cambios al &lt;em&gt;repo2&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
+mv .git/hooks/pre-commit.sample .git/hooks/post-commit
+&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 -f --mirror&amp;#34;&lt;/span&gt; &amp;gt; .git/hooks/post-commit
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En contenido del &lt;em&gt;hook&lt;/em&gt;, para que se vea más claro es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+git push repo2 -f --mirror
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Con este gancho, se mantendrán sincronizados ambos repositorios. Es necesario notar que tras hacer el &lt;em&gt;commit&lt;/em&gt; del &lt;em&gt;repo1&lt;/em&gt;, sigue siendo necesario ejecutar &lt;code&gt;git push&lt;/code&gt; en &lt;em&gt;repo1&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;mantener-sincronizada-una-única-rama&#34;&gt;Mantener sincronizada una única rama&lt;/h1&gt;
+&lt;p&gt;Un problema similar podría ser mantener sincronizado en &lt;em&gt;repo2&lt;/em&gt; únicamente las ramas &lt;em&gt;master&lt;/em&gt;. De forma que podamos crear tantas ramas como necesitemos en &lt;em&gt;repo1&lt;/em&gt; sin que se vean reflejadas en &lt;em&gt;repo2&lt;/em&gt;. Para ello, en lugar de usar el &lt;em&gt;hook&lt;/em&gt; &lt;code&gt;post-commit&lt;/code&gt;, usaremos &lt;code&gt;post-merge&lt;/code&gt;. Éste &lt;em&gt;hook&lt;/em&gt; se ejecutará cada vez que se haga un &lt;code&gt;git merge &amp;lt;rama distinta de master&amp;gt;&lt;/code&gt; sobre master.&lt;/p&gt;
+&lt;p&gt;Para activarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;c1&#34;&gt;# Crear el hook que se ejecutará en cada commit&lt;/span&gt;
+mv .git/hooks/pre-commit.sample .git/hooks/post-merge
+&lt;span class=&#34;c1&#34;&gt;# Añadir el comando a ejecutar&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; -e &lt;span class=&#34;s2&#34;&gt;&amp;#34;#!/bin/bash\n\ngit push repo2 master:master&amp;#34;&lt;/span&gt; &amp;gt; .git/hooks/post-merge
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El contenido del &lt;em&gt;hook&lt;/em&gt; es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
+
+git push repo2 master:master
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;git push repo2 master:master&lt;/code&gt; podría leerse como: &lt;em&gt;Publica en el repo2 en la rama master, el contenido de la rama master del repo actual&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/3583061/automatically-mirror-a-git-repository&#34;&gt;Automatically mirror a git repository&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo Eliminar Ficheros Demasiado Grandes Para GitHub</title>
+            <link>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</link>
+            <pubDate>Sat, 12 Nov 2016 08:12:16 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/eliminar-ficheros-grandes-github/</guid>
+            <description>&lt;p&gt;Trabajando en un repositorio &lt;a href=&#34;https://elbauldelprogramador.com/git/&#34; title=&#34;Artículos sobre Git&#34;&gt;git&lt;/a&gt;, cometí el error de hacer un &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;commit&lt;/a&gt; de un fichero demasiado grande (~240mb). Github tiene un tamaño máximo de 100mb, por lo que no me dejaba subir los cambios a Github. Tras borrar el fichero, seguía con el problema, ya que el fichero seguía en el historial del repositorio. Tras buscar un rato, encontré la solución, veamos:&lt;/p&gt;
+&lt;h1 id=&#34;1-eliminar-el-fichero-del-historial-de-git&#34;&gt;1. Eliminar el fichero del historial de git&lt;/h1&gt;
+&lt;p&gt;Para ello basta ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git filter-branch --index-filter &lt;span class=&#34;s1&#34;&gt;&amp;#39;git rm -r --cached --ignore-unmatch &amp;lt;file/dir&amp;gt;&amp;#39;&lt;/span&gt; HEAD
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Y reemplazar &lt;code&gt;&amp;lt;file/dir&amp;gt;&lt;/code&gt; con la ruta de nuestro fichero.&lt;/p&gt;
+&lt;h1 id=&#34;2-eliminar-por-completo-el-rastro-del-fichero&#34;&gt;2. Eliminar por completo el rastro del fichero&lt;/h1&gt;
+&lt;p&gt;El comando anterior crea una copia de seguridad en caso de que hayamos cometido un error, si ejecutamos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git lola --name-status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veremos un commit parecido a este (&lt;code&gt;* SHA1 (refs/original/refs/heads/master) mensaje del commit&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;En este commit aún está el fichero problemático, para borrarlo definitivamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git update-ref -d refs/original/refs/heads/master
+$ git reflog expire --expire&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now --all
+$ git gc --prune&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;now
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;3-enviar-los-cambios&#34;&gt;3. Enviar los cambios&lt;/h1&gt;
+&lt;p&gt;Una vez hecho esto, solo resta enviar los cambios a Github:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y habremos solucionado el problema.&lt;/p&gt;
+&lt;h1 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/2100907/how-to-remove-delete-a-large-file-from-commit-history-in-git-repository&#34; title=&#34;How to remove/delete a large file from commit history in Git repository?&#34;&gt;How to remove/delete a large file from commit history in Git repository?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/19573031/cant-push-to-github-because-of-large-file-which-i-already-deleted&#34; title=&#34;Can&#39;t push to GitHub because of large file which I already deleted&#34;&gt;Can&amp;rsquo;t push to GitHub because of large file which I already deleted&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Manual De Git Gratuito</title>
+            <link>https://elbauldelprogramador.com/manual-de-git-gratuito/</link>
+            <pubDate>Sat, 06 Aug 2016 16:15:22 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/manual-de-git-gratuito/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt; También puedes consultar nuestra &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Chuleta de comandos GIT&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Delve into the world of Git version source control with this compact guide that discusses the features of this popular control system!&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Git is, without any doubt, the most popular version control system. Ironically, there are other version control systems easier to learn and to use, but, despite that, Git is the favorite option for developers, which is quite clarifying about the powerfulness of Git.&lt;/p&gt;
+&lt;p&gt;In this guide, we will cover all the topics needed to know in order to use Git properly, from explaining what is it and how it differs from other tools, to its usage, covering also advanced topics and practices that can suppose an added value to the process of version controlling.&lt;/p&gt;
+&lt;p&gt;With this free eBook you will also receive weekly news, tips and special offers delivered to your inbox courtesy of Java Code Geeks.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Visita la página &lt;a href=&#34;https://elbauldelprogramador.com/manuales-gratuitos/&#34;&gt;Manuales gratuitos&lt;/a&gt; o consulta el &lt;a href=&#34;http://elbauldelprogramador.tradepub.com/category/information-technology/1207/&#34; title=&#34;Catálogo completo de Guías gratuítas &#34;&gt;catálogo completo&lt;/a&gt;.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo mostrar información de un repositorio Git en el prompt de tu terminal</title>
+            <link>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</link>
+            <pubDate>Mon, 23 May 2016 12:40:25 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/oh-my-git-personalizar-prompt-git/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hoy quiero hablar de algo que llevo usando desde hace ya mucho tiempo en mi terminal. Se trata de dos tipos de &lt;em&gt;Prompts&lt;/em&gt; para bash. La primera de ellas es una general, que se mostrará siempre que tengamos el terminal abierto. La segunda se mostrará cuando nos encontremos en una carpeta que contenga un &lt;a href=&#34;https://elbauldelprogramador.com/git&#34; title=&#34;Tutoriales sobre Git&#34;&gt;repositorio git&lt;/a&gt;. Ésto es lo realmente interesante, ya que el &lt;em&gt;prompt&lt;/em&gt; nos mostrará &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos Git&#34;&gt;información del estado del repositorio&lt;/a&gt;  , lo cual a mi me resulta bastante útil. Comencemos instalando el primero, “&lt;em&gt;Rainbow bash&lt;/em&gt;”:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;rainbow-bash&#34;&gt;Rainbow Bash&lt;/h1&gt;
+&lt;p&gt;Con este &lt;em&gt;prompt&lt;/em&gt; disponemos de iconos y varios temas a elegir. Los pasos de instalación se pueden seguir en el repositorio original, pero básicamente es ejecutar esto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/slok/rainbow-bash.git &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.rainbow-bash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y añadir al &lt;code&gt;.bashrc&lt;/code&gt; lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Prompt&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.rainbow-bash
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$RBW_PATH&lt;/span&gt;/init.sh
+rbw_load_theme simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;temas&#34;&gt;Temas&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Rainbow Bash&lt;/em&gt; tiene varios temas a elegir, para cambiarlos basta con modificar la línea&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rbw_load_theme simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el nombre del tema deseado, a alegir entre (&lt;em&gt;Regular, Hacker, Minimal, Simple, Arrow y Video&lt;/em&gt;), puedes verlos en &lt;a href=&#34;https://github.com/slok/rainbow-bash/tree/master/themes&#34;&gt;su página de github&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;oh-my-git&#34;&gt;Oh My Git&lt;/h1&gt;
+&lt;p&gt;Ahora viene la parte a mi parecer más útil del &lt;em&gt;prompt&lt;/em&gt;, instalaremos &lt;em&gt;Oh My Git&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;preparación-de-la-fuentes-con-iconos&#34;&gt;Preparación de la fuentes con iconos&lt;/h2&gt;
+&lt;p&gt;Antes de empezar es necesario instalar las fuentes necesarias para tener disponibles los iconos de &lt;em&gt;FontAwesome&lt;/em&gt;, hay dos alternativas, instalar una fuente que traiga los iconos metidos a mano (&lt;em&gt;Patched font&lt;/em&gt;) o usar una estrategia &lt;em&gt;Fallback&lt;/em&gt;. Por más que intenté seguir el segundo método, no lo conseguí y terminé usando una fuente parcheada. Si alguien consigue instalar las fuentes siguiendo el segundo método, es bienvenido de comentarlo y actualizo el artículo.&lt;/p&gt;
+&lt;h2 id=&#34;instalar-las-fuentes-parcheadas&#34;&gt;Instalar las fuentes parcheadas&lt;/h2&gt;
+&lt;p&gt;Primero descargamos los ficheros del repositorio &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34;&gt;awesome terminal Fonts&lt;/a&gt;, como vamos a usar la estrategia de fuentes parcheadas, simplemente copiamos las fuentes de la carpeta &lt;code&gt;patched&lt;/code&gt; a la carpeta de fuentes del sistema y cambiamos el tipo de fuente usada por nuestra terminal a una de ellas. Yo por ejemplo uso &lt;em&gt;Source Code Pro&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;instalar-oh-my-git&#34;&gt;Instalar Oh My Git&lt;/h2&gt;
+&lt;p&gt;Ya solo resta instalar Oh My Git, es tan simple como descargar el repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/arialdomartini/oh-my-git.git ~/.oh-my-git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y añadir a nuestro &lt;code&gt;.bash_aliases&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.oh-my-git/prompt.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, al meternos en una carpeta con un repositorio git dentro, deberíamos ver lo siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;volver-a-nuestro-prompt-por-defecto&#34;&gt;Volver a nuestro prompt por defecto&lt;/h2&gt;
+&lt;p&gt;Si cuando nos salgamos del repositorio queremos volver a nuestro &lt;em&gt;prompt&lt;/em&gt;, el que elegimos en &lt;em&gt;Rainbow Bash&lt;/em&gt; por ejemplo, basta con modificar &lt;code&gt;bashrc&lt;/code&gt; o &lt;code&gt;bash_aliases&lt;/code&gt;, en función de dónde tengáis vuestra configuración, al lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; ~/.oh-my-git/prompt.sh
+
+&lt;span class=&#34;nv&#34;&gt;RBW_PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.rainbow-bash
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$RBW_PATH&lt;/span&gt;/init.sh
+
+&lt;span class=&#34;nv&#34;&gt;PS1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$RBW_THEME_SIMPLE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Tema elegido de Rainbow Bash&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;omg_ungit_prompt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PS1&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# Volvemos al prompt original si no estamos en un repo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;A mi personalmente me resulta muy útil esta configuración de &lt;em&gt;prompts&lt;/em&gt;, espero que a vosotros también. No dudéis en comentar!&lt;/p&gt;
+&lt;p&gt;Un saludo.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Oh My Git&lt;/em&gt; | &lt;a href=&#34;https://github.com/arialdomartini/oh-my-git&#34; title=&#34;Repo Oh my Git&#34;&gt;github.com/arialdomartini/oh-my-git&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Rainbox Bash&lt;/em&gt; | &lt;a href=&#34;https://github.com/slok/rainbow-bash&#34; title=&#34;Repositorio Rainbox Bash&#34;&gt;github.com/slok/rainbow-bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Repositorio Awesome Terminal Fonts&lt;/em&gt; | &lt;a href=&#34;https://github.com/gabrielelana/awesome-terminal-fonts&#34; title=&#34;Repositorio Awesome Terminal Fonts&#34;&gt;github.com/gabrielelana/awesome-terminal-fonts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Gource: Visualizar la evolución de un repositorio Git</title>
+            <link>https://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/</guid>
+            <description>&lt;p&gt;Hace unas semanas hablé de &lt;a href=&#34;https://elbauldelprogramador.com/visualiza-las-visitas-a-tu-web-al-estilo-pong-con-logstalgia/&#34; title=&#34;Visualiza las visitas a tu web al estilo Pong con Logstalgia&#34;&gt;logstalgia&lt;/a&gt;, que visualiza las visitas a una web en forma del juego Pong. Hoy hablo de &lt;em&gt;Gource&lt;/em&gt;, herramienta similar que visualiza la evolución de un repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalación-de-gource&#34;&gt;Instalación de Gource&lt;/h1&gt;
+&lt;p&gt;Para instalar el programa basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# aptitude install gource&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez instalado, basta con ejecutar el programa y pasarle la ruta a la carpeta &lt;em&gt;.git&lt;/em&gt; del repositorio que queramos visualizar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gource /ruta/a/.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El resultado es algo como esto:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Al pasar el ratón por la parte inferior, aparece un recuadro en el que podremos seleccionar la fecha a visualizar.&lt;/p&gt;
+&lt;p&gt;Es posible grabar en vídeo la visualización de &lt;em&gt;gource&lt;/em&gt; con el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gource ruta/a/.git/  -1280x1024 --max-files &lt;span class=&#34;m&#34;&gt;99999&lt;/span&gt; --disable-progress --stop-at-end &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;       --user-scale &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; --highlight-all-users --output-ppm-stream - &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; ffmpeg -y -b 3000K -r &lt;span class=&#34;m&#34;&gt;60&lt;/span&gt; -f image2pipe -vcodec ppm -i - -vcodec libx264 gource.mp4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-1280×1024 es la resolución.&lt;/li&gt;
+&lt;li&gt;–max-files 99999 Límite de archivos a mostrar en la animación.&lt;/li&gt;
+&lt;li&gt;–disable-progress Desabilita la barra para seleccionar fecha que mencioné.&lt;/li&gt;
+&lt;li&gt;–stop-at-end Cierra la gource al terminar la animación.&lt;/li&gt;
+&lt;li&gt;–user-scale 2 Escala de los iconos que representan a los desarrolladores&lt;/li&gt;
+&lt;li&gt;–highlight-all-users Muestra siempre el nombre del desarrollador&lt;/li&gt;
+&lt;li&gt;–output-ppm-stream – Envia la salida de gource a un archivo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A continuación os dejo un vídeo de uno de mis repositorios:&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>La generación GitHub: Por qué ahora todos estamos en el opensource</title>
+            <link>https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/la-generacion-github-por-que-ahora-todos-estamos-en-el-opensource/</guid>
+            <description>&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;&lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; se desarrolló con la idea de ser una plataforma colaborativa de &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Categoría OpenSource&#34;&gt;software libre&lt;/a&gt;, pero se ha convertido en mucho más que código. En la actualidad lo usan artistas, constructores, compañías enteras… y ciudades.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Cualquiera puede ahora cambiar los datos de un mapa cuando se construyen nuevos caminos para montar en bici, cuando las carreteras estén en construcción y cuando se hagan nuevos edificios” &lt;!-- raw HTML omitted --&gt;anunció&lt;!-- raw HTML omitted --&gt; hace poco la ciudad de Chicago, que ahora se encuentra en &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;. Ahora la gente &lt;!-- raw HTML omitted --&gt;administra las restauraciones de sus casas&lt;!-- raw HTML omitted --&gt; en &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;. Hace poco un bufete de abogados anunció también que está publicando documentos legales para la financiación en fases iniciales en &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;. Alguien además &lt;!-- raw HTML omitted --&gt;publicó&lt;!-- raw HTML omitted --&gt; el año pasado la totalidad de las leyes Alemanas en Github. (Quizá no sea muy sorprendente que tenga unas 17 peticiones de pull abiertas para realizar cambios). Y por supuesto, &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; lo usan programadores y desarrolladores que &lt;!-- raw HTML omitted --&gt;vuelan Drones AR&lt;!-- raw HTML omitted --&gt; con &lt;strong&gt;Node.js&lt;/strong&gt; o crean sitios webs con &lt;strong&gt;jQuery&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;, según cree el autor original de artículo, está haciendo al software libre lo que internet le hizo a la industria: &lt;strong&gt;Está creando un hueco cultural entre la generación anterior de grandes proyectos de software libre y una nueva, más aficionada cultura del software libre de hoy día.&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;la-revolución-no-será-centralizada&#34;&gt;La revolución no será centralizada&lt;/h1&gt;
+&lt;p&gt;Cuando la gente oye “Open” source (ó Software “libre”), piensan en algo democrático, distribuido e igualitario: Gente construyendo algo juntas para que el resto lo use.&lt;/p&gt;
+&lt;p&gt;Pero en realidad ese no &lt;!-- raw HTML omitted --&gt;ha sido el caso&lt;!-- raw HTML omitted --&gt;. La gran mayoria del software libre ha sido creado y mantenido por gente de clases privilegiadas y protegidas. — desarrolladores profesionales — que interactuaban con otros desarrolladores muy parecidos a ellos (Aunque lo bastante diferentes como para tener una discusión con ellos).&lt;/p&gt;
+&lt;p&gt;Antes de &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;, el autor pasaba mucho tiempo pensando y hablando sobre cómo sería la forma más adecuada de administrar proyectos de software libre, ya que el coste de la coordinación de un proyecto es bastante importante. Tan importante, de hecho, que cuando un proyecto tenía éxito y conseguía reunir una comunidad importante, tenía más sentido seguir desarrollando el proyecto que fracturarlo en proyectos más pequeños. Pero conforme el proyecto se vuelve más grande y complejo, más difícil se hace el colaborar. Así que un grupo de miembros — o “committers” — se encargaban de la gestión y la producción del proyecto. Esto daba lugar a menudo a diferencias entre los que producen el proyecto y los que lo usan.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; soluciona este problema haciendo del software libre algo mucho más descentralizado. Se convierte en algo que trata menos sobre el proyecto en sí, y más sobre los individuos que participan en dicho proyecto.&lt;/p&gt;
+&lt;p&gt;El flujo de trabajo usando &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; es mucho más personal. Una persona (Yo soy &lt;!-- raw HTML omitted --&gt;github.com/elbaulp&lt;!-- raw HTML omitted --&gt; y el autor del artículo original es &lt;!-- raw HTML omitted --&gt;github.com/mikeal&lt;!-- raw HTML omitted --&gt;) tiene una cuenta, y todo lo que publica se crear bajo su perfil. Si alguien quiere agregar algo a su código, ya sea para arreglar algo o mejorar alguna funcionalidad, simplemente hacen un &lt;strong&gt;“fork”&lt;/strong&gt; y copian el proyecto en su directorio personal.&lt;/p&gt;
+&lt;p&gt;Con este sistema de trabajo se incentiva a la gente a colaborar: Fomenta a los desarrolladores a que arreglen cosas. También proporciona a todos los usuarios una identidad en la nueva cultura del software libre; &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; es el número uno en esto. De hecho, muchas compañías contratan a gente a través de github, basandose en su perfil, y para algunas, es imprescindible saber trabajar con git.&lt;/p&gt;
+&lt;p&gt;Lo realmente útil y bueno de este sistema es que cualquiera puede convertirse en usuario de otro proyecto ayudando a desarrollarlo, y al contrario, uno mismo puede beneficiarse de colaboraciones de otras personas en proyectos que hayas creado tú.&lt;/p&gt;
+&lt;h1 id=&#34;des-centralización-como-democracia&#34;&gt;Des-centralización como democracia&lt;/h1&gt;
+&lt;p&gt;La primera versión de &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; hizo una cosa muy bien: Facilitar mucho la publicación de código. Esto fue suficiente para que muchos proyectos prestigiosos, incluyendo Ruby on Rails, migraran su código casi inmediatamente a &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Sin embargo, luego pasó algo más interesante aún: La gente empezó a publicar prácticamente cualquier cosa en &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt;… pushear código (Si me permitís inventarme el palabro) se convirtió en una rutina como el twittear. Redujo las barreras para entrar ye hizo mucho más fácil el coordinar y contribuir al software libre, &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; amplió la producción de código a usuarios ocasionales.&lt;/p&gt;
+&lt;p&gt;Hoy día, un vasto panorama del software simple y comprensible es accesible a una clase de personas creativas que no tienen los conocimientos suficientes como para participar en los grandes proyectos de software libre del pasado.&lt;/p&gt;
+&lt;p&gt;Ésta confusión de relaciones entre productores, contribuidores y consumidores valora naturalmente proyectos más pequeños y fáciles de entender. — y ha dado lugar a una larga cola de contribuciones. En septiembre de 2012, por ejemplo, la mitad de los usuarios activos en &lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; que enviaron (&lt;em&gt;pushed&lt;/em&gt;) cambios enviaron menos de 5 cambios, con el 22% (sobre unas 44000 personas) enviando un único cambio.&lt;/p&gt;
+&lt;p&gt;Obviamente, ésta afición al software libre tiene grandes ventajas.&lt;/p&gt;
+&lt;h1 id=&#34;haciendo-las-cosas-más-fáciles-de-usar&#34;&gt;Haciendo las cosas más fáciles de usar&lt;/h1&gt;
+&lt;p&gt;Uno de los mayores problemas que han tenido siempre los programas de software libre ha sido el &lt;em&gt;“Fit and finish”&lt;/em&gt;. Mala documentación, diseño de la web, y la usabilidad en general ha sido pobre. — Especialmente en comparación con muchas contrapartidas propietarias.&lt;/p&gt;
+&lt;p&gt;Pero ahora, siendo tan fácil realizar colaboraciones, usuarios menos técnicos ven estas plataformas como lugares fáciles en los que poder mejorar en el que recaen. (Esto significa pequeñas cosas como corregir errores crípticos por mensajes más humanos, por ejemplo)&lt;/p&gt;
+&lt;p&gt;En el nuevo software libre, la gente quiere usar la tecnología sin tener que convertirse en expertos en ella. La facilidad de uso se valora más que nunca.&lt;/p&gt;
+&lt;h1 id=&#34;prevenir-el-exceso-de-ingeniería&#34;&gt;Prevenir el exceso de ingeniería&lt;/h1&gt;
+&lt;p&gt;A los ingenieros les gustan los desafíos y las soluciones a ellos se vuelven más inteligentes conforme incrementan las posibilidades de resolverlos. Eso estaba bien cuando los consumidores de esas soluciones eran mentes muy técnicas como los propios ingenieros que disfrutaban resolviendo viejos problemas.&lt;/p&gt;
+&lt;p&gt;Pero esto ha cambiado con los aficionados, una vez que el problema está resuelto raramente volverá a examinarlo. Lo cual fuerza a los desarrolladores a crear soluciones simples que hagan de los problemas complejos algo sencillo de entender.&lt;/p&gt;
+&lt;h1 id=&#34;apoyando-un-ecosistema-más-amplio&#34;&gt;Apoyando un ecosistema más amplio&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/em&gt; ha dado poder a una nueva generación de personas para que colaboren, creen y produzcan. Muchos desarrolladores lamentarán la pérdida de las antiguas normas — como el lugar de los &lt;em&gt;commiteadores&lt;/em&gt; o la eterna lucha sobre qué licencia escoger — pero el futuro ya está en manos de la nueva generación.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Esto no es solo una herramienta: estamos presenciando el nacimiento de una nueva cultura&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;The GitHub generation: why we&amp;rsquo;re all in open source now&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Wired.co.uk&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Vídeo - Evolución Del Blog Desde El Punto De Vista De Git</title>
+            <link>https://elbauldelprogramador.com/video-evolucion-del-blog-desde-el-punto-de-vista-de-git/</link>
+            <pubDate>Wed, 16 Dec 2015 14:51:46 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/video-evolucion-del-blog-desde-el-punto-de-vista-de-git/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hace algún tiempo que hablé del programa &lt;em&gt;Gource&lt;/em&gt;, una herramienta que permite visualizar la evolución y contribuciones de un proyecto git. En su día expliqué en un breve &lt;a href=&#34;https://elbauldelprogramador.com/gource-visualizar-la-evolucion-de-un-repositorio-git/&#34; title=&#34;Ejemplo de Gource&#34;&gt;tutorial cómo usar gource&lt;/a&gt;. Hoy se me ocurrió ejecutar este programa sobre el repositorio que almacena este blog. El resultado me pareció curioso y quise grabarlo en vídeo para enseñároslo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;La plantilla de este blog es obra de &lt;!-- raw HTML omitted --&gt;Minimal Mistakes&lt;!-- raw HTML omitted --&gt;, yo simplemente adapté dicha plantilla a mi blog.&lt;/p&gt;
+&lt;h1 id=&#34;visualización-del-repositorio-git-con-gource&#34;&gt;Visualización del repositorio git con gource&lt;/h1&gt;
+&lt;p&gt;Sin más dilaciones, aquí el vídeo, a la izquierda, en rojo, se ven los ficheros correspondientes a los artículos. A la derecha, en azul, las imágenes. Espero que os guste.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Git: Chuleta de Comandos</title>
+            <link>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</link>
+            <pubDate>Sun, 13 Dec 2015 18:10:12 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA:&lt;/strong&gt; Puede que te interese descargar este &lt;!-- raw HTML omitted --&gt;manual para git&lt;!-- raw HTML omitted --&gt;. &lt;em&gt;Si rellenas el formulario correctamente nos darán $1.5 de comisión, una buena forma de mostrar tu apoyo al blog ;-)&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Una de mis tareas pendientes era aprender GIT decentemente. Así que empecé a leer &lt;!-- raw HTML omitted --&gt;Pro Git&lt;!-- raw HTML omitted --&gt;, libro que recomiendo a todo desarrollador, disponible en &lt;!-- raw HTML omitted --&gt;PDF&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;EPUB&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;MOBI&lt;!-- raw HTML omitted --&gt; y &lt;!-- raw HTML omitted --&gt;versión en papel&lt;!-- raw HTML omitted --&gt;. En la página del libro puedes encontrar versiones en distintos idiomas. Conforme he ido leyendolo, he anotado los comandos. Como resultado he creado esta especie de chuleta de comandos git que comparto hoy con vosotros. Espero que os resulte útil.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;chuleta-de-comandos-git&#34;&gt;Chuleta de comandos git&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git help &amp;lt;command&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone &amp;lt;uri&amp;gt; namedir&lt;/code&gt; # clona usando como nombre de directorio namedir.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add &amp;lt;dir&amp;gt;&lt;/code&gt; # añade recursivamente todos los archivos del dir.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git diff --staged&lt;/code&gt;  # compares staged changes with last commit&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -v&lt;/code&gt; # muestra el diff en el editor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -a -m &amp;quot;mensaje&amp;quot;&lt;/code&gt;  # automatically stage tracked files. No hace falta git add&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rm --cached &amp;lt;file or regexp&amp;gt;&lt;/code&gt;   # Git no realiza un seguimiento del archivo, pero los deja en el directorio de trabajo. Útil cuando se olvida añadir archivos al .gitignore y ya hemos agregado dichos archivos al repositorio.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rm &amp;lt;file&amp;gt;&lt;/code&gt;   # borrarlos con git siempre.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rm -f &amp;lt;file&amp;gt;&lt;/code&gt;   #  si ya está modificado y en el index.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git mv &amp;lt;file&amp;gt; &amp;lt;renamed_file&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gitk&lt;/code&gt;  #  tcl/tk. Herramienta gráfica para git&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit --amend&lt;/code&gt;  # Modificar el mensaje del último commit&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;   #  to unstage&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;   #  Descartar cambios en el directorio de trabajo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;añadir-archivos&#34;&gt;AÑADIR ARCHIVOS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add -i&lt;/code&gt;  # interactive staggin&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git add -p&lt;/code&gt;  # crea patch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;stash&#34;&gt;STASH&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git stash&lt;/code&gt;  # guarda el estado en una pila y limpia el directorio para poder cambiar de rama&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git stash list&lt;/code&gt;  # muestra la pila&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git stash apply&lt;/code&gt;  #  vuelve al estado original del dir. Stash{n} especifica uno concreto Y &amp;ndash;index reaplica los cambios stagged&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git stash pop&lt;/code&gt;  #  elimina el primero en la pila. O drop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;logs&#34;&gt;LOGS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git log -p -2&lt;/code&gt;  #  Muestra 2 últimos commits con diff&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --stat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --pretty &amp;lt;short|full|fuller&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --pretty=format:&amp;quot;%h - %an, %ar : %s&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --pretty=format;&amp;quot;%h %s&amp;quot; --graph&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --since=2.weeks&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log &amp;lt;branch&amp;gt; --not master&lt;/code&gt;  # Muestra commit de &lt;code&gt;&amp;lt;branch&amp;gt;&lt;/code&gt; sin incluir los de master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --abbrev-commit --pretty=oneline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git diff master...contrib&lt;/code&gt;  # Muestra solo el trabajo que la rama contrib actual ha introducido desde su antecesor común con master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log &amp;lt;branch1&amp;gt;..&amp;lt;branch2&amp;gt;&lt;/code&gt;   # Commits de branch2 que no están en branch1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log origin/master..master&lt;/code&gt;  # Muestra qué commits se van a enviar al servidor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log origin/master..&lt;/code&gt;  # Igual que el anterior. Se asume master o HEAD&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log refA refB --not refC&lt;/code&gt;  #  commits en refA y refB que no están en refC&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log master...experiment&lt;/code&gt;  # commits de master o experiment, pero sin ser comunes. Con &amp;ndash;left-right indica a qué rama pertenece cada uno&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;remotes--repos-en-internet&#34;&gt;REMOTES # repos en internet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git remote -v&lt;/code&gt;  #  lista los repos remotos&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote add [shortname] [url]&lt;/code&gt;  #  crea nuevo remote, es posible descargar el contenido de ese repo con git fetch [shortname]. Master branch en [shortcode]/master&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git fetch &amp;lt;remote&amp;gt;&lt;/code&gt;   #  descarga trabajo nuevo a máquina local, no sobreescribe nada tuyo. ( git pull sí hace merge automaticamente si se esta realizando un seguimiento de esa branch)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push [remote-name] [branch-name]&lt;/code&gt;  #  sii nadie ha hecho push antes&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote show [remote-name]&lt;/code&gt;  #  inspecciona remote.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote rename &amp;lt;old-name&amp;gt; &amp;lt;new-name&amp;gt;&lt;/code&gt;   #  también renombra branches: quedaría &lt;code&gt;&amp;lt;new-name&amp;gt;/master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote rm &amp;lt;remote-name&amp;gt;&lt;/code&gt;   #  p.e si el contribuidor ya no contribuye más&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;añadir-varios-repositorios-remotos&#34;&gt;Añadir varios repositorios remotos&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git remote add bitbucket &amp;lt;url repositorio&amp;gt;&lt;/code&gt;  #  Añadir un nuevo repositorio remoto con el nombre deseado. Por ejemplo si ya tenemos uno en github y queremos añadir otro para bitbucket&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u bitbucket -all&lt;/code&gt;  #  Subir el proyecto a bitbucket. A partir de ahora se puede seleccionar a qué repo publicar con &lt;code&gt;git push nombre_repo_remoto&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tagging--marcan-puntos-importantes-en-la-histtoria-del-repo--releases-&#34;&gt;TAGGING # marcan puntos importantes en la histtoria del repo ( releases )&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git tag&lt;/code&gt;  #  muestra las etiquetas actuales&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -l &#39;v1.4.2.*&#39;&lt;/code&gt;   #  acepta regex&lt;/li&gt;
+&lt;li&gt;Dos tipos de tag:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; : puntero a commit ( branch que no cambia )&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Annotated&lt;/strong&gt; : se almacenan como objetos en la db, con checksum, nombre del creador, email, fecha, mensaje, posibilidad de firmarla con &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GPG&lt;/a&gt;. ( recomendada )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tagname&amp;gt; -m &#39;mensaje&#39;&lt;/code&gt;   #  annotated tag&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  muestra información asociada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -s &amp;lt;tag-name&amp;gt; -m &#39;message&#39;&lt;/code&gt;   #  la firma con gpg&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  lightweight tag&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -v &amp;lt;tag-name&amp;gt;&lt;/code&gt;   #  verifica tags firmadas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -a &amp;lt;tag-name&amp;gt; [commit-chksum]&lt;/code&gt;  #  crea tag para commit con dicho chksum&lt;/li&gt;
+&lt;li&gt;Por defecto no se transfieren los tags, para subirlos al servidor:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git push origin [tag-name]&lt;/code&gt;  #  una sola&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin --tags&lt;/code&gt;  #  Enviar todas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Para usar GPG y firmar tags, hay que subir la clave pública al repositorio:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;gpg --list-keys&lt;/code&gt;  # Coges la id pública&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gpg -a --export &amp;lt;id&amp;gt; | git hash-object -w --stdin&lt;/code&gt;  # Copia el SHA-1 devuelto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -a maintainer-gpg-pub &amp;lt;SHA-1&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push --tags&lt;/code&gt;  # Comparte la clave con todos los usuarios&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show maintainer-gpg-pub | gpg --import&lt;/code&gt;  # Cada usuario importa la clave así&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show &amp;lt;tag&amp;gt;&lt;/code&gt;   # Devuelve más información sobre la etiqueta&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git tag -d nombre_tag&lt;/code&gt;  #  eliminar la etiqueta&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin :refs/tags/nombre_tag&lt;/code&gt;  #  Eliminar la etiqueta del repositorio remoto.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;branch&#34;&gt;BRANCH&lt;/h2&gt;
+&lt;p&gt;Las ramas simplememte son punteros a distintos snapshots&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git branch &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea rama. Puntero al commit actual&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # cambiar a la rama especificada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b &amp;lt;nombre-rama&amp;gt;&lt;/code&gt;   # crea y cambia de rama&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge &amp;lt;rama&amp;gt;&lt;/code&gt;   #  Mezcla la rama actual con &lt;code&gt;&amp;lt;rama&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch -d &amp;lt;rama&amp;gt;&lt;/code&gt;   # elimina la rama&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin --delete &amp;lt;branchName&amp;gt;&lt;/code&gt;   #  Elimina una rama del servidor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git mergetool&lt;/code&gt;  # Herramienta gráfica para resolver conflictos&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch&lt;/code&gt;  #  lista ramas&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch -v&lt;/code&gt;  #  lista ramas mostrando último commit&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch --merged&lt;/code&gt;  # lista ramas que han sido mezcladas con la actual. Si no tienen un *, pueden borrarse, ya que significa que se han incorporado los cambios en la rama actual.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git branch --no-merged&lt;/code&gt;  # lista ramas que no han sido incorporadas a la actual.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;remote-branches&#34;&gt;REMOTE BRANCHES&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Descarga el contenido del servidor&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;   # Las ramas no se suben por defecto, has de subirlas explícitamente&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;:&amp;lt;nuevoNombre&amp;gt;&lt;/code&gt;   # Igual que la de arriba, pero en el servidor se llama a la rama con nuevoNombre en lugar de branch&lt;/li&gt;
+&lt;li&gt;Cuando se hace un git fetch que trae consigo nuevas ramas remotas, no se disponen de ellas localmente, solo se dispone de un puntero a la rama remota que no es editable. Para poder trabajar sobre esa rama, es necesario crearla Por ejemplo:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;  #  Tras ejecutarlo, notamos que se ha creado una rama nueva (rama_nueva)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b rama_nueva origin/rama_nueva&lt;/code&gt;  #  Crea una rama local a partir de la remota&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge origin/nueva_rama&lt;/code&gt;  #  Equivalente a la de arriba, pero sin establecer el tracking a la rama&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push [remotename] :[branch]&lt;/code&gt;  #  elimina una rama remota&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push [remotename] [localbranch]:[remotebranch]&lt;/code&gt;  # La rama en el servidor tiene distinto nombre a la local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tracking-branches&#34;&gt;TRACKING BRANCHES&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git checkout --track origin/rama&lt;/code&gt;  # Equivalente a -b rama_nueva origin/rama_nueva&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git chekout -b &amp;lt;nuevo_nombre&amp;gt; origin/&amp;lt;rama&amp;gt;&lt;/code&gt;   #  Establece un nombre distinto para la rama local&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rebase&#34;&gt;REBASE&lt;/h2&gt;
+&lt;p&gt;Rebase y merge se diferencian en que merge mezcla dos puntos finales de dos snapshots y rebase aplica cada uno de los cambios a la rama en la que se hace el rebase. No lo uses en repos publicos con mas colaboradores, porque todos los demas tendrán que hacer re-merges&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git checkout &amp;lt;una rama&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase master&lt;/code&gt;  #  aplica todos los cambios de &lt;code&gt;&amp;lt;una rama&amp;gt;&lt;/code&gt; a master&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git merge master&lt;/code&gt;  # hay que hacer un merge de tipo fast forward&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tenemos 3 ramas, master, client y server, en server y client tenemos varios commit y queremos mezclar client en master pero dejar server intacta:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git rebase --onto master server client&lt;/code&gt;  #  adivina los patches del antecesor común de las ramas server y client y aplica los cambios a master.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge client&lt;/code&gt;  #  fast-forward. Client y master en el mismo snapshot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Si se quiere aplicar también los cambios de server, basta con:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git rebase master server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge server&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase [basebranch] [topicbranch]&lt;/code&gt;  #  sintaxis de rebase&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git rebase -i&lt;/code&gt;  #  Rebase interactivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;servidor&#34;&gt;SERVIDOR&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git instawew&lt;/code&gt;  #  Muestra una interfaz web con los commits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;generar-un-número-de-compilación-build-number&#34;&gt;GENERAR UN NÚMERO DE COMPILACIÓN (BUILD NUMBER)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git describe master&lt;/code&gt;  # Solo funciona para tags creadas con -s ó -a&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;preparar-una-release&#34;&gt;PREPARAR UNA RELEASE&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; | gzip &amp;gt; $(git describe master).tar.gz&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git archive master --prefix=&amp;quot;project/&amp;quot; --format=zip | $(git describe master).zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;test/ export-ignore  # Al crear el tarball no incluye el directorio test/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;generar-un-changelog&#34;&gt;GENERAR UN CHANGELOG&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git shortlog --no-merges master --not &amp;lt;tag&amp;gt;&lt;/code&gt;   # Recopila todos los commits desde &lt;code&gt;&amp;lt;tag&amp;gt;&lt;/code&gt; y los agrupa por autor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;recomendaciones&#34;&gt;RECOMENDACIONES&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Siempre hay que hacer pull antes de push en caso de que alguien haya subido cambios al servidor. Ejemplo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;User1 clona el repo y hace cambios, realiza un commit&lt;/li&gt;
+&lt;li&gt;User2 clona el repo, hace cambios, hace commit y sube los cambios con push&lt;/li&gt;
+&lt;li&gt;User1 intenta hacer push, pero será rechazado con: &lt;!-- raw HTML omitted --&gt;! [rejected] master -&amp;gt; master (non-fast forward)&lt;!-- raw HTML omitted --&gt;. No puede subir los cambios hasta que no mezcle el trabajo que ha subido User2. Así que debe hacer lo siguiente:
+&lt;ul&gt;
+&lt;li&gt;git fetch origin&lt;/li&gt;
+&lt;li&gt;git merge origin/master&lt;/li&gt;
+&lt;li&gt;git push origin master&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mientras User1 hacía estas operaciones, User2 ha creado una rama &lt;!-- raw HTML omitted --&gt;issue54&lt;!-- raw HTML omitted --&gt; y realizado 3 commits, sin haber descargado los cambios de User1. Para sincronizar el trabajo, User2 debe hacer:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log --no-merges origin/master ^issue54&lt;/code&gt;  # Observa qué cambios ha hecho User1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge issue54 &amp;amp;&amp;amp; git merge origin/master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git diff --check&lt;/code&gt;  # Antes de hacer commit, ejecutar esto para ver si hemos añadido demasiados espacios que puedan causar problemas a los demás.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Commits pequeños que se centren en resolver un problema, no commits con grandes cambios.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git add --patch&lt;/code&gt;  # En caso de hacer varios cambios en el mismo archivo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;El mensaje del commit debe tener la estructura siguiente: Una linea de no más de 50 caracteres, seguida de otra línea en blanco seguida de una descripción completa del commit.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pasos-a-seguir-para-contribuir-a-proyecyos-ajenos-mediante-fork&#34;&gt;PASOS A SEGUIR PARA CONTRIBUIR A PROYECYOS AJENOS, MEDIANTE FORK&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git clone &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b featureA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote add myFork &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push myFork featureA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git request-pull origin/master myFork&lt;/code&gt;  # enviar la salida por mail al propietario del proyecto, o hacer click en pull request.&lt;/li&gt;
+&lt;li&gt;Buena practica tener siempre una rama master que apunte a origin/master, para estar siempre actualizado con los ultimos cambios en el proyecto original.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Separar cada trabajo realizado en topic branch, que trackeen a origin/master&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b featureB origin/master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(Hacer cambios)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push myFork featureB&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(Contactar con el propietario del proyecto)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git fetch origin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Otro ejemplo, el propietario del proyecto quiere aceptar un pull tuyo, pero quiere que hagas algunos cambios, aprovechas la oportunidad y mueves tu trabajo para basarlo en el contenido actual de la rama origin/master, aplastas los cambios en &lt;strong&gt;featureB&lt;/strong&gt;, resuelves conflictos, y haces push:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b featureBv2 origin/master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git merge --no-commit --squash featureB&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(cambiar la implementacion)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push myFork featureBv2&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--squash&lt;/code&gt; coge todo el trabajo de la rama mezclada y la aplasta en un no-merge commit encima de la rama en la que estas. &amp;ndash;no-commit no registra el commit automaticamente. Así puedes realizar todos los cambios necesarios y luego hacer el commit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reflog&#34;&gt;REFLOG&lt;/h2&gt;
+&lt;p&gt;En segundo plano, git crea un log de a donde han estado referenciando HEAD y el resto de ramas en los últimos meses.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git reflog&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show HEAD@{n}&lt;/code&gt;  # Muestra información sobre el reflog número n&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log -g master&lt;/code&gt;  # Muestra el log formateado como la salida de reflog&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show master@{yesterday}&lt;/code&gt;  # Muestra los commits de ayer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;utilidades&#34;&gt;UTILIDADES&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git show &amp;lt;short-SHA-1&amp;gt;&lt;/code&gt;   # Es posible ver un commit pasando la versión abreviada del SHA-1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rev-parse &amp;lt;branch&amp;gt;&lt;/code&gt;   # A qué SHA-1 apunta una rama&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show HEAD^&lt;/code&gt;  #  Muestra commit padre&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show HEAD^2&lt;/code&gt;  # Muestra segundo padre&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git show HEAD~2&lt;/code&gt;  #  El primer padre del primer padre&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git filter-branch --tree-filter &#39;rm -f &amp;lt;file&amp;gt;&#39; HEAD&lt;/code&gt;  # elimina el archivo de todos los commits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;depuración&#34;&gt;DEPURACIÓN&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;File anotation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git blame -L 12,22 &amp;lt;archivo&amp;gt;&lt;/code&gt;   #  muestra cuando y por quién se modificaron de la linea 12 a la 22&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git blame -C -L 141,153 &amp;lt;file&amp;gt;&lt;/code&gt;   #  cuando renombras un archivo o lo refactorizas en varios, muestra de donde vino originalmente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Búsqueda Binaria: Cuando hay un bug que no puedes localizar, usas bisect para dererminar en qué commit empezó a producirse el bug.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git bisect start&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git bisect bad&lt;/code&gt;  #  marcas el commit actual como roto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git bisect good [commit bueno]&lt;/code&gt;  #  último commit conocido que funcionaba&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ahora irá preguntando hasta que encuentres el commit culpable. Si esta bien indicas git bisect good. De lo contrario git bisect bad. Al terminar hay que resetear.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git bisect reset&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;submodulos&#34;&gt;SUBMODULOS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;git submodule add &amp;lt;url&amp;gt;&lt;/code&gt;   #  crea un directorio que contiene el comtenido de otro proyecto.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Clonar un repo con submodulos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git clone url&lt;/li&gt;
+&lt;li&gt;git submodule init&lt;/li&gt;
+&lt;li&gt;git submodule update&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configuration&#34;&gt;CONFIGURATION&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global &amp;lt;opcion&amp;gt; &amp;lt;valor&amp;gt;&lt;/code&gt;   # global para usuario, system todos y sin nada, especifico para el repo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config {key}&lt;/code&gt;  #  muestra el valor de key&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.editor &amp;lt;editor&amp;gt;&lt;/code&gt;   # cambia el editor por defecto&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global commit.template $HOME/.gitmessage.txt&lt;/code&gt;  # plantilla para commits&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.pager &#39;more|less&#39;&lt;/code&gt;   # paginador por defecto, puedes usar cualquiera&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global user.signingkey &amp;lt;gpg-key-id&amp;gt;&lt;/code&gt;   #  clave gpg para firmar tags&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.excludesfile &amp;lt;file&amp;gt;&lt;/code&gt;   # como gitignore&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global help.autocorrect 1&lt;/code&gt;  #  autocorrige cuando se escribe un comando incorrecto. Solo en git &amp;gt;= 1.6.1&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global color.ui true&lt;/code&gt;  #  colorea la salida de git. Valores: true|false|always&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.autocrlf input&lt;/code&gt;  # para que usuarios linux no tengan problemas con los retornos de carro de windows&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.autocrlf true&lt;/code&gt;  # para usuarios de windows&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global core.whitespace trailing-space, space-before-tab, indent-with-non-tab, cr-at-eol&lt;/code&gt;  #  respectivamente: busca espacios al final de línea, busca espacios al inicio de tabulación, busca líneas con 8 o más espacios en lugar de tabulaciones, acepta retornos de carro&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git apply --whitespace=warn &amp;lt;patch&amp;gt;&lt;/code&gt;   #  advierte de errores de espacios antes de aplicar el patch. Con &amp;ndash;whitespace=fix intenta arreglarlos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;git-attributes&#34;&gt;GIT ATTRIBUTES&lt;/h2&gt;
+&lt;p&gt;Archivo en .gitattributes en el directorio de trabajo o en .git/info/attributes para no committearlo&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Identificando archivos binarios&lt;/strong&gt;
+Muchos archivos son para uso local y no aportan información al repositorio. Para decirle a git qué archivos son binarios hacer añadir al archivo atributes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;nombre archivo o regexp&amp;gt; -crlf -diff&lt;/code&gt;  #  git no intentará corregir problemas de crlf ni mostrará los cambios con diff. En versiones &amp;gt;= 1.6 se pueden sustituir estos dos valores por la macro binary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Diffing binary files&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En ocasiones es útil mostrar diffs de archivos binarios, como una archivo de word:&lt;/p&gt;
+&lt;p&gt;*&lt;strong&gt;.doc diff=word&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tras-esto-hay-que-definir-el-filtro-word-para-que-git-convierta-archivos-word-a-texto&#34;&gt;tras esto hay que definir el filtro word para que git convierta archivos word a texto:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config diff.word.textconv strings&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Es posible hacer lo mismo para imágenes jpeg, es necesario instalar &lt;strong&gt;exiftool&lt;/strong&gt; para extraer los metadatos y luego hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; ‘*.jpeg &lt;span class=&#34;nv&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;exif’ » .gitattributes
+$ git config diff.exif.textconv exiftool
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Procesar archivos antes de hacer commit y antes de hacer checkout&lt;/strong&gt;: Es posible crear tus propios filtros para hacer sustitución. Estos filtros se llaman &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;smudge&lt;/a&gt; y &lt;strong&gt;clean&lt;/strong&gt;. Los puedes configurar para distintos directorios y luego escribir un script que procesará cada archivo antes de que sea &lt;a href=&#34;https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/&#34; title=&#34;Como Usar Los Filtros Smudge Y Clean en Git&#34;&gt;checkeado (smudge) y commiteado (clean)&lt;/a&gt;. Para ello,escribe en el .gitattributes: (En caso que quieras procesar código C)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*.c filter=indent&lt;/strong&gt; Luego:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config --global filter.indent.clean indent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config --global filter.indent.smudge cat&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Otro ejemplo interesante es la expansión de la palabra clave &lt;strong&gt;$Date$&lt;/strong&gt;. Para ello hay que escribir un script en ruby que recibe un archivo, encuentra la fecha de su último commit e inserta dicha fecha en el archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env ruby&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;STDIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sb&#34;&gt;`git log --pretty=format:&amp;#34;%ad&amp;#34; -1`&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;puts&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gsub&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$Date: &amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;last_date&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;to_s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Puedes nombrar este script como &lt;strong&gt;expand_date&lt;/strong&gt;. Crea un filtro en git, llamado dater y dile que use el script anterior:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git config filter.dater.smudge expand_date&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git config filter.dater.clean &#39;perl -pe &amp;quot;s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/&amp;quot;&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para usar el filtro, simplemente escribe la palabra clave en los archivos que desees:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;# $Date$&amp;#39;&lt;/span&gt; &amp;gt; date_test.txt
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;date.txt filter=dater&amp;#39;&lt;/span&gt; » .gitattributes
+
+git add date_test.txt .gitattributes
+git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Testing date expansion in Git&amp;#34;&lt;/span&gt;
+rm date_test.txt
+git checkout date_test.txt
+cat date_test.txt
+&lt;span class=&#34;nv&#34;&gt;$Date&lt;/span&gt;: Tue Apr &lt;span class=&#34;m&#34;&gt;21&lt;/span&gt; 07:26:52 &lt;span class=&#34;m&#34;&gt;2009&lt;/span&gt; -0700$
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;git-hooks&#34;&gt;GIT HOOKS&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34; title=&#34;Sincronización de proyectos en git con hooks (ganchos)&#34;&gt;Hay dos tipos&lt;/a&gt;, de lado cliente y servidor, se guardan en el directorio .git/hooks. Para activarlos basta con que sean ejecutables.&lt;/p&gt;
+&lt;h2 id=&#34;conceptos&#34;&gt;CONCEPTOS&lt;/h2&gt;
+&lt;p&gt;Fast forward: cuando se hace un merge y el commit de la rama a mezclar esta justo un commit adelantado, simplemente se hace apuntar la rama en la que se iba a mezclar al commit del merge.&lt;/p&gt;
+&lt;h2 id=&#34;gitignore&#34;&gt;GITIGNORE:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;*.a &lt;span class=&#34;c1&#34;&gt;# no .a files&lt;/span&gt;
+*!lib.a &lt;span class=&#34;c1&#34;&gt;# but do track lib.a, even though you’re ignoring .a files above&lt;/span&gt;
+/TODO &lt;span class=&#34;c1&#34;&gt;# only ignore the root TODO file, not subdir/TODO*&lt;/span&gt;
+build/ &lt;span class=&#34;c1&#34;&gt;# ignore all files in the build/ directory*&lt;/span&gt;
+doc/*.txt &lt;span class=&#34;c1&#34;&gt;# ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>21 alias útiles para git</title>
+            <link>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</link>
+            <pubDate>Tue, 01 Dec 2015 10:56:26 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/21-aliases-utiles-para-git/</guid>
+            <description>&lt;p&gt;Todo aquel que use &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Tutorial de Git&#34;&gt;git&lt;/a&gt; sabrá que en ocasiones es un poco tedioso escribir los comandos a ejecutar. Para ello existen los &lt;em&gt;alias&lt;/em&gt;, que nos permiten crearnos atajos a la hora de ejecutar un comando. En este artículo se recopilarán unos cuantos &lt;em&gt;alias&lt;/em&gt; útiles para el día a día. Os animo a que comentéis vuestros preferidos para ir aumentando la lista!. Comencemos.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;git-ec&#34;&gt;git ec&lt;/h1&gt;
+&lt;p&gt;Como no, el primer alias tenía que ser uno que nos permita editar la configuración de git rápidamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+git config --global alias.ec &lt;span class=&#34;s2&#34;&gt;&amp;#34;config --global -e&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, podremos abrir la configuración de git con nuestro editor por defecto con &lt;code&gt;git ec&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;El resto del artículo asumirá que se tiene la configuración abierta con un editor, los aliases se escribirán directamente en la sección &lt;code&gt;[alias]&lt;/code&gt; de dicho fichero.&lt;/p&gt;
+&lt;h1 id=&#34;git-co-br-cm-st&#34;&gt;git co, br, cm, st&lt;/h1&gt;
+&lt;p&gt;Estos &lt;em&gt;aliases&lt;/em&gt; pretenden más que facilitar la escritura de &lt;code&gt;checkout&lt;/code&gt;, &lt;code&gt;branch&lt;/code&gt;, &lt;code&gt;commit -am&lt;/code&gt; y &lt;code&gt;status&lt;/code&gt;. Básicamente los comandos que más uso.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
+&lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
+&lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
+&lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veamos ahora una serie de aliases que he extraido de &lt;!-- raw HTML omitted --&gt;haacked&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
+&lt;h1 id=&#34;actualizar-el-directorio-de-trabajo&#34;&gt;Actualizar el directorio de trabajo&lt;/h1&gt;
+&lt;p&gt;Para simplificar estos dos comandos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+git pull --rebase --prune
+git submodule update --init --recursive
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;en los que el primero obtiene los cambios desde el servidor, si se tienen commits locales, se ponen al principio de los descargados (&lt;code&gt;rebase&lt;/code&gt;), y con &lt;code&gt;prune&lt;/code&gt; se eliminan ramas que ya no existan en el servidor. El segundo simplemente actualiza recursivamente submódulos. El  &lt;em&gt;alias&lt;/em&gt; quedará:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este &lt;em&gt;alias&lt;/em&gt; es algo distinto, la exclamación indica que se va a ejecutar un comando en la &lt;em&gt;shell&lt;/em&gt;, es decir, podemos ejecutar cualquier comando, no solo de git. En este caso, se están ejecutando dos comandos git.&lt;/p&gt;
+&lt;h1 id=&#34;git-save-git-wip-git-undo-git-amend&#34;&gt;git save, git wip, git undo, git amend&lt;/h1&gt;
+&lt;p&gt;Estos dos &lt;em&gt;alias&lt;/em&gt; están destinados a cuando simplemente queremos guardar nuestros cambios, ya sea porque tenemos que irnos a hacer otras cosas, o simplemente no hemos acabado el trabajo y aún no tenemos un nombre para el commit adecuado. Con ellos, se guardan los cambios con un mensaje de commit &lt;code&gt;SAVEPOINT&lt;/code&gt; o &lt;code&gt;WIP&lt;/code&gt;, en función del alias que os guste más:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;#34;WIP&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez volvamos a trabajar, simplemente ejecutamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;undo&lt;/code&gt;, que elimina el último commit, pero deja intactos los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O si simplemente queremos modificar el mensaje del commit, usamos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;amend&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;resetear-el-directorio-de-trabajo-adecuadamente-git-wipe&#34;&gt;Resetear el directorio de trabajo adecuadamente, git wipe&lt;/h1&gt;
+&lt;p&gt;Cuantas veces hemos comenzado a trabajar o intentar añadir algo al código y al final lo único que hicimos fue ensuciar todo el directorio, montones de líneas de código sin ordenar etc. Lo mejor en estos casos es descartar todo y volver a empezar. Para ello es posible usar &lt;code&gt;git reset HEAD --hard&lt;/code&gt;, pero esto borrará todo, sin que quede constancia de lo que hicimos. Para descartar el código, pero que quede constancia de lo que hicimios, por si alguna vez nos hace falta, crearemos el &lt;em&gt;alias&lt;/em&gt; &lt;em&gt;wipe&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hace un commit de todo lo que hay en el directorio de trabajo para luego hacer un &lt;em&gt;hard reset&lt;/em&gt; y eliminar dicho commit. A pesar de ello, el commit seguirá ahí, en la historia del repositorio, aunque inalcanzable. Estos commits son un poco complejos de recuperar, pero al menos seguimos teniendo aquel trabajo del que no quedamos del todo convencidos. Quizá algún día recuerdes que necesitabas una línea de código que escribiste. Para recuperarlo hay que ejecutar &lt;code&gt;git reflog&lt;/code&gt; y buscar el SHA del commit que tenga como mensaje “WIPE SAVEPOINT”.&lt;/p&gt;
+&lt;h1 id=&#34;alias-para-logs&#34;&gt;Alias para logs&lt;/h1&gt;
+&lt;p&gt;Veamos ahora una serie de &lt;em&gt;alias&lt;/em&gt; para mostrar los logs de los commits de distintos modos.&lt;/p&gt;
+&lt;h1 id=&#34;mostrar-commits-de-forma-compacta-y-colores-git-ls&#34;&gt;Mostrar commits de forma compacta y colores, git ls&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-commits-y-ficheros-modificados-git-ll&#34;&gt;Listar commits y ficheros modificados, git ll&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El &lt;em&gt;alias&lt;/em&gt; es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --numstat
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mostar-commits-de-forma-compacta-y-con-fechas-git-lds&#34;&gt;Mostar commits de forma compacta y con fechas, git lds&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si lo preferimos con fechas relativas, usaremos el &lt;em&gt;alias&lt;/em&gt; &lt;code&gt;git ld&lt;/code&gt;:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;buscar-ficheros-y-contenido-dentro-de-ficheros-grep&#34;&gt;Buscar ficheros y contenido dentro de ficheros (grep)&lt;/h1&gt;
+&lt;p&gt;Para buscar ficheros con conteniendo el nombre indicado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!git ls-files | grep -i&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ git f one
+
+P3/oneway/Utils.py
+P3/oneway/__init__.py
+P3/oneway/ej1.py
+P3/oneway/ej2.py
+P3/oneway/ej3.py
+P3/oneway/ej4.py
+P3/oneway/ej5.py
+P3/oneway/ej6.py
+P3/oneway/ej7.py
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para buscar contenido dentro de todo el repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+&lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ git grep Rabin
+
+P1/modularArith/ej4.py:def MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;:
+P1/modularArith/ej4.py:    print MillerRabin&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;90221078753392184154149622269679731705920869572364323146777389106744249167893287091491005751893264013854756094230384816436985035887367570198390830836626929620930395458607390051335962764852769424941031051670131521265969408350800112779692655340042253991970492761524977413231930703094065023050574077317620529581736775256036443993928340221545607375549860405933153255776836414051570996984167934585339322850189347872718439350738428272565094611168867981011370318335242028953808721309056435214502065537377043&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para buscar desde el directorio raíz:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{} echo &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-todos-los-aliases-git-la&#34;&gt;Listar todos los aliases, git la&lt;/h1&gt;
+&lt;p&gt;Ahora que ya llevamos unos cuantos &lt;em&gt;aliases&lt;/em&gt;, quizá sean dificil de recordar hasta que nos acostumbremos, por ello, podemos crear un &lt;em&gt;alias&lt;/em&gt; que liste todos los nuestros &lt;em&gt;aliases&lt;/em&gt; :-):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!git config -l | grep alias | cut -c 7-&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;listar-la-última-etiqueta-git-lt&#34;&gt;Listar la última etiqueta, git lt&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;alias-para-hacer-merges-git-ours-git-theirs&#34;&gt;Alias para hacer merges, git ours, git theirs&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Eso es todo, comentad vuestras &lt;em&gt;alias&lt;/em&gt; para completar este artículo!&lt;/p&gt;
+&lt;h1 id=&#34;recopilación&#34;&gt;Recopilación&lt;/h1&gt;
+&lt;p&gt;Aquí se muestran todos los &lt;em&gt;alias&lt;/em&gt; vistos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;alias&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;ec&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; config --global -e
+  &lt;span class=&#34;nv&#34;&gt;co&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; checkout
+  &lt;span class=&#34;nv&#34;&gt;br&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; branch
+  &lt;span class=&#34;nv&#34;&gt;cm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am
+  &lt;span class=&#34;nv&#34;&gt;st&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; status
+  &lt;span class=&#34;nv&#34;&gt;up&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git pull --rebase --prune &lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git submodule update --init --recursive
+  &lt;span class=&#34;nv&#34;&gt;save&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;SAVEPOINT&amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;wip&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -am &lt;span class=&#34;s2&#34;&gt;&amp;#34;WIP&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;undo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; reset HEAD~1 --mixed
+  &lt;span class=&#34;nv&#34;&gt;amend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; commit -a --amend
+  &lt;span class=&#34;nv&#34;&gt;wipe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; !git add -A &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git commit -qm &lt;span class=&#34;s1&#34;&gt;&amp;#39;WIPE SAVEPOINT&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; git reset HEAD~1 --hard
+  &lt;span class=&#34;nv&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate
+  &lt;span class=&#34;nv&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --numstat
+  &lt;span class=&#34;nv&#34;&gt;lds&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;short
+  &lt;span class=&#34;nv&#34;&gt;ld&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; log --pretty&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;format:&lt;span class=&#34;s2&#34;&gt;&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span&gt; --decorate --date&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;relative
+  &lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!git ls-files | grep -i&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+  &lt;span class=&#34;nv&#34;&gt;gr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; grep -Ii
+  &lt;span class=&#34;nv&#34;&gt;gra&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { A=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;pwd&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; TOPLEVEL=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;git rev-parse --show-toplevel&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git grep --full-name -In &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; | xargs -I{}   echo &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$TOPLEVEL&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/{} &amp;amp;&amp;amp; cd &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$A&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;la&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!git config -l | grep alias | cut -c 7-&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;lasttag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;lt&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; describe --tags --abbrev&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;ours&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { git co --ours &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;!f() { git co --theirs &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;amp;&amp;amp; git add &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$@&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;; }; f&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Github Flow Aliases | &lt;a href=&#34;http://haacked.com/archive/2014/07/28/github-flow-aliases/&#34; title=&#34;Github Flow Aliases&#34;&gt;haacked.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Must Have Git Aliases | &lt;a href=&#34;http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/&#34; title=&#34;Must Have Git Aliases: Advanced Examples&#34;&gt;durdn.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Crear un entorno de desarrollo para WordPress con Git, Capistrano y Wp-Deploy</title>
+            <link>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</link>
+            <pubDate>Fri, 27 Nov 2015 16:17:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/crear-un-entorno-de-desarrollo-para-wordpress-con-git-capistrano-y-wp-deploy/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Nunca es buena idea realizar cambios a un sitio web sin haberlos probado de antemano, hasta asegurarnos que funcionan correctamente. Para ello, lo habitual es tener una copia local de la web, probarlos y luego aplicar los cambios en el sitio real. Sin embargo, muchas veces hay cosas que funcionan el local y no en la web.&lt;/p&gt;
+&lt;p&gt;Existen varias estrategias de flujos de trabajo (Workflows) en el desarrollo de aplicaciones web. Haciendo uso de &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;git&lt;/a&gt;, capistrano y Wp-Deploy es posible llevar un control absoluto del desarrollo y evolución de una web, en este caso para WordPress.&lt;/p&gt;
+&lt;p&gt;Éste articulo tratará de explicar cómo configurar un entorno de trabajo con tres entornos. Un entorno &lt;strong&gt;local&lt;/strong&gt;, para realizar modificaciones, otro de &lt;strong&gt;desarrollo&lt;/strong&gt;, alojado en un servidor real, para comprobar que, efectivamente, los cambios locales funcionan en un servidor real y por último, el entorno de &lt;strong&gt;producción&lt;/strong&gt;, donde se aplicarán los cambios realizados una vez sepamos que funcionan correctamente. Todo ésto haciendo uso de Git, Capistrano y un framework para Capistrano y WordPress llamado &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;configurar-el-entorno-local&#34;&gt;Configurar el entorno local&lt;/h1&gt;
+&lt;p&gt;Para configurar el servidor local, podemos crear una máquina virtual que actúe de servidor o directamente en un PC que tengamos por casa. Lo más cómodo es la máquina virtual. Debemos instalar y configurar un servidor web en ella, si nos decidimos por &lt;strong&gt;nginx&lt;/strong&gt;, en éste blog ya vimos &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-y-configurar-capistrano-y-wp-deploy&#34;&gt;Instalar y configurar Capistrano y Wp-Deploy&lt;/h1&gt;
+&lt;p&gt;Una vez tengamos la copia de la web en local, empezamos instalando y configurando &lt;strong&gt;Wp-Deploy&lt;/strong&gt;. Ya que éste framework hace uso de Capistrano, se explicará directamente la instalación y uso de &lt;strong&gt;Wp-Deploy&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;qué-es-capistrano&#34;&gt;¿Qué es Capistrano?&lt;/h2&gt;
+&lt;p&gt;Es una herramienta de automatización remota de servidores y despliegues escrita en &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-ruby/&#34; title=&#34;Introducción rápida a Ruby&#34;&gt;Ruby&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;requerimientos&#34;&gt;Requerimientos&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Capistrano&lt;/strong&gt; requiere acceso &lt;a href=&#34;https://elbauldelprogramador.com/recibir-alertas-de-correo-ssh/&#34; title=&#34;Recibir alertas de correo al acceder al  sistema mediante SSH&#34;&gt;SSH&lt;/a&gt; entre la máquina local y el servidor, y entre la máquina local y la cuenta GitHub o Bitbucket (o cualquier otro alojamiento de repositorios).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bunder&lt;/strong&gt;: Para resolver rápidamente las dependencias de Ruby, se recomienda instalar &lt;!-- raw HTML omitted --&gt;Bundler&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt;: Una linea de comandos para interactuar con WordPress. La guía de instalación está disponible en su &lt;a href=&#34;http://wp-cli.org/#install&#34;&gt;web.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;instalar-wp-deploy&#34;&gt;Instalar Wp-Deploy&lt;/h2&gt;
+&lt;p&gt;En primer lugar, hay que clonar el repositorio. Para ello:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /directorio/desado
+$ git clone --recursive https://github.com/Mixd/wp-deploy.git new-project
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El comando anterior clonará el repositorio en el directorio especificado y descargará el submódulo que contiene el núcleo de WordPress.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es desvincular el repositorio del original (WP-deploy) y conectarlo a nuestro repositorio personal. Para ello los autores han creado un script que facilita la tarea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bash config/prepare.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Solo resta añadir nuestro repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ git remote add origin &amp;lt;repo_url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y, por último, instalar las dependencias de ruby con &lt;strong&gt;Bundler&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, con ésto tenemos WP-Deploy instalado, pasemos a los ficheros de configuración.&lt;/p&gt;
+&lt;h3 id=&#34;configurar-wp-deploy&#34;&gt;Configurar WP-Deploy&lt;/h3&gt;
+&lt;p&gt;Primero, es necesario establecer las preferencias globales de WordPress en el fichero &lt;code&gt;config/deploy.rb&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;usuario&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El usuario administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_email&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;aaaa@aaaa.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El email del administrador de WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_sitename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;El Baúl del Programador&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# El título del sitio WordPress&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:wp_localurl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# La dirección URL local de desarrollo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Luego definimos los parámetros para el repositorio &lt;a href=&#34;https://elbauldelprogramador.com/tags/git&#34;&gt;git&lt;/a&gt;, en el mismo archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:application&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;nombreDelRepo&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:repo_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;git@github.com:TuUsuario/nombreDelRepo.git&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Wp-Deploy usa por defecto dos entornos, &lt;strong&gt;staging&lt;/strong&gt; y &lt;strong&gt;production&lt;/strong&gt;. En este artículo configuraremos tres.&lt;/p&gt;
+&lt;h3 id=&#34;definiendo-y-configurando-entornos-de-desarrollo&#34;&gt;Definiendo y configurando entornos de desarrollo&lt;/h3&gt;
+&lt;p&gt;Dichos entornos se declaran en el directorio &lt;code&gt;./config/deploy/&lt;/code&gt;, por defecto existen &lt;code&gt;staging.rb&lt;/code&gt; y &lt;code&gt;production.rb&lt;/code&gt;. El primero para el desarrollo local y el segundo para aplicar los cambios a producción.&lt;/p&gt;
+&lt;p&gt;Un ejemplo para &lt;code&gt;production.rb&lt;/code&gt; sería:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://www.miweb.com&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/ruta/donde/reside/la/web
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; # Rama del repositorio que se subirá
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para &lt;code&gt;staging.rb&lt;/code&gt; tendríamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://localhost&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/ruta/donde/reside/la/web/en/local
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; # Rama del repositorio que se subirá
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La diferencia entre una y otra reside principalmente en que la rama de desarrollo es distinta. Cuando se trabaje en una nueva característica o se esté corrigiendo un bug, todos los cambios se realizan en la rama &lt;strong&gt;development&lt;/strong&gt; y se prueban en local. Una vez probados, traspasamos los cambios a la rama &lt;strong&gt;master&lt;/strong&gt; y los subimos al servidor en producción.&lt;/p&gt;
+&lt;p&gt;Además, crearemos otro entorno llamado &lt;code&gt;desarrollo.rb&lt;/code&gt;, que usaremos para probar los cambios de la rama &lt;strong&gt;development&lt;/strong&gt; en el servidor real, pero no en la web accesible al público, se subirán a un subdominio, con acceso restringido y con la indexación para los buscadores desactivada. Para ello creamos el fichero &lt;code&gt;desarrollo.rb&lt;/code&gt; en &lt;code&gt;./config/deploy/&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:stage_url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;http://desarrollo.miweb.com&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;IP.DEL.SERVIDOR.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;USUARIO SSH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;roles&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;sx&#34;&gt;%w{web app db}&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;:deploy_to&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/ruta/donde/reside/el/subdominio/de/la/web/
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;set :branch, &amp;#34;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;development&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34; # Rama del repositorio que se subirá
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vemos, también se usa la rama &lt;strong&gt;development&lt;/strong&gt;, ya que es donde probaremos los cambios aplicados al código.&lt;/p&gt;
+&lt;h3 id=&#34;configurando-el-acceso-a-la-base-de-datos&#34;&gt;Configurando el acceso a la base de datos&lt;/h3&gt;
+&lt;p&gt;En el directorio &lt;code&gt;./config&lt;/code&gt; renombramos el fichero &lt;code&gt;database.example.yml&lt;/code&gt; a &lt;code&gt;database.yml&lt;/code&gt; y lo rellenamos con los datos de acceso para la base de datos en cada uno de los entornos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;k&#34;&gt;staging&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;localhost&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_user&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;production&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;localhost&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_user&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;db_pass&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;localhost&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;root&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;desarrollo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;localhost&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;database&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;db_name&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;root&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;root&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hecho esto, todo debería estar listo para usar.&lt;/p&gt;
+&lt;h3 id=&#34;uso&#34;&gt;Uso&lt;/h3&gt;
+&lt;p&gt;El primer comando que hay que usar, y sólo será necesario usarlo una vez, es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:setup:remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Que instalará WordPress usando los detalles de los archivos de configuración, generará un fichero &lt;code&gt;wp-config.php&lt;/code&gt; (Junto con un usuario y contraseña para WordPress, excepto si ya exite alguno) acorde a ellos y aplicará los cambios en el entorno indicado, en este caso, creará un &lt;code&gt;wp-config.php&lt;/code&gt; para producción en &lt;strong&gt;remote&lt;/strong&gt; (El servidor).&lt;/p&gt;
+&lt;h3 id=&#34;deploying&#34;&gt;Deploying&lt;/h3&gt;
+&lt;p&gt;Para volcar los cambios aplicados al servidor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production deploy
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ésto subirá los cambios hechos en el repositorio al entorno de producción, en nuestro ejemplo, también podríamos escribir en lugar de &lt;code&gt;production&lt;/code&gt;, &lt;code&gt;desarrollo&lt;/code&gt; ó &lt;code&gt;staging&lt;/code&gt; para aplicar los cambios al entorno correspondiente.&lt;/p&gt;
+&lt;h3 id=&#34;migraciones-de-bases-de-datos&#34;&gt;Migraciones de bases de datos&lt;/h3&gt;
+&lt;p&gt;Un comando muy útil, aunque hay que usarlo con precaución, ya que: &lt;em&gt;&lt;strong&gt;puede deshacerse&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Al migrar la base de datos, se reemplazarán automáticamente las urls necesarias del entorno de producción al de desarrollo y vice versa.&lt;/p&gt;
+&lt;h4 id=&#34;enviar-la-base-de-datos-al-entorno-de-producción&#34;&gt;Enviar la base de datos al entorno de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;de-producción-a-desarrollo&#34;&gt;De producción a desarrollo&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:pull
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;realizar-una-copia-de-seguridad-del-a-bd-de-producción&#34;&gt;Realizar una copia de seguridad del a BD de producción&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production db:backup
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sincronizando-la-carpeta-uploads&#34;&gt;Sincronizando la carpeta Uploads&lt;/h3&gt;
+&lt;p&gt;La carpeta &lt;strong&gt;Uploads&lt;/strong&gt; de WordPress no es necesario añadirla al repositorio, es más, se debe evitar, ya que son ficheros muy grandes. En lugar de eso, se mantienen sincronizados con:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production uploads:sync
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;actualizar-el-núcleo-de-wordpress&#34;&gt;Actualizar el núcleo de WordPress&lt;/h3&gt;
+&lt;p&gt;A partir de ahora, la forma de actualizar WordPress no será la típica, pulsando el botón en el panel de control. Ahora se actualizará directamente desde el repositorio. Cuando se libere una nueva versión bastará hacer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ bundle &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; cap production wp:core:update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De igual modo, si se prefiere hacer pruebas antes de subirlo a producción, se cambia el entorno por el deseado y se prueba si la actualización de WordPress es compatible con nuestro sitio.&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Si el lector ha llegado hasta este punto, estaba interesado en conseguir un ciclo de desarrollo adecuado para su sitio y, seguramente esto cumpla con sus necesidades. Una de las principales ventajas de éste modelo de desarrollo es el control absoluto del estado del sitio web, y un mayor control sobre los posibles errores, ya que se pueden probar en dos fases de desarrollo antes de liberarlos al público.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Wp-Deploy&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;github.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Capistrano&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;capistranorb.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Como Usar Los Filtros Smudge Y Clean en Git</title>
+            <link>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</link>
+            <pubDate>Thu, 21 May 2015 14:50:42 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-usar-los-filtros-smudge-y-clean-en-git/</guid>
+            <description>&lt;p&gt;En el anterior artículo, hablamos sobre &lt;a href=&#34;https://elbauldelprogramador.com/sincronizacin-de-proyectos-en-git-con-hooks-ganchos/&#34;&gt;cómo sincronizar dos repositorios en git&lt;/a&gt;, también se vio algo de &lt;em&gt;hooks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Hoy vamos a ver cómo usar filtros en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34;&gt;git&lt;/a&gt; para cambiar automáticamente la &lt;code&gt;url&lt;/code&gt; de una web hecha con &lt;em&gt;jekyll&lt;/em&gt; en función de si estamos en local o en el servidor. Es decir, cuando estemos desarrollando o escribiendo un artículo, querremos ir viendo los resultados en local, para ello la &lt;code&gt;url&lt;/code&gt; del fichero &lt;code&gt;_config.yml&lt;/code&gt; debe estar vacía, cuando esté en el servidor deberá ser el nombre del dominio.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;creando-el-script-para-smudge&#34;&gt;Creando el script para smudge&lt;/h1&gt;
+&lt;p&gt;Bastará con crear un &lt;em&gt;script&lt;/em&gt; que contenga:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;
+&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: http:\/\/elbauldelprogramador\.com/, &amp;#34;url: &amp;#34;)&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo llamaremos &lt;code&gt;siteurl.smudge&lt;/code&gt;, y le daremos permisos de ejecución.&lt;/p&gt;
+&lt;h1 id=&#34;creando-el-script-para-clean&#34;&gt;Creando el script para clean&lt;/h1&gt;
+&lt;p&gt;Similar al anterior:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;
+&lt;span class=&#34;n&#34;&gt;ruby&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;$stdout.puts $stdin.read.gsub(/url: /, &amp;#34;url: http:\/\/elbauldelprogramador\.com&amp;#34;)&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;añadir-los-scripts-a-los-filtros&#34;&gt;Añadir los scripts a los filtros&lt;/h1&gt;
+&lt;p&gt;Solo resta añadir los filtros a la configuración de git:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+$ git config filter.siteurl.smudge siteurl.smudge
+$ git config filter.siteurl.clean siteurl.clean
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Los &lt;em&gt;scripts&lt;/em&gt; tienen que estar en el &lt;em&gt;PATH&lt;/em&gt; del sistema, y tener permisos de ejecucion.
+{: .notice}&lt;/p&gt;
+&lt;h1 id=&#34;el-gitattributes&#34;&gt;El Gitattributes&lt;/h1&gt;
+&lt;p&gt;Gracias al comentario de Julián, me dí cuenta de que faltaba una última cosa por especificar. A qué ficheros se aplicarán los filtros. Para ello, añadimos lo siguiente al fichero &lt;code&gt;.gitattributes&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+_config.yml &lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;siteurl
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Gracias Julián.&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Ejecutados todos los pasos, ahora tendremos la url en local cuando estemos desarrollando, y se sustituirá automáticamente por el dominio cuando se publique en &lt;em&gt;github&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/gilesbowkett/git-smudge-and-clean&#34; title=&#34;Git smudge and Clean&#34;&gt;github.com/gilesbowkett&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes&#34; title=&#34;Git SCM&#34;&gt;Git scm&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

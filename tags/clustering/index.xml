@@ -1,0 +1,393 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>clustering on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/clustering/</link>
+        <description>Recent content in clustering on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 05 Mar 2018 10:56:17 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/clustering/</link>
+            <title>clustering on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/clustering/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Aprendizaje no Supervisado y Detección de Anomalías: ¿Qué es el Clustering?</title>
+            <link>https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/</link>
+            <pubDate>Mon, 05 Mar 2018 10:56:17 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/aprendizaje-nosupervisado-clustering/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este articulo forma parte de una serie de artículos sobre clustering, detección de anomalías y reglas de asociación. Originalmente forman parte de un trabajo para el &lt;strong&gt;Máster Universitario Oficial en Ciencia de Datos e Ingeniería de Computadores&lt;/strong&gt; de la Universidad de Granada en la asignatura &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt;. El resto de artículos son:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-anomalias/&#34;&gt;Detección de anomalías&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas/&#34;&gt;Reglas de Asociación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/aprendizaje-nosupervisado-reglas-avanzadas/&#34;&gt;Reglas de Asociación Avanzadas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El aprendizaje automático se distingue en dos tipos. &lt;strong&gt;Supervisado&lt;/strong&gt;, donde se dispone de información sobre la clase a la que pertenece una instancia o &lt;strong&gt;no supervisado&lt;/strong&gt;, donde esta información no está disponible. Estos apuntes se centran en el último tipo. En la figura se muestra un árbol de tipos de clasificaciones.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;clusteringa-idsec-1-namesec-1a&#34;&gt;Clustering&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Clustering&lt;/em&gt; intenta encontrar patrones en los datos que formen grupos claramente separados. Encontrar estos grupos tiene varias aplicaciones. Por ejemplo si los datos tratan sobre clientes, cada grupo encontrado podría usarse para realizar una segmentación de clientes en marketing, y ofrecer así distintos productos a cada grupo. Otra posible aplicación es agrupar documentos por temática, donde cada &lt;em&gt;cluster&lt;/em&gt; o grupo pertenece a un tipo de documento. En este tipo de aplicaciones &lt;em&gt;clustering&lt;/em&gt; se usa como aplicación final, sin embargo puede usarse como paso previo a otras técnicas de aprendizaje. Algunos ejemplos son exploración de datos y preprocesamiento de datos.&lt;/p&gt;
+&lt;p&gt;Uno de los problemas del &lt;em&gt;clustering&lt;/em&gt; es su subjetividad. En la Figura de abajo aparece un conjunto de datos, pero bajo este mismo conjunto se pueden hacer agrupamientos diferentes.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;medidas-de-similituda-idsec-1-1-namesec-1-1a&#34;&gt;Medidas de similitud&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Una solución al problema descrito en la sección anterior es definir una buena medida de similitud. Para ello es necesario usar únicamente los atributos adecuados, no es necesario usar todos los atributos para calcular la similitud de una instancia frente a otra. También es importante tener en cuenta las magnitudes de cada atributo como paso previo a calcular la similitud, y por tanto es necesario normalizar. Principalmente hay dos formas de normalizar un conjunto de datos para atributos continuos. El método &lt;em&gt;Min-Max&lt;/em&gt; y &lt;em&gt;z-score&lt;/em&gt;. Estas normalizaciones se deben llevar a cabo para cada atributo del conjunto de datos. Es recomendable eliminar cualquier &lt;strong&gt;outlier&lt;/strong&gt;, ya que puede afectar mucho al proceso de normalización. De los dos anteriores, es recomendable usar &lt;em&gt;z-score&lt;/em&gt;, ya que preserva el rango de los datos.&lt;/p&gt;
+&lt;p&gt;Para crear medidas de similitud se consideran la semejanzas o distancias. A mayor valor de semejanza, más se parecen los dos puntos en comparación, sin embargo, a mayor distancia, menor parecido. Es común usar medidas de distancia para descubrir cómo de semejantes son dos puntos. Toda medida de distancia debe cumplir una serie de propiedades, listadas a continuación.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No negativa: \(d(x,y) \geq 0\)&lt;/li&gt;
+&lt;li&gt;Reflexiva: \(d(x,y) = 0\text{ sii } x = y\)&lt;/li&gt;
+&lt;li&gt;Simétrica: \(d(x,y) = d(y,x)\)&lt;/li&gt;
+&lt;li&gt;Desigualdad triangular: \(d(x,y) \leq d(x,z) + d(z,y)\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La desigualdad triangular puede comprenderse mejor visualmente en la figura. Es decir, la suma de dos de los lados del triángulo siempre va a ser mayor o igual a la del lado restante. Como muestra la figura, conforme menos área tiene el triángulo, más cercana es la suma de dos lados al lado restante.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;medidas-de-distanciaa-idsec-1-1-1-namesec-1-1-1a&#34;&gt;Medidas de distancia&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Las principales medidas de distancia son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Euclídea&lt;/em&gt; o \(L_2 \) : \(d_2 (x,y) = \sqrt{\sum_{j=1}^J(x_j - y_j)^2}\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Manhattan&lt;/em&gt; o \(L_1\): \(d_1 (x,y) = \sum_{j=1}^J|x_j - y_j|\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Chebyshev&lt;/em&gt; o \(L_{\infty}\): \(d_\infty = \text{máx}_{j\dots J}|x_j - y_j|\)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Minkowski&lt;/em&gt; o Lr-norm: \(d_p(x,y) = \left ( \sum_{j=1}^J|x_j - y_j|^p\right )^\frac{1}{p}, p \geq 1\)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La distancia Euclídea es la línea recta entre dos puntos. En la distancia Manhattan la distancia entre dos puntos es la suma en valor absoluto de las diferencias de sus coordenadas cartesianas. La Figura muestra cómo pueden existir varios caminos a dos puntos usando Manhattan, pero solo uno y el más corto por Euclídea.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;La distancia de Minkowski es una generalización de las dos anteriores&lt;/p&gt;
+&lt;p&gt;En la distancia de Chebyshev la distancia entre dos puntos es la mayor de sus diferencias a lo largo de cualquiera de sus dimensiones coordenadas. También conocida como la distancia del tablero de ajedrez, por coincidir con el número de movimientos que puede hacer el rey para moverse por el tablero, como muestra la figura.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por último la distancia de Minkowski es una generalización de las anteriores. Cuando \(p = 1\) corresponde con la distancia de Manhattan, para \(p = 2\) distancia Euclídea, y cuando \(p \to \infty\) corresponde con la distancia de Chebyshev. En la figura aparecen distintas distancias para varios valores de \(p\), en esta imagen se aprecia la distancia Manhattan para \(p=1\), Euclídea para \(p=2\) y Chebyshev para \(p=\infty\).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;tipos-de-clusteringa-idsec-1-2-namesec-1-2a&#34;&gt;Tipos de Clustering&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Dentro de la clasificación no supervisada se distinguen principalmente los siguientes tipos de &lt;em&gt;clustering&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Agrupamiento por particiones&lt;/strong&gt;: Una simple división del conjunto de datos en sub conjuntos disjuntos (No solapados) de tal forma que cada punto del conjunto pertenece a uno de dichos subconjuntos (o &lt;em&gt;clusters&lt;/em&gt;). La figura es un ejemplo de este tipo de agrupamiento.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Basados en densidad&lt;/strong&gt;: En este tipo de &lt;em&gt;clustering&lt;/em&gt; un &lt;em&gt;cluster&lt;/em&gt; es una región densa de objetos rodeados por una región de baja densidad. Suele usarse cuando hay ruido y &lt;em&gt;outliers&lt;/em&gt; presentes en los datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basados en Grafos&lt;/strong&gt;: Los datos se representan como un gráfo, los nodos son los puntos y los enlaces representan una conexión entre ambos. Un grupo de objetos conectados los unos con los otros pero no conectados con el resto de puntos en el conjunto de datos forma un &lt;em&gt;cluster&lt;/em&gt;. Para definir los grupos es necesario que cada objeto de un &lt;em&gt;cluster&lt;/em&gt; esté más cerca de cualquier otro punto de su grupo que a un punto de otro &lt;em&gt;cluster&lt;/em&gt;. Esta técnica tiene problemas en presencia de ruido u &lt;em&gt;outliers&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mínimo error cuadrático&lt;/strong&gt;: En este algoritmo se usa la minimización del error cuadrático para determinar a qué &lt;em&gt;cluster&lt;/em&gt; pertenece el punto. Esta técnica la usa el algoritmo K-Medias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jerárquico&lt;/strong&gt;: Si en el agrupamiento por particiones se permite que cada &lt;em&gt;cluster&lt;/em&gt; tenga sub-clusters se obtiene un &lt;em&gt;clustering&lt;/em&gt; jerárquico. Consiste en permitir que los &lt;em&gt;clusters&lt;/em&gt; puedan anidarse, organizado en forma de árbol. Cada nodo del árbol, un &lt;em&gt;cluster&lt;/em&gt; en este caso a exepción de los nodos hoja, forman la unión de sus hijos (los &lt;em&gt;sub-clusters&lt;/em&gt;). La raíz del árbol es el &lt;em&gt;cluster&lt;/em&gt; conteniendo a todos los datos. Los nodos hoja suelen corresponder con un único dato, pero no es obligatorio. La figura muestra un ejemplo de este tipo de &lt;em&gt;clustering&lt;/em&gt;. La figura (d) es un ejemplo de &lt;em&gt;clustering&lt;/em&gt; jerárquico, el nodo raíz contendría todos los puntos, el nodo a la izquierda está formado por un &lt;em&gt;cluster&lt;/em&gt; de tres &lt;em&gt;sub-clusters&lt;/em&gt;. Los métodos jerárquicos se clasifican en &lt;strong&gt;aglomerativos&lt;/strong&gt; o &lt;strong&gt;divisivos&lt;/strong&gt;. El primero considera cada punto un &lt;em&gt;cluster&lt;/em&gt; y en cada paso fusiona los pares más cercanos como un &lt;em&gt;cluster&lt;/em&gt;. Esta técnica requiere de una forma de medir la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt;. El segundo comienza con todos los datos como un solo &lt;em&gt;cluster&lt;/em&gt; y subdivide hasta quedarse con puntos individuales como &lt;em&gt;clusters&lt;/em&gt;. Las técnicas aglomerativas son las más usadas, por esta razón se explican a continuación los distintos métodos. La figura los ilustra.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Enlace Simple&lt;/strong&gt;: La proximidad entre dos &lt;em&gt;clusters&lt;/em&gt; viene dada por la distancia entre los dos puntos más cercanos de cada &lt;em&gt;cluster&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enlace Completo&lt;/strong&gt;: Análogo al anterior, pero usa la distancia de los dos puntos más lejanos de cada &lt;em&gt;cluster.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Enlace Ponderado&lt;/strong&gt;: Usa las distancias pares a pares de todos los puntos en cada &lt;em&gt;cluster&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Método de Ward&lt;/strong&gt;: Mide la proximidad entre dos &lt;em&gt;clusters&lt;/em&gt; usando el incremento del error cuadrático medio producido al unir dos &lt;em&gt;clusters&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;algoritmos-de-clusteringa-idsec-1-3-namesec-1-3a&#34;&gt;Algoritmos de &lt;em&gt;clustering&lt;/em&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;k-meansa-idsec-1-3-1-namesec-1-3-1a&#34;&gt;K-Means&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;K-Means es un un algoritmo de &lt;em&gt;clustering&lt;/em&gt; por particiones. Tiene un parámetro de entrada, &lt;code&gt;k&lt;/code&gt;, indicando el número de &lt;em&gt;clusters&lt;/em&gt; a generar, por tanto es necesario conocer a priori el número de grupos a encontrar. Cada &lt;em&gt;cluster&lt;/em&gt; está representado por su centroide (centro geométrico del &lt;em&gt;cluster&lt;/em&gt;). Los centroides pueden ser puntos reales o no, en caso de ser un punto real del conjunto de datos se denominan menoides.  En cada iteración del algoritmo dichos centroides se recalculan hasta llegar a un criterio de parada. La figura muestra ejemplos de varias iteraciones de K-Means, en él se ilustra el proceso de actualización de los centroides.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;descripción-del-algoritmoa-idsec-1-3-1-1-namesec-1-3-1-1a&#34;&gt;&lt;strong&gt;Descripción del algoritmo&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;K-Means se compone de dos fases principales:&lt;/p&gt;
+&lt;p&gt;El proceso de inicialización consta de dos pasos. Primeramente se escoge el número de centroides (k) y se asignan aleatoriamente, como muestra la figura (a). Una vez colocados los a cada punto se le asigna su correspondiente &lt;em&gt;cluster&lt;/em&gt; usando la media como medida de proximidad. Posteriormente se  recalculan los centroides con los puntos asignados y se actualizan.&lt;/p&gt;
+&lt;p&gt;El proceso iterativo actualiza los centroides en cada iteración mientras los centroides cambien. En cada iteración se calcula la distancia de todos los puntos a los k centroides, formando k grupos y asignando a cada punto su centroide más cercano.&lt;/p&gt;
+&lt;h4 id=&#34;asignación-de-clusters-a-los-puntosa-idsec-1-3-1-2-namesec-1-3-1-2a&#34;&gt;&lt;strong&gt;Asignación de clusters a los puntos&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Para asignar a un punto el &lt;em&gt;cluster&lt;/em&gt; más cercano es necesario usar una medida de proximidad, la más común es la distancia Euclídea (\(L_2\)), aunque no es la única y la elección depende del tipo de datos. Al re-calcular los centroides de cada &lt;em&gt;cluster&lt;/em&gt; se optimiza una &lt;strong&gt;función objetivo&lt;/strong&gt;, por ejemplo minimizar la distancias al cuadrado de cada punto a su &lt;em&gt;cluster&lt;/em&gt; más cercano, como muestra la siguiente ecuación:
+\[SSE = \sum^K_{i=1}\sum_{\textbf{x}\in C_i} dist \left ( c_i, x \right )^2\]
+donde \(C_i\) es el i-ésimo &lt;em&gt;cluster&lt;/em&gt;, \(c_i\) es el centróide del &lt;em&gt;cluster&lt;/em&gt; \(C_i\) y \(\textbf{x}\) es un punto y \(dist\) es la distancia.&lt;/p&gt;
+&lt;p&gt;Con esta función objetivo, se calcula el error de cada punto, es decir, su distancia euclídea al &lt;em&gt;cluster&lt;/em&gt; más cercano, luego se calcula la suma total de los errores al cuadrado. Con este dato, y dados dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; distintos generados por el algoritmo, K-Means escoge aquel con menor error cuadrático.&lt;/p&gt;
+&lt;p&gt;Dada esta función objetivo, lo ideal es resolver el problema de optimización y encontrar el óptimo global, sin embargo es computacionalmente imposible de realizar. Por ello se realizan aproximaciones, como &lt;strong&gt;gradiente descendente&lt;/strong&gt;. Esta técnica consiste en escoger una solución inicial y repetir estos dos pasos: Calcular el cambio en la solución que mejor optimizar la función objetivo (Mediante derivadas) y actualizar la solución.&lt;/p&gt;
+&lt;h4 id=&#34;elección-de-los-centroides-inicialesa-idsec-1-3-1-3-namesec-1-3-1-3a&#34;&gt;&lt;strong&gt;Elección de los centroides iniciales&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Elegir los centroides iniciales al azar usualmente no da buenos resultados, ya que el SSE variará notablemente en función de qué centroides iniciales se escojan. Una posible solución consiste en lanzar el algoritmo varias veces con distintos centroides iniciales y escoger los mejores, pero el problema sigue existiendo debido a la naturaleza aleatoria de este proceso. Otra alternativa es estimar seleccionar el primero punto de forma aleatoria, o calcular el centroide usando todos los puntos. Posteriormente, para cada centroide inicial, seleccionar el punto más alejado de cualquiera de los centroides iniciales ya seleccionados. De esta forma está garantizado elegir un conjunto de centroides iniciales aleatorios y separados entre sí.&lt;/p&gt;
+&lt;h4 id=&#34;elección-del-k-óptimoa-idsec-1-3-1-4-namesec-1-3-1-4a&#34;&gt;&lt;strong&gt;Elección del k óptimo&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;No hay ninguna forma de obtener el &lt;code&gt;k&lt;/code&gt; óptimo salvo prueba y error. Sin embargo, se pueden usar algunas técnicas que suelen dar buenos resultados. Un ejemplo de ello es la técnica del codo. Se lanza el algoritmo para varios &lt;code&gt;k&lt;/code&gt; y se genera un gráfico de cada &lt;code&gt;k&lt;/code&gt; junto a su error. Un buen &lt;code&gt;k&lt;/code&gt; debería ser el que se corresponda con un &lt;a href=&#34;https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/&#34; title=&#34;Mostrar artículos similares usando Clustering con sklearn&#34;&gt;codo&lt;/a&gt; en el gráfico. La figura muestra un ejemplo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;problemas-de-k-meansa-idsec-1-3-1-5-namesec-1-3-1-5a&#34;&gt;&lt;strong&gt;Problemas de K-Means&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Los principales problemas de este algoritmo son los &lt;em&gt;outliers&lt;/em&gt;, ya que alteran las media de la distancia bastante. Una posible solución es usar la mediana como medida de proximidad en lugar de la media, en dicho caso es necesario usar la distancia de Manhattan. Una posible solución es eliminar dichos &lt;em&gt;outliers&lt;/em&gt;, pero dependiendo del tipo de datos esto puede ser otro problema en sí mismo. Otra forma es usar menoides en lugar de centroides. Al usar un dato existente como centroide se minimiza el error introducido por los &lt;em&gt;outliers&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Cuando se tratan datos no numéricos, es posible usar k-modes. Esta variación del algoritmo escoge como centroide el valor de moda en el conjunto. El punto fuerte de esta técnica es que es muy robusto a &lt;em&gt;outliers&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;pre-y-post-procesamiento-requeridoa-idsec-1-3-1-6-namesec-1-3-1-6a&#34;&gt;&lt;strong&gt;Pre y Post procesamiento requerido&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Debido a que K-Means usa distancias, es necesario normalizar los datos para que todas contribuyan en igual medida, de lo contrario los atributos con mayores magnitudes tienen a dominar las decisiones del algoritmo.&lt;/p&gt;
+&lt;p&gt;En cuanto al post procesamiento, es posible eliminar &lt;em&gt;clusters&lt;/em&gt; demasiado pequeños, y tratarlos como &lt;em&gt;clusters outliers&lt;/em&gt;, dividir &lt;em&gt;clusters&lt;/em&gt; con un elevado SSE en varios o combinar aquellos con un SSE bajo.&lt;/p&gt;
+&lt;h3 id=&#34;dbscana-idsec-1-3-2-namesec-1-3-2a&#34;&gt;DBSCAN&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h3&gt;
+&lt;p&gt;Este algoritmo es de la familia jerárquica del &lt;em&gt;clustering&lt;/em&gt;, concretamente &lt;strong&gt;basado en densidad&lt;/strong&gt;. Su principal característica es detectar regiones de puntos densas separadas de otras regiones poco densas. Al contrario que K-Means, detecta automáticamente el número de &lt;em&gt;clusters&lt;/em&gt;. Debido a que las regiones poco densas son descartadas, no produce un &lt;em&gt;clustering&lt;/em&gt; completo, es decir, habrá puntos sin clasificar.&lt;/p&gt;
+&lt;p&gt;DBSCAN está basado en una aproximación basada en el centro. Consiste en medir la densidad como el número de puntos que caen dentro de un radio especificado. El radio por tanto, es un parámetro del algoritmo que se debe ajustar. Una vez definido el radio, un punto puede caer en el interior de una región densa, en el borde o completamente fuera. A estos puntos se les llama puntos &lt;em&gt;core&lt;/em&gt;, &lt;em&gt;border&lt;/em&gt; o &lt;em&gt;noise&lt;/em&gt;, respectivamente ( en español Principales, frontera o ruido). La figura muestra un ejemplo de cada uno de ellos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Core Points&lt;/strong&gt;: Corresponden a los puntos dentro de la región densa. Para ser un punto &lt;em&gt;core&lt;/em&gt; debe haber un número mínimo de puntos definidos como parámetro en su vecindario, que viene dado por el radio.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Border Points&lt;/strong&gt;: Aunque no es un &lt;em&gt;core point&lt;/em&gt;, cae en el entorno de un &lt;em&gt;core point&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Noise Points&lt;/strong&gt;: Un punto que no es ni &lt;em&gt;core&lt;/em&gt; ni &lt;em&gt;border&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;descipción-del-algoritmoa-idsec-1-3-2-1-namesec-1-3-2-1a&#34;&gt;&lt;strong&gt;Descipción del algoritmo&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Para cualquier par de puntos &lt;em&gt;core&lt;/em&gt; lo suficientemente cercanos entre sí – dentro de un radio definido – se colocan en el mismo &lt;em&gt;cluster&lt;/em&gt;. Análogamente, cualquier punto &lt;em&gt;border&lt;/em&gt; cercano a un &lt;em&gt;core&lt;/em&gt; se asigna al mismo &lt;em&gt;cluster&lt;/em&gt; del &lt;em&gt;core&lt;/em&gt;. Los puntos de ruido, se descartan, por ello se indicó en el párrafo anterior que DBSCAN no es un &lt;em&gt;clustering&lt;/em&gt; completo.&lt;/p&gt;
+&lt;h4 id=&#34;selección-de-parámetrosa-idsec-1-3-2-2-namesec-1-3-2-2a&#34;&gt;&lt;strong&gt;Selección de parámetros&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;DBSCAN necesita de dos parámetros antes de ser ejecutado, &lt;em&gt;MinPts&lt;/em&gt; y &lt;em&gt;Eps&lt;/em&gt;, definiendo el número mínimo de puntos necesarios para considerar a un punto como &lt;em&gt;core&lt;/em&gt; y el radio, respectivamente. Lo más usual es observar cómo evoluciona la distancia de un punto a sus k-ésismos vecinos más cercanos (k-distancia). Para los puntos que forman parte de un &lt;em&gt;cluster&lt;/em&gt;, el valor k-distancia será pequeño si &lt;em&gt;k&lt;/em&gt; no es mayor que el tamaño del &lt;em&gt;cluster&lt;/em&gt;. Para los puntos que no pertenecen al &lt;em&gt;cluster&lt;/em&gt;, la k-distancia será elevada. Por tanto, de forma visual es posible determinar el valor del parámetro &lt;em&gt;Eps&lt;/em&gt;, como muestra la figura, y tomando el valor de &lt;code&gt;k&lt;/code&gt; como &lt;em&gt;MinPts&lt;/em&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;pros-y-contras-de-dbscana-idsec-1-3-2-3-namesec-1-3-2-3a&#34;&gt;&lt;strong&gt;Pros y Contras de DBSCAN&lt;/strong&gt;.&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;p&gt;Que DBSCAN al use una aproximación basada en densidad le proporciona resistencia al ruido y es capaz de trabajar con &lt;em&gt;clusters&lt;/em&gt; de tamaños y formas arbitrarias, por tanto puede encontrar &lt;em&gt;clusters&lt;/em&gt; que K-Means no podría. Sin embargo, DBSCAN encuentra dificultades al trabajar con &lt;em&gt;clusters&lt;/em&gt; de distintas densidades. De igual manera, no funciona bien cuando los datos son de gran dimensionalidad, ya que medir la densidad en espacios de gran dimensión es difícil.&lt;/p&gt;
+&lt;h2 id=&#34;evaluación-de-resultadosa-idsec-1-4-namesec-1-4a&#34;&gt;Evaluación de resultados&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;Para la evaluación del resultado de un &lt;em&gt;clustering&lt;/em&gt; es necesario tener en cuenta varios aspectos, entre ellos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Determinar la &lt;strong&gt;tendencia del &lt;em&gt;clustering&lt;/em&gt;&lt;/strong&gt;, es decir, distinguir si realmente existe una estructura no aleatoria en los datos.&lt;/li&gt;
+&lt;li&gt;Determinar el número correcto de &lt;em&gt;clusters&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Evaluar si realmente el resultado del &lt;em&gt;clustering&lt;/em&gt; corresponde con los patrones de los datos, sin referenciar a información externa (&lt;strong&gt;Criterios internos&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Comparar los resultados del &lt;em&gt;clustering&lt;/em&gt; usando información externa, como etiquetas de las clases (&lt;strong&gt;criterios externos&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Comprar dos conjuntos de &lt;em&gt;clusters&lt;/em&gt; y determinar cual es mejor.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Debido a que las técnicas 1,2 y 3 no usan información externa, son técnicas &lt;strong&gt;no supervisadas&lt;/strong&gt;, la cuarta sin embargo necesita información externa, y por tanto es &lt;strong&gt;supervisada&lt;/strong&gt;. La quita puede considerarse un híbrido, ya que puede realizarse de forma supervisada o no supervisada.&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;técnicas no supervisadas&lt;/strong&gt; tratan me medir si la estructura del &lt;em&gt;clustering&lt;/em&gt; es adecuada sin información externa. Un ejemplo de ello es mediante el uso de SSE. Usando esta medida es posible definir la &lt;strong&gt;cohesión&lt;/strong&gt; del &lt;em&gt;cluster&lt;/em&gt;, la cual determina cómo están de juntos los puntos del &lt;em&gt;cluster&lt;/em&gt; así como la &lt;strong&gt;separación&lt;/strong&gt;, que mide cómo de separado está un &lt;em&gt;cluster&lt;/em&gt; con respecto a otro. Para realizar estas mediciones pueden usarse o no los centroides, como muestra la figura.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En cuanto a las &lt;strong&gt;técnicas supervisadas&lt;/strong&gt;, usando información externa, como por ejemplo datos etiquetados, mide hasta qué punto el &lt;em&gt;clustering&lt;/em&gt; consiguió descubrir la estructura de los datos. Un ejemplo de este tipo de técnica es la &lt;strong&gt;entropía&lt;/strong&gt;, la cual mide cómo de bien coinciden las etiquetas de los &lt;em&gt;clusters&lt;/em&gt; con unos datos etiquetados previamente.&lt;/p&gt;
+&lt;p&gt;Por último, comparar dos conjuntos de &lt;em&gt;clusterings&lt;/em&gt; puede hacerse de forma supervisada o no supervisada. Por ejemplo, lanzar dos veces K-Means y compararlos usando SSE o entropía.&lt;/p&gt;
+&lt;h1 id=&#34;erratas&#34;&gt;Erratas&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Gracias a &lt;a href=&#34;https://gitlab.com/josealberto4444&#34; title=&#34;Enlace al gitlab de JoseAlberto4444&#34;&gt;@josealberto4444&lt;/a&gt; por resaltar que faltaba la propiedad de no negatividad en las distancias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;bibliografía-a-idsec-5-namesec-5a&#34;&gt;Bibliografía &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2F04PCT&#34;&gt;Cap 8. Introduction to Data Mining 1st edition by Tan, Pang-Ning, Steinbach, Michael, Kumar, Vipin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://amzn.to/2sYPCAl&#34;&gt;Data Mining, Southeast Asia Edition: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Minkowski_distance&#34;&gt;https://en.wikipedia.org/wiki/Minkowski_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Euclidean_distance&#34;&gt;https://en.wikipedia.org/wiki/Euclidean_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Taxicab_geometry&#34;&gt;https://en.wikipedia.org/wiki/Taxicab_geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Chebyshev_distance&#34;&gt;https://en.wikipedia.org/wiki/Chebyshev_distance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apuntes de clase &lt;em&gt;Aprendizaje no supervisado y detección de anomalías&lt;/em&gt; del &lt;strong&gt;Máster universitario en Ciencia de Datos e Ingeniería de Computadores de la Universidad de Granada&lt;/strong&gt;*&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Mostrar artículos similares usando Clustering con sklearn</title>
+            <link>https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/</link>
+            <pubDate>Tue, 31 Oct 2017 19:58:04 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mostar-articulos-relacionados-blog/</guid>
+            <description>&lt;p&gt;
+Hace un tiempo quería mostrar &lt;strong&gt;artículos similares / relacionados&lt;/strong&gt; al final de cada artículo de este blog. Al momento de plantear este problema, &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; no tenía soporte para esta característica, hoy día sí. Para ello decidí implementar mi propio sistema usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34;&gt;python&lt;/a&gt;, &lt;em&gt;sklearn&lt;/em&gt; y &lt;a href=&#34;https://es.wikipedia.org/wiki/An%C3%A1lisis_de_grupos&#34;&gt;Clustering&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/clustering-similar-posts-sklearn-python.jpg&amp;#34;
+            alt=&amp;#34;Agrupando artículos similares&amp;#34;
+            title=&amp;#34;Agrupando artículos similares&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;437&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Diseño del programa
+&lt;/h2&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Leer y Parsear los artículos
+&lt;/h3&gt;
+&lt;p&gt;
+Ya que escribo tanto en &lt;a href=&#34;https://elbauldelprogramador.com/en/&#34;&gt;Inglés&lt;/a&gt; y &lt;a href=&#34;https://elbauldelprogramador.com&#34;&gt;Español&lt;/a&gt;, necesito entrenar el modelo dos veces, para poder mostrar artículos relacionados en inglés a los lectores ingleses, y en Castellano a los Hispanos. La función &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; se encarga de esto. Recibe como argumentos el &lt;em&gt;directorio&lt;/em&gt; donde se encuentran los artículos, y un &lt;code class=&#34;verbatim&#34;&gt;booleano&lt;/code&gt; indicando si quiero leer los escritos en inglés o castellano.
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;dfEng&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                  &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;dfEs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;readPosts&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blog/content/post&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+                 &lt;span class=&#34;n&#34;&gt;english&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;False&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Dentro de esta función (&lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L63&#34;&gt;puedes consultarla en mi github&lt;/a&gt;), leo los artículos y devuelvo un &lt;a href=&#34;http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html&#34;&gt;Data Frame de Pandas&lt;/a&gt;. Lo más relevante que hace esta función es seleccionar el &lt;a href=&#34;https://elbauldelprogramador.com/tags/parser/&#34;&gt;parser correcto&lt;/a&gt;, para abrir los ficheros usando el &lt;a href=&#34;https://elbauldelprogramador.com/how-to-parse-frontmatter-with-python/&#34;&gt;parseador de yaml&lt;/a&gt; o el de &lt;em&gt;TOML&lt;/em&gt;. Una vez leido el &lt;em&gt;frontmatter&lt;/em&gt;, &lt;code class=&#34;verbatim&#34;&gt;readPosts&lt;/code&gt; crea el &lt;strong&gt;DataFrame&lt;/strong&gt; usando estos &lt;em&gt;metadatos&lt;/em&gt;. En concreto solo se queda con estos:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;tags&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;tags&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;introduction&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Lo cual significa, que usaremos esta información para clasificar los posts.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Selección del Modelo
+&lt;/h2&gt;
+&lt;p&gt;
+Como dije al principio, decidí usar &lt;em&gt;Clustering&lt;/em&gt;. Ya que estoy tratando con datos de texto, necesito una forma de convertir esta información a forma numérica. Para conseguirlo se usa una técnica llamada &lt;a href=&#34;https://es.wikipedia.org/wiki/Tf-idf&#34;&gt;TF-IDF (&lt;em&gt;Term frequency – Inverse document frequency&lt;/em&gt;)&lt;/a&gt;. No entraré en los detalles, pero daré una pequeña introducción.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+¿Qué es TF-IDF? (frecuencia de término – frecuencia inversa de documento)
+&lt;/h3&gt;
+&lt;p&gt;
+Cuando se trabaja con &lt;strong&gt;datos de texto&lt;/strong&gt;, muchas palabras aparecen &lt;em&gt;muchas veces en distintos ducumentos pertenecientes a distintas clases&lt;/em&gt;, dichas palabras no suelen contener &lt;strong&gt;información discriminatoria&lt;/strong&gt;. &lt;strong&gt;TF-IDF&lt;/strong&gt; se encarga de rebajar el peso que tienen estos términos en los datos, para que no influyan en la clasificación.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;em&gt;tf-idf&lt;/em&gt; se define como el producto de:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;strong&gt;Frecuencia del término&lt;/strong&gt;. Número de veces que aparece el término en el documento.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;strong&gt;Frecuencia Inversa de Documento&lt;/strong&gt;. Cuanta información proporciona el término teniendo en cuenta el resto de documentos, es decir, si el término es frecuente o no en el resto de documentos.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Al multiplicar ambos, obtenemos el &lt;em&gt;tf-idf&lt;/em&gt;, citando Wikipedia:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Un peso alto en tf-idf se alcanza con una elevada frecuencia de término (en el documento dado) y una pequeña frecuencia de ocurrencia del término en la colección completa de documentos. Como el cociente dentro de la función logaritmo del idf es siempre mayor o igual que 1, el valor del idf (y del tf-idf) es mayor o igual que 0. Cuando un término aparece en muchos documentos, el cociente dentro del logaritmo se acerca a 1, ofreciendo un valor de idf y de tf-idf cercano a 0.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+En resumen, conforme &lt;strong&gt;más común es un término entre todos los documentos&lt;/strong&gt;, menor será el valor &lt;em&gt;tf-idf&lt;/em&gt;, lo cual indica que esa palabra no es importante para la clasificación.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-5&#34;&gt;
+Hiperparámetros
+&lt;/h3&gt;
+&lt;p&gt;
+Para seleccionar los parámetros apropiados para el modelo he usado &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;el método GridSearchCV de sklearn&lt;/a&gt;, puedes verlo en &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L425&#34;&gt;la línea 425 del código&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Limpiando los datos
+&lt;/h2&gt;
+&lt;p&gt;
+Con el método a usar (&lt;em&gt;clustering&lt;/em&gt;) y teniendo los datos de texto en formato numérico (&lt;em&gt;TF-IDF&lt;/em&gt;), ahora toca limpiar los datos. Cuando se trabaja con datos de texto, es muy frecuente eliminar lo que se denominan &lt;em&gt;stop words&lt;/em&gt;, palabras que no añaden significado alguno (el, la, los, con, a, eso…). Para ello creo la función &lt;a href=&#34;https://github.com/elbaulp/hugo_similar_posts/blob/master/similar_posts.py#L155&#34;&gt;generateTfIdfVectorizer&lt;/a&gt;. Esta misma función se encarga de realizar el &lt;em&gt;stemming&lt;/em&gt;. De &lt;em&gt;Wikipedia&lt;/em&gt;, &lt;a href=&#34;https://es.wikipedia.org/wiki/Stemming&#34;&gt;Stemming es el proceso de:&lt;/a&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+reducir una palabra a su raíz o (en inglés) a un stem.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Dependiendo de en qué idioma esté generando los &lt;strong&gt;artículos relacionados&lt;/strong&gt; (inglés o Castellano) uso:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_snowball&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SnowballStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;spanish&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stemmer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+para Castellano o
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;tokenizer_porter&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PorterStemmer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;porter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;stem&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;word&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;split&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;word&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;stop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+para inglés.
+&lt;/p&gt;
+&lt;p&gt;
+Tras este proceso, finalmente tengo todos los datos listos para aplicar &lt;em&gt;clustering&lt;/em&gt;.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Clustering
+&lt;/h2&gt;
+&lt;p&gt;
+He usado &lt;em&gt;KMeans&lt;/em&gt; para realizar el clustering. La mayor carga de trabajo de este proceso era &lt;strong&gt;limpiar los datos&lt;/strong&gt;, así que este paso es sencillo de programar. Solo es necesario saber cuantos &lt;em&gt;clusters&lt;/em&gt; debería tener. Para ello he usado un método llamado &lt;strong&gt;Elbow Method&lt;/strong&gt; (El método del codo). Sirve para hacernos una idea del valor óptimo de &lt;code class=&#34;verbatim&#34;&gt;k&lt;/code&gt; (Cuantos clusters). El metodo nos indica cuando la &lt;strong&gt;distorsión&lt;/strong&gt; entre clusters empieza a aumentar rápidamente. Se muestra mejor con una imagen:
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/Elbow method for clustering.jpg&amp;#34;
+            alt=&amp;#34;Elbow method&amp;#34;
+            title=&amp;#34;Elbow method&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;546&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;En este ejemplo, se aprecia un codo en k=12&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Tras ejecutar el modelo, usando &lt;em&gt;16 características&lt;/em&gt;, estas son las seleccionadas para Catellano:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;andro&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;comand&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;dat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;desarroll&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;funcion&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;googl&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;jav&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;libr&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;linux&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;program&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;recurs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;segur&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;wordpress&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+y para inglés:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;blogs&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;chang&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;channels&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;curat&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;fil&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;gento&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;howt&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;list&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;lists&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;podcasts&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scal&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;scienc&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;script&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;youtub&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+Cómo intregrar el resultado con Hugo
+&lt;/h2&gt;
+&lt;p&gt;
+Esta parte me llevó bastante tiempo ya que es necesario leer el resultado del modelo, en formato CSV, y mostrar 10 artículos del mismo cluster. Aunque ya no estoy usando este método (ahora uso el propio de Hugo), lo dejo por aquí como referencia:
+&lt;/p&gt;
+&lt;div class=&#34;src src-go&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;delimit&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;labels.&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Lang&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.csv&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;LogicalName&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* First iterate thought csv to get post cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+       &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Set&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cluster&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Get&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;cluster&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* loop csv again to store post in the same cluster */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;getCSV&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;sep&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;cluster&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Add&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Scratch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;Get&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Finally, show 5 randomly related posts */&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;gt&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;len&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;{{&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;related&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;first&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;shuffle&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;post&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;related-post&amp;#34;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;href=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Ref&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;printf&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;title=%q&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;safeHTMLAttr&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;index&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;li&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ul&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;{{&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;end&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&lt;em&gt;Si tienes algún comentario, o quiere mejorar algo, comenta abajo.&lt;/em&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+Referencias
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://amzn.to/2fJVjwk&#34;&gt;Libro Python Machine Learning&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html&#34;&gt;Documentación de Sklearn&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,631 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tor on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/tor/</link>
+        <description>Recent content in tor on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 21 Mar 2017 13:00:18 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/tor/</link>
+            <title>tor on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/tor/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo salir del mundo de Google</title>
+            <link>https://elbauldelprogramador.com/como-salir-mundo-google/</link>
+            <pubDate>Tue, 21 Mar 2017 13:00:18 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-salir-mundo-google/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;!-- raw HTML omitted --&gt;Martí Puig&lt;!-- raw HTML omitted --&gt;, Titulado en C.F.G.S. de Mantenimiento Electrónico. Amante de la cultura DIY, de la programación y la electrónica.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;como-está-la-privacidad-actualmente&#34;&gt;Como está la privacidad actualmente&lt;/h1&gt;
+&lt;p&gt;Actualmente nos han acostumbrado a que todos los servicios que tenemos en Internet sean &lt;strong&gt;gratuitos&lt;/strong&gt;. Sí claro, no tenemos que pagar ni tan solo un céntimo para poder disfrutar de todas las comodidades que nos ofrecen. Por ejemplo, ¿quién paga por una cuenta de correo electrónico?  ¿Quién paga por utilizar el servicio de almacenamiento en la nube donde uno puede &lt;a href=&#34;https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/&#34; title=&#34;Sincronizar Google Drive en Linux en 4 pasos&#34;&gt;sincronizar todos los dispositivos que quiera?&lt;/a&gt; ¿Quién paga por utilizar un servicio de &lt;a href=&#34;https://elbauldelprogramador.com/aplicacion-mensajeria-movil-segura-whatsapp-signal-allo/&#34; title=&#34;¿Qué Aplicación De Mensajería Móvil Es Más Segura?&#34;&gt;mensajería instantánea&lt;/a&gt; para poder comunicarse con sus amigos y familiares?&lt;/p&gt;
+&lt;p&gt;Y todos sabemos que detrás de estas aplicaciones y servicios hay grandes empresas que tienen beneficios millonarios año tras año. Entonces, si no cobran por sus servicios, &lt;em&gt;de dónde obtienen el dinero&lt;/em&gt; para poder conseguir estos beneficios?&lt;/p&gt;
+&lt;p&gt;Pues bien, la información siempre ha sido importante, y ahora más que nunca. Los datos son dinero y de nuestra información es de lo que realmente viven estas empresas. Por este motivo, últimamente se habla tanto del &lt;em&gt;Big Data&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nosotros somos el producto&lt;/strong&gt;, nosotros somos quien les damos, sin ningún reparo esta información la cual, ellos venden y de este modo obtienen beneficios. Por lo tanto, su materia prima, les sale gratis. Simplemente tienen que montar una infraestructura para poder lanzar su servicio a los usuarios y estos ya se encargan de ofrecerles su materia prima: &lt;strong&gt;Datos&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ya hemos visto con el &lt;em&gt;caso de Snowden&lt;/em&gt; y el caso reciente de la filtración de información de la &lt;strong&gt;CIA&lt;/strong&gt; en &lt;em&gt;Wikileaks&lt;/em&gt; o con el caso del atentado de San Bernardino, donde la FBI pirateó un iPhone para obtener toda la información que contenía, después que Apple se hubiese negado a ofrecerle el acceso al dispositivo. Estos casos nos demuestran que nuestra información está expuesta a pesar de tomar medidas para tener a salvo nuestra información. Qué diversas organizaciones tienen acceso a lo que en teoría es &lt;strong&gt;privada&lt;/strong&gt;. Y tienen acceso de forma indebida.&lt;/p&gt;
+&lt;h1 id=&#34;como-escapar-de-la-vigilancia-en-internet&#34;&gt;Como escapar de la vigilancia en Internet&lt;/h1&gt;
+&lt;p&gt;Entonces, qué podemos hacer? Por suerte, hay servicios que pueden sustituir los que nos ponen en bandeja todas las funcionalidades que queramos a un precio muy caro. Nuestros datos. Por supuesto, estos programas sustitutos puede que no sean tan buenos ni tan funcionales que los privativos. Sin embargo, debido a la &lt;em&gt;gran comunidad de programadores&lt;/em&gt; que hay detrás, esta brecha se está haciendo cada vez más estrecha, y actualmente ya podemos disfrutar de una gran funcionalidad y con nuestros datos a salvo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por ejemplo en cuanto a navegadores encontramos a dos grandes vencedores, &lt;strong&gt;Google Chrome&lt;/strong&gt; y &lt;strong&gt;Mozilla Firefox&lt;/strong&gt;. El primero, como ya es de esperar es de código privativo y el segundo es de código abierto. Pero como Google siempre quiere abarcar al máximo y mirar de contentar a todos los usuarios, tiene una versión de código abierto de su navegador, denominado Chromium. Sin embargo, nos centraremos en Mozilla Firefox que ya desde sus orígenes ha sido de código abierto.&lt;/p&gt;
+&lt;h1 id=&#34;pluggins-para-nuestro-navegador&#34;&gt;Pluggins para nuestro navegador&lt;/h1&gt;
+&lt;p&gt;En este navegador nos encontramos con una serie de &lt;em&gt;pluggins&lt;/em&gt; muy interesantes para salvar nuestra intimidad y maximizar nuestra seguridad. A continuación se muestran sus nombres y se especifica sus funcionalidades:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;__UBlock Origin__&lt;!-- raw HTML omitted --&gt;: Es el bloqueador más completo que hay actualmente entre los &lt;em&gt;pluggins&lt;/em&gt; disponibles de Firefox. Nos ahorrará tener que ver publicidad indeseada y molesta.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Privacy Badger&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; que elimina &lt;em&gt;trackers&lt;/em&gt;, publicidad, etc. A medida que lo utilizamos va aprendiendo y va eliminando más publicidad. En caso de que haya algo que no oculte automáticamente y deseemos ocultarlo, podemos seleccionarlo y ya no nos lo volverá a mostrar más.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;HTTPS Everywhere&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; muy útil ya que fuerza que todas las webs que abrimos sean con protocolo HTTPS. Muchas webs tienen las dos versiones, y a veces se nos puede abrir la web sin https, con lo cual, nos redirige automáticamente a la web que utiliza el protocolo más seguro.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Self-destruction&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Desgraciadamente cuando navegamos por la red, las diferentes webs nos minan con &lt;em&gt;cookies&lt;/em&gt; y &lt;em&gt;trackers&lt;/em&gt;. Por esto, nos salen anuncios relacionados de los artículos que terminamos de buscar hace un momento. Para que no nos rastreen, podemos instalar este &lt;em&gt;pluggin&lt;/em&gt; para que vaya eliminando de forma periódica todas las &lt;em&gt;cookies&lt;/em&gt;. Tenemos 3 niveles: al instante, cuando cerremos la pestaña o el navegador.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;SSL Personas&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; que nos muestra mediante colores la seguridad de la web en la que estamos navegando. Pinta el fondo del navegador de un color u otro en función del nivel de seguridad.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;NoScript&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Inhabilita que se ejecuten &lt;em&gt;scripts&lt;/em&gt; con javascript. Esto puede ser útil por ejemplo si utilizamos un &lt;em&gt;adBlocker&lt;/em&gt; y nos salta el aviso de que no podemos acceder al contenido de la web hasta que no hayamos desactivado el &lt;em&gt;adBlocker&lt;/em&gt;. Aunque la verdad, hace bastante inviable la navegación, por lo tanto lo dejaremos en un segundo plano.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;buscadores-que-protegen-nuestra-privacidad&#34;&gt;Buscadores que protegen nuestra privacidad&lt;/h1&gt;
+&lt;p&gt;En cuanto a buscadores que vigilan por nuestra &lt;a href=&#34;https://elbauldelprogramador.com/tails-linux-importancia-privacidad/&#34; title=&#34;TAILS LINUX y la importancia de la privacidad&#34;&gt;privacidad&lt;/a&gt; e intimidad son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.startpage.com/&#34;&gt;StartPage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://disconnect.me/&#34;&gt;Disconnect&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seguramente, algunos no conoceréis ninguno de estos buscadores ya que me diréis que sois fanáticos del buscador de Google y que no podéis vivir sin él. Pues podemos continuar utilizando los servicios de Google de forma que no violen nuestra privacidad ni intimidad. Para ello, vamos a utilizar el buscador más recomendable de los 3 que es StartPage. Este buscador hace de &lt;em&gt;proxy&lt;/em&gt; entre nosotros y Google de modo que terminaremos obteniendo los resultados de Google pero él será quien haga la búsqueda por nosotros y así Google no podrá obtener nuestros datos.&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que hacer la misma búsqueda en StartPage o hacerla en Google seguramente no obtendremos los mismos resultados a pesar que StartPage intenta hacer la búsqueda con el mismo idioma, desde el mismo país, etc&amp;hellip;&lt;/p&gt;
+&lt;h1 id=&#34;gestores-de-contraseñas&#34;&gt;Gestores de contraseñas&lt;/h1&gt;
+&lt;p&gt;Bueno&amp;hellip; y que decir de las &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet y cuando la longitud de la misma no importa&#34;&gt;contraseñas&lt;/a&gt;. Va muy bien el &lt;strong&gt;gestor de contraseñas de Google Chrome&lt;/strong&gt;, verdad? Allí, todas bien ordenadas y ocultas, pero que con un solo click podemos convertirlas en texto plano y ver la contraseña que habíamos olvidado, no?&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que en teoría, aunque Google viva de nuestros datos, parece ser que el tema de las contraseñas aún lo respeta. No debemos olvidar que estas contraseñas están en los servidores de Google. Por este motivo debemos utilizar un gestor de contraseñas abierto y que lo tengamos en local, bajo nuestro control. Nada de subir las contraseñas a Internet. Porque ya hemos visto que de seguro tiene bien poco.&lt;/p&gt;
+&lt;p&gt;Para ello utilizaremos el programa &lt;strong&gt;KeypassX&lt;/strong&gt;. Es el mismo que Keypass sin embargo, este es multiplataforma. Es un gestor de contraseñas con una base de datos local donde almacenaremos todas nuestras contraseñas. Para acceder a esta base de datos tendremos una contraseña maestra, que será la única que deberemos recordar ya que una vez dentro, tendremos acceso al gestor de contraseñas. De este modo, el resto de contraseñas, podran ser realmente seguras e indescifrables ya que no tendremos que recordarlas. Debemos de tener en cuenta que la contraseña maestra debe ser segura ya que si no, pierde toda utilidad el Keypass.&lt;/p&gt;
+&lt;p&gt;Veremos que el programa, nos crea un archivo que es la Base de Datos. Es recomendable ir haciendo copias de seguridad en varios dispositivos por si algún día pasa algún desastre y perdemos el archivo o se corrompe. Ya que entonces, habremos perdido todas nuestras credenciales.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/author/alex&#34; title=&#34;Alejandro&#34;&gt;Alejandro&lt;/a&gt; sin embargo, recomienda usar &lt;!-- raw HTML omitted --&gt;LastPass&lt;!-- raw HTML omitted --&gt;, ya que es el gestor de contraseñas usado por &lt;strong&gt;Steve Gibson&lt;/strong&gt;, un experto en seguridad y comentarista en el pódcast &lt;a href=&#34;https://elbauldelprogramador.com/categories/security-now/&#34; title=&#34;Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Muchos se preguntarán. Si alguien tiene acceso a este archivo, también tiene acceso a todas mis contraseñas, no? No. Porque está &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrado&lt;/a&gt; y sin tu contraseña maestra no va a poder ver nada.&lt;/p&gt;
+&lt;p&gt;Y como deben ser nuestras contraseñas? Bueno pues básicamente hay que seguir 3 reglas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No reutilices tus contraseñas. Porque si por lo que sea, consiguen obtener una y esta se utiliza en varios servicios. Podrán acceder a todos ellos con solo una contraseña.&lt;/li&gt;
+&lt;li&gt;No compartas la contraseña. A pesar de tener mucha confianza con tu pareja, hermanos, familia. Una contraseña es algo personal e intransferible. No compartas con nadie tus contraseñas.&lt;/li&gt;
+&lt;li&gt;Es aconsejable ir cambiando las contraseñas periódicamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Y como sé si es fuerte o no mi contraseña? Pues hay varios servicios en la red donde podemos validar la fortaleza de estas. Por ejemplo, aquí encontramos una muy buena web donde nos dice el tiempo que tardarían en conseguir nuestra contraseña y con qué tipo de ordenador &lt;a href=&#34;http://passwd.criptica.org&#34;&gt;web para validar nuestras contraseñas&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;tor-el-rey-de-la-privacidad&#34;&gt;Tor, el rey de la privacidad&lt;/h1&gt;
+&lt;p&gt;Llegados a este punto ya hemos conseguido que nuestras contraseñas sean seguras. Que nuestras &lt;strong&gt;consultas en los buscadores sean anónimas y que nuestro navegador sea lo más seguro&lt;/strong&gt; y privado posible. Sin embargo, aún podemos ir un paso más allá y usar la red Tor.&lt;/p&gt;
+&lt;p&gt;Es una red que nos provee de una IP diferente a la nuestra y que se ubica en otro punto geográfico al nuestro. A parte, nos ofrece una privacidad al máximo nivel ya que aunque nuestro mensaje sea interceptado nunca se podrá obtener el 100% de la información o metadatos vinculados a este.&lt;/p&gt;
+&lt;p&gt;Por supuesto, la gran ventaja de estos programas comentados anteriormente, es que son libres, y el código fuente es público. Por lo tanto, podemos verificar si realmente funcionan como deben, tienen &lt;em&gt;bugs&lt;/em&gt; o tienen funcionalidades ocultas. Y aunque no todo el mundo se pare a revisar su código, el hecho de que esté disponible y sea posible que cualquier persona lo pueda revisar, da más confianza que uno que se encuentra oculto&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si quieres aprender a configurar Tor, visita la guía &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el Anonimáto con Tor&#34;&gt;Logrando el Anonimáto con Tor&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bien, espero que les haya gustado mi primer tutorial en esta página y espero poder ir aportando mi granito de arena periódicamente a la comunidad.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>TAILS LINUX y la importancia de la privacidad</title>
+            <link>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</link>
+            <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;em&gt;Paula de la Hoz (&lt;a href=&#34;https://twitter.com/Terceranexus6&#34;&gt;@Terceranexus6&lt;/a&gt;&lt;/em&gt;. Su blog: &lt;a href=&#34;https://ohmybits.tumblr.com&#34;&gt;Oh My Bits&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://medium.com/@HamletAgain&#34;&gt;Hamlet Again&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;contexto-actual&#34;&gt;Contexto actual&lt;/h1&gt;
+&lt;p&gt;Con el incipiente avance tecnológico, en nuestra sociedad cada vez se valora más la privacidad del usuario. Todo lo que hacemos, quiénes somos, qué nos gusta, es información que nos puede parecer irrelevante según para qué contextos. Sin embargo para las empresas, gobiernos y asociaciones, esa información es muy valiosa y puede incluso llegar a &lt;em&gt;limitarnos&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Decir que no te importa el derecho a la privacidad porque no tienes nada que esconder no se diferencia de decir que no te importa la libertad de expresión porque no tienes nada que decir.&lt;/em&gt;&amp;rdquo;
+&amp;mdash; &lt;strong&gt;Edward Snowden&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El ex-empleado de la NSA &lt;strong&gt;&lt;em&gt;Edward Snowden&lt;/em&gt;&lt;/strong&gt;, conocido por su implicación en wikileaks con filtraciones de información clasificada, ha abogado por la defensa de la privacidad y los derechos en internet a través de las redes, incluso desde su asilo político en Rusia. Esta controvertida figura, para mantener &amp;ldquo;&lt;em&gt;a salvo&lt;/em&gt;&amp;rdquo; su privacidad utiliza, principalmente, un sistema operativo llamado &lt;strong&gt;TAILS LINUX&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-tails&#34;&gt;¿Qué es Tails?&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/index.en.html&#34;&gt;TAILS&lt;/a&gt; es un sistema operativo &lt;em&gt;live&lt;/em&gt;, ¿ésto qué quiere decir? que podemos utilizarlo desde cualquier ordenador utilizando simplemente un pen drive. Es completamente gratuito, libre y está basado en Debian &lt;a href=&#34;https://elbauldelprogramador.com/categories/linux&#34; title=&#34;Artículos sobre Linux&#34;&gt;GNU/Linux&lt;/a&gt;. Una de las características principales de TAILS, es que basa todas sus conexiones en &lt;strong&gt;TOR&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt; es un navegador que protege al usuario frente al análisis del tráfico de paquetes y la vigilancia masiva usando un sistema alternativo de nodos voluntarios y túneles virtuales, en lugar de hacer una conexión directa.&lt;/p&gt;
+&lt;p&gt;Además de &lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt;, TAILS permite utilizar I2P, y en la web oficial viene &lt;a href=&#34;https://tails.boum.org/doc/anonymous_internet/i2p/index.en.html&#34;&gt;documentado&lt;/a&gt; cómo utilizarlo. El sistema operativo, que ocupa en su totalidad &lt;em&gt;4 gigas&lt;/em&gt;, viene con una serie de programas predeterminados relacionados con la privacidad, la ofimática y la mensajería. En un principio, el pen drive no guarda la información de una sesión a otra, pero &lt;a href=&#34;https://tails.boum.org/install/clone/index.en.html&#34;&gt;podemos configurarlo&lt;/a&gt; para utilizar la memoria sobrante del pen drive.&lt;/p&gt;
+&lt;h1 id=&#34;instalación-y-uso&#34;&gt;Instalación y uso&lt;/h1&gt;
+&lt;p&gt;Configurar un pen drive para instalar TAILS es bastante sencillo, especialmente porque &lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34;&gt;viene indicado paso a paso&lt;/a&gt; en la página oficial. Además incluye especificaciones de instalación desde cualquier sistema operativo (Linux, Windows, MAC y otro TAILS). El proceso es básicamente bajarse la imagen desde TOR, preparar un pen drive de 4 o más gigas, e instalar la imagen en éste.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Para usar este sistema operativo, simplemente insertamos el pen drive en uno de los puertos de un ordenador apagado y lo encendemos. El ordenador tardará varios segundos en terminar de cargar la imagen, pero cuando lo haga tendremos acceso a nuestro escritorio desde el cual podremos navegar con tranquilidad. Una vez que apagamos el ordenador y retiramos el pen drive, &lt;strong&gt;no queda rastro&lt;/strong&gt; de lo que hayamos hecho en el ordenador, ya que se sobrescribe la memoria.&lt;/p&gt;
+&lt;p&gt;Por muy seguro que pueda ser este sistema operativo y las herramientas que ofrece, en la propia página web indica que la mejor forma de protegerse es el &lt;em&gt;sentido común&lt;/em&gt; del usuario, tales como utilizar contraseñas fuertes y saber utilizar apropiadamente las herramientas que ofrece, comprendiendo las limitaciones.&lt;/p&gt;
+&lt;h1 id=&#34;programas-y-recursos&#34;&gt;Programas y recursos&lt;/h1&gt;
+&lt;p&gt;Algunas de las herramientas más interesantes con las que viene Tails son las siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/code/luks/&#34;&gt;LUKS&lt;/a&gt; (Linux Unified Key Setup), que te permite encriptar pen drives y discos externos.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt; es una extensión desarrollada por la &lt;a href=&#34;eff.org&#34;&gt;EFF&lt;/a&gt; para encriptar todas las conexiones usando https.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpgp.org/&#34;&gt;OpenPGP&lt;/a&gt; &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;para encriptar y firmar documentos y correos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://otr.cypherpunks.ca/&#34;&gt;OTR&lt;/a&gt;, para proteger mensajería instantánea.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wipetools.tuxfamily.org/nautilus-wipe.html&#34;&gt;Nautilus Wipe&lt;/a&gt; para borrar archivos con seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;confías-plenamente-en-tails-ellos-esperan-que-no&#34;&gt;¿Confías plenamente en TAILS? ellos esperan que no&lt;/h1&gt;
+&lt;p&gt;Una de los problemas fundamentales de la sociedad actual en términos de informática es el desinterés del usuario medio por su privacidad y seguridad. Y esta concienciación empieza precisamente con la duda. Sean cuales sean nuestros motivos para confiar en un sistema operativo, programa o aplicación, deben haber pasado un filtro de duda y escepticismo, y eso mismo &lt;a href=&#34;https://tails.boum.org/doc/about/trust/index.en.html&#34;&gt;nos sugieren&lt;/a&gt; en la página de TAILS.&lt;/p&gt;
+&lt;p&gt;Las herramientas que ofrecen no sólo tienen un objetivo técnico si no que se esfuerzan en ofrecerte una nueva visión y un cambio en la forma en que sus usuarios usan la tecnología y su información. El uso de este sistema debe ir acompasando al interés por nuestra privacidad, y a la curiosidad por saber qué se hace con nuestra información.&lt;/p&gt;
+&lt;p&gt;Para ello ofrecen una serie de razones por las cuales puede decirse que abogan por estas cualidades. Basa su justificación en el uso de software libre bien documentado, TOR, y el hecho de utilizar Debian GNU/Linux, que aunque ha tenido bugs importantes como &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2008/msg00152.html&#34;&gt;SSH PRNG&lt;/a&gt; no se han encontrado vulnerabilidades de seguridad hasta la fecha, lo que lo convierte en un buen candidato para este sistema.&lt;/p&gt;
+&lt;h1 id=&#34;rompiendo-barreras&#34;&gt;Rompiendo barreras&lt;/h1&gt;
+&lt;p&gt;Es de saber que las distintas distribuciones de linux tienen cierta fama entre los programadores e informáticos de todo el mundo. Debido a la amplia oferta de sistemas operativos disponibles, hay algunas más o menos amigables para un usuario medio. TAILS pretende ser accesible y manejable para cualquiera, tenga o no una base sólida en el uso de programación, linux y Bash. Para ello ofrece una interfaz gráfica intuitiva y una instalación simple.&lt;/p&gt;
+&lt;p&gt;El uso de este sistema puede tener muchas aplicaciones en nuestro día a día, y es completamente legal. No necesitamos ser Edward Snowden para &lt;strong&gt;necesitar o querer&lt;/strong&gt; privacidad, por ejemplo, a la hora de consultar nuestro correo en un ordenador público. La idea de este sistema es liberarnos de la obligación de &amp;ldquo;&lt;em&gt;confiar&lt;/em&gt;&amp;rdquo; en un ordenador público, o de algún amigo.&lt;/p&gt;
+&lt;p&gt;Esta idea puede que nos resulte difícil de agregar a nuestra rutina, pero sin duda se debería hacerse una pequeña reflexión sobre ello. El ritmo de nuestra sociedad ha cambiado con rapidez en pocos años, y dependemos en nuestra vida privada y trabajo (con frecuencia) de programas y aplicaciones que manejan gran cantidad de información privada. Esta rapidez ha hecho que el usuario medio se acostumbre a la comodidad de estas herramientas, pero se olvide con frecuencia de proteger sus datos a la hora de utilizarla, muchas veces por la gran cantidad de trabas y dificultades para ello.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 1)</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/</guid>
+            <description>&lt;ul&gt;
+&lt;li&gt;Logrando el anonimato con Tor (Parte 1)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Todos sabemos que Tor nos permite navegar anónimamente en Internet. En este artículo veremos cómo lograrlo y verdaderamente saber contra qué luchamos.&lt;/p&gt;
+&lt;p&gt;Primero instalemos Tor y empecemos a usarlo para desasirnos de algunas cosas. Hay muchos tutoriales en Internet que describen cómo instalar y usar Tor, pero mencionemos una vez más todos los pasos requeridos.&lt;/p&gt;
+&lt;h1 id=&#34;1-instalación&#34;&gt;1. Instalación&lt;/h1&gt;
+&lt;p&gt;Asumiremos que usas la distribución Ubuntu Linux, sin embargo los pasos son relevantes a su vez para otras distribuciones. Primero veamos &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;1&lt;/a&gt; cómo agregar el repositorio correcto a la lista de fuentes. En caso de que uses Ubuntu 10.04 - las mismas versiones que Backtrack 5 R2 usa - ejecuta los siguientes comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; &lt;span class=&#34;nv&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;&amp;gt;# &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;deb http://deb.torproject.org/torproject.org lucid main&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/apt/sources.list
+ &lt;span class=&#34;c1&#34;&gt;# echo &amp;#34;deb-src http://deb.torproject.org/torproject.org lucid main&amp;#34; &amp;gt;&amp;gt; /etc/apt/sources.list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Luego instalemos Tor y Privoxy:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get update&lt;/span&gt;
+ &lt;span class=&#34;c1&#34;&gt;# apt-get install tor privoxy&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este punto deberíamos mencionar que ambos son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tor: es usado para conectarnos con una red anónima sobre TCP&lt;/li&gt;
+&lt;li&gt;Privoxy: es usado para conectar nuestro navegador sobre un proxy HTTP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Agrega la siguiente línea al archivo &lt;code&gt;/etc/privoxy/config&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# echo &amp;#34;forward-socks4a / &amp;lt;a href=&amp;#34;http://127.0.0.1:9050&amp;#34; target=&amp;#34;_blank&amp;#34;&amp;gt;127.0.0.1:9050&amp;lt;/a&amp;gt; .&amp;#34; &amp;gt;&amp;gt; /etc/privoxy/config&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Además debes agregar las siguientes línas al archivo &lt;code&gt;/etc/tor/torrc&lt;/code&gt;:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;AvoidDiskWrites &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+ControlPort &lt;span class=&#34;m&#34;&gt;9051&lt;/span&gt;
+Log notice stdout
+SafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+WarnUnsafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+SocksListenAddress 127.0.0.1
+SocksPort &lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Por el momento no entraremos en detalles sobre qué significa cada opción, pero describiremos las variables de configuración interesantes más adelante. Primero iniciemos Tor y Privoxy:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/tor start&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/privoxy start&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto debería abrir dos puertos, el 9050 para Tor y el 8118 para Privoxy. Comprobemoslo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# netstat -lntup&lt;/span&gt;
+tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 127.0.0.1:8118 0.0.0.0:* LISTEN 8520/privoxy
+tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 127.0.0.1:9050 0.0.0.0:* LISTEN 8540/tor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ok, los puertos están en estado de escucha, lo que significa que todo está bien, porque pueden aceptar conexiones. el único paso que nos falta es configurar nuestro navegador para que use privoxy. Un ejemplo de configuración de Firefox se presenta en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos ver que configuramos el navegador para conectarse a traves del proxy que está corriendo en IP 127.0.0.1 y el puerto 8118, el cual es exactamente nuestro proxy Privoxy. Así nuestro navegador web se conecta a Privoxy, el cual se conecta en turnos a Tor, que nos permite navegar en Internet anónimamente.&lt;/p&gt;
+&lt;p&gt;Verifiquemos si el navegador está efectivamente usando la red Tor para navegar en internet de manera anónima. Podemos hacerlo visitando la URI &lt;!-- raw HTML omitted --&gt;Check Torproject&lt;!-- raw HTML omitted --&gt;. Si ves algo como la siguiente imagen, entonces hemos configurado Tor exitosamente y podemos navegar en Internet de forma anónima.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En vez de configurarlo manualmente, también podemos usar Tor Browser Bundle, el cual integra prácticamente todo lo que necesitamos. Simplemente tenemos que descargar Tor Browser Bundle, extraerlo y ejecutar el script start-for-browser, de la siguiente manera:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# tar -xvzf tor-browser-gnu-linux-x86_64-2.2.37-1-dev-en-US.tar.gz&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# cd tor-browser_en-US&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ./start-tor-browser&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este script primero inicia Vidalia, que es un QT frontend para Tor y se ve así:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En esta imagen podemos ver que nos conectamos exitosamente a la red Tor (se conecta cuando se inicia Vidalia). Si clickeamos en “View the Network” (Ver la Red), obtendremos una lista de todos los nodos online que la red Tor está usando - esto puede estar más actualizado en &lt;!-- raw HTML omitted --&gt;Nodos Tor&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;El script tambien abrirá el navegador web Tor una vez que nos conectemos con éxito a la red Tor. Este navegador está basado en Firefox y se ve como en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos ver que nuestro navegador está usando efectivamente la red Tor y podemos navegar en Internet de manera anónima.&lt;/p&gt;
+&lt;h1 id=&#34;2-cómo-funciona-tor&#34;&gt;2. Cómo funciona Tor&lt;/h1&gt;
+&lt;p&gt;Antes de describir cómo funciona Tor, debemos saber cómo funciona la internet moderna. Cuando visitamos un sitio web como &lt;!-- raw HTML omitted --&gt;Google&lt;!-- raw HTML omitted --&gt; estamos enviando una petición a uno de los servidores web de Google. Pero esto no sucede directamente de nuestra computadora al servidor de Google. Lo que ocurre es que nosotros enviamos la petición primero a nuestro router, seguido por el ISP (Internet Service Provider), el cual la reenvía a uno de los NIRs (National Internet Registries), que se encarga de reenviarla a uno de los LIRs (Local Internet Registries), que a su vez la reenvía a uno de los RIRs (Regional Internet Registries), etc, hasta que eventualmente el proceso es revertido una vez que la petición alcanzó el destino - el servidor de Google. Puede observarse esto usando el programa Traceroute que envía paquetes con un valor específico de TTL (Time to Live), que expira en cada salto (TTL es aumentado en 1 cada vez que el paquete es enviado para asegurar que expira) entre nuestro cliente y el servidor, revelando la identidad de cada nodo. Para encontrar todos los nodos que el paquete tiene que visitar cuando viaja a traves de Internet al servidor web de Google, podemos ejecutar el comando siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# traceroute www.google.com&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El problema básico con esto es que todos los nodos intermediarios pueden monitorear nuestros paquetes transmitidos a traves de Internet. Incluso si usamos una conexión encriptada (HTTPS), algunos datos todavía pueden ser accedidos simplemente mirando en el encabezado TCP, como la IP de origen, la IP destino, tamaño de carga, tiempo de comunicación, etc.&lt;/p&gt;
+&lt;p&gt;¿Pero qué pasa si estamos usando Tor en el principio de la red? No podemos realmente ejecutar Traceroute cuando estamos usando Tor, dada la forma en que Tor fue diseñado. Dado que Tor no puede manejar paquetes ICMP (ping), no hay forma de saber a dónde serán dirigidos los paquetes. Esto es lo que hace que Tor sea seguro. Cuando estamos usando nuestro navegador conectado a la red Tor, estamos enviando peticiones a través de Internet usando el primer nodo de Tor, el cual la reenvía al siguiente nodo y el siguiente al siguiente, hasta que finalmente alcanza el destino.&lt;/p&gt;
+&lt;p&gt;En la red Tor, todavía necesitamos enviar nuestros paquetes a nuestra red personal, luego al ISP, dado que es nuestro proveedor de servicios de internet; sin ello, no podríamos incluso usar Internet. Pero adicionalmente, nuestros paquetes son además dirigidos a traves de la red Tor, donde son aleatoriamente dirigidos a nodos seguros. esto permite que nuestro tráfico no sea visto por un hábil atacante y el gobierno que está monitoreando el tráfico en cualquier ubicación en Internet.&lt;/p&gt;
+&lt;p&gt;El cliente conectado a la red Tor primero necesita una lista de nodos de Tor que puede ser obtenida de el servidor directorio. Podemos ver los nodos disponibles de Tor visitando &lt;!-- raw HTML omitted --&gt;Tor Nodes&lt;!-- raw HTML omitted --&gt;, donde podemos encontrar bastante información sobre los nodos de Tor, incluyendo hostname, router name, uptime, ancho de banda disponible, etc.&lt;/p&gt;
+&lt;p&gt;Después de que el cliente ha obtenido dicha lista, necesita construir un circuito de conexiones entre los nodos de la red Tor. Cada conexión entre los nodos subsecuentes en un circuito es encriptado con diferentes claves de encriptación, por lo tanto cada nodo sólo conoce el anterior y el siguiente nodo en el circuito. Deberíamos mencionar además que Tor trabaja sobre el protocolo TCP y puede ser usado por cualquier aplicación que pueda ser configurada para enviar su tráfico a través de un proxy SOCKS. Esto no es totalmente correcto debido a que podemos torificar la aplicación con el uso de tsocks, lo cual describiremos en uno de los artículos subsiguientes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Entonces al fin y al cabo, la red Tor provee una manera de esconder el vínculo entre la dirección origen y destino de una conexión dada. Por lo tanto, un intruso no puede determinar de dónde viene la información y hacia dónde va, lo que nos convierte en anónimos.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pero la pregunta persiste: ¿puede realmente volvernos anónimos? La respuesta es sí y no. Necesitamos recordar que todos los paquetes que son enviados de nuestro cliente al servidor serán encriptados en el servidor. Esto realmente tiene sentido por cómo el servidor usaría la información y haría algo con ella si ésta fuera encriptada. En consecuencia, Tor provee anonimato sobre internet, pero no puede proveer los medios para mantenerte anónimo al servidor que está recibiendo la información.&lt;/p&gt;
+&lt;p&gt;Describamos esto un poco más. Si estamos enviando paquetes que contienen nuestro nombre de usuario, nombre de dominio o alguna otra información que indica nuestra presencia, entonces la máquina objetivo sabrá quiénes somos, aunque algún intruso que esté escuchando en un nodo intermediario tal vez no. Esto se reduce a lo siguiente:&lt;/p&gt;
+&lt;p&gt;En cada conexión a través de la red Tor, necesitamos tener en cuenta que a la información:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El cliente la envía&lt;/li&gt;
+&lt;li&gt;Internet la direcciona&lt;/li&gt;
+&lt;li&gt;El servidor la recibe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Con Tor, podemos asegurarnos que Internet aunque canaliza la información, no tiene idea sobre la dirección origen ni destino que usamos, lo cual es crucial para mantener el anonimato sobre Internet. Pero la información enviada de un cliente hacia un servidor son visibles en los dos extremos de la conexión. Por lo tanto, para ser verdaderamente anónimos, incluso en la máquina destino, necesitamos no encapsular ninguna información sensible en el paquete de datos del tráfico entre el cliente y el servidor.&lt;/p&gt;
+&lt;p&gt;Con motivo de esconder la información del nivel de aplicación que pueda comprometer nuestro anonimato, podemos usar &lt;!-- raw HTML omitted --&gt;Torbutton&lt;!-- raw HTML omitted --&gt;, una extensión de Firefox que inhabilita muchos posibles filtrados de información que nos puedan comprometer. O lo que es mejor, podemos usar&lt;!-- raw HTML omitted --&gt; Tor browser bundle&lt;!-- raw HTML omitted --&gt;, el cual usa Vidalia para configurar e iniciar Tor. Éste además abre el navegador Web Tor con Torbutton integrado, el que podemos usar para buscar anónimamente en internet.&lt;/p&gt;
+&lt;h1 id=&#34;3-variables-de-configuración-de-tor&#34;&gt;3. Variables de configuración de Tor&lt;/h1&gt;
+&lt;p&gt;Presentemos lo que el manual dice sobre las variables de configuración que usamos en este artículo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AvoidDiskWrites&lt;/strong&gt;: Si es distinto de cero, intenta escribir en el disco con menos frecuencia. Esto es útil cuando usamos memoria flash u otro dispositivo que soporta solo un limitado número de escrituras. (Default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ControlPort&lt;/strong&gt;: Si está seteado, Tor aceptará conexiones en este puerto y permitirá a esas conexiones controlar el proceso de Tor usando el protocolo “Tor Control Protocol” (descripto en control-spec.txt) Nota: a menos que especifiques también uno o más HashedControlPassword o CookieAuthentication, seteando esta opción causará que Tor permita que cualquier proceso en el localhost lo controle. (Setear ambos métodos de autenticación significa que cualquiera de los dos es suficiente para autenticar Tor). Esta opción es requerida por muchos controladores de Tor; muchos usan el valor 9051. Setealo en “auto” para dejar que Tor elija un puerto por vos. (Default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Log&lt;/strong&gt;: Envía todos los mensajes a la salida standard, a la salida de error standard, o al log del sistema (el valor de “syslog” sólo lo provee Unix). Reconocidos niveles de severidad son debug, info, notice, warn y err. Recomendamos usar “notice” en la mayoría de los casos, debido a que algo más verborrágico podría proveer información sensible a un atacante que obtenga los logs. Si se da solo un nivel de severidad, todos los mensajes de ese nivel o uno mayor serán enviados al destino listado.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SocksListenAddress&lt;/strong&gt;: Bindea hacia esta dirección para esperar por conexiones de aplicaciones de Socks-speaking. (Default: 127.0.0.1) Puedes especificar incluso un puerto (e.g. 192.168.0.1:9100) esta directiva puede ser especificada múltiples veces para bindear múltiples direcciones/puertos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SocksPort&lt;/strong&gt;: Activa este puerto para esperar conexiones de aplicaciones Socks-speaking. Configuralo en 0 si no quieres permitir conexiones con aplicaciones vía SOCKS. Configuralo en “auto” para dejar que Tor seleccione un puerto por vos. (Default: 9050)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;4-configurar-resolución-dns-de-forma-segura&#34;&gt;4. Configurar resolución DNS de forma segura&lt;/h1&gt;
+&lt;p&gt;La única cosa que debemos realmente observar cuando usamos Tor es la resolución de DNS. Usualmente nuestra máquina cliente está usando nuestros propios servidores DNS, los cuales en turnos usan los servidores DNS del ISP, por lo tanto un intruso puede todavía obtener la IP origen y destino con el que nos estamos comunicando. Este es un comportamiento no deseado, porque el servidor DNS ve qué hostname estamos intentando resolver y conectarnos, lo que puede derivar en una revelación de usuario.&lt;/p&gt;
+&lt;p&gt;Nuestro navegador web usa un proxy SOCKS para conectarse a Tor. Debemos saber qué tipo de proxies SOCKS existen. Hay tres tipos de proxies SOCKS, listados a continuación:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SOCKS 4: usa direcciones IP&lt;/li&gt;
+&lt;li&gt;SOCKS 4a: usa hostnames&lt;/li&gt;
+&lt;li&gt;SOCKS 5: usa direcciones IP y hostnames&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para probar si estamos resolviendo hostnames de forma local o remota, podemos editar la configuración torrc agregándole las siguientes líneas al archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;TestSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+SafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+WarnUnsafeSocks &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;TestSocks:&lt;/strong&gt; Cuando está activada esta opción, Tor genera una entrada en el log notice-level por cada conexión al puerto Socks indicando si la petición usó un protocolo de socks seguro o uno inseguro (mira lo comentado en SafeSocks). esto ayuda a determinar si una aplicación que usa Tor está posiblemente filtrando las peticiones DNS. (Default: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SafeSocks&lt;/strong&gt;: Cuando está activada esta opción, Tor rechazará conexiones a aplicaciones que usan variantes no seguras de protocolo de socks - una que solo provea una dirección IP, significa que la aplicación está resolviendo el DNS primero. Más específicamente, estos son socks4 y socks5 cuando no lo hace el servidor DNS remoto. (Defaults: 0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WarnUnsafeSocks&lt;/strong&gt;: Cuando está activada esta opción, Tor alertará cuando una petición recibida sólo contiene una dirección IP en lugar de un hostname. Permitirle a aplicaciones que resuelvan sus DNS es usualmente una mala idea y puede proveer tu ubicación a atacantes. (Default: 1)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En el próximo artículo describiremos cómo configurar el mecanismo de resolución de DNS para evitar cualquier posible robo de información.&lt;/p&gt;
+&lt;h1 id=&#34;5-conclusión&#34;&gt;5. Conclusión&lt;/h1&gt;
+&lt;p&gt;Podemos ver que si somos cuidadosos podemos ser totalmente anónimos en Internet. Debemos vigilar que no resolvamos los hostnames de forma local y debemos no incluir información sensible en los datos de una aplicación que pueda desenmascararnos. Si cumplimos con esto, podemos realmente navegar de manera anónima en Internet.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Manual de Tor, &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://www.torproject.org/docs/tor-manual.html.en&#34;&gt;https://www.torproject.org/docs/tor-manual.html.en&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Infosec&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 2) : Proxies y servidores de DNS</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/</guid>
+            <description>&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Logrando el anonimato con Tor (Parte 1)&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;1-usando-burp-con-tor&#34;&gt;1. Usando Burp con Tor&lt;/h1&gt;
+&lt;p&gt;Ya hemos visto en profundidad cómo configurar nuestro navegador web para usar Privoxy, el cual en turnos usa Tor para mantener el anonimato en internet. ¿Pero qué pasa si queremos interceptar peticiones con Burp? Para comprender mejor qué sucede, la imagen siguiente representa la cadena de nodos que cada petición (y respuesta) debe atravesar parapoder usar el proxy (en nuestro caso, Burp) sobre la red de Tor:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Se puede observar que cada petición del navegador primero pasa por algún proxy (en nuestro caso Burp), el cual nos permite hacer algo con ella - en la mayoría de los casos es inspeccionar los parámetros del GET/POST y modificarlos un poco. Las peticiones luego son pasadas a la red anónima de Tor (la cual ya es parte de internet, pero en la imagen se representa Internet en un propio nodo por claridad).&lt;/p&gt;
+&lt;p&gt;Esa es una visión general de cómo deberían trabajar todos en conjunto, pero todavía falta configurar todos los componentes para que funcionen juntos correctamente. Primero se debe instalar Burp Suite (No se considera necesario detallar los pasos para ello). Cuando Burp está inicializado, se debe ver el puerto 8080 abierto y en estado LISTEN:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ netstat -lntup tcp6 &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 127.0.0.1:8080 :::* LISTEN 4315/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Dado que el navegador web debería enviar todas las peticiones a Burp, es necesario configurar el navegador web para que use Burp en lugar de Privoxy. La configuración para Firefox se presenta a continuación:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;De esta forma Firefox envía todos los paquetes a través del proxy Burp, que corre en el host 127.0.0.1 en el puerto 8080.&lt;/p&gt;
+&lt;p&gt;A continuación es necesario configurar Burp para usar proxy SOCKS, el cual se inicializa y configura a través de Tor. El proxy SOCKS trabaja en un nivel más bajo que el proxy HTTP, por lo tanto tiene la posibilidad de redirigir no sólo peticiones HTTP. SOCKS es básicamente un proxy TCP, el cual puede interceptar y filtrar todas las conexiones TCP que pasan a través de él, lo que le permite no ser específico por aplicación; la aplicación sólo necesita tener la capacidad de enviar sus paquetes de datos a través del proxy SOCKS. Es posible configurar Burp para usar SOCKS en las opciones de Burp indicando “use SOCKS proxy”, como se puede observar en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;De esta forma se configura Burp para que use el proxy SOCKS corriendo en el host 127.0.0.1 (localhost) en el puerto 9050. Si se consultan nuevamente los puertos que estan en estado de escucha nuevamente, se puede observar que el puerto 9050 está asociado al servicio Tor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# netstat -lntup&lt;/span&gt;
+tcp &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 127.0.0.1:9050 0.0.0.0:* LISTEN 8520/tor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Repasando, hemos configurado el navegador para que use el proxy Burp en el puerto 8080, el cual en turnos utiliza el proxy SOCKS en el puerto 9050, razón por la cual exitosamente se logra el encadenamiento de proxies y en consecuencia se navega en internet de manera anónima, mientras seguimos teniendo la ventaja de poder modificar las peticiones con Burp.&lt;/p&gt;
+&lt;h1 id=&#34;2-configurar-tor-para-resolver-los-hostnames-de-forma-segura&#34;&gt;2. Configurar Tor para resolver los hostnames de forma segura&lt;/h1&gt;
+&lt;p&gt;En el artículo anterior aparecen los tipos de proxies SOCKS y algunas variables de configuración de Tor que se pueden usar en el archivo de configuración torrc. Además se debate porqué es importante resolver los hostnames de forma segura. Para revisar esta información visita la &lt;!-- raw HTML omitted --&gt;parte 1&lt;!-- raw HTML omitted --&gt;. Para continuar profundizando, analizaremos cómo configurar Tor para resolver los hostnames de forma segura.&lt;/p&gt;
+&lt;p&gt;Para realizarlo, disponemos de las siguientes soluciones:&lt;/p&gt;
+&lt;h2 id=&#34;a-usar-socks4a&#34;&gt;A: &lt;strong&gt;Usar SOCKS4a&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;No todas las aplicaciones soportan SOCKS4a, por lo tanto esta solución no es del todo viable, ya que necesitamos una solución universal que funcione con todas las aplicaciones.&lt;/p&gt;
+&lt;h2 id=&#34;b-torificar-la-resolución-de-hostnames&#34;&gt;B: &lt;strong&gt;&lt;em&gt;Torificar&lt;/em&gt; la resolución de hostnames&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Es posible intentar &lt;em&gt;torificar&lt;/em&gt; la aplicación de resolución de DNS que utilizamos. Pero es necesario tener cuidado, debido a que algunas aplicaciones no fueron construidas pensando en el modo anónimo. Algunos protocolos, como FTP (modo activo/pasivo), envían la propia dirección IP en la sección de datos del FTP, lo que lo hace muy difícil de anonimizar. Esto ocurre en el modo activo del data transfer en FTP. La siguiente imagen resume la inicialización de la trasferencia FTP:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Se pueden observar todos los pasos necesarios para empezar a enviar la información del servidor al cliente. Parece no ser mucho si no se presta atención. En el paso C, se envía el comando PORT, el cual es la raiz de los problemas para anonimizar. El comando PORT usa un formato como el siguiente:&lt;/p&gt;
+&lt;p&gt;PORT x,x,x,x,y,y donde x representa la IP del cliente y la y representa el puerto elegido que puede ser usado para la transferencia de datos. Por lo tanto en este caso el cliente revela su dirección IP perdiendo así su anonimato. Casos como estos hay que tener en cuenta al momento de &lt;em&gt;torificar&lt;/em&gt; una aplicación.&lt;/p&gt;
+&lt;p&gt;No está relacionado directamente con el esquema de resolución de DNS, pero vale la pena nombrarlo ya que está relacionado con la utilización de Tor en una aplicación.&lt;/p&gt;
+&lt;h2 id=&#34;c-usar-tor-resolve&#34;&gt;C: &lt;strong&gt;Usar tor-resolve&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Con tor-resolve se puede obtener la dirección IP de un hostname de manera muy sencilla. Todo lo que se necesita hacer es correr este programa con el hostname especificado, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# tor-resolve www.google.com 127.0.0.1:9050&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este comando dice que queremos obtener la dirección IP del hostname &lt;a href=&#34;http://www.google.com&#34;&gt;www.google.com&lt;/a&gt;, y que queremos usar el proxy SOCKS de Tor corriendo en el host 127.0.0.1 en el puerto 9050, la cual es la combinación host:port default, pero la especificamos igual, por claridad.&lt;/p&gt;
+&lt;p&gt;D: &lt;strong&gt;Usar el servidor DNS local TorDNS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;El servidor DNS local puede ser configurado, el cual direccionará todas las peticiones DNS através de la red de Tor. Tor provee un servidor DNS built-in, el cual puede ser setteado agregando variables de configuración al archivo /etc/tor/torrc . Más específicamente, es necesario agregar las siguientes variables:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DNSPort &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt;
+AutomapHostsOnResolve &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+AutomapHostsSuffixes .exit,.onion
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para probar si TorDNS funciona, se puede usar el comando dig para consultarle a nuestro servidor DNS por una dirección IP. Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# dig @localhost -p 53 www.google.com&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para asegurarnos que todas las peticiones DNS son realmente enviadas a través de nuestro servidor DNS local, es necesario además cambiar el archivo /etc/resolv.conf para apuntar al servidor DNS 127.0.0.1:53, por lo tanto todas las aplicaciones de la máquina usarán el sevidor DNS TorDNS para la resolución de hostnames. Si hacemos esto, notaremos un poco de retardo cuando consultemos un hostname que todavía no esté en caché, pero con las conecciones de internet actuales esto no debería ser un problema. Pero si de todos modos molesta, podemos configurar un servidor de nombres local para cacheo que podría almacenar los hostnames y sus correspondientes direcciones IP. En Linux hay un programa llamado dnsmasq, el cual es un servidor liviano de cacheo de DHCP y DNS, entre otros, el cual acepta consultas DNS y las responde directamente de la caché local o las redirecciona a un servidor DNS real. Una buena explicación de ello puede encontrase en &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34; title=&#34;Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks&#34;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Es necesario además asegurar que etc/resolv.conf no cambió para la próxima vez que los programas dhclient o dhcpcd estén corriendo. Para inhabilitar los cambios de dhclient sobre resolv.conf con sus propios nameservers, es necesario borrar el domain-name, domain-name-servers ydomain-search del archivo de configuración /etc/dhcp3/dhclient.conf . Para inhabilitar los cambios de dhcpcd en resolv.conf, es necesario borrar domain_name, domain_name_servers y domain_server del archivo de configuración /etc/dhcpcd.conf. Si tenemos ambos programas instalados, cambiar ambos archivos adecuadamente probablmente sea lo mejor.&lt;/p&gt;
+&lt;h1 id=&#34;3-cuál-proxy-elegir&#34;&gt;3. ¿Cuál Proxy elegir?&lt;/h1&gt;
+&lt;p&gt;Hay algunos proxies disponibles que podríamos usar, pero la mayoría de las comunidades utilizan Privoxy o Polipo. Hay un par de razones por las cuales es preferible usar Polipo que Privoxy, y se describen en detalle aquí: Privoxy vs. Polipo. Para resumir, estas son las razones por las cuales Polipo es la mejor opción:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Privoxy no tiene pipelining para HTTP 1.1&lt;/li&gt;
+&lt;li&gt;Privoxy cachea los objetos más pedidos&lt;/li&gt;
+&lt;li&gt;Privoxy necesita transferir la página entera para parsearla y mostrarla al usuario. Esto significa que la experiencia del usuario con Privoxy es mucho peor, debido a que el usuario debe esperar constantemente que los datos de la página web completa sean transferidos desde el servidor, antes de ser mostrados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pero hay otra pregunta que debemos hacernos. ¿Por qué necesitamos incluso un proxy HTTP si podemos usar el proxy de Tor SOCKS desde el navegador? La respuesta es que generalmente el proxy SOCKS del navegador usa algunas variables de configuración default que no toleran Tor de la misma forma que Privoxy o Polipo pueden. Lo más sorprendente son los timeouts, que ocurren muy frecuentemente si usamos directamente el proxy SOCKS.&lt;/p&gt;
+&lt;h1 id=&#34;4-tor-hidden-services-cómo-puedo-mantenerme-anónimo-y-hostear-mi-propio-servidor-en-la-red-tor&#34;&gt;4. Tor Hidden Services: Cómo puedo mantenerme anónimo y hostear mi propio servidor en la red Tor&lt;/h1&gt;
+&lt;p&gt;Los servicios ocultos de Tor usan el hostname que termina con el dominio .onion . Ese TLD (Top Level Domain) no puede ser usado sobre Internet normalmente; sus correspondientes hostnames sólo pueden usarse sobre la red de Tor, la cual sabe cómo resolverlos dentro de sus direcciones IP ocultas.&lt;/p&gt;
+&lt;p&gt;Veamos qué pasa si intentamos resolver un hostname de DuckDuckGo, el cual es un motor de búsqueda usado para buscar websites en la red anónima de Tor. Usemos los comandos dig y tor-resolve de la siguiente forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tor-resolve 3g2upl4pq6kufc4m.onion 127.0.0.1:9050
+dig @localhost -p &lt;span class=&#34;m&#34;&gt;53&lt;/span&gt; 3g2upl4pq6kufc4m.onion
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ambos comandos reportan la dirección IP 127.192.0.10. Podemos observar que esa dirección IP pertenerce al localhost, dado que todas las direcciones IP 127.0.0.0/24 son asignadas al localhost, de hecho 127.0.0.1 es la más comunmente usada. Esto efectivamente logra anonimizar los servidores web en la red Tor, ergo, no se pueden rastrear.&lt;/p&gt;
+&lt;p&gt;Pero hay más que contar en esta historia que sólo la resolución de los dominios .onion, pero no entraremos en detalle por el momento - queda pendiente para futuros artículos.&lt;/p&gt;
+&lt;h1 id=&#34;5-opciones-de-log-en-tor&#34;&gt;5. Opciones de log en Tor&lt;/h1&gt;
+&lt;p&gt;Si instalamos Vidalia, entonces podemos ver nuestros logs en el “Message Log”, pero si no usamos Vidalia, obtener nuestros logs puede ser un poco más complicado. Si todo está configurado y funcionando, probablemente podemos obtener los logs buscando en el directorio /var/log/tor. El siguiente comando muestra los logs como aparecen en la pantalla:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tail -f /var/log/tor/tor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero hay también varias opciones de log que podemos configurar en el archivo /etc/tor/torrc. Las variables de configuración relevantes son las siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log minSeverity-maxSeverity stderr&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;stdout&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;syslog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Envía todos los mensajes entre la mínima y máxima severidad a alguno de los canales de salida: standard error, standard output o syslog.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log minSeverity-maxSeverity file &amp;lt;filename&amp;gt;&amp;lt;/filename&amp;gt;&amp;lt;filename&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los niveles de severidad son los siguientes: debug, info, notice, warn y err. Una buena opción de configuración es la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Log notice-err file /var/log/tor/tor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto efectivamente loggea todos los mensajes al archivo /varlog/tor/tor.&lt;/p&gt;
+&lt;h1 id=&#34;6-opciones-de-configuración-avanzada-de-tor&#34;&gt;6. Opciones de configuración avanzada de Tor&lt;/h1&gt;
+&lt;h2 id=&#34;httpproxy&#34;&gt;HTTPProxy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configura a Tor para hacer peticiones de directorio a través del host:port especificado por esta variable de configuración.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;httpproxyauthenticator&#34;&gt;HTTPProxyAuthenticator&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica el nombre de usuario y contraseña usados para autenticarse en el proxy HTTP.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;httpsproxy&#34;&gt;HTTPSProxy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configura a Tor para hacer todas las peticiones de conexión SSL através del host:port especificado en esta variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;httpsproxyauthenticator&#34;&gt;HTTPSProxyAuthenticator&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica el nombre de usuario y contraseña necesarios para autenticarse en el proxy HTTPS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;socks4proxy&#34;&gt;Socks4Proxy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configura a Tor para establecer todas las conexiones a través del proxy SOCKS4 en el host:port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;socks5proxy&#34;&gt;Socks5Proxy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Configura a Tor para establecer todas las conexiones a través del proxy SOCKS5 en el host:port.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;socks5proxyusername&#34;&gt;Socks5ProxyUsername&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica el nombre de usuario utilizado para autenticarse en el proxy SOCKS5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;socks5proxypassword&#34;&gt;Socks5ProxyPassword&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica la contraseña utilizada para autenticarse en el proxy SOCKS5.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;keepaliveperiod&#34;&gt;KeepAlivePeriod&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica el tiempo que usa Tor para enviar &lt;em&gt;keepalives&lt;/em&gt; para mantener la conexión abierta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;controlport&#34;&gt;ControlPort&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Especifica el puerto en el cual podemos conectarnos a Tor y controlarlo. Si se setea en ‘auto’, Tor automáticamente elige un puerto por nosotros, de otra manera usa el especificado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;newcircuitperiod&#34;&gt;NewCircuitPeriod&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Considera construir un nuevo circuito por cada N segundos (default: 30 segundos).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Las opciones de configuración que son relevantes para el proxy SOCKS en la red Tor son las siguientes:&lt;/p&gt;
+&lt;h2 id=&#34;socksport&#34;&gt;SocksPort:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Determina en qué número de puerto el proxy SOCKS escuchará por conexiones entrantes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sockslistenaddress&#34;&gt;SocksListenAddress&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Determina en qué dirección IP los proxies SOCKS escucharán las conexiones entrantes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sockstimeout&#34;&gt;SocksTimeout&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Determina en cuánto tiempo Tor puede intentar establecer un circuito antes de que se cumpla el timeout (default: 2 minutos).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Deberíamos comprender las últimas 3 variables de configuración, dado que son muy importantes porque el proxy SOCKS es obligatorio como un entry point a la red Tor.&lt;/p&gt;
+&lt;h1 id=&#34;7-finalizando&#34;&gt;7. Finalizando&lt;/h1&gt;
+&lt;p&gt;Queda pendiente analizar Torbutton y tsocks para ver cómo anonimizarnos en Internet, para usar una aplicación sobre la red Tor incluso cuando no traen soporte para el servidor proxy SOCKS.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 3) : Torbutton y Tsocks</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/</guid>
+            <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/&#34; title=&#34;Logrando el anonimato con Tor (Parte 4) – Tor para relés&#34;&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;1-introducción&#34;&gt;1. Introducción&lt;/h1&gt;
+&lt;p&gt;En los artículos previos: &lt;!-- raw HTML omitted --&gt;Parte 1 &lt;!-- raw HTML omitted --&gt;y &lt;!-- raw HTML omitted --&gt;Parte 2&lt;!-- raw HTML omitted --&gt; usamos de forma extensiva Tor Browser Bundle que nos ayuda a garantizar el anonimato.&lt;/p&gt;
+&lt;p&gt;Con Tor Browser Bundle, podemos facilmente comenzar a usar Tor sin instalar ni configurar ninguna otra cosa adicional. Contiene además  un proyecto interesante, un navegador web que está basado en Firefox y está configurado específicamente para proteger nuestra identidad en Internet. No entraremos mucho en detalle sobre las características de Tor Browser Bundle, pero miraremos específicamente las características caseras en el navegador Firefox que nos protegen de perder nuestra identidad. Tor Browser Bundle contiene los siguientes componentes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Vidalia&lt;/strong&gt;: Una interface gráfica de usuario para Tor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tor&lt;/strong&gt;: Un componente que te permite asegurar el anonimato .&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mozilla Firefox&lt;/strong&gt;: Un navegador web.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Torbutton&lt;/strong&gt;: Se encargar de aplicar los niveles de seguridad por lo que Firefox no es vulnerado en ninguna información de seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Podemos además descargar el código fuente de Tor Browser Bundle de &lt;!-- raw HTML omitted --&gt;aquí&lt;!-- raw HTML omitted --&gt; y construirlo nosotros mismos.&lt;/p&gt;
+&lt;p&gt;Al iniciar Firefox, aparecerá la siguiente pantalla:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;2-torbutton&#34;&gt;2. Torbutton&lt;/h1&gt;
+&lt;p&gt;El sitio oficial de Tor recomienda que usemos el boton Torbutton como parte del Tor Browser Bundle y no instalar Torbutton nosotros mismos ya que un error humano puede resultar por configurar Firefox de manera incorrecta. Esto podría entonces implicar falta de seguridad y liberación de información privada. Torbutton solía integrarse a Firefox por medio de un plugin y teníamos la posibilidad de instalarlo manualmente, pero luego fue removido de los addons, por lo que nos obliga a usarlo junto con Tor Browser Bundle.&lt;/p&gt;
+&lt;p&gt;Veamos los factores que pueden comprometer la seguridad de Torbutton en la red &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Exit Node o Upstream Router&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;En este escenario, un atacante corre un &lt;em&gt;exit node&lt;/em&gt; en la red Tor, o controla el router que está ubicado entre el exit node y la máquina destino. El atacante puede entonces interceptar peticiones/respuestas que viajan del cliente al servidor y cambiarlas para revelar la identidad del usuario.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Servidores de Anuncios y/o Sitios Web maliciosos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando un atacante controla el sitio que estamos tratando de alcanzar obviamente puede alimentarnos con respuestas anómalas que pueden comprometer nuestro anonimato.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Red local/ISP/Upstream Router&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;El peligro aquí yace en un atacante que controla cualquier router entre la red local, el ISP y el sitio web destino. Esto puede ser peligroso si el usuario tiene Tor desactivado porque el atacante puede entonces inyectar código arbitrario dentro de la conexión cliente. Esto es sólo probable cuando estamos habilitando/inhabilitando Tor constantemente, por lo que el atacante puede analizar la correlatividad entre el tráfico con y sin Tor, y descubrir nuestra dirección IP fuente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Acceso físico&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando un atacante tiene acceso físico a la máqina del cliente, puede hacer casi cualquier arbitrariedad a la máquina. Esto puede llevar obviamente a la pérdida del anonimato.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Podemos ver que el anonimato del usuario puede ser fácilmente violado si un atacante puede obtener acceso a la red local, routers entre las redes locales, e ISP a un nodo de entrada de Tor (o un nodo de salida de Tor al sitio web destino) incluyendo el sitio web mismo. Por favor pon atención a que no cualquier nodo es parte de la red Tor. Si pensamos un poco en esto, todo tiene sentido. Dado que todas las conexiones están encriptadas, es solo la red Tor misma la que no es vulnerable, por lo que el atacante no puede inyectar código malicioso como respuesta a nuestra petición.&lt;/p&gt;
+&lt;p&gt;Ahora veamos cómo un atacante puede comprometer el anonimato de un usuario final: Primero necesitamos asumir que un atacante puede inyectar una respuesta arbitraria dentro de nuestro navegador como describimos antes. Los posibles vectores de ataque se resumen a continuación &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;h2 id=&#34;inserción-de-javascript&#34;&gt;Inserción de JavaScript&lt;/h2&gt;
+&lt;p&gt;Si un atacante inserta JavaScript en una de las respuestas devueltas al usuario, puede realizar actividad en la red luego de que Tor haya sido desactivado. Por lo tanto puede revelar la verdadera identidad del usuario y llevar a descubrir la dirección IP externa. JavaScript además tiene acceso al historial del navegador y funciones que pueden devolver información del sistema operativo, CPU y usuario agente que utilizamos, dejándonos cada vez menos anónimos.&lt;/p&gt;
+&lt;h2 id=&#34;inserción-de-plugins&#34;&gt;Inserción de Plugins&lt;/h2&gt;
+&lt;p&gt;Un plugin de Firefox que incluya trabajo en la red debería obedecer la configuración del proxy del navegador. Pero puede también desobedecerlo y escapar de esta configuración instanciando la conexión normal a Internet sin pasar por Tor en ningún momento. Este proceso de bypass revela la IP del cliente al sitio web destino. Si el plugin contiene vulnerabilidades, es además posible explotarlas, nuevamente, revelando la identidad del usuario.&lt;/p&gt;
+&lt;h2 id=&#34;inserción-de-css&#34;&gt;Inserción de CSS&lt;/h2&gt;
+&lt;p&gt;Si un atacante puede inyectar CSS, puede entonces hacer que el navegador web revele la dirección IP externa del cliente a través de popups CSS, los cuales son manejadores de eventos que obtienen contenido a través del atributo CSS &lt;em&gt;onmouseover.&lt;/em&gt; Ahora imagina que esos popups tienen la posibilidad de conectarse a Internet y envíar peticiones al sitio web destino *bypasseando *Tor.&lt;/p&gt;
+&lt;h2 id=&#34;lectura-e-inserción-de-cookies&#34;&gt;Lectura e inserción de Cookies&lt;/h2&gt;
+&lt;p&gt;Si un atacante puede obtener una cookie de un usuario autenticado, puede, por supuesto, logearse como el usuario sin demasiado esfuerzo. Esta funcionalidad debería ser prevenida por el uso de clientes certificados que bloquearían los atacantes de identificarse con un usuario arbitrario incluso si el mismo atacante consiguió de alguna manera las cookies de usuarios relevantes.&lt;/p&gt;
+&lt;h2 id=&#34;creación-de-contenido-arbitrario-en-caché&#34;&gt;Creación de contenido arbitrario en Caché&lt;/h2&gt;
+&lt;p&gt;Un navegador web puede almacenar un montón de información en su caché para acceder más rápidamente al recurso cuando es requerido de nuevo - de los cuales algunos son identificadores únicos. Dado que la caché no tiene la misma política origen, estas entradas pueden ser leidas por cualquier dominio, y por ende revelar información sensible al atacante.&lt;/p&gt;
+&lt;h2 id=&#34;usuarios-con-fingerprint-huella-digital-basada-en-atributos-del-navegador&#34;&gt;Usuarios con *Fingerprint (*Huella digital) basada en atributos del navegador&lt;/h2&gt;
+&lt;p&gt;Si un atacante puede tomar la huella digital del navegador web del usuario, puede obtener una gran cantidad de información de las propiedades del navegador, las cuales pueden identificar unívocamente al usuario. Si el sitio web recuerda esas configuraciones puede revelar la identidad del usuario cuando visita el sitio web destino normalmente a través de Tor. Esto es posible por todas las formas que un usuario puede configurar su navegador web para hacerlo único - la más común es personalizando el navegador utilizando un set de plugins.&lt;/p&gt;
+&lt;h2 id=&#34;aprovechar-un-navegador-o-sistema-operativo-de-forma-local-o-remota&#34;&gt;Aprovechar un navegador o Sistema Operativo de forma local o remota&lt;/h2&gt;
+&lt;p&gt;Un atacante puede incluso explotar al navegador web mismo, al plugin, o la vulnerabilidad del sistema operativo, para obtener accesos a la máquina cliente. Esto lleva a comprometer totalmente al sistema del cliente, el cual por supuesto también revela la dirección IP externa.&lt;/p&gt;
+&lt;p&gt;De todos los puntos mencionados, podemos captar que un componente efectivo de Torbutton se necesita para esconder cualquier información personal del usuario que puede revelar la identidad del cliente. Esto puede lograrse implementando las siguientes caracteristicas:&lt;/p&gt;
+&lt;h2 id=&#34;obediencia-al-proxy&#34;&gt;Obediencia al Proxy&lt;/h2&gt;
+&lt;p&gt;El navegador web debe usar el proxy Tor todo el tiempo y no debe permitir que ningún componente de red habilitado lo bypassee y acceda a Internet por la vía normal.&lt;/p&gt;
+&lt;h2 id=&#34;separación-de-estado&#34;&gt;Separación de Estado&lt;/h2&gt;
+&lt;p&gt;Toda la información guardada por el navegador web para mejorar la experiencia del usuario, como las cookies, el historial, DOM, caché, etc, debería ser accesible sólo cuando se usa en el estado Tor-enabled.&lt;/p&gt;
+&lt;h2 id=&#34;aislamiento-de-la-red&#34;&gt;Aislamiento de la red&lt;/h2&gt;
+&lt;p&gt;Todas las páginas web que fueron accedidas por el navegador deben utilizarse para mejorar la actividad de red solamente cuando se trabaja en el estado Tor-enabled.&lt;/p&gt;
+&lt;h2 id=&#34;tor-oculto&#34;&gt;Tor Oculto&lt;/h2&gt;
+&lt;p&gt;Si el sitio web objetivo está identificando la huella digital del navegador web utilizado para accederlo, puede ser una gran utilidad ocultar la presencia de Tor. De todos modos, esconder el navegador web utilizado con su número de versión y plugins instalados puede ayudar a reducir la efectividad de identificar digitalmente al navegador web.&lt;/p&gt;
+&lt;h2 id=&#34;evitar-el-disco&#34;&gt;Evitar el disco&lt;/h2&gt;
+&lt;p&gt;El navegador web no debería escribir ninguna información relacionada con Tor en el disco rígido, pero debería almacenarla en memoria hasta que el usuario cierre el navegador web, momento en el cual el navegador debería descartar toda la información. Esto asegura que los datos persistentes no quedan yaciendo abandonados en algún lugar del disco rígido incluso luego de que el usuario haya terminado de visitar el sitio.&lt;/p&gt;
+&lt;h2 id=&#34;neutralidad-de-la-ubicación&#34;&gt;Neutralidad de la ubicación&lt;/h2&gt;
+&lt;p&gt;El navegador web debería prevenir que se flitre cualquier información sobre la zona horaria a través de la red Tor.
+Set de preservación del anonimato
+El navegador web debería prevenir que se flitre cualquier información que pueda ser tomada como huella digital para el sitio web destino ( plugins instalados, user agent, etc). Debería prevenir que el sitio web destino pueda rastrear usuarios con la información tomada como huella digital, la cual puede ser utilizada para descubrir el cliente actual conectado a un sitio web incluso cuando Tor está activado.&lt;/p&gt;
+&lt;h2 id=&#34;actualización-segura&#34;&gt;Actualización segura&lt;/h2&gt;
+&lt;p&gt;El navegador web debería bloquear cualquier actualización sin autenticar vía Tor, dado que atacantes pueden inyectar un programa de actualización malicioso al navegador.&lt;/p&gt;
+&lt;p&gt;Presentamos algunas razones de porqué los usuarios deberían utilizar Torbutton e inmediatamente integrar Tor Browser Bundle dentro del navegador web Firefox. Este provee algunas modificaciones que pueden hacer a nuestra navegación web más segura y anónima. Si usamos Torbutton fuera de Tor Browser Bundle, existe un gran riesgo de que el navegador haga algo inesperado, que pueda comprometer a nuestro anonimato.
+Debemos mencionar también que Torbutton está integrado dentro de Firefox solamente, dado que es open source. Torbutton no tiene soporte disponible para otros navegadores como IE, Opera, Safari, etc. ni nunca tendrá.&lt;/p&gt;
+&lt;h1 id=&#34;3-tsocks&#34;&gt;3. Tsocks&lt;/h1&gt;
+&lt;p&gt;Tor tiene el proxy SOCKS corriendo en el puerto 9050 que podemos usar para asegurar anonimato en cualquier tráfico que se envíe a través del proxy SOCKS a la red Tor. Pero nuestra aplicación necesita tener soporte para este proxy, o de lo contrario no podremos usarla para acceder a internet de forma anónima. Pero no hay que alarmarse todavía. Hay una solución para este problema. Incluso si el programa no tiene soporte para el servidor proxy SOCKS, o cualquier otro servidor proxy que importe, podemos garantizarnos navegar en internet anónimamente utilizando el programa Torify. Éste usa un programa llamado tsocks que puede enviar conexiones TCP a través del servidor SOCKS. Podemos además utilizar directamente tsocks para lograrlo, como vemos a continuación:&lt;/p&gt;
+&lt;p&gt;Primero necesitamos instalar tsocks si todavía no lo hemos hecho. Por ejemplo, si utilizamos la distribución de Linux Ubuntu, ejecutamos en un terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install tsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si instalamos en la distribución &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-actualizar-elminar-paquetes-gentoo/&#34; title=&#34;Cómo Instalar/actualizar/eliminar Paquetes en Gentoo&#34;&gt;Gentoo&lt;/a&gt;, primero tenemos que activar tordns useflag, la cual permite que las consultas de DNS sean enviadas por Tor y elimina el problema de filtración por DNS que comentábamos en la parte 2. Para instalarlo entonces debe ejecutarse:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;net-proxy/tsocks tordns&amp;#34;&lt;/span&gt; &amp;gt;&amp;gt; /etc/portage/package.use
+emerge net-proxy/tsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Luego necesitamos configurar tsocks para usar Tor. Podemos hacerlo editando el archivo de configuración &lt;code&gt;/etc/tsocks.conf&lt;/code&gt; . Lo mínimo indispensable que debe contenter es lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 192.168.1.0/255.255.255.0
+&lt;span class=&#34;nv&#34;&gt;server&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 127.0.0.1
+&lt;span class=&#34;nv&#34;&gt;server_type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;server_port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;9050&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con la variable de configuración local podemos especificar que esta máquina puede acceder directamente a la red 192.168.1.0/24. Las otras variables indican el host y el puerto del sevidor SOCKS de Tor y su tipo, el cual en este caso es 5 (el valor default es 4).&lt;/p&gt;
+&lt;p&gt;La sintaxis del comando de tordns es muy sencilla y se puede obtener en la página del &lt;!-- raw HTML omitted --&gt;man page&lt;!-- raw HTML omitted --&gt; de Linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tsocks &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;aplicacion &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;argumentos para la aplicacion&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# o&lt;/span&gt;
+tsocks &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;on&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;off&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# o&lt;/span&gt;
+tsocks
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ver que necesitamos especificar la aplicación que queremos que utilice el proxy de Tor. Nótese que sólo los paquetes TCP serán ruteados a través de Tor; los paquetes UDP serán distribuidos normalmente, por lo que tenemos que tener cuidado de ello. Podemos testear rápidamente esto accediendo a un archivo en nuestro propio servidor web Apache con el programa wget. Primero tenemos que hacer los siguientes cambios en nuestra máquina servidora para que podamos observar todos los accesos a los recursos de Apache:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tail -f /var/log/apache2/access.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuación deberíamos descargar algunos recursos normalmente (sin tsocks) para confirmar que la dirección IP se muestra correctamente. Cuando estamos seguros que eso ocurre, podríamos testear tsocks para asegurarnos que la IP es anónima:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tsocks wget http://www.server.com/image.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el log de acceso deberíamos observar una entrada como la siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;31.172.30.1 – – &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;18/Jul/2012:00:33:25 +0200&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; “GET /image.png HTTP/1.0″ &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;695&lt;/span&gt; “-” “Wget/1.12 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;linux-gnu&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;”
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ver que pedimos el archivo image.png de la dirección IP 31.172.30.1. Para verificar incluso si la IP es parte de la red Tor, podemos clickear en “View the Network” en la GUI Vidalia, la cual nos lista todos los nodos en la red Tor. Entre todos ellos está también el nodo con la IP 31.172.30.1 como se representa en la imagen siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos ver que el nodo Tor está ubicado en Alemania, tiene la IP 31.172.30.1, y está levantado desde hace 48 días, etc. Por lo tanto, hemos validado que el nodo es parte de la red Tor, y por lo tanto tsocks funcionó como era esperado.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Achieving Anonymity with Tor Part 3&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;(1) Tor Project&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Torbutton Design Documentation&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Logrando el anonimato con Tor (Parte 4) - Tor para relés</title>
+            <link>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-4/</guid>
+            <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;Logrando el anonimato con Tor (Parte 1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;Logrando el anonimato con Tor (Parte 2): Servidores DNS y Proxies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-3-torbutton-y-tsocks/&#34;&gt;Logrando el anonimato con Tor (Parte 3): TorButton y Tsocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Logrando el anonimato con Tor (Parte 4): Tor para relés&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;1-introducción&#34;&gt;1. Introducción&lt;/h1&gt;
+&lt;p&gt;Hemos visto que la red Tor está constituida de nodos Tor, a través de los cuales enviamos nuestro tráfico para mantenernos anónimos. No hemos profundizado mucho en terminología, porque no era tan importante; todo lo que queríamos era lograr el anonimato, y así fue.&lt;/p&gt;
+&lt;p&gt;Pero cuando intentamos configurar un Tor Relay, entonces el proyecto Tor se pone realmente interesante y no podemos prescindir de la terminología. Aquí están las expresiones más frecuentemente utilizadas (manenemos la expresión en inglés por su normal utilización, y su traducción al español):&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;tor-node&#34;&gt;&lt;strong&gt;Tor Node&lt;/strong&gt;:&lt;/h2&gt;
+&lt;p&gt;Exactamente lo mismo que Tor Relay, los términos pueden intercambiarse.&lt;/p&gt;
+&lt;h2 id=&#34;tor-normal-relay&#34;&gt;&lt;strong&gt;Tor Normal Relay&lt;/strong&gt;:&lt;/h2&gt;
+&lt;p&gt;Una máquina simple en una red Tor.&lt;/p&gt;
+&lt;h2 id=&#34;tor-bridge-relay&#34;&gt;&lt;strong&gt;Tor Bridge Relay&lt;/strong&gt;:&lt;/h2&gt;
+&lt;p&gt;Son relays normales que no están listados dentro del directorio de Tor, lo cual significa que pueden ser considerablemente más difíciles de bloquear. Podemos usar Bridge Relay cuando nuestro ISP está bloqueando el uso de Tor, pero todavía queremos conectarnos a su red. La única diferencia entre normal y bridge relay es que el normal está listado en un directorio público, mientras que el bridge no.&lt;/p&gt;
+&lt;h2 id=&#34;tor-exitnon-exit-relay&#34;&gt;&lt;strong&gt;Tor Exit/Non-Exit Relay&lt;/strong&gt;:&lt;/h2&gt;
+&lt;p&gt;Un Tor Relay puede ser configurado como exit o non-exit. Un relay non-exit es un relay que no se comunica directamente con la red destino, pero actúa como un nodo intermediario en la red Tor. El relay exit es también un nodo intermediario, pero puede ser además un nodo exit, lo que significa que puede comunicarse directametne con el sitio web destino. Sabemos también que las conexiones del nodo exit al sitio web destino están desencriptadas, por lo que podemos ver todo el tráfico que pasa y monitorearlo.&lt;/p&gt;
+&lt;h1 id=&#34;2-tor-relays&#34;&gt;2. Tor Relays&lt;/h1&gt;
+&lt;p&gt;En la siguiente sección intentaremos explicar cómo ejecutar un Tor relay. Primero necesitamos saber que podemos configurar un Tor relay practicamente en cualquier sistema operativo. Si tienes un ancho de banda en exceso, deberías realmente contribuir a la comunidad de Tor configurando un Tor relay, dado que es muy facil y gratis. Pero hay que tener cuidado al configurar un Tor relay de cualquier tipo porque tu IP externa será vista por los clientes que intentan conectarse a tu relay.&lt;/p&gt;
+&lt;p&gt;Podemos muy sencillamente configurar un Tor relay con una interface de usuario gráfica de Vidalia haciendo click en Settings -&amp;gt; Sharing -&amp;gt; “Relay traffic for the Tor network (exit relay)”. Se puede ver en la imagen siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos ver que hay un par de opciones que podemos configurar:&lt;/p&gt;
+&lt;h2 id=&#34;basic-settings&#34;&gt;&lt;strong&gt;Basic Settings:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;“Nickname”: el apolo para nuestro relay, en este caso es abracadabra.&lt;/li&gt;
+&lt;li&gt;“Contact Info”: nuestra información de contacto si algo sale mal, por lo que los desarrolladores pueden contactarnos. En este caso se omitió la información en la imagen.&lt;/li&gt;
+&lt;li&gt;“Attempt to automatically configure port forwarding”: Si clickeamos en el botón Test, automáticamente testeará si tenemos los puertos abiertos en nuestro firewall que probablemente tengamos levantado en nuestro router.  Para la mayoría de los usuarios domésticos, este testeo fallará debido a que los puertos no estarán abiertos. Para lograr que no falle deben abrirse. La funcionalidad del boton Test puede además automáticamente detectar la presencia de otros puertos abiertos y usarlos para transmitir el tráfico. Pero notemos cuáles puertos deberían estar abiertos por defecto, con esta opción desactivada. Lo mínimo que necesitamos abierto es el puerto 9001 para relay, como se puede ver en la imagen anterior. Si habilitamos la reflexión de ese directorio (activando “Mirror the Relay Directory”) entonces necesitaremos también abrir el puerto 9030.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bandwidth-limits&#34;&gt;&lt;strong&gt;Bandwidth Limits:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Cuánto ancho de banda queremos separar para Tor.&lt;/p&gt;
+&lt;h2 id=&#34;exit-policies&#34;&gt;&lt;strong&gt;Exit Policies:&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Configura los servicios que queremos que los clientes accedan a través de nuestro Tor relay. Podemos elegir de:  websites (port 80), secure websites (port 443), mail systems (ports 110, 143, 25), instant messaging, IRC y otros servicios.&lt;/p&gt;
+&lt;p&gt;Pero debemos discutir lo más importante de configurar Tor relay: ¿Debemos configura un Tor relay de tipo exit o non-exit? En la introducción ya hemos discutido la diferencia entre cada uno, y los siguientes puntos están resumidos de &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el anonimato con Tor (Parte 1)&#34;&gt;1&lt;/a&gt; y deberían presentar una imagen clara respecto a qué tipo de nodo queremos correr.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;No corras un nodo exit de una conexión a internet de casa, porque llamará la atención de la red doméstica. Usualmente esto no debería ser muy problemático, pero en algunos paises ha habido captura de equipos en cuentas corriendo nodos exit. Una mejor manera de retribuir a la comunidad Tor mientras usas tu conexión a internet doméstica es configurando un nodo no-exit o un nodo bridge.&lt;/li&gt;
+&lt;li&gt;Usa una IP separada para el nodo Tor y no rutees tu tráfico normal a través de la misma red que el tráfico de Tor. Esto permitirá a tu ISP identificar facilmente quejas de abusos en lugar de terminar la conectividad total a Internet.&lt;/li&gt;
+&lt;li&gt;Registra un nombre de DNS inverso como tor-proxy.tudominio.com, donde deberías también poner alguna información sobre Tor, de forma tal que otras personas puedan saber qué es.&lt;/li&gt;
+&lt;li&gt;Configura reglas para una política de exit. Deberías bolquear el tráfico de BitTorrent, el cual realmente no debería ser utilizado sobre Tor, por su alto requerimiento de ancho de banda.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Está bastante claro que a menos que sepamos qué estamos haciendo, deberíamos ejecutar un nodo non-exit en lugar de un exit. Hemos configurado un relay Tor con el uso de la GUI Vidalia, pero si quisiéramos hacerlo manualmente, podemos editar el archivo &lt;code&gt;/etc/tor/torrc&lt;/code&gt; y agregar las siguientes variables de configuración:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;DataDirectory /home/user/tor/Data/Tor
+DirPort &lt;span class=&#34;m&#34;&gt;9030&lt;/span&gt;
+ORPort &lt;span class=&#34;m&#34;&gt;9001&lt;/span&gt;
+ExitPolicy accept *:80,accept *:443,reject *:*
+Nickname Unnamed
+RelayBandwidthBurst &lt;span class=&#34;m&#34;&gt;10485760&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Describamos las variables de configuración - resumidas de  &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-2-proxies-y-servidores-de-dns/&#34;&gt;2&lt;/a&gt;:&lt;/p&gt;
+&lt;h2 id=&#34;dirport&#34;&gt;DirPort&lt;/h2&gt;
+&lt;p&gt;Indica el servicio de directorio corriendo en este puerto. Si está configurado en auto, Tor automáticamente elegirá un puerto por nosotros.&lt;/p&gt;
+&lt;h2 id=&#34;orport&#34;&gt;ORPort&lt;/h2&gt;
+&lt;p&gt;Indica el puerto que escucha conexiones para clientes y servidores Tor. Esta opción es requerida si queremos correr nuestro propio Tor relay. Si está configurado en auto, Tor automáticamente elegirá un puerto por nosotros.&lt;/p&gt;
+&lt;h2 id=&#34;exitpolicy&#34;&gt;ExitPolicy&lt;/h2&gt;
+&lt;p&gt;Si estamos corriendo un nodo exit, entonces esta política especifica que deberíamos aceptar o rechazar. Los valores más básicos de configuración son aceptar o rechazar paquetes basados en su número de puerto destino.&lt;/p&gt;
+&lt;h2 id=&#34;nickname&#34;&gt;Nickname&lt;/h2&gt;
+&lt;p&gt;Define el alias de nuestro relay.&lt;/p&gt;
+&lt;h2 id=&#34;relaybandwidthburst&#34;&gt;RelayBandwidthBurst&lt;/h2&gt;
+&lt;p&gt;Limita el número de ráfagas de tráfico transmitido a un número determinado de bytes en cada dirección.&lt;/p&gt;
+&lt;h2 id=&#34;relaybandwidthrate&#34;&gt;RelayBandwidthRate&lt;/h2&gt;
+&lt;p&gt;Especifica un número de bytes promedio permitido para ser transmitido a través de este nodo.&lt;/p&gt;
+&lt;p&gt;Después de haber configurado nuestro nodo relay, deberíamos guardar la configuración y reiniciar Tor. Este proceso debería crear claves privadas para Tor, las cuales son almacenadas en keys/secret_id_key en nuestro DataDirectory. Si mostramos el contenido de DataDirectory, podemos ver que las claves privadas están presentes, como se puede ver en la imagen siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Los comandos presentados en la imagen fueron ejecutados unos momentos después de que el relay de Tor sea configurado e iniciado. Podemos ver que la fecha actual es unos minutos después de la fecha de creación de las claves privadas, lo que indica que fueron creadas recientemente. Esas dos claves son críticas para la operación de nuestro relay, debido a que son usadas para encriptar/desencriptar el tráfico que pasa por nuestro relay. Si alguien puede meter las manos en esas dos claves privadas, entonces podría desencriptar todo el tráfico que pasa por nuestro relay, lo cual rompería nuestra capacidad de anonimato con Tor.&lt;/p&gt;
+&lt;p&gt;Presentemos una de las claves aquí, así podemos tener una imagen mejor de estos dos archivos. El contenido del archivo &lt;code&gt;secret_id_file&lt;/code&gt; se muestra a continuación:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos ver que el archivo &lt;code&gt;secret_id_key&lt;/code&gt; contiene solo la clave privada RSA usada para encriptar/desencriptar el tráfico que pasa a través del relay.&lt;/p&gt;
+&lt;p&gt;Cuando reiniciemos Tor, deberíamos notar que toma un poquito más de tiempo porque está configurando e iniciando el relay. Pero esto no garantiza que el Tor relay esté inicializado y corriendo, por lo que tendremos que revisar los logs. Allí deberíamos ver las siguientes lineas que indican que Tor relay se inició correctamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Tor v0.2.2.37 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;git-fce6eb1c44e87bc2&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. This is experimental software. Do not rely on it &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; strong anonymity. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Running on Linux x86_64&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Initialized libevent version 2.0.19-stable using method epoll. Good.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening OR listener on 0.0.0.0:9001
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Directory listener on 0.0.0.0:9030
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Socks listener on 127.0.0.1:0
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Socks listener listening on port 51220.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Opening Control listener on 127.0.0.1:0
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Control listener listening on port 45896.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; OpenSSL OpenSSL 1.0.1c &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; May &lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt; looks like version 0.9.8m or later&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; I will try SSL_OP to &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; renegotiation
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Your Tor server&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#8217;s identity key fingerprint is &amp;amp;#8216;test 0B01A29C23F7C70E52D28AD5A9E70237143B7D4C&amp;amp;#8217;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; We now have enough directory information to build circuits.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped 80%: Connecting to the Tor network.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; New control connection opened.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Guessed our IP address as xxx.xxx.xxx.xxx &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;source: 208.83.223.34&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped 85%: Finishing handshake with first hop.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped 90%: Establishing a Tor circuit.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Tor has successfully opened a circuit. Looks like client functionality is working.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Bootstrapped 100%: Done.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Now checking whether ORPort xxx.xxx.xxx.xxx:9001 and DirPort xxx.xxx.xxx.xxx:9030 are reachable&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#8230; (this may take up to 20 minutes &amp;amp;#8212; look for log messages indicating success)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your ORPort is reachable from the outside. Excellent. Publishing server descriptor.
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Notice&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Self-testing indicates your DirPort is reachable from the outside. Excellent.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Las últimas líneas indican que Tor está verificando si los puertos ORPort y DirPort son accesibles desde afuera, y al mostrar “Excellent” significa que sí. Si esta verificación falla entonces necesitamos revisar nuestros firewalls y abrir los puertos 9001 y 9020. Podemos además ver que Tor publicó el &lt;em&gt;server descriptor&lt;/em&gt; en el directorio del servidor para permitir a los clientes saber que está abierto y pueden conectarse a través de él. El descriptor del servidor contiene información como por ejemplo la dirección, los puertos, las claves, etc.
+En el Message Log podemos ver la imagen siguiente; que dice que Tor y Relay están corriendo bien, lo aumenta nuestra seguridad de que todo está funcionando correctamente.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Si todavía no estamos satisfechos y quisiéramos ver nuestro relay en acción, necesitamos esperar una hora para que el relay sea agregado en el directorio, y luego podemos buscarlo en el sitio web Relay Search. Si escribimos “abracadabra” en el cuadro de búsqueda y presionamos “Search”, nuestro relay debería mostrarse. Podemos ver esto en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hemos buscado la cadena “abracadabra”, la cual es el alias de nuestro relay, por lo tanto está funcionando. La IP externa está enmascarada con xxx.xxx.xxx.xxx para la imagen, pero la dirección está realmente, por lo que es otra confirmación de que el relay no es anónimo y su IP externa es visible. La imagen también nos muestra qué puertos el relay dejará atravesar (80 y 443), el ancho de banda disponible y la versión de Tor que está corriendo, más alguna otra extraña cadena “CwGinCP3xw5S0orVqecCNxQ7fUw”, de la que no tenemos información sobre qué significa.&lt;/p&gt;
+&lt;p&gt;La imagen presentada también tiene un hipervínculo “b20yYC0pV6WSYHT0mq+h6i27Ke0″, que apunta a &lt;a href=&#34;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&#34;&gt;https://metrics.torproject.org/serverdesc?desc-id=6f6d32602d2957a5926074f49aafa1ea2dbb29ed&lt;/a&gt;. Esta dirección revela la información mostrada en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El alias para el relay es abracadabra, el ancho de banda es 59.39 KB, y el IP y el puerto también son visibles. Hay además banderas que identifican el tipo de servicio. Las banderas especifican las siguientes cosas en orden:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Este es un nodo exit&lt;/li&gt;
+&lt;li&gt;Es rápido&lt;/li&gt;
+&lt;li&gt;Está corriendo&lt;/li&gt;
+&lt;li&gt;Es V2DIR&lt;/li&gt;
+&lt;li&gt;Es válido&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;3-conclusión&#34;&gt;3. Conclusión&lt;/h1&gt;
+&lt;p&gt;Hemos visto suficiente información para poder decidir si queremos ayudar a la comunidad de Tor y correr un relay Tor. Los usuarios domésticos deberían al menos configurar un relay no-exit o un puente (bridge), dado que esas dos opciones no atraerán mucha atención.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;InfoSec Institute Resources&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Achieving Anonymity with Tor Part 4&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Tor Project&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>fail2ban on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/fail2ban/</link>
+        <description>Recent content in fail2ban on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/fail2ban/</link>
+            <title>fail2ban on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/fail2ban/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban</title>
+            <link>https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada &lt;em&gt;&lt;strong&gt;Fail2Ban&lt;/strong&gt;&lt;/em&gt;, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar &lt;strong&gt;Fail2Ban&lt;/strong&gt; para bloquear el acceso a nuestra máquina a robots atacando por &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/&#34; title=&#34;Bloquear una IP atacando el servidor mediante iptables&#34;&gt;fuerza bruta&lt;/a&gt; a &lt;em&gt;WordPress&lt;/em&gt; y al servidor web &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;Nginx&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-fail2ban&#34;&gt;Instalar Fail2Ban&lt;/h1&gt;
+&lt;p&gt;Si no se encuentra instalado en nuestro sistema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get install fail2ban
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;antes-de-empezar&#34;&gt;Antes de empezar&lt;/h1&gt;
+&lt;p&gt;Antes de modificar el archivo &lt;em&gt;/etc/fail2ban/jail.conf&lt;/em&gt;, es recomendable -y de hecho lo menciona el propio archivo en su cabecera — realizar una copia y trabajar sobre ella:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/fail2ban &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp jail.conf jail.local
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;bloquear-ataques-de-fuerza-bruta-a-wordpress&#34;&gt;Bloquear ataques de fuerza bruta a WordPress&lt;/h1&gt;
+&lt;p&gt;La siguiente configuración bloqueará durante 20 minutos cualquier intento de loggearse en WordPress de forma incorrecta más de 3 veces. Hay que escribirla en el &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-wp-login&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; http,https
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-wp-login
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /ruta/log/wordpress/access.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;findtime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;120&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1200&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora queda añadir el filtro para esta regla, en el archivo &lt;em&gt;filter.d/nginx-wp-login.conf&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &amp;lt;host&amp;gt;.*&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;POST /wp-login.php
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ignoreregex =
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;inconvenientes-a-tener-en-cuenta&#34;&gt;Inconvenientes a tener en cuenta&lt;/h1&gt;
+&lt;p&gt;Con esta configuración, hay que considerar que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Los usuarios que no recuerden su contraseña se autobloquearán.&lt;/li&gt;
+&lt;li&gt;No te protegerá eficientemente de un ataque distribuido.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configurar-nginx-con-fail2ban&#34;&gt;Configurar Nginx con Fail2Ban&lt;/h2&gt;
+&lt;p&gt;Las siguientes configuraciones serán a nivel del servidor web nginx, no de WordPress, los objetivos son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bloquear a todo aquel intentando ejecutar scripts (.pl, .cgi, .exe etc).&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel intentando usar el servidor como un proxy.&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel que falle al usar la autentificación básica de nginx.&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel que falle al autentificarse en nuestra aplicación.&lt;/li&gt;
+&lt;li&gt;Bloquear &lt;strong&gt;bad bots&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Al igual que antes, en el fichero &lt;em&gt;jail.local&lt;/em&gt; añadimos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-auth&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-auth
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoAuthFailures, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*error*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 10 minutes&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-login&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-login
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoLoginFailures, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 10 minutes&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-badbots&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; apache-badbots
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;BadBots, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-noscript&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoScript, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-noscript
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-proxy&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoProxy, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-proxy
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y sus correspondientes filtros en &lt;em&gt;/etc/fail2ban/filter.d/&lt;/em&gt; (Cada uno en un fichero separado, con el mismo nombre que aparece en la primera línea):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Proxy filter /etc/fail2ban/filter.d/proxy.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Block IPs trying to use server as proxy.&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Matches e.g.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;#34;GET http://www.something.com/&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET http.*
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Block IPs trying to execute scripts such as .php, .pl, .exe and other funny scripts.&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Matches e.g.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;#34;GET /something.php&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;asp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;exe&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;pl&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;cgi&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;cgi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+#
+&lt;span class=&#34;c1&#34;&gt;# Auth filter /etc/fail2ban/filter.d/nginx-auth.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Blocks IPs that fail to authenticate using basic authentication&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; no user/password was provided &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; basic authentication.*client: &amp;lt;host&amp;gt;
+            user .* was not found in.*client: &amp;lt;host&amp;gt;
+            user .* password mismatch.*client: &amp;lt;host&amp;gt;
+
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+#
+&lt;span class=&#34;c1&#34;&gt;# Login filter /etc/fail2ban/filter.d/nginx-login.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Blocks IPs that fail to authenticate using web application&amp;#39;s log in page&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Scan access log for HTTP 200 + POST /sessions =&amp;gt; failed log in&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*POST /sessions HTTP/1&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;.&lt;span class=&#34;s2&#34;&gt;&amp;#34; 200
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ignoreregex =
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;enviar-por-correo-los-bloqueos&#34;&gt;Enviar por correo los bloqueos&lt;/h1&gt;
+&lt;p&gt;Para terminar, si queremos recibir un correo por cada bloqueo que se produzca, basta con añadir estas dos líneas al fichero &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;destemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; direccion@correo
+&lt;span class=&#34;nv&#34;&gt;mta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; sendmail
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¿Administras un servidor? ¿Qué técnicas usas?, deja un comentario.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para wordpress&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;codepoets.co.uk&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para Nginx&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;snippets.aktagon.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Combatir los comentarios de spam en WordPress</title>
+            <link>https://elbauldelprogramador.com/combatir-los-comentarios-de-spam-en-wordpress/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/combatir-los-comentarios-de-spam-en-wordpress/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Los comentarios de spam son algo frecuente en internet, y WordPress no es una excepción. Hace poco vimos cómo &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/&#34; title=&#34;Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&#34;&gt;bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban&lt;/a&gt;. Hoy veremos cómo evitar que se nos inunde la cola de comentarios pendientes o de spam, en mi caso rondan los 200-300 comentarios diarios.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Existe un plugin llamado &lt;!-- raw HTML omitted --&gt;Askimet&lt;!-- raw HTML omitted --&gt; que facilita muchísimo la tarea de detectar comentarios de spam y enviarlos a su correspondiente sección en WordPress. Quizá por eso me ha resultado tan sencillo contruir esta solución para bloquear el acceso a todos los bots que continuamente publican comentarios de este tipo.&lt;/p&gt;
+&lt;h1 id=&#34;recopilar-las-direcciones-ips-de-los-spammers&#34;&gt;Recopilar las direcciones IPs de los spammers&lt;/h1&gt;
+&lt;p&gt;Esto es algo trivial, WordPress siempre muestra la IP desde la que se realiza el comentario. Sin embargo recopilar la dirección de 200 comentarios puede ser una tarea ardua. Será más sencillo extraer esta información de la &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34; title=&#34;Bases de Datos&#34;&gt;base de datos&lt;/a&gt; con una consulta &lt;a href=&#34;https://elbauldelprogramador.com/consulta-de-datos-clausula-select/&#34; title=&#34;Consulta de Datos – Cláusula Select&#34;&gt;SELECT&lt;/a&gt;. La tabla en la que nos interesa realizar la consulta es &lt;strong&gt;wp_comments&lt;/strong&gt;, y el único campo que deseamos extraer es la dirección IP (Columna &lt;strong&gt;comment_author_IP&lt;/strong&gt; de la tabla anterior). Para evitar que se repitan la direcciones IPs usaremos la opción &lt;strong&gt;DISTINC&lt;/strong&gt;. Seleccionaremos únicamente los comentarios que estén marcados como spam, lo cual corresponde a que el campo &lt;strong&gt;comment_approved&lt;/strong&gt; tenga el valor “&lt;strong&gt;spam&lt;/strong&gt;“. La consulta quedará así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-mysql&#34; data-lang=&#34;mysql&#34;&gt;&lt;span class=&#34;k&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;DISTINCT&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;comment_author_IP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wp_comments&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;WHERE&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;comment_approved&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;`&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;  &lt;span class=&#34;s1&#34;&gt;&amp;#39;spam&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Usando &lt;em&gt;phpmyadmin&lt;/em&gt; podremos exportar el resultado a un archivo de texto para tener las IPs almacenadas con el siguiente formato:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+x.x.x.x
+y.y.y.y
+z.z.z.z
+.......
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Almacenarlas así nos facilitará la automatización para bloquearles el acceso.&lt;/p&gt;
+&lt;h1 id=&#34;bloquear-el-spam&#34;&gt;Bloquear el spam&lt;/h1&gt;
+&lt;p&gt;Una vez tenemos el archivo con las IPs de los spammers, procedemos bloquearlos mediante &lt;a href=&#34;https://elbauldelprogramador.com/20-ejemplos-de-iptables-para-sysadmins/&#34; title=&#34;20 ejemplos de iptables para SysAdmins novatos&#34;&gt;iptables&lt;/a&gt;, de tal forma que no lograrán ni acceder al sitio web, ya que Iptables les denegará el acceso. Usaremos el siguiente &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Scripts del blog&#34;&gt;script&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;inet_if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;eth0
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;esta&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;iptables -nL &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -z &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$esta&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Bloqueado &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+        iptables -i &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;inet_if&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -A INPUT -s &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -j LOG --log-prefix &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;#34;&lt;/span&gt;
+        iptables -i &lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;inet_if&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt; -A INPUT -s &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -j DROP
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Ya está bloqueado&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$esta&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;ip&amp;gt; &amp;lt;comentario&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras guardar el script con el nombre deseado, el uso es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./nombre_script.sh &amp;lt;ip&amp;gt; &amp;lt;mensaje en el log&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si la IP ya está bloqueada, no se añadirá otra entrada a Iptables, el segundo parámetro aparecerá en los logs del sistema, algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Dec  &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt; 18:40:36 nombreServidor kernel: &amp;gt;&amp;lt;mensaje en el log&amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;eth0 &lt;span class=&#34;nv&#34;&gt;OUT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;MAC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XXXXXXXXXXXXXX &lt;span class=&#34;nv&#34;&gt;SRC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X.X.X.X &lt;span class=&#34;nv&#34;&gt;DST&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;Y.Y.Y.Y &lt;span class=&#34;nv&#34;&gt;LEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X &lt;span class=&#34;nv&#34;&gt;TOS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X &lt;span class=&#34;nv&#34;&gt;PREC&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X &lt;span class=&#34;nv&#34;&gt;TTL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X &lt;span class=&#34;nv&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X DF &lt;span class=&#34;nv&#34;&gt;PROTO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;TCP &lt;span class=&#34;nv&#34;&gt;SPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XX &lt;span class=&#34;nv&#34;&gt;DPT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XX &lt;span class=&#34;nv&#34;&gt;WINDOW&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XXX &lt;span class=&#34;nv&#34;&gt;RES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;XXX SYN &lt;span class=&#34;nv&#34;&gt;URGP&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para automatizar el bloqueo, recorreremos cada una de las líneas del archivo que hemos exportado de la base de datos con las direcciones IPs de los spammers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat spammers.txt&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+   ./nombre_script.sh &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Comentario SPAM&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y listo, si listamos las reglas de Iptables tendremos algo parecido a esto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;iptables -L
+Chain INPUT &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;policy ACCEPT&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+target     prot opt &lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt;               destination
+DROP       all  --  X.X.X.X        anywhere
+LOG        all  --  X.X.X.X        anywhere            LOG level warning prefix &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;Comentario SPAM&lt;span class=&#34;s1&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;DROP       all  --  Y.Y.Y.Y        anywhere
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;LOG        all  --  Y.Y.Y.Y        anywhere            LOG level warning prefix `Comentario SPAM&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, se notará un descenso drástico en los comentarios de spam. Espero que haya servido de ayuda.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

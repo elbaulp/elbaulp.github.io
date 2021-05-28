@@ -1,0 +1,849 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>security now on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/categories/security-now/</link>
+        <description>Recent content in security now on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 02 Oct 2017 17:50:35 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/categories/security-now/</link>
+            <title>security now on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/categories/security-now/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Estructura y seguridad de los QR Codes</title>
+            <link>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</link>
+            <pubDate>Mon, 02 Oct 2017 17:50:35 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Otra semana más me ha interesado el contenido del episodio del programa de radio Security Now!, que comparto con vosotros. Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/p&gt;
+&lt;p&gt;El anterior espisodio traducido fué &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;Lo último en criptografía: Fully Homomorphic Encryption&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Seguro que estás familiarizado con la imagen de la izquierda, y habrás usado escánares para acceder a su contenido más de una vez, ya que últimamente están de moda y se encuentran en todas partes.&lt;/p&gt;
+&lt;p&gt;Sin embargo esta tecnología se inventó hace 18 años para rastrear rápidamente piezas coches durante su ensamblaje en Japón, y se diseñaron muy bien.&lt;/p&gt;
+&lt;p&gt;Todos son cuadrados y siempre tienen una zona llamada &lt;em&gt;zona tranquila&lt;/em&gt; ó &lt;strong&gt;quiet zone&lt;/strong&gt;. Una de las mejores características de estos códigos es que son neutrales respecto a la orientación, es decir, no es necesario estar exactamente enfrente a ellos o alineados verticalmente para escanearlos. La imagen en sí proporciona toda la información necesaria para permitir al software girarla, orientarla y aplanarla, incluso si se fotografía el código con ángulo.&lt;/p&gt;
+&lt;p&gt;La característica más prominente del QR Code son los tres cuadrados que aparecen en trés de las cuatro esquinas de la imagen. Son tres porque facilitan una orientación rotacional rápida y a la vez proporcionan un inmediato sentido del tamaño y orientación angular. En la esquina restante hay otro pequeño cuadrado. Normalmente los cuadrados de mayor tamaño se situan en la esquia superior derecha e izquierda e inferior izquierda, dejando al de menor tamaño en la esquina inferior derecha. El hecho de que exista un cuadrado grande en la esquina inferior derecha aporta una idea instantanea de orientación rotacional. Si te fijas, el cuadrado más pequeño está a 4 bits desde la base de la imagen y 4 bits desde la derecha:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hay algo que se encuentra en todos y cada uno de los QR que existen, y es una marca de rastreo que une las esquinas interiores de los cuadrados grandes. Mirando entre los cuadrados superiores, se aprecia que siempre hay la siguiente sucesión (negro/blanco, negro/blanco). Es decir un &lt;!-- raw HTML omitted --&gt;ciclo de trabajo del 50%&lt;!-- raw HTML omitted --&gt;. Siempre aparece en los QR Codes. Lo mismo pasa entre el cuadrado superiore inferior izquierdo. Este diseño permite tener una referencia del tamaño y de nuevo orientación posicional adicional.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El código en sí tiene un número de formato y de versión almacenado en los bits circundantes a los tres cuadrados grandes. Dichos bits están siempre en una posición conocida dado que se sabe dónde están colocados los cuadrados grandes. La información almacenada ahí contiene el número de versión y el formato del QR Code.&lt;/p&gt;
+&lt;p&gt;La densidad oscila en el rango 1-40, proveyendo rango de almacenamiento de hasta 2000 caracteres.&lt;/p&gt;
+&lt;p&gt;A la hora de codificar los caracteres los creadores no usaron 1 Byte como es habitual, sino un conjunto de caracteres de 45 elementos. Por lo que solo exiten mayúsculas y algunos caracteres especiales. Lo cual es suficiente para codificar URLs. Aún así, existe un modo binario que permite almacenar caracteres de 8 bits.&lt;/p&gt;
+&lt;p&gt;La codificación del contenido comienza en la esquina inferior derecha y se almacena en bloques de 2×4, la razón del tamaño es para que sean lo más cuadrados posibles, de esta forma los bits en un byte ocupan la menor área posible.&lt;/p&gt;
+&lt;p&gt;Los diseñadores prestaron mucha atención a la corrección de errores, y desarrollaron tres niveles &lt;strong&gt;bajo, medio, cuartil y alto&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El nivel más alto de corrección de errores ocupa dos tercios de la superficie del QR Code, lo cual quiere decir que como mucho es posible que se pierda un tercio de la información codificada. De hecho, una con una simple búsqueda en internet se pueden encontrar QR Codes como el de wikipedia:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;A pesar de haber escrito una palabra justo en mitad del código, sigue siendo decodificable por el lector. Aunque se haya borrado un trozo de información, la corrección de errores la reconstruye.&lt;/p&gt;
+&lt;p&gt;Este tipo de corrección es similar al estilo de corrección de errores &lt;strong&gt;Reed-Solomon&lt;/strong&gt; (Información en &lt;!-- raw HTML omitted --&gt;inglés&lt;!-- raw HTML omitted --&gt;, inf. en &lt;!-- raw HTML omitted --&gt;Español&lt;!-- raw HTML omitted --&gt;) que usan los discos duros. Al igual que en los QR Codes, en los discos duros puede haber un pequeño defecto en la superficie que cause la pérdida de una región física. Esta tecnología permite una recuperación robusta de los datos.&lt;/p&gt;
+&lt;p&gt;Esencialmente hay un mosaico de 2×4 que se extiende a lo largo de un borde y luego da la vuelta. Pero no como un &lt;!-- raw HTML omitted --&gt;raster scan&lt;!-- raw HTML omitted --&gt;, que salta de nuevo hacia donde empezó. En lugar de eso, se da la vuelta y regresa al punto de origen, dos bits más allá. Luego vuelve a girar y regresar.&lt;/p&gt;
+&lt;p&gt;Uno de los problemas que se encontraron los diseñadores fue a la hora de que los datos emularan las características de reparación del QR Code. Habría un problema de señalización en banda, que es el término usado en teoría de la información para referirse al problema de intentar tener datos de formato, que deben estar separados del contenido, el problema es que el código se imprime con tinta. ¿Cómo se diferencia qué es datos y qué es formato?&lt;/p&gt;
+&lt;p&gt;Se plantearon organizar la información, pero ¿que pasa si la información ordenada se parece a uno de los cuadrados principales?, ¿y si aparecen demasiados espacios en blanco consecutivos?. Eso sería un problema. De nuevo el QR Code actua de forma similar a los discos duros usando una tecnología llamada Self-Clocking (Autosincronizable). En lugar de malgastar espacio con una señal de reloj o una traza de reloj además de los datos, organizaron los datos de forma que fueran autosincronizables, para que proporcionen su propia información de sinconización.&lt;/p&gt;
+&lt;p&gt;El modo de hacerlo es asegurarse que no hay, en el caso de los discos duros, un grupo de ceros juntos. Tener esta sucesión de ceros juntos significa que no está pasando nada, el problema surge cuando pasa algo (aparecen 1s) es necesario saber exáctamente cuantas cosas &lt;strong&gt;no&lt;/strong&gt; pasaron, es decir, cuantos ceros había. Y puede ser peligroso si el disco duro no gira a ritmo constante. De forma similar, si el QR Code está estirado o arrugado causará un cambio local en la frecuencia del patrón establecido en el campo visual. Así que no es buena idea tener grandes bloques negros o blancos en el Qr Code porque sería un problema a la hora de conocer su tamaño, lo cual es crucial, especialmente en Qr Codes de gran densidad que se lean desde cierta distancia. Sería dificil saber cuantos bits posee.&lt;/p&gt;
+&lt;p&gt;La solución tomada por los diseñadores fue establecer una máscara para uno de los formatos de control. Y realizar un XOR a todo el conjunto de datos. La opereración XOR se usa muy amenudo en &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptografía&lt;/a&gt;. Al realizar un XOR a algún dato, se invierten los bits, si se vuelve a realizar un XOR sobre los mismos datos, se obtiene el dato original.Debido a lo simple de realiazar un XOR es el proceso perfecto para resolver el problema. Dependiendo de la naturaleza de los datos contenidos en el QR Code crearon una librería con ocho patrones XOR distintos derivados matemáticamente de las coordenadas X e Y de una porción de 8×8.&lt;/p&gt;
+&lt;p&gt;Estos patrones de 8×8, por ejemplo, son un tablero de ajedrez, otro son rayas verticales, rayas horizontales etc. Llegados a este punto, la tarea del codificador QR es establecer un QR code simple, sin enmascarar ni XOR y luego seguir un criterio para detectar posibles problemas, como grandes secuencias de ceros o unos, o formaciones de grandes bloques.&lt;/p&gt;
+&lt;p&gt;Lo que se hace es aplicar cada una de las ocho máscaras para obtener ocho posibles QR codes candidatos y basandose en un criterio elige el más adecuado, y almacenará la máscara elegida como información de codificación.&lt;/p&gt;
+&lt;p&gt;Finalmente para decodificar el contenido, se empieza por la esquina inferior derecha, donde se encuentra el tipo de codificación (de 4 bits de tamaño), luego la longitud (8 bits) seguido de los datos almacenados. Despues de los datos puede haber otra codificación y otra longitud para seguir obteniendo datos. Por consiguiente, es posible disponer de múltiples formatos en un solo QR code. Incluso densidad y correncción de errores variable. Hay que tener una concepto claro, la corrección de errores significa redundancia, a más corrección de errores, mayor porcentaje del área no serán datos.&lt;/p&gt;
+&lt;h1 id=&#34;pasemos-a-ver-los-aspectos-de-seguridad&#34;&gt;&lt;strong&gt;Pasemos a ver los aspectos de seguridad.&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Debido a que estos códigos pueden usarse para representar cualquier cosa, hay gente con malas intenciones que sabe que se están haciendo fotos a los QR Codes. Incluso los anunciantes hacen uso de ellos. Aparecen en muchos carteles. Los códigos QR populares se están reemplazando con pegatinas con otro QR code con contenido malicioso.&lt;/p&gt;
+&lt;p&gt;Normalmente los intérpretes instalados en los smartphones preguntan qué deseas hacer con el contenido del QR code que acaba de leer, compartirlo, ir a la dirección web almacenara etc. Sin embargo hay algunos intérpretes que no están implementados de esta forma. Y es un problema, porque es totalmente posible realizar un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits (Parte I)&#34;&gt;buffer overflow&lt;/a&gt; en el intérprete. Hasta la fecha no se conoce ninguno, pero si lo hubiera sobreescribiría la funcionalidad del intérprete, y tomarían el control del smartphone.&lt;/p&gt;
+&lt;p&gt;Por ese motivo Symantec ha creado un intérprete llamado &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Norton Snap&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; disponible tanto para Android como iOS.&lt;/p&gt;
+&lt;p&gt;Otro buen intérprete es &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;Barcode Scanner&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;, pregunta qué se quiere hacer con el contenido, en lugar de redirigir directamente a la url codificada.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;NOTA:&lt;!-- raw HTML omitted --&gt;Este artículo ha sido escrito a partir del episodio 382 de Security Now!, no me atribuyo ninguna autoría, simplemente he escuchado el episodio y he plasmado lo que he aprendido. A continuación proporciono los enlaces correspondientes al episodio&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 382: QR Codes&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>SQRL y la idea de eliminar el uso de usuario y contraseña en internet</title>
+            <link>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</link>
+            <pubDate>Sun, 10 Sep 2017 12:44:23 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Puedes echar un ojo al artículo más actualizado &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/&#34;&gt;SQRL -Secure Quick Reliable Login a Fondo&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Los lectores habituales sabrán que suelo escuchar el programa de radio &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Artículos sobre Security now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, la semana pasada, &lt;strong&gt;Steve Gibson&lt;/strong&gt;, uno de los mayores expertos en seguridad anunció que se le había ocurrido una manera de eliminar la necesidad de usar usuario y contraseña para identificarse en los sitios web, eliminando así los problemas que esto conlleva. Steve ha llamado a su invención &lt;strong&gt;SQRL&lt;/strong&gt; (&lt;em&gt;Secure &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; Login&lt;/em&gt;) y ha tenido bastante éxito en la comunidad, tanto que hasta el &lt;a href=&#34;http://www.w3.org/&#34; title=&#34;W3 org&#34;&gt;W3&lt;/a&gt; se ha puesto en contacto con él mostrando interés en este nuevo método de autentificación.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El sistema &lt;strong&gt;SQRL&lt;/strong&gt; es bastante simple, cuando se desea identificarse en un sitio web mediante &lt;strong&gt;SQRL&lt;/strong&gt;, aparecerá un código, entonces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El usuario ejecuta en su teléfono móvil la aplicación &lt;strong&gt;SQRL&lt;/strong&gt;, y escanea el código mostrado. (O un usuario navegando desde su móvil toca el código. O un usuario de PC hace click en el código.)&lt;/li&gt;
+&lt;li&gt;Para verificar, la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; muestra el nombre del dominio contenido en el código &lt;strong&gt;SQRL&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Tras verificar el dominio, el usuario permite a la aplicación &lt;strong&gt;SQRL&lt;/strong&gt; que autentifique su identidad.&lt;/li&gt;
+&lt;li&gt;Dejando la información de login en blanco (No es necesario rellenar los campos usuario y contraseña) se hace click en &lt;em&gt;login&lt;/em&gt;… y estaremos en nuestra cuenta.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Este método, a pesar de ser bastante simple, es de lejos mucho más seguro que cualquier otra solución de logueo. Intentaré explicar un poco por encima el proceso traduciéndolo de la página de Steve (1), donde hay muchos más detalles.&lt;/p&gt;
+&lt;h2 id=&#34;qué-ocurre-detrás-de-la-escena&#34;&gt;¿Qué ocurre detrás de la escena?&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Gracias a &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Artículos de Luzcila&#34;&gt;Luzcila&lt;/a&gt; por traducir esta sección&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;(Lo escrito a continuación pretende dar al lector una noción general del proceso de autentificación mediante &lt;strong&gt;SQRL&lt;/strong&gt;, para detalles más técnicos se puede visitar el enlace de las referencias (1), si hay algún interesado en traducir esta información al castellano, puede contactar conmigo mediante el &lt;a href=&#34;https://elbauldelprogramador.com/&#34; title=&#34;Contacto&#34;&gt;formulario de contacto&lt;/a&gt; y encantado añadiré el contenido mencionando a su autor).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El código QR presentado cerca de los campos de login contiene la URL del servicio de autenticación para el sitio. La URL incluye un número aleatorio largo generado de forma segura por lo que cada presentación de la página de login muestra un código QR diferente. (En el mundo de la criptografía este número aleatorio se conoce como “nonce”)&lt;/li&gt;
+&lt;li&gt;La aplicación de autenticación SQRL de los smartphones encripta el nombre de dominio del sitio indexado por la clave maestra del usuario para producir un par de clave pública específica del sitio (&lt;em&gt;site-specific public key pair&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;La aplicación firma criptográficamente la URL completa contenida en el código QR usando la clave privada específica del sitio. Dado que la URL incluye un número largo aleatorio (el nonce), la firma es única para este sitio y código QR.&lt;/li&gt;
+&lt;li&gt;La aplicación emite una consulta HTTPS POST a la URL del código QR, la cual es del servicio de autenticación del sitio. El POST provee la clave pública específica del sitio y la firma criptográfica que se corresponde de la URL del código QR.&lt;/li&gt;
+&lt;li&gt;El sitio web de autenticación recibe y reconoce la consulta POST devolviéndole una respuesta standard HTTP “200 OK” sin otro contenido. La aplicación SQRL acepta la solicitud exitosa del código QR del usuario identificado.&lt;/li&gt;
+&lt;li&gt;El sitio de autenticación tiene la URL que contiene el nonce que devolvió la página de login del smartphone del usuario. Tiene también una firma criptográfica de esa URL, y la clave pública específica del sitio del usuario. Usa la clave pública para verificar que la firma es válida para la URL. Esto confirma que el usuario que produjo la firma usó la clave privada que corresponde a la clave pública. Tras de verificar la firma, el sitio de autentificación reconoce al usuario (ahora-autenticado) por la clave pública específica de sitio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Resumiendo: “El login del sitio web presenta un código QR que contiene la URL de su servicio de autenticación, más un nonce. El smartphone del usuario firma la login URL usando una clave privada derivada de su secreto maestro y el nombre de dominio de la URL. El smartphone envía la clave pública que se corresponde para identificar el usuario, y la firma para autenticarlo.”&lt;/p&gt;
+&lt;p&gt;A continuación dejo los dos podcast en los que Steve Gibson ha dado cantidad de detalles de cómo funciona el sistema &lt;strong&gt;SQRL&lt;/strong&gt;, y en las referencias todos los detalles técnicos. Vuelvo a comentar que toda colaboración para traducir dicha página es bienvenida.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;(1) SQRL en la página de su creador, Steve&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;grc.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>SQRL -Secure Quick Reliable Login a Fondo</title>
+            <link>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</link>
+            <pubDate>Sun, 10 Sep 2017 12:41:58 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/sqrl-secure-quick-reliable-login-a-fondo/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hace unos años, hablé aquí sobre la idea de Steve Gibson, &lt;strong&gt;SQRL&lt;/strong&gt;, sistema con el que pretende eliminar &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34;&gt;el uso de usuarios y contraseñas en internet&lt;/a&gt;. Unos dos años más tarde, con el proyecto bastante maduro, en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Todos los artículos traducidos&#34;&gt;Security Now!&lt;/a&gt;, Steve ha vuelto a dar detalles del funcionamiento de &lt;strong&gt;SQRL&lt;/strong&gt;, y la verdad es que pinta pero que muy bien. En este artículo he usado como fuente el episodio &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/424&#34;&gt;#424&lt;/a&gt; del podcast.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;resumen&#34;&gt;Resumen&lt;/h1&gt;
+&lt;p&gt;Antes de empezar con los detalles, a continuación se muestra un resumen del sistema de autentificación:&lt;/p&gt;
+&lt;h2 id=&#34;el-concepto-principal&#34;&gt;El concepto principal&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Una &lt;strong&gt;HMAC&lt;/strong&gt; cuya clave es un número grande generado aleatoriamente.
+&lt;ul&gt;
+&lt;li&gt;Un código de autentificación basado en Hashes.&lt;/li&gt;
+&lt;li&gt;Similar a cuando se usa una clave en otros sistemas para &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrar/descifrar&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Una forma de crear un &lt;em&gt;keyed hash&lt;/em&gt; (Un hash, de alguna manera, que venga dado por una clave).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cada usuario obtiene su propia función hash.&lt;/li&gt;
+&lt;li&gt;A cada &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Configurar un servidor DNS&#34;&gt;dominio&lt;/a&gt; de un sitio web se le aplica un hash para producir una clave privada personal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;la-jerarquía-de-claves-de-sqrl&#34;&gt;La jerarquía de claves de SQRL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Código de recuperación de 24 dígitos, como una carta para “Salir de la cárcel”.&lt;/li&gt;
+&lt;li&gt;Es posible que nunca se necesite este código.&lt;/li&gt;
+&lt;li&gt;La &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet del usuario&#34;&gt;contraseña&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qué-ocurre-si-queremos-otra-identidad-para-el-mismo-sitio&#34;&gt;¿Qué ocurre si queremos otra identidad para el mismo sitio?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Si mi mujer y yo queremos entrar a Facebook con el mismo pc, se crean IDs alternativos para cada uno.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qué-pasa-si-me-me-roban-mi-identidad-sqlr-o-si-creo-que-me-la-robaron&#34;&gt;¿Qué pasa si me me roban mi identidad SQLR?, ¿O si creo que me la robaron?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bloqueo de identidad.&lt;/li&gt;
+&lt;li&gt;Se puede bloquear/desbloquear una identidad fácilmente&lt;/li&gt;
+&lt;li&gt;Regenerar las claves para una identidad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;qué-pasa-si-quiero-dejar-de-usar-sqrl&#34;&gt;¿Qué pasa si quiero dejar de usar SQRL?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Eliminar/reemplazar las identidades.&lt;/li&gt;
+&lt;li&gt;Las identidades poseen un ciclo de vida completo que puede administrarse.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;y-si-un-sito-fraudulento-muestra-un-id-de-__sqrl__-de-otro-sitio-web&#34;&gt;¿Y si un sito fraudulento muestra un ID de &lt;strong&gt;SQRL&lt;/strong&gt; de otro sitio web?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;El problema del spoofing se hablará a lo largo del artículo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;__sqrl__-revised&#34;&gt;&lt;strong&gt;SQRL&lt;/strong&gt; Revised&lt;/h1&gt;
+&lt;p&gt;Antes de comenzar, expliquemos los dos conceptos más importantes en los que se basa SQRL. El primero es el aspecto &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;criptográfico&lt;/a&gt;, es decir, cómo tener una &lt;a href=&#34;https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/&#34; title=&#34;Chuleta de comandos para GPG&#34;&gt;clave secreta&lt;/a&gt; para un cifrador, para uno como &lt;strong&gt;AES&lt;/strong&gt;, o &lt;strong&gt;Blowfish&lt;/strong&gt;. Es decir, a un cifrador se le pasa un texto plano, y devuelve un texto cifrado, usando la clave secreta. A eso se le llama un cifrador con llaves (&lt;em&gt;keyed cipher&lt;/em&gt;).
+El segundo concepto son los &lt;em&gt;hash&lt;/em&gt;, como &lt;em&gt;SHA-256, SHA-1&lt;/em&gt; etc, de 256 bits y 160, respectivamente. A estos algoritmos se les introduce algo, de cualquier longitud, y devuelven un mensaje de longitud fija, dependiendo del algoritmo: 256 bits, 160, etc. No importa cómo de largo sea el mensaje a resumir.&lt;/p&gt;
+&lt;p&gt;Resulta que también se pueden tener funciones &lt;em&gt;hash&lt;/em&gt; con claves (&lt;em&gt;keyed hash&lt;/em&gt;), actuando de forma similar a los cifradores. A estas funciones &lt;em&gt;hash&lt;/em&gt; se las llama &lt;em&gt;HMAC&lt;/em&gt; (&lt;em&gt;Hash Messgage Authentication Code&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;La diferencia pues, es que una función &lt;em&gt;hash&lt;/em&gt; es simplemente una función, &lt;em&gt;SHA-256&lt;/em&gt; es el mismo &lt;em&gt;SHA-256&lt;/em&gt; para todo el mundo, esta funcionalidad es útil para algunos casos, por ejemplo para comprobar que un fichero descargado no ha sido modificado por nadie. El que sube el fichero, publica el resultado de aplicarle la función &lt;em&gt;hash&lt;/em&gt;, y cuando tú lo descargas, vuelves a pasárselo, si el resultado es el mismo, el fichero no ha sido alterado.&lt;/p&gt;
+&lt;p&gt;Si embargo, un &lt;em&gt;Keyed hash&lt;/em&gt; es distinto, la salida de la función viene determinada por la clave secreta. Por tanto, se tendrán tantas funciones &lt;em&gt;hash&lt;/em&gt; como posibles claves se puedan generar a partir de la longitud de la clave. Si la longitud de la clave es 256 bits, se pueden generar \(2^{256}\) distintas claves, y por tanto \(2^{256}\) distintas funciones &lt;em&gt;hash&lt;/em&gt;. &lt;strong&gt;SQRL&lt;/strong&gt; usa un &lt;em&gt;keyed hash&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-usa-__sqrl__-la-hmac&#34;&gt;Cómo usa &lt;strong&gt;SQRL&lt;/strong&gt; la HMAC&lt;/h1&gt;
+&lt;p&gt;Veamos un ejemplo. Imaginemos que vas a un sitio web, con lo cual tienes el dominio del sitio, por ejemplo amazon.com, o Twit.tv, el que sea. A ese dominio se le aplica un &lt;em&gt;hash&lt;/em&gt; usando &lt;em&gt;HMAC&lt;/em&gt;, lo que devuelve un resumen de una longitud fija, pero usando como clave tu identidad de SQRL. Esta identidad se creará al momento de instalar SQRL, y cada usuario tendrá su propia función &lt;em&gt;hash&lt;/em&gt;, completamente distinta de la de los demás. El resultado de la función &lt;em&gt;hash&lt;/em&gt; para el sitio visitado, por ejemplo amazon, será la clave privada para esa web.&lt;/p&gt;
+&lt;p&gt;SQRL genera una clave privada única para cada sitio web distinto que visitas, si dos usuarios de &lt;strong&gt;SQRL&lt;/strong&gt; visitan el mismo sitio web, la función &lt;em&gt;hash&lt;/em&gt; personal de cada uno dará un resultado distinto, ya que se está usando &lt;em&gt;HMAC&lt;/em&gt;. Por tanto, usando una identidad maestra junto con la función &lt;em&gt;HMAC&lt;/em&gt;, &lt;strong&gt;SQRL&lt;/strong&gt; crea una galaxia de claves privadas de tal modo que cada usuario tenga una clave distinta cuando visitan sitios distintos. Como dijimos antes, con \(2^{256}\) hay claves de sobra. Tantas que no hay que preocuparse por posibles colisiones.&lt;/p&gt;
+&lt;p&gt;Resumiendo lo visto hasta ahora, &lt;em&gt;SQRL&lt;/em&gt; consiste en un usuario con una identidad maestra, para el cual el sistema crea automáticamente una clave privada para cada sitio que visita. Eso sí, cuando se visita la misma web, se obtiene la misma clave privada.&lt;/p&gt;
+&lt;h2 id=&#34;uso-de-la-clave-privada&#34;&gt;Uso de la clave privada&lt;/h2&gt;
+&lt;p&gt;¿Qué se hace con la clave privada? Esta clave se basa en una curva elíptica, en concreto la de Dan Bernstein, por ser determinista, es decir, la clave no se elige aleatoriamente, porque tendría que almacenarse, memorizarla. Y de ser así, se tendrían que guardar para cada uno de los sitios visitados, bastante molesto. De este modo, pueden crearse sobre la marcha usando la identidad maestra y el nombre de dominio.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es usar una función de la curva elíptica que obtiene la clave pública a partir de la privada, pero no funciona al contrario. A partir de la pública es imposible obtener la privada. Además, la clave pública será la identidad del usuario para esa web, y el servidor de la web la almacenará para identificarte.&lt;/p&gt;
+&lt;p&gt;Por último, cuando el usuario se identifica en un sitio web, la web dice &lt;em&gt;vale, dices que este eres tú, demuéstralo.&lt;/em&gt; Para ello la web envía un trozo de datos aleatorio (único para cada usuario), el usuario los firma con su clave privada y lo devuelve a la web. De éste modo, sin exponer la clave privada, acabas de demostrar que la posees. Esto es &lt;em&gt;SQRL&lt;/em&gt; en esencia, proporcionar la clave pública a una web para identificarte. Cuando quieras volver a identificarte en ella, en lugar de usar el típico e inseguro usuario/contraseña, usando SQRL, la web envía un trozo de datos aleatorios, el usiario entonces le devolverá los datos firmados con la clave privada y la clave pública. Al haber usado la web anteriormente, ya conocía tu clave pública, verifica la firma y corrobora que tú eres quien dices ser y listo, identificado.&lt;/p&gt;
+&lt;h1 id=&#34;y-si-alguien-se-hace-pasar-por-mí&#34;&gt;¿Y si alguien se hace pasar por mí?&lt;/h1&gt;
+&lt;p&gt;Una identidad &lt;strong&gt;SQRL&lt;/strong&gt; es un sistema de dos personas (tú y todas las webs del mundo), el usuario es pseudoanónimo para todas las webs. Ya que cada sitio web ve al usuario como un token aleatorio (la clave pública). De este modo el usuario no puede ser rastreado, es decir, no hay forma de asociar tu identidad entre sitios webs. Además, la clave pública que proporcionas al sitio web solo es útil para dicho sitio, para ninguno más, a diferencia del usuario/contraseña. En esencia, con &lt;strong&gt;SQRL&lt;/strong&gt; no estás dándole a la web un secreto que guardar (la contraseña), no necesitan mantener segura la base de datos. Cualquiera podría descargarla y le sería inútil, a cualquiera salvo al sitio web.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-recuperar-tu-identidad&#34;&gt;Cómo recuperar tu identidad&lt;/h1&gt;
+&lt;p&gt;¿Cómo permitimos a los usuarios que sean responsables de su propia identidad, pero al mismo tiempo darles la opción de recuperarla si la perdieran, o se la robaran?&lt;/p&gt;
+&lt;p&gt;Lo primero a tener en cuenta es que &lt;strong&gt;SQRL&lt;/strong&gt; no usa tu identidad más secreta para funcionar, esa es la que guardaremos como último recurso. Lo primero que &lt;strong&gt;SQRL&lt;/strong&gt; hace es generar un “código de rescate”. Un número de 24 dígitos decimales. Este código es el que debe guardarse como el mayor de los secretos. Es tan secreto que no se guarda en ningún cliente SQRL. Cuando se configura &lt;strong&gt;SQRL&lt;/strong&gt; por primera vez, lo imprime por pantalla, y debes anotarlo, o imprimirlo como dígito o como &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR codes&#34;&gt;código QR&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Esta es la carta “Salir de la cárcel” de la que hablábamos al principio. Te sacará de cualquier problema. Y por ser tan poderoso, no se almacena. El único requisito es anotarlo o imprimirlo, y ponerlo en un lugar seguro. El código no puede regenerarse, ya que es completamente aleatorio. Es tu identidad maestra.&lt;/p&gt;
+&lt;p&gt;Una vez anotado o imprimido, &lt;strong&gt;SQRL&lt;/strong&gt; comienza el proceso de hash, aplicando múltiples hash, haciendo operaciones XOR. Tras aplicar iterativamente funciones hash al código, se obtiene lo que será la clave para la función hash del usuario, recuerda, una &lt;em&gt;keyed hash&lt;/em&gt; (&lt;em&gt;HMAC&lt;/em&gt;). Ahora, la clave de la función hash se cifra con una contraseña usando la función &lt;a href=&#34;https://en.wikipedia.org/wiki/Scrypt&#34;&gt;Scrypt&lt;/a&gt;, la cual hace totalmente inviable averiguar  la contraseña.&lt;/p&gt;
+&lt;h1 id=&#34;y-si-me-roban-mi-identidad&#34;&gt;¿Y si me roban mi identidad?&lt;/h1&gt;
+&lt;p&gt;Para ello se creó el &lt;em&gt;Identity Lock&lt;/em&gt; (Bloqueador de identidad), un protocolo consistente en una serie de ecuaciones. Conforme se les va proporcionando la clave pública a las webs, se les proporciona también información sobre el &lt;em&gt;identity lock&lt;/em&gt;. Esta información se genera aleatoriamente por el cliente, y el protocolo permite al cliente generar dicha información para asegurar tu identidad, pero no probrarla. Por tanto, esto difiere de la capacidad anterior de &lt;strong&gt;SQRL&lt;/strong&gt; para probar tu identidad firmando puñado de datos que envía la web.&lt;/p&gt;
+&lt;p&gt;El objetivo del &lt;em&gt;identity lock&lt;/em&gt; es hacer deliberadamente que los clientes no sean capaces de probar algo en el futuro que ya aseguraron probar antes. Así, si el cliente queda fuera del control del usuario. No podría usarse para cambiar tu identidad en ninguna web en la que ya la hubieses establecido. De este modo, un ladrón en posesión de tu identidad, de tu código, contraseña&amp;hellip; todo, no podrían eliminar tu identidad.&lt;/p&gt;
+&lt;p&gt;La segunda cosa que proporciona el código de recuperación (La carta para salir de la cárcel), al insertarlo en el cliente SQRL, permite cambiar tu identidad y re-habilitar la autenticación de haber sido deshabilitada, ya que es posible deshabilitar la autentificación para las webs, pero solo es posible rehabilitarlas con el código de recuperación.&lt;/p&gt;
+&lt;h1 id=&#34;deshabilitar-la-autentificación&#34;&gt;Deshabilitar la autentificación&lt;/h1&gt;
+&lt;p&gt;La posibilidad de deshabilitar la autentificación es útil cuando por ejemplo, pierdes tu móvil, te lo confiscan, etc. En esos casos, tu identidad queda expuesta, pero con cualquier otro cliente SQRL puedes cargar tu identidad y deshabilitar la autentificación para tu identidad. Ningún intruso podrá cambiar tu identidad y tú puedes deshabilitarla, pero para reactivarla necesitarás el código de recuperación. Si alguna vez pasa algo así, al reactivarla con el código, es posible regenerar la identidad (&lt;em&gt;rekeyed&lt;/em&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Esto en esencia es SQRL, bastante prometedor. A continuación dejo el episodio del podcast y la documentación de SQRL.&lt;/p&gt;
+&lt;h1 id=&#34;fuentes&#34;&gt;Fuentes&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentación oficial SQRL | &lt;a href=&#34;https://www.grc.com/sqrl/sqrl.htm&#34;&gt;gcr.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Intel Anuncia Sus Nuevos Discos Duros, 1000 Veces Más Rápidos Que Los SSDs</title>
+            <link>https://elbauldelprogramador.com/optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/</link>
+            <pubDate>Sat, 20 Aug 2016 05:06:16 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/optanetm-3d-nand-tecnologa-3d-xpoint-intel-ssds/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;En un artículo anterior hablamos de &lt;a href=&#34;https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/&#34; title=&#34;Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement&#34;&gt;Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement&lt;/a&gt;. Hoy Intel vuelve a ser noticia, hace unos días en el episodio #573 de &lt;a href=&#34;https://elbauldelprogramador.com/categories/security-now/&#34; title=&#34;Todos los artículos de Security Now!&#34;&gt;Security now!&lt;/a&gt; Steve habló de una nueva tecnología que ha creado Intel junto con Micron. Se llama &lt;strong&gt;3D XPoint&lt;/strong&gt; y con ella han creado dos tipos de discos duros 1000 veces más rápidos que los SSDs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A continuación se proporciona un resumen:&lt;/p&gt;
+&lt;h1 id=&#34;características-de-la-nueva-memoria-3d-xpoint&#34;&gt;Características de la nueva memoria 3D XPoint™&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;1000&lt;/strong&gt; veces &lt;strong&gt;más rápida&lt;/strong&gt; que las NANDs. La latencia de las NANDs se mide en decenas de &lt;strong&gt;microsegundos&lt;/strong&gt;, 3D Point en decenas de &lt;strong&gt;nanosegundos&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;1000 veces más resistencia&lt;/strong&gt; que las NANDs.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;10 veces más densa&lt;/strong&gt; que las memorias convencionales.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No volátil&lt;/strong&gt;, Memoria no volátil (&lt;em&gt;NVM&lt;/em&gt;) es la nueva era de las memorias en los ordenadores, manteniendo los datos incluso después de que el ordenador se apague. Ejemplos de memorias no volátiles: 3D NAND, SSDs, y la tecnología 3D XPoint™.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;3d-xpoint-solventa-la-poca-durabilidad-de-los-ssds&#34;&gt;3D XPoint solventa la poca durabilidad de los SSDs&lt;/h1&gt;
+&lt;p&gt;Con esta tecnología, que Intel pretende sacar al mercado &lt;strong&gt;en 2016&lt;/strong&gt;, se acaba con un gran problema que tienen los SSDs, su poca durabilidad. Los 3D XPoint acabarán por reemplazar a los SSDs en poco tiempo.&lt;/p&gt;
+&lt;p&gt;El problema con los SSDs (Que son memoria NAND), es que se van varando electrones en una pequeña isla que está flotando con el aislante debajo. La forma de escribir en un SSD es crear un campo electroestático lo suficientemente potenten como para superar al aislante y que los electrones fluyan a través de él.&lt;/p&gt;
+&lt;p&gt;Este proceso crea una fatiga en las propiedades físicas del aislante. Esta es la razón por la que escribir en dispositivos de memoria flash es costoso y causa daños a la larga. Algo que los discos duros convencionales no sufren. Esta nueva tecnología de &lt;a href=&#34;https://elbauldelprogramador.com/tags/intel&#34;&gt;Intel&lt;/a&gt;, &lt;strong&gt;3D XPoint&lt;/strong&gt; no sufre de este problema. Además es &lt;strong&gt;10 veces más denso&lt;/strong&gt; que la &lt;strong&gt;DRAM&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;static-ram-sram-o-ram-estática&#34;&gt;Static RAM (SRAM) o RAM estática&lt;/h1&gt;
+&lt;p&gt;La memoria RAM estática o &lt;em&gt;SRAM&lt;/em&gt; es como los &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-los-procesos/&#34;&gt;registros del procesador&lt;/a&gt;, las &lt;em&gt;SRAM&lt;/em&gt; son inversores de acoplamiento cruzado. El problema que tiene este tipo de memoria es que requiere de muchos transistores, y éstos requieren de espacio físico y energía. También producen calor. Sin embargo son bastante rápidas. Como desventaja es que son volátiles, en cuanto no se les suministra energía los datos que almacenan se pierden.&lt;/p&gt;
+&lt;h1 id=&#34;dynamic-ram-dram-o-ram-dinámica&#34;&gt;Dynamic RAM (DRAM) o RAM dinámica&lt;/h1&gt;
+&lt;p&gt;Como mejora a la &lt;em&gt;SRAM&lt;/em&gt; se creó la &lt;em&gt;DRAM&lt;/em&gt;, que reducía la complejidad de la &lt;em&gt;SRAM&lt;/em&gt; a un solo transistor y un condensador. &lt;em&gt;DRAM&lt;/em&gt; almacena la información en el condensador. El problema de estos condensadores es que tienen que ser diminutos para poder colocarlos en un espacio pequeño. La desventaja de &lt;em&gt;DRAM&lt;/em&gt; es que hay que refrescar los condensadores periódicamente para que no pierdan la información almacenada, y hay que hacerlo con la suficiente frecuencia para no darle tiempo al condensador a que se descargue. También es volátil.&lt;/p&gt;
+&lt;h1 id=&#34;memorias-3d-xpoint&#34;&gt;Memorias 3D XPoint&lt;/h1&gt;
+&lt;p&gt;Estas nuevas memorias usan una tecnología de cambio de fase. Imaginemos un conjunto de conductores dispuestos horizontalmente, colocamos pequeños puntos de cosas en dichos conductores horizontalmente. Después, en la parte superior colocamos una rejilla de conductores verticalmente de forma que intersequen con los conductores horizontales en el punto X, de ahí el nombre &lt;strong&gt;XPoint&lt;/strong&gt;. La siguiente imagen ayuda a visualizarlo:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En cada intersección hay una sustancia que las separa. Lo que han conseguido es hacer pasar corriente a través de esta sustancia que cambia su resistencia permanentemente. Por lo tanto, si se envia un pulso de corriente en una dirección, su resistencia decáe. Por contra, al enviar la corriente en el sentido contrario, la resistencia aumenta. Esto se conoce como &lt;em&gt;bulk change&lt;/em&gt; (&lt;em&gt;Cambio en masa, o cambio masivo&lt;/em&gt;) y significa que el material al completo cambia su propiedad. Además es muy estable y &lt;strong&gt;no-volátil&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;de-donde-viene-el-nombre-3d&#34;&gt;De donde viene el nombre 3D&lt;/h1&gt;
+&lt;p&gt;Después de la descripción dada, uno puede imaginar de dónde sale el nombre &lt;strong&gt;3D&lt;/strong&gt;. Lo que hemos descrito es solo una capa, pero si vamos poniendo capas una encima de otra, apilándolas de forma que se aumenta la eficiencia enormemente.&lt;/p&gt;
+&lt;h1 id=&#34;bulk-storage-almacenamiento-en-masa&#34;&gt;Bulk storage (Almacenamiento en masa)&lt;/h1&gt;
+&lt;p&gt;Hasta ahora, los dispositivos de almacenamiento a los que estamos acostumbrados formaban una pirámide jerárquica. Siendo los discos duros los más lentos, pero con más capacidad, hasta la memoria caché del microprocesador (L1, L2 etc), la más rápida pero con menor capacidad. Esta tecnología se situa justo debajo de la &lt;em&gt;DRAM&lt;/em&gt;, como mostramos en la siguiente imagen:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;propiedades-de-3d-xpoint&#34;&gt;Propiedades de 3D XPoint&lt;/h1&gt;
+&lt;p&gt;Lo más impresionante de esta nueva tecnología es que es de &lt;strong&gt;acceso aleatorio&lt;/strong&gt;, de &lt;strong&gt;alta densidad&lt;/strong&gt; y &lt;strong&gt;no volátil&lt;/strong&gt;. Lo cual significa que tendremos velocidades similares a &lt;strong&gt;DRAM&lt;/strong&gt; pero sin perder la información al apagar el PC.&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Con esta nueva tecnología, en unos meses no tendremos que decir &lt;em&gt;“Me he comprado un PC con 8GB de RAM”&lt;/em&gt;, simplemente diremos  &lt;em&gt;“Me he comprado un ordenador con 20TB de almacenamiento &lt;strong&gt;XPoint&lt;/strong&gt;”&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;De aquí a unos 5/10 años, seguramente los SSDs &lt;strong&gt;Optane&lt;/strong&gt; de Intel hayan reemplazado a los &lt;strong&gt;SSDs&lt;/strong&gt; de hoy día.&lt;/p&gt;
+&lt;p&gt;¿Qué te ha parecido esta nueva tecnología? Déjanos un comentario con tu opinión.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;3D XPoint™ Unveiled—The Next Breakthrough in Memory Technology. &lt;a href=&#34;http://www.intel.com/content/www/us/en/architecture-and-technology/3d-xpoint-unveiled-video.html&#34; title=&#34;3D XPoint™ Unveiled—The Next Breakthrough in Memory Technology&#34;&gt;intel.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introducing Breakthrough Memory Technology. &lt;a href=&#34;http://www.intel.com/content/www/us/en/architecture-and-technology/non-volatile-memory.html&#34; title=&#34;Introducing Breakthrough Memory Technology&#34;&gt;intel.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo Intel Va a Acabar Con Los Buffers Overflows Con Control-Flow Enforcement Technology (CET)</title>
+            <link>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</link>
+            <pubDate>Tue, 05 Jul 2016 20:09:47 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/intel-buffer-overflow-control-flow-enforcement-technology-cet/</guid>
+            <description>&lt;p&gt;Hace tiempo que hablamos aquí sobre lo que es un &lt;a href=&#34;https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/&#34; title=&#34;Explotación – Buffers OverFlows y exploits&#34;&gt;Buffer Overflow&lt;/a&gt; y cómo aprovecharnos de ellos para tomar control del sistema. Pues bien, Intel se propone acabar con este tipo tan común de vulnerabilidad en sus nuevos procesadores.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo está basado en el episodio #565 de Security Now!, &lt;em&gt;Control-Flow Enforcement Technology (CET)&lt;/em&gt;, puedes ver todos los artículos traducidos en la página &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Página de episodios traducidos&#34;&gt;security now!&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;cómo-pretende-intel-acabar-con-los-buffers-overflows&#34;&gt;Cómo pretende Intel acabar con los buffers overflows&lt;/h1&gt;
+&lt;p&gt;Básicamente Intel añadirá una nueva instrucción a sus procesadores, llamada &lt;strong&gt;ENDBRANCH&lt;/strong&gt; y una nueva funcionalidad llamada &lt;strong&gt;Shadow stack&lt;/strong&gt;, que podría traducirse como pila oculta. Antes de meternos de lleno a describir ambas novedades, analicemos el problema.&lt;/p&gt;
+&lt;h1 id=&#34;un-poco-de-historia&#34;&gt;Un poco de historia&lt;/h1&gt;
+&lt;p&gt;El problema con la programación orientada al retorno (&lt;em&gt;return oriented-programming&lt;/em&gt;) es que la gente inteligente ideó una forma de conseguir ejecutar código que ya tenía privilegios de ejecución. A lo largo de los años se ha producido una batalla entre gente intentando explotar programas y las compañías intentando idear métodos que lo impidieran.&lt;/p&gt;
+&lt;p&gt;La primera medida de prevención fue el bit &lt;strong&gt;NX&lt;/strong&gt; (&lt;em&gt;No-eXecute bit&lt;/em&gt;), este bit se añadió a los sistemas para evitar los problemas mencionados en el párrafo anterior, que consistía en proporcionar datos al sistema y conseguir que esos datos se ejecutaran. Es decir, en estos sistemas no se diferenciaba lo que era código para ejecutar y lo que eran los datos, por lo que si conseguías que el procesador ejecutara unos datos cuidadosamente proporcionados&amp;hellip; te hacías con el sistema. En la arquitectura Von Neuman clásica, los datos e instrucciones comparten el mismo espacio.&lt;/p&gt;
+&lt;h2 id=&#34;instrucción-nx&#34;&gt;Instrucción NX&lt;/h2&gt;
+&lt;p&gt;Como hemos mencionado, esta compartición de espacio entre datos e instrucciones tenía el siguiente problema: Si consigues que el procesador ejecute una instrucción de salto (&lt;em&gt;jump&lt;/em&gt; ) a esa zona de datos que contiene intencionadamente instrucciones, el procesador las ejecutará. En orden de prevenir este tipo de ataques se creó la el bit &lt;strong&gt;NX&lt;/strong&gt;, una bandera o flag que se añadió al hardware que especifica qué región de memoria no puede ejecutarse. De esta forma, si alguien introduce datos y mediante una instrucción &lt;em&gt;jmp&lt;/em&gt; salta a ellos, el procesador no ejecutará las intrucciones en esos datos porque están marcados con el flag &lt;strong&gt;NX&lt;/strong&gt;. Pero como siempre, la gente es muy lista.&lt;/p&gt;
+&lt;h2 id=&#34;cómo-saltarse-la-protección-del-bit-nx&#34;&gt;Cómo saltarse la protección del bit NX&lt;/h2&gt;
+&lt;p&gt;Ya que esta protección estaba activada, los hackers idearon otra forma de saltarsela, intentar desactivar el bit saltando a alguna región de memoria que sea de ejecución y tenga la llamada al sistema que desactiva el bit &lt;strong&gt;NX&lt;/strong&gt;, normalmente saltaban a una subrutina del kernel, y sobre-escribían la dirección de retorno para saltar a la parte donde reside el código que ellos quieren ejecutar. De este modo ya volvían a poder ejecutar lo que quisieran en la región de datos. ¿Cual fue la contramedida de Intel en ese entonces?  &lt;em&gt;ASLR&lt;/em&gt; (&lt;em&gt;Address Space Layout Randomization&lt;/em&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;qué-es-aslr-address-space-layout-randomization&#34;&gt;Qué es ASLR (Address Space Layout Randomization)&lt;/h2&gt;
+&lt;p&gt;Para prevenir los ataques del tipo anterior, Intel ideo otra solución, aleatorizar la distribución del espacio en el que se reparte el código ejecutable del sistema operativo. Sin embargo, debido al diseño de la arquitectura, no tenían mucho espacio de donde aleatorizar, normalmente disponían solo de 8 bits, es decir 256 posibles localizaciones en memoria. 256 opciones no son muchas, así que los malos podían simplemente probar suerte, fallarían 255 de cada 256 veces, pero acertarían 1 de cada 256, una baja probabilidad de acierto, pero mejor que 0.&lt;/p&gt;
+&lt;h3 id=&#34;mi-ordenador-se-ha-quedado-colgado-por-alguna-misteriosa-razón&#34;&gt;Mi ordenador se ha quedado colgado por alguna misteriosa razón&amp;hellip;&lt;/h3&gt;
+&lt;p&gt;Seguro que alguna vez os ha pasado, el ordenador se queda colgado, os aparece una pantallazo azul&amp;hellip; y simplemente habéis reiniciado y todo parece estar correcto, pues bien, esto fruto de alguien probando suerte en vuestro sistema, y fallando una de esas 255 veces que puede equivocarse “probando suerte” intentando hacerse con vuestro PC.&lt;/p&gt;
+&lt;h1 id=&#34;la-nueva-instrucción-endbranch-de-intel&#34;&gt;La nueva instrucción ENDBRANCH de Intel&lt;/h1&gt;
+&lt;p&gt;Despues de este pequeño repaso por la historia de las vulnerabilidades, vamos a describir la nueva instrucción que Intel ha creado para acabar con los &lt;em&gt;Buffers Overflows&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Su funcionamiento es simple, &lt;strong&gt;ENDBRANCH&lt;/strong&gt; es el único destino válido de una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt;. Es decir, el principio de cada subrutina debe empezar con la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Lo elegante de este diseño, es que los procesadores tienen un &lt;a href=&#34;https://en.wikipedia.org/wiki/Instruction_pipelining&#34;&gt;Instruction Pipeline&lt;/a&gt;, y conforme el procesador va leyendo instrucciones que tiene que ejecutar y encuentra una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; (Recuerda que estas intrucciones tiene que aterrizar en un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;), la instrucción inmediatamente siguiente que va a coger el pipeline debe ser un &lt;strong&gt;ENDBRANCH&lt;/strong&gt;. Por tanto, como esto debe de ser inmutable, Intel sabe que tras una instrucción &lt;code&gt;call&lt;/code&gt; o &lt;code&gt;jump&lt;/code&gt; la siguiente debe ser &lt;strong&gt;ENDBRANCH&lt;/strong&gt;, así que Intel ha añadido un pequeño autómata finito que comprueba que esto es cierto, de no ser así, lanza una excepción y aborta el proceso.&lt;/p&gt;
+&lt;p&gt;Con esta simple mejora, se acaba el problema de sobre-escribir la dirección de retorno de una función para permitir al atacante saltar a una porción de codigo que él controla. Al obligar a que la instrucción &lt;strong&gt;ENDBRANCH&lt;/strong&gt; sea la primera instrucción de todas las subrutinas, define un único punto de entrada válido. Cualquier intento de saltar a la mitad o al final de una función es imposible, ya que el proceso se abortará.&lt;/p&gt;
+&lt;h1 id=&#34;la-pila-stack-y-la-nueva-funcionalidad-de-intel-shadow-stack&#34;&gt;La pila (Stack) y la nueva funcionalidad de Intel, Shadow Stack&lt;/h1&gt;
+&lt;p&gt;Todos estamos familiarizados con el concepto de &lt;a href=&#34;https://es.wikipedia.org/wiki/Pila_(inform%C3%A1tica)&#34; title=&#34;Definición de Pila&#34;&gt;Pila (Stack)&lt;/a&gt; esa estructura de datos que permite introducir datos y sacar datos. Cuando se inventó en su día, de repente permitía hacer llamadas recursivas, lo cual hasta el momento no podía hacerse. Pero el problema con la pila viene a ser el mismo de antes, se comparten instrucciones y datos. Cuando se llama a un método, con unos parámetros, se introduce en la pila la dirección de retorno y los parámetros de la función, si los tuviera. He aquí el problema, es un claro objetivo para un ataque &lt;em&gt;buffer overflow&lt;/em&gt;. En la pila se reserva un espacio para variables de tamaño variable (Valga la redundancia), si no se usa correctamente y no se hacen comprobaciones del tamaño de lo que se intenta guardar en una variable, se corre el riesgo de que alguien mal intencionado desborde la capacidad de esa variable y consiga sobre-escribir la dirección de retorno de la pila. Ya sabemos qué puede pasar cuando alguien sobr escribe la dirección de retorno, pueden saltar a donde quiera y tomar el control.&lt;/p&gt;
+&lt;p&gt;Para resolver este problema Intel ha diseñado la llamada &lt;em&gt;Shadow Stack&lt;/em&gt; o pila oculta. Es una pila a la que el desarrollador no tiene acceso, y mantiene una copia de los parámetros de la pila normal, como dirección de retorno etc, pero nada de datos. Cuando el programador modifica la pila, lo hace en la normal, a la que tiene acceso. Y aquí reside la fortaleza del &lt;em&gt;Shadow Stack&lt;/em&gt;, al no tener acceso, cuando el sistema mira la dirección de retorno, si esta dirección no coincide en ambas pilas, alguien ha modificado la dirección de retorno en la pila normal y el proceso se aborta. Y así, Intel ha puesto fin a años de vulnerabilidades debidas al simple hecho de no comprobar que el tamaño de los datos que intentamos guardar en una variable, no cabe en el espacio que tienen reservado. Una obra maestra.&lt;/p&gt;
+&lt;p&gt;Además, no implica ningun decremento en el rendimiento del sistema, ya que está implementado en hardware, es problema de Intel añadir los transictores necesarios a sus procesadores para que esto funcione.&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Me ha parecido un tema muy interesante y quería compartirlo con vosotros, espero que también os haya gustado. Dejanos un comentario para hacernos llegar tu opinión!&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Security Now 565 Control-Flow Enforcement Technology (CET) | &lt;a href=&#34;https://twit.tv/shows/security-now/episodes/565&#34; title=&#34;Security Now 565
+Control-Flow Enforcement Technology (CET)&#34;&gt;twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Episodio en Youtube | &lt;a href=&#34;https://www.youtube.com/watch?v=W3AdFoJ8lCs&#34; title=&#34;Security Now 565
+Control-Flow Enforcement Technology (CET)&#34;&gt;Youtube.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>WhatsApp: Entendiendo Su Cifrado Extremo a Extremo</title>
+            <link>https://elbauldelprogramador.com/whatsapp-mensajes-cifrados-extremo-a-extremo/</link>
+            <pubDate>Sat, 23 Apr 2016 22:05:58 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/whatsapp-mensajes-cifrados-extremo-a-extremo/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Seguro que muchos últimamente os preguntáis qué significa ese mensaje que aparece en vuestras conversaciones de WhatsApp:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Las llamadas y mensajes enviados a este chat ahora están seguros con cifrado extremo a extremo. Toca para más información.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para los curiosos, en el podcast &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;Security Now!&lt;/a&gt;&lt;/em&gt;, episodio 555 Steve explicó el protocolo que han implementado para mantener las conversaciones y llamadas de &lt;strong&gt;WhatsApp&lt;/strong&gt; seguras. He pensado que puede ser de interés para los lectores del blog, así que lo he traducido. Comencemos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;resumen&#34;&gt;Resumen&lt;/h1&gt;
+&lt;p&gt;Para el que no quiera entrar en detalles aquí los aspectos básicos son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt; ha incorporado a su aplicación la el protocolo &lt;em&gt;Signal&lt;/em&gt; (Desarrolado por whispersystems).&lt;/li&gt;
+&lt;li&gt;El protocolo &lt;em&gt;Signal&lt;/em&gt; proporciona a la seguridad de &lt;strong&gt;WhatsApp&lt;/strong&gt; las siguientes características:
+&lt;ul&gt;
+&lt;li&gt;Confidencialidad - Mensajes cifrados.&lt;/li&gt;
+&lt;li&gt;Integridad - Cualquier alteración de un mensaje será detectada y no se enviará el mensaje.&lt;/li&gt;
+&lt;li&gt;Autentificación - Es posible confirmar la identidad de la otra persona.&lt;/li&gt;
+&lt;li&gt;Consistencia de los participantes - Por defecto está desactivado.&lt;/li&gt;
+&lt;li&gt;Validación del destinatario - Relacionado con las dos anteriores.&lt;/li&gt;
+&lt;li&gt;Confidencialidad directa (Forward secrecy)  - Si se compromenten las claves privadas en el futuro, no se podrán descifrar mensajes antiguos.&lt;/li&gt;
+&lt;li&gt;Confidencialidad futura (Future secrecy) - Ocurre lo mismo para claves que fueron comprometidas, con ellas no se podrán descifrar mensajes.&lt;/li&gt;
+&lt;li&gt;Imposibilidad de vinculación de mensajes (Message unlinkability) - Los mensajes son asíncronos, independientes, pueden perderse.&lt;/li&gt;
+&lt;li&gt;Repudiación de mensajes - El destinatario puede recrear un mensaje válido del emisor.&lt;/li&gt;
+&lt;li&gt;Asincronía - Los mensajes pueden encolarse en el servidor hasta que el destinatario esté conectado para recibirlos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lo que no proporciona este protocolo es:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preservación del anonimato - No es posible enviar mensajes de forma anónima.&lt;/li&gt;
+&lt;li&gt;Requiere que el servidor almacene las claves públicas para poder mandar los mensajes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Veamos ahora el tema con más detalle:&lt;/p&gt;
+&lt;h1 id=&#34;de-donde-viene-signal&#34;&gt;De donde viene Signal&lt;/h1&gt;
+&lt;p&gt;Signal es un protocolo que ha desarrollado &lt;em&gt;Open Whisper Systems&lt;/em&gt; a lo largo de los años como parte de su aplicación de mensajería SMS &lt;em&gt;TextSecure&lt;/em&gt;. Durante todo este tiempo ha ido evolucionando hasta convertirse en el brillante protocolo que es hoy día, como pondremos de manifiesto en este artículo.&lt;/p&gt;
+&lt;p&gt;El objetivo principal del protocolo es porder enviar un mensaje de forma segura, aunque el destinatario no esté conectado en ese momento. El problema de esto, es que el mensaje necesita almacenarse temporalmente en un servidor, con los problemas de seguridad que esto conlleva. Es aquí donde los chicos de &lt;em&gt;Open Whisper Systems&lt;/em&gt; fueron refinando su protocolo con el paso de los años hasta conseguirlo. Cabe destacar que el protocolo es de &lt;!-- raw HTML omitted --&gt;código libre&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;qué-ofrece-el-protocolo-signal---propiedades&#34;&gt;Qué ofrece el protocolo signal - Propiedades&lt;/h1&gt;
+&lt;p&gt;La integración de &lt;em&gt;Signal&lt;/em&gt; con &lt;strong&gt;WhatsApp&lt;/strong&gt; ofrece a sus usuarios &lt;strong&gt;confidencialidad&lt;/strong&gt;, lo cual se traduce en que las comunicaciones están cifradas. &lt;strong&gt;Integridad&lt;/strong&gt;, que significa que cualquier alteración en un mensaje será detectada y no se producirá la transacción. Esto último implica que exite un código de autentificación de mensaje (una MAC). Por último, &lt;strong&gt;autenticación&lt;/strong&gt;, aunque esto hay que activarlo, ya que está apagado por defecto (Veremos cómo activarlo más adelante). La &lt;strong&gt;Autenticación&lt;/strong&gt; significa que podemos verificar la identidad de la otra persona. Otra propiedad del protocolo es &lt;strong&gt;validación del destino (Destination validation)&lt;/strong&gt;, esto significa que si alguna vez en el futuro, se compromete la clave privada no será posible descifrar mensajes antiguos (&lt;strong&gt;Foward secrecy&lt;/strong&gt;). Del mismo modo disponen de &lt;strong&gt;backward secrecy&lt;/strong&gt;, siendo lo contrario del anterior, si una clave privada antigua se ve comprometida, no será posible descifrar mensajes futuros. Estas dos últimas propiedades se consiguen con lo que se denominan &lt;em&gt;Ephemeral Keys&lt;/em&gt; o claves efímeras, este tipo de claves están en constante cambio y renegociándose continuamente, de modo que alguien que consiga una clave no podrá usarla. Por último, &lt;strong&gt;Message unlinkability&lt;/strong&gt; (Asincronía), los mensajes son asíncronos e independientes, pueden llegar en distinto orden, pueden perderse, y aún así el sistema seguirá siendo consistente.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-funciona-el-asincronismo&#34;&gt;Cómo funciona el asincronismo&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Para lograr el asincronismo, los mensajes se deben encolar en un servidor a la espera de que el destinatario se conecte. Este proceso es realmente complicado y el traductor no tiene el conocimiento para hacerlo, pero en las referencias se proporcionan enlaces para los interesados que deseen profundizar en el tema.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sí que se explicará por ecima el proceso. Llegado un punto ambas partes producen una curva elíptica, en concreto la curva 25519, el cual es el algoritmo de curva elíptica de &lt;strong&gt;Bernstein&lt;/strong&gt;. Esta es la misma curva que usa Steve en su protocolo &lt;a href=&#34;https://elbauldelprogramador.com/sqrl-y-la-idea-de-eliminar-el-uso-de-usuario-y-contrasena-en-internet/&#34; title=&#34;SQRL y la idea de eliminar el uso de usuario y contraseña en internet&#34;&gt;SQLR&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez creadas ambas claves Diffie-Hellman privadas y públicas, que son estáticas, crean un conjunto de claves efímeras. En el siguiente paso utilizan el acuerdo de llaves (Key agreement) de Diffie-Hellman tres veces: El primero es coger la clave privada y la clave efímera de la otra persona, el segundo Key Agreement es el mismo que el anterior pero lo hace el otro usuario, es decir, se coge la clave privada y la efímera del otro participante en la conversación. Por último, el tercer key agreement consiste en intercambiar las claves efímeras de ambos y usarlas con Diffie-Hellman. Se concatenan las tres y se obtiene una clave de sesión maestra.&lt;/p&gt;
+&lt;p&gt;Como se comentaba anteriormente, la complejidad del proceso es bastante alta.&lt;/p&gt;
+&lt;h1 id=&#34;el-concepto-de-ratchet&#34;&gt;El concepto de Ratchet&lt;/h1&gt;
+&lt;p&gt;En un protocolo interactivo, un &lt;em&gt;ratchet&lt;/em&gt; o trinquete es el termino usado cuando se quiere evolucionar una clave sobre la que ya se ha establecido una negociación. Conforme se van enviando mensajes, se avanza el trinquete. Para sincronizarlos, el usuario &lt;strong&gt;A&lt;/strong&gt; envía la primera mitad de su acuerdo con clave Diffie-Hellman sobre el usuario &lt;strong&gt;B&lt;/strong&gt;. Hasta que no reciba la mitad restante del usuario &lt;strong&gt;B&lt;/strong&gt; no puede hacer nada. En el momento en el que el usuario &lt;strong&gt;B&lt;/strong&gt; envia su mitad de la clave, &lt;strong&gt;A&lt;/strong&gt; envia la parte que faltaba con un acuse de recibo afirmando que recibió la primera mitad de la clave de &lt;strong&gt;B&lt;/strong&gt;. Ahora ambos tienen una clave pública Diffie-Hellman efímera intercambiada. Con esto ambos pueden realizar un &lt;em&gt;Key agreement&lt;/em&gt; Diffie-Hellman y obtener la siguiente clave ratchet.&lt;/p&gt;
+&lt;h1 id=&#34;sigal-hace-offline-ratchet&#34;&gt;Sigal hace Offline Ratchet&lt;/h1&gt;
+&lt;p&gt;El problema con el mecanismo anterior es que funciona solamente en tiempo real. En este caso es necesario poder enviar un mensaje aunque el destinatario no esté en línea. Para ello crearon el denominado &lt;strong&gt;Offline Ratchet&lt;/strong&gt;. Si el emisor está enviando varios mensajes, a cada uno de ellos se le aplica un hash, para que ningún mensaje enviado comparta la misma clave. En el momento en que el receptor se conecta, ambas partes resincronizan sus Offline Ratchets.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-se-envía-el-primer-mensaje-de-forma-segura&#34;&gt;¿Cómo se envía el primer mensaje de forma segura?&lt;/h1&gt;
+&lt;p&gt;En un protocolo en tiempo real, se puede crear una clave compartida en tiempo real. Pero este sistema pretende que sea posible enviar un mensaje seguro a alguien con quien nunca has hablado. ¿Cómo se logra esto?&lt;/p&gt;
+&lt;p&gt;Los chicos de Whisper Systems lo solucionaron de una forma muy elegante. Al registrarte en tu aplicación &lt;strong&gt;WhatsApp&lt;/strong&gt; o Signal, se le envían al servidor 100 claves públicas efímeras con un identificador asociado. Esto permite a alguien que quiera enviarte un mensaje, y que nunca lo ha hecho hasta ahora, coger una de esas claves para poder mandarte el mensaje de forma segura. La ventaja de las claves efímeras es que solo se pueden usar una vez, y al estar identificadas en cuanto se usan el servidor las borra, es imposible que la misma clave se utilize dos veces. Digamos que pueden verse como una caché de claves de un solo uso, de usar y tirar.&lt;/p&gt;
+&lt;h1 id=&#34;autentificación&#34;&gt;Autentificación&lt;/h1&gt;
+&lt;p&gt;Hasta ahora todo lo que han desarrollado en Whisper Systems ha sido un éxito, una obra maestra. Sin embargo, en este tipo de protocolos siempre hay un punto que flaquea, y ese punto es la autentificación. Autentificación significa que tienes la certeza de que con quien hablas es quien tú crees que es. En threema por ejemplo, lo resolvieron con el sistema de tres puntos y colores. Un punto rojo significa que simplemente esa persona está en tu lista de contactos, dos puntos y amarillo que ambos os tenéis en la lista de contactos. Por último, tres puntos y verde significa que ambos os habéis encontrado en persona y habéis leido el código &lt;a href=&#34;https://elbauldelprogramador.com/estructura-y-seguridad-de-los-qr-codes/&#34; title=&#34;Estructura y seguridad de los QR Codes&#34;&gt;QR&lt;/a&gt; asociado a cada usuario, lo cual certifica que la persona &lt;strong&gt;A&lt;/strong&gt; dice ser quién es y &lt;strong&gt;B&lt;/strong&gt; lo sabe y al contrario.&lt;/p&gt;
+&lt;p&gt;En &lt;strong&gt;WhatsApp&lt;/strong&gt; y Signal, han hecho algo parecido, la imagen del inicio del artículo muestra un código QR en la pantalla, esa es la parte de autentificación de WhatsApp. En Whisper Systems entienden que este cabo es el único que no han atado, no hay forma de resolver el problema de la autenficación, en esta parte el usuario debe ser proactivo. Por este motivo se proporciona el código QR, junto con un número con 60 dígitos (Codificado en el QR). Este código QR es único para cada conversación, y ambos participantes deben tener exáctamente los mismos 60 dígitos. Una vez generado el código no debe cambiar nunca, si cambia es que hay alguien en medio escuchando la conversación o haciéndose pasar por la otra persona (Man in The Middle).&lt;/p&gt;
+&lt;h2 id=&#34;cómo-verificar-la-identidad-de-un-contacto&#34;&gt;Cómo verificar la identidad de un contacto&lt;/h2&gt;
+&lt;p&gt;Para verificar que ambos tenéis el mísmo número basta con hacer click en la foto del contacto y pinchar en el icono de “Información”, allí encontraréis un apartado llamado “Cifrado/Encriptación”. Al pulsarlo aparecerá el código QR y un botón para escanear el de vuestro contacto. Debido a que ambos comartís el mismo código, este paso basta con que lo haga uno de los dos participantes, ya que lo único que se comprueba es que el número coincide.&lt;/p&gt;
+&lt;h2 id=&#34;recibir-notificaciones-de-ataques-man-in-the-middle&#34;&gt;Recibir notificaciones de ataques Man In The Middle&lt;/h2&gt;
+&lt;p&gt;Aún haciendo el paso anterior, nada nos protege si en algún momento las claves se ven comprometidas, para recibir notificaciones de seguridad hay que ir a los ajustes de nuestra cuenta de &lt;strong&gt;WhatsApp&lt;/strong&gt; y en la sección de seguridad activar la opción “Mostrar las notificaciones de seguridad”:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Citando a Steve:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;WhatsApp&lt;/strong&gt; es una obra maestra, me quito el sombrero. Con Signal tenemos una solución perfecta, libre, multiplataforma, con librerías para varios lenguajes. No hay excusa para no usarla.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;Espero que os haya gustado el artículo, el resto de artículos traducidos están en &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;/security-now/&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;p&gt;Para quien quiera seguir leyendo sobre el tema:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://twit.tv/shows/security-now/episodes/555&#34; title=&#34;Enlace al podcast&#34;&gt;Enlace al podcast en twit.tv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/whatsapp-complete/&#34; title=&#34;Artículo sobre __WhatsApp__ en whispersystems.org&#34;&gt;Artículo sobre &lt;strong&gt;WhatsApp&lt;/strong&gt; en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/advanced-ratcheting/&#34; title=&#34;Artículo sobre Ratchets en whispersystems.org&#34;&gt;Artículo sobre Ratchets en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.whatsapp.com/security/&#34; title=&#34;Página de __WhatsApp__ hablando sobre su seguridad&#34;&gt;Página de &lt;strong&gt;WhatsApp&lt;/strong&gt; hablando sobre su seguridad&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/asynchronous-security/&#34; title=&#34;Artículo sobre Seguridad asíncrona en whispersystems.org&#34;&gt;Artículo sobre Seguridad asíncrona en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://whispersystems.org/blog/simplifying-otr-deniability/&#34; title=&#34;Artículo sobre OTR en whispersystems.org&#34;&gt;Artículo sobre OTR en whispersystems.org&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo funciona el Bitcoin, la cripto-moneda</title>
+            <link>https://elbauldelprogramador.com/como-funciona-el-bitcoin-la-cripto-moneda/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-funciona-el-bitcoin-la-cripto-moneda/</guid>
+            <description>&lt;p&gt;Hace mucho tiempo que se empezó a hablar sobre el bitcoin y su futuro como moneda digital. Si como yo te has preguntado cómo funciona y quieres saber más acerca de todo el sistema que rodea al bitcoin, en este artículo traduciré el episodio &lt;em&gt;287 - BitCoin CryptoCurrency&lt;/em&gt; del programa &lt;a href=&#34;https://elbauldelprogramador.com/security-now//&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bicoint fue creado por el criptógrafo Japonés Satoshi Nakamoto y es &lt;a href=&#34;https://elbauldelprogramador.com/opensource/&#34;&gt;open source&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La idea del bitcoin es ofrecer una moneda basada en internet, con fuerza industrial, en la que se haga uso del peer-to-peer donde se pueda intercambiar dinero entre dos partes sin necesidad de un intermediario. Esto último es uno de los mayores problemas porque, &lt;em&gt;¿de donde viene la moneda?&lt;/em&gt;
+, &lt;em&gt;¿Qué crea la moneda?&lt;/em&gt;, &lt;em&gt;¿Cuanta cantidad fluye a través del sistema?&lt;/em&gt;, &lt;em&gt;¿Cómo la monitorizas y la regulas?&lt;/em&gt;, &lt;em&gt;¿Cómo se previene que se produzca inflación?&lt;/em&gt;, &lt;em&gt;¿Cómo previenes que la gente cree la moneda de forma fraudulenta?&lt;/em&gt;, &lt;em&gt;¿Cómo evitas que alguien, en caso de disponer de monedas, reutilice la misma moneda?&lt;/em&gt;. Todas estas preguntas se han resuelto en el sistema de una manera muy inteligente e innovadora.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Pero, &lt;em&gt;¿Cómo se inventa una moneda?&lt;/em&gt;. En realidad, una moneda no es más que un acuerdo entre partes que establecen que esa &lt;em&gt;‘cosa’&lt;/em&gt; sintética tiene valor. Cuando el dólar se regía a los estándares del oro, la idea era que debía haber oro salvaguardando los dólares. De manera que cuando recibías los llamados &lt;em&gt;‘pagarés’&lt;/em&gt;, eran equivalentes a una cantidad X de oro. El problema fue que se necesitaba más dinero del que oro se disponía, así que se dejó de salvaguardar el dólar con el oro.&lt;/p&gt;
+&lt;p&gt;Una vez desconectada la moneda del oro, en cierta manera se tiene una moneda virtual (Dólares, Euros etc).&lt;/p&gt;
+&lt;p&gt;Así pues, BitCoin tiene todos los atributos de una moneda. El concepto de bitcoin (BTC) y el sistema que genera la moneda. Puedes dirigirte a la página de bitcoin, descargar el programa, instalarlo y empezar a generar bitcoins. Tal como suena, empiezas a generar dinero.&lt;/p&gt;
+&lt;p&gt;La forma en la que se crea dinero es mediante el procesamiento de transacciones en el sistema bitcoin. Es complicado, pero así debe ser para obtener un sistema robusto y seguro. En la FAQ de bitcoin.org hay un enlace al &lt;!-- raw HTML omitted --&gt;PDF&lt;!-- raw HTML omitted --&gt; que escribío Satoshi describiendo el funcionamiento del sistema.&lt;/p&gt;
+&lt;p&gt;La idea es que cada usuario quiere un rastro de cada transacción que se haya producido en el sistema, y se producen transacciones todo el tiempo. A pesar de que la moneda sea virtual, se ha anclado a monedas reales. Hay páginas webs que aceptan pagos en bitcoin, esta semana (23/03/2013) ha incrementado su valor en un 53% situandose entorno a los 54 dólares por bitcoin.&lt;/p&gt;
+&lt;p&gt;Si te sorprendió la idea de generar dinero por tí mismo con tan solo instalar el programa y ejecutarlo, hay que decir está todo controlado. Los bitcoin se generan cuando un nodo — Si estás ejecutando el programa, tú mismo eres un nodo — encuentra la solución a un problema complejo. Es una manera muy inteligente de generar monedas, ya que impide que la gente pueda crear monedas a su antojo.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;A modo de continuar con la explicación de cómo funciona bitcoin, hay que remontarse al año 97.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En dicho año, un tal Adam Back propuso un concepto para luchar contra el spam. Lo llamó &lt;strong&gt;‘proof of work’&lt;/strong&gt; (Prueba de trabajo). La idea era que los spammers funcionan debido a que pueden enviar cantidades muy grandes de emails a un coste virtual 0. No les cuesta nada enviar un email. Como consecuencia nuestras bandejas de entrada se ven inundadas con email que a nosotros nos es caro de recibir, y para ellos enviarlos tiene un coste 0. Así que Adam dijo, &lt;em&gt;&lt;strong&gt;¿Y si encontramos la forma de hacer que a alguien le resulte caro enviar un email?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;La forma que encontraron fue esta: Crear una carga computacional para la cual no tenemos la suficiente tecnología, en la que los spammers tengan que realizar una cantidad sustancial de trabajo a fin de validar el email. Aquí es donde aparecen las funciones de hashing. Crear el hash de algo es una técnica valida para este concepto, ya que dado una entrada de longitud arbitrária crea el comúnmente llamado &lt;em&gt;&lt;strong&gt;‘digest’&lt;/strong&gt;&lt;/em&gt;. El cual tiene longitud fija.&lt;/p&gt;
+&lt;p&gt;Es decir, imagina la &lt;em&gt;&lt;strong&gt;función &lt;a href=&#34;https://elbauldelprogramador.com/?s=criptografia&#34;&gt;criptográfica&lt;/a&gt; SHA-256&lt;/strong&gt;&lt;/em&gt;, que produce hashes de 256 bits. Para poder enviar el email, por ejemplo, se podría calcular el hash de la cabecera de tal manera que alguno de los primeros números de los 256 sean cero. De modo que si calculas el hash de una cabecera de email aleatoria, el bit más significativo tiene una probabilidad del 50% de ser 0 ó 1. Con este método se tendría que aplicar el hash a la cabecera hasta que el primer bit sea 0 para poder enviar el email.&lt;/p&gt;
+&lt;p&gt;Pero digamos que para validar la cabecera ha de tener un hash donde los 20 primeros bits, por ejemplo, sean cero. Esto requerirá de 2^20 operaciones. La idea es que esto obliga a realizar una cantidad muy grande de trabajo estimando la cabecera para obtener los X primeros bits del hash a cero. En la práctica, se puede establecer la dificultad para que tome, por ejemplo, dos segundos en realizar el cálculo. Eso significaría al spammer perder dos segundor por email, lo cual es un tiempo computacional mucho mayor de lo que les cuesta en la actualidad.&lt;/p&gt;
+&lt;p&gt;El concepto de Adam no llegó a utilizarse, ya que hay servicios de envío de mails masivos que no son spamers. Como boletines de notícias. Sin embargo &lt;em&gt;Satoshi&lt;/em&gt; usó el concepto propuesto por Adam en el 97, implementándolo de la siguiente manera:&lt;/p&gt;
+&lt;p&gt;Imagina que entre todos los integrantes que componen el sistema, hay gente intercambiando bitcoins. Todo el sistema funciona con un sistema de claves &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34;&gt;asimétricas&lt;/a&gt;, en el que existe el par de claves pública y privada. Una de las partes coge su clave pública y le asocia una cantidad de bitcoins, de igual manera, el destinatario de la transacción proporciona su clave pública. Luego, se firman con la clave privada de cada uno.&lt;/p&gt;
+&lt;p&gt;Así se crea una transacción que solo ellos pueden haber creado ya que son los únicos que poseen sus claves privadas. Esa transacción se emite a todos los nodos de la red P2P (Peer-to-Peer). Como ésta, todas las transacciones que se producen en el sistema se transmiten a la red. De este modo, es muy fácil que cualquiera pueda verificar dicha transacción, ya que conocen la clave pública del firmante, pudiendo así verificar la firma. Hecho esto, el siguiente paso es asegurarse de que dicha persona que acaba de enviar cierta cantidad de bitcoins, no pueda volver a enviarlos de nuevo. Esta es una de las tareas más difíciles de resolver.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Antes de pasar a explicar cómo se resuelve el problema de no permitir el reenvio de los mismos bitcoins, es necesario dar a conocer otro concepto.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Dentro del sistema existen bloques, que son colecciones de transacciones en la red. Siguiendo el método de Adam, aquí los bloques son una analogía a lo que era calcular el hash de la cabecera del email. Luego los bloques son los que requieren el trabajo computacional en el sistema bitcoin. Dicho trabajo lo proporcionan los nodos conectados a la red.&lt;/p&gt;
+&lt;p&gt;Cada bloque está enlazado con todos los anteriores mediante el hash del bloque anterior como parte del siguiente. Lo que significa que se tiene una cadena de bloques que se va moviendo hacia delante, todas enlazadas con el hash del bloque inmediatamente anterior. Existe el denominado bloque &lt;em&gt;&lt;strong&gt;génesis&lt;/strong&gt;&lt;/em&gt;, creado el 3 de Enero del 2009. Cuando descargas el programa y lo ejecutas, éste entra en una sala IRC, de la cual recibirá toda la historia de los bloques generados hasta el momento. Como puedes estar pensando, conforme vaya pasando el tiempo, la cadena de bloques irá aumentando en tamaño y puede exigir de una cantidad te tiempo importante obtenerla. Sin embargo, de nuevo se resuelve otro problema muy inteligentemente. Una vez que los bloques son lo suficientemente antiguos, se comprimen, ya que no es necesario preocuparse de ellos debido al tiempo que ha transcurrido desde que se produzco la transacción.&lt;/p&gt;
+&lt;p&gt;Conocido el concepto de la cadena de bloques, lo que hacen los nodos es competir entre todos para crear el siguiente bloque. El nodo que gana, el que realiza la cantidad de trabajo necesaria para crear el siguiente bloque recibe 50 bitcoins.&lt;/p&gt;
+&lt;p&gt;Los nodos reciben todas las transacciones que aún no se han encapsulado en un bloque, calculan el hash de todo junto con el hash del bloque anterior. Con lo cual se está anclando dicho bloque a la cadena, evitando así que puedas crear un bloque que no esté enlazado con el anterior. Además, existe cierta dificultad la cual consiste en encontrar un bloque con las características que se mencionaron anteriormente, disponer de un número determinado de ceros en el hash empezando por el bit más significativo. &lt;em&gt;“En el momento de grabar el episodio, en número de ceros debía ser 12”, actualmente van por 14&lt;/em&gt;. Con lo cual los nodos intentan crear hashes con este número de ceros, cuando lo consiguen, marcan el bloque como válido y lo transmiten a la red.&lt;/p&gt;
+&lt;p&gt;Hay páginas web que permiten ver la cadena de bloques, como &lt;!-- raw HTML omitted --&gt;bitcoinchain.info&lt;!-- raw HTML omitted --&gt; o &lt;!-- raw HTML omitted --&gt;bitcoinexplorer.com&lt;!-- raw HTML omitted --&gt;, y puedes comprobar cómo los primeros 14 bits son cero, . Un ejemplo de bloque que proporcionaría 50 bitcoins al nodo que lo calculó sería &lt;!-- raw HTML omitted --&gt;este&lt;!-- raw HTML omitted --&gt;, con el hash: &lt;strong&gt;000000000000003a0e9b642d627fbfe8e07d8b946680c5dadc070dcacb754a29&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Como puedes comprobar en estas páginas, no es tan inusual que ocurran hashes con este número de ceros, ahora mismo los 3 primeros bloques se generaron hace 14, 20 y 35 minutos.&lt;/p&gt;
+&lt;p&gt;Ahora bien, puede que estés preguntándote que, si todo esto es público, cualquiera puede ver cuanto dinero gastas o recibes. De nuevo, el sistema está bien pensado y es totalmente anónimo. Lo único que se sabe de tí es la clave pública, ésta clave es la que proporcionas al público para que realicen transacciones contigo. No hay forma conocer quién hay detrás de la clave pública. Además, puedes crear tantos pares de claves privadas/públicas como quieras. Así que no es posible seguir la pista a una determinada clave, ya que puedes crear sin ningún problema tantas como quieras.&lt;/p&gt;
+&lt;p&gt;Como en estos momentos se puede ganar bastante dinero por el hecho de calcular los hashes, hay gente que tiene ordenadores exclusivamente dedicados a calcular hashes usando GPUs. Pero el sistema tenía previsto esto y automáticamente va cambiando la dificultad del problema para establecer el ratio al que se genera la moneda.&lt;/p&gt;
+&lt;p&gt;En realidad, nunca jamás se crearán más de 21 millones de bitcoins (A fecha 25 de Marzo del 2013 hay casi 11 millones), como estaba previsto, a los 4 años de lanzarse la mitad de del total se habrían creado, de hecho hace poco que se cumplieron los 4 añós del lanzamiento del sistema. En los proximos 4 años se crearán la mitad de la mitad, 5.250.000. De nuevo, en los siguientes 4 años a esos (Del año 8 al 12 contando desde el lanzamiento), la mitad de 5.250.000 y así hasta completar los 21 millones. Como ves, el orden de creación de la moneda va decreciendo exponencialmente.&lt;/p&gt;
+&lt;p&gt;De esta manera se dispone de un ratio controlado de inflación dentro del sistema. Lo cual tiene sentido porque, inicialmente, conforme el sistema vaya usandose y se hagan disponibles bienes y servicios que comercien con el sistema, se quiere que se inserte más dinero a la red para tener bitcoins con los que comerciar. Pero no quieres que se vayan creando sin cesar.&lt;/p&gt;
+&lt;p&gt;El problema sería, por supuesto, que dejaramos ese número en 21 millones para siempre y existiera una demanda mucho mayor, la tendencia sería querer más. Sin embargo, la solución es que no estás obligado a comerciar con valores enteros de bitcoins. Puedes usar hasta 8 dígitos decimales. Lo cual permite que haya deflación con el tiempo, ya que estamos estableciendo el número total de monedas a 21 millones. Se sabe que irá descendiendo a lo largo del tiempo, así que no importa cuanta potencia de GPUs se introduzca en el sistema. El sistema se ajusta de forma que el problema computacional a resolver sea a escala — la dificultad escala hasta equilibrar la cantidad de potencia de procesamiento en la totalidad de la red.&lt;/p&gt;
+&lt;p&gt;Para ir terminando, lo que se ha conseguido crear con este sistema es una moneda virtual que es capaz de mantenerse por sí misma.&lt;/p&gt;
+&lt;p&gt;Para que te hagas una idea de la capacidad total de procesamiento de la red. Puedes ver estadísticas en &lt;!-- raw HTML omitted --&gt;blockchain&lt;!-- raw HTML omitted --&gt;. A dia de hoy la fuerza total de hashing es de 46,932.04 GH/s, eso son 46 billones de operaciones de hash por segundo. Puedes consultar el gráfico &lt;!-- raw HTML omitted --&gt;aquí&lt;!-- raw HTML omitted --&gt;. El que consigue resolver el hash gana 50 bitcoins, pero ese valor también decrece con el tiempo. Para los primeros 210.000 bloques son 50, luego va decrementando a la mitad.&lt;/p&gt;
+&lt;p&gt;Así que, el sistema está diseñado para escalar correctamente y crear una moneda segura y estable, con valor real. En el PDF que enlacé al principio, el autor habla del único ataque que podría realizarse contra el sistema, que consistiría en spoofear la cadena de bloques, ya que es ésta la que proporciona la integridad del sistema. Sin embargo, conforme la cadena se vuelve más grande y más nodos haya, se hace practicamente imposible que alguien con capacidad computacional masiva pueda atacar la cadena.&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Si has conseguido llegar hasta aquí leyendo, espero que te haya quedado más claro cómo funciona el bitcoin. Personalmente a mi me llamó mucho la atención cómo se ha estructurado este sistema de forma que no esté sujeto al estado de ningún país, es seguro desde el punto de vista criptográfico y además, una moneda real totalmente anónima. No dudes en dirigirte a bitcoin.org para obtener más información. A continuación dejo el podcast del episodio original de &lt;a href=&#34;https://elbauldelprogramador.com/security-now//&#34;&gt;Security Now!&lt;/a&gt;. Si estás interesado en las traducciones que hago de este programa, puedes suscribirte al feed RSS específico para Security now en la página &lt;a href=&#34;https://elbauldelprogramador.com/rssfeed/&#34;&gt;Feed/Rss&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;GRC | Security Now! »» &lt;!-- raw HTML omitted --&gt;grc.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación  Web</title>
+            <link>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</guid>
+            <description>&lt;p&gt;Hacía mucho tiempo que no traducía episodios del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;Security Now!&lt;/a&gt;. Hoy os traigo la traducción del episodio &lt;a href=&#34;http://twit.tv/show/security-now/495&#34;&gt;#495&lt;/a&gt;, donde &lt;em&gt;Steve&lt;/em&gt; describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado &lt;em&gt;Google&lt;/em&gt;. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.&lt;/p&gt;
+&lt;h1 id=&#34;qué-hay-mal-en-el-protocolo-actual&#34;&gt;¿Qué hay mal en el protocolo actual?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Páginas web inmensas&lt;/li&gt;
+&lt;li&gt;Un modelo textual basado en petición/respuesta muy simple. Es el cliente quien solicita recursos, no el servidor quien las envía por sí mismo.&lt;/li&gt;
+&lt;li&gt;Cada petición es independiente, stateless y no presupone de ningún conocimiento o contexto previo.&lt;/li&gt;
+&lt;li&gt;TCP es muy lento al iniciar una conexión.&lt;/li&gt;
+&lt;li&gt;La negociación inicial de TLS también es muy costosa.&lt;/li&gt;
+&lt;li&gt;Se realizan múltiples conexiones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;http2-corrige-todos-éstos-problemas&#34;&gt;HTTP2 corrige todos éstos problemas&lt;/h1&gt;
+&lt;p&gt;HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en éstos puntos):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Frames&lt;/strong&gt;: Dividen la única conexión existente en varios frames enumerados. Se componen de:
+&lt;ul&gt;
+&lt;li&gt;Una cabecera de 9 bytes:&lt;/li&gt;
+&lt;li&gt;Los primeros 24 bits (Solo se usan 14 bits si no se tiene el permiso del otro pc)&lt;/li&gt;
+&lt;li&gt;8 bits que determinan el tipo de &lt;em&gt;frame&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;8 bits conteniendo los &lt;em&gt;flags&lt;/em&gt; del &lt;em&gt;frame&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;32 bits para el Identificador del flujo (&lt;strong&gt;Stream ID&lt;/strong&gt;). El bit más significativo siempre es 0.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Payload&lt;/em&gt; de longitud variada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streams&lt;/strong&gt; (&lt;em&gt;flujos&lt;/em&gt;):
+&lt;ul&gt;
+&lt;li&gt;El solicitante puede asignarles prioridades.&lt;/li&gt;
+&lt;li&gt;Se les puede asignar inter-dependencias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compresión de cabeceras HTTP&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Cómo funciona LZ (&lt;em&gt;Lempel-Ziv&lt;/em&gt;). (PKZIP, GZIP, LZW, LZA, etc).&lt;/li&gt;
+&lt;li&gt;Un único contexto comprimido para la conexión.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speculative Push&lt;/strong&gt; (Push especulativo).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Empecemos a profundizar en cada uno de éstos puntos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;situación-actual&#34;&gt;Situación actual&lt;/h1&gt;
+&lt;p&gt;Durante los últimos 15 años hemos convivido con HTTP/1, ¿Qué tiene de malo?, hoy en día todo el mundo lo usa. El problema es que en éstos últimos 15 años las webs se han vuelto locas. Han pasado de ser una simple página de texto con algunas fotos a webs con cantidades de recursos pesados, scripts, gráficos, css, librerías etc.&lt;/p&gt;
+&lt;p&gt;El navegador solicita el contenido en texto plano de la página web. Luego busca todos los recursos que dicha web necesita (anuncios, javascript, flash), en definitiva, plugins que necesitará cargar. Una vez sabe todo lo que necesita, comienza a solicitar éstos recursos a sus correspondientes servidores para comenzar a montar la web.&lt;/p&gt;
+&lt;p&gt;HTTP es el único protocolo que tenemos para hacer éste tipo de cosas, y no puede usarse más de una vez a la vez, es decir, se solicita algo, el servidor lo proporciona y la conexión se cierra. Éste problema intentó subsanarse con la cabecera &lt;code&gt;keep-alive&lt;/code&gt;, para así al menos no tener que crear otra conexión TCP (costoso). Así podíamos realizar otra petición HTTP sobre la misma conexión TCP. Aún así, sigue siendo lento, solicitamos un recurso, lo recibimos, solicitamos, recibimos etc.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El principal problema reside en que abrir una conexión TCP es muy lento.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para solucionar ésto, TCP diseñó un sistema para explorar el ancho de banda disponible. Al principio, comienza a mandar paquetes léntamente (&lt;em&gt;slow-start&lt;/em&gt;), aumenta la velocidad hasta que se dá cuenta que hay paquetes que se están perdiendo, entonces vuelve a bajar la velocidad e incrementa de nuevo poco a poco.&lt;/p&gt;
+&lt;p&gt;Con ésta solución, sigue habiendo un problema. Si abrimos varias conexiones, todas y cada una de ellas realizarán un &lt;em&gt;slow-start&lt;/em&gt; para comprobar el ancho de banda entre los dos puntos. Lo cual no es óptimo. Si además la conexión es a un servidor seguro, se ralentiza aún más al deber establecer la conexión TLS.&lt;/p&gt;
+&lt;p&gt;Debido a que todo esto es un gran lío, y con el tiempo únicamente va a empeorar, &lt;strong&gt;Google&lt;/strong&gt; ha decidido ponerse manos a la obra y solucionarlo. &lt;strong&gt;Y lo han conseguido&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Actualmente, todos los navegadores soportan HTTP2.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;http2&#34;&gt;HTTP2&lt;/h1&gt;
+&lt;p&gt;HTTP2 rompe completamente con lo que teníamos hasta ahora, no hay compatibilidad hacia atrás entre HTTP2 HTTP/1.1. El cambio más significativo es que &lt;strong&gt;Sólo existe una única conexión&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;La razón por la que solo hay una conexión, radica en que no queremos varias conexiones comprobando cómo de rápido pueden transmitir datos. En su lugar, tendremos una conexión yendo a la máxima velocidad posible. Así tendremos una única negociación TLS y una única conexión TCP.&lt;/p&gt;
+&lt;h1 id=&#34;speculative-push&#34;&gt;Speculative push&lt;/h1&gt;
+&lt;p&gt;A partir de ahora, los servidores tendrán algo llamado &lt;em&gt;speculative push&lt;/em&gt;, algo equivalente a la especulación el los procesadores. En las CPUs modernas, el procesador va por delante de la ejecución actual ejecutando sentencias futuras, cuando se llega a una bifurcación, se ejecutan las sentencias de ambas ramas, una vez se ejecuta la condición necesaria para saber qué bifurcación había que coger, se descartan las intrucciones de la rama incorrecta. El &lt;em&gt;speculative push&lt;/em&gt; es algo parecido, el servidor puede enviar algunas cosas que sabe que el navegador necesitará antes de que el éste las solicite.&lt;/p&gt;
+&lt;h1 id=&#34;frames&#34;&gt;Frames&lt;/h1&gt;
+&lt;p&gt;La única conexión existente se dividirá en en &lt;em&gt;frames&lt;/em&gt;. Son una abstracción de HTTP2. Permiten soportar múltiples flujos simultáneamente. Hay que tener en cuenta que los &lt;em&gt;frames&lt;/em&gt; no son paquetes. TCP, el protocolo que hay debajo, dividirá los &lt;em&gt;frames&lt;/em&gt; en paquetes. Será TCP quién garantice que los paquetes perdidos llegarán al destino, y en el orden correcto. HTTP2 confía en que su comunicación se ve como un único flujo.&lt;/p&gt;
+&lt;p&gt;El flujo TCP se divide en &lt;em&gt;frames&lt;/em&gt; de longitud aleatoria. Los &lt;em&gt;frames&lt;/em&gt; están por encima de TCP en la capa de abstracción. Cada &lt;em&gt;frame&lt;/em&gt; tiene una cabecera de 9 bytes&lt;/p&gt;
+&lt;h2 id=&#34;frame-header-la-cabecera-de-los-frames&#34;&gt;Frame Header (La cabecera de los Frames)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;+-----------------------------------------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++---------------+---------------+---------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Flags &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++-+-------------+---------------+-------------------------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;R&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Stream Identifier &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;31&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;=============================================================&lt;/span&gt;+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Frame Payload &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0...&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
++---------------------------------------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De los 9 bytes, los 24 primeros (3 bytes), componen la longitud del &lt;em&gt;frame&lt;/em&gt;, es decir, la longitud del &lt;em&gt;payload&lt;/em&gt; en dicho &lt;em&gt;frame&lt;/em&gt;, sin contar los 9 bytes de la cabecera. Sin el permiso del otro participante en la conexión, sólo se usarán 14 de los 24 bits. De modo que, si ambas partes se ponen de acuerdo, un &lt;em&gt;frame&lt;/em&gt; podría tener una longitud de 16MB (24 bits). Aunque normalmente se usarán como mucho &lt;em&gt;frames&lt;/em&gt; de 16K bytes (14 bits). La mayoría de &lt;em&gt;frames&lt;/em&gt; serán mucho más pequeños que eso.&lt;/p&gt;
+&lt;p&gt;Después de la longitud, los 8 bits siguientes (1 byte), especificarán el tipo de &lt;em&gt;frame&lt;/em&gt;, lo cual deja espacio para 256 tipos de &lt;em&gt;frames&lt;/em&gt;, actualmente hay pocos tipos. Luego hay otro byte que especifica los &lt;em&gt;flags&lt;/em&gt; específicos del &lt;em&gt;frame&lt;/em&gt;. Finalmente, los últimos 32 bits de la cabecera especifican el &lt;em&gt;stream ID&lt;/em&gt;, o Id de flujo, que indica que él es el siguiente al &lt;em&gt;frame&lt;/em&gt; con dicho ID. Por alguna razón, el bit más significativo siempre es 0.&lt;/p&gt;
+&lt;p&gt;En resumen, los &lt;em&gt;frames&lt;/em&gt; pueden variar en tamaño desde muy pequeños hasta 16K, a no ser que ambas partes negocien un tamañó mayor. Luego un tipo de &lt;em&gt;frame&lt;/em&gt; y sus &lt;em&gt;flags&lt;/em&gt;. El &lt;em&gt;Stream ID&lt;/em&gt; permite un flujo de hasta 4GB, así se reduce la posibilidad de agotar los posibles IDs para una conexión. Los múltiples flujos simultáneos permiten una conversación multiplexada entre los dos puntos. Es decir, que el navegador cree nuevos flujos.&lt;/p&gt;
+&lt;h1 id=&#34;conexión-entre-el-cliente-y-el-servidor&#34;&gt;Conexión entre el cliente y el servidor&lt;/h1&gt;
+&lt;p&gt;Recordemos que tenemos una única conexión entre el cliente y el servidor, es posible tener otras conexiones HTTP2, una por cada servidor que contribuye al contenido de la página solicitada. Pero la clave está en que se tiene una única conexión por servidor.&lt;/p&gt;
+&lt;p&gt;El cliente emite consultas para obtener recursos, numerando sucesivamente cada petición con un &lt;em&gt;Stream ID&lt;/em&gt;, sobre la misma conexión. El servidor comienza a buscar los recursos solicitados y enviarlos.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Por debajo de HTTP2, sigue existiendo HTTP/1.1, simplemente se encapsula en frames.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;stream-priority-prioridad-de-flujo&#34;&gt;Stream Priority (Prioridad de flujo)&lt;/h1&gt;
+&lt;p&gt;Otra cosa que el cliente puede hacer con los flujos es asignarles prioridad. Por ejemplo, la página HTML principal, la cual es necesaria inmediatamente para obtener el resto de URLs necesarias para completar la carga de la web. Es posible asignar una prioridad a dicho recurso para que el servidor lo proporcione de inmediato. De esta forma, se puede establecer dependencias entre recursos.&lt;/p&gt;
+&lt;h1 id=&#34;los-beneficios-de-una-única-conexión&#34;&gt;Los beneficios de una única conexión&lt;/h1&gt;
+&lt;p&gt;Hagamos un breve repaso de lo visto hasta ahora. Tenemos una única conexión optimizada para ser veloz. Una vez establecida se comienza a enviar peticiones, empaquetándolas en &lt;em&gt;frames&lt;/em&gt; y asignándoles un identificador único (&lt;em&gt;Stream ID&lt;/em&gt;). En el lado del servidor, éste mira las dependencias y prioridades, enviándolas en el orden solicitado por el cliente.&lt;/p&gt;
+&lt;p&gt;El servidor va acumulando una gran cantidad de cosas a enviar y las lanza por la conexión todo lo rápido que puede, teniendo en cuenta las restricciones que el cliente haya establecido. Se mantiene así la única conexión tan ocupada como sea posible, sin existir pausas entre peticiones de recursos. Ésta es la gran diferencia con el protocolo anterior. Ya que, aunque hubiera 6 o más conexiones, había un periodo de espera entre solicitar y recibir cada uno de los recursos necesarios. El servidor básicamente esperaba a que el cliente se diera cuenta de qué recursos le hacían falta, ésto ya no pasa en HTTP2.&lt;/p&gt;
+&lt;h1 id=&#34;header-compression-compresión-de-cabeceras&#34;&gt;Header Compression (Compresión de cabeceras)&lt;/h1&gt;
+&lt;p&gt;Actualmente hay mucha redundancia en las cabeceras HTTP, ya que todas y cada una de ellas se envían en todas las peticiones, aunque sean iguales para cada petición (Ej, el user-agent, cookies, hora etc). Como se mencionó arriba, el protocolo HTTP típico, el textual sigue usandose sin modificar.&lt;/p&gt;
+&lt;p&gt;Para solucionar el problema de la redundancia en las cabeceras, hay que comprender cómo funciona la compresión. Todo se lo debemos a dos genios, &lt;strong&gt;Lempel&lt;/strong&gt; y &lt;strong&gt;Ziv&lt;/strong&gt;, de ellos viene la extensión .lz, creada por los 70. En ésta época adquirieron una patente llamada compresión Lempel-Ziv (Compresión LZ). Y así nació ZIP, GZIP, LZW, LZA etc. El concepto de compresión es el siguiente. Estamos enviando algo al otro punto del que el otro punto no sabe nada, y de hecho nosotros tampoco. Ésto se conoce como “&lt;em&gt;Stream compression&lt;/em&gt;” (Compresión del flujo), ya que la idea es que estamos recibiendo bytes en un flujo, sin saber nada sobre su significado.&lt;/p&gt;
+&lt;p&gt;Conforme recibimos bytes de datos, sin saber nada más sobre ellos, volvemos a enviarlos, pero mantenemos un buffer con el número de X bytes más recientes enviados hasta el momento. Es decir, los enviamos y los guardamos en un buffer que almacenará lo que hemos enviado. Cuando vuelvas a recibir bytes, miraremos en el buffer en busca de patrones que coincidan con lo que nosotros enviamos anteriormente.&lt;/p&gt;
+&lt;p&gt;Ahora bien, si se va a enviar algo que ya enviamos recientemente, podríamos en su lugar enviar una referencia a dicha cadena que tenemos en nuestro buffer al otro extemo. El otro extremo está haciendo lo mismo, mantiene un buffer.&lt;/p&gt;
+&lt;p&gt;Ambos buffers están sincronizados. Nosotros mantenemos un buffer de lo que enviamos, el servidor mantiene uno de lo que recibe, que es lo que nosotros enviamos. De modo que al enviar una referencia a una cadena de nuestro buffer, apuntará a la misma cadena en el buffer del servidor. He aquí la compresión, enviamos una referencia en lugar de la cadena completa.&lt;/p&gt;
+&lt;p&gt;Éstos buffers reciben el nombre de “&lt;em&gt;compression context&lt;/em&gt;” (Compresión de contexto).&lt;/p&gt;
+&lt;p&gt;Los genios de &lt;strong&gt;Google&lt;/strong&gt;, han usado un contexto de compresión por conexión, no por flujo. Lo cual significa que obtenemos compresión en todas las consultas. Es decir, la consulta HTTP enviada en el primer flujo estará comprimida. Aunque no demasiado, ya que es la primera y nunca se han enviado esas cabeceras, la segunda consulta que vaya al mismo servidor, desde el mismo navegador, con las mismas cookies, el mismo user agent y todas las demás cabeceras redundantes, en el mismo contexto de compresión, enviará ésta vez referencias a las cabeceras del otro extremo.&lt;/p&gt;
+&lt;p&gt;En resumen, enviamos la cabeceras una vez, y a partir de ahí simplemente se enviarán referecias a las cabeceras&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Ésto es HTTP2. Mencionemos algunas cosas, el &lt;em&gt;speculative push&lt;/em&gt; significa que el servidor puede anticipar qué recursos puede necesitar el cliente.&lt;/p&gt;
+&lt;p&gt;El cacheo de recursos en el cliente lo previene de tener que preguntar por más recursos, pero es un arma de doble filo, ya que el servidor puede enviar mediante &lt;em&gt;speculative push&lt;/em&gt; algo que el cliente ya tuviera en su caché. De modo que no hay que hacer un uso excesivo del &lt;em&gt;speculative push&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Todo el mérito de éste protocolo es para Google&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Borrador HTTP2&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;tools.ietf.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Crédito de la imagen&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://httpwg.github.io/&#34;&gt;https://httpwg.github.io/&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Grave vulnerabilidad en UPnP que afecta a 81 millones de routers</title>
+            <link>https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/grave-problema-en-upnp-que-afecta-a-81-millones-de-routers/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Como es habitual, hoy traigo otro episodio de &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;security Now!&lt;/a&gt; que me parece interesante. Este en concreto, además de interesante es algo que afecta a millones de routers y dispositivos con el servicio UPnP activado.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Nota: El contenido no es de mi autoría, simplemente lo he traducido.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Y es que recientemente se ha descubierto que es posible desde cualquier lugar del mundo, y sin ningún tipo de restricción de seguridad acceder a redes privadas y configurar el router.&lt;/p&gt;
+&lt;p&gt;El creador del framework metaexploit, comunicó a Steve Gibson que había finalizado un escaneo completo de todo internet hace aproximadamente un mes, el cual duró unos 5 meses y medio.&lt;/p&gt;
+&lt;p&gt;El objetivo del escaner era encontrar routers vulnerables con el puerto usado por el protocolo UPnP (Universal Plug &amp;amp; Play). &lt;strong&gt;Encontró 81 millones&lt;/strong&gt;. El 2.2% de las ip públicas son posibles objetivos a un ataque medienta UPnP.&lt;/p&gt;
+&lt;p&gt;El problema es que el servicio UPnP nunca debería estar en el lado público del router, nunca debería estar expuesto a internet. Debido a esto, cualquier Hacker puede apoderarse de cualquier red privada (VPN).&lt;/p&gt;
+&lt;p&gt;El fallo está en el diseño del protocolo. Ya que se antepuso la facilidad de uso a la seguridad. Pasemos a explicar el objetivo que pretende lograr este servicio.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Cada vez son más los dispositivos que pueden acceder a internet, como las televisiones. Para poder autoconfigurarse, tienen implementado el protocolo DHCP, que permite obtener una dirección IP del router. Así como UPnP, lo cual permite a esos dispositivos ser descubiertos dentro de la red. Por ejemplo, cualquier pc que tengamos en casa puede enviar un paquete a nuestra red privada (Un paquete de broadcast) para que cualquier dispositivo con UPnP responda al pc haciendole saber que dispone de este servicio. Despues, el pc sigue preguntando al dispositivo sobre sus capacidades, qué interfaces tiene disponibles etc.&lt;/p&gt;
+&lt;p&gt;Se puede observar varios problemas en este comportamiento. El primero es que los PCs responden a este tipo de paquetes también, con lo cual, si un malware infecta un pc de la red privada, puede enviar una petición al resto de PCs de la red y usar UPnP para abrir un agujero en el firewall y acceder directamente a los PCs. Y es posible porque ese es el proposito del servicio UPnP, la capacidad de configurar el router.&lt;/p&gt;
+&lt;p&gt;Pongamos un ejemplo real. &lt;strong&gt;BitTorrent&lt;/strong&gt; es un cliente UPnP, al ejecutarlo en una red privada, localiza al router mediante UPnP y le pregunta por su IP externa, es decir, la pública. La ip pública no es algo que se conozca en el interior de la red privada, pero bittorrent necesita saberla para poder comunicarse con otros clientes bittorrent y establecer las conexiones. Tras esto, BiTorrent solicita un puerto abierto. Así, se ha modificado la configuración del router para permitir a bitTorrent recibir tráfico entrante no solicitado.&lt;/p&gt;
+&lt;p&gt;En todo el tiempo que UPnP lleva funcionando, nadie ha sugerido que nada de esto debiera estar funcionando en el lado público del router. UPnP está diseñado para operar únicamente en el lado privado de la red, es decir, en la red de casa, del trabajo, etc.&lt;/p&gt;
+&lt;p&gt;A raiz de no preocuparse de que operase en el lado público, millones de router tienen a disposición pública este servicio. De modo que si un hacker conoce la IP de un router con dicho servicio activo, puede enviar solicitudes &lt;strong&gt;Universal Plug &amp;amp; Play (UPnP)&lt;/strong&gt; al router con el mismo nivel de control y poder con el que lo hace un PC desde dentro de la red privada, ya que no está protegido por ninguna contraseña ni método de autentificación.&lt;/p&gt;
+&lt;p&gt;Otro ejemplo, la consola xBox necesita del router que tenga activado UPnP para poder jugar Online. Y lo hace de la misma forma que bitTorrent.&lt;/p&gt;
+&lt;p&gt;Skipe funciona de manera similar, antiguamente, cuando no era posible establecer una conexión directa entre los dos puntos que querían comunicarse mediante skipe, se usaba lo que se conoce como nodos relé, de manera que si estos dos puntos no pueden comunicarse el uno con el otro, lo hacen mediante el relé. Actualmente Skipe usa UPnP para evitar el uso del relé, abriendo él mismo los puertos necesarios para establecer la comunicación directa mediante el servicio.&lt;/p&gt;
+&lt;p&gt;Una solución es configurar el router para desabilitar UPnP, pero dado que el propósito del servicio no era estar diponible públicamente, no hay ninguna opción para desabilitarlo.&lt;/p&gt;
+&lt;p&gt;Como se mencionó al principio, el creador de metaExploit realizó un escaner completo de internet para el espacio IPv4 y encontró 81 millones de routers con UPnP en el lado público, ese número debería se 0. Es decir, 81 millones de router responderán a la petición de un hacker que mande una solicitud UPnP esperando sus ordenes para modificar su configuración.&lt;/p&gt;
+&lt;p&gt;El informe del escaner se puede encontrar en PDF en el siguiente enlace: &lt;!-- raw HTML omitted --&gt;bit.ly/upnpflaws&lt;!-- raw HTML omitted --&gt;, del cual extraigo un fragmento:&lt;/p&gt;
+&lt;p&gt;*“Universal Plug and Play (UPnP) is a protocol standard that allows easy communication
+between computers and network-enabled devices. This protocol is enabled by default on
+millions of systems, including routers, printers, media servers, IP cameras, smart TVs, home
+automation systems, and network storage servers. UPnP support is enabled by default on
+Microsoft Windows, Mac OS X, and many distributions of Linux.“&lt;/p&gt;
+&lt;p&gt;“The UPnP protocol suffers from a number of basic security problems, many of which have
+been highlighted over the last twelve years. Authentication is rarely implemented by device
+manufacturers, privileged capabilities are often exposed to untrusted networks, and common
+programming flaws plague common UPnP software implementations. These issues are
+endemic across UPnP-enabled applications and network devices.”&lt;/p&gt;
+&lt;p&gt;“The statistics in this paper were derived from five and a half months of active scanning. UPnP
+discovery requests were sent to every routable IPv4 address approximately once a week from
+June 1 to November 17, 2012. This process identified over 81 million unique IP addresses that
+responded to a standard UPnP discovery request. Further probes determined that
+approximately 17 million of these systems also exposed the UPnP Simple Object Access
+Protocol (SOAP) service to the world. This level of exposure far exceeded the expectations of
+the researchers.”&lt;/p&gt;
+&lt;p&gt;“This paper quantifies the exposure of UPnP-enabled systems to the internet at large,
+classifies these systems by vendor, identifies specific products, and describes a number of
+new vulnerabilities that were identified in common UPnP implementations. Over 1,500
+vendors and 6,900 products were identified that are vulnerable to least one of the security
+flaws outlined in this paper. Over 23 million systems were vulnerable to a single remote code
+execution flaw that was discovered during the course of this research.”&lt;/p&gt;
+&lt;p&gt;“Rapid7 worked with CERT/CC to notify the open source projects and device manufacturers
+vulnerable to the issues described in this paper. Unfortunately, the realities of the consumer
+electronics industry will leave most systems vulnerable for the indefinite future. For this
+reason, Rapid7 strongly recommends disabling UPnP on all internet-facing systems and
+replacing systems that do not provide the ability to disable this protocol.”&lt;/p&gt;
+&lt;p&gt;“Rapid7 has provided a number of tools to help identify UPnP-enabled systems, including the
+free ScanNow for UPnP, modules for the open source Metasploit Framework, and updates to
+the Nexpose vulnerability management platform.”&lt;/p&gt;
+&lt;p&gt;Al principio se dan unos cuantos datos estadísticos de todos los dispositivos y sistemas que tienen UPnP habilitado por defecto así como tipos de vulnerabilildades para acaber diciendo que se desactive el servicio en cualquier dispositivo conectado a internet, ya que la industria de los dispositivos electrónicos no dará solución a los dispositivos afectados. Por último, Rapid7 recomienda una serie de herramientas para identificar si nuestro sistema es vulnerable. Como ScanNow y varios modulos para metasploit.&lt;/p&gt;
+&lt;p&gt;En resumen, el 2.2% del total de direcciones IPv4 del mundo responde a paquetes UPnP. Sobre el 20% de esas IPs están expuestas a la API de SOAP, es decir, al enviar el paquete de solicitud UPnP, el objetivo del paquete responde con una cadena de identificación, versión del sistema Operativo que está ejecutando, versión de la librería UPnP junto a más información. Lo cual permite elegir el exploit a utilizar para lograr explotar la vulnerabilidad. Incluso indica dónde se está ejecutando su servicio HTTP (el servicio HTTP de UPnP). Una vez conectado a ese servidor, es interactua con la API de SOAP para cambiar la configuraión del router.&lt;/p&gt;
+&lt;p&gt;A continuación en las referencias proporciono una herramienta que &lt;!-- raw HTML omitted --&gt;Steve Gibson&lt;!-- raw HTML omitted --&gt; ha creado para comprobar si eres vulnerable a paquetes UPnP.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Test UPnP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;grc.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Unplug UPnP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;twit.tv&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Lo último en criptografía: Fully Homomorphic Encryption</title>
+            <link>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
+&lt;p&gt;Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt; (Cifrado Homomórfico) ó &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico).&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-el-cifrado-homomórfico-ó-homomorphic-encryption&#34;&gt;¿Qué es el cifrado homomórfico ó &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;?&lt;/h1&gt;
+&lt;p&gt;Los chicos de &lt;!-- raw HTML omitted --&gt;RSA&lt;!-- raw HTML omitted --&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;. Pero se quedó como una pregunta abierta.&lt;/p&gt;
+&lt;p&gt;Y hace solo tres años un estudiante de posgrado sorprendió al mundo al demostrar que este sistema es posible. Lo que este estudiante hizo fue demostrar matemáticamente que es posible realizar operaciones de cálculo estándares — como sumar, multiplicar etc — a datos cifrados sin la necesidad de descifrarlos previamente.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, es posible cifrar datos, enviarlos a la &lt;em&gt;nube&lt;/em&gt; y operar sobre estos datos &lt;strong&gt;sin descifrarlos&lt;/strong&gt; . La &lt;em&gt;nube&lt;/em&gt; no tiene la menor idea del contenido de los datos sobre los que está operando, no vé ningún resultado intermedio. La totalidad de los datos permanecen cifrados durante todo el tiempo. De manera que obtienes el resultado encriptado, y solamente tú puedes desencriptarlo. En eso consiste el cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;, y funciona.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;analizando-los-sistemas-de-cifrado-actuales&#34;&gt;Analizando los sistemas de cifrado actuales&lt;/h1&gt;
+&lt;p&gt;De acuerdo al glosario de definiciones de los laboratorios RSA, definen &lt;strong&gt;probabilistic encryption&lt;/strong&gt; (Cifrado probabilístico) al algoritmo que produce resultados cifrados distinos cada vez que se usa, aunque sea con los mismos datos. Esta definición rompe con el esquema del &lt;strong&gt;deterministic encryption&lt;/strong&gt; (Cifrado determinista) el cual produce siempre la misma salida para un mismo dato de entrada, es decir, dado un valor de entrada a encriptar, el resultado de cifrar dicho dato será siempre el mismo, con lo cual existe una forma de invertir el proceso. Más técnicamente, el cifrado probabilístico (&lt;strong&gt;probabilistic encryption&lt;/strong&gt;) se define así:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El cifrado probabilístico — &lt;strong&gt;probabilistic encryption&lt;/strong&gt; es un diseño de cifrado en el cual un mensaje es encriptado en uno de muchos posibles &lt;strong&gt;ciphertext&lt;/strong&gt;, y no en uno solo como ocurre en el cifrado determinístico &lt;strong&gt;(deterministic encryption)&lt;/strong&gt;. Siendo así muy poco probable obtener información parcial sobre el &lt;strong&gt;ciphertext.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En enfoques anteriores de cifrado, a pesar de que no siempre se sabía cuando era posible obtener dicha información parcial, no se demostró que no era posible hacerlo.&lt;/p&gt;
+&lt;p&gt;Lo que esta definición quiere decir es que nunca se ha demostrado que la clave pública estandar RSA sea segura. Se basa en la presunta dificultad de factorizar numeros primos enormes. Pero nadie ha sido capaz de demostrar que sea dificil factorizarlos. Simplemente sabemos que es complicado.&lt;/p&gt;
+&lt;p&gt;Sin embargo saber algo, y demostrarlo, son dos mundos aparte en términos de la tecnología de criptografía académica.&lt;/p&gt;
+&lt;p&gt;Así que poco después de que los primeros desarrolladores de RSA inventaran este cifrado asimétrico basado en factorización, se dieron cuenta de que su enfoque tenía una propiedad, llamada &lt;strong&gt;homomorfismo (homomorphism)&lt;/strong&gt;. Y escribieron sobre esto pocos meses después de desarrollar RSA.&lt;/p&gt;
+&lt;p&gt;La palabra &lt;strong&gt;homomorfismo&lt;/strong&gt; viene de &lt;strong&gt;Homo&lt;/strong&gt; y &lt;strong&gt;mórfica&lt;/strong&gt;, que significa &lt;em&gt;de la misma forma&lt;/em&gt;. Es decir, la posibilidad de aplicar distintos procesos un mismo dato y obtener el mismo resultado. Un ejemplo simple es la multiplicación, si &lt;strong&gt;a*b=c&lt;/strong&gt; también sabemos que &lt;strong&gt;log(a) + log(b) = log(c)&lt;/strong&gt;, por tanto, estas operaciones son homomórficas.&lt;/p&gt;
+&lt;p&gt;Bien, pues esta idea del homomorfismo ha sido lo que el estudiante mencionado al principio del artículo demostró en su tesis doctoral en 2009, su nombre es Craig Gentry y sorprendió al mundo de la criptografía al presentar un sistema criptográfico homomórfico totalmente funcional. Craig Gentry demostró en sus tesis que es absolutamente posible realizar operaciones de suma y multiplicación sobre información cifrada, sin necesidad de descifrarla en ninguna fase del proceso. Como consecuencia, nadie puede obtener información de los datos sobre los que se está operando. Cuando el resultado de la operación se devuelve a la persona propietaria de esos datos, solo dicha persona puede descifrarlos con su clave. Y el resultado de los datos descifrados es el mismo que se habría obtenido al realizar estas operaciones a datos no cifrados.&lt;/p&gt;
+&lt;p&gt;Las aplicaciones que tiene este sistema son enormes, por ejemplo las corporaciones podrían dejar en la nube sus datos de manera segura y además realizar operaciones a éstos, y obtener un resultado. De hecho, se han desarrollado &lt;strong&gt;motores de búsqueda&lt;/strong&gt; en los cuales el buscador no conoce la consulta que realiza el usuario ni el resultado de la misma, simplemente devuelve el resultado y luego es el usuario quien descifra el resultado para obtener la respuesta a la consulta realizada con total privacidad.&lt;/p&gt;
+&lt;p&gt;Continuando con la tarea de entender cómo funciona el &lt;strong&gt;cifrado probabilístico&lt;/strong&gt; o &lt;strong&gt;probabilistic encryption&lt;/strong&gt; vamos a profundizar un poco en el tema.&lt;/p&gt;
+&lt;h1 id=&#34;cifrado-probabilístico&#34;&gt;Cifrado probabilístico&lt;/h1&gt;
+&lt;p&gt;Imaginemos un sistema de cifrado sencillo, de una dimensión, una buena analogía sería una cuerda con nudos a lo largo de la misma. Éstos nodos, o nudos, representan valores claramente conocidos a consecuencia de su posición. El hecho de cifrar es elegir un nodo de esta cuerda y añadirle ruido deliberadamente, desplazando así la posición del nodo una cantida pseudoaleatoria con respecto a la original.&lt;/p&gt;
+&lt;p&gt;La función que tiene una clave (&lt;strong&gt;key&lt;/strong&gt;) en los sistemas cifrados es determinar dónde están estos nodos que no distribuidos de manera uniforme. Se requiere de un cálculo muy complejo para averiguar dónde se situan, de modo que solo alguien con la clave puede saberlo. Y sobre estos datos con ruido podemos operar y obtener un resultado, como sumar . Se pueden elegir dos números, añadirles ruido, sumarlos y obtener un resultado. Por lo tanto también se está sumando el ruido de cada uno de los números. El resultado será una función que tendrá como entrada los dos sumandos y el ruido correspondiente a cada uno de ellos.&lt;/p&gt;
+&lt;p&gt;No habrá problema siempre y cuando no haya demasiado ruido, la suma será correcta. El ruido es la razón por la cual quién hace las operaciones no puede sacar nada en claro del resultado, todo lo que sabe es ha recibido una pareja de valores y los está sumando, y no conocerá el resultado porque está calculado relativamente a los nodos. Y ese desplazamiento relativo solo lo conoce la persona con la &lt;strong&gt;clave.&lt;/strong&gt; Para resumir, el proceso que realiza las operaciones sabe qué tipo de operaciones está realizando, pero no tiene ni idea de los datos subyacentes.&lt;/p&gt;
+&lt;p&gt;Todo este proceso que acabo de explicar es una mínima parte de como funciona el cifrado probabilístico, ya que solo se ha aplicado a una dimensión (Una sola cuerda con nodos.). En realidad se hace con un concepto algebráico llamado &lt;em&gt;&lt;!-- raw HTML omitted --&gt;lattice (Retículo)&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;, y son espacios n-dimensionales interconectados con dimensiones del rango de 512, 2048 o mayores. Seguramente puedas visualizar un cubo de 3 dimensiones, y aunque no seas capaz de visualizar una figura de 512 dimensiones, se puede representar matemáticamente.&lt;/p&gt;
+&lt;p&gt;Los sistemas homomórficos trabajan en estos retículos hiper-dimensionales añadiendo ruido a los nodos para deplazarlos con respecto a su posición original. Como se ha mencionado en los párrafos anteriores, el problema está en que el ruido se va acumulando, en operaciones de suma se duplica cuando hay dos sumandos, y en la multiplicación se eleva al cuadrado cuando se multiplican dos números. Con lo que el ruido se va de las manos muy rápidamente, como consecuencia se está limitado a un número determinado de operecaciones antes de que el ruido interfiera demasiado en los datos reales.&lt;/p&gt;
+&lt;p&gt;Un sistema &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico) no tiene esta limitación, por definición es posible realizar cualquier tipo de operación, por muy compleja que sea. Craig consiguió evitar que el ruido quedara fuera de control porque, tras realiazar un número determinado de operaciones, los datos se vuelven a cifrar (Sin descifrarlos previamente, es decir, el cifrado homomórfico realiza su propio cifrado) elimiando el ruido de modo que nunca sobrepase el sistema.
+Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno &lt;strong&gt;pequeño&lt;/strong&gt; al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
+&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema &lt;strong&gt;homomórfico&lt;/strong&gt; a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el &lt;strong&gt;sistema totalmente homomórfico&lt;/strong&gt; tiene un tamaño de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
+&lt;p&gt;En resumen, es una forma completamente distinta de cifrar y tratar datos para la cual los computadores estándares actuales de 64-bits de ancho de palabra no están capacitados.&lt;/p&gt;
+&lt;p&gt;Este sistema tiene un gran futuro y estamos tan solo al comienzo, como siempre pasa en criptografía, el sistema avanzará rápido y mejorará. Se encontrarán atajos, nuevas formas de hacer las mismas cosas. La idea de ruido en un retículo es solo una de las posibilidades de un esquema de cifrado no-determinista que han sido propuestas, hay otras. Como usar máximos comunes divisores entre otras.&lt;/p&gt;
+&lt;p&gt;Queda así abierto un nuevo campo en la investigación criptográfica. De aquí a 20, 30 años habrá aplicaciones que funcionarán de un modo totalmente distinto al que estamos acostumbrados, y la gente se preguntará ¿No se ha hecho el cifrado siempre de esta manera?, y no será así, recordaremos lo que solíamos usar y nos daremos cuenta que era estúpido en comparación.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;grc.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;twit.tv&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Qué es QUIC, el nuevo protocolo desarrollado por Google</title>
+            <link>https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/que-es-quic-el-nuevo-protocolo-desarrollado-por-google/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Escuchando el podcast &lt;!-- raw HTML omitted --&gt;#411&lt;!-- raw HTML omitted --&gt; de &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;security now!&lt;/a&gt; Steve habló del protocolo &lt;em&gt;QUIC&lt;/em&gt;, que está desarrollando Google y pretende ser más seguro y rápido. Investigando un poco para conocer más acerca de este nuevo protocolo, encontré una pequeña &lt;strong&gt;FAQ (Frequently Asked Questions)&lt;/strong&gt; en Google Drive, al parecer dicha FAQ es autoría del propio grupo de desarrollo de &lt;em&gt;QUIC&lt;/em&gt;, el nombre original del documento es &lt;strong&gt;QUIC Geek FAQ (for folks that know about UDP, TCP, SPDY, and stuff like that)&lt;/strong&gt;, aquí dejo la tabla de contenidos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;qué-es-quic&#34;&gt;¿Qué es QUIC?&lt;/h1&gt;
+&lt;p&gt;QUIC es el nombre de un protocolo experimental en el que Google está trabajando, sus siglas vienen de &lt;strong&gt;Q&lt;/strong&gt;uick &lt;strong&gt;U&lt;/strong&gt;DP &lt;strong&gt;I&lt;/strong&gt;nternet &lt;strong&gt;C&lt;/strong&gt;onnection. El protocolo soporta un conujunto de conexiones multiplexadas a través de UDP y ha sido diseñado para proporcionar una &lt;a href=&#34;https://elbauldelprogramador.com/seguridad&#34;&gt;seguridad&lt;/a&gt; equivalente a &lt;!-- raw HTML omitted --&gt;TLS/SSL&lt;!-- raw HTML omitted --&gt; y para reducir la latencia tanto en la conexión como en el transporte de datos. En la última versión de Chrome se ha implementado una versión experimental del protocolo.&lt;/p&gt;
+&lt;h1 id=&#34;cuales-son-algunas-de-las-técnicas-empleadas-en-quic&#34;&gt;¿Cuales son algunas de las técnicas empleadas en QUIC?&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; empleará una estimación del ancho de banda en cada dirección para prevenir congestiones, para luego establecer la transmisión de los paquetes a un ritmo uniforme para reducir la pérdida de paquetes. También usará códigos de corrección de errores a nivel del paquete para reducir la necesidad de retransmitir los datos perdidos. &lt;em&gt;QUIC&lt;/em&gt; alinea los límites de bloque &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;criptográficos&lt;/a&gt; con los límites del paquete, de manera que el impacto de la pérdida del paquete sea mucho menor.&lt;/p&gt;
+&lt;h1 id=&#34;no-proporciona-ya-spdy-conexiones-multiplexadas-sobre-ssl&#34;&gt;¿No proporciona ya SPDY conexiones multiplexadas sobre SSL?&lt;/h1&gt;
+&lt;p&gt;Sí, pero &lt;!-- raw HTML omitted --&gt;SPDY&lt;!-- raw HTML omitted --&gt; hasta el momento se ejecuta a través de TCP, lo cual provoca algunos costes de latencia (Aunque SPDY mejora la latencia de HTTP a través de TCP).&lt;/p&gt;
+&lt;h1 id=&#34;por-qué-no-es-spdy-sobre-tcp-lo-suficientemente-bueno&#34;&gt;¿Por qué no es SPDY sobre TCP lo suficientemente bueno?&lt;/h1&gt;
+&lt;p&gt;Un único paquete perdido en una conexión TCP subyacente paraliza todos los flujos SPDY multiplexados de esa conexión. En comparación, un único paquete perdido para X conexiones paralelas en HTTP &lt;strong&gt;paralizará solo 1 de X conexiones&lt;/strong&gt;. Con &lt;em&gt;UDP, QUIC&lt;/em&gt; puede soportar entregas desajustadas, de modo que un paquete perdido paralizará como mucho un flujo (stream). El evitar la congestión a través de una sola &lt;!-- raw HTML omitted --&gt;ventana&lt;!-- raw HTML omitted --&gt; de congestión coloca a SPDY en una posición desfavorable a través de TCP en comparación con varias conexiones HTTP, cada una con una ventana de congestión separada. Las ventanas de congestión separadas no se ven afectadas tanto por la pérdida de paquetes, y &lt;em&gt;QUIC&lt;/em&gt; será capaz de manejar de manera más equitativa la congestión de un conjunto de conexiones multiplexadas.&lt;/p&gt;
+&lt;h1 id=&#34;hay-alguna-otra-razón-por-la-que-tcp-no-sea-lo-suficientemente-bueno&#34;&gt;¿Hay alguna otra razón por la que TCP no sea lo suficientemente bueno?&lt;/h1&gt;
+&lt;p&gt;TCP, y TSL/SSL, requieren habitualmente una o más veces de idas y vueltas (&lt;strong&gt;round trip times, RTTs&lt;/strong&gt;) durante el establecimiento de la conexión. Se espera que &lt;em&gt;QUIC&lt;/em&gt; pueda reducir los costos de conexión a practicamente cero &lt;em&gt;RTTs&lt;/em&gt;, por ejemplo mandar &lt;em&gt;hola&lt;/em&gt;, y luego enviar la solicitud de datos sin tener que esperar.&lt;/p&gt;
+&lt;h1 id=&#34;por-qué-no-mejorar-tcp-a-través-de-spdy&#34;&gt;¿Por qué no mejorar TCP a través de SPDY?&lt;/h1&gt;
+&lt;p&gt;Ese es nuestro objetivo. El soporte TCP está integrado en el &lt;strong&gt;kernel&lt;/strong&gt; de los sistemas operativos. Teniendo en cuenta la lentitud de los usuarios a la hora de actualizar su Sistema Operativo, &lt;strong&gt;es poco probable que se vea una adopción significativa de los cambios en TCP del lado del cliente en menos de 5-15 años&lt;/strong&gt;. &lt;em&gt;QUIC&lt;/em&gt; permite probar y experimentar con ideas nuevas para obtener resultado más rápidamente. Tenemos la esperanza de que las características de &lt;em&gt;QUIC&lt;/em&gt; migrarán a TCP y TLS si resultan eficaces.&lt;/p&gt;
+&lt;h1 id=&#34;por-qué-no-construir-un-protocolo-totalmente-nuevo-en-vez-de-usar-udp&#34;&gt;¿Por qué no construir un protocolo totalmente nuevo, en vez de usar UDP?&lt;/h1&gt;
+&lt;p&gt;Hoy día, las &lt;strong&gt;Middle boxes&lt;/strong&gt; en internet, por lo general bloquean el tráfico a menos que sea TCP o UDP. Ya que no se pudo modificar significativamente TCP, fue necesario usar UDP. UDP se usa en la actualidad por muchos sistemas de juego, así como VoIP y videos en streaming, por lo que su uso parece plausible.&lt;/p&gt;
+&lt;h1 id=&#34;por-qué-quic-siempre-requiere-cifrado-en-todo-el-canal&#34;&gt;¿Por qué QUIC siempre requiere cifrado en todo el canal?&lt;/h1&gt;
+&lt;p&gt;Como hemos aprendido con SPDY y otros protocolos, si no ciframos el tráfico, entonces las &lt;strong&gt;Middle boxes&lt;/strong&gt; se garantizan (a sabiendas, o sin saberlo) a corromper las transmisiones cuando tratan de &lt;em&gt;amablemente&lt;/em&gt; filtrar o &lt;em&gt;mejorar&lt;/em&gt; el tráfico.&lt;/p&gt;
+&lt;h1 id=&#34;udp-no-tiene-controles-de-congestión-no-causará-quic-un-colapso-en-internet-si-es-ampliamente-adoptado&#34;&gt;UDP no tiene controles de congestión, ¿No causará QUIC un colapso en internet si es ampliamente adoptado?&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; emplea controles de congestión, así como emplea retransmisiones automáticas para apoyar el transporte fiable. &lt;em&gt;QUIC&lt;/em&gt; tratará de ser justo compitiendo con el tráfico TCP. Por ejemplo, al transportar \(\mathcal{Q}\) flujos multiplexados, y compartir un ancho de banda con \(\mathcal{T}\) flujos TCP simultáneos, vamos a tratar de utilizar recursos en el rango de \(\frac{\mathcal{Q}}{\mathcal{Q} + \mathcal{T}}\) de ancho de banda. (Es decir, &lt;em&gt;una parte justa&lt;/em&gt; para los flujos \(\mathcal{Q}\) adicionales).&lt;/p&gt;
+&lt;h1 id=&#34;por-qué-no-utilizar-estándares-existentes-como-sctp-sobre-dtls&#34;&gt;¿Por qué no utilizar estándares existentes como SCTP sobre DTLS?&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;QUIC&lt;/em&gt; incorpora muchas técnicas en un esfuerzo para reducir la latencia. SCTP y DTLS no fueron diseñados con este propósito, y esto se hace significativamente evidente incluso durante las fases de establecimiento de la conexión. Varias de las técnicas con las que &lt;em&gt;QUIC&lt;/em&gt; está experimentando serían técnicamente difíciles de incorporar a los estándares existentes. Como ejemplo, cada uno de estos protocolos requeiren varios &lt;strong&gt;RTTs&lt;/strong&gt; para establecer una conexión, lo cual no concuerda con nuestros objetivos de conseguir 0 &lt;em&gt;RTTs&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;cuanto-reducen-las-técnicas-de-quic-la-latencia&#34;&gt;¿Cuanto reducen las técnicas de QUIC la latencia?&lt;/h1&gt;
+&lt;p&gt;Esta es exáctamente la pregunta que estamos investigando en este momento, estamos experimentando con varias características y técnicas en Chromium. Aún es demasiado pronto para compartir resultados preliminares - Estad atentos.&lt;/p&gt;
+&lt;h1 id=&#34;hay-alguna-forma-de-deshabilitar-quic-si-no-quiero-ejecutarlo-en-mi-chromium&#34;&gt;¿Hay alguna forma de deshabilitar QUIC si no quiero ejecutarlo en mi Chromium?&lt;/h1&gt;
+&lt;p&gt;Sí, visitando &lt;em&gt;about:flags&lt;/em&gt; y luego desactivar &lt;em&gt;Experimental QUIC protocol&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;dónde-puedo-aprender-más-sobre-quic&#34;&gt;¿Dónde puedo aprender más sobre QUIC?&lt;/h1&gt;
+&lt;p&gt;Si quieres saber más, y necesitas material que te ayude a dormir, puedes mirar en &lt;!-- raw HTML omitted --&gt;QUIC Design Document and Specification Rationale&lt;!-- raw HTML omitted --&gt;. Para criptógrafos que se pregunten cómo de bien están los puntos sobre las ies, y las tes cruzadas, pueden echar un vistazo a las especificaciones criptográficas (&lt;!-- raw HTML omitted --&gt;QUIC Crypto Specification&lt;!-- raw HTML omitted --&gt;). Si prefieres ver el código cliente, puedes echar un vistazo al &lt;!-- raw HTML omitted --&gt;código fuente de Chromium&lt;!-- raw HTML omitted --&gt;. Si te preguntas qué papel puede desempaña un servidor, échale un vistazo al &lt;!-- raw HTML omitted --&gt;código del servidor prototipo&lt;!-- raw HTML omitted --&gt;. Finalmente, si lo que deseas es pensar en los bits en el cable, también hay una &lt;!-- raw HTML omitted --&gt;especificación para los cables&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;hay-algún-grupo-de-discusión-para-quic&#34;&gt;¿Hay algún grupo de discusión para QUIC?&lt;/h1&gt;
+&lt;p&gt;Sí, &lt;a href=&#34;mailto:proto-quic@chromium.org&#34;&gt;proto-quic@chromium.org&lt;/a&gt; | &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://groups.google.com/a/chromium.org/d/forum/proto-quic&#34;&gt;https://groups.google.com/a/chromium.org/d/forum/proto-quic&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;QUIC FAQ for Geeks&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar Documento en Drive&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Regin - Arquitectura del Malware de primer nivel que permite una vigilancia sigilosa</title>
+            <link>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/regin-arquitectura-malware-de-primer-nivel-vigilancia-sigilosa/</guid>
+            <description>&lt;p&gt;En éstos días se ha escuchado hablar mucho sobre &lt;strong&gt;Regin&lt;/strong&gt;, un malware de una calidad superior, como pocos vistos hasta ahora. En éste artículo se pretende profundizar en el funcionamiento de éste malware, el cual es una obra de excelente calidad. Me basaré principalmente en lo comentado por Steve en el episodio #483 del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34; title=&#34;Más artículos de Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;“&lt;strong&gt;Regin&lt;/strong&gt;” viene de &lt;em&gt;“Registry”&lt;/em&gt; - &lt;em&gt;Install&lt;/em&gt;, descubierto por Symantec en 2008. A continuación se cita el análisis que hicieron sobre éste malware:&lt;/p&gt;
+&lt;p&gt;En el mundo de las amenazas de malware, sólo unos pocos ejemplos pueden considerarse inigualables y sin igual. &lt;strong&gt;Regin&lt;/strong&gt; es ese tipo de malware.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; es un software extremadamente complejo que puede personalizarse con un amplio rango de capacidades que pueden desplegarse dependiendo del objetivo a atacar. Está construido sobre un framework diseñado para mantener operaciones de recolección de datos a largo plazo quedando al margen de todos los radares ( Entiéndanse, antivirus). Lleva a cabo medidas extraordinarias para ocultarse a sí mismo y sus actividades en la máquina afectada. Su sigilo combina técnicas de las más avanzadas que se han visto en uso.*&lt;/p&gt;
+&lt;p&gt;El principal propósito de &lt;strong&gt;Regin&lt;/strong&gt; es la recopilación de información y se ha visto implicado en operaciones de colección de datos contra organizaciones gubernamentales, empresas, organizaciones docentes y particulares. La complejidad y nivel de sofisticación de &lt;strong&gt;Regin&lt;/strong&gt; hacen pensar que el desarrollo de ésta amenaza ha llevado meses, e incluso años.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; es una amenaza multi etapa y modular, lo que significa que tiene un número de compoenentes, cada uno dependiente de otros, para realizar las operaciones de ataque. Éste enfoque modular proporciona la flexibilidad necesaria a los ataques, ya que es posible cargar características personalizadas hechas a medida para cada objetivo individual cuando sea necesario. Algunos “&lt;a href=&#34;https://elbauldelprogramador.com/quic-analisis-practico-del-protocolo-de-google/&#34; title=&#34;Análisis del protocolo QUIC de Google&#34;&gt;payloads&lt;/a&gt;” personalizados son muy avanzados y muestran una gran experiencia en sectores especializados. El diseño modular dificulta el análisis de la amenaza, ya que todos los componentes deben estar disponibles para poder entender completamente cómo funciona el malware.&lt;/p&gt;
+&lt;h1 id=&#34;período-activo-y-versiones-de-regin&#34;&gt;Período activo y versiones de Regin&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; estuvo activo durante 2008 y 2011, donde se detuvo, desinstalándose de todos los sistemas infectados. En 2013 se volvió a detectar una nueva versión, bastante mejorada de éste malware.&lt;/p&gt;
+&lt;p&gt;La versión activa entre 2008 y 2011 fue la 1.0. En 2013, o posíblemente antes, se lanzó la versión 2.0. Todas las versiones 2.0 se han encontrado compiladas para 64-bit.&lt;/p&gt;
+&lt;h1 id=&#34;principales-objetivos&#34;&gt;Principales objetivos&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Regin&lt;/strong&gt; se ha detectado en las principales compañias de telefonía, los módulos del malware desplegados en dichas instalaciones están diseñados para obtener acceso a las llamadas que son redirigidas por la infraestructura telefónica.&lt;/p&gt;
+&lt;h1 id=&#34;arquitectura-de-regin&#34;&gt;Arquitectura de Regin&lt;/h1&gt;
+&lt;p&gt;Se compone de las 6 etapas resumidas en la siguiente tabla:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;Etapas&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Componentes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 0&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;“Dropper”. Instala Regin en el objetivo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga Drivers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga Drivers&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Carga compresión, cifrado, networking, y los componentes necesarios para gestionar un sistema de archivos cifrado (EVFS)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Utiliza el EFVS y carga drivers adicionales para su kernel, incluyendo payloads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;Etapa 5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Payloads principales y ficheros de datos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Las etapas más interesantes son las que almacenan los ejecutables y ficheros de datos en las etapas 4 y 5. La etapa inicial 1 es la única que contiene código visible. El resto de etapas se almacenan como bloques de datos &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrados&lt;/a&gt;, ya sea en forma de ficheros o dentro de algún área de almacenamiento de ficheros no tradicional, como el registro, atributos extendidos, o sectores al final del disco duro.&lt;/p&gt;
+&lt;p&gt;A continuación se muetra un gráfico que describe el proceso de infección:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;etapa-0&#34;&gt;Etapa 0&lt;/h2&gt;
+&lt;p&gt;Una vez que el &lt;em&gt;dropper&lt;/em&gt; se ejecuta en el objetivo, se instalará y ejecuta la etapa 1. Es probable que ésta etapa se encargue de configurar varios atributos y claves en el registro que mantengan codificadas versiones de las etapas 2, 3, y posiblemente etapas de la 4 en adelante.&lt;/p&gt;
+&lt;h2 id=&#34;etapa-1&#34;&gt;Etapa 1&lt;/h2&gt;
+&lt;p&gt;Es el punto inicial para cargar la amenaza. Se conocen dos ficheroes de esta etapa:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;usbclass.sys (versión 1.0)&lt;/li&gt;
+&lt;li&gt;adpu160.sys (version 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Son drivers del kernel que cargan y ejecutan la etapa 2. Es posible que se registren como un servicio del sistema que se ejecute al iniciar el ordenador.&lt;/p&gt;
+&lt;p&gt;La etapa 1 simplemente lee y ejecuta la etapa 2 desde un conjunto de atributos extendidos de NTFS, si no se encuentran dichos atributos extendidos, la etapa 2 se ejecuta desde un conjunto de claves del registro.&lt;/p&gt;
+&lt;h2 id=&#34;etapa-2&#34;&gt;Etapa 2&lt;/h2&gt;
+&lt;p&gt;Es un driver del kernel que extrae, instala y ejecuta la etapa 3. Ésta etapa no está almacenada en un sistema de ficheros tradicional, sino que se encuentra cifrada en un atributo extendido o en el registro.&lt;/p&gt;
+&lt;p&gt;Puede encontrarse cifrada en :&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atributos extendidos&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;%Windir%&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\fonts&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\cursors&lt;/em&gt; (possibly only in version 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Sub claves del registro&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4F20E605-9452-4787-B793-
+D0204917CA58}&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\RestoreList\VideoBase&lt;/em&gt; (possibly only in version
+2.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ésta etapa puede ocultar instancias en ejecución de la etapa 1. Una vez hecho, no hay partes visibles del malware. De forma similar a etapas previas, la etapa 2 localiza y carga una versión cifrada de la etapa 3 desde atributos extendidos de NTFS o el registro.&lt;/p&gt;
+&lt;p&gt;La etapa 2 también puede monitorizar el estado de la amenaza. Ésta etapa crea el fichero &lt;em&gt;msrdc64.dat&lt;/em&gt;, el cual parece tener siempre un tamaño de 512B. Sólo se usan los dos primeros bytes, el resto están a cero. El segundo byte indica cuantas instancias se permite ejecutar de forma exclusiva, su valor es 2. Lo cual significa que no más de una instancia debería ejecutarse al mismo tiempo. El primero, cuantas instancias se intentaron ejecutar. Por tanto, hay tres combinaciones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;00 02&lt;/code&gt; (No se está ejecutando)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;01 02&lt;/code&gt; (Ejecutándo)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;02 02&lt;/code&gt; (Se estaba ejecutando y se ha iniciado una segunda instancia)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;etapa-3&#34;&gt;Etapa 3&lt;/h2&gt;
+&lt;p&gt;Es una DDL de modo kernel, cifrada dentro de un atributo extendido o en el registro.&lt;/p&gt;
+&lt;p&gt;Se puede encontrar en:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Atributos extendidos&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\system32&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;%Windir%\system32\drivers&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Sub claves del registro&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class{4F20E605-9452-4787-B793-
+D0204917CA5A}&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El fichero es de 6 a 7 veces mayor que el driver de la etapa 2. Además de cargar la etapa 4, ofrece un &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; para etapas de mayor nivel.&lt;/p&gt;
+&lt;p&gt;A partir de esta etapa, todas estan basadas en un framework modular de módulos de código. Éstos módulos ofrecen funciones mediante una interfaz privada y personalizada. Cada fichero en la etapa 3 y superior pude exportar funcionalidad a otras partes de Regin.&lt;/p&gt;
+&lt;p&gt;Las primitivas disponibles para la etapa 3 son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El orquestador, que parsea ficheros personalizados encontrados en los datos adjuntos a los ficheros ejecutables de las etapas 3 en adelante. Éstos ficheros contienen una lista de las funcionalidades de Regin a ser ejecutadas.&lt;/li&gt;
+&lt;li&gt;Rutinas de compresión y descompresión.&lt;/li&gt;
+&lt;li&gt;Rutinas de cifrado y descifrado.&lt;/li&gt;
+&lt;li&gt;Rutinas para obtener localizaciones de almacenamiento de componentes de mayor nivel (Etapa 4).&lt;/li&gt;
+&lt;li&gt;Rutinas para gestionar el sistema de ficheros virtual cifrado usado por la etapa 4.&lt;/li&gt;
+&lt;li&gt;Primitivas de red.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;etapa-4&#34;&gt;Etapa 4&lt;/h2&gt;
+&lt;p&gt;Los ficheros para la etapa 4, cargados por la etapa 3, consisten en un modo usuario del orquestador y múltiples módulos payload del kernel. Se almacenan en dos contenedores EVFS como ficheros:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SystemAudit.Evt&lt;/strong&gt;: Contiene los drivers del kernel para la etapa 4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SecurityAudit.Evt&lt;/strong&gt;: Versión usuario de la etapa 3. Los ficheros se inyectan en &lt;code&gt;services.exe&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;etapa-5&#34;&gt;Etapa 5&lt;/h2&gt;
+&lt;p&gt;Consiste en la la funcionalidad principal de Regin para los payloads. Los ficheros para ésta etapa son los inyectados en &lt;code&gt;services.exe&lt;/code&gt; por la etapa 4. También almacenados en el EVFS.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SystemLog.evt&lt;/strong&gt;: Contiene DLLs que constituyen el payload de Regin.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\SecurityLog.evt&lt;/strong&gt;: Ficheros de datos, usados por los componentes de las etapas 4 y 5 para almacenar varios elementos de datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%System%\config\ApplicationLog.evt&lt;/strong&gt;: Otro contenedor para logs de la etapa 5, referenciados por ficheros de datos de la misma etapa.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%Windir%\ime\imesc5\dicts\pintlgbp.imd&lt;/strong&gt; (versión 2.0)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;%Windir%\ime\imesc5\dicts\pintlgbs.imd&lt;/strong&gt; (versión 2.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El payload de Regin implica las DDLs contenidas en el contenedor EVFS &lt;code&gt;SystemLog.evt&lt;/code&gt;.
+La funcionalidad del payload es distinta en función del ordenador objetivo del ataque. Para cada entorno específico, se preparan payloads personalizados. Algunos ejemplos de funcionalidades detectadas hasta ahora son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Esnifar tráfico de red de bajo nivel.&lt;/li&gt;
+&lt;li&gt;Robar datos mediante varios canales (TCP, UDP, ICMP, HTTP).&lt;/li&gt;
+&lt;li&gt;Obtener información del ordenador.&lt;/li&gt;
+&lt;li&gt;Robar contraseñas.&lt;/li&gt;
+&lt;li&gt;Obtener información de procesos y memoria.&lt;/li&gt;
+&lt;li&gt;Escanear el sistema de ficheros.&lt;/li&gt;
+&lt;li&gt;Capacidades forenses de bajo nivel (Por ejemplo, recuperar ficheros borrados).&lt;/li&gt;
+&lt;li&gt;Manipulación del entorno gráfico (Control remoto del ratón, capturar la pantalla etc).&lt;/li&gt;
+&lt;li&gt;Detectar servidores web IIS y robar los logs.&lt;/li&gt;
+&lt;li&gt;Esnifar tráfico de red GSM BSC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para más información, podéis echar un vistazo a los siguientes enlaces, entre ellos el análisis original de Symantec, y el vídeo del podcast de &lt;strong&gt;Security Now!&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Regin: Top-tier espionage tool enables stealthy surveillance, y créditos de las imágenes&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;symantec.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Análisis de Symantec sobre Regin&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Fichero PDF&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,70 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>linux on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/linux/</link>
+        <description>Recent content in linux on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/linux/</link>
+            <title>linux on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/linux/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>BotBrew basil, Compila, instala y ejecuta aplicaciones Linux en Android</title>
+            <link>https://elbauldelprogramador.com/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/botbrewcompila-instala-y-ejecuta-aplicaciones-linux-en-android/</guid>
+            <description>&lt;p&gt;Leyendo noticias en mi lector RSS he encontrado un artículo interesante que comparto con vosotros.
+Se trata de un programa que permitirá tener un sistema debian básico en el dispostivo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Paso 1:&lt;/strong&gt; Instalar busybox (Herramienta que provee de varias utilidades estándares de Unix) desde la play Store, (Requiere &lt;a href=&#34;https://elbauldelprogramador.com/rootear-samsung-galaxy-s-gt-i9003/&#34; title=&#34;Rootear Samsung Galaxy S GT-I9003&#34;&gt;root&lt;/a&gt;) En caso de que el teléfono no esté rooteado, puedes seguir los pasos indicados en el vídeo de más abajo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paso 2:&lt;/strong&gt; Para conseguir que tu dispositivo sea aún más poderoso, instala &lt;!-- raw HTML omitted --&gt;BostBrew Basil&lt;!-- raw HTML omitted --&gt;, esta aplicación inicializa el sistema base y permite manejar la instalación de paquetes mediante Dpkg y Apt en lugar de Opkg. Permitiendo instalar algunos paquetes linux.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paso 3:&lt;/strong&gt; Instalar los paquetes necesarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Conectamos el teléfono al pc mediante adb con &lt;code&gt;./adb shell&lt;/code&gt; y ejecutamos los comandos de &lt;strong&gt;botbrew&lt;/strong&gt; así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/data/botbrew-basil/init -- comando aquí
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es decir, para instalar un entorno debian completo, se haría lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sh-4.1# /data/botbrew-basil/init -- apt-get install repository-emdebian
+sh-4.1# /data/botbrew-basil/init -- apt-get install debianbotbrew-debian-minimal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Existe la posibilidad de instalar el paquete &lt;strong&gt;botbrew-wrapper&lt;/strong&gt; para evitar tener que preceder los comandos con la ruta mencionada arriba:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;shell@android:/ &lt;span class=&#34;c1&#34;&gt;# /data/botbrew-basil/init -- apt-get install botbrew-wrapper&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora basta con ejecutar el comando &lt;strong&gt;botbrew2&lt;/strong&gt; y seguidamente los comandos deseados, por ejemplo, para isntalar gcc y g++:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;shell@android:/ &lt;span class=&#34;c1&#34;&gt;# su&lt;/span&gt;
+shell@android:/ &lt;span class=&#34;c1&#34;&gt;# botbrew2&lt;/span&gt;
+shell@android:/ &lt;span class=&#34;c1&#34;&gt;# apt-get install gcc g++&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instalados los compiladores, podemos ejecutar aplicaciones escritas en C/C++, probemos con un hola Mundo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Hola mundo!&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Compilado y ejecutado desde Android&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ya solo queda compilarlo y ejecutarlo, dejo una captura de pantalla como prueba de que funciona:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Y no solo eso, también podemos instalar python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# apt-get install python2.7-minimal&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# cd /tmp&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# echo &amp;#34;print &amp;#34;Hola Mundo desde Android!&amp;#34;&amp;#34; &amp;gt;&amp;gt; hello.py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@android&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# python2.7 hello.py&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;Hola&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Mundo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;desde&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Android&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De nuevo, com prueba, una captura de pantalla:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;A continuación un vídeo explicando el proceso de instalación de busybox sin permisos de root:&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Geeknizer&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;XDA-Developers&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

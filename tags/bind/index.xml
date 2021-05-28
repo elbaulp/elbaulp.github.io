@@ -1,0 +1,325 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>bind on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/bind/</link>
+        <description>Recent content in bind on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/bind/</link>
+            <title>bind on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/bind/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 1 (Introducción)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;En esta serie de artículos, intentaré explicar lo mejor posible el funcionamiento de los servidores DNS, y cómo configurar el tuyo propio. Habrá una parte más teórica sobre el funcionamiento del sistema, que es una traducción de un artículo en howtoforge.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ya que los artículos están basados en distintas fuentes de información que he ido recopilando, no sé de cuantas partes estará formada esta serie, así que la lista de arriba irá cambiando hasta que estén completos todos los artículos.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Debo reconocer que el tema de los DNS me ha dado muchos problemas, es algo que para mí ha sido dificil de entender. A base de leer y releer muchos artículos por internet, aprendí a configurar un servidor DNS manualmente. Hoy voy a explicar cómo.&lt;/p&gt;
+&lt;p&gt;En Linux, &lt;strong&gt;BIND&lt;/strong&gt; es el encargado de gestionar los DNS, como su página de ayuda indica (&lt;em&gt;bind - bind a name to a socket&lt;/em&gt;), asocia un nombre a un socket. Es importante que antes de continuar compruebes que la versión de &lt;strong&gt;BIND&lt;/strong&gt; es superior a la 4. Lo ideal sería tener la 8 o 9. Puedes comprobarlo con el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ nslookup -type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;txt -class&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;chaos version.bind servidor
+Server:     servidor
+Address:    IP#53
+
+version.bind   &lt;span class=&#34;nv&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;VERSION&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;BIND&lt;/strong&gt; tiene tres componentes, el primero es llamado &lt;em&gt;named&lt;/em&gt; o &lt;em&gt;name-dee&lt;/em&gt;, es un demonio que ejecuta el lado servidor del DNS.&lt;/p&gt;
+&lt;p&gt;El segundo componente es llamado &lt;em&gt;resolver library&lt;/em&gt; o biblioteca de resolución, encargada de realizar peticiones a servidores DNS para intentar traducir un nombre a una dirección IP. El archivo de configuración para este componente es &lt;strong&gt;resolv.conf&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El tercer y último componente de &lt;strong&gt;BIND&lt;/strong&gt; proporciona herramientas para probar el servidor DNS. Entre estas herramientas se encuentran comandos como &lt;strong&gt;dig&lt;/strong&gt;, que se verá más adelante.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;cual-es-tu-responsabilidad-como-parte-del-sistema-dns&#34;&gt;¿Cual es tu responsabilidad como parte del sistema DNS?&lt;/h1&gt;
+&lt;p&gt;DNS es una &lt;a href=&#34;https://elbauldelprogramador.com/bases-de-datos/&#34;&gt;base de datos&lt;/a&gt; distribuida. Cuando pagas por un dominio, debes configurar dos servidores de nombres, y éstos deben ser registrados en el sistema DNS.&lt;/p&gt;
+&lt;p&gt;La base de datos del sistema DNS tiene tres niveles. Al primer grupo de servidores se les llama “&lt;strong&gt;servidores root&lt;/strong&gt;”. Al segundo, “&lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt;” o dominios de primer nivel. Cuando se necesita conocer la dirección de una web, el segundo componente de &lt;strong&gt;BIND&lt;/strong&gt; (resolver library) realiza una petición, (De aquí en adelante lo llamaremos &lt;em&gt;resolver&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Por ejemplo, supongamos que quieres encontrar a &lt;strong&gt;google.com&lt;/strong&gt;. Tu resolver pide a los servidores root que identifique la IP de google.com. El servidor root responde, “ &lt;em&gt;No lo sé, pero sí sé donde puedes encontrar la respuesta, comienza con los servidores TLD para COM&lt;/em&gt; ”.&lt;/p&gt;
+&lt;p&gt;Así, el servidor root envia la petición a un servidor COM. Éste último servidor dice: “&lt;em&gt;No tengo esa información, pero sé de un servidor de nombres que sí, tiene dirección 173.194.34.6 y nombre ns1.google.com. Dirígete a esa dirección y te dirá la dirección del sitio web google.com.”&lt;/em&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En la figura de arriba, la parte superior izquierda representa los servidores root. En la jerga DNS, éstos servidores reprensentan el comienzo del camino en el sistema DNS. Suelen representarse con un punto (“.”). En los archivos de configuración, el mapeo entre IP y nombre acabará en un punto. A lo largo de esta series de artículos quedará más claro este concepto.&lt;/p&gt;
+&lt;p&gt;Los servidores root son los principales de la base de datos distribuida. Poseen información sobre los &lt;strong&gt;Top Level Domains (TLDs)&lt;/strong&gt; o dominios de primer nivel. En los TLDs se incluyen &lt;em&gt;com, net, org, mil, gov, edu etc&lt;/em&gt;. Al contratar un nombre de dominio, es necesario elegir qué TLD se desea, este blog se encuentra en el espacio de nombres COM y se llama &lt;em&gt;elbauldelprogramador.com&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-responde-el-servidor-dns-a-las-peticiones&#34;&gt;¿Cómo responde el servidor DNS a las peticiones?&lt;/h1&gt;
+&lt;p&gt;En este punto es donde &lt;strong&gt;BIND&lt;/strong&gt; entra en acción. El primer componente que mencionamos, &lt;strong&gt;named&lt;/strong&gt;; está presente en todos los servidores de nombres y es el encargado de responder a las peticiones de los resolvers. Lee sus datos del archivo de configuración &lt;em&gt;named.conf&lt;/em&gt;. Éste fichero obtiene su información de unos ficheros a los que se les suele llamar &lt;em&gt;zone files&lt;/em&gt; ó &lt;em&gt;ficheros de zona&lt;/em&gt;. Existen multidud de ellos, pero un archivo de zona en particular mantiene una base de datos de registros que proporciona named con la mayoría de sus respuestas.&lt;/p&gt;
+&lt;p&gt;En la figura 2, &lt;em&gt;named&lt;/em&gt; ha recibido una petición. Busca en su fichero de configuración &lt;em&gt;named.conf&lt;/em&gt;, que busca en el archivo de zona primaria y pasa la información solicitada al resolver desde el exterior.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;usando-namedconf&#34;&gt;Usando Named.conf&lt;/h1&gt;
+&lt;p&gt;El proceso &lt;em&gt;named&lt;/em&gt; escucha en el puerto 53 en los sitemas Linux. Al recibir una petición para una dirección, busca en el primer archivo de configuración que conoce, &lt;em&gt;named.conf&lt;/em&gt;. Tal y como se aprecia en la figura 2.&lt;/p&gt;
+&lt;p&gt;El fichero tiene la siguiente estructura:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;// This is the primary configuration file for the BIND DNS server named.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// Please read /usr/share/doc/bind9/README.Debian.gz for information on the
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// structure of BIND configuration files in Debian, *BEFORE* you customize
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// this configuration file.
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// If you are just adding zones, please do that in /etc/bind/named.conf.local
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;/etc/bind/named.conf.options&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;/etc/bind/named.conf.local&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;include&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;/etc/bind/named.conf.default-zones&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veamos el contenido de los tres archivos que incluye:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;named.conf.options&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;options &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    directory &lt;span class=&#34;s2&#34;&gt;&amp;#34;/var/cache/bind&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí se definen el directorio por defecto para named.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;named.conf.default-zones&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; hint&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/db.root&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;localhost&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/db.local&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.in-addr.arpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/db.127&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.in-addr.arpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/db.0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;255.in-addr.arpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/db.255&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;zone “.”&lt;/strong&gt; contiene los nombres y direcciones de los servidores root. Como se mencionó arriba, éstos servidores saben en qué servidores autorizados existe tu dominio — Siendo el primero los TLD (com, org, net etc) y el segundo el servidor autorizado para tu dominio.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;zone “localhost”&lt;/strong&gt;. Cada servidor de nombres administra su propio dominio loopback (127.0.0.1). El motivo de crear una zona para localhost es reducir tráfico y permitir que el mismo software funcione en el sistema como lo hace en internet.&lt;/p&gt;
+&lt;p&gt;El resto de las zonas son archivos de zonas inversas. Es una copia invertida de la base de datos definida en los otros archivos. Es decir, asocia una IP a un nombre, al contrario. Se pueden indentificar por la extensión &lt;strong&gt;in-addr.arpa&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En el siguiente artículo ser verá en detalle la estructura del archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, en el que se definen nuevas zonas que corresponden a dominios que resolverá el servidor DNS. Así como a los archivos &lt;em&gt;pri.nombredominio.com&lt;/em&gt; asociados a cada zona.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 3 (Zona Inversa y DNS secundario)&#34;&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Siguiendo con los artículos de cómo configurar un servidor DNS. En el anterior artículo dejamos pendiente echar un vistazo al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;, que contiene información sobre los dominios que serán resueltos por el servidor DNS. Veamos el contenido:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        allow-transfer &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;DNS_SECUNDARIO&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/pri.elbauldelprogramador.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El contenido de &lt;strong&gt;/etc/bind/pri.elbauldelprogramador.com&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$TTL&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;
+@       IN      SOA     ks3277174.kimsufi.com. correo.electronico.com. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+                        &lt;span class=&#34;m&#34;&gt;2013011703&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; serial, todays date + todays serial #
+                        &lt;span class=&#34;m&#34;&gt;7200&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; refresh, seconds
+                        &lt;span class=&#34;m&#34;&gt;540&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; retry, seconds
+                        &lt;span class=&#34;m&#34;&gt;604800&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; expire, seconds
+                        &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;            &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; minimum, seconds
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt; A        5.39.89.44
+elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;      MX    &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;   mail.elbauldelprogramador.com.
+elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;      NS        ks3277174.kimsufi.com.
+elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;      NS        ns.kimsufi.com.
+mail &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt; A        5.39.89.44
+www &lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt; A        5.39.89.44
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;SOA&lt;/strong&gt; es el acrónimo para &lt;em&gt;“Start Authority”&lt;/em&gt;. Si recuerdas la figura 1 del artículo anterior, recordarás que DNS es una base de datos distrubuida. Comenzando en los root servers, las peticiones se van desplazando hasta llegar a su destino, en este caso, hasta llegar al servidor DNS que estamos configurando. Por esa razón, en el fichero de zona es necesario indicar dónde comienza su autoridad(&lt;em&gt;authority&lt;/em&gt;). Ésta autoridad comienza precisamente en el fichero de zona. Los servidores &lt;strong&gt;TLD&lt;/strong&gt; (&lt;em&gt;Top Level Domain ó Dominios de primer nivel&lt;/em&gt;) esperan del servidor DNS que realice su parte del trabajo.&lt;/p&gt;
+&lt;p&gt;El registro &lt;strong&gt;SOA&lt;/strong&gt; consta de varios campos. Es necesario proporcionar datos a esos campos para que otros servidores en internet puedan llevar a cabo sus peticiones. Los campos son:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;nombre&#34;&gt;Nombre&lt;/h1&gt;
+&lt;p&gt;Define el nombre principal de la zona. El &lt;em&gt;@&lt;/em&gt; es una abreviatura a la zona actual, es decir, para &lt;em&gt;/pri.elbauldelprogramador.com&lt;/em&gt; en este ejemplo. El nombre del servidor maestro para esta zona es ks3277174.kimsufi.com. Esto significa que en el archivo &lt;em&gt;named.conf&lt;/em&gt; existe una entrada que apunta y este archivo vuelve apunta a su vez a la entrada en el archivo de configuración.&lt;/p&gt;
+&lt;h1 id=&#34;clase&#34;&gt;Clase&lt;/h1&gt;
+&lt;p&gt;Existen varios tipos de clases DNS. En nuestro caso solo se usará la clase &lt;em&gt;IN&lt;/em&gt; o &lt;em&gt;Internet&lt;/em&gt;, usadas para definir el mapeo entre la dirección IP y &lt;em&gt;BIND&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;tipo&#34;&gt;Tipo&lt;/h1&gt;
+&lt;p&gt;El tipo de registro para el recurso DNS, en el ejemplo de arriba, el tipo es &lt;em&gt;SOA&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;nombre-del-servidor&#34;&gt;Nombre del servidor&lt;/h1&gt;
+&lt;p&gt;Nombre completo del servidor de nombres primario. Debe acabar en un punto.&lt;/p&gt;
+&lt;h1 id=&#34;dirección-de-correo&#34;&gt;Dirección de correo&lt;/h1&gt;
+&lt;p&gt;Dirección de correo de la persona responsable del dominio. Nota cómo se sustituye el símbolo @ por un punto.&lt;/p&gt;
+&lt;h1 id=&#34;número-de-serie&#34;&gt;Número de serie&lt;/h1&gt;
+&lt;p&gt;Normalmente tiene el formato &lt;em&gt;YYYYMMDD&lt;/em&gt; con dos dígitios más al final que indican el número de serie del día. El número de serie es útil para indicarle a servidor DNS secundario cuando debe actualizarse. Si el servidor esclavo al comprobar el número de serie ha cambiado, realizará una trasnferencia de zona (&lt;strong&gt;zone transfer&lt;/strong&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;refresh-o-actualización&#34;&gt;Refresh o actualización&lt;/h1&gt;
+&lt;p&gt;En este campo indica al servidor DNS esclavo o secundario con qué frecuencia debería comprobar el estado del maestro. El valor está representado en segundos. En cada ciclo de refresco, el esclavo realiza la comprobación para saber cuando es necesaria una transferencia de zona (&lt;strong&gt;zone transfer&lt;/strong&gt;). En el ejemplo el valor es 7200&lt;/p&gt;
+&lt;h1 id=&#34;retry-o-reintento&#34;&gt;Retry o reintento&lt;/h1&gt;
+&lt;p&gt;Frecuencia con la que el esclavo debería conectarse al maestro en caso de una conexión fallida.&lt;/p&gt;
+&lt;h1 id=&#34;expiry-o-expiración&#34;&gt;Expiry o expiración&lt;/h1&gt;
+&lt;p&gt;Cantidad total de tiempo en la que el esclavo debería reintentar ponerse en contacto con el maestro antes de que expiren los datos que contiene. Referencias futuras serán dirigidas a los servidores root.&lt;/p&gt;
+&lt;h1 id=&#34;ttl-mínimo&#34;&gt;TTL mínimo&lt;/h1&gt;
+&lt;p&gt;Este campo define el tiempo de vida (&lt;em&gt;Time To Live&lt;/em&gt;) para el dominio en segundos. Sirve para responder a peticiones de subdominios que no existen en los registros. Cuando esté configurado, el servidor DNS responderá con una respuesta del tipo &lt;strong&gt;no domain&lt;/strong&gt; o &lt;strong&gt;NXDOMAIN&lt;/strong&gt;. Dicha respuesta será cacheada. El TTL establece la duración del cacheo para la respuesta.&lt;/p&gt;
+&lt;p&gt;Después de estos campos, se especifican los servidores de nombres para el dominio. &lt;strong&gt;NS&lt;/strong&gt; es el acrónimo de &lt;strong&gt;Name Server&lt;/strong&gt;. Como se ha visto un poco más arriba, el servidor de nombres principal del ejemplo es &lt;em&gt;ks3277174.kimsufi.com&lt;/em&gt;. También se define el sevidor DNS secundario o esclavo, en este caso &lt;em&gt;ns.kimsufi.com&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Además de los registros &lt;em&gt;NS&lt;/em&gt;, se definen los registros &lt;strong&gt;MX&lt;/strong&gt;, que identifican el servidor de correo para el dominio, el número 10 define la prioridad del servidor de correo. Así como el registro de tipo &lt;strong&gt;A&lt;/strong&gt;, que asocia un nombre a una dirección ip.&lt;/p&gt;
+&lt;p&gt;En el ejemplo existe un único registro &lt;strong&gt;MX&lt;/strong&gt;, pero puede haber más. Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;MX &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt; mail.elbauldelprogramador.com.
+MX &lt;span class=&#34;m&#34;&gt;20&lt;/span&gt; mail.otrodominio.com.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si se envia un email al dominio, el servidor de correo que envía el email intenta conectarse a &lt;em&gt;mail.elbauldelprogramador.com&lt;/em&gt; ya que tiene prioridad 10, si no puede establecer conexión, lo intentará con &lt;em&gt;mail.otrodominio.com&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;El último tipo de registro que vamos a ver es el de tipo &lt;strong&gt;CNAME&lt;/strong&gt; (&lt;em&gt;Canonical Name&lt;/em&gt;). Se suele referir a ellos como registros alias del tipo &lt;strong&gt;A&lt;/strong&gt;. Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ftp        CNAME www
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;significa que &lt;em&gt;ftp.elbauldelprogramador.com&lt;/em&gt; es un alias de &lt;em&gt;&lt;a href=&#34;http://www.elbauldelprogramador.com&#34;&gt;www.elbauldelprogramador.com&lt;/a&gt;&lt;/em&gt;. Es decir, &lt;em&gt;ftp.elbauldelprogramador.com&lt;/em&gt; apunta al mismo servidor que &lt;em&gt;&lt;a href=&#34;http://www.elbauldelprogramador.com&#34;&gt;www.elbauldelprogramador.com&lt;/a&gt;&lt;/em&gt;. Un registro &lt;strong&gt;CNAME&lt;/strong&gt; debe apuntar a un registro de tipo &lt;strong&gt;A&lt;/strong&gt; y solo de tipo &lt;strong&gt;A&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En el siguiente artículo se verá el archivo de zona inversa y la configuración del servidor DNS secundario, así como el uso del comando &lt;em&gt;dig&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-servidor-dns3/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 1 (Introducción)&#34;&gt;Cómo configurar un servidor DNS - Parte 1 (Introducción)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns2/&#34; title=&#34;Cómo configurar un servidor DNS – Parte 2 (La Zona Primaria)&#34;&gt;Cómo configurar un servidor DNS - Parte 2 (La Zona Primaria)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cómo configurar un servidor DNS - Parte 3 (Zona Inversa y DNS secundario)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ya se ha visto que existe una base de datos centralizada que asocia nombres de dominios a direccines IP, también se mencionó el caso inverso, una copia inversa de dicha base de datos, que asocia IP’s a nombres de dominios. Ésta búsqueda inversa es usada por muchos programas, que rechazarán establecer una conexión si la búsqueda inversa y la búsqueda directa (&lt;em&gt;Dominio»IP&lt;/em&gt;) no coinciden. Muchos proveedores de correo usan la búsqueda inversa para clasificar correos como spam.&lt;/p&gt;
+&lt;p&gt;Con objetivo de que los emails enviados desde el dominio que se está configurando no sean clasificados como spam, es necesario crear la zona inversa en el archivo &lt;strong&gt;named.conf.local&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;89.39.5.in-addr.arpa&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+ &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    file &lt;span class=&#34;s2&#34;&gt;&amp;#34;pri.89.39.5.in-addr.arpa&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los números son la dirección ip del servidor escritos en orden inverso. Es decir, la ip es &lt;strong&gt;5.39.89.x&lt;/strong&gt;, así pues, la zona ha de llamarse &lt;em&gt;89.39.5.in-addr.arpa&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Es necesario crear el archivo de zone inversa también, &lt;em&gt;pri.89.39.5.in-addr.arpa&lt;/em&gt;. Este archivo es necesario crearlo en el mismo directorio en el que se encuentra el archivo de zona primario (&lt;em&gt;pri.elbauldelprogramador.com&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;El principio de este archivo es exáctamente igual que &lt;em&gt;pri.elbauldelprogramador.com&lt;/em&gt;:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;@       IN      SOA     ks3277174.kimsufi.com. contacto.elbauldelprogramador.com. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+                        &lt;span class=&#34;m&#34;&gt;2013021001&lt;/span&gt;       &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; serial, todays date + todays serial #
+                        &lt;span class=&#34;m&#34;&gt;7200&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; refresh, seconds
+                        &lt;span class=&#34;m&#34;&gt;540&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; retry, seconds
+                        &lt;span class=&#34;m&#34;&gt;604800&lt;/span&gt;              &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; expire, seconds
+                        &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;            &lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; minimum, seconds
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+  NS      ks3277174.kimsufi.com.
+  NS      ns.kimsufi.com.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A continuación, es necesario añadir un registro del tipo &lt;strong&gt;PTR&lt;/strong&gt;. Los registros &lt;strong&gt;PTR&lt;/strong&gt; son punteros. Apuntan a un nombre de dominio. Quedaría así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;m&#34;&gt;44&lt;/span&gt;   PTR elbauldelprogramador.com.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El 44 es el último valor de la dirección IP del servidor.&lt;/p&gt;
+&lt;p&gt;Eso es todo, en este punto usaremos el comando &lt;strong&gt;dig&lt;/strong&gt; para comprobar la configuración.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dig elbauldelprogramador.com
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; elbauldelprogramador.com
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; global options: +cmd
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; Got answer:
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; -&amp;gt;&amp;gt;HEADER&lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;- opco&lt;/span&gt;de: QUERY, status: NOERROR, id: &lt;span class=&#34;m&#34;&gt;10156&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; flags: qr rd ra&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;elbauldelprogramador.com.    IN  A
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+elbauldelprogramador.com. &lt;span class=&#34;m&#34;&gt;532&lt;/span&gt;    IN  A   5.39.89.44
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; Query time: &lt;span class=&#34;m&#34;&gt;50&lt;/span&gt; msec
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; SERVER: 80.58.61.250#53&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;80.58.61.250&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; WHEN: Mon Feb &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 21:09:28 &lt;span class=&#34;m&#34;&gt;2013&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; MSG SIZE  rcvd: &lt;span class=&#34;m&#34;&gt;58&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así, estamos buscando la ip del dominio. Como se aprecia, devuelve el valor correcto en la sección &lt;strong&gt;ANSWER SECTION&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ dig -x 5.39.89.44
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.4-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; -x 5.39.89.44
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; global options: +cmd
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; Got answer:
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; -&amp;gt;&amp;gt;HEADER&lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;- opco&lt;/span&gt;de: QUERY, status: NOERROR, id: &lt;span class=&#34;m&#34;&gt;50347&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; flags: qr rd ra&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;44.89.39.5.in-addr.arpa.    IN  PTR
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; ANSWER SECTION:
+44.89.39.5.in-addr.arpa. &lt;span class=&#34;m&#34;&gt;84513&lt;/span&gt; IN  PTR elbauldelprogramador.com.
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; Query time: &lt;span class=&#34;m&#34;&gt;52&lt;/span&gt; msec
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; SERVER: 80.58.61.250#53&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;80.58.61.250&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; WHEN: Mon Feb &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt; 21:10:09 &lt;span class=&#34;m&#34;&gt;2013&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; MSG SIZE  rcvd: &lt;span class=&#34;m&#34;&gt;76&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta vez, se está realizando la petición inversa, preguntamos por el dominio.&lt;/p&gt;
+&lt;h1 id=&#34;el-servidor-dns-secundario&#34;&gt;El servidor DNS secundario&lt;/h1&gt;
+&lt;p&gt;En caso de disponer de otro servidor DSN propio, para configurarlo de modo que haga las veces de servidor DNS secundario es necesario añadir otra zona al archivo &lt;strong&gt;named.conf.local&lt;/strong&gt; en el servidor &lt;strong&gt;secundario&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;DOMINIO&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; slave&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+     file &lt;span class=&#34;s2&#34;&gt;&amp;#34;sec.DOMINIO.COM&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+     masters &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; DIRECCION IP SERVIDOR PRIMARIO&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta vez, se declara la zona como &lt;strong&gt;slave&lt;/strong&gt; o esclava y se especifica la dirección IP del servidor maestro. En el fichero indicado en &lt;strong&gt;file&lt;/strong&gt; se almacenarán los datos de la zona esclava. Basta con reiniciar &lt;strong&gt;named&lt;/strong&gt; y dicho fichero será creado al ponserse en contacto con el servidor primario y habiendo realizado una transferencia de zona.&lt;/p&gt;
+&lt;p&gt;Por último, por razones de seguridad es recomendable agregar una línea adicional en archivo de zona del servidor &lt;strong&gt;principal&lt;/strong&gt; que únicamente permita al servidor secundario realizar la transferencia de zona:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;zone &lt;span class=&#34;s2&#34;&gt;&amp;#34;elbauldelprogramador.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; master&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        allow-transfer &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;IP SERVIDOR DNS SECUNDARIO&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        file &lt;span class=&#34;s2&#34;&gt;&amp;#34;/etc/bind/pri.elbauldelprogramador.com&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En mi caso, la ip corresponde al servidor DNS secundario que proporciona la compañia en la que tengo contratado el servidor.&lt;/p&gt;
+&lt;p&gt;Con éste último artículo doy por terminada este conjunto de artículos que pretendían dar a conocer al lector el funcionamiento de DNS. Habiendo adquirido este conocimiento, será mucho más fácil usar las distintas herramientas que proporcionan los paneles de administración web para configurar los DNS.&lt;/p&gt;
+&lt;p&gt;Para finalizar, reiterar que todos los artículos están basados en un How to de la web que se menciona en las referencias.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Traditional DNS Howto&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo ocultar la versión de BIND (Y cómo averiguarla)</title>
+            <link>https://elbauldelprogramador.com/como-ocultar-la-version-de-bind-y-como-averiguarla/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-ocultar-la-version-de-bind-y-como-averiguarla/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Realizando un análisis en &lt;em&gt;&lt;!-- raw HTML omitted --&gt;dnsInspect&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; me dí cuenta de que el servidor estaba mostrando la versión de &lt;a href=&#34;https://elbauldelprogramador.com/como-configurar-un-servidor-dns/&#34;&gt;BIND&lt;/a&gt;, lo cual no es buena idea. Así que busqué cómo ocultarla y aprovecho para compartirlo con todos vosotros por si alguna vez os hace falta.&lt;/p&gt;
+&lt;p&gt;Antes de proceder a ocultar la versión, comprobemos que efectivamente la estamos mostrando, usaremos &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Dig – Chuleta básica de comandos&#34;&gt;dig&lt;/a&gt;&lt;/strong&gt; para ello:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Consultamos la versión para el dominio de la web&lt;/span&gt;
+$ dig @example.com -c CH -t txt version.bind
+&lt;span class=&#34;c1&#34;&gt;# Consultamos también en nuestros servidores DNS secundarios&lt;/span&gt;
+$ dig @direcciónDNS -c CH -t txt version.bind
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras ejecutar el primer comando deberiamos ver si estamos mostrando la versión de &lt;strong&gt;BIND&lt;/strong&gt;. En mi caso la respuesta era afirmativa, sin embargo al consultar la versión en el servidor DNS secundario la respuesta era &lt;em&gt;&lt;strong&gt;“[Secured]”&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Una vez hecho esto, pasamos a ocultar la versión.&lt;/p&gt;
+&lt;h1 id=&#34;ocultar-la-versión-de-bind-en-un-servidor&#34;&gt;Ocultar la versión de BIND en un servidor&lt;/h1&gt;
+&lt;p&gt;Esto no es más que &lt;strong&gt;seguridad mediante oscuridad&lt;/strong&gt;, ya que aunque se oculte la versión, hay herramientas que detectarán la versión de BIND, como &lt;strong&gt;&lt;!-- raw HTML omitted --&gt;fpdns&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt;. Sin embargo, ocultandola evitaremos que scripts automatizados buscando versiones concretas puedan aprovecharse de cualquier vulnerabilidad.&lt;/p&gt;
+&lt;p&gt;Abrimos el fichero de configuración de &lt;strong&gt;BIND&lt;/strong&gt;, concretamente &lt;em&gt;/etc/bind/named.conf.options&lt;/em&gt; y añadimos la siguiente línea:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;version &lt;span class=&#34;s2&#34;&gt;&amp;#34;Texto a mostrar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Guardamos el fichero y reiniciamos &lt;strong&gt;BIND&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# service bind9 restart&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;mostrar-versión-de-bind-aún-cuando-está-oculta&#34;&gt;Mostrar versión de BIND aún cuando está oculta&lt;/h1&gt;
+&lt;p&gt;Instalamos &lt;em&gt;fpdns&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get install fpdns
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo ejecutamos pasando como argumento el servidor del cual queremos determinar la versión:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ fpdns -D &amp;lt;dominio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;La salida será algo de este estilo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com, ip&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: ISC BIND version -- version
+fingerprint &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;elbauldelprogramador.com, ip&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: ISC BIND version -- version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Cybercity&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

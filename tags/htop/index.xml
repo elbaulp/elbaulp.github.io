@@ -1,0 +1,266 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>htop on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/htop/</link>
+        <description>Recent content in htop on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Sun, 08 Oct 2017 19:27:49 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/htop/</link>
+            <title>htop on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/htop/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>10 de las Mejores Herramientas en la Línea de Comandos II</title>
+            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</link>
+            <pubDate>Sun, 08 Oct 2017 19:27:49 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos-ii/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En esta segunda entrega revisaremos otras &lt;a href=&#34;https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/&#34;&gt;diez herramientas&lt;/a&gt; que podemos usar en nuestra &lt;strong&gt;terminal de Linux&lt;/strong&gt; y que nos ahorrarán tiempo y esfuerzo en muchas tareas cotidianas ampliando así nuestra lista de imprescindibles.&lt;/p&gt;
+&lt;h1 id=&#34;11-lshwhttpwwwezixorgprojectwikihardwarelister&#34;&gt;11. &lt;a href=&#34;http://www.ezix.org/project/wiki/HardwareLiSter&#34;&gt;lshw&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Se trata, como se puede deducir de su nombre, de un &lt;strong&gt;Hardware Lister&lt;/strong&gt;, que nos permitirá conocer cualquier detalle sobre el hardware de nuestra máquina.
+Si tu distribución es basada en Debian (como Ubuntu) posiblemente lo tengas ya instalado, de no ser así en su página oficial ofrecen todos los detalles.&lt;/p&gt;
+&lt;p&gt;Aunque la mayoría de la información se puede consular en  ficheros del sistema como &lt;code&gt;/proc/meminfo&lt;/code&gt; que es de dondel el propio programa extrae la información, a veces no está lo más legible posible y no en el mismo lugar, por eso esta es tan interesante.&lt;/p&gt;
+&lt;p&gt;Veamos por ejemplo un extracto del informe de memoria que hace:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ lshw -C memory
+...
+*-cache:0
+       descripción: L1 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt;
+       ranura: L1-Cache
+       tamaño: 64KiB
+       capacidad: 64KiB
+       capacidades: internal write-back data
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+  *-cache:1
+       descripción: L2 caché
+       id físico: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+       ranura: L2-Cache
+       tamaño: 4MiB
+       capacidad: 4MiB
+       capacidades: internal write-back instruction
+       configuración: &lt;span class=&#34;nv&#34;&gt;level&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;em&gt;Una sencilla forma de conocer la caché de nuestro procesador (entre otras muchas cosas relacionadas con memoria).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Para su ejecución solo necesitamos especificarle el tipo de información con la opcion ``-C&lt;code&gt;, en este caso &lt;/code&gt;memory`. Se pueden consultar todas las opciones en la ayuda.&lt;/p&gt;
+&lt;p&gt;Además podemos hacer cosas como extraer la información en formato HTML (también XML), que aunque no tiene un diseño muy trabajado, nos puede ser útil.&lt;/p&gt;
+&lt;p&gt;Además también dispone de una interfaz para escritorio, llamada &lt;code&gt;lshw-gtk&lt;/code&gt; (aunque eso nos interesa menos).&lt;/p&gt;
+&lt;h1 id=&#34;12-htophttpslinuxdienetman1htop&#34;&gt;12 &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Como un alternativa a &lt;code&gt;top&lt;/code&gt; de la anterior entrega (que se nos puede quedar corto en algunas ocasiones) tenemos &lt;a href=&#34;https://linux.die.net/man/1/htop&#34;&gt;htop&lt;/a&gt;, que no es más que otro visor de procesos, pero &lt;strong&gt;interactivo&lt;/strong&gt;. Este tendremos que instalarlo, ya que no suele venir por defecto, pero merece la pena.&lt;/p&gt;
+&lt;p&gt;No solo ofrece una visión de la memoria de nuestros sistema en tiempo real sino también el número de tareas, hebras y carga del sistema, incluso el tiempo que lleva encendido el equipo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Y lo mejor de todo es que podemos navegar por los procesos y realizar ciertas acciones sobre ellos, como matarlos con &lt;code&gt;kill&lt;/code&gt;, aquí &lt;code&gt;F9&lt;/code&gt;, directamente desde el propio programa.&lt;/p&gt;
+&lt;p&gt;Pero si quieres algo más rápido como para por ejemplo, ver la memoria que tienes libre y usada para &lt;em&gt;swap&lt;/em&gt; siempre puedes usar &lt;a href=&#34;https://linux.die.net/man/1/free&#34;&gt;free&lt;/a&gt;, instalada por defecto en la mayoría de las distros.&lt;/p&gt;
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ free
+              total        used        free      shared  buff/cache   available
+Memoria:     &lt;span class=&#34;m&#34;&gt;4036232&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;3014980&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;177508&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;243164&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;843744&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;470464&lt;/span&gt;
+Swap:       &lt;span class=&#34;m&#34;&gt;7999484&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;2502164&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;5497320&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;13-fdiskhttpmancxfdisk&#34;&gt;13 &lt;a href=&#34;http://man.cx/fdisk&#34;&gt;fdisk&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Aunque es una herramienta completa (merecería un post aparte) para realizar particiones en nuestro disco también nos puede servir sólo para consultar información relacionada, muy útil a si tenemos varios discos, por ejemplo, para ver nomenclatura, tamaños, etc, y no podemos dejar de mencionarla.&lt;/p&gt;
+&lt;p&gt;Ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fdisk -l
+Disposit.  Inicio     Start     Final  Sectores   Size Id Tipo
+/dev/sdb1  *           &lt;span class=&#34;m&#34;&gt;2048&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;206847&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;204800&lt;/span&gt;   100M  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb2            &lt;span class=&#34;m&#34;&gt;206848&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239460410&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;239253563&lt;/span&gt; 114,1G  &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; HPFS/NTFS/exFAT
+/dev/sdb3         &lt;span class=&#34;m&#34;&gt;239462398&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;248934402&lt;/span&gt; 118,7G  &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; Extendida
+/dev/sdb5         &lt;span class=&#34;m&#34;&gt;484225024&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;488396799&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;4171776&lt;/span&gt;     2G &lt;span class=&#34;m&#34;&gt;82&lt;/span&gt; Linux swap / Solaris
+/dev/sdb6         &lt;span class=&#34;m&#34;&gt;239462400&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;484225023&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;244762624&lt;/span&gt; 116,7G &lt;span class=&#34;m&#34;&gt;83&lt;/span&gt; Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;14-dfhttpslinuxdienetman1df-duhttpslinuxdienetman1du-y-ncduhttpsdevyorhelnlncduman&#34;&gt;14 &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt;, &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; y &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;El espacio libre que tenemos en nuestro sistema siempre es algo a tener en cuenta y para comprobarlo no necesitamos ninguna herramienta gráfica, mucho más rápido y eficiente desde terminal, veamos algunas utilidades.&lt;/p&gt;
+&lt;p&gt;Con &lt;a href=&#34;https://linux.die.net/man/1/df&#34;&gt;df&lt;/a&gt; podemos ver información relevante sobre nuestro sistema de ficheros, como el porcentaje de ocupación, entre otros. Así podremos comprobar de un vistazo el estado de las particiones, por si tuviéramos que realizar una reasignación de espacio.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ df
+S.ficheros     bloques de 1K   Usados Disponibles Uso% Montado en
+udev                 &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;        &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;1997292&lt;/span&gt;   0% /dev
+tmpfs                 &lt;span class=&#34;m&#34;&gt;403624&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;6384&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;397240&lt;/span&gt;   2% /run
+/dev/sda6           &lt;span class=&#34;m&#34;&gt;98298500&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;8421160&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;84861020&lt;/span&gt;  10% /
+/dev/sda7          &lt;span class=&#34;m&#34;&gt;123329532&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;15084216&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;101957496&lt;/span&gt;  13% /home
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero si queremos algo más sencillo como saber el tamaño de una carpeta o fichero podemos usar &lt;a href=&#34;https://linux.die.net/man/1/du&#34;&gt;du&lt;/a&gt; con las opciones que hace su salida más legible, como &lt;code&gt;-hs&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ du -h
+3,3G	./Tasks
+5,8M	./Books
+3,3G	.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Que nos dice el tamaño del directorio y de todo
+lo contenido en su interior.&lt;/p&gt;
+&lt;p&gt;Pero existen otras herramientas con más características, como &lt;a href=&#34;https://dev.yorhel.nl/ncdu/man&#34;&gt;ncdu&lt;/a&gt;. Si &lt;code&gt;du&lt;/code&gt; era el acrónimo de &lt;em&gt;&amp;ldquo;disk usage&amp;rdquo;&lt;/em&gt;, este podría significar &lt;em&gt;&amp;ldquo;nice disk usage&amp;rdquo;&lt;/em&gt; (aunque en realidad es NCurses Disk Usage).&lt;/p&gt;
+&lt;p&gt;Y lo bueno que tiene es que entramos en una interfaz (directamente en terminal) donde no solo vemos el tamaño de los ficheros o directorios sino también el tamaño relativo al fichero de mayor peso, para de forma muy rápida ver los que más espacio están ocupando en disco en relación al resto.&lt;/p&gt;
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Microservices
+3,3 GiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########] /Talks&lt;/span&gt;
+5,8 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; /Books
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y no solo eso, además (y es lo mejor) podemos navegar por las carpetas seleccionándolas y haciendo intro, recalculándose el peso relativo para los fichero de esta.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;/Talks
+539,4 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;##########]  Testing Microservices.mp4&lt;/span&gt;
+343,5 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  Building Fault Tolerant Microservices.mp4&lt;/span&gt;
+342,6 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;######    ]  GOTO 2015 • Microservi...ify • Kevin Goldsmith.mp4&lt;/span&gt;
+314,2 MiB &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#####     ]  Principles Of Microservices by Sam Newman.mp4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;15-ddhttpslinuxdienetman1dd&#34;&gt;15 &lt;a href=&#34;https://linux.die.net/man/1/dd&#34;&gt;dd&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Potente y simple herramienta que entre otras cosas nos sirve para grabar imágenes &lt;code&gt;.iso&lt;/code&gt; en memorias externas, algo que seguramente hayamos necesitado hacer en más de una ocación. Mucho más sencillo desde &lt;em&gt;terminal&lt;/em&gt;, así de simple, por ejemplo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dd if=input.iso of=/dev/sdb&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Donde especificamos la iso que queremos quemar (estando en el mismo directorio) y el punto de montaje (para conocerlo podemos usar &lt;code&gt;df&lt;/code&gt;como hemos visto antes).&lt;/p&gt;
+&lt;h1 id=&#34;16-historyhttpslinuxdienetman3history&#34;&gt;16 &lt;a href=&#34;https://linux.die.net/man/3/history&#34;&gt;history&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Herramienta muy simple para ver los últimos comandos usados (en realidad todos).&lt;/p&gt;
+&lt;p&gt;Un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$history&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1080&lt;/span&gt;  locate linux
+&lt;span class=&#34;m&#34;&gt;1081&lt;/span&gt;  clear
+&lt;span class=&#34;m&#34;&gt;1082&lt;/span&gt;  apropos ls
+&lt;span class=&#34;m&#34;&gt;1083&lt;/span&gt;  apropos &lt;span class=&#34;s2&#34;&gt;&amp;#34;create dir&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;1084&lt;/span&gt;  clear
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vimos en otra entrada puede usarse para, por ejemplo, conocer que comandos usamos con más frecuencia.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;history | awk &#39;{print $2}&#39; | sort | uniq -c | sort -rn | head -10 &lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;17-rsynchttpslinuxdienetman1rsync&#34;&gt;17 &lt;a href=&#34;https://linux.die.net/man/1/rsync&#34;&gt;rsync&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Útil para hacer cópias de forma eficiente, pero &lt;strong&gt;incrementales&lt;/strong&gt;, es decir, no se realizan copias completas
+sino una inicial y las posteriores sobre las modificaciones
+que el directorio en cuestión haya sufrido. Muy útil para copias de seguridad, entre otras muchas cosas.&lt;/p&gt;
+&lt;p&gt;Además el origen y el destino pueden ser tanto el mismo equipo como equipos en la misma o diferentes redes.&lt;/p&gt;
+&lt;p&gt;Por ejemplo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rsync -rtv origen/ destino/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Esta es otra herramienta que daría para otra entrada completa.&lt;/p&gt;
+&lt;h1 id=&#34;18-locatehttpslinuxdienetman1locate&#34;&gt;18. &lt;a href=&#34;https://linux.die.net/man/1/locate&#34;&gt;locate&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Ideal para buscar ficheros en todo nuestro sistema. Es algo bruto, ya que por defecto busca en todo el sistema pero usando alguna de las opciones podemos refinar un poco su comportamiento. Eso sí, necesitarás usar algún paginador como &lt;code&gt;less&lt;/code&gt;o &lt;code&gt;more&lt;/code&gt; para ver la salida poco a poco.&lt;/p&gt;
+&lt;p&gt;Un ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ locate password &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+/bin/systemd-ask-password
+/bin/systemd-tty-ask-password-agent
+/boot/grub/i386-pc/legacy_password_test.mod
+/boot/grub/i386-pc/password.mod
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;19-aproposhttpman7orglinuxman-pagesman1apropos1html&#34;&gt;19. &lt;a href=&#34;http://man7.org/linux/man-pages/man1/apropos.1.html&#34;&gt;apropos&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Algo así como &lt;em&gt;&amp;ldquo;A propósito de&amp;hellip;&amp;quot;&lt;/em&gt; (traducción libre) nos servirá de ayuda si no recordamos un comando pero si que es lo que hacía o con qué trabajaba o simplemente buscamos entre el software instalado en nuestra máquina.
+Esta herramienta busca en las cabeceras y descripciones de las páginas de &lt;a href=&#34;https://linux.die.net/man/&#34;&gt;man&lt;/a&gt; de los programas instalados en el sistema para ayudaros a encontrarlo.&lt;/p&gt;
+&lt;p&gt;Si por ejemplo buscamos un programa que hacía algo con Python, podemos usarla así:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;apropos python | less&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;(Usamos &lt;code&gt;less&lt;/code&gt; para ver progresivamente la salida del comando)&lt;/p&gt;
+&lt;p&gt;Y vemos que entre otras cosas tenemos instalados conversores entre versiones de Python, quizás ni lo sabías :) .&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;2to3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python2 to Python3 converter
+2to3-2.7 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+2to3-3.5 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;         - Python2 to Python3 converter
+dh_python2 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+dh_python3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;       - calculates Python dependencies, adds maintainer script...
+fab &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;              - Simple Pythonic remote deployment tool
+jwt3 &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;1&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;             - Python implementation of JSON Web Token
+:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;20-treehttpslinuxdienetman1tree&#34;&gt;20. &lt;a href=&#34;https://linux.die.net/man/1/tree&#34;&gt;tree&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Si algún momento has necesitado conocer las subcarpetas y ficheros de un subdirectorio estando en terminal probablemente hayas acabando entrando y saliendo de ellas, bajando y subiendo de nivel, todo esto es mucho más sencillo si podemos ver el árbol de directorios y ficheros desde terminal, grácias a la orden &lt;code&gt;tree&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; $ tree .
+.
+├── css
+│   └── kit.css
+├── index.html
+└── js
+    ├── lib1.js
+    ├── lib2.js
+    └── lib3.js
+
+&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; directories, &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; files
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si no la tienes ya instalada es tan fácil como hacer:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo apt-get install tree&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;bonus-reverse-i-searchhttpswwwgnuorgsoftwarebashmanualhtml_nodecommands-for-historyhtml&#34;&gt;Bonus: &lt;a href=&#34;https://www.gnu.org/software/bash/manual/html_node/Commands-For-History.html&#34;&gt;reverse-i-search&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Y para acabar, ya que hemos hablado de &lt;code&gt;history&lt;/code&gt; y de &lt;code&gt;locate&lt;/code&gt; no podíamos dejar de lado reverse-i-search, por si lo que queremos es buscar comandos que previamente hemos usado. Es un poco especial porque no se ejecuta de forma común al resto, sino pulsando &lt;code&gt;Crtl + R&lt;/code&gt; en nuestra terminal, ya que en realidad es un comando para la manipulación del historial que consultamos con &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Un ejemplo, con solo poner &lt;code&gt;pyth&lt;/code&gt; nos sale una de las órdenes con python que hemos ejecutado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;reverse-i-search&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;pyth&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;: apropos python &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; less
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ver más puedes pulsar &lt;code&gt;Crtl+Shift+R&lt;/code&gt; cuando el buscador está abierto y &lt;code&gt;Crtl+C&lt;/code&gt; para salir.&lt;/p&gt;
+&lt;p&gt;Estas son solo algunas de las herramientas que he considerado más útiles para el día a día de cualquier usuario, pero quizás nos hemos dejado en el tintero alguna.&lt;/p&gt;
+&lt;p&gt;¿Añadirías alguna a la lista? ¡Cuéntanos!&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>10 de las Mejores Herramientas en la Línea de Comandos</title>
+            <link>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</link>
+            <pubDate>Sun, 08 Oct 2017 19:27:20 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/top-10-de-herramientas-que-son-mejores-en-la-linea-de-comandos/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Escribir commandos en una terminal puede parecer tedioso, pero con las herramientas correctas, la línea de comandos puede ser increíblemente poderosa. Aquí están nuestras herramientas de línea de comandos favoritas que hacen impresionantes cosas que simplemente no puedes encontrar en una GUI (Interfaz Gráfica de Usuario).&lt;/p&gt;
+&lt;p&gt;Nota: Mientras que un montón de tutoriales y videos en esta página son Linux-central, estos comandos son útiles para todos. Los usuarios de Mac pueden usar todos estos comandos en sus Terminales de la misma forma, y los usuarios de Windows pueden &lt;!-- raw HTML omitted --&gt;chequear Cygwin&lt;!-- raw HTML omitted --&gt; para una mayor experiencia de terminal como-UNIX donde estas herramientas vienen de la mano. Además no todas las herramientas vienen preinstaladas en cada sistema, por lo que puedes necesitar instalar algunas de ellas por separado antes de que puedas usarlas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;10-top&#34;&gt;10. Top&lt;/h1&gt;
+&lt;p&gt;Cuando tu computadora comienza a congelarse, realentarse, o simplemente comportarse de forma extraña, el comando &lt;em&gt;top&lt;/em&gt; puede ayudarte a enderezarla. Simplemente escribiendo &lt;em&gt;top&lt;/em&gt; en una terminal, puedes obtener una lista de cada programa que está corriendo en tu sistema, así como cuántos recursos del sistema están consumiendo. Luego, si encuentras uno que se haya vuelto un poco loco, puedes matarlo y volver tu sistema a la normalidad, rápidamente. Esto en su totalidad lleva unos pocos segundos y no necesitas esperar que ningunas ventanas o atractivas imágenes carguen. Revisa &lt;!-- raw HTML omitted --&gt;esta rápida introducción a top&lt;!-- raw HTML omitted --&gt; para más información, y si quieres algo un poco más amigable, el comando htop es un reemplazo mucho mejor.&lt;/p&gt;
+&lt;h1 id=&#34;9-ifconfig&#34;&gt;9. Ifconfig&lt;/h1&gt;
+&lt;p&gt;Si tienes más de una computadora en tu casa, es probable que necesites entrar en la configuración de tu red reiteradas veces. Conocer tu red puede ayudarte a &lt;!-- raw HTML omitted --&gt;controlar tu HTPC&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;monitorear tus descargas de BitTorrent&lt;!-- raw HTML omitted --&gt;, o &lt;!-- raw HTML omitted --&gt;compartir archivos entre computadoras&lt;!-- raw HTML omitted --&gt;. Cuando llegue el momento, ifconfig será tu mejor amigo. Muestra la dirección IP de tu computadora, la dirección MAC de tu tarjeta Ethernet y Wi-Fi, y mucho más. Revisa &lt;!-- raw HTML omitted --&gt;esta introducción a ifconfig&lt;!-- raw HTML omitted --&gt; para ver cómo se usa.&lt;/p&gt;
+&lt;h1 id=&#34;8-chmod-y-chown&#34;&gt;8. Chmod y Chown&lt;/h1&gt;
+&lt;p&gt;De vez en cuando, te encuentras con un error de “permiso denegado” al intentar acceder a un archivo, y eso puede ser exasperante. Correr &lt;code&gt;chmod &lt;/code&gt;editará los permisos de cualquier archivo, permitiéndote leer, escribir y/o ejecutar un archivo dado, acorde a tus especificaciones. Puedes hacer esto desde la GUI, pero &lt;code&gt;chmod&lt;/code&gt; es un poco más poderoso, especialmente si estás trabajando con múltiples archivos. Para ver cómo se usa, revisa &lt;!-- raw HTML omitted --&gt;esta guía de chmod y su hermano chown&lt;!-- raw HTML omitted --&gt;, que te ayudará a obtener total propiedad de un archivo.&lt;/p&gt;
+&lt;h1 id=&#34;7-ssh&#34;&gt;7. SSH&lt;/h1&gt;
+&lt;p&gt;Para qué configurar un &lt;!-- raw HTML omitted --&gt;sistema de pantalla completa compartida&lt;!-- raw HTML omitted --&gt; cuando todo lo que necesitas es checkear una sencilla cosa? SSH te conecta a otra computadora y te permite usar su terminal como si estuvieras sentado justo en frente de ella. Puedes checkear procesos activos, cambiar permisos, y acceder a archivos en tu máquina remota justo desde la máquina que está frente a ti. Puede hacer mucho más también, desde controlar&lt;!-- raw HTML omitted --&gt; un servidor sin monitor&lt;!-- raw HTML omitted --&gt; hasta &lt;!-- raw HTML omitted --&gt;encriptar tu navegador web&lt;!-- raw HTML omitted --&gt; en una conexión menos-que-segura. Incluso puede ayudarte a &lt;!-- raw HTML omitted --&gt;controlar tu dispositivo iOS&lt;!-- raw HTML omitted --&gt; .&lt;/p&gt;
+&lt;h1 id=&#34;6-wget&#34;&gt;6. Wget&lt;/h1&gt;
+&lt;p&gt;Puedes ingresar a un sitio web y bajar un archivo en un click, pero si quieres serio contro sobre tus descargas wget es lo mejor para la tarea. Con unos pocos tipeos puedes descargar automáticamente toda la música de un sitio web, continuar reactivar descargas que son interrumpidas, o incluso &lt;!-- raw HTML omitted --&gt;capturar el archivo entero de la “Imagen Astronómica del Día”&lt;!-- raw HTML omitted --&gt; (“Astronomy Picture of the Day”) de la NASA. Revisa nuestra &lt;!-- raw HTML omitted --&gt;guía de capacitación en wget&lt;!-- raw HTML omitted --&gt; para ver todo lo que esta pequeña herramienta puede hacer.&lt;/p&gt;
+&lt;h1 id=&#34;5-vi-y-vim&#34;&gt;5. Vi y Vim&lt;/h1&gt;
+&lt;p&gt;A pesar de todos las embellecidas herramientas para escritura que hay por ahí, el texto plano sigue siendo una de las formas más útiles para manejar información. Puede ser para crear una &lt;!-- raw HTML omitted --&gt;extremadamente versátil lista de tareas&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;ayudarte a ajustar la configuración de tu aplicación favorita&lt;!-- raw HTML omitted --&gt;, o incluso permitirte&lt;!-- raw HTML omitted --&gt; construir un sitio web completo&lt;!-- raw HTML omitted --&gt;. Y si bien hay &lt;!-- raw HTML omitted --&gt;una gran cantidad de editores de texto excelentes&lt;!-- raw HTML omitted --&gt;, muchos usuarios poderosos eligen decididamente Vi y Vim. Vi y Vim son editores de texto de línea de comandos que son totalmente basados en teclado, permitiéndote navegar por grandes bloques de texto con sólo tipear unas pocas teclas. Si te tomas en serio la edición de texto, estos editores son el camino a seguir, a pesar de su curva de aprendizaje. Afortunadamente,&lt;!-- raw HTML omitted --&gt; la web está llena de tutoriales&lt;!-- raw HTML omitted --&gt; sobre cómo usarlos.&lt;/p&gt;
+&lt;h1 id=&#34;4-grep&#34;&gt;4. Grep&lt;/h1&gt;
+&lt;p&gt;No todo el trabajo de línea de comandos es limpio y simple. A veces, correrás un comando y obtendrás una pared gigante de texto que es imposible de vadear. Por suerte, grep te ayudará a encontrar lo que estás buscando. Por sí solo, puede buscar una frase específica a través de todo el texto dentro de un archivo en tu sistema (por ejemplo, grep Laundry todo.txt), que es útil en sí mismo. Sin embargo, el verdadero poder de grep viene cuando se utiliza junto con otros comandos. ¿No encuentras lo que estás buscando en la salida de &lt;em&gt;top&lt;/em&gt;? Puedes utilizar grep para buscar el programa que estás buscando. Echa un vistazo a&lt;!-- raw HTML omitted --&gt; este tutorial&lt;!-- raw HTML omitted --&gt; para aprender a usar grep, y combinarlo con otros comandos, sólo necesitas aprender …&lt;/p&gt;
+&lt;h1 id=&#34;3-pipes&#34;&gt;3. Pipes&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Pipes&lt;/em&gt; no es el nombre de una herramienta específica, sino más bien una clase de herramientas que te ayudan a enviar la salida de un comando a otro comando. Tomando el ejemplo de #4, en donde queríamos encontrar algo específico en la salida de &lt;em&gt;top&lt;/em&gt;. Para ello, deberías ejecutar algo como &lt;em&gt;2 top-l | grep firefox&lt;/em&gt;. El símbolo | conecta la salida de &lt;em&gt;top&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt;, que busca entonces &lt;em&gt;firefox&lt;/em&gt; y encuentra la información relevante. También puedes conectar la salida de un comando a un archivo de texto con el símbolo&amp;gt;, como por ejemplo: &lt;em&gt;ifconfig &amp;gt; myip.txt.&lt;/em&gt; Para más ejemplos de como usar &lt;em&gt;pip&lt;/em&gt;es, visita nuestro &lt;!-- raw HTML omitted --&gt;manual de línea de comandos para principiantes&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;2-find&#34;&gt;2. Find&lt;/h1&gt;
+&lt;p&gt;A diferencia de grep, que busca texto dentro de archivos, &lt;em&gt;find&lt;/em&gt; es una herramienta que te ayuda a encontrar archivos en función de otros criterios, como nombre, tipo de archivo, o fecha de última edición. Es mucho más poderosa que el tradicional buscador Spotlight o el de Windows, y una de las mejores maneras de encontrar rápidamente archivos en tu sistema. Además, si quieres buscar algo dentro de un archivo, puedes conectar la salida del &lt;em&gt;find&lt;/em&gt; a &lt;em&gt;grep&lt;/em&gt; y resolverlo. Para ver cómo se hace, checkea&lt;!-- raw HTML omitted --&gt; este gran tutorial&lt;!-- raw HTML omitted --&gt; para el comando &lt;em&gt;find&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;1-apt-get-y-otros-gestores-de-paquetes&#34;&gt;1. Apt-get y otros gestores de paquetes&lt;/h1&gt;
+&lt;p&gt;Si estás cansado de abrir un navegador web y visitar un sitio web sólo para descargar un programa, los gestores de paquetes son un regalo del cielo. Gestores de paquetes - como &lt;em&gt;apt-get&lt;/em&gt; de Ubuntu, &lt;em&gt;pacman&lt;/em&gt; de Arch Linux, o algún &lt;!-- raw HTML omitted --&gt;brebaje casero&lt;!-- raw HTML omitted --&gt; de un Sistema Operativo X que hace a la instalación muy fácil. Con ellos, puedes buscar en una gran base de datos de aplicaciones, así como descargarlas e instalarlas con sólo tipear unas teclas. Todo lo que necesitas saber es el nombre de la aplicación que estás buscando. Incluso te permite instalar los requisitos previos necesarios para ese programa -como Java- , para que no tengas que hacerlo tú mismo. el gestor de paquetes que utilizas generalmente depende de tu sistema operativo, entonces googlea para ver qué gestores están disponibles para tu sistema y qué aplicaciones están disponibles en sus repositorios.&lt;/p&gt;
+&lt;p&gt;Si te has cansado de la interfaz gráfica de usuario, checkea nuestra &lt;!-- raw HTML omitted --&gt;lista de aplicaciones de línea de comandos no convencionales&lt;!-- raw HTML omitted --&gt; y si no lo has hecho todavía, asegúrate de leer sobre &lt;!-- raw HTML omitted --&gt;cómo convertirse en un ninja de línea de comandos con atajos para ahorrar tiempo&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fuente | &lt;!-- raw HTML omitted --&gt;lifehacker&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Liberada la versión 1.0 de htop</title>
+            <link>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/liberada-la-version-10-de-htop/</guid>
+            <description>&lt;p&gt;Si monitorizáis el estado de vuestros sistemas con &lt;a href=&#34;https://elbauldelprogramador.com/tags/linux&#34;&gt;Linux&lt;/a&gt; probablemente conozcáis el célebre comando top, que permite acceder a esa información en modo consola de una forma más visual de la que suele ofrecer el simple ‘ps’. Y seguro que también conocéis htop, que ocho años después acaba de anunciar su versión 1.0.&lt;/p&gt;
+&lt;p&gt;Podéis &lt;strong&gt;consultar las mejoras&lt;/strong&gt; en la &lt;!-- raw HTML omitted --&gt;página oficial del proyecto en SourceForge&lt;!-- raw HTML omitted --&gt;, y por supuesto tenéis a vuestra disposición tanto el &lt;!-- raw HTML omitted --&gt;código fuente&lt;!-- raw HTML omitted --&gt; como &lt;a href=&#34;http://htop.sourceforge.net/index.php?page=downloads#binaries&#34;&gt;binarios&lt;/a&gt; preparados para diversas distribuciones. Quien quiera agradecer al autor su trabajo, puede &lt;!-- raw HTML omitted --&gt;invitarle a una cervecita.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;El autor explica en la página del proyecto las mejoras de esta nueva versión:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;I am extremely happy to announce htop 1.0!&lt;/p&gt;
+&lt;p&gt;Time flies, I can’t believe it’s been eight years of development
+already. It seems like yesterday that I’ve decided to stop writing PID
+numbers every time I wanted to kill a process and started this
+project. I am very happy to see this little project grow into a
+reality, see it being included in repositories for many distributions,
+reading nice reviews arond the web, receiving many contributions from
+coders from all over the world who helped making htop better and
+better over the years, and getting short “thank you!” emails that
+always make my day. Thanks to all distro packagers, reviewers, code
+contributors, users. The free software community is amazing; if it
+wasn’t for all of you, htop wouldn’t be what it is now. Version
+numbers are more symbolic than anything, but the stability of htop 0.9
+in the past year and the cool new features introduced in this release
+compelled me to call this version 1.0. We all deserve this little
+“achievement”.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Performance improvements&lt;/li&gt;
+&lt;li&gt;Support for splitting CPU meters into two or four columns (thanks to Wim Heirman)&lt;/li&gt;
+&lt;li&gt;Switch from PLPA, which is now deprecated, to HWLOC.&lt;/li&gt;
+&lt;li&gt;Bring back support for native Linux sched_setaffinity, so we don’t have to use HWLOC where we don’t need to.&lt;/li&gt;
+&lt;li&gt;Support for typing in user names and column fields in selection panels.&lt;/li&gt;
+&lt;li&gt;Support for UTF-8 tree drawing (thanks to Bin Guo)&lt;/li&gt;
+&lt;li&gt;Option for counting CPUs from zero (thanks to Sean Noonan)&lt;/li&gt;
+&lt;li&gt;Meters update in every screen (no longer halting while on Setup, etc.)&lt;/li&gt;
+&lt;li&gt;Stricter checks for command-line options (thanks to Sebastian Pipping)&lt;/li&gt;
+&lt;li&gt;Incremental filtering (thanks to Seth Heeren for the idea and initial implementation)&lt;/li&gt;
+&lt;li&gt;Try harder to find the ncurses header (thanks to Moritz Barsnick)&lt;/li&gt;
+&lt;li&gt;Man page updates (thanks to Vincent Launchbury)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Support larger numbers for process times.  (thanks to Tristan Nakagawa for the report.)&lt;/li&gt;
+&lt;li&gt;BUGFIX: Segfault in BarMeterMode_draw() for small terminal widths (patch by Sebastian Pipping)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Que traduzco a continuación:&lt;/p&gt;
+&lt;p&gt;El tiempo vuela, no puedo creer que hayan pasado ya 8 años de desarrollo. Parece que fue ayer cuando decidí dejar de escribir números de PID cada vez que quería matar un proceso y empecé este proyecto. Estoy muy contento de ver este proyecto crecer hasta llegar a ser una realida, verlo incluido en los repositorios de muchas distribuciones, leer agradables revisiones por toda la web, recibir correos de muchos contribuidores de todo el mundo que han ayudado a htop a mejorar con los años, y recibir emails cortos que simplemente decían “gracias!” y me alegraban el día. Gracias a todos los empaquetadores de distros, revisores, contribuidores de código, usuarios. La comunidad del software libre es increible; si no fuera por todos ellos, htop no sería lo que es hoy. Los números de las versiones son méramente simbólicos, pero la estabilidad de htop 0.9 el los años pasados y las nuevas características introducidas en esta “release”, me obliga a llamar a esta versión la 1.0. Todos merecemos este pequeño logro.&lt;/p&gt;
+&lt;p&gt;Para instalarlo tan solo debéis escribir en el terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo aptitude install htop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al ejecutarlo veremos algo parecido a lo siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Vía &lt;!-- raw HTML omitted --&gt;MuyLinux&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Fuente &lt;!-- raw HTML omitted --&gt;htop.sourceforge.net&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

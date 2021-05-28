@@ -1,0 +1,79 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>autentificación de dos factores on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/autentificaci%C3%B3n-de-dos-factores/</link>
+        <description>Recent content in autentificación de dos factores on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/autentificaci%C3%B3n-de-dos-factores/</link>
+            <title>autentificación de dos factores on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/autentificaci%C3%B3n-de-dos-factores/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Saltarse la autentificación de dos factores de Google</title>
+            <link>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/saltarse-la-autentificacion-de-dos-factores-de-google/</guid>
+            <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;Dou Security&lt;/strong&gt;&lt;/em&gt; encontró un agujero de seguridad del sistema de autentificación de Google que permitía ganar control total sobre la &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificación de dos factores de Google&lt;/a&gt; y controlar las cuentas de Gmail haciendo uso de la única contraseña usada para conectarse a aplicaciones individuales de google.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;La vulnerabilidad está en la implementación del mecanismo de auto-login en la ultima versión del navegador Chrome para Android. Dicha vulnerabilidad permitión a Duo Security usar un ASP (Application-Specific-Password) para ganar acceso al panel de recuperación de cuentas de Google y gestionar la configuración de la autentificación de dos factores.&lt;/p&gt;
+&lt;p&gt;El auto-login permite a los usuarios que han enlazado sus dispositivos móviles o ChromeBooks a su cuenta de Google acceder automáticamente a todas las páginas que tienen que ver con aplicaciones de Google sin necesidad de insertar los datos de login.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Duo Security dijo en &lt;!-- raw HTML omitted --&gt;su blog&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;“Normalmente, una vez activada la autentificación en dos factores, Google te pide que crees contraseñas específicas para cada aplicación que uses. Lo cual quiere decir que dichas aplicaciones no soportan el login usando la autentificación en dos pasos.”*&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;“Luego, se usa un ASP en lugar de tu contraseña real. En términos más concretos, Se crean ASPs para la mayoría de aplicaciones cliente que no usan un login basado en Web: clientes email que usen IMAP y SMTP (Mail de Apple, Thunderbird etc); clientes de chat con comunicaciones mediante XMPP (Adium, pidgin etc) y aplicaciones de calendarios que se sincronizan usando CaIDAV (iCal, etc)”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Las ASPs son Tokens especializados generados para cada aplicación que el usuario usa en lugar de la combinación contraseña/token. Duo Security descubrió que los ASPs en ralidad no eran específicos para aplicaciones, de hecho, un único código podría usarse para loggearse en casi cualquier aplicación Web de Google debido a la característica del auto-login.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“En definitiva, usando solamente un nombre de usuario, un ASP y una simple petición a &lt;a href=&#34;https://android.clients.google.com/auth,&#34;&gt;https://android.clients.google.com/auth,&lt;/a&gt; es posible acceder a cualquier aplicación web de Google sin necesidad de que se nos soliciten datos de login (o verificación en dos pasos)”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Los investigadores comunicaron la vulnerabilidad a Google y el problema ya ha sido arreglado.&lt;/p&gt;
+&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Bypassing Google’s Two-Factor Authentication&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;thehackernews.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo</title>
+            <link>https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/</guid>
+            <description>&lt;p&gt;La Autenticación de dos factores (Two-factor autenticación) es una de &lt;!-- raw HTML omitted --&gt;las mejores cosas que puedes hacer&lt;!-- raw HTML omitted --&gt; para asegurarte de que tus cuentas no sean hackeadas. Aquí hay una lista de todos los servicios populares que la ofrecen, y donde deberías ir para activarlo ahora mismo.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-la-autenticación-de-dos-factores&#34;&gt;¿Qué es la Autenticación de Dos Factores?&lt;/h1&gt;
+&lt;p&gt;Las contraseñas, desafortunadamente, &lt;!-- raw HTML omitted --&gt;no son tan seguras como solían serlo,&lt;!-- raw HTML omitted --&gt; y si alguien obtiene tu contraseña, puede acceder a tu cuenta sin problema. La Autenticación de Dos Factores soluciona ese problema.&lt;/p&gt;
+&lt;p&gt;El gurú del spam de Google, Matt Cutts, &lt;!-- raw HTML omitted --&gt;lo expresa mejor&lt;!-- raw HTML omitted --&gt;: la Autenticación de dos factores es una simple característica que te pide más que solo tu contraseña. Requiere tanto “algo que sabes” (por ejemplo, una contraseña) como “algo que tienes” (por ejemplo, tu teléfono). Luego de ingresar tu contraseña, tendrás un segundo código enviado a tu teléfono, y solo después de ingresarlo podrás ingresar a tu cuenta. Piensa en esto como ingresar un numero de PIN, luego hacer un escaneo de retina, como ves en todas las películas de espías que existen. Es mucho mas seguro que una contraseña que puedes hackear, y mantiene a los fisgones no deseados alejados de tus cuentas online.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;dónde-puedo-usarla&#34;&gt;¿Dónde puedo usarla?&lt;/h1&gt;
+&lt;p&gt;Desafortunadamente, no puedes usar autenticación de dos factores en cualquier parte de la web todavía. Pero muchos sitios la han implementado recientemente, incluyendo muchos de tus servicios favoritos. Aquí están algunos servicios que permiten autenticación de dos factores, con algunas instrucciones de cómo habilitarla:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google/Gmail:&lt;/strong&gt; La mayoría de nosotros guarda mucha información en nuestras cuentas de Google, y definitivamente querrás protegerla activando la autenticación de dos factores. Puedes aprender &lt;!-- raw HTML omitted --&gt;cómo hacerlo aquí,&lt;!-- raw HTML omitted --&gt; o checkear la &lt;!-- raw HTML omitted --&gt;documentación oficial de Google&lt;!-- raw HTML omitted --&gt; para más información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LastPass&lt;/strong&gt;: Si usas LastPass para crear, manejar, y guardar tus contraseñas de otros sitios (lo cual recomendamos que hagas), este es uno de los más importantes servicios para los cuales tienes que habilitar la autenticación de dos factores, dado que almacena tus contraseñas por cualquier otro sitio en la red. Usa la aplicación &lt;!-- raw HTML omitted --&gt;Google Authenticator&lt;!-- raw HTML omitted --&gt; para Android, iOS y BlackBerry, y puedes leer &lt;!-- raw HTML omitted --&gt;cómo habilitarlo aquí&lt;!-- raw HTML omitted --&gt;. Alternativamente, puedes usar &lt;!-- raw HTML omitted --&gt;una de esas aplicaciones de gestión de contraseñas&lt;!-- raw HTML omitted --&gt; que sincronizan entre computadoras con Dropbox (que también soporta Autenticación de dos factores, como describimos a continuación.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Facebook&lt;/strong&gt;: Tener la contraseña de Facebook secuestrada puede ser más que sorprendente, y la autenticación de dos factores es muy fácil de usar. encontrarás instrucciones sobre &lt;!-- raw HTML omitted --&gt;cómo hacerlo aquí&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dropbox&lt;/strong&gt;: Dropbox es&lt;!-- raw HTML omitted --&gt; útil por una gran cantidad de cosas&lt;!-- raw HTML omitted --&gt;, no solo por estar almacenando datos y &lt;!-- raw HTML omitted --&gt;enviando información sensible a través de Internet.&lt;!-- raw HTML omitted --&gt; Hazte un favor y &lt;!-- raw HTML omitted --&gt;activa la autenticación de dos factores utilizando estas instrucciones&lt;!-- raw HTML omitted --&gt;. Si quieres otra capa de seguridad adicional, puedes hacerlo &lt;!-- raw HTML omitted --&gt;encriptando de los contenidos de tu Dropbox con TrueCrypt&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Algunos de los productos de Microsoft:&lt;/strong&gt; Microsoft no ha habilitado la autenticación de dos factores para Outlook aún, pero algunos de sus servicios - incluyendo Xbox Live, sus páginas de facturación, y SkyDrive cuando te conectas remotamente a otra computadora, lo requieren de forma predeterminada. Puedes leer más sobre ello &lt;!-- raw HTML omitted --&gt;aquí&lt;!-- raw HTML omitted --&gt;. Y, si quieres una mejor seguridad para Outlook, debes saber que &lt;!-- raw HTML omitted --&gt;Microsoft está trabajando en una forma segura y fácil&lt;!-- raw HTML omitted --&gt; para fortalecer tu login.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Correo Yahoo!&lt;/strong&gt;: Si eres un usuario de Yahoo, puedes &lt;!-- raw HTML omitted --&gt;activar la autenticación de dos factores&lt;!-- raw HTML omitted --&gt; para tu buzón.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Amazon Web Services&lt;/strong&gt;: Si utilizas cualquiera de los servicios web de Amazon, como Amazon S3 o el almacenamiento Glacier, puedes conseguir&lt;!-- raw HTML omitted --&gt; seguridad extra con Autenticación de Dos Factores&lt;!-- raw HTML omitted --&gt; a través de la aplicación Google Authenticator para Android, iOS y BlackBerry. También es compatible con Windows phone través de la aplicación &lt;!-- raw HTML omitted --&gt;Authenticator&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WordPress&lt;/strong&gt;: Si no quieres que nadie obtenga acceso no autorizado a tu blog, WordPress también es &lt;!-- raw HTML omitted --&gt;compatible con la aplicación Google Authenticator&lt;!-- raw HTML omitted --&gt; para Android, iOS y BlackBerry.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DreamHost&lt;/strong&gt;: Si alojas tu propio dominio o el sitio web en DreamHost - nuestro servicio favorito de web hosting, puedes habilitar la autenticación de dos factores con Google Authenticator para Android, iOS y BlackBerry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si utilizas cualquiera de estos servicios deberías habilitar autenticación de dos factores en este momento - es una de las mejores maneras de mantener tus datos (y, en muchos casos, tu dinero) seguros. Por supuesto, también deberías asegurarte de que utilizas una contraseña única y segura para cada una de tus cuentas, y si no lo haces, ya es b&lt;!-- raw HTML omitted --&gt;uen momento para cambiarlas&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Fuente | &lt;!-- raw HTML omitted --&gt;lifehacker&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

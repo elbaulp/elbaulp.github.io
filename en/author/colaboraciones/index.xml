@@ -1,0 +1,106 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>colaboraciones on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/author/colaboraciones/</link>
+        <description>Recent content in colaboraciones on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Wed, 09 Aug 2017 17:45:16 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/author/colaboraciones/</link>
+            <title>colaboraciones on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/author/colaboraciones/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Keep your LaTeX project clean with this simple script</title>
+            <link>https://elbauldelprogramador.com/en/keep-latex-project-clean/</link>
+            <pubDate>Wed, 09 Aug 2017 17:45:16 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/keep-latex-project-clean/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;This post is a collaboration by &lt;!-- raw HTML omitted --&gt;Luis Liñan&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;@lulivi&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today we are going to use a simple shell script to autoupdate the pdf preview of our latex files. Then, it will bring the pdf from the metafiles directory to our project directory, keeping it clean from auxiliar files.&lt;/p&gt;
+&lt;h1 id=&#34;directory-structure&#34;&gt;Directory structure&lt;/h1&gt;
+&lt;p&gt;Working with the same structure as &lt;a href=&#34;https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/&#34;&gt;other article from the blog&lt;/a&gt; we will have what follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+|-- figures
+|   |-- figure_1.pdf
+|   `-- ...
+|-- main.pdf
+|-- main.tex
+|-- ref.bib
+|-- style.sty
+`-- metafiles
+    |-- main.aux
+    |-- main.bbl
+    |-- main.blg
+    |-- main.fdb_latexmk
+    |-- main.fls
+    |-- main.lof
+    |-- main.log
+    |-- main.lot
+    |-- main.out
+    |-- main.pdf
+    `-- main.toc
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;script-execution&#34;&gt;Script execution&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Help function&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  mkdir &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$change&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~ &lt;span class=&#34;nv&#34;&gt;$pdf_substring&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+      cp &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/*.pdf ./
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;============&amp;gt; iNotify &amp;lt;============&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==&amp;gt;   Updated parent pdf file   &amp;lt;==&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;===================================&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file&lt;/span&gt;
+listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory&lt;/span&gt;
+latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The only thing we have to do is execute the script with the metafiles directory as an argument:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Check the &lt;a href=&#34;https://github.com/lulivi/Latex-PDF-auto-updater&#34;&gt;script repository&lt;/a&gt; out for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Compilar automáticamente ficheros en latex mientras los modificamos&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Ejecutar un script al modificar un fichero con inotify&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Latexmk man page&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

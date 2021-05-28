@@ -1,0 +1,46 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>criptografia on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/criptografia/</link>
+        <description>Recent content in criptografia on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 02 Oct 2017 17:32:33 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/criptografia/</link>
+            <title>criptografia on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/criptografia/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Editar y crear archivos cifrados con GPG en Vim</title>
+            <link>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</link>
+            <pubDate>Mon, 02 Oct 2017 17:32:33 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;gpg&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;GNU Privacy Guard&lt;/em&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-gpg&#34;&gt;¿Qué es &lt;strong&gt;gpg&lt;/strong&gt;?&lt;/h1&gt;
+&lt;p&gt;Me permito extraer el la definición de genbeta::Dev. Para una explicación más profunda del funcionamiento de &lt;strong&gt;gpg&lt;/strong&gt;, puedes dirigirte al artículo en GenBeta::Dev que cito en las referencias.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;!-- raw HTML omitted --&gt;podéis descargarlo desde la página oficial&lt;!-- raw HTML omitted --&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
+&lt;p&gt;Descarga el plugin &lt;!-- raw HTML omitted --&gt;gnupg.vim&lt;!-- raw HTML omitted --&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat ~/.vimrc
+:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Introducción a &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;genbeta::dev&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,534 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>colaboraciones on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/author/colaboraciones/</link>
+        <description>Recent content in colaboraciones on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Wed, 09 Aug 2017 17:45:16 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/author/colaboraciones/</link>
+            <title>colaboraciones on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/author/colaboraciones/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Mantén tu proyecto de LaTeX limpio con este simple script</title>
+            <link>https://elbauldelprogramador.com/mantener-proyecto-latex-limpio-script/</link>
+            <pubDate>Wed, 09 Aug 2017 17:45:16 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/mantener-proyecto-latex-limpio-script/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;!-- raw HTML omitted --&gt;Luis Liñan&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;@lulivi&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En esta entrada del blog utilizaremos un script simple que nos permitirá actualizar automáticamente nuestro documento pdf (a partir del fichero tex) y devolverlo al directorio de trabajo manteniendolo totalmente limpio.&lt;/p&gt;
+&lt;h1 id=&#34;estructura-del-directorio&#34;&gt;Estructura del directorio&lt;/h1&gt;
+&lt;p&gt;Siguiendo la estructura ya comentada en &lt;a href=&#34;https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/&#34;&gt;otro artículo del blog&lt;/a&gt; tendremos lo siguiente en nuestro directorio de trabajo:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+|-- figures
+|   |-- figure_1.pdf
+|   `-- ...
+|-- main.pdf
+|-- main.tex
+|-- ref.bib
+|-- style.sty
+`-- metafiles
+    |-- main.aux
+    |-- main.bbl
+    |-- main.blg
+    |-- main.fdb_latexmk
+    |-- main.fls
+    |-- main.lof
+    |-- main.log
+    |-- main.lot
+    |-- main.out
+    |-- main.pdf
+    `-- main.toc
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;ejecución-del-script&#34;&gt;Ejecución del script&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Help function&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  mkdir &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$change&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~ &lt;span class=&#34;nv&#34;&gt;$pdf_substring&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+      cp &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/*.pdf ./
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;============&amp;gt; iNotify &amp;lt;============&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==&amp;gt;   Updated parent pdf file   &amp;lt;==&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;===================================&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file&lt;/span&gt;
+listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory&lt;/span&gt;
+latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Lo único que hay que hacer es ejecutar el script desde el directorio de trabajo pasando como argumento el directorio donde irán los outputs de la compilación:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Para más información sobre el script, vea el &lt;a href=&#34;https://github.com/lulivi/Latex-PDF-auto-updater&#34;&gt;repositorio del script&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Compilar automáticamente ficheros en latex mientras los modificamos&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Ejecutar un script al modificar un fichero con inotify&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Latexmk man page&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo salir del mundo de Google</title>
+            <link>https://elbauldelprogramador.com/como-salir-mundo-google/</link>
+            <pubDate>Tue, 21 Mar 2017 13:00:18 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-salir-mundo-google/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;!-- raw HTML omitted --&gt;Martí Puig&lt;!-- raw HTML omitted --&gt;, Titulado en C.F.G.S. de Mantenimiento Electrónico. Amante de la cultura DIY, de la programación y la electrónica.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;como-está-la-privacidad-actualmente&#34;&gt;Como está la privacidad actualmente&lt;/h1&gt;
+&lt;p&gt;Actualmente nos han acostumbrado a que todos los servicios que tenemos en Internet sean &lt;strong&gt;gratuitos&lt;/strong&gt;. Sí claro, no tenemos que pagar ni tan solo un céntimo para poder disfrutar de todas las comodidades que nos ofrecen. Por ejemplo, ¿quién paga por una cuenta de correo electrónico?  ¿Quién paga por utilizar el servicio de almacenamiento en la nube donde uno puede &lt;a href=&#34;https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/&#34; title=&#34;Sincronizar Google Drive en Linux en 4 pasos&#34;&gt;sincronizar todos los dispositivos que quiera?&lt;/a&gt; ¿Quién paga por utilizar un servicio de &lt;a href=&#34;https://elbauldelprogramador.com/aplicacion-mensajeria-movil-segura-whatsapp-signal-allo/&#34; title=&#34;¿Qué Aplicación De Mensajería Móvil Es Más Segura?&#34;&gt;mensajería instantánea&lt;/a&gt; para poder comunicarse con sus amigos y familiares?&lt;/p&gt;
+&lt;p&gt;Y todos sabemos que detrás de estas aplicaciones y servicios hay grandes empresas que tienen beneficios millonarios año tras año. Entonces, si no cobran por sus servicios, &lt;em&gt;de dónde obtienen el dinero&lt;/em&gt; para poder conseguir estos beneficios?&lt;/p&gt;
+&lt;p&gt;Pues bien, la información siempre ha sido importante, y ahora más que nunca. Los datos son dinero y de nuestra información es de lo que realmente viven estas empresas. Por este motivo, últimamente se habla tanto del &lt;em&gt;Big Data&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nosotros somos el producto&lt;/strong&gt;, nosotros somos quien les damos, sin ningún reparo esta información la cual, ellos venden y de este modo obtienen beneficios. Por lo tanto, su materia prima, les sale gratis. Simplemente tienen que montar una infraestructura para poder lanzar su servicio a los usuarios y estos ya se encargan de ofrecerles su materia prima: &lt;strong&gt;Datos&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Ya hemos visto con el &lt;em&gt;caso de Snowden&lt;/em&gt; y el caso reciente de la filtración de información de la &lt;strong&gt;CIA&lt;/strong&gt; en &lt;em&gt;Wikileaks&lt;/em&gt; o con el caso del atentado de San Bernardino, donde la FBI pirateó un iPhone para obtener toda la información que contenía, después que Apple se hubiese negado a ofrecerle el acceso al dispositivo. Estos casos nos demuestran que nuestra información está expuesta a pesar de tomar medidas para tener a salvo nuestra información. Qué diversas organizaciones tienen acceso a lo que en teoría es &lt;strong&gt;privada&lt;/strong&gt;. Y tienen acceso de forma indebida.&lt;/p&gt;
+&lt;h1 id=&#34;como-escapar-de-la-vigilancia-en-internet&#34;&gt;Como escapar de la vigilancia en Internet&lt;/h1&gt;
+&lt;p&gt;Entonces, qué podemos hacer? Por suerte, hay servicios que pueden sustituir los que nos ponen en bandeja todas las funcionalidades que queramos a un precio muy caro. Nuestros datos. Por supuesto, estos programas sustitutos puede que no sean tan buenos ni tan funcionales que los privativos. Sin embargo, debido a la &lt;em&gt;gran comunidad de programadores&lt;/em&gt; que hay detrás, esta brecha se está haciendo cada vez más estrecha, y actualmente ya podemos disfrutar de una gran funcionalidad y con nuestros datos a salvo.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por ejemplo en cuanto a navegadores encontramos a dos grandes vencedores, &lt;strong&gt;Google Chrome&lt;/strong&gt; y &lt;strong&gt;Mozilla Firefox&lt;/strong&gt;. El primero, como ya es de esperar es de código privativo y el segundo es de código abierto. Pero como Google siempre quiere abarcar al máximo y mirar de contentar a todos los usuarios, tiene una versión de código abierto de su navegador, denominado Chromium. Sin embargo, nos centraremos en Mozilla Firefox que ya desde sus orígenes ha sido de código abierto.&lt;/p&gt;
+&lt;h1 id=&#34;pluggins-para-nuestro-navegador&#34;&gt;Pluggins para nuestro navegador&lt;/h1&gt;
+&lt;p&gt;En este navegador nos encontramos con una serie de &lt;em&gt;pluggins&lt;/em&gt; muy interesantes para salvar nuestra intimidad y maximizar nuestra seguridad. A continuación se muestran sus nombres y se especifica sus funcionalidades:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;__UBlock Origin__&lt;!-- raw HTML omitted --&gt;: Es el bloqueador más completo que hay actualmente entre los &lt;em&gt;pluggins&lt;/em&gt; disponibles de Firefox. Nos ahorrará tener que ver publicidad indeseada y molesta.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Privacy Badger&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; que elimina &lt;em&gt;trackers&lt;/em&gt;, publicidad, etc. A medida que lo utilizamos va aprendiendo y va eliminando más publicidad. En caso de que haya algo que no oculte automáticamente y deseemos ocultarlo, podemos seleccionarlo y ya no nos lo volverá a mostrar más.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;HTTPS Everywhere&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; muy útil ya que fuerza que todas las webs que abrimos sean con protocolo HTTPS. Muchas webs tienen las dos versiones, y a veces se nos puede abrir la web sin https, con lo cual, nos redirige automáticamente a la web que utiliza el protocolo más seguro.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;Self-destruction&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Desgraciadamente cuando navegamos por la red, las diferentes webs nos minan con &lt;em&gt;cookies&lt;/em&gt; y &lt;em&gt;trackers&lt;/em&gt;. Por esto, nos salen anuncios relacionados de los artículos que terminamos de buscar hace un momento. Para que no nos rastreen, podemos instalar este &lt;em&gt;pluggin&lt;/em&gt; para que vaya eliminando de forma periódica todas las &lt;em&gt;cookies&lt;/em&gt;. Tenemos 3 niveles: al instante, cuando cerremos la pestaña o el navegador.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;SSL Personas&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Es un &lt;em&gt;pluggin&lt;/em&gt; que nos muestra mediante colores la seguridad de la web en la que estamos navegando. Pinta el fondo del navegador de un color u otro en función del nivel de seguridad.&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;&lt;strong&gt;NoScript&lt;/strong&gt;&lt;!-- raw HTML omitted --&gt;: Inhabilita que se ejecuten &lt;em&gt;scripts&lt;/em&gt; con javascript. Esto puede ser útil por ejemplo si utilizamos un &lt;em&gt;adBlocker&lt;/em&gt; y nos salta el aviso de que no podemos acceder al contenido de la web hasta que no hayamos desactivado el &lt;em&gt;adBlocker&lt;/em&gt;. Aunque la verdad, hace bastante inviable la navegación, por lo tanto lo dejaremos en un segundo plano.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;buscadores-que-protegen-nuestra-privacidad&#34;&gt;Buscadores que protegen nuestra privacidad&lt;/h1&gt;
+&lt;p&gt;En cuanto a buscadores que vigilan por nuestra &lt;a href=&#34;https://elbauldelprogramador.com/tails-linux-importancia-privacidad/&#34; title=&#34;TAILS LINUX y la importancia de la privacidad&#34;&gt;privacidad&lt;/a&gt; e intimidad son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.startpage.com/&#34;&gt;StartPage&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://disconnect.me/&#34;&gt;Disconnect&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seguramente, algunos no conoceréis ninguno de estos buscadores ya que me diréis que sois fanáticos del buscador de Google y que no podéis vivir sin él. Pues podemos continuar utilizando los servicios de Google de forma que no violen nuestra privacidad ni intimidad. Para ello, vamos a utilizar el buscador más recomendable de los 3 que es StartPage. Este buscador hace de &lt;em&gt;proxy&lt;/em&gt; entre nosotros y Google de modo que terminaremos obteniendo los resultados de Google pero él será quien haga la búsqueda por nosotros y así Google no podrá obtener nuestros datos.&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que hacer la misma búsqueda en StartPage o hacerla en Google seguramente no obtendremos los mismos resultados a pesar que StartPage intenta hacer la búsqueda con el mismo idioma, desde el mismo país, etc&amp;hellip;&lt;/p&gt;
+&lt;h1 id=&#34;gestores-de-contraseñas&#34;&gt;Gestores de contraseñas&lt;/h1&gt;
+&lt;p&gt;Bueno&amp;hellip; y que decir de las &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet y cuando la longitud de la misma no importa&#34;&gt;contraseñas&lt;/a&gt;. Va muy bien el &lt;strong&gt;gestor de contraseñas de Google Chrome&lt;/strong&gt;, verdad? Allí, todas bien ordenadas y ocultas, pero que con un solo click podemos convertirlas en texto plano y ver la contraseña que habíamos olvidado, no?&lt;/p&gt;
+&lt;p&gt;Si bien es cierto que en teoría, aunque Google viva de nuestros datos, parece ser que el tema de las contraseñas aún lo respeta. No debemos olvidar que estas contraseñas están en los servidores de Google. Por este motivo debemos utilizar un gestor de contraseñas abierto y que lo tengamos en local, bajo nuestro control. Nada de subir las contraseñas a Internet. Porque ya hemos visto que de seguro tiene bien poco.&lt;/p&gt;
+&lt;p&gt;Para ello utilizaremos el programa &lt;strong&gt;KeypassX&lt;/strong&gt;. Es el mismo que Keypass sin embargo, este es multiplataforma. Es un gestor de contraseñas con una base de datos local donde almacenaremos todas nuestras contraseñas. Para acceder a esta base de datos tendremos una contraseña maestra, que será la única que deberemos recordar ya que una vez dentro, tendremos acceso al gestor de contraseñas. De este modo, el resto de contraseñas, podran ser realmente seguras e indescifrables ya que no tendremos que recordarlas. Debemos de tener en cuenta que la contraseña maestra debe ser segura ya que si no, pierde toda utilidad el Keypass.&lt;/p&gt;
+&lt;p&gt;Veremos que el programa, nos crea un archivo que es la Base de Datos. Es recomendable ir haciendo copias de seguridad en varios dispositivos por si algún día pasa algún desastre y perdemos el archivo o se corrompe. Ya que entonces, habremos perdido todas nuestras credenciales.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/author/alex&#34; title=&#34;Alejandro&#34;&gt;Alejandro&lt;/a&gt; sin embargo, recomienda usar &lt;!-- raw HTML omitted --&gt;LastPass&lt;!-- raw HTML omitted --&gt;, ya que es el gestor de contraseñas usado por &lt;strong&gt;Steve Gibson&lt;/strong&gt;, un experto en seguridad y comentarista en el pódcast &lt;a href=&#34;https://elbauldelprogramador.com/categories/security-now/&#34; title=&#34;Security Now!&#34;&gt;Security Now!&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Muchos se preguntarán. Si alguien tiene acceso a este archivo, también tiene acceso a todas mis contraseñas, no? No. Porque está &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/&#34; title=&#34;Cómo cifrar archivos con openssl&#34;&gt;cifrado&lt;/a&gt; y sin tu contraseña maestra no va a poder ver nada.&lt;/p&gt;
+&lt;p&gt;Y como deben ser nuestras contraseñas? Bueno pues básicamente hay que seguir 3 reglas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No reutilices tus contraseñas. Porque si por lo que sea, consiguen obtener una y esta se utiliza en varios servicios. Podrán acceder a todos ellos con solo una contraseña.&lt;/li&gt;
+&lt;li&gt;No compartas la contraseña. A pesar de tener mucha confianza con tu pareja, hermanos, familia. Una contraseña es algo personal e intransferible. No compartas con nadie tus contraseñas.&lt;/li&gt;
+&lt;li&gt;Es aconsejable ir cambiando las contraseñas periódicamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Y como sé si es fuerte o no mi contraseña? Pues hay varios servicios en la red donde podemos validar la fortaleza de estas. Por ejemplo, aquí encontramos una muy buena web donde nos dice el tiempo que tardarían en conseguir nuestra contraseña y con qué tipo de ordenador &lt;a href=&#34;http://passwd.criptica.org&#34;&gt;web para validar nuestras contraseñas&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;tor-el-rey-de-la-privacidad&#34;&gt;Tor, el rey de la privacidad&lt;/h1&gt;
+&lt;p&gt;Llegados a este punto ya hemos conseguido que nuestras contraseñas sean seguras. Que nuestras &lt;strong&gt;consultas en los buscadores sean anónimas y que nuestro navegador sea lo más seguro&lt;/strong&gt; y privado posible. Sin embargo, aún podemos ir un paso más allá y usar la red Tor.&lt;/p&gt;
+&lt;p&gt;Es una red que nos provee de una IP diferente a la nuestra y que se ubica en otro punto geográfico al nuestro. A parte, nos ofrece una privacidad al máximo nivel ya que aunque nuestro mensaje sea interceptado nunca se podrá obtener el 100% de la información o metadatos vinculados a este.&lt;/p&gt;
+&lt;p&gt;Por supuesto, la gran ventaja de estos programas comentados anteriormente, es que son libres, y el código fuente es público. Por lo tanto, podemos verificar si realmente funcionan como deben, tienen &lt;em&gt;bugs&lt;/em&gt; o tienen funcionalidades ocultas. Y aunque no todo el mundo se pare a revisar su código, el hecho de que esté disponible y sea posible que cualquier persona lo pueda revisar, da más confianza que uno que se encuentra oculto&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Si quieres aprender a configurar Tor, visita la guía &lt;a href=&#34;https://elbauldelprogramador.com/logrando-el-anonimato-con-tor-parte-1/&#34; title=&#34;Logrando el Anonimáto con Tor&#34;&gt;Logrando el Anonimáto con Tor&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bien, espero que les haya gustado mi primer tutorial en esta página y espero poder ir aportando mi granito de arena periódicamente a la comunidad.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>TAILS LINUX y la importancia de la privacidad</title>
+            <link>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</link>
+            <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/tails-linux-importancia-privacidad/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Este artículo es una colaboración de &lt;em&gt;Paula de la Hoz (&lt;a href=&#34;https://twitter.com/Terceranexus6&#34;&gt;@Terceranexus6&lt;/a&gt;&lt;/em&gt;. Su blog: &lt;a href=&#34;https://ohmybits.tumblr.com&#34;&gt;Oh My Bits&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://medium.com/@HamletAgain&#34;&gt;Hamlet Again&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;contexto-actual&#34;&gt;Contexto actual&lt;/h1&gt;
+&lt;p&gt;Con el incipiente avance tecnológico, en nuestra sociedad cada vez se valora más la privacidad del usuario. Todo lo que hacemos, quiénes somos, qué nos gusta, es información que nos puede parecer irrelevante según para qué contextos. Sin embargo para las empresas, gobiernos y asociaciones, esa información es muy valiosa y puede incluso llegar a &lt;em&gt;limitarnos&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Decir que no te importa el derecho a la privacidad porque no tienes nada que esconder no se diferencia de decir que no te importa la libertad de expresión porque no tienes nada que decir.&lt;/em&gt;&amp;rdquo;
+&amp;mdash; &lt;strong&gt;Edward Snowden&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El ex-empleado de la NSA &lt;strong&gt;&lt;em&gt;Edward Snowden&lt;/em&gt;&lt;/strong&gt;, conocido por su implicación en wikileaks con filtraciones de información clasificada, ha abogado por la defensa de la privacidad y los derechos en internet a través de las redes, incluso desde su asilo político en Rusia. Esta controvertida figura, para mantener &amp;ldquo;&lt;em&gt;a salvo&lt;/em&gt;&amp;rdquo; su privacidad utiliza, principalmente, un sistema operativo llamado &lt;strong&gt;TAILS LINUX&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-tails&#34;&gt;¿Qué es Tails?&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://tails.boum.org/index.en.html&#34;&gt;TAILS&lt;/a&gt; es un sistema operativo &lt;em&gt;live&lt;/em&gt;, ¿ésto qué quiere decir? que podemos utilizarlo desde cualquier ordenador utilizando simplemente un pen drive. Es completamente gratuito, libre y está basado en Debian &lt;a href=&#34;https://elbauldelprogramador.com/categories/linux&#34; title=&#34;Artículos sobre Linux&#34;&gt;GNU/Linux&lt;/a&gt;. Una de las características principales de TAILS, es que basa todas sus conexiones en &lt;strong&gt;TOR&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt; es un navegador que protege al usuario frente al análisis del tráfico de paquetes y la vigilancia masiva usando un sistema alternativo de nodos voluntarios y túneles virtuales, en lugar de hacer una conexión directa.&lt;/p&gt;
+&lt;p&gt;Además de &lt;a href=&#34;https://elbauldelprogramador.com/tags/tor&#34;&gt;TOR&lt;/a&gt;, TAILS permite utilizar I2P, y en la web oficial viene &lt;a href=&#34;https://tails.boum.org/doc/anonymous_internet/i2p/index.en.html&#34;&gt;documentado&lt;/a&gt; cómo utilizarlo. El sistema operativo, que ocupa en su totalidad &lt;em&gt;4 gigas&lt;/em&gt;, viene con una serie de programas predeterminados relacionados con la privacidad, la ofimática y la mensajería. En un principio, el pen drive no guarda la información de una sesión a otra, pero &lt;a href=&#34;https://tails.boum.org/install/clone/index.en.html&#34;&gt;podemos configurarlo&lt;/a&gt; para utilizar la memoria sobrante del pen drive.&lt;/p&gt;
+&lt;h1 id=&#34;instalación-y-uso&#34;&gt;Instalación y uso&lt;/h1&gt;
+&lt;p&gt;Configurar un pen drive para instalar TAILS es bastante sencillo, especialmente porque &lt;a href=&#34;https://tails.boum.org/install/os/index.en.html&#34;&gt;viene indicado paso a paso&lt;/a&gt; en la página oficial. Además incluye especificaciones de instalación desde cualquier sistema operativo (Linux, Windows, MAC y otro TAILS). El proceso es básicamente bajarse la imagen desde TOR, preparar un pen drive de 4 o más gigas, e instalar la imagen en éste.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Para usar este sistema operativo, simplemente insertamos el pen drive en uno de los puertos de un ordenador apagado y lo encendemos. El ordenador tardará varios segundos en terminar de cargar la imagen, pero cuando lo haga tendremos acceso a nuestro escritorio desde el cual podremos navegar con tranquilidad. Una vez que apagamos el ordenador y retiramos el pen drive, &lt;strong&gt;no queda rastro&lt;/strong&gt; de lo que hayamos hecho en el ordenador, ya que se sobrescribe la memoria.&lt;/p&gt;
+&lt;p&gt;Por muy seguro que pueda ser este sistema operativo y las herramientas que ofrece, en la propia página web indica que la mejor forma de protegerse es el &lt;em&gt;sentido común&lt;/em&gt; del usuario, tales como utilizar contraseñas fuertes y saber utilizar apropiadamente las herramientas que ofrece, comprendiendo las limitaciones.&lt;/p&gt;
+&lt;h1 id=&#34;programas-y-recursos&#34;&gt;Programas y recursos&lt;/h1&gt;
+&lt;p&gt;Algunas de las herramientas más interesantes con las que viene Tails son las siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://guardianproject.info/code/luks/&#34;&gt;LUKS&lt;/a&gt; (Linux Unified Key Setup), que te permite encriptar pen drives y discos externos.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt; es una extensión desarrollada por la &lt;a href=&#34;eff.org&#34;&gt;EFF&lt;/a&gt; para encriptar todas las conexiones usando https.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://openpgp.org/&#34;&gt;OpenPGP&lt;/a&gt; &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;para encriptar y firmar documentos y correos&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://otr.cypherpunks.ca/&#34;&gt;OTR&lt;/a&gt;, para proteger mensajería instantánea.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://wipetools.tuxfamily.org/nautilus-wipe.html&#34;&gt;Nautilus Wipe&lt;/a&gt; para borrar archivos con seguridad.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;confías-plenamente-en-tails-ellos-esperan-que-no&#34;&gt;¿Confías plenamente en TAILS? ellos esperan que no&lt;/h1&gt;
+&lt;p&gt;Una de los problemas fundamentales de la sociedad actual en términos de informática es el desinterés del usuario medio por su privacidad y seguridad. Y esta concienciación empieza precisamente con la duda. Sean cuales sean nuestros motivos para confiar en un sistema operativo, programa o aplicación, deben haber pasado un filtro de duda y escepticismo, y eso mismo &lt;a href=&#34;https://tails.boum.org/doc/about/trust/index.en.html&#34;&gt;nos sugieren&lt;/a&gt; en la página de TAILS.&lt;/p&gt;
+&lt;p&gt;Las herramientas que ofrecen no sólo tienen un objetivo técnico si no que se esfuerzan en ofrecerte una nueva visión y un cambio en la forma en que sus usuarios usan la tecnología y su información. El uso de este sistema debe ir acompasando al interés por nuestra privacidad, y a la curiosidad por saber qué se hace con nuestra información.&lt;/p&gt;
+&lt;p&gt;Para ello ofrecen una serie de razones por las cuales puede decirse que abogan por estas cualidades. Basa su justificación en el uso de software libre bien documentado, TOR, y el hecho de utilizar Debian GNU/Linux, que aunque ha tenido bugs importantes como &lt;a href=&#34;https://lists.debian.org/debian-security-announce/2008/msg00152.html&#34;&gt;SSH PRNG&lt;/a&gt; no se han encontrado vulnerabilidades de seguridad hasta la fecha, lo que lo convierte en un buen candidato para este sistema.&lt;/p&gt;
+&lt;h1 id=&#34;rompiendo-barreras&#34;&gt;Rompiendo barreras&lt;/h1&gt;
+&lt;p&gt;Es de saber que las distintas distribuciones de linux tienen cierta fama entre los programadores e informáticos de todo el mundo. Debido a la amplia oferta de sistemas operativos disponibles, hay algunas más o menos amigables para un usuario medio. TAILS pretende ser accesible y manejable para cualquiera, tenga o no una base sólida en el uso de programación, linux y Bash. Para ello ofrece una interfaz gráfica intuitiva y una instalación simple.&lt;/p&gt;
+&lt;p&gt;El uso de este sistema puede tener muchas aplicaciones en nuestro día a día, y es completamente legal. No necesitamos ser Edward Snowden para &lt;strong&gt;necesitar o querer&lt;/strong&gt; privacidad, por ejemplo, a la hora de consultar nuestro correo en un ordenador público. La idea de este sistema es liberarnos de la obligación de &amp;ldquo;&lt;em&gt;confiar&lt;/em&gt;&amp;rdquo; en un ordenador público, o de algún amigo.&lt;/p&gt;
+&lt;p&gt;Esta idea puede que nos resulte difícil de agregar a nuestra rutina, pero sin duda se debería hacerse una pequeña reflexión sobre ello. El ritmo de nuestra sociedad ha cambiado con rapidez en pocos años, y dependemos en nuestra vida privada y trabajo (con frecuencia) de programas y aplicaciones que manejan gran cantidad de información privada. Esta rapidez ha hecho que el usuario medio se acostumbre a la comodidad de estas herramientas, pero se olvide con frecuencia de proteger sus datos a la hora de utilizarla, muchas veces por la gran cantidad de trabas y dificultades para ello.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo crear un Front Controller en PHP</title>
+            <link>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Seguro que a algunos os habrá gustado esta decisión porque pensáis que &lt;strong&gt;a veces es mejor no usar ningún framework&lt;/strong&gt;, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como &lt;a href=&#34;http://www.slimframework.com/&#34; title=&#34;Slim Framework&#34;&gt;Slim&lt;/a&gt; más de uno comenzará a plantearse esta cuestión, ¿verdad?&lt;/p&gt;
+&lt;p&gt;En todo caso, nosotros levantamos nuestra app desde cero con estas ideas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Definimos la estructura de carpetas &lt;strong&gt;pensando en CRUD&lt;/strong&gt;, de acuerdo a los objetos que tenemos que gestionar, y a las operaciones que se llevan a cabo sobre dichos objetos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Separamos la lógica&lt;/strong&gt; PHP de la lógica de presentación (HTML, CSS y JS).&lt;/li&gt;
+&lt;li&gt;Implementamos el patrón de diseño &lt;strong&gt;Singleton&lt;/strong&gt; en la clase &lt;code&gt;People&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Por cierto, te recuerdo que el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; está disponible &lt;a href=&#34;https://github.com/programarivm/phpguay/tree/master/agenda&#34; title=&#34;AgendaPHPGuay disponible en GitHub&#34;&gt;en este repositorio de GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Finalmente &lt;strong&gt;propusimos a los alumnos que mejoraran la seguridad de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; implementando el patrón de diseño de software &lt;a href=&#34;http://en.wikipedia.org/wiki/Front_Controller_pattern&#34; title=&#34;Front Controller&#34;&gt;Front Controller&lt;/a&gt;&lt;/strong&gt;. Y los que teníais un nivel de programación intermedio comentabais que esta propuesta empezaba a complicarse bastante. Pues bien amig@s, que no cunda el pánico, hoy voy a explicar qué pasos hay que seguir exactamente para poner un Front Controller en la app.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-front-controller&#34;&gt;¿Qué es Front Controller?&lt;/h1&gt;
+&lt;p&gt;Front Controller es un patrón de diseño de software muy utilizado en aplicaciones web que consiste en &lt;strong&gt;definir un único punto de acceso para todas las peticiones HTTP&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A diferencia de las aplicaciones web clásicas, por así decir, donde el usuario podía ejecutar directamente cualquier script referenciándolo directamente en la barra de direcciones de su navegador, &lt;strong&gt;con Front Controller solo se accede a un punto central único: el famoso archivo index.php&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El resto de archivos permanece inaccesible a los usuarios, a excepción de los assets, por supuesto, es decir, las imágenes, los archivos CSS y los archivos JavaScript.&lt;/p&gt;
+&lt;p&gt;Front Controller aporta por tanto una capa de seguridad, y mejora también el mantenimiento de la aplicación porque permite definir en un solo punto toda aquella lógica que de otro modo estaría esparcida en varios archivos diferentes. Esta es la lógica de inicialización o arranque de la app (bootstrap logic).&lt;/p&gt;
+&lt;h1 id=&#34;cómo-se-implementa-front-controller&#34;&gt;¿Cómo se implementa Front Controller?&lt;/h1&gt;
+&lt;p&gt;Implementar Front Controller es sencillo. Por un lado, primero &lt;strong&gt;tenemos que crear una carpeta llamada &lt;code&gt;public&lt;/code&gt; en la carpeta raíz de nuestra aplicación&lt;/strong&gt;. Aquí ponemos los archivos que pueden ver los usuarios de Internet, por así decirlo. O dicho de otra forma, los archivos que están en &lt;code&gt;public&lt;/code&gt; son los únicos accesibles por los usuarios desde su navegador web. Estos archivos son los assets y el mismo &lt;code&gt;index.php&lt;/code&gt;. A modo de ejemplo &lt;strong&gt;puedes echar un vistazo a &lt;a href=&#34;http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application&#34; title=&#34;Estructura de directorios de una app MVC&#34;&gt;esta estructura de directorios&lt;/a&gt; recomendada por Slim&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Luego, por otro lado, tienes que asegurarte que &lt;strong&gt;tu servidor web canaliza todas las peticiones hacia tu archivo &lt;code&gt;index.php&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En Apache:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;RewriteEngine On
+RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-f
+RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   try_files   &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt;/ /index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo Crear Un Bundle Symfony2</title>
+            <link>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</link>
+            <pubDate>Mon, 22 Jun 2015 09:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-un-bundle-symfony2/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;em&gt;Alejandro Blanco&lt;/em&gt;, Director de desarrollo en &lt;a href=&#34;http://smsup.es&#34;&gt;smsup.es&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En este articulo vamos a ver los pasos que he seguido para crear un bundle de symfony 2 de forma que sea redistribuible mediante composer. Este bundle servirá para facilitar la interacción con la api de smsup, desde symfony2 y poder enviar sms masivos. Es un bundle simple, pero tiene varias cosas interesantes (requiere otra librería, utiliza parámetros de configuración, etc.), y puede ser una buena introducción.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Voy a describir paso a paso como lo he creado, habrá otras formas igualmente válidas y seguramente mejores, esto es solo como yo lo he hecho.&lt;/p&gt;
+&lt;p&gt;Asumo que ya tenemos composer instalado, si no es así, se puede instalar &lt;a href=&#34;https://getcomposer.org/download/&#34;&gt;siguiendo estos pasos&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;instalar-symfony2&#34;&gt;Instalar symfony2&lt;/h1&gt;
+&lt;p&gt;Lo primero es instalar symfony, en este caso voy a instalar la versión 2.3, que es la versión menor con soporte ahora mismo, ya que quiero que sea compatible con el máximo de versiones posible y para ello lo mejor es crearlo sobre la menor versión.
+Lo instalamos usando el comando siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer create-project symfony/framework-standard-edition /ruta/hasta/directorio-raiz-servidor-web/Symfony 2.3.0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;creamos-la-base-del-bundle&#34;&gt;Creamos la base del bundle&lt;/h1&gt;
+&lt;p&gt;Una vez instalado, creamos dentro de vendors el directorio del bundle siguiendo la estructura en la que queramos que luego se instale. En este caso voy a usar la estructura smsup\smsup-api-bundle.&lt;/p&gt;
+&lt;p&gt;Ahora creamos dentro los archivos mínimos que debe tener el bundle para funcionar:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DependencyInjection/SmsupapiExtension.php&lt;/strong&gt;: este archivo gestiona la carga de la configuración de los servicios definidos por el bundle. Aquí vamos cargar el archivo services.yml.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\DependencyInjection;
+  use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\HttpKernel\DependencyInjection\Extension;
+
+class SmsupapiExtension extends Extension
+{
+    public function load(array $configs, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+        $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Resources/config/services.yml&lt;/strong&gt;: aquí se definen los servicios que expone el bundle. Vamos a definir solo un servicio que expondrá los métodos de la api y gestionara las peticiones a la librería. También podemos incluir en este archivo parámetros de configuración que luego queramos usar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+services:
+  smsup.smsupapi.sender:
+      class: smsup&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupapiBundle&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;lases&lt;span class=&#34;se&#34;&gt;\S&lt;/span&gt;msupSender
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Clases/SmsupSender.php&lt;/strong&gt;: esta será la clase que hemos definido para usar como servicio, en principio solo definiremos un método que haga un echo en pantalla para comprobar que funciona.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
+class SmsupSender {
+  public function Send($mensaje)
+  {
+    echo &amp;#34;Su mensaje es: &amp;#34; . $mensaje;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;SmsupapiBundle.php&lt;/strong&gt;: clase que extiende de Bundle y sirve para cargarlo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+class SmsupapiBundle extends Bundle
+{
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto tendríamos definidos los archivos mínimos para crear el bundle y poder usarlo. Para probar que funciona bien vamos a modificar el archivo de autoload generado por composer (solo a modo de prueba, esto no debe hacerse ya que cada vez que instalamos algo con composer se modifican estos archivos), para simular como quedará una vez nuestro bundle sea instalado y añadiremos la carga del bundle en AppKernel.&lt;/p&gt;
+&lt;p&gt;En vendor\composer\autoload_psr4.php, añadir esta entrada en el array devuelto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+&amp;#39;smsup\\SmsupapiBundle\\&amp;#39; =&amp;gt; array($vendorDir . &amp;#39;/smsup/SmsupapiBundle&amp;#39;),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En AppKernel añadimos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+new smsup\SmsupapiBundle\SmsupapiBundle(),
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora solo queda comprobar que todo funciona bien, para ello vamos a Acme\DemoBundle\Controller\WelcomeController.php y en el método indexAction añadimos el siguiente código:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+$sender = $this-&amp;gt;get(&amp;#39;smsup.smsupapi.sender&amp;#39;);
+$sender-&amp;gt;send(&amp;#39;entró y funciona&amp;#39;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto simplemente obtendrá el servicio definido en nuestro bundle y llamara al método send que definimos, pasando el mensaje &amp;ldquo;entró y funciona&amp;rdquo;. Al ejecutar en el navegador localhost/RUTA_SYMFONY/web/app_dev.php/ deberíamos ver la página de bienvenida de symfony, pero en la primera línea debe aparecer el texto &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;, lo cual nos indica que todo ha ido bien.&lt;/p&gt;
+&lt;h1 id=&#34;subida-al-repositorio&#34;&gt;Subida al repositorio&lt;/h1&gt;
+&lt;p&gt;Como ya sabemos que funciona correctamente nuestro bundle, aunque no haga nada útil aun, vamos a subirlo a nuestro repositorio git y a añadirlo a packagist para que pueda ser descargado usando composer. Para esto debemos añadir el archivo composer.json, en el que vamos a definir nuestro bundle. En nuestro caso quedaría así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;
+&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;smsup/smsup-api-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;symfony-bundle&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Bundle Symfony2 para el uso de la api de smsup.es para el envio de sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;keywords&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;sms api&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;bundle sms&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;homepage&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://www.smsup.es&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;license&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;MIT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;require&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;php&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;=5.3.2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;smsup/smsuplib&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;~2.0&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt;
+  &lt;span class=&#34;nt&#34;&gt;&amp;#34;autoload&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;nt&#34;&gt;&amp;#34;psr-4&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;#34;smsup\\SmsupapiBundle\\&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los parámetros importantes aquí son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name:&lt;/strong&gt; es el nombre que le damos y deber ser único&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;type:&lt;/strong&gt; indicamos el tipo que es, en este caso un bundle de symfony&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;require:&lt;/strong&gt; indicamos las dependencias de nuestro bundle, en este caso la librería &amp;ldquo;smsup/smsuplib&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;autoload:&lt;/strong&gt; indicamos que el namespace smsup\SmsupapiBundle hace referencia a la raíz de nuestro bundle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ya solo debemos declarar nuestro paquete en packagist, para lo cual tenemos que acceder a &lt;a href=&#34;https://packagist.org&#34;&gt;https://packagist.org&lt;/a&gt; y hacer login. Luego vamos a &amp;ldquo;Submit&amp;rdquo; e indicamos el enlace al repositorio y solo con esto ya nos cargara el mismo. Para que cada vez que actualicemos nuestro repositorio packagist actualice los datos, se recomienda añadir un webhook al repositorio. En el caso de github, debemos ir a Settings -&amp;gt; Weebhooks &amp;amp; Services -&amp;gt; Add Service. Seleccionar tipo Packagist e indicar el nombre de usuario y la clave de la API de packagist.&lt;/p&gt;
+&lt;p&gt;Una vez hecho esto vamos a instalar nuestro bundle desde composer para ver que todo es correcto. Antes vamos a eliminar el directorio que creamos en vendor, para que se instale limpiamente.&lt;/p&gt;
+&lt;p&gt;Como no hemos definido ninguna versión en nuestro repositorio, para que composer descargue el paquete, debemos cambiar en el archivo composer.json de symonfy, la estabilidad mínima de los paquetes a descargar, ya que la rama master se considera de desarrollo. Esto se hace cambiando &amp;ldquo;stable&amp;rdquo; por &amp;ldquo;dev&amp;rdquo; en:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;
+&lt;span class=&#34;s2&#34;&gt;&amp;#34;minimum-stability&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;stable&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para instalarlo ejecutamos la siguiente instruccion:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer require smsup/smsup-api-bundle master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hemos incluido &amp;ldquo;master&amp;rdquo; para indicar que se descargue la rama master, ya que aún no definimos ninguna versión estable.&lt;/p&gt;
+&lt;p&gt;Tras esto ya tenemos nuestro bundle instalado correctamente en vendors y si ejecutamos el código que teníamos de prueba veremos de nuevo el mensaje &amp;ldquo;Su mensaje es: entró funciona&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Ahora ya solo debemos incluir las funcionalidades que queramos que tenga e ir actualizando el repositorio.
+Vamos a añadir la funcionalidad y luego veremos como crear la primera versión estable.&lt;/p&gt;
+&lt;h1 id=&#34;añadimos-parámetros-obligatorios-de-configuración&#34;&gt;Añadimos parámetros obligatorios de configuración&lt;/h1&gt;
+&lt;p&gt;Vamos a añadir dos parámetros de configuración obligatorios, en los que se le indicara al bundle el ID de la Api y la clave secreta de la misma.
+Para esto debemos crear el archivo DependencyInjection/Configuration.php en el que indicamos, mediante el método getConfigTreeBuilder, el árbol de parámetros que vamos a usar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\DependencyInjection;
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+class Configuration implements ConfigurationInterface
+{
+    public function getConfigTreeBuilder()
+    {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder-&amp;gt;root(&amp;#39;smsupapi&amp;#39;);
+        $rootNode-&amp;gt;
+          children()
+            -&amp;gt;scalarNode(&amp;#39;api_id&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+            -&amp;gt;scalarNode(&amp;#39;api_secret&amp;#39;)
+                -&amp;gt;isRequired()
+                -&amp;gt;cannotBeEmpty()
+            -&amp;gt;end()
+          -&amp;gt;end()
+        ;
+        return $treeBuilder;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí indicamos que en el nodo &amp;ldquo;smsupapi&amp;rdquo; debe haber dos parámetros &amp;ldquo;api_id&amp;rdquo; y &amp;ldquo;api_secret&amp;rdquo; y que son obligatorios y no deben estar vacíos. Según esta configuración, si falta alguno de los parámetros symfony dará un error.&lt;/p&gt;
+&lt;p&gt;Luego debemos añadir unas líneas al archivo DependencyInjection/SmsupapiExtension.php para que se procese esa configuración, y hacemos que se inyecten los valores de los parámetros al servicio que habíamos creado.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+public function load(array $configs, ContainerBuilder $container)
+{
+    $processor = new Processor();
+    $configuration = new Configuration();
+    $config = $processor-&amp;gt;processConfiguration($configuration, $configs);
+    $loader = new YamlFileLoader($container, new FileLocator(__DIR__.&amp;#39;/../Resources/config&amp;#39;));
+    $loader-&amp;gt;load(&amp;#39;services.yml&amp;#39;);
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApiid&amp;#39;, array($config[&amp;#39;api_id&amp;#39;]));
+    $container-&amp;gt;getDefinition(&amp;#39;smsup.smsupapi.sender&amp;#39;)
+                -&amp;gt;addMethodCall(&amp;#39;setApisecret&amp;#39;, array($config[&amp;#39;api_secret&amp;#39;]));
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ello añadimos al servicio los setters correspondientes a la clase del nuestro servicio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+protected $apiId;
+protected $apiSecret;
+public function setApiid($apiId)
+{
+  $this-&amp;gt;apiId = $apiId;
+}
+public function setApisecret($apiSecret)
+{
+  $this-&amp;gt;apiSecret = $apiSecret;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Inyectamos de esta forma los parámetros para evitar inyectar el container al servicio, ya que no vamos a necesitarlo para ninguna otra cosa.&lt;/p&gt;
+&lt;h1 id=&#34;añadimos-la-funcionalidad-a-nuestro-servicio&#34;&gt;Añadimos la funcionalidad a nuestro servicio&lt;/h1&gt;
+&lt;p&gt;Ahora vamos a añadir la funcionalidad que queremos que tenga a nuestro servicio. En este caso vamos a exponer 5 métodos públicos, que se corresponden con los métodos de la librería &amp;ldquo;smsuplib&amp;rdquo;. Añadiremos algunos cambios para facilitar el paso de parámetros y la gestión del resultado de la petición.
+SmsupSender.php quedaría así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+  namespace smsup\SmsupapiBundle\Clases;
+  use smsup\smsuplib;
+class SmsupSender {
+  protected $apiId;
+  protected $apiSecret;
+  public function setApiid($apiId)
+  {
+    $this-&amp;gt;apiId = $apiId;
+  }
+  public function setApisecret($apiSecret)
+  {
+    $this-&amp;gt;apiSecret = $apiSecret;
+  }
+  public function getNewSms()
+  {
+    return new Sms;
+  }
+  public function enviarSms(Sms $sms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;NuevoSms($sms-&amp;gt;getTexto(), $sms-&amp;gt;getNumeros(), $sms-&amp;gt;getFechaenvio(), $sms-&amp;gt;getReferencia(), $sms-&amp;gt;getRemitente());
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function eliminarSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EliminarSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function estadoSms($idsms)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;EstadoSMS($idsms);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function creditosDisponibles()
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;CreditosDisponibles();
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  public function resultadoPeticion($referencia)
+  {
+    $lib = $this-&amp;gt;getSmsapilib();
+    $respuesta = $lib-&amp;gt;ResultadoPeticion($referencia);
+    return $this-&amp;gt;setResult($respuesta);
+  }
+  private function getSmsapilib()
+  {
+    return new smsuplib($this-&amp;gt;apiId, $this-&amp;gt;apiSecret);
+  }
+  private function setResult($respuesta)
+  {
+    return new Result($respuesta[&amp;#39;httpcode&amp;#39;], $respuesta[&amp;#39;resultado&amp;#39;]);
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Añadimos dos clases como ayuda:&lt;/p&gt;
+&lt;h1 id=&#34;smsphp&#34;&gt;Sms.php&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;resultphp&#34;&gt;Result.php&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;
+namespace smsup\SmsupapiBundle\Clases;
+class Result {
+  protected $httpcode;
+  protected $result;
+  public function __construct ($httpcode, $result)
+  {
+    $this-&amp;gt;httpcode = $httpcode;
+    $this-&amp;gt;result = $result;
+  }
+  public function getHttpcode()
+  {
+    return $this-&amp;gt;httpcode;
+  }
+  public function getResult()
+  {
+    return $this-&amp;gt;result;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora ya tenemos completada la primera versión de nuestro bundle, por lo que actualizamos el repositorio y vamos a crear la primera versión estable del mismo.&lt;/p&gt;
+&lt;h1 id=&#34;primera-versión-estable&#34;&gt;Primera versión estable&lt;/h1&gt;
+&lt;p&gt;Para definir una versión solo debemos añadir una etiqueta con la versión al repositorio y packagist se encarga del resto. La etiqueta debe tener el formato &amp;lsquo;X.Y.Z&amp;rsquo; o &amp;lsquo;vX.Y.Z&amp;rsquo; (también puede llevar un sufijo RC, beta, etc). En nuestro caso será la etiqueta &amp;ldquo;v1.0.0&amp;rdquo;.
+Hecho esto, ya está disponible una versión estable de nuestro bundle que puede instalarse de la siguiente forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+composer require smsup/smsup-api-bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podéis ver como quedan todos los archivos &lt;a href=&#34;https://github.com/smsup/SmsupapiBundle&#34;&gt;en el repositorio&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Espero que resulte útil esta introducción a la creación de un bundle y quedo abierto a cualquier comentario o mejora que queráis hacer.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

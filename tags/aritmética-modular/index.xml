@@ -1,0 +1,446 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>aritmética modular on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/aritm%C3%A9tica-modular/</link>
+        <description>Recent content in aritmética modular on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 04 Dec 2017 12:12:52 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/aritm%C3%A9tica-modular/</link>
+            <title>aritmética modular on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/aritm%C3%A9tica-modular/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Criptografía 101 - Fundamentos Matemáticos (II) - Cálculo de Potencias</title>
+            <link>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-ii/</link>
+            <pubDate>Mon, 04 Dec 2017 12:12:52 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-ii/</guid>
+            <description>
+&lt;p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Este artículo es parte del curso de &lt;strong&gt;Introducción a la Criptografía&lt;/strong&gt;, el código está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34;&gt;elbaulp/cripto&lt;/a&gt;, también hay una &lt;a href=&#34;https://elbauldelprogramador.com/introduccion-criptografia/&#34;&gt;tabla de contenidos.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+Cálculo de potencias
+&lt;/h2&gt;
+&lt;p&gt;
+Queremos ahora, dados &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;m&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;n&lt;/code&gt; calcular \(a^m\bmod n\), pero de forma eficiente, para ello definiremos el teorema de Fermat:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Sean \(a,n \in \mathbb N\), si \(mcd(a,n) = 1\), \(a^{\phi(n)} \equiv 1\pmod n\)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Veamos algunos ejemplos. En \(\mathbb Z_5,\ \phi(5) = 4\), luego, por el teorema de Fermat, tenemos que \(1^{4} = 2^{4} = 3^{4} = 4^{4} = 1\). En \(\mathbb Z_{53}, \phi(53) = 52\), para calcular \(7^{111}\), como \(mcd(7, 53) = 1\) entonces \( 7^{52} = 1\), luego \(7^{52\cdot 2} = 7^{104} = 1\) y por tanto \(7^{111} = 7^7 = 29\).
+&lt;/p&gt;
+&lt;p&gt;
+Un caso particular del teorema de Fermat, es el teorema Pequeño de Fermat:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Sea p primo, \(a \in \mathbb N:\ 1 \leq a \leq p-1\) entonces \(a^{p-1} \equiv 1\pmod p\)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Como consecuencia a esto se tiene que \(a^{p} \equiv a\pmod p\). Veamos algunos ejemplos:
+&lt;/p&gt;
+&lt;p&gt;
+Calculemos las unidades de \(\mathbb Z_4\), que son \(\mathcal U(\mathbb Z_4) = \{1,3\}\), sabemos que únicamente tiene dos unidades, porque \(\phi(4) = \phi(2^2) = 2\), y particularmente son el 1 y el 3, porque cumplen que \(1^2 = 3^2 = 1\). Más arriba vimos que en \(\mathbb Z_5,\ \phi(5) = 4\) y por tanto todos sus elementos &lt;a href=&#34;https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/#c%C3%A1lculo-de-inversos&#34;&gt;tienen inverso&lt;/a&gt;, comprobemos que también se cumple una de las variantes del teorema Pequeño de Fermat en \(\mathbb Z_5\). El teorema dice \(a^{p} \equiv a\pmod p\), como vemos, en \(Z_5, 0^5 = 0, 1^5 = 1, 2^5 = 2, 3^5 = 3, 4^5 = 4\).
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Algoritmo para el cálculo de potencias
+&lt;/h3&gt;
+&lt;p&gt;
+Uno de los algoritmos usados para el cálculo de potencias modulares es el siguiente:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+Entrada: \(a\in\mathbb Z_n\), un entero \(0 \leq k \lt n\) cuya representación binaria es \(\sum_{i=0}^t k_i 2^i\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Salida: \(a^k \pmod n\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;  1. Fijar b = 1, Si k = 0 devolver b.
+  2. A = a
+  3. Si k_0 = 1 entonces b = a
+  4. Para cada i desde 1 a t repetir:
+     1. A = A * A modulo n.
+     2. Si k_i = 1 entonces b = A * b modulo n
+  5. Devolver b&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Este algoritmo se basa en el hecho de que se puede representar el exponente en representación binaria. La representación binaria de k viene dada por \(\sum_{i=0}^t k_i 2^i\), donde cada \(k_i\in \{0, 1\}\). Quizá con esta notación no te resulte familiar, pero no es más que la forma abreviada de la más conocida, por ejemplo, 5 en binario es \(1\cdot 2^0 + 0\cdot 2^1 + 1\cdot 2^2\). Sabiendo esto, entonces
+&lt;/p&gt;
+&lt;p&gt;
+$$a^k = \prod_{i=0}^t a^{k_i 2^i} = (a^{2^0})^{k_0}(a^{2^1})^{k_1}\cdots(a^{2^t})^{k_t}$$
+&lt;/p&gt;
+&lt;p&gt;
+Si analizas un poco la expresión de arriba, cuando \(k_i = 0\) todo el término \((a^{2^i})^{k_i} = 1\), lo cual implica que ese cálculo no va a cambiar el resultado, porque estás multiplicando por 1.
+&lt;/p&gt;
+&lt;p&gt;
+Con este apunte, leer el algoritmo es sencillo. Recibe un número entero y otros dos números, k,n &amp;gt; 0 y calcula \(a^{k} \pmod n\). Si k==0 no es necesario hacer ningún cálculo y simplemente devolvemos 1, ya que cualquier cosa elevada a cero es 1. En el paso 3, si \(k_0\) (el bit menos significativo de la representación binaria) es 1, luego \((a^{2^0})^{k_0} = a\), de lo contrario b = 1, ya que estás elevando a 0, y cualquier número elevado a 0 es 1. El siguiente paso es iterar sobre los bits restantes de k, es decir, desde \(k_1 \dots k_t\). Básicamente se repite el mismo proceso, se eleva al cuadrado A (corresponde con esta parte de la expresión \((a^2\)), y si el bit \(k_i = 1\) multiplicas \((a^{2^i})^{1}\) por &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;, si \(k_i = 0\) no hace falta hacer nada, ya que toda la expresión \((a^{2^i})^{0} = 1\). Una vez recorrida la representación binaria de k, devolvemos b.
+&lt;/p&gt;
+&lt;p&gt;
+Para entenderlo mejor, imagina que quieres calcular \(2^5\pmod 5\). El primer paso es representar el exponente en binario, \(5 = 101_b\), sigue los pasos del algoritmo, donde a = 2, k = 5 y n = 5:
+&lt;/p&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;b = 1
+A = 2
+es k_0 == 1? sí -&amp;gt; b = 2
+Desde k_1 hasta k_t:
+   A = A * A mod n -&amp;gt; 2 * 2 mod 5 = 4
+   es k_1 == 1? no
+   A = A * A mod n -&amp;gt; 4 * 4 mod 5 = 1
+   es k_2 == 1? sí -&amp;gt; b = A * b mod n -&amp;gt; b = 1 * 2 mod 5 = 2
+devuelve b, que es 2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+He intentado hacer dos representaciones visuales de cómo funciona, supón que quieres calcular \(2^7 \pmod 5\) y \(2^{11} \pmod 5\):
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint.png&amp;#34;
+            alt=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            title=&amp;#34;Calcular potencias modulares Criptografía&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;330&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Calcular potencias modulares criptografía&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/criptografia-101-fundamentos-matematicos-ii-powermodint2.png&amp;#34;
+            alt=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            title=&amp;#34;Calcular potencias modulares criptografía&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;206&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Espero que con este ejemplo te haya quedado claro cómo funciona el algoritmo. Lo he implementado en python, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej3.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;powerModInt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @input a in $Z_n$ and integers 0 &amp;lt;= k &amp;lt;= n
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;      @output a to the power of k mod n ($a^k mod n$)
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;  &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;# If the least significant bit is 1, $a^1 = a$&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
+      &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+          &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;
+      &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;k&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Orden
+&lt;/h3&gt;
+&lt;p&gt;
+Definiremos el orden de un número como
+\[ord(a) = min(k\ \in \mathbb N\backslash 0\:a^k=1)\]
+es decir, el número mínimo al que hay que elevar &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; para que sea igual a 1. Así, por ejemplo, en \(\mathbb Z_5\), tenemos los siguientes órdenes para sus elementos:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(1^1 = 1; ord(1) = 1\), ya que el número mínimo al que hay que elevar 1 para que de 1, es 1.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(2^4 = 1; ord(2) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(3^4 = 1; ord(3) = 4\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(4^2 = 1; ord(4) = 2\), ya que el número mínimo al que hay que elevar 4 para que de 1, es 2.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;headline-4&#34;&gt;
+Subgrupos y primitivos
+&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Sea a un elemento de \(\mathbb Z_p\), por ejemplo, \(\lt a&amp;gt; = \{ a^k:\ k\in N \}\) es un subgrupo generado por a.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Por ejemplo, los subgrupos de las unidades de \(\mathbb Z_5\) son:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 1&amp;gt; = \{ 1 \}\), ya que \(\forall k \in\mathbb Z, 1^k = 1\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 2&amp;gt; = \{ 2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 3&amp;gt; = \{ 3^0, 3^1, 3^2, 3^3\} = \{ 1, 2, 3, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+\(\lt 4&amp;gt; = \{ 4^0, 4^1, 4^2, 4^3 \} = \{ 1, 4 \}\)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Si nos fijamos, tanto &amp;amp;lt;2&amp;gt; como &amp;amp;lt;3&amp;gt; generan por completo \(\mathbb Z_5\), estos elementos se llaman primitivos. Particularmente, &amp;amp;lt;a&amp;gt; será primitivo si su &lt;strong&gt;orden es máximo&lt;/strong&gt;, en el caso que nos ocupa, vemos que es cierto, puesto que \(\phi(5)=4, ord(2) = ord(3) = 4\), que es el máximo. Además, el orden de un número establece número de elementos que genera el subgrupo, como ord(2) = ord(3) = 4, sabemos que éstos subgrupos generan 4 elementos, que son el número de unidades de \(\mathbb Z_5\), y por tanto, lo generan completamente. De igual manera, vimos un poco más arriba que ord(4) = 2, y podemos comprobar 4 genera únicamente dos elementos.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Referencias
+&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Apuntes de la asignatura criptografía del profesor &lt;strong&gt;Jesús García Miranda&lt;/strong&gt;, Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación (ETSIIT), Granada.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;http://amzn.to/2jMBrdD&#34; target=&#34;_blank&#34;&gt;Handbook of Applied Cryptography (Discrete Mathematics and Its Applications)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>Criptografía 101: Fundamentos matemáticos (I) - Aritmética modular</title>
+            <link>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/</link>
+            <pubDate>Sat, 28 Oct 2017 11:23:44 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/criptografia-101-fundamentos-matematicos-i/</guid>
+            <description>&lt;h2 id=&#34;headline-1&#34;&gt;
+Aritmética modular
+&lt;/h2&gt;
+&lt;p&gt;
+Antes de profundizar en los temas sobre criptografía, es necesario tener una base matemática, ya que al fin y al cabo, la criptografía se basa en ellas.
+&lt;/p&gt;
+&lt;p&gt;
+Nos centraremos en la aritmética modular, y cómo operar con ella. La aritmética modular se define del siguiente modo:
+&lt;/p&gt;
+&lt;p&gt;
+\[a \equiv b\pmod n,\]
+&lt;/p&gt;
+&lt;p&gt;
+si \(b - a\) es múltiplo de \(n\) o, dicho de otro modo, \(a\) y \(b\) tienen el mismo resto cuando se dividen por \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+Así, por ejemplo, \(3 \equiv 8 \pmod 5\), ya que \(8 - 3 = 5\), que es un multiplo de 5. También podemos comprobarlo sabiendo que el resto de dividir 3 entre 5 es 3 y el resto de 8 entre 5, también. A partir de ahora expresaremos el resto de dividir un número entre otro como sigue:
+&lt;/p&gt;
+&lt;p&gt;
+\[a\bmod n = r,\]
+&lt;/p&gt;
+&lt;p&gt;
+donde \(r\) es el resto de dividir \(a\) entre \(n\).
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/crypto-101.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/crypto-101.jpg&amp;#34;
+            alt=&amp;#34;Modular Arithmetics&amp;#34;
+            title=&amp;#34;Modular Arithmetics&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;360&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Cálculo de inversos
+&lt;/h3&gt;
+&lt;p&gt;
+Sea \(a \in \mathbb Z_n\), se dice que \(a\) tiene inverso, o que es una unidad, si \(\exists b \in \mathbb Z_n\ :\ ba = 1\), y se denota por \(a^{-1}\).
+&lt;/p&gt;
+&lt;p&gt;
+Al conjunto de todas las unidades de \(\mathbb Z_n\) lo llamaremos \(\mathcal{U}(\mathbb Z_n)\) y se define como:
+&lt;/p&gt;
+&lt;p&gt;
+\[\mathcal{U}(\mathbb Z_n) = \{ a \in \mathbb Z_n : \exists a^{-1}\} = \{ a \in \mathbb Z_n : mcd(a, n) = 1\},\]
+&lt;/p&gt;
+&lt;p&gt;
+donde &lt;em&gt;mcd&lt;/em&gt; es el máximo común divisor.
+&lt;/p&gt;
+&lt;p&gt;
+Particularmente, si \(p\) es un número primo, todo elemento de \(\mathbb Z_p\), salvo el cero, tiene inverso, y por tanto \(\mathbb Z_p\) es un cuerpo. En criptografía, trabajaremos en cuerpos \(\mathbb Z_p\) con un \(p\) primo.
+&lt;/p&gt;
+&lt;p&gt;
+El número de unidades de \(\mathbb Z_n\), se puede calcular con la función de Euler \(\phi(n)\), y vale lo siguiente:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+Si \(p\) es un número primo, \(\phi(p) = p - 1\), ya que todos los elementos salvo el 0, son unidades.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Sean a, b, dos números enteros \( \phi(ab) = \phi(a)\phi(b)\ sii\ mcd(a, b) = 1\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+Sea \(p\) un primo, \(\phi(p^n) = p^n - p^{n-1}\).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Por ejemplo, \(\#\mathcal{U}(\mathbb Z_5) = 4\), ya que todos sus elementos tienen inverso (el 1,2,3,4), y \(\phi(5) = 4\), y por tanto, \(\mathbb Z_5\) es un cuerpo. Sin embargo, \(\#\mathcal{U}(\mathbb Z_{15}) = 8\), ya que \(\phi(15) = \phi(3)\phi(5) = 2\cdot 4 = 8\). Las unidades de \(\mathbb Z_{15}\) son 1,2,4,7,8,11,13,14.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-3&#34;&gt;
+Un ejemplo práctico
+&lt;/h3&gt;
+&lt;p&gt;
+Veamos ahora cómo calcular el inverso de un número en \(\mathbb Z_n\) mediante el algoritmo Extendido de Euclides implementado en &lt;a href=&#34;https://elbauldelprogramador.com/tags/python/&#34;&gt;python&lt;/a&gt;, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej1.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    Compute the Greatest Common Divisor d of a and b, and integers x and
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    y satisfying ax + by = d.
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    :returns: a tuple (d,x,y)
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;    &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;x1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt;
+        &lt;span class=&#34;n&#34;&gt;y1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;y2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Este algoritmo, devuelve una tupla &lt;code class=&#34;verbatim&#34;&gt;(d, x, y)&lt;/code&gt;, donde &lt;code class=&#34;verbatim&#34;&gt;d&lt;/code&gt; es el máximo común divisor de los números &lt;code class=&#34;verbatim&#34;&gt;a,b&lt;/code&gt; y &lt;code class=&#34;verbatim&#34;&gt;x&lt;/code&gt; es el inverso de &lt;code class=&#34;verbatim&#34;&gt;a&lt;/code&gt; mod &lt;code class=&#34;verbatim&#34;&gt;b&lt;/code&gt;.  Por ejemplo, si ejecutamos &lt;code class=&#34;verbatim&#34;&gt;mcd(2, 5)&lt;/code&gt;, nos devolverá &lt;code class=&#34;verbatim&#34;&gt;[1, -2, 1]&lt;/code&gt;, donde 1 es el &lt;code class=&#34;verbatim&#34;&gt;mcd(2, 5)&lt;/code&gt;, y \(-2\) su inverso, si lo queremos en positivo, basta con sumar 5 a \(-2\), que es 3, luego el inverso de 2 mod 5 es 3, ya que \(2 \cdot 3 = 6\), y 6 mod 5 = 1.
+&lt;/p&gt;
+&lt;p&gt;
+Para facilitar la tarea de calcular el inverso de un número, definiremos el siguiente método, el código fuente está disponible en &lt;a href=&#34;https://github.com/algui91/grado_informatica_criptografia/blob/master/P1/modularArith/ej2.py&#34;&gt;github&lt;/a&gt;:
+&lt;/p&gt;
+&lt;div class=&#34;src src-python&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;moduloInverse&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;:returns: the inverse of a modulo b, if it exists&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;extMcd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;d&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; a inverse does not exist&amp;#39;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
+        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+Si lo ejecutamos con los mismos números de antes, 2 y 5, nos devolverá \(2^{-1}\), es decir, 3.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Agradecimientos
+&lt;/h2&gt;
+&lt;p&gt;
+Gracias a &lt;a href=&#34;https://github.com/josealberto4444/&#34;&gt;josealberto4444&lt;/a&gt; por ayudarme con correcciones.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Referencias
+&lt;/h2&gt;
+&lt;p&gt;
+
+&lt;blockquote&gt;Todo el código mostrado en los artículos está disponible en &lt;a href=&#34;https://github.com/elbaulp/grado_informatica_criptografia&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Apuntes de la asignatura criptografía del profesor &lt;strong&gt;Jesús García Miranda&lt;/strong&gt;, Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación (ETSIIT), Granada.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&#34;http://amzn.to/2jMBrdD&#34; target=&#34;_blank&#34;&gt;Handbook of Applied Cryptography (Discrete Mathematics and Its Applications)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Más información
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://es.wikipedia.org/wiki/Aritm%25C3%25A9tica_modular&#34;&gt;Aritmética modular | wikipedia.org&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

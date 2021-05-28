@@ -1,0 +1,180 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>prelude on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/prelude/</link>
+        <description>Recent content in prelude on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 30 Aug 2016 14:10:30 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/prelude/</link>
+            <title>prelude on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/prelude/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Chuleta De Comandos / Atajos De Teclado / Paquetes más útiles para Emacs</title>
+            <link>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</link>
+            <pubDate>Tue, 30 Aug 2016 14:10:30 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/chuleta-atajos-teclado-emacs/</guid>
+            <description>&lt;p&gt;No es la primera vez que se publica en el blog una &lt;a href=&#34;https://elbauldelprogramador.com/tags/chuleta&#34; title=&#34;Artículos sobre chuletas&#34;&gt;chuleta&lt;/a&gt; de algo:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/dig-chuleta-basica-de-comandos/&#34; title=&#34;Chuleta básica de comandos Dig&#34;&gt;Chuleta de comandos para dig&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Chuleta de comandos para Git&#34;&gt;Git: Chuleta de comandos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-de-comandos-para-gpg/&#34; title=&#34;Chuleta de comandos para GPG&#34;&gt;Chuleta de comandos GPG&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/chuleta-markdown-para-wordpress/&#34; title=&#34;Chuleta de comandos de Markdown&#34;&gt;Chuleta de comandos MarkDown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La de hoy va sobre &lt;em&gt;Emacs&lt;/em&gt;. La idea es que esta chuleta la creemos entre todos. Que cada uno aporte su granito de arena para crear la &lt;strong&gt;chuleta de atajos de teclado/comandos/paquetes para emacs definitiva&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A lo largo del poco tiempo que llevo usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/emacs&#34; title=&#34;Artículos sobre emacs&#34;&gt;emacs&lt;/a&gt;, ya he ido descubriendo los atajos que me resultan más útiles para mi día a día, empecemos:&lt;/p&gt;
+&lt;h1 id=&#34;paquetes-útiles&#34;&gt;Paquetes útiles&lt;/h1&gt;
+&lt;h2 id=&#34;yasnippet&#34;&gt;Yasnippet&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.emacswiki.org/emacs/Yasnippet&#34; title=&#34;Página oficial de YaSnippet&#34;&gt;YaSnippet&lt;/a&gt; es un sistema de plantillas para &lt;strong&gt;emacs&lt;/strong&gt;, es uno de los paquetes que recomiendo instalar, ya que te facilita mucho la vida. Por defecto ya trae configurados muchos &lt;em&gt;snippets&lt;/em&gt; para todos los lenguajes, pero podemos configurar más a nuestro gusto. Por ejemplo:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Una de las plantillas que tengo para escribir en el blog es:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: Modified&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: mod&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# # modified: 2016-$1-$2T$3:$4$0&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;`(format-time-string &amp;#34;&lt;/span&gt;%Y-%m-%dT%H:%M:%S+01:00&lt;span class=&#34;s2&#34;&gt;&amp;#34;)`&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En los comentarios se especifica el nombre del &lt;em&gt;snippet&lt;/em&gt;, la palabra que lo lanzará (&lt;em&gt;mod&lt;/em&gt;) en este caso. Así, al escribir &lt;code&gt;mod&lt;/code&gt; y pulsar el tabulador se insertará en el editor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;lastmod&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;2017-03-08T16:58:45+01:00&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Otro ejemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# -*- mode: snippet -*-&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# name: CodeBlock&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# key: code&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# --&lt;/span&gt;
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;
+&lt;span class=&#34;se&#34;&gt;\`\`\`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Este otro &lt;em&gt;snippet&lt;/em&gt; lo uso para insertar código en &lt;em&gt;Markdown&lt;/em&gt;, al escribir &lt;code&gt;code&lt;/code&gt; y pulsar el tabulador, me inserta en el texto las tres tildes ``` con el cursor situado en &lt;em&gt;$1&lt;/em&gt; para que escriba el lenguaje en el que resaltará la sintáxis, y al volver a pulsar el tabulador el cursor se posiciona dentro del bloque de código para que comience a escribir.&lt;/p&gt;
+&lt;h1 id=&#34;miscelánica--taréas-habituales&#34;&gt;Miscelánica / Taréas habituales&lt;/h1&gt;
+&lt;h2 id=&#34;buscar-y-reemplazar-en-varios-ficheros&#34;&gt;Buscar y reemplazar en varios ficheros&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Queremos buscar por una &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;expresión regular&lt;/a&gt; o un texto simple en varios ficheros a la vez, o un directorio completo, y reemplazar el texto encontrado por otro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ejecutar &lt;code&gt;M-x find-name-dired&lt;/code&gt;: e introducir el directorio en el que están los ficheros.&lt;/li&gt;
+&lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt; para “marcar” todos los ficheros del directorio.&lt;/li&gt;
+&lt;li&gt;Pulsar &lt;code&gt;Q&lt;/code&gt; para ejecutar el comando &lt;code&gt;query-replace&lt;/code&gt; para todos los ficheros marcados.&lt;/li&gt;
+&lt;li&gt;Una vez escrita la expresión regular, se nos pide confirmación para cada fichero, podemos pulsar &lt;code&gt;espacio&lt;/code&gt; para reemplazar la expresión en el fichero, &lt;code&gt;n&lt;/code&gt; para descartarla, o &lt;code&gt;A&lt;/code&gt; para reemplazar la expresión en todos los ficheros.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://stackoverflow.com/a/271136/1612432&#34; title=&#34;Using Emacs to recursively find and replace in text files not already open&#34;&gt;Using Emacs to recursively find and replace in text files not already open&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;selección-rectangular&#34;&gt;Selección rectangular&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A veces queremos seleccionar una región de texto y realizar una acción sobre ella, por ejemplo eliminar espacios en blanco, añadir algún texto delante de cada frase etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Supongamos que tenemos el siguiente texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y queremos transformarla a:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;- línea &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+- línea &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+- línea &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+- línea &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para ello seleccionamos la región, y pulsamos &lt;code&gt;C-x r t&lt;/code&gt;, nos preguntará qué texto queremos introducir, le damos a enter y listo. Otras combinaciones para operar en selecciones rectangulares:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-x r k&lt;/code&gt;: &lt;em&gt;Kill&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x r d&lt;/code&gt;: &lt;em&gt;Borra&lt;/em&gt; el texto de la región seleccionada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x r y&lt;/code&gt;: Pega (&lt;em&gt;Yank&lt;/em&gt;) la última región borrada (Con &lt;em&gt;kill&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x r o&lt;/code&gt;: Inserta espacios en blanco para rellenar el espacio de la región seleccionada.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-x clear-rectangle&lt;/code&gt;: Reemplaza la selección con espacios.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-x delete-white-spaces-rectangle&lt;/code&gt;: Elimina los espacios en blanco a la izquierda.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x r t string RET&lt;/code&gt;: Reemplaza el contenido del rectángulo con &lt;em&gt;string&lt;/em&gt; en cada línea. (El ejemplo visto)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-x string-insert-rectangle RET string RET&lt;/code&gt;: Inserta &lt;em&gt;string&lt;/em&gt; en cada línea del rectángulo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Fuente&lt;/strong&gt;: &lt;a href=&#34;http://www.delorie.com/gnu/docs/emacs/emacs_68.html&#34; title=&#34;GNU Emacs Manual&#34;&gt;GNU Emacs Manual&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;reemplazar-un-carácter-con-un-salto-de-línea&#34;&gt;Reemplazar un carácter con un salto de línea&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Supongamos que tenemos un texto mal formateado, y queremos reemplazar un caracter en concreto por un salto de línea. Esto suele pasar por ejemplo al leer ficheros con codificaciones distintas. En los que el salto de línea se interpreta de otro modo. A modo de ejemplo, supongamos que vamos a reemplazar el caracter &lt;code&gt;^N&lt;/code&gt; por un salto de línea. Tenemos este texto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet^N, consectetur adipiscing elit.^N Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pulsar &lt;code&gt;M-x replace-string&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Introducimos el texto que queremos reemplazar, en este caso &lt;code&gt;^N&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Insertamos el salto de línea, para ello, pulsar:
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;C-q&lt;/code&gt;: Para decirle a emacs que vamos a insertar un caracter en crudo (&lt;em&gt;raw&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-j&lt;/code&gt;: Esta combinación se corresponde con el salto de línea&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Pulsamos &lt;code&gt;Enter&lt;/code&gt; y deberíamos tener el siguiente texto:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Lorem ipsum dolor sit amet
+, consectetur adipiscing elit.
+ Fusce vestibulum.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/613029/1612432&#34; title=&#34;How to replace a character with a newline in Emacs?&#34;&gt;How to replace a character with a newline in Emacs?&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;eliminiar-los-espacios-en-blanco-sobrantes-al-final-de-una-línea&#34;&gt;Eliminiar los espacios en blanco sobrantes al final de una línea&lt;/h2&gt;
+&lt;p&gt;Basta ejecutar &lt;code&gt;M-x delete-trailing-whitespace&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;guardar-comandos-que-usamos-usualmente&#34;&gt;Guardar comandos que usamos usualmente&lt;/h2&gt;
+&lt;p&gt;Este tema se trató en más profundidad en el artículo &lt;a href=&#34;https://elbauldelprogramador.com/como-crear-comandos-personalizados-en-emacs&#34; title=&#34;Cómo crear comandos personalizados en Emacs&#34;&gt;&lt;em&gt;Cómo crear comandos personalizados en Emacs&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;administar-las-copias-de-seguridad-de-emacs&#34;&gt;Administar las copias de seguridad de emacs&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Emacs&lt;/em&gt; por defecto guarda una copia de seguridad del fichero en un fichero del mismo nombre pero acabado en &lt;code&gt;~&lt;/code&gt;, aunque es bastánte útil, a veces molesta tener ficheros desperdigados a lo largo de las carpetas acabando en &lt;code&gt;~&lt;/code&gt;. Es posible almacenarlos todos en una carpeta. Veamos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En el fichero de configuración (&lt;code&gt;~/.emacs/init.el&lt;/code&gt;) añadimos&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; Set a directory for backup files&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;backup-directory-alist&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;~/.saves&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;delete-old-versions&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;kept-new-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;kept-old-versions&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;version-control&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde podemos sustituir &lt;code&gt;~/.saves&lt;/code&gt; por el directorio deseado.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/151946/1612432&#34; title=&#34;How do I control how Emacs makes backup files?&#34;&gt;How do I control how Emacs makes backup files?&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ejecutar-una-acción-para-todos-los-buffers-abiertos&#34;&gt;Ejecutar una acción para todos los buffers abiertos&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Problema:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Algunos comandos que hemos visto aquí, como buscar y reemplazar texto en varios ficheros a la vez, realizan la acción pero no guardan los cambios en el fichero. Para guardarlos tenemos que seleccionarlos uno a uno en el &lt;em&gt;buffer&lt;/em&gt; y ejecutar la acción de guardar. Para hacernos la vida más fácil, podemos usar &lt;code&gt;ibuffer&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Para sustituir el modo &lt;em&gt;buffer&lt;/em&gt;, por &lt;em&gt;ibuffer&lt;/em&gt; debemos añadir a nuestra configuración:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-elisp&#34; data-lang=&#34;elisp&#34;&gt;&lt;span class=&#34;c1&#34;&gt;;; make ibuffer the default&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;global-set-key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;\C-x\C-b&amp;#34;&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;ibuffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A partir de ahora, cada vez que visitemos la pestaña del &lt;em&gt;buffer&lt;/em&gt;, se abrirá &lt;em&gt;ibuffer&lt;/em&gt;. Para seleccionar todos los ficheros abiertos y guardarlos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pulsar &lt;code&gt;t&lt;/code&gt;, para seleccionar todos los ficheros.&lt;/li&gt;
+&lt;li&gt;Pulsar &lt;code&gt;S&lt;/code&gt;, para guardar los ficheros seleccionados&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Fuente:&lt;/strong&gt; &lt;a href=&#34;http://stackoverflow.com/a/14293998/1612432&#34; title=&#34;Execute a particular command on multiple emacs buffers&#34;&gt;Execute a particular command on multiple emacs buffers&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;alinear-verticalmente-código-en-base-al-signo-&#34;&gt;Alinear verticalmente código en base al signo =&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;M-x align-regex =&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;convertir-texto-a-mayúsculaminúscula&#34;&gt;Convertir texto a mayúscula/minúscula&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C-x C-u&lt;/code&gt;: Convertir la región seleccionada a mayúsculas.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;C-x C-l&lt;/code&gt;: Convertir la región seleccionada a minúsculas.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-l&lt;/code&gt;: Convertir la siguiente palabra a minúscula.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-u&lt;/code&gt;: Convertir la siguiente palabra a mayúscula.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-c&lt;/code&gt;: Convertir a mayúscula la primera letra de la palabra &amp;ndash; Capitalizar &amp;ndash;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;reemplazar-tabulador-por-espacios-y-viceversa&#34;&gt;Reemplazar tabulador por espacios y viceversa&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;M-x tabify&lt;/code&gt;: Sustituye en la región seleccionada espacios por tabuladores.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;M-x untabify&lt;/code&gt;: Proceso contrario, reemplaza en la región selecionada tabuladores por espacios.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fuente: &lt;a href=&#34;https://mdk.fr/blog/emacs-replace-tabs-with-spaces.html&#34; title=&#34;Emacs: replace tabs with spaces&#34;&gt;mdk.fr&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;prelude&#34;&gt;Prelude&lt;/h1&gt;
+&lt;p&gt;Tal y como dice la descripción de su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/tags/github/&#34; title=&#34;Github&#34;&gt;Github&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; is an enhanced Emacs 24 distribution that should make your experience with Emacs both more pleasant and more powerful.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;es decir:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Prelude&lt;/em&gt; es una distribución mejorada de Emacs 24 que debería hacer tu experiencia con emacs más agradable y potente.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Aunque la descripción menciona la versión 24, personalmente yo estoy usando la versión 25 en &lt;a href=&#34;https://elbauldelprogramador.com/tags/gentoo&#34; title=&#34;Gentoo&#34;&gt;Gentoo&lt;/a&gt; y funciona perfectamente.&lt;/p&gt;
+&lt;p&gt;La instalación de &lt;em&gt;Prelude&lt;/em&gt; es muy sencilla, toda la documentación necesaria se encuentra en su &lt;!-- raw HTML omitted --&gt;repositorio de Github&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;tu-turno&#34;&gt;Tu Turno&lt;/h1&gt;
+&lt;p&gt;El propósito de este artículo es que crezca con las contribuciones de todos nosotros, para ello he subido el código de este artículo a github. Para aportar vuestro granito de arena, mandad &lt;!-- raw HTML omitted --&gt;Pull Request&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Esperamos vuestras colaboraciones!&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

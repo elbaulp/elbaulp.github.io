@@ -1,0 +1,529 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tutorials on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/tutorials/</link>
+        <description>Recent content in tutorials on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Wed, 18 Oct 2017 19:01:49 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/tags/tutorials/</link>
+            <title>tutorials on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/tutorials/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Org-mode Quick reference Cheat-Sheet</title>
+            <link>https://elbauldelprogramador.com/en/org-mode-quick-cheatsheet/</link>
+            <pubDate>Wed, 18 Oct 2017 19:01:49 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/org-mode-quick-cheatsheet/</guid>
+            <description>&lt;h2 id=&#34;headline-1&#34;&gt;
+Quick reference guide for emacs Org-mode key binds
+&lt;/h2&gt;
+&lt;p&gt;
+This is a quick reference to org mode, it is mostly a copy and paste from its manual, but I needed an easy way of checking the most useful &lt;strong&gt;org-mode commands&lt;/strong&gt; in a single view, because I found myself checking again and again its manual.
+&lt;/p&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/orgmodequickreference.jpg&amp;#34;
+            alt=&amp;#34;Org mode quick reference&amp;#34;
+            title=&amp;#34;Org mode quick reference&amp;#34;
+            sizes=&amp;#34;(min-width: 640px) 640px, 100vw&amp;#34;
+            width=&amp;#34;640&amp;#34;
+            height=&amp;#34;480&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Org mode quick reference&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+First, you can cycle through your sections with &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;, which &lt;strong&gt;expands/contract&lt;/strong&gt; sections in your document.
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+Sections
+&lt;/h2&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Top level headline&lt;/span&gt;
+&lt;span class=&#34;gu&#34;&gt;**&lt;/span&gt; Second level
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
+    some text
+&lt;span class=&#34;gu&#34;&gt;***&lt;/span&gt; 3rd level
+    more text
+
+&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Another top level headline&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Cycling
+&lt;/h2&gt;
+&lt;p&gt;
+You can cycle through sections with:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt;  Cycle &lt;strong&gt;sub-tree&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;TAB&amp;gt;&lt;/code&gt; or &lt;code class=&#34;verbatim&#34;&gt;C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; &lt;strong&gt;Global&lt;/strong&gt; cycle. (The entire buffer)
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-u C-u C-u &amp;lt;TAB&amp;gt;&lt;/code&gt; Show all.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+Move through headlines
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-n&lt;/code&gt; Next heading.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-p&lt;/code&gt; Previous heading.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-f&lt;/code&gt; Next heading same level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-b&lt;/code&gt; Previous heading same level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-u&lt;/code&gt; Backward to higher level heading.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&amp;lt;!–ad–&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+Insert/modify sections
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insert new heading with same level as current. If the cursor is at a plain list item, a new item is created. If used in the middle of a line, split the line and the rest become a new headline.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insert new TODO at &lt;strong&gt;same level&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; In a new empty entry cycle through levels.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Promote/demote &lt;strong&gt;current headline&lt;/strong&gt; by one level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Promote/demote the &lt;strong&gt;current sub-tree&lt;/strong&gt; by one level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt;  Move &lt;strong&gt;sub-tree&lt;/strong&gt; up/down (swap with previous/next sub-tree of same level).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-w&lt;/code&gt; Refile &lt;strong&gt;entry or region&lt;/strong&gt; to a different location.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-x n s/w&lt;/code&gt;  Narrow buffer to &lt;strong&gt;current sub-tree&lt;/strong&gt; / widen it again
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+Sparse Trees
+&lt;/h2&gt;
+&lt;p&gt;
+Useful to hide documents parts where you are not currently working.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;forward slash&amp;gt;&lt;/code&gt; Prompts to create a sparse-tree
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c &amp;lt;forward slash&amp;gt; r&lt;/code&gt; Occur. Prompts for a regexp and shows a sparse tree with all matches. Each match is also highlighted; the highlights disappear by pressing C-c C-c.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+Plain lists
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Unordered:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;-&lt;/code&gt;, &lt;code class=&#34;verbatim&#34;&gt;+&lt;/code&gt; or &lt;code class=&#34;verbatim&#34;&gt;*&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Ordered:&lt;/em&gt; &lt;code class=&#34;verbatim&#34;&gt;1.&lt;/code&gt; or &lt;code class=&#34;verbatim&#34;&gt;1)&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;em&gt;Description:&lt;/em&gt; Use &lt;code class=&#34;verbatim&#34;&gt;::&lt;/code&gt; to separate the &lt;em&gt;term&lt;/em&gt; from the &lt;em&gt;description&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;&amp;lt;TAB&amp;gt;&lt;/code&gt; Fold items.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insert item at the same level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt; Insert item with a Checkbox.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;up&amp;gt;/&amp;lt;down&amp;gt;&lt;/code&gt; Move items &lt;strong&gt;including sub-items&lt;/strong&gt; up/down.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-&amp;lt;left&amp;gt;/M-&amp;lt;right&amp;gt;&lt;/code&gt; Decrease/increase indentation level.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;left&amp;gt;/&amp;lt;right&amp;gt;&lt;/code&gt; Decrease/increase indentation level, including &lt;strong&gt;sub-items&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; If there is a &lt;strong&gt;checkbox&lt;/strong&gt;, toggle it.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c -&lt;/code&gt; Cycle through differences kinds of lists.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+Footnotes
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-x f&lt;/code&gt; When cursor is at a footnote reference, jump to definition. When at a definition, jump to first reference. Otherwise, create a new footnote.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt; Jump between definition and reference.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+Here is an example footnote &lt;sup class=&#34;footnote-reference&#34;&gt;&lt;a id=&#34;footnote-reference-1&#34; href=&#34;#footnote-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The code to generate it is:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;Here is an example footnote &lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt;.
+
+&lt;span class=&#34;bp&#34;&gt;[fn:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;]&lt;/span&gt; Click return to return to reference&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+Hyperlinks
+&lt;/h2&gt;
+&lt;p&gt;
+Syntax: &lt;code class=&#34;verbatim&#34;&gt;[[link][description]]&lt;/code&gt; or only &lt;code class=&#34;verbatim&#34;&gt;[[link]]&lt;/code&gt;, once a link is created, you can edit it with &lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;
+In case the link is not a URL, it is considered to be internal in the current file:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;[[&lt;span class=&#34;na&#34;&gt;#custom-id&lt;/span&gt;]]
+[[&lt;span class=&#34;na&#34;&gt;My Target&lt;/span&gt;][&lt;span class=&#34;nt&#34;&gt;Find my target&lt;/span&gt;]]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+The last one will search for a target in the current file with syntax &lt;code class=&#34;verbatim&#34;&gt;&amp;lt;&amp;lt;My Target&amp;gt;&amp;gt;&lt;/code&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c l&lt;/code&gt; Store a link to the current location.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; Insert link, it will ask you for the link and an optional description. If called with &lt;code class=&#34;verbatim&#34;&gt;C-u&lt;/code&gt; prefix, file name completion is used to link to a file.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-l&lt;/code&gt; with &lt;strong&gt;cursor in a link&lt;/strong&gt;, allows to edit it.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-o&lt;/code&gt; or &lt;code class=&#34;verbatim&#34;&gt;mouse-1&lt;/code&gt; or &lt;code class=&#34;verbatim&#34;&gt;mouse-2&lt;/code&gt; open link.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-10&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+items
+&lt;/h2&gt;
+&lt;p&gt;
+Any headline starting with &lt;em&gt;TODO&lt;/em&gt; becomes a &lt;em&gt;TODO&lt;/em&gt; item.
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c C-t&lt;/code&gt; Rotate the TODO state of the current item among &lt;em&gt;(unmarked) -&amp;gt; TODO -&amp;gt; DONE -&amp;gt; (unmarked)&lt;/em&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;right&amp;gt;/&amp;lt;left&amp;gt;&lt;/code&gt; As above, but &lt;strong&gt;only for the item&lt;/strong&gt; at point.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c / t&lt;/code&gt; View &lt;em&gt;TODO&lt;/em&gt; items in a &lt;em&gt;sparse tree&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;C-c a t&lt;/code&gt; Show the global TODO list.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-M-&amp;lt;RET&amp;gt;&lt;/code&gt; Insert new &lt;em&gt;TODO&lt;/em&gt; item.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+C-c , Set priority for item (Between &lt;em&gt;A,B,C&lt;/em&gt;).
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;S-&amp;lt;up&amp;gt;/&amp;lt;dwn&amp;gt;&lt;/code&gt; Cycle through priorities.
+&lt;/p&gt;
+&lt;h3 id=&#34;headline-11&#34;&gt;
+&lt;span class=&#34;todo&#34;&gt;TODO&lt;/span&gt;
+checkboxes
+&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+You can have a composed list of &lt;em&gt;TODO&lt;/em&gt; items, and can toggle it with &lt;code class=&#34;verbatim&#34;&gt;C-c C-c&lt;/code&gt;, and create a new one with &lt;code class=&#34;verbatim&#34;&gt;M-S-&amp;lt;RET&amp;gt;&lt;/code&gt;.
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;gh&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;err&#34;&gt; TODO&lt;/span&gt;&lt;span class=&#34;gs&#34;&gt; Organize party [0/3]&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; call people [0/2]
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Peter
+    &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; Sarah
+  &lt;span class=&#34;k&#34;&gt;- [ ]&lt;/span&gt; order food&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-todo-checkboxs.gif&amp;#34;
+            alt=&amp;#34;TODO Items checkboxes&amp;#34;
+            title=&amp;#34;TODO items checkboxes&amp;#34;
+            sizes=&amp;#34;(min-width: 244px) 244px, 100vw&amp;#34;
+            width=&amp;#34;244&amp;#34;
+            height=&amp;#34;100&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;TODO Items checkboxes&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
+Markup
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;*bold*&lt;/code&gt; =&amp;gt; &lt;strong&gt;bold&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;/italics/&lt;/code&gt; =&amp;gt; &lt;em&gt;italics&lt;/em&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;=code=&lt;/code&gt; and &lt;code class=&#34;verbatim&#34;&gt;~verbatim~&lt;/code&gt; -&amp;gt;  &lt;code class=&#34;verbatim&#34;&gt;code&lt;/code&gt;, &lt;code&gt;verbatim&lt;/code&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;+strike-through+&lt;/code&gt; -&amp;gt; &lt;del&gt;strike-through&lt;/del&gt;.
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;code class=&#34;verbatim&#34;&gt;_underline_&lt;/code&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;headline-13&#34;&gt;
+Images &amp;amp; Tables
+&lt;/h2&gt;
+&lt;p&gt;
+Tables have this syntax:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;s&#34;&gt;| HEADER1  | header2  |&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;|----------+----------|&lt;/span&gt;
+&lt;span class=&#34;s&#34;&gt;| content1 | contend2 |&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+&amp;lt;figure&amp;gt;
+        &amp;lt;a href=&amp;#34;/img/org-mode-table.gif&amp;#34;&amp;gt;
+          &amp;lt;img
+            on=&amp;#34;tap:lightbox1&amp;#34;
+            role=&amp;#34;button&amp;#34;
+            tabindex=&amp;#34;0&amp;#34;
+            layout=&amp;#34;responsive&amp;#34;
+            src=&amp;#34;/img/org-mode-table.gif&amp;#34;
+            alt=&amp;#34;Creating tables in org-mode&amp;#34;
+            title=&amp;#34;Creating tables in org-mode&amp;#34;
+            sizes=&amp;#34;(min-width: 304px) 304px, 100vw&amp;#34;
+            width=&amp;#34;304&amp;#34;
+            height=&amp;#34;214&amp;#34;&amp;gt;
+          &amp;lt;/img&amp;gt;
+        &amp;lt;/a&amp;gt;
+        &amp;lt;figcaption&amp;gt;Creating tables in org-mode&amp;lt;/figcaption&amp;gt;
+&amp;lt;/figure&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;
+Images are like links: &lt;code class=&#34;verbatim&#34;&gt;[[./img/a-image.jpg]]&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-14&#34;&gt;
+Source code
+&lt;/h2&gt;
+&lt;p&gt;
+To include source code:
+&lt;/p&gt;
+&lt;div class=&#34;src src-org&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt; #+BEGIN_SRC emacs-lisp
+     (defun org-xor (a b)
+        &amp;#34;Exclusive or.&amp;#34;
+        (if a (not b) b))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+#+END_SRC
+&lt;/p&gt;
+&lt;p&gt;
+will render to
+&lt;/p&gt;
+&lt;div class=&#34;src src-emacs-lisp&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;org-xor&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s&#34;&gt;&amp;#34;Exclusive or.&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+You can edit the code example in a buffer supporting that language with &lt;code class=&#34;verbatim&#34;&gt;C-c &amp;#39;&lt;/code&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;headline-15&#34;&gt;
+Source
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://orgmode.org/guide/&#34;&gt;Org-mode short guide&lt;/a&gt;
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr class=&#34;footnotes-separatator&#34;&gt;
+&lt;div class=&#34;footnote-definitions&#34;&gt;
+&lt;div class=&#34;footnote-definition&#34;&gt;
+&lt;sup id=&#34;footnote-1&#34;&gt;&lt;a href=&#34;#footnote-reference-1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;
+&lt;div class=&#34;footnote-body&#34;&gt;
+&lt;p&gt;
+Click to return to reference
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>Free Ebooks</title>
+            <link>https://elbauldelprogramador.com/en/manuales-gratuitos/</link>
+            <pubDate>Thu, 21 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/manuales-gratuitos/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;section id=&#34;guides-container&#34;&gt;
+  &lt;amp-list
+    width=&#34;800&#34;
+    height=&#34;800&#34;
+    layout=&#34;responsive&#34;
+    src=&#34;https://elbauldelprogramador.com/guides.json&#34;&gt;
+    &lt;template type=&#34;amp-mustache&#34;&gt;
+      &lt;article class=&#34;box-item shown&#34;&gt;
+        &lt;a href=&#34;{{url}}&#34;&gt;
+          &lt;figure&gt;
+            &lt;img src=&#34;{{thumbnail}}&#34; alt=&#34;{{title}}&#34; width=&#34;{{width}}&#34; height=&#34;{{height}}&#34;&gt;
+            &lt;/img&gt;
+          &lt;/figure&gt;
+        &lt;/a&gt;
+      &lt;/article&gt;
+    &lt;/template&gt;
+  &lt;/amp-list&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

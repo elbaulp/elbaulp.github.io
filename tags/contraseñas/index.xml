@@ -1,0 +1,312 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>contraseñas on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/contrase%C3%B1as/</link>
+        <description>Recent content in contraseñas on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Wed, 04 Oct 2017 13:48:14 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/contrase%C3%B1as/</link>
+            <title>contraseñas on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/contrase%C3%B1as/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Crear y administrar contraseñas inteligentemente</title>
+            <link>https://elbauldelprogramador.com/good-passwords/</link>
+            <pubDate>Wed, 04 Oct 2017 13:48:14 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/good-passwords/</guid>
+            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;27.07.2017: &lt;strong&gt;Añado&lt;/strong&gt; &lt;em&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;/em&gt; a enlaces de interés.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+&lt;p&gt;Recientemente hemos visto mucho revuelo en &lt;a href=&#34;https://elbauldelprogramador.com/categories/seguridad&#34; title=&#34;Posts sobre seguridad&#34;&gt;seguridad&lt;/a&gt; con el &lt;strong&gt;RansomWare WannaCry&lt;/strong&gt; y el robo de más de &lt;strong&gt;230 millones de contraseñás y cuentas&lt;/strong&gt;. En estos tiempos más que nunca es necesario tener &lt;strong&gt;buenos hábitos al crear contraseñas al darnos de alta en nuevos servicios&lt;/strong&gt;. En este artículo mencionaré algunas buenas prácticas que llevo llevando a cabo desde hace unos años.&lt;/p&gt;
+&lt;h1 id=&#34;crea-buenas-contrasenas&#34;&gt;Crea Buenas Contrasenas&lt;/h1&gt;
+&lt;p&gt;El primer paso es &lt;em&gt;crear una &lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet y cuando la longitud de la misma no importa&#34;&gt;contraseña&lt;/a&gt; fuerte y aleatoria&lt;/em&gt;. Hay muchas webs que se dedican a generar este tipo de contraseñas, por ejemplo la web de &lt;!-- raw HTML omitted --&gt;Steve Gibson&lt;!-- raw HTML omitted --&gt;  o la herramienta incorporada a tal fin en &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, para cada nueva cuenta que crees en cualquier servicio, genera una contraseña de gran longitud con caracteres, números y símbolos. Una buena elección son contraseñas &lt;strong&gt;de 50 caracteres o más&lt;/strong&gt;, abajo muestro un ejemplo de la herramienta integrada en &lt;strong&gt;LastPass&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Si no quieres usar &lt;strong&gt;LastPass&lt;/strong&gt; puedes usar el &lt;strong&gt;generador de Steve&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Veamos cuanto &lt;strong&gt;tiempo se tardaría en descifrar una contraseña&lt;/strong&gt; de estas características, por ejemplo esta de tamaño 50: 8e8f6$AB9^YgOJ4x$JqHknK&lt;em&gt;FXp&lt;/em&gt;uru2qyU3KXydaK*lJncQrE:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;en la web de &lt;strong&gt;Steve Gibson&lt;/strong&gt; vemos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;usa-un-administrador-de-contraseñas&#34;&gt;Usa un Administrador de Contraseñas&lt;/h1&gt;
+&lt;p&gt;Está claro que usando este tipo de contraseñas &lt;strong&gt;es imposible memorizarlas&lt;/strong&gt;, eso es signo de una buena contraseña.&lt;/p&gt;
+&lt;p&gt;Para poder administrar tales contraseñas deberías usar un &lt;strong&gt;administrador de contraseñas&lt;/strong&gt;, yo uso &lt;strong&gt;LastPass&lt;/strong&gt;, ya que han demostrado que saben tomarse la seguridad en serio. Baso esta opinión en el conocimiento de Steve Gibson en seguridad, si quieres comprobarlo por tí mismo aquí hay unos cuantos recursos: &lt;!-- raw HTML omitted --&gt;I&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;II&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Incluso si estás usando LastPass para generar y almacenar las contraseñas de forma segura, aún podemos añadir una capa extra de seguridad: &lt;strong&gt;“Usar LastPass inteligentemente”&lt;/strong&gt;, veamos lo que quiero decir con esto en la siguiente sección.&lt;/p&gt;
+&lt;h2 id=&#34;buenas-prácticas-usando-un-administrador-de-contraseñas&#34;&gt;Buenas Prácticas usando un Administrador de Contraseñas&lt;/h2&gt;
+&lt;p&gt;La posibilidad de que alguien te ataque y te robe todos los datos de &lt;strong&gt;LastPAss&lt;/strong&gt; aún existen, aunque toda la información se guarda cifrada. Supongamos que alguien consigue nuestros datos de LastPass, y pongámonos en el &lt;strong&gt;peor de los casos, la consiguen descifrada&lt;/strong&gt;. Si en lugar de almacenar toda la contraseña en &lt;em&gt;LastPass&lt;/em&gt;, almacenamos solo la &lt;strong&gt;parte que no podemos memorizar&lt;/strong&gt; aún estaremos a salvo, veamos un ejemplo:&lt;/p&gt;
+&lt;p&gt;Cuando generas la contraseña, la almacenas en el gestor de contraseñas, pero en el servicio en el que te estás dando de alta, supongamos Google, estableces la siguiente contraseña:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;8e8f6$AB9^YgOJ4x$JqHknK&lt;em&gt;FXp&lt;/em&gt;uru2qyU3KXydaK*lJncQrE&lt;/em&gt;&lt;strong&gt;UnaContraseñaQuePuedesMemorizar&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;De este modo, incluso aunque roben todos los datos de LastPass, el ladrón no será capaz de acceder a tu cuenta, ya que &lt;strong&gt;solo conoce parte de tu contraseña&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;fortaleciendo-tu-presencia-online&#34;&gt;Fortaleciendo tu presencia Online&lt;/h1&gt;
+&lt;p&gt;Cada vez más servicios ofrecen &lt;a href=&#34;https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/&#34; title=&#34;Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo&#34;&gt;autentificacion en dos factores&lt;/a&gt;, deberías habilitarla.&lt;/p&gt;
+&lt;h2 id=&#34;tfa&#34;&gt;TFA&lt;/h2&gt;
+&lt;p&gt;Cuando activas la &lt;strong&gt;autentificacion en dos factores&lt;/strong&gt;, se te muestran los códigos de respaldo en caso de que pierdas tu teléfono o no puedas generar un código para la autentificacion.&lt;/p&gt;
+&lt;h2 id=&#34;protegiendo-los-códigos-de-respaldo-de-tu-tfa&#34;&gt;Protegiendo los códigos de respaldo de tu TFA&lt;/h2&gt;
+&lt;p&gt;Es importante que descarues y guardes estos códigos en un lugar seguro. La mejor idea es imprimirlos en papel y guardarlos en una caja del banco. Pero para la mayoría de gente basta con guardarlos en un disco duro externo o imprimirlos.&lt;/p&gt;
+&lt;p&gt;Eso es todo, creo que aplicando estos consejos estarás más protegido que la mayoría de gente, pero recuerda que nada es seguro al 100%.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;¿Qué tipo de consejos o mejores prácticas usas tú?, deja un comentario!&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;enlaces-de-interés&#34;&gt;Enlaces de interés&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Passwords Evolved: Authentication Guidance for the Modern Era&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras</title>
+            <link>https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En la esfera social de bookmark (“socialbookmarkosphere”) se habla &lt;a href=&#34;http://kestas.kuliukas.com/RainbowTables/&#34;&gt;insistentemente&lt;/a&gt; de las “&lt;!-- raw HTML omitted --&gt;Tablas Arcoiris&lt;!-- raw HTML omitted --&gt;“, cuál es el significado real de &lt;em&gt;password security&lt;/em&gt;, y por qué demuestran que Microsoft hizo un trabajo de mala calidad en la seguridad de &lt;em&gt;Windows for Workgroups&lt;/em&gt; hace 15 años. Esto realmente me enloquece. Si el eje soporte “avanzado” de tu modelo de amenazas es “Tablas Arcoiris”, deja de trabajar en tu aplicación &lt;em&gt;Calendario Social de Compras&lt;/em&gt; ahora mismo: no puedo confiar en ti con mi Reddit karma score, y mucho menos el número de mi tarjeta de crédito.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Para comenzar, almacenamiento de contraseñas 101&lt;/strong&gt;: Los servidores &lt;!-- raw HTML omitted --&gt;no suelen almacenar las contraseñas reales&lt;!-- raw HTML omitted --&gt;. En su lugar, encriptan la contraseña, guardan el hash, y descartan la contraseña. El valor del hash puede verificar una contraseña de una página de login, pero no puede ser revertido de nuevo al valor de la contraseña. Por lo tanto cuando inevitablemente pierdes tu tabla de contraseñas SQL, no se han expuesto todas las contraseñas; sólo lo residual.&lt;/p&gt;
+&lt;p&gt;Ahora re-expliquemos las Tablas Arcoiris:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;Toma un “diccionario” - por ejemplo, todas las combinaciones de caracteres alfanuméricos con menos de 15 caracteres.&lt;/li&gt;
+&lt;li&gt;Encríptalas a todas.&lt;/li&gt;
+&lt;li&gt;Graba los resultados en un DVD.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ahora tienes cientos de billones de valores hash que pueden revertirse al valor original - una “tabla arcoiris”. Para usarla,&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Toma tu tabla de hashes robada&lt;/li&gt;
+&lt;li&gt;por cada hash&lt;/li&gt;
+&lt;li&gt;búscala en la tabla arcoiris&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Si está allí, lo resolviste.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lo que necesitas saber sobre Tablas Arcoiris: ningún esquema moderno de &lt;strong&gt;contraseñas&lt;/strong&gt; es vulnerable a ellos.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Las Tablas Arcoiris son de fácil acierto. Para cada clave, genera un número aleatorio (un ‘&lt;em&gt;nonce’&lt;/em&gt;). Genera el hash de la contraseña con el nonce, y almacena ambos valores. El servidor dispone de información suficiente para verificar contraseñas (el nonce se guarda descubierto). Pero incluso con un pequeño valor aleatorio, digamos, 16 bits, las tablas arcoiris son inviables: en la actualidad hay 65.536 “variantes” de cada hash, y en vez de 300 billones de entradas en la tabla arcoiris, necesitas cuatrillones. El nonce en este esquema se llama “salt” (sal).&lt;/p&gt;
+&lt;p&gt;Genial, ¿no? Sí, y la &lt;!-- raw HTML omitted --&gt;criptografía Unix&lt;!-- raw HTML omitted --&gt; - casi el &lt;em&gt;mínimo común denominador&lt;/em&gt; en sistemas de seguridad - ha tenido esta característica &lt;!-- raw HTML omitted --&gt;desde 1976&lt;!-- raw HTML omitted --&gt;. Si esto son novedades para tí, no deberías estar diseñando sistemas de contraseñas. Usa alguna buena de otro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No, en serio. &lt;!-- raw HTML omitted --&gt;Usa algún sistema de contraseñas de otro&lt;!-- raw HTML omitted --&gt;. No construyas uno propio.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La mayoría de los peores problemas de seguridad de la industria (como el famoso y deficiente hash LANMAN) sucedieron porque inteligentes desarrolladores enfocaron el código de seguridad de la misma forma que hicieron el resto del código. La diferencia entre el código de seguridad y el código de la aplicación es que cuando el de la aplicación falla, lo descubres en el momento, pero cuando falla el de seguridad, te enteras 4 años más tarde, cuando un DVD con todos los códigos de tarjetas de crédito de tus clientes y la información CVV2 comienza a circular en Estonia.&lt;/p&gt;
+&lt;p&gt;Aquí hay un esquema de vanguardia de un post reciente de un blog sobre Tablas Arcoiris y Salts:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hash = md5(&#39;deliciously-salty-&#39; + password)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hay al menos dos problemas con este código. Sí, el autor no sabe que es un salt; “deliciously-salty-” is not a nonce (además, Jeff, a tu computadora realmente no le interesa si separas la contraseña de el nonce con un guión; es una computadora, no una maestra de 2do grado).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pero hay un problema mucho mayor con este código: las letras “md5″.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;**Dos razones.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estás esperando que haga una crítica severa acerca de cómo no hay &lt;!-- raw HTML omitted --&gt;ninguna cualidad redentora&lt;!-- raw HTML omitted --&gt; para justificar &lt;!-- raw HTML omitted --&gt;el uso de MD5 en 2007&lt;!-- raw HTML omitted --&gt;. Eso es cierto (MD5 está roto, es demasiado lento para usarlo como un hash de propósito general, etc.) Pero ese no es el problema.&lt;/li&gt;
+&lt;li&gt;El problema es que MD5 es rápido. Entonces lo son sus competidores modernos, como SHA1 y SHA256. &lt;!-- raw HTML omitted --&gt;La velocidad es un propósito de diseño&lt;!-- raw HTML omitted --&gt; de un hash seguro moderno, debido a que los hashes son bloques de construcción de casi todos los sistemas criptográficos, y usualmente tienen ‘demanda de ejecución’ de nivel ‘por paquete’ o ‘por mensaje’.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;La velocidad es exactamente lo que no quieres en una función de hash de contraseñas.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Los esquemas modernos de contraseñas son atacados con cracker de contraseñas incrementales. Crackers incrementales no precalculan todas las posibles contraseñas crackeadas. Consideran cada hash de contraseña individualmente, y alimentan su diccionario a través de la función de hash de contraseña de la misma manera que tu página de login de PHP lo haría. A los crackers de Tablas Arcoiris les gusta que Ophcrack use espacio para atacar contraseñas; los crackers incrementales como John the Ripper, Crack y LC5 trabajan con tiempo: estadísticas y cómputo.&lt;/li&gt;
+&lt;li&gt;En el juego de atacar contraseñas se gana puntos según el tiempo consumido para crackear una contraseña X. Con las tablas arcoiris, ese tiempo depende de qué tan grande tu tabla necesita ser y que tan rápido puedes buscarla. Con crackers incrementales, el tiempo depende de qué tan rápido puedes hacer correr tu función de hash de contraseñas.&lt;/li&gt;
+&lt;li&gt;Cuanto más puedas optimizar tu función, más rápida se vuelva, más debil tu esquema es. MD5 y SHA1, incluso cifradores de bloque convencionales como DES, son diseñados para ser rápidos. MD5, SHA1 y DES son hasheadores de contraseña débiles. En las CPU modernas, crudos bloques de construcción encriptada como DES y MD5 pueden ser&lt;!-- raw HTML omitted --&gt; separados en bits&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;vectorizados y paralelizados&lt;!-- raw HTML omitted --&gt; para hacer búsquedas de contraseña rápidas como un rayo. Dejar &lt;!-- raw HTML omitted --&gt;fuera de juego a las implementaciones FPGA&lt;!-- raw HTML omitted --&gt; costó sólo cientos de dólares.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Usar funciones hash caseras para autenticar las contraseñas es tan ingenuo como usar funciones hash salt. No lo hagas.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;¿Qué es lo nuevo aquí?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Primero, lo que tu sistema operativo ya te da&lt;/strong&gt;: un esquema de contraseñas “optimizado” para ser computacionalmente caro. El más famoso de estos es el esquema FreeBSD MD5 de &lt;!-- raw HTML omitted --&gt;PHK&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;La diferencia entre el esquema de PHK y el que estabas por usar para tu carrito de compras 2.0 es simple. Estabas por aplicar MD5 en un salt y la contraseña y luego guardar el hash. PHK aplica MD5 por miles de iteraciones. Ésto es lo que llamamos “&lt;em&gt;stretching&lt;/em&gt;” (extenderse).&lt;/li&gt;
+&lt;li&gt;El esquema MD5 de PHK es sencillo de codificar y está incluido en los sistemas operativos Linux y BSD. Si tienes que elegir entre el código PHP que tienes y el esquema de PHK, elige el de PHK o fallarás la auditoría PCI. [*]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;La respuesta más simple es “hashing adaptativo”&lt;/strong&gt;(adaptive hashing), el cual Neils Provos y David Mazieres inventaron para OpenBSD en 1999. Su esquema original&lt;!-- raw HTML omitted --&gt; es llamado “bcrypt&lt;!-- raw HTML omitted --&gt;“, pero la idea es más importante que el algoritmo.&lt;/p&gt;
+&lt;p&gt;Hay tres grandes diferencias entre Provos-Mazieres y el esquema de PHK:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Bcrypt fue inventado por dos hombres inteligentes y el de PHK fue&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;inventado sólo por un hombre inteligente. Eso es literalmente el doble de inteligente.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Bcrypt usa Blowfish en lugar de MD5. Blowfish es un cifrador en bloque con un notoriamente caro tiempo de configuración. Optimizar Blowfish para que sea más rápido, tendrías que contribuir con un importante avance en la criptografía. Nuestros practicantes de seguridad son todos “apostadores”, y usualmente nos gusta apostar a lo que nos “demande importantes avances en criptografía”.&lt;/li&gt;
+&lt;li&gt;Provos y Mazieres extendieron Blowfish. Se llaman los suyos: &amp;ldquo;Eksblowfish&amp;rdquo;. Eksblowfish es más deplorable: el tiempo de configuración tarda más que Blowfish. ¿Cuánto más? &lt;em&gt;Tu llamado.&lt;/em&gt; Puedes hacer que un intento con contraseña simple lleve milisegundos, o puedes hacer que tarde horas.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;¿Por qué bcrypt es como un gran acierto? Piensa en el problema desde dos perspectivas: el servidor, y el atacante.&lt;/p&gt;
+&lt;p&gt;Primero, el servidor: tienes decenas de miles de logins por hora, o decenas por segundo. Comparado con los impactos en la base de datos y los refrescos de página y E/S, el checkeo de contraseña es despreciable. No te preocupes si tu testeo de contraseña tarda el doble de tiempo, o incluso diez veces más, porque los hash no caen dentro del rango 80/20.&lt;/p&gt;
+&lt;p&gt;Ahora, el atacante. Esto es fácil. El atacante se preocupa mucho si los tests de contraseña toman el doble de tiempo. Si un testeo de contraseña tarda el doble, el tiempo total de crackeo de contraseña tarda también el doble.&lt;/p&gt;
+&lt;p&gt;¿Comprendes?&lt;/p&gt;
+&lt;p&gt;La mayor ventaja del hashing adaptativo es que puedes ajustarlo. De la misma forma que las computadoras son cada vez más rápidas, el mismo bloque de código continúa produciendo contraseñas que son difíciles de crackear.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finalmente, como tu abogado en este asunto, me veo obligado a informarte sobre SRP.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SRP es el protocolo de Contraseña Remota Segura de Stanford (&lt;!-- raw HTML omitted --&gt;Stanford Secure Remote Password&lt;!-- raw HTML omitted --&gt; protocol). Es un sistema de criptografía de clave pública diseñado para almacenar y validar contraseñas de forma segura sin guardarlas o transmitirlas sin cifrar.&lt;/p&gt;
+&lt;p&gt;Este objetivo de diseño es mucho mejor de lo que suena, ya que hay usualmente algunas cuestiones inevitables en el diseño de sistemas de contraseñas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Puedes guardar el hash de la contraseña. Ahora si pierdes la base de datos de contraseñas, no expones las contraseñas efectivas. No obstante, tampoco tú sabes el valor real de las contraseñas, lo que significa que para validarlas, tus clientes necesitan enviártelas sin encriptar.&lt;/li&gt;
+&lt;li&gt;Puedes usar un esquema de desafío-respuesta (&lt;em&gt;challenge-response)&lt;/em&gt;, donde ambos lados usan un problema matemático para demostrarse entre sí que conocen la contraseña, pero ninguno de los dos lados envía la contraseña sobre la red. Estos esquemas son buenos, pero no funcionan si ambos lados no tienen acceso al valor real de la contraseña – en otras palabras, el servidor tiene que almacenarla sin encriptar.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;La mayoría de los practicantes elegirán el esquema de hashing. Ambos ataques – robo de bases de datos y contraseñas robadas por &lt;em&gt;phishing –&lt;/em&gt; ocurren todo el tiempo. Pero las bases de datos robadas comprometen más contraseñas.&lt;/p&gt;
+&lt;p&gt;SRP resuelve las compensaciones. Es una extensión de Diffie-Hellman. El detalle destacado de esta publicación: en lugar de almacenar un hash de la contraseña con &lt;em&gt;salt&lt;/em&gt;, almacenas un “verificador”, el cual es un número elevado a la (obviamente muy grande) potencia del módulo N del hash de la contraseña.&lt;/p&gt;
+&lt;p&gt;Si entiendes DH, SRP simplemente va a tener sentido para ti. Si no, &lt;!-- raw HTML omitted --&gt;Wikipedia te explicará mejor que yo&lt;!-- raw HTML omitted --&gt;. Para la prueba del próximo miércoles, necesitas saber:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SRP está relacionado con Diffie-Hellman.&lt;/li&gt;
+&lt;li&gt;SRP es un protocol &lt;em&gt;desafío-respuesta&lt;/em&gt; que permite al servidor que demuestre que sabes la contraseña sin que la misma se inserte en la red.&lt;/li&gt;
+&lt;li&gt;SRP no require que almacenes las contraseñas en texto plano; sino que las guardas en un verificador criptográfico no-revertible.&lt;/li&gt;
+&lt;li&gt;Los verificadores SRP “Cracking” rápidamente podrían involucrar un avance singificativo a la criptografía.&lt;/li&gt;
+&lt;li&gt;SRP es lo suficientemente simple para correr sin Javascript.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;¡Increíble! ¿Por qué no estás usando SRP en este preciso momento? Te dare tres razones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SRP está patentado&lt;/li&gt;
+&lt;li&gt;Para hacerlo funcionar de forma segura en un navegador, tienes que cubrir la página de login sobre SSL; de otra forma, &lt;!-- raw HTML omitted --&gt;como Meebo&lt;!-- raw HTML omitted --&gt;, te enredarás en un esquema que puede ser mordido por cualquiera que pueda hacer *phishing *una página web.&lt;/li&gt;
+&lt;li&gt;SRP es fácil de estropear, por lo que los primeros N mainstreams de Rails o PHP o las implementaciones Pylons SRP serán trivialmente bypassables por al menos el primer año hasta que sean implementadas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;¿Qué hemos aprendido?&lt;/p&gt;
+&lt;p&gt;Aprendimos que si es 1975, puedes incendiar ARPANet con un ataque de Tabla arcoiris. Si es 2007, un ataque de ese tipo te incendia a tí, aprendimos que deberías volver a 1975 y esperar 30 años antes de intentar diseñar un esquema de hashing de contraseñas.&lt;/p&gt;
+&lt;p&gt;Aprendimos que si hemos aprendido algo de este post, deberíamos consultar a nuestros amigos y vecinos en el campo de seguridad pidiendo ayuda con nuestros esquemas de contraseñas, porque nadie va a encontrar el error que termine el juego de nuestros esquemas MD5 hasta el momento después de que el número de tarjeta de crédito de mi madre sea vendido en un puesto de ruta en Tallinn, Estonia.&lt;/p&gt;
+&lt;p&gt;Aprendimos que en un esquema de hashing de contraseñas, la velocidad es el enemigo. Aprendimos que MD5 fue diseñado para velocidad. Entonces, aprendimos que MD5 es el enemigo. También Jeff Atwood y Richard Skrenta.&lt;/p&gt;
+&lt;p&gt;Finalmente, aprendimos que si queremos almacenar contraseñas en forma segura tenemos tres opciones razonables: el esquema MD5 de PHK, el esquema Bcrypt de Provos-Maziere y SRP. Aprendimos que la opción correcta es Bcrypt.&lt;/p&gt;
+&lt;p&gt;[∗] &lt;em&gt;Disclaimer: I cannot actually flunk your PCI audit.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Fuente | &lt;!-- raw HTML omitted --&gt;Matasano Security&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>El uso de contraseñas en una evolución tecnológica</title>
+            <link>https://elbauldelprogramador.com/el-uso-de-contrasenas-en-una-evolucion-tecnologica/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/el-uso-de-contrasenas-en-una-evolucion-tecnologica/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hoy os traigo un artículo sobre la gran problemática que hay entorno a las contraseñas, y es que, por todos es conocido que usar contraseñas débiles puede comprometer cualquier sistema informático. A continuación resumo un artículo muy interesante que leí en &lt;strong&gt;The Hacker News&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Todos los días leemos noticias sobre algún ataque exitoso a sistemas informáticos. A menudo, sistemas de control crítico estan en la red, protegidos únicamente por una contraseña débil, o incluso con la contraseña por defecto de fábrica. El comportamiento erróneo del componente humano y la ausencia de validaciones se traduce en aplicaciones vulnerables a ataques externos.&lt;/p&gt;
+&lt;p&gt;La consultoría Deloitte, recientemente publicó un informe titulado ”&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;Technology, Media &amp;amp; Telecommunications Predictions 2013&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;”. En dicho informe se hacen una serie de predicciones para 2013. Entre las predicciones más destacadas figura la preocupación del uso indebido de contraseñas, que seguirá siendo en 2013 una de las causas de muchos problemas.&lt;/p&gt;
+&lt;p&gt;El informe se centra en la necesidad de reconsiderar la forma de gestionar contraseñas; Duncan Stewart, Director de investigación del TMT dijo:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;”Las contraseñas con al menos ocho caracteres, un número, mezcla de mayúsculas y minúsculas y símbolos no alfanuméricos parecieran ser robustas hace algún tiempo. Pero pueden ser fácilmente crackeadas con la aparición de software y hardware avanzado.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;”Lo ideal sería usar contraseñas largas y verdaderamente aleatorias, pero la gente no las usaría”, dijo Stewart.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;”Una contraseña de ocho caracteres elegida de entre los 94 caracteres disponibles en un teclado estándar es una de las &lt;em&gt;6,095,689,385,410,816&lt;/em&gt; combinaciones posibles. Un ordenador relatívamente rápido del 2011 tardaría aproximadamente un año en probar todas las combinaciones. Si se tratara de averiguar la contraseña de una tarjeta de crédito, no compensaría el tiempo de cómputo. Sin embargo, un número de factores relativos al comportamiento humano y cambios en la tecnología, se han combinado para hacer a las contraseñas &lt;strong&gt;fuertes&lt;/strong&gt; vulnerables.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Descifrar contrasñas de ocho caracteres mediante ataques de fuerza bruta es posible en unas 5,5 horas. Con una máquina dedicada a tal fin, y empleando unidades de procesamiento gráfico. El precio de estas máquinas ronda los $30,000. Pero como indica el informe, es posible obtener la misma capacidad computacional mediante una gran &lt;!-- raw HTML omitted --&gt;botnet.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;La longitud de la contraseña no es la única preocupación de los investigadores. El factor humano expone el proceso de gestión de contraseñas a un riesgo muy serio. No tendemos a recordar contraseñas largas y complejas, al revés, usamos contraseñas fáciles de recordar y afines a nuestra vida cotidiana. En muchos casos, las contraseñas se reutilizan en varios servicios, desde nuestra cuenta de facebook a la bancaria. La media de usuarios tiene unas 26 cuentas protegidas con contraseña, pero solamente 5 son distintas. De acuerdo con un estudio reciente basado en seis millones de contraseñas generadas por el usuario, las 10.000 contraseñas más comunes eran usadas en el 98.1% de las cuentas. Información que nos dá una idea de cómo es de vulnerable la gestión de credenciales.&lt;/p&gt;
+&lt;p&gt;Deloitte precide que en 2013 más del 90% de las contraseñas, incluso aquellas consideradas como seguras por los departamentos IT, serán hackeadas con serias consecuencias. La compañia precide, de hecho, miles de millones en pérdidas y un daño significativo a la reputación de la empresa cuyos clientes han sido víctimas de los ataques.&lt;/p&gt;
+&lt;p&gt;En dicho informe se explica cómo es el proceso de averiguar una contraseña:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;“El problema no es que el atacante descubre el nombre de usuario, accede a la página de login e intenta adivinar la contraseña. Eso sería inviable, ya que la mayoría de los sitios bloquean al usuario que introduce un determinado número de veces la contraseña equivocada. La mayoría de organizaciones tienen la información del usuario y su contraseña en un archivo. Ese archivo está hasheado, es decir, usando algoritmos de &lt;a href=&#34;https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/&#34; title=&#34;Lo último en criptografía: Fully Homomorphic Encryption&#34;&gt;encriptación&lt;/a&gt; se cifran el nombre de usuario y contraseña. Nadie en la organización puede ver las contraseñas en su forma descifrada. Cuando el usuario intenta logearse, el servidor vuelve a cifrar los datos introducidos y los comprueba con los que hay en el fichero. Hasta ahora, parece seguro. Sin embargo, éstos ficheros a menudo son robados. Mediante varios tipos de software y hardware, el atacante puede descifrar ciertos usuarios y contraseñas. Una vez descifrados, esta información se vende, se comparte o es explotada por el atacante.“&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Además, otro problema referente a las contraseñas viene dado por la plataforma que se use. Si consideramos que la media de usuarios tarda unos 4-5 segundos en escribir una contraseña ”fuerte” de diez caracteres en un teclado convencional. Unos 7-10 segundos en un dispositivo móvil con teclado hardware y de 7 a 30 segundos en pantallas táctiles, un cuarto de la gente encuestada admitió usar contraseñas menos seguras para ahorrar tiempo.&lt;/p&gt;
+&lt;p&gt;Para finalizar, muestro el top ten de peores contraseñas según SplashData. Los puestos del 1 al 3 no han cambiado con respecto al año pasado. Sin embargo este año aparecen en la lista contraseñas como &lt;strong&gt;”welcome” ”jesus”&lt;/strong&gt; o &lt;strong&gt;”ninja”&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;password (=)&lt;/li&gt;
+&lt;li&gt;123456 (=)&lt;/li&gt;
+&lt;li&gt;12345678 (=)&lt;/li&gt;
+&lt;li&gt;abc123 (sube 1)&lt;/li&gt;
+&lt;li&gt;qwerty (baja 1)&lt;/li&gt;
+&lt;li&gt;monkey (=)&lt;/li&gt;
+&lt;li&gt;letmein (sube 1)&lt;/li&gt;
+&lt;li&gt;dragon (sube 2)&lt;/li&gt;
+&lt;li&gt;111111 (sube 3)&lt;/li&gt;
+&lt;li&gt;baseball (subo 1)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Si usas cualquiera de estas contraseñas, deberías cambiarla.&lt;/p&gt;
+&lt;p&gt;Está claro que al final el eslabón más débil en seguridad es el ser humano, y no parece que muchos estén dispuestos a cambiar. Innumerables veces he intentado convencer a familiares mios de que cambien sus contraseñas por se muy, muy sencillas y no me han hecho caso. Siempre dicen ”&lt;strong&gt;Pero quién va a querer meterse en mi cuenta de tal servicio&lt;/strong&gt;”&lt;/p&gt;
+&lt;p&gt;Si estás interesado en saber más acerca de este tema puede que te interesen los siquientes enlaces:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/basta-con-las-tablas-arcoiris-lo-que-necesitas-saber-sobre-esquemas-de-contrasenas-seguras/&#34; title=&#34;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&#34;&gt;Basta con las Tablas Arcoiris: lo que necesitas saber sobre esquemas de contraseñas seguras&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/&#34; title=&#34;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&#34;&gt;Cómo se almacenan tus contraseñas en internet (y cuando la longitud de la misma no importa)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;thehackernews.com&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Todos los lugares donde deberías habilitar la Autenticación de Dos Factores ahora mismo</title>
+            <link>https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/todos-los-lugares-donde-deberias-habilitar-autenticacion-de-dos-factores-ahora-mismo/</guid>
+            <description>&lt;p&gt;La Autenticación de dos factores (Two-factor autenticación) es una de &lt;!-- raw HTML omitted --&gt;las mejores cosas que puedes hacer&lt;!-- raw HTML omitted --&gt; para asegurarte de que tus cuentas no sean hackeadas. Aquí hay una lista de todos los servicios populares que la ofrecen, y donde deberías ir para activarlo ahora mismo.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-la-autenticación-de-dos-factores&#34;&gt;¿Qué es la Autenticación de Dos Factores?&lt;/h1&gt;
+&lt;p&gt;Las contraseñas, desafortunadamente, &lt;!-- raw HTML omitted --&gt;no son tan seguras como solían serlo,&lt;!-- raw HTML omitted --&gt; y si alguien obtiene tu contraseña, puede acceder a tu cuenta sin problema. La Autenticación de Dos Factores soluciona ese problema.&lt;/p&gt;
+&lt;p&gt;El gurú del spam de Google, Matt Cutts, &lt;!-- raw HTML omitted --&gt;lo expresa mejor&lt;!-- raw HTML omitted --&gt;: la Autenticación de dos factores es una simple característica que te pide más que solo tu contraseña. Requiere tanto “algo que sabes” (por ejemplo, una contraseña) como “algo que tienes” (por ejemplo, tu teléfono). Luego de ingresar tu contraseña, tendrás un segundo código enviado a tu teléfono, y solo después de ingresarlo podrás ingresar a tu cuenta. Piensa en esto como ingresar un numero de PIN, luego hacer un escaneo de retina, como ves en todas las películas de espías que existen. Es mucho mas seguro que una contraseña que puedes hackear, y mantiene a los fisgones no deseados alejados de tus cuentas online.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;dónde-puedo-usarla&#34;&gt;¿Dónde puedo usarla?&lt;/h1&gt;
+&lt;p&gt;Desafortunadamente, no puedes usar autenticación de dos factores en cualquier parte de la web todavía. Pero muchos sitios la han implementado recientemente, incluyendo muchos de tus servicios favoritos. Aquí están algunos servicios que permiten autenticación de dos factores, con algunas instrucciones de cómo habilitarla:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google/Gmail:&lt;/strong&gt; La mayoría de nosotros guarda mucha información en nuestras cuentas de Google, y definitivamente querrás protegerla activando la autenticación de dos factores. Puedes aprender &lt;!-- raw HTML omitted --&gt;cómo hacerlo aquí,&lt;!-- raw HTML omitted --&gt; o checkear la &lt;!-- raw HTML omitted --&gt;documentación oficial de Google&lt;!-- raw HTML omitted --&gt; para más información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LastPass&lt;/strong&gt;: Si usas LastPass para crear, manejar, y guardar tus contraseñas de otros sitios (lo cual recomendamos que hagas), este es uno de los más importantes servicios para los cuales tienes que habilitar la autenticación de dos factores, dado que almacena tus contraseñas por cualquier otro sitio en la red. Usa la aplicación &lt;!-- raw HTML omitted --&gt;Google Authenticator&lt;!-- raw HTML omitted --&gt; para Android, iOS y BlackBerry, y puedes leer &lt;!-- raw HTML omitted --&gt;cómo habilitarlo aquí&lt;!-- raw HTML omitted --&gt;. Alternativamente, puedes usar &lt;!-- raw HTML omitted --&gt;una de esas aplicaciones de gestión de contraseñas&lt;!-- raw HTML omitted --&gt; que sincronizan entre computadoras con Dropbox (que también soporta Autenticación de dos factores, como describimos a continuación.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Facebook&lt;/strong&gt;: Tener la contraseña de Facebook secuestrada puede ser más que sorprendente, y la autenticación de dos factores es muy fácil de usar. encontrarás instrucciones sobre &lt;!-- raw HTML omitted --&gt;cómo hacerlo aquí&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dropbox&lt;/strong&gt;: Dropbox es&lt;!-- raw HTML omitted --&gt; útil por una gran cantidad de cosas&lt;!-- raw HTML omitted --&gt;, no solo por estar almacenando datos y &lt;!-- raw HTML omitted --&gt;enviando información sensible a través de Internet.&lt;!-- raw HTML omitted --&gt; Hazte un favor y &lt;!-- raw HTML omitted --&gt;activa la autenticación de dos factores utilizando estas instrucciones&lt;!-- raw HTML omitted --&gt;. Si quieres otra capa de seguridad adicional, puedes hacerlo &lt;!-- raw HTML omitted --&gt;encriptando de los contenidos de tu Dropbox con TrueCrypt&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Algunos de los productos de Microsoft:&lt;/strong&gt; Microsoft no ha habilitado la autenticación de dos factores para Outlook aún, pero algunos de sus servicios - incluyendo Xbox Live, sus páginas de facturación, y SkyDrive cuando te conectas remotamente a otra computadora, lo requieren de forma predeterminada. Puedes leer más sobre ello &lt;!-- raw HTML omitted --&gt;aquí&lt;!-- raw HTML omitted --&gt;. Y, si quieres una mejor seguridad para Outlook, debes saber que &lt;!-- raw HTML omitted --&gt;Microsoft está trabajando en una forma segura y fácil&lt;!-- raw HTML omitted --&gt; para fortalecer tu login.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Correo Yahoo!&lt;/strong&gt;: Si eres un usuario de Yahoo, puedes &lt;!-- raw HTML omitted --&gt;activar la autenticación de dos factores&lt;!-- raw HTML omitted --&gt; para tu buzón.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Amazon Web Services&lt;/strong&gt;: Si utilizas cualquiera de los servicios web de Amazon, como Amazon S3 o el almacenamiento Glacier, puedes conseguir&lt;!-- raw HTML omitted --&gt; seguridad extra con Autenticación de Dos Factores&lt;!-- raw HTML omitted --&gt; a través de la aplicación Google Authenticator para Android, iOS y BlackBerry. También es compatible con Windows phone través de la aplicación &lt;!-- raw HTML omitted --&gt;Authenticator&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WordPress&lt;/strong&gt;: Si no quieres que nadie obtenga acceso no autorizado a tu blog, WordPress también es &lt;!-- raw HTML omitted --&gt;compatible con la aplicación Google Authenticator&lt;!-- raw HTML omitted --&gt; para Android, iOS y BlackBerry.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DreamHost&lt;/strong&gt;: Si alojas tu propio dominio o el sitio web en DreamHost - nuestro servicio favorito de web hosting, puedes habilitar la autenticación de dos factores con Google Authenticator para Android, iOS y BlackBerry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si utilizas cualquiera de estos servicios deberías habilitar autenticación de dos factores en este momento - es una de las mejores maneras de mantener tus datos (y, en muchos casos, tu dinero) seguros. Por supuesto, también deberías asegurarte de que utilizas una contraseña única y segura para cada una de tus cuentas, y si no lo haces, ya es b&lt;!-- raw HTML omitted --&gt;uen momento para cambiarlas&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Fuente | &lt;!-- raw HTML omitted --&gt;lifehacker&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo se almacenan tus contraseñas en internet (y cuándo la longitud  de la misma no importa)</title>
+            <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
+            <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;changelog&#34;&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/josealberto4444&#34;&gt;Speedy&lt;/a&gt; ha cambiado:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Añadido apunte sobre seguridad de las contraseñas cuando están guardadas en bases de datos en texto plano o con cifrado básico.&lt;/li&gt;
+&lt;li&gt;Añadida explicación sobre tablas de arcoíris y qué contraseñas son más frecuentes ahí.&lt;/li&gt;
+&lt;li&gt;Eliminada recomendación de usar OAuth en sitios inseguros.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero ¿qué quiere decir realmente que un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
+&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;!-- raw HTML omitted --&gt;base de datos&lt;!-- raw HTML omitted --&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Este es claramente el peor método de todos, en términos de &lt;!-- raw HTML omitted --&gt;seguridad&lt;!-- raw HTML omitted --&gt;. La gran mayoría de sitios con reputación no usan este método, ya que si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Depende del ataque que se realice. Si la base de datos queda comprometida, no importa cual sea la longitud de tu contraseña o cómo de segura sea: si está almacenada en texto plano, tu contraseña será accesible para todo el mundo sin ningún trabajo. Por el contrario, si se pretende robar la contraseña por fuerza bruta o algún otro ataque, la fortaleza de tu contraseña será tu única salvaguarda, ¡por eso siempre debes escoger contraseñas seguras! También importa en términos de ocultarla de amigos y conocidos, que pueden intentar adivinarla, pero, como ya hemos dicho, no hay nada que hacer en el caso de que el sitio se vea comprometido.&lt;/p&gt;
+&lt;h1 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
+&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sitio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
+&lt;h1 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: si se dispone del hash, no es posible ejecutar el algoritmo inverso para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
+&lt;p&gt;Aun así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; — que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas — se puede mirar fácilmente el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;!-- raw HTML omitted --&gt;SHA-1&lt;!-- raw HTML omitted --&gt; para ‘password1′. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;!-- raw HTML omitted --&gt;Jeff Atwood&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles tienen más probabilidades de encontrarse en ellas. Su mayor debilidad, sin embargo, no es la complejidad, sino la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;!-- raw HTML omitted --&gt;XKCD&lt;!-- raw HTML omitted --&gt; llamado “correct horse battery staple”) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
+&lt;h1 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria — llamada “salt” — al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, e incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes “salteados” en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;!-- raw HTML omitted --&gt;hackearon&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente. Sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo — más que usar rainbow tables — pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
+&lt;h1 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;!-- raw HTML omitted --&gt;están apostando por los hashes lentos&lt;!-- raw HTML omitted --&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos — como el algoritmo &lt;!-- raw HTML omitted --&gt;bcrypt&lt;!-- raw HTML omitted --&gt; — los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que es muy importante. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h1&gt;
+&lt;p&gt;Entonces, ¿qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;No usar servicios con mala seguridad:&lt;/strong&gt; Aunque no podemos controlar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servicios darnos de alta. Nunca deberíamos darnos de alta con servicios que usan texto plano o cifrado para almacenar las contraseñas, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;!-- raw HTML omitted --&gt;servicio web CloudFlare&lt;!-- raw HTML omitted --&gt;, es hacer click en el enlace “no recuerdo mi contraseña”. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada — y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos mostrado más arriba, una contraseña más segura es menos susceptible de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable — solo significa que llevará más tiempo romperla. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta de que una filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos y alguna de ellas se compromete, el resto de cuentas estará a salvo. Si usamos la misma contraseña para todos los sitios, una vulnerabilidad en cualquiera de ellos puede significar un mundo de problemas para ti.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cumplir escrupulosamente el punto 4 si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Si no sabemos cómo de seguro es un sitio, el punto 4 juega un papel crucial, es decir, debemos asegurarnos de que la contraseña que usemos en él no la usamos en ningún otro sitio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
+&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;!-- raw HTML omitted --&gt;desarrollo de aplicaciones web&lt;!-- raw HTML omitted --&gt; en &lt;!-- raw HTML omitted --&gt;udacity&lt;!-- raw HTML omitted --&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
+&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
+&lt;h1 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imagen | de &lt;!-- raw HTML omitted --&gt;palsur&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Fuente | &lt;!-- raw HTML omitted --&gt;LifeHacker&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,448 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>script on The Programmer&#39;s Chest</title>
+        <link>https://elbauldelprogramador.com/en/tags/script/</link>
+        <description>Recent content in script on The Programmer&#39;s Chest</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 30 Oct 2017 11:39:16 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/en/tags/script/</link>
+            <title>script on The Programmer&#39;s Chest</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/en/tags/script/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Rename files in bulk in GNU/Linux</title>
+            <link>https://elbauldelprogramador.com/en/rename-files-in-bulk-linux/</link>
+            <pubDate>Mon, 30 Oct 2017 11:39:16 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/rename-files-in-bulk-linux/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Note: Thanks to &lt;a href=&#34;https://elbauldelprogramador.com/author/cristina/&#34;&gt;Cristina H&lt;/a&gt; for translating this post to english.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sometimes when we get some files from the internet (usually music), each file contains in its name the name of the webpage from which it was downloaded.&lt;/p&gt;
+&lt;p&gt;If we want to rename all files to delete the web page from the file name, it is not necessary to rename files one by one, using the &lt;code&gt;rename&lt;/code&gt; command from GNU/Linux we can get it done easily.&lt;/p&gt;
+&lt;p&gt;For example, lets say the files are as follows:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls
+01. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Uno - www.HHGroups.com.mp3
+02. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Lluvia y fuego - www.HHGroups.com.mp3
+03. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Donde duele inspira - www.HHGroups.com.mp3
+04. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+05. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Soy loco por ti - www.HHGroups.com.mp3
+06. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+07. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+08. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - In-extremis - www.HHGroups.com.mp3
+09. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+10. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Artesano del arte insano - www.HHGroups.com.mp3
+11. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Cosquijazz - www.HHGroups.com.mp3
+12. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - Mis ego depresiones - www.HHGroups.com.mp3
+13. Rafael Lechowski &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Flowklorikos&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We want to delete the following from their names: &lt;strong&gt;Rafael Lechowski (Flowklorikos)&lt;/strong&gt; and &lt;strong&gt;&lt;a href=&#34;http://www.HHGroups.com&#34;&gt;www.HHGroups.com&lt;/a&gt;&lt;/strong&gt;. For that we use the rename command with the following syntax:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/Rafael Lechowski (Flowklorikos) - //g&amp;#39;&lt;/span&gt; *.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;What we are saying with that expression is that we want to replace all that match with Rafael Lechowski (Flowklorikos) by nothing, that is, to delete it from the name. It is necessary to scape blanks and parenthesis. The *.mp3 means that we want to apply that renaming to all mp3 files.&lt;/p&gt;
+&lt;p&gt;As a result, now the files have the following names:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+01. Uno - www.HHGroups.com.mp3
+02. Lluvia y fuego - www.HHGroups.com.mp3
+03. Donde duele inspira - www.HHGroups.com.mp3
+04. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+05. Soy loco por ti - www.HHGroups.com.mp3
+06. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+07. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+08. In-extremis - www.HHGroups.com.mp3
+09. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; - www.HHGroups.com.mp3
+10. Artesano del arte insano - www.HHGroups.com.mp3
+11. Cosquijazz - www.HHGroups.com.mp3
+12. Mis ego depresiones - www.HHGroups.com.mp3
+13. &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt; - www.HHGroups.com.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The only missing thing, is to delete the &lt;a href=&#34;http://www.HHGroups.com&#34;&gt;www.HHGroups.com&lt;/a&gt; part. We get it done with the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rename &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/ - www.HHGroups.com//g&amp;#39;&lt;/span&gt; *.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And finally, we have all our files renamed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hkr@hkr:~/Desktop/RAP/d$ ls -1
+01. Uno.mp3
+02. Lluvia y fuego.mp3
+03. Donde duele inspira.mp3
+04. Por amor al odio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Gregory Isaacs&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+05. Soy loco por ti.mp3
+06. Desde el barro &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+07. Folio en blanco &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;Improvisacion&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+08. In-extremis.mp3
+09. Sucio &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;con Carlos Talavera&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.mp3
+10. Artesano del arte insano.mp3
+11. Cosquijazz.mp3
+12. Mis ego depresiones.mp3
+13. 13.mp3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>Change your gnome shell background&#39;s image and put a text color that suits, automatically</title>
+            <link>https://elbauldelprogramador.com/en/imagen-terminal-color-texto-a-juego-linux/</link>
+            <pubDate>Mon, 09 Oct 2017 20:09:46 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/imagen-terminal-color-texto-a-juego-linux/</guid>
+            <description>&lt;p&gt;Sure you are that kind of person that spend hours in front of a computer with one or more terminals open. And sure, you are very used to the shell black background with white letters, or whatever shell style you put long time ago&amp;hellip; Because, lets be honest, changing it everyday is not the most fun job. But&amp;hellip; What if it changes itself automatically? What if you could just have your favorite pictures as shell backsground&amp;rsquo;s images, with a text that suits the colors in each of that images and you just have to no nothing?&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Here I want to tell you how I thought to do it with a bash script, and thus escape from the shell style routine.&lt;/p&gt;
+&lt;h1 id=&#34;before-we-start&#34;&gt;Before we start&amp;hellip;&lt;/h1&gt;
+&lt;h2 id=&#34;check-you-gnome-shell-version&#34;&gt;Check you gnome-shell version&lt;/h2&gt;
+&lt;p&gt;That script is valid only for &lt;strong&gt;gnome versions &amp;lt; 3.8&lt;/strong&gt;. I Have tested it in Linux Mint Debian Edition and in Ubuntu 14.04 (in this last I had to install gnome-shell).&lt;/p&gt;
+&lt;p&gt;To install gnome-shell (just in case you need to):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ sudo apt-get install gnome-shell
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to check the gnome version:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ gnome-shell --version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;install-imagemagick-and-gawk&#34;&gt;Install ImageMagick and gawk&lt;/h2&gt;
+&lt;p&gt;We are goint to use some ImageMagick functions to convert the images, and gawk for filtering expressions. To install them:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ sudo apt-get install gawk
+    cris@cris ~ $ sudo apt-get install imagemagick
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;script-explanation&#34;&gt;Script explanation&lt;/h1&gt;
+&lt;p&gt;What we want this script to do is to modify directly the shell configuration values that are set in the file &lt;strong&gt;%gconf.xml&lt;/strong&gt; which is placed at &lt;code&gt;home/user/.gconf/apps/gnome-terminal/profiles/Default/&lt;/code&gt; for gnome versions &amp;lt; 3.8.&lt;/p&gt;
+&lt;h2 id=&#34;variables-definition&#34;&gt;Variables definition&lt;/h2&gt;
+&lt;p&gt;Initially, we are declaring the variables with the path of the commands we are going to use frequently. It is not mandatory, but it is recommended. The &lt;strong&gt;ROUTE&lt;/strong&gt; variable contains the path for the folder where the images that we want to use as background images are placed.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;GCONFT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/gconftool-2&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;SORT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/sort&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;GAWK&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/gawk&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;CNVRT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/bin/convert&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;ROUTE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/myPath/*&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;gconftool-2&lt;/strong&gt; : gnome configuration tool. We use it with the &lt;em&gt;set&lt;/em&gt; option to modify the configuration file.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;sort&lt;/strong&gt; : command that sorts text lines.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;gawk&lt;/strong&gt; : pattern scanner. We use it to filter the hexadecimal pattern.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;convert&lt;/strong&gt; : we use this command to resize the image and convert it to an hibstogram.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;taking-images&#34;&gt;Taking Images&lt;/h2&gt;
+&lt;p&gt;We take randomly an image of &lt;strong&gt;myPath&lt;/strong&gt; for the shell background:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We clear the path name and take only the image&amp;rsquo;s name:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILECONV&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lets resize the image (just if needed, for example if the images we want to use are for desktop background). To not modify the original image neither keeping so many unnecessary copies, we save it in /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    convert &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILE&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -resize %50 &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;As my images are desktop background size, I resize them to the half of their size to fit better the shell.&lt;/p&gt;
+&lt;p&gt;Optional: we take another image from the folder to set it as desktop background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;FILED&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;shuf -n &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;$ROUTE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-the-terminals-background-image&#34;&gt;Set the terminal&amp;rsquo;s background image&lt;/h2&gt;
+&lt;p&gt;We modify some configurations that are by default before applying changes, to have an effect:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_type --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#solido por defecto&lt;/span&gt;
+
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_command --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_theme_colors --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;false&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/use_custom_default_size --type bool &lt;span class=&#34;s2&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, we can just take the resized image and set it as terminal&amp;rsquo;s background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_image --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Last, we set a dark background color for shell and a high opacity level, to make the text looks better:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;#181824243131&amp;#34;&lt;/span&gt;
+
+    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/background_darkness --type float &lt;span class=&#34;s2&#34;&gt;&amp;#34;0.78&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;set-the-text-color-to-suit-with-the-image&#34;&gt;Set the text color to suit with the image&lt;/h2&gt;
+&lt;p&gt;To do that, we first get the color hibstogram from the image, and then we take a color tone of them. With &lt;strong&gt;convert&lt;/strong&gt; we can specify the number of colors to take and the deeper we want to go in the image to get them. Then, we sort then according to their numeric order and filter just the hexadecimal code of the colors with &lt;strong&gt;gawk&lt;/strong&gt;. We save it in a text file called paleta.txt which will be created at /tmp.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$CNVRT&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILECONV&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -colors &lt;span class=&#34;m&#34;&gt;25&lt;/span&gt; -depth &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; -format &lt;span class=&#34;s1&#34;&gt;&amp;#39;%c&amp;#39;&lt;/span&gt; histogram:info:- &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$SORT&lt;/span&gt; --general-numeric-sort &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$GAWK&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;match ($0, /^ *[0-9]+: \([^)]+\) (#[0-9A-F]+) .+$/, a) { print a[1] }&amp;#39;&lt;/span&gt; &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;/tmp/paleta.txt&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To finish, we open the temporary file &lt;strong&gt;paleta.txt&lt;/strong&gt; and read the first 6 lines from it, that is, we read the first 6 colors:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# open file&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt; /tmp/paleta.txt
+    &lt;span class=&#34;c1&#34;&gt;#read 6 lines&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color1 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color2 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color3 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color4 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color5 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; color6 &amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;#close&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; 3&amp;lt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and we set the last readed color as the shell&amp;rsquo;s text color:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;$GCONFT&lt;/span&gt; --set /apps/gnome-terminal/profiles/Default/foreground_color --type string &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$color6&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Why taking the 6º color? well thats because as colors are ordered from dark to light, the lighther ones, that are the ones that give better results, are in the center possition of the hibstogram. However, you can modify it depending on your images. The script is not perfect! the image folder I use has 700 images and there is sometimes someone that fails suiting with text color, especially the very dark images where no light colors can be found. If you have any idea of improvement, comment it or let me know!&lt;/p&gt;
+&lt;p&gt;Optional: if you also want to change the desktop background image:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    gsettings &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; org.gnome.desktop.background picture-uri &lt;span class=&#34;s2&#34;&gt;&amp;#34;file:///&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$FILED&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;enjoy-and-show-off-your-terminals&#34;&gt;Enjoy and show off your terminals&lt;/h1&gt;
+&lt;h1 id=&#34;plan-it-execution&#34;&gt;Plan it execution&lt;/h1&gt;
+&lt;p&gt;To avoid executing the script by hand, you can automate it execution using &lt;strong&gt;crontab&lt;/strong&gt;, for example, if you want it to execute each time you boot your pc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;    cris@cris ~ $ crontab -e &lt;span class=&#34;c1&#34;&gt;# open crontab&lt;/span&gt;
+    @reboot /path_to_script/ChangeTerminals.sh &lt;span class=&#34;c1&#34;&gt;# add task&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;some-examples&#34;&gt;Some examples&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;link-to-code&#34;&gt;Link to code&lt;/h1&gt;
+&lt;p&gt;You can check the script at &lt;a href=&#34;https://github.com/CristinaHG/My-TerminalsBacgroundSetter&#34; title=&#34;My Terminals Background Setter Repository &#34;&gt;github&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Keep your LaTeX project clean with this simple script</title>
+            <link>https://elbauldelprogramador.com/en/keep-latex-project-clean/</link>
+            <pubDate>Wed, 09 Aug 2017 17:45:16 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/keep-latex-project-clean/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;This post is a collaboration by &lt;!-- raw HTML omitted --&gt;Luis Liñan&lt;!-- raw HTML omitted --&gt;, &lt;!-- raw HTML omitted --&gt;@lulivi&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today we are going to use a simple shell script to autoupdate the pdf preview of our latex files. Then, it will bring the pdf from the metafiles directory to our project directory, keeping it clean from auxiliar files.&lt;/p&gt;
+&lt;h1 id=&#34;directory-structure&#34;&gt;Directory structure&lt;/h1&gt;
+&lt;p&gt;Working with the same structure as &lt;a href=&#34;https://elbauldelprogramador.com/ocultar-los-metaficheros-de-latex-del-directorio-de-trabajo/&#34;&gt;other article from the blog&lt;/a&gt; we will have what follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.
+|-- figures
+|   |-- figure_1.pdf
+|   `-- ...
+|-- main.pdf
+|-- main.tex
+|-- ref.bib
+|-- style.sty
+`-- metafiles
+    |-- main.aux
+    |-- main.bbl
+    |-- main.blg
+    |-- main.fdb_latexmk
+    |-- main.fls
+    |-- main.lof
+    |-- main.log
+    |-- main.lot
+    |-- main.out
+    |-- main.pdf
+    `-- main.toc
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;script-execution&#34;&gt;Script execution&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# Help function&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;metafiles_directory&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Check correct execution of the script&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Create directory if it doesn&amp;#39;t exist&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ! -d &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+  mkdir &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Copy the pdf from the temporal directory to the parent directory&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; listen_pdf_update &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;pdf_substring&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;(.*[.]pdf.*)&amp;#39;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; true&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;inotifywait -e close_write &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$change&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;~ &lt;span class=&#34;nv&#34;&gt;$pdf_substring&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+      cp &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/*.pdf ./
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;============&amp;gt; iNotify &amp;lt;============&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;==&amp;gt;   Updated parent pdf file   &amp;lt;==&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;===================================&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up listener for the target PDF file&lt;/span&gt;
+listen_pdf_update &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Set up latex listener for changes in the directory&lt;/span&gt;
+latexmk -shell-escape -silent -bibtex -view&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;pdf -xelatex -pdf -pvc -output-directory&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Kill all processes created in this script&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;kill&lt;/span&gt; -9 -&lt;span class=&#34;nv&#34;&gt;$$&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The only thing we have to do is execute the script with the metafiles directory as an argument:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ /PATH/TO/SCRIPT/updatePdfLatex.sh &amp;lt;metafiles_directory&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;Check the &lt;a href=&#34;https://github.com/lulivi/Latex-PDF-auto-updater&#34;&gt;script repository&lt;/a&gt; out for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Compilar automáticamente ficheros en latex mientras los modificamos&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Ejecutar un script al modificar un fichero con inotify&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;!-- raw HTML omitted --&gt;Latexmk man page&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>How to search files with locate using regular expressions.</title>
+            <link>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</link>
+            <pubDate>Wed, 15 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/buscar-archivos-con-locate-mediante-expresiones-regulares-complejas/</guid>
+            <description>&lt;p&gt;In GNU/Linux, &lt;code&gt;locate&lt;/code&gt; command is useful to find files in the file system by querying a database. Here is how to use with regular expressions.&amp;rdquo; Its &lt;code&gt;man&lt;/code&gt; description is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;locate reads one or more databases prepared by updatedb(8) and writes file names matching at least one of the PATTERNs to standard output, one per line.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This post arises from a problem I had some days ago. I have a file with some of my &lt;!-- raw HTML omitted --&gt;Favorite songs&lt;!-- raw HTML omitted --&gt;. I update this file on a regular basis and I wanted to generate a playlist from that file. The solution was to write a &lt;a href=&#34;https://elbauldelprogramador.com/tags/bash&#34; title=&#34;Categoría script&#34;&gt;script&lt;/a&gt; which loop through all items in the file and search where the each file is located in the hard drive.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; Some time ago I improved this idea and wrote a &lt;code&gt;Python&lt;/code&gt; script to &lt;a href=&#34;https://elbauldelprogramador.com/en/generar-listas-de-reproduccion-determinada-duracion-python/&#34; title=&#34;create music playlists with a given length&#34;&gt;create music playlists with a given length&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;regular-expressions-in-locate&#34;&gt;Regular expressions in Locate&lt;/h1&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;strong&gt;Locate&lt;/strong&gt; accepts complex &lt;a href=&#34;https://elbauldelprogramador.com/tags/regex&#34; title=&#34;Artículos sobre expresiones regulares&#34;&gt;regexs&lt;/a&gt;, in order to enable them, give &lt;code&gt;locate&lt;/code&gt; &lt;code&gt;-regex&lt;/code&gt; option.&lt;/p&gt;
+&lt;p&gt;Basically the problem is as follows: Given a text file with filenames, get the absolute path for each file in the textfile. For example, a file name &lt;em&gt;“Author - Song Name”&lt;/em&gt; will be stored in the file as &lt;em&gt;“Song Name”&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;writing-the-regular-expression&#34;&gt;Writing the regular expression&lt;/h1&gt;
+&lt;p&gt;Here is the &lt;code&gt;regex&lt;/code&gt; needed:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp4&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;mp3&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$i&lt;/code&gt; stores the song name.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.*&lt;/code&gt; match zero or more characters after the song name.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(\.mp4|\.mp3)&lt;/code&gt; match only files with &lt;a href=&#34;https://elbauldelprogramador.com/cual-es-la-diferencia-entre-los-distintos-formatos-de-audio-y-cual-deberia-elegir/&#34; title=&#34;¿Cual es la diferencia entre los distintos formatos de audio, y cual debería elegir?&#34;&gt;&lt;em&gt;mp3&lt;/em&gt; or &lt;em&gt;mp4&lt;/em&gt; extensions&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When building regular expressions, I find useful to use some king of tool like &lt;strong&gt;regex tester&lt;/strong&gt;, that allows to visualize the regular expression:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;script&#34;&gt;Script&lt;/h1&gt;
+&lt;p&gt;Once the regular expression is finished, the script that process the file with the song names and creates a playlist is as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat TEXT_FILE_WITH_SONG_NAMES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;
+&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&lt;/span&gt;
+
+&amp;gt; /path/to/playlist.m3u
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
+    locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /path/to/playlist.m3u
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39; &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;IFS&lt;/code&gt; is set to line break, because &lt;code&gt;for&lt;/code&gt; by default would consider the space as a separator, instead of a new line.&lt;/p&gt;
+&lt;p&gt;As an alternative, suggested  by &lt;a href=&#34;https://twitter.com/ingenieriainv/status/769135025216483328&#34;&gt;@ingenieríainv&lt;/a&gt; is to use &lt;code&gt;while read $i&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;names&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;cat ARCHIVO_CON_LISTA_DE_NOMBRES&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+&amp;gt; /path/to/playlist.m3u
+
+cat &lt;span class=&#34;nv&#34;&gt;$nombres&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;read&lt;/span&gt; i
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;locate --regex -i \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)\&amp;#34;&amp;#34;&lt;/span&gt;
+    locate --regex -i &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.*(\.mp4|\.mp3)&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; tee -a /path/to/playlist.m3u
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And so &lt;code&gt;IFS&lt;/code&gt; is no longer needed.&lt;/p&gt;
+&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;RegEx Tester&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;regexpal.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;As I said to you, I have done the bash highlighted syntax script, Still it does not highlight many words, but I will try to improve it. If there is some word that is not highlighted, simply add it to the variable KeyWords.&lt;!-- raw HTML omitted --&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Select a File&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;alias bg bind break builtin case cd command continue declare dirs disown do done echo elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if in jobs kill let local logout popd pushd pwd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while sed rm IFS cp mv mkdir&amp;#34;&lt;/span&gt;
+
+ sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# &amp;amp; print the coincidence with the pattern&lt;/span&gt;
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in &lt;span class=&#34;nv&#34;&gt;$keywords&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#I search in the text, every key word contained in keyWords, and add the label&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/b&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wordb&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$word&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&amp;#34;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;No se seleciciono nada.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I am going to explain a bit the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This line is the one that takes charge highlighting the comments. We look for one “*”, that are the comments in bash, and any character after ” (. *) “. “&amp;amp;”, it is in order that in this place, it prints everything what coincided with the pattern ” (. *) “, that is to say, the comment.&lt;/p&gt;
+&lt;p&gt;There is a small problem, and is that I did not manage to form the regular expression 100 % correct for the comments, in any place in which one exists #, it will treat as a comment, this happens for example in (#!/bin/bash).&lt;/p&gt;
+&lt;p&gt;I hope that it is useful&lt;/p&gt;
+</description>
+        </item>
+        
+        <item>
+            <title>Bash syntax highlighted script [Improved]</title>
+            <link>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/en/bash-syntax-highlighted-script-improved/</guid>
+            <description>&lt;p&gt;Thanks to DavidRSM, I have improved the highlighted syntax script for bash, and now it allows many more key words. Simply it is necessary to add to the variable keywords the commands names that they find in /bin/, and /sbin/, You can add more key words concatenating them to the variable, this way:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$keywords&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls &lt;span class=&#34;s1&#34;&gt;&amp;#39;Commands directory&amp;#39;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Select a File&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;alias bg bind break builtin case cd command continue declare dirs disown do done elif else enable-in esac eval exec exit export fc fg fi for function getopts hash help history if jobs let local logout popd pushd read readonly return select set shift suspend test then time times trap type typeset ulimit umask unalias unset until wait while&amp;#34;&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;#Agrego mas palabras clave de los directorios sbin y bine, que contienen comandos.&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$keywords&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /bin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+ &lt;span class=&#34;nv&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$keywords&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;ls /sbin/&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+
+ &lt;span class=&#34;c1&#34;&gt;# Para lo comentarios, el &amp;amp; hace que se escriba lo que coincidio con el patron&lt;/span&gt;
+sed &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#.*/&amp;amp;/&amp;#39;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp
+ cp temp &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in &lt;span class=&#34;nv&#34;&gt;$keywords&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/b&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wordb&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$word&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&amp;#34;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;No se seleciciono nada.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+        <item>
+            <title>C&#43;&#43; syntax highlighted script</title>
+            <link>https://elbauldelprogramador.com/c-syntax-highlighted-script/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/c-syntax-highlighted-script/</guid>
+            <description>&lt;p&gt;I decided to create a small script that highlights the words reserved of c++.&lt;!-- raw HTML omitted --&gt; Here the code:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;rutaCodigo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;zenity --file-selection --title&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Select a File&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$?&lt;/span&gt; in
+0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nv&#34;&gt;keyWords&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;continue float new signed try auto default for operator sizeof typedef break delete friend private static union case do goto protected struct unsigned catch double if public switch virtual char else inline register template void enum int return this volatile const extern long short throw while bool cout cin using namespace&amp;#34;&lt;/span&gt;
+
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^#include/#include/&amp;#34;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp &lt;span class=&#34;c1&#34;&gt;# coloreo el include&lt;/span&gt;
+  sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^#define/#define/&amp;#34;&lt;/span&gt; &amp;lt; temp &amp;gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# coloreo el define&lt;/span&gt;
+
+  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; word in &lt;span class=&#34;nv&#34;&gt;$keyWords&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#Busco en el texto, cada palabra clave contenida en keyWords, y le añado la etiqueta span&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/b&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$wordb&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$word&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&amp;#34;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp
+    cp temp &lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^class /class/g&amp;#34;&lt;/span&gt; &amp;lt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$rutaCodigo&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &amp;gt; temp
+  rm temp
+  &lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+*&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;No se seleciciono nada.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;esac&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;I am going to explain a bit the code:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The variable &lt;em&gt;keyWords&lt;/em&gt; contains the key words of c ++, fewer “class”, which later I will explain because. In this variable, the words have to be separated by a space, and all in the same line, In order that the “for” takes word to word.&lt;/p&gt;
+&lt;p&gt;Both following lines&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sed &lt;span class=&#34;s2&#34;&gt;&amp;#34;s/^#include..... and sed &amp;#34;&lt;/span&gt;s/^#define...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;search the pattern “#define” or “#include”, initially of every line of the text, this is indicated by &lt;em&gt;^&lt;/em&gt;, and replaces it with his corresponding style, to format the text. Once we enter the “for”, there is applied basically the same procedure that for it “define” and “include”, but with every word of the variable keyWords.&lt;/p&gt;
+&lt;p&gt;Finally, I do the same for the reserved word “class”, the motive for which I have left this one by the end, it is because the label &lt;!-- raw HTML omitted --&gt; contains the word, “class”, and then the code would not go out well, since on having been this word inside the label span, it would replace it also.&lt;/p&gt;
+&lt;p&gt;How Use It:&lt;/p&gt;
+&lt;p&gt;It is necessary to create a css class for the blog, of this form:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;prp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#0a0&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;cpp&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;#a40&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;font-weight&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;bold&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Once done this, we have to execute the script and introduce the code path to formatting with this style.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Here&lt;!-- raw HTML omitted --&gt; you can see the result.&lt;/p&gt;
+&lt;p&gt;Regards, I hope that it is useful&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

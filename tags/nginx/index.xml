@@ -1,0 +1,1011 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>nginx on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/nginx/</link>
+        <description>Recent content in nginx on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/nginx/</link>
+            <title>nginx on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/nginx/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Bloquear ataques de fuerza bruta en Nginx y WordPress con Fail2Ban</title>
+            <link>https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/bloquear-ataques-de-fuerza-bruta-en-nginx-y-wordpress-con-fail2ban/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Cuando se administra un servidor, te das cuenta de la cantidad de máquinas automatizadas que existen realizando ataques de fuerza bruta hacia tu servidor. Para poner fin a algunos de estos ataques existe una herramienta llamada &lt;em&gt;&lt;strong&gt;Fail2Ban&lt;/strong&gt;&lt;/em&gt;, que monitoriza los logs del sistema para detectar estos ataques y mitigarlos. En este artículos veremos cómo configurar &lt;strong&gt;Fail2Ban&lt;/strong&gt; para bloquear el acceso a nuestra máquina a robots atacando por &lt;a href=&#34;https://elbauldelprogramador.com/bloquear-una-ip-atacanto-el-servidor-mediante-iptables/&#34; title=&#34;Bloquear una IP atacando el servidor mediante iptables&#34;&gt;fuerza bruta&lt;/a&gt; a &lt;em&gt;WordPress&lt;/em&gt; y al servidor web &lt;em&gt;&lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;Nginx&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-fail2ban&#34;&gt;Instalar Fail2Ban&lt;/h1&gt;
+&lt;p&gt;Si no se encuentra instalado en nuestro sistema:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo apt-get install fail2ban
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;antes-de-empezar&#34;&gt;Antes de empezar&lt;/h1&gt;
+&lt;p&gt;Antes de modificar el archivo &lt;em&gt;/etc/fail2ban/jail.conf&lt;/em&gt;, es recomendable -y de hecho lo menciona el propio archivo en su cabecera — realizar una copia y trabajar sobre ella:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /etc/fail2ban &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp jail.conf jail.local
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;bloquear-ataques-de-fuerza-bruta-a-wordpress&#34;&gt;Bloquear ataques de fuerza bruta a WordPress&lt;/h1&gt;
+&lt;p&gt;La siguiente configuración bloqueará durante 20 minutos cualquier intento de loggearse en WordPress de forma incorrecta más de 3 veces. Hay que escribirla en el &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-wp-login&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; http,https
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-wp-login
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /ruta/log/wordpress/access.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;findtime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;120&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1200&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora queda añadir el filtro para esta regla, en el archivo &lt;em&gt;filter.d/nginx-wp-login.conf&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &amp;lt;host&amp;gt;.*&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;POST /wp-login.php
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ignoreregex =
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;inconvenientes-a-tener-en-cuenta&#34;&gt;Inconvenientes a tener en cuenta&lt;/h1&gt;
+&lt;p&gt;Con esta configuración, hay que considerar que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Los usuarios que no recuerden su contraseña se autobloquearán.&lt;/li&gt;
+&lt;li&gt;No te protegerá eficientemente de un ataque distribuido.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;configurar-nginx-con-fail2ban&#34;&gt;Configurar Nginx con Fail2Ban&lt;/h2&gt;
+&lt;p&gt;Las siguientes configuraciones serán a nivel del servidor web nginx, no de WordPress, los objetivos son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bloquear a todo aquel intentando ejecutar scripts (.pl, .cgi, .exe etc).&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel intentando usar el servidor como un proxy.&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel que falle al usar la autentificación básica de nginx.&lt;/li&gt;
+&lt;li&gt;Bloquear a todo aquel que falle al autentificarse en nuestra aplicación.&lt;/li&gt;
+&lt;li&gt;Bloquear &lt;strong&gt;bad bots&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Al igual que antes, en el fichero &lt;em&gt;jail.local&lt;/em&gt; añadimos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-auth&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-auth
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoAuthFailures, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*error*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 10 minutes&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-login&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-login
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoLoginFailures, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;600&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 10 minutes&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-badbots&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; apache-badbots
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;BadBots, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-noscript&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoScript, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-noscript
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;nginx-proxy&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;enabled&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;action&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; iptables-multiport&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NoProxy, &lt;span class=&#34;nv&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;http,https&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;filter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; nginx-proxy
+&lt;span class=&#34;nv&#34;&gt;logpath&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /var/log/nginx*/*access*.log
+&lt;span class=&#34;nv&#34;&gt;maxretry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;bantime&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;86400&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 1 day&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y sus correspondientes filtros en &lt;em&gt;/etc/fail2ban/filter.d/&lt;/em&gt; (Cada uno en un fichero separado, con el mismo nombre que aparece en la primera línea):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Proxy filter /etc/fail2ban/filter.d/proxy.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Block IPs trying to use server as proxy.&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Matches e.g.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;#34;GET http://www.something.com/&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET http.*
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Noscript filter /etc/fail2ban/filter.d/nginx-noscript.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Block IPs trying to execute scripts such as .php, .pl, .exe and other funny scripts.&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Matches e.g.&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# 192.168.1.1 - - &amp;#34;GET /something.php&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*GET.*&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;asp&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;exe&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;pl&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;cgi&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\s&lt;/span&gt;cgi&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+#
+&lt;span class=&#34;c1&#34;&gt;# Auth filter /etc/fail2ban/filter.d/nginx-auth.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Blocks IPs that fail to authenticate using basic authentication&lt;/span&gt;
+#
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; no user/password was provided &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; basic authentication.*client: &amp;lt;host&amp;gt;
+            user .* was not found in.*client: &amp;lt;host&amp;gt;
+            user .* password mismatch.*client: &amp;lt;host&amp;gt;
+
+&lt;span class=&#34;nv&#34;&gt;ignoreregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+#
+&lt;span class=&#34;c1&#34;&gt;# Login filter /etc/fail2ban/filter.d/nginx-login.conf:&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Blocks IPs that fail to authenticate using web application&amp;#39;s log in page&lt;/span&gt;
+#
+&lt;span class=&#34;c1&#34;&gt;# Scan access log for HTTP 200 + POST /sessions =&amp;gt; failed log in&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Definition&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;failregex&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; ^&amp;lt;host&amp;gt; -.*POST /sessions HTTP/1&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;.&lt;span class=&#34;s2&#34;&gt;&amp;#34; 200
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;ignoreregex =
+&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;enviar-por-correo-los-bloqueos&#34;&gt;Enviar por correo los bloqueos&lt;/h1&gt;
+&lt;p&gt;Para terminar, si queremos recibir un correo por cada bloqueo que se produzca, basta con añadir estas dos líneas al fichero &lt;em&gt;jail.local&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nv&#34;&gt;destemail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; direccion@correo
+&lt;span class=&#34;nv&#34;&gt;mta&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; sendmail
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¿Administras un servidor? ¿Qué técnicas usas?, deja un comentario.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para wordpress&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;codepoets.co.uk&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fail2Ban para Nginx&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;snippets.aktagon.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo configurar un balanceador de carga en entornos cloud</title>
+            <link>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-configurar-un-balanceador-de-carga-en-entornos-cloud/</guid>
+            <description>&lt;p&gt;Hoy vamos a hablar de cómo configurar un Balanceador de carga para un servidor. Veremos dos alternativas, configurarlo todo a mano, o desde un entorno cloud virtualizado, desde el panel de control de &lt;a href=&#34;http://www.arsys.es/servidores/cloud?utm_source=cooperation&amp;amp;utm;_medium=baul&amp;amp;utm;_term=balanceador&amp;amp;utm;_content=online&amp;amp;utm;_campaign=cloud&#34;&gt;Arsys&lt;/a&gt;. Está claro que, la segunda opción, será mucho más sencilla. Aún así, con la primera se aprenderá qué está pasando realmente por debajo.&lt;/p&gt;
+&lt;h1 id=&#34;tecnologías-a-usar&#34;&gt;Tecnologías a usar&lt;/h1&gt;
+&lt;p&gt;Para configurar el load balancer a mano, usaremos nginx.&lt;/p&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+&lt;p&gt;Balancear cargas a lo largo de múltiples instancias de aplicaciones es una técnica muy usada para optimizar la utilización de recursos, maximizar el rendimiento, reducir latencia, y asegurar tolerancia a fallos.&lt;/p&gt;
+&lt;p&gt;Nginx puede configurarse para hacer las veces de un balanceador de carga Http para distribuir el tráfico a varios servidores de aplicaciones.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;métodos-de-balanceo-en-nginx&#34;&gt;Métodos de balanceo en nginx&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Round-Robin&lt;/em&gt;: Las peticiones a los servidores se distribuyen al estilo round robin.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;least-connected&lt;/em&gt;: La siguiente petición se asigna al servidor con menos conexiones activas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;ip-hash&lt;/em&gt;: Se usa una función hash para determinar el servidor al que debería enviarse la siguiente petición, basándose en la ip del cliente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;configuraciones-por-defecto&#34;&gt;Configuraciones por defecto&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        server srv1.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+        location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            proxy_pass http://myapp1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En este ejemplo, hay 3 instancias de la misma aplicación. ejecutándose en srv1-srv3. Si no se especifíca ningún método de balanceo, se aplica round-robin. Todas las peticiones se redirigen al grupo de servidores &lt;code&gt;myapp1&lt;/code&gt; y nginx se encarga de realizar el balanceo Http mediante round-robin.&lt;/p&gt;
+&lt;h2 id=&#34;balanceo-least-connected&#34;&gt;Balanceo Least Connected&lt;/h2&gt;
+&lt;p&gt;En este método de balanceo, se permite controlar la carga que reciben los servidores. Nginx intentará no sobrecargar un servidor ocupado con demasiadas peticiones, enviándolas a los servidores menos ocupados.&lt;/p&gt;
+&lt;p&gt;Para activar este método, hay que añadir la directiva &lt;code&gt;least_conn&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        least_conn&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv1.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;balanceo-ponderado&#34;&gt;Balanceo ponderado&lt;/h1&gt;
+&lt;p&gt;Si se quiere dar más ponderación, es posible usar el parámetro &lt;code&gt;weight&lt;/code&gt; en los servidores, para asignarles más “peso” a la hora de tomar decisiones de balanceo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;upstream myapp1 &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        server srv1.example.com &lt;span class=&#34;nv&#34;&gt;weight&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv2.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server srv3.example.com&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esta configuración, 5 peticiones nuevas se distribuirán de la siguiente forma: 3 a srv1, 1 a srv2 y 1 a srv3.&lt;/p&gt;
+&lt;h1 id=&#34;control-de-estado-health-checks&#34;&gt;Control de estado (Health checks)&lt;/h1&gt;
+&lt;p&gt;Si un servidor falla, nginx lo marcará como en mal estado y evitará enviarle peticiones.&lt;/p&gt;
+&lt;h1 id=&#34;configurar-el-balanceo-de-carga-en-entornos-cloud&#34;&gt;Configurar el balanceo de carga en entornos cloud&lt;/h1&gt;
+&lt;p&gt;Visto cómo crear el balanceo de carga a mano, ahora pasemos a administrar y crear de forma sencilla un sistema de balanceo. En este caso usando &lt;em&gt;Arsys&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para ello, en el panel de control hacemos click en &lt;em&gt;Red&lt;/em&gt; » Balanceadores. Allí crearemos uno nuevo&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Donde se especifica el nombre, puertos y direcciones a usar.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es elegir el tipo de Control de estado a realizar, y el método de balanceo (Round robin o least connections)&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por último, se especifica la aplicación que será balanceada entre todos los servidores virtuales disponibles.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;ventajas-y-desventajas&#34;&gt;Ventajas y desventajas&lt;/h1&gt;
+&lt;p&gt;La opción de crear y configurar el balanceador a mano puede ser buena para aprender, pero a la larga, conforme las necesidades de la aplicación vayan aumentando será más y más tedioso. Sin embargo, con un entorno cloud, podremos crear, modificar y borrar servidores y balanceadores a golpe de click.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Nginx Docs&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;nginx.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo crear un Front Controller en PHP</title>
+            <link>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-crear-un-front-controller-en-php/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;Éste artículo es una colaboración de &lt;a href=&#34;http://programarivm.com&#34;&gt;Jordi Bassagañas&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;La semana pasada, &lt;strong&gt;en el &lt;a href=&#34;http://programarivm.com/2014/10/felicidades-ya-terminamos-la-programacion-de-la-agenda-csv-con-php/&#34; title=&#34;Curso de Programación PHP guay&#34;&gt;Curso de Programación PHP guay&lt;/a&gt;, desarrollamos una agenda PHP basada en archivos CSV&lt;/strong&gt;. El ejercicio era tan sencillo que no utilizamos ningún &lt;a href=&#34;https://elbauldelprogramador.com/los-10-mejores-frameworks-gratis-de-aplicaciones-web/&#34; title=&#34;Los 11 Mejores Frameworks gratuitos para Aplicaciones Web&#34;&gt;framework&lt;/a&gt; de desarrollo de aplicaciones como por ejemplo Symfony, Laravel o Yii, pero sí que aplicamos algunas ideas de análisis para afrontar nuestro desarrollo con garantías de éxito.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Seguro que a algunos os habrá gustado esta decisión porque pensáis que &lt;strong&gt;a veces es mejor no usar ningún framework&lt;/strong&gt;, sobre todo cuando la aplicación es muy sencilla (en los años recientes este ha venido siendo un argumento muy habitual), aunque con la llegada de los micro frameworks como &lt;a href=&#34;http://www.slimframework.com/&#34; title=&#34;Slim Framework&#34;&gt;Slim&lt;/a&gt; más de uno comenzará a plantearse esta cuestión, ¿verdad?&lt;/p&gt;
+&lt;p&gt;En todo caso, nosotros levantamos nuestra app desde cero con estas ideas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Definimos la estructura de carpetas &lt;strong&gt;pensando en CRUD&lt;/strong&gt;, de acuerdo a los objetos que tenemos que gestionar, y a las operaciones que se llevan a cabo sobre dichos objetos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Separamos la lógica&lt;/strong&gt; PHP de la lógica de presentación (HTML, CSS y JS).&lt;/li&gt;
+&lt;li&gt;Implementamos el patrón de diseño &lt;strong&gt;Singleton&lt;/strong&gt; en la clase &lt;code&gt;People&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Por cierto, te recuerdo que el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; está disponible &lt;a href=&#34;https://github.com/programarivm/phpguay/tree/master/agenda&#34; title=&#34;AgendaPHPGuay disponible en GitHub&#34;&gt;en este repositorio de GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Finalmente &lt;strong&gt;propusimos a los alumnos que mejoraran la seguridad de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; implementando el patrón de diseño de software &lt;a href=&#34;http://en.wikipedia.org/wiki/Front_Controller_pattern&#34; title=&#34;Front Controller&#34;&gt;Front Controller&lt;/a&gt;&lt;/strong&gt;. Y los que teníais un nivel de programación intermedio comentabais que esta propuesta empezaba a complicarse bastante. Pues bien amig@s, que no cunda el pánico, hoy voy a explicar qué pasos hay que seguir exactamente para poner un Front Controller en la app.&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-front-controller&#34;&gt;¿Qué es Front Controller?&lt;/h1&gt;
+&lt;p&gt;Front Controller es un patrón de diseño de software muy utilizado en aplicaciones web que consiste en &lt;strong&gt;definir un único punto de acceso para todas las peticiones HTTP&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;A diferencia de las aplicaciones web clásicas, por así decir, donde el usuario podía ejecutar directamente cualquier script referenciándolo directamente en la barra de direcciones de su navegador, &lt;strong&gt;con Front Controller solo se accede a un punto central único: el famoso archivo index.php&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;El resto de archivos permanece inaccesible a los usuarios, a excepción de los assets, por supuesto, es decir, las imágenes, los archivos CSS y los archivos JavaScript.&lt;/p&gt;
+&lt;p&gt;Front Controller aporta por tanto una capa de seguridad, y mejora también el mantenimiento de la aplicación porque permite definir en un solo punto toda aquella lógica que de otro modo estaría esparcida en varios archivos diferentes. Esta es la lógica de inicialización o arranque de la app (bootstrap logic).&lt;/p&gt;
+&lt;h1 id=&#34;cómo-se-implementa-front-controller&#34;&gt;¿Cómo se implementa Front Controller?&lt;/h1&gt;
+&lt;p&gt;Implementar Front Controller es sencillo. Por un lado, primero &lt;strong&gt;tenemos que crear una carpeta llamada &lt;code&gt;public&lt;/code&gt; en la carpeta raíz de nuestra aplicación&lt;/strong&gt;. Aquí ponemos los archivos que pueden ver los usuarios de Internet, por así decirlo. O dicho de otra forma, los archivos que están en &lt;code&gt;public&lt;/code&gt; son los únicos accesibles por los usuarios desde su navegador web. Estos archivos son los assets y el mismo &lt;code&gt;index.php&lt;/code&gt;. A modo de ejemplo &lt;strong&gt;puedes echar un vistazo a &lt;a href=&#34;http://www.slimframework.com/news/how-to-organize-a-large-slim-framework-application&#34; title=&#34;Estructura de directorios de una app MVC&#34;&gt;esta estructura de directorios&lt;/a&gt; recomendada por Slim&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Luego, por otro lado, tienes que asegurarte que &lt;strong&gt;tu servidor web canaliza todas las peticiones hacia tu archivo &lt;code&gt;index.php&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;En Apache:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;RewriteEngine On
+RewriteCond %&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;REQUEST_FILENAME&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt; !-f
+RewriteRule ^ index.php &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;QSA,L&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En &lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;nginx&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;location / &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   try_files   &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt;/ /index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;¡Y esto es todo por hoy amig@s! Espero que esta entrada os haya gustado y que entendáis bien las mejoras que aporta el uso de Front Controller (seguridad y escalabilidad). Ahora solo falta adaptar el código de &lt;code&gt;AgendaPHPGuay&lt;/code&gt; para que funcione con esta nueva característica, pero como nosotr@s aplicamos ideas de análisis y diseño de apps desde el principio, ya veréis que será muy sencillo.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo habilitar la página de estado en Nginx</title>
+            <link>https://elbauldelprogramador.com/como-hablitar-la-pagina-de-estado-en-nginx/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-hablitar-la-pagina-de-estado-en-nginx/</guid>
+            <description>&lt;p&gt;Nginx dispone de una página que muestra el estado del servidor, que mostrará información sobre las conexiones activas junto a otra información. Para habilitar la página en cuestión no hay más que seguir éstos sencillos pasos.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;habilitar-el-módulo-httpstubstatusmodule&#34;&gt;Habilitar el módulo HttpStubStatusModule&lt;/h1&gt;
+&lt;p&gt;Es necesario compilar nginx con éste módulo. Para comprobar si está compilado debe aparecer &lt;code&gt;--with-http_stub_status_module&lt;/code&gt; al ejecutar el comando&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nginx -V
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De no tenerlo, hay que volver a &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;compilar nginx&lt;/a&gt; con éste módulo activo.&lt;/p&gt;
+&lt;h1 id=&#34;habilitar-la-página-de-estado-en-nginx&#34;&gt;Habilitar la página de estado en nginx&lt;/h1&gt;
+&lt;p&gt;Hay que editar el fichero &lt;em&gt;nginx.conf&lt;/em&gt;, y añadir en el bloque &lt;em&gt;&lt;strong&gt;server { /*…*/ }&lt;/strong&gt;&lt;/em&gt; lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;location /nginx_status &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Hablitar las estadísticas&lt;/span&gt;
+        stub_status on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# No registrar en los logs los accesos a la página de estado&lt;/span&gt;
+        access_log   off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Perminir que únicamente mi IP pueda visitar la página #&lt;/span&gt;
+        allow X.X.X.X&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;# Denegar el acceso al resto del mundo #&lt;/span&gt;
+        deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, es necesario reiniciar nginx para que sea consciente de los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;service nginx reload
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora al dirigirse a la dirección &lt;em&gt;&lt;strong&gt;midominio.com/nginx_status&lt;/strong&gt;&lt;/em&gt; veremos algo así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Active connections: &lt;span class=&#34;m&#34;&gt;291&lt;/span&gt;
+server accepts handled requests
+   &lt;span class=&#34;m&#34;&gt;16630948&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;16630948&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;31070465&lt;/span&gt;
+Reading: &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt; Writing: &lt;span class=&#34;m&#34;&gt;179&lt;/span&gt; Waiting: &lt;span class=&#34;m&#34;&gt;106&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;active connections&lt;/em&gt; — Número de conexiones abieras.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;server accepts handled requests&lt;/em&gt; — En el ejemplo, nginx ha aceptado 16630948 conexiones, procesado 16630948 de ellas (Ninguna fue cerrada) y ha procesado 31070465 (1.8 peticiones por conexión).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;reading&lt;/em&gt; — Peticiones de cabecera leídas.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;writing&lt;/em&gt; — Peticiones leidas, procesadas, o escritas en respuesta al cliente.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;waiting&lt;/em&gt; — Conexiones &lt;em&gt;keep-alive&lt;/em&gt;, activas en el momento (Lectura + Escritura)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Enable and see current status page&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;cyberciti&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HttpStubStatusModule&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;wiki.nginx.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo instalar y configurar Nginx con php5-fpm</title>
+            <link>https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Nginx (Pronunciado engine-x) es un servidor &lt;a href=&#34;https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/&#34;&gt;HTTP&lt;/a&gt; de alto rendimiento, gratuito, software libre y &lt;!-- raw HTML omitted --&gt;proxy inverso&lt;!-- raw HTML omitted --&gt;, así como un servidor proxy &lt;!-- raw HTML omitted --&gt;IMAP&lt;!-- raw HTML omitted --&gt;/&lt;!-- raw HTML omitted --&gt;POP3&lt;!-- raw HTML omitted --&gt;. Desarrollado por Igor Sysoev. Acualmente el &lt;!-- raw HTML omitted --&gt;12.18%&lt;!-- raw HTML omitted --&gt; de las webs usan nginx como servidor HTTP. Sus aspectos más destacables son el rendimiento, estabilidad, simplicidad de configuración y un bajo consumo de recursos. En este artículo explicaré como instalar nginx desde el código fuente.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalando-dependencias&#34;&gt;Instalando dependencias&lt;/h1&gt;
+&lt;p&gt;Antes de poder compilar nginx, es necesario instalar unos cuantos paquetes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install build-essential libssl-dev libpcre3-dev&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El paquete &lt;code&gt;build-essential&lt;/code&gt; contiene las herramientas básicas para compilar programas desde código fuente, las otras dos librerías son necesarias para nginx durante el proceso de compilación.&lt;/p&gt;
+&lt;h1 id=&#34;descargar-y-compilar-nginx&#34;&gt;Descargar y compilar Nginx&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget http://nginx.org/download/nginx-1.2.6.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Descomprimimos el fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ tar zxvf nginx-1.2.6.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez descomprimido, entramos en el directorio y compilamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; nginx-1.2.6
+~/nginx-1.2.6$ ./configure --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module
+~/nginx-1.2.6$ make
+~/nginx-1.2.6$ sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para consultar qué modulos hay disponibles hay que visitar la &lt;!-- raw HTML omitted --&gt;pagina oficial de Nginx&lt;!-- raw HTML omitted --&gt; y decidir cuales queremos habilitar. Con la opción &lt;code&gt;--sbin-path=/usr/local/sbin&lt;/code&gt; establecemos la ruta en la que se instalará el ejecutable. Tras compilar se mostrará información de la localización de los distintos ficheros:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nginx path prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx&amp;#34;&lt;/span&gt;
+nginx binary file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/sbin&amp;#34;&lt;/span&gt;
+nginx configuration prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/conf&amp;#34;&lt;/span&gt;
+nginx configuration file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/conf/nginx.conf&amp;#34;&lt;/span&gt;
+nginx pid file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/nginx.pid&amp;#34;&lt;/span&gt;
+nginx error log file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/error.log&amp;#34;&lt;/span&gt;
+nginx http access log file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/access.log&amp;#34;&lt;/span&gt;
+nginx http client request body temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;client_body_temp&amp;#34;&lt;/span&gt;
+nginx http proxy temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;proxy_temp&amp;#34;&lt;/span&gt;
+nginx http fastcgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;fastcgi_temp&amp;#34;&lt;/span&gt;
+nginx http uwsgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;uwsgi_temp&amp;#34;&lt;/span&gt;
+nginx http scgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es necesario descargar un script que permita detener, reiniciar e iniciar nginx, podemos descargar el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+$ sudo mv nginx /etc/init.d/nginx
+$ sudo chmod +x /etc/init.d/nginx
+$ sudo chown root:root /etc/init.d/nginx
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el tercer comando otorgamos permiso de ejecución al script, con el cuarto hacemos al usuario root propietario del mismo.&lt;/p&gt;
+&lt;p&gt;Si queremos que nginx se inicie automáticamente al iniciar el sistema, hay que añadirlo a los &lt;a href=&#34;https://elbauldelprogramador.com/entendiendo-los-runlevel-en-debian-y-ubuntu/&#34;&gt;runlevel&lt;/a&gt; correspondientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# update-rc.d nginx defaults&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora estamos en condiciones de ejecutar nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/nginx start&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; ok &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Starting Nginx Server...:.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Listo, nos dirigimos a nuestro navegador y escribimos en la barra de direcciones &lt;strong&gt;localhost&lt;/strong&gt;. Si todo ha ido bien deberíamos ver esta pantalla:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Usando firebug se puede comprobar que efectivamente se está corriendo un servidor nginx:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;modificando-la-configuración-por-defecto&#34;&gt;Modificando la configuración por defecto&lt;/h1&gt;
+&lt;p&gt;Sustituimos la configuración por defecto por esta:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    include       mime.types&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    default_type  application/octet-stream&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    gzip on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_buffers &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; 8k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_disable &lt;span class=&#34;s2&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_proxied any&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    log_format  main  &lt;span class=&#34;s1&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    index              index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+ access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
+        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Se ha cambiado el usuario del servidor de “&lt;em&gt;nobody&lt;/em&gt;” a “&lt;em&gt;www-data&lt;/em&gt;”, éste último es el usuario por defecto para servidores webs.&lt;/li&gt;
+&lt;li&gt;Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.&lt;/li&gt;
+&lt;li&gt;Se habilita la compresión gzip para reducir el ancho de banda consumido.&lt;/li&gt;
+&lt;li&gt;Se define el formato que tendrán los ficheros de log.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cambiamos los permisos de los ficheros que contienen la web y reiniciamos nginx para aplicar los cambios:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo chown -R www-data:www-data html/
+$ sudo service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo service nginx start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;instalar-php5-fpm&#34;&gt;Instalar php5-fpm&lt;/h1&gt;
+&lt;p&gt;En lugar de instalar php5, instalaremos php5-fpm (&lt;em&gt;FastCGI Process Manager&lt;/em&gt;), una implementación alternativa con algunas características adicionales.&lt;/p&gt;
+&lt;p&gt;En ubuntu, ejecutamamos el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install php5-fpm&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En debian agregamos el repositorio al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;deb http://packages.dotdeb.org stable all
+deb-src http://packages.dotdeb.org stable all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Agregamos la llave &lt;a href=&#34;https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/&#34; title=&#34;Cómo cifrar correos con GPG usando Mailvelope&#34;&gt;GnuPG&lt;/a&gt; del repositorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get update
+wget http://www.dotdeb.org/dotdeb.gpg
+cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instalamos php:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo iniciamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/init.d/php5-fpm start&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para lograr que nginx interprete php, hay que hacer algunas modificaciones a la configuración:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    include       mime.types&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    default_type  application/octet-stream&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    gzip on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_buffers &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; 8k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_disable &lt;span class=&#34;s2&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_proxied any&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    log_format  main  &lt;span class=&#34;s1&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    index              index.php index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    upstream php &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        server 127.0.0.1:9000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+  access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
+        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+        location ~ &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php$ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                include fastcgi_params&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                fastcgi_index index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                fastcgi_param SCRIPT_FILENAME &lt;span class=&#34;nv&#34;&gt;$document_root$fastcgi_script_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                fastcgi_pass php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los principales cambios realizados son los siguientes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Se ha añadido &lt;code&gt;index.php&lt;/code&gt; antes de &lt;code&gt;index.html index.htm&lt;/code&gt; para dar prioridad a los archivos php.&lt;/li&gt;
+&lt;li&gt;El bloque &lt;code&gt;upstream php&lt;/code&gt; que apunta a &lt;code&gt;PHP-FPM&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Un manejador para archivos php &lt;code&gt;location ~ \.php$&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para terminar, añadimos los siguientes parámetros al final del archivo &lt;em&gt;/usr/local/nginx/fastcgi_params&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fastcgi_connect_timeout 60&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_send_timeout 180&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_read_timeout 180&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_buffer_size 128k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_buffers &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_busy_buffers_size 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_temp_file_write_size 256k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_intercept_errors on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para aplicar los cambios, reiniciamos nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# service nginx restart&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto, deberíamos tener instalado un servidor corriendo con nginx y ejecutando archivos php.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Learn how to setup a web server pt2: Installing Nginx and PHP&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;blog.bryanbibat.net&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HOWTO install php5-fpm on Debian Squeeze&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;fak3r.com&lt;!-- raw HTML omitted --&gt;.&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Instalación y optimización de un servidor web con Nginx (I)</title>
+            <link>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i/</guid>
+            <description>&lt;blockquote&gt;
+&lt;p&gt;La siguiente serie de artículos son el fruto de un trabajo realizado para la facultad en la asignatura Ingeniería de Servidores de la Universidad de Granada (ETSIIT [Escuela Técnica Superior de Ingenierías Informática y de Telecomunicación] )&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;A lo largo de esta guía se pretende mostrar cómo instalar desde cero un servidor web con Nginx, realizando las operaciones necesarias para lograr el mayor rendimiento y seguridad posibles con programas tales como php-fpm, APC, y el módulo pagespeed de Google para optimizar los recursos web.&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hace tiempo se vío en este blog &lt;a href=&#34;https://elbauldelprogramador.com/como-instalar-nginx-con-php5-fpm/&#34; title=&#34;Cómo instalar y configurar Nginx con php5-fpm&#34;&gt;cómo instalar y configurar Nginx con php5-fpm&lt;/a&gt;, en los próximos artículos se intentará explicar de forma más detallada cómo llevar a cabo éste proceso junto con algunas mejoras adicionales en términos de optimización. Es necesario informar al lector que todas las recomendaciones aquí explicadas se basan únicamente en la experiencias del autor.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;compilar-e-instalar-nginx&#34;&gt;Compilar e instalar Nginx&lt;/h2&gt;
+&lt;h3 id=&#34;preparando-el-entorno&#34;&gt;Preparando el entorno&lt;/h3&gt;
+&lt;p&gt;Lo primero que debemos hacer es instalar las dependencias necesarias para la compilación, para ello:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install build-essential libssl-dev libpcre3-dev
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto descargamos la última versión de nginx, al momento de escribir este texto la 1.4.4:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget http://nginx.org/download/nginx-1.4.4.tar.gz
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Descomprimimos el archivo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tar xzvf nginx-1.4.4.tar.gz
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Antes de compilar cambiaremos un valor en el código fuente como medida de seguridad por ocultación. El valor a cambiar es la cadena asignada a la cabecera que indica el servidor usado en las peticiones HTTP. En concreto el archivo a cambiar es el alojado en &lt;code&gt;src/http/ngx_http_header_filter_module.c&lt;/code&gt;, concretamente en la línea 48:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Server: nginx&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Server: &amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NGINX_VER&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Cambiamos estas dos líneas a algo del estilo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Server: Mi servidor Web&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ngx_http_server_full_string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;Server: Mi servidor Web&amp;#34;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;CRLF&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ya solo queda compilarlo e instalarlo, de momento necesitaremos los módulos siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;--with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin -with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Aquí estamos habilitando la compresión de las páginas con gzip, SSL para conexiones seguras, deshabilitando el módulo de correo POP3, IMAP y SMTP. Dependiendo de las necesidades de nuestro servidor, deberemos activar o desactivar algunos módulos. Más tarde necesitaremos recompilar para añadir el módulo &lt;strong&gt;pagespeed&lt;/strong&gt;. La lista de todos los módulos disponibles se puede consultar en la &lt;!-- raw HTML omitted --&gt;documentación de nginx&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;compilar&#34;&gt;Compilar&lt;/h3&gt;
+&lt;p&gt;Ya está todo listo para compilar e instalar, dentro del directorio de nginx ejecutamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./configure --with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module&lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;--without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto deberíamos ver un resumen de la operación realizada:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Configuration summary
+  + using system PCRE library
+  + using system OpenSSL library
+  + md5: using OpenSSL library
+  + sha1: using OpenSSL library
+  + using system zlib library
+
+  nginx path prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx&amp;#34;&lt;/span&gt;
+  nginx binary file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/sbin&amp;#34;&lt;/span&gt;
+  nginx configuration prefix: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/conf&amp;#34;&lt;/span&gt;
+  nginx configuration file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/conf/nginx.conf&amp;#34;&lt;/span&gt;
+  nginx pid file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/nginx.pid&amp;#34;&lt;/span&gt;
+  nginx error log file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/error.log&amp;#34;&lt;/span&gt;
+  nginx http access log file: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/local/nginx/logs/access.log&amp;#34;&lt;/span&gt;
+  nginx http client request body temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;client_body_temp&amp;#34;&lt;/span&gt;
+  nginx http proxy temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;proxy_temp&amp;#34;&lt;/span&gt;
+  nginx http fastcgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;fastcgi_temp&amp;#34;&lt;/span&gt;
+  nginx http uwsgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;uwsgi_temp&amp;#34;&lt;/span&gt;
+  nginx http scgi temporary files: &lt;span class=&#34;s2&#34;&gt;&amp;#34;scgi_temp&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para compilar e instalar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;make -j &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; make install
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, es necesario descargar el script que permite iniciar, detener, reiniciar y recargar nginx mediante el comando &lt;strong&gt;service&lt;/strong&gt;, podemos descargarlo desde&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx
+mv nginx /etc/init.d/nginx
+sudo chmod +x /etc/init.d/nginx
+sudo chown root:root /etc/init.d/nginx
+update-rc.d nginx defaults
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto hemos descargaro el script, lo hemos movido al directorio en el que será llamado al inicio del sistema, dado permisos de ejecución y asignado a root como propietario. Hecho esto, para iniciar nuestro servidor web hay que ejecutar el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;service nginx start
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como se muestra en la siguiente figura nginx, podemos comprobar que nginx está funcionando correctamente dirigiéndonos a la dirección &lt;em&gt;localhost&lt;/em&gt;, donde veremos lo siguiente:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;configuración&#34;&gt;Configuración&lt;/h3&gt;
+&lt;p&gt;Ya que está todo listo, vamos a realizar unos cuantos ajustes a la configuración por defecto:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;user  www-data&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+worker_processes  1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+pid        /var/run/nginx.pid&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+error_log  logs/error.log&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+events &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    worker_connections  1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+http &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    include       mime.types&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    default_type  application/octet-stream&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    gzip on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_buffers &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt; 8k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_disable &lt;span class=&#34;s2&#34;&gt;&amp;#34;MSIE [1-6]\.&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_proxied any&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    log_format  main  &lt;span class=&#34;s1&#34;&gt;&amp;#39;$remote_addr - $remote_user [$time_local] &amp;#34;$request&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;$status $body_bytes_sent &amp;#34;$http_referer&amp;#34; &amp;#39;&lt;/span&gt;
+                      &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;#34;$http_user_agent&amp;#34; &amp;#34;$http_x_forwarded_for&amp;#34;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    access_log  logs/access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    sendfile        on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    keepalive_timeout  3&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    index              index.html index.htm&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        listen       80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        root html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    access_log  logs/host.access.log  main&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+        &lt;span class=&#34;c1&#34;&gt;# Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).&lt;/span&gt;
+        location ~ /&lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                access_log off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+                log_not_found off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los cambios más relevantes sobre la configuración por defecto son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Se ha cambiado el usuario del servidor de &lt;em&gt;nobody&lt;/em&gt; a &lt;em&gt;www-data&lt;/em&gt;, éste último es el usuario por defecto para servidores webs.&lt;/li&gt;
+&lt;li&gt;Se define el archivo donde se localizará el PID (Process ID) del servidor. Esto permite al script que hemos instalado iniciar o detener nginx.&lt;/li&gt;
+&lt;li&gt;Se habilita la compresión gzip para reducir el ancho de banda consumido.&lt;/li&gt;
+&lt;li&gt;Se define el formato que tendrán los ficheros de log.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cambiamos los permisos del directorio donde se alojan los recursos web a este último usuario y reiniciamos nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;chown -R www-data:www-data /usr/local/nginx/html/
+service nginx destroy &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; service nginx start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Instalación y optimización de un servidor web con Nginx (II)</title>
+            <link>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii/</guid>
+            <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Continuando con el artículo anterior, ahora procedemos a instalar PHP-FPM.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-php-fpm&#34;&gt;Instalar PHP-FPM&lt;/h1&gt;
+&lt;p&gt;En lugar de instalar php5, instalaremos php5-fpm (FastCGI Process Manager), una implementación alternativa con algunas características adicionales. En Ubuntu se puede instalar desde repositorios, para debian los agregamos a mano al &lt;em&gt;sources.list&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;deb http://packages.dotdeb.org stable all
+deb-src http://packages.dotdeb.org stable all
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es necesario agregar la &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;llave GnuPG&lt;/a&gt;, instalamos php5-fpm y lo iniciamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get update
+wget http://www.dotdeb.org/dotdeb.gpg
+cat dotdeb.gpg &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sudo apt-key add -
+apt-get install php5-cli php5-suhosin php5-fpm php5-cgi php5-mysql
+service php5-fpm start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora probaremos que php funciona bajo nginx, para ello es necesario modificar ligeramente el archivo &lt;em&gt;nginx.conf&lt;/em&gt;, concretamente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;En el bloque &lt;em&gt;http&lt;/em&gt; hay que añadir index.php a la directiva index, para que quede index &lt;em&gt;index.php index.html index.htm;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Necesitamos crear la comunicación entre nginx y php mediante un socket, para ello añadimos lo siguiente en el bloque &lt;em&gt;http&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;upstream php &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    server unix://var/run/php-fpm.socket&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Por último, dentro del bloque &lt;em&gt;server&lt;/em&gt;, añadimos una regla que permita manejar los archivos php:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;location ~ &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php$ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    include fastcgi_params&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    fastcgi_index index.php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    fastcgi_param SCRIPT_FILENAME &lt;span class=&#34;nv&#34;&gt;$document_root$fastcgi_script_name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    fastcgi_pass php&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Una última modificación al archivo &lt;em&gt;/etc/php5/fpm/pool.d/www.conf&lt;/em&gt; y agregamos la línea &lt;em&gt;listen = /var/run/php-fpm.socket&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;probando-php&#34;&gt;Probando PHP&lt;/h2&gt;
+&lt;p&gt;Para comprobar que PHP funciona crearemos un fichero simple que mostrará un mensaje, hemos de colocarlo en &lt;em&gt;/usr/local/nginx/http/&lt;/em&gt; y asignarle como grupo y usuario &lt;em&gt;www-data&lt;/em&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;?php echo &amp;#34;Probando que PHP funciona&amp;#34;;??&amp;gt;&amp;#39;&lt;/span&gt; &amp;gt; /usr/local/nginx/html/index.php
+chown www-data:www-data /usr/local/nginx/html/index.php
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De nuevo nos dirigimos al &lt;em&gt;localhost&lt;/em&gt; y deberíamos ver el mensaje, lo cual indica que se está ejecutando PHP.&lt;/p&gt;
+&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (III)&#34;&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Instalación y optimización de un servidor web con Nginx (III)</title>
+            <link>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-iii/</guid>
+            <description>&lt;h1 id=&#34;tabla-de-contenidos&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En éste último artículo se verá cómo realizar optimizaciones al servidor web nginx, PHP y se cubrirá la instalación del sistema de caches APC y el módulo Page Speed de Google.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;optimizando&#34;&gt;Optimizando&lt;/h2&gt;
+&lt;h3 id=&#34;pools-en-php&#34;&gt;Pools en PHP&lt;/h3&gt;
+&lt;p&gt;La configuración por defecto de PHP no suele ser la óptima, dependiendo de nuestras necesidades y hardware deberemos ajustar algunos parámetros. En esta sección nos centraremos en el número de procesos y recursos que se dedicarán a una aplicación web. Estos parámetros se encuentran en el directorio &lt;em&gt;/etc/php/fpm/pools.d&lt;/em&gt;, se debe tener una archivo por cada aplicación, en nuestro caso será &lt;em&gt;www.conf&lt;/em&gt;.
+Los parámetros a ajustar son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;pm&lt;/strong&gt;: Decide cómo el controlador de procesos administra los procesos hijos, es recomendable establecerlo a dinámico.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pm.max_children&lt;/strong&gt;: Cuando pm es estático, el número de hijos a crear, cuando es dinámico, el máximo número de hijos que se podrán tener.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pm.start_servers&lt;/strong&gt;: Número de hijos a crear al inicio.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pm.min_spare_servers&lt;/strong&gt;: El número mínimo de procesos libres (Sin hacer nada).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pm.max_spare_servers&lt;/strong&gt;: Número máximo de procesos libres.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;pm.max_requests&lt;/strong&gt;: El número de peticiones que cada hijo aceptará antes de reiniciarse, útil para evitar pérdidas de memoria.&lt;/p&gt;
+&lt;p&gt;Hay varias aproximaciones para determinar el valor adecuado de estos parámetros, en esta guía se verán 3, y todas con &lt;em&gt;pm = dynamic&lt;/em&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;primer-método&#34;&gt;Primer método&lt;/h4&gt;
+&lt;p&gt;El primero (&lt;!-- raw HTML omitted --&gt;Guillaume Moigneu&lt;!-- raw HTML omitted --&gt;) consiste en calcular &lt;em&gt;pm.max_children&lt;/em&gt; basándonos en la fórmula:&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = (RAM_{total} - RAM_{resto Proc})/ RAM_{mediaPHP}\]&lt;/p&gt;
+&lt;p&gt;Donde \(RAM_{restoProc}\) es la memoria usada por los otros procesos y \(RAM_{mediaPHP}\) es la media de memoria usada por los procesos de PHP. La memoria consumida por el resto de procesos se puede calcular mediante este comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ps -ylA --sort:rss &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep -v php5-fpm &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;!/RSS/ { s+=$8 } END { printf &amp;#34;%s\n&amp;#34;, &amp;#34;Memoria total usada por otros procesos&amp;#34;; printf &amp;#34;%dM\n&amp;#34;, s/1024 }&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Y la consumida por PHP:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ps -ylC php5-fpm --sort:rss  &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; awk &lt;span class=&#34;s1&#34;&gt;&amp;#39;!/RSS/ { s+=$8 } END { printf &amp;#34;%s\n&amp;#34;, &amp;#34;Memoria consumida por PHP: &amp;#34;; printf &amp;#34;%dM\n&amp;#34;, s/1024 }&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al número anterior lo dividimos por los procesos de PHP y obtenemos la media. Una vez calculado el valor de &lt;em&gt;max_children&lt;/em&gt;, &lt;em&gt;min_spare_servers&lt;/em&gt; y &lt;em&gt;max_spare_servers&lt;/em&gt; se suelen calcular evaluando el rendimiento y &lt;em&gt;start_servers&lt;/em&gt;, suele ser:&lt;/p&gt;
+&lt;p&gt;\[start\_servers = \frac{min\_spare\_servers + (max\_spare\_servers - min\_spare\_servers)}{2}\]&lt;/p&gt;
+&lt;h4 id=&#34;segundo-método&#34;&gt;Segundo método&lt;/h4&gt;
+&lt;p&gt;El segundo método (&lt;!-- raw HTML omitted --&gt;myshell.co.uk&lt;!-- raw HTML omitted --&gt;) es calcularlo en base a:&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = RAM_{total} / RAM_{maxPHP}\]&lt;/p&gt;
+&lt;p&gt;Donde \(RAM_{maxPHP}\) es el process PHP que ocupe más memoria. El resto de parámetros se calculan en base a éste.&lt;/p&gt;
+&lt;h4 id=&#34;tercer-método&#34;&gt;Tercer método&lt;/h4&gt;
+&lt;p&gt;Por último, otro método (&lt;!-- raw HTML omitted --&gt;Perusio&lt;!-- raw HTML omitted --&gt;) es realizando la operación siguiente:&lt;/p&gt;
+&lt;p&gt;\[pm.max\_children = 1.2 \cdot RAM_{total}/RAM_{mediaPHP}\]&lt;/p&gt;
+&lt;h3 id=&#34;optimizando-nginx&#34;&gt;Optimizando Nginx&lt;/h3&gt;
+&lt;p&gt;FastCGI es un protocolo que hace de interfaz entre programas y servidores web. En esta sección veremos cómo configurar nginx para cachear páginas y aumentar su rendimiento.&lt;/p&gt;
+&lt;p&gt;Para aprovechar todos los núcleos de un procesador, nginx necesita ajustar el parámetro &lt;em&gt;worker_processes&lt;/em&gt; acorde al número de procesadores. Para determinar el número de procesadores podemos ejecutar el siguiente comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;cat /proc/cpuinfo&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep processor &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wc -l
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En la directiva &lt;em&gt;worker_connections&lt;/em&gt; dentro del bloque &lt;em&gt;events&lt;/em&gt; escribiremos un 1024. Con esto nginx tendrá un proceso por núcleo y cada proceso podrá procesar hasta 1024 conexiones.&lt;/p&gt;
+&lt;p&gt;Estableceremos ahora los parámetros que permitirán cachear los resultados para servirlos más rápido al cliente, para ello haremos uso de las directivas &lt;em&gt;fastcgi_cache&lt;/em&gt;. En el bloque &lt;em&gt;http&lt;/em&gt; necesitaremos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;fastcgi_cache_path /var/cache/nginx &lt;span class=&#34;nv&#34;&gt;levels&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1:2 &lt;span class=&#34;nv&#34;&gt;keys_zone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;microcache:500m &lt;span class=&#34;nv&#34;&gt;max_size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1000m &lt;span class=&#34;nv&#34;&gt;inactive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;60m&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_cache_key &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$scheme$request_method$host$request_uri&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+fastcgi_cache_use_stale updating error timeout invalid_header http_500&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo cual establece el directorio donde se guardarán los objetos cacheados, los niveles de cache, un nombre y el espacio reservado (500Mb), así como un tope máximo (1Gb). La segunda directiva establece bajo qué nombre se almacenará la clave para la cache. Por último la tercera servirá contenido antiguo en la caché cuando haya errores en el servidor web, cuando se esté actualizando la caché, cuando haya errores del tipo 5xx o cuando la cabecera de la petición sea inválida.&lt;/p&gt;
+&lt;p&gt;El siguiente paso es decidir qué objetos se almacenarán en caché y cuales no. Para ello, dentro de un bloque &lt;em&gt;server&lt;/em&gt; escribiremos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$no_cache&lt;/span&gt; 0&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$request_method&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; POST&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$no_cache&lt;/span&gt; 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$query_string&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$no_cache&lt;/span&gt; 1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    location ~ &lt;span class=&#34;se&#34;&gt;\.&lt;/span&gt;php$ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;# ....&lt;/span&gt;
+      fastcgi_cache_bypass &lt;span class=&#34;nv&#34;&gt;$no_cache&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      fastcgi_no_cache &lt;span class=&#34;nv&#34;&gt;$no_cache&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      fastcgi_cache microcache&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      fastcgi_cache_valid 60m&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En esta porción de código hemos declarado una variable que determinará qué peticiones se cachean y cuales no. No cachearemos ninguna petición POST ni nada que tenga consultas en la URL (?arg…&amp;amp;arg1;…). Con ayuda de esta variable podremos decidir en el bloque &lt;em&gt;location&lt;/em&gt; si cacheamos la petición (directivas bypass y no_cache), aquí hacemos referencia al nombre que dimos anteriormente al espacio de caché y fijamos un periodo de validez.&lt;/p&gt;
+&lt;h3 id=&#34;page-speed&#34;&gt;Page Speed&lt;/h3&gt;
+&lt;p&gt;En esta sección veremos cómo compilar y configurar el módulo desarrollado por Google que optimizará al máximo todos los recursos de nuestra web, minimizando considerablemente el tiempo de respuesta y aplicando algunos cambios a los archivos para que cumplan con los estándares de rendimiento que Google usa para puntuar las páginas web.&lt;/p&gt;
+&lt;p&gt;Algunas de las características que ofrece son comprimir los archivos CSS y JavaScript de forma que ocupen lo menos posible. Unificar (cuando sea posible) la mayor cantidad de archivos CSS y JS en uno solo para reducir el número de peticiones al servidor. Optimizar las imágenes para reducir su tamaño. Cargar de forma asíncrona los programas JS. Mover los elementos bloqueantes que impiden que la página se renderize correctamente a lugares donde no sean perjudiciales para el renderizado. Éstas son solo algunas de las funcionalidades principales.&lt;/p&gt;
+&lt;h4 id=&#34;preparando-el-entorno&#34;&gt;Preparando el entorno&lt;/h4&gt;
+&lt;p&gt;Antes de poder compilar, será necesario instalar algunas dependencias:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install build-essential zlib1g-dev libpcre3 libpcre3-dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una vez hecho, estamos en condiciones para descargar y compilar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~
+wget https://github.com/pagespeed/ngx_pagespeed/archive/v1.7.30.1-beta.zip
+unzip v1.7.30.1-beta.zip &lt;span class=&#34;c1&#34;&gt;# or unzip v1.7.30.1-beta&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ngx_pagespeed-1.7.30.1-beta/
+wget https://dl.google.com/dl/page-speed/psol/1.7.30.1.tar.gz
+tar -xzvf 1.7.30.1.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Hecho esto, será necesario recompilar nginx con este módulo, como comentamos al inicio de esta guía, para ello simplemente ejecutamos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;nginx -V &lt;span class=&#34;c1&#34;&gt;# Para ver con qué módulos está compilado el ejecutable actual&lt;/span&gt;
+configure arguments: --with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/nginx-1.4.4/ &lt;span class=&#34;c1&#34;&gt;# compilaremos nginx con el nuevo módulo (--ad-module)&lt;/span&gt;
+./configure --with-http_gzip_static_module --sbin-path&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/usr/local/sbin --with-http_ssl_module --without-mail_pop3_module --without-mail_imap_module --without-mail_smtp_module --with-http_stub_status_module --with-http_realip_module --add-module&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/ngx_pagespeed-1.7.30.1-beta
+make -j &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# compilamos&lt;/span&gt;
+service nginx destroy &lt;span class=&#34;c1&#34;&gt;# detenemos la instancia actual de nginx&lt;/span&gt;
+make install &lt;span class=&#34;c1&#34;&gt;# instalamos la nueva versión con pagespeed&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;configurando-pagespeed&#34;&gt;Configurando PageSpeed&lt;/h4&gt;
+&lt;p&gt;Solo resta configurar nginx para activar &lt;em&gt;pagespeed&lt;/em&gt; con los filtros deseados. La documentación se puede encontrar en &lt;!-- raw HTML omitted --&gt;Configuring PageSpeed Filters&lt;!-- raw HTML omitted --&gt;. Por defecto los filtros habilitados son:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;add_head
+combine_css
+combine_javascript
+convert_meta_tags
+extend_cache
+fallback_rewrite_css_urls
+flatten_css_imports
+inline_css
+inline_import_to_link
+inline_javascript
+rewrite_css
+rewrite_images
+rewrite_javascript
+rewrite_style_attributes_with_url
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Veamos cómo habilitar pagespeed en nginx, para ello crearemos un fichero y un directorio en &lt;em&gt;/usr/local/nginx/conf/global/pagespeed.conf&lt;/em&gt; conteniendo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pagespeed on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Needs to exist and be writable by nginx.&lt;/span&gt;
+pagespeed FileCachePath /var/ngx_pagespeed_cache&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Ensure requests for pagespeed optimized resources go to the pagespeed handler&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# and no extraneous headers get set.&lt;/span&gt;
+location ~ &lt;span class=&#34;s2&#34;&gt;&amp;#34;\.pagespeed\.([a-z]\.)?[a-z]{2}\.[^.]{10}\.[^.]+&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      add_header &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+location ~ &lt;span class=&#34;s2&#34;&gt;&amp;#34;^/ngx_pagespeed_static/&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+location ~ &lt;span class=&#34;s2&#34;&gt;&amp;#34;^/ngx_pagespeed_beacon&lt;/span&gt;$&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This page shows statistics about the ngx_pagespeed module.&lt;/span&gt;
+location /ngx_pagespeed_statistics &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    allow 127.0.0.1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    allow TuIP&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Recent log messages. Like statistics, these are generally not to be shown&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# to the public, so this has access controls as well.&lt;/span&gt;
+pagespeed MessageBufferSize 100000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+location /ngx_pagespeed_message &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    allow 127.0.0.1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#    allow TuIP;&lt;/span&gt;
+    deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# This page lets you view a graphical console displaying statistics about&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# the ngx_pagespeed module.  As with statistics and messages, you may&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# want access control.&lt;/span&gt;
+pagespeed Statistics on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+pagespeed StatisticsLogging on&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+pagespeed LogDir /var/log/pagespeed&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+pagespeed StatisticsLoggingIntervalMs 60000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+pagespeed StatisticsLoggingMaxFileSizeKb 1024&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+location /pagespeed_console &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    allow 127.0.0.1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#    allow TuIP;&lt;/span&gt;
+    deny all&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Honoring no-transform Cache-Control Headers&lt;/span&gt;
+pagespeed DisableRewriteOnNoTransform off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+pagespeed RewriteLevel CoreFilters&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Specifying the value for the PageSpeed header&lt;/span&gt;
+pagespeed XHeaderValue &lt;span class=&#34;s2&#34;&gt;&amp;#34;Gracias a ngx_pagespeed&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto debería ser suficiente para la mayoría de webs, es posible habilitar más filtros usando la directiva &lt;em&gt;pagespeed EnableFilters&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Por último hay que añadir la configuración a nginx, dentro del bloque &lt;em&gt;server&lt;/em&gt; que deseemos incluimos la línea &lt;em&gt;include global/pagespeed.conf;&lt;/em&gt; y recargamos la configuración de nginx:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;service nginx reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos comprobar que todo funciona correctamente ojeando las cabeceras de la respuesta del servidor como se muestra en la figura:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Como vemos, la cabecera de pagespeed está presente, luego está habilitado.&lt;/p&gt;
+&lt;h2 id=&#34;apc&#34;&gt;APC&lt;/h2&gt;
+&lt;p&gt;APC viene de Alternative PHP Cache y es un opcode libre y gratuito para PHP. Su objetivo es proporcionar un marco robusto, libre y abierto para optimizar código intermedio de PHP mediante su almacenamiento en caché.&lt;/p&gt;
+&lt;h3 id=&#34;instalando-y-configurando-apc&#34;&gt;Instalando y configurando APC&lt;/h3&gt;
+&lt;p&gt;Para instalarlo basta con ejecutar:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install php-apc
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El archivo de configuración reside en &lt;em&gt;/etc/php5/fpm/conf.d/apc.ini&lt;/em&gt;, un ejemplo de configuración es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apc.enabled&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.shm_segments&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.shm_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;128M
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Relative to the number of cached files &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;you may need to watch your stats &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; a day or two to find out a good number&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+apc.num_files_hint&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;768&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Relative to the size of your site
+apc.user_entries_hint&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;The number of seconds a cache entry is allowed to idle in a slot before APC dumps the cache
+apc.ttl&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7200&lt;/span&gt;
+apc.user_ttl&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7200&lt;/span&gt;
+apc.gc_ttl&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Setting this to &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; will give you the best performance, as APC will
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;not have to check the IO &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; changes. However, you must clear
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;the APC cache to recompile already cached files. If you are still
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;developing, updating your site daily in WP-ADMIN, and running W3TC
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; this to &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.stat&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt;This MUST be 0, WP can have errors otherwise!
+apc.include_once_override&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Only &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; to &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; debugging
+apc.enable_cli&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Allow &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; seconds after a file is created before it is cached to prevent users from seeing half-written/weird pages
+apc.file_update_protection&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;Leave at 2M or lower. WordPress doest have any file sizes close to 2M
+apc.max_file_size&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1M
+
+apc.cache_by_default&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.use_request_time&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.slam_defense&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.mmap_file_mask&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/tmp/apc.XXXXXX
+apc.stat_ctime&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.canonicalize&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.write_lock&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+apc.report_autofilter&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.rfc1867&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.rfc1867_prefix &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;upload_
+apc.rfc1867_name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;APC_UPLOAD_PROGRESS
+apc.rfc1867_freq&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.rfc1867_ttl&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;3600&lt;/span&gt;
+apc.lazy_classes&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+apc.lazy_functions&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+
+apc.localcache &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;The size of the &lt;span class=&#34;nb&#34;&gt;local&lt;/span&gt; process shadow-cache, should be &lt;span class=&#34;nb&#34;&gt;set&lt;/span&gt; to a sufficiently large value, approximately half of apc.num_files_hint.
+apc.localcache.size &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;384&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://elbauldelprogramador.com/solucionar-fallo-de-segmentacion-en-php-cuando-se-usa-apc/&#34; title=&#34;Solucionar fallo de segmentación en PHP cuando se usa APC&#34;&gt;APC&lt;/a&gt; proporciona una mejora considerable en cuanto al rendimiento, ya que no es necesario volver a interpretar el código PHP cada vez que el servidor recibe una petición, el código quedará compilado en cache listo para ser servido. Uno de los parámetros más importantes es &lt;em&gt;apc.shm_size=&lt;/em&gt;, el cual establece el tamaño reservado para la caché.&lt;/p&gt;
+&lt;h2 id=&#34;consideraciones-sobre-seguridad&#34;&gt;Consideraciones sobre seguridad&lt;/h2&gt;
+&lt;p&gt;Algunos valores por defecto de la configuración de nginx no son adecuados en términos de seguridad, basándonos en las recomendaciones de &lt;!-- raw HTML omitted --&gt;NIX Craft&lt;!-- raw HTML omitted --&gt; podemos ajustar éstos parámetros según nuestras necesidades para obtener una mayor seguridad frente a ataques. Todos estos parámetros irán en el bloque &lt;em&gt;http&lt;/em&gt; de nginx.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Start: Size Limits &amp;amp; Buffer Overflows ##&lt;/span&gt;
+      client_body_buffer_size  8K&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      client_header_buffer_size 1k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      client_max_body_size 1m&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      large_client_header_buffers &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; 1k&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;## END: Size Limits &amp;amp; Buffer Overflows ##&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;## Start: Timeouts ##&lt;/span&gt;
+      client_body_timeout   10&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      client_header_timeout 10&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      keepalive_timeout     &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 5&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+      send_timeout          10&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;## End: Timeouts ##&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;### Directive describes the zone, in which the session states are stored i.e. store in slimits. ###&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;### 1m can handle 32000 sessions with 32 bytes/session, set to 5m x 32000 session ###&lt;/span&gt;
+      limit_conn_zone &lt;span class=&#34;nv&#34;&gt;$binary_remote_addr&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;zone&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;addr:5m&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;### Control maximum number of simultaneous connections for one session i.e. ###&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;### restricts the amount of connections from a single ip address ###&lt;/span&gt;
+      limit_conn addr 10&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Una breve explicación del propósito de cada directiva:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;client_body_buffer_size&lt;/strong&gt;: El tamaño máximo del buffer de petición del cliente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;client_header_buffer_size&lt;/strong&gt;: Normalmente el tamaño de las cabeceras de la mayoría de peticiones son inferiores a 1k, si hay problemas deberemos subir el valor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;client_max_body_size&lt;/strong&gt;: Si vamos a aceptar que se suban archivos a nuestra web, este valor debería ser dado en Megas, de lo contrario podremos establecer un valor bajo, como 1k.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;large_client_header_buffers&lt;/strong&gt;: Número máximo y tamaño de los buffers para peticiones que tengan cabeceras de mayor tamaño enviadas por el cliente. Útil para combatir bad bots y ataques DoS.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;client_body_timeout&lt;/strong&gt;: Establece el tiempo de espera para leer el cuerpo de la petición del cliente. Si tras pasar el tiempo el cliente no envía nada, nginx devolverá un error 408 (Request timeout).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;client_header_timeout&lt;/strong&gt;: Similar al anterior pero para la cabecera.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;keepalive_timeout&lt;/strong&gt;: El primer parámetro asigna el tiempo de espera para mantener la conexión activa con el cliente, el servidor cerrará la conxión tras pasar éste tiempo. El segundo parámetro establece el valor de la cabecera &lt;em&gt;Keep-Alive:timeout=time&lt;/em&gt; en la respuesta del servidor, esta cabecera puede hacer que algunos navegadore cierren la conexión para que no sea el servidor el que tenga que hacerlo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;send_timeout&lt;/strong&gt;: Asigna el tiempo de espera al cliente.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;limit_conn_zone&lt;/strong&gt;: Controla el número de conexiones simultaneas de un mismo cliente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Con esto concluyen los tres artículos sobre instalación y optimización de un servidor web con nginx, espero que haya resultado útil.&lt;/p&gt;
+&lt;h1 id=&#34;tabla-de-contenidos-1&#34;&gt;Tabla de contenidos&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-i&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (I)&#34;&gt;Instalación y optimización de un servidor web con Nginx (I)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://elbauldelprogramador.com/instalacion-optimizacion-servidor-web-nginx-ii&#34; title=&#34;Instalación y optimización de un servidor web con Nginx (II)&#34;&gt;Instalación y optimización de un servidor web con Nginx (II)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instalación y optimización de un servidor web con Nginx (III)&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

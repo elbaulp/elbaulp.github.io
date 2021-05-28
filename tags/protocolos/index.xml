@@ -1,0 +1,133 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>protocolos on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/protocolos/</link>
+        <description>Recent content in protocolos on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/protocolos/</link>
+            <title>protocolos on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/protocolos/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Cómo funciona HTTP/2, protocolo que acelerá considerablemente la navegación  Web</title>
+            <link>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-funciona-http2-protocolo-que-acelera-considerablemente-la-navegacion-web/</guid>
+            <description>&lt;p&gt;Hacía mucho tiempo que no traducía episodios del podcast &lt;a href=&#34;https://elbauldelprogramador.com/security-now/&#34;&gt;Security Now!&lt;/a&gt;. Hoy os traigo la traducción del episodio &lt;a href=&#34;http://twit.tv/show/security-now/495&#34;&gt;#495&lt;/a&gt;, donde &lt;em&gt;Steve&lt;/em&gt; describió al detalle el nuevo protocolo HTTP2, el cual lo ha desarrollado &lt;em&gt;Google&lt;/em&gt;. Primero echaremos un vistazo a lo que tenemos en la actualidad, qué problemas presenta y qué soluciones ofrece HTTP2.&lt;/p&gt;
+&lt;h1 id=&#34;qué-hay-mal-en-el-protocolo-actual&#34;&gt;¿Qué hay mal en el protocolo actual?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Páginas web inmensas&lt;/li&gt;
+&lt;li&gt;Un modelo textual basado en petición/respuesta muy simple. Es el cliente quien solicita recursos, no el servidor quien las envía por sí mismo.&lt;/li&gt;
+&lt;li&gt;Cada petición es independiente, stateless y no presupone de ningún conocimiento o contexto previo.&lt;/li&gt;
+&lt;li&gt;TCP es muy lento al iniciar una conexión.&lt;/li&gt;
+&lt;li&gt;La negociación inicial de TLS también es muy costosa.&lt;/li&gt;
+&lt;li&gt;Se realizan múltiples conexiones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;http2-corrige-todos-éstos-problemas&#34;&gt;HTTP2 corrige todos éstos problemas&lt;/h1&gt;
+&lt;p&gt;HTTP2 se compone principalmente de (A lo largo del artículo se profundizará en éstos puntos):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Frames&lt;/strong&gt;: Dividen la única conexión existente en varios frames enumerados. Se componen de:
+&lt;ul&gt;
+&lt;li&gt;Una cabecera de 9 bytes:&lt;/li&gt;
+&lt;li&gt;Los primeros 24 bits (Solo se usan 14 bits si no se tiene el permiso del otro pc)&lt;/li&gt;
+&lt;li&gt;8 bits que determinan el tipo de &lt;em&gt;frame&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;8 bits conteniendo los &lt;em&gt;flags&lt;/em&gt; del &lt;em&gt;frame&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;32 bits para el Identificador del flujo (&lt;strong&gt;Stream ID&lt;/strong&gt;). El bit más significativo siempre es 0.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Payload&lt;/em&gt; de longitud variada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Streams&lt;/strong&gt; (&lt;em&gt;flujos&lt;/em&gt;):
+&lt;ul&gt;
+&lt;li&gt;El solicitante puede asignarles prioridades.&lt;/li&gt;
+&lt;li&gt;Se les puede asignar inter-dependencias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compresión de cabeceras HTTP&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;Cómo funciona LZ (&lt;em&gt;Lempel-Ziv&lt;/em&gt;). (PKZIP, GZIP, LZW, LZA, etc).&lt;/li&gt;
+&lt;li&gt;Un único contexto comprimido para la conexión.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Speculative Push&lt;/strong&gt; (Push especulativo).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Empecemos a profundizar en cada uno de éstos puntos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;situación-actual&#34;&gt;Situación actual&lt;/h1&gt;
+&lt;p&gt;Durante los últimos 15 años hemos convivido con HTTP/1, ¿Qué tiene de malo?, hoy en día todo el mundo lo usa. El problema es que en éstos últimos 15 años las webs se han vuelto locas. Han pasado de ser una simple página de texto con algunas fotos a webs con cantidades de recursos pesados, scripts, gráficos, css, librerías etc.&lt;/p&gt;
+&lt;p&gt;El navegador solicita el contenido en texto plano de la página web. Luego busca todos los recursos que dicha web necesita (anuncios, javascript, flash), en definitiva, plugins que necesitará cargar. Una vez sabe todo lo que necesita, comienza a solicitar éstos recursos a sus correspondientes servidores para comenzar a montar la web.&lt;/p&gt;
+&lt;p&gt;HTTP es el único protocolo que tenemos para hacer éste tipo de cosas, y no puede usarse más de una vez a la vez, es decir, se solicita algo, el servidor lo proporciona y la conexión se cierra. Éste problema intentó subsanarse con la cabecera &lt;code&gt;keep-alive&lt;/code&gt;, para así al menos no tener que crear otra conexión TCP (costoso). Así podíamos realizar otra petición HTTP sobre la misma conexión TCP. Aún así, sigue siendo lento, solicitamos un recurso, lo recibimos, solicitamos, recibimos etc.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El principal problema reside en que abrir una conexión TCP es muy lento.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Para solucionar ésto, TCP diseñó un sistema para explorar el ancho de banda disponible. Al principio, comienza a mandar paquetes léntamente (&lt;em&gt;slow-start&lt;/em&gt;), aumenta la velocidad hasta que se dá cuenta que hay paquetes que se están perdiendo, entonces vuelve a bajar la velocidad e incrementa de nuevo poco a poco.&lt;/p&gt;
+&lt;p&gt;Con ésta solución, sigue habiendo un problema. Si abrimos varias conexiones, todas y cada una de ellas realizarán un &lt;em&gt;slow-start&lt;/em&gt; para comprobar el ancho de banda entre los dos puntos. Lo cual no es óptimo. Si además la conexión es a un servidor seguro, se ralentiza aún más al deber establecer la conexión TLS.&lt;/p&gt;
+&lt;p&gt;Debido a que todo esto es un gran lío, y con el tiempo únicamente va a empeorar, &lt;strong&gt;Google&lt;/strong&gt; ha decidido ponerse manos a la obra y solucionarlo. &lt;strong&gt;Y lo han conseguido&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Actualmente, todos los navegadores soportan HTTP2.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;http2&#34;&gt;HTTP2&lt;/h1&gt;
+&lt;p&gt;HTTP2 rompe completamente con lo que teníamos hasta ahora, no hay compatibilidad hacia atrás entre HTTP2 HTTP/1.1. El cambio más significativo es que &lt;strong&gt;Sólo existe una única conexión&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;La razón por la que solo hay una conexión, radica en que no queremos varias conexiones comprobando cómo de rápido pueden transmitir datos. En su lugar, tendremos una conexión yendo a la máxima velocidad posible. Así tendremos una única negociación TLS y una única conexión TCP.&lt;/p&gt;
+&lt;h1 id=&#34;speculative-push&#34;&gt;Speculative push&lt;/h1&gt;
+&lt;p&gt;A partir de ahora, los servidores tendrán algo llamado &lt;em&gt;speculative push&lt;/em&gt;, algo equivalente a la especulación el los procesadores. En las CPUs modernas, el procesador va por delante de la ejecución actual ejecutando sentencias futuras, cuando se llega a una bifurcación, se ejecutan las sentencias de ambas ramas, una vez se ejecuta la condición necesaria para saber qué bifurcación había que coger, se descartan las intrucciones de la rama incorrecta. El &lt;em&gt;speculative push&lt;/em&gt; es algo parecido, el servidor puede enviar algunas cosas que sabe que el navegador necesitará antes de que el éste las solicite.&lt;/p&gt;
+&lt;h1 id=&#34;frames&#34;&gt;Frames&lt;/h1&gt;
+&lt;p&gt;La única conexión existente se dividirá en en &lt;em&gt;frames&lt;/em&gt;. Son una abstracción de HTTP2. Permiten soportar múltiples flujos simultáneamente. Hay que tener en cuenta que los &lt;em&gt;frames&lt;/em&gt; no son paquetes. TCP, el protocolo que hay debajo, dividirá los &lt;em&gt;frames&lt;/em&gt; en paquetes. Será TCP quién garantice que los paquetes perdidos llegarán al destino, y en el orden correcto. HTTP2 confía en que su comunicación se ve como un único flujo.&lt;/p&gt;
+&lt;p&gt;El flujo TCP se divide en &lt;em&gt;frames&lt;/em&gt; de longitud aleatoria. Los &lt;em&gt;frames&lt;/em&gt; están por encima de TCP en la capa de abstracción. Cada &lt;em&gt;frame&lt;/em&gt; tiene una cabecera de 9 bytes&lt;/p&gt;
+&lt;h2 id=&#34;frame-header-la-cabecera-de-los-frames&#34;&gt;Frame Header (La cabecera de los Frames)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;+-----------------------------------------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Length &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++---------------+---------------+---------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Type &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Flags &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;8&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++-+-------------+---------------+-------------------------------+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;R&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Stream Identifier &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;31&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
++&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;+&lt;span class=&#34;o&#34;&gt;=============================================================&lt;/span&gt;+
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; Frame Payload &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0...&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; ...
++---------------------------------------------------------------+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;De los 9 bytes, los 24 primeros (3 bytes), componen la longitud del &lt;em&gt;frame&lt;/em&gt;, es decir, la longitud del &lt;em&gt;payload&lt;/em&gt; en dicho &lt;em&gt;frame&lt;/em&gt;, sin contar los 9 bytes de la cabecera. Sin el permiso del otro participante en la conexión, sólo se usarán 14 de los 24 bits. De modo que, si ambas partes se ponen de acuerdo, un &lt;em&gt;frame&lt;/em&gt; podría tener una longitud de 16MB (24 bits). Aunque normalmente se usarán como mucho &lt;em&gt;frames&lt;/em&gt; de 16K bytes (14 bits). La mayoría de &lt;em&gt;frames&lt;/em&gt; serán mucho más pequeños que eso.&lt;/p&gt;
+&lt;p&gt;Después de la longitud, los 8 bits siguientes (1 byte), especificarán el tipo de &lt;em&gt;frame&lt;/em&gt;, lo cual deja espacio para 256 tipos de &lt;em&gt;frames&lt;/em&gt;, actualmente hay pocos tipos. Luego hay otro byte que especifica los &lt;em&gt;flags&lt;/em&gt; específicos del &lt;em&gt;frame&lt;/em&gt;. Finalmente, los últimos 32 bits de la cabecera especifican el &lt;em&gt;stream ID&lt;/em&gt;, o Id de flujo, que indica que él es el siguiente al &lt;em&gt;frame&lt;/em&gt; con dicho ID. Por alguna razón, el bit más significativo siempre es 0.&lt;/p&gt;
+&lt;p&gt;En resumen, los &lt;em&gt;frames&lt;/em&gt; pueden variar en tamaño desde muy pequeños hasta 16K, a no ser que ambas partes negocien un tamañó mayor. Luego un tipo de &lt;em&gt;frame&lt;/em&gt; y sus &lt;em&gt;flags&lt;/em&gt;. El &lt;em&gt;Stream ID&lt;/em&gt; permite un flujo de hasta 4GB, así se reduce la posibilidad de agotar los posibles IDs para una conexión. Los múltiples flujos simultáneos permiten una conversación multiplexada entre los dos puntos. Es decir, que el navegador cree nuevos flujos.&lt;/p&gt;
+&lt;h1 id=&#34;conexión-entre-el-cliente-y-el-servidor&#34;&gt;Conexión entre el cliente y el servidor&lt;/h1&gt;
+&lt;p&gt;Recordemos que tenemos una única conexión entre el cliente y el servidor, es posible tener otras conexiones HTTP2, una por cada servidor que contribuye al contenido de la página solicitada. Pero la clave está en que se tiene una única conexión por servidor.&lt;/p&gt;
+&lt;p&gt;El cliente emite consultas para obtener recursos, numerando sucesivamente cada petición con un &lt;em&gt;Stream ID&lt;/em&gt;, sobre la misma conexión. El servidor comienza a buscar los recursos solicitados y enviarlos.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Por debajo de HTTP2, sigue existiendo HTTP/1.1, simplemente se encapsula en frames.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;stream-priority-prioridad-de-flujo&#34;&gt;Stream Priority (Prioridad de flujo)&lt;/h1&gt;
+&lt;p&gt;Otra cosa que el cliente puede hacer con los flujos es asignarles prioridad. Por ejemplo, la página HTML principal, la cual es necesaria inmediatamente para obtener el resto de URLs necesarias para completar la carga de la web. Es posible asignar una prioridad a dicho recurso para que el servidor lo proporcione de inmediato. De esta forma, se puede establecer dependencias entre recursos.&lt;/p&gt;
+&lt;h1 id=&#34;los-beneficios-de-una-única-conexión&#34;&gt;Los beneficios de una única conexión&lt;/h1&gt;
+&lt;p&gt;Hagamos un breve repaso de lo visto hasta ahora. Tenemos una única conexión optimizada para ser veloz. Una vez establecida se comienza a enviar peticiones, empaquetándolas en &lt;em&gt;frames&lt;/em&gt; y asignándoles un identificador único (&lt;em&gt;Stream ID&lt;/em&gt;). En el lado del servidor, éste mira las dependencias y prioridades, enviándolas en el orden solicitado por el cliente.&lt;/p&gt;
+&lt;p&gt;El servidor va acumulando una gran cantidad de cosas a enviar y las lanza por la conexión todo lo rápido que puede, teniendo en cuenta las restricciones que el cliente haya establecido. Se mantiene así la única conexión tan ocupada como sea posible, sin existir pausas entre peticiones de recursos. Ésta es la gran diferencia con el protocolo anterior. Ya que, aunque hubiera 6 o más conexiones, había un periodo de espera entre solicitar y recibir cada uno de los recursos necesarios. El servidor básicamente esperaba a que el cliente se diera cuenta de qué recursos le hacían falta, ésto ya no pasa en HTTP2.&lt;/p&gt;
+&lt;h1 id=&#34;header-compression-compresión-de-cabeceras&#34;&gt;Header Compression (Compresión de cabeceras)&lt;/h1&gt;
+&lt;p&gt;Actualmente hay mucha redundancia en las cabeceras HTTP, ya que todas y cada una de ellas se envían en todas las peticiones, aunque sean iguales para cada petición (Ej, el user-agent, cookies, hora etc). Como se mencionó arriba, el protocolo HTTP típico, el textual sigue usandose sin modificar.&lt;/p&gt;
+&lt;p&gt;Para solucionar el problema de la redundancia en las cabeceras, hay que comprender cómo funciona la compresión. Todo se lo debemos a dos genios, &lt;strong&gt;Lempel&lt;/strong&gt; y &lt;strong&gt;Ziv&lt;/strong&gt;, de ellos viene la extensión .lz, creada por los 70. En ésta época adquirieron una patente llamada compresión Lempel-Ziv (Compresión LZ). Y así nació ZIP, GZIP, LZW, LZA etc. El concepto de compresión es el siguiente. Estamos enviando algo al otro punto del que el otro punto no sabe nada, y de hecho nosotros tampoco. Ésto se conoce como “&lt;em&gt;Stream compression&lt;/em&gt;” (Compresión del flujo), ya que la idea es que estamos recibiendo bytes en un flujo, sin saber nada sobre su significado.&lt;/p&gt;
+&lt;p&gt;Conforme recibimos bytes de datos, sin saber nada más sobre ellos, volvemos a enviarlos, pero mantenemos un buffer con el número de X bytes más recientes enviados hasta el momento. Es decir, los enviamos y los guardamos en un buffer que almacenará lo que hemos enviado. Cuando vuelvas a recibir bytes, miraremos en el buffer en busca de patrones que coincidan con lo que nosotros enviamos anteriormente.&lt;/p&gt;
+&lt;p&gt;Ahora bien, si se va a enviar algo que ya enviamos recientemente, podríamos en su lugar enviar una referencia a dicha cadena que tenemos en nuestro buffer al otro extemo. El otro extremo está haciendo lo mismo, mantiene un buffer.&lt;/p&gt;
+&lt;p&gt;Ambos buffers están sincronizados. Nosotros mantenemos un buffer de lo que enviamos, el servidor mantiene uno de lo que recibe, que es lo que nosotros enviamos. De modo que al enviar una referencia a una cadena de nuestro buffer, apuntará a la misma cadena en el buffer del servidor. He aquí la compresión, enviamos una referencia en lugar de la cadena completa.&lt;/p&gt;
+&lt;p&gt;Éstos buffers reciben el nombre de “&lt;em&gt;compression context&lt;/em&gt;” (Compresión de contexto).&lt;/p&gt;
+&lt;p&gt;Los genios de &lt;strong&gt;Google&lt;/strong&gt;, han usado un contexto de compresión por conexión, no por flujo. Lo cual significa que obtenemos compresión en todas las consultas. Es decir, la consulta HTTP enviada en el primer flujo estará comprimida. Aunque no demasiado, ya que es la primera y nunca se han enviado esas cabeceras, la segunda consulta que vaya al mismo servidor, desde el mismo navegador, con las mismas cookies, el mismo user agent y todas las demás cabeceras redundantes, en el mismo contexto de compresión, enviará ésta vez referencias a las cabeceras del otro extremo.&lt;/p&gt;
+&lt;p&gt;En resumen, enviamos la cabeceras una vez, y a partir de ahí simplemente se enviarán referecias a las cabeceras&lt;/p&gt;
+&lt;h1 id=&#34;conclusión&#34;&gt;Conclusión&lt;/h1&gt;
+&lt;p&gt;Ésto es HTTP2. Mencionemos algunas cosas, el &lt;em&gt;speculative push&lt;/em&gt; significa que el servidor puede anticipar qué recursos puede necesitar el cliente.&lt;/p&gt;
+&lt;p&gt;El cacheo de recursos en el cliente lo previene de tener que preguntar por más recursos, pero es un arma de doble filo, ya que el servidor puede enviar mediante &lt;em&gt;speculative push&lt;/em&gt; algo que el cliente ya tuviera en su caché. De modo que no hay que hacer un uso excesivo del &lt;em&gt;speculative push&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Todo el mérito de éste protocolo es para Google&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Borrador HTTP2&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;tools.ietf.org&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Crédito de la imagen&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;https://httpwg.github.io/&#34;&gt;https://httpwg.github.io/&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

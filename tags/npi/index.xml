@@ -1,0 +1,115 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>NPI on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/npi/</link>
+        <description>Recent content in NPI on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 14 Dec 2015 07:53:53 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/npi/</link>
+            <title>NPI on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/npi/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Programación Android - Conceptos básicos</title>
+            <link>https://elbauldelprogramador.com/conceptos-basicos/</link>
+            <pubDate>Mon, 14 Dec 2015 07:53:53 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/conceptos-basicos/</guid>
+            <description>&lt;h1 id=&#34;conceptos-básicos-android&#34;&gt;Conceptos básicos Android&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;View:&lt;/strong&gt; Representa el componente básico en el que se apoyan
+todos los elementos que construyen una interfaz. Todos los elementos
+que generan interfaces heredan de la clase &lt;code&gt;View&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Activity:&lt;/strong&gt; Encargada de mostrar la interfaz de
+usuario e interactuar con él. Responden a los eventos generados por
+el usuario (pulsar botones etc). Heredan de la clase
+&lt;a href=&#34;http://developer.android.com/reference/android/app/Activity.html&#34;&gt;&lt;code&gt;Activity&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Services:&lt;/strong&gt; No tienen interfaz visual y se ejecutan
+en segundo plano, se encargan de realizar tareas que deben continuar
+ejecutandose cuando nuestra aplicación no está en primer plano.
+Todos los servicios extienden de la clase &lt;code&gt;Service&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Content Provider:&lt;/strong&gt; Ponen un grupo de datos a disposición de distintas aplicaciones, extienden de la clase ContentProvider para implementar los métodos de la interfaz, pero para acceder a esta interfaz se ha de usar una clase llamada ContentResolver.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BroadcastReceiver:&lt;/strong&gt; Simplemente reciben un mensaje
+y reaccionan ante él, extienden de la clase BroadcastReceiver, no
+tienen interfaz de usuario, pero pueden lanzar Actividades como
+respuesta a un evento o usar NotificationManager para informar al
+usuario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Intent:&lt;/strong&gt; Permite realizar la comunicación y
+transferencia de datos entre objetos de la clase Activity o Service.
+También permite iniciar otras Activities o lanzar otras
+aplicaciones.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;hola-mundo&#34;&gt;Hola Mundo&lt;/h1&gt;
+&lt;p&gt;Veamos ahora cómo crear la típica aplicación &lt;em&gt;Hola Mundo&lt;/em&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;crear-el-proyecto&#34;&gt;Crear el proyecto&lt;/h2&gt;
+&lt;p&gt;Para ello, en Android Studio, hacemos click en &lt;em&gt;File » New Project&lt;/em&gt;. Una vez creada, veremos que la estructura de la aplicación es la mostrada en la imagen.&lt;/p&gt;
+&lt;h2 id=&#34;componentes-del-proyecto&#34;&gt;Componentes del proyecto&lt;/h2&gt;
+&lt;p&gt;Los proyectos de Android siguen una estructura fija de carpetas que
+debemos respetar.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;carpeta-res&#34;&gt;Carpeta Res&lt;/h3&gt;
+&lt;p&gt;Esta es una de las carpeta que más se va a usar junto con &lt;code&gt;src&lt;/code&gt;. Se
+compila y se generan referencias en la clase &lt;code&gt;R&lt;/code&gt;, para acceder a ellos
+desde código. Están escritos en &lt;code&gt;XML&lt;/code&gt;. El propósito de esta carpeta es separar la lógica de la aplicación de la interfaz.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;anim&lt;/code&gt;: Definición de Animaciones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;color&lt;/code&gt;: Definición de colores&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drawable&lt;/code&gt;: Ficheros bitmap(.png, .9.png, .jpg, .gif) o XML con contenidos que se dibujarán (fondos, botones etc).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;layout&lt;/code&gt;: Definen la capa de interfaz de usuario&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;menu&lt;/code&gt;: Definición de los menús de la aplicación&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;raw&lt;/code&gt;: Binarios que no se pueden colocar en las otras carpetas.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;values&lt;/code&gt;: Definición de estilos, cadenas de texto para Localización etc.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xml&lt;/code&gt;: Ficheros XML que pueden ser accedidos en tiempo de ejecución&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hola-mundo-1&#34;&gt;Hola Mundo&lt;/h2&gt;
+&lt;p&gt;Pasemos ahora a describir los distintos componentes de la aplicación.&lt;/p&gt;
+&lt;p&gt;La apliación creada por defecto tendrá un &lt;em&gt;Activity&lt;/em&gt; muy simple, uno de los métodos más importantes de esta clase es &lt;code&gt;onCreate&lt;/code&gt;, en él se crean y se instancias los componentes necesarios para dicha &lt;em&gt;Activity&lt;/em&gt;, se instancias componentes gráficos, se establecen los &lt;em&gt;callbacks&lt;/em&gt; necesarios, eventos etc. El código más simple que se puede obtener en este método es el siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;
+&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Bundle&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;kd&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+  &lt;span class=&#34;cm&#34;&gt;/**
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   * Método encargado de “inflar” la actividad.
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   * Inicializar cada componente de la actividad
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   * con su correspondiente View.
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;   */&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;setContentView&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;layout&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;activity_main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es importante añadir la línea &lt;code&gt;setContentView(R.layout.activity_main);&lt;/code&gt;, ya que aquí se define qué &lt;em&gt;layout&lt;/em&gt; (Interfaz gráfica) va a usar esta &lt;em&gt;Activity&lt;/em&gt;. De no añadirla, cualquier referencia que intentemos hacer de un componente gráfico fallará.&lt;/p&gt;
+&lt;h2 id=&#34;ciclo-de-vida-de-una-activity&#34;&gt;Ciclo de vida de una Activity&lt;/h2&gt;
+&lt;p&gt;La siguiente imagen muestra el ciclo de vida de una &lt;em&gt;Activity&lt;/em&gt;, esto es qué flujo de llamadas siguen las aplicaciones. Como vemos, &lt;code&gt;onCreate&lt;/code&gt; es el primero método en llamarse al lanzar una &lt;em&gt;Activity&lt;/em&gt;, es por ello que en él debemos hacer todas las inicializaciones necesarias. Si lo necesitamos, podemos implementar todos y cada uno de estos métodos. Por ejemplo, en una aplicación de vídeo, interesará detener la reproducción cuando se recibe una llamada, o cuando la pantalla se apaga, toda esa lógica deberá ir en el método &lt;code&gt;onPause&lt;/code&gt; o &lt;code&gt;onStop&lt;/code&gt;, y debería reanudarse implementando la lógica en &lt;code&gt;onRestart&lt;/code&gt; o &lt;code&gt;onResume&lt;/code&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;reslayoutactivity_mainxml&#34;&gt;./res/layout/activity_main.xml&lt;/h3&gt;
+&lt;p&gt;Este es el fichero que especifica qué interfaz gráfica queremos en nuestra &lt;em&gt;Activity&lt;/em&gt; (Recordemos la llamada &lt;code&gt;setContentView(R.layout.activity_main);&lt;/code&gt;). En este caso, la interfaz es un simple &lt;code&gt;TextView&lt;/code&gt; que mostrará el mensaje &lt;em&gt;Hola Mundo&lt;/em&gt;. (El texto se ha especificado haciendo referencia al fichero de cadenas (&lt;em&gt;strings.xml&lt;/em&gt;) definido más abajo, en concreto se hace referencia a la cadena de texto de valor &lt;code&gt;hello_world&lt;/code&gt;).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;RelativeLayout&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;match_parent&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;na&#34;&gt;tools:context=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;.MainActivity&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;wrap_content&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@string/hello_world&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/RelativeLayout&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;resvaluesstringsxml&#34;&gt;./res/values/strings.xml&lt;/h3&gt;
+&lt;p&gt;Aquí se definen las cadenas de texto a usar en la aplicación. Siempre deben escribirse en un fichero &lt;code&gt;XML&lt;/code&gt; dentro de la carpeta &lt;code&gt;values&lt;/code&gt;, ya que de este modo podremos traducir la aplicación a otro idioma fácilmente con tan solo crear otra carpeta llamada &lt;code&gt;values-de&lt;/code&gt;, por ejemplo, que contenga las cadenas de texto en Alemán. En este caso, se crea una única cadena de texto de nombre &lt;code&gt;hello_world&lt;/code&gt; y de valor &lt;em&gt;Hello World!&lt;/em&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello_world&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello world!&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En el &lt;a href=&#34;https://elbauldelprogramador.com/android/tutorial-android-hola-mundo-a-fondo/&#34; title=&#34;Tutorial Android Hola mundo a fondo&#34;&gt;siguiente artículo&lt;/a&gt; se verá a fondo la aplicación &lt;em&gt;Hola Mundo&lt;/em&gt; tal y como la crea en estos momentos &lt;em&gt;Android Studio&lt;/em&gt;, usando &lt;em&gt;Fragments&lt;/em&gt; en lugar de &lt;em&gt;Activity&lt;/em&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

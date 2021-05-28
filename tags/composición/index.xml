@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Composición on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/composici%C3%B3n/</link>
+        <description>Recent content in Composición on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Tue, 24 Oct 2017 18:51:32 +0200</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/composici%C3%B3n/</link>
+            <title>Composición on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/composici%C3%B3n/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Teoría de Categorías en Scala - Composición</title>
+            <link>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</link>
+            <pubDate>Tue, 24 Oct 2017 18:51:32 +0200</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/teoria-categorias-scala-composicion/</guid>
+            <description>&lt;h1 id=&#34;changelog&#34;&gt;CHANGELOG&lt;/h1&gt;
+
+&lt;p&gt;&lt;em&gt;Gracias a Jesús López por comentar en este artículo y corregir unos cuantos errores.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+
+&lt;p&gt;Este es el primer artículo de una serie que voy a escribir sobre &lt;strong&gt;teoría de categorías&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Llevaba un tiempo queriendo aprender &lt;strong&gt;teoría de categorías&lt;/strong&gt;, ya que he leido bastante sobre el tema y parece que tiene &lt;a href=&#34;http://blog.ploeh.dk/2017/10/04/from-design-patterns-to-category-theory/&#34; title=&#34;aplicaciones en el desarrollo de software&#34;&gt;aplicaciones en el desarrollo de software&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Esta serie de artículos se basan en gran libro que &lt;strong&gt;Bartosz Milewski&lt;/strong&gt; escribió hace un tiempo. Para aportar mi granito de arena, he decidido implementar los ejercicios que propone usando &lt;a href=&#34;https://elbauldelprogramador.com/tags/scala/&#34; title=&#34;scala&#34;&gt;scala&lt;/a&gt; y &lt;em&gt;tests basados en propiedades&lt;/em&gt; con &lt;code&gt;scalacheck&lt;/code&gt;. Espero que te guste esta serie, y no dudes en comentar tu opinión o sugerir/corregir el contenido.&lt;/p&gt;
+
+&lt;p&gt;&lt;!--more--&gt;&lt;!--ad--&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;categoría-la-esencia-de-la-composición&#34;&gt;Categoría: La esencia de la composición&lt;/h1&gt;
+
+&lt;p&gt;Antes de continuar, ¿Qué es una &lt;em&gt;categoría?&lt;/em&gt;, de &lt;a href=&#34;https://es.wikipedia.org/wiki/Categor%C3%ADa_(matem%C3%A1ticas)&#34; title=&#34;Wikipedia&#34;&gt;Wikipedia&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+En teoría de categorías, una categoría es una estructura algebraica que consta de una &lt;strong&gt;colección de objetos&lt;/strong&gt;, &lt;strong&gt;conectados unos con otros mediante flechas&lt;/strong&gt; tales que se cumplen las siguientes propiedades básicas: las flechas se pueden componer unas con otras de manera &lt;strong&gt;asociativa&lt;/strong&gt;, y para cada objeto existe una flecha que se comporta como un &lt;strong&gt;elemento neutro bajo la composición&lt;/strong&gt;.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;En resumen, una &lt;em&gt;categoría&lt;/em&gt; está formada por &lt;strong&gt;objetos y flechas&lt;/strong&gt;, y pueden componerse. Esto se aprecia mejor con una imagen:&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition.jpg&#34;
+            alt=&#34;Arrows and objects category Theory&#34;
+            title=&#34;Arrows and objects category Theory&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;360&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+        &lt;figcaption&gt;Ejemplo de Categoría&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Cada flecha puede &lt;strong&gt;componerse&lt;/strong&gt;, p.e: Si &lt;code&gt;A -&amp;gt; B&lt;/code&gt; y &lt;code&gt;B -&amp;gt; D&lt;/code&gt; entonces debe existir una flecha de &lt;code&gt;A -&amp;gt; D&lt;/code&gt;. Las flechas pueden llamarse &lt;strong&gt;morfismos&lt;/strong&gt;, y se pueden componer. En la imagen de arriba tienes:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;f: A -&amp;gt; B&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;g: B -&amp;gt; D&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Si componemos esas dos, también tienes &lt;code&gt;h: A -&amp;gt; D&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;La composición se lee de &lt;em&gt;derecha a izquierda&lt;/em&gt;, por tanto &lt;code&gt;g∘f&lt;/code&gt; quiere decir &lt;code&gt;g(f(x))&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;propiedades-de-la-composición&#34;&gt;Propiedades de la composición&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Asociatividad:&lt;/strong&gt; &lt;code&gt;f∘(g∘h) == (f∘g)∘h == f∘g∘h&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Para cada objeto existe una &lt;strong&gt;flecha Identidad, o morfismo Identidad&lt;/strong&gt;, que va del objeto a sí mismo: &lt;code&gt;f∘IDₐ = f == IDₐ∘f = f&lt;/code&gt;, como muestro debajo:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/category-theory-identity.jpg&#34;
+            alt=&#34;Category Theory, object identity&#34;
+            title=&#34;Category Theory, object identity&#34;
+            sizes=&#34;(min-width: 640px) 640px, 100vw&#34;
+            width=&#34;640&#34;
+            height=&#34;360&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;ejemplos-en-scala&#34;&gt;Ejemplos en Scala&lt;/h1&gt;
+
+&lt;p&gt;Ahora que ya he comentado un poco de la teoría, vamos a implementarlo en &lt;strong&gt;scala&lt;/strong&gt;. Como dije al principio, voy a usar &lt;em&gt;tests basados en propiedades&lt;/em&gt; para comprobar que el objeto creado cumple las &lt;strong&gt;propiedades algebraicas&lt;/strong&gt; de una categoría. Estas propiedades son la &lt;strong&gt;Identidad&lt;/strong&gt; y &lt;strong&gt;asociatividad&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;El código de abajo es la definición de una &lt;em&gt;categoría&lt;/em&gt; (Para ser más precisos, es una instancia de la categoría &lt;strong&gt;Hask&lt;/strong&gt;). En la categoría &lt;strong&gt;Hask&lt;/strong&gt;, los objetos son tipos y las flechas funciones. Puedes consultar el código en el fichero &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/main/scala/elbaulp/Category.scala&#34; title=&#34;Category.scala de mi respositorio.&#34;&gt;Category.scala de mi respositorio.&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;k&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;
+  &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt;, &lt;span class=&#34;kt&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;](&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;B&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;A&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;C&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;=&lt;/span&gt;
+     &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;andThen&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Es bastante simple, una función &lt;em&gt;identidad&lt;/em&gt; y otra función que &lt;em&gt;compone&lt;/em&gt; dos funciones. Para comprobar que cumple las propiedades, he escrito los siguientes tests.&lt;/p&gt;
+
+&lt;h1 id=&#34;tests-basados-en-propiedades&#34;&gt;Tests basados en propiedades&lt;/h1&gt;
+
+&lt;p&gt;Para mantener el artículo limpio, muestro solo el código necesario, puedes consultar el &lt;a href=&#34;https://github.com/elbaulp/Scala-Category-Theory/blob/master/src/test/scala/elbaulp/CategorySpec.scala&#34; title=&#34;código completo de los tests en github.&#34;&gt;código completo de los tests en github.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;propiedad-identidad&#34;&gt;Propiedad Identidad&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a == Id(a)&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Id∘f = f&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;square&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;square&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;f∘Id = f&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;La primera propiedad manifiesta que para todo &lt;code&gt;String&lt;/code&gt; posible que se le pase a la función &lt;code&gt;identity&lt;/code&gt;, la &lt;code&gt;identidad&lt;/code&gt; siempre será la cadena de texto que se le pasó a la función.&lt;/p&gt;
+
+&lt;p&gt;La segunda y tercera propiedad indican que no importa cómo se componga la función &lt;code&gt;identidad&lt;/code&gt; con otra función &lt;code&gt;f&lt;/code&gt;, ya que el resultado siempre será esa función &lt;code&gt;f&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;propiedad-asociativa&#34;&gt;Propiedad asociativa&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-scala&#34; data-lang=&#34;scala&#34;&gt;&lt;span class=&#34;n&#34;&gt;property&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;Associativity: h∘(g∘f) = (h∘g)∘f = h∘g∘f&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;){&lt;/span&gt;
+  &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;forAll&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;Int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;===&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Category&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;compose&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;))(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;})&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Como puedes ver, este test comprueba que la propiedad asociativa es cierta.&lt;/p&gt;
+
+&lt;p&gt;Si ejecutas estos tests, verás que todos pasan:&lt;/p&gt;
+
+&lt;p&gt;&lt;figure&gt;
+        &lt;a href=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;&gt;
+          &lt;img
+            on=&#34;tap:lightbox1&#34;
+            role=&#34;button&#34;
+            tabindex=&#34;0&#34;
+            layout=&#34;responsive&#34;
+            src=&#34;https://elbauldelprogramador.com/img/category-theory-composition-test.png&#34;
+            alt=&#34;Category theory property tests&#34;
+            title=&#34;Category theory property tests&#34;
+            sizes=&#34;(min-width: 397px) 397px, 100vw&#34;
+            width=&#34;397&#34;
+            height=&#34;105&#34;&gt;
+          &lt;/img&gt;
+        &lt;/a&gt;
+&lt;/figure&gt;&lt;/p&gt;
+
+&lt;p&gt;Eso es todo para esta primera parte, espero que te haya gustado. Me gustaría saber tu opinión, &lt;em&gt;te animo a comentar abajo&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;recursos&#34;&gt;Recursos&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://bartoszmilewski.com/2014/11/04/category-the-essence-of-composition/trackback/&#34; title=&#34;Category: The Essence of Composition&#34;&gt;Category: The Essence of Composition&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

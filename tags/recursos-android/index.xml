@@ -1,0 +1,302 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>recursos android on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/recursos-android/</link>
+        <description>Recent content in recursos android on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/recursos-android/</link>
+            <title>recursos android on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/recursos-android/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Eliminar recursos sin usar en Android</title>
+            <link>https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/eliminar-recursos-sin-usar-en-android/</guid>
+            <description>&lt;p&gt;Trabajando en el proyecto &lt;a href=&#34;https://elbauldelprogramador.com/swadroid&#34; title=&#34;Artículos en el blog de SWADroid&#34;&gt;SWADroid&lt;/a&gt; | &lt;a href=&#34;https://github.com/Amab/SWADroid/tree/develop&#34; title=&#34;Proyecto en Github&#34;&gt;(Fuente en Github)&lt;/a&gt;, y tras pasar la herramienta &lt;code&gt;Lint&lt;/code&gt;, me encontré con cientos de recursos sin usar, que debía eliminar a mano. Pensé que debía existir alguna herramienta que permitiera automatizar el proceso, y de hecho, exíste, &lt;em&gt;Android Resource Remover&lt;/em&gt;. Hoy veremos cómo usar ésta herramienta para eliminar recursos sin usar en Android.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;el-problema&#34;&gt;El problema&lt;/h1&gt;
+&lt;p&gt;A medida que un proyecto va creciendo, se usan más y más &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos/&#34; title=&#34;PROGRAMACIÓN ANDROID: RECURSOS – INTRODUCCIÓN&#34;&gt;recursos&lt;/a&gt;. Con el paso del tiempo puede que muchos dejen de usarse al ser reemplazados por otros. En el caso de SWADRoid había cientos. La manera de resolverlos fue usando la herramienta &lt;em&gt;Android Resource Remover&lt;/em&gt; cuya instalación procederemos a explicar ahora.&lt;/p&gt;
+&lt;h1 id=&#34;instalar-android-resource-remover&#34;&gt;Instalar Android Resource Remover&lt;/h1&gt;
+&lt;p&gt;Bastante sencillo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip install android-resource-remover
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;ejecutar-android-resource-remover&#34;&gt;Ejecutar Android Resource Remover&lt;/h1&gt;
+&lt;p&gt;Bastante sencillo también, basta con ejecutar&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;android-resource-remover
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;en el directorio del proyecto a limpiar.&lt;/p&gt;
+&lt;h2 id=&#34;problemas-en-la-instalación&#34;&gt;Problemas en la instalación&lt;/h2&gt;
+&lt;p&gt;Si por algún motivo, el proceso de instalación no finaliza correctamente, es posible que falten los siguientes paquetes en el sistema.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get install libxml2-dev libxslt1-dev
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;En mi caso tuve que instalarlos.&lt;/p&gt;
+&lt;p&gt;También es posible que sea necesario actualizar la librería xml con&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;easy_install --upgrade lxml
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;uso-avanzado&#34;&gt;Uso avanzado&lt;/h1&gt;
+&lt;p&gt;En mi caso, me encontré con problemas al usar el programa sin argumentos. Concretamente los pasos que seguí fueron:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;lint --xml lint-result.xml -Wall --quiet --showall .
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El significado de los parámetros es:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--xml lint-result.xml&lt;/code&gt; Guarda el resultado en el fichero indicado.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-Wall&lt;/code&gt; Comprueba todos &lt;em&gt;Warnings&lt;/em&gt;, incluidos las desactivadas por defecto.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--quiet&lt;/code&gt; No muestra el progreso.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--showall&lt;/code&gt; No trunca mensajes demasiado largos.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt; directorio sobre el que ejecutar &lt;code&gt;lint&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Una vez finalizado el análisis, es posible eliminar los recursos sin usar usando &lt;em&gt;Android Resource Remover&lt;/em&gt; con los siguientes parámetros:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;android-resource-remover --xml lint-result.xml
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;eliminar-identificadores-sin-usar&#34;&gt;Eliminar Identificadores sin usar&lt;/h1&gt;
+&lt;p&gt;Aunque &lt;em&gt;Android Resource Remover&lt;/em&gt; por defecto eliminar únicamente recursos de tipo imágenes, ficheros xml etc, es posible hacer una ligera modificación al código para que elimine los identificadores sin usar. La línea a modificar es &lt;code&gt;root.findall(&#39;.//issue[@id=&amp;quot;UnusedResources&amp;quot;]&#39;)&lt;/code&gt;, basta modificarla a &lt;code&gt;root.findall(&#39;.//issue[@id=&amp;quot;UnusedIDs&amp;quot;]&#39;)&lt;/code&gt; y ejecutar de nuevo los pasos mencionados arriba.&lt;/p&gt;
+&lt;h1 id=&#34;resultado&#34;&gt;Resultado&lt;/h1&gt;
+&lt;p&gt;Tras pasar &lt;em&gt;Android Resource Remover&lt;/em&gt;, &lt;em&gt;SWADroid&lt;/em&gt; paso a ocupar &lt;strong&gt;1,5Mb&lt;/strong&gt; frente a las &lt;strong&gt;2,3Mb&lt;/strong&gt; previas a la eliminación de los recursos sin usar.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Proyecto en Github&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;github.com/KeepSafe/android-resource-remover&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Remove unused Android resources to reduce APK size&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;keepsafe-engineering.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Introducción</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos/</guid>
+            <description>&lt;p&gt;Ya hemos visto que Android separa los recursos (imágenes, sonidos etc) del código colocándolos organizados dentro del directorio &lt;em&gt;&lt;strong&gt;./res&lt;/strong&gt;&lt;/em&gt;. Esto nos facilita su mantenimiento, además de permitirnos usar diferentes recursos dependiendo de la configuración del terminal.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Separar los recursos permite proporcionar alternativas para dar soporte a las distintas configuraciones de dispositivos, como idiomas o tamaños de pantalla. Para conseguir compatibilidad con las diferentes configuraciones, debemos organizar los recursos en el directorio &lt;em&gt;&lt;strong&gt;./res&lt;/strong&gt;&lt;/em&gt; de nuestros proyectos, dentro de subdirectorios para agruparlos por tipo y configuración.&lt;/p&gt;
+&lt;p&gt;Un recurso puede usarse por defecto (Se mostrará en cualquier dispositivo, independientemente de su configuración), o pueden especificarse recurosos alternativos (Que se mostrán en los dispositivos para configuraciones determinadas), veámoslo con unas imágenes de ejemplo:&lt;/p&gt;
+&lt;p&gt;Dos dispositivos distintos, usando recursos por defecto:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Dos dispositivos distintos, usando recursos alternativos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por ejemplo, podemos crear iconos más pequeños para que sean mostrados en los terminales con pantallas más pequeñas o diseñar una disposición de pantalla diferente para cuando la aplicación se esté ejecutando en modo apaisado, para conseguir esto, simplemente creamos una carpeta de recursos añadiendo el sufijo que indica la situación en la que debe usarse.&lt;/p&gt;
+&lt;p&gt;Para el caso del idioma, crearíamos un archivo xml con las cadenas traducidas a dicho idioma, en este caso inglés, y lo colocaríamos dentro de &lt;em&gt;&lt;strong&gt;./res/values-en/strings.xml&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para el caso del layout personalizado cuando la pantalla esté en modo apaisado, meteríamos nuestro layout dentro de &lt;em&gt;&lt;strong&gt;res/layout-land/&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Para saber más acerca de los tipos de sufijos que se pueden usar, visita &lt;a href=&#34;http://developer.android.com/guide/topics/resources/providing-resources.html&#34;&gt;Providing Resources en la página oficial de Android.&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos---usando-recursos2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-usando/&#34;&gt;Programación Android: Recursos - Usando recursos&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Strings</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-strings/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-strings/</guid>
+            <description>&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+&lt;p&gt;Como ya hemos visto, los recursos juegan un papel muy importante en la arquitectura Android. Un recurso en Android es un archivo (como un fichero de música) o un valor (como el título de un Diálogo) que está ligado a una aplicación ejecutable. Estos archivos están ligados a un ejecutable de tal manera que podemos cambiarlos sin necesidad de recompilar la aplicación.&lt;/p&gt;
+&lt;p&gt;Los ejemplos de recursos más familiares son cadenas de texto, colores e imágenes. En lugar de escribir las cadenas de texto en el código fuente, usamos sus IDs. Esta indirección nos permite cambiar el valor de la cadena sin tener que cambiar el código fuente.&lt;/p&gt;
+&lt;p&gt;Existen mucho recursos en Android, que vamos a ver a lo largo de las etradas posteriores. Empezaremos por un recurso muy común, los string:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;recursos-string&#34;&gt;Recursos string&lt;/h1&gt;
+&lt;p&gt;Android permite definir strings en uno o más archivos XML de recursos. Estos archivos están bajo el directorio &lt;em&gt;&lt;strong&gt;./res/values&lt;/strong&gt;&lt;/em&gt;. El nombre del archivo XML para este tipo de recurso puede ser cualquiera, pero por convención se suele llamar &lt;em&gt;&lt;strong&gt;strings.xml&lt;/strong&gt;&lt;/em&gt;. Veamos un ejemplo de este fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf­8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;app_name&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello_app&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Cuando este archivo se crea o modifica, el plugin ADT de eclipse automáticamente creará o actualizará una clase java de nuestra aplicación llamada &lt;em&gt;&lt;strong&gt;R.java&lt;/strong&gt;&lt;/em&gt; alojada en el directorio ./gen, que contiene los IDs únicos para las dos cadenas que acabamos de crear.&lt;/p&gt;
+&lt;p&gt;Para el fichero strings.xml que acabamos de crear, tendremos lo siguiente en la clase R:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nombre.de.nuestro.paquete&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;app_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040001&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como vemos como primero R.java define una clase principal en el paquete raiz: &lt;em&gt;&lt;strong&gt;public final class R&lt;/strong&gt;&lt;/em&gt;. Depues, define una clase interna llamada &lt;em&gt;&lt;strong&gt;public static final class string&lt;/strong&gt;&lt;/em&gt;. R.java crea esta clase estática interna como espacio de nombres para guardar los IDs de los recursos string.&lt;/p&gt;
+&lt;p&gt;La definición de los dos &lt;em&gt;&lt;strong&gt;public static final int&lt;/strong&gt;&lt;/em&gt; llamados app_name y hello son los IDs de los recursos que representan nuestras cadenas de texto. Podemos usar estos IDs en cualquier lugar de nuestro código mediante &lt;em&gt;&lt;strong&gt;R.string.hello o R.string.app_name&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;La estructura del fichero string.xml es muy fácil de seguir. Tenemos un elemento raiz llamado &lt;code&gt;&amp;lt;resources&amp;gt;&lt;/code&gt;, seguido por uno o más elementos hijos &lt;code&gt;&amp;lt;string&amp;gt;&lt;/code&gt;. Cada elemento &lt;code&gt;&amp;lt;string&amp;gt;&lt;/code&gt; tiene una propiedad llamada &lt;em&gt;&lt;strong&gt;name&lt;/strong&gt;&lt;/em&gt; que será la que usará como identificador R.java.&lt;/p&gt;
+&lt;p&gt;Para comprobar que se permiten varios recursos de string en el directorio values, vamos a crear otro fichero llamado strings1.xml con lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf­8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;hello1&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello1&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+    &lt;span class=&#34;nt&#34;&gt;&amp;lt;string&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;app_name1&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Hello_app1&lt;span class=&#34;nt&#34;&gt;&amp;lt;/string&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora, el plugin ADT de eclipse se encargará de actualizar el fichero R.java, que contendrá lo siguiente:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;nombre.de.nuestro.paquete&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;R&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+   &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+   &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;app_name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040001&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hello&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040000&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;app_name1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040006&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;hello1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0x7f040005&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+      &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+   &lt;span class=&#34;c1&#34;&gt;//.. otras entradas dependiendo de tu proyecto y aplicación
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;siguiente-tema-programación-android-recursos---layout1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout/&#34;&gt;Programación Android: Recursos - Layout&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Trabajar con recursos XML arbitrarios</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-trabajar/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-trabajar/</guid>
+            <description>&lt;p&gt;Además de los recursos estructurados &lt;a href=&#34;https://elbauldelprogramador.com/curso-programacion-android/&#34;&gt;que hemos ido viendo&lt;/a&gt;, Android permite usar archivos XML arbitrarios como recursos. Esto proporciona una forma rápida de referenciar los archivos basandose en su Id de recurso así como permitirnos localizar estos archivos de una manera sencilla. Como última ventaja, nos permite compilar y almacenar estos archivos en el dispositivo eficientemente.&lt;/p&gt;
+&lt;p&gt;Los ficheros XML que se lean de esta manera, tiene que almacenarse bajo el directorio &lt;code&gt;./res/xml&lt;/code&gt;. A continuación vamos a ver un ejemplo:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;rootelem1&amp;gt;&lt;/span&gt;
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;subelem1&amp;gt;&lt;/span&gt;
+      Hello World from an xml sub element
+   &lt;span class=&#34;nt&#34;&gt;&amp;lt;/subelem1&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/rootelem1&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Como hace con cualquier otro fichero XML de recursos, el AAPT compila este fichero antes de colocarlo en el paquete de la aplicación. Ahora necesitamos usar una instancia de &lt;em&gt;XmlPullParser&lt;/em&gt; para poder parsear el archivo. Para obtener la instancia de &lt;em&gt;XmlPullParser&lt;/em&gt; usando el siguiente código desde cualquier contexto (incluyendo una activity):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;n&#34;&gt;Resources&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getResources&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;XmlResourceParser&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getXml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;El &lt;em&gt;XmlResourceParser&lt;/em&gt; devuelto es una instancia de &lt;em&gt;XmlPullParser&lt;/em&gt;, y también implementa java.util.AttributeSet. En el siguiente fragmento de código se muestra como leer el fichero:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getEventsFromAnXMLFile&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+ &lt;span class=&#34;kd&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParserException&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IOException&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;StringBuffer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;StringBuffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;Resources&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;activity&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getResources&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;n&#34;&gt;XmlResourceParser&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getXml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;xml&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+
+    &lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getEventType&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;END_DOCUMENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+         &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;START_DOCUMENT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;******Start document&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+         &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;START_TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nStart tag &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+         &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;END_TAG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nEnd tag &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+         &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;XmlPullParser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;TEXT&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;nText &amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getText&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;());&lt;/span&gt;
+         &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+         &lt;span class=&#34;n&#34;&gt;eventType&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xpp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//eof-while
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;     &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;n******End document&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+     &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sb&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
+ &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//eof-function
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Lo que hacemos en el código de arriba es obtener el XmlPullParser, usarlo para navegar a través de los elementos del archivo y usar métodos adicionales de XmlPullParser para acceder a detalles de los elementos XML. Para ejecutar este código, se debe crear un archivo XML como el mostrado anteriormente y llamar al método &lt;em&gt;getEventsFromAnXMLFile&lt;/em&gt; desde cualquier menú o botón. Devolverá un string, el cual se podrá usar para mostrarlo por el Log usando el método de debug Log.d&lt;/p&gt;
+&lt;h1 id=&#34;siguiente-tema-programación-android-recursos---trabajar-con-recursos-raw2&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-trabajar-2/&#34;&gt;Programación Android: Recursos - Trabajar con recursos RAW&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos - Usando recursos</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-usando/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-usando/</guid>
+            <description>&lt;p&gt;A todos los recursos que colocamos en las subcarpetas de ./res/ se puede acceder a través de la clase R de nuestro proyecto.&lt;/p&gt;
+&lt;p&gt;Esta clase R la genera el comando aapt en una pasada anterior a la compilación (Eclipse, por defecto, la va generando continuamente conforme cambiamos los recursos). Contiene todos los identificadores de recursos para poder referenciarlos.&lt;/p&gt;
+&lt;p&gt;Al igual que la carpeta “res”, la clase R se organiza en subclases, así por ejemplo el icono que colocamos en ./res/drawable/icon tiene su correspondencia en R.drawable.icon (que es un identificador estático de tipo int y sirve para acceder al recurso).&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Así pues los ID de recurso están compuestos de:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clase R que contienen todos los recursos.&lt;/li&gt;
+&lt;li&gt;Subclase de recurso, cada grupo tiene la suya (drawable, string, style, layout…).&lt;/li&gt;
+&lt;li&gt;Nombre del recurso que, según el tipo, será: el nombre del fichero sin la extensión o el atributo xml “android:name” si es un valor sencillo (cadena, estilo, etc.).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tenemos dos formas de acceder a los recursos definidos en la clase R:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;En el código, accediendo a las propiedades de la clase R directamente (R.string.nombre).&lt;/li&gt;
+&lt;li&gt;En los ficheros XML, usando una notación especial: @grupo_recursos/ nombre_recurso, es decir, el recurso anterior se accedería con @string/nombre.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si lo que queremos es acceder a un recurso definido por el sistema antepondremos el prefijo android:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Desde el código: &lt;code&gt;android.R.layout.simple_list_item_1&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;En los ficheros XML: &lt;code&gt;@android:layout/simple_list_item_1&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;referenciando-atributos-de-estilo&#34;&gt;Referenciando atributos de estilo&lt;/h1&gt;
+&lt;p&gt;Cuando aplicamos estilos a nuestros layout puede interesarnos acceder a un atributo concreto de un estilo, para eso tenemos una sintaxis específica que podemos usar en nuestros XML:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;?[&lt;span class=&#34;nt&#34;&gt;&amp;lt;nombre_paquete&amp;gt;&lt;/span&gt;:][&lt;span class=&#34;nt&#34;&gt;&amp;lt;tipo_recurso&amp;gt;&lt;/span&gt;/]&lt;span class=&#34;nt&#34;&gt;&amp;lt;nombre_recurso&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Así por ejemplo si queremos colocar un texto pequeño usaremos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;?android:attr.textAppearanceSmall
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Si queremos, también podemos utilizar nuestros propios atributos.&lt;/p&gt;
+&lt;p&gt;Primero lo definimos con un tag “attr”·dentro de &lt;code&gt;./res/values/attr.xml.&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf­8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+     &lt;span class=&#34;nt&#34;&gt;&amp;lt;attr&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cabecera&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;format=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Ahora ya podemos usar esa propiedad en nuestros estilos:&lt;/p&gt;
+&lt;p&gt;Primero definimos un estilo de texto llamado “TituloRojo”, y luego lo aplicamos al atributo que hemos creado llamado “Cabecera”. Obsérvese que como es un atributo propio, no usamos el espacio de nombres “android:”.&lt;/p&gt;
+&lt;p&gt;Si luego quisiéramos acceder a este atributo al definir un layout podríamos usar la sintaxis mencionada:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;./res/layout/milayout&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf­8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;FrameLayout&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;xmlns:android=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;TextView&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;fill_parent
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;     android:layout_height=&amp;#34;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;fill_parent&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;android:text=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;No hay datos disponibles&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;style=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;?attr/cabecera&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/FrameLayout&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;./res/values/style.xml&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf­8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;resources&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MiTema&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;parent=&lt;/span&gt;
+     &lt;span class=&#34;s&#34;&gt;&amp;#34;@android:style/Theme.Light&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android:windowBackground&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+     @drawable/fondo
+     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;cabecera&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+     @style/TituloRojo&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;style&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;TituloRojo&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;na&#34;&gt;parent=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;@android:style/TextAppearance.Large&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
+     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android:textColor&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;#FF0000&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+     &lt;span class=&#34;nt&#34;&gt;&amp;lt;item&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;name=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;android:textStyle&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;bold&lt;span class=&#34;nt&#34;&gt;&amp;lt;/item&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;nt&#34;&gt;&amp;lt;/resources&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;siguiente-tema-programación-android-recursos---strings1&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings/&#34;&gt;Programación Android: Recursos - Strings&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+        <item>
+            <title>Programación Android: Recursos compilados y no compilados</title>
+            <link>https://elbauldelprogramador.com/programacion-android-recursos-2/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/programacion-android-recursos-2/</guid>
+            <description>&lt;p&gt;Android soporta principalmente dos tipos de recursos: archivos XML y archivos raw (como imágenes, audio y vídeo). Incluso dentro de los archivos XML, has podido ver que en algunos casos los recursos están definidos como valores dentro del archivo XML (las cadenas de texto, por ejemplo). En otras ocasiones, un archivo XML es un recurso por sí mismo, como los Layout.&lt;/p&gt;
+&lt;p&gt;Podemos encontrar dos tipos de archivos XML: uno se compilará a un formato binario y el otro se copiará tal como es al dispositivo. Como ejemplo podemos poner los ficheros XML de recursos&lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-strings&#34;&gt; string &lt;/a&gt;y los ficheros de &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-layout&#34;&gt;layout&lt;/a&gt;, ambos se compilarán a un formato binario antes de formar parte del paquete de instalación. Estos ficheros XML tienen formatos predefinidos en los que los nodos XML se traducen a IDs.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Por supuesto, también se pueden elegir archivos XML para guardarlos con su formato propio, estos archivos no serán interpretados y se les asignará un ID de recurso para poder identificarlos. Sin embargo, podemos querer que estos ficheros también se compilen a un formato binario. Para lograrlo, hay que colocarlos bajo el directorio &lt;em&gt;&lt;strong&gt;./res/xml&lt;/strong&gt;&lt;/em&gt;. En tal caso, deberemos usar los lectores XMl que proporciona Android para acceder a los nodos del fichero.&lt;/p&gt;
+&lt;p&gt;Si colocamos cualquier tipo de archivo, incluyendo ficheros XML, bajo &lt;em&gt;&lt;strong&gt;./res/raw&lt;/strong&gt;&lt;/em&gt;, no se compilarán a un formato binario. Deberemos entonces, para leerlos, usar Stream. Los archivos de audio y vídeo entran en esta categoría también.&lt;/p&gt;
+&lt;p&gt;Hay que destacar, que al formar parte el directorio rar de ./res/*, incluso estos archivos raw de audio y vídeo serán localizados como todos los demás recursos.&lt;/p&gt;
+&lt;p&gt;Como vimos, los recursos se almacenan en varios subdirectorios según su tipo, a continuación vemos algunos de los subdirectorios más importantes de la carpeta res.:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;anim&lt;/strong&gt;: Archivos compilados de animaciones.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;drawable&lt;/strong&gt;: Bitmaps&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;layout&lt;/strong&gt;: definición de vistas y UI.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;values&lt;/strong&gt;: Arrays, colores, dimensiones, strings y estilos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;xml&lt;/strong&gt;: fircheros XML arbitrarios.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;raw&lt;/strong&gt;: ficheros raw no compilados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El compilador de recursos AAPT (Android Asset Packaging Tool), compila todos los recursos excepto los raw y lo coloca en el fichero .apk (Android package) final. Este fichero es el que contiene el código de las aplicaciones Android y los recursos, similar a los .jar de Java. Estos ficheros son los que usamos para instalar aplicaciones en Android.&lt;/p&gt;
+&lt;h1 id=&#34;siguiente-tema-programación-androidrecursos---arrays-de-strings3&#34;&gt;Siguiente Tema: &lt;a href=&#34;https://elbauldelprogramador.com/programacion-android-recursos-arrays-de/&#34;&gt;Programación Android:Recursos - Arrays de strings&lt;/a&gt;&lt;/h1&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

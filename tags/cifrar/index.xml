@@ -1,0 +1,301 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cifrar on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/cifrar/</link>
+        <description>Recent content in cifrar on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Mon, 02 Oct 2017 17:32:33 +0100</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/cifrar/</link>
+            <title>cifrar on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/cifrar/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Editar y crear archivos cifrados con GPG en Vim</title>
+            <link>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</link>
+            <pubDate>Mon, 02 Oct 2017 17:32:33 +0100</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Hoy quiero hablaros de un plugin bastante útil que encontré para el potente editor de textos Vim, que permite crear y modificar archivos de texto bajo &lt;strong&gt;&lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;gpg&lt;/a&gt;&lt;/strong&gt; (&lt;em&gt;GNU Privacy Guard&lt;/em&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-gpg&#34;&gt;¿Qué es &lt;strong&gt;gpg&lt;/strong&gt;?&lt;/h1&gt;
+&lt;p&gt;Me permito extraer el la definición de genbeta::Dev. Para una explicación más profunda del funcionamiento de &lt;strong&gt;gpg&lt;/strong&gt;, puedes dirigirte al artículo en GenBeta::Dev que cito en las referencias.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Antes de empezar con lo interesante tenemos que saber que es &lt;strong&gt;gpg&lt;/strong&gt; (GNU Privacy Guard), que es un derivado libre de &lt;strong&gt;PGP&lt;/strong&gt; y su utilidad es la de cifrar y firmar digitalmente, siendo además multiplataforma (&lt;!-- raw HTML omitted --&gt;podéis descargarlo desde la página oficial&lt;!-- raw HTML omitted --&gt;) aunque viene incorporado en algunos sistemas Linux, en Windows se encuentra solo con gestor gráfico).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;instalar-el-plugin-para-vim&#34;&gt;Instalar el plugin para Vim&lt;/h1&gt;
+&lt;p&gt;Descarga el plugin &lt;!-- raw HTML omitted --&gt;gnupg.vim&lt;!-- raw HTML omitted --&gt;. Una vez descargado, pégalo en el directorio &lt;em&gt;$HOME/.vim/plugin/&lt;/em&gt;. El último paso es añadir la siguiente línea al archivo &lt;strong&gt;.bashrc&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GPG_TTY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;tty&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Es recomendable establecer algunas variables en el fichero de configuracón de Vim (&lt;em&gt;.vimrc&lt;/em&gt;). El mio está así:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ cat ~/.vimrc
+:let g:GPGDefaultRecipients&lt;span class=&#34;o&#34;&gt;=[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;tu-correo&amp;gt;&amp;lt;id_publica&amp;gt; -u &amp;lt;id_privada&amp;gt; --output &amp;lt;nombre_archivo.signed.gpg&amp;gt; --sign &amp;lt;archivo_original&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Plugin para Vim&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Introducción a &lt;!-- raw HTML omitted --&gt;gpg&lt;!-- raw HTML omitted --&gt;&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;genbeta::dev&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo cifrar archivos con openssl</title>
+            <link>https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-cifrar-archivos-con-openssl/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Las copias de seguridad son algo que debemos tener a buen resguardo por si algún dia le ocurre algo a nuestros datos. Si bien lo anterior es cierto, de igual modo hemos de tener bien protegidas éstas copias de seguridad para que no puedan ser usadas por terceros de caer en manos maliciosas. Hoy veremos cómo &lt;strong&gt;cifrar archivos con openssl&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;generar-las-claves-públicas-y-privadas&#34;&gt;Generar las claves públicas y privadas&lt;/h1&gt;
+&lt;p&gt;Al igual que en &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34;&gt;GPG&lt;/a&gt;, necesitaremos generar un par de claves, pública y privada, para poder cifrar archivos con openssl:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ openssl genrsa -out clave.pem &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt;
+$ openssl rsa -in clave.pem -out clave.pub.pem -outform PEM -pubout
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con el primer comando generamos la clave, en &lt;em&gt;clave.pem&lt;/em&gt; se encuentran tanto la clave privada como la pública, con el segundo comando extraemos la pública a un archivo distinto.&lt;/p&gt;
+&lt;h1 id=&#34;método-elegido-para-cifrar-los-archivos&#34;&gt;Método elegido para cifrar los archivos&lt;/h1&gt;
+&lt;p&gt;El sistema de claves pública/privada no puede cifrar archivos de gran tamaño. Por tanto usaremos un &lt;!-- raw HTML omitted --&gt;cifrado simétrico&lt;!-- raw HTML omitted --&gt; para el cifrado normal. Cada vez que cifremos un fichero se usará una clave simétrica generada aleatoriamente. Esta clave simétrica es la que &lt;strong&gt;cifraremos de forma &lt;!-- raw HTML omitted --&gt;asimétrica&lt;!-- raw HTML omitted --&gt;&lt;/strong&gt; con la &lt;strong&gt;llave pública&lt;/strong&gt; que hemos generado con los comandos de arriba. En resumen:&lt;/p&gt;
+&lt;h2 id=&#34;para-cifrar-los-archivos&#34;&gt;Para cifrar los archivos&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Generamos una clave aleatoriamente, de gran longitud (40-50 caracteres por ejemplo).&lt;/li&gt;
+&lt;li&gt;Ciframos el archivo con la clave generada en 1.&lt;/li&gt;
+&lt;li&gt;Ciframos la clave generada en 1 con nuestra clave pública.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;para-descifrar-los-archivos&#34;&gt;Para descifrar los archivos&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Desciframos la clave generada en 1 y cifrada con la llave pública en 3&lt;/li&gt;
+&lt;li&gt;Desciframos el archivo con la clave que acabamos de descifrar en 1&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;aplicar-los-pasos-con-openssl&#34;&gt;Aplicar los pasos con openssl&lt;/h1&gt;
+&lt;p&gt;Ahora procedemos a aplicar los pasos descritos anteriormente con openssl:&lt;/p&gt;
+&lt;h2 id=&#34;cifrando-los-archivos&#34;&gt;Cifrando los archivos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, generar clave aleatoria&lt;/span&gt;
+$ openssl rand -base64 &lt;span class=&#34;m&#34;&gt;48&lt;/span&gt; -out key.txt
+&lt;span class=&#34;c1&#34;&gt;# Paso 2, cifrar el archivo con la clave simétrica&lt;/span&gt;
+$ openssl enc -aes-256-cbc -pass file:key.txt -in archivoSINcifrar -out archivoCIFRADO.encrypted
+&lt;span class=&#34;c1&#34;&gt;# Paso 3, cifrar la clave generada en el paso 1 con la llave pública&lt;/span&gt;
+$ openssl rsautl -encrypt -in key.txt -out key.enc -inkey clave.pub.pem -pubin
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Los argumentos significan:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;enc -aes-256-cbc:&lt;/strong&gt; Tipo de cifrado simétrico.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-pass file:key.txt:&lt;/strong&gt; La clave con la que cifrar el archivo.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-in:&lt;/strong&gt; Fichero de entrada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-out:&lt;/strong&gt; Fichero de salida.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;rsautl:&lt;/strong&gt; Indica que vamos a usar RSA para firmar, verificar, cifrar o descifrar.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-encrypt:&lt;/strong&gt; Encriptar el fichero de entrada con una llave RSA pública.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-inkey:&lt;/strong&gt; Llave con la que cifrar&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-pubin:&lt;/strong&gt; Indica que vamos a firmar con una llave pública.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;descifrado-de-archivos&#34;&gt;Descifrado de archivos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Paso 1, desciframos la clave generada en 1 y cifrada con la llave pública en 3&lt;/span&gt;
+$ openssl rsautl -decrypt -inkey ./clave.pem -in key.enc -out key.txt
+&lt;span class=&#34;c1&#34;&gt;# Paso 2, Descifrar el archivo con la clave&lt;/span&gt;
+$ openssl enc -aes-256-cbc -d -pass file:key.txt -in archivoCIFRADO.encrypted -out archivoSINcifrar
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;-d:&lt;/strong&gt; Descifra los datos de entrada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;script-para-descifrar-varios-archivos-de-una-vez&#34;&gt;Script para descifrar varios archivos de una vez&lt;/h1&gt;
+&lt;p&gt;Como suele ser habitual, los &lt;a href=&#34;https://elbauldelprogramador.com/&#34;&gt;scripts bash&lt;/a&gt; nos facilitan las tareas repetitivas, con los comandos de arriba, es trivial escribir un &lt;strong&gt;script&lt;/strong&gt; que automatize el proceso de descrifrar todos los archivos de un directorio:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#/bin/bash&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$#&lt;/span&gt; -ne &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Usage: &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$0&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt; &amp;lt;directorio a=&amp;#34;&lt;/span&gt;a&lt;span class=&#34;s2&#34;&gt;&amp;#34; los=&amp;#34;&lt;/span&gt;los&lt;span class=&#34;s2&#34;&gt;&amp;#34; archivos=&amp;#34;&lt;/span&gt;archivos&lt;span class=&#34;s2&#34;&gt;&amp;#34; cifrados=&amp;#34;&lt;/span&gt;cifrados&lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;gt;&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+
+openssl rsautl -decrypt -inkey ./clave.pem -in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc&amp;#34;&lt;/span&gt; -out &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;openssl rsautl -decrypt -inkey ./clave.pem -in \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.enc\&amp;#34; -out \&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt\&amp;#34;&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;OIFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$IFS&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;$&amp;#39;\n&amp;#39;&lt;/span&gt;
+
+
+&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;find &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -type f -name &lt;span class=&#34;s2&#34;&gt;&amp;#34;*.encrypted&amp;#34;&lt;/span&gt;&lt;span class=&#34;sb&#34;&gt;`&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Decrypting &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+    openssl enc -aes-256-cbc -d -pass file:&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;/key.txt&amp;#34;&lt;/span&gt; -in &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; -out &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;/&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;basename &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; .encrypted&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+
+&lt;span class=&#34;nv&#34;&gt;IFS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$OIFS&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Espero que os sea de utilidad.&lt;/p&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Encrypt tar.gz file on create&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;askubuntu.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;how to encrypt a large file in openssl using public key&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;stackoverflow.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Documentación oficial de openssl&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;Visitar sitio&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo cifrar correos electrónicos con GPG usando Mailvelope</title>
+            <link>https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-cifrar-correos-con-gpg-con-mailvelope/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;En estos tiempos en los que está claro que estamos sometidos a vigilancia de los gobiernos, es posible que queramos un poco de privacidad cuando nos comunicamos por la red. Hoy voy a explicar cómo configurar un plugin para Firefox y Chrome que nos permitirá enviar correos de forma segura mediante &lt;a href=&#34;https://elbauldelprogramador.com/tags/gpg&#34;&gt;GPG&lt;/a&gt;, &lt;strong&gt;Mailvelope&lt;/strong&gt;.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;introducción&#34;&gt;Introducción&lt;/h1&gt;
+&lt;p&gt;En otro artículo vimos &lt;a href=&#34;https://elbauldelprogramador.com/editar-y-crear-archivos-cifrados-con-gpg-en-vim/&#34; title=&#34;Editar y crear archivos cifrados con GPG en Vim&#34;&gt;cómo cifrar archivos mediante GPG&lt;/a&gt;, en esta ocasión se trata de lo mismo, pero cifrando el contenido de correos electrónicos.&lt;/p&gt;
+&lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-chrome&#34;&gt;Descargar e instalar Mailvelope en Chrome&lt;/h1&gt;
+&lt;p&gt;Los usuarios de este navegador simplemente deben instalar Mailvelope como cualquier otro plugin en la siguiente &lt;!-- raw HTML omitted --&gt;dirección&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;descargar-e-instalar-mailvelope-en-firefox&#34;&gt;Descargar e instalar Mailvelope en Firefox&lt;/h1&gt;
+&lt;p&gt;El plugin aún no está disponible de forma oficial para firefox, pero podemos usar su repositorio en &lt;a href=&#34;https://elbauldelprogramador.com/mini-tutorial-y-chuleta-de-comandos-git/&#34; title=&#34;Git: Mini Tutorial y chuleta de comandos&#34;&gt;Git&lt;/a&gt; para compilarlo e instalarlo. Los siguientes pasos se han extraído de la &lt;!-- raw HTML omitted --&gt;documentación oficial&lt;!-- raw HTML omitted --&gt;:&lt;/p&gt;
+&lt;p&gt;Otra opción es descargarlo de &lt;a href=&#34;https://www.mailvelope.com/&#34; title=&#34;Página oficial de Mailvelope&#34;&gt;mailvelope.com&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;NOTA&lt;/strong&gt;: Actualmente ya disponen de extensión para firefox, puedes saltarte este paso.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone git://github.com/mozilla/addon-sdk.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; addon-sdk
+&lt;span class=&#34;nb&#34;&gt;source&lt;/span&gt; bin/activate
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ..
+git clone git://github.com/toberndo/mailvelope.git
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; mailvelope
+git checkout -t origin/firefox
+git submodule init
+git submodule update
+make build
+make dist-ff
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tras esto, en &lt;strong&gt;dist/mailvelope.xpi&lt;/strong&gt; se encuentra el plugin para instalarlo.&lt;/p&gt;
+&lt;h1 id=&#34;generar-llaves-en-mailvelope&#34;&gt;Generar llaves en Mailvelope&lt;/h1&gt;
+&lt;p&gt;Una vez instalado mailvelope en el navegador correspondiente, hacemos &lt;strong&gt;click en el icono del plugin » opciones&lt;/strong&gt;. Aparecerá un formulario que rellenaremos con un nombre, el correo a usar y un &lt;strong&gt;passphrase&lt;/strong&gt;, en las opciones avanzadas podemos elegir el algoritmo de cifrado, la longitud y la fecha de expiración:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;enviar-la-clave-pública-a-un-servidor-de-llaves&#34;&gt;Enviar la clave pública a un servidor de llaves&lt;/h1&gt;
+&lt;p&gt;El par de claves pública/privada que acabamos de generar debe aparecer en &lt;em&gt;Display keys&lt;/em&gt;. La seleccionamos y hacemos click en &lt;strong&gt;Export » Display public key&lt;/strong&gt;, copiamos la llave y la pegamos en la sección &lt;strong&gt;Submission And Publication&lt;/strong&gt; del servidor de llaves &lt;!-- raw HTML omitted --&gt;keyserver.borgnet.us&lt;!-- raw HTML omitted --&gt;. A partir de ahora, cualquiera que tenga a su disposición la clave pública que acabamos de subir al servidor podrá enviarnos un correo cifrado.&lt;/p&gt;
+&lt;h1 id=&#34;ejemplo&#34;&gt;Ejemplo&lt;/h1&gt;
+&lt;p&gt;Vamos a poner un ejemplo con la cuenta de correo de contacto de este blog. El primer paso es obtener la clave pública que se encuentra en la página de &lt;a href=&#34;https://elbauldelprogramador.com/contacto&#34; title=&#34;Contacto&#34;&gt;contacto&lt;/a&gt; o en este otro &lt;!-- raw HTML omitted --&gt;enlace&lt;!-- raw HTML omitted --&gt;. La copiamos y en la sección &lt;strong&gt;Import Keys&lt;/strong&gt; de Mailvelope la pegamos. Ahora mi clave pública se encuentra en tu anillo de claves.&lt;/p&gt;
+&lt;p&gt;Como es la primera vez que ambas cuentas de correo van a ponerse en contacto, para que yo pueda enviar correos cifrados debo conocer la clave pública del otro usuario. Mailvelope dispone de una opción que permite enviar la clave pública por correo en Display Keys » (Seleccionamos la clave deseada) » Export » Send Public Key by email. Si por algún motivo no funcionara simplemente copiamos la clave pública y la pegamos en el correo como parte del mensaje. Otra opción es proporcionar el enlace del servidor de claves donde reside.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Como vemos en la imagen, aparece un simbolo a la derecha, tenemos que pulsarlo y escribir en mensaje ahí:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Como aparece en la imagen, si es la primera vez que ambos correos se ponen en contacto, hay que enviar la clave pública para que la otra persona pueda reponder con un mensaje cifrado. Luego hacemos click en el candado y seleccionamos a clave pública con la que cifrar el mensaje, en este caso con la del correo de este blog, que hemos importado más arriba. Ya solo queda hacer click en &lt;strong&gt;Transfer&lt;/strong&gt; y obtendremos esto:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Pulsamos enviar y listo.&lt;/p&gt;
+&lt;p&gt;El proceso contrario, es decir, cuando nos envíen un email cifrado es bastante intuitivo, abrimos el correo y nos encontramos con esto:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;El cursor adaptará la forma de una llave, hacemos click, introducimos nuestro &lt;strong&gt;passphrase&lt;/strong&gt; y descifraremos el mensaje.&lt;/p&gt;
+&lt;p&gt;Espero que haya sido de utilidad y os animéis a usar diariamente esta tecnología.&lt;/p&gt;</description>
+        </item>
+        
+        <item>
+            <title>Lo último en criptografía: Fully Homomorphic Encryption</title>
+            <link>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/lo-ultimo-en-criptografia-fully-homomorphic-encryption/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Me he aficionado a escuchar un programa de radio llamado &lt;strong&gt;Security Now!&lt;/strong&gt;, cuya web puedes consultar en las referencias. Como el nombre del programa indica, hablan sobre seguridad en sistemas informáticos principalmente. El episodio de esta semana iba enfocado a qué se está desarrollando a día de hoy en el mundo de la criptografía.&lt;/p&gt;
+&lt;p&gt;Pues bien, una de esas cosas en las que los criptógrafos están trabajando a dia de hoy se llama &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt; (Cifrado Homomórfico) ó &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico).&lt;/p&gt;
+&lt;h1 id=&#34;qué-es-el-cifrado-homomórfico-ó-homomorphic-encryption&#34;&gt;¿Qué es el cifrado homomórfico ó &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;?&lt;/h1&gt;
+&lt;p&gt;Los chicos de &lt;!-- raw HTML omitted --&gt;RSA&lt;!-- raw HTML omitted --&gt; plantearon la hipótesis de este sistema de cifrado en el año 78. Postularon la posibilidad del cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;. Pero se quedó como una pregunta abierta.&lt;/p&gt;
+&lt;p&gt;Y hace solo tres años un estudiante de posgrado sorprendió al mundo al demostrar que este sistema es posible. Lo que este estudiante hizo fue demostrar matemáticamente que es posible realizar operaciones de cálculo estándares — como sumar, multiplicar etc — a datos cifrados sin la necesidad de descifrarlos previamente.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, es posible cifrar datos, enviarlos a la &lt;em&gt;nube&lt;/em&gt; y operar sobre estos datos &lt;strong&gt;sin descifrarlos&lt;/strong&gt; . La &lt;em&gt;nube&lt;/em&gt; no tiene la menor idea del contenido de los datos sobre los que está operando, no vé ningún resultado intermedio. La totalidad de los datos permanecen cifrados durante todo el tiempo. De manera que obtienes el resultado encriptado, y solamente tú puedes desencriptarlo. En eso consiste el cifrado homomórfico o &lt;strong&gt;Homomorphic Encryption&lt;/strong&gt;, y funciona.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;analizando-los-sistemas-de-cifrado-actuales&#34;&gt;Analizando los sistemas de cifrado actuales&lt;/h1&gt;
+&lt;p&gt;De acuerdo al glosario de definiciones de los laboratorios RSA, definen &lt;strong&gt;probabilistic encryption&lt;/strong&gt; (Cifrado probabilístico) al algoritmo que produce resultados cifrados distinos cada vez que se usa, aunque sea con los mismos datos. Esta definición rompe con el esquema del &lt;strong&gt;deterministic encryption&lt;/strong&gt; (Cifrado determinista) el cual produce siempre la misma salida para un mismo dato de entrada, es decir, dado un valor de entrada a encriptar, el resultado de cifrar dicho dato será siempre el mismo, con lo cual existe una forma de invertir el proceso. Más técnicamente, el cifrado probabilístico (&lt;strong&gt;probabilistic encryption&lt;/strong&gt;) se define así:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;El cifrado probabilístico — &lt;strong&gt;probabilistic encryption&lt;/strong&gt; es un diseño de cifrado en el cual un mensaje es encriptado en uno de muchos posibles &lt;strong&gt;ciphertext&lt;/strong&gt;, y no en uno solo como ocurre en el cifrado determinístico &lt;strong&gt;(deterministic encryption)&lt;/strong&gt;. Siendo así muy poco probable obtener información parcial sobre el &lt;strong&gt;ciphertext.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En enfoques anteriores de cifrado, a pesar de que no siempre se sabía cuando era posible obtener dicha información parcial, no se demostró que no era posible hacerlo.&lt;/p&gt;
+&lt;p&gt;Lo que esta definición quiere decir es que nunca se ha demostrado que la clave pública estandar RSA sea segura. Se basa en la presunta dificultad de factorizar numeros primos enormes. Pero nadie ha sido capaz de demostrar que sea dificil factorizarlos. Simplemente sabemos que es complicado.&lt;/p&gt;
+&lt;p&gt;Sin embargo saber algo, y demostrarlo, son dos mundos aparte en términos de la tecnología de criptografía académica.&lt;/p&gt;
+&lt;p&gt;Así que poco después de que los primeros desarrolladores de RSA inventaran este cifrado asimétrico basado en factorización, se dieron cuenta de que su enfoque tenía una propiedad, llamada &lt;strong&gt;homomorfismo (homomorphism)&lt;/strong&gt;. Y escribieron sobre esto pocos meses después de desarrollar RSA.&lt;/p&gt;
+&lt;p&gt;La palabra &lt;strong&gt;homomorfismo&lt;/strong&gt; viene de &lt;strong&gt;Homo&lt;/strong&gt; y &lt;strong&gt;mórfica&lt;/strong&gt;, que significa &lt;em&gt;de la misma forma&lt;/em&gt;. Es decir, la posibilidad de aplicar distintos procesos un mismo dato y obtener el mismo resultado. Un ejemplo simple es la multiplicación, si &lt;strong&gt;a*b=c&lt;/strong&gt; también sabemos que &lt;strong&gt;log(a) + log(b) = log(c)&lt;/strong&gt;, por tanto, estas operaciones son homomórficas.&lt;/p&gt;
+&lt;p&gt;Bien, pues esta idea del homomorfismo ha sido lo que el estudiante mencionado al principio del artículo demostró en su tesis doctoral en 2009, su nombre es Craig Gentry y sorprendió al mundo de la criptografía al presentar un sistema criptográfico homomórfico totalmente funcional. Craig Gentry demostró en sus tesis que es absolutamente posible realizar operaciones de suma y multiplicación sobre información cifrada, sin necesidad de descifrarla en ninguna fase del proceso. Como consecuencia, nadie puede obtener información de los datos sobre los que se está operando. Cuando el resultado de la operación se devuelve a la persona propietaria de esos datos, solo dicha persona puede descifrarlos con su clave. Y el resultado de los datos descifrados es el mismo que se habría obtenido al realizar estas operaciones a datos no cifrados.&lt;/p&gt;
+&lt;p&gt;Las aplicaciones que tiene este sistema son enormes, por ejemplo las corporaciones podrían dejar en la nube sus datos de manera segura y además realizar operaciones a éstos, y obtener un resultado. De hecho, se han desarrollado &lt;strong&gt;motores de búsqueda&lt;/strong&gt; en los cuales el buscador no conoce la consulta que realiza el usuario ni el resultado de la misma, simplemente devuelve el resultado y luego es el usuario quien descifra el resultado para obtener la respuesta a la consulta realizada con total privacidad.&lt;/p&gt;
+&lt;p&gt;Continuando con la tarea de entender cómo funciona el &lt;strong&gt;cifrado probabilístico&lt;/strong&gt; o &lt;strong&gt;probabilistic encryption&lt;/strong&gt; vamos a profundizar un poco en el tema.&lt;/p&gt;
+&lt;h1 id=&#34;cifrado-probabilístico&#34;&gt;Cifrado probabilístico&lt;/h1&gt;
+&lt;p&gt;Imaginemos un sistema de cifrado sencillo, de una dimensión, una buena analogía sería una cuerda con nudos a lo largo de la misma. Éstos nodos, o nudos, representan valores claramente conocidos a consecuencia de su posición. El hecho de cifrar es elegir un nodo de esta cuerda y añadirle ruido deliberadamente, desplazando así la posición del nodo una cantida pseudoaleatoria con respecto a la original.&lt;/p&gt;
+&lt;p&gt;La función que tiene una clave (&lt;strong&gt;key&lt;/strong&gt;) en los sistemas cifrados es determinar dónde están estos nodos que no distribuidos de manera uniforme. Se requiere de un cálculo muy complejo para averiguar dónde se situan, de modo que solo alguien con la clave puede saberlo. Y sobre estos datos con ruido podemos operar y obtener un resultado, como sumar . Se pueden elegir dos números, añadirles ruido, sumarlos y obtener un resultado. Por lo tanto también se está sumando el ruido de cada uno de los números. El resultado será una función que tendrá como entrada los dos sumandos y el ruido correspondiente a cada uno de ellos.&lt;/p&gt;
+&lt;p&gt;No habrá problema siempre y cuando no haya demasiado ruido, la suma será correcta. El ruido es la razón por la cual quién hace las operaciones no puede sacar nada en claro del resultado, todo lo que sabe es ha recibido una pareja de valores y los está sumando, y no conocerá el resultado porque está calculado relativamente a los nodos. Y ese desplazamiento relativo solo lo conoce la persona con la &lt;strong&gt;clave.&lt;/strong&gt; Para resumir, el proceso que realiza las operaciones sabe qué tipo de operaciones está realizando, pero no tiene ni idea de los datos subyacentes.&lt;/p&gt;
+&lt;p&gt;Todo este proceso que acabo de explicar es una mínima parte de como funciona el cifrado probabilístico, ya que solo se ha aplicado a una dimensión (Una sola cuerda con nodos.). En realidad se hace con un concepto algebráico llamado &lt;em&gt;&lt;!-- raw HTML omitted --&gt;lattice (Retículo)&lt;!-- raw HTML omitted --&gt;&lt;/em&gt;, y son espacios n-dimensionales interconectados con dimensiones del rango de 512, 2048 o mayores. Seguramente puedas visualizar un cubo de 3 dimensiones, y aunque no seas capaz de visualizar una figura de 512 dimensiones, se puede representar matemáticamente.&lt;/p&gt;
+&lt;p&gt;Los sistemas homomórficos trabajan en estos retículos hiper-dimensionales añadiendo ruido a los nodos para deplazarlos con respecto a su posición original. Como se ha mencionado en los párrafos anteriores, el problema está en que el ruido se va acumulando, en operaciones de suma se duplica cuando hay dos sumandos, y en la multiplicación se eleva al cuadrado cuando se multiplican dos números. Con lo que el ruido se va de las manos muy rápidamente, como consecuencia se está limitado a un número determinado de operecaciones antes de que el ruido interfiera demasiado en los datos reales.&lt;/p&gt;
+&lt;p&gt;Un sistema &lt;strong&gt;Fully Homomorphic Encryption&lt;/strong&gt; (Cifrado totalmente homomórfico) no tiene esta limitación, por definición es posible realizar cualquier tipo de operación, por muy compleja que sea. Craig consiguió evitar que el ruido quedara fuera de control porque, tras realiazar un número determinado de operaciones, los datos se vuelven a cifrar (Sin descifrarlos previamente, es decir, el cifrado homomórfico realiza su propio cifrado) elimiando el ruido de modo que nunca sobrepase el sistema.
+Craig implementó este sistema en IBM. Tiene cuatro tipos de escalas del sistema. Uno &lt;strong&gt;pequeño&lt;/strong&gt; al que llama 2⁹ de 512 dimensiones, otro de 2¹¹, uno mediano de 2¹³ y el mayor de todos de 2¹⁵.&lt;/p&gt;
+&lt;p&gt;Aunque aún estamos muy lejos de ver esto implementado en las tecnologías actuales, porque actualmente no están preparadas para soportarlo. La razón es sencilla, el sistema &lt;strong&gt;homomórfico&lt;/strong&gt; a secas, no el Totalmente cifrado (Fully Homomorfic) requiere para el sistema más pequeño, el de 512 dimensiones, un ancho de palabra de 200.000 bits, lo cual es enorme. La clave pública usada en el &lt;strong&gt;sistema totalmente homomórfico&lt;/strong&gt; tiene un tamaño de 17MB y necesita 2.4 segundos para generarse usando la máquina estandar más potente. El sistema mayor, el de 2¹⁵, de 32768 dimensiones requiere dos horas para generar la clave y ocupa 2.3GB.&lt;/p&gt;
+&lt;p&gt;En resumen, es una forma completamente distinta de cifrar y tratar datos para la cual los computadores estándares actuales de 64-bits de ancho de palabra no están capacitados.&lt;/p&gt;
+&lt;p&gt;Este sistema tiene un gran futuro y estamos tan solo al comienzo, como siempre pasa en criptografía, el sistema avanzará rápido y mejorará. Se encontrarán atajos, nuevas formas de hacer las mismas cosas. La idea de ruido en un retículo es solo una de las posibilidades de un esquema de cifrado no-determinista que han sido propuestas, hay otras. Como usar máximos comunes divisores entre otras.&lt;/p&gt;
+&lt;p&gt;Queda así abierto un nuevo campo en la investigación criptográfica. De aquí a 20, 30 años habrá aplicaciones que funcionarán de un modo totalmente distinto al que estamos acostumbrados, y la gente se preguntará ¿No se ha hecho el cifrado siempre de esta manera?, y no será así, recordaremos lo que solíamos usar y nos daremos cuenta que era estúpido en comparación.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Transcipciones a texto y audio del episodio&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;grc.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Episode 376: Fully Homomorphic Encryption&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;twit.tv&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+        <item>
+            <title>Cómo se almacenan tus contraseñas en internet (y cuándo la longitud  de la misma no importa)</title>
+            <link>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</link>
+            <pubDate>Tue, 14 Jul 2015 21:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/como-se-almacenan-tus-contrasenas-en-internet-y-cuando-la-longitud-de-la-misma-no-importa/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;changelog&#34;&gt;Changelog&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/josealberto4444&#34;&gt;Speedy&lt;/a&gt; ha cambiado:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Añadido apunte sobre seguridad de las contraseñas cuando están guardadas en bases de datos en texto plano o con cifrado básico.&lt;/li&gt;
+&lt;li&gt;Añadida explicación sobre tablas de arcoíris y qué contraseñas son más frecuentes ahí.&lt;/li&gt;
+&lt;li&gt;Eliminada recomendación de usar OAuth en sitios inseguros.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Cuando algún sitio web que usamos frecuentemente es hackeado, comprometiendo las contraseñas de los usuarios, probablemente pensemos en la seguridad online. pero ¿qué quiere decir realmente que un sitio es hackeado?, ¿y cómo podemos protegernos? A continuación se explica cómo se almacenan tus contraseñas en internet, y cómo te afecta cuando la web que usas se ve comprometida.&lt;/p&gt;
+&lt;p&gt;Existen numerosas formas de almacenar contraseñas, algunas más seguras que otras. Veamos algunos de los métodos más populares, y cómo afectan a la seguridad de tus datos.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h1 id=&#34;método-uno-contraseñas-en-texto-plano&#34;&gt;Método uno: Contraseñas en texto plano&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; La forma más sencilla para una web de almacenar tu contraseña es en texto plano. Lo que significa que en algún lugar de sus servidores, existe una &lt;!-- raw HTML omitted --&gt;base de datos&lt;!-- raw HTML omitted --&gt; con tu usuario y contraseña escrita en un formato legible para los humanos (Si tu contraseña es &lt;code&gt;testing123&lt;/code&gt;, se almacena en la base de datos como &lt;code&gt;testing123&lt;/code&gt;). Cuando introduces tus credenciales en el sitio, se comprueban con la base de datos para ver si coinciden. Este es claramente el peor método de todos, en términos de &lt;!-- raw HTML omitted --&gt;seguridad&lt;!-- raw HTML omitted --&gt;. La gran mayoría de sitios con reputación no usan este método, ya que si alguien compromete esta base de datos, las contraseñas de todo el mundo serán comprometidas inmediatamente.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Depende del ataque que se realice. Si la base de datos queda comprometida, no importa cual sea la longitud de tu contraseña o cómo de segura sea: si está almacenada en texto plano, tu contraseña será accesible para todo el mundo sin ningún trabajo. Por el contrario, si se pretende robar la contraseña por fuerza bruta o algún otro ataque, la fortaleza de tu contraseña será tu única salvaguarda, ¡por eso siempre debes escoger contraseñas seguras! También importa en términos de ocultarla de amigos y conocidos, que pueden intentar adivinarla, pero, como ya hemos dicho, no hay nada que hacer en el caso de que el sitio se vea comprometido.&lt;/p&gt;
+&lt;h1 id=&#34;método-dos-cifrado-de-contraseña-básico&#34;&gt;Método dos: Cifrado de contraseña básico&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Para añadir más protección a la contraseña de la que proporciona el texto plano, la mayoría de los sítios cifran la contraseña antes de almacenarla en sus servidores. El cifrado, para aquellos que no lo sepan, usa una clave especial para convertir la contraseña a una cadena de texto aleatoria. Alguien que disponga estas cadenas aleatorias de texto, no será capaz de loggearse en tu cuenta a no ser que sepa la clave, la cual podría usar para descifrar la contraseña.&lt;/p&gt;
+&lt;p&gt;El problema es que a menudo la clave se almacena en el mismo servidor en el que se encuentran las contraseñas, por lo que si el servidor se compromete, no hay gran trabajo que realizar para descifrar todas las contraseñas, con lo cual este método sigue siendo tremendamente inseguro.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; No. Ya que es fácil descifrar la contraseña conociendo la clave, no importa cómo de segura sea tu contraseña. De nuevo: hablamos en términos de que el sitio se vea comprometido; si tienes un amigo o familiar cotilla hurgando en tus cosas, una contraseña segura puede ayudar a evitar que la adivinen.&lt;/p&gt;
+&lt;h1 id=&#34;método-tres-contraseñas-con-hash&#34;&gt;Método tres: Contraseñas con Hash&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Un hash es similar al cifrado en el sentido en que también cambia la contraseña por una cadena de texto larga, formada por letras y números. Sin embargo, a diferencia del cifrado, el hash es una calle de un solo sentido: si se dispone del hash, no es posible ejecutar el algoritmo inverso para obtener la contraseña original. Lo que significa que se tendrán que obtener los hashes e intentar diferentes combinaciones de contraseñas para ver cual de ellas coincide.&lt;/p&gt;
+&lt;p&gt;Aun así, hay un inconveniente en este método. Aunque no se puede descodificar un hash a su contraseña original, se pueden intentar contraseñas diferentes hasta que alguna coincida con el hash que se robó de la base de datos. Los ordenadores pueden hacer esto muy muy rápido, y con la ayuda de una cosa llamada &lt;em&gt;rainbow tables (tablas de arco iris)&lt;/em&gt; — que es esencialmente una lista de miles de millones de hashes diferentes y sus correspondientes contraseñas — se puede mirar fácilmente el hash que tenemos y ver si ya ha sido descubierta la contraseña. Puedes probrar escribiendo &lt;code&gt;e38ad214943daad1d64c102faec29de4afe9da3d&lt;/code&gt; en google. Rápidamente vemos que es el hash &lt;!-- raw HTML omitted --&gt;SHA-1&lt;!-- raw HTML omitted --&gt; para ‘password1′. Para más información sobre cómo funcionan las &lt;em&gt;rainbow tables&lt;/em&gt; puedes visitar este artículo de &lt;!-- raw HTML omitted --&gt;Jeff Atwood&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; En este caso sí. Las &lt;em&gt;rainbow tables&lt;/em&gt; están hechas de contraseñas que ya han sido rotas, lo que significa que las contraseñas débiles tienen más probabilidades de encontrarse en ellas. Su mayor debilidad, sin embargo, no es la complejidad, sino la longitud. Es mejor usar contraseñas largas (como el famoso comic de &lt;!-- raw HTML omitted --&gt;XKCD&lt;!-- raw HTML omitted --&gt; llamado “correct horse battery staple”) en lugar de una corta y compleja (como kj$fsDl#).&lt;/p&gt;
+&lt;h1 id=&#34;método-cuatro-contraseñas-con-hash-y-una-pizca-de-sal-salt&#34;&gt;Método cuatro: Contraseñas con Hash y una pizca de sal (Salt)&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;El término que normalmente se usa es salt, en lugar de su traducción, sal, sin embargo, voy a usar los dos terminos, salt y sal, para que la traducción quede comprensible&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Echar sal a un hash significa añadir una cadena de caracteres aleatoria — llamada “salt” — al principio o al final de la contraseña antes de crear el hash. Se usa un salt distinto para cada contraseña, e incluso si el salt se almacena en el mismo servidor, se hará realmente dificil encontrar estos hashes “salteados” en los rainbow tables, ya que cada uno es largo, complejo y único. LinkedIn es conocido por &lt;em&gt;no&lt;/em&gt; usar hashes salteados, de haberlos usado sus usuarios habrían estado más seguros cuando los &lt;!-- raw HTML omitted --&gt;hackearon&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; Indudablemente. Sin embargo, desafortunadamente hemos llegado a un punto en el cual los ordenadores tienen una gran capacidad de computación y pueden conseguirlo por fuerza bruta, incluso con contraseñas con salt. Puede llevar mucho tiempo — más que usar rainbow tables — pero aún así es factible. Lo cual significa que la seguridad de la contraseña cuenta, a más longitud y mayor complejidad, más tiempo llevará crackearla.&lt;/p&gt;
+&lt;h1 id=&#34;método-cinco-hashes-lentos-slow-hashes&#34;&gt;Método cinco: Hashes lentos (&lt;em&gt;Slow Hashes&lt;/em&gt;)&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Cómo funciona:&lt;/strong&gt; Ahora mismo, los expertos en seguridad &lt;!-- raw HTML omitted --&gt;están apostando por los hashes lentos&lt;!-- raw HTML omitted --&gt; como la mejor opción para almacenar contraseñas. Funciones de hashes como MD5, SHA-1, y SHA-256 son relativamente rápidos: si introducimos una contraseña, nos devolverá el resultado hasheado rápidamente. En un ataque de fuerza bruta, el tiempo es el factor más importante. Usando hashes lentos — como el algoritmo &lt;!-- raw HTML omitted --&gt;bcrypt&lt;!-- raw HTML omitted --&gt; — los ataques de fuerza bruta tardarán mucho más, ya que cada contraseña necesita más tiempo para computarse.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;¿Importa la seguridad de mi contraseña?&lt;/strong&gt; De nuevo, las contraseñas seguras son más difíciles de romper por fuerza bruta, por lo tanto para este método sí que es muy importante. Teniendo una contraseña segura tardará mucho, mucho tiempo en descubrirse.&lt;/p&gt;
+&lt;h1 id=&#34;cómo-evitar-que-tu-contraseña-sea-filtrada&#34;&gt;¿Cómo evitar que tu contraseña sea filtrada?&lt;/h1&gt;
+&lt;p&gt;Entonces, ¿qué significa todo esto para el usuario? Esto es lo que deberías aprender de toda esta información:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;No usar servicios con mala seguridad:&lt;/strong&gt; Aunque no podemos controlar cómo una compañía almacena nuestras contraseñas, podemos controlar con qué servicios darnos de alta. Nunca deberíamos darnos de alta con servicios que usan texto plano o cifrado para almacenar las contraseñas, ya que son mucho más vulnerables. Una buena manera de averiguar lo que utilizan, de acuerdo al &lt;!-- raw HTML omitted --&gt;servicio web CloudFlare&lt;!-- raw HTML omitted --&gt;, es hacer click en el enlace “no recuerdo mi contraseña”. Si nos envía la contraseña en un email, significa que pueden acceder a la contraseña en sí, por lo tanto no está hasheada — y probablemente esté usando alguno de los métodos más débiles. Por supuesto, siempre se puede enviarles un correo y preguntarles, o mirar su FAQ para ver si proporcionan esa información.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar contraseñas seguras:&lt;/strong&gt; Como hemos mostrado más arriba, una contraseña más segura es menos susceptible de que alguien la descifre rápidamente. La longitud es más importante que la complejidad. Recuerda: cualquier contraseña es crackeable, lo que queremos es que lleve el mayor tiempo posible.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cambiar de contraseña siempre que un sitio sea comprometido:&lt;/strong&gt; Incluso si nuestra contraseña es segura, no significa que sea invulnerable — solo significa que llevará más tiempo romperla. Aquellos con contraseñas débiles puede que ya tengan sus cuentas comprometidas incluso antes de darse cuenta de que una filtración se ha producido, pero si la contraseña necesita de días para ser crackeada, aún tenemos tiempo para cambiarla haciendo así que la contraseña antigua no sirva para nada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Usar distintas contraseñas para cada sitio:&lt;/strong&gt; Si se usan contraseñas distintas para cada cuenta que tengamos y alguna de ellas se compromete, el resto de cuentas estará a salvo. Si usamos la misma contraseña para todos los sitios, una vulnerabilidad en cualquiera de ellos puede significar un mundo de problemas para ti.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cumplir escrupulosamente el punto 4 si no estamos seguros sobre la seguridad del sitio:&lt;/strong&gt; Si no sabemos cómo de seguro es un sitio, el punto 4 juega un papel crucial, es decir, debemos asegurarnos de que la contraseña que usemos en él no la usamos en ningún otro sitio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;más-cosas-sobre-seguridad&#34;&gt;Más cosas sobre seguridad&lt;/h2&gt;
+&lt;p&gt;Dejando aparte la traducción de este artículo de LifeHacker me gustaría hablaros del tema de la seguridad en la web, del cual aprendí bastante al hacer un curso de &lt;!-- raw HTML omitted --&gt;desarrollo de aplicaciones web&lt;!-- raw HTML omitted --&gt; en &lt;!-- raw HTML omitted --&gt;udacity&lt;!-- raw HTML omitted --&gt;, que impartía Steve Huffman, el creador de reddit.&lt;/p&gt;
+&lt;p&gt;A lo largo del curso hay un tema dedicado al registro de usuarios donde se usan muchos de estos métodos, sobre todo el hash con salt usando SHA-256. También se habla de bcrypt, que básicamente es igual que el anterior, pero recibe como parámetro un número, que será el tiempo que la función de cifrado estará sin hacer nada, para conseguir así el objetivo de que no sea posible descifrar las contraseñas tan rápido. Os dejo unos vídeos sobre el tema y recomiendo que hagáis el curso.&lt;/p&gt;
+&lt;h1 id=&#34;bcrypt&#34;&gt;Bcrypt&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;rainbow-tables&#34;&gt;Rainbow Tables&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;crear-salts&#34;&gt;Crear Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;hashear-salts&#34;&gt;Hashear Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;validar-salts&#34;&gt;Validar Salts&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h1 id=&#34;validar-salts-solución&#34;&gt;Validar Salts (Solución)&lt;/h1&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imagen | de &lt;!-- raw HTML omitted --&gt;palsur&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;li&gt;Fuente | &lt;!-- raw HTML omitted --&gt;LifeHacker&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

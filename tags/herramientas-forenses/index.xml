@@ -1,0 +1,115 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>herramientas forenses on El Baúl del programador</title>
+        <link>https://elbauldelprogramador.com/tags/herramientas-forenses/</link>
+        <description>Recent content in herramientas forenses on El Baúl del programador</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>es-ES</language>
+        <lastBuildDate>Fri, 01 Jan 2016 00:00:00 +0000</lastBuildDate>
+        <image>
+            <url>https://elbauldelprogramador.com/img/bio-photo-rss.png</url>
+            <link>https://elbauldelprogramador.com/tags/herramientas-forenses/</link>
+            <title>herramientas forenses on El Baúl del programador</title>
+            <width>144</width>
+            <height>144</height>
+        </image>
+        <atom:link href="https://elbauldelprogramador.com/tags/herramientas-forenses/" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Unhide Forensic Tool: Encuentra puertos y procesos ocultos</title>
+            <link>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</link>
+            <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://elbauldelprogramador.com/unhide-forensic-tool-encuentra-puertos-y-procesos-ocultos/</guid>
+            <description>&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Unhide Forensic Tool o simplemente &lt;em&gt;&lt;strong&gt;Unhide&lt;/strong&gt;&lt;/em&gt; es una herramienta forense que permite encontrar los procesos que ocultan los &lt;!-- raw HTML omitted --&gt;RootKits&lt;!-- raw HTML omitted --&gt;, por módulos del kernel Linux o por otras técnicas.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Está disponible tanto para &lt;!-- raw HTML omitted --&gt;Windows&lt;!-- raw HTML omitted --&gt; como para &lt;!-- raw HTML omitted --&gt;Linux&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Antes de usarlo es necesario compilarlo, cosa que logramos con los siguientes comandos:&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;gcc -Wall -O2 --static -pthread unhide-linux*.c unhide-output.c -o unhide-linux
+gcc -Wall -O2 --static unhide_rb.c -o unhide_rb
+gcc -Wall -O2 --static unhide-tcp.c unhide-tcp-fast.c unhide-output.c -o unhide-tcp
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;unhide-tcp&lt;/strong&gt; es una herramienta forense que identifica puertos TCP/UDP a la escucha pero no están listados en &lt;a href=&#34;https://elbauldelprogramador.com/netstat-analizando-la-red-y-detectando-problemas/&#34;&gt;/bin/netstat&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Los posibles argumentos de cada herramienta son los siguientes:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-tcp --help
+Unhide-tcp &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
+Copyright © &lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt; Yago Jesus &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; Patrick Gouin
+License GPLv3+ : GNU GPL version &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; or later
+
+http://www.unhide-forensics.info
+
+Usage: ./unhide-tcp &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+Options :
+   -V          Show version and &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+   -v          verbose
+   -h          display this &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+   -f          show fuser output &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; hidden ports
+   -l          show lsof output &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; hidden ports
+   -o          log result into unhide-tcp.log file
+   -s          use very quick version &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; server with lot of opened ports
+   -n          use netstat instead of ss
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para mi sorpresa, he descubierto que esta herramienta está desarrollada por Jesus Yago, colaborador en un blog que leo regularmente, &lt;!-- raw HTML omitted --&gt;securitybydefault&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;Las opciones de &lt;strong&gt;unhide-linux&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;./unhide-linux --help
+Unhide &lt;span class=&#34;m&#34;&gt;20121229&lt;/span&gt;
+Copyright © &lt;span class=&#34;m&#34;&gt;2012&lt;/span&gt; Yago Jesus &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; Patrick Gouin
+License GPLv3+ : GNU GPL version &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; or later
+
+http://www.unhide-forensics.info
+
+NOTE : This version of unhide is &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; systems using Linux &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 2.6
+
+Usage: ./unhide-linux &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; test_list
+
+Option :
+   -V          Show version and &lt;span class=&#34;nb&#34;&gt;exit&lt;/span&gt;
+   -v          verbose
+   -h          display this &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;
+   -m          more checks &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;available only with procfs, checkopendir &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; checkchdir commands&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+   -r          use alternate sysinfo &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; in meta-test
+   -f          log result into unhide-linux.log file
+   -o          same as &lt;span class=&#34;s1&#34;&gt;&amp;#39;-f&amp;#39;&lt;/span&gt;
+   -d          &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; a double check in brute &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+Test_list :
+   Test_list is one or more of the following
+   Standard tests :
+      brute
+      proc
+      procall
+      procfs
+      quick
+      reverse
+      sys
+   Elementary tests :
+      checkbrute
+      checkchdir
+      checkgetaffinity
+      checkgetparam
+      checkgetpgid
+      checkgetprio
+      checkRRgetinterval
+      checkgetsched
+      checkgetsid
+      checkkill
+      checknoprocps
+      checkopendir
+      checkproc
+      checkquick
+      checkreaddir
+      checkreverse
+      checksysinfo
+      checksysinfo2
+      checksysinfo3
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;fuente&#34;&gt;Fuente&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Unhide Forensic Tool, Find hidden processes and ports&lt;/em&gt; »» &lt;!-- raw HTML omitted --&gt;toolsyard.thehackernews.com&lt;!-- raw HTML omitted --&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

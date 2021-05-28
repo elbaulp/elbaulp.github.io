@@ -1,0 +1,5 @@
+name: 'Build Blog'
+description: 'Build an org-mode project and publish also old hugo blog content'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
